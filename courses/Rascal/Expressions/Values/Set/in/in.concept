@@ -1,0 +1,48 @@
+Name: in
+
+Synopsis: Membership test on set values.
+
+Syntax:
+`$Exp_1$ in $Exp_2$`
+
+Types:
+| `$Exp_1$`           |  `$Exp_2$`     | `$Exp_1$ in $Exp_2$` |
+|:--------------------|:---------------|:---------------------|
+| `$T_1$`  <: `$T_2$` |  `set[$T_2$]`  | `bool`               |
+
+Function:
+
+Details:
+
+Description:
+Yields `true` if the value of $Exp_1$ occurs as element in the value of $Exp_2$ and `false` otherwise. The type of $Exp_1$ should be compatible with the element type of $Exp_2$.
+
+Examples:
+<screen>
+2 in {1, 2, 3};
+4 in {1, 2, 3};
+</screen>
+
+Benefits:
+
+Pitfalls:
+
+Questions:
+
+QType: <A:arb[int,str,bool]> in <B:list[same[A]]>
+
+QValue:
+make: ELM = int[0,100]
+make: A = set[same[ELM]]
+expr: A1 = {<ELM>} + <A>
+expr: C =  <ELM> in <A1>
+hint: <C>
+test: <ELM> in <A1> == <?>
+
+QValue:
+prep: import Set;
+make: ELM = int[0,10]
+make: A = set[same[ELM]]
+expr: C =  <ELM> in <A>
+hint: <C>
+test: <ELM> in <A> == <?>

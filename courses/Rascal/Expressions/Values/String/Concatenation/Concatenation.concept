@@ -1,0 +1,33 @@
+Name: Concatenation
+
+Synopsis: Concatenate two strings.
+
+Syntax:
+`$Exp_1$ + $Exp_2$`
+
+Types:
+| `$Exp_1$` | `$Exp_2$` | `$Exp_1$ + $Exp_2$` |
+|:----------|:----------|:--------------------|
+| `str`     | `str`     | `str`               |
+
+Function:
+
+Details:
+
+Description:
+
+Concatenates the string values of $Exp_1$ and $Exp_2$.
+
+Note that to concatenate other types of values into a string, you can use [$Values/String] interpolation.
+
+Examples:
+<screen>
+"abc" + "def";
+</screen>
+
+Benefits:
+
+Pitfalls:
+
+Questions:
+

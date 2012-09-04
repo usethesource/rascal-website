@@ -1,0 +1,27 @@
+Name: Equal
+
+Synopsis: Equality operator on locations.
+
+Syntax:
+`$Exp_1$ == $Exp_2$`
+
+Types:
+| `$Exp_1$` | `$Exp_2$` | `$Exp_1$ == $Exp_2$` |
+|:----------|:----------|:---------------------|
+| `loc`     |  `loc`    | `bool`               |
+
+Function:
+
+Details:
+
+Description:
+Yields `true` if both arguments are identical and `false` otherwise.
+
+Examples:
+
+Benefits:
+
+Pitfalls:
+
+Questions:
+

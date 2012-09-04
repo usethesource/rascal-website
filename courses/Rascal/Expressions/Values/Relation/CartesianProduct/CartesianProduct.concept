@@ -1,0 +1,43 @@
+Name: CartesianProduct
+
+Synopsis: Cartesian product of two relation values.
+
+Syntax:
+`$Exp_1$ * $Exp_2$`
+
+Types:
+|`$Exp_1$`     | `$Exp_2$`    | `$Exp_1$ * $Exp_2$`  |
+|:-------------|:-------------|:---------------------|
+| `set[$T_1$]` | `set[$T_2$]` | `rel[$T_1$, $T_2$]`  |
+
+Function:
+
+Details:
+
+Description:
+Returns a binary relation that is the [Cartesian product](http://en.wikipedia.org/wiki/Cartesian_product) of two sets.
+
+Examples:
+<screen>
+{1, 2, 3} * {9};
+{1, 2, 3} * {10, 11};
+</screen>
+
+Benefits:
+
+Pitfalls:
+
+Questions:
+
+QType:
+make: S1 = set[int,2,3]
+make: S2 = set[int,2,3]
+test: <S1> * <S2>
+
+QValue:
+make: S1 = set[int,2,3]
+make: S2 = set[int,2,2]
+expr: H = <S1> * <S2>
+hint: <H>
+test: <S1> * <S2> == <?>
+

@@ -1,0 +1,24 @@
+Name: area
+
+Synopsis: The desired area for a figure inside a [treemap].
+
+Syntax:
+
+Types:
+
+Function:
+`FProperty area(num a)`
+
+Details:
+
+Description:
+
+
+Examples:
+
+Benefits:
+
+Pitfalls:
+
+Questions:
+

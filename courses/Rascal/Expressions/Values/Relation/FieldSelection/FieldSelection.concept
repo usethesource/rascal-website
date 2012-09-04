@@ -1,0 +1,45 @@
+Name: FieldSelection
+
+Synopsis: Select a field (column) from a relation value.
+
+Syntax:
+`$Exp$ . $Name$`
+
+Types:
+|`$Exp$`                                | `$Exp$ . $Name$` |
+|:--------------------------------------|:-----------------|
+| `rel[$T_1$ $L_1$, $T_2$ $L_2$, ... ]` | `set[$T_i$]`     |
+
+Function:
+
+Details:
+
+Description:
+$Exp$ should evaluate to a relation that has an $i$-th field label $L_i$ that is identical to $Name$.
+Return a set with all values of that field.
+$Name$ stands for itself and is not evaluated.
+
+Examples:
+<screen>
+rel[str street, int nm] R = {<"abc", 1>, <"abc", 2>, <"def", 4>, <"def", 5>};
+R.street;
+</screen>
+
+Benefits:
+
+Pitfalls:
+
+Questions:
+
+QValue:
+hint: A set consisting of the first element of each tuple.
+list:
+rel[str animal, int nlegs] legs = {<"bird", 2>, <"dog", 4>, <"human", 2>, <"snake", 0>, <"spider", 8>, <"millepede", 1000>, <"crab", 8>, <"cat", 4>};
+test: legs.animal == <?>
+
+QValue:
+hint: A set consisting of the second element of each tuple.
+list:
+rel[str animal, int nlegs] legs = {<"bird", 2>, <"dog", 4>, <"human", 2>, <"snake", 0>, <"spider", 8>, <"millepede", 1000>, <"crab", 8>, <"cat", 4>};
+test: legs.nlegs == <?>
+

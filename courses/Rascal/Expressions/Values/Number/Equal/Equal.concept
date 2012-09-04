@@ -1,0 +1,42 @@
+Name: Equal
+
+Synopsis: Equality operator on numeric values.
+
+Syntax:
+`$Exp_1$ == $Exp_2$`
+
+Types:
+| `$Exp_1$`  |  `$Exp_2$` | `$Exp_1$ == $Exp_2$`  |
+|:-----------|:-----------|:----------------------|
+| `int`      |  `int`     | `bool`                |
+| `int`      |  `real`    | `bool`                |
+| `real`     |  `real`    | `bool`                |
+
+Function:
+
+Details:
+
+Description:
+Yields `true` if the value of both arguments is numerically equal, and `false` otherwise.
+
+Examples:
+<screen>
+12 == 12
+12 == 12.0
+12 == 13
+12 == 13.0
+3.14 == 3.14
+3.14 == 3
+</screen>
+
+Benefits:
+
+Pitfalls:
+
+Questions:
+QType:  <A:int> == <B:int>
+QType:  <A:real> == <B:real>
+QType:  <A:num> == <B:num>
+QType:  <A:num> == <B:num>
+QValue: <A:num> == <B:num>
+
