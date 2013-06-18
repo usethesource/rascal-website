@@ -2,7 +2,6 @@ permalink: /:title
 
 markdown: rdiscount
 
-auto: true
 pygments: true
 
 name: Rascal - Meta Programming Language
