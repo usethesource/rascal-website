@@ -33,12 +33,9 @@
 
       <div class="masthead">
 		  <ul class="nav nav-pills pull-right">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Projects</a></li>
-			<li><a href="#">Services</a></li>
-			<li><a href="#">Downloads</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Contact</a></li>
+		   {% assign pages_list = site.pages %}
+		  {% assign group = 'navigation' %}
+		  {% include pages_list %}
 		  </ul>
 		<h3 class="muted">Rascal MPL</h3>
       </div>
