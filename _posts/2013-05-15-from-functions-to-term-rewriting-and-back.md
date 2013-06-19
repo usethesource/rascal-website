@@ -7,7 +7,7 @@ published: false
 
 Here's a nifty design element from Rascal that I personally like: functions are actually rewrite rules. The bottom line here is that pattern matching drives dynamic dispatch which results in openly extensible meta programs.
 
-The design choice seems _obvious_ for people who have been programming in ASF+SDF, Stratego and TXL who argue that rewrite rules and strategies were actually just functions.
+The design choice seems obvious for people who have been programming in ASF+SDF, Stratego and TXL who argue that rewrite rules and strategies were actually just functions.
 
 ## Complete functions
 
