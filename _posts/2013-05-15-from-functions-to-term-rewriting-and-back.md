@@ -1,6 +1,6 @@
 ---
 layout: default
-published: false
+published: true
 ---
 
 # From functions to term rewriting and back in Rascal
