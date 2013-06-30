@@ -32,16 +32,15 @@
     <div class="container-narrow">
 
       <div class="masthead">
-		  <ul class="nav nav-pills pull-right">
+		  <ul class="nav nav-pills pull-left">
 		   {% assign pages_list = site.pages %}
 		  {% assign group = 'navigation' %}
 		  {% include pages_list %}
 		  </ul>
-		<h3 class="muted">Rascal MPL</h3>
       </div>
 
       <!-- Jumbotron -->
-      <div class="jumbotron">
+      <div class="jumbotron" style="clear: left">
         <h1>Rascal</h1>
 		<p class="lead">Meta Programming Language</p>
         <a class="btn btn-large btn-success" href="/download/">Get started today</a>
