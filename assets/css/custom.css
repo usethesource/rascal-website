@@ -50,3 +50,8 @@
   .marketing p + h4 {
 	margin-top: 28px;
   }
+
+.container-narrow.normal {
+   background: no-repeat 100% 0% url('/assets/img/logo_rascal_light_small.png');
+   background-size: 100px;
+}
