@@ -35,21 +35,28 @@
       {% assign isBlog = true %}
       {% endif %}
    {% endfor %}
-    <div class="container-narrow normal">
+    <div class="container normal">
+       <div class="row-fluid">
+          <div class="span8 offset2">
 
-      <div class="masthead">
-		  <ul class="nav nav-pills pull-left">
-		  {% include menu %}
-		  </ul>
-      </div>
+            <div class="masthead">
+              <ul class="nav nav-pills pull-left">
+              {% include menu %}
+              </ul>
+            </div>
 
-      <div class="page-header" style="clear: left">
-        <h1>Rascal <small>Meta Programming Language</small></h1>
+            <div class="page-header" style="clear: left">
+              <h1>Rascal <small>Meta Programming Language</small></h1>
+            </div>
+         </div>
       </div>
 
       {% if isBlog or page.url == "/blog/index.html" %}
          <div class="row-fluid">
-            <div class="span3">
+            <div class="span8 offset2">
+               {{ content }}
+            </div>
+            <div class="span2">
                <ul class="nav nav-list">
                   {% if page.url == "/blog/index.html" %}
                      <li class="active"><a href="/blog/">Index</a>
@@ -65,22 +72,23 @@
                {% endfor %}
                </ul>
             </div>
-            <div class="span9">
-               {{ content }}
-            </div>
          </div>
       {% else %}
          <div class="row-fluid">
-            <div class="span12">
+            <div class="span8 offset2">
                {{ content }}
             </div>
          </div>
       {% endif %}
 
-      <hr>
+       <div class="row-fluid">
+          <div class="span8 offset2">
+            <hr>
 
-      <div class="footer">
-        <p> Copyright &copy; 2010, CWI</p>
+            <div class="footer">
+              <p> Copyright &copy; 2010, CWI</p>
+            </div>
+         </div>
       </div>
 
     </div> <!-- /container -->

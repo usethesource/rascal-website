@@ -3,12 +3,7 @@
 	padding-bottom: 40px;
   }
 
-  /* Custom container */
-  .container-narrow {
-	margin: 0 auto;
-	max-width: 700px;
-  }
-  .container-narrow > hr {
+  .container > hr {
 	margin: 30px 0;
   }
 
@@ -51,7 +46,13 @@
 	margin-top: 28px;
   }
 
-.container-narrow.normal {
-   background: no-repeat 100% 0% url('/assets/img/logo_rascal_light_small.png');
+.container.normal {
+   background: no-repeat 80% 0% url('/assets/img/logo_rascal_light_small.png');
    background-size: 100px;
+}
+@media (max-width: 767px) {
+   .container.normal {
+      background: no-repeat 100% 0% url('/assets/img/logo_rascal_light_small.png');
+      background-size: 100px;
+   }
 }
