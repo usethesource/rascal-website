@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: post 
 published: true
+title: "From functions to term rewriting and back in Rascal"
 ---
-
-# From functions to term rewriting and back in Rascal
 
 Here's a nifty design element from Rascal that I personally like: functions are actually rewrite rules. The bottom line here is that pattern matching drives dynamic dispatch which results in openly extensible meta programs.
 
