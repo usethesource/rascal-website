@@ -29,6 +29,12 @@
 
   <body>
 
+   {% assign isBlog = false %}
+   {% for post in site.posts %}
+      {% if page.url == post.url %}
+      {% assign isBlog = true %}
+      {% endif %}
+   {% endfor %}
     <div class="container-narrow normal">
 
       <div class="masthead">
@@ -41,12 +47,27 @@
         <h1>Rascal <small>Meta Programming Language</small></h1>
       </div>
 
-      <!-- Example row of columns -->
-      <div class="row-fluid">
-        <div class="span12">
-		  {{ content }}
-        </div>
-      </div>
+      {% if isBlog or page.url == "/blog/index.html" %}
+         <div class="row-fluid">
+            <div class="span3">
+               <ul>
+                  <li><a href="/blog/">Index</a>
+               {% for post in site.posts %}
+                  <li><a href="{{post.url}}">{{post.title}}</a>
+               {% endfor %}
+               </ul>
+            </div>
+            <div class="span9">
+               {{ content }}
+            </div>
+         </div>
+      {% else %}
+         <div class="row-fluid">
+            <div class="span12">
+               {{ content }}
+            </div>
+         </div>
+      {% endif %}
 
       <hr>
 

@@ -8,5 +8,6 @@
 
 {% assign title="Blog" %}
 {% assign link="/blog/" %}
+{% assign blogRoot = true %}
 {% include menu_item %}
 
