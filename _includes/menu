@@ -1,0 +1,12 @@
+{% assign title="Home" %}
+{% assign link="/" %}
+{% include menu_item %}
+
+{% assign title="Download" %}
+{% assign link="/download/" %}
+{% include menu_item %}
+
+{% assign title="Blog" %}
+{% assign link="/blog/" %}
+{% include menu_item %}
+
