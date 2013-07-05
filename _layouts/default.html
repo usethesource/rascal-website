@@ -50,10 +50,18 @@
       {% if isBlog or page.url == "/blog/index.html" %}
          <div class="row-fluid">
             <div class="span3">
-               <ul>
-                  <li><a href="/blog/">Index</a>
+               <ul class="nav nav-list">
+                  {% if page.url == "/blog/index.html" %}
+                     <li class="active"><a href="/blog/">Index</a>
+                  {% else %}
+                     <li><a href="/blog/">Index</a>
+                  {% endif %}
                {% for post in site.posts %}
-                  <li><a href="{{post.url}}">{{post.title}}</a>
+                  {% if page.url == post.url %}
+                     <li class="active"><a href="{{post.url}}">{{post.title}}</a>
+                  {% else %}
+                     <li><a href="{{post.url}}">{{post.title}}</a>
+                  {% endif %}
                {% endfor %}
                </ul>
             </div>
