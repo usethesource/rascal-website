@@ -6,12 +6,12 @@
 {% assign link="/start/" %}
 {% include menu_item %}
 
-{% assign title="Developers" %}
-{% assign link="/developers/" %}
-{% include menu_item %}
-
 {% assign title="Help" %}
 {% assign link="/help/" %}
+{% include menu_item %}
+
+{% assign title="Developers" %}
+{% assign link="/developers/" %}
 {% include menu_item %}
 
 {% assign title="Blog" %}
