@@ -19,3 +19,6 @@
 {% assign blogRoot = true %}
 {% include menu_item %}
 
+{% assign title="About" %}
+{% assign link="/about/" %}
+{% include menu_item %}
