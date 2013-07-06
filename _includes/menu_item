@@ -6,3 +6,4 @@
 {% endif %}
 {% assign title = nil %}
 {% assign link = nil %}
+{% assign blogRoot = nil %}
