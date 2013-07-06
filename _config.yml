@@ -10,5 +10,3 @@ name: Rascal - Meta Programming Language
 title: Rascal - Meta Programming Language
 
 production_url: http://rascal.landman.nl.eu.org/
-
-exclude: ["README.md"]
