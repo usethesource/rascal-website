@@ -5,11 +5,11 @@ title: Blog
 <p class="lead">
    Welcome to our team's blog, where Rascal team members blog.
 </p>
-<dl>
+<dl class="blogPosts">
   {% for post in site.posts offset:0 limit:10 %}
       <dt><a href="{{ post.url }}">{{ post.title }}</a></dt>
       <dd>
-         {{ post.excerpt }}<br/>
+         {{ post.excerpt }}
          <a href="{{ post.url }}#disqus_thread">Comments</a>
       </dd>
   {% endfor %}

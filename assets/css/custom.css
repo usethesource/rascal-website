@@ -56,3 +56,12 @@
       background-size: 100px;
    }
 }
+
+.blogPosts dd p {
+   margin-bottom: 0;
+}
+.blogPosts dd {
+   margin-bottom: 10px;
+}
+
+
