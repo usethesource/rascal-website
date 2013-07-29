@@ -24,11 +24,11 @@ This grammar reuses identifier syntax and whitespace convention from the standar
 
 To check for unreachable states, we first create a binary relation between states. The first comprehension uses *concrete syntax* matching to find a state's transitions. The post-fix `+` computes the transitive closure of the relation. Then  we return all states are not reachable from the initial state.
 
-<img src="/assets/img/AnalyzeSTM.png" alt="AnalyzeSTM" style="width:450px;"/>
+<img src="/assets/img/AnalyzeSTM.png" alt="AnalyzeSTM" style="width:475px;"/>
 
 There are various ways of compiling a DSL to target code in Rascal. The simplest is using string templates and generate code in a general purpose language. The following snippet shows the generation of a Java while loop to execute a state machine.
 
-<img src="/assets/img/CompileSTM.png" alt="CompileSTM" style="width:350px;"/>
+<img src="/assets/img/CompileSTM.png" alt="CompileSTM" style="width:325px;"/>
 
 
 String templates allow arbitrary Rascal values and control-flow constructs to be interpolated in string literals. Note how this code does not use concrete matching, but instead uses the labels defined in the grammar (i.e., `states`, `out`, `event`, and `to`).
