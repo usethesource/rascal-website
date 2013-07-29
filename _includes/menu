@@ -2,7 +2,7 @@
 {% assign link="/" %}
 {% include menu_item %}
 
-{% assign title="Get started" %}
+{% assign title="Download" %}
 {% assign link="/start/" %}
 {% include menu_item %}
 
