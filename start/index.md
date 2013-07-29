@@ -4,15 +4,14 @@ title: Getting started
 published: true
 ---
 
-## Getting started with Rascal
 
-### Disclaimer
+# Disclaimer
 
 We currently only release alpha versions of Rascal, which are subject to frequent changes
 
-## Eclipse plugin
+# Eclipse plugin
 
-The Eclipse update site for Rascal is: <strong>http://www.rascal-mpl.org/updates</strong>
+The Eclipse update site for Rascal is: <strong><a href="http://www.rascal-mpl.org/updates">http://www.rascal-mpl.org/updates</a></strong>
 
 You need _Eclipse for RCP and RAP Developers (Indigo)_ version of Eclipse
 available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. It has been reported recently that the latest release (0.5.2) also works with
@@ -26,10 +25,9 @@ Please note that:
    resources.
  - For generating parsers, Rascal uses quite a bit of memory. Please use `-vmargs -Xmx1G -Xss32m`
 
-## Commandline REPL
+# Commandline REPL
 
-
-## First time
+# First time
 
 After you have downloaded Rascal, you might be interested in the first steps to executing some Rascal code.
 
