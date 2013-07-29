@@ -28,3 +28,7 @@ to submit your contributions. Thanks! Champion bug reporters will be awarded wit
 Rascal is completely hosted on GitHub, [under the cwi-swat repositories](https://github.com/organizations/cwi-swat).
 See our [developer setup](https://github.com/cwi-swat/rascal/wiki/Rascal-Developers-Setup---Step-by-Step)
 instructions on which projects to checkout and dependencies to install.
+
+### Continous update site
+
+The continuous update site is deployed at http://www.rascal-mpl.org/unstable-updates. Every time a contribution is pushed to github, and all tests succeed, the unstable update site is build and deployed fully automatically.
