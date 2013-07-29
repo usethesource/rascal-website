@@ -1,6 +1,8 @@
 ---
 layout: post 
 published: true
+author: Jurgen Vinju
+authorlink: http://homepages.cwi.nl/~jurgenv
 title: "From functions to term rewriting and back in Rascal"
 ---
 
