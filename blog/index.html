@@ -1,7 +1,9 @@
 ---
-layout: "default"
+layout: default
 title: Blog
+published: true
 ---
+
 <p class="lead">
    Welcome to our team's blog, where Rascal team members blog.
 </p>
@@ -10,7 +12,6 @@ title: Blog
       <dt><a href="{{ post.url }}">{{ post.title }}</a></dt>
       <dd>
          {{ post.excerpt }}
-         <a href="{{ post.url }}#disqus_thread">Comments</a>
       </dd>
   {% endfor %}
 </dl>
