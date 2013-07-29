@@ -12,13 +12,16 @@ into a single language.  Use it for any kind of metaprogramming task: to
 construct parsers for programming languages, to analyze and transform source
 code, or as a language workbench to define DSLs with full IDE support.
 <br>
+<br>
 Rascal is a programming language, not a specification language, such that meta programs
 can be created by, understood by, and debugged by <strong>programmers</strong>.
 
 <br>
+<br>
 Rascal primitives include context-free grammars, relations, relational calculus operators,
 advanced patterns matching, generic type-safe traversal, comprehensions, concrete syntax for objects,
 string templates for code generation, etc.
+<br>
 <br>
 
 Rascal has libraries for integrating language front-ends, for re-using analysis
