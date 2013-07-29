@@ -3,13 +3,38 @@ layout: "front"
 title: "Home"
 ---
 
-## Welcome to Rascal
+## Metaprogramming for the masses
 
-<p class="lead">
-	Rascal is a domain specific language for source code analysis and manipulation
-	a.k.a. meta-programming. 
+<p class="lead"> 
+
+Construct parsers for programming languages by writing declarative, modular grammars. Analyze and transform source code using a metaprogramming language with built-in support for traversal, querying, pattern matching and code generation. Use Rascal as a language workbench to define DSLs with full IDE support.
+
 </p>
 
-It is currently being developed and tested at CWI. No
-formal release has been made yet, but we do provide alpha quality "previews" on
-the [Getting started](/start/) page.
+
+### A DSL in 36 lines of code
+
+The following example shows how to define a simple DSL for state machines. It includes a parser, a check for unreachable states and a compiler to Java code. 
+
+The grammar of the DSL is defined using Rascal's grammar formalism which is fully integrated in the language.
+
+![State machine syntax](/assets/img/SyntaxSTM.png "State machine syntax")
+
+This grammar reuses identifier syntax and whitespace convention from the standard library. Each non-terminal defines a *type*. Parse trees are typed values like any other value in Rascal.
+
+To check for unreachable states, we first create a binary relation between states. The first comprehension uses *concrete syntax* matching to find a state's transitions. The post-fix `+` computes the transitive closure of the relation. Then  we return all states are not reachable from the initial state.
+
+![Checking for unreachable states](/assets/img/AnalyzeSTM.png "Checking for unreachable states")
+
+There are various ways of compiling a DSL to target code in Rascal. The simplest is using string templates and generate code in a general purpose language. The following snippet shows the generation of a Java while loop to execute a state machine.
+
+![Compiling state machines to Java](/assets/img/AnalyzeSTM.png "Compiling state machines to Java")
+
+String templates allow arbitrary Rascal values and control-flow constructs to be interpolated in string literals. Note how this code does not use concrete matching, but instead uses the labels defined in the grammar (i.e., `states`, `out`, `event`, and `to`).
+
+And that's it! A complete DSL in 36 lines of code. Of course, the parser and the `unreachable` and `compile` functions can be connected to the IDE. This provides custom syntax highlighting, error-marking and automatic building in state machine editors.
+
+
+
+
+
