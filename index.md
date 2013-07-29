@@ -4,7 +4,7 @@ title: Home
 published: true
 ---
 
-## The one-stop-shop for metaprogramming
+## The one-stop shop for metaprogramming
 
 <p class="lead"> 
 
