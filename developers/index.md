@@ -1,6 +1,7 @@
 ---
-layout: "default"
-title: "Developers"
+layout: default
+title: Developers
+published: true
 ---
 
 <p class="text-center">
@@ -9,7 +10,6 @@ title: "Developers"
    <a class="btn" href="https://github.com/cwi-swat/rascal/wiki/Rascal-Developers-Setup---Step-by-Step"><i class="icon-info-sign"></i> Develop instructions</a>
 </p>
 
-## Developers
 ### Library contributions
 
 The Rascal team is currently quite small. In this stage it is good to be small.
