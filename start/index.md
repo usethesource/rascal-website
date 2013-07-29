@@ -29,7 +29,7 @@ Please note that:
    resources.
  - For generating parsers, Rascal uses quite a bit of memory. Please use `-vmargs -Xmx1G -Xss32m`
  
-### Follow these steps to install the plugin into Eclipse:
+### Follow these steps to install the plugin into Eclipse
 
 1. Start Eclipse.
 1. Select Help -> Install New Software.
