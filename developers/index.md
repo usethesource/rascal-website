@@ -10,6 +10,8 @@ published: true
    <a class="btn" href="https://github.com/cwi-swat/rascal/wiki/Rascal-Developers-Setup---Step-by-Step"><i class="icon-info-sign"></i> Develop instructions</a>
 </p>
 
+This page is intended for developers contributing to the source code of the Rascal  implementation  itself, rather than programmers that use Rascal.
+
 ### Library contributions
 
 The Rascal team is currently quite small. In this stage it is good to be small.
@@ -31,4 +33,4 @@ instructions on which projects to checkout and dependencies to install.
 
 ### Continous update site
 
-The continuous update site is deployed at <http://www.rascal-mpl.org/unstable-updates>. Every time a contribution is pushed to github, and all tests succeed, the unstable update site is build and deployed fully automatically.
+The continuous update site is deployed at http://www.rascal-mpl.org/unstable-updates. Every time a contribution is pushed to github, and all tests succeed, the unstable update site is build and deployed fully automatically.
