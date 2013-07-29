@@ -4,7 +4,12 @@ title: "Developers"
 ---
 ## Developers
 
-<a class="btn btn-large btn-success" href="https://github.com/cwi-swat/rascal">github</a>
+### Quick links
+<a class="btn" href="https://github.com/cwi-swat/rascal">Source code <img
+src="/assets/img/GitHub-Mark-32px.png" width="16px" height="16px" /></a>
+<a class="btn" href="https://github.com/cwi-swat/rascal/issues/">Report issues</a>
+<a class="btn" href="https://github.com/cwi-swat/rascal/wiki/Rascal-Developers-Setup---Step-by-Step">Develop
+instructions</a>
 
 ### Library contributions
 
