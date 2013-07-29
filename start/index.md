@@ -21,7 +21,15 @@ You need _Eclipse for RCP and RAP Developers (Indigo)_ version of Eclipse
 available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. It has been reported recently that the latest release (0.5.2) also works with
 Juno and normal (non RCP/RAP) versions of Eclipse. Not thoroughly tested though!
 
-Follow these steps to install the plugin:
+Please note that:
+ 
+ - Rascal now needs a JDK because it uses the Java compiler, so please download a JDK, not just a JRE.
+ - You may have to [edit the Eclipse init file](/start/editini.html) so
+   that Eclipse can find your Java installation and Eclipse can allocate enough
+   resources.
+ - For generating parsers, Rascal uses quite a bit of memory. Please use `-vmargs -Xmx1G -Xss32m`
+ 
+### Follow these steps to install the plugin into Eclipse:
 
 1. Start Eclipse.
 1. Select Help -> Install New Software.
@@ -31,15 +39,7 @@ Follow these steps to install the plugin:
 1. Select Next (several times) and accept the software license. The process may take a few minutes!
 1. Once these features have been installed, restart Eclipse.
 
-Please note that:
-
- - Rascal now needs a JDK because it uses the Java compiler, so please download a JDK, not just a JRE.
- - You may have to [edit the Eclipse init file](/start/editini.html) so
-   that Eclipse can find your Java installation and Eclipse can allocate enough
-   resources.
- - For generating parsers, Rascal uses quite a bit of memory. Please use `-vmargs -Xmx1G -Xss32m`
-
-### First time
+### How to use the Eclipse plugin for the first time
 
 After you have downloaded Rascal, you might be interested in the first steps to executing some Rascal code.
 
@@ -50,7 +50,8 @@ After you have downloaded Rascal, you might be interested in the first steps to 
 
 ## Commandline REPL
 
-The download the fully contained jar file [here](http://www.example.com).
+An entirely different way of using Rascal is via the standalone commandline console.
+You can download the fully contained jar file [here](http://www.example.com).
 
 Please note that:
 
