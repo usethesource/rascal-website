@@ -24,7 +24,7 @@ Juno and normal (non RCP/RAP) versions of Eclipse. Not thoroughly tested though!
 Please note that:
 
  - Rascal now needs a JDK because it uses the Java compiler, so please download a JDK, not just a JRE.
- - You may have to [edit the Eclipse init file](/start/eclipse/editini.html) so
+ - You may have to [edit the Eclipse init file](/start/editini.html) so
    that Eclipse can find your Java installation and Eclipse can allocate enough
    resources.
  - For generating parsers, Rascal uses quite a bit of memory. Please use `-vmargs -Xmx1G -Xss32m`
