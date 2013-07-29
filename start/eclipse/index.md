@@ -1,7 +1,9 @@
 ---
-layout: "default"
-title: "Installing Rascal Eclipse plugin"
+layout: default
+title: Installing Rascal Eclipse plugin
+published: true
 ---
+
 ### Disclaimer
 
 We currently only release alpha versions of Rascal, which are subject to frequent changes.
