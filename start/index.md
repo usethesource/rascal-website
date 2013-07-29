@@ -21,6 +21,16 @@ You need _Eclipse for RCP and RAP Developers (Indigo)_ version of Eclipse
 available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. It has been reported recently that the latest release (0.5.2) also works with
 Juno and normal (non RCP/RAP) versions of Eclipse. Not thoroughly tested though!
 
+Follow these steps to install the plugin:
+
+1. Start Eclipse.
+1. Select Help -> Install New Software.
+1. Make sure that the tick for "Contact all update sites during install to find required software" is enabled.
+1. Type: http://www.rascal-mpl.org/updates in the "Work with" edit box.
+1. Select the feature *Rascal*.
+1. Select Next (several times) and accept the software license. The process may take a few minutes!
+1. Once these features have been installed, restart Eclipse.
+
 Please note that:
 
  - Rascal now needs a JDK because it uses the Java compiler, so please download a JDK, not just a JRE.
