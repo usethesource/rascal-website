@@ -25,7 +25,7 @@ string templates for code generation, etc.
 <br>
 <br>
 
-Rascal has libraries for integrating language front-ends, for re-using analysis
+Rascal has libraries for integrating language front-ends, for reusing analysis
 algorithms (such as SMT solvers), and for getting typed meta-data out of
 version management systems, for interactive visualization, etc.  
 </p>
