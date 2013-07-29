@@ -3,7 +3,7 @@ layout: "default"
 title: "Developers"
 ---
 
-<p class="text-centered">
+<p class="text-center">
 <a class="btn" href="https://github.com/cwi-swat/rascal">Source code <img
 src="/assets/img/GitHub-Mark-32px.png" width="16px" height="16px" /></a>
 <a class="btn" href="https://github.com/cwi-swat/rascal/issues/">Report issues</a>
