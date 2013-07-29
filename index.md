@@ -3,20 +3,25 @@ layout: "front"
 title: "Home"
 ---
 
-## Metaprogramming for the masses
+## The one-stop-shop for metaprogramming
 
 <p class="lead"> 
 
-Rascal conveniently integrates all technological aspects for the creation of
-meta programs.  Use it for any kind of metaprogramming task: to _construct
-parsers for programming languages_ by writing declarative, modular grammars, to
-_analyze and transform source code_ using a metaprogramming language with
-built-in support for relational modeling, generic traversal, querying, pattern
-matching and code generation, or ---as a language workbench--- to define DSLs
-with full IDE support.
+Rascal integrates all technological aspects for the creation of meta programs
+into a single language.  Use it for any kind of metaprogramming task: to
+<strong>construct parsers for programming languages</strong> by writing
+declarative, modular grammars, to <strong>analyze and transform source
+code</strong> using a metaprogramming language with built-in support for
+relational modeling, generic traversal, querying, pattern matching and code
+generation, or -as a language workbench- to define DSLs with <strong>full IDE
+support</strong>.
 
-Rascal is a programming language, not a specification language, such that Rascal
-programs can be created by, understood by and debugged by _programmers_.
+Rascal is a programming language, not a specification language, such that meta programs
+can be created by, understood by, and debugged by <strong>programmers</strong>.
+
+Rascal has libraries for integrating language front-ends, for re-using analysis
+algorithms (such as SMT solvers), and for getting typed meta-data out of
+version management systems, for interactive visualization, etc.  
 </p>
 
 
