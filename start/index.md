@@ -4,11 +4,16 @@ title: Getting started
 published: true
 ---
 
-# Disclaimer
+<p class="text-center">
+   <a class="btn" href="http://www.rascal-mpl.org/updates">Eclipse update site<p class="code">`http://www.rascal-mpl.org/updates`</p></a>
+   <a class="btn" href="http://www.example.com"><i class="icon-jar"></i>Commandline REPL Jar File</a>
+</p>
+
+## Disclaimer
 
 We currently only release alpha versions of Rascal, which are subject to frequent changes
 
-# Eclipse plugin
+## Eclipse plugin
 
 The Eclipse update site for Rascal is: **[http://www.rascal-mpl.org/updates](http://www.rascal-mpl.org/updates)**
 
@@ -24,9 +29,7 @@ Please note that:
    resources.
  - For generating parsers, Rascal uses quite a bit of memory. Please use `-vmargs -Xmx1G -Xss32m`
 
-# Commandline REPL
-
-# First time
+### First time
 
 After you have downloaded Rascal, you might be interested in the first steps to executing some Rascal code.
 
@@ -35,6 +38,16 @@ After you have downloaded Rascal, you might be interested in the first steps to 
  - This should automatically open a new console with the new project on its search path
  - Type `1 + 1` after the `rascal>` prompt to see `2`
 
-### Further reading
+## Commandline REPL
+
+The download the fully contained jar file [here](http://www.example.com).
+
+Please note that:
+
+- The commandline version does not feature pre-installed Java analysis libraries
+- A Java SDK 1.7 or higher installed and available. A Java run-time environment will not be enough.
+- The command line of Rascal starts by running `java -Xmx1G -Xss32m -jar rascal-<version>.jar`.
+
+## Further reading
 
 Check out our [Help page](/help/) for links to documentation and our community.
