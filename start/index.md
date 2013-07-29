@@ -5,7 +5,7 @@ published: true
 ---
 
 <p class="text-center">
-   <a class="btn" href="http://www.rascal-mpl.org/updates"><i class="icon-shopping-cart"></i> http://www.rascal-mpl.org/updates</a>
+   <a class="btn" href="http://www.rascal-mpl.org/updates"><i class="icon-shopping-cart"></i>Eclipse update site</a>
    <a class="btn" href="http://www.example.com"><i class="icon-file"></i>Commandline REPL Jar File</a>
 </p>
 
