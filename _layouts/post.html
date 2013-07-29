@@ -3,6 +3,9 @@ layout: default
 ---
 <h2>{{ page.title }}</h2>
 <p class="meta">{{ page.date | date_to_string }}</p>
+{% if page.author && page.authorlink %}
+<p class="meta"><a href="{{page.authorlink}}">{{ page.author }}</a></p>
+{% endif %}
 
 <div class="post">
 {{ content }}
