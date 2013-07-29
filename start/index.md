@@ -11,7 +11,7 @@ We currently only release alpha versions of Rascal, which are subject to frequen
 
 # Eclipse plugin
 
-The Eclipse update site for Rascal is: <strong><a href="http://www.rascal-mpl.org/updates">http://www.rascal-mpl.org/updates</a></strong>
+The Eclipse update site for Rascal is: _[http://www.rascal-mpl.org/updates](http://www.rascal-mpl.org/updates)_
 
 You need _Eclipse for RCP and RAP Developers (Indigo)_ version of Eclipse
 available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. It has been reported recently that the latest release (0.5.2) also works with
