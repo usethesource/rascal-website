@@ -1,11 +1,21 @@
 ---
-layout: "default"
-title: "About"
+layout: default
+title: About
+published: true
 ---
-## About Rascal
-__Add something about the rascal team__?
 
-### Teaching
+## About Rascal
+
+Rascal is a project by researchers in programming languages and software engineering. The core team is from Centrum Wiskunde & Informatica (CWI), and people from different institutes and universities have been and are contributing.
+
+In principle Rascal is a research laboratory and research vehicle that is not intended for production use (yet). It has been and is used in serious projects however and we plan to stabilize the language eventually.
+
+- Rascal is the successor of the [ASF+SDF Meta-Environment](http://www.meta-environment.org/).
+- [Tobias Baanders](http://www.tobiasart.eu/) designed the Rascal logo.
+- It employs a parsing architecture inspired by Scott and Johnstone's GLL parsing.
+
+## Teaching
+
 Rascal is taught at Universiteit van Amsterdam as part of the Master Software Engineering program, in a collaboration between UvA, HvA and VU:
 
  - In Software Evolution it is used to analyze, visualize and transform source code of legacy systems.
@@ -15,18 +25,7 @@ Rascal is also taught in the course Advanced Programming at Amsterdam University
 
 At Open Universiteit (OU), Rascal is also taught for the lab of the course on Software Evolution.
 
-### Facts
- - Rascal is the successor of the [ASF+SDF Meta-Environment](http://www.meta-environment.org/).
- - Like [ASF+SDF](http://www.asfsdf.org/), it fully supports embedded concrete syntax fragments for "syntax safe" matching and construction of source code.
- - Like [StringTemplate](http://www.stringtemplate.org/), it supports recursive string templates for code generation in the absence of a context-free grammar.
- - [Tobias Baanders](http://www.tobiasart.eu/) designed the Rascal logo.
- - It employs a parsing architecture inspired by Scott and Johnstone's GLL parsing.
- - It's fundamental run-time data representation and manipulation API (pdb.values) is a part of Eclipse IMP
- - PDB.values was inspired (mostly) by the [ATerm library](http://www.meta-environment.org/Meta-Environment/ATerms) and
-   [RScript](http://www.meta-environment.org/Meta-Environment/RScript).
- - We used Rascal itself to transform its Java-based interpreter from the Visitor design pattern to the Interpreter design pattern automagically.
-
-### Stories
+## Stories
 
 #### Lego Turing Machine
 
@@ -76,4 +75,3 @@ These applications are very pattern matching and visitor intensive.
 Rascal also offers a number of libraries that are written using a combination of Rascal and Java code. Examples include bindings for repository models (subversion, svn and git) that Waruzjan Shahbazian wrote and the Figure combinator library for visualization by Paul Klint.
 
 These library modules are usually very data centric, providing abstract data types and syntax definitions for data representation and exchange.
-
