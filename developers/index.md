@@ -4,11 +4,9 @@ title: "Developers"
 ---
 
 <p class="text-center">
-<a class="btn" href="https://github.com/cwi-swat/rascal">Source code <img
-src="/assets/img/GitHub-Mark-32px.png" width="16px" height="16px" /></a>
-<a class="btn" href="https://github.com/cwi-swat/rascal/issues/">Report issues</a>
-<a class="btn" href="https://github.com/cwi-swat/rascal/wiki/Rascal-Developers-Setup---Step-by-Step">Develop
-instructions</a>
+   <a class="btn" href="https://github.com/cwi-swat/rascal"><img src="/assets/img/GitHub-Mark-32px.png" width="16px" height="16px" /> Source code </a>
+   <a class="btn icon-tasks" href="https://github.com/cwi-swat/rascal/issues/">Report issues</a>
+   <a class="btn icon-info-sign" href="https://github.com/cwi-swat/rascal/wiki/Rascal-Developers-Setup---Step-by-Step">Develop instructions</a>
 </p>
 
 ## Developers
