@@ -19,9 +19,9 @@ can be created by, understood by, and debugged by <strong>programmers</strong>.
 
 <br>
 <br>
-Rascal primitives include context-free grammars, relations, relational calculus operators,
-advanced patterns matching, generic type-safe traversal, comprehensions, concrete syntax for objects,
-string templates for code generation, etc.
+Rascal primitives include immutable data, context-free grammars and algebraic data-types, relations, relational calculus operators,
+advanced patterns matching, generic type-safe traversal, comprehensions, concrete syntax for objects,lexically scoped backtracking,
+string templates for code generation. Still it feels like a normal programming language.
 <br>
 <br>
 
