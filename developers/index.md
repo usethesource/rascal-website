@@ -3,6 +3,9 @@ layout: "default"
 title: "Developers"
 ---
 ## Developers
+
+<a class="btn btn-large btn-success" href="https://github.com/cwi-swat/rascal">github</a>
+
 ### Library contributions
 
 The Rascal team is currently quite small. In this stage it is good to be small.
