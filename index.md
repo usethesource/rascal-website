@@ -7,8 +7,16 @@ title: "Home"
 
 <p class="lead"> 
 
-Construct parsers for programming languages by writing declarative, modular grammars. Analyze and transform source code using a metaprogramming language with built-in support for traversal, querying, pattern matching and code generation. Use Rascal as a language workbench to define DSLs with full IDE support.
+Rascal conveniently integrates all technological aspects for the creation of
+meta programs.  Use it for any kind of metaprogramming task: to _construct
+parsers for programming languages_ by writing declarative, modular grammars, to
+_analyze and transform source code_ using a metaprogramming language with
+built-in support for relational modeling, generic traversal, querying, pattern
+matching and code generation, or ---as a language workbench--- to define DSLs
+with full IDE support.
 
+Rascal is a programming language, not a specification language, such that Rascal
+programs can be created by, understood by and debugged by _programmers_.
 </p>
 
 
