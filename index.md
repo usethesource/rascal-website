@@ -1,6 +1,7 @@
 ---
-layout: "front"
-title: "Home"
+layout: front
+title: Home
+published: true
 ---
 
 ## The one-stop-shop for metaprogramming
@@ -13,7 +14,7 @@ construct parsers for programming languages, to analyze and transform source
 code to define DSLs with full IDE support.
 <br>
 <br>
-Rascal is a programming language, not a specification language, such that meta programs
+Rascal is a programming language; such that meta programs
 can be created by, understood by, and debugged by <strong>programmers</strong>.
 
 <br>
@@ -52,8 +53,3 @@ There are various ways of compiling a DSL to target code in Rascal. The simplest
 String templates allow arbitrary Rascal values and control-flow constructs to be interpolated in string literals. Note how this code does not use concrete matching, but instead uses the labels defined in the grammar (i.e., `states`, `out`, `event`, and `to`).
 
 And that's it! A complete DSL in 36 lines of code. Of course, the parser and the `unreachable` and `compile` functions can be connected to the IDE. This provides custom syntax highlighting, error-marking and automatic building in state machine editors.
-
-
-
-
-
