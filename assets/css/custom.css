@@ -89,7 +89,7 @@ code.github .MetaVariable {
 
 code .Keyword {
 	color: #7B0052;
-	font-weight: bolder;
+	font-weight: 900;
 }
 
 code .Constant {
