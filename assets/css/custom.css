@@ -69,20 +69,51 @@
    margin-bottom: 10px;
 }
 
-code .Keyword {
+code.github .Keyword {
 	color: #990000;
 	font-weight: bold;
 }
 
-code .Constant {
+code.github .Constant {
 	color: #dd1144;
 }
 
-code .Comment {
+code.github .Comment {
 	color: #999988;
 	font-style: italic;
 }
 
-code .MetaVariable {
+code.github .MetaVariable {
 	color: #009090;
 }
+
+code .Keyword {
+	color: #7B0052;
+	font-weight: bold;
+}
+
+code .Constant {
+	color: #8B008B;
+}
+code .Variable {
+	color: #55AA55;
+}
+
+code .Identifier {
+	color: #2C577C;
+}
+
+code .Type {
+	color: #AB2525;
+}
+
+code .Comment {
+	color: #528D73;
+	font-style: italic;
+}
+
+code .MetaVariable {
+	color: #295F94;
+	font-style: italic;
+}
+
