@@ -36,7 +36,7 @@ From ["A DSL in 36 lines of code"](dsl-in-36-lines-of-code):
 
 A grammar in Rascal:
 
-<pre><code><span class="Keyword">module</span> Syntax
+<pre class="rascal"><code><span class="Keyword">module</span> Syntax
 
 <span class="Keyword">extend</span> lang::std::Layout;
 <span class="Keyword">extend</span> lang::std::Id;
@@ -48,7 +48,7 @@ A grammar in Rascal:
 
 A fact extractor and checker in Rascal, using concrete syntax:
 
-<pre><code><span class="Keyword">module</span> Analyze
+<pre class="rascal"><code><span class="Keyword">module</span> Analyze
 
 <span class="Keyword">import</span> Syntax;
 
@@ -61,7 +61,7 @@ A fact extractor and checker in Rascal, using concrete syntax:
 
 A code generator:
 
-<pre><code><span class="Keyword">module</span> Compile
+<pre class="rascal"><code><span class="Keyword">module</span> Compile
 
 <span class="Keyword">import</span> Syntax;
 

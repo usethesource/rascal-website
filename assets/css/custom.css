@@ -89,7 +89,7 @@ code.github .MetaVariable {
 
 code .Keyword {
 	color: #7B0052;
-	font-weight: bold;
+	font-weight: bolder;
 }
 
 code .Constant {
@@ -117,3 +117,8 @@ code .MetaVariable {
 	font-style: italic;
 }
 
+pre.rascal {
+	border: 0;
+	background: 0;
+	margin-left: 10px;
+}
