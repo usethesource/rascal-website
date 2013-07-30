@@ -31,9 +31,9 @@ version management systems, for interactive visualization, etc.
 <h2>Code snippets</h2>
 
 <div class="tabbable"> 
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs" id="Snippets">
     <li class="active"><a href="#DSLs" data-toggle="tab">DSLs</a></li>
-    <li><a href="#Analysis" data-toggle="tab">Analysis</a></li>
+    <li><a href="#Metrics" data-toggle="tab">Metrics</a></li>
     <li><a href="#Transformations" data-toggle="tab">Transformations</a></li>
   </ul>
   <div class="tab-content">
@@ -88,9 +88,20 @@ version management systems, for interactive visualization, etc.
   '  }
   '}"</span>; </code></pre>
     </div>
-    <div class="tab-pane" id="tab2">
-      <p>Howdy, I'm in Section 2.</p>
+    <div class="tab-pane" id="Metrics">
+      <p>Show cyclomatic complexity in a few lines of Rascal.</p>
+    </div>
+    <div class="tab-pane" id="Transformations">
+      <p>Show a nice transformation in a few lines of Rascal.</p>
     </div>
   </div>
 </div>
 
+
+<script src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+   $('#Snippets a').click(function (e) {
+     e.preventDefault();
+     $(this).tab('show');
+   })
+</script>
