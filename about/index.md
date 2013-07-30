@@ -6,7 +6,7 @@ published: true
 
 ## About Rascal
 
-Rascal is a project by researchers in programming languages and software engineering. The core team is from Centrum Wiskunde & Informatica (CWI), and people from different institutes and universities have been and are contributing.
+Rascal is a project by researchers in programming languages and software engineering. The core team is from Centrum Wiskunde & Informatica (CWI), and people from different institutes and universities have been and are contributing. See the [github contributors](https://github.com/cwi-swat/rascal/graphs/contributors) graphs and [ohloh](https://www.ohloh.net/p/rascal).
 
 In principle Rascal is a research laboratory and research vehicle that is not intended for production use (yet). It has been and is used in serious projects however and we plan to stabilize the language eventually.
 
@@ -24,4 +24,3 @@ Rascal is taught at Universiteit van Amsterdam as part of the Master Software En
 Rascal is also taught in the course Advanced Programming at Amsterdam University College. The course material can be found here.
 
 At Open Universiteit (OU), Rascal is also taught for the lab of the course on Software Evolution.
-
