@@ -1,3 +1,10 @@
+{% assign isBlog = false %}
+{% for post in site.posts %}
+   {% if page.url == post.url %}
+   {% assign isBlog = true %}
+   {% endif %}
+{% endfor %}
+{% assign isBlogList = page.url == "/blog/index.html" or page.url == "/blog/archive.html" %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,6 +21,9 @@
     <link href="/assets/css/custom.css" rel="stylesheet">
     <link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      {% if isBlog or isBlogList %}
+         <link href="/blog/feed.xml" rel="alternate" type="application/rss+xml" title="RSS" />
+      {% endif %}
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -30,12 +40,6 @@
 
   <body>
 
-   {% assign isBlog = false %}
-   {% for post in site.posts %}
-      {% if page.url == post.url %}
-      {% assign isBlog = true %}
-      {% endif %}
-   {% endfor %}
     <div class="container normal">
        <div class="row-fluid">
           <div class="span8 offset2">
@@ -52,7 +56,7 @@
          </div>
       </div>
 
-      {% if isBlog or page.url == "/blog/index.html" or page.url == "/blog/archive.html" %}
+      {% if isBlog or isBlogList %}
          <div class="row-fluid content">
             <div class="span8 offset2">
                {{ content }}
