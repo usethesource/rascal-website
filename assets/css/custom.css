@@ -63,10 +63,3 @@
 .blogPosts dd {
    margin-bottom: 10px;
 }
-
-.muted .icon-edit {
-   zoom: 1;
-   filter: alpha(opacity=50);
-   opacity: 0.5;	
-}
-
