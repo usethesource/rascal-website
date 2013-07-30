@@ -7,13 +7,13 @@ published: true
 ## The one-stop shop for metaprogramming
 
 <p class="lead"> 
-
 Rascal integrates all technological aspects for the creation of meta programs
 into a single language.  Use it for any kind of metaprogramming task: to
 construct parsers for programming languages, to analyze and transform source
 code, or to define new DSLs with full IDE support.
-<br>
-<br>
+</p>
+
+<p class="lead"> 
 Rascal is a programming language; such that meta programs
 can be created by, understood by, and debugged by <strong>programmers</strong>.
 
