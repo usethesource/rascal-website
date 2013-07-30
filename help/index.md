@@ -5,9 +5,9 @@ published: true
 ---
 
 <p class="text-center">
-   <a class="btn" href="http://tutor.rascal-mpl.org/"><i class="icon-shopping-cart"></i> Online Documentation</a>
-   <a class="btn" href="http://stackoverflow.com/questions/tagged/rascal"><i class="icon-question-sign"></i> StackOverflow</a>
-   <a class="btn" href="https://github.com/cwi-swat/rascal/issues"><i class="icon-comment"></i> Issue tracker</a>
+   <a class="btn" href="http://tutor.rascal-mpl.org/"><i class="icon-info"></i> Online Documentation</a>
+   <a class="btn" href="http://stackoverflow.com/questions/tagged/rascal"><i class="icon-stackexchange"></i> StackOverflow</a>
+   <a class="btn" href="https://github.com/cwi-swat/rascal/issues"><i class="icon-bug"></i> Issue tracker</a>
 </p>
 
 ## Documentation and Introduction
