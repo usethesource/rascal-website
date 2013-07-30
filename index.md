@@ -16,15 +16,15 @@ code, or to define new DSLs with full IDE support.
 <p class="lead"> 
 Rascal is a programming language; such that meta programs
 can be created by, understood by, and debugged by <strong>programmers</strong>.
+</p>
 
-<br>
-<br>
+<p class="lead"> 
 Rascal primitives include immutable data, context-free grammars and algebraic data-types, relations, relational calculus operators,
 advanced patterns matching, generic type-safe traversal, comprehensions, concrete syntax for objects,lexically scoped backtracking,
 string templates for code generation. Still it feels like a normal programming language.
-<br>
-<br>
+</p>
 
+<p class="lead"> 
 Rascal has libraries for integrating language front-ends, for reusing analysis
 algorithms (such as SMT solvers), and for getting typed meta-data out of
 version management systems, for interactive visualization, etc.  
