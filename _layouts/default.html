@@ -1,10 +1,14 @@
 {% assign isBlog = false %}
 {% for post in site.posts %}
    {% if page.url == post.url %}
-   {% assign isBlog = true %}
+      {% assign isBlog = true %}
    {% endif %}
 {% endfor %}
-{% assign isBlogList = page.url == "/blog/index.html" or page.url == "/blog/archive.html" %}
+{% assign isBlogList = false %}
+{% if page.url == "/blog/index.html" or page.url == "/blog/archive.html" %}
+   {% assign isBlogList = true %}
+{% endif %}
+ 
 <!DOCTYPE html>
 <html lang="en">
   <head>
