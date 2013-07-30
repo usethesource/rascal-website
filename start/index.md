@@ -5,7 +5,7 @@ published: true
 ---
 
 <p class="text-center">
-   <a class="btn" href="http://www.rascal-mpl.org/updates"><i class="icon-shopping-cart"></i> Eclipse update site</a>
+   <a class="btn" href="http://www.rascal-mpl.org/updates"><i class="icon-download-alt"></i> Eclipse update site</a>
    <a class="btn" href="http://www.example.com"><i class="icon-download"></i> Commandline REPL Jar File</a>
 </p>
 
