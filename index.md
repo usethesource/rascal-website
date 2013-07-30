@@ -35,10 +35,53 @@ version management systems, for interactive visualization, etc.
 From ["A DSL in 36 lines of code"](dsl-in-36-lines-of-code):
 
 A grammar in Rascal:
-<img src="/assets/img/SyntaxSTM.png" alt="SyntaxSTM" style="width:450px; display: block; margin-left: auto; margin-right: auto;"/>
+
+<pre><code>
+<span class="keyword">module</span> Syntax
+
+<span class="keyword">extend</span> lang::std::Layout;
+<span class="keyword">extend</span> lang::std::Id;
+
+<span class="keyword">start</span> <span class="keyword">syntax</span> Machine = machine: State+ states;
+<span class="keyword">syntax</span> State = <span class="Comment">@Foldable</span> state: <span class="Constant">"state"</span> Id name Trans* out;
+<span class="keyword">syntax</span> Trans = trans: Id event <span class="Constant">":"</span> Id to;
+</code></pre>
+
 
 A fact extractor and checker in Rascal, using concrete syntax:
-<img src="/assets/img/AnalyzeSTM.png" alt="AnalyzeSTM" style="width:487px; display: block; margin-left: auto; margin-right: auto;"/>
+
+<pre><code>
+<span class="keyword">module</span> Analyze
+
+<span class="keyword">import</span> Syntax;
+
+<span class="keyword">set</span>[Id] unreachable(Machine m) {
+  r = { &lt;q1,q2&gt; | (State)`<span class="keyword">state</span> <span class="MetaVariable">&lt;Id q1&gt;</span> <span class="MetaVariable">&lt;Trans* ts&gt;</span>` &lt;- m.states, 
+                  (Trans)`<span class="MetaVariable">&lt;Id _&gt;</span>: <span class="MetaVariable">&lt;Id q2&gt;</span>` &lt;- ts }+;
+  qs = [ q.name | /State q := m ];
+  <span class="keyword">return</span> { q | q &lt;- qs, q <span class="keyword">notin</span> r[qs[<span class="keyword">0</span>]] };
+}
+</code></pre>
 
 A code generator:
-<img src="/assets/img/CompileSTM.png" alt="CompileSTM" style="width:325px; display: block; margin-left: auto; margin-right: auto;"/>
+
+<pre><code>
+<span class="keyword">module</span> Compile
+
+<span class="keyword">import</span> Syntax;
+
+<span class="keyword">str</span> compile(Machine m) =
+  <span class="Constant">"while (true) {
+  '  event = input.next();
+  '  switch (current) { 
+  '    &lt;</span><span class="keyword">for</span> (q &lt;- m.states) {<span class="Constant">&gt;
+  '    case \"&lt;</span>q.name<span class="Constant">&gt;\":
+  '      &lt;</span><span class="keyword">for</span> (t &lt;- q.out) {<span class="Constant">&gt;
+  '      if (event.equals(\"&lt;</span>t.event<span class="Constant">&gt;\"))
+  '        current = \"&lt;</span>t.to<span class="Constant">&gt;\";
+  '      &lt;</span>}<span class="Constant">&gt;
+  '      break;
+  '    &lt;</span>}<span class="Constant">&gt;
+  '  }
+  '}"</span>;
+ </code></pre>
