@@ -35,6 +35,7 @@ version management systems, for interactive visualization, etc.
 From ["A DSL in 36 lines of code"](dsl-in-36-lines-of-code):
 
 A grammar in Rascal:
+
 <pre><code><span class="Keyword">module</span> Syntax
 
 <span class="Keyword">extend</span> lang::std::Layout;

@@ -68,3 +68,21 @@
 .blogPosts dd {
    margin-bottom: 10px;
 }
+
+code .Keyword {
+	color: #990000;
+	font-weight: bold;
+}
+
+code .Constant {
+	color: #dd1144;
+}
+
+code .Comment {
+	color: #999988;
+	font-style: italic;
+}
+
+code .MetaVariable {
+	color: #009090;
+}
