@@ -35,23 +35,19 @@ version management systems, for interactive visualization, etc.
 From ["A DSL in 36 lines of code"](dsl-in-36-lines-of-code):
 
 A grammar in Rascal:
-
-<pre><code>
-<span class="keyword">module</span> Syntax
+<pre><code><span class="keyword">module</span> Syntax
 
 <span class="keyword">extend</span> lang::std::Layout;
 <span class="keyword">extend</span> lang::std::Id;
 
 <span class="keyword">start</span> <span class="keyword">syntax</span> Machine = machine: State+ states;
 <span class="keyword">syntax</span> State = <span class="Comment">@Foldable</span> state: <span class="Constant">"state"</span> Id name Trans* out;
-<span class="keyword">syntax</span> Trans = trans: Id event <span class="Constant">":"</span> Id to;
-</code></pre>
+<span class="keyword">syntax</span> Trans = trans: Id event <span class="Constant">":"</span> Id to;</code></pre>
 
 
 A fact extractor and checker in Rascal, using concrete syntax:
 
-<pre><code>
-<span class="keyword">module</span> Analyze
+<pre><code><span class="keyword">module</span> Analyze
 
 <span class="keyword">import</span> Syntax;
 
@@ -60,13 +56,11 @@ A fact extractor and checker in Rascal, using concrete syntax:
                   (Trans)`<span class="MetaVariable">&lt;Id _&gt;</span>: <span class="MetaVariable">&lt;Id q2&gt;</span>` &lt;- ts }+;
   qs = [ q.name | /State q := m ];
   <span class="keyword">return</span> { q | q &lt;- qs, q <span class="keyword">notin</span> r[qs[<span class="keyword">0</span>]] };
-}
-</code></pre>
+}</code></pre>
 
 A code generator:
 
-<pre><code>
-<span class="keyword">module</span> Compile
+<pre><code><span class="keyword">module</span> Compile
 
 <span class="keyword">import</span> Syntax;
 
@@ -83,5 +77,4 @@ A code generator:
   '      break;
   '    &lt;</span>}<span class="Constant">&gt;
   '  }
-  '}"</span>;
- </code></pre>
+  '}"</span>; </code></pre>
