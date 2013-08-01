@@ -43,7 +43,7 @@ An example would be a semantic check on state machines, such as finding all unre
 
 To check for unreachable states, we first create a binary relation between states using a comprehension. 
 This comprehension uses *concrete syntax* matching to find a state's transitions. 
-The pattern between backticks (`\``) is written in the language of the object language, which in this case is the statemachine language defined in the grammar above. 
+The pattern between backticks (`````) is written in the language of the object language, which in this case is the statemachine language defined in the grammar above. 
 The variables in between `<` and `>` are bound for each state that is found in the machine `m`. 
 The post-fix `+` then computes the transitive closure of the relation. 
 
