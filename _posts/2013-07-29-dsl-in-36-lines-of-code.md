@@ -8,7 +8,7 @@ layout: post
 
 
 One of the goals of Rascal is to allow the definition of [Domain-Specific Languages](https://en.wikipedia.org/wiki/Domain-specific_language). 
-In this small post we give a flavor of how you can use Rascal to define the syntax of a DSL, a simple semantic check and a compiler to Java code.
+In this small post we give a flavor of how you can use Rascal to define the syntax of a DSL, a simple semantic check and how to compile the DSL to Java.
 
 The following example shows how to define a simple DSL for state machines. It includes a parser, a check for unreachable states and a compiler to Java code. 
 
@@ -43,7 +43,7 @@ An example would be a semantic check on state machines, such as finding all unre
 
 To check for unreachable states, we first create a binary relation between states using a comprehension. 
 This comprehension uses *concrete syntax* matching to find a state's transitions. 
-The pattern between backticks (`````) is written in the language of the object language, which in this case is the statemachine language defined in the grammar above. 
+The pattern between backticks is written in the language of the object language, which in this case is the statemachine language defined in the grammar above (Note the embedded syntax highlighting!). 
 The variables in between `<` and `>` are bound for each state that is found in the machine `m`. 
 The post-fix `+` then computes the transitive closure of the relation. 
 
