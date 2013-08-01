@@ -24,7 +24,7 @@ Shown below is the syntax definition of a simple state machine language, inspire
 <span class="Keyword">syntax</span> State = <span class="Comment">@Foldable</span> state: <span class="Constant">"state"</span> Id name Trans* out;
 <span class="Keyword">syntax</span> Trans = trans: Id event <span class="Constant">":"</span> Id to;</code></pre>
 
-A state machine consists of a number of named state declarations, where each state contains transitions to other states (identified by name). 
+A state machine consists of a number of named state declarations, where each state contains transitions to other states (identified by name) when a certain event happens. 
 The grammar reuses identifier syntax and whitespace convention from the standard library.
 Each non-terminal defines a *type*. Parse trees are typed values like any other value in Rascal.
 As a result, you can write functions that process such trees. 
@@ -43,8 +43,9 @@ An example would be a semantic check on state machines, such as finding all unre
 
 To check for unreachable states, we first create a binary relation between states using a comprehension. 
 This comprehension uses *concrete syntax* matching to find a state's transitions. 
-The pattern between backticks is written in the language of the object language, which in this case is the statemachine language defined in the grammar above (Note the embedded syntax highlighting!). 
-The variables in between `<` and `>` are bound for each state that is found in the machine `m`. 
+The pattern between backticks is written in the object language, which in this case is the statemachine language defined in the grammar above (Note the embedded syntax highlighting!). 
+The variables `q1` and `ts` in between `<` and `>` are bound for each state that is found in the machine `m`. 
+A similar pattern is used to find the target state `q2` is found in each transition in `ts`.
 The post-fix `+` then computes the transitive closure of the relation. 
 
 The relation `r` is based on the transitions in a state machine. 
