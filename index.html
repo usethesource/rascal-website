@@ -88,8 +88,34 @@ version management systems, for interactive visualization, etc.
   '  }
   '}"</span>; </code></pre>
     </div>
+
+
+
     <div class="tab-pane" id="Metrics">
-      <p>Show cyclomatic complexity in a few lines of Rascal.</p>
+      <p>Calculating the maximum Cyclomatic complexity in a file.</p>
+<pre class="rascal"><code><span class="Keyword">module</span> CalculateCC
+
+<span class="Keyword">import</span> List;
+<span class="Keyword">import</span> lang::java::\syntax::Java15;
+
+<span class="Keyword">int</span> maxCC(CompilationUnit file) = max([ calculateCC(m) | /MethodDec m := file]);
+
+<span class="Keyword">int</span> calculateCC(MethodDec m) {
+   cc = 1;
+   <span class="Keyword">visit</span> (m) {
+      <span class="Keyword">case</span> (Stm)`<span class="Keyword">do</span> <span class="MetaVariable">&lt;Stm _&gt;</span> <span class="Keyword">while</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>);`: cc += 1;
+      <span class="Keyword">case</span> (Stm)`<span class="Keyword">while</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: cc += 1;
+      <span class="Keyword">case</span> (Stm)`<span class="Keyword">if</span> ( <span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: cc +=1;
+      <span class="Keyword">case</span> (Stm)`<span class="Keyword">if</span> ( <span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span> <span class="Keyword">else</span> <span class="MetaVariable">&lt;Stm _&gt;</span>`: cc +=1;
+      <span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> ( <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}* _&gt;</span>; ; <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}*_&gt;</span> ) <span class="MetaVariable">&lt;Stm _&gt;</span>` : cc += 1;
+      <span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> ( <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}* _&gt;</span>; <span class="MetaVariable">&lt;Expr _&gt;</span>; <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}*_&gt;</span> ) <span class="MetaVariable">&lt;Stm _&gt;</span>` : cc += 1;
+      <span class="Keyword">case</span> (Stm)`<span class="MetaSkipped">for ( </span><span class="MetaVariable">&lt;LocalVarDec _&gt;</span><span class="MetaSkipped"> ; ; </span><span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}* _&gt;</span><span class="MetaSkipped"> ) </span><span class="MetaVariable">&lt;Stm _&gt;</span><span class="MetaSkipped"> </span>`: cc += 1;
+      <span class="Keyword">case</span> (Stm)`<span class="MetaSkipped">for ( </span><span class="MetaVariable">&lt;LocalVarDec _&gt;</span><span class="MetaSkipped"> ; </span><span class="MetaVariable">&lt;Expr _&gt;</span><span class="MetaSkipped"> ; </span><span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}* _&gt;</span><span class="MetaSkipped"> ) </span><span class="MetaVariable">&lt;Stm _&gt;</span><span class="MetaSkipped"> </span>`: cc += 1;
+      <span class="Keyword">case</span> (Stm)`<span class="Keyword">switch</span> ( <span class="MetaVariable">&lt;Expr _&gt;</span> ) <span class="MetaVariable">&lt;SwitchBlock _&gt;</span>`: cc += 1;
+      <span class="Keyword">case</span> (SwitchLabel)`<span class="Keyword">case</span> <span class="MetaVariable">&lt;Expr _&gt;</span> :` : cc += 1;
+   }
+   <span class="Keyword">return</span> cc;
+}</code></pre>
     </div>
     <div class="tab-pane" id="Transformations">
       <p>Show a nice transformation in a few lines of Rascal.</p>
