@@ -119,8 +119,10 @@ version management systems, for interactive visualization, etc.
   <span class="Keyword">return</span> result;
 }</code></pre>
 
-   <p>Then we iterate over all the files in a directory and it's sub directories
-   and select the top 10 most complex methods</p>
+      <p>
+         Then we iterate over all the files in a directory and it's sub directories
+         and select the top 10 most complex methods
+      </p>
 
 <pre class="rascal"><code><span class="Keyword">module</span> FindComplexFiles
 
@@ -145,8 +147,11 @@ version management systems, for interactive visualization, etc.
 <span class="Keyword">lrel</span>[<span class="Keyword">int</span> cc, <span class="Keyword">loc</span> method] maxCC(<span class="Keyword">loc</span> file) 
   = [&lt;cyclomaticComplexity(m), m@\loc&gt; | m &lt;- allMethods(file)];</code></pre>
 
-   <p>Running <code>findComplex</code> on the JHotdraw project returns the
-   following top 10 complex methods</p>
+      <p>
+         Running <code>findComplex</code> on the JHotdraw project returns the
+         following top 10 complex methods
+      </p>
+
 <pre><code>
 rascal>findComplexFiles(|project://jhotdraw751/|)
 lrel[int cc,loc method]: [
@@ -162,15 +167,17 @@ lrel[int cc,loc method]: [
   &lt;<span style="important">24</span>,|project://jhotdraw751/JHotDraw%207.5.1/Source/jhotdraw7/src/main/java/org/jhotdraw/draw/liner/CurvedLiner.java|(1413,5993,&lt;53,4&gt;,&lt;191,5&gt;)&gt;
 ]
 </code></pre>
-   <p><code>|..|</code> are source locations, which is a native concept in
-   Rascal.
-   Source locations represent an unique identifier for files (URI), and a
-   specific region in that file.
-   </p>
+      <p>
+         <code>|...|</code> are source locations, which is a native concept in
+         Rascal.
+         Source locations represent an unique identifier for files (URI), and a
+         specific region in that file.
+      </p>
 
-   <p>Inside the Rascal IDE you can click on any of these source locations, and
-   an editor will open and show the file and the relevant range
-   </p>
+      <p>
+         Inside the Rascal IDE you can click on any of these source locations, and
+         an editor will open and show the file and the relevant range
+      </p>
 
     </div>
     <div class="tab-pane" id="Transformations">
