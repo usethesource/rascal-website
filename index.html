@@ -203,8 +203,11 @@ CompilationUnit idiomatic(CompilationUnit unit) = <span class="Keyword">innermos
    <span class="Keyword">case</span> (Stm) `<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr cond&gt;</span>) { <span class="Keyword">return</span> <span class="Keyword">true</span>; } <span class="Keyword">else</span> { <span class="Keyword">return</span> <span class="Keyword">false</span>; }` =&gt;
         (Stm) `<span class="Keyword">return</span> <span class="MetaVariable">&lt;Expr cond&gt;</span>;`
 };
+</code></pre>
 
-<span class="Keyword">test</span> <span class="Keyword">bool</span> example() {
+<p>The following code is a small test program written to demonstrate the effect of the idiomatic function. Test functions are integrated in Rascal and will generate random input for parameters and integrate with the IDE to produce test reports.</p>
+
+<pre><code><span class="Keyword">test</span> <span class="Keyword">bool</span> example() {
   code = (CompilationUnit) `<span class="Keyword">class</span> MyClass { <span class="Keyword">int</span> m() { <span class="Keyword">if</span> (!x) println("x"); <span class="Keyword">else</span> println("y");  <span class="Keyword">if</span> (x) <span class="Keyword">return</span> <span class="Keyword">true</span>; <span class="Keyword">else</span> <span class="Keyword">return</span> <span class="Keyword">false</span>; } }`;
   <span class="Keyword">return</span> idiomatic(code)
          ==  
