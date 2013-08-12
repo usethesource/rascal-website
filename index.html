@@ -93,8 +93,11 @@ version management systems, for interactive visualization, etc.
 
     <div class="tab-pane" id="Metrics">
       <h3>Finding the most complex method in a set of Java files</h3>
-      <p>First we create a module to calculate the Cyclomatic Complexity as a
-      measure for how complex a method is</p>
+      <p>
+         We use Cyclomatic Complexity to measure the complexity of a method.
+         The first module implements a Cyclomatic Complexity calculation using
+         Concrete Syntax pattern matching. 
+      </p>
 <pre class="rascal"><code><span class="Keyword">module</span> CalculateCC
 
 <span class="Keyword">import</span> lang::java::\syntax::Java15;
@@ -119,26 +122,28 @@ version management systems, for interactive visualization, etc.
    <p>Then we iterate over all the files in a directory and it's sub directories
    and select the top 10 most complex methods</p>
 
-<pre class="rascal"><code><span class="Keyword">module</span> CalculateCC
+<pre class="rascal"><code><span class="Keyword">module</span> FindComplexFiles
 
+<span class="Keyword">import</span> List;
+<span class="Keyword">import</span> Exception;
+<span class="Keyword">import</span> ParseTree;
+<span class="Keyword">import</span> util::FileSystem;
+<span class="Keyword">import</span> lang::java::\syntax::Disambiguate;
 <span class="Keyword">import</span> lang::java::\syntax::Java15;
 
-<span class="Keyword">int</span> cyclomaticComplexity(MethodDec m) {
-  result = 1;
-  <span class="Keyword">visit</span> (m) {
-    <span class="Keyword">case</span> (Stm)`<span class="Keyword">do</span> <span class="MetaVariable">&lt;Stm _&gt;</span> <span class="Keyword">while</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>);`: result += 1;
-    <span class="Keyword">case</span> (Stm)`<span class="Keyword">while</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: result += 1;
-    <span class="Keyword">case</span> (Stm)`<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: result +=1;
-    <span class="Keyword">case</span> (Stm)`<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span> <span class="Keyword">else</span> <span class="MetaVariable">&lt;Stm _&gt;</span>`: result +=1;
-    <span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> (<span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}* _&gt;</span>; <span class="MetaVariable">&lt;Expr? _&gt;</span>; <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}*_&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>` : result += 1;
-    <span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> (<span class="MetaVariable">&lt;LocalVarDec _&gt;</span> ; <span class="MetaVariable">&lt;Expr? e&gt;</span> ; <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}* _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: result += 1;
-    <span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> (<span class="MetaVariable">&lt;FormalParam _&gt;</span> : <span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>` : result += 1;
-    <span class="Keyword">case</span> (Stm)`<span class="Keyword">switch</span> (<span class="MetaVariable">&lt;Expr _&gt;</span> ) <span class="MetaVariable">&lt;SwitchBlock _&gt;</span>`: result += 1;
-    <span class="Keyword">case</span> (SwitchLabel)`<span class="Keyword">case</span> <span class="MetaVariable">&lt;Expr _&gt;</span> :` : result += 1;
-    <span class="Keyword">case</span> (CatchClause)`<span class="Keyword">catch</span> (<span class="MetaVariable">&lt;FormalParam _&gt;</span>) <span class="MetaVariable">&lt;Block _&gt;</span>` : result += 1;
-  }
-  <span class="Keyword">return</span> result;
-}</code></pre>
+<span class="Keyword">import</span> CalculateCC;
+
+<span class="Keyword">lrel</span>[<span class="Keyword">int</span> cc, <span class="Keyword">loc</span> method] findComplexFiles(<span class="Keyword">loc</span> project, <span class="Keyword">int</span> limit = 10) {
+  result = [*maxCC(f) | /file(f) &lt;- crawl(project), f.extension == <span class="Constant">"java"</span>];	
+  result = sort(result, <span class="Keyword">bool</span> (&lt;<span class="Keyword">int</span> a, <span class="Keyword">loc</span> _&gt;, &lt;<span class="Keyword">int</span> b, <span class="Keyword">loc</span> _&gt;) { <span class="Keyword">return</span> a &lt; b; });
+  <span class="Keyword">return</span> head(reverse(result), limit);
+}
+
+<span class="Keyword">set</span>[MethodDec] allMethods(<span class="Keyword">loc</span> file) 
+  = {m | /MethodDec m := parse(#<span class="Keyword">start</span>[CompilationUnit], file)};
+
+<span class="Keyword">lrel</span>[<span class="Keyword">int</span> cc, <span class="Keyword">loc</span> method] maxCC(<span class="Keyword">loc</span> file) 
+  = [&lt;cyclomaticComplexity(m), m@\loc&gt; | m &lt;- allMethods(file)];</code></pre>
 
    <p>Running <code>findComplex</code> on the JHotdraw project returns the
    following top 10 complex methods</p>
