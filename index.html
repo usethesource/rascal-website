@@ -182,7 +182,7 @@ lrel[int cc,loc method]: [
     </div>
     <div class="tab-pane" id="Transformations">
       <p>This is a very basic source-to-source Java transformation which changes the style of the code without changing its semantics. The code uses concrete syntax to make sure no syntax errors are introduced and to make sure the rules always match something that really exists in Java.</p>
-      <pre><code><span class="Keyword">module</span> Idiomatic
+      <pre class="rascal"><code><span class="Keyword">module</span> Idiomatic
 
 <span class="Keyword">import</span> lang::java::\syntax::Java15;
 <span class="Keyword">import</span> IO;
@@ -207,7 +207,7 @@ CompilationUnit idiomatic(CompilationUnit unit) = <span class="Keyword">innermos
 
 <p>The following code is a small test program written to demonstrate the effect of the idiomatic function. Test functions are integrated in Rascal and will generate random input for parameters and integrate with the IDE to produce test reports.</p>
 
-<pre><code><span class="Keyword">test</span> <span class="Keyword">bool</span> example() {
+<pre class="rascal"><code><span class="Keyword">test</span> <span class="Keyword">bool</span> example() {
   code = (CompilationUnit) `<span class="Keyword">class</span> MyClass { <span class="Keyword">int</span> m() { <span class="Keyword">if</span> (!x) println("x"); <span class="Keyword">else</span> println("y");  <span class="Keyword">if</span> (x) <span class="Keyword">return</span> <span class="Keyword">true</span>; <span class="Keyword">else</span> <span class="Keyword">return</span> <span class="Keyword">false</span>; } }`;
   <span class="Keyword">return</span> idiomatic(code)
          ==  
