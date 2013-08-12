@@ -162,3 +162,8 @@ pre.rascal {
 }
 
 
+.pre-scrollable-x {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
