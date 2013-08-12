@@ -181,7 +181,35 @@ lrel[int cc,loc method]: [
 
     </div>
     <div class="tab-pane" id="Transformations">
-      <p>Show a nice transformation in a few lines of Rascal.</p>
+      <p>This is a very basic source-to-source Java transformation which changes the style of the code without changing its semantics. The code uses concrete syntax to make sure no syntax errors are introduced and to make sure the rules always match something that really exists in Java.</p>
+      <pre><code><span class="Keyword">module</span> Idiomatic
+
+<span class="Keyword">import</span> lang::java::\syntax::Java15;
+<span class="Keyword">import</span> IO;
+<span class="Keyword">import</span> ParseTree;
+
+CompilationUnit idiomatic(CompilationUnit unit) = <span class="Keyword">innermost</span> <span class="Keyword">visit</span>(unit) {
+   <span class="Keyword">case</span> (Stm) `<span class="Keyword">if</span> (!<span class="MetaVariable">&lt;Expr cond&gt;</span>) <span class="MetaVariable">&lt;Stm a&gt;</span> <span class="Keyword">else</span> <span class="MetaVariable">&lt;Stm b&gt;</span>` =&gt; 
+        (Stm) `<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr cond&gt;</span>)  <span class="MetaVariable">&lt;Stm b&gt;</span> <span class="Keyword">else</span> <span class="MetaVariable">&lt;Stm a&gt;</span>`
+        
+   <span class="Keyword">case</span> (Stm) `<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr cond&gt;</span>) <span class="MetaVariable">&lt;Stm a&gt;</span>` =&gt; 
+        (Stm) `<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr cond&gt;</span>) { <span class="MetaVariable">&lt;Stm a&gt;</span> }` 
+     <span class="Keyword">when</span> (Stm) `<span class="MetaVariable">&lt;Block _&gt;</span>` !:= a
+        
+   <span class="Keyword">case</span> (Stm) `<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr cond&gt;</span>) <span class="MetaVariable">&lt;Stm a&gt;</span> <span class="Keyword">else</span> <span class="MetaVariable">&lt;Stm b&gt;</span>` =&gt; 
+        (Stm) `<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr cond&gt;</span>) { <span class="MetaVariable">&lt;Stm a&gt;</span> } <span class="Keyword">else</span> { <span class="MetaVariable">&lt;Stm b&gt;</span> }` 
+     <span class="Keyword">when</span> (Stm) `<span class="MetaVariable">&lt;Block _&gt;</span>` !:= a
+                 
+   <span class="Keyword">case</span> (Stm) `<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr cond&gt;</span>) { <span class="Keyword">return</span> <span class="Keyword">true</span>; } <span class="Keyword">else</span> { <span class="Keyword">return</span> <span class="Keyword">false</span>; }` =&gt;
+        (Stm) `<span class="Keyword">return</span> <span class="MetaVariable">&lt;Expr cond&gt;</span>;`
+};
+
+<span class="Keyword">test</span> <span class="Keyword">bool</span> example() {
+  code = (CompilationUnit) `<span class="Keyword">class</span> MyClass { <span class="Keyword">int</span> m() { <span class="Keyword">if</span> (!x) println("x"); <span class="Keyword">else</span> println("y");  <span class="Keyword">if</span> (x) <span class="Keyword">return</span> <span class="Keyword">true</span>; <span class="Keyword">else</span> <span class="Keyword">return</span> <span class="Keyword">false</span>; } }`;
+  <span class="Keyword">return</span> idiomatic(code)
+         ==  
+         (CompilationUnit) `<span class="Keyword">class</span> MyClass    { <span class="Keyword">int</span> m() { <span class="Keyword">if</span> (x) { println("y"); } <span class="Keyword">else</span> { println("x"); }  <span class="Keyword">return</span> x; } }` ;
+}</code></pre>
     </div>
   </div>
 </div>
