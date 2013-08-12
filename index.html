@@ -221,6 +221,54 @@ CompilationUnit idiomatic(CompilationUnit unit) = <span class="Keyword">innermos
 <script src="assets/js/jquery-1.10.2.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+$.fn.tabHistory = function(defaultTab, selectorPrefix){
+    // Handle tabs, page reloads & browser forward/back history.
+    var History = window.History;
+    if(!selectorPrefix) selectorPrefix = '.navbar li > ';
+ 
+    if (!History.enabled) {
+        return false;
+    }
+ 
+    $(window).bind('load statechange', function (event) {
+        var State = History.getState();
+        var hash  = History.getHash();
+ 
+        // Our default tab.
+        if (!State.data || !State.data.tab) {
+            if (hash) {
+                State.data.tab = hash;
+                window.location.hash = '';
+            } else {
+                State.data.tab = defaultTab;
+            }
+        }
+ 
+        $(selectorPrefix+'a[href="#' + State.data.tab + '"]').tab('show');
+        if(event.type == 'load')
+            History.replaceState({tab: State.data.tab}, null, State.url);
+    });
+ 
+    $('a[data-toggle="tab"]').on('shown', function (event) {
+ 
+        // Set the selected tab to be the current state. But don't update the URL.
+        var url = event.target.href.split("#")[0];
+        var tab = event.target.href.split("#")[1];
+ 
+        var State = History.getState();
+ 
+        // Don't set the state if we haven't changed tabs.
+        if (State.data.tab != tab) {
+            History.pushState({'tab': tab}, null, url);
+        }
+    });
+};
+
+$(document).ready(function() {
+    //init tab history with default tab 'table'
+    $(window).tabHistory('DSLs');
+});
+
    $('#Snippets a').click(function (e) {
      e.preventDefault();
      $(this).tab('show');
