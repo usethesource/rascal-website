@@ -148,18 +148,18 @@ version management systems, for interactive visualization, etc.
    <p>Running <code>findComplex</code> on the JHotdraw project returns the
    following top 10 complex methods</p>
 <pre><code>
-rascal> findComplexFiles(|project://jhotdraw751/|)
-lrel[loc method,int cc]: [
-  &lt;|project://jhotdraw751/src/../StreamPosTokenizer.java|(17762,15910,&lt;499,4&gt;,&lt;946,5&gt;),<bold>83&</bold>&gt;,
-  &lt;|project://jhotdraw751/src/../BezierPath.java|(14900,4669,&lt;486,4&gt;,&lt;634,5&gt;),<bold>42&</bold>&gt;,
-  &lt;|project://jhotdraw751/src/../SlantedLiner.java|(1396,6337,&lt;53,4&gt;,&lt;208,5&gt;),<bold>42&</bold>&gt;,
-  &lt;|project://jhotdraw751/src/../DefaultDrawingViewTransferHandler.java|(2659,12674,&lt;75,4&gt;,&lt;297,5&gt;),<bold>31&</bold>&gt;,
-  &lt;|project://jhotdraw751/src/../ElbowLiner.java|(1422,5658,&lt;52,4&gt;,&lt;186,5&gt;),<bold>30&</bold>&gt;,
-  &lt;|project://jhotdraw751/src/../HSLPhysiologicColorSpace.java|(1234,3094,&lt;41,4&gt;,&lt;149,5&gt;),<bold>28&</bold>&gt;,
-  &lt;|project://jhotdraw751/src/../JavaPrimitivesDOMFactory.java|(6035,3378,&lt;175,4&gt;,&lt;263,5&gt;),<bold>28&</bold>&gt;,
-  &lt;|project://jhotdraw751/src/../JavaPrimitivesDOMFactory.java|(9424,2954,&lt;266,4&gt;,&lt;335,5&gt;),<bold>25&</bold>&gt;,
-  &lt;|project://jhotdraw751/src/../StdXMLParser.java|(11928,7203,&lt;460,3&gt;,&lt;657,4&gt;),<bold>25&</bold>&gt;,
-  &lt;|project://jhotdraw751/src/../jhotdraw/draw/liner/CurvedLiner.java|(1413,5993,&lt;53,4&gt;,&lt;191,5&gt;),<bold>24</bold>&gt;
+rascal>findComplexFiles(|project://jhotdraw751/|)
+lrel[int cc,loc method]: [
+  &lt;<span style="important">83</span>,|project://jhotdraw751/JHotDraw%207.5.1/Source/jhotdraw7/src/main/java/org/jhotdraw/io/StreamPosTokenizer.java|(17762,15910,&lt;499,4&gt;,&lt;946,5&gt;)&gt;,
+  &lt;<span style="important">42</span>,|project://jhotdraw751/JHotDraw%207.5.1/Source/jhotdraw7/src/main/java/org/jhotdraw/draw/liner/SlantedLiner.java|(1396,6337,&lt;53,4&gt;,&lt;208,5&gt;)&gt;,
+  &lt;<span style="important">42</span>,|project://jhotdraw751/JHotDraw%207.5.1/Source/jhotdraw7/src/main/java/org/jhotdraw/geom/BezierPath.java|(14900,4669,&lt;486,4&gt;,&lt;634,5&gt;)&gt;,
+  &lt;<span style="important">31</span>,|project://jhotdraw751/JHotDraw%207.5.1/Source/jhotdraw7/src/main/java/org/jhotdraw/draw/DefaultDrawingViewTransferHandler.java|(2659,12674,&lt;75,4&gt;,&lt;297,5&gt;)&gt;,
+  &lt;<span style="important">30</span>,|project://jhotdraw751/JHotDraw%207.5.1/Source/jhotdraw7/src/main/java/org/jhotdraw/draw/liner/ElbowLiner.java|(1422,5658,&lt;52,4&gt;,&lt;186,5&gt;)&gt;,
+  &lt;<span style="important">28</span>,|project://jhotdraw751/JHotDraw%207.5.1/Source/jhotdraw7/src/main/java/org/jhotdraw/color/HSLPhysiologicColorSpace.java|(1234,3094,&lt;41,4&gt;,&lt;149,5&gt;)&gt;,
+  &lt;<span style="important">28</span>,|project://jhotdraw751/JHotDraw%207.5.1/Source/jhotdraw7/src/main/java/org/jhotdraw/xml/JavaPrimitivesDOMFactory.java|(6035,3378,&lt;175,4&gt;,&lt;263,5&gt;)&gt;,
+  &lt;<span style="important">25</span>,|project://jhotdraw751/JHotDraw%207.5.1/Source/jhotdraw7/src/main/java/net/n3/nanoxml/StdXMLParser.java|(11928,7203,&lt;460,3&gt;,&lt;657,4&gt;)&gt;,
+  &lt;<span style="important">25</span>,|project://jhotdraw751/JHotDraw%207.5.1/Source/jhotdraw7/src/main/java/org/jhotdraw/xml/JavaPrimitivesDOMFactory.java|(9424,2954,&lt;266,4&gt;,&lt;335,5&gt;)&gt;,
+  &lt;<span style="important">24</span>,|project://jhotdraw751/JHotDraw%207.5.1/Source/jhotdraw7/src/main/java/org/jhotdraw/draw/liner/CurvedLiner.java|(1413,5993,&lt;53,4&gt;,&lt;191,5&gt;)&gt;
 ]
 </code></pre>
    <p><code>|..|</code> are source locations, which is a native concept in
