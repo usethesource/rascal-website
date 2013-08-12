@@ -267,7 +267,8 @@ $.fn.tabHistory = function(defaultTab, selectorPrefix){
 
 $(document).ready(function() {
     //init tab history with default tab 'table'
-    $(window).tabHistory('DSLs');
+    $(window).tabHistory('DSLs', '#Snippets ');
+    console.log('?');
 });
 
    $('#Snippets a').click(function (e) {
