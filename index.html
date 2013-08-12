@@ -92,31 +92,81 @@ version management systems, for interactive visualization, etc.
 
 
     <div class="tab-pane" id="Metrics">
-      <p>Calculating the maximum Cyclomatic complexity in a file.</p>
+      <h3>Finding the most complex method in a set of Java files</h3>
+      <p>First we create a module to calculate the Cyclomatic Complexity as a
+      measure for how complex a method is</p>
 <pre class="rascal"><code><span class="Keyword">module</span> CalculateCC
 
-<span class="Keyword">import</span> List;
 <span class="Keyword">import</span> lang::java::\syntax::Java15;
-<span class="Keyword">import</span> IO;
 
-<span class="Keyword">int</span> maxCC(CompilationUnit file) = max([ calculateCC(m) | /MethodDec m := file]);
-
-<span class="Keyword">int</span> calculateCC(MethodDec m) {
-	cc = 1;
-	<span class="Keyword">visit</span> (m) {
-		<span class="Keyword">case</span> (Stm)`<span class="Keyword">do</span> <span class="MetaVariable">&lt;Stm _&gt;</span> <span class="Keyword">while</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>);`: cc += 1;
-		<span class="Keyword">case</span> (Stm)`<span class="Keyword">while</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: cc += 1;
-		<span class="Keyword">case</span> (Stm)`<span class="Keyword">if</span> ( <span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: cc +=1;
-		<span class="Keyword">case</span> (Stm)`<span class="Keyword">if</span> ( <span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span> <span class="Keyword">else</span> <span class="MetaVariable">&lt;Stm _&gt;</span>`: cc +=1;
-		<span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> ( <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}* _&gt;</span>; <span class="MetaVariable">&lt;Expr? _&gt;</span>; <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}*_&gt;</span> ) <span class="MetaVariable">&lt;Stm _&gt;</span>` : cc += 1;
-		<span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> ( <span class="MetaVariable">&lt;LocalVarDec _&gt;</span> ; <span class="MetaVariable">&lt;Expr? e&gt;</span> ; <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}* _&gt;</span> ) <span class="MetaVariable">&lt;Stm _&gt;</span>`: cc += 1;
-		<span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> ( <span class="MetaVariable">&lt;FormalParam _&gt;</span> : <span class="MetaVariable">&lt;Expr _&gt;</span> ) <span class="MetaVariable">&lt;Stm _&gt;</span>` : cc += 1;
-		<span class="Keyword">case</span> (Stm)`<span class="Keyword">switch</span> ( <span class="MetaVariable">&lt;Expr _&gt;</span> ) <span class="MetaVariable">&lt;SwitchBlock _&gt;</span>`: cc += 1;
-		<span class="Keyword">case</span> (SwitchLabel)`<span class="Keyword">case</span> <span class="MetaVariable">&lt;Expr _&gt;</span> :` : cc += 1;
-		<span class="Keyword">case</span> (CatchClause)`<span class="Keyword">catch</span> ( <span class="MetaVariable">&lt;FormalParam _&gt;</span> ) <span class="MetaVariable">&lt;Block _&gt;</span>` : cc += 1;
-	}
-	<span class="Keyword">return</span> cc;
+<span class="Keyword">int</span> cyclomaticComplexity(MethodDec m) {
+  result = 1;
+  <span class="Keyword">visit</span> (m) {
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">do</span> <span class="MetaVariable">&lt;Stm _&gt;</span> <span class="Keyword">while</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>);`: result += 1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">while</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: result += 1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: result +=1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span> <span class="Keyword">else</span> <span class="MetaVariable">&lt;Stm _&gt;</span>`: result +=1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> (<span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}* _&gt;</span>; <span class="MetaVariable">&lt;Expr? _&gt;</span>; <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}*_&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>` : result += 1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> (<span class="MetaVariable">&lt;LocalVarDec _&gt;</span> ; <span class="MetaVariable">&lt;Expr? e&gt;</span> ; <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}* _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: result += 1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> (<span class="MetaVariable">&lt;FormalParam _&gt;</span> : <span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>` : result += 1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">switch</span> (<span class="MetaVariable">&lt;Expr _&gt;</span> ) <span class="MetaVariable">&lt;SwitchBlock _&gt;</span>`: result += 1;
+    <span class="Keyword">case</span> (SwitchLabel)`<span class="Keyword">case</span> <span class="MetaVariable">&lt;Expr _&gt;</span> :` : result += 1;
+    <span class="Keyword">case</span> (CatchClause)`<span class="Keyword">catch</span> (<span class="MetaVariable">&lt;FormalParam _&gt;</span>) <span class="MetaVariable">&lt;Block _&gt;</span>` : result += 1;
+  }
+  <span class="Keyword">return</span> result;
 }</code></pre>
+
+   <p>Then we iterate over all the files in a directory and it's sub directories
+   and select the top 10 most complex methods</p>
+
+<pre class="rascal"><code><span class="Keyword">module</span> CalculateCC
+
+<span class="Keyword">import</span> lang::java::\syntax::Java15;
+
+<span class="Keyword">int</span> cyclomaticComplexity(MethodDec m) {
+  result = 1;
+  <span class="Keyword">visit</span> (m) {
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">do</span> <span class="MetaVariable">&lt;Stm _&gt;</span> <span class="Keyword">while</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>);`: result += 1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">while</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: result += 1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: result +=1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">if</span> (<span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span> <span class="Keyword">else</span> <span class="MetaVariable">&lt;Stm _&gt;</span>`: result +=1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> (<span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}* _&gt;</span>; <span class="MetaVariable">&lt;Expr? _&gt;</span>; <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}*_&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>` : result += 1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> (<span class="MetaVariable">&lt;LocalVarDec _&gt;</span> ; <span class="MetaVariable">&lt;Expr? e&gt;</span> ; <span class="MetaVariable">&lt;{Expr <span class="Constant">","</span>}* _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>`: result += 1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">for</span> (<span class="MetaVariable">&lt;FormalParam _&gt;</span> : <span class="MetaVariable">&lt;Expr _&gt;</span>) <span class="MetaVariable">&lt;Stm _&gt;</span>` : result += 1;
+    <span class="Keyword">case</span> (Stm)`<span class="Keyword">switch</span> (<span class="MetaVariable">&lt;Expr _&gt;</span> ) <span class="MetaVariable">&lt;SwitchBlock _&gt;</span>`: result += 1;
+    <span class="Keyword">case</span> (SwitchLabel)`<span class="Keyword">case</span> <span class="MetaVariable">&lt;Expr _&gt;</span> :` : result += 1;
+    <span class="Keyword">case</span> (CatchClause)`<span class="Keyword">catch</span> (<span class="MetaVariable">&lt;FormalParam _&gt;</span>) <span class="MetaVariable">&lt;Block _&gt;</span>` : result += 1;
+  }
+  <span class="Keyword">return</span> result;
+}</code></pre>
+
+   <p>Running <code>findComplex</code> on the JHotdraw project returns the
+   following top 10 complex methods</p>
+<pre><code>
+rascal> findComplexFiles(|project://jhotdraw751/|)
+lrel[loc method,int cc]: [
+  &lt;|project://jhotdraw751/src/../StreamPosTokenizer.java|(17762,15910,&lt;499,4&gt;,&lt;946,5&gt;),<bold>83&</bold>&gt;,
+  &lt;|project://jhotdraw751/src/../BezierPath.java|(14900,4669,&lt;486,4&gt;,&lt;634,5&gt;),<bold>42&</bold>&gt;,
+  &lt;|project://jhotdraw751/src/../SlantedLiner.java|(1396,6337,&lt;53,4&gt;,&lt;208,5&gt;),<bold>42&</bold>&gt;,
+  &lt;|project://jhotdraw751/src/../DefaultDrawingViewTransferHandler.java|(2659,12674,&lt;75,4&gt;,&lt;297,5&gt;),<bold>31&</bold>&gt;,
+  &lt;|project://jhotdraw751/src/../ElbowLiner.java|(1422,5658,&lt;52,4&gt;,&lt;186,5&gt;),<bold>30&</bold>&gt;,
+  &lt;|project://jhotdraw751/src/../HSLPhysiologicColorSpace.java|(1234,3094,&lt;41,4&gt;,&lt;149,5&gt;),<bold>28&</bold>&gt;,
+  &lt;|project://jhotdraw751/src/../JavaPrimitivesDOMFactory.java|(6035,3378,&lt;175,4&gt;,&lt;263,5&gt;),<bold>28&</bold>&gt;,
+  &lt;|project://jhotdraw751/src/../JavaPrimitivesDOMFactory.java|(9424,2954,&lt;266,4&gt;,&lt;335,5&gt;),<bold>25&</bold>&gt;,
+  &lt;|project://jhotdraw751/src/../StdXMLParser.java|(11928,7203,&lt;460,3&gt;,&lt;657,4&gt;),<bold>25&</bold>&gt;,
+  &lt;|project://jhotdraw751/src/../jhotdraw/draw/liner/CurvedLiner.java|(1413,5993,&lt;53,4&gt;,&lt;191,5&gt;),<bold>24</bold>&gt;
+]
+</code></pre>
+   <p><code>|..|</code> are source locations, which is a native concept in
+   Rascal.
+   Source locations represent an unique identifier for files (URI), and a
+   specific region in that file.
+   </p>
+
+   <p>Inside the Rascal IDE you can click on any of these source locations, and
+   an editor will open and show the file and the relevant range
+   </p>
+
     </div>
     <div class="tab-pane" id="Transformations">
       <p>Show a nice transformation in a few lines of Rascal.</p>
