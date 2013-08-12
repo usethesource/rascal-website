@@ -158,7 +158,7 @@ pre.rascal {
   font-size: 11.9px;
 }
 
-
+pre.rascal,
 .pre-scrollable-x {
   overflow: auto;
   word-wrap: normal;
