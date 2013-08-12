@@ -87,9 +87,6 @@ code.github .MetaVariable {
 	color: #009090;
 }
 
-code .important {
-	font-weight: 900;
-}
 
 code .Keyword {
 	color: #7B0052;
@@ -166,4 +163,8 @@ pre.rascal {
   overflow: auto;
   word-wrap: normal;
   white-space: pre;
+}
+
+pre .important {
+	font-weight: 900;
 }
