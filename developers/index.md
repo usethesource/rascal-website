@@ -22,7 +22,7 @@ for version repository systems and bug databases, or front-ends for programming
 ## Enhancements, bugs and patches
 
 We welcome feedback. Please use [GitHub issues](https://github.com/cwi-swat/rascal/issues) 
-to submit your contributions. Thanks! 
+to submit your contributions such as pull requests, bug reports and suggestions for enhancement. Thanks! 
 
 ## Source access
 
