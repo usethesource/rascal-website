@@ -165,6 +165,11 @@ pre.rascal,
   white-space: pre;
 }
 
+pre.rascal code {
+  overflow-wrap: normal;
+  white-space: pre;
+}
+
 pre .important {
 	font-weight: 900;
 }
