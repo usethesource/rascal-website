@@ -230,7 +230,7 @@ CompilationUnit idiomatic(CompilationUnit unit) = <span class="Keyword">innermos
           $('html,body').animate({scrollTop: $(target).offset().top - 40}, 'slow');
        }
        return $('a[data-toggle="tab"]').on('shown', function(e) {
-         return location.hash = prefix + $(e.target).attr('href').substr(1);
+         return location.hash.replace(prefix + $(e.target).attr('href').substr(1));
        });
    });
 
