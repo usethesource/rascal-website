@@ -16,7 +16,7 @@ This page is intended for developers contributing to the source code of the Rasc
 
 We solicit for Rascal library contributions. Examples are bindings
 for version repository systems and bug databases, or front-ends for programming
-   languages and domain specific languages. Please contact us if you are
+   languages and domain specific languages. Please [contact us](mailto:Jurgen.Vinju@cwi.nl) if you are
    interested. 
 
 ## Enhancements, bugs and patches
