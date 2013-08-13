@@ -229,14 +229,13 @@ CompilationUnit idiomatic(CompilationUnit unit) = <span class="Keyword">innermos
           $(target).tab('show');
           $('html,body').animate({scrollTop: $(target).offset().top - 40}, 'slow');
        }
-       return $('a[data-toggle="tab"]').on('shown', function(e) {
-         return location.hash.replace(prefix + $(e.target).attr('href').substr(1));
+        $('a[data-toggle="tab"]').on('shown', function(e) {
+         location.replace(prefix + $(e.target).attr('href').substr(1));
        });
    });
 
    $('#Snippets a').click(function (e) {
      e.preventDefault();
-     //window.location.hash = $(this).attr('href');
      $(this).tab('show');
    })
 </script>
