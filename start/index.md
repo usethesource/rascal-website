@@ -6,7 +6,7 @@ published: true
 
 <p class="text-center">
    <a class="btn" href="http://update.rascal-mpl.org/stable"><i class="icon-download-alt"></i> Eclipse update site</a>
-   <a class="btn" href="http://www.example.com"><i class="icon-download"></i> Commandline REPL Jar File</a>
+   <a class="btn" href="http://update.rascal-mpl.org/console/rascal-0.5.1.jar"><i class="icon-download"></i> Commandline REPL Jar File</a>
 </p>
 
 ## Disclaimer
@@ -51,7 +51,7 @@ After you have downloaded Rascal, you might be interested in the first steps to 
 ## Commandline REPL
 
 An entirely different way of using Rascal is via the standalone commandline console.
-You can download the fully contained jar file [here](http://www.example.com).
+You can download the fully contained jar file [here](http://update.rascal-mpl.org/console/rascal-0.5.1.jar).
 
 Please note that:
 
