@@ -33,4 +33,4 @@ instructions on which projects to checkout and dependencies to install.
 
 ## Continous update site
 
-The continuous update site is deployed at http://www.rascal-mpl.org/unstable-updates. Every time a contribution is pushed to github, and all tests succeed, the unstable update site is build and deployed fully automatically.
+The continuous update site is deployed at `http://update.rascal-mpl.org/unstable`. Every time a contribution is pushed to github, and all tests succeed, the unstable update site is build and deployed fully automatically.

@@ -5,7 +5,7 @@ published: true
 ---
 
 <p class="text-center">
-   <a class="btn" href="http://www.rascal-mpl.org/updates"><i class="icon-download-alt"></i> Eclipse update site</a>
+   <a class="btn" href="http://update.rascal-mpl.org/stable"><i class="icon-download-alt"></i> Eclipse update site</a>
    <a class="btn" href="http://www.example.com"><i class="icon-download"></i> Commandline REPL Jar File</a>
 </p>
 
@@ -15,7 +15,7 @@ We currently only release alpha versions of Rascal, which are subject to frequen
 
 ## Eclipse plugin
 
-The Eclipse update site for Rascal is: **[http://www.rascal-mpl.org/updates](http://www.rascal-mpl.org/updates)**
+The Eclipse update site for Rascal is: **[http://update.rascal-mpl.org/stable/](http://update.rascal-mpl.org/stable/)**
 
 You need _Eclipse for RCP and RAP Developers (Indigo)_ version of Eclipse
 available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. It has been reported recently that the latest release (0.5.2) also works with
@@ -34,7 +34,7 @@ Please note that:
 1. Start Eclipse.
 1. Select Help -> Install New Software.
 1. Make sure that the tick for "Contact all update sites during install to find required software" is enabled.
-1. Type: http://www.rascal-mpl.org/updates in the "Work with" edit box.
+1. Type: `http://update.rascal-mpl.org/stable/` in the "Work with" edit box.
 1. Select the feature *Rascal*.
 1. Select Next (several times) and accept the software license. The process may take a few minutes!
 1. Once these features have been installed, restart Eclipse.
