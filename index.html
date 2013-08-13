@@ -220,39 +220,23 @@ CompilationUnit idiomatic(CompilationUnit unit) = <span class="Keyword">innermos
 
 <script src="assets/js/jquery-1.10.2.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery.history.js"></script>
 <script type="text/javascript">
-$(function(){
-  // Function to activate the tab
-  function activateTab() {
-      var activeTab = $('[href=' + window.location.hash.replace('/', '') + ']');
-      activeTab && activeTab.tab('show');
-  }
 
-  // Trigger when the page loads
-  activateTab();
-
-  // Trigger when the hash changes (forward / back)
-  $(window).on('hashchange', function() {
-      activateTab();
-  });
-
-  // Change hash when a tab changes
-  // Handle shown event using delegation 
-  $(document).on('shown.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function () {
-      window.location.hash = $(this).attr('href').replace('#', '');
-  }); 
-});
-
-/*$(document).ready(function() {
-    //init tab history with default tab 'table'
-    $(window).tabHistory('DSLs', '#Snippets ');
-    console.log('?');
-});
-*/
+   $(document).ready(function() {
+       var prefix = "tab_"; 
+       if (location.hash !== '') {
+          var target = 'a[href="' +location.hash.replace(prefix,"")+ '"]';
+          $(target).tab('show');
+          $('html,body').animate({scrollTop: $(target).offset().top - 40}, 'slow');
+       }
+       return $('a[data-toggle="tab"]').on('shown', function(e) {
+         return location.hash = prefix + $(e.target).attr('href').substr(1);
+       });
+   });
 
    $('#Snippets a').click(function (e) {
      e.preventDefault();
+     //window.location.hash = $(this).attr('href');
      $(this).tab('show');
    })
 </script>
