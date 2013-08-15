@@ -6,7 +6,7 @@ authorlink: http://homepages.cwi.nl/~jurgenv
 title: "The Language Interaction Design of Concrete Syntax"
 ---
 
-This post dives into some of the design decisions regarding the manipulation of parse trees and abstract syntax trees in Rascal using _concrete syntax_ notation. History has shown that the design and implementation of this particular syntactic feature of meta programming languages is so hard, that every time a language designer works on it he can publish a scientific paper about it. Crazy isn't it? It's just syntax! So, here is why concrete syntax is what it is in Rascal and how it is implemented.
+This post dives into some of the design decisions regarding the manipulation of parse trees and abstract syntax trees in Rascal using _concrete syntax_ notation. 
 
 ## Definitions
 
@@ -15,14 +15,19 @@ What we call _concrete syntax_ is a notation for syntax trees that is embedded i
 ### Concrete syntax
 
 ```
-if (a && b) { println("a and b"); }
+if (a && b) { 
+  println("a and b"); 
+}
 ```
 
 ### Lisp S-expressions
 
 ```
 (if ((and (id "a") (id "b")) 
-    (block ((call (id "println") (args (strconst "a and b")))))
+    (block 
+      ((call (id "println") (args (strconst "a and b")))
+    )
+)
 ```
 
 ### XML
@@ -60,11 +65,15 @@ if:
 
 For the degenerate case of a single node with no children, of course any abstract notation wins. As soon as we have nesting, even marginally interesting code snippets, however, concrete syntax wins by landslide in terms of brevity and cognitive overload.
 
+## Meta Variables
+
+The above examples showed only literal program fragments. One distinguishing feature, however, of concrete syntax is ...
+
 ## History
 
 The concrete syntax feature appeared first, as far as I know and please correct me if I am wrong, in the early 1980's in experimental meta programming systems and  algebraic specification systems. There was a concept of _mix fix_ operator syntax where algebraic operators would not only be exclusively prefix, postfix or infix, but all at the same time. This would allow, for example, to define readable algebraic operators with arity larger than two such as `if _ then _ else _`. Some systems started to use BNF to define mix fix functions, and concrete syntax was born. In extreme cases, such as ASF+SDF any context-free grammar rule was allowed to be an operator, while in other systems more restrictions could apply. 
 
-If you are interested in what this all looked like, also in the years after that, the following is a list of names of systems that I use[d] mixfix operators or concrete syntax in some form or another:
+If you are interested in what this all looked like, also in the years after that, the following is a list of names of systems that used or use mixfix operators or concrete syntax in some form or another:
 
 * ASF+SDF
 * TXL
@@ -77,7 +86,7 @@ If you are interested in what this all looked like, also in the years after that
 * SugarJ
 * K
 
-People that I know by heart who published on the concrete syntax feature are Annika Aasa, Kent Petersson, Dan Synek, Chris Verhoef, Paul Klint, Eelco Visser, Peter Borovansky, Jan Rekers, Martin Bravenboer, Rob Vermaas, Radu Mereuta, Dorel Lucanu, and yours truly.
+People that I know by heart who published on the concrete syntax feature are Annika Aasa, Kent Petersson, Dan Synek, Chris Verhoef, Paul Klint, Eelco Visser, Peter Borovansky, Jan Rekers, Martin Bravenboer, Rob Vermaas, Radu Mereuta, Dorel Lucanu, and yours truly. There must be more.
 
 Concrete syntax should not be confused with string or file templates, such as found in PHP-like template expanders. The difference is that such templates are flat strings that are not statically checked or parsed. With concrete syntax you can not write a pattern that will never match, and you can not write a pattern that will construct a syntactically incorrect output.
 
@@ -92,20 +101,7 @@ So, concrete syntax is not new or novel in any way. It is a good idea neverthele
 ## Rascal
 
 
-## Bibliography
 
-* ASF+SDF
-* TXL
-* ELAN
-* OBJ
-* Annika Aasa's ML
-* Verhoef
-* Maude
-* StrategoXT
-* Rise
-* OOPSLA
-* Repleo
-* SugarJ
 
 
 
