@@ -30,6 +30,7 @@ Rascal is completely hosted on GitHub, [under the cwi-swat repositories](https:/
 See our [developer setup](https://github.com/cwi-swat/rascal/wiki/Rascal-Developers-Setup---Step-by-Step)
 instructions on which projects to checkout and dependencies to install.
 
-## Continuous update site
+## Continuous integration
 
-The continuous update site is deployed at `http://update.rascal-mpl.org/unstable`. Every time a contribution is pushed to GitHub, and all tests succeed, the unstable update site is build and deployed fully automatically.
+* Please find our [Jenkins](http://jenkins-ci.org) installation running at <http://build.rascal-mpl.org>.
+* The continuous update site is deployed at `http://update.rascal-mpl.org/unstable`. Every time a contribution is pushed to GitHub, and all tests succeed, the unstable update site is build and deployed fully automatically.
