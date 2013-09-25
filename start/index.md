@@ -18,8 +18,7 @@ We currently only release alpha versions of Rascal, which are subject to frequen
 The Eclipse update site for Rascal is: **[http://update.rascal-mpl.org/stable/](http://update.rascal-mpl.org/stable/)**
 
 You need _Eclipse for RCP and RAP Developers (Juno or Kepler)_ version of Eclipse
-available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. It has been reported recently that the latest release (0.5.2) also works with
-Juno and normal (non RCP/RAP) versions of Eclipse. Not thoroughly tested though!
+available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. It has been reported recently that the latest release also works with normal (non RCP/RAP) versions of Eclipse. Not thoroughly tested though!
 
 Please note that:
  
