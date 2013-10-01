@@ -1,6 +1,8 @@
-{
-   layout: default
-}
+---
+layout: default
+title: Troubleshooting Installation Problems
+published: true
+---
 ## Troubleshooting Installation Problems
 
 ### Diagnostic Tools
