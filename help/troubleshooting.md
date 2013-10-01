@@ -1,3 +1,6 @@
+{
+   layout: default
+}
 ## Troubleshooting Installation Problems
 
 ### Diagnostic Tools
