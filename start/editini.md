@@ -1,7 +1,9 @@
 ---
-layout: "default"
-title: "Configure Eclipse for rascal"
+layout: default
+title: Configure Eclipse for rascal
+published: true
 ---
+
 To configure Eclipse properly for running Rascal, you may have to edit the eclipse.ini file:
 
  - find it first
@@ -9,9 +11,6 @@ To configure Eclipse properly for running Rascal, you may have to edit the eclip
 	`/Applications/Eclipse.app/Contents/MacOS/eclipse.ini`
    - on Windows it may be in `C:\Program Files\eclipse\eclipse.ini`
    - on Linux its where you extracted the eclipse tarball.
- - then find the line that starts with `-vm` and add on the next (separate) line
-   the path to the java run-time binary, e.g. `/usr/bin/java` or `C:\Program
-   Files\Java SDK 1.7\javaw.exe`.
  - then find the line that starts with `-vm` and add on the next _separate_ line
    the path to the java run-time binary, e.g. `/usr/bin/java` or `C:\Program
    Files\Java SDK 1.7\javaw.exe`.
