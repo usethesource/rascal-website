@@ -11,7 +11,7 @@ authorlink: http://homepages.cwi.nl/~jurgenv
 title: "Rascal 0.7.x release notes"
 ---
 
-In this post we report on the Rascal release 0.7.0. We expect a number of patch releases as well, which we report on by updating this post at the end when necessary. The Rascal release includes the following main components:
+In this post we report on the Rascal release 0.7.0. We expect a number of patch releases as well, which we report on by updating this post (at its end) when necessary. The Rascal release includes the following main components:
 
 * Parser and interpreter: parsing and running Rascal programs
 * Parser generator: generating parsers for programming languages and domain specific languages
@@ -45,4 +45,8 @@ The 1.0 release is a big bang release:
 * The Rascal type checker
 * Rascal compiler to RVM
 * RVM interpreter
+
+### Patch releases
+
+* Patch 7.0.1. includes an update to the documentation on M3
 
