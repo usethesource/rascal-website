@@ -86,7 +86,7 @@ If you are interested in what this all looked like, also in the years after that
 * SugarJ
 * K
 
-People that I know by heart who published on the concrete syntax feature are Annika Aasa, Kent Petersson, Dan Synek, Chris Verhoef, Paul Klint, Eelco Visser, Peter Borovansky, Jan Rekers, Martin Bravenboer, Rob Vermaas, Radu Mereuta, Dorel Lucanu, and yours truly. There must be more.
+People that I know by heart who published on the concrete syntax feature are Annika Aasa, Kent Petersson, Dan Synek, Chris Verhoef, Paul Klint, Eelco Visser, Peter Borovansky, Jan Rekers, Martin Bravenboer, Rob Vermaas, Radu Mereuta, Dorel Lucanu, Jeroen Arnoldus, and yours truly. There must be more.
 
 Concrete syntax should not be confused with string or file templates, such as found in PHP-like template expanders. The difference is that such templates are flat strings that are not statically checked or parsed. With concrete syntax you can not write a pattern that will never match, and you can not write a pattern that will construct a syntactically incorrect output.
 
