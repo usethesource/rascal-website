@@ -39,12 +39,15 @@ The 0.8 release is planned with:
 The 0.9 release is planned with:
 
 * Keyword parameters replacing annotations completely
+* New Figure library based on javascript
 
-The 1.0 release is a big bang release:
+The 1.0 release is a big bang release which includes the following new components which have been developed over the last two years:
 
 * The Rascal type checker
 * Rascal compiler to RVM
 * RVM interpreter
+
+In 1.0 the old Rascal interpreter will still be included, but from here on its usage will be deprecated. We will be working to switch the IDE support to using the new infra-structure for a while and when this is finished the interpreter will not be released any longer. Note that this does not mean that we will not have a REPL for Rascal anymore. We will always have a REPL.
 
 ### Patch releases
 
