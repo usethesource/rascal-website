@@ -48,5 +48,5 @@ The 1.0 release is a big bang release:
 
 ### Patch releases
 
-* Patch 7.0.1. includes an update to the documentation on M3
+* Patch 0.7.1. includes an update to the documentation on M3
 
