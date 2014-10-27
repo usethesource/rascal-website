@@ -35,3 +35,15 @@ instructions on which projects to checkout and dependencies to install.
 * Please find our [Jenkins](http://jenkins-ci.org) installation running at <http://build.rascal-mpl.org>.
 * The continuous update site is deployed at `http://update.rascal-mpl.org/unstable`. Every time a contribution is pushed to GitHub, and all tests succeed, the unstable update site is build and deployed fully automatically.
 * We also publish a unstable version of the [command line REPL](http://update.rascal-mpl.org/console/rascal-shell-unstable.jar)
+
+## Updating the tutor documentation
+
+To be able to run the tutor compiler, you should have an Eclipse with Rascal installed into it, with the following configuration parameters as VM arguments:
+
+```
+-Drascal.courses.lib.rascal=/path-to-rascal-project-clone/src/org/rascalmpl/library
+-Drascal.courses.lib.rascal-eclipse=/path-to-rascal-eclipse-project-clone/src/org/rascalmpl/eclipse/library
+```
+
+You can do this by editing your `eclipse.ini` file and adding this after `-vmargs` or by adding the arguments to the run configuration of a second level Eclipse instance.
+
