@@ -30,3 +30,19 @@ Compared to 0.6.x the 0.7 release is mainly a bug fix release, with a number of 
 ### Keyword parameters
 
 ### Looking forward to the 0.8.x, 0.9.x and 1.0 releases
+
+The 0.8 release is planned with:
+
+* Re-implemented general top-down parsing algorithm with on-demand lexing
+* Fast regular expressions and better language integrated pattern matching
+
+The 0.9 release is planned with:
+
+* Keyword parameters replacing annotations completely
+
+The 1.0 release is a big bang release:
+
+* The Rascal type checker
+* Rascal compiler to RVM
+* RVM interpreter
+
