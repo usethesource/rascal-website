@@ -17,7 +17,7 @@ We currently only release alpha versions of Rascal, which are subject to frequen
 
 The Eclipse update site for Rascal is: **[http://update.rascal-mpl.org/stable/](http://update.rascal-mpl.org/stable/)**
 
-You need _Eclipse for RCP and RAP Developers (Kepler)_ version of Eclipse
+You need _Eclipse for RCP and RAP Developers (Luna)_ version of Eclipse
 available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. It has been reported recently that the latest release also works with normal (non RCP/RAP) versions of Eclipse. Not thoroughly tested though!
 
 Please note that:
@@ -51,12 +51,12 @@ After you have downloaded Rascal, you might be interested in the first steps to 
 ## Commandline REPL
 
 An entirely different way of using Rascal is via the standalone commandline console.
-You can download the fully contained jar file [here](http://update.rascal-mpl.org/console/rascal-0.6.2.jar).
+You can download the fully contained jar file [here](http://update.rascal-mpl.org/console/rascal-0.7.0.jar).
 
 Please note that:
 
-- The commandline version does not feature pre-installed Java analysis libraries
-- A Java SDK 1.7 or higher installed and available. A Java run-time environment will not be enough.
+- The commandline version contains a limited set of Java analysis libraries
+- A Java JDK 1.7 or higher installed is required. A Java run-time environment (JRE) will not be enough.
 - The command line of Rascal starts by running `java -Xmx1G -Xss32m -jar rascal-<version>.jar`.
 
 ## Further reading
