@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 
 ---
 layout: post 
@@ -9,13 +13,12 @@ title: "Rascal 0.7.x release notes"
 
 In this post we report on the Rascal release 0.7.0. We expect a number of patch releases as well, which we report on by updating this post at the end when necessary. The Rascal release includes the following main components:
 
-* Parser and interpreter
-* Parser generator
-* Eclipse plugin
-* Eclipse plugin generator for DSLs
-* Rascal commandline shell
-* Standard library
-* Programming language front-end library
+* Parser and interpreter: parsing and running Rascal programs
+* Parser generator: generating parsers for programming languages and domain specific languages
+* Eclipse plugin: an IDE for Rascal
+* Eclipse plugin generator for DSLs: an IDE generator based on Rascal programs
+* Rascal commandline shell: to run Rascal independently from Eclipse
+* Standard library: utilities for programming in Rascal, including several (stable) programming language front-ends and general analysis facilities.
 
 Compared to 0.6.x the 0.7 release is mainly a bug fix release, with a number of extensions to the libraries and one new language feature. 
 
