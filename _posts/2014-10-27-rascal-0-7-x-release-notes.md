@@ -35,6 +35,7 @@ The 0.8 release is planned with:
 
 * Re-implemented general top-down parsing algorithm with on-demand lexing
 * Fast regular expressions and better language integrated pattern matching
+* Standard library component for communicating with SMT solvers easily
 
 The 0.9 release is planned with:
 
