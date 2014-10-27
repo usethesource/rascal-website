@@ -27,3 +27,7 @@ lost amongst all the questions on StackOverflow.
 ## Reporting bugs & suggestions
 Rascal is alpha software, so we expect bugs, if you happen to come across one,
 please report [an issue in Rascal's github page](https://github.com/cwi-swat/rascal/issues). We also welcome issues in the form of suggestions for improvement.
+
+## Release notes
+
+Release notes will be published on the community [blog](/blog).
