@@ -41,9 +41,9 @@ instructions on which projects to checkout and dependencies to install.
 To be able to run the tutor compiler, you should have an Eclipse with Rascal installed into it, with the following configuration parameters as VM arguments:
 
 ```
+-Drascal.courses=/path-to-rascal-project/src/org/rascalmpl/courses
 -Drascal.courses.lib.rascal=/path-to-rascal-project-clone/src/org/rascalmpl/library
 -Drascal.courses.lib.rascal-eclipse=/path-to-rascal-eclipse-project-clone/src/org/rascalmpl/eclipse/library
 ```
 
 You can do this by editing your `eclipse.ini` file and adding this after `-vmargs` or by adding the arguments to the run configuration of a second level Eclipse instance.
-
