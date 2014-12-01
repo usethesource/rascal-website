@@ -6,7 +6,7 @@ published: true
 
 <p class="text-center">
    <a class="btn" href="http://update.rascal-mpl.org/stable"><i class="icon-download-alt"></i> Eclipse update site</a>
-   <a class="btn" href="http://update.rascal-mpl.org/console/rascal-0.6.2.jar"><i class="icon-download"></i> Commandline REPL Jar File</a>
+   <a class="btn" href="http://update.rascal-mpl.org/console/rascal-0.7.0.jar"><i class="icon-download"></i> Commandline REPL Jar File</a>
 </p>
 
 ## Disclaimer
