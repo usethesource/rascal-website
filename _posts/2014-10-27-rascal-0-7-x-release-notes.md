@@ -3,7 +3,7 @@ layout: post
 published: true
 author: Jurgen Vinju
 authorlink: http://homepages.cwi.nl/~jurgenv
-title: "Rascal 0.7.0 release notes"
+title: "Rascal 0.7.x release notes"
 ---
 
 In this post we report on the Rascal release 0.7.0. We expect a number of patch releases as well, which we report on by updating this post (at its end) when necessary. The Rascal release includes the following main components:
