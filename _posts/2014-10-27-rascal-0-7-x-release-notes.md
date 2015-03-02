@@ -1,10 +1,6 @@
 ---
-published: true
----
-
----
 layout: post 
-published: false
+published: true
 author: Jurgen Vinju
 authorlink: http://homepages.cwi.nl/~jurgenv
 title: "Rascal 0.7.0 release notes"
