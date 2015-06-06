@@ -13,7 +13,7 @@ To configure Eclipse properly for running Rascal, you may have to edit the eclip
    - on Linux its where you extracted the eclipse tarball.
  - then find the line that starts with `-vm` and add on the next _separate_ line
    the path to the java run-time binary, e.g. `/usr/bin/java` or `C:\Program
-   Files\Java SDK 1.7\bin\javaw` (note there is no `.exe`).
+   Files\Java SDK 1.8\bin\javaw` (note there is no `.exe`).
     - If you can't find the line that starts with `-vm` you should add it before
 	  the line starting with `-vmargs`
  - to have enough memory to run Rascal please
