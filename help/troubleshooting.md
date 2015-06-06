@@ -25,18 +25,18 @@ published: true
 
  - *Eclipse starts but I can't find the Rascal Perspective or any Rascal entries in the File → New menu*
 
-   This is typically because you're running on Java 6 instead of Java 7. Rascal requires the Java 7 SDK to
+   This is typically because you're running on Java 6 instead of Java 8. Rascal requires the Java 8 SDK to
    run. You can check which Java you're using by checking the ```java.version``` and ```java.vm.name``` entries
    in *Installation Details → Configuration*.
 
-   If you're running Java 6 even when Java 7 is installed, the simplest approach is just to remove all old
+   If you're running Java 6 even when Java 8 is installed, the simplest approach is just to remove all old
    installations of Java 6. You can also supply the path to the Java VM using the ```-vm``` option in your
    [eclipse.ini file](/start/editini.html).
    
  - *Eclipse starts, but I get an error message say that I need the Java JDK*
   
-   Install Java 7 JDK. If you have it installed but still get the error message, the simplest approach is
-   just to remove all your installations of Java JRE (typically called just *Java 7uXX* on Windows). Your
+   Install Java 8 JDK. If you have it installed but still get the error message, the simplest approach is
+   just to remove all your installations of Java JRE (typically called just *Java 8uXX* on Windows). Your
    JDK installation will supply all functionality of the JRE. You can also supply the path to the correct
    Java VM using the ```-vm``` option in your [eclipse.ini file](/start/editini.html).
 
@@ -48,7 +48,7 @@ published: true
   
  - *Rascal used to work, but I updated it and now it doesn't*
   
-   Some requirements have changed in the stable release; you now need Java 7, and Eclipse Juno or Kepler.
+   Some requirements have changed in the stable release; you now need Java 8, and Eclipse Luna.
    Eclipse Indigo no longer works.
 
  - *I use git, and it keeps hanging or using 100% CPU*

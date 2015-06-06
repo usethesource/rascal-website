@@ -22,7 +22,7 @@ available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to 
 
 Please note that:
  
- - Rascal now needs a JDK because it uses the Java compiler, so please download a JDK, not just a JRE.
+ - Rascal now needs a JDK because it uses the Java compiler, so please download a JDK8, not just a JRE.
  - You may have to [edit the Eclipse init file](/start/editini.html) so
    that Eclipse can find your Java installation and Eclipse can allocate enough
    resources.
@@ -56,7 +56,7 @@ You can download the fully contained jar file [here](http://update.rascal-mpl.or
 Please note that:
 
 - The commandline version contains a limited set of Java analysis libraries
-- A Java JDK 1.7 or higher installed is required. A Java run-time environment (JRE) will not be enough.
+- A Java JDK 1.8 or higher installed is required. A Java run-time environment (JRE) will not be enough.
 - The command line of Rascal starts by running `java -Xmx1G -Xss32m -jar rascal-<version>.jar`.
 
 ## Further reading

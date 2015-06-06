@@ -50,3 +50,4 @@ In 1.0 the old Rascal interpreter will still be included, but from here on its u
 
 * Patch 0.7.1. includes an update to the documentation on M3
 * Patch 0.7.2. bug fixes
+* Patch 0.7.3. bug fixes and memory optimizations (more than 50%)
