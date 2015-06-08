@@ -1,4 +1,7 @@
 ---
+layout: default
+title: Test
+published: true
 ---
 <pre class="rascal"><code><span class="Comment">@bootstrapParser</span>
 <span class="Comment">@doc{
