@@ -4,6 +4,7 @@ title: Getting started
 published: true
 ---
 
+
 <p class="text-center">
    <a class="btn" href="http://update.rascal-mpl.org/stable"><i class="icon-download-alt"></i> Eclipse update site</a>
    <a class="btn" href="http://update.rascal-mpl.org/console/rascal-shell-stable.jar"><i class="icon-download"></i> Commandline REPL Jar File</a>
@@ -33,7 +34,7 @@ Please note that:
 1. Start Eclipse.
 1. Select Help -> Install New Software.
 1. Make sure that the tick for "Contact all update sites during install to find required software" is enabled.
-1. Type: `http://update.rascal-mpl.org/stable/` in the "Work with" edit box.
+1. Type: `http://update.rascal-mpl.org/stable/` in the "Work with" edit box, and then press enter.
 1. Select the feature *Rascal* (only the Rascal Metaprogramming Language is needed).
 1. Select Next (several times) and accept the software license. The process may take a few minutes!
 1. Once these features have been installed, restart Eclipse.
