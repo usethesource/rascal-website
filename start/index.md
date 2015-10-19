@@ -18,15 +18,15 @@ We currently only release alpha versions of Rascal, which are subject to frequen
 
 The Eclipse update site for Rascal is: **[http://update.rascal-mpl.org/stable/](http://update.rascal-mpl.org/stable/)**
 
-You need _Eclipse for RCP and RAP Developers (Luna)_ version of Eclipse
-available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. It has been reported recently that the latest release also works with normal (non RCP/RAP) versions of Eclipse. Not thoroughly tested though!
+You need _Eclipse for RCP Developers (Mars.1)_ version of Eclipse
+available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. 
 
 Please note that:
  
- - Rascal now needs a JDK because it uses the Java compiler, so please download a JDK8, not just a JRE.
+ - Rascal needs a JDK because it uses the Java compiler, so please download a JDK8, not just a JRE.
  - You may have to [edit the Eclipse init file](/start/editini.html) so
    that Eclipse can find your Java installation and Eclipse can allocate enough
-   resources.
+   resources. If you are running MacOSX you have to start Eclipse once first, quit, and then edit the ini file.
  - For generating parsers, Rascal uses quite a bit of memory. Please use `-vmargs -Xmx1G -Xss32m`
  
 ### Follow these steps to install the plugin into Eclipse
@@ -56,7 +56,7 @@ You can download the fully contained jar file [here](http://update.rascal-mpl.or
 
 Please note that:
 
-- The commandline version contains a limited set of Java analysis libraries
+- The commandline version does not support analyzing Java code directly at the moment.
 - A Java JDK 1.8 or higher installed is required. A Java run-time environment (JRE) will not be enough.
 - The command line of Rascal starts by running `java -Xmx1G -Xss32m -jar rascal-<version>.jar`.
 
