@@ -15,7 +15,7 @@
 {% include menu_item %}
 
 {% assign title="Blog" %}
-{% assign link="/blog/" %}
+{% assign link="http://www.usethesource.io/blog" %}
 {% assign blogRoot = true %}
 {% include menu_item %}
 
