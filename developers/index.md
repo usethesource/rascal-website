@@ -21,12 +21,12 @@ for version repository systems and bug databases, or front-ends for programming
 
 ## Enhancements, bugs and patches
 
-We welcome feedback. Please use [GitHub issues](https://github.com/cwi-swat/rascal/issues) 
+We welcome feedback. Please use [GitHub issues](https://github.com/usethesource/rascal/issues) 
 to submit your contributions such as pull requests, bug reports and suggestions for enhancement. Thanks! 
 
 ## Source access
 
-Rascal is completely hosted on GitHub, [under the cwi-swat repositories](https://github.com/organizations/cwi-swat).
+Rascal is completely hosted on GitHub, [under the UseTheSource repositories](https://github.com/organizations/usethesource).
 See our [developer setup](https://github.com/cwi-swat/rascal/wiki/Rascal-Developers-Setup---Step-by-Step)
 instructions on which projects to checkout and dependencies to install.
 
