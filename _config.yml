@@ -5,7 +5,7 @@ gems:
 
 safe: true
 lsi: false
-pygments: true
+hightlighter: rouge
 
 name: Rascal - Meta Programming Language
 title: Rascal - Meta Programming Language
