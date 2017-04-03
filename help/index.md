@@ -30,4 +30,4 @@ please report [an issue in Rascal's github page](https://github.com/cwi-swat/ras
 
 ## Release notes
 
-Release notes will be published on the community [blog](/blog).
+Release notes will be published on the community [blog](http://usethesource.io/blog/)
