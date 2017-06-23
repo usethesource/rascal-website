@@ -33,6 +33,6 @@ instructions on which projects to checkout and dependencies to install.
 ## Continuous integration
 
 * Please find our [Jenkins](http://jenkins-ci.org) installation running at <http://ci.usethesource.io>.
-* The continuous update site is deployed at `http://update.rascal-mpl.org/unstable`. Every time a contribution is pushed to GitHub, and all tests succeed, the unstable update site is build and deployed fully automatically.
-* We also publish a unstable version of the [command line REPL](http://update.rascal-mpl.org/console/rascal-shell-unstable.jar)
-* We archived an interpreter-only version [here](http://update.rascal-mpl.org/console/rascal-shell-interpreter-no-compiler.jar)
+* The continuous update site is deployed at `https://update.rascal-mpl.org/unstable`. Every time a contribution is pushed to GitHub, and all tests succeed, the unstable update site is build and deployed fully automatically.
+* We also publish a unstable version of the [command line REPL](https://update.rascal-mpl.org/console/rascal-shell-unstable.jar)
+* We archived an interpreter-only version [here](https://update.rascal-mpl.org/console/rascal-shell-interpreter-no-compiler.jar)

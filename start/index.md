@@ -6,8 +6,8 @@ published: true
 
 
 <p class="text-center">
-   <a class="btn" href="http://update.rascal-mpl.org/stable"><i class="icon-download-alt"></i> Eclipse update site</a>
-   <a class="btn" href="http://update.rascal-mpl.org/console/rascal-shell-stable.jar"><i class="icon-download"></i> Commandline REPL Jar File</a>
+   <a class="btn" href="https://update.rascal-mpl.org/stable"><i class="icon-download-alt"></i> Eclipse update site</a>
+   <a class="btn" href="https://update.rascal-mpl.org/console/rascal-shell-stable.jar"><i class="icon-download"></i> Commandline REPL Jar File</a>
 </p>
 
 ## Disclaimer
@@ -16,7 +16,7 @@ We currently only release alpha versions of Rascal, which are subject to frequen
 
 ## Eclipse plugin
 
-The Eclipse update site for Rascal is: **[http://update.rascal-mpl.org/stable/](http://update.rascal-mpl.org/stable/)**
+The Eclipse update site for Rascal is: **[https://update.rascal-mpl.org/stable/](https://update.rascal-mpl.org/stable/)**
 
 You need _Eclipse for RCP Developers (Neon.2)_ version of Eclipse,
 available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. Older versions of Eclipse should also work,  at least down to Mars.2.
@@ -34,11 +34,11 @@ Please note that:
 1. Start Eclipse.
 1. Select Help -> Install New Software.
 1. Make sure that the tick for "Contact all update sites during install to find required software" is enabled.
-1. Type: `http://update.rascal-mpl.org/stable/` in the "Work with" edit box, and then press enter.
+1. Type: `https://update.rascal-mpl.org/stable/` in the "Work with" edit box, and then press enter.
 1. Select the feature *Rascal* (only the Rascal Metaprogramming Language is needed).
 1. Select Next (several times) and accept the software license. The process may take a few minutes!
 1. Once these features have been installed, restart Eclipse.
-1. In case of problems check our [Troubleshooting page](http://www.rascal-mpl.org/help/troubleshooting.html)
+1. In case of problems check our [Troubleshooting page](https://www.rascal-mpl.org/help/troubleshooting.html)
 
 ### How to use the Eclipse plugin for the first time
 
@@ -52,7 +52,7 @@ After you have downloaded Rascal, you might be interested in the first steps to 
 ## Commandline REPL
 
 An entirely different way of using Rascal is via the standalone commandline console.
-You can download the fully contained jar file [here](http://update.rascal-mpl.org/console/rascal-shell-stable.jar).
+You can download the fully contained jar file [here](https://update.rascal-mpl.org/console/rascal-shell-stable.jar).
 
 Please note that:
 
