@@ -23,8 +23,8 @@ available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to 
 
 A continously released update site for practical libraries for Rascal can be found here: **[https://update.rascal-mpl.org/libs/](https://update.rascal-mpl.org/libs/)**, featuring for example prototypes of:
 
-   * (https://github.com/cwi-swat/clair)[ClaiR - C language analysis in Rascal]
-   * (https://github.com/cwi-swat/shapes)[Shapes - generating web-based visualisations]
+   * [ClaiR - C language analysis in Rascal](https://github.com/cwi-swat/clair)
+   * [Shapes - generating web-based visualisations](https://github.com/cwi-swat/shapes)
 
 Please note that:
  
