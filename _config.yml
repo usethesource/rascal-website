@@ -10,7 +10,7 @@ hightlighter: rouge
 name: Rascal - Meta Programming Language
 title: Rascal - Meta Programming Language
 
-production_url: http://rascal.landman.nl.eu.org/
+production_url: http://usethesource.io/blog/
 
 exclude: ["README.md"]
 
