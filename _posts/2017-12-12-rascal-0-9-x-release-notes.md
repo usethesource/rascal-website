@@ -1,7 +1,7 @@
 ---
 layout: post 
 published: true
-author: Jurgen Vinju
+author: Jurgen J. Vinju
 authorlink: http://homepages.cwi.nl/~jurgenv
 title: "Rascal 0.9.x release notes"
 ---
