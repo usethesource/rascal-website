@@ -12,16 +12,16 @@ published: true
 
 ## Disclaimer
 
-We currently only release alpha versions of Rascal, which are subject to frequent changes
+We currently only release alpha versions of Rascal, which are subject to frequent changes.
 
 ## Eclipse plugin
 
 The Eclipse update site for Rascal is: **[https://update.rascal-mpl.org/stable/](https://update.rascal-mpl.org/stable/)**
 
-You need _Eclipse for RCP Developers (Neon.3 or Oxygen) _ version of Eclipse,
+You need _Eclipse for RCP Developers (Neon.3 or Oxygen)_ version of Eclipse,
 available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. Older versions of Eclipse should also work,  at least down to Mars.2.
 
-A continously released update site for practical libraries for Rascal can be found here: **[https://update.rascal-mpl.org/libs/](https://update.rascal-mpl.org/libs/)**, featuring for example prototypes of:
+A continuously released update site for practical libraries for Rascal can be found here: **[https://update.rascal-mpl.org/libs/](https://update.rascal-mpl.org/libs/)**, featuring for example prototypes of:
 
    * [ClaiR - C language analysis in Rascal](https://github.com/cwi-swat/clair)
    * [Shapes - generating web-based visualisations](https://github.com/cwi-swat/shapes)
@@ -29,6 +29,8 @@ A continously released update site for practical libraries for Rascal can be fou
 Please note that:
  
  - Rascal needs a JDK because it uses the Java compiler, so please download a JDK8, not just a JRE.
+ - Our update site has a Let's Encrypt certificate, which is supported by Java 8 from update 101 onwards.
+   Please update your Java 8 installation if you encounter a ValidationException during the installation process.
  - You may have to [edit the Eclipse init file](/start/editini.html) so
    that Eclipse can find your Java installation and Eclipse can allocate enough
    resources. If you are running MacOSX you have to start Eclipse once first, quit, and then edit the ini file.
