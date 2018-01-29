@@ -62,7 +62,7 @@ published: true
    [Oxygen](http://www.eclipse.org/downloads/packages/release/Oxygen/2) instead.
 
  - *I'm trying to install Rascal into Eclipse, but Eclipse can't find the update site,* or
-   *I'm trying to isntall Rascal into Eclipse, but the update site's certificate can't be validated.*
+   *I'm trying to install Rascal into Eclipse, but the update site's certificate can't be validated.*
 
    Our update site uses a *Let's Encrypt* certificate, which has been supported by Java 8 since update 101.
    Most likely, you're using an older Java version. Update to a recent Java 8 version.
