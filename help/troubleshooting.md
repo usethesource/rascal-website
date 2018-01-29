@@ -25,12 +25,12 @@ published: true
 
  - *Eclipse starts but I can't find the Rascal Perspective or any Rascal entries in the File → New menu*
 
-   This is typically because you're running on Java 6 instead of Java 8. Rascal requires the Java 8 SDK to
+   This is typically because you're running an old Java version instead of Java 8. Rascal requires the Java 8 SDK to
    run. You can check which Java you're using by checking the ```java.version``` and ```java.vm.name``` entries
    in *Installation Details → Configuration*.
 
-   If you're running Java 6 even when Java 8 is installed, the simplest approach is just to remove all old
-   installations of Java 6. You can also supply the path to the Java VM using the ```-vm``` option in your
+   If you're running an old Java version even when Java 8 is installed, the simplest approach is just to remove all old
+   installations of Java. You can also supply the path to the Java VM using the ```-vm``` option in your
    [eclipse.ini file](/start/editini.html).
    
  - *Eclipse starts, but I get an error message say that I need the Java JDK*
@@ -48,8 +48,7 @@ published: true
   
  - *Rascal used to work, but I updated it and now it doesn't*
   
-   Some requirements have changed in the stable release; you now need Java 8, and Eclipse Luna.
-   Eclipse Indigo no longer works.
+   Some requirements have changed in the stable release; you now need Java 8, and Eclipse Neon.3.
 
  - *I use git, and it keeps hanging or using 100% CPU*
   
@@ -58,7 +57,13 @@ published: true
 
  - *Installation complains about a missing "jetty" package*
  
-   Most likely you're using an Indigo or earlier version of Eclipse. Use
-   [3.8.2](http://archive.eclipse.org/eclipse/downloads/drops/R-3.8.2-201301310800/), 
-   [Juno](http://eclipse.org/downloads/packages/release/juno/sr2) or 
-   [Kepler](http://eclipse.org/downloads/) instead.
+   Most likely you're using an outdated version of Eclipse. Use
+   [Neon.3](http://www.eclipse.org/downloads/packages/release/Neon/3) or
+   [Oxygen](http://www.eclipse.org/downloads/packages/release/Oxygen/2) instead.
+
+ - *I'm trying to install Rascal into Eclipse, but Eclipse can't find the update site,* or
+   *I'm trying to isntall Rascal into Eclipse, but the update site's certificate can't be validated.*
+
+   Our update site uses a *Let's Encrypt* certificate, which has been supported by Java 8 since update 101.
+   Most likely, you're using an older Java version. Update to a recent Java 8 version.
+   Alternatively, manually install *Let's Encrypt*'s intermediate certificate to your truststore.

@@ -29,8 +29,8 @@ A continuously released update site for practical libraries for Rascal can be fo
 Please note that:
  
  - Rascal needs a JDK because it uses the Java compiler, so please download a JDK8, not just a JRE.
- - Our update site has a Let's Encrypt certificate, which is supported by Java 8 from update 101 onwards.
-   Please update your Java 8 installation if you encounter a ValidationException during the installation process.
+ - Our update site has a *Let's Encrypt* certificate, which has been supported by Java 8 from update 101 onwards.
+   Please update your Java 8 installation if you encounter a ValidatorException during the installation process.
  - You may have to [edit the Eclipse init file](/start/editini.html) so
    that Eclipse can find your Java installation and Eclipse can allocate enough
    resources. If you are running MacOSX you have to start Eclipse once first, quit, and then edit the ini file.
@@ -45,7 +45,7 @@ Please note that:
 1. Select the feature *Rascal* (only the Rascal Metaprogramming Language is needed).
 1. Select Next (several times) and accept the software license. The process may take a few minutes!
 1. Once these features have been installed, restart Eclipse.
-1. In case of problems check our [Troubleshooting page](https://www.rascal-mpl.org/help/troubleshooting.html)
+1. In case of problems check our [Troubleshooting page](http://www.rascal-mpl.org/help/troubleshooting.html)
 
 ### How to use the Eclipse plugin for the first time
 
