@@ -63,7 +63,7 @@ You can download the fully contained jar file [here](https://update.rascal-mpl.o
 
 Please note that:
 
-- The commandline version does not support analyzing Java code directly at the moment.
+- The commandline version comes with "batteries included" for Java analysis (the jar packages even the Eclipse JDT compiler), but of course Rascal can be used to analyze any programming language in principle. 
 - A Java JDK 1.8 or higher installed is required. A Java run-time environment (JRE) will not be enough.
 - The command line of Rascal starts by running `java -Xmx1G -Xss32m -jar rascal-<version>.jar`.
 
