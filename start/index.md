@@ -12,7 +12,7 @@ published: true
 
 ## Disclaimer
 
-We currently only release alpha versions of Rascal, which are subject to frequent changes.
+We release beta versions of Rascal, which are pretty stable. For 2020, expect about one release per month. Alpha releases are [continuously deployed](/developers). 
 
 ## Eclipse plugin
 
