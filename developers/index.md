@@ -40,4 +40,4 @@ instructions on which projects to checkout and dependencies to install.
 ## VScode/LSP prototype
 
 * We are developing the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) version of the Rascal IDE [here]( https://nexus.usethesource.io/content/repositories/snapshots/org/rascalmpl/rascal-vscode-extension), for now specialized towards running in [Visual Studio Code](https://github.com/microsoft/vscode)
-* Install the `.vsix` file to enable the experimantal Rascal features in [Visual Studio Code](https://github.com/microsoft/vscode)
+* Install the `.vsix` file to enable the experimental Rascal features in [Visual Studio Code](https://github.com/microsoft/vscode)
