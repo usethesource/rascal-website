@@ -18,8 +18,10 @@ We release beta versions of Rascal, which are pretty stable. For 2020, expect ab
 
 The Eclipse update site for Rascal is: **[https://update.rascal-mpl.org/stable/](https://update.rascal-mpl.org/stable/)**
 
-You need _Eclipse for RCP Developers (Neon.3 or Oxygen)_ version of Eclipse,
-available at [www.eclipse.org/downloads/](http://www.eclipse.org/downloads/) to run Rascal. Older versions of Eclipse should also work,  at least down to Mars.2.
+You need the _Eclipse IDE for RCP and RAP Developers_ version of Eclipse.
+Currently, due to compatability issues with Java 11, Rascal only works with Eclipse IDE versions up to 2020-06, which is available at [https://www.eclipse.org/downloads/packages/release/2020-06/r/eclipse-ide-rcp-and-rap-developers](https://www.eclipse.org/downloads/packages/release/2020-06/r/eclipse-ide-rcp-and-rap-developers).
+For further information see [this issue on the Rascal GitHub page](https://github.com/usethesource/rascal/issues/1473).
+Older versions of Eclipse should also work,  at least down to Mars.2.
 
 A continuously released update site for practical libraries for Rascal can be found here: **[https://update.rascal-mpl.org/libs/](https://update.rascal-mpl.org/libs/)**, featuring for example prototypes of:
 
