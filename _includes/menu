@@ -10,7 +10,7 @@
 {% assign link="/help/" %}
 {% include menu_item %}
 
-{% assign title="Developers" %}
+{% assign title="Contributing" %}
 {% assign link="/developers/" %}
 {% include menu_item %}
 
