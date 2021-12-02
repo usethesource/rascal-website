@@ -26,7 +26,7 @@ Rascal is a (meta) programming language with the following features:
 4. immutable values (sets, lists, numbers, maps, algebraic data-types), via [vallang](https://github.com/usethesource/vallang)
 5. REPL ([rascal](https://github.com/usethesource/rascal))
 6. Eclipse IDE with IDE generator based on Eclipse IMP ([rascal-eclipse](https://github.com/usethesource/rascal-eclipse))
-7. VScode IDE with IDE generator based on LSP ([rascal-vscode](https://github.com/cwi-swat/rascal-vscode))
+7. VScode IDE with IDE generator based on LSP ([rascal-language-servers](https://github.com/usethesource/rascal-language-servers))
 8. Interactive documentation (tutor) compiler ([rascal](https://github.com/usethesource/rascal))
 8. Interactive documentation content ([rascal](https://github.com/usethesource/rascal))
 8. Libraries for
@@ -71,5 +71,5 @@ instructions on which projects to checkout and dependencies to install.
    * Rascal-core [![Build Status Rascal Compiler](https://github.com/usethesource/rascal-core/actions/workflows/build.yaml/badge.svg)](https://github.com/usethesource/rascal-core/actions/workflows/build.yaml)
    * Typepal [![Build Status TypePal](https://github.com/usethesource/typepal/actions/workflows/build.yaml/badge.svg)](https://github.com/usethesource/typepal/actions/workflows/build.yaml)
    * Rascal-eclipse [![Build Status Rascal-Eclipse](https://github.com/usethesource/rascal-eclipse/actions/workflows/build.yaml/badge.svg)](https://github.com/usethesource/rascal-eclipse/actions/workflows/build.yaml)
-   * Rascal-vscode [![Build Status Rascal-VScode](https://github.com/cwi-swat/rascal-vscode/actions/workflows/build.yaml/badge.svg)](https://github.com/cwi-swat/rascal-vscode/actions/workflows/build.yaml)
+   * Rascal-vscode [![Build Status Rascal-VScode](https://github.com/usethesource/rascal-language-servers/actions/workflows/build.yaml/badge.svg)](https://github.com/usethesource/rascal-language-servers/actions/workflows/build.yaml)
    
