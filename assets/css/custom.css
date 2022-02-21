@@ -9,7 +9,7 @@
 
 
    .front-back {
-      background: no-repeat 100% 50% url('/assets/img/logo_rascal_light_small.png');
+      background: no-repeat 100% 50% url('/assets/img/logo_rascal.png');
    }
   /* Main marketing message and sign up button */
   .jumbotron {
@@ -31,7 +31,7 @@
 	text-align: center;
   }
    .front-back {
-      background: no-repeat 100% 50% url('/assets/img/logo_rascal_light_small_mobile.png');
+      background: no-repeat 25% 50% url('/assets/img/logo_rascal.png');
    }
   .jumbotron h1 {
 	font-size: 50px;
@@ -52,12 +52,12 @@
   }
 
 .container.normal {
-   background: no-repeat 80% 0% url('/assets/img/logo_rascal_light_small.png');
+   background: no-repeat 80% 0% url('/assets/img/logo_rascal.png');
    background-size: 100px;
 }
 @media (max-width: 767px) {
    .container.normal {
-      background: no-repeat 100% 0% url('/assets/img/logo_rascal_light_small.png');
+      background: no-repeat 50% 0% url('/assets/img/logo_rascal.png');
       background-size: 100px;
    }
 }
