@@ -55,7 +55,7 @@ const config = {
             position: 'left',
             label: 'Guides',
           },
-          {to: '/api', label: 'Reference docs', position: 'left'},
+          {href: 'https://tutor.rascal-mpl.org/Rascal/Rascal.html', label: 'Reference docs', position: 'left'},
           {to: '/casestudies', label: 'Case Studies', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           
