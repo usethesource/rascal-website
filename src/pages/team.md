@@ -6,6 +6,7 @@ title: Team
 
 ## Core team
 - Paul Klint
+- Davy Landman
 - Jurgen Vinju
 - Tijs van der Storm
 
