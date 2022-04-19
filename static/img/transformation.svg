@@ -1,7 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Svg Vector Icons : http://www.onlinewebfonts.com/icon -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-<metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
-<g><path d="M976.3,11.9c-5-3.4-10.8-4.8-16.7-4.8c-6,0-11.7,1.6-17,5.3L23.7,628.1C14.3,634.5,9,645.5,10.2,657c1.1,11.5,8.5,21.1,19,25.2l239.6,96.5l112.6,198.4c5.5,9.6,15.4,15.4,26.1,15.6h0.5c10.8,0,20.9-5.7,26.1-14.9l63.8-106.6l296.7,119.5c3.7,1.6,7.6,2.3,11.5,2.3c5.3,0,10.3-1.4,14.9-3.9c8-4.6,13.8-12.6,15.1-21.8l153.2-924C991.9,30.7,986.6,18.3,976.3,11.9L976.3,11.9z M106.2,646.7L816,170.8L300,726.2c-2.8-1.6-5-3.7-8-5L106.2,646.7L106.2,646.7z M322.3,748.2c0-0.2-0.2-0.2-0.2-0.5l580.2-624.5L407.6,898.2L322.3,748.2L322.3,748.2z M782.5,918.9l-261.7-105c-6.2-2.5-12.8-3.4-19-3.7L904.8,182L782.5,918.9L782.5,918.9z"/></g>
+
+<svg
+   version="1.1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 1000 1000"
+   enable-background="new 0 0 1000 1000"
+   xml:space="preserve"
+   id="svg204"
+   sodipodi:docname="transformation.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs208" /><sodipodi:namedview
+   id="namedview206"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   showgrid="false"
+   inkscape:zoom="0.873"
+   inkscape:cx="500"
+   inkscape:cy="513.7457"
+   inkscape:window-width="1296"
+   inkscape:window-height="1081"
+   inkscape:window-x="1630"
+   inkscape:window-y="287"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="svg204" />
+<metadata
+   id="metadata198"> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+<g
+   id="g202"
+   style="fill:#df8f87;opacity:1"><path
+     d="M976.3,11.9c-5-3.4-10.8-4.8-16.7-4.8c-6,0-11.7,1.6-17,5.3L23.7,628.1C14.3,634.5,9,645.5,10.2,657c1.1,11.5,8.5,21.1,19,25.2l239.6,96.5l112.6,198.4c5.5,9.6,15.4,15.4,26.1,15.6h0.5c10.8,0,20.9-5.7,26.1-14.9l63.8-106.6l296.7,119.5c3.7,1.6,7.6,2.3,11.5,2.3c5.3,0,10.3-1.4,14.9-3.9c8-4.6,13.8-12.6,15.1-21.8l153.2-924C991.9,30.7,986.6,18.3,976.3,11.9L976.3,11.9z M106.2,646.7L816,170.8L300,726.2c-2.8-1.6-5-3.7-8-5L106.2,646.7L106.2,646.7z M322.3,748.2c0-0.2-0.2-0.2-0.2-0.5l580.2-624.5L407.6,898.2L322.3,748.2L322.3,748.2z M782.5,918.9l-261.7-105c-6.2-2.5-12.8-3.4-19-3.7L904.8,182L782.5,918.9L782.5,918.9z"
+     id="path200"
+     style="fill:#df8f87" /></g>
 </svg>

@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Domain Specific Languages, Parsers & Compilers',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/DSLs.svg').default,
     description: (
       <ul>
         <li>Context Free Grammars</li>
@@ -19,7 +19,7 @@ const FeatureList = [
   },
   {
     title: 'Source Code Analysis',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/analysis.svg').default,
     description: (
       <ul>
         <li>Formal Concept Analysis</li>
@@ -31,7 +31,7 @@ const FeatureList = [
   },
   {
     title: 'Source Code Transformation',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/transformation.svg').default,
     description: (
       <ul>
         <li>Pattern Matching</li>
@@ -41,7 +41,7 @@ const FeatureList = [
   },
   {
     title: 'Source code Generation',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/generation.svg').default,
     description: (
       <ul>
         <li>String Templates</li>
@@ -50,7 +50,7 @@ const FeatureList = [
   },
   {
     title: 'Java Interop',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/java.svg').default,
     description: (
       <ul>
         <li>Runs on the JVM (8+)</li>
@@ -61,7 +61,7 @@ const FeatureList = [
   },
   {
     title: 'Visualization',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/visualization.svg').default,
     description: (
       <ul>
         <li>Draws figures :-)</li>
