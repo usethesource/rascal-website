@@ -1,8 +1,11 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+// const path = require('path');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
+// console.log(__dirname);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -38,7 +41,9 @@ const config = {
       }),
     ],
   ],
-
+  // plugins: [
+  //   path.resolve(__dirname, 'plugins/rascal-plugin'),
+  // ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -51,7 +56,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'WhyRascal',
             position: 'left',
             label: 'Guides',
           },
@@ -77,7 +82,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/GettingStarted',
               },
             ],
           },
@@ -123,12 +128,12 @@ const config = {
 
       algolia: {
         // The application ID provided by Algolia
-        appId: 'R2IYF7ETH7',
+        appId: 'FKSZQR9CR0',
   
         // Public API key: it is safe to commit it
-        apiKey: '599cec31baffa4868cae4e79f180729b',
+        apiKey: '1f28a823d399f1a470a0f8bb027528ac',
   
-        indexName: 'docsearch',
+        indexName: 'rascal_web',
   
         // Optional: see doc section below
         contextualSearch: true,

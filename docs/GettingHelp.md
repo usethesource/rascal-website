@@ -1,0 +1,158 @@
+---
+sidebar_position: 3
+---
+x
+**Synopsis.**
+
+Getting help when working with Rascal
+
+**Description.**
+
+You can use Rascal in two ways:
+
+  - At the command line — the *Command Line Interface* (CLI) or if you prefer the *Read-Eval-Print-Loop* (REPL).
+
+  - In an Integrated Development Environment (IDE) like Eclipse.
+
+Both provide help facilities that we discuss in more detail:
+
+  - [Help at the command line](#GettingHelp-CommandLine): Get help when using Rascal at the command line (CLI, REPL).
+
+  - [Help in the Integrated Development Environment (IDE)](#GettingHelp-IDE): Get help when using Rascal in the IDE.
+
+  - [Browsing Documentation](#GettingHelp-Browsing): Browsing the Rascal documentation.
+
+  - [Further Reading](#GettingHelp-FurtherReading): How to continue reading the Rascal documentation.
+
+# Help at the command line
+
+**Synopsis.**
+
+Get help when using Rascal at the command line (CLI, REPL)
+
+**Description.**
+
+While using the command line interface you have two commands at your proposal:
+
+  - `help`:
+    
+      - Without arguments, `help` gives some introductory information about the help facilities.
+    
+      - With arguments, the arguments are interpreted as search terms and search results are shown in a separate browser
+        window.
+
+  - `apropos`: like `help` but all (abbreviated) results are only shown as text in the command line interface.
+
+**Examples.**
+
+First, type `help` and get some introductory help:
+
+``` rascal-shell
+help
+```
+
+Next, type `help` followed by some search terms will open a browser window with a list of relevant pages in the Rascal
+documentation. From there-on you can further browse through and search in Rascal’s extensive documentation.
+
+Typing `apropos` followed by search terms shows the search results directly in the command shell and does not open a
+separate browser. Here is a way to search for help related to `if`.
+
+``` rascal-shell
+apropos if
+```
+
+# Help in the Integrated Development Environment (IDE)
+
+**Synopsis.**
+
+Get help when using Rascal in the IDE
+
+> **Note**
+> 
+> To be written
+
+# Browsing Documentation
+
+**Synopsis.**
+
+Browsing the Rascal documentation
+
+**Description.**
+
+All Rascal documentation has been indexed and cross-referenced and can be accessed via a single browser interface.
+
+Suppose we want to learn about `while` statement in Rascal and the type `help while` at the command line. This will show
+the following results (actual results may differ):
+
+![search results while]\(images/search-results-while.png\)
+
+In the right pane you find the search results, most relevant first (this happpens to be the description of the `while`
+statement). Each result consists of a clickable link and a synopsis of the information to be found there.
+
+In the top left corner, you find a search box for new searches and the RascalTutor logo ![rascal tutor
+small]\(images/rascal-tutor-small.png\) that will bring you back to the Tutor home page.
+
+All Rascal documentation is organized in *courses*, each course consist of a hierarchy of *concepts*. The documentation
+for `while` is found in the course named [Rascal](/Rascal) and the complete name is
+[Rascal/Statements/While](/Rascal#Statements-While).
+
+There are other courses like [Help](/Help) (this course) and [Recipes](/Recipes) and the search for while found uses of
+while in various courses (like this one, since we are mentioning `while` quite a lot).
+
+# Further Reading
+
+**Synopsis.**
+
+How to continue reading the Rascal documentation
+
+**Description.**
+
+The Tutor home page is always reachable via the RascalTutor logo ![rascal tutor small]\(images/rascal-tutor-small.png\)
+in the top left corner of each Tutor page and is the best starting point for further reading. Here is a recent overview
+of the available courses:
+
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Beginner</th>
+<th>Moderate</th>
+<th>Advanced</th>
+<th>General</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><ul>
+<li><p><a href="/WhyRascal">Why Rascal?</a></p></li>
+<li><p><a href="/GettingStarted">Getting Started</a></p></li>
+<li><p><a href="/Rascalopedia">Rascalopedia</a></p></li>
+<li><p><a href="/Recipes">Rascal Recipes</a></p></li>
+<li><p><a href="/GettingHelp">Getting Help</a></p></li>
+<li><p><a href="/RascalShell">The Rascal Shell</a></p></li>
+</ul></td>
+<td><ul>
+<li><p><a href="/RascalConcepts">Rascal Concepts</a></p></li>
+<li><p><a href="/Rascal">Rascal Language</a></p></li>
+<li><p><a href="/Libraries">Rascal Library</a></p></li>
+<li><p><a href="/CompileTimeErrors">Compile Time Errors</a></p></li>
+<li><p><a href="/RunTimeErrors">Run Time Errors</a></p></li>
+</ul></td>
+<td><ul>
+<li><p><a href="/Tutor">RascalTutor</a></p></li>
+<li><p><a href="https://github.com/usethesource/rascal/wiki">Rascal Wiki</a></p></li>
+</ul></td>
+<td><ul>
+<li><p><a href="http://www.rascal-mpl.org">Rascal Home Page</a></p></li>
+<li><p><a href="https://github.com/usethesource/rascal">Rascal @ GitHub</a></p></li>
+<li><p><a href="https://github.com/usethesource/rascal/issues">Issue tracker @ GitHub</a></p></li>
+<li><p><a href="http://stackoverflow.com/questions/tagged/rascal">Rascal @ StackOverflow</a></p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
