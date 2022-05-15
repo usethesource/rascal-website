@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 ---
-x
+
 **Synopsis.**
 
 Getting help when working with Rascal
@@ -99,60 +99,3 @@ for `while` is found in the course named [Rascal](/Rascal) and the complete name
 There are other courses like [Help](/Help) (this course) and [Recipes](/Recipes) and the search for while found uses of
 while in various courses (like this one, since we are mentioning `while` quite a lot).
 
-# Further Reading
-
-**Synopsis.**
-
-How to continue reading the Rascal documentation
-
-**Description.**
-
-The Tutor home page is always reachable via the RascalTutor logo ![rascal tutor small]\(images/rascal-tutor-small.png\)
-in the top left corner of each Tutor page and is the best starting point for further reading. Here is a recent overview
-of the available courses:
-
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Beginner</th>
-<th>Moderate</th>
-<th>Advanced</th>
-<th>General</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li><p><a href="/WhyRascal">Why Rascal?</a></p></li>
-<li><p><a href="/GettingStarted">Getting Started</a></p></li>
-<li><p><a href="/Rascalopedia">Rascalopedia</a></p></li>
-<li><p><a href="/Recipes">Rascal Recipes</a></p></li>
-<li><p><a href="/GettingHelp">Getting Help</a></p></li>
-<li><p><a href="/RascalShell">The Rascal Shell</a></p></li>
-</ul></td>
-<td><ul>
-<li><p><a href="/RascalConcepts">Rascal Concepts</a></p></li>
-<li><p><a href="/Rascal">Rascal Language</a></p></li>
-<li><p><a href="/Libraries">Rascal Library</a></p></li>
-<li><p><a href="/CompileTimeErrors">Compile Time Errors</a></p></li>
-<li><p><a href="/RunTimeErrors">Run Time Errors</a></p></li>
-</ul></td>
-<td><ul>
-<li><p><a href="/Tutor">RascalTutor</a></p></li>
-<li><p><a href="https://github.com/usethesource/rascal/wiki">Rascal Wiki</a></p></li>
-</ul></td>
-<td><ul>
-<li><p><a href="http://www.rascal-mpl.org">Rascal Home Page</a></p></li>
-<li><p><a href="https://github.com/usethesource/rascal">Rascal @ GitHub</a></p></li>
-<li><p><a href="https://github.com/usethesource/rascal/issues">Issue tracker @ GitHub</a></p></li>
-<li><p><a href="http://stackoverflow.com/questions/tagged/rascal">Rascal @ StackOverflow</a></p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
