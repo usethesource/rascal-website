@@ -1,5 +1,6 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
+title: Getting Started
 ---
 **Synopsis.**
 
@@ -40,5 +41,4 @@ In the Eclipse version, Rascal modules can be edited and a command console is al
 > Add a screenshot
 
 Where to go from here: have a look at [Getting Help](/GettingHelp) and in particular [further
-reading](/GettingHelp#GettingHelp-FurtherReading) or just click the RascalTutor logo ![rascal tutor
-small]\(images/rascal-tutor-small.png\) at the top left of each Tutor page.
+reading](/GettingHelp#GettingHelp-FurtherReading) or just click the RascalTutor logo ![rascal tutor small](/images/rascal-tutor-small.png) at the top left of each Tutor page.

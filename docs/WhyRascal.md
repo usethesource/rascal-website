@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+title: Why Rascal?
 ---
 
 **Synopsis.**
@@ -103,7 +104,7 @@ analysis and synthesis of complex data structures simple.
 
 Rascal excels in supporting the Extract-Analyze-SYnthesize (EASY) paradigm.
 
-![easy workflow]\(images/easy-workflow.png\)
+![easy workflow](/images/easy-workflow.png)
 
 **Description.**
 
@@ -186,7 +187,7 @@ annotations that describe the reliability of individual components. She will use
 
 System renovation.
 
-![Extract-Analyze-View Paradigm]\(images/extract-analyze-view-paradigm.png\)
+![Extract-Analyze-View Paradigm](/images/extract-analyze-view-paradigm.png)
 
 **Description.**
 
@@ -228,7 +229,7 @@ frequently used login names and IP addresses.
 
 Strategies to solve problems in various domains using Rascal.
 
-![Problem Solving Workflow]\(images/problem-solving.png\)
+![Problem Solving Workflow](/images/problem-solving.png)
 
 **Description.**
 
@@ -266,14 +267,14 @@ With these examples in mind, we can study the overall problem solving workflow a
 
   - Is synthesis needed, then define the synthesis phase, see [Synthesis](#SolutionStrategies-Synthesis).
 
-![Validation Workflow]\(images/validation.png\)
+![Validation Workflow](/images/validation.png)
 
 Each phase is subject to a validation and improvement workflow as shown in the second figure
 [figure\_title](#Validation-Workflow). Each individual phase as well as the combination of phases may introduce errors
 and has thus to be carefully validated. In combination with the detailed strategies for each phase, this forms a
 complete approach for problem solving and validation using Rascal.
 
-![Requirements Workflow]\(images/requirements.png\)
+![Requirements Workflow](/images/requirements.png)
 
 A major question in every problem solving situation is how to determine the requirements for each phase of the solution.
 For instance, how do we know what to extract from the source code if we do not know what the desired end results of the
@@ -312,7 +313,7 @@ We will discuss:
 
 Strategies to extract facts from software systems.
 
-![Extraction Workflow]\(images/define-extraction.png\)
+![Extraction Workflow](/images/define-extraction.png)
 
 **Description.**
 
@@ -396,7 +397,7 @@ The Rascal features that are most frequently used for extraction are:
 
 Strategies to analyze software systems.
 
-![Analysis Workflow]\(images/define-analysis.png\)
+![Analysis Workflow](/images/define-analysis.png)
 
 **Description.**
 
@@ -438,7 +439,7 @@ The Rascal features that are frequently used for analysis are:
 
 Strategies to synthesise results.
 
-![Synthesis Workflow]\(images/define-synthesis.png\)
+![Synthesis Workflow](/images/define-synthesis.png)
 
 **Description.**
 

@@ -1,5 +1,6 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
+title: Getting Help
 ---
 
 **Synopsis.**
@@ -84,13 +85,12 @@ All Rascal documentation has been indexed and cross-referenced and can be access
 Suppose we want to learn about `while` statement in Rascal and the type `help while` at the command line. This will show
 the following results (actual results may differ):
 
-![search results while]\(images/search-results-while.png\)
+![search results while](/images/search-results-while.png)
 
 In the right pane you find the search results, most relevant first (this happpens to be the description of the `while`
 statement). Each result consists of a clickable link and a synopsis of the information to be found there.
 
-In the top left corner, you find a search box for new searches and the RascalTutor logo ![rascal tutor
-small]\(images/rascal-tutor-small.png\) that will bring you back to the Tutor home page.
+In the top left corner, you find a search box for new searches and the RascalTutor logo ![rascal tutor small](/images/rascal-tutor-small.png) that will bring you back to the Tutor home page.
 
 All Rascal documentation is organized in *courses*, each course consist of a hierarchy of *concepts*. The documentation
 for `while` is found in the course named [Rascal](/Rascal) and the complete name is

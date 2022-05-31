@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+title: Concepts
 ---
 
 **Synopsis.**
@@ -66,7 +67,7 @@ Here are the concepts to be discussed:
 
 Static type checking.
 
-![Type Lattice]\(images/type-lattice.png\)
+![Type Lattice](/images/type-lattice.png)
 
 **Description.**
 

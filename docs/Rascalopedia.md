@@ -1,5 +1,6 @@
 ---
-sidebar_position: 100
+sidebar_position: 12
+title: Glossary
 ---
 
 **Synopsis.**
@@ -89,20 +90,20 @@ stack), two functions `push` and `pop` and axioms that define them. At the imple
 implemented using a list, array or something else.
 
 In functional languages, and also in Rascal, abstract datatypes (or ADTs for short) are used to define new data types.
-Well-known examples are [stack](http://en.wikipedia.org/wiki/Stack_\(data_structure\)) and
-[tree](http://en.wikipedia.org/wiki/Tree_\(data_structure\)).
+Well-known examples are [stack](http://en.wikipedia.org/wiki/Stack_(data_structure)) and
+[tree](http://en.wikipedia.org/wiki/Tree_(data_structure)).
 
 See [Algebraic Data Types](/Rascal#Declarations-AlgebraicDataType) and [Constructors](/Rascal#Values-Constructor) in the
 [Rascal Language Reference](/Rascal).
 
 ## Abstract Data Types in Daily Life
 
-  - A stack of trays in the local cafetaria: ![dispenser]\(images/dispenser.jpg\)
+  - A stack of trays in the local cafetaria: ![dispenser](/images/dispenser.jpg)
     [credit](http://www.thermo-box.co.uk/fimi-food-transport-and-handling-products/self-levelling-heated-and-unheated-plate-and-tray-systems.html)
 
-  - A tree: ![tree]\(images/tree.jpg\) [credit](http://free-extras.com/images/tree-569.htm)
+  - A tree: ![tree](/images/tree.jpg) [credit](http://free-extras.com/images/tree-569.htm)
 
-  - Coral: ![coral]\(images/coral.jpg\) [credit](http://blog.enn.com/?p=476)
+  - Coral: ![coral](/images/coral.jpg) [credit](http://blog.enn.com/?p=476)
 
 ## Abstract Data Types in computer science
 
@@ -136,11 +137,11 @@ text. In many cases a less detailed representation is sufficient and an abstract
 
 For the input sentence
 
-![example-text]\(images/example-text.png\)
+![example-text](/images/example-text.png)
 
 the parse tree (left) and abstract syntax tree (right) may look as follows:
 
-![parse-ast]\(images/parse-ast.png\)
+![parse-ast](/images/parse-ast.png)
 
 Note that the parse tree on the left did not preserve the spaces in the original text but there are parse tree formats
 (including the one used by Rascal) that preserve all textual information.
@@ -219,7 +220,7 @@ Directly execute the statements of a program.
 
 There are two methods to execute a program that is written in some source language:
 
-  - An [Interpreter](http://en.wikipedia.org/wiki/Interpreter_\(computing\)) directly executes the source statements
+  - An [Interpreter](http://en.wikipedia.org/wiki/Interpreter_(computing)) directly executes the source statements
     (but see the variations below).
 
   - A [Compiler](#Rascalopedia-Compiler) translates the source program to some efficient executable form. That
@@ -349,12 +350,12 @@ their operators](/Rascal#Values-List) and of [library functions on lists](/Libra
 
 ## Lists in Daily Life
 
-  - A line of people waiting for the super market checkout or bus stop. ![bustop]\(images/queue.png\)
+  - A line of people waiting for the super market checkout or bus stop. ![bustop](/images/queue.png)
     [credit](http://www.realbollywood.com)
 
   - The wagons of a train.
 
-  - The Top 100 Music Charts. ![hot100.png]\(images/hot100.png\)
+  - The Top 100 Music Charts. ![hot100.png](/images/hot100.png)
     [credit](http://www.billboard.com/charts/hot-100#/charts/hot-100)
 
   - Twitter users ordered according to number of followers.
@@ -457,9 +458,9 @@ be so detailed that it contains every space, comment and parenthesis in the orig
 
 **Examples.**
 
-A parse tree for the sentence ![example]\(images/example-text.png\)
+A parse tree for the sentence ![example](/images/example-text.png)
 
-![parse-tree]\(images/parse-tree.png\)
+![parse-tree](/images/parse-tree.png)
 
 # Parser
 
@@ -478,7 +479,7 @@ of language *L*. There are two possible answers:
 
 This is shown below:
 
-![parser]\(images/parser.png\)
+![parser](/images/parser.png)
 
 # Prettyprinter
 
@@ -568,7 +569,7 @@ An unordered set of tuples.
 In mathematics, given sets *D*<sub>1</sub>, *D*<sub>2</sub>, …​ *D*<sub>n</sub>, a *n*-ary relation *R* is characterized
 by *R* SUBSETEQ *D*<sub>1</sub> × *D*<sub>2</sub> × …​ × *D*<sub>n</sub>. In other words, *R* consists of a set of
 tuples \< *V<sub>1</sub>*, …​, *V<sub>n</sub>* \> where each *V*<sub>i</sub> is an element of the set *D*<sub>i</sub>.
-When *n* = 2, we call the relation a [binary relation](http://en.wikipedia.org/wiki/Relation_\(mathematics\)).
+When *n* = 2, we call the relation a [binary relation](http://en.wikipedia.org/wiki/Relation_(mathematics)).
 
 In [database theory](http://en.wikipedia.org/wiki/Relational_algebra), a relation is a table with a heading and an
 unordered set of tuples:
@@ -590,12 +591,12 @@ them, see [functions on sets](/Libraries#Libraries-Set)).
 
   - The *parent-of* or *friend-of* relation between people.
     image::/Rascalopedia/Relation/char-relation.jpg\[width="350px" ,alt="char-relation"\]
-    [credit]\(images/Pg10-11CharRelation.jpg\)
+    [credit](/images/Pg10-11CharRelation.jpg)
 
   - A character relation map, describing the relations between the characters in a play or soap series.
 
   - A listing of the top 2000 songs of all times including the position, artist name, song title, the year the song was
-    published. ![top2000-2010]\(images/top2000-2010.jpg\) [credit](http://top2011.radio2.nl/lijst/2010)
+    published. ![top2000-2010](/images/top2000-2010.jpg) [credit](http://top2011.radio2.nl/lijst/2010)
 
 ## Relations in computer science
 
@@ -658,13 +659,13 @@ operators](/Rascal#Values-Set) and of [library functions on sets](/Libraries#Pre
 
 ## Sets in Daily Life
 
-  - A cutlery set consisting of knife, fork and the like. ![cutlery-set]\(images/cutlery-set.jpg\)
+  - A cutlery set consisting of knife, fork and the like. ![cutlery-set](/images/cutlery-set.jpg)
     [credit](http://www.ikea.com/gb/en/catalog/products/50087185/)
 
   - A crowd of people.
 
   - A stamp collection (but be aware that the duplicates will disappear\!)
-    ![stamp-collecting]\(images/stamp-collecting.jpg\)
+    ![stamp-collecting](/images/stamp-collecting.jpg)
     [credit](http://www.life123.com/hobbies/antiques-collectibles/stamps/stamp-collecting-2.shtml)
 
 ## Sets in computer science
@@ -772,7 +773,7 @@ Examples of software metrics are:
   - [Cyclomatic complexity](http://en.wikipedia.org/wiki/Cyclomatic_complexity) measures logical complexity of code.
     Software components with a high cyclomatic complexity are hard to understand and maintain.
 
-  - [Coupling](http://en.wikipedia.org/wiki/Coupling_\(computer_science\)) measures the coupling between software
+  - [Coupling](http://en.wikipedia.org/wiki/Coupling_(computer_science)) measures the coupling between software
     components. High coupling indicates problems in the structure of a system.
 
 # Static Semantics
@@ -831,7 +832,7 @@ According to the [Merriam-Webster](http://www.merriam-webster.com/dictionary/syn
   - *Computers*: the grammatical rules and structural patterns governing the ordered use of appropriate words and
     symbols for issuing commands, writing code, etc., in a particular software application or programming language.
 
-[Wikipedia](http://en.wikipedia.org/wiki/Syntax_\(programming_languages) says: the syntax of a programming language is
+[Wikipedia](http://en.wikipedia.org/wiki/Syntax_(programming_languages) says: the syntax of a programming language is
 the set of rules that define the combinations of symbols that are considered to be correctly structured programs in that
 language.
 
@@ -962,23 +963,23 @@ examples can be found in [visualization recipes](/Recipes#Recipes-Visualization)
 Robert vam Liere and Wim de Leeuw have visualized liquid flows. There is also an
 [animated](http://homepages.cwi.nl/~robertl/movies/flow1.mpg) version.
 
-![flow]\(images/flow.jpg\)
+![flow](/images/flow.jpg)
 
 ## Information Visualization
 
 Facebook’s [Friend Wheel](http://apps.facebook.com/friendwheel/) shows the connection between friends:
 
-![friends]\(images/friends.jpg\)
+![friends](/images/friends.jpg)
 
 ## Software Visualization
 
 Stephen Eick [visualizes](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.67.962) the frequency of execution for
 each line in all source files of a software system.
 
-![frequency]\(images/freq.png\)
+![frequency](/images/freq.png)
 
 Daniel Bierwirth
 [shows](http://www.danielbierwirth.de/index.php/reseachprojects/8-myresearch/mastercurriculumresearchcat/73-bundle-view-software-visualization)
 the connections (colored lines) between system components (at outer circle).
 
-![bundle]\(images/bundle.jpg\)
+![bundle](/images/bundle.jpg)

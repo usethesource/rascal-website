@@ -1,5 +1,6 @@
 ---
 sidebar_position: 9
+title: TypePal
 ---
 
 **Synopsis.**
@@ -626,7 +627,7 @@ first search for a definition in the current parse tree and only when that fails
 This is illustrated below, where a name occurrence *O* can be resolved to definitions *D1* (syntactic resolution), *D2*
 (semantic resolution) and/or *D3* (semantic resolution).
 
-![400]\(images/NameResolution.png\)
+![400](/images/NameResolution.png)
 
 > **Important**
 > 
@@ -764,7 +765,7 @@ Type checking using TypePal proceeds in the following stages:
 This approach is very flexible, since each of the stages can be called separately, enabeling a pipeline with
 user-defined model transformations inbetween.
 
-![900]\(images/Architecture.png\)
+![900](/images/Architecture.png)
 
 This whole process starts with a syntax for the language we want to analyze (let’s call that language *L* for now). The
 *L* syntax is used to parse the *L* program we want to type check. The result is a parse tree.
@@ -852,7 +853,7 @@ state. The global services provided by a `Collector` are:
 
 The functions provided by a `Collector` are summarized below:
 
-![800]\(images/Collector.png\)
+![800](/images/Collector.png)
 
 Three dozen functions are available that fall into the following categories:
 
@@ -1389,7 +1390,7 @@ A `Solver` tries to solve the constraints in a `TModel`; unsolved constraints pr
 The purpose of a Solver is to solve the constraints that have been gathered by the [Collector](#TypePal-Collector) and
 to produce a TModel. The functions provided by a Solver are summarized below:
 
-![800]\(images/Solver.png\)
+![800](/images/Solver.png)
 
 Two dozen functions (some very similar to the ones provided for [Collector](#TypePal-Collector)) are available that fall
 into the following categories:
@@ -1775,7 +1776,7 @@ TypePal provides configuration options for
 
 Here is an overview:
 
-![600]\(images/TypePalConfig.png\)
+![600](/images/TypePalConfig.png)
 
 ## Name Resolution & Overloading
 

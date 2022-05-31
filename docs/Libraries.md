@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+title: Libraries
 ---
 
 **Synopsis.**
@@ -9640,7 +9641,7 @@ Determine the connected components of a graph.
 
 **Description.**
 
-Returns the [connected components](http://en.wikipedia.org/wiki/Connected_component_\(graph_theory\)) of Graph `G`, as
+Returns the [connected components](http://en.wikipedia.org/wiki/Connected_component_(graph_theory)) of Graph `G`, as
 sets of nodes. All nodes within one component are all reachable from one another, there are no paths between two nodes
 from different components. The graph is assumed to be undirected.
 

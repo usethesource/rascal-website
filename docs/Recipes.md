@@ -1,5 +1,6 @@
 ---
-sidebar_position: 12
+sidebar_position: 13
+title: Recipes
 ---
 
 **Synopsis.**
@@ -585,7 +586,7 @@ A self-reproducing program.
 
 **Description.**
 
-A [quine](http://en.wikipedia.org/wiki/Quine_\(computing\)) is a computer program that takes no input and produces a
+A [quine](http://en.wikipedia.org/wiki/Quine_(computing)) is a computer program that takes no input and produces a
 copy of its own source code. A quine is also called a *self-replicating* or *self-reproducing* program.
 
 At the [Quine Page](http://www.nyx.net/~gthompso/quine.htm) you can find hundreds of quines in many different
@@ -626,7 +627,7 @@ str program =";
     a moment.
 
   - The function `quine` prints the string `program` twice, here as is and this produces the program upto
-    ![callout]\(images/callout.png\) above.
+    ![1](/images/1.png) above.
 
   - Here the value of `program` is printed as a string (surrounded with string quotes) in order to reproduce the string
     value of `program` followed by a semi-colon (`;`).
@@ -655,7 +656,7 @@ println("\"" + escape(greeting, ("\"": "\\\"")) + "\"");
 
 And indeed, the two quotes are now properly escaped.
 
-This is exactly what happens at ![4]\(images/4.png\) in the definition of `quine`:
+This is exactly what happens at ![4](/images/4.png) in the definition of `quine`:
 
 ``` rascal
 println("\"" + escape(program, ("\"" : "\\\"", "\\" : "\\\\")) + "\";");
@@ -1189,7 +1190,7 @@ Let’s see how these questions can be answered using Rascal.
 Consider the following call graph (a box represents a procedure and an arrow represents a call from one procedure to
 another procedure):
 
-![calls]\(images/calls.png\)
+![calls](/images/calls.png)
 
 ``` rascal-shell
 import Set;
@@ -1336,7 +1337,7 @@ procedures by a call between components.
 
 Consider the following figure:
 
-![Module Parts]\(images/parts.png\)
+![Module Parts](/images/parts.png)
 
 (a) Shows the calls between procedures; (b) shows how procedures are part of a system component. (c) shows how the call
 relation given in (a) can be lifted to the component level.
@@ -1609,7 +1610,7 @@ Symbolic differentiation.
 
 **Description.**
 
-Computing the [derivative](http://en.wikipedia.org/wiki/Differentiation_\(mathematics\)) of an expression with respect
+Computing the [derivative](http://en.wikipedia.org/wiki/Differentiation_(mathematics)) of an expression with respect
 to some variable is a classical calculus problem. Loosely speaking, a derivative can be thought of as how much one
 quantity is changing in response to changes in some other quantity; for example, the derivative of the position of a
 moving object with respect to time is the object’s instantaneous velocity.
@@ -2430,7 +2431,7 @@ start syntax Exp =
                  ;
 ```
 
-Observe that at ![1]\(images/3.png\) these labels have been added.
+Observe that at ![1](/images/3.png) these labels have been added.
 
 It is good practice to introduce separate modules for parsing and for the conversion itself:
 
@@ -3829,7 +3830,7 @@ include a Lisp interpreter. (A variant says the same about including an email cl
 
 We will closely follow and **reuse parts of** Peter Norvig’s excellent page on [Lispy](http://norvig.com/lispy.html), a
 Lisp interpreter written in Python. The Lisp variant to be implemented is the following subset of the
-[Scheme](http://en.wikipedia.org/wiki/Scheme_\(programming_language\)) language:
+[Scheme](http://en.wikipedia.org/wiki/Scheme_(programming_language)) language:
 
 | Form                                                                                                    | Syntax                 | Semantics and Example                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -4942,14 +4943,14 @@ An Integrated Development Environment for Pico.
 Unresolved directive in Languages/Pico/IDE/IDE.adoc - include::/mnt/c/dev/projects/usethesource/rascal/src/org/rascalmpl/library/demo/lang/Pico/Plugin.rsc[tags=module]
 ```
 
-  - First the name of the language and its file name extension are defined \(images/1.png\).
+  - First the name of the language and its file name extension are defined (/images/1.png).
 
-  - Next the connection with the parser \(images/3.png\), evaluator
-    \(images/6.png\) are defined.
+  - Next the connection with the parser (/images/3.png), evaluator
+    (/images/6.png) are defined.
 
-  - \(images/7.png\) combines the above into a set of contributions to the Pico IDE.
+  - (/images/7.png) combines the above into a set of contributions to the Pico IDE.
 
-  - The actual creation of the Pico IDE is done by `registerPico` \(images/8.png\) that:
+  - The actual creation of the Pico IDE is done by `registerPico` (/images/8.png) that:
     
       - Registers the Pico language with name, file name extension and Parser. Whenever a user clicks on a `.pico` file
         an editor will opened and the parsed file will be displayed in it.
@@ -4962,20 +4963,20 @@ Unresolved directive in Languages/Pico/IDE/IDE.adoc - include::/mnt/c/dev/projec
 
 Let’s write a Pico program that produces a string of "a"s:
 
-![screen 1]\(images/Screenshot1.png\)
+![screen 1](/images/Screenshot1.png)
 
 As can be seen in the editor above, we get an error since we made a typo (missing comma) in the declarations. We correct
 it:
 
-![screen 2]\(images/Screenshot2.png\)
+![screen 2](/images/Screenshot2.png)
 
 Now it turns out that we had erroneously used the `+` operator on strings (it should be `||`). We correct it:
 
-![screen 3]\(images/Screenshot3.png\)
+![screen 3](/images/Screenshot3.png)
 
 Now we get a warning that variable `n` is not initialized. We correct it and get an error-free and warning-free program:
 
-![screen 4]\(images/Screenshot4.png\)
+![screen 4](/images/Screenshot4.png)
 
 ### Load
 
@@ -5454,7 +5455,7 @@ render(visCFG(CFG.graph));
 
 The resulting visualization looks like this:
 
-![Control flow graph]\(images/cfg1.png\)
+![Control flow graph](/images/cfg1.png)
 
 # Metrics
 
@@ -5762,7 +5763,7 @@ render(space(visColoredTree(rb), std(size(30)), std(gap(30))));
 
 and the result is:
 
-![a1]\(images/a1.png\)
+![a1](/images/a1.png)
 
 Note that:
 
@@ -5781,7 +5782,7 @@ render(space(visColoredTree(rb), std(size(30)), std(gap(30)), std(manhattan(fals
 
 the result is:
 
-![a2]\(images/a2.png\)
+![a2](/images/a2.png)
 
 It is also possible to change the [orientation](/Libraries#Properties-orientation) of the tree and draw it, for example,
 from left to right:
@@ -5793,7 +5794,7 @@ render(space(visColoredTree(rb), std(size(30)), std(gap(30)), std(orientation(le
 
 the result is:
 
-![a3]\(images/a3.png\)
+![a3](/images/a3.png)
 
 ## Draw a Logo
 
@@ -6094,11 +6095,11 @@ render(logo());
 
 will produce:
 
-![Rascal logo]\(images/logo1.png\)
+![Rascal logo](/images/logo1.png)
 
 or as a screenshot:
 
-![Screen shot]\(images/Screenshot1.png\)
+![Screen shot](/images/Screenshot1.png)
 
 ## Interactive Box Height
 
@@ -6169,7 +6170,7 @@ render(higher());
 
 gives
 
-![h1]\(images/h1.png\)
+![h1](/images/h1.png)
 
 Unfortunately we cannot show the interaction here, so run this example from the `demo` directory and watch how the
 height of the box changes when you enter a new number in the text field.
@@ -6193,9 +6194,9 @@ render(b);
 
 and it will look like this:
 
-![Box 1]\(images/b1.png\) or rather, it will look like this:
+![Box 1](/images/b1.png) or rather, it will look like this:
 
-![Screenshot 1]\(images/Screenshot1.png\)
+![Screenshot 1](/images/Screenshot1.png)
 
 Wow, the box fills the whole window\! So lets give our box a [size](/Libraries#Properties-size):
 
@@ -6208,7 +6209,7 @@ render(b);
 
 and it will look like this:
 
-![Box 2]\(images/b2.png\)
+![Box 2](/images/b2.png)
 
 On screen however, it still fills the whole window as shown above. The lesson here is that size is to be taken as
 **minimum size** (and probably we should rename `size` to `minSize` to emphasize this).
@@ -6225,7 +6226,7 @@ render(b);
 
 which says: *I am a red box and I want to occupy 50% of the available space.* The result is:
 
-![Screen shot 2]\(images/Screenshot2.png\)
+![Screen shot 2](/images/Screenshot2.png)
 
 Shrinking can also be limited to one dimension using [hshrink](/Libraries#Properties-hshrink) or
 [vshrink](/Libraries#Properties-vshrink):
@@ -6240,7 +6241,7 @@ render(b);
 which says:\_ I am a red box and I want to occupy 50% of the available space in the horizontal direction and 100% of the
 available space in the vertical direction.\_ The result is:
 
-![Screen shot 3]\(images/Screenshot3.png\)
+![Screen shot 3](/images/Screenshot3.png)
 
 Relative sizes can also be used when figures are nested.
 
@@ -6252,7 +6253,7 @@ b2 = box(b1, fillColor("yellow"), size(200,100));
 render(b2);
 ```
 
-![Box 5]\(images/b5.png\)
+![Box 5](/images/b5.png)
 
 **Pitfalls.**
 
@@ -6302,7 +6303,7 @@ render(visParsetree(parse(#Exp, "1+2*3")));
 
 With as result:
 
-![t1]\(images/t1.png\)
+![t1](/images/t1.png)
 
 The figure is interactive (not available here):
 
@@ -6335,7 +6336,7 @@ Here is an ellipse with minimum size 200x300 that occupies 80% of the available 
 render(e);
 ```
 
-![e1]\(images/e1.png\)
+![e1](/images/e1.png)
 
 (we add the shrink to leave some space for thick lines and shadows below).
 
@@ -6346,7 +6347,7 @@ Change the style of its border using [lineStyle](/Libraries#Properties-lineStyle
 render(e);
 ```
 
-![e2]\(images/e2.png\)
+![e2](/images/e2.png)
 
 Change the thickness of its border using [lineWidth](/Libraries#Properties-lineWidth):
 
@@ -6355,7 +6356,7 @@ Change the thickness of its border using [lineWidth](/Libraries#Properties-lineW
 render(e);
 ```
 
-![e3]\(images/e3.png\)
+![e3](/images/e3.png)
 
 Change the color of its border using [lineColor](/Libraries#Properties-lineColor):
 
@@ -6364,7 +6365,7 @@ Change the color of its border using [lineColor](/Libraries#Properties-lineColor
 render(e);
 ```
 
-![e4]\(images/e4.png\)
+![e4](/images/e4.png)
 
 Change the color of its area using [fillColor](/Libraries#Properties-fillColor):
 
@@ -6373,7 +6374,7 @@ Change the color of its area using [fillColor](/Libraries#Properties-fillColor):
 render(e);
 ```
 
-![e5]\(images/e5.png\)
+![e5](/images/e5.png)
 
 Add a shadow using [shadow](/Libraries#Properties-shadow):
 
@@ -6382,7 +6383,7 @@ Add a shadow using [shadow](/Libraries#Properties-shadow):
 render(e);
 ```
 
-![e6]\(images/e6.png\)
+![e6](/images/e6.png)
 
 Add the color of the shadow using [shadowColor](/Libraries#Properties-shadowColor):
 
@@ -6391,7 +6392,7 @@ Add the color of the shadow using [shadowColor](/Libraries#Properties-shadowColo
 render(e);
 ```
 
-![e7]\(images/e7.png\)
+![e7](/images/e7.png)
 
 Finally, enjoy the grande finale:
 
@@ -6400,4 +6401,4 @@ Finally, enjoy the grande finale:
 render(e);
 ```
 
-![e8]\(images/e8.png\)
+![e8](/images/e8.png)

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+title: Language Reference
 ---
 
 **Synopsis.**
@@ -146,7 +147,7 @@ which corresponds to a path relative to the root of the current workspace.
 
 The constituents of a module are shown in the figure below.
 
-![Module Parts]\(images/module-parts.png\)
+![Module Parts](/images/module-parts.png)
 
 An [Import](#Declarations-Import) declares other modules that are used by the current module. Following imports, a
 module may contain declarations (in arbitrary order, but a [Syntax Definition](#Declarations-SyntaxDefinition) can occur
@@ -259,7 +260,7 @@ program is executed.
 
 The types are ordered in a so-called *type lattice* shown in the following figure.
 
-![Type Lattice]\(images/type-lattice.png\)
+![Type Lattice](/images/type-lattice.png)
 
 The arrows describe a *subtype-of* relation between types. The type `void` is the *smallest* type and is included in all
 other types and the type `value` is the *largest* type that includes all other types. We also see that `rel` is a
@@ -9355,7 +9356,7 @@ Reduce generated values to a single value.
 
 **Description.**
 
-A reducer resembles the [fold](http://en.wikipedia.org/wiki/Fold_\(higher-order_function\)) function found in most
+A reducer resembles the [fold](http://en.wikipedia.org/wiki/Fold_(higher-order_function)) function found in most
 functional languages.
 
 A reducer is equivalent to the following code:
@@ -9642,7 +9643,7 @@ The following statements are available:
 
   - [While](#Statements-While): While loop.
 
-![Statement Types]\(images/statement-parts.png\)
+![Statement Types](/images/statement-parts.png)
 
 ## Append
 

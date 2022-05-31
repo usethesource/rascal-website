@@ -1,6 +1,6 @@
 ---
 sidebar_position: 999
-title: Syntax Highlighting Demo
+title: -- Syntax Highlighting Demo --
 ---
 import Rascal from '@site/src/components/Rascal';
 
