@@ -12,27 +12,19 @@ published: true
 
 ## Disclaimer
 
-We release beta versions of Rascal, which are pretty stable. For 2020, expect about one release per month. Alpha releases are [continuously deployed](/developers). 
+We release beta versions of Rascal, which are pretty stable. For 2022, expect about one release per month. Alpha releases are [continuously deployed](/developers). 
 
 ## Eclipse plugin
 
 The Eclipse update site for Rascal is: **[https://update.rascal-mpl.org/stable/](https://update.rascal-mpl.org/stable/)**
 
 You need the _Eclipse IDE for RCP and RAP Developers_ version of Eclipse.
-Currently, due to compatability issues with Java 11, Rascal only works with Eclipse IDE versions up to 2020-06, which is available at [https://www.eclipse.org/downloads/packages/release/2020-06/r/eclipse-ide-rcp-and-rap-developers](https://www.eclipse.org/downloads/packages/release/2020-06/r/eclipse-ide-rcp-and-rap-developers).
-For further information see [this issue on the Rascal GitHub page](https://github.com/usethesource/rascal/issues/1473).
-Older versions of Eclipse should also work,  at least down to Mars.2.
-
-A continuously released update site for practical libraries for Rascal can be found here: **[https://update.rascal-mpl.org/libs/](https://update.rascal-mpl.org/libs/)**, featuring for example prototypes of:
-
-   * [ClaiR - C language analysis in Rascal](https://github.com/cwi-swat/clair)
-   * [Shapes - generating web-based visualisations](https://github.com/cwi-swat/shapes)
+Currently, due to compatability issues with Java 8, the latest Rascal plugins only works with Eclipse IDE versions up after 2020-06.
+Older versions of Eclipse do not work anymore.
 
 Please note that:
- 
- - Rascal needs a JDK because it uses the Java compiler, so please download a JDK8, not just a JRE.
- - Our update site has a *Let's Encrypt* certificate, which has been supported by Java 8 from update 101 onwards.
-   Please update your Java 8 installation if you encounter a ValidatorException during the installation process.
+
+ - You need a JDK version 11, not lower and not higher.
  - You may have to [edit the Eclipse init file](/start/editini.html) so
    that Eclipse can find your Java installation and Eclipse can allocate enough
    resources. If you are running MacOSX you have to start Eclipse once first, quit, and then edit the ini file.
