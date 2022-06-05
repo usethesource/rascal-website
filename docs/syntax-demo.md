@@ -4,7 +4,7 @@ title: -- Syntax Highlighting Demo --
 ---
 import Rascal from '@site/src/components/Rascal';
 
-# Rascal component
+## Rascal component
 
 <Rascal>
 module demo::basic::Hello
@@ -16,7 +16,7 @@ void hello() {
 }
 </Rascal>
 
-# Backtick method
+## Backtick method
 
 ```rascal
 module demo::basic::Hello

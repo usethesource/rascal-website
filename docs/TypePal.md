@@ -57,7 +57,7 @@ features and also show some examples:
 
   - [Examples of Typecheckers](#TypePal-Examples): Examples of type checkers built with TypePal.
 
-# Overview
+## Overview
 
 **Synopsis.**
 
@@ -92,7 +92,7 @@ are solved in an efficient, data-driven, fashion.
 
 TypePal is highly parameterized and can be adapted to specific type checking needs.
 
-# A Calculator Language
+## A Calculator Language
 
 **Synopsis.**
 
@@ -105,7 +105,7 @@ TypePal. The full source code of Calc can be found at
 <https://github.com/cwi-swat/typepal/tree/master/src/examples/calc>. See [Examples of Typecheckers](#TypePal-Examples)
 for a list of all available type checker examples.
 
-## Syntax of Calc
+### Syntax of Calc
 
 ``` rascal
 module lang::calc::Syntax
@@ -157,7 +157,7 @@ keyword Reserved
 
   - a conditional expression (the first expression should have type Boolean, the other two should have the same type).
 
-## Typechecking Calc
+### Typechecking Calc
 
 Type checking Calc amounts to checking the following:
 
@@ -242,7 +242,7 @@ where *syntactic pattern* corresponds with a rule from the language syntax, in t
 > Each `collect` declaration is responsible for calling `collect` on relevant subparts (a run-time error is given for a
 > missing `collect`).
 
-#### Check Declaration
+##### Check Declaration
 
 A declaration introduces a new name and associates the type of the righthand side expression with it.
 
@@ -272,7 +272,7 @@ Here we define `name` as a variable and define its type as the same type as `exp
     is defined having the same type as `exp`. This implies that the type of `name` can only be known when the type of
     `exp` is known.
 
-#### Check Exp: Id
+##### Check Exp: Id
 
 An expression consisting of a single identifier, refers to a name introduced in another declaration and gets the type
 introduced in that declaration.
@@ -298,7 +298,7 @@ this. There are then two possibilities:
 > 
 > We do not enforce *define-before-use* in this example, but see [???](#XXX) how to achieve this.
 
-#### Check Exp: Boolean and Integer constants
+##### Check Exp: Boolean and Integer constants
 
 ``` rascal
 void collect(current: (Exp) `<Boolean boolean>`, Collector c){
@@ -317,7 +317,7 @@ When encountering a Boolean or integer constant we record their type using `c.fa
 > The second argument of `fact` maybe an `AType`, an arbitrary parse tree (in which case the type of that tree will be
 > used), or a function that returns a type.
 
-#### Check Exp: parentheses
+##### Check Exp: parentheses
 
 ``` rascal
 void collect(current: (Exp) `( <Exp e> )`, Collector c){
@@ -330,7 +330,7 @@ The type of an expression enclosed by parentheses is the same as the same of the
 
 A final, essential, step is to collect constraints from the subpart `e`.
 
-#### Check Exp: addition
+##### Check Exp: addition
 
 Addition of integers given an integer result and addition of Booleans gives a Boolean result.
 
@@ -378,7 +378,7 @@ integer result type and two Boolean arguments a Boolean result type; otherwise r
 
 A final, essential, step is to collect constraints from the subparts `e1` and `e2`.
 
-#### Check Exp: multiplication
+##### Check Exp: multiplication
 
 ``` rascal
 void collect(current: (Exp) `<Exp e1> * <Exp e2>`, Collector c){
@@ -398,7 +398,7 @@ void collect(current: (Exp) `<Exp e1> * <Exp e2>`, Collector c){
 Checking multiplication follows exactly the same pattern as checking addition. Even in this simple example we see
 repetition of code that could be factored out.
 
-#### Check Exp: conditional expression
+##### Check Exp: conditional expression
 
 ``` rascal
 void collect(current: (Exp) `if <Exp cond> then <Exp e1> else <Exp e2>`, Collector c){
@@ -421,7 +421,7 @@ used) or an `AType`. `requireEqual` requires that both types are equal or report
 
 A final, essential, step is to collect constraints from the subparts `cond`, `e1` and `e2`.
 
-## Testing the Calc typechecker
+### Testing the Calc typechecker
 
 ### Getting started
 
@@ -522,27 +522,27 @@ and here is the produced output:
     Test If3: true
     Test summary: 9 tests executed, 9 succeeded, 0 failed
 
-# Concepts and Definitions
+## Concepts and Definitions
 
 **Synopsis.**
 
 The concepts and definitions used in TypePal.
 
-## Identifier
+### Identifier
 
 The syntax of a source language may impose various restrictions on the identifiers that can occur in a program. They
 amount to including or excluding specific characters for various occurrences of names in the program. One example is the
 requirement in Java that class names start with an upper case letter. TypePal is agnostic of such conventions and
 represents each name as a string. *Qualified names* are also supported and are represented by a list of strings.
 
-## Tree
+### Tree
 
 The Rascal data type `Tree` (REF) is used to represent all parse trees that can be generated for any syntax described in
 Rascal. `Tree` is also a super type of any syntactic construct that may occur in a parse tree. In TypePal we
 interchangeably use `Tree` and the source area (a source location) associated with it to uniquely identify program
 parts, definitions, uses and scopes.
 
-## Scope
+### Scope
 
 A *scope* is a region of a program that delimits where definitions of identifier are applicable. An identifier is
 defined in the scope where it is defined and in all nested subscopes, unless one of these subscopes redefines that same
@@ -550,7 +550,7 @@ identifier. In that case, the inner definition applies inside that nested scope 
 identified by the subtree of the parse tree that introduces them such as, for instance, a module, a function declaration
 or a block. Special rules may apply such as *define-before-use* or *scopes-with-holes*.
 
-## Scope Graph
+### Scope Graph
 
 The scope graph is one of the the oldest methods to describe the scope of names in a program. We use a version of scope
 graphs as described by Kastens & Waite, *Name analysis for modern languages: a general solution*, SP\&E, 2017. This
@@ -558,7 +558,7 @@ model uses text ranges in the source text (happily represented by Rascal’s `lo
 aspects of names. A scope graph provides lookup operations on names that take both syntactic nesting and semantic
 linking (via *paths*) into account, as well as the specific roles of identifiers and paths (described below).
 
-## Identifier definition
+### Identifier definition
 
 The *definition* of an identifier is inside TypePal characterized by a `Define`:
 
@@ -578,7 +578,7 @@ where
 
   - `defInfo` is any additional information associated with this definition, see [DefInfo](#_definfo),
 
-## Identifier Use
+### Identifier Use
 
 The *use* of an identifier is characterized by a `Use`:
 
@@ -593,7 +593,7 @@ where `use` represents the use of a simple name and `useq` that of a qualified n
 strings is given; the last string is a simple name in given `idRoles` and the preceeding strings are its qualifiers in
 `qualifierRoles`.
 
-## Path
+### Path
 
 TypePal is based on scope graphs that are not only based on syntactic containment of scopes but can also express
 semantic connections between parse trees. While scopes are strictly determined by the hierarchical structure of a
@@ -611,7 +611,7 @@ data PathRole
 
 Paths are, amongst others, used in the resolution of qualified names.
 
-## Name Resolution
+### Name Resolution
 
 Name resolution is based on the principle: *syntactic resolution first, semantic resolution second*. This means that we
 first search for a definition in the current parse tree and only when that fails we follow semantic path to other trees
@@ -634,7 +634,7 @@ This is illustrated below, where a name occurrence *O* can be resolved to defini
 > Name resolution need not have a unique solution. Therefore the author of a TypePal-based type checker can provide
 > functions to (a) filter valid solutions; (b) determine which identifiers may be overloaded.
 
-## Role
+### Role
 
 Identifiers, scopes and path can play different *roles* that determine how they will be handled. They are represented by
 various Rascal datatypes that can be extended by the author of a typechecker.
@@ -681,7 +681,7 @@ data PathRole
     ;
 ```
 
-## Types
+### Types
 
 The type to be associated with names varies widely for different programming languages and has to be provided by the
 typechecker author. TypePal provides the data type `AType` that provides already some built-in constructors:
@@ -713,7 +713,7 @@ messages):
 str prettyAType(AType atype);
 ```
 
-## DefInfo
+### DefInfo
 
 When defining a name, we usually want to associate information with it such as the type of the defined name. TypePal
 provides the data type `DefInfo` for this purpose:
@@ -743,7 +743,7 @@ The [Solver](#TypePal-Solver) argument of `getAType` and `getATypes` is the curr
 > 
 > noDefInfo may be removed.
 
-# Architecture of TypePal
+## Architecture of TypePal
 
 **Synopsis.**
 
@@ -781,7 +781,7 @@ new [Solver](#TypePal-Solver) (using `newSolver`) and running it on the given `T
 
 TypePal can be configured using a [TypePal Configuration](#TypePal-Configuration).
 
-# Reporting
+## Reporting
 
 **Synopsis.**
 
@@ -816,7 +816,7 @@ The following insertion directives are supported:
 
   - `%%`: insert the character `%`.
 
-# Collector
+## Collector
 
 **Synopsis.**
 
@@ -891,7 +891,7 @@ given a `Collector` named `c`, calling the `define` function amounts to: `c.defi
 Collector functions are prefixed with `/* Collector field */` to emphasize that they are a field of the Collector
 datatype.
 
-## LifeCycle of Collector
+### LifeCycle of Collector
 
 A new `Collector` is created using the function `newCollector`.
 
@@ -941,7 +941,7 @@ where:
 > 
 > Each `collect` function is responsible for collecting constraints from its subtrees.
 
-## Configuration
+### Configuration
 
 The [TypePal Configuration](#TypePal-Configuration) can be retrieved or adjusted by the following two functions:
 
@@ -952,7 +952,7 @@ The [TypePal Configuration](#TypePal-Configuration) can be retrieved or adjusted
 
 The former returns the current TypePal configuration, the latter sets the current configuration to a new configuration.
 
-## Scoping
+### Scoping
 
 Scope management amounts to entering a new scope, leave the current scope and retrieving the current scope:
 
@@ -976,7 +976,7 @@ void collect(current: (Expression) `let <Id name> : <Type tp> = <Expression exp1
 }
 ```
 
-## Scope Info
+### Scope Info
 
 It is possible to associate auxiliary information with each scope. This enables the downward propagation of information
 during the topdown traversal of the source program by `collect`. Typical use cases are:
@@ -1054,7 +1054,7 @@ void collect(current:(Statement) `break <Target target>;`, Collector c){
   - When handling a `break` statement, we get all available ScopeInfo for loopScopes (innermost first) and check the
     associated loopInfo.
 
-## Nested Info
+### Nested Info
 
 An arbitrary number of push down stacks can be maintained during the topdown traversal of the source code that is being
 type checked. A use case is recording that a certain syntax type is encountered and make children aware of this, e.g.
@@ -1074,7 +1074,7 @@ Each stack has a string name (`key`) and is created on demand.
 require the existence of the named stack. `getStack` returns all values in the named stack, while `clearStack` resets it
 to empty.
 
-## Composition
+### Composition
 
 TModels can be composed by adding the information from one TModel to the other. A use case is module compoisition.
 
@@ -1084,7 +1084,7 @@ TModels can be composed by adding the information from one TModel to the other. 
 
 `addTModel` adds the information in `tm` to the current Collector.
 
-## Reporting
+### Reporting
 
 One or more reports can be added by `report` and `reports`:
 
@@ -1099,7 +1099,7 @@ See [Reporting](#TypePal-Reporting) for a description of `FailMessage`.
 > 
 > If one of the messages is `error` the execution of the current calculator or requirement is immediately terminated.
 
-## Add Path
+### Add Path
 
 TypePal is based on nested scopes and path between scopes. The former represent textual nesting as present in block
 structure and function scopes. The latter represent non-local semantic links between program parts as present in import
@@ -1156,7 +1156,7 @@ void collect(current: (WithStatement) `with <{RecordVariable ","}+ recordVars> d
 }
 ```
 
-## Define
+### Define
 
 The function `define` adds the definition of a name in the *current* scope:
 
@@ -1180,7 +1180,7 @@ The function `defineInScope` adds the definition of a name in a *given* scope:
 /* Collector field */  void (value scope, str id, IdRole idRole, value def, DefInfo info) defineInScope
 ```
 
-## Use
+### Use
 
 ### Use an unqualified name
 
@@ -1264,7 +1264,7 @@ applied:
 
 See the Rascal type checker for examples.
 
-## Inference
+### Inference
 
 ATypes may contain type variables and new type variables can be created using `newTypeVar`:
 
@@ -1300,7 +1300,7 @@ contain type variables**.
 The bindings that are accumulated during `calculateEager` or `requireEager` are effectuated upon successfull completion
 of that `calculateEager` or `requireEager`.
 
-## Fact
+### Fact
 
 The function `fact` registers known type information for a program fragment `src`:
 
@@ -1327,7 +1327,7 @@ void collect(current: (Exp) `( <Exp e> )`, Collector c){
 
   - Registers the fact that the current expression has the same type as the embedded expression `e`.
 
-## Calculate
+### Calculate
 
 A calculator computes the type of a subtree `src` by way of an AType-returning function `calculator`. A list of
 dependencies is given whose types have to be known before this calculator can be computed. There are two versions: for
@@ -1344,7 +1344,7 @@ calculator definitions.
 
 See [Inference](#_inference) for details about type variables.
 
-## Require
+### Require
 
 A requirement is a predicate regarding the type or properties of a source tree fragment `src`. There are two versions:
 for `require` all dependencies should be fully resolved and instantiated, while `requireEager` can also handle
@@ -1379,7 +1379,7 @@ The arguments `l` and `r` should either be an AType or a subtree whose type is k
 See [A Calculator Language](#TypePal-PocketCalculator) and [Examples of Typecheckers](#TypePal-Examples) for examples of
 requirement definitions. See [Inference](#_inference) for details about type variables.
 
-# Solver
+## Solver
 
 **Synopsis.**
 
@@ -1421,7 +1421,7 @@ The result of the Solver is an enriched `TModel` that contains, amongst others, 
 or types that could not be computed. It can also be used to generate other usefull information about the program such as
 a use-def relation and the used vocabulary (used for name completion).
 
-## Lifecycle of Solver
+### Lifecycle of Solver
 
 Once, an initial TModel has been created by a [Collector](#TypePal-Collector), a Solver takes over to solve constraints
 and produce a final TModel. A new Solver can be created by `newSolver` that comes in two flavours:
@@ -1459,7 +1459,7 @@ The final TModel contains valuable information such as
 
   - use/def relations.
 
-## Fact
+### Fact
 
 The function `fact` registers known type information for a program fragment `src`:
 
@@ -1474,7 +1474,7 @@ Here
 
   - `atype` is the AType to be associated with `src`.
 
-## Calculate
+### Calculate
 
 All calculate (and require) functions use the following typing convention: an argument of type `value` can either be:
 
@@ -1531,7 +1531,7 @@ from unification are effectuated when the enclosing calculate succeeds.
 The function `lub` return the least upper bound of the types of `l` and `r`; it calls the user-provided function
 `getLub`, see [TypePal Configuration](#TypePal-Configuration).
 
-## Require
+### Require
 
 ### requireEqual
 
@@ -1581,7 +1581,7 @@ require succeeds.
 The function `requireTrue` returns when its condition is true, otherwise the FailMessage is reported. The function
 `requireFalse` returns when its condition is false, otherwise the FailMessage is reported.
 
-## Types
+### Types
 
 Type-related functions try to retrieve various forms of type information from parts of the source program. When that
 information is available, it is returned as result. When it is not available, the internal exception `TypeUnavailable()`
@@ -1692,7 +1692,7 @@ Here:
 
   - `idRoles` is a set of allowed identifier roles for the selectoed types.
 
-## Inference
+### Inference
 
 Type inference is supported by the introduction of type variables using `newTypeVar` in combination with unification
 primitives inside `calculateEager` [Calculate](#_calculate) and `requireEager` [Require](#_require) such as
@@ -1715,14 +1715,14 @@ replaces all type variables occurring in `atype` by their binding (when present)
 
 checks whether `atype` contains any occurrences of type variables.
 
-## Reporting
+### Reporting
 
 ``` rascal
 /* Solver field */ bool(FailMessage fmsg) report
 /* Solver field */ bool (list[FailMessage] fmsgs) reports
 ```
 
-## Global Info
+### Global Info
 
 ### getConfig
 
@@ -1752,7 +1752,7 @@ Returns the global store of the Solver. The following elements may occur in the 
     collect phase will be visible during the solve phase and can me (mis)used to communicate information between the two
     phases.
 
-# TypePal Configuration
+## TypePal Configuration
 
 **Synopsis.**
 
@@ -1778,7 +1778,7 @@ Here is an overview:
 
 ![600](/images/TypePalConfig.png)
 
-## Name Resolution & Overloading
+### Name Resolution & Overloading
 
 ### isAcceptableSimple
 
@@ -1889,7 +1889,7 @@ bool fwjMayOverload (set[loc] defs, map[loc, Define] defines) {
 
   - Only allow the combination of class name and constructor name.
 
-## Operations on Types
+### Operations on Types
 
 Various operations on types can be configured by way of user-defined functions.
 
@@ -1963,7 +1963,7 @@ AType structParametersInstantiateTypeParameters(Tree current, structDef(str name
 default AType structParametersInstantiateTypeParameters(Tree current, AType def, AType ins, AType act, Solver s) = act;
 ```
 
-## Retrieval of Types
+### Retrieval of Types
 
 ### getTypeNamesAndRole
 
@@ -2030,7 +2030,7 @@ AType staticFieldsGetTypeInNamelessType(AType containerType, Tree selector, loc 
 }
 ```
 
-## Extension Points
+### Extension Points
 
 ### preSolver
 
@@ -2048,7 +2048,7 @@ A function `preSolver` that can enrich or transform the TModel before the Solver
 
 A function `postSolver` that can enrich or transform the TModel after constraint solving is complete.
 
-## Miscellaneous
+### Miscellaneous
 
 ### unescapeName
 
@@ -2068,7 +2068,7 @@ from names.
 When `validateConstraints` is true, the validity of all constraints is checked before solving starts. For all
 dependencies (in facts, calculators and requirements) a calculator needs to be present to solve that dependency.
 
-## Verbosity
+### Verbosity
 
 The verbosity of TypePal can be controlled with several configurations settings.
 
@@ -2113,7 +2113,7 @@ complete.
 
 When `showTModel` is true, the resulting TModel is printed when solving is complete.
 
-# Utilities
+## Utilities
 
 **Synopsis.**
 
@@ -2123,7 +2123,7 @@ Some utility functions.
 
 TypePal provides some utility functions to address common scenarios.
 
-## collectAndSolve
+### collectAndSolve
 
 ``` rascal
 TModel collectAndSolve(Tree pt, TypePalConfig config = tconfig(), bool debug = false)
@@ -2138,7 +2138,7 @@ TModel collectAndSolve(Tree pt, TypePalConfig config = tconfig(), bool debug = f
 
   - Return the extended TModel.
 
-## getUseDef
+### getUseDef
 
 ``` rascal
 rel[loc, loc] getUseDef(TModel tm)
@@ -2147,7 +2147,7 @@ rel[loc, loc] getUseDef(TModel tm)
 Get all use-def relations in a given TModel. This may be used in an IDE for creating hyperlinks between use locations
 and definitions.
 
-## getVocabulary
+### getVocabulary
 
 ``` rascal
 set[str] getVocabulary(TModel tm)
@@ -2155,7 +2155,7 @@ set[str] getVocabulary(TModel tm)
 
 Get all defined names in a given TModel. This may be used in an IDE for text completion.
 
-## getFacts
+### getFacts
 
 ``` rascal
 map[loc, AType] getFacts(TModel tm)
@@ -2163,7 +2163,7 @@ map[loc, AType] getFacts(TModel tm)
 
 Get all the locations and their type in a given TModel.
 
-## getMessages
+### getMessages
 
 ``` rascal
 list[Message] getMessages(TModel tm)
@@ -2171,7 +2171,7 @@ list[Message] getMessages(TModel tm)
 
 Get all the messages in a TModel (as added by the Solver).
 
-# Examples of Typecheckers
+## Examples of Typecheckers
 
 **Synopsis.**
 
@@ -2197,7 +2197,7 @@ its source at GitHub. Each example has the same structure:
 
   - `examples` (optionally) a directory with example.
 
-## Calc
+### Calc
 
 |                 |                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -2205,7 +2205,7 @@ its source at GitHub. Each example has the same structure:
 | **Illustrates** | fact, define, use, requireEqual, calculate, getType, report                                                    |
 | **Source**      | <https://github.com/cwi-swat/typepal/tree/master/src/examples/calc>                                            |
 
-## Pico
+### Pico
 
 |                 |                                                                                          |
 | --------------- | ---------------------------------------------------------------------------------------- |
@@ -2213,7 +2213,7 @@ its source at GitHub. Each example has the same structure:
 | **Illustrates** | fact, define, use, enterScope, leaveScope, requireEqual, calculate, getType, report      |
 | **Source**      | <https://github.com/cwi-swat/typepal/tree/master/src/examples/pico>                      |
 
-## QL
+### QL
 
 |                 |                                                                                           |
 | --------------- | ----------------------------------------------------------------------------------------- |
@@ -2221,7 +2221,7 @@ its source at GitHub. Each example has the same structure:
 | **Illustrates** | fact, define, use, requireEqual, requireTrue, calculate, getType, report                  |
 | **Source**      | <https://github.com/cwi-swat/typepal/tree/master/src/examples/ql>                         |
 
-## Fun
+### Fun
 
 |                 |                                                                                                  |
 | --------------- | ------------------------------------------------------------------------------------------------ |
@@ -2229,7 +2229,7 @@ its source at GitHub. Each example has the same structure:
 | **Illustrates** | fact, define, use, enterScope, leaveScope, requireEqual, calculate, getType, report              |
 | **Source**      | <https://github.com/cwi-swat/typepal/tree/master/src/examples/fun>                               |
 
-## ModFun
+### ModFun
 
 |                 |                                                                       |
 | --------------- | --------------------------------------------------------------------- |
@@ -2237,7 +2237,7 @@ its source at GitHub. Each example has the same structure:
 | **Illustrates** | PathRole, addPathToDef                                                |
 | **Source**      | <https://github.com/cwi-swat/typepal/tree/master/src/examples/modfun> |
 
-## Struct
+### Struct
 
 |                 |                                                                       |
 | --------------- | --------------------------------------------------------------------- |
@@ -2245,7 +2245,7 @@ its source at GitHub. Each example has the same structure:
 | **Illustrates** | useViaType, TypePalConfig, getTypeNamesAndRole                        |
 | **Source**      | <https://github.com/cwi-swat/typepal/tree/master/src/examples/struct> |
 
-## Aliases
+### Aliases
 
 |                 |                                                                        |
 | --------------- | ---------------------------------------------------------------------- |
@@ -2253,7 +2253,7 @@ its source at GitHub. Each example has the same structure:
 | **Illustrates** | useViaType, TypePalConfig, getTypeNamesAndRole                         |
 | **Source**      | <https://github.com/cwi-swat/typepal/tree/master/src/examples/aliases> |
 
-## StaticFields
+### StaticFields
 
 |                 |                                                                             |
 | --------------- | --------------------------------------------------------------------------- |
@@ -2261,7 +2261,7 @@ its source at GitHub. Each example has the same structure:
 | **Illustrates** | useViaType, TypePalConfig, getTypeNamesAndRole, getTypeInNamelessType       |
 | **Source**      | <https://github.com/cwi-swat/typepal/tree/master/src/examples/staticFields> |
 
-## StructParameters
+### StructParameters
 
 |                 |                                                                                                  |
 | --------------- | ------------------------------------------------------------------------------------------------ |
@@ -2269,7 +2269,7 @@ its source at GitHub. Each example has the same structure:
 | **Illustrates** | useViaType, TypePalConfig, getTypeNamesAndRole, getTypeInNamelessType, instantiateTypeParameters |
 | **Source**      | <https://github.com/cwi-swat/typepal/tree/master/src/examples/structParameters>                  |
 
-## SmallOO
+### SmallOO
 
 |                 |                                                                        |
 | --------------- | ---------------------------------------------------------------------- |
@@ -2277,7 +2277,7 @@ its source at GitHub. Each example has the same structure:
 | **Illustrates** | useViaType, TypePalConfig, getTypeNamesAndRole                         |
 | **Source**      | <https://github.com/cwi-swat/typepal/tree/master/src/examples/smallOO> |
 
-## FWJava
+### FWJava
 
 |                 |                                                                                                                             |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -2285,7 +2285,7 @@ its source at GitHub. Each example has the same structure:
 | **Illustrates** | useViaType, addPathToDef, isSubType, TypePalConfig, getTypeNamesAndRole, mayOverload, preSolver, setScopeInfo, getScopeInfo |
 | **Source**      | <https://github.com/cwi-swat/typepal/tree/master/src/examples/fwjava>                                                       |
 
-## Pascal
+### Pascal
 
 |                 |                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -2293,7 +2293,7 @@ its source at GitHub. Each example has the same structure:
 | **Illustrates** | useViaType, addPathToType, PathRole, isSubType, TypePalConfig, preCollectInitialization getTypeNamesAndRole |
 | **Source**      | <https://github.com/cwi-swat/typepal/tree/master/src/examples/pascal>                                       |
 
-## UntypedFun
+### UntypedFun
 
 |                 |                                                                                                                                      |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------ |

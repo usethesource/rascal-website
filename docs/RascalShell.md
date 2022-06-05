@@ -24,7 +24,7 @@ Next to Rascal language expressions, the shell features a number of specific com
 
   - [Keyboard Shortcuts](#RascalShell-Keyboard): Keybord shortcuts.
 
-# Read Eval Print Loop (REPL)
+## Read Eval Print Loop (REPL)
 
 **Synopsis.**
 
@@ -74,7 +74,7 @@ x * y
   - Rascal is a statically typed language but we have not released the type checker yet. Sometimes this is confusing
     because the interpreter will try to run otherwise broken code and produce an error message.
 
-# Commands
+## Commands
 
 **Synopsis.**
 
@@ -96,7 +96,7 @@ The RascalShell provides several built-in commands:
 
   - [Test Command](#Commands-Test): Run tests.
 
-## Clear Command
+### Clear Command
 
 **Synopsis.**
 
@@ -110,7 +110,7 @@ Clear all break points.
 
 Removes all break points.
 
-## Edit Command
+### Edit Command
 
 **Synopsis.**
 
@@ -125,7 +125,7 @@ import IO;
 :edit IO
 ```
 
-## Help Command
+### Help Command
 
 **Synopsis.**
 
@@ -139,7 +139,7 @@ Get a reminder of the shell commands.
 :help
 ```
 
-## Quit Command
+### Quit Command
 
 **Synopsis.**
 
@@ -153,7 +153,7 @@ Quit the RascalShell.
 
 Typing `:quit` or <span class="keycombo">Ctrl+d</span> will end the execution of the shell.
 
-## Set Command
+### Set Command
 
 **Synopsis.**
 
@@ -201,7 +201,7 @@ fac(5)
 
 The `set` command is completely unrelated to Rascal’s built-in `set` type.
 
-## Test Command
+### Test Command
 
 **Synopsis.**
 
@@ -228,7 +228,7 @@ Execute the tests in the `Integers` module in the Rascal test suite:
 test lang::rascal::tests::basic::Integers
 ```
 
-# Command Completion
+## Command Completion
 
 **Synopsis.**
 
@@ -239,7 +239,7 @@ Context-dependent command completion.
 RascalShell provides context-dependent command completion. Typing Tab autocompletes from the current cursor position and
 will show all possible completions (or will directly add the completion when this is unique).
 
-# Command History
+## Command History
 
 **Synopsis.**
 
@@ -281,7 +281,7 @@ text:
 
 And again, typing Return will reexecute `a = 3`.
 
-# Keyboard Shortcuts
+## Keyboard Shortcuts
 
 **Synopsis.**
 

@@ -25,7 +25,7 @@ Rascal can generate various kinds of exceptions and errors during execution (run
 
   - Since the type checker is not available yet, the interpreter throws more run-time exceptions than necessary.
 
-# Runtime Exceptions
+## Runtime Exceptions
 
 **Synopsis.**
 
@@ -83,7 +83,7 @@ The following exceptions can be trown as the result of a run-time error:
   - [Unavailable Information](#RuntimeExceptions-UnavailableInformation): Requested information is unavailable at
     runtime.
 
-## Ambiguity
+### Ambiguity
 
 **Synopsis.**
 
@@ -172,7 +172,7 @@ Here are some pointers for further disambiguation help:
 
   - [Disambiguation features](/Rascal#SyntaxDefinition-Disambiguation).
 
-## Arithmetic Exception
+### Arithmetic Exception
 
 **Synopsis.**
 
@@ -221,7 +221,7 @@ import IO;
 try println(3/0); catch ArithmeticException(msg): println("The message is: <msg>");
 ```
 
-## Assertion Failed
+### Assertion Failed
 
 **Synopsis.**
 
@@ -285,7 +285,7 @@ try println(incrPositive(-3)); catch AssertionFailed(msg): println("incrPositive
 
   - In the RascalShell, `enableAsserts` is always true.
 
-## Empty List
+### Empty List
 
 **Synopsis.**
 
@@ -344,7 +344,7 @@ catch EmptyList():
   println("Cannot take head of empty list");
 ```
 
-## Empty Map
+### Empty Map
 
 **Synopsis.**
 
@@ -398,7 +398,7 @@ catch EmptyMap():
   println("Cannot use getOneFrom on empty map");
 ```
 
-## Empty Set
+### Empty Set
 
 **Synopsis.**
 
@@ -451,7 +451,7 @@ catch EmptySet():
   println("Cannot apply getOneFrom to empty set");
 ```
 
-## IO
+### IO
 
 **Synopsis.**
 
@@ -504,7 +504,7 @@ catch IO(msg):
   println("This did not work: <msg>");
 ```
 
-## Index Out Of Bounds
+### Index Out Of Bounds
 
 **Synopsis.**
 
@@ -563,7 +563,7 @@ catch IndexOutOfBounds(msg):
   println("The message is: <msg>");
 ```
 
-## Invalid Argument
+### Invalid Argument
 
 **Synopsis.**
 
@@ -601,7 +601,7 @@ someLoc = |home:///abc.txt|;
 someLoc.offset = -1;
 ```
 
-## Invalid URI
+### Invalid URI
 
 **Synopsis.**
 
@@ -634,7 +634,7 @@ Another well-known example is a missing path when using `//` (wrong) instead of 
 |home://|;
 ```
 
-## Invalid Use Of Date
+### Invalid Use Of Date
 
 **Synopsis.**
 
@@ -665,7 +665,7 @@ NOW.hour = 14;
 > 
 > Exception is not shown properly
 
-## Invalid Use Of Location
+### Invalid Use Of Location
 
 **Synopsis.**
 
@@ -691,7 +691,7 @@ someLoc = |home:///abc.txt|;
 someLoc.begin = <1, 2>;
 ```
 
-## Invalid Use Of Time
+### Invalid Use Of Time
 
 **Synopsis.**
 
@@ -722,7 +722,7 @@ NOW.year = 2020;
 > 
 > Exception is not shown properly
 
-## Java
+### Java
 
 **Synopsis.**
 
@@ -743,7 +743,7 @@ Remedy: Contact the Rascal developers:
 If you are an expert developer and have implemented your own extension in Java, please check your own extension code
 first.
 
-## No Main Function
+### No Main Function
 
 **Synopsis.**
 
@@ -761,7 +761,7 @@ Rascal program does not provide a `main` function.
 
 Thrown when executing a Rascal program that does not declare a main function.
 
-## No Parent
+### No Parent
 
 **Synopsis.**
 
@@ -775,7 +775,7 @@ Parent directory is missing in source location.
 
 `import Exception;` (only needed when `NoParent` is used in `catch`)
 
-## No Such Annotation
+### No Such Annotation
 
 **Synopsis.**
 
@@ -847,7 +847,7 @@ piece@quality;
 > 
 > Using white space around the `@` confuses the Rascal parser
 
-## No Such Field
+### No Such Field
 
 **Synopsis.**
 
@@ -881,7 +881,7 @@ The field `beard` is evidently only applicable to a `man` but not to a woman (di
 jane.beard;
 ```
 
-## No Such Key
+### No Such Key
 
 **Synopsis.**
 
@@ -943,7 +943,7 @@ import Exception;
 try println(M["c"]); catch NoSuchKey(k): println("Key <k> does not exist");
 ```
 
-## Not Implemented
+### Not Implemented
 
 **Synopsis.**
 
@@ -961,7 +961,7 @@ Attempt to execute an unimplemented feature.
 
 Thrown when a not (yet) implemented feature is executed. This exception is mostly used by the Rascal implementors.
 
-## Parse Error
+### Parse Error
 
 **Synopsis.**
 
@@ -1025,7 +1025,7 @@ catch ParseError(e):
   println("Your input cannot be parsed: <e>");
 ```
 
-## RegExp Syntax Error
+### RegExp Syntax Error
 
 **Synopsis.**
 
@@ -1052,7 +1052,7 @@ The following regular expression `/+/` is incorrect (maybe `/a+/` was meant?):
 /+/ := "aaaa";
 ```
 
-## Unavailable Information
+### Unavailable Information
 
 **Synopsis.**
 
@@ -1085,7 +1085,7 @@ someLoc = |home:///abc.txt|;
 someLoc.offset;
 ```
 
-# Other Runtime Errors
+## Other Runtime Errors
 
 **Synopsis.**
 
@@ -1095,7 +1095,7 @@ Other runtime errors that cannot be caught as a runtime exception.
 
 Note: Examples will be collected here
 
-## Compiler Error
+### Compiler Error
 
 **Synopsis.**
 

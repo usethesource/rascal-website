@@ -29,39 +29,39 @@ Most language concepts are described separately but some features we just mentio
 
 Here are the concepts to be discussed:
 
-  - [Static Typing](#RascalConcepts-StaticTyping): Static type checking.
+  - [Static Typing](#static-typing): Static type checking.
 
-  - [Datatypes](#RascalConcepts-Datatypes): Built-in and user-defined datatypes.
+  - [Datatypes](#datatypes): Built-in and user-defined datatypes.
 
-  - [Immutable Values](#RascalConcepts-ImmutableValues): Immutable values.
+  - [Immutable Values](#immutable-values): Immutable values.
 
-  - [Comprehensions](#RascalConcepts-Comprehensions): Comprehensions for generating values.
+  - [Comprehensions](#comprehensions): Comprehensions for generating values.
 
-  - [Pattern Matching](#RascalConcepts-PatternMatching): Pattern matching.
+  - [Pattern Matching](#pattern-matching): Pattern matching.
 
-  - [Control Structures](#RascalConcepts-ControlStructures): Success-directed control structures.
+  - [Control Structures](#control-structures): Success-directed control structures.
 
-  - [Case Distinction](#RascalConcepts-CaseDistinction): Case distinction via pattern matching.
+  - [Case Distinction](#case-distinction): Case distinction via pattern matching.
 
-  - [Visiting](#RascalConcepts-Visiting): Visiting tree structures and arbitrary values.
+  - [Visiting](#visiting): Visiting tree structures and arbitrary values.
 
-  - [Functions](#RascalConcepts-Functions): Functions and pattern-directed invocation.
+  - [Functions](#functions): Functions and pattern-directed invocation.
 
-  - [Syntax Definition and Parsing](#RascalConcepts-SyntaxDefinitionAndParsing): Syntax definition and parser generation
+  - [Syntax Definition and Parsing](#syntax-definition-and-parsing): Syntax definition and parser generation
     for new languages.
 
-  - [IDE Construction](#RascalConcepts-IDEConstruction): Extend an IDE with interactive, language-specific, features
+  - [IDE Construction](#ide-construction): Extend an IDE with interactive, language-specific, features
     (Eclipse only).
 
-  - [Code Models](#RascalConcepts-CodeModels): Code models are abstract representations of source code.
+  - [Code Models](#code-models): Code models are abstract representations of source code.
 
-  - [Enumerating](#RascalConcepts-Enumerating): Enumerating values.
+  - [Enumerating](#enumerating): Enumerating values.
 
-  - [Equation Solving](#RascalConcepts-EquationSolving): Solving equations by fixed-point iteration.
+  - [Equation Solving](#equation-solving): Solving equations by fixed-point iteration.
 
-  - [Rewriting](#RascalConcepts-Rewriting): Rewriting using pattern-directed invocation.
+  - [Rewriting](#rewriting): Rewriting using pattern-directed invocation.
 
-# Static Typing
+## Static Typing
 
 **Synopsis.**
 
@@ -76,8 +76,9 @@ checker (not yet released) to predict errors and give warnings where possibly sl
 system ensures well-formedness of data structures and plays an important role while pattern matching, since many
 algorithms dispatch on the types of values.
 
-Rascal’s static type system does not ensure that all functions will go right: \* functions may throw exceptions. \*
-functions may not be defined for the specific pattern which occur on the call site.
+Rascal’s static type system does not ensure that all functions will go right:
+* functions may throw exceptions.
+* functions may not be defined for the specific pattern which occur on the call site.
 
 However, the static type system will produce an error when a function will certainly throw an exception, or when it is
 certainly not defined for a certain case. Also it catches some logical tautologies and contradictions which would lead
@@ -171,7 +172,7 @@ node ND = red(3);
 One example of the actual application of subtypes can be found in [Count
 Constructors](/Recipes#Common-CountConstructors).
 
-# Datatypes
+## Datatypes
 
 **Synopsis.**
 
@@ -276,7 +277,7 @@ $2101-09-05$;
 "abc"(1, 2, 3);
 ```
 
-# Immutable Values
+## Immutable Values
 
 **Synopsis.**
 
@@ -356,7 +357,7 @@ values.
 
   - Immutable values maybe less efficient than mutable ones.
 
-# Comprehensions
+## Comprehensions
 
 **Synopsis.**
 
@@ -394,7 +395,7 @@ do not give in full detail) is
 which traverses program `P` (using the *descendant match* operator `/`, see [Patterns](/Rascal#Patterns-Abstract)) and
 constructs a set of all identifiers that occur on the left hand side of assignment statements in `P`.
 
-# Pattern Matching
+## Pattern Matching
 
 **Synopsis.**
 
@@ -461,7 +462,7 @@ whileStat(EXP Exp, _*)
 When there is a grammar for this example language, we can also write concrete patterns as described in [Concrete
 Patterns](/Rascal#Patterns-Concrete).
 
-# Control Structures
+## Control Structures
 
 **Synopsis.**
 
@@ -497,7 +498,7 @@ for(/asgStat(Id name, _) <- P, size(name) > 10){
 
 This statement prints all identifiers in assignment statements (`asgStat`) that consist of more than 10 characters.
 
-# Case Distinction
+## Case Distinction
 
 **Synopsis.**
 
@@ -534,7 +535,7 @@ case black(_, _):
 }
 ```
 
-# Visiting
+## Visiting
 
 **Synopsis.**
 
@@ -565,7 +566,7 @@ The traversal order in a visit expressions can be explicitly defined by the prog
 Examples of visiting are, for instance, given in the Recipes [ColoredTrees](/Recipes#Common-ColoredTrees) and
 [Derivative](/Recipes#Common-Derivative).
 
-# Functions
+## Functions
 
 **Synopsis.**
 
@@ -615,7 +616,7 @@ f(5, int (int y){return 3 * y;});
 
 Here the second argument of `f` is an anonymous function.
 
-# Syntax Definition and Parsing
+## Syntax Definition and Parsing
 
 **Synopsis.**
 
@@ -707,7 +708,7 @@ points we want to make are:
 See [Recipes](/Recipes) for a more extensive presentation of the [EXP](/Recipes#Languages-Exp) language and
 [Languages](/Recipes#Recipes-Languages) for other language examples.
 
-# IDE Construction
+## IDE Construction
 
 **Synopsis.**
 
@@ -737,7 +738,7 @@ To instantiate an IDE for a language implemented using Rascal, use the following
 
 The following IDE features are available
 
-# Code Models
+## Code Models
 
 **Synopsis.**
 
@@ -765,7 +766,7 @@ Extensions for representing facts about specific languages:
 
   - [lang::java::m3](/Libraries#java-m3).
 
-# Enumerating
+## Enumerating
 
 **Synopsis.**
 
@@ -840,7 +841,7 @@ for(int x <- {1, 3, 5, 7, 11 })
 
 The variables that are bound by an enumerator are local to the statement in which the enumerator is used.
 
-# Equation Solving
+## Equation Solving
 
 **Synopsis.**
 
@@ -863,7 +864,7 @@ equations. Their solution can be found with the solve statement.
 > 
 > add links
 
-# Rewriting
+## Rewriting
 
 **Synopsis.**
 

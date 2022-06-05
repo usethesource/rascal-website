@@ -76,7 +76,7 @@ These are the currently covered topics:
 
   - [Visualization](#Rascalopedia-Visualization): Visual presentation of scientific or abstract data.
 
-# AbstractDataType
+## AbstractDataType
 
 **Synopsis.**
 
@@ -96,7 +96,7 @@ Well-known examples are [stack](http://en.wikipedia.org/wiki/Stack_(data_structu
 See [Algebraic Data Types](/Rascal#Declarations-AlgebraicDataType) and [Constructors](/Rascal#Values-Constructor) in the
 [Rascal Language Reference](/Rascal).
 
-## Abstract Data Types in Daily Life
+### Abstract Data Types in Daily Life
 
   - A stack of trays in the local cafetaria: ![dispenser](/images/dispenser.jpg)
     [credit](http://www.thermo-box.co.uk/fimi-food-transport-and-handling-products/self-levelling-heated-and-unheated-plate-and-tray-systems.html)
@@ -105,7 +105,7 @@ See [Algebraic Data Types](/Rascal#Declarations-AlgebraicDataType) and [Construc
 
   - Coral: ![coral](/images/coral.jpg) [credit](http://blog.enn.com/?p=476)
 
-## Abstract Data Types in computer science
+### Abstract Data Types in computer science
 
   - The run-time stack of a programming language interpreter.
 
@@ -113,7 +113,7 @@ See [Algebraic Data Types](/Rascal#Declarations-AlgebraicDataType) and [Construc
 
   - An ontology.
 
-## Abstract Data Types in Rascal
+### Abstract Data Types in Rascal
 
   - A tree data type:
 
@@ -121,7 +121,7 @@ See [Algebraic Data Types](/Rascal#Declarations-AlgebraicDataType) and [Construc
 
     data MyTree = leaf(int n) | tree(str name, MyTree left, MyTree right);
 
-# Abstract Syntax Tree
+## Abstract Syntax Tree
 
 **Synopsis.**
 
@@ -146,7 +146,7 @@ the parse tree (left) and abstract syntax tree (right) may look as follows:
 Note that the parse tree on the left did not preserve the spaces in the original text but there are parse tree formats
 (including the one used by Rascal) that preserve all textual information.
 
-# Compiler
+## Compiler
 
 **Synopsis.**
 
@@ -168,7 +168,7 @@ executable form (in a target language) and consists of the following phases:
 
   - Code generation: generate the final code, this can be asembly language or directly executable code.
 
-# Domain Specific Language
+## Domain Specific Language
 
 **Synopsis.**
 
@@ -188,7 +188,7 @@ Programming language targeted for a particular application domain.
 
   - Regular expressions (text matching).
 
-# Dynamic Semantics
+## Dynamic Semantics
 
 **Synopsis.**
 
@@ -204,13 +204,13 @@ Dynamic semantics describes the execution behaviour of a program and includes:
 
 Contrast with [Static Semantics](#Rascalopedia-StaticSemantics) that describes pre-execution behaviour.
 
-# Grammar
+## Grammar
 
 **Synopsis.**
 
 A synonym for [Syntax](#Rascalopedia-Syntax).
 
-# Interpreter
+## Interpreter
 
 **Synopsis.**
 
@@ -254,7 +254,7 @@ The advantages of interpreters versus compiler are:
     
       - Con: complex, optimizations are error-prone.
 
-# Language
+## Language
 
 **Synopsis.**
 
@@ -271,7 +271,7 @@ language is the (possible infinite) set of strings that are defined by a grammar
 
   - The Java language: the infinite set of syntactically correct Java programs.
 
-# Language Definition
+## Language Definition
 
 **Synopsis.**
 
@@ -298,7 +298,7 @@ Language](#Rascalopedia-DomainSpecificLanguage) and includes:
 Other aspects of a language definition may include editor behaviour, highlighting, debugging, outlining, auto-completion
 and more.
 
-# List
+## List
 
 **Synopsis.**
 
@@ -348,7 +348,7 @@ In Rascal, lists are surrounded by brackets `[` and `]` and the elements are sep
 of the form `list[T]`, where *T* is the smallest common type of all list elements. Read the description of [lists and
 their operators](/Rascal#Values-List) and of [library functions on lists](/Libraries#Libraries-List).
 
-## Lists in Daily Life
+### Lists in Daily Life
 
   - A line of people waiting for the super market checkout or bus stop. ![bustop](/images/queue.png)
     [credit](http://www.realbollywood.com)
@@ -362,7 +362,7 @@ their operators](/Rascal#Values-List) and of [library functions on lists](/Libra
 
   - A *to do* list.
 
-## Lists in computer science
+### Lists in computer science
 
   - The locations in a computer memory.
 
@@ -370,7 +370,7 @@ their operators](/Rascal#Values-List) and of [library functions on lists](/Libra
 
   - The list of procedures that are called by a given procedure.
 
-## Lists in Rascal
+### Lists in Rascal
 
   - The empty list: `[]`. Its type is `list[void]`.
 
@@ -378,7 +378,7 @@ their operators](/Rascal#Values-List) and of [library functions on lists](/Libra
 
   - A list of mixed-type values: `[3, "a", 4]`. Its type is `list[value]`.
 
-# MetaProgramming
+## MetaProgramming
 
 **Synopsis.**
 
@@ -445,7 +445,7 @@ A tool to compute [Software Metric](#Rascalopedia-SoftwareMetric)s of Java progr
 
   - Target language: number.
 
-# ParseTree
+## ParseTree
 
 **Synopsis.**
 
@@ -462,7 +462,7 @@ A parse tree for the sentence ![example](/images/example-text.png)
 
 ![parse-tree](/images/parse-tree.png)
 
-# Parser
+## Parser
 
 **Synopsis.**
 
@@ -481,7 +481,7 @@ This is shown below:
 
 ![parser](/images/parser.png)
 
-# Prettyprinter
+## Prettyprinter
 
 **Synopsis.**
 
@@ -532,7 +532,7 @@ if( x > 10 )
 }
 ```
 
-# Refactoring
+## Refactoring
 
 **Synopsis.**
 
@@ -558,7 +558,7 @@ Some well-known refactorings are:
 
   - [Extract Methods](http://martinfowler.com/refactoring/catalog/extractMethod.html)
 
-# Relation
+## Relation
 
 **Synopsis.**
 
@@ -587,7 +587,7 @@ sets all set operators also apply to them, see [Set Values](/Rascal#Values-Set))
 relations](/Libraries#Libraries-Relation) (and here again, since relations are sets all set operators also apply to
 them, see [functions on sets](/Libraries#Libraries-Set)).
 
-## Relations in Daily Life
+### Relations in Daily Life
 
   - The *parent-of* or *friend-of* relation between people.
     image::/Rascalopedia/Relation/char-relation.jpg\[width="350px" ,alt="char-relation"\]
@@ -598,13 +598,13 @@ them, see [functions on sets](/Libraries#Libraries-Set)).
   - A listing of the top 2000 songs of all times including the position, artist name, song title, the year the song was
     published. ![top2000-2010](/images/top2000-2010.jpg) [credit](http://top2011.radio2.nl/lijst/2010)
 
-## Relations in computer science
+### Relations in computer science
 
   - A relational data base.
 
   - Login information including user name, password, home directory, etc.
 
-## Relations in Rascal
+### Relations in Rascal
 
   - A parent child relation:
 
@@ -629,13 +629,13 @@ them, see [functions on sets](/Libraries#Libraries-Set)).
     ...
     };
 
-# Scope
+## Scope
 
 **Synopsis.**
 
 The visibility and accessibility of names in a program.
 
-# Set
+## Set
 
 **Synopsis.**
 
@@ -657,7 +657,7 @@ In Rascal, sets are surrounded by braces `{` and `}` and the elements are separa
 the form `set[T]`, where *T* is the smallest common type of all set elements. Read the description of [sets and their
 operators](/Rascal#Values-Set) and of [library functions on sets](/Libraries#Prelude-Set).
 
-## Sets in Daily Life
+### Sets in Daily Life
 
   - A cutlery set consisting of knife, fork and the like. ![cutlery-set](/images/cutlery-set.jpg)
     [credit](http://www.ikea.com/gb/en/catalog/products/50087185/)
@@ -668,7 +668,7 @@ operators](/Rascal#Values-Set) and of [library functions on sets](/Libraries#Pre
     ![stamp-collecting](/images/stamp-collecting.jpg)
     [credit](http://www.life123.com/hobbies/antiques-collectibles/stamps/stamp-collecting-2.shtml)
 
-## Sets in computer science
+### Sets in computer science
 
   - The files in a directory. Of course, when you order them (by name, modification date) you need a
     [List](#Rascalopedia-List) to represent them.
@@ -677,7 +677,7 @@ operators](/Rascal#Values-Set) and of [library functions on sets](/Libraries#Pre
 
   - The set of nodes in a network.
 
-## Sets in Rascal
+### Sets in Rascal
 
   - The empty set: `{}`. Its type is `set[void]`.
 
@@ -685,7 +685,7 @@ operators](/Rascal#Values-Set) and of [library functions on sets](/Libraries#Pre
 
   - A set of mixed-type values: `{3, "a", 4}`. Its type is `set[value]`.
 
-# Software Engineering
+## Software Engineering
 
 **Synopsis.**
 
@@ -717,7 +717,7 @@ Other approaches promote [agile development](http://en.wikipedia.org/wiki/Agile_
 characterized by very short iterations that include all the above activities. Agile methods aim to produce prototypes as
 early as possible and this makes it easier for future users to assess the prototype and suggest changes.
 
-# Software Evolution
+## Software Evolution
 
 **Synopsis.**
 
@@ -751,7 +751,7 @@ following:
 
   - Developing [Refactoring](#Rascalopedia-Refactoring) tools to counter the effects of software evolution.
 
-# Software Metric
+## Software Metric
 
 **Synopsis.**
 
@@ -776,7 +776,7 @@ Examples of software metrics are:
   - [Coupling](http://en.wikipedia.org/wiki/Coupling_(computer_science)) measures the coupling between software
     components. High coupling indicates problems in the structure of a system.
 
-# Static Semantics
+## Static Semantics
 
 **Synopsis.**
 
@@ -801,7 +801,7 @@ Examples of static semantic properties include:
 
 Language with substantial static semantics: Java, Haskell, Rascal. Languages with only dynamic semantics: Python, Ruby.
 
-# Syntax
+## Syntax
 
 **Synopsis.**
 
@@ -853,7 +853,7 @@ There are two possible answers:
 
   - *No*. Error messages pin point the location where the text deviates from the syntax rules.
 
-# Testing
+## Testing
 
 **Synopsis.**
 
@@ -865,7 +865,7 @@ Determine that the quality and functionality of software.
 meets its specifications and works as expected. This is done by manually or automatically executing test cases and
 observe the result.
 
-# Tuple
+## Tuple
 
 **Synopsis.**
 
@@ -884,7 +884,7 @@ Tn]`, *T*<sub>i</sub> represents the type of element *i*. Tuple have two major a
 
 See [Tuple Values](/Rascal#Values-Tuple) for the operations on tuples.
 
-# Typechecker
+## Typechecker
 
 **Synopsis.**
 
@@ -934,7 +934,7 @@ These different styles of type checking have different trade offs:
 
   - In Python, a variable can first get a string value assigned and later on an integer value.
 
-# Visualization
+## Visualization
 
 **Synopsis.**
 
@@ -956,7 +956,7 @@ subareas:
 The [Visualization Library](/Libraries#Libraries-Vis) library provides a framework for interactive visualization. Simple
 examples can be found in [visualization recipes](/Recipes#Recipes-Visualization).
 
-## Scientific visualization
+### Scientific visualization
 
 **Examples.**
 
@@ -965,13 +965,13 @@ Robert vam Liere and Wim de Leeuw have visualized liquid flows. There is also an
 
 ![flow](/images/flow.jpg)
 
-## Information Visualization
+### Information Visualization
 
 Facebook’s [Friend Wheel](http://apps.facebook.com/friendwheel/) shows the connection between friends:
 
 ![friends](/images/friends.jpg)
 
-## Software Visualization
+### Software Visualization
 
 Stephen Eick [visualizes](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.67.962) the frequency of execution for
 each line in all source files of a software system.

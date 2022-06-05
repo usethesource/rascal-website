@@ -54,7 +54,7 @@ You can find more (accessible) information related to Rascal here:
   - Rascal allows you to write highly imperative code, but it has declarative constructs that lead to shorter and more
     readable code.
 
-# Declarations
+## Declarations
 
 **Synopsis.**
 
@@ -110,7 +110,7 @@ The following concepts are relevant for declarations:
 
   - [Tag Declaration](#Declarations-Tag): Tag declarations are not implemented (yet).
 
-## Module Declaration
+### Module Declaration
 
 **Synopsis.**
 
@@ -206,7 +206,7 @@ The actual source of this module can be found in `library/demo/basic/Hello.rsc` 
 
 More ways to write this example are discussed in the [Hello](/Recipes#Basic-Hello) example in [Recipes](/Recipes).
 
-## Import
+### Import
 
 **Synopsis.**
 
@@ -234,7 +234,7 @@ import IO;
 println("IO library was imported.");
 ```
 
-## Program
+### Program
 
 **Synopsis.**
 
@@ -245,7 +245,7 @@ A Rascal program consists of a number of [Module Declaration](#Declarations-Modu
 A Rascal program consists of a number of [Module Declaration](#Declarations-Module)s, each stored in a separate file
 with extension `.rsc`.
 
-## StaticTyping
+### StaticTyping
 
 **Synopsis.**
 
@@ -499,7 +499,7 @@ Graph[str] GS = {<"a", "b">, <"c","d">, <"d", "a">};
 The type parameters that are used in the type in the right part of the alias declaration should be defined in the left
 part of the alias definition.
 
-## Algebraic Data Type
+### Algebraic Data Type
 
 **Synopsis.**
 
@@ -528,7 +528,7 @@ terms of type `Bool` can be constructed using the defined constructors:
 conj(tt(),ff());
 ```
 
-## Variable Declaration
+### Variable Declaration
 
 **Synopsis.**
 
@@ -615,7 +615,7 @@ if( 4 > 3){ x = "abc"; } else { x = "def";}
 x;
 ```
 
-## Function Declaration
+### Function Declaration
 
 **Synopsis.**
 
@@ -803,7 +803,7 @@ Definition](#Declarations-SyntaxDefinition)s, see [Action](#SyntaxDefinition-Act
 In case of overlapping function definitions, the order in which the functions are tried is left undefined. The only
 exceptions are functions marked `default`, those will be tried after non-`default` functions.
 
-## Syntax Definition
+### Syntax Definition
 
 **Synopsis.**
 
@@ -1100,7 +1100,7 @@ There are generally three ways of removing ambiguity from parse forests that are
   - The third way is use the [Visit](#Expressions-Visit) statement on a parse tree and implement your own filter
     post-parsing time, or any other kind of program that processes [Parse Trees](#SyntaxDefinition-ParseTrees).
 
-#### Associativity Declaration
+##### Associativity Declaration
 
 **Synopsis.**
 
@@ -1175,7 +1175,7 @@ that share an associativity group.
 | `E = E "+" > E "+" E;` | \`E = right ( E "+"        |
 | E "+" E);\`            | `E = E "+" E > E "+" ;`    |
 
-#### Follow Declaration
+##### Follow Declaration
 
 **Synopsis.**
 
@@ -1194,7 +1194,7 @@ Using `!>>`, the parser will not accept the *Symbol* if it is immediately follow
 string. If the end of the symbol coincides with end-of-file, the constraint will always succeed and the symbol is
 accepted.
 
-#### Precede Declaration
+##### Precede Declaration
 
 **Synopsis.**
 
@@ -1213,7 +1213,7 @@ Using `!<<`, the parser will not accept the *Symbol* if it is immediately preced
 string. If the start of the symbol coincides with start of the inout, the constraint will always succeed and the symbol
 is accepted.
 
-#### Priority Declaration
+##### Priority Declaration
 
 **Synopsis.**
 
@@ -1307,7 +1307,7 @@ Here a number of strings for this language, with brackets to show how they will 
     ambiguity then. Example: E = left "a"? E "\*" E \> E "" E will remain ambiguous. This should be written as: E = left
     ("a" E "\*" E | E "\*" E ) \> E "" E; (unfolding the optional such that E becomes explicitly left-most).
 
-#### Reserve Declaration
+##### Reserve Declaration
 
 **Synopsis.**
 
@@ -1572,7 +1572,7 @@ syntax Declaration = ("public" | "private" | "static" | "final")* Type Id "(" {(
   - The lack of automatic longest match and prefer keyword heuristics (you have to define it yourself), sometimes leads
     to unexpected ambiguity. See \[Disambiguation\].
 
-## Alias Declaration
+### Alias Declaration
 
 **Synopsis.**
 
@@ -1619,7 +1619,7 @@ In other words the standard graph datatype can be parameterized with any element
 
 See [Type Parameters](#StaticTyping-TypeParameters) for other examples parameterized alias declarations.
 
-## Annotation Declaration
+### Annotation Declaration
 
 **Synopsis.**
 
@@ -1665,7 +1665,7 @@ Examples have been removed since this feature is deprecated.
   - Annotations are cumbersome since they change the structure of [Values](#Expressions-Values) without changing the
     semantics of the identity of a value. This is why they are deprecated.
 
-## Tag Declaration
+### Tag Declaration
 
 **Synopsis.**
 
@@ -1682,7 +1682,7 @@ Tag declarations explain which type the expected value of a tag should have.
 
   - Not yet implemented, so basically tags are not checked
 
-# Patterns
+## Patterns
 
 **Synopsis.**
 
@@ -1777,7 +1777,7 @@ Each pattern binds variables in a conditional scope:
   - If a variable is bound in the scope of a pattern, then it acts as an `==` test, so make sure to use fresh variables
     to avoid such accidental collisions.
 
-## Concrete Patterns
+### Concrete Patterns
 
 **Synopsis.**
 
@@ -1849,7 +1849,7 @@ Some observations about this example:
 
 A full example of concrete patterns can be found in [WithLayout](/Recipes#Concrete-WithLayout).
 
-## Descendant Pattern
+### Descendant Pattern
 
 **Synopsis.**
 
@@ -1902,7 +1902,7 @@ for(/int N := T)
     append N;
 ```
 
-## Labelled Pattern
+### Labelled Pattern
 
 **Synopsis.**
 
@@ -1926,7 +1926,7 @@ for(/M:black(_,leaf(4)) := T)
 
 We use an **anonymous variable** `_` at a position where we don’t care about the actual value that is matched.
 
-## List Pattern
+### List Pattern
 
 **Synopsis.**
 
@@ -2018,7 +2018,7 @@ for([*L1, *L2] := [10, 20, 30, 40, 50])
     if([10, N, 30, 40, 50] := [10, 20, 30, 40, 50])
        println("Match succeeded, N = <N>");
 
-## Literal Pattern
+### Literal Pattern
 
 **Synopsis.**
 
@@ -2062,7 +2062,7 @@ x = 123;
 123 := x;
 ```
 
-## MultiVariable Pattern
+### MultiVariable Pattern
 
 **Synopsis.**
 
@@ -2115,7 +2115,7 @@ if({10, *int S, 50} := {50, 40, 30, 30, 10})
 
 In older versions of Rascal the type of a multi-variable had to be a list or set type.
 
-## Node pattern
+### Node pattern
 
 **Synopsis.**
 
@@ -2147,7 +2147,7 @@ if(red(K) := red(13))
    println("K = <K>");
 ```
 
-## Regular Expression Pattern
+### Regular Expression Pattern
 
 **Synopsis.**
 
@@ -2320,7 +2320,7 @@ Here are examples, how to escape punctuation characters in regular expressions:
 /a\+b/ := "a+b";
 ```
 
-## Set Pattern
+### Set Pattern
 
 **Synopsis.**
 
@@ -2397,7 +2397,7 @@ for({*S1, *S2} :={30, 20, 10})
     if({10, N, 30, 40, 50} := {50, 40, 30, 20, 10})
        println("Match succeeded, N = <N>");
 
-## Tuple Pattern
+### Tuple Pattern
 
 **Synopsis.**
 
@@ -2416,7 +2416,7 @@ if(<A, B, C> := <13, false, "abc">)
    println("A = <A>, B = <B>, C = <C>");
 ```
 
-## Type Constrained Pattern
+### Type Constrained Pattern
 
 **Synopsis.**
 
@@ -2459,7 +2459,7 @@ visit (ex) {
 }
 ```
 
-## Typed and Labelled Pattern
+### Typed and Labelled Pattern
 
 **Synopsis.**
 
@@ -2492,7 +2492,7 @@ visit (ex) {
 }
 ```
 
-## Variable Pattern
+### Variable Pattern
 
 **Synopsis.**
 
@@ -2536,7 +2536,7 @@ if(M := 10)
    println("Match succeeded, M == <M>");
 ```
 
-## Variable Declaration Pattern
+### Variable Declaration Pattern
 
 **Synopsis.**
 
@@ -2580,7 +2580,7 @@ if(str S := "abc")
    println("Match succeeds, S == \"<S>\"");
 ```
 
-# Expressions
+## Expressions
 
 **Synopsis.**
 
@@ -2624,7 +2624,7 @@ The expression is the basic unit of evaluation and may consist of the ingredient
     [Do](#Statements-Do) can also be used in expressions, see [Statement as
     Expression](#Expressions-StatementAsExpression).
 
-## Values
+### Values
 
 **Synopsis.**
 
@@ -3102,7 +3102,7 @@ if ([1, *int L, 2, *int M] := [1,2,3,2,4] && size(L) > 0)
   println("L: <L>, M: <M>");
 ```
 
-#### Boolean All
+##### Boolean All
 
 **Synopsis.**
 
@@ -3147,7 +3147,7 @@ all(int n <- [], n > 0);
 > The Rascal interpreter and compiler give different results on an empty list. The interpreter returns `fals` for the
 > abo eexample.
 
-#### Boolean And
+##### Boolean And
 
 **Synopsis.**
 
@@ -3215,7 +3215,7 @@ for (int j <- [1,2,3] && incr() && (i % 2 == 0))
 i;
 ```
 
-#### Boolean Any
+##### Boolean Any
 
 **Synopsis.**
 
@@ -3241,7 +3241,7 @@ Yields `true` when at least one combination of values of *Exp*<sub>i</sub> is tr
 any(int n <- [1 .. 10], n % 2 == 0);
 ```
 
-#### Boolean Equivalence
+##### Boolean Equivalence
 
 **Synopsis.**
 
@@ -3290,7 +3290,7 @@ false <==> true;
 > (j ← \[1,2,3\] && (j % 3 == 0)) for i ← \[1,2\] && (i % 2 == 0i ← \[1,2\] && (i % 2 == 0 ⇐⇒ (j ← \[1,2,3\] && (j % 3
 > == 0))) println("true\!");
 
-#### Boolean IfDefinedElse
+##### Boolean IfDefinedElse
 
 **Synopsis.**
 
@@ -3348,7 +3348,7 @@ L[4] ? 0;
 
 It is, however, not possible to assign to index positions outside the list.
 
-#### Boolean Implication
+##### Boolean Implication
 
 **Synopsis.**
 
@@ -3385,7 +3385,7 @@ evaluated to determine the result.
 false ==> true;
 ```
 
-#### Boolean IsDefined
+##### Boolean IsDefined
 
 **Synopsis.**
 
@@ -3416,7 +3416,7 @@ L[1]?
 L[5]?
 ```
 
-#### Boolean Match
+##### Boolean Match
 
 **Synopsis.**
 
@@ -3445,7 +3445,7 @@ description.
 {10, *int n, 50} := {50, 40, 30, 30, 10};
 ```
 
-#### Boolean Negation
+##### Boolean Negation
 
 **Synopsis.**
 
@@ -3476,7 +3476,7 @@ The *not* operator on Boolean values defined as follows:
 !true;
 ```
 
-#### Boolean NoMatch
+##### Boolean NoMatch
 
 **Synopsis.**
 
@@ -3505,7 +3505,7 @@ description.
 {10, *n, 50} !:= {40, 30, 30, 10};
 ```
 
-#### Boolean Or
+##### Boolean Or
 
 **Synopsis.**
 
@@ -3739,7 +3739,7 @@ DT.century;
 In normal parlance, the year 2010 is in the 21th century. The `century` field, however, just returns the century
 component of a given year, e.g., for 2010 this is 20.
 
-#### DateTime Equal
+##### DateTime Equal
 
 **Synopsis.**
 
@@ -3766,7 +3766,7 @@ $2010-07-15$ == $2010-07-15$;
 $2010-07-15$ == $2010-07-14$;
 ```
 
-#### DateTime Field Selection
+##### DateTime Field Selection
 
 **Synopsis.**
 
@@ -3787,7 +3787,7 @@ Types
 Field selection applies to `datetime` values. *Name* should be one of the supported fields listed in
 [DateTime](#Values-DateTime) and returns the value of that field. Name stands for itself and is not evaluated.
 
-#### DateTime GreaterThan
+##### DateTime GreaterThan
 
 **Synopsis.**
 
@@ -3815,7 +3815,7 @@ $2010-07-15$ > $2010-07-14$;
 $2011-07-15$ > $2010-07-15$;
 ```
 
-#### DateTime GreaterThanOrEqual
+##### DateTime GreaterThanOrEqual
 
 **Synopsis.**
 
@@ -3843,7 +3843,7 @@ $2011-07-15$ >= $2010-07-15$;
 $2010-07-15$ >= $2010-07-14$;
 ```
 
-#### DateTime LessThan
+##### DateTime LessThan
 
 **Synopsis.**
 
@@ -3871,7 +3871,7 @@ $2010-07-14$ < $2010-07-15$;
 $2011-07-15$ < $2010-07-14$;
 ```
 
-#### DateTime LessThanOrEqual
+##### DateTime LessThanOrEqual
 
 **Synopsis.**
 
@@ -3899,7 +3899,7 @@ $2010-07-15$ <= $2010-07-15$;
 $2011-07-15$ <= $2010-07-14$;
 ```
 
-#### DateTime NotEqual
+##### DateTime NotEqual
 
 **Synopsis.**
 
@@ -4043,7 +4043,7 @@ L = [1, 2, 3];
 [10, *L, 20];
 ```
 
-#### List Append
+##### List Append
 
 **Synopsis.**
 
@@ -4082,7 +4082,7 @@ To append a list to a list, use extra brackets:
 [1] + [[2]]
 ```
 
-#### List Comprehension
+##### List Comprehension
 
 **Synopsis.**
 
@@ -4118,7 +4118,7 @@ But we can also include the relevant `n` in the resulting list:
 [n, n * n | int n <- [0 .. 10], n % 3 == 0];
 ```
 
-#### List Concatenation
+##### List Concatenation
 
 **Synopsis.**
 
@@ -4156,7 +4156,7 @@ And overloaded usage for insert and append looks like:
 [] + 1
 ```
 
-#### List Difference
+##### List Difference
 
 **Synopsis.**
 
@@ -4191,7 +4191,7 @@ occurrence of that element in the first list.
 [1, 2, 3, 1, 2, 3] - [1, 2];
 ```
 
-#### List Equal
+##### List Equal
 
 **Synopsis.**
 
@@ -4218,7 +4218,7 @@ Yields `true` if both arguments are equal lists and `false` otherwise.
 [1, 2, 3] == [3, 2, 1];
 ```
 
-#### List Insert
+##### List Insert
 
 **Synopsis.**
 
@@ -4259,7 +4259,7 @@ To insert a list as an element, use extra brackets:
 [[1]] + [2]
 ```
 
-#### List Intersection
+##### List Intersection
 
 **Synopsis.**
 
@@ -4286,7 +4286,7 @@ Returns the intersection of the two list values of *Exp*<sub>1</sub> and *Exp*<s
 [1, 2, 3, 4, 5] & [4, 5, 6];
 ```
 
-#### List NotEqual
+##### List NotEqual
 
 **Synopsis.**
 
@@ -4313,7 +4313,7 @@ Yields `true` if both arguments are unequal lists and `false` otherwise.
 [1, 2, 3] != [1, 2, 3];
 ```
 
-#### List Product
+##### List Product
 
 **Synopsis.**
 
@@ -4346,7 +4346,7 @@ Here is a concise way to create a deck of cards:
 ["clubs", "hearts", "diamonds", "spades"] * [1 .. 13];
 ```
 
-#### List Slice
+##### List Slice
 
 **Synopsis.**
 
@@ -4469,7 +4469,7 @@ L[..10];
 L[1..20];
 ```
 
-#### List Splice
+##### List Splice
 
 **Synopsis.**
 
@@ -4510,7 +4510,7 @@ L = [10, 20, 30];
 
 in which nested lists are handled.
 
-#### List StrictSubList
+##### List StrictSubList
 
 **Synopsis.**
 
@@ -4539,7 +4539,7 @@ otherwise.
 [1, 3, 5] < [1, 2, 3, 4, 5]
 ```
 
-#### List StrictSuperList
+##### List StrictSuperList
 
 **Synopsis.**
 
@@ -4569,7 +4569,7 @@ otherwise.
 [1, 2, 3, 4, 5] > [1, 3, 5]
 ```
 
-#### List SubList
+##### List SubList
 
 **Synopsis.**
 
@@ -4598,7 +4598,7 @@ otherwise.
 [1, 3, 5] <= [1, 2, 3, 4, 5];
 ```
 
-#### List Subscription
+##### List Subscription
 
 **Synopsis.**
 
@@ -4635,7 +4635,7 @@ Explore an error case:
 L[5];
 ```
 
-#### List SuperList
+##### List SuperList
 
 **Synopsis.**
 
@@ -4665,7 +4665,7 @@ otherwise.
 [1, 2, 3, 4, 5] >= [1, 3, 5]
 ```
 
-#### List in
+##### List in
 
 **Synopsis.**
 
@@ -4693,7 +4693,7 @@ otherwise. The type of *Exp*<sub>1</sub> should be compatible with the element t
 4 in [1, 2, 3];
 ```
 
-#### List notin
+##### List notin
 
 **Synopsis.**
 
@@ -4788,7 +4788,7 @@ types are interchangeable.
 [<"a", 1, "b">, <"c", 2, "d">]
 ```
 
-#### ListRelation CartesianProduct
+##### ListRelation CartesianProduct
 
 **Synopsis.**
 
@@ -4815,7 +4815,7 @@ Returns a binary relation that is the [Cartesian product](http://en.wikipedia.or
 [1, 2, 3] * [10, 11];
 ```
 
-#### ListRelation Composition
+##### ListRelation Composition
 
 **Synopsis.**
 
@@ -4845,7 +4845,7 @@ Returns the composition of two binary list relations.
 
 We use the letter `o` as operator and this may conflict other defined names.
 
-#### ListRelation FieldSelection
+##### ListRelation FieldSelection
 
 **Synopsis.**
 
@@ -4874,7 +4874,7 @@ lrel[str street, int nm] R = [<"abc", 1>, <"abc", 2>, <"def", 4>, <"def", 5>];
 R.street;
 ```
 
-#### ListRelation Join
+##### ListRelation Join
 
 **Synopsis.**
 
@@ -4903,7 +4903,7 @@ contains tuples that are the result from concatenating the elements from both ar
 [<1,2>, <10,20>] join [<2,3>, <20,30>];
 ```
 
-#### ListRelation Reflexive Transitive Closure
+##### ListRelation Reflexive Transitive Closure
 
 **Synopsis.**
 
@@ -4947,7 +4947,7 @@ Closure](#ListRelation-TransitiveClosure)):
 [<1,2>, <2,3>, <3,4>]*;
 ```
 
-#### ListRelation Subscription
+##### ListRelation Subscription
 
 **Synopsis.**
 
@@ -4957,7 +4957,7 @@ Indexing of a list relation via tuple values.
 
   - `Exp0 [ Exp1]`
 
-##### Variant 1
+###### Variant 1
 
 | `Exp0`                | `Exp1` | `Exp2` | …​ | `Exp0 [ Exp1, Exp2, …​ ]` |
 | --------------------- | ------ | ------ | -- | ------------------------- |
@@ -4965,7 +4965,7 @@ Indexing of a list relation via tuple values.
 
 Types
 
-##### Variant 2
+###### Variant 2
 
 |        |                       |                 |
 | ------ | --------------------- | --------------- |
@@ -4976,14 +4976,14 @@ Types
 
 ListRelation resulting from subscription of a ListRelation *Exp*<sub>0</sub>.
 
-##### Variant 1
+###### Variant 1
 
 Subscription with the index values of *Exp*<sub>1</sub>, *Exp*<sub>2</sub>, …​. The result is a ListRelation with all
 tuples that have these index values as first elements with the index values removed from the tuple. If the resulting
 tuple has only a single element, a list is returned instead of a relation. A wildcard `_` as index value matches all
 possible values at that index position.
 
-##### Variant 2
+###### Variant 2
 
 Subscription with a set of the index values of *Exp*<sub>1</sub>. The result is a ListRelation with all tuples that have
 these index values as first element with the index values removed from the tuple.
@@ -5022,7 +5022,7 @@ or rather for the indices `"Japan"` and `2008`:
 GDP["Japan", 2008];
 ```
 
-#### ListRelation Transitive Closure
+##### ListRelation Transitive Closure
 
 **Synopsis.**
 
@@ -5191,7 +5191,7 @@ x = |tmp://myTempDirectory|;
 x += "myTempFile.txt";
 ```
 
-#### Location AddSegment
+##### Location AddSegment
 
 **Synopsis.**
 
@@ -5223,7 +5223,7 @@ To get the original back, you can use the `parent` field:
 (|tmp:///myDir| + "myFile").parent
 ```
 
-#### Location Equal
+##### Location Equal
 
 **Synopsis.**
 
@@ -5243,7 +5243,7 @@ Types
 
 Yields `true` if both arguments are identical and `false` otherwise.
 
-#### Location FieldSelection
+##### Location FieldSelection
 
 **Synopsis.**
 
@@ -5264,7 +5264,7 @@ Types
 Field selection applies to locations. *Name* should be one of the supported fields listed in
 [Location](#Values-Location) and returns the value of that field. Name stands for itself and is not evaluated.
 
-#### Location GreaterThan
+##### Location GreaterThan
 
 **Synopsis.**
 
@@ -5285,7 +5285,7 @@ Types
 Yields `true` if the location value of *Exp*<sub>1</sub> strictly textually encloses the location value of
 *Exp*<sub>2</sub>, and `false` otherwise.
 
-#### Location GreaterThanOrEqual
+##### Location GreaterThanOrEqual
 
 **Synopsis.**
 
@@ -5306,7 +5306,7 @@ Types
 Yields `true` if the location value of *Exp*<sub>1</sub> textually encloses the location value of *Exp*<sub>2</sub>, and
 `false` otherwise.
 
-#### Location LessThan
+##### Location LessThan
 
 **Synopsis.**
 
@@ -5327,7 +5327,7 @@ Types
 Yields `true` if the location value of *Exp*<sub>1</sub> is strictly textually contained in the location value of
 *Exp*<sub>2</sub>, and `false` otherwise.
 
-#### Location LessThanOrEqual
+##### Location LessThanOrEqual
 
 **Synopsis.**
 
@@ -5348,7 +5348,7 @@ Types
 Yields `true` if the location value of *Exp*<sub>1</sub> is textually contained in the location value of
 *Exp*<sub>2</sub>, and `false` otherwise.
 
-#### NotEqual
+##### NotEqual
 
 **Synopsis.**
 
@@ -5430,7 +5430,7 @@ The following functions are provided for maps:
 ("pear" : 1, "apple" : 3, "banana" : 0);
 ```
 
-#### Map Composition
+##### Map Composition
 
 **Synopsis.**
 
@@ -5461,7 +5461,7 @@ import Map;
 
 We use the letter `o` as operator and this may conflict other defined names.
 
-#### Map Comprehension
+##### Map Comprehension
 
 **Synopsis.**
 
@@ -5508,7 +5508,7 @@ Use a map comprehension to filter fruits with an associated value larger than 10
 (fruit : fruits[fruit] | fruit <- fruits, fruits[fruit] > 10);
 ```
 
-#### Map Difference
+##### Map Difference
 
 **Synopsis.**
 
@@ -5535,7 +5535,7 @@ in *Exp*<sub>1</sub> that do have a key that does not occur in *Exp*<sub>2</sub>
 ("apple": 1, "pear": 2) - ("banana": 3, "apple": 4);
 ```
 
-#### Map Equal
+##### Map Equal
 
 **Synopsis.**
 
@@ -5562,7 +5562,7 @@ Yields `true` if both arguments contain the same key/value pairs, and `false` ot
 ("apple": 1, "pear": 2) == ("apple": 1, "banana": 3)
 ```
 
-#### Map Intersection
+##### Map Intersection
 
 **Synopsis.**
 
@@ -5590,7 +5590,7 @@ key/value pairs that occur in both maps.
 ("apple": 1, "pear": 2) & ("banana": 3, "apple": 4);
 ```
 
-#### Map NotEqual
+##### Map NotEqual
 
 **Synopsis.**
 
@@ -5617,7 +5617,7 @@ Yields `true` if both arguments contain different key/value pairs, and `false` o
 ("apple": 1, "pear": 2) != ("pear": 2, "apple": 1);
 ```
 
-#### Map StrictSubMap
+##### Map StrictSubMap
 
 **Synopsis.**
 
@@ -5645,7 +5645,7 @@ the values of *Exp*<sub>1</sub> and *EXp*<sub>2</sub> are not equal, and `false`
 ("apple": 1, "pear": 2) < ("apple": 1, "banana" : 3);
 ```
 
-#### Map StrictSuperMap
+##### Map StrictSuperMap
 
 **Synopsis.**
 
@@ -5673,7 +5673,7 @@ the values of *Exp*<sub>1</sub> and *EXp*<sub>2</sub> are not equal, and `false`
 ("apple": 1, "banana" : 3) > ("apple": 1, "pear": 2);
 ```
 
-#### Map SubMap
+##### Map SubMap
 
 **Synopsis.**
 
@@ -5702,7 +5702,7 @@ the values of *Exp*<sub>1</sub> and *Exp*<sub>2</sub> are equal, and `false` oth
 ("apple": 1, "pear": 2) <= ("apple": 1, "banana" : 3);
 ```
 
-#### Map Subscription
+##### Map Subscription
 
 **Synopsis.**
 
@@ -5743,7 +5743,7 @@ colors[0];
 colors["square"];
 ```
 
-#### Map SuperMap
+##### Map SuperMap
 
 **Synopsis.**
 
@@ -5772,7 +5772,7 @@ the values of *Exp*<sub>1</sub> and *Exp*<sub>2</sub> are equal, and `false` oth
 ("apple": 1, "banana" : 3) >= ("apple": 1, "pear": 2);
 ```
 
-#### Map Union
+##### Map Union
 
 **Synopsis.**
 
@@ -5805,7 +5805,7 @@ same key in common, that key will be associated in the union with the value asso
 
 Map union is very suited for representing environment composition in interpreters.
 
-#### Map in
+##### Map in
 
 **Synopsis.**
 
@@ -5833,7 +5833,7 @@ otherwise. The type of *Exp*<sub>1</sub> should be compatible with the key type 
 "pineapple" in ("apple": 1, "pear": 2);
 ```
 
-#### Map notin
+##### Map notin
 
 **Synopsis.**
 
@@ -5934,7 +5934,7 @@ A node with named fields:
   - the lack of types at run-time makes pattern matching on node possibly inaccurate (you might match more than you
     think)
 
-#### Node Equal
+##### Node Equal
 
 **Synopsis.**
 
@@ -5962,7 +5962,7 @@ each node are pairwise equal, otherwise `false`.
 "f"(1, "abc", true) == "f"(1, "def", true);
 ```
 
-#### Node GreaterThan
+##### Node GreaterThan
 
 **Synopsis.**
 
@@ -5991,7 +5991,7 @@ m`.
 "f"(10, "abc") > "f"(10);
 ```
 
-#### Node GreaterThanOrEqual
+##### Node GreaterThanOrEqual
 
 **Synopsis.**
 
@@ -6021,7 +6021,7 @@ G(M1, …​, Mm)` when: \* *N* is equal to *M*, or \* *F* is lexicographically 
 "f"(10, "abc") >= "f"(10, "abc");
 ```
 
-#### Node LessThan
+##### Node LessThan
 
 **Synopsis.**
 
@@ -6050,7 +6050,7 @@ m`.
 "f"(10) < "f"(10, "abc");
 ```
 
-#### Node LessThanOrEqual
+##### Node LessThanOrEqual
 
 **Synopsis.**
 
@@ -6079,7 +6079,7 @@ G(M1, …​, Mm)` when: \* *N* is equal to *M*, or \* *F* is lexicographically 
 "f"(10) <= "f"(10, "abc");
 ```
 
-#### Node NotEqual
+##### Node NotEqual
 
 **Synopsis.**
 
@@ -6107,7 +6107,7 @@ children of each node is pairwise unequal, otherwise `true`.
 "f"(1, "abc", true) != "f"(1, "abc", true);
 ```
 
-#### Node Slice
+##### Node Slice
 
 **Synopsis.**
 
@@ -6231,7 +6231,7 @@ ND[..10];
 ND[1..20];
 ```
 
-#### Node Subscription
+##### Node Subscription
 
 **Synopsis.**
 
@@ -6317,7 +6317,7 @@ The following operations are provided on numbers:
 
   - [Number Subtraction](#Number-Subtraction): Subtract two numeric values.
 
-#### Number Addition
+##### Number Addition
 
 **Synopsis.**
 
@@ -6346,7 +6346,7 @@ Yields the numerical sum of the values of *Exp*<sub>1</sub> and *Exp*<sub>2</sub
 12 + 13.5
 ```
 
-#### Number Conditional
+##### Number Conditional
 
 **Synopsis.**
 
@@ -6375,7 +6375,7 @@ If the value of *Exp* is `true` then the value of *Exp*<sub>1</sub> else the val
 (3 > 20) ? 10 : 20
 ```
 
-#### Number Division
+##### Number Division
 
 **Synopsis.**
 
@@ -6407,7 +6407,7 @@ Yields the result of dividing the value of *Exp<sub>1</sub>* by the value of *Ex
 12 / 0
 ```
 
-#### Number Equal
+##### Number Equal
 
 **Synopsis.**
 
@@ -6440,7 +6440,7 @@ Yields `true` if the value of both arguments is numerically equal, and `false` o
 3.14 == 3
 ```
 
-#### Number GreaterThan
+##### Number GreaterThan
 
 **Synopsis.**
 
@@ -6472,7 +6472,7 @@ otherwise.
 12.5 > 13
 ```
 
-#### Number GreaterThanOrEqual
+##### Number GreaterThanOrEqual
 
 **Synopsis.**
 
@@ -6504,7 +6504,7 @@ and `false` otherwise.
 12.5 >= 13
 ```
 
-#### Number LessThan
+##### Number LessThan
 
 **Synopsis.**
 
@@ -6536,7 +6536,7 @@ otherwise.
 12.5 < 13
 ```
 
-#### Number LessThanOrEqual
+##### Number LessThanOrEqual
 
 **Synopsis.**
 
@@ -6568,7 +6568,7 @@ Yields `true` if the value of *Exp<sub>1</sub>* is numerically less than or equa
 12.5 <= 13
 ```
 
-#### Number Multiplication
+##### Number Multiplication
 
 **Synopsis.**
 
@@ -6598,7 +6598,7 @@ Yields the result of multiplying the values of *Exp<sub>1</sub>* and *Exp<sub>2<
 -12*13
 ```
 
-#### Number Negation
+##### Number Negation
 
 **Synopsis.**
 
@@ -6627,7 +6627,7 @@ Yields the negated values of *Exp*.
 - -12
 ```
 
-#### Number NotEqual
+##### Number NotEqual
 
 **Synopsis.**
 
@@ -6660,7 +6660,7 @@ Yields `true` if the value of both arguments is numerically unequal, and `false`
 3.14 != 3.14
 ```
 
-#### Number Remainder
+##### Number Remainder
 
 **Synopsis.**
 
@@ -6695,7 +6695,7 @@ Remainder is only defined on integers:
 13.5 % 6
 ```
 
-#### Number Subtraction
+##### Number Subtraction
 
 **Synopsis.**
 
@@ -6934,7 +6934,7 @@ types are interchangeable.
 {<"a", 1, "b">, <"c", 2, "d">}
 ```
 
-#### Relation CartesianProduct
+##### Relation CartesianProduct
 
 **Synopsis.**
 
@@ -6961,7 +6961,7 @@ Returns a binary relation that is the [Cartesian product](http://en.wikipedia.or
 {1, 2, 3} * {10, 11};
 ```
 
-#### Relation Composition
+##### Relation Composition
 
 **Synopsis.**
 
@@ -6992,7 +6992,7 @@ import Relation;
 
 We use the letter `o` as operator and this may conflict other defined names.
 
-#### Relation FieldSelection
+##### Relation FieldSelection
 
 **Synopsis.**
 
@@ -7020,7 +7020,7 @@ rel[str street, int nm] R = {<"abc", 1>, <"abc", 2>, <"def", 4>, <"def", 5>};
 R.street;
 ```
 
-#### Relation Join
+##### Relation Join
 
 **Synopsis.**
 
@@ -7049,7 +7049,7 @@ are the result from concatenating the elements from both arguments.
 {<1,2>, <10,20>} join {<2,3>, <20,30>};
 ```
 
-#### Relation ReflexiveTransitiveClosure
+##### Relation ReflexiveTransitiveClosure
 
 **Synopsis.**
 
@@ -7089,17 +7089,17 @@ TransitiveClosure](#Relation-TransitiveClosure)): \* R\* = R<sup>0</sup> + R<sup
 {<1,2>, <2,3>, <3,4>}*;
 ```
 
-#### Relation Subscription
+##### Relation Subscription
 
 **Synopsis.**
 
 Indexing of a relation via tuple values.
 
-#### `Exp_0 [ Exp1, Exp2, …​ Expn]`
+##### `Exp_0 [ Exp1, Exp2, …​ Expn]`
 
-#### `Exp_0 [ Exp1]`
+##### `Exp_0 [ Exp1]`
 
-##### Variant 1
+###### Variant 1
 
 | `Exp_0`              | `Exp1` | `Exp2` | …​ | `Exp_0 [ Exp1, Exp2, …​ ]` |
 | -------------------- | ------ | ------ | -- | -------------------------- |
@@ -7107,7 +7107,7 @@ Indexing of a relation via tuple values.
 
 Types
 
-##### Variant 2
+###### Variant 2
 
 | `Exp0`               | `Exp1`    | `Exp0 [ Exp1 ]`      |
 | -------------------- | --------- | -------------------- |
@@ -7117,14 +7117,14 @@ Types
 
 Relation resulting from subscription of a relation *Exp*<sub>0</sub>.
 
-##### Variant 1
+###### Variant 1
 
 Subscription with the index values of *Exp*<sub>1</sub>, *Exp*<sub>2</sub>, …​. The result is a relation with all tuples
 that have these index values as first elements with the index values removed from the tuple. If the resulting tuple has
 only a single element, a set is returned instead of a relation. A wildcard `_` as index value matches all possible
 values at that index position.
 
-##### Variant 2
+###### Variant 2
 
 Subscription with a set of the index values of *Exp*<sub>1</sub>. The result is a relation with all tuples that have
 these index values as first element with the index values removed from the tuple.
@@ -7163,7 +7163,7 @@ or rather for the indices `"Japan"` and `2008`:
 GDP["Japan", 2008];
 ```
 
-#### Relation TransitiveClosure
+##### Relation TransitiveClosure
 
 **Synopsis.**
 
@@ -7298,7 +7298,7 @@ Note that
 
   - `{1, 2, 3}` and `{1, 2, 3, 1}` are also identical sets (since duplication is not relevant).
 
-#### Set splicing
+##### Set splicing
 
 Introduce a set variable `S`
 
@@ -7318,7 +7318,7 @@ or how its elements are added as elements to the other set:
 {10, *S, 20};
 ```
 
-#### Set Comprehension
+##### Set Comprehension
 
 **Synopsis.**
 
@@ -7347,7 +7347,7 @@ number of generators *Gen*<sub>1</sub>, *Gen*<sub>2</sub>, *Gen*<sub>3</sub>, �
 { N * N | int N <- [0 .. 10], N % 3 == 0};
 ```
 
-#### Set Difference
+##### Set Difference
 
 **Synopsis.**
 
@@ -7379,7 +7379,7 @@ computed. The difference is computed by removing all elements of the second set 
 {1, 2, 3, 4} - {5, 6, 7};
 ```
 
-#### Set Equal
+##### Set Equal
 
 **Synopsis.**
 
@@ -7406,7 +7406,7 @@ Yields `true` if both arguments are equal sets and `false` otherwise.
 {1, 2, 3} == {1, 2};
 ```
 
-#### Set Insert
+##### Set Insert
 
 **Synopsis.**
 
@@ -7438,7 +7438,7 @@ The `+` operator will add elements to sets.
 
   - if both operands of `+` are a set then it acts as [Set Union](#Set-Union).
 
-#### Set Intersection
+##### Set Intersection
 
 **Synopsis.**
 
@@ -7465,7 +7465,7 @@ the common elements of both sets.
 {1, 2, 3, 4, 5} & {4, 5, 6};
 ```
 
-#### Set NotEqual
+##### Set NotEqual
 
 **Synopsis.**
 
@@ -7492,7 +7492,7 @@ Yields `true` if both arguments are unequal sets and `false` otherwise.
 {1, 2, 3} != {1, 2};
 ```
 
-#### Set Product
+##### Set Product
 
 **Synopsis.**
 
@@ -7525,7 +7525,7 @@ A card deck can be created as follows:
 {"clubs", "hearts", "diamonds", "spades"} * {1,2,3,4,5,6,7,8,9,10,11,12,13};
 ```
 
-#### Set Splice
+##### Set Splice
 
 **Synopsis.**
 
@@ -7562,7 +7562,7 @@ S = {10, 20, 30};
 {1, 2, *S, 3, 4};
 ```
 
-#### Set StrictSubSet
+##### Set StrictSubSet
 
 **Synopsis.**
 
@@ -7591,7 +7591,7 @@ otherwise.
 {1, 2, 3} < {1, 2, 3};
 ```
 
-#### Set StrictSuperSet
+##### Set StrictSuperSet
 
 **Synopsis.**
 
@@ -7619,7 +7619,7 @@ otherwise.
 {1, 2, 3, 4} > {4, 3, 2, 1};
 ```
 
-#### Set SubSet
+##### Set SubSet
 
 **Synopsis.**
 
@@ -7647,7 +7647,7 @@ otherwise.
 {1, 2, 3} <= {1, 2, 3};
 ```
 
-#### Set SuperSet
+##### Set SuperSet
 
 **Synopsis.**
 
@@ -7674,7 +7674,7 @@ Yields `true` if the value of *Exp*<sub>1</sub> is a superset of the value of *E
 {1, 2, 3, 4} >= {4, 3, 2, 1};
 ```
 
-#### Set Union
+##### Set Union
 
 **Synopsis.**
 
@@ -7700,7 +7700,7 @@ Insert](#Set-Insert) instead.
 {2} + { 2, 3, 4};
 ```
 
-#### Set in
+##### Set in
 
 **Synopsis.**
 
@@ -7728,7 +7728,7 @@ otherwise. The type of *Exp*<sub>1</sub> should be compatible with the element t
 4 in {1, 2, 3};
 ```
 
-#### Set notin
+##### Set notin
 
 **Synopsis.**
 
@@ -7905,7 +7905,7 @@ println(genClass());
 String interpolation enables very flexible template-based text generation as used in generators for source code, markup
 and the like.
 
-#### String Concatenation
+##### String Concatenation
 
 **Synopsis.**
 
@@ -7933,7 +7933,7 @@ Note that to concatenate other types of values into a string, you can use [Strin
 "abc" + "def";
 ```
 
-#### String Equal
+##### String Equal
 
 **Synopsis.**
 
@@ -7960,7 +7960,7 @@ Yields `true` if both arguments are identical and `false` otherwise.
 "abc" == "defghi";
 ```
 
-#### String GreaterThan
+##### String GreaterThan
 
 **Synopsis.**
 
@@ -7989,7 +7989,7 @@ Yields `true` if the string value of *Exp*<sub>1</sub> is strictly lexicographic
 "a" > "abc";
 ```
 
-#### String GreaterThanOrEqual
+##### String GreaterThanOrEqual
 
 **Synopsis.**
 
@@ -8019,7 +8019,7 @@ Yields `true` if the string value of *Exp*<sub>1</sub> is lexicographically grea
 "a" >= "abc";
 ```
 
-#### String LessThan
+##### String LessThan
 
 **Synopsis.**
 
@@ -8048,7 +8048,7 @@ Yields `true` if the string value of *Exp*<sub>1</sub> is strictly lexicographic
 "abc" < "a";
 ```
 
-#### String LessThanOrEqual
+##### String LessThanOrEqual
 
 **Synopsis.**
 
@@ -8078,7 +8078,7 @@ Yields `true` if the string value of *Exp*<sub>1</sub> is lexicographically less
 "abc" <= "a";
 ```
 
-#### String NotEqual
+##### String NotEqual
 
 **Synopsis.**
 
@@ -8105,15 +8105,15 @@ Yields `true` if both arguments are not identical and `false` otherwise.
 "abc" != "abc";
 ```
 
-#### String Slice
+##### String Slice
 
 **Synopsis.**
 
 Retrieve a slice of a string.
 
-#### `Exp1 [ Exp2 .. Exp4]`
+##### `Exp1 [ Exp2 .. Exp4]`
 
-#### `Exp1 [ Exp2 , Exp3 .. Exp4]`
+##### `Exp1 [ Exp2 , Exp3 .. Exp4]`
 
 **Syntax.**
 
@@ -8231,7 +8231,7 @@ S[..10];
 S[1..20];
 ```
 
-#### String Subscription
+##### String Subscription
 
 **Synopsis.**
 
@@ -8325,7 +8325,7 @@ P.first;
 P.first = "Bo";
 ```
 
-#### Tuple Concatenation
+##### Tuple Concatenation
 
 **Synopsis.**
 
@@ -8351,7 +8351,7 @@ Returns a tuple consisting of the concatenation of the tuple elements of *Exp*<s
 <"abc", 1, 2.5> + <true, "def">;
 ```
 
-#### Tuple Equal
+##### Tuple Equal
 
 **Synopsis.**
 
@@ -8377,7 +8377,7 @@ Yields `true` if both tuples are identical and `false` otherwise.
 <1, "abc", true> == <1, "abc", true>;
 ```
 
-#### Tuple FieldSelection
+##### Tuple FieldSelection
 
 **Synopsis.**
 
@@ -8405,7 +8405,7 @@ tuple[int key, str val] T = <1, "abc">;
 T.val;
 ```
 
-#### Tuple GreaterThan
+##### Tuple GreaterThan
 
 **Synopsis.**
 
@@ -8438,7 +8438,7 @@ Otherwise the result if `false`.
 <1, "def", true> > <1, "abc", true>;
 ```
 
-#### Tuple GreaterThanOrEqual
+##### Tuple GreaterThanOrEqual
 
 **Synopsis.**
 
@@ -8472,7 +8472,7 @@ Otherwise the result if `false`.
 <1, "def", true> > <1, "abc", true>;
 ```
 
-#### Tuple LessThan
+##### Tuple LessThan
 
 **Synopsis.**
 
@@ -8505,7 +8505,7 @@ Otherwise the result if `false`.
 <1, "abc", true> < <1, "def", true>;
 ```
 
-#### Tuple LessThanOrEqual
+##### Tuple LessThanOrEqual
 
 **Synopsis.**
 
@@ -8539,7 +8539,7 @@ Otherwise the result if `false`.
 <1, "abc", true> <= <1, "def", true>;
 ```
 
-#### Tuple NotEqual
+##### Tuple NotEqual
 
 **Synopsis.**
 
@@ -8566,7 +8566,7 @@ Yields `true` if both tuples are not identical and `false` otherwise.
 <1, "abc", true> != <1, "abc", true>;
 ```
 
-#### Tuple Subscription
+##### Tuple Subscription
 
 **Synopsis.**
 
@@ -8620,7 +8620,7 @@ The following operators are provided for values:
 
   - [Value NotEqual](#Value-NotEqual): Not equal operator on values.
 
-#### Value Conditional
+##### Value Conditional
 
 **Synopsis.**
 
@@ -8649,7 +8649,7 @@ Typing](#Declarations-StaticTyping)) of the types of *Exp*<sub>2</sub> and *Exp*
 ( 3 < 2 ) ? "abc" : {3, 4};
 ```
 
-#### Value Equal
+##### Value Equal
 
 **Synopsis.**
 
@@ -8694,7 +8694,7 @@ and `X` and `Z`:
 X == Z;
 ```
 
-#### Value GreaterThan
+##### Value GreaterThan
 
 **Synopsis.**
 
@@ -8746,7 +8746,7 @@ and `X` and `Z`:
 X > Z;
 ```
 
-#### Value GreaterThanOrEqual
+##### Value GreaterThanOrEqual
 
 **Synopsis.**
 
@@ -8798,7 +8798,7 @@ and `X` and `Z`:
 X >= Z;
 ```
 
-#### Value LessThan
+##### Value LessThan
 
 **Synopsis.**
 
@@ -8850,7 +8850,7 @@ and `X` and `Z`:
 X < Z;
 ```
 
-#### Value LessThanOrEqual
+##### Value LessThanOrEqual
 
 **Synopsis.**
 
@@ -8902,7 +8902,7 @@ and `X` and `Z`:
 X <= Z;
 ```
 
-#### Value NotEqual
+##### Value NotEqual
 
 **Synopsis.**
 
@@ -8958,7 +8958,7 @@ Values of type `void`.
 
 Void stands for *nothing* and is represented by the type `void`. It is a type without any values.
 
-## Operators
+### Operators
 
 **Synopsis.**
 
@@ -9075,7 +9075,7 @@ Traffic<2,day>;
 Field projection thus selects parts from a larger value that has a fixed number of parts. The selection is based on
 position and not on value and can be used to completely reorder or remove the parts of a larger value.
 
-## Call
+### Call
 
 **Synopsis.**
 
@@ -9134,7 +9134,7 @@ Next call `square`. This results in the following steps:
 square(12);
 ```
 
-## Comprehensions
+### Comprehensions
 
 **Synopsis.**
 
@@ -9311,7 +9311,7 @@ Filters can also be applied to values produced by several generators:
 [<X, Y> | int X <- [0 .. 10], int Y <- [0 .. 10], X + Y == 10]
 ```
 
-## Concrete Syntax
+### Concrete Syntax
 
 **Synopsis.**
 
@@ -9344,7 +9344,7 @@ generate its parse trees.
 
   - The disambiguation of embedded concrete syntax fragments may change in the near future.
 
-## Reducer
+### Reducer
 
 **Synopsis.**
 
@@ -9388,7 +9388,7 @@ L = [1, 3, 5, 7];
 (1 | it * e | int e <- L);
 ```
 
-## Statement as Expression
+### Statement as Expression
 
 **Synopsis.**
 
@@ -9404,7 +9404,7 @@ the relevant statements, see [If](#Statements-If), [While](#Statements-While), [
 
 It is likely that the design of Rascal will evolve into completely merging expressions and statements.
 
-## Visit
+### Visit
 
 **Synopsis.**
 
@@ -9579,7 +9579,7 @@ The action may also be a [Block](#Statements-Block):
 case red(_,_): { c = c + 1; println("c = <c>"); }
 ```
 
-# Statements
+## Statements
 
 **Synopsis.**
 
@@ -9645,7 +9645,7 @@ The following statements are available:
 
 ![Statement Types](/images/statement-parts.png)
 
-## Append
+### Append
 
 **Synopsis.**
 
@@ -9668,7 +9668,7 @@ for(int i <- [1..5]) append i*i;
 L = for(int i <- [1..5]) append i*i;
 ```
 
-## Assert
+### Assert
 
 **Synopsis.**
 
@@ -9704,7 +9704,7 @@ int div(int x, int y) {
 div(4,0);
 ```
 
-## Assignment
+### Assignment
 
 **Synopsis.**
 
@@ -10045,7 +10045,7 @@ N = 3;
 N;
 ```
 
-## Block
+### Block
 
 **Synopsis.**
 
@@ -10085,7 +10085,7 @@ After the block we cannot refer to `x`:
 x;
 ```
 
-## Break
+### Break
 
 **Synopsis.**
 
@@ -10113,7 +10113,7 @@ for(int i <- [1 .. 10]){
 }
 ```
 
-## Continue
+### Continue
 
 **Synopsis.**
 
@@ -10141,7 +10141,7 @@ for(int i <- [1 .. 10]){
 }
 ```
 
-## Do
+### Do
 
 **Synopsis.**
 
@@ -10175,7 +10175,7 @@ n = 3;
 do { append n * n; n -= 1; } while (n > 0);
 ```
 
-## Fail
+### Fail
 
 **Synopsis.**
 
@@ -10235,7 +10235,7 @@ public list[int] sort(list[int] numbers){
 sort([10, 1, 5, 3]);
 ```
 
-## For
+### For
 
 **Synopsis.**
 
@@ -10267,7 +10267,7 @@ for(int n <- [1 .. 5]) println("n = <n>");
 for(int n <- [1 .. 5]) append n * n;
 ```
 
-## If
+### If
 
 **Synopsis.**
 
@@ -10309,7 +10309,7 @@ system):
 if( 2 > 3 ) 30;
 ```
 
-## Insert
+### Insert
 
 **Synopsis.**
 
@@ -10359,7 +10359,7 @@ visit(T){
 There is a glitch in the Rascal syntax that *requires* a semicolon after a case (as in the first example), but refuses
 it in the abbreviated version using `⇒` (the second example).
 
-## Return
+### Return
 
 **Synopsis.**
 
@@ -10398,7 +10398,7 @@ int twiceb(int n) = 2 * n;
 twiceb(5);
 ```
 
-## Solve
+### Solve
 
 **Synopsis.**
 
@@ -10443,7 +10443,7 @@ solve (T) {
         }
 ```
 
-## Switch
+### Switch
 
 **Synopsis.**
 
@@ -10489,7 +10489,7 @@ From the printed message you can infer that the cases are tried in the order in 
 
 The switch statement does not yet return a value, this will be changed.
 
-## Test
+### Test
 
 **Synopsis.**
 
@@ -10500,7 +10500,7 @@ Test statement (*deprecated*).
 The `test` statement is deprecated and is replaced by the `test` modifier in function declarations, see [Function
 Declaration](#Declarations-Function).
 
-## Throw
+### Throw
 
 **Synopsis.**
 
@@ -10532,7 +10532,7 @@ conc("fairy", "tale");
 conc("foot", "ball");
 ```
 
-## Try Catch
+### Try Catch
 
 **Synopsis.**
 
@@ -10589,7 +10589,7 @@ int hd2(list[int] x) { try return head(x); catch EmptyList(): return 0; }
 hd2([]);
 ```
 
-## Visit
+### Visit
 
 **Synopsis.**
 
@@ -10615,7 +10615,7 @@ if (true) {
 }
 ```
 
-## While
+### While
 
 **Synopsis.**
 

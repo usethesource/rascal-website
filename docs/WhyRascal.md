@@ -11,16 +11,16 @@ What is the motivation for Rascal and which problems can you solve with it?
 
 We give various answers to these questions:
 
-  - In [Motivation](#WhyRascal-Motivation) we summarize the distinguishing features of Rascal and describe some
+  - In [Motivation](#motivation) we summarize the distinguishing features of Rascal and describe some
     application domains.
 
-  - [The Extract-Analyze-SYnthesize (EASY) paradigm](#WhyRascal-EASY) can be used in many Rascal applications.
+  - [The Extract-Analyze-SYnthesize (EASY) paradigm](#EASY) can be used in many Rascal applications.
 
-  - We have also collected [Solution Strategies](#WhyRascal-SolutionStrategies) for a wide range of problems.
+  - We have also collected [Solution Strategies](#solution-strategies) for a wide range of problems.
 
-  - Last but not least we give a quick [Comparison with other Paradigms](#WhyRascal-CompareWithOtherParadigms).
+  - Last but not least we give a quick [Comparison with other Paradigms](#comparison).
 
-# Motivation
+## Motivation {#motivation}
 
 **Synopsis.**
 
@@ -98,7 +98,7 @@ analysis and synthesis of complex data structures simple.
 
   - *Eclipse integration* makes Rascal programming a breeze. All familiar tools are at your fingertips.
 
-# The Extract-Analyze-SYnthesize (EASY) paradigm
+## The Extract-Analyze-SYnthesize (EASY) paradigm {#EASY}
 
 **Synopsis.**
 
@@ -117,17 +117,17 @@ meta-programming problems, but is rather common.
 Rascal has been designed to fully support problem solving that fits the EASY paradigm. We will discuss the following use
 cases represented by different *personas*:
 
-  - [Concurrency](#EASY-Concurrency): Concurrency analysis.
+  - [Concurrency](#concurrency): Concurrency analysis.
 
-  - [Forensics](#EASY-Forensics): Domain-specific language for forensics research.
+  - [Forensics](#forensics): Domain-specific language for forensics research.
 
-  - [Model-Driven Engineering](#EASY-ModelDrivenEngineering): Tools for Model-Driven Engineering.
+  - [Model-Driven Engineering](#MDE): Tools for Model-Driven Engineering.
 
-  - [Renovation](#EASY-Renovation): System renovation.
+  - [Renovation](#renovation): System renovation.
 
-  - [Security](#EASY-Security): Security analysis.
+  - [Security](#security): Security analysis.
 
-## Concurrency
+### Concurrency {#concurrency}
 
 **Synopsis.**
 
@@ -145,7 +145,7 @@ for concurrency problems and have to do with calls, threads, shared variables an
 and synthesizes an abstract model that captures the essentials of the concurrency behaviour of the program. Finally he
 runs a third-party verification tool with this model as input to do the actual verification.
 
-## Forensics
+### Forensics {#forensics}
 
 **Synopsis.**
 
@@ -164,7 +164,7 @@ first extracts relevant information from it and analyzes it: which media formats
 for? How should search results be combined? Given this new information, Java code is synthesized that uses the various
 existing tools and combines their results.
 
-## Model-Driven Engineering
+### Model-Driven Engineering {#MDE}
 
 **Synopsis.**
 
@@ -181,7 +181,7 @@ annotations that describe the reliability of individual components. She will use
 
   - to generate executable code that takes the reliability issues into account.
 
-## Renovation
+### Renovation {#renovation}
 
 **Synopsis.**
 
@@ -208,7 +208,7 @@ and so on and so forth. Results will be typically represented as pictures that d
 found. In the case of source code analysis, a variation of our workflow scheme is quite common. It is then called the
 extract-analyze-view paradigm and is shown in the figure.
 
-## Security
+### Security {#security}
 
 **Synopsis.**
 
@@ -223,7 +223,7 @@ originating IP address are extracted and put in a table (the internal representa
 analyzed by detecting duplicates and counting frequencies. Finally results are synthesized by listing the most
 frequently used login names and IP addresses.
 
-# Solution Strategies
+## Solution Strategies {#solution-strategies}
 
 **Synopsis.**
 
@@ -257,20 +257,20 @@ To appreciate these general strategies, it is good to keep some specific problem
   - *Interactive refactoring*: given known *code smells* a user can interactively indicate how these smells should be
     removed. The refactoring features in Eclipse and Visual Studio are examples.
 
-With these examples in mind, we can study the overall problem solving workflow as shown in the figure
-[figure\_title](#Problem-Solving-Workflow) above. It consists of three optional phases:
+With these examples in mind, we can study the overall problem solving workflow as shown in the figure above. 
+It consists of three optional phases:
 
   - Is extraction needed to solve the problem, then define the extraction phase, see
-    [Extraction](#SolutionStrategies-Extraction).
+    [Extraction](#extraction).
 
-  - Is analysis needed, then define the analysis phase, see [Analysis](#SolutionStrategies-Analysis).
+  - Is analysis needed, then define the analysis phase, see [Analysis](#analysis).
 
-  - Is synthesis needed, then define the synthesis phase, see [Synthesis](#SolutionStrategies-Synthesis).
+  - Is synthesis needed, then define the synthesis phase, see [Synthesis](#synthesis).
 
 ![Validation Workflow](/images/validation.png)
 
 Each phase is subject to a validation and improvement workflow as shown in the second figure
-[figure\_title](#Validation-Workflow). Each individual phase as well as the combination of phases may introduce errors
+above. Each individual phase as well as the combination of phases may introduce errors
 and has thus to be carefully validated. In combination with the detailed strategies for each phase, this forms a
 complete approach for problem solving and validation using Rascal.
 
@@ -279,7 +279,7 @@ complete approach for problem solving and validation using Rascal.
 A major question in every problem solving situation is how to determine the requirements for each phase of the solution.
 For instance, how do we know what to extract from the source code if we do not know what the desired end results of the
 project are? The standard solution is to use a workflow for requirements gathering that is the inverse of the phases
-needed to solve the complete problem. This is shown in the third figure [figure\_title](#Requirements-Workflow) and
+needed to solve the complete problem. This is shown in the third figure above and
 amounts to the phases:
 
   - Requirements of the synthesis phase. This amounts to making an inventory of the desired results of the whole project
@@ -301,13 +301,13 @@ phases of the first figure above.
 
 We will discuss:
 
-  - [Extraction](#SolutionStrategies-Extraction): Strategies to extract facts from software systems.
+  - [Extraction](#extraction): Strategies to extract facts from software systems.
 
-  - [Analysis](#SolutionStrategies-Analysis): Strategies to analyze software systems.
+  - [Analysis](#analysis): Strategies to analyze software systems.
 
-  - [Synthesis](#SolutionStrategies-Synthesis): Strategies to synthesise results.
+  - [Synthesis](#synthesis): Strategies to synthesise results.
 
-## Extraction
+### Extraction {#extraction}
 
 **Synopsis.**
 
@@ -318,7 +318,7 @@ Strategies to extract facts from software systems.
 **Description.**
 
 How can we extract facts from the *System under Investigation* (SUI) that we are interested in? The extraction workflow
-is shown in the figure [figure\_title](#Extraction-Workflow) above and consists of the following steps:
+is shown in the figure above and consists of the following steps:
 
   - First and foremost we have to determine which facts we need. This sounds trivial, but it is not. The problem is that
     we have to anticipate which facts will be needed in the next---not yet defined---analysis phase. A common approach
@@ -391,7 +391,7 @@ The Rascal features that are most frequently used for extraction are:
 
   - The repertoire of built-in datatypes (like lists, maps, sets and relations) to represent the extracted facts.
 
-## Analysis
+### Analysis {#analysis}
 
 **Synopsis.**
 
@@ -401,7 +401,7 @@ Strategies to analyze software systems.
 
 **Description.**
 
-The analysis workflow is shown in the figure [figure\_title](#Analysis-Workflow) below and consists of two steps:
+The analysis workflow is shown in the figure above and consists of two steps:
 
   - Determine the results that are needed for the synthesis phase.
 
@@ -433,7 +433,7 @@ The Rascal features that are frequently used for analysis are:
 
   - Rewrite rules to simplify results and to enforce constraints.
 
-## Synthesis
+### Synthesis {#synthesis}
 
 **Synopsis.**
 
@@ -443,7 +443,7 @@ Strategies to synthesise results.
 
 **Description.**
 
-Results are synthesized as shown in the Figure [figure\_title](#Synthesis-Workflow) above. This consists of the
+Results are synthesized as shown in the figure above. This consists of the
 following steps:
 
   - Determine the results of the synthesis phase. Wide range of results is possible including:
@@ -480,7 +480,7 @@ The Rascal features that are frequently used for synthesis are:
 
   - Rewrite rules.
 
-# Comparison with other Paradigms
+## Comparison with other Paradigms {#comparison}
 
 **Synopsis.**
 
@@ -491,12 +491,12 @@ Rascal compared with the imperative, object-oriented and algebraic paradigms
 Rascal provides both familiar and unfamiliar features. These will be appreciated differently by programmers that are
 expert in other language paradigms. We provide the following comparisons:
 
-  - [ASF+SDF](#CompareWithOtherParadigms-ASFPlusSDF): Rascal explained for ASF+SDF programmers.
+  - [ASF+SDF](#asf-sdf): Rascal explained for ASF+SDF programmers.
 
-  - [Object-Oriented and Imperative Languages](#CompareWithOtherParadigms-OO): Rascal explained for OO and imperative
+  - [Object-Oriented and Imperative Languages](#oo): Rascal explained for OO and imperative
     programmers.
 
-## ASF+SDF
+### ASF+SDF {#asf-sdf}
 
 **Synopsis.**
 
@@ -561,7 +561,7 @@ What are the differences between ASF+SDF and Rascal? What are the commonalities?
   - Rascal is supported by a modern, Eclipse-based, IDE, unlike the simple IDE of the ASF+SDF Meta-Environment. IDE
     services like keyword highlighting, outlining, and more are available for the Rascal programmer.
 
-## Object-Oriented and Imperative Languages
+### Object-Oriented and Imperative Languages {#oo}
 
 **Synopsis.**
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Getting Help
 ---
 
@@ -17,15 +17,13 @@ You can use Rascal in two ways:
 
 Both provide help facilities that we discuss in more detail:
 
-  - [Help at the command line](#GettingHelp-CommandLine): Get help when using Rascal at the command line (CLI, REPL).
+  - [Help at the command line](#commandLine): Get help when using Rascal at the command line (CLI, REPL).
 
-  - [Help in the Integrated Development Environment (IDE)](#GettingHelp-IDE): Get help when using Rascal in the IDE.
+  - [Help in the Integrated Development Environment (IDE)](#IDE): Get help when using Rascal in the IDE.
 
-  - [Browsing Documentation](#GettingHelp-Browsing): Browsing the Rascal documentation.
+  - [Browsing Documentation](#browsing): Browsing the Rascal documentation.
 
-  - [Further Reading](#GettingHelp-FurtherReading): How to continue reading the Rascal documentation.
-
-# Help at the command line
+## Help at the command line {#commandLine}
 
 **Synopsis.**
 
@@ -62,7 +60,7 @@ separate browser. Here is a way to search for help related to `if`.
 apropos if
 ```
 
-# Help in the Integrated Development Environment (IDE)
+## Help in the Integrated Development Environment (IDE) {#IDE}
 
 **Synopsis.**
 
@@ -72,7 +70,7 @@ Get help when using Rascal in the IDE
 > 
 > To be written
 
-# Browsing Documentation
+## Browsing Documentation {#browsing}
 
 **Synopsis.**
 

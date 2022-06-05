@@ -19,7 +19,7 @@ The libraries described here provide the following functionality:
 
   - [util](#Libraries-util): Utilities: functions, data types and interfaces with external libraries.
 
-# Prelude
+## Prelude
 
 **Synopsis.**
 
@@ -88,7 +88,7 @@ This library makes it possible to import all core Rascal functionality with a si
 
   - In the future, Rascal may automatically load the prelude.
 
-## Boolean
+### Boolean
 
 **Usage.**
 
@@ -213,7 +213,7 @@ toString(true);
 toString(false);
 ```
 
-## Content
+### Content
 
 **Usage.**
 
@@ -402,7 +402,7 @@ data Status
 
 Encoding of HTTP status
 
-## DateTime
+### DateTime
 
 **Usage.**
 
@@ -1273,7 +1273,7 @@ import DateTime;
 arbDateTime();
 ```
 
-## Exception
+### Exception
 
 **Usage.**
 
@@ -1375,7 +1375,7 @@ try {
 println(N);
 ```
 
-## IO
+### IO
 
 **Usage.**
 
@@ -2420,7 +2420,7 @@ data LocationType
 
 `void unwatch(loc src, bool recursive, void (LocationChangeEvent event) watcher)`
 
-## List
+### List
 
 **Usage.**
 
@@ -3764,7 +3764,7 @@ zip3([3, 1, 4], ["thirty", "ten", "forty"], [300, 100, 400]);
 
 `list[tuple[&T first, &U second, &V third]] zip3(list[&T] a, list[&U] b, list[&V] c)`
 
-## ListRelation
+### ListRelation
 
 **Usage.**
 
@@ -4256,7 +4256,7 @@ index([<1,10>, <2,20>, <3,30>, <30,10>]);
 
 `list[&T] squeeze(list[&T] xs)`
 
-## Location
+### Location
 
 **Usage.**
 
@@ -4480,7 +4480,7 @@ Compute a location that textually covers the text of a list of locations.
 Create a new location that refers to the smallest text area that overlaps with the text of the given locations. The
 given locations should all refer to the same file but they may be overlapping or be contained in each other.
 
-## Map
+### Map
 
 **Usage.**
 
@@ -4893,7 +4893,7 @@ import Map;
 itoString(("apple": 1, "pear": 2, "orange": 3));
 ```
 
-## Message
+### Message
 
 **Usage.**
 
@@ -4935,7 +4935,7 @@ data Message
 Messages can be used to communicate information about source texts. They can be interpreted by IDE’s to display type
 errors and warnings, etc.
 
-## Node
+### Node
 
 **Usage.**
 
@@ -5209,7 +5209,7 @@ F = "f"(10, "abc", color="red", size="large");
 itoString(F);
 ```
 
-## ParseTree
+### ParseTree
 
 **Usage.**
 
@@ -6051,7 +6051,7 @@ Select the innermost Tree of a given type which is enclosed by a given location.
 
 Determine if the given type is a non-terminal type.
 
-## Relation
+### Relation
 
 **Usage.**
 
@@ -6501,7 +6501,7 @@ import Relation;
 index({<1,10>, <2,20>, <3,30>, <30,10>});
 ```
 
-## Set
+### Set
 
 **Usage.**
 
@@ -7129,7 +7129,7 @@ Flatten a set of sets into a single set.
 
 Compute the Jaccard similarity between two sets.
 
-## String
+### String
 
 **Usage.**
 
@@ -7984,7 +7984,7 @@ import String;
 substitute("abc", (|stdin:///|(1,1): "d"))
 ```
 
-## Type
+### Type
 
 **Usage.**
 
@@ -9099,7 +9099,7 @@ Determine if the given type is a reified type.
 
 Determine if the given type is an type variable (parameter).
 
-## ValueIO
+### ValueIO
 
 **Usage.**
 
@@ -9189,7 +9189,7 @@ Write a value to a file using an efficient binary file format.
 
 Write a value to a file using a textual file format.
 
-# analysis
+## analysis
 
 **Synopsis.**
 
@@ -9218,7 +9218,7 @@ Library functions for analysis tasks.
     
       - [SimpleRegression](#statistics-SimpleRegression): Statistical methods for simple regression.
 
-## FCA
+### FCA
 
 **Usage.**
 
@@ -9363,7 +9363,7 @@ Computes Dot Graph from Concept Lattice.
 
 Write relation in `.dot` format.
 
-## graphs
+### graphs
 
 **Synopsis.**
 
@@ -9433,7 +9433,7 @@ The `Graph` library provides the following functions:
 
 \[\[Graph-Graph\[\&T\]\]\] \#\# Graph\[\&T\] .Types `rel[&T from, &T to]`
 
-#### order
+##### order
 
 **Function.**
 
@@ -9450,7 +9450,7 @@ import  analysis::graphs::Graph;
 order({<3,4>, <1,2>, <2,4>, <1,3>});
 ```
 
-#### stronglyConnectedComponents
+##### stronglyConnectedComponents
 
 **Function.**
 
@@ -9467,13 +9467,13 @@ import  analysis::graphs::Graph;
 stronglyConnectedComponents({<1, 2>, <2, 3>, <3, 2>, <2, 4>, <4, 2>, <3, 5>, <5, 3>, <4, 5>, <5, 3>});
 ```
 
-#### stronglyConnectedComponentsAndTopSort
+##### stronglyConnectedComponentsAndTopSort
 
 **Function.**
 
 `tuple[set[set[&T]], list[&T]] stronglyConnectedComponentsAndTopSort(Graph[&T] ag)`
 
-#### bottom
+##### bottom
 
 **Function.**
 
@@ -9494,7 +9494,7 @@ import analysis::graphs::Graph;
 bottom({<1,2>, <1,3>, <2,4>, <3,4>});
 ```
 
-#### predecessors
+##### predecessors
 
 **Function.**
 
@@ -9515,7 +9515,7 @@ import analysis::graphs::Graph;
 predecessors({<1,2>, <1,3>, <2,4>, <3,4>}, 4);
 ```
 
-#### reach
+##### reach
 
 **Function.**
 
@@ -9529,7 +9529,7 @@ Determine the graph nodes reachable from a set of nodes.
 
 Returns the set of nodes in Graph `G` that are reachable from any of the nodes in the set `Start`.
 
-#### reachR
+##### reachR
 
 **Function.**
 
@@ -9551,7 +9551,7 @@ import analysis::graphs::Graph;
 reachR({<1,2>, <1,3>, <2,4>, <3,4>}, {1}, {1, 2, 3});
 ```
 
-#### reachX
+##### reachX
 
 **Function.**
 
@@ -9573,7 +9573,7 @@ import analysis::graphs::Graph;
 reachX({<1,2>, <1,3>, <2,4>, <3,4>}, {1}, {2});
 ```
 
-#### shortestPathPair
+##### shortestPathPair
 
 **Function.**
 
@@ -9587,7 +9587,7 @@ Determine the shortest path between two graph nodes.
 
 Returns the shortest path between nodes `From` and `To` in Graph `G`.
 
-#### successors
+##### successors
 
 **Function.**
 
@@ -9608,7 +9608,7 @@ import analysis::graphs::Graph;
 successors({<1,2>, <1,3>, <2,4>, <3,4>}, 1);
 ```
 
-#### top
+##### top
 
 **Function.**
 
@@ -9629,7 +9629,7 @@ import analysis::graphs::Graph;
 top({<1,2>, <1,3>, <2,4>, <3,4>});
 ```
 
-#### connectedComponents
+##### connectedComponents
 
 **Function.**
 
@@ -9660,7 +9660,7 @@ connectedComponents({<1,2>, <1,3>, <4,5>, <5,6>});
 
 \[\[LabeledGraph-LGraph\[\&T,\&L\]\]\] \#\# LGraph\[\&T,\&L\] .Types `rel[&T from, &L label, &T to]`
 
-#### bottom
+##### bottom
 
 **Function.**
 
@@ -9670,7 +9670,7 @@ connectedComponents({<1,2>, <1,3>, <4,5>, <5,6>});
 
 Return the bottom nodes of a LGraph.
 
-#### predecessors
+##### predecessors
 
 **Function.**
 
@@ -9680,7 +9680,7 @@ Return the bottom nodes of a LGraph.
 
 The predecessors of a single node in a LGraph.
 
-#### reach
+##### reach
 
 **Function.**
 
@@ -9690,7 +9690,7 @@ The predecessors of a single node in a LGraph.
 
 Reachability from a given start set of nodes.
 
-#### reachR
+##### reachR
 
 **Function.**
 
@@ -9700,7 +9700,7 @@ Reachability from a given start set of nodes.
 
 Reachability from given start set of nodes with restrictions.
 
-#### reachX
+##### reachX
 
 **Function.**
 
@@ -9710,7 +9710,7 @@ Reachability from given start set of nodes with restrictions.
 
 Reachability from given start set of nodes with exclusions.
 
-#### successors
+##### successors
 
 **Function.**
 
@@ -9720,7 +9720,7 @@ Reachability from given start set of nodes with exclusions.
 
 The successors of a single node in a LGraph.
 
-#### top
+##### top
 
 **Function.**
 
@@ -9730,7 +9730,7 @@ The successors of a single node in a LGraph.
 
 Return the top nodes of a LGraph.
 
-## m3
+### m3
 
 **Synopsis.**
 
@@ -9759,7 +9759,7 @@ To get started with m3 immediately, please have a look at:
   - See \[$Recipes:Metrics/MeasuringJava\] for a step-by-step by-example recipe for how to use M3 for measuring things
     about Java:
 
-## statistics
+### statistics
 
 **Synopsis.**
 
@@ -9844,7 +9844,7 @@ The following functions are provided:
 
   - [covariance](#Libraries/analysis/statistics/Correlation-covariance): Covariance of data values.
 
-#### PearsonsCorrelation
+##### PearsonsCorrelation
 
 **Function.**
 
@@ -9865,7 +9865,7 @@ strength of the linear dependence between two variables.
 Use [SpearmansCorrelation](#Correlation-SpearmansCorrelation) when there is a **monotonous dependence** between the two
 variables.
 
-#### PearsonsCorrelationStandardErrors
+##### PearsonsCorrelationStandardErrors
 
 **Function.**
 
@@ -9875,7 +9875,7 @@ variables.
 
 Standard errors associated with Pearson correlation.
 
-#### PearsonsCorrelationPValues
+##### PearsonsCorrelationPValues
 
 **Function.**
 
@@ -9885,7 +9885,7 @@ Standard errors associated with Pearson correlation.
 
 P-values (significance) associated with Pearson correlation.
 
-#### SpearmansCorrelation
+##### SpearmansCorrelation
 
 **Function.**
 
@@ -9905,7 +9905,7 @@ natural ranking and then computing [PearsonsCorrelation](#Correlation-PearsonsCo
 
 Use [PearsonsCorrelation](#Correlation-PearsonsCorrelation) when there is a **linear dependence** between the variables.
 
-#### covariance
+##### covariance
 
 **Function.**
 
@@ -9992,7 +9992,7 @@ percentile(D,50);
 percentile(D,75);
 ```
 
-#### geometricMean
+##### geometricMean
 
 **Function.**
 
@@ -10006,7 +10006,7 @@ Geometric mean of data values.
 
 Computes the [geometric mean](http://en.wikipedia.org/wiki/Geometric_mean) of the given data values.
 
-#### kurtosis
+##### kurtosis
 
 **Function.**
 
@@ -10021,7 +10021,7 @@ Kurtosis of data values.
 Computes the [kurtosis](http://en.wikipedia.org/wiki/Kurtosis) of the given data values. Kurtosis is a measure of the
 "peakedness" of a distribution.
 
-#### kurtosisExcess
+##### kurtosisExcess
 
 **Function.**
 
@@ -10036,7 +10036,7 @@ Kurtosis excess of data values.
 Computes the [kurtosis excess](http://en.wikipedia.org/wiki/Kurtosis) of the given data values. Kurtosis excess is a
 measure of the "peakedness" of a distribution corrected such that a normal distribution will be 0.
 
-#### max
+##### max
 
 **Function.**
 
@@ -10046,7 +10046,7 @@ measure of the "peakedness" of a distribution corrected such that a normal distr
 
 Largest data value.
 
-#### mean
+##### mean
 
 **Function.**
 
@@ -10060,7 +10060,7 @@ Arithmetic mean of data values.
 
 Computes the [arithmetic mean](http://en.wikipedia.org/wiki/Arithmetic_mean) of the data values.
 
-#### median
+##### median
 
 **Function.**
 
@@ -10083,13 +10083,13 @@ median([1,2,5,7,8]);
 median([1,2,2,6,7,8]);
 ```
 
-#### middle
+##### middle
 
 **Function.**
 
 `list[&T] middle(list[&T] nums)`
 
-#### min
+##### min
 
 **Function.**
 
@@ -10099,7 +10099,7 @@ median([1,2,2,6,7,8]);
 
 Smallest data value.
 
-#### percentile
+##### percentile
 
 **Function.**
 
@@ -10114,7 +10114,7 @@ Percentile of data values.
 Returns the ``p`th percentile of the data values.
 0 < `p`` ⇐ 100 should hold.
 
-#### variance
+##### variance
 
 **Function.**
 
@@ -10129,7 +10129,7 @@ Variance of data values.
 Computes the [variance](http://en.wikipedia.org/wiki/Variance) of the data values. It measures how far a set of numbers
 is spread out.
 
-#### skewness
+##### skewness
 
 **Function.**
 
@@ -10144,7 +10144,7 @@ Skewness of data values.
 Returns the [skewness](http://en.wikipedia.org/wiki/Skewness) of the available values. Skewness is a measure of the
 asymmetry of a given distribution.
 
-#### standardDeviation
+##### standardDeviation
 
 **Function.**
 
@@ -10159,7 +10159,7 @@ Standard deviation of data values.
 Computes the [standard deviation](http://en.wikipedia.org/wiki/Standard_deviation) of the data values. It shows how much
 variation exists from the average (mean, or expected value).
 
-#### sum
+##### sum
 
 **Function.**
 
@@ -10169,7 +10169,7 @@ variation exists from the average (mean, or expected value).
 
 Sum of data values.
 
-#### sumsq
+##### sumsq
 
 **Function.**
 
@@ -10179,7 +10179,7 @@ Sum of data values.
 
 Sum of the squares of data values.
 
-#### centralMoment
+##### centralMoment
 
 **Function.**
 
@@ -10187,7 +10187,7 @@ Sum of the squares of data values.
 
 Calculate the k-th central moment
 
-#### moment
+##### moment
 
 **Function.**
 
@@ -10215,7 +10215,7 @@ This module helps by providing commonly used functions for the purpose of counti
 can be used to draw (cumulative) histograms, or they can directly be used for further statistical processing and
 visualisation.
 
-#### distribution
+##### distribution
 
   - `map[&T, int] distribution(rel[&U event, &T bucket] input)`
 
@@ -10237,7 +10237,7 @@ distribution({<"chicken","animal">,<"bear","animal">,<"oak","plant">,<"tulip","p
 distribution({<"alice",2>,<"bob",3>,<"claire",5>},5);
 ```
 
-#### cumFreq
+##### cumFreq
 
   - `int cumFreq(list[value] values, num n)`
 
@@ -10262,7 +10262,7 @@ cumFreq(D, 2);
 cumFreq(D, 10);
 ```
 
-#### cumPct
+##### cumPct
 
   - `num cumPct(list[value] values, num n)`
 
@@ -10284,7 +10284,7 @@ cumPct(D, 2);
 cumPct(D, 10);
 ```
 
-#### pct
+##### pct
 
   - `num pct(list[value] values, num n)`
 
@@ -10340,7 +10340,7 @@ The following functions are provided:
 
   - [gini](#Libraries/analysis/statistics/Inference-gini): Gini coefficient.
 
-#### chiSquare
+##### chiSquare
 
 **Function.**
 
@@ -10367,7 +10367,7 @@ import analysis::statistics::Inference;
 chiSquare([<50, 44>, <50, 56>])
 ```
 
-#### chiSquareTest
+##### chiSquareTest
 
   - `num chiSquareTest(lrel[num expected, int observed] values)`
 
@@ -10389,7 +10389,7 @@ frequency counts. There are two forms of this test:
     frequency distribution described by the expected counts, with significance level `alpha` (0 \< `alpha` \< 0.5).
     Returns true iff the null hypothesis can be rejected with confidence 1 - `alpha`.
 
-#### tTest
+##### tTest
 
   - `num tTest(list[num] sample1, list[num] sample2)`
 
@@ -10464,7 +10464,7 @@ tTest(s1,s2,0.40);
 tTest(s1,s2,0.50);
 ```
 
-#### anovaFValue
+##### anovaFValue
 
 **Function.**
 
@@ -10488,7 +10488,7 @@ Compute the F statistic — also known as [F-test](http://en.wikipedia.org/w
 
 are as defined [here](http://faculty.vassar.edu/lowry/ch13pt1.html).
 
-#### anovaPValue
+##### anovaPValue
 
 **Function.**
 
@@ -10506,7 +10506,7 @@ Perform [Analysis of Variance test](http://en.wikipedia.org/wiki/Analysis_of_var
 Computes the exact p-value using the formula `p = 1 - cumulativeProbability(F)` where `F` is the
 [anovaFValue](#Inference-anovaFValue).
 
-#### anovaTest
+##### anovaTest
 
 **Function.**
 
@@ -10526,7 +10526,7 @@ Returns true iff the estimated p-value is less than `alpha` (0 \< `alpha` ⇐ 0.
 The exact p-value is computed using the formula `p = 1 - cumulativeProbability(F)` where `F` is the
 [anovaFValue](#Inference-anovaFValue).
 
-#### gini
+##### gini
 
 **Function.**
 
@@ -10612,7 +10612,7 @@ The following functions are provided:
 
   - [predict](#Libraries/analysis/statistics/SimpleRegression-predict): Predict a value.
 
-#### intercept
+##### intercept
 
 **Function.**
 
@@ -10625,7 +10625,7 @@ Intercept of regression line. .Description
 Returns the [intercept](http://en.wikipedia.org/wiki/Root_of_a_function) of the estimated regression line. The least
 squares estimate of the intercept is computed using these [normal equations](http://www.xycoon.com/estimation4.htm).
 
-#### interceptStdErr
+##### interceptStdErr
 
 **Function.**
 
@@ -10636,7 +10636,7 @@ squares estimate of the intercept is computed using these [normal equations](htt
 Standard error of intercept estimate. .Description Returns the [standard error of the intercept
 estimate](http://www.xycoon.com/standarderrorb0.htm), usually denoted s(b0).
 
-#### meanSquareError
+##### meanSquareError
 
 **Function.**
 
@@ -10650,7 +10650,7 @@ Sum of squared errors divided by the degrees of freedom.
 
 Returns the sum of squared errors divided by the degrees of freedom, usually abbreviated MSE.
 
-#### R
+##### R
 
 **Function.**
 
@@ -10665,7 +10665,7 @@ Pearson’s product-moment correlation coefficient.
 Computes Pearson’s product-moment correlation coefficient. More functions related to this coefficient can be found in
 [Correlation](#statistics-Correlation).
 
-#### regressionSumSquares
+##### regressionSumSquares
 
 **Function.**
 
@@ -10680,7 +10680,7 @@ Sum of squared deviations of the predicted y values about their mean.
 Returns the sum of squared deviations of the predicted y values about their mean (which equals the mean of y). This is
 usually abbreviated SSR or [SSM](http://www.xycoon.com/SumOfSquares.htm).
 
-#### RSquare
+##### RSquare
 
 **Function.**
 
@@ -10693,7 +10693,7 @@ Coefficient of determination. .Description
 Returns the [coefficient of determination](http://en.wikipedia.org/wiki/Coefficient_of_determination) usually denoted
 r\_\_<sup>2</sup>. It provides a measure of how well future outcomes are likely to be predicted by the regression model.
 
-#### significance
+##### significance
 
 **Function.**
 
@@ -10712,7 +10712,7 @@ this is often denoted Prob(|t| \> 0)
 The validity of this statistic depends on the assumption that the observations included in the model are drawn from a
 [Bivariate Normal Distribution](http://en.wikipedia.org/wiki/Bivariate_normal_distribution).
 
-#### slope
+##### slope
 
 **Function.**
 
@@ -10724,7 +10724,7 @@ Slope of regression line. .Description Returns the slope of the estimated regres
 the slope is computed using the [normal equations](http://www.xycoon.com/estimation4.htm). The slope is sometimes
 denoted b1.
 
-#### slopeConfidenceInterval
+##### slopeConfidenceInterval
 
 **Function.**
 
@@ -10745,7 +10745,7 @@ Returns the half-width of a 95% confidence interval for the slope estimate. The 
 The validity of this statistic depends on the assumption that the observations included in the model are drawn from a
 [Bivariate Normal Distribution](http://en.wikipedia.org/wiki/Bivariate_normal_distribution).
 
-#### slopeStdErr
+##### slopeStdErr
 
 **Function.**
 
@@ -10757,7 +10757,7 @@ Standard error of slope estimate. .Description
 
 Returns the [standard error of the slope estimate](http://www.xycoon.com/standarderrorb0.htm), usually denoted s(b1).
 
-#### sumOfCrossProducts
+##### sumOfCrossProducts
 
 **Function.**
 
@@ -10769,7 +10769,7 @@ Sum of cross products of observations. .Description
 
 Returns the sum of crossproducts, x*<sub>i</sub>\*y*<sub>i</sub>.
 
-#### sumSquaredErrors
+##### sumSquaredErrors
 
 **Function.**
 
@@ -10790,7 +10790,7 @@ sum of the products of x and y mean deviations.
 The return value is constrained to be non-negative, i.e., if due to rounding errors the computational formula returns a
 negative result, 0 is returned.
 
-#### totalSumSquares
+##### totalSumSquares
 
 **Function.**
 
@@ -10803,7 +10803,7 @@ Sum of squared deviations. .Description
 Returns the sum of squared deviations of the y values about their mean. This is defined as
 [SSTO](http://www.xycoon.com/SumOfSquares.htm).
 
-#### XSumSquares
+##### XSumSquares
 
 **Function.**
 
@@ -10817,7 +10817,7 @@ Sum of squared deviations of x values about their mean.
 
 Returns the sum of squared deviations of the x values about their mean.
 
-#### predict
+##### predict
 
 **Function.**
 
@@ -10832,7 +10832,7 @@ provided data values:
 
 `predict(x) = intercept + slope * x`
 
-# lang
+## lang
 
 **Synopsis.**
 
@@ -10852,7 +10852,7 @@ Definitions and tools for various languages.
 
   - [xml](#lang-xml): XML utilities.
 
-## RSF
+### RSF
 
 **Synopsis.**
 
@@ -10922,7 +10922,7 @@ data    listcreate    List
  "data" : {<"main", "FILE">, <"listcreate", "List">})
 ```
 
-## csv
+### csv
 
 **Synopsis.**
 
@@ -10966,7 +10966,7 @@ position;artist;title;year
 3;Boudewijn de Groot;Avond;1997
 ```
 
-## java
+### java
 
 **Synopsis.**
 
@@ -10978,7 +10978,7 @@ Definitions and tools related to the Java language.
 
 tools for Java provided via reusing the Eclipse JDT
 
-#### m3
+##### m3
 
 **Synopsis.**
 
@@ -11018,7 +11018,7 @@ Use this API to extract Java m3 models starting from Eclipse Java projects:
 
   - [TypeSymbol](#m3-TypeSymbol):
 
-#### AST
+##### AST
 
 **Usage.**
 
@@ -11028,7 +11028,7 @@ Use this API to extract Java m3 models starting from Eclipse Java projects:
 
 defines AST node types for Java
 
-##### Declaration
+###### Declaration
 
 **Types.**
 
@@ -11060,7 +11060,7 @@ data Declaration
      ;
 ```
 
-##### Expression
+###### Expression
 
 **Types.**
 
@@ -11107,7 +11107,7 @@ data Expression
      ;
 ```
 
-##### Statement
+###### Statement
 
 **Types.**
 
@@ -11146,7 +11146,7 @@ data Statement
      ;
 ```
 
-##### Type
+###### Type
 
 **Types.**
 
@@ -11173,7 +11173,7 @@ data Type
      ;
 ```
 
-##### Modifier
+###### Modifier
 
 **Types.**
 
@@ -11197,19 +11197,19 @@ data Modifier
      ;
 ```
 
-##### getPaths
+###### getPaths
 
 **Function.**
 
 `set[loc] getPaths(loc dir, str suffix)`
 
-##### findRoots
+###### findRoots
 
 **Function.**
 
 `set[loc] findRoots(set[loc] folders)`
 
-##### createAstFromFile
+###### createAstFromFile
 
 **Function.**
 
@@ -11220,7 +11220,7 @@ list[loc] classPath = [], str javaVersion = "1.7")`
 
 Creates AST from a file
 
-##### createAstsFromFiles
+###### createAstsFromFiles
 
 **Function.**
 
@@ -11231,7 +11231,7 @@ sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")`
 
 Creates AST from a file
 
-##### createAstFromString
+###### createAstFromString
 
 **Function.**
 
@@ -11240,7 +11240,7 @@ sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")`
 
 Creates ASTs from an input string
 
-##### createAstsFromDirectory
+###### createAstsFromDirectory
 
 **Function.**
 
@@ -11249,7 +11249,7 @@ Creates ASTs from an input string
 
 Creates ASTs from a project
 
-#### Core
+##### Core
 
 **Usage.**
 
@@ -11263,7 +11263,7 @@ extends the M3 \[$analysis/m3/Core\] with Java specific concepts such as inherit
 
 For a quick start, go find [???](#createM3FromEclipseProject).
 
-##### M3
+###### M3
 
 **Types.**
 
@@ -11279,7 +11279,7 @@ data M3 (
 )
 ```
 
-##### Language
+###### Language
 
 **Types.**
 
@@ -11289,72 +11289,72 @@ data Language (str version="")
      ;
 ```
 
-##### composeJavaM3
+###### composeJavaM3
 
 **Function.**
 
 `M3 composeJavaM3(loc id, set[M3] models)`
 
-##### diffJavaM3
+###### diffJavaM3
 
 **Function.**
 
 `M3 diffJavaM3(loc id, list[M3] models)`
 
-##### createM3FromFile
+###### createM3FromFile
 
 **Function.**
 
 `M3 createM3FromFile(loc file, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath = [], str
 javaVersion = "1.7")`
 
-##### createM3sFromFiles
+###### createM3sFromFiles
 
 **Function.**
 
 `set[M3] createM3sFromFiles(set[loc] files, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath =
 [], str javaVersion = "1.7")`
 
-##### createM3FromFiles
+###### createM3FromFiles
 
 **Function.**
 
 `M3 createM3FromFiles(loc projectName, set[loc] files, bool errorRecovery = false, list[loc] sourcePath = [], list[loc]
 classPath = [], str javaVersion = "1.7")`
 
-##### createM3sAndAstsFromFiles
+###### createM3sAndAstsFromFiles
 
 **Function.**
 
 `tuple[set[M3], set[Declaration]] createM3sAndAstsFromFiles(set[loc] files, bool errorRecovery = false, list[loc]
 sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")`
 
-##### createM3FromString
+###### createM3FromString
 
 **Function.**
 
 `M3 createM3FromString(loc fileName, str contents, bool errorRecovery = false, list[loc] sourcePath = [], list[loc]
 classPath = [], str javaVersion = "1.7")`
 
-##### createM3FromJarClass
+###### createM3FromJarClass
 
 **Function.**
 
 `M3 createM3FromJarClass(loc jarClass, list[loc] classPath = [])`
 
-##### createM3FromSingleClass
+###### createM3FromSingleClass
 
 **Function.**
 
 `M3 createM3FromSingleClass(loc jarClass, str className)`
 
-##### createM3FromJarFile
+###### createM3FromJarFile
 
 **Function.**
 
 `M3 createM3FromJarFile(loc jarLoc, list[loc] classPath = [|system:///|])`
 
-##### createM3FromDirectory
+###### createM3FromDirectory
 
 **Function.**
 
@@ -11365,211 +11365,211 @@ classPath = [], str javaVersion = "1.7")`
 globs for jars, class files and java files in a directory and tries to compile all source files into an \[$analysis/m3\]
 model
 
-##### createM3FromJar
+###### createM3FromJar
 
 **Function.**
 
 `M3 createM3FromJar(loc jarFile, list[loc] classPath = [])`
 
-##### unregisterJavaProject
+###### unregisterJavaProject
 
 **Function.**
 
 `void unregisterJavaProject(loc project)`
 
-##### getMethodSignature
+###### getMethodSignature
 
 **Function.**
 
 `str getMethodSignature(loc method)`
 
-##### isCompilationUnit
+###### isCompilationUnit
 
 **Function.**
 
 `bool isCompilationUnit(loc entity)`
 
-##### isPackage
+###### isPackage
 
 **Function.**
 
 `bool isPackage(loc entity)`
 
-##### isClass
+###### isClass
 
 **Function.**
 
 `bool isClass(loc entity)`
 
-##### isConstructor
+###### isConstructor
 
 **Function.**
 
 `bool isConstructor(loc entity)`
 
-##### isMethod
+###### isMethod
 
 **Function.**
 
 `bool isMethod(loc entity)`
 
-##### isParameter
+###### isParameter
 
 **Function.**
 
 `bool isParameter(loc entity)`
 
-##### isVariable
+###### isVariable
 
 **Function.**
 
 `bool isVariable(loc entity)`
 
-##### isField
+###### isField
 
 **Function.**
 
 `bool isField(loc entity)`
 
-##### isInterface
+###### isInterface
 
 **Function.**
 
 `bool isInterface(loc entity)`
 
-##### isEnum
+###### isEnum
 
 **Function.**
 
 `bool isEnum(loc entity)`
 
-##### isType
+###### isType
 
 **Function.**
 
 `bool isType(loc entity)`
 
-##### files
+###### files
 
 **Function.**
 
 `set[loc] files(rel[loc, loc] containment)`
 
-##### declaredMethods
+###### declaredMethods
 
 **Function.**
 
 `rel[loc, loc] declaredMethods(M3 m, set[Modifier] checkModifiers = {})`
 
-##### declaredFields
+###### declaredFields
 
 **Function.**
 
 `rel[loc, loc] declaredFields(M3 m, set[Modifier] checkModifiers = {})`
 
-##### declaredFieldsX
+###### declaredFieldsX
 
 **Function.**
 
 `rel[loc, loc] declaredFieldsX(M3 m, set[Modifier] checkModifiers = {})`
 
-##### declaredTopTypes
+###### declaredTopTypes
 
 **Function.**
 
 `rel[loc, loc] declaredTopTypes(M3 m)`
 
-##### declaredSubTypes
+###### declaredSubTypes
 
 **Function.**
 
 `rel[loc, loc] declaredSubTypes(M3 m)`
 
-##### classes
+###### classes
 
 **Function.**
 
 `set[loc] classes(M3 m)`
 
-##### interfaces
+###### interfaces
 
 **Function.**
 
 `set[loc] interfaces(M3 m)`
 
-##### packages
+###### packages
 
 **Function.**
 
 `set[loc] packages(M3 m)`
 
-##### variables
+###### variables
 
 **Function.**
 
 `set[loc] variables(M3 m)`
 
-##### parameters
+###### parameters
 
 **Function.**
 
 `set[loc] parameters(M3 m)`
 
-##### fields
+###### fields
 
 **Function.**
 
 `set[loc] fields(M3 m)`
 
-##### methods
+###### methods
 
 **Function.**
 
 `set[loc] methods(M3 m)`
 
-##### constructors
+###### constructors
 
 **Function.**
 
 `set[loc] constructors(M3 m)`
 
-##### enums
+###### enums
 
 **Function.**
 
 `set[loc] enums(M3 m)`
 
-##### types
+###### types
 
 **Function.**
 
 `set[loc] types(M3 m)`
 
-##### elements
+###### elements
 
 **Function.**
 
 `set[loc] elements(M3 m, loc parent)`
 
-##### fields
+###### fields
 
 **Function.**
 
 `set[loc] fields(M3 m, loc class)`
 
-##### methods
+###### methods
 
 **Function.**
 
 `set[loc] methods(M3 m, loc class)`
 
-##### constructors
+###### constructors
 
 **Function.**
 
 `set[loc] constructors(M3 m, loc class)`
 
-##### nestedClasses
+###### nestedClasses
 
 **Function.**
 
@@ -11577,7 +11577,7 @@ model
 
 \<AUTOINSERTED\>
 
-##### typeDependency
+###### typeDependency
 
 **Types.**
 
@@ -11589,25 +11589,25 @@ anno rel[loc from, loc to] M3@typeDependency;
 
 \</AUTOINSERTED\>
 
-#### TypeHierarchy
+##### TypeHierarchy
 
 **Usage.**
 
 `import lang::java::m3::TypeHierarchy;`
 
-##### getDeclaredTypeHierarchy
+###### getDeclaredTypeHierarchy
 
 **Function.**
 
 `rel[loc from, loc to] getDeclaredTypeHierarchy(M3 model)`
 
-#### TypeSymbol
+##### TypeSymbol
 
 **Usage.**
 
 `import lang::java::m3::TypeSymbol;`
 
-##### Bound
+###### Bound
 
 **Types.**
 
@@ -11619,7 +11619,7 @@ data Bound
      ;
 ```
 
-##### TypeSymbol
+###### TypeSymbol
 
 **Types.**
 
@@ -11653,19 +11653,19 @@ data TypeSymbol
      ;
 ```
 
-##### subtype
+###### subtype
 
 **Function.**
 
 `default bool subtype(TypeSymbol s, TypeSymbol t)`
 
-##### lub
+###### lub
 
 **Function.**
 
 `default TypeSymbol lub(TypeSymbol s, TypeSymbol t)`
 
-## xml
+### xml
 
 **Synopsis.**
 
@@ -11677,7 +11677,7 @@ XML utilities
 
 The following functions and datatypes are provided, all based on the Document Object Model (DOM):
 
-# util
+## util
 
 **Synopsis.**
 
@@ -11711,7 +11711,7 @@ Utilities: functions, data types and interfaces with external libraries.
 
   - [ShellExec](#util-ShellExec): Execute and manage external processes.
 
-## Benchmark
+### Benchmark
 
 **Usage.**
 
@@ -12036,13 +12036,13 @@ Force a garbage collection.
 
 This function forces a garbage collection and can, for instance, be used before running a benchmark.
 
-## Clipboard
+### Clipboard
 
 > **Warning**
 > 
 > documentation awaits Eclipse integration
 
-## Eval
+### Eval
 
 **Usage.**
 
@@ -12149,7 +12149,7 @@ evalType("2 * 3;");
 evalType("[1, 2, 3];");
 ```
 
-## Math
+### Math
 
 **Usage.**
 
@@ -12939,7 +12939,7 @@ generate prime numbers up to a maximum
 
 `int arbPrime(int upTo)`
 
-## Monitor
+### Monitor
 
 **Usage.**
 
@@ -12996,7 +12996,7 @@ Log to the user that a certain event has happened under the currently registered
 
 `void jobWarning(str message, loc src)`
 
-## PriorityQueue
+### PriorityQueue
 
 **Usage.**
 
@@ -13146,13 +13146,13 @@ data PriorityQueue
 
 `PriorityQueue mergeQueue(PriorityQueue p, PriorityQueue q)`
 
-## Prompt
+### Prompt
 
 > **Warning**
 > 
 > documentation awaits Eclipse integration
 
-## Resources
+### Resources
 
 **Synopsis.**
 
@@ -13323,7 +13323,7 @@ import util::Resources;
 root();
 ```
 
-## ShellExec
+### ShellExec
 
 **Usage.**
 
@@ -13343,21 +13343,21 @@ Execute and manage external processes.
 
 Start a new external process. .Description
 
-## Start a new external process.
+### Start a new external process.
 
-## Start a new external process in a given working directory.
+### Start a new external process in a given working directory.
 
-## Start a new external process with the given arguments.
+### Start a new external process with the given arguments.
 
-## Start a new external process with the given arguments in the given working directory.
+### Start a new external process with the given arguments in the given working directory.
 
-## Start a new external process with the given environment variables.
+### Start a new external process with the given environment variables.
 
-## Start a new external process with the given environment variables in the given working directory.
+### Start a new external process with the given environment variables in the given working directory.
 
-## Start a new external process with the given arguments and environment variables.
+### Start a new external process with the given arguments and environment variables.
 
-## Start a new external process with the given arguments and environment variables in the given working directory.
+### Start a new external process with the given arguments and environment variables in the given working directory.
 
 ### exec
 

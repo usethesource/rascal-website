@@ -116,7 +116,7 @@ raised by a static checker. This static checker is currently under development.
 
   - [UnsupportedSubscriptArity](#CompileTimeErrors-UnsupportedSubscriptArity): Wrong number of subscripts is used.
 
-# AmbiguousFunctionReference
+## AmbiguousFunctionReference
 
 **Synopsis.**
 
@@ -135,7 +135,7 @@ d(3).x
 d("a").x
 ```
 
-# ArgumentMismatch
+## ArgumentMismatch
 
 **Synopsis.**
 
@@ -179,7 +179,7 @@ list[int] triple(list[int] L) = [3 * x | x <- L];
 triple([1,2,3]);
 ```
 
-# Arity
+## Arity
 
 **Synopsis.**
 
@@ -219,7 +219,7 @@ But these are incorrect:
 {<1,2,3>, <2,3,4>,<4,5,6>}*
 ```
 
-# DateTimeSyntax
+## DateTimeSyntax
 
 **Synopsis.**
 
@@ -248,7 +248,7 @@ $2013-07-40T09:15:23.123+03:00$;
 
 Others, like a wrong month number (here: 15) lead to a DateTimeSyntax error
 
-# IllegalQualifiedDeclaration
+## IllegalQualifiedDeclaration
 
 **Synopsis.**
 
@@ -275,7 +275,7 @@ Without the qualification, this is correct:
 data D = d();
 ```
 
-# InvalidDateTimeComparison
+## InvalidDateTimeComparison
 
 **Synopsis.**
 
@@ -313,7 +313,7 @@ But mixing dates and times gives errors:
 $2013-07-15$ < $T20:03:56.901+01:00$
 ```
 
-# JavaCompilation
+## JavaCompilation
 
 **Synopsis.**
 
@@ -333,7 +333,7 @@ Remedy: Contact the Rascal developers:
     Github](https://github.com/usethesource/rascal/issues?state=open). If your problem has not yet been reported by
     someone else, please report it here.
 
-# JavaMethodLink
+## JavaMethodLink
 
 **Synopsis.**
 
@@ -391,7 +391,7 @@ public java int size(list[&T] lst){
 }
 ```
 
-# MissingModifier
+## MissingModifier
 
 **Synopsis.**
 
@@ -439,7 +439,7 @@ This is what happens if the `java` keyword is missing:
 public int size(list[&T] lst);
 ```
 
-# MissingReturn
+## MissingReturn
 
 **Synopsis.**
 
@@ -484,7 +484,7 @@ int triple(int x) = x * 3;
 triple(5)
 ```
 
-# ModuleImport
+## ModuleImport
 
 **Synopsis.**
 
@@ -523,7 +523,7 @@ Here is the effect of a misspelled module name (assuming that you do not have a 
 import Lis;
 ```
 
-# ModuleNameMismatch
+## ModuleNameMismatch
 
 **Synopsis.**
 
@@ -542,7 +542,7 @@ Remedies:
 
   - Rename the file.
 
-# NoKeywordParameters
+## NoKeywordParameters
 
 **Synopsis.**
 
@@ -573,7 +573,7 @@ int incr(int x, int delta=1) = x + delta;
 incr(3, delta=5);
 ```
 
-# NonAbstractJavaFunction
+## NonAbstractJavaFunction
 
 **Synopsis.**
 
@@ -613,7 +613,7 @@ If you are an expert developer, please check the body of the offending function 
 java int incr(int x) {}
 ```
 
-# NonVoidTypeRequired
+## NonVoidTypeRequired
 
 **Synopsis.**
 
@@ -644,7 +644,7 @@ int dummy() { return 17; }
 {1, *dummy(), 2}
 ```
 
-# NonWellformedType
+## NonWellformedType
 
 **Synopsis.**
 
@@ -670,7 +670,7 @@ map[str, int, int]  m;
 set[int,str] s;
 ```
 
-# NotEnumerable
+## NotEnumerable
 
 **Synopsis.**
 
@@ -692,7 +692,7 @@ int x <- 17
 b <- true
 ```
 
-# PartiallyLabeledFields
+## PartiallyLabeledFields
 
 **Synopsis.**
 
@@ -715,7 +715,7 @@ tuple[int n, str] T;
 rel[str name, int] R;
 ```
 
-# RedeclaredField
+## RedeclaredField
 
 **Synopsis.**
 
@@ -755,7 +755,7 @@ A tuple declaration with a duplicate field name also gives an error:
 tuple[int x, str x] Q = <3,"abc">;
 ```
 
-# RedeclaredType
+## RedeclaredType
 
 **Synopsis.**
 
@@ -781,7 +781,7 @@ alias D = int;
 alias D = str;
 ```
 
-# RedeclaredVariable
+## RedeclaredVariable
 
 **Synopsis.**
 
@@ -798,7 +798,7 @@ int n = 3;
 int n = 4;
 ```
 
-# SyntaxError
+## SyntaxError
 
 **Synopsis.**
 
@@ -831,7 +831,7 @@ When you are completely desparate and cannot find the syntax error, the followin
       - The module does not parse. The syntax error is in the top part. Move the `/*` marker to the middle of the top
         part and repeat.
 
-# UndeclaredAnnotation
+## UndeclaredAnnotation
 
 **Synopsis.**
 
@@ -866,7 +866,7 @@ But using a wrong annotation name generates an error:
 piece @ qual;
 ```
 
-# UndeclaredField
+## UndeclaredField
 
 **Synopsis.**
 
@@ -902,7 +902,7 @@ jo = person("Jo", 33);
 jo.gender;
 ```
 
-# UndeclaredFunction
+## UndeclaredFunction
 
 **Synopsis.**
 
@@ -980,7 +980,7 @@ int n = 3;
 n + 1;
 ```
 
-# UndeclaredJavaMethod
+## UndeclaredJavaMethod
 
 **Synopsis.**
 
@@ -1028,7 +1028,7 @@ This is the result of misspelling the function name (`siz` instead of `size`):
 public java int siz(list[&T] lst);
 ```
 
-# UndeclaredKeywordParameter
+## UndeclaredKeywordParameter
 
 **Synopsis.**
 
@@ -1063,7 +1063,7 @@ This can be fixed by using the correct name for the keyword parameter:
 incr(3, delta=5);
 ```
 
-# UndeclaredModule
+## UndeclaredModule
 
 **Synopsis.**
 
@@ -1088,7 +1088,7 @@ M::x = 3;
 M::f(3);
 ```
 
-# UndeclaredModuleProvider
+## UndeclaredModuleProvider
 
 **Synopsis.**
 
@@ -1117,7 +1117,7 @@ This is fixed by using the proper scheme name:
 readFileLines(|std:///demo/basic/Hello.rsc|);
 ```
 
-# UndeclaredNonTerminal
+## UndeclaredNonTerminal
 
 **Synopsis.**
 
@@ -1145,7 +1145,7 @@ parse(#X, "ab");
 The source location of the non-terminal is not yet available, so the error message mentions the module in which this
 occurs.
 
-# UndeclaredType
+## UndeclaredType
 
 **Synopsis.**
 
@@ -1179,7 +1179,7 @@ myint incr(myint n) = n + 1;
 incr(3);
 ```
 
-# UndeclaredVariable
+## UndeclaredVariable
 
 **Synopsis.**
 
@@ -1211,7 +1211,7 @@ x = 5;
 [1, *x, 3]
 ```
 
-# UnexpectedKeywordArgumentType
+## UnexpectedKeywordArgumentType
 
 **Synopsis.**
 
@@ -1242,7 +1242,7 @@ Erroneous use of `delta` with a string value:
 incr(3, delta="more");
 ```
 
-# UnexpectedType
+## UnexpectedType
 
 **Synopsis.**
 
@@ -1276,7 +1276,7 @@ An `assert` statement expects an argument of type `bool`:
 assert 3;
 ```
 
-# UnguardedAppend
+## UnguardedAppend
 
 **Synopsis.**
 
@@ -1303,7 +1303,7 @@ Using append outside a loop gives an error:
 append 3;
 ```
 
-# UnguardedFail
+## UnguardedFail
 
 **Synopsis.**
 
@@ -1342,7 +1342,7 @@ An error occurs when `fail` is used outside a conditional context:
 fail;
 ```
 
-# UnguardedInsert
+## UnguardedInsert
 
 **Synopsis.**
 
@@ -1387,7 +1387,7 @@ An error occurs when insert is used outside a visit:
 insert red(leaf(1), leaf(2));
 ```
 
-# UnguardedIt
+## UnguardedIt
 
 **Synopsis.**
 
@@ -1419,7 +1419,7 @@ Using `it` outside a reducer gives an error:
 it + 3
 ```
 
-# UnguardedReturn
+## UnguardedReturn
 
 **Synopsis.**
 
@@ -1443,7 +1443,7 @@ Using return outside a function body gives an error:
 return 3;
 ```
 
-# UninitializedPatternMatch
+## UninitializedPatternMatch
 
 **Synopsis.**
 
@@ -1470,7 +1470,7 @@ void dummy() { return; }
 int n := dummy();
 ```
 
-# UnitializedVariable
+## UnitializedVariable
 
 **Synopsis.**
 
@@ -1498,7 +1498,7 @@ x = 3;
 x + 5;
 ```
 
-# UnsupportedOperation
+## UnsupportedOperation
 
 **Synopsis.**
 
@@ -1547,7 +1547,7 @@ Calling an integer as a function is not supported:
 17(3, "abc");
 ```
 
-# UnsupportedPattern
+## UnsupportedPattern
 
 **Synopsis.**
 
@@ -1563,7 +1563,7 @@ and check conditions on the value "manually" later.
 
 Warning: To Do
 
-# UnsupportedSubscript
+## UnsupportedSubscript
 
 **Synopsis.**
 
@@ -1601,7 +1601,7 @@ true[1];
 {1,2,3}[1];
 ```
 
-# UnsupportedSubscriptArity
+## UnsupportedSubscriptArity
 
 **Synopsis.**
 

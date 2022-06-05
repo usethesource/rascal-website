@@ -74,6 +74,7 @@ const config = {
           },
         ],
       },
+
       footer: {
         style: 'dark',
         links: [
@@ -121,6 +122,11 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} UseTheSource. Built with Docusaurus.`,
       },
       
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 3,
+      },
+
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,

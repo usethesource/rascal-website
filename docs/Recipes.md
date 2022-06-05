@@ -44,7 +44,7 @@ The following features are covered:
 
   - Visualization.
 
-# Basic
+## Basic
 
 **Synopsis.**
 
@@ -74,7 +74,7 @@ We discuss the following examples:
 
 These programs illustrate various features of Rascal; they are **not representative** as use cases of the language.
 
-## Hello
+### Hello
 
 **Synopsis.**
 
@@ -142,7 +142,7 @@ The `hello` function is by default visible outside the `Hello` module. We could 
 void hello() { …​ }`. Restricting visibility to the module itself can be achieved by adding the keyword `private` to the
 definition of `hello`.
 
-## Factorial
+### Factorial
 
 **Synopsis.**
 
@@ -194,7 +194,7 @@ Here is an example of `fac2`:
 fac2(47);
 ```
 
-## Squares
+### Squares
 
 **Synopsis.**
 
@@ -256,7 +256,7 @@ import IO;
 println(squaresTemplate(9));
 ```
 
-## Bottles Of Beer
+### Bottles Of Beer
 
 **Synopsis.**
 
@@ -310,7 +310,7 @@ import demo::basic::Bottles;
 sing();
 ```
 
-## Bubble
+### Bubble
 
 **Synopsis.**
 
@@ -417,7 +417,7 @@ sort4(L);
 sort5(L);
 ```
 
-## Even
+### Even
 
 **Synopsis.**
 
@@ -519,7 +519,7 @@ even7(25);
   - Trainwreck alert: if you start putting too many conditions in a single for loop or comprehension the code may become
     unreadable.
 
-## FizzBuzz
+### FizzBuzz
 
 **Synopsis.**
 
@@ -578,7 +578,7 @@ import demo::basic::FizzBuzz;
 fizzbuzz();
 ```
 
-## Quine
+### Quine
 
 **Synopsis.**
 
@@ -674,7 +674,7 @@ quine();
 
 If you follow this output line-by-line you will see that it is identical to the original source code of module `Quine`.
 
-# Common
+## Common
 
 **Synopsis.**
 
@@ -711,7 +711,7 @@ We discuss the following tasks:
 
   - [Word Replacement](#Common-WordReplacement): Replace words in a string.
 
-## Ad Hoc Data Exploration
+### Ad Hoc Data Exploration
 
 **Synopsis.**
 
@@ -1158,7 +1158,7 @@ And we’re done. But what did we learn here? Here’s what I think:
     
       - Are you measuring what you think you are measuring? How do you know?
 
-## Call Analysis
+### Call Analysis
 
 **Synopsis.**
 
@@ -1320,7 +1320,7 @@ indirectly from that entry point (`(Calls+)[p]`).
   - We discuss call analysis in a, intentionally, simplistic fashion that does not take into account how the call
     relation is extracted from actual source code. The above principles are, however, applicable to real cases as well.
 
-## Call Lifting
+### Call Lifting
 
 **Synopsis.**
 
@@ -1399,7 +1399,7 @@ Please verify that this corresponds exactly to (c) in the figure above.
 ``` rascal-shell
 ```
 
-## Colored Trees
+### Colored Trees
 
 **Synopsis.**
 
@@ -1516,7 +1516,7 @@ as, for instance, abstract syntax trees for real programming languages.
 
 The visit statement is based on a new paradigm one has to learn.
 
-## Count Constructors
+### Count Constructors
 
 **Synopsis.**
 
@@ -1602,7 +1602,7 @@ count(H);
 countRelevant(H, {"hearts", "spades"});
 ```
 
-## Derivative
+### Derivative
 
 **Synopsis.**
 
@@ -1702,7 +1702,7 @@ Now apply simplification to the result of differentiation:
 simplify(dd(E, var("x")));
 ```
 
-## String Template
+### String Template
 
 **Synopsis.**
 
@@ -1848,7 +1848,7 @@ println(genClass("Person", fields));
   - In more complex cases, it can be better to introduce an abstract datatype to represent the desired code and to use
     string templates to produce the actual textual representation of that code.
 
-## Word Count
+### Word Count
 
 **Synopsis.**
 
@@ -2101,7 +2101,7 @@ public list[str] Jabberwocky = [
 ];
 ```
 
-## Word Replacement
+### Word Replacement
 
 **Synopsis.**
 
@@ -2176,7 +2176,7 @@ capAll1("turn this into a capitalized title")
 capAll2("turn this into a capitalized title")
 ```
 
-# Languages
+## Languages
 
 **Synopsis.**
 
@@ -2258,7 +2258,7 @@ Other languages that we are considering (but are not yet described):
 
   - MissGrant: a state machine language.
 
-## Exp
+### Exp
 
 **Synopsis.**
 
@@ -2391,7 +2391,7 @@ How can we bridge this gap? We discuss two approaches:
 
   - [Automatic](#Combined-Automatic): the library function \[Rascal:implode\] is used to automate this transformation.
 
-#### Automatic
+##### Automatic
 
 **Synopsis.**
 
@@ -2504,7 +2504,7 @@ import demo::lang::Exp::Combined::Automatic::Eval;
 eval("2+3*4");
 ```
 
-#### Manual
+##### Manual
 
 **Synopsis.**
 
@@ -2605,7 +2605,7 @@ We discuss several versions of Exp based on concrete syntax:
 
   - [With Layout](#Concrete-WithLayout): adds layout information to Exp’s synax definition.
 
-#### No Layout
+##### No Layout
 
 **Synopsis.**
 
@@ -2715,7 +2715,7 @@ eval("2+3*4");
 eval("(2+3)*4");
 ```
 
-#### With Layout
+##### With Layout
 
 **Synopsis.**
 
@@ -2809,7 +2809,7 @@ eval("( 2+3 )* 4");
     space goes with the first Whitespace, because even an empty Whitespace list must never be followed immediately by a
     space.
 
-## Func
+### Func
 
 **Synopsis.**
 
@@ -3817,7 +3817,7 @@ We use the scheme `std` that refers to files that reside in the Rascal library. 
 parse(|std:///demo/lang/Func/programs/F0.func|);
 ```
 
-## Lisra
+### Lisra
 
 **Synopsis.**
 
@@ -4340,7 +4340,7 @@ test bool eval23() = eval("(begin (define rev (lambda (x) (if (null? x) () (appe
 test bool eval24() = eval("(begin (define F (lambda (x) y)) (set! y 10) (F 1))").val == Integer(10);
 ```
 
-## Pico
+### Pico
 
 **Synopsis.**
 
@@ -5457,13 +5457,13 @@ The resulting visualization looks like this:
 
 ![Control flow graph](/images/cfg1.png)
 
-# Metrics
+## Metrics
 
 **Synopsis.**
 
 Computing
 
-## Measuring Java
+### Measuring Java
 
 **Synopsis.**
 
@@ -5672,7 +5672,7 @@ import List;
 size([m@src | /Expression m := methodAST]) == (0 | it + 1 | /Expression _ := methodAST)
 ```
 
-# Visualization
+## Visualization
 
 **Synopsis.**
 
@@ -5697,7 +5697,7 @@ We cover the following topics:
 
   - [Playing With Properties](#Visualization-PlayingWithProperties): Illustrate the effect of various figure properties.
 
-## ADT
+### ADT
 
 **Synopsis.**
 
@@ -5796,7 +5796,7 @@ the result is:
 
 ![a3](/images/a3.png)
 
-## Draw a Logo
+### Draw a Logo
 
 **Synopsis.**
 
@@ -6101,7 +6101,7 @@ or as a screenshot:
 
 ![Screen shot](/images/Screenshot1.png)
 
-## Interactive Box Height
+### Interactive Box Height
 
 **Synopsis.**
 
@@ -6175,7 +6175,7 @@ gives
 Unfortunately we cannot show the interaction here, so run this example from the `demo` directory and watch how the
 height of the box changes when you enter a new number in the text field.
 
-## My First Box
+### My First Box
 
 **Synopsis.**
 
@@ -6267,7 +6267,7 @@ import vis::Render;
 In other recipes and the Rascal documentation we omit these two imports to avoid cluttering our examples with irrelevant
 details. Be aware that you will always need them when creating a visualisation.
 
-## ParseTree
+### ParseTree
 
 **Synopsis.**
 
@@ -6321,7 +6321,7 @@ The figure is interactive (not available here):
 
   - This visualization does not scale to huge trees.
 
-## Playing With Properties
+### Playing With Properties
 
 **Synopsis.**
 
