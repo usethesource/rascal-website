@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrascal_website=self.webpackChunkrascal_website||[]).push([[453],{8605:function(e){e.exports=JSON.parse('{"label":"hello","permalink":"/blog/tags/hello","allTagsPath":"/blog/tags","count":2}')}}]);
