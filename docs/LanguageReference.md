@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 title: Language Reference
+slug: /Rascal
 ---
 
 **Synopsis.**
@@ -11,25 +12,25 @@ Reference manual for the Rascal meta-programming language.
 
 Here we describe *all* features of the Rascal language in detail, for reference purposes.
 
-  - [Declarations](#Rascal-Declarations): The entities that can be declared in Rascal programs.
+  - [Declarations](#declarations): The entities that can be declared in Rascal programs.
 
-  - [Patterns](#Rascal-Patterns): Patterns are a notation for pattern matching used to detect if a value has a certain
+  - [Patterns](#patterns): Patterns are a notation for pattern matching used to detect if a value has a certain
     shape,.
 
-  - [Expressions](#Rascal-Expressions): The expressions available in Rascal.
+  - [Expressions](#expressions): The expressions available in Rascal.
 
-  - [Statements](#Rascal-Statements): All Rascal statements.
+  - [Statements](#statements): All Rascal statements.
 
 You can find more (accessible) information related to Rascal here:
 
-  - [Why Rascal](/WhyRascal): gives the motivation for the Rascal language and describes various usage scenarios.
+  - [Why Rascal](/docs/WhyRascal): gives the motivation for the Rascal language and describes various usage scenarios.
 
-  - [Getting Started](/GettingStarted) describes how to download, install and start Rascal.
+  - [Getting Started](/docs/GettingStarted) describes how to download, install and start Rascal.
 
-  - [Getting Help](/GettingHelp) shows how to use the help facilties and search the documentation. See [Further
-    Reading](/GettingHelp#GettingHelp-FurtherReading) for a reading guide.
+  - [Getting Help](/docs/GettingHelp) shows how to use the help facilties and search the documentation. See [Further
+    Reading](/docs/GettingHelp#FurtherReading) for a reading guide.
 
-  - Library functies are described in [Rascal Libraries](/Libraries).
+  - Library functies are described in [Rascal Libraries](/docs/Libraries).
 
   - We do not maintain a list of frequently asked questions (faq) but use
     [StackOverflow](http://stackoverflow.com/questions/tagged/rascal) instead.
@@ -38,13 +39,13 @@ You can find more (accessible) information related to Rascal here:
 
   - We show examples for each Rascal language construct described here.
 
-  - You can find many simple code examples in [Recipes](/Recipes).
+  - You can find many simple code examples in [Recipes](/docs/Recipes).
 
-  - The [Rascal Libraries](/Libraries) contain examples for most functions.
+  - The [Rascal Libraries](/docs/Libraries) contain examples for most functions.
 
 <!-- end list -->
 
-  - Rascal has everything you need for any kind of (meta-)program you want to write. See [Why Rascal](/WhyRascal).
+  - Rascal has everything you need for any kind of (meta-)program you want to write. See [Why Rascal](/docs/WhyRascal).
 
 <!-- end list -->
 
@@ -64,51 +65,51 @@ The entities that can be declared in Rascal programs.
 
 The following concepts are relevant for declarations:
 
-  - [Module Declaration](#Declarations-Module): Declare a module.
+  - [Module Declaration](#module-declaration): Declare a module.
 
-  - [Import](#Declarations-Import): Declare the import a module.
+  - [Import](#import): Declare the import a module.
 
-  - [Program](#Declarations-Program): A Rascal program consists of a number of [Module
-    Declaration](#Declarations-Module)s.
+  - [Program](#program): A Rascal program consists of a number of [Module
+    Declaration](#module-declaration)s.
 
-  - [StaticTyping](#Declarations-StaticTyping): The static type system of Rascal.
+  - [StaticTyping](#staticTyping): The static type system of Rascal.
     
-      - [Reified Types](#StaticTyping-ReifiedTypes): Reified types are types that can be used as values.
+      - [Reified Types](#reifiedtypes): Reified types are types that can be used as values.
     
-      - [Type Constraints](#StaticTyping-TypeConstraints): Type constraints restrict the acceptable type for parameters.
+      - [Type Constraints](#typeconstraints): Type constraints restrict the acceptable type for parameters.
     
-      - [Type Parameters](#StaticTyping-TypeParameters): Type parameters enable parameterized types.
+      - [Type Parameters](#typeparameters): Type parameters enable parameterized types.
 
-  - [Algebraic Data Type](#Declarations-AlgebraicDataType): Define a user-defined type (Algebraic Data Type).
+  - [Algebraic Data Type](#ADT): Define a user-defined type (Algebraic Data Type).
 
-  - [Variable Declaration](#Declarations-Variable): Declare a variable.
+  - [Variable Declaration](#variable): Declare a variable.
 
-  - [Function Declaration](#Declarations-Function): Declare a function.
+  - [Function Declaration](#function): Declare a function.
 
-  - [Syntax Definition](#Declarations-SyntaxDefinition): Syntax Definitions allow the definition of parsers for
+  - [Syntax Definition](#definition): Syntax Definitions allow the definition of parsers for
     programming languages, domain-specific languages and data formats.
     
-      - [Action](#SyntaxDefinition-Action): Actions are functions that are called when parse trees are constructed
+      - [Action](#action): Actions are functions that are called when parse trees are constructed
         (right after parsing).
     
-      - [Ambiguity Detection](#SyntaxDefinition-AmbiguityDetection): Ambiguity detection helps to find ambiguities in
+      - [Ambiguity Detection](#ambiguityDetection): Ambiguity detection helps to find ambiguities in
         syntax definitions.
     
-      - [Ambiguity Diagnosis](#SyntaxDefinition-AmbiguityDiagnosis): Ambiguity diagnosis suggests changes to syntax
+      - [Ambiguity Diagnosis](#ambiguityDiagnosis): Ambiguity diagnosis suggests changes to syntax
         definitions to make them non-ambiguous.
     
-      - [Disambiguation](#SyntaxDefinition-Disambiguation):
+      - [Disambiguation](#disambiguation):
     
-      - [Parse Trees](#SyntaxDefinition-ParseTrees): An algebraic data-type for parse trees; produced by all parsers
+      - [Parse Trees](#parseTrees): An algebraic data-type for parse trees; produced by all parsers
         generated from syntax definitions.
     
-      - [Symbol](#SyntaxDefinition-Symbol): The symbols that can occur in a syntax definition.
+      - [Symbol](#symbol): The symbols that can occur in a syntax definition.
 
-  - [Alias Declaration](#Declarations-Alias): Declare an alias for a type.
+  - [Alias Declaration](#alias): Declare an alias for a type.
 
-  - [Annotation Declaration](#Declarations-Annotation):
+  - [Annotation Declaration](#annotation):
 
-  - [Tag Declaration](#Declarations-Tag): Tag declarations are not implemented (yet).
+  - [Tag Declaration](#tag): Tag declarations are not implemented (yet).
 
 ### Module Declaration
 
@@ -149,23 +150,23 @@ The constituents of a module are shown in the figure below.
 
 ![Module Parts](/images/module-parts.png)
 
-An [Import](#Declarations-Import) declares other modules that are used by the current module. Following imports, a
-module may contain declarations (in arbitrary order, but a [Syntax Definition](#Declarations-SyntaxDefinition) can occur
+An [Import](#import) declares other modules that are used by the current module. Following imports, a
+module may contain declarations (in arbitrary order, but a [Syntax Definition](#definition) can occur
 directly following the imports) for:
 
-  - [Syntax Definition](#Declarations-SyntaxDefinition)
+  - [Syntax Definition](#definition)
 
-  - [Variable Declaration](#Declarations-Variable)
+  - [Variable Declaration](#variable)
 
-  - [Function Declaration](#Declarations-Function)
+  - [Function Declaration](#function)
 
-  - [Algebraic Data Type](#Declarations-AlgebraicDataType)
+  - [Algebraic Data Type](#ADT)
 
-  - [Alias Declaration](#Declarations-Alias)
+  - [Alias Declaration](#alias)
 
-  - [Annotation Declaration](#Declarations-Annotation)
+  - [Annotation Declaration](#annotation)
 
-  - [Tag Declaration](#Declarations-Tag)
+  - [Tag Declaration](#tag)
 
 Each declaration may contain a `private` or `public` keyword that determines the *visibility* of the declared entity.
 
@@ -199,12 +200,12 @@ void hello() {
 }
 ```
 
-It defines a module with the name `demo::basic::Hello` and imports the [IO](/Libraries#Prelude-IO) library. Finally, it
+It defines a module with the name `demo::basic::Hello` and imports the [IO](/docs/Libraries#io) library. Finally, it
 declares the `hello` function.
 
 The actual source of this module can be found in `library/demo/basic/Hello.rsc` in the Rascal sources.
 
-More ways to write this example are discussed in the [Hello](/Recipes#Basic-Hello) example in [Recipes](/Recipes).
+More ways to write this example are discussed in the [Hello](/docs/Recipes#Hello) example in [Recipes](/docs/Recipes).
 
 ### Import
 
@@ -227,7 +228,7 @@ module.
 
 **Examples.**
 
-Here, is how to import the [IO](/Libraries#Prelude-IO) library:
+Here, is how to import the [IO](/docs/Libraries#io) library:
 
 ``` rascal-shell
 import IO;
@@ -238,11 +239,11 @@ println("IO library was imported.");
 
 **Synopsis.**
 
-A Rascal program consists of a number of [Module Declaration](#Declarations-Module)s.
+A Rascal program consists of a number of [Module Declaration](#module-declaration)s.
 
 **Description.**
 
-A Rascal program consists of a number of [Module Declaration](#Declarations-Module)s, each stored in a separate file
+A Rascal program consists of a number of [Module Declaration](#module-declaration)s, each stored in a separate file
 with extension `.rsc`.
 
 ### StaticTyping
@@ -287,7 +288,7 @@ The Rascal type system has various advanced features that are described separate
     to define constraints on the actual type to be used.
 
   - The formal arguments of functions are bound to *values* but in exceptional cases a function may need a type as
-    argument value, [Reified Types](#StaticTyping-ReifiedTypes) make this possible.
+    argument value, [Reified Types](#reifiedtypes) make this possible.
 
 **Examples.**
 
@@ -358,7 +359,7 @@ PROGRAM parsePROGRAM(str s) { ... }
 Unfortunately this solution does not scale well to large languages with many non-terminals and it breaks down completely
 when we do not know the non-terminals before hand.
 
-Now we can write (see [Type Parameters](#StaticTyping-TypeParameters) for a description of the `&T` notation):
+Now we can write (see [Type Parameters](#typeparameters) for a description of the `&T` notation):
 
 ``` rascal
 &T parse(type[&T] start, str s) { ... }
@@ -367,7 +368,7 @@ Now we can write (see [Type Parameters](#StaticTyping-TypeParameters) for a desc
 and use the parse by giving it a type as argument:
 
 ``` rascal
-parse(#EXP, "1+3");
+parse(#eXP, "1+3");
 ```
 
 ### Type Constraints
@@ -387,7 +388,7 @@ constraint which expresses that actual types bound to *Name* should be a subtype
 
 **Examples.**
 
-Here is the definition of the absolute value function `abs` from the [Number](#Values-Number) library:
+Here is the definition of the absolute value function `abs` from the [Number](#number) library:
 
 ``` rascal
 public &T <: num abs(&T <: num N)
@@ -404,7 +405,7 @@ abs(-3);
 abs(-3.5);
 ```
 
-Here is an example from the [Node](#Values-Node) library:
+Here is an example from the [Node](#node) library:
 
 ``` rascal
 &T <: node setAnnotations(&T <: node x, map[str, value] annotations);
@@ -412,7 +413,7 @@ Here is an example from the [Node](#Values-Node) library:
 
 (we don’t give the body of this function since it has been implemented in Java). `setAnnotations` takes a value of any
 type that is at most `node` and adds annotations to it. This makes it possible to set annotations on any [Algebraic Data
-Type](#Declarations-AlgebraicDataType).
+Type](#ADT).
 
 ``` rascal-shell
 import Node;
@@ -476,7 +477,7 @@ All other occurrences of type parameters are *using occurrences*. The following 
 **Examples.**
 
 Let's consider a small example of the use of function parameters in a function declaration, see [Function
-Declaration](#Declarations-Function) for more details on function declarations. The following function `swap` returns a
+Declaration](#function) for more details on function declarations. The following function `swap` returns a
 tuple in which its arguments are swapped and can be applied to arbitrary values in a type safe manner:
 
 ``` rascal-shell
@@ -488,7 +489,7 @@ swap("abc", 3);
 Observe that the type parameters that are used in the return type should be defined in the declarations of the formal
 parameter of the function.
 
-An [???](#Alias) declaration may also be parameterized. So we can generalize graphs as follows:
+An [Alias](#alias) declaration may also be parameterized. So we can generalize graphs as follows:
 
 ``` rascal
 alias Graph[&Node] = rel[&Node, &Node];
@@ -499,7 +500,7 @@ Graph[str] GS = {<"a", "b">, <"c","d">, <"d", "a">};
 The type parameters that are used in the type in the right part of the alias declaration should be defined in the left
 part of the alias definition.
 
-### Algebraic Data Type
+### Algebraic Data Type {#ADT}
 
 **Synopsis.**
 
@@ -511,7 +512,7 @@ In ordinary programming languages record types or classes exist to introduce a n
 related, named, values and to provide access to the elements of such a collection through their name.
 
 In Rascal, algebraic data types provide this facility. They have to be declared, and then values can be declared using
-calls to the declared constructor functions, see [Constructor](#Values-Constructor).
+calls to the declared constructor functions, see [Constructor](#constructor).
 
 **Examples.**
 
@@ -660,7 +661,7 @@ body, the type of this parameter will therefore be `list[Type0]`.
 
 ### Variant 3 and 4
 
-All formal parameter of a function can be [Patterns](#Rascal-Patterns). There are some restrictions however:
+All formal parameter of a function can be [Patterns](#patterns). There are some restrictions however:
 
   - A Pattern in formal parameter positions may not refer to variables in the scope.
 
@@ -678,15 +679,15 @@ All formal parameter of a function can be [Patterns](#Rascal-Patterns). There ar
 
 ### Parameterized types in function declaration
 
-The types that occur in function declarations may also contain [Type Parameters](#StaticTyping-TypeParameters). In this
+The types that occur in function declarations may also contain [Type Parameters](#typeparameters). In this
 way functions can be defined for arbitrary types. The type variable is bound (statically) at by the types of the
 parameters given at location of the call. The result type must be used at least once in any of the parameters.
 
 ### Overloading
 
 Function definitions may be overloaded, i.e. a function with the same name may be defined twice and a function may
-redefine a constructor of an [Algebraic Data Type](#Declarations-AlgebraicDataType) or a [Syntax
-Definition](#Declarations-SyntaxDefinition).
+redefine a constructor of an [Algebraic Data Type](#ADT) or a [Syntax
+Definition](#definition).
 
 There are some restrictions however:
 
@@ -698,10 +699,10 @@ There are some restrictions however:
     
       - They range over incomparable types, as in `int f(int a)` and `int f(real a)`, or
     
-      - They range over different alternatives of an [Algebraic Data Type](#Declarations-AlgebraicDataType), as in `int
+      - They range over different alternatives of an [Algebraic Data Type](#ADT), as in `int
         f(and(Bool a, Bool b))` and `int f(or(Bool a, Bool b))`
     
-      - They range over different alternatives of a [Syntax Definition](#Declarations-SyntaxDefinition)
+      - They range over different alternatives of a [Syntax Definition](#definition)
     
       - And note that deep matches using the `/` alternative are considered to be of type `value` and therefore overlap
         with all other patterns.
@@ -710,7 +711,7 @@ There are some restrictions however:
 
   - If a function is fallible, it uses the `fail` statement to back-track to a different alternative, then there must be
     a `default` alternative defined which can handle the general case. An \[AlgebraicDataType\] or a
-    \[SyntaxDefinition\] with the same name and return type counts as a `default` alternative.
+    \[syntax-definition\] with the same name and return type counts as a `default` alternative.
 
   - `default` functions may not fail.
 
@@ -728,12 +729,12 @@ The *Modifiers* affect *visibility* and *special behaviour* of functions:
     
       - `test` declares that this is a test function. A test function is a boolean function (currently) without
         arguments. It can be called as any other function. However, it can also be called automatically by the unit test
-        framework, by typing `:test` at the command line, see [???](#Help).
+        framework, by typing `:test` at the command line, see [Help](#help).
     
       - `default` declares an alternative for an overloaded function that will only be tried after all non-default
-        alternatives have been tried. Note that [Algebraic Data Type](#Declarations-AlgebraicDataType)s and [Syntax
-        Definition](#Declarations-SyntaxDefinition)s *implicitly* define `default` functions that may be overloaded by
-        normal [Function Declaration](#Declarations-Function)s.
+        alternatives have been tried. Note that [Algebraic Data Type](#ADT)s and [Syntax
+        Definition](#definition)s *implicitly* define `default` functions that may be overloaded by
+        normal [Function Declaration](#function)s.
 
 **Examples.**
 
@@ -768,7 +769,7 @@ invert2({<"mon", 1>, <"tue", 2>});
 ```
 
 As another example declare a function that can be used to swap the elements of pairs of arbitrary types (also see [Tuple
-Subscription](#Tuple-Subscription)):
+Subscription](#subscription)):
 
 ``` rascal-shell
 tuple[&T2, &T1] swap(tuple[&T1, &T2] TP) { return <TP[1], TP[0]>;}
@@ -794,9 +795,9 @@ f(0);
 f(2);
 ```
 
-In combination with an [Algebraic Data Type](#Declarations-AlgebraicDataType), which defines `default` functions
+In combination with an [Algebraic Data Type](#ADT), which defines `default` functions
 implicitly for every alternative, we can define canonicalization functions. The same holds for [Syntax
-Definition](#Declarations-SyntaxDefinition)s, see [Action](#SyntaxDefinition-Action)s.
+Definition](#definition)s, see [Action](#action)s.
 
 **Pitfalls.**
 
@@ -836,23 +837,23 @@ list of tags.
 **Description.**
 
 Rascal supports full context-free grammars for syntax definition. It generates scannerless parsers from these
-definitions. These parsers produce [Parse Trees](#SyntaxDefinition-ParseTrees) that can be further processed by Rascal
-using [Concrete Syntax](#Expressions-ConcreteSyntax) fragments in [Patterns](#Rascal-Patterns) and
-[Expressions](#Rascal-Expressions), or they can be *imploded* to [Algebraic Data
-Type](#Declarations-AlgebraicDataType)s.
+definitions. These parsers produce [Parse Trees](#parseTrees) that can be further processed by Rascal
+using [Concrete Syntax](#concretesyntax) fragments in [Patterns](#patterns) and
+[Expressions](#expressions), or they can be *imploded* to [Algebraic Data
+Type](#ADT)s.
 
 There are four kinds of non-terminals that can be defined with slightly different characteristics.
 
   - *Syntax* non-terminals are general context-free non-terminals. This mean left-recursion, right-recursion, any of the
-    regular expression [Symbol](#SyntaxDefinition-Symbol)s and all kinds of
-    [Disambiguation](#SyntaxDefinition-Disambiguation) can be used to define it. It is important to note that in between
+    regular expression [Symbol](#symbol)s and all kinds of
+    [Disambiguation](#disambiguation) can be used to define it. It is important to note that in between
     the *Symbols* that define a syntax non-terminal the locally defined layout non-terminal will be interleaved. For
     example, if you define `layout ML = [\ ]*;` and `syntax A = "a" "a"`, Rascal will *modify* the definition of A to
     `syntax A = "a" ML "a";` before generating a parser.
 
   - *Lexical* non-terminals are just like *syntax* non-terminals, very much like *syntax* non-terminals. However, the
     definition of a lexical is *not* modified with interleaved layout non-terminals. And, the structure of lexicals is
-    not traversed by the [Visit](#Expressions-Visit) statement and equality is checked between lexicals by checking the
+    not traversed by the [Visit](#visit) statement and equality is checked between lexicals by checking the
     characters (not its structure) for equality.
 
   - *Layout* non-terminals are just like *syntax* non-terminals as well. However, they are used to preprocess all
@@ -860,39 +861,39 @@ There are four kinds of non-terminals that can be defined with slightly differen
 
   - *Keyword* non-terminals are *not* like *syntax* non-terminals. These only allow definition of enumeration of literal
     symbols and single character classes. Keyword non-terminals play an important role in the semantics of
-    [Disambiguation](#SyntaxDefinition-Disambiguation) where some disambiguation constructs require finite, non-empty
+    [Disambiguation](#disambiguation) where some disambiguation constructs require finite, non-empty
     enumeration of strings. The prime example is the definition of reserved keywords.
 
-Each alternative of a syntax definition is defined by a list of [Symbol](#SyntaxDefinition-Symbol)s. Each of the
-[Symbol](#SyntaxDefinition-Symbol)s can be labeled or not. The alternative of a defined syntax type may be labeled or
+Each alternative of a syntax definition is defined by a list of [Symbol](#symbol)s. Each of the
+[Symbol](#symbol)s can be labeled or not. The alternative of a defined syntax type may be labeled or
 not as well. With the label additional operations are activated on the corresponding parse trees:
 
-  - The `is` operator is defined for labeled alternatives (see [Operators](#Expressions-Operators)).
+  - The `is` operator is defined for labeled alternatives (see [Operators](#operators)).
 
-  - The `has` operator is defined for labeled [Symbol](#SyntaxDefinition-Symbol)s in the right-hand side (see
-    [Operators](#Expressions-Operators)).
+  - The `has` operator is defined for labeled [Symbol](#symbol)s in the right-hand side (see
+    [Operators](#operators)).
 
-  - [Action](#SyntaxDefinition-Action) functions can be written to override the construction of a parse tree, using the
+  - [Action](#action) functions can be written to override the construction of a parse tree, using the
     label of an alternative as the function name
 
-  - \[implode\] uses labeled alternatives to map to an [Algebraic Data Type](#Declarations-AlgebraicDataType)
+  - \[implode\] uses labeled alternatives to map to an [Algebraic Data Type](#ADT)
 
-Alternatives can be combined in a single [Syntax Definition](#Declarations-SyntaxDefinition) using the `|`, `>` and
-associativity combinators. The latter two represent [Disambiguation](#SyntaxDefinition-Disambiguation) constructs that
+Alternatives can be combined in a single [Syntax Definition](#definition) using the `|`, `>` and
+associativity combinators. The latter two represent [Disambiguation](#disambiguation) constructs that
 you should read more about. The `|` is a short-hand for not having to repeat `syntax A =` for every alternative of `A`.
 
 Alternatives can be named or not. The names are essential only if:
 
-  - you need to [implode](/Libraries#ParseTree-implode) [Parse Trees](#SyntaxDefinition-ParseTrees)
+  - you need to [implode](/docs/Libraries#implode) [Parse Trees](#parseTrees)
 
   - you need to use the `is` expression, as in `myStatement is ifThenElse` instead of using concrete pattern matching.
 
-  - you want to write [Action](#SyntaxDefinition-Action)s that triggers on the construction of the alternative.
+  - you want to write [Action](#action)s that triggers on the construction of the alternative.
 
 However, it is generally a good idea to name your rules even if you do not need them. Note that a name may be reused for
 different alternatives for a single non-terminal, provided that the lists of symbols for these "overloaded" alternatives
 use *different non-terminal symbols*. This implies that alternatives for lexicals generally do not use overloaded names
-because they are often defined only by regular expressions over terminal [Symbol](#SyntaxDefinition-Symbol)s (literals
+because they are often defined only by regular expressions over terminal [Symbol](#symbol)s (literals
 and character classes).
 
 The *start* modifier identifies the start of a grammar. The effect of a start modifier is that Rascal will generate an
@@ -904,12 +905,12 @@ layout L = [\ ]*; start Program = Statement*;`
 ```
 
 will produce `syntax start[Program] = L Program top L;`. Note that the `start[Program]` type is now available in your
-program, and [Parse Trees](#SyntaxDefinition-ParseTrees) assigned to variable of that type will allow access to the
+program, and [Parse Trees](#parseTrees) assigned to variable of that type will allow access to the
 *top* field.
 
 **Examples.**
 
-The following example makes use of practically all of the [Syntax Definition](#Declarations-SyntaxDefinition) features,
+The following example makes use of practically all of the [Syntax Definition](#definition) features,
 except parse actions.
 
 ``` rascal
@@ -951,13 +952,13 @@ syntax Expression
 
   - Embedding of concrete syntax fragments in Rascal programs
 
-  - [Syntax Definition](#Declarations-SyntaxDefinition)s follow the syntax and semantics of [Algebraic Data
-    Type](#Declarations-AlgebraicDataType)s quite closely.
+  - [Syntax Definition](#definition)s follow the syntax and semantics of [Algebraic Data
+    Type](#ADT)s quite closely.
 
 <!-- end list -->
 
-  - Grammars may be ambiguous, so read about [Disambiguation](#SyntaxDefinition-Disambiguation), [Ambiguity
-    Detection](#SyntaxDefinition-AmbiguityDetection) and [Ambiguity Diagnosis](#SyntaxDefinition-AmbiguityDiagnosis).
+  - Grammars may be ambiguous, so read about [Disambiguation](#disambiguation), [Ambiguity
+    Detection](#ambiguityDetection) and [Ambiguity Diagnosis](#ambiguityDiagnosis).
 
   - Static grammar checker is not implemented yet.
 
@@ -969,11 +970,11 @@ Actions are functions that are called when parse trees are constructed (right af
 
 **Description.**
 
-A so-called [Action](#SyntaxDefinition-Action) is a normal rascal [Function Declaration](#Declarations-Function) that
-overloads a [Syntax Definition](#Declarations-SyntaxDefinition). A [Syntax Definition](#Declarations-SyntaxDefinition),
-very similar to [Algebraic Data Type](#Declarations-AlgebraicDataType) definitions, defines a constructor for a parse
+A so-called [Action](#action) is a normal rascal [Function Declaration](#function) that
+overloads a [Syntax Definition](#definition). A [Syntax Definition](#definition),
+very similar to [Algebraic Data Type](#ADT) definitions, defines a constructor for a parse
 tree node. This constructor is the default function, and when it is overloaded by a non-default function this overloaded
-function will be tried first. You can overload any labeled [Syntax Definition](#Declarations-SyntaxDefinition) using the
+function will be tried first. You can overload any labeled [Syntax Definition](#definition) using the
 name of an alternative.
 
 For example:
@@ -986,19 +987,19 @@ public A a(B b, C c) {
 }
 ```
 
-In this example [Action](#SyntaxDefinition-Action) function the a is replaced by whatever A the `f` function returns.
+In this example [Action](#action) function the a is replaced by whatever A the `f` function returns.
 
-[Action](#SyntaxDefinition-Action)s are executed every time a parse tree is constructed:
+[Action](#action)s are executed every time a parse tree is constructed:
 
   - Right after parsing.
 
   - On the way back from a visit statement.
 
-  - When a [Concrete Syntax](#Expressions-ConcreteSyntax) expression is executed.
+  - When a [Concrete Syntax](#concretesyntax) expression is executed.
 
-  - When [Parse Trees](#SyntaxDefinition-ParseTrees) are constructed "manually".
+  - When [Parse Trees](#parseTrees) are constructed "manually".
 
-They can be used as a [Disambiguation](#SyntaxDefinition-Disambiguation) method, using the `filter` statement, as in:
+They can be used as a [Disambiguation](#disambiguation) method, using the `filter` statement, as in:
 
 ``` rascal
 syntax E = id: Id i;
@@ -1020,8 +1021,8 @@ Ambiguity detection helps to find ambiguities in syntax definitions.
 
 **Description.**
 
-AmbiDexter is a tool that analyzes [Syntax Definition](#Declarations-SyntaxDefinition)s, including their
-[Disambiguation](#SyntaxDefinition-Disambiguation)s, to try and determine which ambiguities it contains. Static
+AmbiDexter is a tool that analyzes [Syntax Definition](#definition)s, including their
+[Disambiguation](#disambiguation)s, to try and determine which ambiguities it contains. Static
 detection of ambiguity is not decidable, nevertheless AmbiDexter does a fine job at finding them.
 
   - AmbiDexter can find ambiguity for you before testing the parser, after which you can use \[AmbiguityDiagnosis\] to
@@ -1032,7 +1033,7 @@ detection of ambiguity is not decidable, nevertheless AmbiDexter does a fine job
   - AmbiDexter is now a separate command-line tool which still needs integration
 
   - AmbiDexter is not a silver bullet. It has a time-limit to stop after having searcher only so much of a language.
-    After the time limit has expired, your \[SyntaxDefinition\] may still be ambiguous.
+    After the time limit has expired, your \[syntax-definition\] may still be ambiguous.
 
 ### Ambiguity Diagnosis
 
@@ -1043,10 +1044,10 @@ Ambiguity diagnosis suggests changes to syntax definitions to make them non-ambi
 **Description.**
 
 The `Ambiguity` library, a.k.a. DrAmbiguity, contains a diagnosis tool that can help you find the causes of ambiguous
-parse trees and possible [Disambiguation](#SyntaxDefinition-Disambiguation)s to solve them in a [Syntax
-Definition](#Declarations-SyntaxDefinition). DrAmbiguity is a library that processes any parse forest produced by a
-parser generated from Rascal’s [Syntax Definition](#Declarations-SyntaxDefinition)s. Please read
-[Disambiguation](#SyntaxDefinition-Disambiguation) first.
+parse trees and possible [Disambiguation](#disambiguation)s to solve them in a [Syntax
+Definition](#definition). DrAmbiguity is a library that processes any parse forest produced by a
+parser generated from Rascal’s [Syntax Definition](#definition)s. Please read
+[Disambiguation](#disambiguation) first.
 
 **Examples.**
 
@@ -1055,7 +1056,7 @@ import analysis::grammars::Ambiguity;
 diagnose(t); // for any t of which you know it contains an ambiguity
 ```
 
-  - DrAmbiguity automatically proposes [Disambiguation](#SyntaxDefinition-Disambiguation)s that will work
+  - DrAmbiguity automatically proposes [Disambiguation](#disambiguation)s that will work
 
 <!-- end list -->
 
@@ -1070,35 +1071,35 @@ diagnose(t); // for any t of which you know it contains an ambiguity
 
 **Synopsis.**
 
-Disambiguation is the definition of filters on the parse trees that [Syntax Definition](#Declarations-SyntaxDefinition)s
-define. There are several ways of defining [Disambiguation](#SyntaxDefinition-Disambiguation) in Rascal.
+Disambiguation is the definition of filters on the parse trees that [Syntax Definition](#definition)s
+define. There are several ways of defining [Disambiguation](#disambiguation) in Rascal.
 
 **Description.**
 
 There are generally three ways of removing ambiguity from parse forests that are produced by parsers generated from
-[Syntax Definition](#Declarations-SyntaxDefinition)s.
+[Syntax Definition](#definition)s.
 
-  - The first way is to add disambiguation declarations to the [Syntax Definition](#Declarations-SyntaxDefinition). You
+  - The first way is to add disambiguation declarations to the [Syntax Definition](#definition). You
     can choose from:
     
-      - [Priority Declaration](#Disambiguation-Priority)s, which can be used to define the relative priority in
+      - [Priority Declaration](#priority)s, which can be used to define the relative priority in
         expression languages
     
-      - [Associativity Declaration](#Disambiguation-Associativity)s, which can be used to define relative associativity
+      - [Associativity Declaration](#associativity)s, which can be used to define relative associativity
         between operators of expression languages
     
-      - [Follow Declaration](#Disambiguation-Follow)s, which can be used to implement longest match using lookahead
+      - [Follow Declaration](#follow)s, which can be used to implement longest match using lookahead
     
-      - [Precede Declaration](#Disambiguation-Precede)s, which can be used to implement first match using look behind
+      - [Precede Declaration](#precede)s, which can be used to implement first match using look behind
     
-      - [which allow you to finite sets of strings from a \<\<Syntax Definition](#Reserve%20Declaration\>s) to implement
+      - [which allow you to finite sets of strings from a \<\<Syntax Definition](#reserve-Declaration\>s) to implement
         keyword reservation
 
-  - The second way is to add [Action](#SyntaxDefinition-Action)s that will be triggered just after parsing and allow you
+  - The second way is to add [Action](#action)s that will be triggered just after parsing and allow you
     to trim a parse forest using any information necessary.
 
-  - The third way is use the [Visit](#Expressions-Visit) statement on a parse tree and implement your own filter
-    post-parsing time, or any other kind of program that processes [Parse Trees](#SyntaxDefinition-ParseTrees).
+  - The third way is use the [Visit](#visit) statement on a parse tree and implement your own filter
+    post-parsing time, or any other kind of program that processes [Parse Trees](#parseTrees).
 
 ##### Associativity Declaration
 
@@ -1113,7 +1114,7 @@ Define associativity of operators
   - `syntax Exp = Assoc Symbol1 Symbol2 …​`
 
 Here *Assoc* is one of: `left`, `right`, `assoc` or `non-assoc`. See [Syntax
-Definition](#Declarations-SyntaxDefinition)s on how to define alternatives and [Symbol](#SyntaxDefinition-Symbol)s.
+Definition](#definition)s on how to define alternatives and [Symbol](#symbol)s.
 
 **Description.**
 
@@ -1134,7 +1135,7 @@ associativity, as in `left ( right Alt1 | Alt2 | Alt3)`, then *Alt*<sub>1</sub> 
 itself and left associative with respect to all others in the group.
 
 A finer point is that associativity has no effect on any other position than the left-most and right-most position (see
-also [Priority Declaration](#Disambiguation-Priority)). This is to guarantee that associativity does not introduce parse
+also [Priority Declaration](#priority)). This is to guarantee that associativity does not introduce parse
 errors. The following tables explain when an assocativity declaration filters given two productions `father` and `child`
 that share an associativity group.
 
@@ -1163,7 +1164,7 @@ that share an associativity group.
     declarations.
 
   - Use of productions that are not both left and right recursive in an associativity group, although safe, is not very
-    meaningful. We would advise to use the [Priority Declaration](#Disambiguation-Priority) relation such a case. For
+    meaningful. We would advise to use the [Priority Declaration](#priority) relation such a case. For
     example:
 
 | Original associativity | Better written as priority |
@@ -1179,14 +1180,14 @@ that share an associativity group.
 
 **Synopsis.**
 
-A conditional [Symbol](#SyntaxDefinition-Symbol), constraining the characters that can immediately follow a symbol in
+A conditional [Symbol](#symbol), constraining the characters that can immediately follow a symbol in
 the input source text.
 
   - `Symbol >> constraint`
 
   - `Symbol !>> constraint`
 
-where a *constraint* is any character class, a literal or a keyword non-terminal [Symbol](#SyntaxDefinition-Symbol).
+where a *constraint* is any character class, a literal or a keyword non-terminal [Symbol](#symbol).
 
 **Description.**
 
@@ -1198,14 +1199,14 @@ accepted.
 
 **Synopsis.**
 
-A conditional [Symbol](#SyntaxDefinition-Symbol), constraining the characters that can immediately precede a symbol in
+A conditional [Symbol](#symbol), constraining the characters that can immediately precede a symbol in
 the input source text.
 
   - `constraint << Symbol`
 
   - `constraint !<< Symbol`
 
-where a *constraint* is any character class, a literal or a keyword non-terminal [Symbol](#SyntaxDefinition-Symbol).
+where a *constraint* is any character class, a literal or a keyword non-terminal [Symbol](#symbol).
 
 **Description.**
 
@@ -1229,8 +1230,8 @@ Declare the priority of operators.
 
 Priority declarations define a partial ordering between the productions *within a single non-terminal*. The feature is
 specifically designed to fit with the semantics of expression sub-languages embedded in programming languages. There
-exist other mechanisms for [Disambiguation](#SyntaxDefinition-Disambiguation), if [Priority
-Declaration](#Disambiguation-Priority) does not work for you.
+exist other mechanisms for [Disambiguation](#disambiguation), if [Priority
+Declaration](#priority) does not work for you.
 
 The semantics of a priority relation `A > B` is that B will not be nested under A in the left-most or right-most
 position. Any other position of A will allow B fine. Note that the priority relation you define is transitively closed,
@@ -1250,7 +1251,7 @@ recursive.
 
 **Examples.**
 
-The following snippet uses all [Priority Declaration](#Disambiguation-Priority) features:
+The following snippet uses all [Priority Declaration](#priority) features:
 
 ``` rascal
 syntax Exp
@@ -1311,11 +1312,11 @@ Here a number of strings for this language, with brackets to show how they will 
 
 **Synopsis.**
 
-Reserve is a conditional [Symbol](#SyntaxDefinition-Symbol), constraining the set of strings that a symbol may produce.
+Reserve is a conditional [Symbol](#symbol), constraining the set of strings that a symbol may produce.
 
   - `Symbol \ constraint`
 
-where a *constraint* is any character class, a literal or a keyword non-terminal [Symbol](#SyntaxDefinition-Symbol).
+where a *constraint* is any character class, a literal or a keyword non-terminal [Symbol](#symbol).
 
 ### Parse Trees
 
@@ -1329,7 +1330,7 @@ Below is the full definition of `Tree` and `Production` and `Symbol`. A parse tr
 `Tree`.
 
   - Most internal nodes are applications (`appl`) of a `Production` to a list of children `Tree` nodes. `Production` is
-    the abstract representation of a \[SyntaxDefinition\] rule, which consists of a definition of an alternative for a
+    the abstract representation of a \[syntax-definition\] rule, which consists of a definition of an alternative for a
     `Symbol` by a list of `Symbols`.
 
   - The leaves of a parse tree are always characters (`char`), which have an integer index in the UTF8 table.
@@ -1337,17 +1338,17 @@ Below is the full definition of `Tree` and `Production` and `Symbol`. A parse tr
   - Some internal nodes encode ambiguity (`amb`) by pointing to a set of alternative `Tree` nodes.
 
 The `Production` and `Symbol` types are an abstract notation for rules in [Syntax
-Definition](#Declarations-SyntaxDefinition)s, while the `Tree` type is the actual notation for parse trees.
+Definition](#definition)s, while the `Tree` type is the actual notation for parse trees.
 
 Parse trees are called parse forests when they contain `amb` nodes.
 
 You can analyze and manipulate parse trees in three ways:
 
-  - Directly on the `Tree` level, just like any other [Algebraic Data Type](#Declarations-AlgebraicDataType)
+  - Directly on the `Tree` level, just like any other [Algebraic Data Type](#ADT)
 
-  - Using [Concrete Syntax](#Expressions-ConcreteSyntax)
+  - Using [Concrete Syntax](#syntax)
 
-  - Using [Action](#SyntaxDefinition-Action)s
+  - Using [Action](#action)s
 
 The type of a parse tree is the symbol that it’s production produces, i.e. `appl(prod(sort("A"),[],{}),[])` has type
 `A`. Ambiguity nodes Each such a non-terminal type has `Tree` as its immediate super-type.
@@ -1414,7 +1415,7 @@ The following operations on character classes can be composed arbitrarily:
 | `Class1 && Class2`   | Intersection of character classes `Class1` and `Class2`               |
 | `(Class)`            | Brackets for defining application order of class operators            |
 
-The following regular expressions can be constructed over [Symbol](#SyntaxDefinition-Symbol)s:
+The following regular expressions can be constructed over [Symbol](#symbol)s:
 
 | Symbol                        | Description                                                                    |
 | ----------------------------- | ------------------------------------------------------------------------------ |
@@ -1427,7 +1428,7 @@ The following regular expressions can be constructed over [Symbol](#SyntaxDefini
 | `(Symbol1 \| Symbol2 \| …​ )` | Embedded choice of alternative symbols                                         |
 | `()`                          | The anonymous non-terminal for the language with the empty string              |
 
-Inline conditions ([Disambiguation](#SyntaxDefinition-Disambiguation)s) can be added to symbols to constrain their
+Inline conditions ([Disambiguation](#disambiguation)s) can be added to symbols to constrain their
 acceptability:
 
 | Disambiguation         | Description                                                                      |
@@ -1450,16 +1451,16 @@ Every non-terminal symbol is a type.
 **Description.**
 
 The basic symbols are the non-terminal name and the labeled non-terminal name. These refer to the names defined by
-[Syntax Definition](#Declarations-SyntaxDefinition). You can use any defined non-terminal name in any other definition
+[Syntax Definition](#definition). You can use any defined non-terminal name in any other definition
 (lexical in syntax, syntax in lexical, etc).
 
 Then we have literals and character classes to define the *terminals* of a grammar. When you use a literal such as
 `"begin"`, Rascal will produce a definition for it down to the character level before generating a parser: `syntax
-"begin" = [b][e][g][i][n];`. This effect will be visible in the [Parse Trees](#SyntaxDefinition-ParseTrees) produced by
+"begin" = [b][e][g][i][n];`. This effect will be visible in the [Parse Trees](#trees) produced by
 the parser. For case insensitive literals you will see a similar effect; the use of `'begin'` produces `syntax 'begin' =
 [bB][eE][gG][iI][nN]`.
 
-Character classes have the same escaping conventions as characters in a [String](#Values-String) literal, but spaces and
+Character classes have the same escaping conventions as characters in a [String](#string) literal, but spaces and
 newlines are meaningless and have to be escaped and the `[` and `]` brackets as well as the dash `-` need escaping. For
 example, one writes `[\[ \] \ \n\-]` for a class that includes the open and close square brackets and a space, a newline
 and a dash. Character classes support ranges as in `[a-zA-Z0-9]`. Please note about character classes that:
@@ -1470,26 +1471,26 @@ and a dash. Character classes support ranges as in `[a-zA-Z0-9]`. Please note ab
   - Character classes are also ordered by Rascal and overlapping ranges are merged before parsers are generated.
     Equality between character classes is checked after this canonicalization.
 
-  - Although all [Symbol](#SyntaxDefinition-Symbol)s are type constructors, the character class operators are not
+  - Although all [Symbol](#symbol)s are type constructors, the character class operators are not
     allowed in types.
 
 The other symbols either *generate* for you parts of the construction of a grammar, or they *constrain* the rules of the
-grammar to generate a smaller set of trees as [Disambiguation](#SyntaxDefinition-Disambiguation)s.
+grammar to generate a smaller set of trees as [Disambiguation](#disambiguation)s.
 
 The *generative symbols* are referred to as the *regular symbols*. These are like named non-terminals, except that they
 are defined implicitly and interpreted by the parser generator to produce a parser that can recognize a symbol
 optionally, iteratively, alternatively, sequentially, etc. You also need to know this about the regular symbols:
 
-  - In [Parse Trees](#SyntaxDefinition-ParseTrees) you will find special nodes for the regular expression symbols that
+  - In [Parse Trees](#parse-trees) you will find special nodes for the regular expression symbols that
     hide *how* these were recognized.
 
-  - [Patterns](#Rascal-Patterns) using [Concrete Syntax](#Expressions-ConcreteSyntax) have special semantics for the
+  - [Patterns](#patterns) using [Concrete Syntax](#concrete-syntax) have special semantics for the
     regular symbols (list matching, separator handling, ignoring layout, etc.).
 
-  - Regular symbols are not allowed in *keyword* [Syntax Definition](#Declarations-SyntaxDefinition)s
+  - Regular symbols are not allowed in *keyword* [Syntax Definition](#definition)s
 
   - Depending on their occurrence in a *lexical*, *syntax* or *layout* [Syntax
-    Definition](#Declarations-SyntaxDefinition) the semantics of regular symbols changes. In the *syntax* context,
+    Definition](#definition) the semantics of regular symbols changes. In the *syntax* context,
     layout non-terminals will be woven into the regular symbol, but not in the *lexical* and *layout* contexts. For
     example, a `Symbol*` in a *syntax* definition such as `syntax X = A*;` will be processed to ``syntax X = `{A
     Layout}*``. Similarly, `syntax X = {A B}+;` will be processed to `syntax X = {A (Layout B Layout)}+;`.
@@ -1502,7 +1503,7 @@ to define the effect of keyword reservation and longest match.
     follow constraint such as `A >> [a-z]` means that the character immediately following a recognized A must be in the
     range `[a-z]`.
 
-  - Read more on the constraint symbols via [Disambiguation](#SyntaxDefinition-Disambiguation)s.
+  - Read more on the constraint symbols via [Disambiguation](#disambiguation)s.
 
 **Examples.**
 
@@ -1617,13 +1618,13 @@ alias Graph[&T] = rel[&T, &T];
 
 In other words the standard graph datatype can be parameterized with any element type.
 
-See [Type Parameters](#StaticTyping-TypeParameters) for other examples parameterized alias declarations.
+See [Type Parameters](#typeparameters) for other examples parameterized alias declarations.
 
 ### Annotation Declaration
 
 **Synopsis.**
 
-Declare an annotation type for nodes. This feature is deprecated; please use [???](#Keyword%20Fields) instead.
+Declare an annotation type for nodes. This feature is deprecated; please use [Keyword Fields](#keyword-fields) instead.
 
 **Syntax.**
 
@@ -1632,7 +1633,7 @@ Declare an annotation type for nodes. This feature is deprecated; please use [??
 **Description.**
 
 An annotation may be associated with any node value, be it a pure node or some [Algebraic Data
-Type](#Declarations-AlgebraicDataType) derived from it.
+Type](#ADT) derived from it.
 
 Annotations are intended to attach application data to values, like adding position information or control flow
 information to source code or adding visualization information to a graph.
@@ -1653,7 +1654,7 @@ The following constructs are provided for handling annotations:
     See \[Selection\].
 
   - `Val1[@Anno = Val2]`: is an expression that sets the value of annotation *Anno* of the value *Val<sub>1</sub>* to
-    *Val<sub>2</sub>* and returns *Val<sub>1</sub>* with the new annotation value as result. See [???](#Replacement).
+    *Val<sub>2</sub>* and returns *Val<sub>1</sub>* with the new annotation value as result. See [Replacement](#replacement).
 
   - `Var @ Anno = Val`: is an assignment statement that sets the value of annotation *Anno* of the value of variable
     *Var* to *Val*.
@@ -1662,7 +1663,7 @@ The following constructs are provided for handling annotations:
 
 Examples have been removed since this feature is deprecated.
 
-  - Annotations are cumbersome since they change the structure of [Values](#Expressions-Values) without changing the
+  - Annotations are cumbersome since they change the structure of [Values](#values) without changing the
     semantics of the identity of a value. This is why they are deprecated.
 
 ### Tag Declaration
@@ -1691,12 +1692,12 @@ to parts of the matched value.
 
 **Syntax.**
 
-For most of the [Values](#Expressions-Values), there is a corresponding pattern matching operator. Then there are some
+For most of the [Values](#values), there is a corresponding pattern matching operator. Then there are some
 "higher-order" matching operators which make complex patterns out of simpler ones. This is the complete list:
 
 | Pattern              | Syntax                                                                                                                                                                                          |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Literal              | [Boolean](#Values-Boolean), [Integer](#Values-Integer), [Real](#Values-Real), [Number](#Values-Number), [String](#Values-String), [Location](#Values-Location), or [DateTime](#Values-DateTime) |
+| Literal              | [Boolean](#boolean), [Integer](#integer), [Real](#real), [Number](#number), [String](#string), [Location](#location), or [DateTime](#datetime) |
 | Regular Expression   | `/<Regular Expression>/`                                                                                                                                                                        |
 | Variable declaration | `Type Var`                                                                                                                                                                                      |
 | Multi-variable       | `*Var`, `*Type Var`                                                                                                                                                                             |
@@ -1717,46 +1718,46 @@ Patterns are used to **dispatch** functions and conditional control flow, to **e
 conditionally **filter** values. The pattern following pattern kinds can be arbitrarily nested, following the above
 syntax:
 
-  - [Concrete Patterns](#Patterns-Concrete): Concrete patterns.
+  - [Concrete Patterns](#concrete): Concrete patterns.
 
-  - [Descendant Pattern](#Patterns-Descendant): Deep match in an abstract pattern.
+  - [Descendant Pattern](#descendant): Deep match in an abstract pattern.
 
-  - [Labelled Pattern](#Patterns-Labelled): Labelled abstract pattern.
+  - [Labelled Pattern](#labelled): Labelled abstract pattern.
 
-  - [List Pattern](#Patterns-List): List in abstract pattern.
+  - [List Pattern](#list): List in abstract pattern.
 
-  - [Literal Pattern](#Patterns-Literal): Literal in abstract pattern.
+  - [Literal Pattern](#literal): Literal in abstract pattern.
 
-  - [MultiVariable Pattern](#Patterns-MultiVariable): Multi-variable (also known as Splice-variable) in abstract
+  - [MultiVariable Pattern](#multivariable): Multi-variable (also known as Splice-variable) in abstract
     pattern.
 
-  - [Node pattern](#Patterns-Node): Node in abstract pattern.
+  - [Node pattern](#node): Node in abstract pattern.
 
-  - [Regular Expression Pattern](#Patterns-Regular): Regular expression patterns.
+  - [Regular Expression Pattern](#regular): Regular expression patterns.
 
-  - [Set Pattern](#Patterns-Set): Set in abstract pattern.
+  - [Set Pattern](#set): Set in abstract pattern.
 
-  - [Tuple Pattern](#Patterns-Tuple): Tuple in abstract pattern.
+  - [Tuple Pattern](#tuple): Tuple in abstract pattern.
 
-  - [Type Constrained Pattern](#Patterns-TypeConstrained): Type constrained abstract pattern.
+  - [Type Constrained Pattern](#typeconstrained): Type constrained abstract pattern.
 
-  - [Typed and Labelled Pattern](#Patterns-TypedLabelled): Typed, labelled, abstract pattern.
+  - [Typed and Labelled Pattern](#typedlabelled): Typed, labelled, abstract pattern.
 
-  - [Variable Pattern](#Patterns-Variable): Variable in abstract pattern.
+  - [Variable Pattern](#variable): Variable in abstract pattern.
 
-  - [Variable Declaration Pattern](#Patterns-VariableDeclaration): Variable declaration in abstract pattern.
+  - [Variable Declaration Pattern](#variabledeclaration): Variable declaration in abstract pattern.
 
 All these patterns may be used in:
 
-  - cases of a [Switch](#Statements-Switch) or [Visit](#Expressions-Visit),
+  - cases of a [Switch](#switch) or [Visit](#visit),
 
-  - on the left of the [Boolean Match](#Boolean-Match) operator (`:=`),
+  - on the left of the [Boolean Match](#match) operator (`:=`),
 
-  - on the left of the [Enumerator](#Comprehensions-Enumerator) operator (`←`), and
+  - on the left of the [Enumerator](#enumerator) operator (`←`), and
 
-  - as formal parameters of [Function Declaration](#Declarations-Function)s.
+  - as formal parameters of [Function Declaration](#function)s.
 
-  - [Try Catch](#Statements-TryCatch) statements to match thrown exceptions.
+  - [Try Catch](#try-catch) statements to match thrown exceptions.
 
 Each pattern binds variables in a conditional scope:
 
@@ -1795,29 +1796,29 @@ Typed variable inside a concrete pattern: Type</emphasis> Var>
 
 **Description.**
 
-A concrete pattern is a pattern for matching a [???](#Parse%20Tree). The notation of a concrete pattern is the **object
+A concrete pattern is a pattern for matching a [Parse Tree](#parse-trees). The notation of a concrete pattern is the **object
 language** itself, the language that the parse tree describes. In other words, you can use a code example to match
-parsed code using a concrete pattern. These concrete code examples can contain [Variable Pattern](#Patterns-Variable)s
-like the other [Patterns](#Rascal-Patterns).
+parsed code using a concrete pattern. These concrete code examples can contain [Variable Pattern](#variable)s
+like the other [Patterns](#patterns).
 
-The mechanism of concete patterns gives a good notation for matching complex structures such as a [???](#Parse%20Tree),
+The mechanism of concete patterns gives a good notation for matching complex structures such as a [Prase Tree](#parse-trees),
 and it works in a simple manner:
 
-  - the input code is parsed using a parser generated from a [Syntax Definition](#Declarations-SyntaxDefinition); this
+  - the input code is parsed using a parser generated from a [Syntax Definition](#definition); this
     generates parse trees.
 
   - the pattern example code is parsed using the **same** parser; this generates parse trees with [Variable
-    Pattern](#Patterns-Variable)s.
+    Pattern](#variable)s.
 
-  - the parse tree with the [Variable Pattern](#Patterns-Variable)s is matches against the parse tree of the input code,
-    similarly to the way [Node pattern](#Patterns-Node)s work.
+  - the parse tree with the [Variable Pattern](#variable)s is matches against the parse tree of the input code,
+    similarly to the way [Node pattern](#node)s work.
 
-So, you could say that [Concrete Patterns](#Patterns-Concrete) are a short notation for otherwise highly complex [Node
-pattern](#Patterns-Node)s on [???](#Parse%20Tree). Note that the [???](#Typed%20Variable)s in a concrete pattern can
+So, you could say that [Concrete Patterns](#concrete) are a short notation for otherwise highly complex [Node
+pattern](#node)s on [Parse Tree](#parse-trees). Note that the [Typed Variable](#typed-variable)s in a concrete pattern can
 only occur in the pattern at the location where the code for a full non-terminal of the [Syntax
-Definition](#Declarations-SyntaxDefinition) would be. The structure of a concrete pattern follows the structure of the
-grammar in the [Syntax Definition](#Declarations-SyntaxDefinition) and the types of the [Variable
-Pattern](#Patterns-Variable)s are the syntax non-terminals of the [Syntax Definition](#Declarations-SyntaxDefinition).
+Definition](#definition) would be. The structure of a concrete pattern follows the structure of the
+grammar in the [Syntax Definition](#definition) and the types of the [Variable
+Pattern](#variable)s are the syntax non-terminals of the [Syntax Definition](#definition).
 
 Inside concrete syntax patterns, layout is ignored while pattern matching. So parse trees which have different
 whitespace and comments but are otherwise the same will match anyway.
@@ -1835,19 +1836,19 @@ Examples (in a context where an appropriate concrete syntax has been defined):
     syntax Num = [0-9]+;
     syntax Exp = left Exp "*" Exp > Exp "+" Exp |  Id | Num;
     layout WS = [\ \n\r\t]*;
-    visit (parse(#Exp, "x + x")) {
+    visit (parse(#exp, "x + x")) {
        case (Exp) `<Id a> + <Id b>` => (Exp) `2 * <Id a>` when a == b
     }
 
 Some observations about this example:
 
-  - Notice how the non-terminals `Exp` and `Id` from the [Syntax Definition](#Declarations-SyntaxDefinition) become
+  - Notice how the non-terminals `Exp` and `Id` from the [Syntax Definition](#definition) become
     types for the pattern.
 
   - When this example pattern actually matches the variable `a` is bound and can be used again like any other [Variable
-    Pattern](#Patterns-Variable).
+    Pattern](#variable).
 
-A full example of concrete patterns can be found in [WithLayout](/Recipes#Concrete-WithLayout).
+A full example of concrete patterns can be found in [WithLayout](/docs/Recipes#with-layout).
 
 ### Descendant Pattern
 
@@ -1874,7 +1875,7 @@ T = red(red(black(leaf(1), leaf(2)), black(leaf(3), leaf(4))), black(leaf(5), le
 Now we match for `black` nodes with `leaf(4)` as second argument:
 
 ``` rascal-shell
-for(/black(_,leaf(4)) := T)
+for(/docs/black(_,leaf(4)) := T)
     println("Match!");
 ```
 
@@ -1884,21 +1885,21 @@ print the actual values of the matches, we would need an \[Abstract/Labelled\] p
 Here we match all leaves that occur as second argument of `black`:
 
 ``` rascal-shell
-for(/black(_,leaf(int N)) := T)
+for(/docs/black(_,leaf(int N)) := T)
     println("Match <N>");
 ```
 
 Here we list all integers that occur in any leaf:
 
 ``` rascal-shell
-for(/int N := T)
+for(/docs/int N := T)
     println("Match <N>");
 ```
 
 Rather than printing, we can also collect them in a list using \[$Statements/Append\]:
 
 ``` rascal-shell
-for(/int N := T)
+for(/docs/int N := T)
     append N;
 ```
 
@@ -1920,7 +1921,7 @@ data ColoredTree = leaf(int N)
                  | red(ColoredTree left, ColoredTree right)
                  | black(ColoredTree left, ColoredTree right);
 T = red(red(black(leaf(1), leaf(2)), black(leaf(3), leaf(4))), black(leaf(5), leaf(4)));
-for(/M:black(_,leaf(4)) := T)
+for(/docs/M:black(_,leaf(4)) := T)
     println("Match <M>");
 ```
 
@@ -1938,21 +1939,20 @@ A list pattern matches a list value (the subject), provided that *Pat*<sub>1</su
 *Pat*<sub>n</sub> match the elements of that list in order. Special cases exist when one of the patterns
 *Pat*<sub>i</sub> is
 
-  - a [Variable Pattern](#Patterns-Variable) with a type that is identical to the element type of the subject list: the
+  - a [Variable Pattern](#variable) with a type that is identical to the element type of the subject list: the
     variable is matched with the value at the corresponding position in the subject list.
 
-  - a [MultiVariable Pattern](#Patterns-MultiVariable), with an optional element type that is identical to the element
+  - a [MultiVariable Pattern](#multivariable), with an optional element type that is identical to the element
     type of the subject list: list matching is applied and the variable can match an arbitrary number of elements of the
     subject list.
 
-  - a [Variable Pattern](#Patterns-Variable), where the variable has been declared with a list type, but not
+  - a [variable-pattern](#variable), where the variable has been declared with a list type, but not
     initialized, outside the pattern: list matching is applied and the variable can match an arbitrary number of
     elements of the subject list.
 
-  - a [???](#Variable]%20Pattern), where the variable has been declared with a type equal to the element type of the
+  - a [variable-pattern](#variable), where the variable has been declared with a type equal to the element type of the
     subject, but not initialized, outside the pattern: the variable is matched with the value at the corresponding
-    position in the subject list.
-
+    position in the subject list
 **Examples.**
 
 ``` rascal-shell
@@ -2026,8 +2026,8 @@ Literal in abstract pattern.
 
 **Description.**
 
-A literal of one of the basic types [Boolean](#Values-Boolean), [Integer](#Values-Integer), [Real](#Values-Real),
-[Number](#Values-Number), [String](#Values-String), [Location](#Values-Location), or [DateTime](#Values-DateTime) can be
+A literal of one of the basic types [Boolean](#boolean), [Integer](#integer), [Real](#real),
+[Number](#number), [String](#string), [Location](#location), or [DateTime](#datetime) can be
 used as abstract pattern. A literal pattern matches with a value that is identical to the literal.
 
 **Examples.**
@@ -2333,18 +2333,18 @@ A set pattern matches a set value (the subject), provided that *Pat*<sub>1</sub>
 do not contain duplicates). Completely analogous to list patterns, there are special cases when one of the patterns
 *Pat*<sub>i</sub> is
 
-  - a [Variable Declaration Pattern](#Patterns-VariableDeclaration) with a type that is identical to the element type of
+  - a [Variable Declaration Pattern](#variabledeclaration) with a type that is identical to the element type of
     the subject set: the variable is matched with one value in the subject set.
 
-  - a [MultiVariable Pattern](#Patterns-MultiVariable), with an optional element type that is identical to the element
+  - a [MultiVariable Pattern](#multivariable), with an optional element type that is identical to the element
     type of the subject set: set matching is applied and the variable can match an arbitrary number (in arbitrary order)
     of elements of the subject set.
 
-  - a [Variable Pattern](#Patterns-Variable), where the variable has been declared with a set type, but not initialized,
+  - a [Variable Pattern](#variable), where the variable has been declared with a set type, but not initialized,
     outside the pattern: set matching is applied and the variable can match an arbitrary number (in arbitrary order) of
     elements of the subject set.
 
-  - a [Variable Pattern](#Patterns-Variable), where the variable has been declared with a type equal to the element type
+  - a [Variable Pattern](#variable), where the variable has been declared with a type equal to the element type
     of the subject, but not initialized, outside the pattern: the variable is matched with one value in the subject set.
 
 **Examples.**
@@ -2473,7 +2473,7 @@ assigned to *Var*.
 This construct is used for:
 
   - binding the *whole pattern* to a variable while also matching some stuff out of it: `MyType t :
-    someComplexPattern(f(int a), int b))`. This is similar to [Labelled Pattern](#Patterns-Labelled)s but with an extra
+    someComplexPattern(f(int a), int b))`. This is similar to [Labelled Pattern](#labelled)s but with an extra
     type
 
   - to assert that the pattern has a certain type. This can be useful in disambiguating a constructor name, as in the
@@ -2510,7 +2510,7 @@ A variable pattern can act in two roles:
 
   - If *Var* has not been defined before (or it has been declared but not initialized) then it matches any value. That
     value is assigned to *Var*. The scope of this variable is the outermost expression in which the pattern occurs or
-    the enclosing [If](#Statements-If), [While](#Statements-While), or [Do](#Statements-Do) if the pattern occurs in the
+    the enclosing [If](#if), [While](#while), or [Do](#do) if the pattern occurs in the
     test expression of those statements.
 
 **Examples.**
@@ -2554,7 +2554,7 @@ can be used as abstract pattern. A variable declaration introduces a new variabl
 given type *Type*. That value is assigned to *Var* when the whole match succeeds.
 
 The scope of this variable is the outermost expression in which the pattern occurs or the enclosing
-[If](#Statements-If), [While](#Statements-While), or [Do](#Statements-Do) if the pattern occurs in the test expression
+[If](#if), [While](#while), or [Do](#do) if the pattern occurs in the test expression
 of those statements.
 
 **Examples.**
@@ -2590,39 +2590,39 @@ The expressions available in Rascal.
 
 The expression is the basic unit of evaluation and may consist of the ingredients shown in the figure.
 
-  - An elementary *literal value*, e.g. constants of the types [Boolean](#Values-Boolean), [Integer](#Values-Integer),
-    [Real](#Values-Real), [Number](#Values-Number), [String](#Values-String), [Location](#Values-Location) or
-    [DateTime](#Values-DateTime).
+  - An elementary *literal value*, e.g. constants of the types [Boolean](#boolean), [Integer](#integer),
+    [Real](#real), [Number](#number), [String](#string), [Location](#location) or
+    [DateTime](#datetime).
 
-  - A *structured value* for [List](#Values-List), [Set](#Values-Set), [Map](#Values-Map), [Tuple](#Values-Tuple) or
-    [Relation](#Values-Relation). The elements are first evaluated before the structured value is built.
+  - A *structured value* for [List](#list), [Set](#set), [Map](#map), [Tuple](#tuple) or
+    [Relation](#relation). The elements are first evaluated before the structured value is built.
 
   - A *variable* that evaluates to its current value.
 
   - A call to a function or constructor:
     
       - A *function call*. First the arguments are evaluated and the corresponding function is called. The value
-        returned by the function is used as value of the function call. See [Call](#Expressions-Call).
+        returned by the function is used as value of the function call. See [Call](#call).
     
       - A *constructor*. First the arguments are evaluated and then a data value is constructed for the corresponding
         type. This data value is used as value of the constructor. Constructors are functions that can be used in all
-        contexts where functions can be used. See [Constructor](#Values-Constructor).
+        contexts where functions can be used. See [Constructor](#constructor).
 
   - An operator expression. The operator is applied to the arguments; the evaluation order of the arguments depends on
     the operator. The result returned by the operator is used as value of the operator expression. See
-    [Operators](#Expressions-Operators).
+    [Operators](#operators).
 
-  - [Comprehensions](#Expressions-Comprehensions).
+  - [Comprehensions](#comprehensions).
 
-  - A [Visit](#Expressions-Visit) expression.
+  - A [Visit](#visit) expression.
 
-  - A [Boolean Any](#Boolean-Any) expression.
+  - A [Boolean Any](#any) expression.
 
-  - An [Boolean All](#Boolean-All) expression.
+  - An [Boolean All](#all) expression.
 
-  - Some statements like [If](#Statements-If), [For](#Statements-For), [While](#Statements-While) and
-    [Do](#Statements-Do) can also be used in expressions, see [Statement as
-    Expression](#Expressions-StatementAsExpression).
+  - Some statements like [If](#if), [For](#for), [While](#while) and
+    [Do](#do) can also be used in expressions, see [Statement as
+    Expression](#statementasexpression).
 
 ### Values
 
@@ -2630,315 +2630,315 @@ The expression is the basic unit of evaluation and may consist of the ingredient
 
 The different types of values.
 
-  - [Boolean](#Values-Boolean): Boolean values.
+  - [Boolean](#boolean): Boolean values.
     
-      - [Boolean All](#Boolean-All): All argument expressions are true.
+      - [Boolean All](#all): All argument expressions are true.
     
-      - [Boolean And](#Boolean-And): Boolean *and* operator.
+      - [Boolean And](#and): Boolean *and* operator.
     
-      - [Boolean Any](#Boolean-Any): Any combination of argument values is true.
+      - [Boolean Any](#any): Any combination of argument values is true.
     
-      - [Boolean Equivalence](#Boolean-Equivalence): The *equivalence* operator on Boolean values.
+      - [Boolean Equivalence](#equivalence): The *equivalence* operator on Boolean values.
     
-      - [Boolean IfDefinedElse](#Boolean-IfDefinedElse): Test whether expression has a defined value, otherwise provide
+      - [Boolean IfDefinedElse](#ifdefinedelse): Test whether expression has a defined value, otherwise provide
         alternative.
     
-      - [Boolean Implication](#Boolean-Implication): The *implication* operator on Boolean values.
+      - [Boolean Implication](#implication): The *implication* operator on Boolean values.
     
-      - [Boolean IsDefined](#Boolean-IsDefined): Test whether the value of an expression is defined.
+      - [Boolean IsDefined](#isdefined): Test whether the value of an expression is defined.
     
-      - [Boolean Match](#Boolean-Match): Match a pattern against an expression.
+      - [Boolean Match](#match): Match a pattern against an expression.
     
-      - [Boolean Negation](#Boolean-Negation): The *not* operator on Boolean values.
+      - [Boolean Negation](#negation): The *not* operator on Boolean values.
     
-      - [Boolean NoMatch](#Boolean-NoMatch): Negated \[Boolean Match\] operator.
+      - [Boolean NoMatch](#nomatch): Negated \[Boolean Match\] operator.
     
-      - [Boolean Or](#Boolean-Or): The *or* operator on Boolean values.
+      - [Boolean Or](#or): The *or* operator on Boolean values.
 
-  - [Constructor](#Values-Constructor): Constructors create values for user-defined datatypes (Algebraic Datatypes).
+  - [Constructor](#constructor): Constructors create values for user-defined datatypes (Algebraic Datatypes).
 
-  - [DateTime](#Values-DateTime): Date and time values.
+  - [DateTime](#datetime): Date and time values.
     
-      - [DateTime Equal](#DateTime-Equal): Equality on datetime values.
+      - [DateTime Equal](#equal): Equality on datetime values.
     
-      - [DateTime Field Selection](#DateTime-FieldSelection): Select a field from a datetime value.
+      - [DateTime Field Selection](#fieldselection): Select a field from a datetime value.
     
-      - [DateTime GreaterThan](#DateTime-GreaterThan): Greater than operator on datetime values.
+      - [DateTime GreaterThan](#greaterthan): Greater than operator on datetime values.
     
-      - [DateTime GreaterThanOrEqual](#DateTime-GreaterThanOrEqual): Greater than or equal operator on datetime values.
+      - [DateTime GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on datetime values.
     
-      - [DateTime LessThan](#DateTime-LessThan): Less than operator on datetime values.
+      - [DateTime LessThan](#lessthan): Less than operator on datetime values.
     
-      - [DateTime LessThanOrEqual](#DateTime-LessThanOrEqual): Less than or equal operator on datetime values.
+      - [DateTime LessThanOrEqual](#lessthanorequal): Less than or equal operator on datetime values.
     
-      - [DateTime NotEqual](#DateTime-NotEqual): Not equal operator on datetime values.
+      - [DateTime NotEqual](#notequal): Not equal operator on datetime values.
 
-  - [Integer](#Values-Integer): Integer values.
+  - [Integer](#integer): Integer values.
 
-  - [List](#Values-List): List values.
+  - [List](#list): List values.
     
-      - [List Append](#List-Append): Append an element at the end of a list.
+      - [List Append](#append): Append an element at the end of a list.
     
-      - [List Comprehension](#List-Comprehension): A list comprehension generates a list value.
+      - [List Comprehension](#comprehension): A list comprehension generates a list value.
     
-      - [List Concatenation](#List-Concatenation): Concatenate two lists.
+      - [List Concatenation](#concatenation): Concatenate two lists.
     
-      - [List Difference](#List-Difference): The difference between two lists.
+      - [List Difference](#difference): The difference between two lists.
     
-      - [List Equal](#List-Equal): Equality on lists.
+      - [List Equal](#equal): Equality on lists.
     
-      - [List Insert](#List-Insert): add an element in front of a list.
+      - [List Insert](#insert): add an element in front of a list.
     
-      - [List Intersection](#List-Intersection): Intersection of two lists.
+      - [List Intersection](#intersection): Intersection of two lists.
     
-      - [List NotEqual](#List-NotEqual): Not equal operator on lists.
+      - [List NotEqual](#notequal): Not equal operator on lists.
     
-      - [List Product](#List-Product): Compute the product of two lists.
+      - [List Product](#product): Compute the product of two lists.
     
-      - [List Slice](#List-Slice): Retrieve a slice of a list.
+      - [List Slice](#slice): Retrieve a slice of a list.
     
-      - [List Splice](#List-Splice): Splice the elements of a list in an enclosing list.
+      - [List Splice](#splice): Splice the elements of a list in an enclosing list.
     
-      - [List StrictSubList](#List-StrictSubList): The strict sublist operator on lists.
+      - [List StrictSubList](#strictsublist): The strict sublist operator on lists.
     
-      - [List StrictSuperList](#List-StrictSuperList): The strict super list operator on lists.
+      - [List StrictSuperList](#strictsuperlist): The strict super list operator on lists.
     
-      - [List SubList](#List-SubList): The sublist operator on lists.
+      - [List SubList](#sublist): The sublist operator on lists.
     
-      - [List Subscription](#List-Subscription): Retrieve a list element via its index.
+      - [List Subscription](#subscription): Retrieve a list element via its index.
     
-      - [List SuperList](#List-SuperList): The super list operator on lists.
+      - [List SuperList](#superlist): The super list operator on lists.
     
-      - [List in](#List-in): Membership test on list elements.
+      - [List in](#in): Membership test on list elements.
     
-      - [List notin](#List-notin): Negated membership test on lists.
+      - [List notin](#notin): Negated membership test on lists.
 
-  - [ListRelation](#Values-ListRelation): ListRelation values.
+  - [ListRelation](#listrelation): ListRelation values.
     
-      - [ListRelation CartesianProduct](#ListRelation-CartesianProduct): Cartesian product of two list relation values.
+      - [ListRelation CartesianProduct](#cartesianproduct): Cartesian product of two list relation values.
     
-      - [ListRelation Composition](#ListRelation-Composition): Composition of two list relation values.
+      - [ListRelation Composition](#composition): Composition of two list relation values.
     
-      - [ListRelation FieldSelection](#ListRelation-FieldSelection): Select a field (column) from a list relation value.
+      - [ListRelation FieldSelection](#fieldselection): Select a field (column) from a list relation value.
     
-      - [ListRelation Join](#ListRelation-Join): Join two list relation values.
+      - [ListRelation Join](#join): Join two list relation values.
     
-      - [ListRelation Reflexive Transitive Closure](#ListRelation-ReflexiveTransitiveClosure): The reflexive transitive
+      - [ListRelation Reflexive Transitive Closure](#reflexivetransitiveclosure): The reflexive transitive
         closure of a binary list relation.
     
-      - [ListRelation Subscription](#ListRelation-Subscription): Indexing of a list relation via tuple values.
+      - [ListRelation Subscription](#subscription): Indexing of a list relation via tuple values.
     
-      - [ListRelation Transitive Closure](#ListRelation-TransitiveClosure): Transitive closure on binary list relation
+      - [ListRelation Transitive Closure](#transitiveclosure): Transitive closure on binary list relation
         values.
 
-  - [Location](#Values-Location): (Source code) location values.
+  - [Location](#location): (Source code) location values.
     
-      - [Location AddSegment](#Location-AddSegment): Locations can be concatenated with strings to add segments to the
+      - [Location AddSegment](#addsegment): Locations can be concatenated with strings to add segments to the
         path component.
     
-      - [Location Equal](#Location-Equal): Equality operator on locations.
+      - [Location Equal](#equal): Equality operator on locations.
     
-      - [Location FieldSelection](#Location-FieldSelection): Field selection on locations.
+      - [Location FieldSelection](#fieldselection): Field selection on locations.
     
-      - [Location GreaterThan](#Location-GreaterThan): The greater than operator on location values.
+      - [Location GreaterThan](#greaterthan): The greater than operator on location values.
     
-      - [Location GreaterThanOrEqual](#Location-GreaterThanOrEqual): The greater than or equal operator on location
+      - [Location GreaterThanOrEqual](#greaterthanorequal): The greater than or equal operator on location
         values.
     
-      - [Location LessThan](#Location-LessThan): The less than operator on location values.
+      - [Location LessThan](#lessthan): The less than operator on location values.
     
-      - [Location LessThanOrEqual](#Location-LessThanOrEqual): The less than or equal operator on location values.
+      - [Location LessThanOrEqual](#lessthanorequal): The less than or equal operator on location values.
     
-      - [NotEqual](#Location-NotEqual): The not equal operator on location values.
+      - [NotEqual](#notequal): The not equal operator on location values.
 
-  - [Map](#Values-Map): Map values.
+  - [Map](#map): Map values.
     
-      - [Map Composition](#Map-Composition): Composition of two map values.
+      - [Map Composition](#composition): Composition of two map values.
     
-      - [Map Comprehension](#Map-Comprehension): A map comprehension generates a map value.
+      - [Map Comprehension](#comprehension): A map comprehension generates a map value.
     
-      - [Map Difference](#Map-Difference): The difference between two maps.
+      - [Map Difference](#difference): The difference between two maps.
     
-      - [Map Equal](#Map-Equal): Equality operator on maps.
+      - [Map Equal](#equal): Equality operator on maps.
     
-      - [Map Intersection](#Map-Intersection): Intersection of two maps.
+      - [Map Intersection](#intersection): Intersection of two maps.
     
-      - [Map NotEqual](#Map-NotEqual): Not equal operator on map values.
+      - [Map NotEqual](#notequal): Not equal operator on map values.
     
-      - [Map StrictSubMap](#Map-StrictSubMap): Strict submap operator on map values.
+      - [Map StrictSubMap](#strictsubmap): Strict submap operator on map values.
     
-      - [Map StrictSuperMap](#Map-StrictSuperMap): Strict supermap operator on map values.
+      - [Map StrictSuperMap](#strictsupermap): Strict supermap operator on map values.
     
-      - [Map SubMap](#Map-SubMap): Submap operator on map values.
+      - [Map SubMap](#submap): Submap operator on map values.
     
-      - [Map Subscription](#Map-Subscription): Retrieve a value by its key in map.
+      - [Map Subscription](#subscription): Retrieve a value by its key in map.
     
-      - [Map SuperMap](#Map-SuperMap): Supermap operator on map values.
+      - [Map SuperMap](#supermap): Supermap operator on map values.
     
-      - [Map Union](#Map-Union): Union of two maps.
+      - [Map Union](#union): Union of two maps.
     
-      - [Map in](#Map-in): Membership test on the keys of a map.
+      - [Map in](#in): Membership test on the keys of a map.
     
-      - [Map notin](#Map-notin): Negated membership test on the keys of a map.
+      - [Map notin](#notin): Negated membership test on the keys of a map.
 
-  - [Node](#Values-Node): Node values.
+  - [Node](#node): Node values.
     
-      - [Node Equal](#Node-Equal): Equal operator on node values.
+      - [Node Equal](#equal): Equal operator on node values.
     
-      - [Node GreaterThan](#Node-GreaterThan): Greater than operator on node values.
+      - [Node GreaterThan](#greaterthan): Greater than operator on node values.
     
-      - [Node GreaterThanOrEqual](#Node-GreaterThanOrEqual): Greater than or equal operator on node values.
+      - [Node GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on node values.
     
-      - [Node LessThan](#Node-LessThan): Less than operator on node values.
+      - [Node LessThan](#lessthan): Less than operator on node values.
     
-      - [Node LessThanOrEqual](#Node-LessThanOrEqual): Less than or equal operator on node values.
+      - [Node LessThanOrEqual](#lessthanorequal): Less than or equal operator on node values.
     
-      - [Node NotEqual](#Node-NotEqual): Not equal operator on node values.
+      - [Node NotEqual](#notequal): Not equal operator on node values.
     
-      - [Node Slice](#Node-Slice): Retrieve a slice of a node’s argument list.
+      - [Node Slice](#slice): Retrieve a slice of a node’s argument list.
     
-      - [Node Subscription](#Node-Subscription): Retrieve an argument of a node via its index.
+      - [Node Subscription](#subscription): Retrieve an argument of a node via its index.
 
-  - [Number](#Values-Number): Numeric values.
+  - [Number](#number): Numeric values.
     
-      - [Number Addition](#Number-Addition): Addition on numeric values.
+      - [Number Addition](#addition): Addition on numeric values.
     
-      - [Number Conditional](#Number-Conditional): Conditional expression for numeric values.
+      - [Number Conditional](#conditional): Conditional expression for numeric values.
     
-      - [Number Division](#Number-Division): Division on numeric values.
+      - [Number Division](#division): Division on numeric values.
     
-      - [Number Equal](#Number-Equal): Equality operator on numeric values.
+      - [Number Equal](#equal): Equality operator on numeric values.
     
-      - [Number GreaterThan](#Number-GreaterThan): Greater than operator on numeric values.
+      - [Number GreaterThan](#greaterthan): Greater than operator on numeric values.
     
-      - [Number GreaterThanOrEqual](#Number-GreaterThanOrEqual): Greater than or equal operator on numeric values.
+      - [Number GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on numeric values.
     
-      - [Number LessThan](#Number-LessThan): Less than operator on numeric values.
+      - [Number LessThan](#lessthan): Less than operator on numeric values.
     
-      - [Number LessThanOrEqual](#Number-LessThanOrEqual): Less than or equal operator on numeric values.
+      - [Number LessThanOrEqual](#lessthanorequal): Less than or equal operator on numeric values.
     
-      - [Number Multiplication](#Number-Multiplication): Multiply two numeric values.
+      - [Number Multiplication](#multiplication): Multiply two numeric values.
     
-      - [Number Negation](#Number-Negation): Negate a numeric value.
+      - [Number Negation](#negation): Negate a numeric value.
     
-      - [Number NotEqual](#Number-NotEqual): Not equal operator on numeric values.
+      - [Number NotEqual](#notequal): Not equal operator on numeric values.
     
-      - [Number Remainder](#Number-Remainder): Remainder of two integer values.
+      - [Number Remainder](#remainder): Remainder of two integer values.
     
-      - [Number Subtraction](#Number-Subtraction): Subtract two numeric values.
+      - [Number Subtraction](#subtraction): Subtract two numeric values.
 
-  - [Range](#Values-Range): Numeric range of values.
+  - [Range](#range): Numeric range of values.
 
-  - [Real](#Values-Real): Real values.
+  - [Real](#real): Real values.
 
-  - [ReifiedTypes](#Values-ReifiedTypes): Types can be represented by values.
+  - [ReifiedTypes](#reifiedtypes): Types can be represented by values.
 
-  - [Relation](#Values-Relation): Relation values.
+  - [Relation](#relation): Relation values.
     
-      - [Relation CartesianProduct](#Relation-CartesianProduct): Cartesian product of two relation values.
+      - [Relation CartesianProduct](#cartesianproduct): Cartesian product of two relation values.
     
-      - [Relation Composition](#Relation-Composition): Composition of two relation values.
+      - [Relation Composition](#composition): Composition of two relation values.
     
-      - [Relation FieldSelection](#Relation-FieldSelection): Select a field (column) from a relation value.
+      - [Relation FieldSelection](#fieldselection): Select a field (column) from a relation value.
     
-      - [Relation Join](#Relation-Join): Join two relation values.
+      - [Relation Join](#join): Join two relation values.
     
-      - [Relation ReflexiveTransitiveClosure](#Relation-ReflexiveTransitiveClosure): The reflexive transitive closure of
+      - [Relation ReflexiveTransitiveClosure](#reflexivetransitiveclosure): The reflexive transitive closure of
         a binary relation.
     
-      - [Relation Subscription](#Relation-Subscription): Indexing of a relation via tuple values.
+      - [Relation Subscription](#subscription): Indexing of a relation via tuple values.
     
-      - [Relation TransitiveClosure](#Relation-TransitiveClosure): Transitive closure on binary relation values.
+      - [Relation TransitiveClosure](#transitiveclosure): Transitive closure on binary relation values.
 
-  - [Set](#Values-Set): Set values.
+  - [Set](#set): Set values.
     
-      - [Set Comprehension](#Set-Comprehension): A set comprehension generates a set value.
+      - [Set Comprehension](#comprehension): A set comprehension generates a set value.
     
-      - [Set Difference](#Set-Difference): The difference between two sets.
+      - [Set Difference](#difference): The difference between two sets.
     
-      - [Set Equal](#Set-Equal): Equal operator on set values.
+      - [Set Equal](#equal): Equal operator on set values.
     
-      - [Set Insert](#Set-Insert): Add an element to a set.
+      - [Set Insert](#insert): Add an element to a set.
     
-      - [Set Intersection](#Set-Intersection): Intersection of two sets.
+      - [Set Intersection](#intersection): Intersection of two sets.
     
-      - [Set NotEqual](#Set-NotEqual): Not equal operator on set values.
+      - [Set NotEqual](#notequal): Not equal operator on set values.
     
-      - [Set Product](#Set-Product): The product of two set values.
+      - [Set Product](#product): The product of two set values.
     
-      - [Set Splice](#Set-Splice): Splice the elements of a set in an enclosing set.
+      - [Set Splice](#splice): Splice the elements of a set in an enclosing set.
     
-      - [Set StrictSubSet](#Set-StrictSubSet): Strict subset operator on set values.
+      - [Set StrictSubSet](#strictsubset): Strict subset operator on set values.
     
-      - [Set StrictSuperSet](#Set-StrictSuperSet): Strict superset operator on set values.
+      - [Set StrictSuperSet](#strictsuperset): Strict superset operator on set values.
     
-      - [Set SubSet](#Set-SubSet): Subset operator on set values.
+      - [Set SubSet](#subset): Subset operator on set values.
     
-      - [Set SuperSet](#Set-SuperSet): Superset operator on set values.
+      - [Set SuperSet](#superset): Superset operator on set values.
     
-      - [Set Union](#Set-Union): Union of two set values.
+      - [Set Union](#union): Union of two set values.
     
-      - [Set in](#Set-in): Membership test on set values.
+      - [Set in](#in): Membership test on set values.
     
-      - [Set notin](#Set-notin): Negated membership test on set values.
+      - [Set notin](#notin): Negated membership test on set values.
 
-  - [String](#Values-String): String values.
+  - [String](#string): String values.
     
-      - [String Concatenation](#String-Concatenation): Concatenate two strings.
+      - [String Concatenation](#concatenation): Concatenate two strings.
     
-      - [String Equal](#String-Equal): Equality operator on string values.
+      - [String Equal](#equal): Equality operator on string values.
     
-      - [String GreaterThan](#String-GreaterThan): Greater than operator on string values.
+      - [String GreaterThan](#greaterthan): Greater than operator on string values.
     
-      - [String GreaterThanOrEqual](#String-GreaterThanOrEqual): Greater than or equal operator on string values.
+      - [String GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on string values.
     
-      - [String LessThan](#String-LessThan): Less than operator on string values.
+      - [String LessThan](#lessthan): Less than operator on string values.
     
-      - [String LessThanOrEqual](#String-LessThanOrEqual): Less than or equal operator on string values.
+      - [String LessThanOrEqual](#lessthanorequal): Less than or equal operator on string values.
     
-      - [String NotEqual](#String-NotEqual): Not equal operator on string values.
+      - [String NotEqual](#notequal): Not equal operator on string values.
     
-      - [String Slice](#String-Slice): Retrieve a slice of a string.
+      - [String Slice](#slice): Retrieve a slice of a string.
     
-      - [String Subscription](#String-Subscription): Retrieve a substring via its index.
+      - [String Subscription](#subscription): Retrieve a substring via its index.
 
-  - [Tuple](#Values-Tuple): Tuple values.
+  - [Tuple](#tuple): Tuple values.
     
-      - [Tuple Concatenation](#Tuple-Concatenation): Concatenate two tuple values.
+      - [Tuple Concatenation](#concatenation): Concatenate two tuple values.
     
-      - [Tuple Equal](#Tuple-Equal): Equality operator on tuple values.
+      - [Tuple Equal](#equal): Equality operator on tuple values.
     
-      - [Tuple FieldSelection](#Tuple-FieldSelection): Select a field from a tuple by its field name.
+      - [Tuple FieldSelection](#fieldselection): Select a field from a tuple by its field name.
     
-      - [Tuple GreaterThan](#Tuple-GreaterThan): Greater than operator on tuple values.
+      - [Tuple GreaterThan](#greaterthan): Greater than operator on tuple values.
     
-      - [Tuple GreaterThanOrEqual](#Tuple-GreaterThanOrEqual): Greater than or equal operator on tuple values.
+      - [Tuple GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on tuple values.
     
-      - [Tuple LessThan](#Tuple-LessThan): Less than operator on tuple values.
+      - [Tuple LessThan](#lessthan): Less than operator on tuple values.
     
-      - [Tuple LessThanOrEqual](#Tuple-LessThanOrEqual): Less than or equal operator on tuple values.
+      - [Tuple LessThanOrEqual](#lessthanorequal): Less than or equal operator on tuple values.
     
-      - [Tuple NotEqual](#Tuple-NotEqual): Not equal operator on tuple values.
+      - [Tuple NotEqual](#notequal): Not equal operator on tuple values.
     
-      - [Tuple Subscription](#Tuple-Subscription): Retrieve a tuple field by its index position.
+      - [Tuple Subscription](#subscription): Retrieve a tuple field by its index position.
 
-  - [Value](#Values-Value): Values of type `value`.
+  - [Value](#value): Values of type `value`.
     
-      - [Value Conditional](#Value-Conditional): Conditional expression on values.
+      - [Value Conditional](#conditional): Conditional expression on values.
     
-      - [Value Equal](#Value-Equal): Equal operator on values.
+      - [Value Equal](#equal): Equal operator on values.
     
-      - [Value GreaterThan](#Value-GreaterThan): Greater than operator on values.
+      - [Value GreaterThan](#greaterthan): Greater than operator on values.
     
-      - [Value GreaterThanOrEqual](#Value-GreaterThanOrEqual): Greater than or equal operator on values.
+      - [Value GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on values.
     
-      - [Value LessThan](#Value-LessThan): Less than operator on values.
+      - [Value LessThan](#lessthan): Less than operator on values.
     
-      - [Value LessThanOrEqual](#Value-LessThanOrEqual): Less than or equal operator on values.
+      - [Value LessThanOrEqual](#lessthanorequal): Less than or equal operator on values.
     
-      - [Value NotEqual](#Value-NotEqual): Not equal operator on values.
+      - [Value NotEqual](#notequal): Not equal operator on values.
 
-  - [Void](#Values-Void): Values of type `void`.
+  - [Void](#void): Values of type `void`.
 
 ### Boolean
 
@@ -2963,7 +2963,7 @@ semantics. This means that the operands are evaluated until the outcome of the o
 
 Most operators are self-explanatory except the match (:=) and no match (\!:=) operators that are also the main reason to
 treat Boolean operator expressions separately. Although we describe patterns in full detail in
-[Patterns](#Rascal-Patterns), a preview is useful here. A pattern can
+[Patterns](#patterns), a preview is useful here. A pattern can
 
   - match (or not match) any arbitrary value (that we will call the *subject value*);
 
@@ -2987,7 +2987,7 @@ is evaluated as follows:
   - if the match fails, no variables are bound and the match expression yields `false`.
 
 This looks and *is* nice and dandy, so why all this fuss about Boolean operators? The catch is that—​as we will see in
-[Patterns](#Rascal-Patterns)--a match need not be unique. This means that there may be more than one way of matching the
+[Patterns](#patterns)--a match need not be unique. This means that there may be more than one way of matching the
 subject value resulting in different variable bindings.
 
 This behaviour is applicable in the context of all Rascal constructs where a pattern match determines the flow of
@@ -2996,42 +2996,42 @@ control of the program, in particular:
   - Boolean expressions: when a pattern match fails that is part of a Boolean expression, further solutions are tried in
     order to try to make the Boolean expression true.
 
-  - Tests in [For](#Statements-For), [While](#Statements-While), [Do](#Statements-Do) statements.
+  - Tests in [For](#for), [While](#while), [Do](#do) statements.
 
-  - Tests in [Boolean Any](#Boolean-Any) and [Boolean All](#Boolean-All) expressions.
+  - Tests in [Boolean Any](#any) and [Boolean All](#all) expressions.
 
-  - Tests and [Enumerator](#Comprehensions-Enumerator)s in comprehensions.
+  - Tests and [Enumerator](#enumerator)s in comprehensions.
 
-  - Pattern matches in cases of a [Visit](#Expressions-Visit).
+  - Pattern matches in cases of a [Visit](#visit).
 
-  - Pattern matches in cases of a [Switch](#Statements-Switch).
+  - Pattern matches in cases of a [Switch](#switch).
 
 The following operators are provided for Boolean:
 
-  - [Boolean All](#Boolean-All): All argument expressions are true.
+  - [Boolean All](#all): All argument expressions are true.
 
-  - [Boolean And](#Boolean-And): Boolean *and* operator.
+  - [Boolean And](#and): Boolean *and* operator.
 
-  - [Boolean Any](#Boolean-Any): Any combination of argument values is true.
+  - [Boolean Any](#any): Any combination of argument values is true.
 
-  - [Boolean Equivalence](#Boolean-Equivalence): The *equivalence* operator on Boolean values.
+  - [Boolean Equivalence](#equivalence): The *equivalence* operator on Boolean values.
 
-  - [Boolean IfDefinedElse](#Boolean-IfDefinedElse): Test whether expression has a defined value, otherwise provide
+  - [Boolean IfDefinedElse](#ifdefinedelse): Test whether expression has a defined value, otherwise provide
     alternative.
 
-  - [Boolean Implication](#Boolean-Implication): The *implication* operator on Boolean values.
+  - [Boolean Implication](#implication): The *implication* operator on Boolean values.
 
-  - [Boolean IsDefined](#Boolean-IsDefined): Test whether the value of an expression is defined.
+  - [Boolean IsDefined](#isdefined): Test whether the value of an expression is defined.
 
-  - [Boolean Match](#Boolean-Match): Match a pattern against an expression.
+  - [Boolean Match](#match): Match a pattern against an expression.
 
-  - [Boolean Negation](#Boolean-Negation): The *not* operator on Boolean values.
+  - [Boolean Negation](#negation): The *not* operator on Boolean values.
 
-  - [Boolean NoMatch](#Boolean-NoMatch): Negated \[Boolean Match\] operator.
+  - [Boolean NoMatch](#nomatch): Negated \[Boolean Match\] operator.
 
-  - [Boolean Or](#Boolean-Or): The *or* operator on Boolean values.
+  - [Boolean Or](#or): The *or* operator on Boolean values.
 
-There are also [library functions](/Libraries#Prelude-Boolean) available for Booleans.
+There are also [library functions](/docs/Libraries#boolean) available for Booleans.
 
 **Examples.**
 
@@ -3311,7 +3311,7 @@ Types
 If no exception is generated during the evaluation of *Exp*<sub>1</sub>, the result of `Exp1 ? Exp2` is the value of
 *Exp*<sub>1</sub>. Otherwise, it is the value of *Exp*<sub>2</sub>.
 
-Also see [???](#Boolean%20isDefined) and [Assignment](#Statements-Assignment).
+Also see [???](#boolean-isDefined) and [Assignment](#assignment).
 
 **Examples.**
 
@@ -3428,13 +3428,13 @@ Match a pattern against an expression.
 
 | `Pat`                        | `Exp`   | `Pat := Exp` |
 | ---------------------------- | ------- | ------------ |
-| [Patterns](#Rascal-Patterns) | `value` | `bool`       |
+| [Patterns](#patterns) | `value` | `bool`       |
 
 Types
 
 **Description.**
 
-See [???](#Pattern%20Matching) for an introduction to pattern matching and [Patterns](#Rascal-Patterns) for a complete
+See [???](#pattern-Matching) for an introduction to pattern matching and [Patterns](#patterns) for a complete
 description.
 
 **Examples.**
@@ -3494,7 +3494,7 @@ Types
 
 **Description.**
 
-See [???](#Pattern%20Matching) for an introduction to pattern matching and [Patterns](#Rascal-Patterns) for a complete
+See [???](#pattern-Matching) for an introduction to pattern matching and [Patterns](#patterns) for a complete
 description.
 
 **Examples.**
@@ -3575,7 +3575,7 @@ In ordinary programming languages record types or classes exist to introduce a n
 related, named, values and to provide access to the elements of such a collection through their name.
 
 In Rascal, algebraic data types provide this facility. They have to be declared, see [Algebraic Data
-Type](#Declarations-AlgebraicDataType), and then values can be created using calls to the declared constructor
+Type](#ADT), and then values can be created using calls to the declared constructor
 functions. The constructor *Name* should correspond (regarding name, arity and argument types) to one of the
 alternatives in the ADT declaration.
 
@@ -3584,7 +3584,7 @@ data value is constructed in accordance with the declared data type using the va
 the constructor. This data value is used as value of the constructor. Constructors are functions that can be used in all
 contexts where functions can be used.
 
-Observe that the syntax of a constructor is identical to the syntax of an function [Call](#Expressions-Call).
+Observe that the syntax of a constructor is identical to the syntax of an function [Call](#call).
 
 **Examples.**
 
@@ -3638,8 +3638,8 @@ The following fields provide access to information about the value, but cannot b
   - `century`: returns the century component of a year for date or datetime values.
 
 The following fields provide access to the individual components of date, time and datetime values, and can be accessed
-using [DateTime Field Selection](#DateTime-FieldSelection) and be assigned using [DateTime Field
-Selection](#DateTime-FieldSelection):
+using [DateTime Field Selection](#fieldselection) and be assigned using [DateTime Field
+Selection](#fieldselection):
 
   - `year`
 
@@ -3678,37 +3678,37 @@ variable of type `datetime`.
 
 The following operators are defined for DateTime:
 
-  - [DateTime Equal](#DateTime-Equal): Equality on datetime values.
+  - [DateTime Equal](#equal): Equality on datetime values.
 
-  - [DateTime Field Selection](#DateTime-FieldSelection): Select a field from a datetime value.
+  - [DateTime Field Selection](#fieldselection): Select a field from a datetime value.
 
-  - [DateTime GreaterThan](#DateTime-GreaterThan): Greater than operator on datetime values.
+  - [DateTime GreaterThan](#greaterthan): Greater than operator on datetime values.
 
-  - [DateTime GreaterThanOrEqual](#DateTime-GreaterThanOrEqual): Greater than or equal operator on datetime values.
+  - [DateTime GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on datetime values.
 
-  - [DateTime LessThan](#DateTime-LessThan): Less than operator on datetime values.
+  - [DateTime LessThan](#lessthan): Less than operator on datetime values.
 
-  - [DateTime LessThanOrEqual](#DateTime-LessThanOrEqual): Less than or equal operator on datetime values.
+  - [DateTime LessThanOrEqual](#lessthanorequal): Less than or equal operator on datetime values.
 
-  - [DateTime NotEqual](#DateTime-NotEqual): Not equal operator on datetime values.
+  - [DateTime NotEqual](#notequal): Not equal operator on datetime values.
 
 The following functions are defined for DateTime:
 
-  - [DateTime Equal](#DateTime-Equal): Equality on datetime values.
+  - [DateTime Equal](#equal): Equality on datetime values.
 
-  - [DateTime Field Selection](#DateTime-FieldSelection): Select a field from a datetime value.
+  - [DateTime Field Selection](#fieldselection): Select a field from a datetime value.
 
-  - [DateTime GreaterThan](#DateTime-GreaterThan): Greater than operator on datetime values.
+  - [DateTime GreaterThan](#greaterthan): Greater than operator on datetime values.
 
-  - [DateTime GreaterThanOrEqual](#DateTime-GreaterThanOrEqual): Greater than or equal operator on datetime values.
+  - [DateTime GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on datetime values.
 
-  - [DateTime LessThan](#DateTime-LessThan): Less than operator on datetime values.
+  - [DateTime LessThan](#lessthan): Less than operator on datetime values.
 
-  - [DateTime LessThanOrEqual](#DateTime-LessThanOrEqual): Less than or equal operator on datetime values.
+  - [DateTime LessThanOrEqual](#lessthanorequal): Less than or equal operator on datetime values.
 
-  - [DateTime NotEqual](#DateTime-NotEqual): Not equal operator on datetime values.
+  - [DateTime NotEqual](#notequal): Not equal operator on datetime values.
 
-There are also [library functions](/Libraries#Prelude-DateTime) available for DateTime.
+There are also [library functions](/docs/Libraries#datetime) available for DateTime.
 
 **Examples.**
 
@@ -3785,7 +3785,7 @@ Types
 **Description.**
 
 Field selection applies to `datetime` values. *Name* should be one of the supported fields listed in
-[DateTime](#Values-DateTime) and returns the value of that field. Name stands for itself and is not evaluated.
+[DateTime](#datetime) and returns the value of that field. Name stands for itself and is not evaluated.
 
 ##### DateTime GreaterThan
 
@@ -3944,7 +3944,7 @@ sequence of digits of arbitrary length.
 
 The integer values are represented by the type `int` and are written as usual. They can be *arbitrarily large*.
 
-See [Number](#Values-Number) for all operations and functions on integers, reals and numbers.
+See [Number](#number) for all operations and functions on integers, reals and numbers.
 
   - `12`
 
@@ -3986,43 +3986,43 @@ to be prefixed by the splice operator `*`.
 
 The following operators are provided on list:
 
-  - [List Append](#List-Append): Append an element at the end of a list.
+  - [List Append](#append): Append an element at the end of a list.
 
-  - [List Comprehension](#List-Comprehension): A list comprehension generates a list value.
+  - [List Comprehension](#comprehension): A list comprehension generates a list value.
 
-  - [List Concatenation](#List-Concatenation): Concatenate two lists.
+  - [List Concatenation](#concatenation): Concatenate two lists.
 
-  - [List Difference](#List-Difference): The difference between two lists.
+  - [List Difference](#difference): The difference between two lists.
 
-  - [List Equal](#List-Equal): Equality on lists.
+  - [List Equal](#equal): Equality on lists.
 
-  - [List Insert](#List-Insert): add an element in front of a list.
+  - [List Insert](#insert): add an element in front of a list.
 
-  - [List Intersection](#List-Intersection): Intersection of two lists.
+  - [List Intersection](#intersection): Intersection of two lists.
 
-  - [List NotEqual](#List-NotEqual): Not equal operator on lists.
+  - [List NotEqual](#notequal): Not equal operator on lists.
 
-  - [List Product](#List-Product): Compute the product of two lists.
+  - [List Product](#product): Compute the product of two lists.
 
-  - [List Slice](#List-Slice): Retrieve a slice of a list.
+  - [List Slice](#slice): Retrieve a slice of a list.
 
-  - [List Splice](#List-Splice): Splice the elements of a list in an enclosing list.
+  - [List Splice](#splice): Splice the elements of a list in an enclosing list.
 
-  - [List StrictSubList](#List-StrictSubList): The strict sublist operator on lists.
+  - [List StrictSubList](#strictsublist): The strict sublist operator on lists.
 
-  - [List StrictSuperList](#List-StrictSuperList): The strict super list operator on lists.
+  - [List StrictSuperList](#strictsuperlist): The strict super list operator on lists.
 
-  - [List SubList](#List-SubList): The sublist operator on lists.
+  - [List SubList](#sublist): The sublist operator on lists.
 
-  - [List Subscription](#List-Subscription): Retrieve a list element via its index.
+  - [List Subscription](#subscription): Retrieve a list element via its index.
 
-  - [List SuperList](#List-SuperList): The super list operator on lists.
+  - [List SuperList](#superlist): The super list operator on lists.
 
-  - [List in](#List-in): Membership test on list elements.
+  - [List in](#in): Membership test on list elements.
 
-  - [List notin](#List-notin): Negated membership test on lists.
+  - [List notin](#notin): Negated membership test on lists.
 
-There are also [library functions](/Libraries#Prelude-List) available for List.
+There are also [library functions](/docs/Libraries#list) available for List.
 
 **Examples.**
 
@@ -4057,8 +4057,8 @@ Types
 
 **Description.**
 
-The operator `+` appends an element at the end of a list. The `+` is one of those [Operators](#Expressions-Operators)
-which are overloaded. It can also mean [List Insert](#List-Insert) or [List Concatenation](#List-Concatenation) for
+The operator `+` appends an element at the end of a list. The `+` is one of those [Operators](#operators)
+which are overloaded. It can also mean [List Insert](#insert) or [List Concatenation](#concatenation) for
 example.
 
 **Examples.**
@@ -4068,7 +4068,7 @@ example.
 [1] + 2;
 ```
 
-  - If both operands of `+` are a list, then it acts as [List Concatenation](#List-Concatenation)
+  - If both operands of `+` are a list, then it acts as [List Concatenation](#concatenation)
 
 This is concatenation:
 
@@ -4102,7 +4102,7 @@ Types
 
 A list comprehension consists of a number of contributing expressions *Exp*<sub>1</sub>, *Exp*<sub>2</sub>, …​ and a
 number of generators *Gen*<sub>1</sub>, *Gen*<sub>2</sub>, *Gen*<sub>3</sub>, …​ that are evaluated as described in
-[Comprehensions](#Expressions-Comprehensions).
+[Comprehensions](#comprehensions).
 
 **Examples.**
 
@@ -4138,7 +4138,7 @@ Types
 
 The `+` operator concatenates the elements of the two lists in order of appearance.
 
-Note that the same operator is overloaded for [List Insert](#List-Insert) and [List Append](#List-Append).
+Note that the same operator is overloaded for [List Insert](#insert) and [List Append](#append).
 
 **Examples.**
 
@@ -4233,8 +4233,8 @@ Types
 **Description.**
 
 The `+` operator can insert an element in front of a list. Note that `+` is one of the
-[Operators](#Expressions-Operators) that is overloaded, it is also [List Concatenation](#List-Concatenation) and [List
-Append](#List-Append) for example.
+[Operators](#operators) that is overloaded, it is also [List Concatenation](#concatenation) and [List
+Append](#append) for example.
 
 **Examples.**
 
@@ -4244,8 +4244,8 @@ Append](#List-Append) for example.
 1 + [2,3]
 ```
 
-  - If the first operand before the `+` is a list, `+` acts as [List Concatenation](#List-Concatenation) and not as
-    [List Insert](#List-Insert)
+  - If the first operand before the `+` is a list, `+` acts as [List Concatenation](#concatenation) and not as
+    [List Insert](#insert)
 
 This is concatenation:
 
@@ -4751,28 +4751,28 @@ for `list[tuple[T1 L1, T2 L2, …​ ]]`.
 An n-ary list relation with m tuples is denoted by `[< E11, E12, …​, E1n>,< E21, E22, …​, E2n>, …​, < Em1, Em2, …​,
 Emn>]`, where the *E*<sub>ij</sub> are expressions that yield the desired element type *T*<sub>i</sub>.
 
-Since list relations are a form of list all operations (see [List](#Values-List)) and functions (see
-[???](#Prelude-List)) are also applicable to relations.
+Since list relations are a form of list all operations (see [List](#list)) and functions (see
+[???](#list)) are also applicable to relations.
 
 The following additional operators are provided for list relations:
 
-  - [ListRelation CartesianProduct](#ListRelation-CartesianProduct): Cartesian product of two list relation values.
+  - [ListRelation CartesianProduct](#cartesianproduct): Cartesian product of two list relation values.
 
-  - [ListRelation Composition](#ListRelation-Composition): Composition of two list relation values.
+  - [ListRelation Composition](#composition): Composition of two list relation values.
 
-  - [ListRelation FieldSelection](#ListRelation-FieldSelection): Select a field (column) from a list relation value.
+  - [ListRelation FieldSelection](#fieldselection): Select a field (column) from a list relation value.
 
-  - [ListRelation Join](#ListRelation-Join): Join two list relation values.
+  - [ListRelation Join](#join): Join two list relation values.
 
-  - [ListRelation Reflexive Transitive Closure](#ListRelation-ReflexiveTransitiveClosure): The reflexive transitive
+  - [ListRelation Reflexive Transitive Closure](#reflexivetransitiveclosure): The reflexive transitive
     closure of a binary list relation.
 
-  - [ListRelation Subscription](#ListRelation-Subscription): Indexing of a list relation via tuple values.
+  - [ListRelation Subscription](#subscription): Indexing of a list relation via tuple values.
 
-  - [ListRelation Transitive Closure](#ListRelation-TransitiveClosure): Transitive closure on binary list relation
+  - [ListRelation Transitive Closure](#transitiveclosure): Transitive closure on binary list relation
     values.
 
-There are also [library functions](/Libraries#Prelude-ListRelation) available for ListRelation.
+There are also [library functions](/docs/Libraries#listrelation) available for ListRelation.
 
 **Examples.**
 
@@ -4935,7 +4935,7 @@ relation R:
   - …​
 
 then the reflexive transitive closure R\* can be defined in two ways: (also see [ListRelation Transitive
-Closure](#ListRelation-TransitiveClosure)):
+Closure](#transitiveclosure)):
 
   - R\* = R<sup>0</sup> + R<sup>1</sup> + R<sup>2</sup> + R<sup>3</sup> + …​
 
@@ -5262,7 +5262,7 @@ Types
 **Description.**
 
 Field selection applies to locations. *Name* should be one of the supported fields listed in
-[Location](#Values-Location) and returns the value of that field. Name stands for itself and is not evaluated.
+[Location](#location) and returns the value of that field. Name stands for itself and is not evaluated.
 
 ##### Location GreaterThan
 
@@ -5396,33 +5396,33 @@ Maps resemble functions rather than relations in the sense that only a single va
 
 The following functions are provided for maps:
 
-  - [Map Composition](#Map-Composition): Composition of two map values.
+  - [Map Composition](#composition): Composition of two map values.
 
-  - [Map Comprehension](#Map-Comprehension): A map comprehension generates a map value.
+  - [Map Comprehension](#comprehension): A map comprehension generates a map value.
 
-  - [Map Difference](#Map-Difference): The difference between two maps.
+  - [Map Difference](#difference): The difference between two maps.
 
-  - [Map Equal](#Map-Equal): Equality operator on maps.
+  - [Map Equal](#equal): Equality operator on maps.
 
-  - [Map Intersection](#Map-Intersection): Intersection of two maps.
+  - [Map Intersection](#intersection): Intersection of two maps.
 
-  - [Map NotEqual](#Map-NotEqual): Not equal operator on map values.
+  - [Map NotEqual](#notequal): Not equal operator on map values.
 
-  - [Map StrictSubMap](#Map-StrictSubMap): Strict submap operator on map values.
+  - [Map StrictSubMap](#strictsubmap): Strict submap operator on map values.
 
-  - [Map StrictSuperMap](#Map-StrictSuperMap): Strict supermap operator on map values.
+  - [Map StrictSuperMap](#strictsupermap): Strict supermap operator on map values.
 
-  - [Map SubMap](#Map-SubMap): Submap operator on map values.
+  - [Map SubMap](#submap): Submap operator on map values.
 
-  - [Map Subscription](#Map-Subscription): Retrieve a value by its key in map.
+  - [Map Subscription](#subscription): Retrieve a value by its key in map.
 
-  - [Map SuperMap](#Map-SuperMap): Supermap operator on map values.
+  - [Map SuperMap](#supermap): Supermap operator on map values.
 
-  - [Map Union](#Map-Union): Union of two maps.
+  - [Map Union](#union): Union of two maps.
 
-  - [Map in](#Map-in): Membership test on the keys of a map.
+  - [Map in](#in): Membership test on the keys of a map.
 
-  - [Map notin](#Map-notin): Negated membership test on the keys of a map.
+  - [Map notin](#notin): Negated membership test on the keys of a map.
 
 **Examples.**
 
@@ -5482,7 +5482,7 @@ Types
 A map comprehension consists of a number of two contributing expressions *Exp*<sub>1</sub> (for key values), and
 *Exp*<sub>2</sub> (the values associated with those key values) and a number of generators *Gen*<sub>1</sub>,
 *Gen*<sub>2</sub>, *Gen*<sub>3</sub>, …​ that are evaluated as described in
-[Comprehensions](#Expressions-Comprehensions).
+[Comprehensions](#comprehensions).
 
 **Examples.**
 
@@ -5889,21 +5889,21 @@ Values of type `node` represent untyped trees and are constructed as follows:
 
 The following are provided for nodes:
 
-  - [Node Equal](#Node-Equal): Equal operator on node values.
+  - [Node Equal](#equal): Equal operator on node values.
 
-  - [Node GreaterThan](#Node-GreaterThan): Greater than operator on node values.
+  - [Node GreaterThan](#greaterthan): Greater than operator on node values.
 
-  - [Node GreaterThanOrEqual](#Node-GreaterThanOrEqual): Greater than or equal operator on node values.
+  - [Node GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on node values.
 
-  - [Node LessThan](#Node-LessThan): Less than operator on node values.
+  - [Node LessThan](#lessthan): Less than operator on node values.
 
-  - [Node LessThanOrEqual](#Node-LessThanOrEqual): Less than or equal operator on node values.
+  - [Node LessThanOrEqual](#lessthanorequal): Less than or equal operator on node values.
 
-  - [Node NotEqual](#Node-NotEqual): Not equal operator on node values.
+  - [Node NotEqual](#notequal): Not equal operator on node values.
 
-  - [Node Slice](#Node-Slice): Retrieve a slice of a node’s argument list.
+  - [Node Slice](#slice): Retrieve a slice of a node’s argument list.
 
-  - [Node Subscription](#Node-Subscription): Retrieve an argument of a node via its index.
+  - [Node Subscription](#subscription): Retrieve an argument of a node via its index.
 
 **Examples.**
 
@@ -6127,7 +6127,7 @@ Types
 
 **Description.**
 
-A Node slice is similar to a list [List Slice](#List-Slice) and uses the integer values of *Exp*<sub>2</sub> and
+A Node slice is similar to a list [List Slice](#slice) and uses the integer values of *Exp*<sub>2</sub> and
 *Exp*<sub>4</sub> to determine the `begin` (**inclusive**) and `end` (**exclusive**) of a slice from the children of the
 node value *ND* of *Exp*<sub>1</sub>. Negative indices count from the end of the list of children backwards. Using the
 second form, an extra index *Exp*<sub>3</sub> is given that determines the index of the second element in the slice and
@@ -6291,31 +6291,31 @@ first converted to real and the real operator is applied.
 
 The following operations are provided on numbers:
 
-  - [Number Addition](#Number-Addition): Addition on numeric values.
+  - [Number Addition](#addition): Addition on numeric values.
 
-  - [Number Conditional](#Number-Conditional): Conditional expression for numeric values.
+  - [Number Conditional](#conditional): Conditional expression for numeric values.
 
-  - [Number Division](#Number-Division): Division on numeric values.
+  - [Number Division](#division): Division on numeric values.
 
-  - [Number Equal](#Number-Equal): Equality operator on numeric values.
+  - [Number Equal](#equal): Equality operator on numeric values.
 
-  - [Number GreaterThan](#Number-GreaterThan): Greater than operator on numeric values.
+  - [Number GreaterThan](#greaterthan): Greater than operator on numeric values.
 
-  - [Number GreaterThanOrEqual](#Number-GreaterThanOrEqual): Greater than or equal operator on numeric values.
+  - [Number GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on numeric values.
 
-  - [Number LessThan](#Number-LessThan): Less than operator on numeric values.
+  - [Number LessThan](#lessthan): Less than operator on numeric values.
 
-  - [Number LessThanOrEqual](#Number-LessThanOrEqual): Less than or equal operator on numeric values.
+  - [Number LessThanOrEqual](#lessthanorequal): Less than or equal operator on numeric values.
 
-  - [Number Multiplication](#Number-Multiplication): Multiply two numeric values.
+  - [Number Multiplication](#multiplication): Multiply two numeric values.
 
-  - [Number Negation](#Number-Negation): Negate a numeric value.
+  - [Number Negation](#negation): Negate a numeric value.
 
-  - [Number NotEqual](#Number-NotEqual): Not equal operator on numeric values.
+  - [Number NotEqual](#notequal): Not equal operator on numeric values.
 
-  - [Number Remainder](#Number-Remainder): Remainder of two integer values.
+  - [Number Remainder](#remainder): Remainder of two integer values.
 
-  - [Number Subtraction](#Number-Subtraction): Subtract two numeric values.
+  - [Number Subtraction](#subtraction): Subtract two numeric values.
 
 ##### Number Addition
 
@@ -6742,7 +6742,7 @@ Ranges are a shorthand for describing lists of integers from *Exp*<sub>1</sub> u
 increments of 1. When *Exp*<sub>2</sub> is present it is taken as the second element of the list and *Exp*<sub>2</sub> -
 *Exp*<sub>1</sub> is used as increment for the subsequent list elements.
 
-A range with integer expressions is identical to a list [List Slice](#List-Slice). However, a range may also contain
+A range with integer expressions is identical to a list [List Slice](#slice). However, a range may also contain
 numeric expressions that are not integers.
 
 **Examples.**
@@ -6781,7 +6781,7 @@ Real values.
 The real values are represented by the type `real` and are written as usual in most programming languages. They can have
 *arbitrary size and precision*.
 
-See [Number](#Values-Number) for all operations on integers, reals and numbers.
+See [Number](#number) for all operations on integers, reals and numbers.
 
   - 1.5
 
@@ -6802,15 +6802,15 @@ The type reify expression operator has two functions in one go:
   - it reifies the declarations necessary to build values of the types as well
 
 As a result a reified type can be used to reconstruct a type and the abstract ([Algebraic Data
-Type](#Declarations-AlgebraicDataType)) or concrete ([Syntax Definition](#Declarations-SyntaxDefinition)) grammar that
+Type](#ADT)) or concrete ([Syntax Definition](#definition)) grammar that
 produced it.
 
-Type literals have a nice interaction with [Type Parameters](#StaticTyping-TypeParameters), since they can be used to
+Type literals have a nice interaction with [Type Parameters](#typeparameters), since they can be used to
 bind a type parameter without having to provide a value of the type. An example is the [???](#parse) function in
-[???](#ParseTree) (see below for an example usage).
+[???](#parseTree) (see below for an example usage).
 
-The values that are used to represent types are declared in the [???](#Libraries-Prelude-Type) module and
-[???](#Libraries-Prelude-ParseTree) modules, namely `Symbol` is the data-type to represent types symbolically and
+The values that are used to represent types are declared in the [???](#type) module and
+[???](#parseTree) modules, namely `Symbol` is the data-type to represent types symbolically and
 `Production` is the data-type for representing grammatical constructs.
 
 A type literal wraps a `Symbol` and a map of \`Production\`s.
@@ -6898,27 +6898,27 @@ L2, …​ ]]`.
 An n-ary relations with m tuples is denoted by `{< E11, E12, …​, E1n >,< E21, E22, …​, E2n >, …​, < Em1, Em2, …​, Emn
 >}`, where the *E*<sub>ij</sub> are expressions that yield the desired element type *T*<sub>i</sub>.
 
-Since relations are a form of set all operations (see [Set](#Values-Set)) and functions (see [???](#Prelude-Set)) are
+Since relations are a form of set all operations (see [Set](#set)) and functions (see [???](#set)) are
 also applicable to relations.
 
 The following additional operators are provided for relations:
 
-  - [Relation CartesianProduct](#Relation-CartesianProduct): Cartesian product of two relation values.
+  - [Relation CartesianProduct](#cartesianproduct): Cartesian product of two relation values.
 
-  - [Relation Composition](#Relation-Composition): Composition of two relation values.
+  - [Relation Composition](#composition): Composition of two relation values.
 
-  - [Relation FieldSelection](#Relation-FieldSelection): Select a field (column) from a relation value.
+  - [Relation FieldSelection](#fieldselection): Select a field (column) from a relation value.
 
-  - [Relation Join](#Relation-Join): Join two relation values.
+  - [Relation Join](#join): Join two relation values.
 
-  - [Relation ReflexiveTransitiveClosure](#Relation-ReflexiveTransitiveClosure): The reflexive transitive closure of a
+  - [Relation ReflexiveTransitiveClosure](#reflexivetransitiveclosure): The reflexive transitive closure of a
     binary relation.
 
-  - [Relation Subscription](#Relation-Subscription): Indexing of a relation via tuple values.
+  - [Relation Subscription](#subscription): Indexing of a relation via tuple values.
 
-  - [Relation TransitiveClosure](#Relation-TransitiveClosure): Transitive closure on binary relation values.
+  - [Relation TransitiveClosure](#transitiveclosure): Transitive closure on binary relation values.
 
-There are also [library functions](/Libraries#Prelude-Relation) available for Relations.
+There are also [library functions](/docs/Libraries#relation) available for Relations.
 
 **Examples.**
 
@@ -7080,7 +7080,7 @@ Reflexive transitive closure is defined by repeated composition of a relation. I
   - …​
 
 then the reflexive transitive closure R\* can be defined in two ways: (also see [Relation
-TransitiveClosure](#Relation-TransitiveClosure)): \* R\* = R<sup>0</sup> + R<sup>1</sup> + R<sup>2</sup> + R<sup>3</sup>
+TransitiveClosure](#transitiveclosure)): \* R\* = R<sup>0</sup> + R<sup>1</sup> + R<sup>2</sup> + R<sup>3</sup>
 + …​ \* R\* = R<sup>0</sup> + R+
 
 **Examples.**
@@ -7252,37 +7252,37 @@ by the splice operator `*`.
 
 The following operators are provided on sets:
 
-  - [Set Comprehension](#Set-Comprehension): A set comprehension generates a set value.
+  - [Set Comprehension](#comprehension): A set comprehension generates a set value.
 
-  - [Set Difference](#Set-Difference): The difference between two sets.
+  - [Set Difference](#difference): The difference between two sets.
 
-  - [Set Equal](#Set-Equal): Equal operator on set values.
+  - [Set Equal](#equal): Equal operator on set values.
 
-  - [Set Insert](#Set-Insert): Add an element to a set.
+  - [Set Insert](#insert): Add an element to a set.
 
-  - [Set Intersection](#Set-Intersection): Intersection of two sets.
+  - [Set Intersection](#intersection): Intersection of two sets.
 
-  - [Set NotEqual](#Set-NotEqual): Not equal operator on set values.
+  - [Set NotEqual](#notequal): Not equal operator on set values.
 
-  - [Set Product](#Set-Product): The product of two set values.
+  - [Set Product](#product): The product of two set values.
 
-  - [Set Splice](#Set-Splice): Splice the elements of a set in an enclosing set.
+  - [Set Splice](#splice): Splice the elements of a set in an enclosing set.
 
-  - [Set StrictSubSet](#Set-StrictSubSet): Strict subset operator on set values.
+  - [Set StrictSubSet](#strictsubset): Strict subset operator on set values.
 
-  - [Set StrictSuperSet](#Set-StrictSuperSet): Strict superset operator on set values.
+  - [Set StrictSuperSet](#strictsuperset): Strict superset operator on set values.
 
-  - [Set SubSet](#Set-SubSet): Subset operator on set values.
+  - [Set SubSet](#subset): Subset operator on set values.
 
-  - [Set SuperSet](#Set-SuperSet): Superset operator on set values.
+  - [Set SuperSet](#superset): Superset operator on set values.
 
-  - [Set Union](#Set-Union): Union of two set values.
+  - [Set Union](#union): Union of two set values.
 
-  - [Set in](#Set-in): Membership test on set values.
+  - [Set in](#in): Membership test on set values.
 
-  - [Set notin](#Set-notin): Negated membership test on set values.
+  - [Set notin](#notin): Negated membership test on set values.
 
-There are also [library functions](/Libraries#Prelude-Set) available for Sets. .Examples \#\# Set types
+There are also [library functions](/docs/Libraries#set) available for Sets. .Examples \#\# Set types
 
 ``` rascal-shell
 {1, 2, 3};
@@ -7338,7 +7338,7 @@ Types
 
 A set comprehension consists of a number of contributing expressions *Exp*<sub>1</sub>, *Exp*<sub>2</sub>, …​ and a
 number of generators *Gen*<sub>1</sub>, *Gen*<sub>2</sub>, *Gen*<sub>3</sub>, …​ that are evaluated as described in
-[Comprehensions](#Expressions-Comprehensions).
+[Comprehensions](#comprehensions).
 
 **Examples.**
 
@@ -7436,7 +7436,7 @@ The `+` operator will add elements to sets.
 1 + {1};
 ```
 
-  - if both operands of `+` are a set then it acts as [Set Union](#Set-Union).
+  - if both operands of `+` are a set then it acts as [Set Union](#union).
 
 ##### Set Intersection
 
@@ -7689,7 +7689,7 @@ Types
 **Description.**
 
 The `+` operator computes set union if both operands are sets. If one of the operands is not a set, it acts as [Set
-Insert](#Set-Insert) instead.
+Insert](#insert) instead.
 
 **Examples.**
 
@@ -7829,25 +7829,25 @@ in the current string.
 
 The following operators are defined for Strings:
 
-  - [String Concatenation](#String-Concatenation): Concatenate two strings.
+  - [String Concatenation](#concatenation): Concatenate two strings.
 
-  - [String Equal](#String-Equal): Equality operator on string values.
+  - [String Equal](#equal): Equality operator on string values.
 
-  - [String GreaterThan](#String-GreaterThan): Greater than operator on string values.
+  - [String GreaterThan](#greaterthan): Greater than operator on string values.
 
-  - [String GreaterThanOrEqual](#String-GreaterThanOrEqual): Greater than or equal operator on string values.
+  - [String GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on string values.
 
-  - [String LessThan](#String-LessThan): Less than operator on string values.
+  - [String LessThan](#lessthan): Less than operator on string values.
 
-  - [String LessThanOrEqual](#String-LessThanOrEqual): Less than or equal operator on string values.
+  - [String LessThanOrEqual](#lessthanorequal): Less than or equal operator on string values.
 
-  - [String NotEqual](#String-NotEqual): Not equal operator on string values.
+  - [String NotEqual](#notequal): Not equal operator on string values.
 
-  - [String Slice](#String-Slice): Retrieve a slice of a string.
+  - [String Slice](#slice): Retrieve a slice of a string.
 
-  - [String Subscription](#String-Subscription): Retrieve a substring via its index.
+  - [String Subscription](#subscription): Retrieve a substring via its index.
 
-There are also [library functions](/Libraries#Prelude-String) available for Strings.
+There are also [library functions](/docs/Libraries#string) available for Strings.
 
 **Examples.**
 
@@ -7925,7 +7925,7 @@ Types
 
 Concatenates the string values of *Exp*<sub>1</sub> and *Exp*<sub>2</sub>.
 
-Note that to concatenate other types of values into a string, you can use [String](#Values-String) interpolation.
+Note that to concatenate other types of values into a string, you can use [String](#string) interpolation.
 
 **Examples.**
 
@@ -8127,7 +8127,7 @@ Types
 
 **Description.**
 
-A String slice is similar to a list [List Slice](#List-Slice) and uses the integer values of *Exp*<sub>2</sub> and
+A String slice is similar to a list [List Slice](#slice) and uses the integer values of *Exp*<sub>2</sub> and
 *Exp*<sub>4</sub> to determine the `begin` (**inclusive**) and `end` (**exclusive**) of a slice from the string value
 *S* of *Exp*<sub>1</sub>. Negative indices count from the end of the string backwards. Using the second form, an extra
 index *Exp*<sub>3</sub> is given that determines the index of the second element in the slice and establishes the `step`
@@ -8299,23 +8299,23 @@ types and *L*<sub>1</sub>, *L*<sub>2</sub>, …​ are optional labels.
 
 The following operators are provided for tuples:
 
-  - [Tuple Concatenation](#Tuple-Concatenation): Concatenate two tuple values.
+  - [Tuple Concatenation](#concatenation): Concatenate two tuple values.
 
-  - [Tuple Equal](#Tuple-Equal): Equality operator on tuple values.
+  - [Tuple Equal](#equal): Equality operator on tuple values.
 
-  - [Tuple FieldSelection](#Tuple-FieldSelection): Select a field from a tuple by its field name.
+  - [Tuple FieldSelection](#fieldselection): Select a field from a tuple by its field name.
 
-  - [Tuple GreaterThan](#Tuple-GreaterThan): Greater than operator on tuple values.
+  - [Tuple GreaterThan](#greaterthan): Greater than operator on tuple values.
 
-  - [Tuple GreaterThanOrEqual](#Tuple-GreaterThanOrEqual): Greater than or equal operator on tuple values.
+  - [Tuple GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on tuple values.
 
-  - [Tuple LessThan](#Tuple-LessThan): Less than operator on tuple values.
+  - [Tuple LessThan](#lessthan): Less than operator on tuple values.
 
-  - [Tuple LessThanOrEqual](#Tuple-LessThanOrEqual): Less than or equal operator on tuple values.
+  - [Tuple LessThanOrEqual](#lessthanorequal): Less than or equal operator on tuple values.
 
-  - [Tuple NotEqual](#Tuple-NotEqual): Not equal operator on tuple values.
+  - [Tuple NotEqual](#notequal): Not equal operator on tuple values.
 
-  - [Tuple Subscription](#Tuple-Subscription): Retrieve a tuple field by its index position.
+  - [Tuple Subscription](#subscription): Retrieve a tuple field by its index position.
 
 **Examples.**
 
@@ -8606,19 +8606,19 @@ other types and does not have any values itself.
 
 The following operators are provided for values:
 
-  - [Value Conditional](#Value-Conditional): Conditional expression on values.
+  - [Value Conditional](#conditional): Conditional expression on values.
 
-  - [Value Equal](#Value-Equal): Equal operator on values.
+  - [Value Equal](#equal): Equal operator on values.
 
-  - [Value GreaterThan](#Value-GreaterThan): Greater than operator on values.
+  - [Value GreaterThan](#greaterthan): Greater than operator on values.
 
-  - [Value GreaterThanOrEqual](#Value-GreaterThanOrEqual): Greater than or equal operator on values.
+  - [Value GreaterThanOrEqual](#greaterthanorequal): Greater than or equal operator on values.
 
-  - [Value LessThan](#Value-LessThan): Less than operator on values.
+  - [Value LessThan](#lessthan): Less than operator on values.
 
-  - [Value LessThanOrEqual](#Value-LessThanOrEqual): Less than or equal operator on values.
+  - [Value LessThanOrEqual](#lessthanorequal): Less than or equal operator on values.
 
-  - [Value NotEqual](#Value-NotEqual): Not equal operator on values.
+  - [Value NotEqual](#notequal): Not equal operator on values.
 
 ##### Value Conditional
 
@@ -8640,7 +8640,7 @@ Types
 
 Yields the value of *Exp*<sub>2</sub> if the value of *Exp*<sub>1</sub> is `true` and the value of *Exp*<sub>3</sub>
 otherwise. The result type is the *least upper bound* (also known as `lub`, see [Static
-Typing](#Declarations-StaticTyping)) of the types of *Exp*<sub>2</sub> and *Exp*<sub>3</sub>.
+Typing](#staticTyping)) of the types of *Exp*<sub>2</sub> and *Exp*<sub>3</sub>.
 
 **Examples.**
 
@@ -8975,44 +8975,44 @@ other words, operators listed earlier in the table bind stronger.
 
 | Operator                       | See                                                                                                                                                                                                                                                                                  | Short Description                                                                                                                              |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Exp . Name`                   | [Location](#Location-FieldSelection), [DateTime](#DateTime-FieldSelection), [Tuple](#Tuple-FieldSelection), [???](#Relation-FieldSelection.Relation),                                                                                                                                | Select named field from structured value                                                                                                       |
-| `Exp1 [ Name = Exp2 ]`         | [???](#FieldAssignment)                                                                                                                                                                                                                                                              | Change value of named field of structured value                                                                                                |
-| `Exp < field1, …​ >`           | [???](#FieldProjection)                                                                                                                                                                                                                                                              | Select fields from relation or structured value                                                                                                |
-| `Exp is Name`                  | [???](#ParseTree), [Concrete Syntax](#Expressions-ConcreteSyntax), [Algebraic Data Type](#Declarations-AlgebraicDataType)                                                                                                                                                            | Returns true if and only if the constructor name of the value produced by *Exp* is equal to *Name*                                             |
-| `Exp has Name`                 | [???](#ParseTree), [Concrete Syntax](#Expressions-ConcreteSyntax), [Algebraic Data Type](#Declarations-AlgebraicDataType)                                                                                                                                                            | Returns true if and only if the constructor (node or parse tree) of the value produced by *Exp* has any field labeled *Name*                   |
-| `Exp1 [ Exp2 , Exp3, …​. ]`    | [List](#List-Subscription), [Map](#Map-Subscription), [Tuple](#Tuple-Subscription), [Relation](#Relation-Subscription)                                                                                                                                                               | Retrieve values for given index/key from list, map, tuple or relation.                                                                         |
-| `Exp1 [ Exp2 , Exp3 .. Exp4 ]` | [List](#Values-List-Slice), [String](#String-Slice), [Node](#Node-Slice)                                                                                                                                                                                                             | Retrieve a slice from a list, string, or node.                                                                                                 |
-| `Exp?`                         | [Boolean](#Boolean-IsDefined)                                                                                                                                                                                                                                                        | Test whether an expression has a defined value                                                                                                 |
-| `!Exp`                         | [Boolean](#Boolean-Negation)                                                                                                                                                                                                                                                         | Negate a Boolean value                                                                                                                         |
-| `- Exp`                        | [Number](#Number-Negation)                                                                                                                                                                                                                                                           | Negation of numbers                                                                                                                            |
-| `Exp +`                        | [Relation](#Relation-TransitiveClosure), [ListRelation](#ListRelation-TransitiveClosure),                                                                                                                                                                                            | Transitive closure on relation or list relation                                                                                                |
-| `Exp *`                        | [Relation](#Relation-ReflexiveTransitiveClosure), [ListRelation](#ListRelation-ReflexiveTransitiveClosure)                                                                                                                                                                           | Reflexive transitive closure on relation or list relation                                                                                      |
-| `Exp @ Name`                   | [???](#Expressions-Selection)                                                                                                                                                                                                                                                        | Value of annotation *Name* of *Exp*'s value                                                                                                    |
-| `Exp1 [@ Name = Exp2]`         | [???](#Expressions-Replacement)                                                                                                                                                                                                                                                      | Assign value of *Exp*<sub>2</sub> to annotation *Name* of *Exp*<sub>1</sub>'s value                                                            |
-| `Exp1 o Exp2`                  | [Relation](#Relation-Composition), [Map](#Map-Composition)                                                                                                                                                                                                                           | *Exp*<sub>1</sub> and *Exp*<sub>2</sub> should evaluate to a relation or map; return their composition. Note: the letter "o" is thus a keyword |
-| `Exp1 / Exp2`                  | [Number](#Number-Division)                                                                                                                                                                                                                                                           | Divide two numbers                                                                                                                             |
-| `Exp1 % Exp2`                  | [Number](#Number-Remainder)                                                                                                                                                                                                                                                          | Remainder on numbers                                                                                                                           |
-| `Exp1 * Exp2`                  | [Number](#Number-Multiplication), [List](#List-Product), [Set](#Set-Product), [Relation](#Relation-CartesianProduct)                                                                                                                                                                 | Multiply numbers; product of list, set, or relation                                                                                            |
-| `Exp1 & Exp2`                  | [List](#List-Intersection), [Set](#Set-Intersection), [Map](#Map-Intersection)                                                                                                                                                                                                       | Intersection of list, set (including relation), or map                                                                                         |
-| `Exp1 + Exp2`                  | [Number](#Number-Addition), [String](#String-Concatenation), [List Concatenation](#List-Concatenation), [List Insert](#List-Insert),[List Append](#List-Append), [Tuple Concatenation](#Tuple-Concatenation), [Set](#Set-Union), [Map](#Map-Union), [Location](#Location-AddSegment) | Add numbers; concatenate string, list or tuple; union on set (including relation), or map; concatenate location and string                     |
-| `Exp1 - Exp2`                  | [Number](#Number-Subtraction), [List](#List-Difference), [Set](#Set-Difference), [Map](#Map-Difference)                                                                                                                                                                              | Subtract numbers; difference of list, set (including relation), or map                                                                         |
-| `Exp1 join Exp2`               | [Relation](#Relation-Join)                                                                                                                                                                                                                                                           | Join on relation                                                                                                                               |
-| `Exp1 in Exp2`                 | [List](#List-in), [Set](#Set-in), [Map](#Map-in)                                                                                                                                                                                                                                     | Membership test for element in list, map, set (including relation)                                                                             |
-| `Exp1 notin Exp2`              | [List](#List-notin), [Set](#Set-notin), [Map](#Map-notin)                                                                                                                                                                                                                            | Negated membership test for element in list, map, set (including relation)                                                                     |
-| `Exp1 ⇐ Exp2`                  | [Number](#Number-LessThanOrEqual), [String](#String-LessThanOrEqual), [Location](#Location-LessThanOrEqual), [DateTime](#DateTime-LessThanOrEqual), [List](#List-SubList), [Set](#Set-SubSet), [Map](#Map-SubMap)                                                                    | Less than or equal on all values                                                                                                               |
-| `Exp1 < Exp2`                  | [Number](#Number-LessThan), [String](#String-LessThan), [Location](#Location-LessThan), [dateTime](#DateTime-LessThan), [List](#List-StrictSubList), [Set](#Set-StrictSubSet), [Map](#Map-StrictSubMap)                                                                              | Less than on all values                                                                                                                        |
-| `Exp1 >= Exp2`                 | [Number](#Number-GreaterThanOrEqual), [String](#String-GreaterThanOrEqual), [Location](#Location-GreaterThanOrEqual), [DateTime](#DateTime-GreaterThanOrEqual), [List](#List-SuperList), [Set](#Set-SuperSet), [Map](#Map-SuperMap)                                                  | Greater than or equal on all values                                                                                                            |
-| `Exp1 > Exp2`                  | [Number](#Number-GreaterThan), [String](#String-GreaterThan), [Location](#Location-GreaterThan), [DateTime](#DateTime-GreaterThan), [List](#List-StrictSuperList), [Set](#Set-StrictSuperSet), [Map](#Map-StrictSuperMap)                                                            | Greater than on all values.                                                                                                                    |
-| `Pat := Exp`                   | [Boolean Match](#Boolean-Match)                                                                                                                                                                                                                                                      | Pattern matches value of expression                                                                                                            |
-| `Pat !:= Exp`                  | [Boolean NoMatch](#Boolean-NoMatch)                                                                                                                                                                                                                                                  | Pattern does not match value of expression                                                                                                     |
-| `Exp1 == Exp2`                 | [Number](#Number-Equal), [String](#String-Equal), [Location](#Location-Equal), [DateTime](#DateTime-Equal), [List](#List-Equal), [Set](#Set-Equal), [Map](#Map-Equal)                                                                                                                | Equality on all values                                                                                                                         |
-| `Exp1 != Exp2`                 | [Number](#Number-NotEqual), [String](#String-NotEqual), [Location](#Location-NotEqual), [DateTime](#DateTime-NotEqual), [List](#List-NotEqual), [Set](#Set-NotEqual), [Map](#Map-NotEqual)                                                                                           | Inequality on all values                                                                                                                       |
-| `Exp1 ? Exp2`                  | [Boolean IfDefinedElse](#Boolean-IfDefinedElse)                                                                                                                                                                                                                                      | Value of expression when it is defined, otherwise alternative value                                                                            |
-| `Exp1 ? Exp2 : Exp3`           | [Value Conditional](#Value-Conditional)                                                                                                                                                                                                                                              | Conditional expression for all types                                                                                                           |
-| `Exp1 =⇒ Exp2`                 | [Boolean Implication](#Boolean-Implication)                                                                                                                                                                                                                                          | Implication on Boolean values                                                                                                                  |
-| `Exp1 ⇐⇒ Exp2`                 | [Boolean Equivalence](#Boolean-Equivalence)                                                                                                                                                                                                                                          | Equivalence on Boolean values                                                                                                                  |
-| `Exp1 && Exp2`                 | [Boolean And](#Boolean-And)                                                                                                                                                                                                                                                          | And on Boolean values                                                                                                                          |
-| `Exp1 \|\| Exp2`               | [Boolean Or](#Boolean-Or)                                                                                                                                                                                                                                                            | Or on Boolean values                                                                                                                           |
+| `Exp . Name`                   | [Location](#fieldselection), [DateTime](#fieldselection), [Tuple](#fieldselection), [???](#fieldselection.Relation),                                                                                                                                | Select named field from structured value                                                                                                       |
+| `Exp1 [ Name = Exp2 ]`         | [???](#fieldAssignment)                                                                                                                                                                                                                                                              | Change value of named field of structured value                                                                                                |
+| `Exp < field1, …​ >`           | [???](#fieldProjection)                                                                                                                                                                                                                                                              | Select fields from relation or structured value                                                                                                |
+| `Exp is Name`                  | [???](#parseTree), [Concrete Syntax](#concretesyntax), [Algebraic Data Type](#ADT)                                                                                                                                                            | Returns true if and only if the constructor name of the value produced by *Exp* is equal to *Name*                                             |
+| `Exp has Name`                 | [???](#parseTree), [Concrete Syntax](#concretesyntax), [Algebraic Data Type](#ADT)                                                                                                                                                            | Returns true if and only if the constructor (node or parse tree) of the value produced by *Exp* has any field labeled *Name*                   |
+| `Exp1 [ Exp2 , Exp3, …​. ]`    | [List](#subscription), [Map](#subscription), [Tuple](#subscription), [Relation](#subscription)                                                                                                                                                               | Retrieve values for given index/key from list, map, tuple or relation.                                                                         |
+| `Exp1 [ Exp2 , Exp3 .. Exp4 ]` | [List](#list-Slice), [String](#slice), [Node](#slice)                                                                                                                                                                                                             | Retrieve a slice from a list, string, or node.                                                                                                 |
+| `Exp?`                         | [Boolean](#isdefined)                                                                                                                                                                                                                                                        | Test whether an expression has a defined value                                                                                                 |
+| `!Exp`                         | [Boolean](#negation)                                                                                                                                                                                                                                                         | Negate a Boolean value                                                                                                                         |
+| `- Exp`                        | [Number](#negation)                                                                                                                                                                                                                                                           | Negation of numbers                                                                                                                            |
+| `Exp +`                        | [Relation](#transitiveclosure), [ListRelation](#transitiveclosure),                                                                                                                                                                                            | Transitive closure on relation or list relation                                                                                                |
+| `Exp *`                        | [Relation](#reflexivetransitiveclosure), [ListRelation](#reflexivetransitiveclosure)                                                                                                                                                                           | Reflexive transitive closure on relation or list relation                                                                                      |
+| `Exp @ Name`                   | [???](#selection)                                                                                                                                                                                                                                                        | Value of annotation *Name* of *Exp*'s value                                                                                                    |
+| `Exp1 [@ Name = Exp2]`         | [???](#replacement)                                                                                                                                                                                                                                                      | Assign value of *Exp*<sub>2</sub> to annotation *Name* of *Exp*<sub>1</sub>'s value                                                            |
+| `Exp1 o Exp2`                  | [Relation](#composition), [Map](#composition)                                                                                                                                                                                                                           | *Exp*<sub>1</sub> and *Exp*<sub>2</sub> should evaluate to a relation or map; return their composition. Note: the letter "o" is thus a keyword |
+| `Exp1 / Exp2`                  | [Number](#division)                                                                                                                                                                                                                                                           | Divide two numbers                                                                                                                             |
+| `Exp1 % Exp2`                  | [Number](#remainder)                                                                                                                                                                                                                                                          | Remainder on numbers                                                                                                                           |
+| `Exp1 * Exp2`                  | [Number](#multiplication), [List](#product), [Set](#product), [Relation](#cartesianproduct)                                                                                                                                                                 | Multiply numbers; product of list, set, or relation                                                                                            |
+| `Exp1 & Exp2`                  | [List](#intersection), [Set](#intersection), [Map](#intersection)                                                                                                                                                                                                       | Intersection of list, set (including relation), or map                                                                                         |
+| `Exp1 + Exp2`                  | [Number](#addition), [String](#concatenation), [List Concatenation](#concatenation), [List Insert](#insert),[List Append](#append), [Tuple Concatenation](#concatenation), [Set](#union), [Map](#union), [Location](#addsegment) | Add numbers; concatenate string, list or tuple; union on set (including relation), or map; concatenate location and string                     |
+| `Exp1 - Exp2`                  | [Number](#subtraction), [List](#difference), [Set](#difference), [Map](#difference)                                                                                                                                                                              | Subtract numbers; difference of list, set (including relation), or map                                                                         |
+| `Exp1 join Exp2`               | [Relation](#join)                                                                                                                                                                                                                                                           | Join on relation                                                                                                                               |
+| `Exp1 in Exp2`                 | [List](#in), [Set](#in), [Map](#in)                                                                                                                                                                                                                                     | Membership test for element in list, map, set (including relation)                                                                             |
+| `Exp1 notin Exp2`              | [List](#notin), [Set](#notin), [Map](#notin)                                                                                                                                                                                                                            | Negated membership test for element in list, map, set (including relation)                                                                     |
+| `Exp1 ⇐ Exp2`                  | [Number](#lessthanorequal), [String](#lessthanorequal), [Location](#lessthanorequal), [DateTime](#lessthanorequal), [List](#sublist), [Set](#subset), [Map](#submap)                                                                    | Less than or equal on all values                                                                                                               |
+| `Exp1 < Exp2`                  | [Number](#lessthan), [String](#lessthan), [Location](#lessthan), [dateTime](#lessthan), [List](#strictsublist), [Set](#strictsubset), [Map](#strictsubmap)                                                                              | Less than on all values                                                                                                                        |
+| `Exp1 >= Exp2`                 | [Number](#greaterthanorequal), [String](#greaterthanorequal), [Location](#greaterthanorequal), [DateTime](#greaterthanorequal), [List](#superlist), [Set](#superset), [Map](#supermap)                                                  | Greater than or equal on all values                                                                                                            |
+| `Exp1 > Exp2`                  | [Number](#greaterthan), [String](#greaterthan), [Location](#greaterthan), [DateTime](#greaterthan), [List](#strictsuperlist), [Set](#strictsuperset), [Map](#strictsupermap)                                                            | Greater than on all values.                                                                                                                    |
+| `Pat := Exp`                   | [Boolean Match](#match)                                                                                                                                                                                                                                                      | Pattern matches value of expression                                                                                                            |
+| `Pat !:= Exp`                  | [Boolean NoMatch](#nomatch)                                                                                                                                                                                                                                                  | Pattern does not match value of expression                                                                                                     |
+| `Exp1 == Exp2`                 | [Number](#equal), [String](#equal), [Location](#equal), [DateTime](#equal), [List](#equal), [Set](#equal), [Map](#equal)                                                                                                                | Equality on all values                                                                                                                         |
+| `Exp1 != Exp2`                 | [Number](#notequal), [String](#notequal), [Location](#notequal), [DateTime](#notequal), [List](#notequal), [Set](#notequal), [Map](#notequal)                                                                                           | Inequality on all values                                                                                                                       |
+| `Exp1 ? Exp2`                  | [Boolean IfDefinedElse](#ifdefinedelse)                                                                                                                                                                                                                                      | Value of expression when it is defined, otherwise alternative value                                                                            |
+| `Exp1 ? Exp2 : Exp3`           | [Value Conditional](#conditional)                                                                                                                                                                                                                                              | Conditional expression for all types                                                                                                           |
+| `Exp1 =⇒ Exp2`                 | [Boolean Implication](#implication)                                                                                                                                                                                                                                          | Implication on Boolean values                                                                                                                  |
+| `Exp1 ⇐⇒ Exp2`                 | [Boolean Equivalence](#equivalence)                                                                                                                                                                                                                                          | Equivalence on Boolean values                                                                                                                  |
+| `Exp1 && Exp2`                 | [Boolean And](#and)                                                                                                                                                                                                                                                          | And on Boolean values                                                                                                                          |
+| `Exp1 \|\| Exp2`               | [Boolean Or](#or)                                                                                                                                                                                                                                                            | Or on Boolean values                                                                                                                           |
 
 ### Field Assignment
 
@@ -9099,9 +9099,9 @@ First, the actual parameter expressions *Exp*<sub>i</sub> are evaluated resultin
 The values *V*<sub>i</sub> are bound to the formal parameter names of the declared functions and the function body is
 executed. The value returned by the function is used as value of the function call.
 
-A *constructor call* has identical syntax to that of a function call, see [Constructor](#Values-Constructor),
+A *constructor call* has identical syntax to that of a function call, see [Constructor](#constructor),
 
-See [Function Declaration](#Declarations-Function) for more details about function declarations.
+See [Function Declaration](#function) for more details about function declarations.
 
 > **Note**
 > 
@@ -9144,11 +9144,11 @@ Comprehensions provide a concise notation to conditionally generate new values.
 
 Comprehensions are defined for the following types:
 
-  - `list`, see [List Comprehension](#List-Comprehension),
+  - `list`, see [List Comprehension](#comprehension),
 
-  - `set`, see [Set Comprehension](#Set-Comprehension),
+  - `set`, see [Set Comprehension](#comprehension),
 
-  - `map`, see [Map Comprehension](#Map-Comprehension).
+  - `map`, see [Map Comprehension](#comprehension).
 
 The syntax varies slightly for each type, but comprehensions have the following common elements:
 
@@ -9206,8 +9206,8 @@ fruits = ("pear" : 1, "apple" : 3, "banana" : 0, "berry" : 25, "orange": 35);
 (fruit : fruits[fruit] | fruit <- fruits, fruits[fruit] > 10);
 ```
 
-See [List Comprehension](#List-Comprehension), [Set Comprehension](#Set-Comprehension), or [Map
-Comprehension](#Map-Comprehension) for more examples.
+See [List Comprehension](#comprehension), [Set Comprehension](#comprehension), or [Map
+Comprehension](#comprehension) for more examples.
 
 ### Enumerator
 
@@ -9276,8 +9276,8 @@ Here are examples of enumerators in action:
 
 **Synopsis.**
 
-Filter values in a [List Comprehension](#List-Comprehension)\], [Set Comprehension](#Set-Comprehension) or [Map
-Comprehension](#Map-Comprehension).
+Filter values in a [List Comprehension](#comprehension)\], [Set Comprehension](#comprehension) or [Map
+Comprehension](#comprehension).
 
 **Syntax.**
 
@@ -9323,16 +9323,16 @@ Concrete syntax is a notation for patterns that match parse trees and expression
 
 where each sentence is a string over the language generated from `Nonterminal`. This language is extended in the
 following way. Each non-terminal reachable `X` from *Non*-terminal has an added alternative to allow nested Rascal
-[Patterns](#Rascal-Patterns) inside of concrete syntax fragments:
+[Patterns](#patterns) inside of concrete syntax fragments:
 
   - `syntax X = "<" Pattern p ">";`
 
 **Description.**
 
 A concrete syntax fragment allows the programmer to write patterns and expressions in the language that is currently
-analyzed, transformed or generated. The [Concrete Syntax](#Expressions-ConcreteSyntax) feature is derived from [Syntax
-Definition](#Declarations-SyntaxDefinition)s. For any non-terminal defined in a [Syntax
-Definition](#Declarations-SyntaxDefinition), you may use [Concrete Syntax](#Expressions-ConcreteSyntax) to match or
+analyzed, transformed or generated. The [Concrete Syntax](#concretesyntax) feature is derived from [Syntax
+Definition](#definition)s. For any non-terminal defined in a [Syntax
+Definition](#definition), you may use [Concrete Syntax](#concretesyntax) to match or
 generate its parse trees.
 
   - Easy notation for complex structures
@@ -9397,8 +9397,8 @@ Statements that have a value and can be used as expressions.
 **Description.**
 
 Several forms of statements produce a value and can be used as expression. This is further explained in the sections for
-the relevant statements, see [If](#Statements-If), [While](#Statements-While), [Do](#Statements-Do) and
-[For](#Statements-For).
+the relevant statements, see [If](#if), [While](#while), [Do](#do) and
+[For](#for).
 
 **Pitfalls.**
 
@@ -9423,7 +9423,7 @@ default: ...
 
 **Description.**
 
-Visiting, recursively traversing, the nodes in a deeply nested data-structure is a very common task in the [EASY](/EASY)
+Visiting, recursively traversing, the nodes in a deeply nested data-structure is a very common task in the [EASY](/docs/WhyRascal#easy)
 domain. In many cases (but certainly not all) this data-structure is a syntax tree of some source code file and the
 nodes correspond to expressions or statements.
 
@@ -9442,9 +9442,9 @@ scenarios:
 The visit expression in Rascal can accommodate all these (and more) use cases.
 
 Given a subject term (the current value of *Exp*) and a list of cases (consisting of a sequence of
-[???](#Pattern%20with%20Action)s, it traverses the term. Depending on the precise actions it may perform replacement
+[???](#pattern-with-Action)s, it traverses the term. Depending on the precise actions it may perform replacement
 (mimicking a transformer), update local variables (mimicking an accumulator) or a combination of these two (accumulating
-transformer). If **any** of the actions contains an [Insert](#Statements-Insert) statement, the value of the visit
+transformer). If **any** of the actions contains an [Insert](#insert) statement, the value of the visit
 expression is a new value that is obtained by successive insertions in the subject term by executing one or more cases.
 Otherwise, the original value of the subject term is returned.
 
@@ -9481,9 +9481,9 @@ The execution of the cases has the following effect:
         
           - `Pattern ⇒ Exp` is equivalent to `Pattern : insert Exp;`.
     
-      - Execution of a [Fail](#Statements-Fail) statement: the next case is tried.
+      - Execution of a [Fail](#fail) statement: the next case is tried.
     
-      - Execution of a [Return](#Statements-Return) statement that returns a value from the enclosing function.
+      - Execution of a [Return](#return) statement that returns a value from the enclosing function.
 
 The precise behaviour of the visit expression depends on the type of the subject:
 
@@ -9520,9 +9520,9 @@ bottom-up visit(e){
          }
 ```
 
-More examples can, for instance, be found in Recipes, see [ColoredTrees](/Recipes#Common-ColoredTrees),
-[WordReplacement](/Recipes#Common-WordReplacement), [CountConstructors](/Recipes#CommonCountConstructors), and
-[Derivative](/Recipes#Common-Derivative).
+More examples can, for instance, be found in Recipes, see [ColoredTrees](/docs/Recipes#ColoredTrees),
+[WordReplacement](/docs/Recipes#WordReplacement), [CountConstructors](/docs/Recipes#CommonCountConstructors), and
+[Derivative](/docs/Recipes#Derivative).
 
 ### Pattern With Action
 
@@ -9537,23 +9537,23 @@ A pattern with an associated action that is executed on a successful match.
 **Description.**
 
 Patterns can be used in various contexts, but a common context is a PatternWithAction, which in its turn, may be used in
-various statements such [Switch](#Statements-Switch) and [Visit](#Expressions-Visit).
+various statements such [Switch](#switch) and [Visit](#visit).
 
 There are two variants as listed above:
 
   - When the subject matches *Pattern*, the expression *Exp* is evaluated and the subject is replaced with the result.
 
   - When the subject matches Pat, the Statement is executed. More statements can be executed by including them in a
-    [Block](#Statements-Block).
+    [Block](#block).
 
-In [Switch](#Statements-Switch) statements, only the form `Pattern : Statement` is allowed. When the subject matches
+In [Switch](#switch) statements, only the form `Pattern : Statement` is allowed. When the subject matches
 *Pattern*, the *Statement* is executed and the execution of the switch statement is complete. However, when a fail
 statement is executed in *Statement* further alternatives of *Pattern* are tried. If no alternatives remain,
 PatternWithAction as a whole fails and subsequent cases of the switch statement are tried.
 
-In [Visit](#Expressions-Visit) expressions, the form `Pattern ⇒ Exp` describes subtree replacement: the current subtree
+In [Visit](#visit) expressions, the form `Pattern ⇒ Exp` describes subtree replacement: the current subtree
 of the subject of the visit expression is replaced by the value of *Exp*. The form `Pattern : Statement` is as described
-for switch statements, with the addition that execution of an [Insert](#Statements-Insert) statement will replace the
+for switch statements, with the addition that execution of an [Insert](#insert) statement will replace the
 current subtree. After both success or failure of the PatternWithAction, the traversal of the subject continues.
 
 **Examples.**
@@ -9573,7 +9573,7 @@ case red(_, _):    println("A red root node");
 case red(_,_): c = c + 1;
 ```
 
-The action may also be a [Block](#Statements-Block):
+The action may also be a [Block](#block):
 
 ``` rascal
 case red(_,_): { c = c + 1; println("c = <c>"); }
@@ -9589,59 +9589,59 @@ All Rascal statements.
 
 The following statements are available:
 
-  - [Append](#Statements-Append): Append an element to the list value produced by various loop statements.
+  - [Append](#append): Append an element to the list value produced by various loop statements.
 
-  - [Assert](#Statements-Assert): An executable assertion.
+  - [Assert](#assert): An executable assertion.
 
-  - [Assignment](#Statements-Assignment): Assign a value to a variable or more complex data structure.
+  - [Assignment](#assignment): Assign a value to a variable or more complex data structure.
     
-      - [Annotation](#Assignment-Annotation):
+      - [Annotation](#annotation):
     
-      - [Constructor](#Assignment-Constructor): Assign to constructor.
+      - [Constructor](#constructor): Assign to constructor.
     
-      - [Field](#Assignment-Field): Assign to a field of a tuple, relation or datatype.
+      - [Field](#field): Assign to a field of a tuple, relation or datatype.
     
-      - [IsDefined](#Assignment-IsDefined): Assign but replace if value is not defined.
+      - [IsDefined](#isdefined): Assign but replace if value is not defined.
     
-      - [Multiple](#Assignment-Multiple): Assign to multiple assignables.
+      - [Multiple](#multiple): Assign to multiple assignables.
     
-      - [Slice](#Assignment-Slice): Assign to a slice of a list or string.
+      - [Slice](#slice): Assign to a slice of a list or string.
     
-      - [Subscription](#Assignment-Subscription): Assign a single element of a structured value.
+      - [Subscription](#subscription): Assign a single element of a structured value.
     
-      - [Variable](#Assignment-Variable): Assign to a variable.
+      - [Variable](#variable): Assign to a variable.
 
-  - [Block](#Statements-Block): Group statements into a block.
+  - [Block](#block): Group statements into a block.
 
-  - [Break](#Statements-Break): End the execution of a while, do or for loop.
+  - [Break](#break): End the execution of a while, do or for loop.
 
-  - [Continue](#Statements-Continue): Continue with the next iteration of while, do or for loop.
+  - [Continue](#continue): Continue with the next iteration of while, do or for loop.
 
-  - [Do](#Statements-Do): Repeat statements while condition holds.
+  - [Do](#do): Repeat statements while condition holds.
 
-  - [Fail](#Statements-Fail): Let the current alternative of a pattern match fail.
+  - [Fail](#fail): Let the current alternative of a pattern match fail.
 
-  - [For](#Statements-For): For loop.
+  - [For](#for): For loop.
 
-  - [If](#Statements-If): Conditional statement.
+  - [If](#if): Conditional statement.
 
-  - [Insert](#Statements-Insert): Insert a value in a tree during a [Visit](#Expressions-Visit).
+  - [Insert](#insert): Insert a value in a tree during a [Visit](#visit).
 
-  - [Return](#Statements-Return): Return a value as result of a \[Function\].
+  - [Return](#return): Return a value as result of a \[Function\].
 
-  - [Solve](#Statements-Solve): Solve a set of equalities by fixed-point iteration.
+  - [Solve](#solve): Solve a set of equalities by fixed-point iteration.
 
-  - [Switch](#Statements-Switch):
+  - [Switch](#switch):
 
-  - [Test](#Statements-Test): Test statement (*deprecated*).
+  - [Test](#test): Test statement (*deprecated*).
 
-  - [Throw](#Statements-Throw):
+  - [Throw](#throw):
 
-  - [Try Catch](#Statements-TryCatch): Try to execute a statement and catch resulting exceptions.
+  - [Try Catch](#try-catch): Try to execute a statement and catch resulting exceptions.
 
-  - [Visit](#Statements-Visit):
+  - [Visit](#visit):
 
-  - [While](#Statements-While): While loop.
+  - [While](#while): While loop.
 
 ![Statement Types](/images/statement-parts.png)
 
@@ -9657,8 +9657,8 @@ Append an element to the list value produced by various loop statements.
 
 **Description.**
 
-An append statement may only occur in the body of a [While](#Statements-While), [Do](#Statements-Do) or
-[For](#Statements-For) statement. It appends the value of *Exp* to the resulting list value of the loop construct in
+An append statement may only occur in the body of a [While](#while), [Do](#do) or
+[For](#for) statement. It appends the value of *Exp* to the resulting list value of the loop construct in
 which it occurs.
 
 **Examples.**
@@ -9757,21 +9757,21 @@ An assignable is either a single variable, (the base variable), optionally follo
 selections. The assignment statement always results in assigning a completely new value to the base variable. We
 distinguish the following forms of assignment:
 
-  - [Annotation](#Assignment-Annotation):
+  - [Annotation](#annotation):
 
-  - [Constructor](#Assignment-Constructor): Assign to constructor.
+  - [Constructor](#constructor): Assign to constructor.
 
-  - [Field](#Assignment-Field): Assign to a field of a tuple, relation or datatype.
+  - [Field](#field): Assign to a field of a tuple, relation or datatype.
 
-  - [IsDefined](#Assignment-IsDefined): Assign but replace if value is not defined.
+  - [IsDefined](#isdefined): Assign but replace if value is not defined.
 
-  - [Multiple](#Assignment-Multiple): Assign to multiple assignables.
+  - [Multiple](#multiple): Assign to multiple assignables.
 
-  - [Slice](#Assignment-Slice): Assign to a slice of a list or string.
+  - [Slice](#slice): Assign to a slice of a list or string.
 
-  - [Subscription](#Assignment-Subscription): Assign a single element of a structured value.
+  - [Subscription](#subscription): Assign a single element of a structured value.
 
-  - [Variable](#Assignment-Variable): Assign to a variable.
+  - [Variable](#variable): Assign to a variable.
 
 ### Annotation
 
@@ -9783,7 +9783,7 @@ Assign to an annotation. This feature is deprecated.
 
 The value *V* of *Assignable* is determined and should be of a type that has an annotation *Name*. A new value *V*' is
 created that is a copy of *V* but with the value of annotation *Name* replaced by the value of *Exp*. *V*' is assigned
-to *Assignable*. See [Annotation Declaration](#Declarations-Annotation).
+to *Assignable*. See [Annotation Declaration](#annotation).
 
 **Examples.**
 
@@ -9838,8 +9838,8 @@ Assign but replace if value is not defined.
 **Description.**
 
 First the value of *Exp*<sub>1</sub> is determined and if that is defined it is assigned to *Assignable*. Otherwise, the
-value of *Exp*<sub>2</sub> is assigned to *Assignable*. Values which can be undefined are values in [Map](#Values-Map)s
-where the key is not set or values of [Annotations](#Declarations-Annotation) which have not been set yet.
+value of *Exp*<sub>2</sub> is assigned to *Assignable*. Values which can be undefined are values in [Map](#map)s
+where the key is not set or values of [Annotations](#annotation) which have not been set yet.
 
 No other values can be used in an undefined state, so the ? operator does not make sense on undefined or uninitialized
 variables for example.
@@ -9898,9 +9898,9 @@ Assign to a slice of a list or string.
 
 **Description.**
 
-A slice assignment is defined for [List](#Values-List), [String](#Values-String) and [Node](#Values-Node) and aims to
-replace a slice from the old value of the assignable by a new value. See [List Slice](#List-Slice), [String
-Slice](#String-Slice) or [Node Slice](#Node-Slice) for a more detailed explanation of slicing.
+A slice assignment is defined for [List](#list), [String](#string) and [Node](#node) and aims to
+replace a slice from the old value of the assignable by a new value. See [List Slice](#slice), [String
+Slice](#slice) or [Node Slice](#slice) for a more detailed explanation of slicing.
 
 Let *V* be the current value of *Assignable*.
 
@@ -10093,11 +10093,11 @@ End the execution of a while, do or for loop.
 
 **Description.**
 
-A `break` statement is only allowed inside the body of a [While](#Statements-While), [Do](#Statements-Do) or
-[For](#Statements-For) statement and is associated with the innermost loop statement in which it is contained. Its
+A `break` statement is only allowed inside the body of a [While](#while), [Do](#do) or
+[For](#for) statement and is associated with the innermost loop statement in which it is contained. Its
 effect is to end the execution of the loop.
 
-Also see [Continue](#Statements-Continue) and [Fail](#Statements-Fail).
+Also see [Continue](#continue) and [Fail](#fail).
 
 **Examples.**
 
@@ -10121,12 +10121,12 @@ Continue with the next iteration of while, do or for loop.
 
 **Description.**
 
-A continue statement is only allowed inside the body of a [While](#Statements-While), [Do](#Statements-Do) or
-[For](#Statements-For) statement and is associated with the innermost loop statement in which it is contained. Its
+A continue statement is only allowed inside the body of a [While](#while), [Do](#do) or
+[For](#for) statement and is associated with the innermost loop statement in which it is contained. Its
 effect is to end the execution of the block for the current iteration of the loop and to continue with the next
 iteration of the loop.
 
-Also see [Break](#Statements-Break) and [Fail](#Statements-Fail).
+Also see [Break](#break) and [Fail](#fail).
 
 **Examples.**
 
@@ -10157,7 +10157,7 @@ Repeat statements while condition holds.
 from scratch in each repetition and only the first true value (if any) is used.
 
 By default, the value of a do statement is the empty list. In general, the value of a do statement consists of all
-values contributed by [Append](#Statements-Append) statements that are executed during the repeated execution of its
+values contributed by [Append](#append) statements that are executed during the repeated execution of its
 body Statement.
 
 **Examples.**
@@ -10189,15 +10189,15 @@ Let the current alternative of a pattern match fail.
 
 A `fail` statement is only allowed in statements that are controlled by the outcome of a pattern match:
 
-  - The [Patterns](#Rascal-Patterns) in a [???](#Pattern%20with%20Action) in [Switch](#Statements-Switch) or
-    [Visit](#Expressions-Visit) statement controls the statements in the action part.
+  - The [Patterns](#patterns) in a [???](#pattern-with-Action) in [Switch](#switch) or
+    [Visit](#visit) statement controls the statements in the action part.
 
-  - The test (expression) of a [While](#Statements-While) or [Do](#Statements-Do) statement controls the statements in
+  - The test (expression) of a [While](#while) or [Do](#do) statement controls the statements in
     the body part.
 
-  - The test (expressions) of a [For](#Statements-For) statement control the statements in the body part.
+  - The test (expressions) of a [For](#for) statement control the statements in the body part.
 
-  - The formal parameter declaration of a [Function Declaration](#Declarations-Function).
+  - The formal parameter declaration of a [Function Declaration](#function).
 
 The `fail` statement is associated with the innermost pattern match by which it is controlled.
 
@@ -10216,7 +10216,7 @@ When `fail` is executed:
 
 **Examples.**
 
-Here is an example taken from [Bubble](/Recipes#Bubble). It uses a `fail` for the case that no unsorted element can be
+Here is an example taken from [Bubble](/docs/Recipes#Bubble). It uses a `fail` for the case that no unsorted element can be
 found in the list of numbers. As a result, the whole case fails and the default case is used.
 
 ``` rascal-shell
@@ -10250,13 +10250,13 @@ For loop.
 The for-statement executes *Statement* for all possible combinations of values generated, and filtered, by the
 expressions *Exp*<sub>i</sub>.
 
-Some of the expressions can generate bindings ([Enumerator](#Comprehensions-Enumerator),
-[Boolean,Match](#Expressions-Values)), and some can filter them ([Boolean](#Expressions-Values)). The for loop will
+Some of the expressions can generate bindings ([Enumerator](#enumerator),
+[Boolean,Match](#values)), and some can filter them ([Boolean](#values)). The for loop will
 iterate over the cartesian product of all the generating expressions, and filter the combinations which fail the
 conditional expressions.
 
 By default, the value of a for statement is the empty list. In general, the value of a for statement consists of all
-values contributed by [Append](#Statements-Append) statements that are executed during the repeated execution of its
+values contributed by [Append](#append) statements that are executed during the repeated execution of its
 body Statement.
 
 **Examples.**
@@ -10313,7 +10313,7 @@ if( 2 > 3 ) 30;
 
 **Synopsis.**
 
-Insert a value in a tree during a [Visit](#Expressions-Visit).
+Insert a value in a tree during a [Visit](#visit).
 
 **Syntax.**
 
@@ -10321,8 +10321,8 @@ Insert a value in a tree during a [Visit](#Expressions-Visit).
 
 **Description.**
 
-An insert statement may only occur in the action part of a [Pattern With Action](#Visit-PatternWithAction), more
-precisely in a case in a [Visit](#Expressions-Visit) expression. The value matched by the pattern of this case is
+An insert statement may only occur in the action part of a [Pattern With Action](#patternwithaction), more
+precisely in a case in a [Visit](#visit) expression. The value matched by the pattern of this case is
 replaced by the value of *Exp*.
 
 The following rule applies:
@@ -10432,7 +10432,7 @@ here just as a simple illustration). Transitive closure of a relation is usually
 R+ = R + (R o R) + (R o R o R) + ...
 ```
 
-In other words, it is the union of successive [Relation Composition](#Relation-Composition)s of `R` with itself. For a
+In other words, it is the union of successive [Relation Composition](#composition)s of `R` with itself. For a
 given relation `R` this can be expressed as follows:
 
 ``` rascal-shell
@@ -10464,7 +10464,7 @@ default: ...
 **Description.**
 
 A switch statement is similar to a switch statement in C or Java. The value of the expression *Exp* is the subject term
-that will be matched by the successive [Pattern With Action](#Visit-PatternWithAction)s in the switch statement. The
+that will be matched by the successive [Pattern With Action](#patternwithaction)s in the switch statement. The
 switch statement provides only matching at the top level of the subject term and does not traverse it. The type of the
 pattern in each case must be identical to the type of the subject term (or be a supertype of it). If no case matches,
 the switch acts as a dummy statement. There is no fall through from one case to the next.
@@ -10498,7 +10498,7 @@ Test statement (*deprecated*).
 **Description.**
 
 The `test` statement is deprecated and is replaced by the `test` modifier in function declarations, see [Function
-Declaration](#Declarations-Function).
+Declaration](#function).
 
 ### Throw
 
@@ -10513,12 +10513,12 @@ Throw any value as an exception up the call stack.
 **Description.**
 
 A throw statement causes the immediate abortion of the execution of the current function with *Exp* \\'s value as
-exception value. The exception can be caught by a [Try Catch](#Statements-TryCatch) statement in the current function or
+exception value. The exception can be caught by a [Try Catch](#try-catch) statement in the current function or
 in one of its callers. If the exception is not caught, the execution of the Rascal program is terminated. The following
 rules apply:
 
   - The static type of *Exp* should be `RuntimeException`, see
-    [RuntimeException](/Libraries#Exception-RuntimeException).
+    [RuntimeException](/docs/Libraries#runtimeexception).
 
   - The Rascal program may contain data declarations that extend the type `RuntimeException`.
 
@@ -10552,10 +10552,10 @@ finally: Statement3;
 
 **Description.**
 
-A try catch statement has as purpose to catch any [Exceptions](/Libraries#Prelude-Exception) that are raised during the
+A try catch statement has as purpose to catch any [Exceptions](/docs/Libraries#exception) that are raised during the
 execution of *Statement*<sub>1</sub>. These exceptions may caused by:
 
-  - The execution of an explicit [Throw](#Statements-Throw) statement.
+  - The execution of an explicit [Throw](#throw) statement.
 
   - The Rascal system that discovers an abnormal condition, e.g., an out of bounds error when accessing a list element.
 
@@ -10570,7 +10570,7 @@ as follows:
 
 **Examples.**
 
-Let’s define a variant of the [head](/Libraries#List-head) function that returns the first element of a list, but throws
+Let’s define a variant of the [head](/docs/Libraries#head) function that returns the first element of a list, but throws
 an exception when the list is empty. Our variant will return `0` for an empty list:
 
 ``` rascal-shell
@@ -10593,15 +10593,15 @@ hd2([]);
 
 **Synopsis.**
 
-The [Visit](#Expressions-Visit) expression can also be used directly as a statement
+The [Visit](#visit) expression can also be used directly as a statement
 
 **Syntax.**
 
-See [???](#Expression-Visit).
+See [???](#visit).
 
 **Description.**
 
-See [Visit](#Expressions-Visit) for the details.
+See [Visit](#visit) for the details.
 
 **Examples.**
 
@@ -10629,11 +10629,11 @@ While loop.
 
 The Boolean expression *Exp* is evaluated repeatedly and *Statement* is executed when the test is true. Execution ends
 the first time that the test yields false. The test *Exp* is executed from scratch in each repetition and only the first
-`true` value (if any) is used. This is relevant when *Exp* contains a [Boolean Match](#Boolean-Match) or [Boolean
-NoMatch](#Boolean-NoMatch) operator.
+`true` value (if any) is used. This is relevant when *Exp* contains a [Boolean Match](#match) or [Boolean
+NoMatch](#nomatch) operator.
 
 By default, the value of a while statement is the empty list. In general, the value of a while statement consists of all
-values contributed by [Append](#Statements-Append) statements that are executed during the repeated execution of its
+values contributed by [Append](#append) statements that are executed during the repeated execution of its
 body *Statement*.
 
 **Examples.**
@@ -10651,7 +10651,7 @@ n = 3;
 while (n > 0) { append n * n; n -= 1; }
 ```
 
-Just to be sure, a [List Comprehension](#List-Comprehension) is the superior way to write this:
+Just to be sure, a [List Comprehension](#comprehension) is the superior way to write this:
 
 ``` rascal-shell
 [n * n | n <- [3 .. 1]];

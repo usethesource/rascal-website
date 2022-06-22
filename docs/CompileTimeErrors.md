@@ -15,106 +15,106 @@ The following compile time (static) errors can occur in a Rascal program. They c
 Although some of these errors are raised while running Rascal programs in the interpreter, they are all intended to be
 raised by a static checker. This static checker is currently under development.
 
-  - [AmbiguousFunctionReference](#CompileTimeErrors-AmbiguousFunctionReference): An ambiguous function name.
+  - [AmbiguousFunctionReference](#ambiguousfunctionreference): An ambiguous function name.
 
-  - [ArgumentMismatch](#CompileTimeErrors-ArgumentMismatch): The called signature does not match any defined function.
+  - [ArgumentMismatch](#argumentmismatch): The called signature does not match any defined function.
 
-  - [Arity](#CompileTimeErrors-Arity): The number of arguments of an operator differ from what is required.
+  - [Arity](#arity): The number of arguments of an operator differ from what is required.
 
-  - [DateTimeSyntax](#CompileTimeErrors-DateTimeSyntax): A datetime value is syntactically incorrect.
+  - [DateTimeSyntax](#datetimesyntax): A datetime value is syntactically incorrect.
 
-  - [IllegalQualifiedDeclaration](#CompileTimeErrors-IllegalQualifiedDeclaration): Qualified names cannot be declared.
+  - [IllegalQualifiedDeclaration](#illegalqualifieddeclaration): Qualified names cannot be declared.
 
-  - [InvalidDateTimeComparison](#CompileTimeErrors-InvalidDateTimeComparison): Attempt to compare a date with a time.
+  - [InvalidDateTimeComparison](#invaliddatetimecomparison): Attempt to compare a date with a time.
 
-  - [JavaCompilation](#CompileTimeErrors-JavaCompilation): Compilation of generated Java code failed.
+  - [JavaCompilation](#javacompilation): Compilation of generated Java code failed.
 
-  - [JavaMethodLink](#CompileTimeErrors-JavaMethodLink): Cannot link to a Java method.
+  - [JavaMethodLink](#javamethodlink): Cannot link to a Java method.
 
-  - [MissingModifier](#CompileTimeErrors-MissingModifier): A modifier is missing in a declaration.
+  - [MissingModifier](#missingmodifier): A modifier is missing in a declaration.
 
-  - [MissingReturn](#CompileTimeErrors-MissingReturn): A return statement is missing from a function body.
+  - [MissingReturn](#missingreturn): A return statement is missing from a function body.
 
-  - [ModuleImport](#CompileTimeErrors-ModuleImport): A Rascal module could not be imported.
+  - [ModuleImport](#moduleimport): A Rascal module could not be imported.
 
-  - [ModuleNameMismatch](#CompileTimeErrors-ModuleNameMismatch): Module name and file name are different.
+  - [ModuleNameMismatch](#modulenamemismatch): Module name and file name are different.
 
-  - [NoKeywordParameters](#CompileTimeErrors-NoKeywordParameters): A function that is declared without keyword
+  - [NoKeywordParameters](#nokeywordparameters): A function that is declared without keyword
     parameters is called with keyword parameters.
 
-  - [NonAbstractJavaFunction](#CompileTimeErrors-NonAbstractJavaFunction): A function declared with the `java` modifier
+  - [NonAbstractJavaFunction](#nonabstractjavafunction): A function declared with the `java` modifier
     has a Rascal body.
 
-  - [NonVoidTypeRequired](#CompileTimeErrors-NonVoidTypeRequired): A type other than `void` is needed.
+  - [NonVoidTypeRequired](#nonvoidtyperequired): A type other than `void` is needed.
 
-  - [NonWellformedType](#CompileTimeErrors-NonWellformedType): A type in a declaration is not wellformed.
+  - [NonWellformedType](#nonwellformedtype): A type in a declaration is not wellformed.
 
-  - [NotEnumerable](#CompileTimeErrors-NotEnumerable): A value that cannot be enumerated is used in an enumerator.
+  - [NotEnumerable](#notenumerable): A value that cannot be enumerated is used in an enumerator.
 
-  - [PartiallyLabeledFields](#CompileTimeErrors-PartiallyLabeledFields): In a tuple or relation all fields should have
+  - [PartiallyLabeledFields](#partiallylabeledfields): In a tuple or relation all fields should have
     names or none at all.
 
-  - [RedeclaredField](#CompileTimeErrors-RedeclaredField): A field name is redeclared.
+  - [RedeclaredField](#redeclaredfield): A field name is redeclared.
 
-  - [RedeclaredType](#CompileTimeErrors-RedeclaredType): A type with the same name has been declared before.
+  - [RedeclaredType](#redeclaredtype): A type with the same name has been declared before.
 
-  - [RedeclaredVariable](#CompileTimeErrors-RedeclaredVariable): A variable with the same name has been declared in the
+  - [RedeclaredVariable](#redeclaredvariable): A variable with the same name has been declared in the
     same scope.
 
-  - [SyntaxError](#CompileTimeErrors-SyntaxError): Text in a module or entered via the command line violates the Rascal
+  - [SyntaxError](#syntaxerror): Text in a module or entered via the command line violates the Rascal
     syntax.
 
-  - [UndeclaredAnnotation](#CompileTimeErrors-UndeclaredAnnotation): An annotation is used that has not been declared.
+  - [UndeclaredAnnotation](#undeclaredannotation): An annotation is used that has not been declared.
 
-  - [UndeclaredField](#CompileTimeErrors-UndeclaredField): A field name is used that has not been declared.
+  - [UndeclaredField](#undeclaredfield): A field name is used that has not been declared.
 
-  - [UndeclaredFunction](#CompileTimeErrors-UndeclaredFunction): A function is called that has not been declared.
+  - [UndeclaredFunction](#undeclaredfunction): A function is called that has not been declared.
 
-  - [UndeclaredJavaMethod](#CompileTimeErrors-UndeclaredJavaMethod): Attempt to call a non-existing Java method.
+  - [UndeclaredJavaMethod](#undeclaredjavamethod): Attempt to call a non-existing Java method.
 
-  - [UndeclaredKeywordParameter](#CompileTimeErrors-UndeclaredKeywordParameter): A function is called with a keyword
+  - [UndeclaredKeywordParameter](#undeclaredkeywordparameter): A function is called with a keyword
     parameter that was not declared in the function’s declaration.
 
-  - [UndeclaredModule](#CompileTimeErrors-UndeclaredModule): Reference to a non-existing module.
+  - [UndeclaredModule](#undeclaredmodule): Reference to a non-existing module.
 
-  - [UndeclaredModuleProvider](#CompileTimeErrors-UndeclaredModuleProvider): A scheme is used in a location for wich no
+  - [UndeclaredModuleProvider](#undeclaredmoduleprovider): A scheme is used in a location for wich no
     provider has been registered.
 
-  - [UndeclaredNonTerminal](#CompileTimeErrors-UndeclaredNonTerminal): A syntax rule uses an undeclared non-terminal.
+  - [UndeclaredNonTerminal](#undeclarednonterminal): A syntax rule uses an undeclared non-terminal.
 
-  - [UndeclaredType](#CompileTimeErrors-UndeclaredType): Use of a type that has not been declared.
+  - [UndeclaredType](#undeclaredtype): Use of a type that has not been declared.
 
-  - [UndeclaredVariable](#CompileTimeErrors-UndeclaredVariable): Use of a variable that has not been declared.
+  - [UndeclaredVariable](#undeclaredvariable): Use of a variable that has not been declared.
 
-  - [UnexpectedKeywordArgumentType](#CompileTimeErrors-UnexpectedKeywordArgumentType): The actual value of a keyword
+  - [UnexpectedKeywordArgumentType](#unexpectedkeywordargumenttype): The actual value of a keyword
     argument is not compatible with its declared type.
 
-  - [UnexpectedType](#CompileTimeErrors-UnexpectedType): A value of a different type was expected.
+  - [UnexpectedType](#unexpectedtype): A value of a different type was expected.
 
-  - [UnguardedAppend](#CompileTimeErrors-UnguardedAppend): Append statement occurs outside a for/while statement.
+  - [UnguardedAppend](#unguardedappend): Append statement occurs outside a for/while statement.
 
-  - [UnguardedFail](#CompileTimeErrors-UnguardedFail): Use of `fail` statement outside a condtional context.
+  - [UnguardedFail](#unguardedfail): Use of `fail` statement outside a condtional context.
 
-  - [UnguardedInsert](#CompileTimeErrors-UnguardedInsert): An `insert` occurs outside a `visit` expression.
+  - [UnguardedInsert](#unguardedinsert): An `insert` occurs outside a `visit` expression.
 
-  - [UnguardedIt](#CompileTimeErrors-UnguardedIt): The special variable `it` occurs outside a reducer expression.
+  - [UnguardedIt](#unguardedit): The special variable `it` occurs outside a reducer expression.
 
-  - [UnguardedReturn](#CompileTimeErrors-UnguardedReturn): A return statement occurs outside a function body.
+  - [UnguardedReturn](#unguardedreturn): A return statement occurs outside a function body.
 
-  - [UninitializedPatternMatch](#CompileTimeErrors-UninitializedPatternMatch): Pattern matching has not been properly
+  - [UninitializedPatternMatch](#uninitializedpatternmatch): Pattern matching has not been properly
     initialized.
 
-  - [UnitializedVariable](#CompileTimeErrors-UnitializedVariable): Use of a variable that has not been initialized.
+  - [UnitializedVariable](#unitializedvariable): Use of a variable that has not been initialized.
 
-  - [UnsupportedOperation](#CompileTimeErrors-UnsupportedOperation): Attempt to apply a operation to a value for which
+  - [UnsupportedOperation](#unsupportedoperation): Attempt to apply a operation to a value for which
     the operation is not defined.
 
-  - [UnsupportedPattern](#CompileTimeErrors-UnsupportedPattern): A pattern is used that is not supported.
+  - [UnsupportedPattern](#unsupportedpattern): A pattern is used that is not supported.
 
-  - [UnsupportedSubscript](#CompileTimeErrors-UnsupportedSubscript): A subscript is applied to a value that does not
+  - [UnsupportedSubscript](#unsupportedsubscript): A subscript is applied to a value that does not
     support it.
 
-  - [UnsupportedSubscriptArity](#CompileTimeErrors-UnsupportedSubscriptArity): Wrong number of subscripts is used.
+  - [UnsupportedSubscriptArity](#unsupportedsubscriptarity): Wrong number of subscripts is used.
 
 ## AmbiguousFunctionReference
 
@@ -187,9 +187,9 @@ The number of arguments of an operator differ from what is required.
 
 **Description.**
 
-Various operators like [composition](/Rascal#Relation-Composition), [transitive
-closure](/Rascal#Relation-TransitiveClosure) and [reflexive transitive
-closure](/Rascal#Relation-ReflexiveTransitiveClosure) expect binary relations or tuples as arguments.
+Various operators like [composition](/docs/Rascal#Composition), [transitive
+closure](/docs/Rascal#TransitiveClosure) and [reflexive transitive
+closure](/docs/Rascal#ReflexiveTransitiveClosure) expect binary relations or tuples as arguments.
 
 **Examples.**
 
@@ -227,7 +227,7 @@ A datetime value is syntactically incorrect.
 
 **Description.**
 
-datetime values have a rather complex format as described in [datetime](/Rascal#Values-DateTime). Some errors in the
+datetime values have a rather complex format as described in [datetime](/docs/Rascal#DateTime). Some errors in the
 format are treated as syntax errors, others generate the `DateTimeSyntax` error.
 
 Remedy: Fix the datetime value.
@@ -283,7 +283,7 @@ Attempt to compare a date with a time.
 
 **Description.**
 
-[datetime](/Rascal#Values-DateTime) values may contain two components: date and time. Datetime values that contain both
+[datetime](/docs/Rascal#DateTime) values may contain two components: date and time. Datetime values that contain both
 a date and a time can be compared. Dates can also be compared with dates, and times with times. This error is generated
 when a date is compared with a time.
 
@@ -492,7 +492,7 @@ A Rascal module could not be imported.
 
 **Description.**
 
-Rascal programs are split up in modules. An [import](/Rascal#Statements-Import) statement is used to include one module
+Rascal programs are split up in modules. An [import](/docs/Rascal#Import) statement is used to include one module
 in another. This error indicates that a module import failed. This can be caused by
 
   - A misspelled name in the import statement.
@@ -622,7 +622,7 @@ A type other than `void` is needed.
 **Description.**
 
 This error is generated when a non-void value is needed, but only void is provided. The most prominent examples are
-splicing for [list](/Rascal#List-Splice), [set](/Rascal#Set-Splice), and [map](/Rascal#Map-Splice).
+splicing for [list](/docs/Rascal#Splice), [set](/docs/Rascal#Splice), and [map](/docs/Rascal#Splice).
 
 Remedy: replace the expression that computes void by an expression that computes a non-void value.
 
@@ -678,8 +678,8 @@ A value that cannot be enumerated is used in an enumerator.
 
 **Description.**
 
-An [enumerator](/Rascal#Comprehensions-Enumerator) like `int n ← V` is used in
-[comprehensions](/Rascal#Expressions-Comprehensions) to enumerate the values in `V`. This error is produced when `V` is
+An [enumerator](/docs/Rascal#Enumerator) like `int n ← V` is used in
+[comprehensions](/docs/Rascal#Comprehensions) to enumerate the values in `V`. This error is produced when `V` is
 a value that does not support enumeration. This is typically the case for atomic values like numbers, Booleans and
 Strings,
 
@@ -723,7 +723,7 @@ A field name is redeclared.
 
 **Description.**
 
-The definition of an [algebraic data type](/Rascal#Declarations-AlgebraicDatatype) consists of a number of constructor
+The definition of an [algebraic data type](/docs/Rascal#ADT) consists of a number of constructor
 functions. Each constructor has named fields but the same field name may only be used in different constructors if it
 has the same type in all occurrences in the declaration.
 
@@ -764,7 +764,7 @@ A type with the same name has been declared before.
 **Description.**
 
 Some declarations introduce new type names. Most important are an [algebraic data
-type](/Rascal#Declarations-AlgebraicDataType) and [alias](/Rascal#Declarations-Alias). This error signals that the same
+type](/docs/Rascal#ADT) and [alias](/docs/Rascal#Alias). This error signals that the same
 type name is used for incompatible purposes.
 
 Remedy: rename one of the type names.
@@ -839,8 +839,8 @@ An annotation is used that has not been declared.
 
 **Description.**
 
-An [annotation](/Rascal#Declarations-Annotation) can be used to add information to an instance of an [algebraic data
-type](/Rascal#Declarations-AlgebraicDataType). An annotation has to declared beforehand. This error is generated when an
+An [annotation](/docs/Rascal#Annotation) can be used to add information to an instance of an [algebraic data
+type](/docs/Rascal#ADT). An annotation has to declared beforehand. This error is generated when an
 undeclared annotation is used.
 
 Remedies:
@@ -874,9 +874,9 @@ A field name is used that has not been declared.
 
 **Description.**
 
-Fields of [tuple](/Rascal#Values-Tuple) (hence also of [relation](/Rascal#Values-Relation) and
-[listrelation](/Rascal#Values-ListRelation)) and constructors of [algebraic data
-types](/Rascal#Declarations-AlgebraicDataType) may have names. This error is generated when a reference is made to an
+Fields of [tuple](/docs/Rascal#Tuple) (hence also of [relation](/docs/Rascal#Relation) and
+[listrelation](/docs/Rascal#ListRelation)) and constructors of [algebraic data
+types](/docs/Rascal#ADT) may have names. This error is generated when a reference is made to an
 undeclared field.
 
 Remedies:
@@ -1096,7 +1096,7 @@ A scheme is used in a location for wich no provider has been registered.
 
 **Description.**
 
-[Locations](/Rascal#Values-Location) provide very flexible ways to access files and external data sources. There any
+[Locations](/docs/Rascal#Location) provide very flexible ways to access files and external data sources. There any
 many protocols (called *schemes*) that can be used (e.g., `file`, `http`, `home` and many others). This error is
 generated when an unknown scheme is used.
 
@@ -1125,7 +1125,7 @@ A syntax rule uses an undeclared non-terminal.
 
 **Description.**
 
-All non-terminals that occur in a [syntax definition](/Rascal#Declarations-SyntaxDefinition) should be declared in some
+All non-terminals that occur in a [syntax definition](/docs/Rascal#SyntaxDefinition) should be declared in some
 rule. This error is generated when this is not the case.
 
 Remedy: declare the offending non-terminal.
@@ -1251,8 +1251,8 @@ A value of a different type was expected.
 **Description.**
 
 This error signals an incompatibility between expected type and actual type. Some of the situations in which this may
-occur are [assert](/Rascal#Statements-Assert), [variable](/Rascal#Declarations-Variable),
-[solve](/Rascal#Statements-Solve).
+occur are [assert](/docs/Rascal#Assert), [variable](/docs/Rascal#Variable),
+[solve](/docs/Rascal#Solve).
 
 Remedy: adjust the actual type to the expected type.
 
@@ -1284,7 +1284,7 @@ Append statement occurs outside a for/while statement.
 
 **Description.**
 
-The [append](/Rascal#Statements-Append) statement can be used inside a loop statement. This error is generated when
+The [append](/docs/Rascal#Append) statement can be used inside a loop statement. This error is generated when
 append occurs outside a loop.
 
 Remedy: use List concatenation to append an element to a list outside a loop.
@@ -1311,7 +1311,7 @@ Use of `fail` statement outside a condtional context.
 
 **Description.**
 
-A [fail](/Rascal#Statements-Fail) statement is only allowed inside conditional statements. This error is generated when
+A [fail](/docs/Rascal#Fail) statement is only allowed inside conditional statements. This error is generated when
 `fail` is used outside a conditional context.
 
 Remedies:
@@ -1350,8 +1350,8 @@ An `insert` occurs outside a `visit` expression.
 
 **Description.**
 
-An insert statement may only occur in the action part of a [pattern with action](/Rascal#Patterns-PatternWithAction),
-more precisely in a case in a [visit](/Rascal#Expressions-Visit) expression.
+An insert statement may only occur in the action part of a [pattern with action](/docs/Rascal#PatternWithAction),
+more precisely in a case in a [visit](/docs/Rascal#Visit) expression.
 
 Remedies:
 
@@ -1395,7 +1395,7 @@ The special variable `it` occurs outside a reducer expression.
 
 **Description.**
 
-A [reducer](/Rascal#Expressions-Reducer) is used to reduce all elements in a collection to a sngle value. The special
+A [reducer](/docs/Rascal#Reducer) is used to reduce all elements in a collection to a sngle value. The special
 variable `it` represents the currently reduced value and can be modified inside the reducer. This error is generated
 when `it` i used otuside the a reducer.
 
@@ -1427,7 +1427,7 @@ A return statement occurs outside a function body.
 
 **Description.**
 
-A [return](/Rascal#Statements-Return) statement is used to return a value from a function. It is an error to use it
+A [return](/docs/Rascal#Return) statement is used to return a value from a function. It is an error to use it
 outside a function body.
 
 **Examples.**
@@ -1451,9 +1451,9 @@ Pattern matching has not been properly initialized.
 
 **Description.**
 
-[Pattern matching](/Rascal#Concepts-PatternMatching) requires two ingredients:
+[Pattern matching](/docs/Rascal#PatternMatching) requires two ingredients:
 
-  - One of the many [patterns](/Rascal#Rascal-Patterns).
+  - One of the many [patterns](/docs/Rascal#Patterns).
 
   - A non-void subject value to which the pattern is applied.
 
@@ -1478,7 +1478,7 @@ Use of a variable that has not been initialized.
 
 **Description.**
 
-A [variable](/Rascal#Declarations-Variable) has to be initialized before it can be used. This error is generated when an
+A [variable](/docs/Rascal#Variable) has to be initialized before it can be used. This error is generated when an
 uninitialzed variable is used.
 
 Remedy: assign a value to the variable before its use:
@@ -1571,9 +1571,9 @@ A subscript is applied to a value that does not support it.
 
 **Description.**
 
-Subscription is available for values of various types including: [string](/Rascal#String-Subscription),
-[node](/Rascal#Node-Subscription), [list](/Rascal#List-Subscription), [map](/Rascal#Map-Subscription),
-[tuple](/Rascal#Tuple-Subscription) and [relation](/Rascal#Relation-Subscription). This error is generated when
+Subscription is available for values of various types including: [string](/docs/Rascal#Subscription),
+[node](/docs/Rascal#Subscription), [list](/docs/Rascal#Subscription), [map](/docs/Rascal#Subscription),
+[tuple](/docs/Rascal#Subscription) and [relation](/docs/Rascal#Subscription). This error is generated when
 subscription is applied to a value for which it is not defined.
 
 Remedies:
@@ -1609,9 +1609,9 @@ Wrong number of subscripts is used.
 
 **Description.**
 
-Subscription is available for values of various types including: [string](/Rascal#String-Subscription),
-[node](/Rascal#Node-Subscription), [list](/Rascal#List-Subscription), [map](/Rascal#Map-Subscription),
-[tuple](/Rascal#Tuple-Subscription) and [relation](/Rascal#Relation-Subscription). This error is generated when
+Subscription is available for values of various types including: [string](/docs/Rascal#Subscription),
+[node](/docs/Rascal#Subscription), [list](/docs/Rascal#Subscription), [map](/docs/Rascal#Subscription),
+[tuple](/docs/Rascal#Subscription) and [relation](/docs/Rascal#Subscription). This error is generated when
 subscription is applied to a value that does support subscription but not the number of indices that are used.
 
 Remedies: correct the number of indices used in the subscription.

@@ -11,7 +11,7 @@ Gentle introduction to the main concepts of the Rascal language.
 
 Rascal is based on a dozen concepts and having a global understanding of them will help to grasp the language more
 quickly. Here we will informally explain and illustrate these concepts and often we will refer to the [Rascal Language
-Reference](/Rascal) for further details. In other words, we are providing here a friendly front-end for the actual
+Reference](/docs/Rascal) for further details. In other words, we are providing here a friendly front-end for the actual
 language description.
 
 Most language concepts are described separately but some features we just mention here:
@@ -151,7 +151,7 @@ classify(V);
 ```
 
 In addition to these standard examples, it is interesting that all [Algebraic Data
-Types](/Rascal#Declarations-AlgebraicDataType) are subtypes of type `node`. Let’s introduce a simple `Color` data type:
+Types](/docs/Rascal#ADT) are subtypes of type `node`. Let’s introduce a simple `Color` data type:
 
 ``` rascal-shell
 data Color = red(int level) | blue(int level);
@@ -170,7 +170,7 @@ node ND = red(3);
 ```
 
 One example of the actual application of subtypes can be found in [Count
-Constructors](/Recipes#Common-CountConstructors).
+Constructors](/docs/Recipes#countconstructors).
 
 ## Datatypes
 
@@ -182,31 +182,31 @@ Built-in and user-defined datatypes.
 
 Rascal provides a rich set of datatypes:
 
-  - [Boolean](/Rascal#Values-Boolean) (`bool`).
+  - [Boolean](/docs/Rascal#boolean) (`bool`).
 
-  - Infinite precision [Integer](/Rascal#Values-Integer) (`int`), [Real](/Rascal#Values-Real) (`real`), and
-    [Number](/Rascal#Values-Number) (`num`).
+  - Infinite precision [Integer](/docs/Rascal#integer) (`int`), [Real](/docs/Rascal#real) (`real`), and
+    [Number](/docs/Rascal#number) (`num`).
 
-  - [String](/Rascal#Values-String)s (`str`) that can act as templates with embedded expressions and statements.
+  - [String](/docs/Rascal#string)s (`str`) that can act as templates with embedded expressions and statements.
 
-  - Source code [Location](/Rascal#Values-Location)s (`loc`) based on an extension of Universal Resource Identifiers
+  - Source code [Location](/docs/Rascal#location)s (`loc`) based on an extension of Universal Resource Identifiers
     (URI) that allow precise description of text areas in local and remote files.
 
-  - Date and time values ([DateTime](/Rascal#Values-DateTime), `datetime`).
+  - Date and time values ([DateTime](/docs/Rascal#datetime), `datetime`).
 
-  - [List](/Rascal#Values-List) (`list`).
+  - [List](/docs/Rascal#list) (`list`).
 
-  - [Tuple](/Rascal#Values-Tuple) (`tuple`).
+  - [Tuple](/docs/Rascal#tuple) (`tuple`).
 
-  - [Set](/Rascal#Values-Set) (`set`).
+  - [Set](/docs/Rascal#set) (`set`).
 
-  - [Map](/Rascal#Values-Map) (`map`)
+  - [Map](/docs/Rascal#map) (`map`)
 
-  - [Relation](/Rascal#Values-Relation) (`rel`).
+  - [Relation](/docs/Rascal#relation) (`rel`).
 
-  - Untyped tree structures ([Node](/Rascal#Values-Node), `node`).
+  - Untyped tree structures ([Node](/docs/Rascal#node), `node`).
 
-  - User-defined algebraic datatypes ([Algebraic Data Type](/Rascal#Declarations-AlgebraicDataType), `data`) allow the
+  - User-defined algebraic datatypes ([Algebraic Data Type](/docs/Rascal#ADT), `data`) allow the
     introduction of problem-specific types and are a subtype of node. This makes it possible to have typed and untyped
     views on the same data. A special case are syntax trees that are the result of parsing source files are represented
     as datatypes (`Tree`).
@@ -331,7 +331,7 @@ In pointer-based languages and in object-oriented languages the change to the or
 visible via `M`.
 
 String values are, like all other values, also immutable. Let’s experiment with the
-[replaceAll](/Libraries#String-replaceAll) function:
+[replaceAll](/docs/Libraries#replaceall) function:
 
 ``` rascal-shell
 import String;
@@ -374,8 +374,8 @@ Rascal generalizes comprehensions in various ways. Comprehensions exist for list
 consists of an expression that determines the successive elements to be included in the result and a list of enumerators
 and tests (boolean expressions). The enumerators produce values and the tests filter them.
 
-See [Comprehensions](/Rascal#Expressions-Comprehensions), [List Comprehension](/Rascal#List-Comprehension), [Set
-Comprehension](/Rascal#Set-Comprehension), and [Map Comprehension](/Rascal#Map-Comprehension) for details.
+See [Comprehensions](/docs/Rascal#comprehensions), [List Comprehension](/docs/Rascal#comprehension), [Set
+Comprehension](/docs/Rascal#comprehension), and [Map Comprehension](/docs/Rascal#comprehension) for details.
 
 **Examples.**
 
@@ -392,7 +392,7 @@ do not give in full detail) is
 {name | /asgStat(Id name, _) <- P}
 ```
 
-which traverses program `P` (using the *descendant match* operator `/`, see [Patterns](/Rascal#Patterns-Abstract)) and
+which traverses program `P` (using the *descendant match* operator `/`, see [Patterns](/docs/Rascal#abstract)) and
 constructs a set of all identifiers that occur on the left hand side of assignment statements in `P`.
 
 ## Pattern Matching
@@ -406,19 +406,19 @@ Pattern matching.
 Pattern matching determines whether a given pattern matches a given value. The outcome can be `false` (no match) or
 `true` (a match). A pattern match that succeeds may bind values to variables.
 
-Pattern matching is *the* mechanism for case distinction ([Switch](/Rascal#Statements-Switch) statement) and search
-([Visit](/Rascal#Expressions-Visit) statement) in Rascal. Patterns can also be used in an explicit match operator `:=`
+Pattern matching is *the* mechanism for case distinction ([Switch](/docs/Rascal#switch) statement) and search
+([Visit](/docs/Rascal#visit) statement) in Rascal. Patterns can also be used in an explicit match operator `:=`
 and can then be part of larger boolean expressions. Since a pattern match may have more than one solution, local
 backtracking over the alternatives of a match is provided. Patterns can also be used in
-[Enumerators](/Rascal#Comprehensions-Enumerator)s and control structures like [For](/Rascal#Statements-For) and
-[While](/Rascal#Statements-While) statement.
+[Enumerators](/docs/Rascal#enumerator)s and control structures like [For](/docs/Rascal#for) and
+[While](/docs/Rascal#while) statement.
 
 A very rich pattern language is provided that includes string matching based on regular expressions, matching of
 abstract patterns, and matching of concrete syntax patterns. Some of the features that are provided are list
 (associative) matching, set (associative, commutative, idempotent) matching, and deep matching of descendant patterns.
 All these forms of matching can be used in a single pattern and can be nested. Patterns may contain variables that are
 bound when the match is successful. Anonymous (don’t care) positions are indicated by the underscore (`_`). See
-[Patterns](/Rascal#Rascal-Patterns) for more details.
+[Patterns](/docs/Rascal#patterns) for more details.
 
 **Examples.**
 
@@ -460,7 +460,7 @@ whileStat(EXP Exp, _*)
 ```
 
 When there is a grammar for this example language, we can also write concrete patterns as described in [Concrete
-Patterns](/Rascal#Patterns-Concrete).
+Patterns](/docs/Rascal#concrete).
 
 ## Control Structures
 
@@ -473,7 +473,7 @@ Success-directed control structures.
 The flow of Rascal program execution is completely explicit. Boolean expressions determine choices that drive the
 control structures. Only local backtracking is provided in the context of boolean expressions and pattern matching.
 
-Control structures like [If](/Rascal#Statements-If), [While](/Rascal#Statements-While) and [For](/Rascal#Statements-For)
+Control structures like [If](/docs/Rascal#if), [While](/docs/Rascal#while) and [For](/docs/Rascal#for)
 statement are driven by Boolean expressions. Actually, combinations of generators and Boolean expressions can be used to
 drive the control structures. In the latter case, the Boolean expression is executed for each generated value.
 
@@ -491,7 +491,7 @@ if(N <= 0)
 A combination of a generator and a test:
 
 ``` rascal
-for(/asgStat(Id name, _) <- P, size(name) > 10){
+for(/docs/asgStat(Id name, _) <- P, size(name) > 10){
     println(name);
 }
 ```
@@ -512,12 +512,12 @@ pattern succeeds and the following statement is executed successfully, all chang
 are committed and thus become permanent. The variables bound by the pattern are always local to the statement associated
 with the case.
 
-See [Switch](/Rascal#Statements-Switch),[Visit](/Rascal#Expressions-Visit) and [Pattern With
-Action](/Rascal#Patterns-PatternWithAction) for more details.
+See [Switch](/docs/Rascal#switch),[Visit](/docs/Rascal#visit) and [Pattern With
+Action](/docs/Rascal#pattern-with-action) for more details.
 
 **Examples.**
 
-We use the [ColoredTrees](/Recipes#Common-ColoredTrees) datatype as example and use a switch to distinguish between red
+We use the [ColoredTrees](/docs/Recipes#colored-trees) datatype as example and use a switch to distinguish between red
 and black nodes:
 
 ``` rascal-shell
@@ -554,17 +554,17 @@ visited. When one of the cases matches the statements associated with that case 
 
   - cause some side effect, i.e., assign a value to local or global variables;
 
-  - execute an [Insert](/Rascal#Statements-Insert) statement that replaces the current element;
+  - execute an [Insert](/docs/Rascal#insert) statement that replaces the current element;
 
-  - execute a [Fail](/Rascal#Statements-Fail) statement that causes the match for the current case to fail.
+  - execute a [Fail](/docs/Rascal#fail) statement that causes the match for the current case to fail.
 
 The value of a visit expression is the original subject value with all replacements made as dictated by matching cases.
 The traversal order in a visit expressions can be explicitly defined by the programmer.
 
 **Examples.**
 
-Examples of visiting are, for instance, given in the Recipes [ColoredTrees](/Recipes#Common-ColoredTrees) and
-[Derivative](/Recipes#Common-Derivative).
+Examples of visiting are, for instance, given in the Recipes [ColoredTrees](/docs/Recipes#colored-trees) and
+[Derivative](/docs/Recipes#derivative).
 
 ## Functions
 
@@ -578,7 +578,7 @@ Functions allow the definition of frequently used operations. They have a name a
 explicitly declared and are fully typed. Functions can also be used as values thus enabling higher-order functions.
 Rascal is a higher-order language in which functions are first-class values.
 
-See [Function Declaration](/Rascal#Declarations-Function) for details.
+See [Function Declaration](/docs/Rascal#function-declaration) for details.
 
 **Examples.**
 
@@ -628,19 +628,19 @@ All source code analysis projects need to extract information directly from the 
 approaches to this:
 
   - *Lexical information*: Use regular expressions to extract useful, but somewhat superficial, flat, information. This
-    can be achieved using regular expression patterns, see [Regular Expression Pattern](/Rascal#Patterns-Regular)s.
+    can be achieved using regular expression patterns, see [Regular Expression Pattern](/docs/Rascal#regular)s.
 
   - *Structured information*: Use syntax analysis to extract the complete, nested, structure of the source code in the
     form of a syntax tree. Rascal can directly manipulate the parse trees, but it also enables user-defined mappings
     from parse tree to abstract syntax tree.
 
-Using [Syntax Definitions](/Rascal#Declarations-SyntaxDefinition) you can define the syntax of any (programming)
+Using [Syntax Definitions](/docs/Rascal#syntax-definition) you can define the syntax of any (programming)
 language. Then Rascal:
 
   - will generate the parser, and
 
   - will provide pattern matching and pattern construction on parse trees and abstract syntax trees, see [Abstract
-    Patterns](/Rascal#Patterns-Abstract) and [Concrete Patterns](/Rascal#Patterns-Concrete).
+    Patterns](/docs/Rascal#abstract) and [Concrete Patterns](/docs/Rascal#concrete).
 
 **Examples.**
 
@@ -693,7 +693,7 @@ import ParseTree;
 parse(#start[Exp], "2+3*4");
 ```
 
-First we import the syntax definition and the [ParseTree](/Libraries/Prelude-ParseTree) module that provides the parsing
+First we import the syntax definition and the [ParseTree](/docs/Libraries#parsetree) module that provides the parsing
 functionality. Finally, we parse `2+3*4` using the start symbol `Exp`.
 
 Don’t be worried, we are just showing the resulting parse tree here. It intended for programs and not for humans. The
@@ -705,10 +705,10 @@ points we want to make are:
 
   - Given a syntax definition, it can be used immediately for parsing.
 
-See [Recipes](/Recipes) for a more extensive presentation of the [EXP](/Recipes#Languages-Exp) language and
-[Languages](/Recipes#Recipes-Languages) for other language examples.
+See [Recipes](/docs/Recipes) for a more extensive presentation of the [EXP](/docs/Recipes#exp) language and
+[Languages](/docs/Recipes#languages) for other language examples.
 
-## IDE Construction
+## IDE Construction (OUTDATED)
 
 **Synopsis.**
 
@@ -725,7 +725,7 @@ Rascal uses the services of the IDE Meta-tooling Platform, or [IMP](http://www.e
 of API and tools to support constructing IDEs for programming languages and domain specific languages. Rascal is also
 part of the collection of IMP tools and (will be) hosted shortly on eclipse.org.
 
-Using the [IDE library](/Libraries#util-IDE), you can instantiate the services that IMP provides for any language
+Using the [IDE library](/docs/Libraries#ide), you can instantiate the services that IMP provides for any language
 implemented in Rascal.
 
 To instantiate an IDE for a language implemented using Rascal, use the following steps:
@@ -746,25 +746,25 @@ Code models are abstract representations of source code
 
 **Description.**
 
-You can use any of Rascal’s [Values](/Rascal#Expressions-Values) to represent facts about source code. For example,
-[Algebraic Data Types](/Rascal#Declarations-AlgebraicDataType) can be used to define abstract syntax trees and
-[???](#Values-Relation) are used to represent call graphs. We consistently use [Locations](/Rascal#Values-Location) to
+You can use any of Rascal’s [Values](/docs/Rascal#values) to represent facts about source code. For example,
+[Algebraic Data Types](/docs/Rascal#ADT) can be used to define abstract syntax trees and
+[???](#values-Relation) are used to represent call graphs. We consistently use [Locations](/docs/Rascal#location) to
 refer to source code artifacts, either physically (`|file:///tmp/HelloWorld.java|`) or logically
 (`|java+class://java/lang/Object|`).
 
 Specifically we have standardized a set of models to represent source code which are ready for computing metrics:
 \#/Libraries\#analysis-m3\[M3\]. This M3 model consists of:
 
-  - an open (extensible) set of [Relations](/Rascal#Values-Relation) between source code artifacts.
+  - an open (extensible) set of [Relations](/docs/Rascal#relation) between source code artifacts.
 
-  - a number of extensible [Algebraic Data Types](/Rascal#Declarations-AlgebraicDataType) for representing abstract
+  - a number of extensible [Algebraic Data Types](/docs/Rascal#ADT) for representing abstract
     syntax trees.
 
-The core language independent model can be found here: [analysis::m3](/Libraries#analysis-m3).
+The core language independent model can be found here: [analysis::m3](/docs/Libraries#m3).
 
 Extensions for representing facts about specific languages:
 
-  - [lang::java::m3](/Libraries#java-m3).
+  - [lang::java::m3](/docs/Libraries#m3).
 
 ## Enumerating
 
@@ -779,7 +779,7 @@ substrings of a string, or all the nodes in a tree. Each value that is enumerate
 before it can possibly contribute to the result of the enumerator. An enumerator yields `true` as long as it has
 generated a new value, and `false` otherwise.
 
-See [Enumerator](/Rascal#Comprehensions-Enumerator) for details.
+See [Enumerator](/docs/Rascal#enumerator) for details.
 
 **Examples.**
 
@@ -826,8 +826,8 @@ A more satisfying use is as follows:
 { x * x | int x <- {1, 3, 5, 7, 11 }};
 ```
 
-When used inside [Comprehensions](/Rascal#Expressions-Comprehensions), or [For](/Rascal#Statements-For),
-[Do](/Rascal#Statements-Do), or [While](/Rascal#Statements-While) statement, all values of the generator will be
+When used inside [Comprehensions](/docs/Rascal#comprehensions), or [For](/docs/Rascal#for),
+[Do](/docs/Rascal#do), or [While](/docs/Rascal#while) statement, all values of the generator will be
 produced and used. The variables that are introduced by a enumerator are local to the construct in which the enumerator
 is used. Here is a similar example:
 
@@ -853,7 +853,7 @@ Many problems can be solved by forms of *constraint solving*. This is a declarat
 constraints that a problem solution should satisfy and how potential solutions can be generated. The actual solution (if
 any) is found by enumerating solutions and testing their compliance with the constraints.
 
-Rascal provides a [Solve](/Rascal#Statements-Solve) statement that helps writing constraint solvers.
+Rascal provides a [Solve](/docs/Rascal#solve) statement that helps writing constraint solvers.
 
 **Examples.**
 
@@ -880,7 +880,7 @@ long as some pattern matches.
 
 Rascal has ancestors, notably [ASF+SDF](http://www.meta-environment.org/), where rewriting was the most important
 computation mechanism. In Rascal, rewriting can be achieved using pattern-directed invocation, see [Function
-Declaration](/Rascal#Declarations-Function), possibly combined with a [Visit](/Rascal#Expressions-Visit) statement.
+Declaration](/docs/Rascal#function), possibly combined with a [Visit](/docs/Rascal#visit) statement.
 
 **Examples.**
 
@@ -917,4 +917,4 @@ Exp simplify(Exp e){
   - The actual `simplify` function: it performs a bottom up visit of the expression, replacing each subexpression by a
     simplified version.
 
-See [Derivative](/Recipes#Common-Derivative) for a full explanation of this example.
+See [Derivative](/docs/Recipes#derivative) for a full explanation of this example.

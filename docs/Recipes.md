@@ -85,7 +85,7 @@ Variations on the ubiquitous *Hello World* example.
 **Examples.**
 
 We demonstrate hello via an interactive session with the Rascal system. First we get the prompt `rascal>` that shows
-that Rascal is ready for our input. Next, we import the library module [IO](/Libraries#Prelude-IO) since hello world
+that Rascal is ready for our input. Next, we import the library module [IO](/docs/Libraries#io) since hello world
 requires printing. Rascal responds with the feedback `ok` so we know that all went well. Finally, we call `println` and
 proudly observe our first Rascal output\!
 
@@ -170,7 +170,7 @@ int fac3(int N)  {
 
   - `fac` is defined using a conditional expression to distinguish cases.
 
-  - `fac2` distinguishes cases using pattern-based dispatch ([Rascal Functions](/Rascal#Concepts-Function)). Here the
+  - `fac2` distinguishes cases using pattern-based dispatch ([Rascal Functions](/docs/Rascal#Function)). Here the
     case for `0` is defined.
 
   - Here all other cases for `fac2` are defined (as indicated by the `default` keyword).
@@ -225,9 +225,9 @@ str squaresTemplate(int N)
     '  <I> squared = <I * I><}>";
 ```
 
-  - The [IO](/Libraries#Prelude-IO) module is imported since we want to print things using `println`.
+  - The [IO](/docs/Libraries#io) module is imported since we want to print things using `println`.
 
-  - [String](/Rascal#Values-String) interpolation is used several times. Here the value of `N` is inserted in the header
+  - [String](/docs/Rascal#String) interpolation is used several times. Here the value of `N` is inserted in the header
     message.
 
   - The values of `I` and `I * I` are inserted in each line that is printed.
@@ -248,7 +248,7 @@ squares(9);
 squaresTemplate(9);
 ```
 
-To get a truly identical result we have to import the [IO](/Libraries#Prelude-IO) module and print the value of
+To get a truly identical result we have to import the [IO](/docs/Libraries#io) module and print the value of
 `squaresTemplate`:
 
 ``` rascal-shell
@@ -295,7 +295,7 @@ void sing(){
     is available. Observe how we use the patterns `0`, `1` and `int n` in the definition of three variants of this
     function.
 
-  - *Pattern-directed invocation* (see [function declaration](/Rascal#Declarations-Function)) will determine at the call
+  - *Pattern-directed invocation* (see [function declaration](/docs/Rascal#Function)) will determine at the call
     site which function will be called. The general case is labeled with `default` to indicate that if the case for 0
     and 1 do not match, this alternative should handle the other cases.
 
@@ -319,7 +319,7 @@ Variout styles to write bubble sort.
 **Description.**
 
 [Bubble sort](http://en.wikipedia.org/wiki/Bubble_sort) is a classical (albeit not the most efficient) technique to sort
-lists of values. We present here several styles to implement bubble sort. Also see [sort](/Libraries#List-sort) for a
+lists of values. We present here several styles to implement bubble sort. Also see [sort](/docs/Libraries#sort) for a
 more efficient library function for sorting.
 
 **Examples.**
@@ -1527,8 +1527,8 @@ Generic function that can count constructors in a value of any algebraic data ty
 In [???](#ColoredTrees), we have seen a function that can count the number of red nodes in a `ColoredTree`. Is it
 possible to define a function that can count constructors in a value of any algerbaic data type?
 
-We exploit the subtype relation (see [Static Typing](/Rascal#Concepts-StaticTyping)) between [algebraic data
-types](/Rascal#Declrations-AlgebraicDataType)s and the type [node](/Rascal#Values-Node) to achieve this.
+We exploit the subtype relation (see [Static Typing](/docs/Rascal#StaticTyping)) between [algebraic data
+types](/docs/Rascal#ADT)s and the type [node](/docs/Rascal#Node) to achieve this.
 
 In real applications this becomes relevant when counting, for instance, statement types in programs.
 
@@ -1584,14 +1584,14 @@ Two data types are introduced `ColoredTree` and `Hand` together with an example 
   - Defines a visit of argument `N`; it traverses the complete value of `N`.
 
   - Defines the case that we encounter a node and we update its frequency count. First the name of the constructor is
-    retrieved (using [getName](/Libraries#Node-getName)) and then the frequency is updated. The
-    [isDefined](/Rascal#Assignment-IsDefined) operator is used to provide a default value of 0 when the name was not yet
+    retrieved (using [getName](/docs/Libraries#getname)) and then the frequency is updated. The
+    [isDefined](/docs/Rascal#IsDefined) operator is used to provide a default value of 0 when the name was not yet
     in the map.
 
   - The map `freq` is returned as result.
 
   - Defines a variant `countRelevant`; it gets is an extra argument of relevant constructors names that is used to
-    filter the map that is returned by `count` using [domainR](/Libraries#Map-domainR).
+    filter the map that is returned by `count` using [domainR](/docs/Libraries#domainr).
 
 <!-- end list -->
 
@@ -1716,7 +1716,7 @@ value. Languages like PHP and Ruby are popular for this feature. Let’s see how
 
 Rascal provides string templates that rival what is provided in
 [Ruby](http://www.ruby-doc.org/stdlib/libdoc/erb/rdoc/ERB.html), [PHP](http://www.php.net/) or
-[ANTLR](http://www.stringtemplate.org/). They are fully described in [string values](/Rascal#Values-String).
+[ANTLR](http://www.stringtemplate.org/). They are fully described in [string values](/docs/Rascal#String).
 
 **Examples.**
 
@@ -1895,7 +1895,7 @@ int wordCount(list[str] input, int (str s) countInLine)
 }
 ```
 
-  - An [enumerator](/Rascal#Comprehensions-Enumerator) is used to generated all the lines in the list of lines.
+  - An [enumerator](/docs/Rascal#Enumerator) is used to generated all the lines in the list of lines.
 
   - The argument function `countInLine` is applied to count the number of words in each line.
 
@@ -1922,7 +1922,7 @@ int wordCount2(list[str] lines) = (0 | it + (0 | it + 1 | /\w+/ := line) | str l
 wordCount2(Jabberwocky);
 ```
 
-The function body contains two nested [reducers](/Rascal#Expressions-Reducer). The inner reducer counts the number of
+The function body contains two nested [reducers](/docs/Rascal#Reducer). The inner reducer counts the number of
 words in a line, the outer reducer accumulates all line word counts.
 
 ``` rascal-shell
@@ -1944,7 +1944,7 @@ module demo::common::WordCount::CountInLine1
 
 int countInLine1(str S){
   int count = 0;
-  for(/[a-zA-Z0-9_]+/ := S){
+  for(/docs/[a-zA-Z0-9_]+/ := S){
        count += 1;
   }
   return count;
@@ -1977,7 +1977,7 @@ int countInLine2(str S){
   // \w matches any word character
   // \W matches any non-word character
   // <...> are groups and should appear at the top level.
-  while (/^\W*\w+<rest:.*$>/ := S) {
+  while (/docs/^\W*\w+<rest:.*$>/ := S) {
     count += 1;
     S = rest;
   }
@@ -2023,7 +2023,7 @@ int countInLine3(str S){
 }
 ```
 
-We use a [reducer](/Rascal#Expressions-Reducer) that is a recipe to reduce the values produced by one or more generators
+We use a [reducer](/docs/Rascal#Reducer) that is a recipe to reduce the values produced by one or more generators
 to a single value:
 
   - `0` is the initial value of the reducer
@@ -2123,7 +2123,7 @@ import String;
 
 str capitalize(str word) 
 {
-   if(/^<letter:[a-z]><rest:.*$>/ := word){
+   if(/docs/^<letter:[a-z]><rest:.*$>/ := word){
      return toUpperCase(letter) + rest;
    } else {
      return word;
@@ -2140,7 +2140,7 @@ test bool capitalize2() = capitalize("rascal") == "Rascal";
 str capAll1(str S) 
 {
  result = "";
- while (/^<before:\W*><word:\w+><after:.*$>/ := S) {
+ while (/docs/^<before:\W*><word:\w+><after:.*$>/ := S) {
     result = result + before + capitalize(word);
     S = after;
   }
@@ -2160,7 +2160,7 @@ str capAll2(str S)
 ```
 
   - We start by introducing a helper function `capitalize` that does the actual capitalization of a single word. See
-    [Regular Pattern](/Rascal#Patterns-Regular) for details about regular expression patterns. Next we give two versions
+    [Regular Pattern](/docs/Rascal#Regular) for details about regular expression patterns. Next we give two versions
     of a capitalization functions for a sentence:
 
   - `capAll1` uses a while loop to find subsequent words and to replace them by a capitalized version.
@@ -2338,7 +2338,7 @@ int eval(add(Exp e1, Exp e2)) = eval(e1) + eval(e2);
 ```
 
 Here we see Rascal’s *pattern-directed invocation* in action (see [Function
-Declaration](/Rascal#Declarations-Function)). The essence is this: in other languages the formal parameters in a
+Declaration](/docs/Rascal#Function)). The essence is this: in other languages the formal parameters in a
 function declaration are just that: formal parameters, i.e., single names that can be used inside the function and that
 are bound when the function is called. In Rascal, however, the formal parameters are actually a *pattern* and functions
 can have arbitrarily complex patterns as (single) formal parameter. These patterns may bind variables and thus introduce
@@ -2399,7 +2399,7 @@ Use implode to translate an Exp parse tree to an abstract syntax tree.
 
 **Description.**
 
-[implode](/Libraries#ParseTree-implode) is a function that automates the mapping between parse trees and abstract syntax
+[implode](/docs/Libraries#implode) is a function that automates the mapping between parse trees and abstract syntax
 trees. It takes two arguments:
 
   - The *reified* type of the desired abstract syntax. (In Rascal, types can not be used freely as values. A reified
@@ -2771,7 +2771,7 @@ int eval((Exp)`<Exp e1> + <Exp e2>`) = eval(e1) + eval(e2);
 int eval((Exp)`( <Exp e> )`) = eval(e);
 ```
 
-Note that [Pattern Matching](/Rascal#Concepts-PatternMatching) will *ignore* all trees in layout positions, such that
+Note that [Pattern Matching](/docs/Rascal#PatternMatching) will *ignore* all trees in layout positions, such that
 the parse tree of "1 + \\\\n1" will match against `<Exp e1> + <Exp e2>`. The same goes for equality on parse trees.
 
 For the above example Rascal will insert the `Whitespace` non-terminal between every element of the syntax rules for
@@ -3713,7 +3713,7 @@ To simplify later processing, Func programs are converted to an abstract syntax 
 
 The concrete syntax for Func is described in [Concrete Syntax](#Func-ConcreteSyntax) and its abstract syntax in
 [Abstract Syntax](#Func-AbstractSyntax). Rather than manually writing conversion rules from Func parse trees to Func
-abstract syntax trees we use our secret weapon: [implode](/Libraries#PareTree-implode) that performs the mapping for us.
+abstract syntax trees we use our secret weapon: [implode](/docs/Libraries#implode) that performs the mapping for us.
 As you see when you compare the concrete and abstract syntax, the ground work has already been done by appropriately
 labelling concrete rules with constructor names of the abstract syntax.
 
@@ -3774,8 +3774,8 @@ Parse a Func program from a string or a file.
 **Description.**
 
 Parsing uses the syntax rules for a given start non-terminnal to parse a string and turn it into a parse tree. The work
-horse is the [parse](/Libraries#ParseTree-parse) function that is available in the
-[PareTree](/Libraries#Prelude-ParseTree) library.
+horse is the [parse](/docs/Libraries#parse) function that is available in the
+[PareTree](/docs/Libraries#parsetree) library.
 
 **Examples.**
 
@@ -5002,11 +5002,11 @@ Notes:
 
   - The function `load` takes a string as argument (supposedly the source code of a Pico program) and returns a value of
     type `PROGRAM`, the abstract syntax tree of the input program. In case the input program is syntactically incorrect,
-    a `ParseError` exception will be thrown, see [RuntimeException](/Libraries#Prelude-RunTimeException).
+    a `ParseError` exception will be thrown, see [RuntimeException](/docs/Libraries#runtimeexception).
 
   - `parse(#Program, txt)`: parse `txt` according to the non-terminal `Program`. Note that `#Program` is a *reified
     type*, i.e., the type `Program` is represented as an ordinary Rascal value and passed as argument to the `parse`
-    function, see [reified types](/Rascal#Values-ReifiedTypes). The `parse` function returns a parse tree of the input
+    function, see [reified types](/docs/Rascal#ReifiedTypes). The `parse` function returns a parse tree of the input
     program.
 
   - `implode(#PROGRAM, parse(#Program, txt))`: transform the parse returned by `parse` into an abstract syntax tree of
@@ -5477,7 +5477,7 @@ This is a recipe for computing basic or more advanced metrics from a Java projec
 
   - You have a Java project in your Eclipse workspace that compiles without errors. Let’s call it `HelloWorld`.
 
-Now we will follow the [EASY](/EASY) paradigm:
+Now we will follow the [EASY](/docs/WhyRascal#easy) paradigm:
 
   - a library will be used to *parse* the Java code generating \[Rascalopedia:AbstractSyntaxTree\]
 
@@ -5753,8 +5753,8 @@ module demo::vis::VisADT
   - `visNode` represents the node itself as a \[$Rascal:Figures/tree\] that has a colored ellipse as root and the
     visualization of two ColoredTrees as children.
 
-For the example `ColoredTree` `rb` we can set a standard (see [/Libraries\#std](/Libraries#std))
-[size](/Libraries#Properties-size) and standard [gap](/Libraries#Properties-gap):
+For the example `ColoredTree` `rb` we can set a standard (see [/Libraries\#std](/docs/Libraries#std))
+[size](/docs/Libraries#size) and standard [gap](/docs/Libraries#gap):
 
 ``` rascal-figure
                 import demo::vis::VisADT;
@@ -5773,7 +5773,7 @@ Note that:
   - We use `std(size(30))` and \` std(gap(30))\` to achieve that these properties are set for all subfigures.
 
 Some further custumizations are possible. By default, the tree visualization uses
-[manhattan](/Libraries#Properties-manhattan) style. If we turn it off
+[manhattan](/docs/Libraries#manhattan) style. If we turn it off
 
 ``` rascal-figure
                 import demo::vis::VisADT;
@@ -5784,7 +5784,7 @@ the result is:
 
 ![a2](/images/a2.png)
 
-It is also possible to change the [orientation](/Libraries#Properties-orientation) of the tree and draw it, for example,
+It is also possible to change the [orientation](/docs/Libraries#orientation) of the tree and draw it, for example,
 from left to right:
 
 ``` rascal-figure
@@ -6183,7 +6183,7 @@ Drawing a box in many variations.
 
 **Examples.**
 
-Drawing a red [box](/Libraries#Figure-box) is as simple as this:
+Drawing a red [box](/docs/Libraries#box) is as simple as this:
 
 ``` rascal-figure
 import vis::Figure;
@@ -6198,7 +6198,7 @@ and it will look like this:
 
 ![Screenshot 1](/images/Screenshot1.png)
 
-Wow, the box fills the whole window\! So lets give our box a [size](/Libraries#Properties-size):
+Wow, the box fills the whole window\! So lets give our box a [size](/docs/Libraries#size):
 
 ``` rascal-figure
 import vis::Figure;
@@ -6215,7 +6215,7 @@ On screen however, it still fills the whole window as shown above. The lesson he
 **minimum size** (and probably we should rename `size` to `minSize` to emphasize this).
 
 So how can we produce a box that does *not* fill the whole window? The answer is to define the size of the box
-*relative* to its surroundings by using [shrink](/Libraries#Properties-shrink):
+*relative* to its surroundings by using [shrink](/docs/Libraries#shrink):
 
 ``` rascal-figure
 import vis::Figure;
@@ -6228,8 +6228,8 @@ which says: *I am a red box and I want to occupy 50% of the available space.* Th
 
 ![Screen shot 2](/images/Screenshot2.png)
 
-Shrinking can also be limited to one dimension using [hshrink](/Libraries#Properties-hshrink) or
-[vshrink](/Libraries#Properties-vshrink):
+Shrinking can also be limited to one dimension using [hshrink](/docs/Libraries#hshrink) or
+[vshrink](/docs/Libraries#vshrink):
 
 ``` rascal-figure
 import vis::Figure;
@@ -6340,7 +6340,7 @@ render(e);
 
 (we add the shrink to leave some space for thick lines and shadows below).
 
-Change the style of its border using [lineStyle](/Libraries#Properties-lineStyle):
+Change the style of its border using [lineStyle](/docs/Libraries#linestyle):
 
 ``` rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), lineStyle("dot"));
@@ -6349,7 +6349,7 @@ render(e);
 
 ![e2](/images/e2.png)
 
-Change the thickness of its border using [lineWidth](/Libraries#Properties-lineWidth):
+Change the thickness of its border using [lineWidth](/docs/Libraries#linewidth):
 
 ``` rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), lineWidth(5));
@@ -6358,7 +6358,7 @@ render(e);
 
 ![e3](/images/e3.png)
 
-Change the color of its border using [lineColor](/Libraries#Properties-lineColor):
+Change the color of its border using [lineColor](/docs/Libraries#linecolor):
 
 ``` rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), lineColor("blue"));
@@ -6367,7 +6367,7 @@ render(e);
 
 ![e4](/images/e4.png)
 
-Change the color of its area using [fillColor](/Libraries#Properties-fillColor):
+Change the color of its area using [fillColor](/docs/Libraries#fillcolor):
 
 ``` rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), fillColor("yellow"));
@@ -6376,7 +6376,7 @@ render(e);
 
 ![e5](/images/e5.png)
 
-Add a shadow using [shadow](/Libraries#Properties-shadow):
+Add a shadow using [shadow](/docs/Libraries#shadow):
 
 ``` rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), shadow(true));
@@ -6385,7 +6385,7 @@ render(e);
 
 ![e6](/images/e6.png)
 
-Add the color of the shadow using [shadowColor](/Libraries#Properties-shadowColor):
+Add the color of the shadow using [shadowColor](/docs/Libraries#shadowcolor):
 
 ``` rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), shadow(true), shadowColor("grey"));

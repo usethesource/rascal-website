@@ -16,65 +16,65 @@ Rascalopedia is work in progress. Please send us your suggestions for new concep
 
 These are the currently covered topics:
 
-  - [AbstractDataType](#Rascalopedia-AbstractDataType): A definition of a data type.
+  - [AbstractDataType](#abstractdatatype): A definition of a data type.
 
-  - [Abstract Syntax Tree](#Rascalopedia-AbstractSyntaxTree): Representation of the abstract syntactic structure of a
+  - [Abstract Syntax Tree](#abstractsyntaxtree): Representation of the abstract syntactic structure of a
     program.
 
-  - [Compiler](#Rascalopedia-Compiler): Tranform source code to an executable form.
+  - [Compiler](#compiler): Tranform source code to an executable form.
 
-  - [Domain Specific Language](#Rascalopedia-DomainSpecificLanguage): Programming language targeted for a particular
+  - [Domain Specific Language](#domainspecificlanguage): Programming language targeted for a particular
     application domain.
 
-  - [Dynamic Semantics](#Rascalopedia-DynamicSemantics): Description of the execution behaviour of a program.
+  - [Dynamic Semantics](#dynamicsemantics): Description of the execution behaviour of a program.
 
-  - [Grammar](#Rascalopedia-Grammar): A synonym for [Syntax](#Rascalopedia-Syntax).
+  - [Grammar](#grammar): A synonym for [Syntax](#syntax).
 
-  - [Interpreter](#Rascalopedia-Interpreter): Directly execute the statements of a program.
+  - [Interpreter](#interpreter): Directly execute the statements of a program.
 
-  - [Language](#Rascalopedia-Language): The set of strings defined by a [Grammar](#Rascalopedia-Grammar).
+  - [Language](#language): The set of strings defined by a [Grammar](#grammar).
 
-  - [Language Definition](#Rascalopedia-LanguageDefinition): Description of all aspects of a language.
+  - [Language Definition](#languagedefinition): Description of all aspects of a language.
 
-  - [List](#Rascalopedia-List): An ordered sequence of values.
+  - [List](#list): An ordered sequence of values.
 
-  - [MetaProgramming](#Rascalopedia-MetaProgramming): Analysis or transformation of one program by another program.
+  - [MetaProgramming](#metaprogramming): Analysis or transformation of one program by another program.
 
-  - [ParseTree](#Rascalopedia-ParseTree): Detailed represention of the concrete syntactic structure of a program.
+  - [ParseTree](#parsetree): Detailed represention of the concrete syntactic structure of a program.
 
-  - [Parser](#Rascalopedia-Parser): Check that a text adheres to the rules of a language (and return a
-    [ParseTree](#Rascalopedia-ParseTree)).
+  - [Parser](#parser): Check that a text adheres to the rules of a language (and return a
+    [ParseTree](#parsetree)).
 
-  - [Prettyprinter](#Rascalopedia-Prettyprinter): Transform an [Abstract Syntax Tree](#Rascalopedia-AbstractSyntaxTree)
+  - [Prettyprinter](#prettyprinter): Transform an [Abstract Syntax Tree](#abstractsyntaxtree)
     into a formatted string.
 
-  - [Refactoring](#Rascalopedia-Refactoring): Restructuring source code to improve its internal structure without
+  - [Refactoring](#refactoring): Restructuring source code to improve its internal structure without
     changing its external behaviour.
 
-  - [Relation](#Rascalopedia-Relation): An unordered set of tuples.
+  - [Relation](#relation): An unordered set of tuples.
 
-  - [Scope](#Rascalopedia-Scope): The visibility and accessibility of names in a program.
+  - [Scope](#scope): The visibility and accessibility of names in a program.
 
-  - [Set](#Rascalopedia-Set): An unordered collection of values without duplicates.
+  - [Set](#set): An unordered collection of values without duplicates.
 
-  - [Software Engineering](#Rascalopedia-SoftwareEngineering): Discpline of design, building and maintaining software.
+  - [Software Engineering](#softwareengineering): Discpline of design, building and maintaining software.
 
-  - [Software Evolution](#Rascalopedia-SoftwareEvolution): Understanding and managing the continuous change of software.
+  - [Software Evolution](#softwareevolution): Understanding and managing the continuous change of software.
 
-  - [Software Metric](#Rascalopedia-SoftwareMetric): A metric to measure a source code property.
+  - [Software Metric](#softwaremetric): A metric to measure a source code property.
 
-  - [Static Semantics](#Rascalopedia-StaticSemantics): Description of the properties of a program that can be
+  - [Static Semantics](#staticsemantics): Description of the properties of a program that can be
     determined/checked before it is executed.
 
-  - [Syntax](#Rascalopedia-Syntax): The rules that describe correctly structured programs in a language.
+  - [Syntax](#syntax): The rules that describe correctly structured programs in a language.
 
-  - [Testing](#Rascalopedia-Testing): Determine that the quality and functionality of software.
+  - [Testing](#testing): Determine that the quality and functionality of software.
 
-  - [Tuple](#Rascalopedia-Tuple): An ordered, fixed length, sequence of values of possibly different type.
+  - [Tuple](#tuple): An ordered, fixed length, sequence of values of possibly different type.
 
-  - [Typechecker](#Rascalopedia-Typechecker): Checks the type rules for a source language.
+  - [Typechecker](#typechecker): Checks the type rules for a source language.
 
-  - [Visualization](#Rascalopedia-Visualization): Visual presentation of scientific or abstract data.
+  - [Visualization](#visualization): Visual presentation of scientific or abstract data.
 
 ## AbstractDataType
 
@@ -93,8 +93,8 @@ In functional languages, and also in Rascal, abstract datatypes (or ADTs for sho
 Well-known examples are [stack](http://en.wikipedia.org/wiki/Stack_(data_structure)) and
 [tree](http://en.wikipedia.org/wiki/Tree_(data_structure)).
 
-See [Algebraic Data Types](/Rascal#Declarations-AlgebraicDataType) and [Constructors](/Rascal#Values-Constructor) in the
-[Rascal Language Reference](/Rascal).
+See [Algebraic Data Types](/docs/Rascal#ADT) and [Constructors](/docs/Rascal#Constructor) in the
+[Rascal Language Reference](/docs/Rascal).
 
 ### Abstract Data Types in Daily Life
 
@@ -129,7 +129,7 @@ Representation of the abstract syntactic structure of a program.
 
 **Description.**
 
-A [ParseTree](#Rascalopedia-ParseTree) is a detailed and very precise represention of the concrete syntactic structure
+A [ParseTree](#parsetree) is a detailed and very precise represention of the concrete syntactic structure
 of a program. It may even be so detailed that it contains every space, comment and parenthesis in the original source
 text. In many cases a less detailed representation is sufficient and an abstract syntax tree (or AST for short) is used.
 
@@ -157,14 +157,14 @@ Tranform source code to an executable form.
 A [compiler](http://en.wikipedia.org/wiki/Compiler) transforms the source code of a program (in a source langue) to an
 executable form (in a target language) and consists of the following phases:
 
-  - [Parser](#Rascalopedia-Parser): read the source code and build an [Abstract Syntax
-    Tree](#Rascalopedia-AbstractSyntaxTree).
+  - [Parser](#parser): read the source code and build an [Abstract Syntax
+    Tree](#abstractsyntaxtree).
 
-  - [Typechecker](#Rascalopedia-Typechecker): perform a semantic analysis of the code, resolve all names and verify that
+  - [Typechecker](#typechecker): perform a semantic analysis of the code, resolve all names and verify that
     the program is type correct.
 
   - Optimisation: perform optimisations (e.g., constant folding, dead code elimination, call unfolding). This can be
-    seen as a form of [Refactoring](#Rascalopedia-Refactoring).
+    seen as a form of [Refactoring](#refactoring).
 
   - Code generation: generate the final code, this can be asembly language or directly executable code.
 
@@ -198,17 +198,17 @@ Description of the execution behaviour of a program.
 
 Dynamic semantics describes the execution behaviour of a program and includes:
 
-  - Treatment of declarations, names, variables and [Scope](#Rascalopedia-Scope)s.
+  - Treatment of declarations, names, variables and [Scope](#scope)s.
 
   - Execution of procedures, statements and expressions.
 
-Contrast with [Static Semantics](#Rascalopedia-StaticSemantics) that describes pre-execution behaviour.
+Contrast with [Static Semantics](#staticsemantics) that describes pre-execution behaviour.
 
 ## Grammar
 
 **Synopsis.**
 
-A synonym for [Syntax](#Rascalopedia-Syntax).
+A synonym for [Syntax](#syntax).
 
 ## Interpreter
 
@@ -223,14 +223,14 @@ There are two methods to execute a program that is written in some source langua
   - An [Interpreter](http://en.wikipedia.org/wiki/Interpreter_(computing)) directly executes the source statements
     (but see the variations below).
 
-  - A [Compiler](#Rascalopedia-Compiler) translates the source program to some efficient executable form. That
+  - A [Compiler](#compiler) translates the source program to some efficient executable form. That
     executable form is then executed by a hardware processor.
 
 Interpreters exist in many flavours:
 
 1.  Direct execution of the source.
 
-2.  First parse the source text and build an [Abstract Syntax Tree](#Rascalopedia-AbstractSyntaxTree) that is then
+2.  First parse the source text and build an [Abstract Syntax Tree](#abstractsyntaxtree) that is then
     interpreted.
 
 3.  As (2), but convert the AST first to an intermediate form that is more suitable for execution. Then interpret that
@@ -258,11 +258,11 @@ The advantages of interpreters versus compiler are:
 
 **Synopsis.**
 
-The set of strings defined by a [Grammar](#Rascalopedia-Grammar).
+The set of strings defined by a [Grammar](#grammar).
 
 **Description.**
 
-A [Grammar](#Rascalopedia-Grammar) or [Syntax](#Rascalopedia-Syntax) defines the formation rules for a language. A
+A [Grammar](#grammar) or [Syntax](#syntax) defines the formation rules for a language. A
 language is the (possible infinite) set of strings that are defined by a grammar.
 
   - The language of strings of at most 5 `a` 's: the finite set `{"a", "aa", "aaa", "aaaa", "aaaaa"}`.
@@ -280,18 +280,18 @@ Description of all aspects of a language.
 **Description.**
 
 A language definition defines all relevant aspects of a programming language or [Domain Specific
-Language](#Rascalopedia-DomainSpecificLanguage) and includes:
+Language](#domainspecificlanguage) and includes:
 
-  - A [Grammar](#Rascalopedia-Grammar) (including lexical and contect-free syntax).
+  - A [Grammar](#grammar) (including lexical and contect-free syntax).
 
   - Rules to describe the textual formatting of a language. These rules are sufficient to generate a
-    [Prettyprinter](#Rascalopedia-Prettyprinter) for it.
+    [Prettyprinter](#prettyprinter) for it.
 
-  - Rules that describe the [Static Semantics](#Rascalopedia-StaticSemantics) of a language. These rules are sufficient
-    to generate a [Typechecker](#Rascalopedia-Typechecker).
+  - Rules that describe the [Static Semantics](#staticsemantics) of a language. These rules are sufficient
+    to generate a [Typechecker](#typechecker).
 
-  - Rules that describe the [Dynamic Semantics](#Rascalopedia-DynamicSemantics) of a language. These rules are
-    sufficient to generate an [Interpreter](#Rascalopedia-Interpreter) for it.
+  - Rules that describe the [Dynamic Semantics](#dynamicsemantics) of a language. These rules are
+    sufficient to generate an [Interpreter](#interpreter) for it.
 
   - Rules how to generate code.
 
@@ -346,7 +346,7 @@ language).
 
 In Rascal, lists are surrounded by brackets `[` and `]` and the elements are separated by commas. Each list has a type
 of the form `list[T]`, where *T* is the smallest common type of all list elements. Read the description of [lists and
-their operators](/Rascal#Values-List) and of [library functions on lists](/Libraries#Libraries-List).
+their operators](/docs/Rascal#List) and of [library functions on lists](/docs/Libraries#list).
 
 ### Lists in Daily Life
 
@@ -402,7 +402,7 @@ In some cases the metaprogram transforms the source program into a *target progr
 
 **Examples.**
 
-A [Refactoring](#Rascalopedia-Refactoring) tool for restructuring Java code:
+A [Refactoring](#refactoring) tool for restructuring Java code:
 
   - Metaprogram: the refactoring tool.
 
@@ -416,7 +416,7 @@ A [Refactoring](#Rascalopedia-Refactoring) tool for restructuring Java code:
 
   - Target language: Java.
 
-A Java [Compiler](#Rascalopedia-Compiler):
+A Java [Compiler](#compiler):
 
   - Metaprogram: the Java compiler.
 
@@ -431,7 +431,7 @@ A Java [Compiler](#Rascalopedia-Compiler):
   - Target language: instructions for the JVM (Java Virtual Machine) or machine code, depending on the hardware
     platform.
 
-A tool to compute [Software Metric](#Rascalopedia-SoftwareMetric)s of Java programs
+A tool to compute [Software Metric](#softwaremetric)s of Java programs
 
   - Metaprogram: the metrics tool.
 
@@ -466,14 +466,14 @@ A parse tree for the sentence ![example](/images/example-text.png)
 
 **Synopsis.**
 
-Check that a text adheres to the rules of a language (and return a [ParseTree](#Rascalopedia-ParseTree)).
+Check that a text adheres to the rules of a language (and return a [ParseTree](#parsetree)).
 
 **Description.**
 
 A [parser](http://en.wikipedia.org/wiki/Parsing) checks that a text in language *L* indeed adheres to the syntax rules
 of language *L*. There are two possible answers:
 
-  - *Yes*. A [ParseTree](#Rascalopedia-ParseTree) is returned that shows how the text adheres to the syntax rules.
+  - *Yes*. A [ParseTree](#parsetree) is returned that shows how the text adheres to the syntax rules.
 
   - *No*. Error messages pin point the location where the text deviates from the syntax rules.
 
@@ -485,7 +485,7 @@ This is shown below:
 
 **Synopsis.**
 
-Transform an [Abstract Syntax Tree](#Rascalopedia-AbstractSyntaxTree) into a formatted string.
+Transform an [Abstract Syntax Tree](#abstractsyntaxtree) into a formatted string.
 
 **Description.**
 
@@ -494,9 +494,9 @@ A [pretty printer](http://en.wikipedia.org/wiki/Prettyprint) formats the source 
 
   - The source text itself.
 
-  - A [ParseTree](#Rascalopedia-ParseTree) that corresponds to the source text. This variant is also called *unparser*.
+  - A [ParseTree](#parsetree) that corresponds to the source text. This variant is also called *unparser*.
 
-  - An [Abstract Syntax Tree](#Rascalopedia-AbstractSyntaxTree) that corresponds to the source text.
+  - An [Abstract Syntax Tree](#abstractsyntaxtree) that corresponds to the source text.
 
 Pretty printers also differ in flexibility. They differ in:
 
@@ -582,21 +582,18 @@ unordered set of tuples:
 | …​                               | …​                               | …​ |                                  |
 
 In Rascal, a relation is a set of tuples and is characterized by the type: `rel[D1 Name1, D2 Name2, …​, Dn Namen]` See
-[Relation Values](/Rascal#Values-Relation) and for a description of relations and their operators (since relations are
-sets all set operators also apply to them, see [Set Values](/Rascal#Values-Set)) and [functions on
-relations](/Libraries#Libraries-Relation) (and here again, since relations are sets all set operators also apply to
-them, see [functions on sets](/Libraries#Libraries-Set)).
+[Relation Values](/docs/Rascal#Relation) and for a description of relations and their operators (since relations are
+sets all set operators also apply to them, see [Set Values](/docs/Rascal#Set)) and [functions on
+relations](/docs/Libraries#relation) (and here again, since relations are sets all set operators also apply to
+them, see [functions on sets](/docs/Libraries#set)).
 
 ### Relations in Daily Life
 
-  - The *parent-of* or *friend-of* relation between people.
-    image::/Rascalopedia/Relation/char-relation.jpg\[width="350px" ,alt="char-relation"\]
-    [credit](/images/Pg10-11CharRelation.jpg)
+  - The *parent-of* or *friend-of* relation between people. ![char-relation](/images/char-relation.jpg) [credit](http://www.translatedmemories.com/bookpgs/Pg10-11CharRelation.jpg)
 
   - A character relation map, describing the relations between the characters in a play or soap series.
 
-  - A listing of the top 2000 songs of all times including the position, artist name, song title, the year the song was
-    published. ![top2000-2010](/images/top2000-2010.jpg) [credit](http://top2011.radio2.nl/lijst/2010)
+  - A listing of the top 2000 songs of all times including the position, artist name, song title, the year the song was published. ![top2000-2010](/images/top2000-2010.jpg) [credit](http://top2011.radio2.nl/lijst/2010)
 
 ### Relations in computer science
 
@@ -655,7 +652,7 @@ A set is a collection of values with the following properties:
 
 In Rascal, sets are surrounded by braces `{` and `}` and the elements are separated by commas. Each set has a type of
 the form `set[T]`, where *T* is the smallest common type of all set elements. Read the description of [sets and their
-operators](/Rascal#Values-Set) and of [library functions on sets](/Libraries#Prelude-Set).
+operators](/docs/Rascal#Set) and of [library functions on sets](/docs/Libraries#set).
 
 ### Sets in Daily Life
 
@@ -671,7 +668,7 @@ operators](/Rascal#Values-Set) and of [library functions on sets](/Libraries#Pre
 ### Sets in computer science
 
   - The files in a directory. Of course, when you order them (by name, modification date) you need a
-    [List](#Rascalopedia-List) to represent them.
+    [List](#list) to represent them.
 
   - The set of moves an opponent can play in a game.
 
@@ -738,18 +735,18 @@ examples of his laws (slightly paraphrased):
   - *Continuing Growth*: The functional content of programs must be continually increased to maintain user satisfaction
     over their lifetime.
 
-*Software evolution* is a specialisation in [Software Engineering](#Rascalopedia-SoftwareEngineering) that address the
+*Software evolution* is a specialisation in [Software Engineering](#softwareengineering) that address the
 following:
 
   - Understanding the reasons for software evolution.
 
   - Understanding the impact of software evolution on the structure and quality of source code.
 
-  - Developing [Software Metric](#Rascalopedia-SoftwareMetric)s and tools to measure the impact of software evolution.
+  - Developing [Software Metric](#softwaremetric)s and tools to measure the impact of software evolution.
 
   - Developing methods and tools for the better understanding of source code.
 
-  - Developing [Refactoring](#Rascalopedia-Refactoring) tools to counter the effects of software evolution.
+  - Developing [Refactoring](#refactoring) tools to counter the effects of software evolution.
 
 ## Software Metric
 
@@ -785,11 +782,11 @@ Description of the properties of a program that can be determined/checked before
 **Description.**
 
 The static semantics of a program describe all properties that can be determined before the program is executed. A
-[Typechecker](#Rascalopedia-Typechecker) is a tool that checks the properties of a program as described by its static
+[Typechecker](#typechecker) is a tool that checks the properties of a program as described by its static
 semantics.
 
 Static semantics describes properties that are relevant before a program is executed and differs from [Dynamic
-Semantics](#Rascalopedia-DynamicSemantics) that describes the execution behaviour itself.
+Semantics](#dynamicsemantics) that describes the execution behaviour itself.
 
 **Examples.**
 
@@ -836,7 +833,7 @@ According to the [Merriam-Webster](http://www.merriam-webster.com/dictionary/syn
 the set of rules that define the combinations of symbols that are considered to be correctly structured programs in that
 language.
 
-In linguistics, a [Grammar](#Rascalopedia-Grammar) is a concept that includes syntax. However, in the cases that are
+In linguistics, a [Grammar](#grammar) is a concept that includes syntax. However, in the cases that are
 relevant for meta-programming they can be used interchangeably. We will use them as synonyms.
 
 In programming languages a further subdivision can be made:
@@ -846,10 +843,10 @@ In programming languages a further subdivision can be made:
 
   - *Context-free syntax* defines the global structure of statements, procedures and modules.
 
-A [Parser](#Rascalopedia-Parser) checks that a text in language *L* indeed adheres to the syntax rules of language *L*.
+A [Parser](#parser) checks that a text in language *L* indeed adheres to the syntax rules of language *L*.
 There are two possible answers:
 
-  - *Yes*. A [ParseTree](#Rascalopedia-ParseTree) is returned that shows how the text adheres to the syntax rules.
+  - *Yes*. A [ParseTree](#parsetree) is returned that shows how the text adheres to the syntax rules.
 
   - *No*. Error messages pin point the location where the text deviates from the syntax rules.
 
@@ -878,11 +875,11 @@ A tuple is an ordered fixed length sequence of values of possibly different type
 In Rascal a tuple is written as `<` *V*<sub>1</sub>, …​, *V*<sub>n</sub> `>` and a tuple type has the form `type[T1, …​,
 Tn]`, *T*<sub>i</sub> represents the type of element *i*. Tuple have two major applications:
 
-  - As tuples in a [Relation](#Rascalopedia-Relation).
+  - As tuples in a [Relation](#relation).
 
   - For ad-hoc packaging of values, for instance, to return multiple-values from a function.
 
-See [Tuple Values](/Rascal#Values-Tuple) for the operations on tuples.
+See [Tuple Values](/docs/Rascal#Tuple) for the operations on tuples.
 
 ## Typechecker
 
@@ -953,8 +950,8 @@ subareas:
 
   - [Software Visualization](http://en.wikipedia.org/wiki/Software_visualization): deals with facts related to software.
 
-The [Visualization Library](/Libraries#Libraries-Vis) library provides a framework for interactive visualization. Simple
-examples can be found in [visualization recipes](/Recipes#Recipes-Visualization).
+The [Visualization Library](/docs/Libraries#vis) library provides a framework for interactive visualization. Simple
+examples can be found in [visualization recipes](/docs/Recipes#Visualization).
 
 ### Scientific visualization
 

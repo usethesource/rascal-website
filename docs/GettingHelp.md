@@ -91,9 +91,9 @@ statement). Each result consists of a clickable link and a synopsis of the infor
 In the top left corner, you find a search box for new searches and the RascalTutor logo ![rascal tutor small](/images/rascal-tutor-small.png) that will bring you back to the Tutor home page.
 
 All Rascal documentation is organized in *courses*, each course consist of a hierarchy of *concepts*. The documentation
-for `while` is found in the course named [Rascal](/Rascal) and the complete name is
-[Rascal/Statements/While](/Rascal#Statements-While).
+for `while` is found in the course named [Rascal](/docs/Rascal) and the complete name is
+[Rascal/Statements/While](/docs/Rascal#While).
 
-There are other courses like [Help](/Help) (this course) and [Recipes](/Recipes) and the search for while found uses of
+There are other courses like [Help](/docs/GettingHelp) (this course) and [Recipes](/docs/Recipes) and the search for while found uses of
 while in various courses (like this one, since we are mentioning `while` quite a lot).
 

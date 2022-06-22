@@ -4,7 +4,7 @@ title: Getting Started
 ---
 **Synopsis.**
 
-First steps using Rascal
+First steps using Rascal (OUTDATED)
 
 **Description.**
 
@@ -40,5 +40,5 @@ In the Eclipse version, Rascal modules can be edited and a command console is al
 > 
 > Add a screenshot
 
-Where to go from here: have a look at [Getting Help](/GettingHelp) and in particular [further
-reading](/GettingHelp#GettingHelp-FurtherReading) or just click the RascalTutor logo ![rascal tutor small](/images/rascal-tutor-small.png) at the top left of each Tutor page.
+Where to go from here: have a look at [Getting Help](/docs/GettingHelp) and in particular [further
+reading](/docs/GettingHelp#FurtherReading) or just click the RascalTutor logo ![rascal tutor small](/images/rascal-tutor-small.png) at the top left of each Tutor page.

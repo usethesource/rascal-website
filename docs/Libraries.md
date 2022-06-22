@@ -5,19 +5,19 @@ title: Libraries
 
 **Synopsis.**
 
-The available [Rascal](/Rascal) libraries.
+The available [Rascal](/docs/Rascal) libraries.
 
 **Description.**
 
 The libraries described here provide the following functionality:
 
-  - [Prelude](#Libraries-Prelude): The Rascal standard prelude.
+  - [Prelude](#Prelude): The Rascal standard prelude.
 
-  - [analysis](#Libraries-analysis): Library functions for analysis tasks.
+  - [analysis](#analysis): Library functions for analysis tasks.
 
-  - [lang](#Libraries-lang): Definitions and tools for various languages.
+  - [lang](#lang): Definitions and tools for various languages.
 
-  - [util](#Libraries-util): Utilities: functions, data types and interfaces with external libraries.
+  - [util](#util): Utilities: functions, data types and interfaces with external libraries.
 
 ## Prelude
 
@@ -28,54 +28,54 @@ The Rascal standard prelude.
 **Description.**
 
 The `Prelude` library provides core functionality for handling all of Rascal’s data-types. See the [Rascal Language
-Reference](/Rascal) for details of the language Rascal itself.
+Reference](/docs/Rascal) for details of the language Rascal itself.
 
 For
 
-  - numeric functions, see the [Math](#util-Math) library,
+  - numeric functions, see the [Math](#math) library,
 
-  - statistical functions see [statistics](#analysis-statistics),
+  - statistical functions see [statistics](#statistics),
 
-  - graph functions see [graphs](#analysis-graphs),
+  - graph functions see [graphs](#graphs),
 
-  - other common utilitites see [util](#Libraries-util).
+  - other common utilitites see [util](#util).
 
 `Prelude` provides the following:
 
-  - [Boolean](#Prelude-Boolean): Library functions for Booleans.
+  - [Boolean](#boolean): Library functions for Booleans.
 
-  - [Content](#Prelude-Content): Content provides access to the content server of the Rascal terminal for viewing
+  - [Content](#content): Content provides access to the content server of the Rascal terminal for viewing
     interactive HTML output.
 
-  - [DateTime](#Prelude-DateTime): Library functions for date and time.
+  - [DateTime](#date-time): Library functions for date and time.
 
-  - [Exception](#Prelude-Exception): Exceptions thrown by the Rascal run-time.
+  - [Exception](#exception): Exceptions thrown by the Rascal run-time.
 
-  - [IO](#Prelude-IO): Library functions for input/output.
+  - [IO](#io): Library functions for input/output.
 
-  - [List](#Prelude-List): Library functions for lists.
+  - [List](#list): Library functions for lists.
 
-  - [ListRelation](#Prelude-ListRelation): Library functions for list relations.
+  - [ListRelation](#list-relation): Library functions for list relations.
 
-  - [Location](#Prelude-Location): Library functions for source locations.
+  - [Location](#location): Library functions for source locations.
 
-  - [Map](#Prelude-Map): Library functions for maps.
+  - [Map](#map): Library functions for maps.
 
-  - [Message](#Prelude-Message): A `Message` datatype that represents messages in the IDE.
+  - [Message](#message): A `Message` datatype that represents messages in the IDE.
 
-  - [Node](#Prelude-Node): Library functions for nodes.
+  - [Node](#node): Library functions for nodes.
 
-  - [ParseTree](#Prelude-ParseTree): Library functions for parse trees.
+  - [ParseTree](#parseTree): Library functions for parse trees.
 
-  - [Relation](#Prelude-Relation): Library functions for relations.
+  - [Relation](#relation): Library functions for relations.
 
-  - [Set](#Prelude-Set): Library functions for sets.
+  - [Set](#set): Library functions for sets.
 
-  - [String](#Prelude-String): Library functions for strings.
+  - [String](#string): Library functions for strings.
 
-  - [Type](#Prelude-Type): Rascal’s type system, implemented in Rascal itself.
+  - [Type](#type): Rascal’s type system, implemented in Rascal itself.
 
-  - [ValueIO](#Prelude-ValueIO): Library functions for reading and writing values in textual and binary format.
+  - [ValueIO](#valueIO): Library functions for reading and writing values in textual and binary format.
 
 **Benefits.**
 
@@ -100,7 +100,7 @@ Library functions for Booleans.
 
 **Description.**
 
-For operators on Boolean values see [Boolean](/Rascal#Values-Boolean) in the Rascal Language Reference.
+For operators on Boolean values see [Boolean](/docs/Rascal#Boolean) in the Rascal Language Reference.
 
 The following functions are defined for Booleans:
 
@@ -414,7 +414,7 @@ Library functions for date and time.
 
 **Description.**
 
-For operators on `datetime` see [DateTime](/Rascal#Values-DateTime) in the Rascal Language Reference.
+For operators on `datetime` see [DateTime](/docs/Rascal#DateTime) in the Rascal Language Reference.
 
 The following functions are defined for datetime:
 
@@ -1346,7 +1346,7 @@ The `Exception` datatype used in all Rascal exceptions.
 Since declarations for ADTs are extensible, the user can add new exceptions when needed.
 
 Exceptions are either generated by the Rascal run-time (e.g., `IndexOutOfBounds`) or they are generated by a
-[throw](/Rascal#Statements-Throw). Exceptions can be caught with a [try catch](/Rascal#Statements-TryCatch).
+[throw](/docs/Rascal#Throw). Exceptions can be caught with a [try catch](/docs/Rascal#try-catch).
 
 **Examples.**
 
@@ -2146,7 +2146,7 @@ A text file can be encoded in many different character sets, most common are UTF
 the encoding of the file, please use the [readFileEnc](#IO-readFileEnc) and [readFileLinesEnc](#IO-readFileLinesEnc)
 overloads. If you do not know, we try to detect this. This detection is explained below:
 
-  - If the implementation of the used scheme in the [location](/Rascal#Values-Location) (e.g.,`|project:///|`) defines
+  - If the implementation of the used scheme in the [location](/docs/Rascal#Location) (e.g.,`|project:///|`) defines
     the charset of the file then this is used.
 
   - Otherwise if the file contains a UTF8/16/32 [BOM](http://en.wikipedia.org/wiki/Byte_order_mark), then this is used.
@@ -2159,7 +2159,7 @@ overloads. If you do not know, we try to detect this. This detection is explaine
 
   - Finally, we fall back to the system default (as given by the Java Runtime Environment).
 
-**To summarize**, we use UTF-8 by default, except if the [location](/Rascal#Values-Location) has available meta-data,
+**To summarize**, we use UTF-8 by default, except if the [location](/docs/Rascal#Location) has available meta-data,
 the file contains a BOM, or the first 32 bytes of the file are not valid UTF-8.
 
   - The second version of `readFile` with a string argument is *deprecated*.
@@ -2432,7 +2432,7 @@ Library functions for lists.
 
 **Description.**
 
-For operators on lists see [List](/Rascal#Values-List) in the Rascal Language Reference.
+For operators on lists see [List](/docs/Rascal#List) in the Rascal Language Reference.
 
 The following functions are available for lists:
 
@@ -2822,7 +2822,7 @@ index(["zebra", "elephant", "snake", "owl"]);
 
 **Benefits.**
 
-This function is useful in [for](/Rascal#Statements-For) loops over lists.
+This function is useful in [for](/docs/Rascal#For) loops over lists.
 
 ### indexOf
 
@@ -3206,7 +3206,7 @@ reducer([10, 20, 30, 40], add, 0);
 
 **Pitfalls.**
 
-WARNING: This function is **deprecated**, use a [reducer](/Rascal#Expressions-Reducer) instead.
+WARNING: This function is **deprecated**, use a [reducer](/docs/Rascal#Reducer) instead.
 
 ### remove
 
@@ -3276,7 +3276,7 @@ Returns a sublist of `lst` from index `start` of length `len`.
 
 > **Note**
 > 
-> In most cases it is better to use the built-in [slice](/Rascal#List-Slice) notation, see the example below.
+> In most cases it is better to use the built-in [slice](/docs/Rascal#Slice) notation, see the example below.
 
 **Examples.**
 
@@ -3776,7 +3776,7 @@ Library functions for list relations.
 
 **Description.**
 
-For operators on listrelations see [ListRelation](/Rascal#Values-ListRelation) in the Rascal Language Reference.
+For operators on listrelations see [ListRelation](/docs/Rascal#ListRelation) in the Rascal Language Reference.
 
 The following functions are defined for list relations :
 
@@ -4268,7 +4268,7 @@ Library functions for source locations.
 
 **Description.**
 
-For a description of source locations see [Location](/Rascal#Values-Location) in the Rascal Language Reference.
+For a description of source locations see [Location](/docs/Rascal#Location) in the Rascal Language Reference.
 
 The following functions are defined for source locations:
 
@@ -4492,7 +4492,7 @@ Library functions for maps.
 
 **Description.**
 
-For operators on maps see [Map](/Rascal#Values-Map) in the Rascal Language Reference.
+For operators on maps see [Map](/docs/Rascal#Map) in the Rascal Language Reference.
 
 The following functions are defined for maps:
 
@@ -4679,7 +4679,7 @@ Returns a map with key and value inverted; the result should be a map. If the in
 `MultipleKey` exception is raised since an attempt is made to create a map where more than one value would be associated
 with the same key.
 
-Also see [invert](#Map-invert) and [Exception](#Prelude-Exception).
+Also see [invert](#Map-invert) and [Exception](#exception).
 
 **Examples.**
 
@@ -4915,7 +4915,7 @@ data Message = error(str msg, loc at)
 
 Messages can be used to communicate information about source texts. They can be interpreted by IDEs to display type
 errors and warnings, etc. `Message` s are, for instance, used as annotations of [algebraic data
-type](/Rascal#Declarations-AlgebraicDataType). A very common example is to annotate parse trees with messages.
+type](/docs/Rascal#ADT). A very common example is to annotate parse trees with messages.
 
 ### Message
 
@@ -4947,7 +4947,7 @@ Library functions for nodes.
 
 **Description.**
 
-For operators on nodes see [Node](/Rascal#Values-Node) in the Rascal Language Reference.
+For operators on nodes see [Node](/docs/Rascal#Node) in the Rascal Language Reference.
 
 The following functions are defined for nodes:
 
@@ -5232,22 +5232,22 @@ terminals (characters) of the grammar.
 
 `Tree` is the universal parse tree data type in Rascal and can be used to represent parse trees for any language.
 
-  - `Tree` is a subtype of the type [node](/Rascal#Values-Node).
+  - `Tree` is a subtype of the type [node](/docs/Rascal#Node).
 
-  - All types (non-terminals) declared in [syntax definitions](/Rascal#Declarations-SyntaxDefinition) are sub-types of
+  - All types (non-terminals) declared in [syntax definitions](/docs/Rascal#SyntaxDefinition) are sub-types of
     `Tree`.
 
-  - All [concrete syntax expressions](/Rascal#Expressions-ConcreteSyntax) produce parse trees with a type corresponding
+  - All [concrete syntax expressions](/docs/Rascal#ConcreteSyntax) produce parse trees with a type corresponding
     to a non-terminals.
 
-  - Trees can be annotated in various ways, see features for [IDE construction](/Rascal#Concepts-IDEConstruction). Most
+  - Trees can be annotated in various ways, see features for [IDE construction](/docs/Rascal#IDEConstruction). Most
     importantly the `\loc` annotation always points to the source location of any (sub) parse tree.
 
-Parse trees are usually analyzed and constructed using [concrete syntax expressions](/Rascal#Expressions-ConcreteSyntax)
-and [concrete syntax patterns](/Rascal#Patterns-Concrete).
+Parse trees are usually analyzed and constructed using [concrete syntax expressions](/docs/Rascal#ConcreteSyntax)
+and [concrete syntax patterns](/docs/Rascal#Concrete).
 
 *Advanced users* may want to create tools that analyze any parse tree, regardless of the [syntax
-definition](/Rascal#Declarations-SyntaxDefinition) that generated it, you can manipulate them on the abstract level.
+definition](/docs/Rascal#SyntaxDefinition) that generated it, you can manipulate them on the abstract level.
 
 A parse tree is of type [Tree](#ParseTree-Tree) using the auxiliary types [Production](#ParseTree-Production),
 [Symbol](#ParseTree-Symbol), [Condition](#ParseTree-Condition), [Attr](#ParseTree-Attr),
@@ -5255,7 +5255,7 @@ A parse tree is of type [Tree](#ParseTree-Tree) using the auxiliary types [Produ
 structure of type `Tree`.
 
   - Most internal nodes are applications (`appl`) of a `Production` to a list of children `Tree` nodes. `Production` is
-    the abstract representation of a rule in a [syntax definition](/Rascal#Declarations-SyntaxDefinition), which
+    the abstract representation of a rule in a [syntax definition](/docs/Rascal#SyntaxDefinition), which
     consists of a definition of an alternative for a `Symbol` by a list of `Symbols`.
 
   - The leaves of a parse tree are always characters (`char`), which have an integer index in the UTF8 table.
@@ -5263,18 +5263,18 @@ structure of type `Tree`.
   - Some internal nodes encode ambiguity (`amb`) by pointing to a set of alternative `Tree` nodes.
 
 The `Production` and `Symbol` types are an abstract notation for rules in [syntax
-definitions](/Rascal#Declarations-SyntaxDefinition), while the `Tree` type is the actual notation for parse trees.
+definitions](/docs/Rascal#SyntaxDefinition), while the `Tree` type is the actual notation for parse trees.
 
 Parse trees are called parse forests when they contain `amb` nodes.
 
 You can analyze and manipulate parse trees in three ways:
 
-  - Directly on the `Tree` level, just like any other [algebraic data type](/Rascal#Declarations-AlgebraicDataType).
+  - Directly on the `Tree` level, just like any other [algebraic data type](/docs/Rascal#ADT).
 
-  - Using [concrete syntax expressions](/Rascal#Expressions-ConcreteSyntax) and [concrete syntax
-    patterns](/Rascal#Patterns-Concrete).
+  - Using [concrete syntax expressions](/docs/Rascal#ConcreteSyntax) and [concrete syntax
+    patterns](/docs/Rascal#Concrete).
 
-  - Using [actions](/Rascal#SynyaxDefinition-Action).
+  - Using [actions](/docs/Rascal#Action).
 
 The type of a parse tree is the symbol that it’s production produces, i.e. `appl(prod(sort("A"),[],{}),[])` has type
 `A`. Ambiguity nodes Each such a non-terminal type has `Tree` as its immediate super-type.
@@ -5348,7 +5348,7 @@ labels in the list of children of a `prod`.
 **Pitfalls.**
 
 For historical reasons the name of the annotation is "loc" and this interferes with the Rascal keyword `loc` for the
-type of [source locations](/Rascal#Values-Location). Therefore the annotation name has to be escaped as `\loc` when it
+type of [source locations](/docs/Rascal#Location). Therefore the annotation name has to be escaped as `\loc` when it
 is declared or used.
 
 The following functions and data types are declared for ParseTrees:
@@ -5399,7 +5399,7 @@ Production in ParseTrees
 
 **Description.**
 
-The type `Production` is introduced in [Type](#Prelude-Type), see [Production](#Type-Production). Here we extend it with
+The type `Production` is introduced in [Type](#type), see [Production](#Type-Production). Here we extend it with
 the symbols that can occur in a ParseTree. We also extend productions with basic combinators allowing to construct
 ordered and un-ordered compositions, and associativity groups.
 
@@ -5509,7 +5509,7 @@ Symbols that can occur in a ParseTree
 
 **Description.**
 
-The type `Symbol` is introduced in [Type](#Prelude-Type), see [Symbol](#Type-Symbol), to represent the basic Rascal
+The type `Symbol` is introduced in [Type](#type), see [Symbol](#Type-Symbol), to represent the basic Rascal
 types, e.g., `int`, `list`, and `rel`. Here we extend it with the symbols that may occur in a ParseTree.
 
   - The `start` symbol wraps any symbol to indicate that it is a start symbol of the grammar and may occur at the root
@@ -6063,7 +6063,7 @@ Library functions for relations.
 
 **Description.**
 
-For operators on relations see [Relation](/Rascal#Values-Relation) in the Rascal Language Reference.
+For operators on relations see [Relation](/docs/Rascal#Relation) in the Rascal Language Reference.
 
 The following functions are defined for relations:
 
@@ -6513,7 +6513,7 @@ Library functions for sets.
 
 **Description.**
 
-For operators on sets see [Set](/Rascal#Values-Set) in the Rascal Language Reference.
+For operators on sets see [Set](/docs/Rascal#Set) in the Rascal Language Reference.
 
 The following functions are defined for sets:
 
@@ -6828,7 +6828,7 @@ reducer({10, 20, 30, 40}, add, 0);
 
 > **Warning**
 > 
-> This function is **deprecated**, use a [reducer](/Rascal#Expressions-Reducer) instead.
+> This function is **deprecated**, use a [reducer](/docs/Rascal#Reducer) instead.
 
 ### size
 
@@ -7141,7 +7141,7 @@ Library functions for strings.
 
 **Description.**
 
-For operators on strings see [String](/Rascal#Values-String) in the Rascal Language Reference.
+For operators on strings see [String](/docs/Rascal#String) in the Rascal Language Reference.
 
 The following functions are defined for strings:
 
@@ -8000,7 +8000,7 @@ The goal of this module is to provide:
 
   - reflection capabilities that are useful for deserialization and validation of data, and
 
-  - to provide the basic building blocks for syntax trees (see [ParseTree](#Prelude-ParseTree))
+  - to provide the basic building blocks for syntax trees (see [ParseTree](#parseTree))
 
 The following definition is built into Rascal:
 
@@ -8061,7 +8061,7 @@ Symbols are values that represent Rascal’s types. These are the atomic types. 
 
   - Parameters that represent a type variable.
 
-In [ParseTree](#Prelude-ParseTree), see [Symbol](#ParseTree-Symbol), Symbols will be further extended with the symbols
+In [ParseTree](#parseTree), see [Symbol](#ParseTree-Symbol), Symbols will be further extended with the symbols
 that may occur in a ParseTree.
 
 ### Symbol
@@ -8687,7 +8687,7 @@ value x = 1;
 typeOf(x)
 ```
 
-  - Note that the `typeOf` function does not produce definitions, like the [reify](/Rascal#Values-ReifiedTypes) operator
+  - Note that the `typeOf` function does not produce definitions, like the [reify](/docs/Rascal#ReifiedTypes) operator
     `#` does, since values may escape the scope in which they’ve been constructed leaving their contents possibly
     undefined.
 
@@ -9395,7 +9395,7 @@ A `Graph` datatype with associated functions.
 
 **Description.**
 
-The Graph data type is a binary relation and all operators and functions defined on [relations](/Rascal#Values-Relation)
+The Graph data type is a binary relation and all operators and functions defined on [relations](/docs/Rascal#Relation)
 are also defined on Graphs.
 
 The `Graph` library provides the following functions:
@@ -11841,7 +11841,7 @@ CPU time in nanoseconds (10<sup>-9</sup> sec).
 
 **Examples.**
 
-We use the `fac` function described in [Factorial](/Recipes#Basic-Factorial) as example:
+We use the `fac` function described in [Factorial](/docs/Recipes#Factorial) as example:
 
 ``` rascal-shell
 import util::Benchmark;
@@ -11882,7 +11882,7 @@ System time in nanoseconds (10<sup>-9</sup> sec).
 
 **Examples.**
 
-We use the `fac` function described in [Factorial](/Recipes#Basic-Factorial) as example:
+We use the `fac` function described in [Factorial](/docs/Recipes#Factorial) as example:
 
 ``` rascal-shell
 import util::Benchmark;
@@ -11920,7 +11920,7 @@ User time in nanoseconds (10<sup>-9</sup> sec).
 
 **Examples.**
 
-We use the `fac` function described in [Factorial](/Recipes#Basic-Factorial) as example:
+We use the `fac` function described in [Factorial](/docs/Recipes#Factorial) as example:
 
 ``` rascal-shell
 import util::Benchmark;
@@ -11957,7 +11957,7 @@ Current time in milliseconds (10<sup>-3</sup> sec).
 
 **Pitfalls.**
 
-This function is a competitor for the [now](#DateTime-now) function that provides a [datetime](/Rascal#Values-Datetime)
+This function is a competitor for the [now](#DateTime-now) function that provides a [datetime](/docs/Rascal#Datetime)
 value for the current time.
 
 ### benchmark
@@ -11978,7 +11978,7 @@ default the function [realTime](#Benchmark-realTime) is used. A map of labels an
 
 **Examples.**
 
-We use the `fac` function described in [Factorial](/Recipes#Basic-Factorial) as example:
+We use the `fac` function described in [Factorial](/docs/Recipes#Factorial) as example:
 
 ``` rascal-shell
 import util::Benchmark;
@@ -13175,7 +13175,7 @@ data Resource = root(set[Resource] projects)
 
 The `Resource` library provides direct access to Eclipse projects and the resources they contain. A `Resource` is the
 Rascal representation of an Eclipse project, or a folder or a file in an Eclipse project. In combination with the
-[IO](#Prelude-IO) library module, users of the Resources library gain access to the contents of any file that is in an
+[IO](#iO) library module, users of the Resources library gain access to the contents of any file that is in an
 Eclipse project.
 
 Resource is a recursive data-type, where recursion indicates **containment**, i.e., a folder contains many other
