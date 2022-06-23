@@ -27,7 +27,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/usethesource/rascal-website/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/usethesource/rascal-website/tree/website-v2/docs/',
         },
         blog: {
           showReadingTime: true,
@@ -35,7 +35,7 @@ const config = {
           blogSidebarCount: 'ALL',
           // Please change this to your repo.
           editUrl:
-            'https://github.com/usethesource/rascal-website/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/usethesource/rascal-website/tree/website-v2/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
