@@ -31,6 +31,8 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
           // Please change this to your repo.
           editUrl:
             'https://github.com/usethesource/rascal-website/tree/main/packages/create-docusaurus/templates/shared/',
@@ -41,9 +43,26 @@ const config = {
       }),
     ],
   ],
-  // plugins: [
-  //   path.resolve(__dirname, 'plugins/rascal-plugin'),
-  // ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        /**
+         * Required for any multi-instance plugin
+         */
+        id: 'release-notes',
+        /**
+         * URL route for the blog section of your site.
+         * *DO NOT* include a trailing slash.
+         */
+        routeBasePath: 'release-notes',
+        /**
+         * Path to data on filesystem relative to site dir.
+         */
+        path: './release-notes',
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -63,7 +82,7 @@ const config = {
           // {href: 'https://tutor.rascal-mpl.org/Rascal/Rascal.html', label: 'Reference docs', position: 'left'},
           {to: '/casestudies', label: 'Case Studies', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
-          
+          {to: '/release-notes', label: 'Release notes', position: 'left'},
 
           {to: '/projects', label: 'Projects', position: 'right'},
           {to: '/team', label: 'Team', position: 'right'},

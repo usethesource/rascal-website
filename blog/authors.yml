@@ -1,17 +1,35 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+jvinju:
+  name: Jurgen Vinju
+  title: Groupleader @ CWI-SWAT, professor @ TU/E, Rascal Core Team
+  url: http://homepages.cwi.nl/~jurgenv
+  image_url: https://www.cwi.nl/news/2014/jurgen-vinju-appointed-professor/@@images/5e1fe43d-a00b-4989-a5b9-eb526725c6ee.jpeg
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+tvdstorm:
+  name: Tijs van der Storm
+  title: Senior researcher @ CWI-SWAT, professor @ RUG, Rascal Core Team
+  url: https://homepages.cwi.nl/~storm/
+  image_url: https://www.uva.nl/binaries/_ht_1610011694919/extralarge/content/gallery/personen/s/t/tijs-van-der-storm_low_res.jpg
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+dlandman:
+  name: Davy Landman
+  title: Language Engineer & CEO of swat.engineering, Rascal Core Team
+  url: https://homepages.cwi.nl/~landman/
+  image_url: https://homepages.cwi.nl/~landman/images/davylandman.png
+
+msteindorfer:
+  name: Micheal Steindorfer
+  title: Researcher @ TU Delft, Rascal Contributor
+  url: https://github.com/msteindorfer
+  image_url: https://avatars.githubusercontent.com/u/1998004?v=4
+
+mhills:
+  name: Mark Hills
+  title: Associate Professor @ East Caroline University, Rascal Contributor
+  url: http://www.cs.ecu.edu/hillsma/
+  image_url: https://s.gravatar.com/avatar/cf27b8d5ab19b451087c19f5493d32a9?s=270%27
+
+pklint:
+  name: Paul Klint
+  title: Research Fellow @ CWI, Rascal Godfather
+  url: https://www.cwi.nl/people/paul-klint
+  image_url: https://www.adviescollegeicttoetsing.nl/binaries/medium/content/gallery/adviescollegeicttoetsing/content-afbeeldingen/leden-adviescollege-ict-toetsing/paul-klint-213-x-300-px.jpg

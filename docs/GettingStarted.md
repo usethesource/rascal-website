@@ -11,7 +11,7 @@ First steps using Rascal (OUTDATED)
 You can start using Rascal by following these steps:
 
   - **Download and Install** Rascal by carefully following the instructions at the [Rascal
-    Website](http://www.rascal-mpl.org/start/).
+    Website](/docs/GettingStarted).
 
 > **Caution**
 > 

@@ -599,11 +599,9 @@ Remedies:
 
   - If this happens to a library function, contact the Rascal developers:
     
-      - Ask a question at \[Rascal Ask site\](<http://ask.rascal-mpl.org/questions/>).
+      - Ask a question at \[StackOverflow\](<https://stackoverflow.com/questions/tagged/rascal/>).
     
-      - Read the currently open issues at the Rascal’s \[issue
-        tracker\](<https://github.com/cwi-swat/rascal/issues?state=open>). If your problem has not yet been reported by
-        someone else, please report it here.
+      - Read the currently open issues at the Rascal’s \[issue tracker\](<https://github.com/cwi-swat/rascal/issues?state=open>). If your problem has not yet been reported by someone else, please report it here.
 
 If you are an expert developer, please check the body of the offending function first.
 
