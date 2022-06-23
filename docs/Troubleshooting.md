@@ -30,7 +30,7 @@ title: Troubleshooting Installation Problems
 
    If you're running an old Java version even when Java 8 is installed, the simplest approach is just to remove all old
    installations of Java. You can also supply the path to the Java VM using the ```-vm``` option in your
-   [eclipse.ini file](/start/editini.html).
+   [eclipse.ini file](/docs/EditIni).
    
  - *Eclipse starts, but I get an error message say that I need the Java JDK*
   

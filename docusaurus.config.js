@@ -80,7 +80,7 @@ const config = {
             label: 'Docs',
           },
           // {href: 'https://tutor.rascal-mpl.org/Rascal/Rascal.html', label: 'Reference docs', position: 'left'},
-          {to: '/casestudies', label: 'Case Studies', position: 'left'},
+          {to: '/stories', label: 'Stories', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/release-notes', label: 'Release notes', position: 'left'},
 
