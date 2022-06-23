@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrascal_website=self.webpackChunkrascal_website||[]).push([[3469],{9149:function(e){e.exports=JSON.parse('{"permalink":"/release-notes","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
