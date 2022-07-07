@@ -30,7 +30,7 @@ export default function Home() {
       <main>
         <HomepageFeatures />
         <p className='text--center'>
-          <a href='#'>Feature comparisons between frontends (Eclipse, VSCode, CLI, Maven)</a>
+          <a href='/docs/GettingStarted'>Feature comparisons between frontends (Eclipse, VSCode, CLI, Maven)</a>
         </p>
       </main>
     </Layout>
