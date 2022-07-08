@@ -35,8 +35,8 @@
   <dependencies>
     <dependency>
       <groupId>org.rascalmpl</groupId>
-      <artifactId>rascal</artifactId>
-      <version>0.24.3</version>
+      <artifactId>flybytes</artifactId>
+      <version>0.0.2</version>
   </dependency>
   </dependencies>
   <build>
