@@ -39,33 +39,33 @@ statements and declarations right there. Or, you can import library modules and 
 
 Rascal code can be a trivial expression
 
-``` rascal-shell
+```rascal-shell
 1+2
 ```
 
 Or a more complex list comprehension:
 
-``` rascal-shell
+```rascal-shell
 [ n * n | int n <- [0..10] ]
 ```
 
 Or importing a module and using a function declared in it:
 
-``` rascal-shell
+```rascal-shell
 import List;
 size([ n * n | int n <- [0..10] ])
 ```
 
 Another use is to declare variables
 
-``` rascal-shell
+```rascal-shell
 int x = 2;
 int y = 3;
 ```
 
 and use them later on:
 
-``` rascal-shell
+```rascal-shell
 x * y
 ```
 
@@ -120,7 +120,7 @@ Open an editor for a Rascal module
 
 **Description.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 :edit IO
 ```
@@ -135,7 +135,7 @@ Get a reminder of the shell commands.
 
 **Description.**
 
-``` rascal-shell
+```rascal-shell
 :help
 ```
 
@@ -184,7 +184,7 @@ The options are:
 
 Turn `tracing` on and execute a function:
 
-``` rascal-shell
+```rascal-shell
 import demo::basic::Factorial;
 :set tracing true
 fac(5)
@@ -192,7 +192,7 @@ fac(5)
 
 Turn trace off and execute the same function:
 
-``` rascal-shell
+```rascal-shell
 :set tracing false
 fac(5)
 ```
@@ -217,14 +217,14 @@ Run Rascal tests. The tests in all currently imported modules are executed and t
 
 Execute the tests in an imported module:
 
-``` rascal-shell
+```rascal-shell
 import demo::basic::Factorial;
 test
 ```
 
 Execute the tests in the `Integers` module in the Rascal test suite:
 
-``` rascal-shell
+```rascal-shell
 test lang::rascal::tests::basic::Integers
 ```
 
@@ -258,7 +258,7 @@ RascalShell provides a history of previously entered commands. This can be acces
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 a = 1;
 b = 2;
 c = 3;
@@ -266,7 +266,7 @@ c = 3;
 
 Typing ↑ will then show the text (not followed by Return\!):
 
-``` rascal
+```rascal
 rascal>c = 3;
 ```
 
@@ -275,7 +275,7 @@ Typing Return will reexecute `c = 3`.
 Typing the letter `a` (the search text in this example) followed by <span class="keycombo">Ctrl+r</span> will show the
 text:
 
-``` rascal
+```rascal
 (reverse-i-search)`a': a = 3;
 ```
 

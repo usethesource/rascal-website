@@ -126,7 +126,7 @@ Return an arbitrary Boolean value.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Boolean;
 arbBool();
 arbBool();
@@ -163,7 +163,7 @@ Maps `true` to `1` and `false` to `0`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Boolean;
 toInt(true);
 toInt(false);
@@ -185,7 +185,7 @@ Maps `true` to `1.0` and `false` to `0.0`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Boolean;
 toReal(true);
 toReal(false);
@@ -207,7 +207,7 @@ Maps `true` to `"true"` and `false` to `"false"`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Boolean;
 toString(true);
 toString(false);
@@ -227,7 +227,7 @@ Content provides access to the content server of the Rascal terminal for viewing
 
 **Types.**
 
-``` rascal
+```rascal
 data Content
      = content(str id, Response (Request) callback)
      | content(Response response)
@@ -246,7 +246,7 @@ terminal and the documentation pages.
 
 For example, a piece of html can be displayed directly like such:
 
-``` rascal-shell
+```rascal-shell
 html("\<a href=\"http://www.rascal-mpl.org\"\>Rascal homepage\</a\>")
 ----
 ```
@@ -303,7 +303,7 @@ Directly serve the contents of a string as plain text
 
 **Types.**
 
-``` rascal
+```rascal
 data Request (map[str, str] headers = (), map[str, str] parameters = (), map[str,str] uploads = ())
      = get (str path)
      | put (str path, Body content)
@@ -329,7 +329,7 @@ it was.
 
 **Types.**
 
-``` rascal
+```rascal
 data Response
      = response(Status status, str mimeType, map[str,str] header, str content)
      | fileResponse(loc file, str mimeType, map[str,str] header)
@@ -380,7 +380,7 @@ Utility to serve a file from any source location.
 
 **Types.**
 
-``` rascal
+```rascal
 data Status
      = ok()
      | created()
@@ -577,7 +577,7 @@ Get the current datetime.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 now();
 ```
@@ -594,7 +594,7 @@ Create a new date.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 createDate(2012,1,1);
 ```
@@ -612,7 +612,7 @@ Create a new time (with optional timezone offset).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 createTime(8,15,30,55);
 createTime(8,15,30,55,2,0);
@@ -633,7 +633,7 @@ Create a new datetime (with optional timezone offset).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 createDateTime(2012,1,1,8,15,30,55);
 createDateTime(2012,1,1,8,15,30,55,2,0);
@@ -651,7 +651,7 @@ Create a new datetime by combining a date and a time.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 D = createDate(2012, 1, 1);
 T = createTime(8, 15, 45, 30);
@@ -670,7 +670,7 @@ Split an existing datetime into a tuple with the date and the time.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 splitDateTime(N);
@@ -688,7 +688,7 @@ Increment the years by given amount or by 1.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 incrementYears(N);
@@ -707,7 +707,7 @@ Increment the months by a given amount or by 1. .Function
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 incrementMonths(N);
@@ -726,7 +726,7 @@ Increment the days by given amount or by 1.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 incrementDays(N);
@@ -745,7 +745,7 @@ Increment the hours by a given amount or by 1.\`
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 incrementHours(N);
@@ -764,7 +764,7 @@ Increment the minutes by a given amount or by 1.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 incrementMinutes(N);
@@ -783,7 +783,7 @@ Increment the seconds by a given amount or by 1.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 incrementSeconds(N);
@@ -802,7 +802,7 @@ Increment the milliseconds by a given amount or by 1.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 incrementMilliseconds(N);
@@ -821,7 +821,7 @@ Decrement the years by a given amount or by 1.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 decrementYears(N);
@@ -840,7 +840,7 @@ Decrement the months by a given amount or by 1.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 decrementMonths(N);
@@ -859,7 +859,7 @@ Decrement the days by a given amount or by 1.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 decrementDays(N);
@@ -878,7 +878,7 @@ Decrement the hours by a given amount or by 1.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 decrementHours(N);
@@ -897,7 +897,7 @@ Decrement the minutes by a given amount or by 1.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 decrementMinutes(N);
@@ -916,7 +916,7 @@ Decrement the seconds by a given amount or by 1.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 decrementSeconds(N);
@@ -935,7 +935,7 @@ Decrement the milliseconds by a given amount or by 1.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 decrementMilliseconds(N);
@@ -946,7 +946,7 @@ decrementMilliseconds(N, 5);
 
 **Types.**
 
-``` rascal
+```rascal
 data interval
      = Interval(datetime begin, datetime end)
      ;
@@ -968,7 +968,7 @@ Given two datetime values, create an interval.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 B = now();
 E = incrementDays(B, 2);
@@ -979,7 +979,7 @@ createInterval(B, E);
 
 **Types.**
 
-``` rascal
+```rascal
 data Duration
      = duration(int years, int months, int days, int hours, int minutes, int seconds, int milliseconds)
      ;
@@ -1007,7 +1007,7 @@ Create a new duration representing the duration between the begin and end dates.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 B = now();
 E1 = incrementHours(B);
@@ -1028,7 +1028,7 @@ Return the number of days in an interval, including the begin and end days.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 B = now();
 E = incrementDays(B, 2);
@@ -1048,7 +1048,7 @@ Return the difference between two dates and/or datetimes in days.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 B = now();
 E = incrementDays(B, 2);
@@ -1071,7 +1071,7 @@ Given an interval `i`, return a list of days `[i.begin, …​, i.end]`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 B = now();
 E = incrementDays(B, 2);
@@ -1091,7 +1091,7 @@ Parse an input date given as a string using the given format string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 parseDate("2011-12-23", "yyyy-MM-dd");
 parseDate("20111223", "yyyyMMdd");
@@ -1119,7 +1119,7 @@ Parse an input time given as a string using the given format string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 parseTime("11/21/19", "HH/mm/ss");
 ```
@@ -1146,7 +1146,7 @@ Parse an input datetime given as a string using the given format string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 parseDateTime("2011/12/23/11/19/54", "YYYY/MM/dd/HH/mm/ss");
 ```
@@ -1173,7 +1173,7 @@ Print an input date using the given format string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 printDate(now());
 printDate(now(), "YYYYMMdd");
@@ -1191,7 +1191,7 @@ Print an input date using a specific locale and format string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 printDateInLocale(now(), "Europe/Netherlands");
 printDateInLocale(now(), "French");
@@ -1209,7 +1209,7 @@ Print an input time using the given format string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 printTime(N);
@@ -1238,7 +1238,7 @@ Print an input datetime using the given format string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 N = now();
 printDateTime(N);
@@ -1268,7 +1268,7 @@ Create a new arbitrary datetime.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import DateTime;
 arbDateTime();
 ```
@@ -1287,7 +1287,7 @@ Exceptions thrown by the Rascal run-time.
 
 **Types.**
 
-``` rascal
+```rascal
 data RuntimeException
      = Ambiguity(loc location, str nonterminal, str sentence)
      | ArithmeticException(str message)
@@ -1352,21 +1352,21 @@ Exceptions are either generated by the Rascal run-time (e.g., `IndexOutOfBounds`
 
 Import relevant libraries:
 
-``` rascal-shell
+```rascal-shell
 import Exception;
 import IO;
 ```
 
 Define the map `weekend` and do a subscription with a non-existing key:
 
-``` rascal-shell
+```rascal-shell
 weekend = ("saturday": 1, "sunday": 2);
 weekend["monday"];
 ```
 
 Repeat this, but catch the exception. We use variable `N` to track what happened:
 
-``` rascal-shell
+```rascal-shell
 N = 1;
 try {
    N = weekend["monday"];
@@ -1668,7 +1668,7 @@ difference between this function and [println](#IO-println) is that its return t
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 bprintln("Hello World");
 ```
@@ -1689,13 +1689,13 @@ Check whether a certain location exists, i.e., whether an actual file is associa
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 ```
 
 Does the library file `IO.rsc` exist?
 
-``` rascal-shell
+```rascal-shell
 exists(|std:///IO.rsc|);
 ```
 
@@ -1711,13 +1711,13 @@ Find a named file in a list of locations.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 ```
 
 Find the file `IO.rsc` in the standard library:
 
-``` rascal-shell
+```rascal-shell
 find("IO.rsc", [|std:///|]);
 ```
 
@@ -1752,7 +1752,7 @@ version that adds a newline and [iprintToFile](#IO-iprintToFile) for a version t
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 iprint(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
 ```
@@ -1774,7 +1774,7 @@ version that returns its argument as result and [iprintln](#IO-iprintln) for a v
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 iprintToFile(|file:///tmp/fruits.txt|, ["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
 ```
@@ -1801,7 +1801,7 @@ See [iprintlnExp](#IO-iprintlnExp) for a version that adds a newline.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 iprintExp(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
 ```
@@ -1822,7 +1822,7 @@ See [iprintExp](#IO-iprintExp) for a version that does not add a newline.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 iprintlnExp(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
 ```
@@ -1847,7 +1847,7 @@ By default we only print the first 1000 lines, if you want to print larger value
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 iprintln(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
 iprintln([ {"hi"} | i <- [0..1000]], lineLimit = 10);
@@ -1883,13 +1883,13 @@ Returns last modification time of the file at location `file`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 ```
 
 Determine the last modification date of the Rascal standard library:
 
-``` rascal-shell
+```rascal-shell
 lastModified(|std:///IO.rsc|);
 ```
 
@@ -1909,13 +1909,13 @@ Returns the creation time of the file at location `file`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 ```
 
 Determine the last modification date of the Rascal standard library:
 
-``` rascal-shell
+```rascal-shell
 created(|std:///IO.rsc|);
 ```
 
@@ -1955,13 +1955,13 @@ List the entries in directory `file`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 ```
 
 List all entries in the standard library:
 
-``` rascal-shell
+```rascal-shell
 listEntries(|std:///|);
 ```
 
@@ -1999,7 +1999,7 @@ Print a value on the output stream. See [println](#IO-println) for a version tha
 
 Note that the only difference with [println](#IO-println) is that no newline is added after the value is printed
 
-``` rascal-shell
+```rascal-shell
 import IO;
 print("Hello World");
 ```
@@ -2020,7 +2020,7 @@ Print a value and return it as result.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 printExp(3.14);
 printExp("The value of PI is approximately ", 3.14);
@@ -2043,34 +2043,34 @@ newline and [printlnExp](#IO-printlnExp) for a version that returns its argument
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 println("Hello World");
 ```
 
 Introduce variable S and print it:
 
-``` rascal-shell
+```rascal-shell
 S = "Hello World";
 println(S);
 ```
 
 Introduce variable L and print it:
 
-``` rascal-shell
+```rascal-shell
 L = ["a", "b", "c"];
 println(L);
 ```
 
 Use a string template to print several values:
 
-``` rascal-shell
+```rascal-shell
 println("<S>: <L>");
 ```
 
 Just print a newline
 
-``` rascal-shell
+```rascal-shell
 println();
 ```
 
@@ -2086,7 +2086,7 @@ Print a value followed by a newline and return it as result.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 printlnExp(3.14);
 printlnExp("The value of PI is approximately ", 3.14);
@@ -2379,7 +2379,7 @@ throws PathNotFound, IO`
 
 **Types.**
 
-``` rascal
+```rascal
 data LocationChangeEvent
      = changeEvent(loc src, LocationChangeType changeType, LocationType \type)
      ;
@@ -2389,7 +2389,7 @@ data LocationChangeEvent
 
 **Types.**
 
-``` rascal
+```rascal
 data LocationChangeType
      = created()
      | deleted()
@@ -2401,7 +2401,7 @@ data LocationChangeType
 
 **Types.**
 
-``` rascal
+```rascal
 data LocationType
      = file()
      | directory()
@@ -2591,7 +2591,7 @@ Concatenate a list of lists.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 concat([]);
 concat([[]]);
@@ -2617,7 +2617,7 @@ Delete the `n`-th element from a list. A new list without the `n`-th element is 
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 delete([1, 2, 3], 1);
 delete(["zebra", "elephant", "snake", "owl"], 2);
@@ -2635,7 +2635,7 @@ Get the distribution of the elements of the list. That is how often does each el
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 distribution([4,4,4,3,1,2,1,1,3,4]);
 ```
@@ -2657,7 +2657,7 @@ elements from the head of a list\].
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 drop(2, [5, 1, 7, 3]);
 drop(10, [5, 1, 7, 3]);
@@ -2676,7 +2676,7 @@ Remove multiple occurrences of elements in a list. The first occurrence remains.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 dup([3, 1, 5, 3, 1, 7, 1, 2]);
 ```
@@ -2704,7 +2704,7 @@ element.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 getOneFrom(["zebra", "elephant", "snake", "owl"]);
 getOneFrom(["zebra", "elephant", "snake", "owl"]);
@@ -2745,33 +2745,33 @@ Get the first element(s) from a list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 ```
 
 Get the first element:
 
-``` rascal-shell
+```rascal-shell
 head([1, 2, 3]);
 head(["zebra", "elephant", "snake", "owl"]);
 ```
 
 An exception is thrown when taking the head of an empty list:
 
-``` rascal-shell
+```rascal-shell
 head([]);
 ```
 
 Get the first n elements:
 
-``` rascal-shell
+```rascal-shell
 head([1, 2, 3, 4], 2);
 head(["zebra", "elephant", "snake", "owl"], 2);
 ```
 
 An exception is thrown when the second argument exceeds the length of the list:
 
-``` rascal-shell
+```rascal-shell
 head([1, 2, 3, 5], 5);
 ```
 
@@ -2791,7 +2791,7 @@ This function is identical to [pop](#List-pop).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 headTail([3, 1, 4, 5]);
 pop([3, 1, 4, 5]);
@@ -2814,7 +2814,7 @@ Returns a list of all legal index values for a given list `lst`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 index([1, 3, 5]);
 index(["zebra", "elephant", "snake", "owl"]);
@@ -2841,7 +2841,7 @@ Return index of first occurrence of `elt` in `lst`, or `-1` if `elt` is not foun
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 indexOf([3, 1, 4, 5], 4);
 indexOf([3, 1, 4, 5], 7);
@@ -2865,7 +2865,7 @@ Returns a new list with the value of `elm` inserted at index position `n` of the
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 insertAt([1,2,3], 1, 5);
 insertAt(["zebra", "elephant", "snake", "owl"], 2, "eagle");
@@ -2873,7 +2873,7 @@ insertAt(["zebra", "elephant", "snake", "owl"], 2, "eagle");
 
 An exception is thrown when the index position is outside the list:
 
-``` rascal-shell
+```rascal-shell
 insertAt([1,2,3], 10, 5);
 ```
 
@@ -2889,7 +2889,7 @@ Join a list of values into a string separated by a separator.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 intercalate("/", [3]);
 intercalate("/", [3, 1, 4, 5]);
@@ -2909,7 +2909,7 @@ Intersperses a list of values with a separator.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 intersperse(", ", ["a","b","c"]);
 intersperse(0, [1, 2, 3]);
@@ -2933,7 +2933,7 @@ Returns `true` when a list is empty and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 isEmpty([]);
 isEmpty([1, 2, 3]);
@@ -2955,7 +2955,7 @@ Also see [tail](#List-tail) that returns a list of one or more of the last eleme
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 last([1]);
 last([3, 1, 4, 5]);
@@ -2979,7 +2979,7 @@ Also see [indexOf](#List-indexOf).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 lastIndexOf([3, 1, 4, 5, 4], 4);
 lastIndexOf([3, 1, 4, 5, 4], 7);
@@ -3002,7 +3002,7 @@ Apply a function `fn` to each element of `lst` and return the list of results.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 int incr(int x) { return x + 1; }
 mapper([1, 2, 3, 4], incr);
@@ -3020,7 +3020,7 @@ Determine the largest element in a list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 max([1, 3, 5, 2, 4]);
 max(["zebra", "elephant", "snake", "owl"]);
@@ -3043,7 +3043,7 @@ function `lessOrEqual` may be given for a user-defined ordering between values.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 merge([1, 3, 5], [2, 7, 9, 15]);
 merge(["ape", "elephant", "owl", "snale", "zebra"], ["apple", "berry", "orange", "pineapple"]);
@@ -3051,7 +3051,7 @@ merge(["ape", "elephant", "owl", "snale", "zebra"], ["apple", "berry", "orange",
 
 Merge two lists of strings and use their length as ordering:
 
-``` rascal-shell
+```rascal-shell
 import String;
 merge(["ape", "owl", "snale", "zebra", "elephant"], ["apple", "berry", "orange", "pineapple"], bool(str x, str y){ return size(x) <= size(y); });
 ```
@@ -3068,7 +3068,7 @@ Determine the smallest element in a list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 min([1, 3, 5, 2, 4]);
 min(["zebra", "elephant", "snake", "owl"]);
@@ -3091,7 +3091,7 @@ are taken alternately from the left and the right list, followed by the remainin
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 mix([3, 1, 7, 5, 9], [15, 25, 35]);
 mix([3, 1, 7], [15, 25, 35, 45, 55]);
@@ -3110,7 +3110,7 @@ Compute all permutations of a list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 permutations([1,2,3]);
 ```
@@ -3134,7 +3134,7 @@ see [push](#List-push) and [top](#List-top).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 pop([3, 1, 4, 5]);
 headTail([3, 1, 4, 5]);
@@ -3153,7 +3153,7 @@ Return all but the last element of a list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 prefix([3, 1, 4, 5]);
 prefix([]);
@@ -3176,7 +3176,7 @@ Also see [pop](#List-pop) and [top](#List-top).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 push(7, [3, 1, 4, 5]);
 push("eagle", ["zebra", "elephant", "snake", "owl"]);
@@ -3198,7 +3198,7 @@ Apply the function `fn` to successive elements of list `lst` starting with `unit
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 int add(int x, int y) { return x + y; }
 reducer([10, 20, 30, 40], add, 0);
@@ -3236,7 +3236,7 @@ Returns a list with the elements of `lst` in reverse order.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 reverse([1,4,2,3]);
 reverse(["zebra", "elephant", "snake", "owl"]);
@@ -3254,7 +3254,7 @@ Determine the number of elements in a list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 size([20, 10, 30]);
 size(["zebra", "elephant", "snake", "owl"]);
@@ -3280,7 +3280,7 @@ Returns a sublist of `lst` from index `start` of length `len`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 slice([10, 20, 30, 40, 50, 60], 2, 3);
 slice(["zebra", "elephant", "snake", "owl"], 1, 2);
@@ -3288,7 +3288,7 @@ slice(["zebra", "elephant", "snake", "owl"], 1, 2);
 
 Here are the equivalent expressions using the slice notation:
 
-``` rascal-shell
+```rascal-shell
 [10, 20, 30, 40, 50, 60][2 .. 5];
 ["zebra", "elephant", "snake", "owl"][1 .. 3];
 ```
@@ -3317,7 +3317,7 @@ Sort the elements of a list:
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 import String;
 sort([10, 4, -2, 11, 100, 5]);
@@ -3358,7 +3358,7 @@ Returns a random (unbiased) shuffled list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 shuffle([1,4,2,3]);
 shuffle(["zebra", "elephant", "snake", "owl"]);
@@ -3376,7 +3376,7 @@ Split a list into two halves.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 split([3, 1, 4, 5, 7]);
 split(["zebra", "elephant", "snake", "owl"]);
@@ -3394,7 +3394,7 @@ Sum the elements of a list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 sum([3, 1, 4, 5]);
 sum([3, 1.5, 4, 5]);
@@ -3418,31 +3418,31 @@ Get the tail element(s) from a list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ```
 
 All but first element:
 
-``` rascal-shell
+```rascal-shell
 import List;
 tail([10,20,30]);
 ```
 
 Try an error case:
 
-``` rascal-shell
+```rascal-shell
 tail([]);
 ```
 
 Last n elements:
 
-``` rascal-shell
+```rascal-shell
 tail([10, 20, 30, 40, 50, 60], 3);
 ```
 
 Try an error case:
 
-``` rascal-shell
+```rascal-shell
 tail([10, 20, 30, 40, 50, 60], 10);
 ```
 
@@ -3463,7 +3463,7 @@ remove elements from the head of a list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 take(2, [3, 1, 4, 5]);
 take(6, [3, 1, 4, 5]);
@@ -3492,7 +3492,7 @@ See [getOneFrom](#List-getOneFrom) to only selected an element from a list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 takeOneFrom([10,20,30,40,50]);
 takeOneFrom([10,20,30,40,50]);
@@ -3514,7 +3514,7 @@ Take elements from the front of the list as long as a predicate is true.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 bool isEven(int a) = a mod 2 == 0;
 takeWhile([2,4,6,8,1,2,3,4,5],isEven);
@@ -3537,7 +3537,7 @@ from all tuples with the same first element. Keys should be unique.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 toMap([<1,10>, <1, 11>, <2, 20>, <3, 30>, <3, 31>]);
 ```
@@ -3563,14 +3563,14 @@ Convert a list of tuples to a map; result must be a map.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 toMapUnique([<1,10>, <2, 20>, <3, 30>]);
 ```
 
 Let’s explore an error case:
 
-``` rascal-shell
+```rascal-shell
 toMapUnique([<1,10>, <1, 11>, <2, 20>, <3, 30>]);
 ```
 
@@ -3592,7 +3592,7 @@ Take the top element of a list. .Description This function is identical to [???]
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 top([3, 1, 4, 5]);
 top(["zebra", "elephant", "snake", "owl"]);
@@ -3611,7 +3611,7 @@ followed by each other. This function will return an empty relation for empty li
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 toRel([3, 1, 4, 5]);
 toRel(["zebra", "elephant", "snake", "owl"]);
@@ -3633,7 +3633,7 @@ Convert `lst` to a set.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 toSet([10, 20, 30, 40]);
 toSet(["zebra", "elephant", "snake", "owl"]);
@@ -3641,7 +3641,7 @@ toSet(["zebra", "elephant", "snake", "owl"]);
 
 Note that the same can be done using splicing
 
-``` rascal-shell
+```rascal-shell
 l = [10,20,30,40];
 s = {*l};
 ```
@@ -3662,7 +3662,7 @@ Convert `lst` to a string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 toString([10, 20, 30]);
 toString(["zebra", "elephant", "snake", "owl"]);
@@ -3684,7 +3684,7 @@ Convert `lst` to a indented string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 itoString([10, 20, 30]);
 itoString(["zebra", "elephant", "snake", "owl"]);
@@ -3706,7 +3706,7 @@ Also see [???](#List-unzip);
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 unzip2([<3,"thirty">, <1,"ten">, <4,"forty">]);
 unzip3([<3,"thirty",300>, <1,"ten",100>, <4,"forty",400>]);
@@ -3731,7 +3731,7 @@ since the returned values are shared.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 upTill(10);
 ```
@@ -3752,7 +3752,7 @@ Also see [???](#List-unzip).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import List;
 zip3([3, 1, 4], ["thirty", "ten", "forty"]);
 zip3([3, 1, 4], ["thirty", "ten", "forty"], [300, 100, 400]);
@@ -3899,7 +3899,7 @@ Return the list of all elements in any tuple in a list relation.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 carrier([<1,10>, <2,20>]);
 carrier([<1,10,100,1000>, <2,20,200,2000>]);
@@ -3925,7 +3925,7 @@ Returns list relation `R` restricted to tuples with elements in set `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 carrierR([<1,10>, <2,20>, <3,30>], {10, 1, 20});
 ```
@@ -3950,7 +3950,7 @@ Returns list relation `R` excluding tuples with some element in `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 carrierX([<1,10>, <2,20>, <3,30>], {10, 1, 20});
 ```
@@ -3977,20 +3977,20 @@ that occur at corresponding tuple positions in `R`. The function `complement` re
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 ```
 
 Declare `R` and compute corresponding `U`:
 
-``` rascal-shell
+```rascal-shell
 R = [<1,10>, <2, 20>, <3, 30>];
 U = domain(R) * range(R);
 ```
 
 Here is the complement of `R` computed in two ways:
 
-``` rascal-shell
+```rascal-shell
 U - R;
 complement([<1,10>, <2, 20>, <3, 30>]);
 ```
@@ -4017,7 +4017,7 @@ been removed.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 domain([<1,10>, <2,20>]);
 domain([<"mon", 1>, <"tue", 2>]);
@@ -4051,7 +4051,7 @@ Restriction of a list relation `R` to tuples with first element in `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 domainR([<1,10>, <2,20>, <3,30>], {3, 1});
 ```
@@ -4076,7 +4076,7 @@ List relation `R` excluding tuples with first element in `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 domainX([<1,10>, <2,20>, <3,30>], {3, 1});
 ```
@@ -4093,7 +4093,7 @@ Make sets of elements in the domain that relate to the same element in the range
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 legs = [<"bird", 2>, <"dog", 4>, <"human", 2>, <"spider", 8>, <"millepede", 1000>, <"crab", 8>, <"cat", 4>];
 groupDomainByRange(legs);
@@ -4111,7 +4111,7 @@ Make sets of elements in the range that relate to the same element in the domain
 
 **Description.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 skins = [<"bird", "feather">, <"dog", "fur">, <"tortoise", "shell">, <"human", "skin">, <"fish", "scale">, <"lizard", "scale">, <"crab", "shell">, <"cat", "fur">];
 groupRangeByDomain(skins);
@@ -4133,7 +4133,7 @@ The identity list relation for set `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 ident(["mon", "tue", "wed"]);
 ```
@@ -4154,7 +4154,7 @@ Invert the tuples in a list relation.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 invert([<1,10>, <2,20>]);
 ```
@@ -4181,7 +4181,7 @@ have been removed.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 range([<1,10>, <2,20>]);
 range([<"mon", 1>, <"tue", 2>]);
@@ -4203,7 +4203,7 @@ Restriction of binary list relation `R` to tuples with second element in set `S`
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 rangeR([<1,10>, <2,20>, <3,30>], {30, 10});
 ```
@@ -4224,7 +4224,7 @@ Restriction of binary list relation `R` to tuples with second element not in set
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 rangeX([<1,10>, <2,20>, <3,30>], {30, 10});
 ```
@@ -4245,7 +4245,7 @@ Converts a binary list relation to a map of the domain to a set of the range.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ListRelation;
 index([<1,10>, <2,20>, <3,30>, <30,10>]);
 ```
@@ -4550,7 +4550,7 @@ Returns the map `m` minus the key `k`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 delete(("apple":1,"pear":2), "apple");
 ```
@@ -4571,7 +4571,7 @@ Returns the domain (set of keys) of map `M`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 domain(("apple": 1, "pear": 2));
 ```
@@ -4592,7 +4592,7 @@ Return the map `M` restricted to pairs with key in `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 domainR(("apple": 1, "pear": 2, "orange": 3), {"apple", "pear"});
 ```
@@ -4613,7 +4613,7 @@ Return the map `M` restricted to pairs with key not in `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 domainX(("apple": 1, "pear": 2, "orange": 3), {"apple", "pear"});
 ```
@@ -4634,7 +4634,7 @@ Returns an arbitrary key of map `M`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
@@ -4658,7 +4658,7 @@ Also see [invertUnique](#Map-invertUnique).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 invert(("apple": 1, "pear": 2, "orange": 1));
 ```
@@ -4683,14 +4683,14 @@ Also see [invert](#Map-invert) and [Exception](#exception).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 invertUnique(("apple": 1, "pear": 2, "orange": 3));
 ```
 
 Here is an examples that generates an exception:
 
-``` rascal-shell
+```rascal-shell
 invertUnique(("apple": 1, "pear": 2, "orange": 1));
 ```
 
@@ -4710,7 +4710,7 @@ Returns `true` if map `M` is empty, and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 isEmpty(());
 isEmpty(("apple": 1, "pear": 2, "orange": 3));
@@ -4732,7 +4732,7 @@ Apply the functions `F` and `G` to each key/value pair in a map and return the t
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 str prefix(str s) { return "X" + s; }
 int incr(int x) { return x + 1; }
@@ -4755,7 +4755,7 @@ Returns the range (set of values) of map `M`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 range(("apple": 1, "pear": 2));
 ```
@@ -4776,7 +4776,7 @@ Returns the map restricted to pairs with values in `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 rangeR(("apple": 1, "pear": 2, "orange": 3), {2, 3});
 ```
@@ -4797,7 +4797,7 @@ Returns the map restricted to pairs with values not in `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 rangeX(("apple": 1, "pear": 2, "orange": 3), {2, 3});
 ```
@@ -4818,7 +4818,7 @@ Returns the number of pairs in map `M`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 size(("apple": 1, "pear": 2, "orange": 3));
 ```
@@ -4835,7 +4835,7 @@ Convert a map to a list of tuples.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 toList(("apple": 1, "pear": 2, "orange": 3));
 ```
@@ -4854,7 +4854,7 @@ Convert a map to a relation.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 toRel(("apple": 1, "pear": 2, "orange": 3));
 ```
@@ -4871,7 +4871,7 @@ Convert a map to a string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 toString(("apple": 1, "pear": 2, "orange": 3));
 ```
@@ -4888,7 +4888,7 @@ Convert a map to a indented string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 itoString(("apple": 1, "pear": 2, "orange": 3));
 ```
@@ -4905,7 +4905,7 @@ A `Message` datatype that represents messages in the IDE.
 
 **Types.**
 
-``` rascal
+```rascal
 data Message = error(str msg, loc at)
              | warning(str msg, loc at)
              | info(str msg, loc at);
@@ -4921,7 +4921,7 @@ type](/docs/Rascal#ADT). A very common example is to annotate parse trees with m
 
 **Types.**
 
-``` rascal
+```rascal
 data Message
      = error(str msg, loc at)
      | error(str msg)
@@ -5006,7 +5006,7 @@ Determine the number of children of a node.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Node;
 arity("f"(10, "abc"));
 arity("f"(10, "abc", false));
@@ -5024,7 +5024,7 @@ Get the children of a node.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Node;
 getChildren("f"(10, "abc"));
 ```
@@ -5041,7 +5041,7 @@ Get the keyword parameters of a node.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Node;
 getKeywordParameters("f"(10, "abc", height=0));
 ```
@@ -5064,7 +5064,7 @@ Set the keyword parameters of a node.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Node;
 setKeywordParameters("f"(10, "abc"), ("height":0));
 ```
@@ -5087,7 +5087,7 @@ Determine the name of a node.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Node;
 getName("f"(10, "abc"));
 ```
@@ -5104,7 +5104,7 @@ Create a node given its function name and arguments.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Node;
 makeNode("f", [10, "abc"]);
 ```
@@ -5185,7 +5185,7 @@ Convert a node to a string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Node;
 F = "f"(10, "abc", color="red", size="large");
 toString(F);
@@ -5203,7 +5203,7 @@ Convert a node to an indented string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Node;
 F = "f"(10, "abc", color="red", size="large");
 itoString(F);
@@ -5281,7 +5281,7 @@ The type of a parse tree is the symbol that it’s production produces, i.e. `ap
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import ParseTree;
 syntax A = "a";
 // will make the following succeed:
@@ -5304,7 +5304,7 @@ for recognizing the literal a, which is defined to be a single a from the charac
 
 When we use labels in the definitions, they also end up in the trees. The following definition
 
-``` rascal-shell
+```rascal-shell
 import ParseTree;
 lexical B= myB:"b";
 lexical C = myC:"c" B bLabel;
@@ -5357,7 +5357,7 @@ The following functions and data types are declared for ParseTrees:
 
 **Types.**
 
-``` rascal
+```rascal
 data Tree
      = appl(Production prod, list[Tree] args)
      | cycle(Symbol symbol, int cycleLength)
@@ -5386,7 +5386,7 @@ A `Tree` defines the trees normally found after parsing; additional constructors
 
 **Types.**
 
-``` rascal
+```rascal
 data Production
      = prod(Symbol def, list[Symbol] symbols, set[Attr] attributes)
      | regular(Symbol def)
@@ -5419,7 +5419,7 @@ ordered and un-ordered compositions, and associativity groups.
 
 **Types.**
 
-``` rascal
+```rascal
 data Production
      = \priority(Symbol def, list[Production] choices)
      | \associativity(Symbol def, Associativity \assoc, set[Production] alternatives)
@@ -5431,7 +5431,7 @@ data Production
 
 **Types.**
 
-``` rascal
+```rascal
 data Attr
      = \bracket()
      | \assoc(Associativity \assoc)
@@ -5452,7 +5452,7 @@ though.
 
 **Types.**
 
-``` rascal
+```rascal
 data Associativity
      = \left()
      | \right()
@@ -5473,7 +5473,7 @@ Associativity defines the various kinds of associativity of a specific productio
 
 **Types.**
 
-``` rascal
+```rascal
 data CharRange
      = range(int begin, int end)
      ;
@@ -5497,7 +5497,7 @@ Character ranges and character class .Description
 
 **Types.**
 
-``` rascal
+```rascal
 data Symbol
      = \start(Symbol symbol)
      ;
@@ -5555,7 +5555,7 @@ types, e.g., `int`, `list`, and `rel`. Here we extend it with the symbols that m
 
 **Types.**
 
-``` rascal
+```rascal
 data Symbol
      = \sort(str name)
      | \lex(str name)
@@ -5570,7 +5570,7 @@ data Symbol
 
 **Types.**
 
-``` rascal
+```rascal
 data Symbol
      = \lit(str string)
      | \cilit(str string)
@@ -5582,7 +5582,7 @@ data Symbol
 
 **Types.**
 
-``` rascal
+```rascal
 data Symbol
      = \empty()
      | \opt(Symbol symbol)
@@ -5599,7 +5599,7 @@ data Symbol
 
 **Types.**
 
-``` rascal
+```rascal
 data Symbol
      = \conditional(Symbol symbol, set[Condition] conditions)
      ;
@@ -5615,7 +5615,7 @@ data Symbol
 
 **Types.**
 
-``` rascal
+```rascal
 data Condition
      = \follow(Symbol symbol)
      | \not-follow(Symbol symbol)
@@ -5721,20 +5721,20 @@ flag to consider.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Concrete::NoLayout::Syntax;
 import ParseTree;
 ```
 
 Seeing that `parse` returns a parse tree:
 
-``` rascal-shell
+```rascal-shell
 parse(#Exp, "2+3");
 ```
 
 Catching a parse error:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 try {
   Exp e = parse(#Exp, "2@3");
@@ -5824,20 +5824,20 @@ Yield the string of characters that form the leafs of the given parse tree.
 `unparse` is the inverse function of [parse](#ParseTree-parse), i.e., for every syntactically correct string *TXT* of
 type `S`, the following holds:
 
-``` rascal
+```rascal
 unparse(parse(#S, TXT)) == TXT
 ```
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Concrete::NoLayout::Syntax;
 import ParseTree;
 ```
 
 First parse an expression, this results in a parse tree. Then unparse this parse tree:
 
-``` rascal-shell
+```rascal-shell
 unparse(parse(#Exp, "2+3"));
 ```
 
@@ -5922,7 +5922,7 @@ Finally, source location fields are propagated as keyword fields on constructor 
 required to explicitly declare a keyword field on all ADTs used in implosion. In other words, for every ADT type `T`,
 add:
 
-``` rascal
+```rascal
 data T(loc location=|unknown);
 ```
 
@@ -5934,14 +5934,14 @@ Here are some examples for the above rules.
 
 Given the grammar
 
-``` rascal
+```rascal
 syntax IDTYPE = Id ":" Type;
 syntax Decls = decls: "declare" {IDTYPE ","}* ";";
 ```
 
 `Decls` will be imploded as:
 
-``` rascal
+```rascal
 data Decls = decls(list[tuple[str,Type]]);
 ```
 
@@ -5951,13 +5951,13 @@ data Decls = decls(list[tuple[str,Type]]);
 
 Given the grammar
 
-``` rascal
+```rascal
 syntax Formal = formal: "VAR"? {Id ","}+ ":" Type;
 ```
 
 The corresponding ADT could be:
 
-``` rascal
+```rascal
 data Formal = formal(bool, list[str], Type);
 ```
 
@@ -5965,14 +5965,14 @@ data Formal = formal(bool, list[str], Type);
 
 Given the grammar
 
-``` rascal
+```rascal
 syntax Tag = "[" {Modifier ","}* "]";
 syntax Decl = decl: Tag? Signature Body;
 ```
 
 In this case, a `Decl` is imploded into the following ADT:
 
-``` rascal
+```rascal
 data Decl = decl(list[Modifier], Signature, Body);
 ```
 
@@ -5980,13 +5980,13 @@ data Decl = decl(list[Modifier], Signature, Body);
 
 Given the grammar
 
-``` rascal
+```rascal
 syntax Exp = left add: Exp "+" Exp;
 ```
 
 Can be imploded into:
 
-``` rascal
+```rascal
 data Exp = add(Exp, Exp);
 ```
 
@@ -5994,7 +5994,7 @@ data Exp = add(Exp, Exp);
 
 **Types.**
 
-``` rascal
+```rascal
 data TreeSearchResult[&T<:Tree]
      = treeFound(&T tree)
      | treeNotFound()
@@ -6170,7 +6170,7 @@ Return the set of all elements in any tuple in a relation.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 carrier({<1,10>, <2,20>});
 carrier({<1,10,100,1000>, <2,20,200,2000>});
@@ -6196,7 +6196,7 @@ Returns relation `R` restricted to tuples with elements in set `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 carrierR({<1,10>, <2,20>, <3,30>}, {10, 1, 20});
 ```
@@ -6221,7 +6221,7 @@ Returns relation `R` excluding tuples with some element in `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 carrierX({<1,10>, <2,20>, <3,30>}, {10, 1, 20});
 ```
@@ -6248,20 +6248,20 @@ in other words: `U - R`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 ```
 
 Declare `R` and compute corresponding `U`:
 
-``` rascal-shell
+```rascal-shell
 R = {<1,10>, <2, 20>, <3, 30>};
 U = domain(R) * range(R);
 ```
 
 Here is the complement of `R` computed in two ways:
 
-``` rascal-shell
+```rascal-shell
 U - R;
 complement({<1,10>, <2, 20>, <3, 30>});
 ```
@@ -6282,7 +6282,7 @@ Domain of a relation: a set consisting of the first element of each tuple.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 domain({<1,10>, <2,20>});
 domain({<"mon", 1>, <"tue", 2>});
@@ -6308,7 +6308,7 @@ Restriction of a relation `R` to tuples with first element in `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 domainR({<1,10>, <2,20>, <3,30>}, {3, 1});
 ```
@@ -6333,7 +6333,7 @@ Relation `R` excluded tuples with first element in `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 domainX({<1,10>, <2,20>, <3,30>}, {3, 1});
 ```
@@ -6350,7 +6350,7 @@ Make sets of elements in the domain that relate to the same element in the range
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 legs = {<"bird", 2>, <"dog", 4>, <"human", 2>, <"spider", 8>, <"millepede", 1000>, <"crab", 8>, <"cat", 4>};
 groupDomainByRange(legs);
@@ -6368,7 +6368,7 @@ Make sets of elements in the range that relate to the same element in the domain
 
 **Description.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 skins = {<"bird", "feather">, <"dog", "fur">, <"tortoise", "shell">, <"human", "skin">, <"fish", "scale">, <"lizard", "scale">, <"crab", "shell">, <"cat", "fur">};
 groupRangeByDomain(skins);
@@ -6390,7 +6390,7 @@ The identity relation for set `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 ident({"mon", "tue", "wed"});
 ```
@@ -6411,7 +6411,7 @@ Invert the tuples in a relation.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 invert({<1,10>, <2,20>});
 ```
@@ -6432,7 +6432,7 @@ The range (i.e., all but the first element of each tuple) of a relation.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 range({<1,10>, <2,20>});
 range({<"mon", 1>, <"tue", 2>});
@@ -6454,7 +6454,7 @@ Restriction of binary relation `R` to tuples with second element in set `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 rangeR({<1,10>, <2,20>, <3,30>}, {30, 10});
 ```
@@ -6475,7 +6475,7 @@ Restriction of binary relation `R` to tuples with second element not in set `S`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 rangeX({<1,10>, <2,20>, <3,30>}, {30, 10});
 ```
@@ -6496,7 +6496,7 @@ Converts a binary relation to a map of the domain to a set of the range.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 index({<1,10>, <2,20>, <3,30>, <30,10>});
 ```
@@ -6599,19 +6599,19 @@ Classify elements in a set.
 
 We classify animals by their number of legs.
 
-``` rascal-shell
+```rascal-shell
 import Set;
 ```
 
 Create a map from animals to number of legs.
 
-``` rascal-shell
+```rascal-shell
 legs = ("bird": 2, "dog": 4, "human": 2, "snake": 0, "spider": 8, "millepede": 1000, "crab": 8, "cat": 4);
 ```
 
 Define function `nLegs` that returns the number of legs for each animal (or `0` when the animal is unknown):
 
-``` rascal-shell
+```rascal-shell
 int nLegs(str animal){
     return legs[animal] ? 0;
 }
@@ -6619,7 +6619,7 @@ int nLegs(str animal){
 
 Now classify a set of animals:
 
-``` rascal-shell
+```rascal-shell
 classify({"bird", "dog", "human", "spider", "millepede", "zebra", "crab", "cat"}, nLegs);
 ```
 
@@ -6637,19 +6637,19 @@ Group elements in a set given an equivalence function.
 
 We classify animals by their number of legs.
 
-``` rascal-shell
+```rascal-shell
 import Set;
 ```
 
 Create a map from animals to number of legs.
 
-``` rascal-shell
+```rascal-shell
 legs = ("bird": 2, "dog": 4, "human": 2, "snake": 0, "spider": 8, "millepede": 1000, "crab": 8, "cat": 4);
 ```
 
 Define function `nLegs` that returns the number of legs fro each animal (or `0` when the animal is unknown):
 
-``` rascal-shell
+```rascal-shell
 int nLegs(str animal){
     return legs[animal] ? 0;
 }
@@ -6658,7 +6658,7 @@ bool similar(str a, str b) = nLegs(a) == nLegs(b);
 
 Now group a set of animals:
 
-``` rascal-shell
+```rascal-shell
 group({"bird", "dog", "human", "spider", "millepede", "zebra", "crab", "cat"}, similar);
 ```
 
@@ -6678,7 +6678,7 @@ Map set elements to a fixed index.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 index({"elephant", "zebra", "snake"});
 ```
@@ -6699,7 +6699,7 @@ Yields `true` if `s` is empty, and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 isEmpty({1, 2, 3});
 isEmpty({});
@@ -6721,7 +6721,7 @@ Return a set obtained by applying function `fn` to all elements of set `s`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 int incr(int x) { return x + 1; }
 mapper({1, 2, 3, 4}, incr);
@@ -6739,7 +6739,7 @@ Determine the largest element of a set.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 max({1, 3, 5, 2, 4});
 max({"elephant", "zebra", "snake"});
@@ -6757,7 +6757,7 @@ Determine the smallest element of a set.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 min({1, 3, 5, 4, 2});
 ```
@@ -6778,7 +6778,7 @@ Returns a set with all subsets of `s`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 power({1,2,3,4});
 ```
@@ -6799,7 +6799,7 @@ Returns all subsets (excluding the empty set) of `s`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 power1({1,2,3,4});
 ```
@@ -6820,7 +6820,7 @@ Apply the function `fn` to successive elements of set `s` starting with `unit`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 int add(int x, int y) { return x + y; }
 reducer({10, 20, 30, 40}, add, 0);
@@ -6842,7 +6842,7 @@ Determine the number of elements in a set.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 size({1,2,3,4});
 size({"elephant", "zebra", "snake"});
@@ -6867,7 +6867,7 @@ Pick an arbitrary element from a set.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 getOneFrom({"elephant", "zebra", "snake"});
 getOneFrom({"elephant", "zebra", "snake"});
@@ -6912,7 +6912,7 @@ Also see [getOneFrom](#Set-getOneFrom).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 takeOneFrom({1, 2, 3, 4});
 takeOneFrom({1, 2, 3, 4});
@@ -6945,7 +6945,7 @@ Convert a set to a list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 toList({1, 2, 3, 4});
 toList({"elephant", "zebra", "snake"});
@@ -6953,7 +6953,7 @@ toList({"elephant", "zebra", "snake"});
 
 Note that the same result can be obtained using splicing:
 
-``` rascal-shell
+```rascal-shell
 s = {1,2,3,4};
 l = [*s];
 ```
@@ -6980,7 +6980,7 @@ of all tuples with the same first element.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 toMap({<"a", 1>, <"b", 2>, <"a", 10>});
 ```
@@ -7001,14 +7001,14 @@ Convert a set of tuples to a map. The result should be a legal map (i.e., withou
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 toMapUnique({<"a", 1>, <"b", 2>, <"c", 10>});
 ```
 
 Now explore an erroneous example:
 
-``` rascal-shell
+```rascal-shell
 toMapUnique({<"a", 1>, <"b", 2>, <"a", 10>});
 ```
 
@@ -7024,7 +7024,7 @@ Convert a set to a string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 toString({1, 2, 3});
 toString({"elephant", "zebra", "snake"});
@@ -7047,7 +7047,7 @@ Convert a set to an indented string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 toString({1, 2, 3});
 toString({"elephant", "zebra", "snake"});
@@ -7084,7 +7084,7 @@ This function `lessThan` (\<) function should implement a strict partial order, 
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Set;
 import String;
 sort({10, 4, -2, 11, 100, 5});
@@ -7255,7 +7255,7 @@ Center a string in given space.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 center("abc", 10);
 center("abc", 10, "x");
@@ -7278,7 +7278,7 @@ that converts character codes back to string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 charAt("abc", 0);
 stringChar(charAt("abc", 0));
@@ -7297,7 +7297,7 @@ Return characters of a string. .Description Return a list of the characters of `
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 chars("abc");
 stringChars(chars("abc")) == "abc";
@@ -7319,7 +7319,7 @@ Check whether the string `find` occurs as substring in the string `subject`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 contains("abracadabra", "bra");
 contains("abracadabra", "e");
@@ -7351,7 +7351,7 @@ Yields `true` if string `subject` ends with the string `suffix`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 endsWith("Hello.rsc", ".rsc");
 ```
@@ -7372,7 +7372,7 @@ Return a copy of `subject` in which each single character key in replacements ha
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 import IO;
 escape("abracadabra", ("a" : "AA", "c" : "C"));
@@ -7399,7 +7399,7 @@ See also [findFirst](#String-findFirst) and [findLast](#String-findLast).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 findAll("abracadabra", "a");
 findAll("abracadabra", "bra");
@@ -7425,7 +7425,7 @@ Also see [findAll](#String-findAll) and [findLast](#String-findLast).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 findFirst("abracadabra", "a");
 findFirst("abracadabra", "bra");
@@ -7451,7 +7451,7 @@ Also see [findAll](#String-findAll) and [findFirst](#String-findFirst).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 findLast("abracadabra", "a");
 findLast("abracadabra", "bra");
@@ -7474,7 +7474,7 @@ Returns `true` if string `s` is empty.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 isEmpty("");
 isEmpty("abc");
@@ -7496,7 +7496,7 @@ Returns a string of maximum `n` length, with arbitrary characters.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 arbString(3);
 arbString(10);
@@ -7518,7 +7518,7 @@ Left alignment of string in given space.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 left("abc", 10);
 left("abc", 10, "x");
@@ -7541,7 +7541,7 @@ Return a copy of `subject` in which all occurrences of `find` (if any) have been
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 replaceAll("abracadabra", "a", "A");
 replaceAll("abracadabra", "ra", "RARA");
@@ -7569,7 +7569,7 @@ Also see [replaceAll](#String-replaceAll) and [replaceLast](#String-replaceLast)
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 replaceFirst("abracadabra", "a", "A");
 replaceFirst("abracadabra", "ra", "RARA");
@@ -7597,7 +7597,7 @@ Also see [replaceFirst](#String-replaceFirst) and [replaceLast](#String-replaceL
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 replaceLast("abracadabra", "a", "A");
 replaceLast("abracadabra", "ra", "RARA");
@@ -7624,7 +7624,7 @@ Returns string with all characters of string `s` in reverse order.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 reverse("abc");
 ```
@@ -7645,7 +7645,7 @@ Right alignment of a string value in a given space.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 right("abc", 10);
 right("abc", 10, "x");
@@ -7667,7 +7667,7 @@ Returns the length (number of characters) in string `s`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 size("abc");
 size("");
@@ -7689,7 +7689,7 @@ Yields `true` if string `subject` starts with the string `prefix`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 startsWith("Hello.rsc", "Hell");
 ```
@@ -7740,7 +7740,7 @@ Extract a substring from a string value.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 substring("abcdef", 2);
 substring("abcdef", 2, 4);
@@ -7764,7 +7764,7 @@ Throws `IllegalArgument` when `s` cannot be converted.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 toInt("11");
 toInt("11", 8);
@@ -7772,7 +7772,7 @@ toInt("11", 8);
 
 Now try an erroneous argument:
 
-``` rascal-shell
+```rascal-shell
 toInt("abc");
 ```
 
@@ -7792,7 +7792,7 @@ Convert all characters in string `s` to lowercase. Also see [toUpperCase](#Strin
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 toLowerCase("AaBbCc123");
 ```
@@ -7813,7 +7813,7 @@ Converts string `s` to a real. Throws `IllegalArgument` when `s` cannot be conve
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 toReal("2.5e-3");
 toReal("123");
@@ -7838,7 +7838,7 @@ Also see [toLowerCase](#String-toLowerCase).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 toUpperCase("AaBbCc123");
 ```
@@ -7855,7 +7855,7 @@ Returns string with leading and trailing whitespace removed.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 trim("  jelly
 beans  ");
@@ -7876,7 +7876,7 @@ allowed syntax in `charSet`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 squeeze("hello", "el");
 ```
@@ -7961,7 +7961,7 @@ Convert a string value to a (source code) location.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 toLocation("http://grammarware.net");
 toLocation("document.xml");
@@ -7979,7 +7979,7 @@ Substitute substrings in a string based on a substitution map from location to s
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import String;
 substitute("abc", (|stdin:///|(1,1): "d"))
 ```
@@ -8004,7 +8004,7 @@ The goal of this module is to provide:
 
 The following definition is built into Rascal:
 
-``` rascal
+```rascal
 data type[&T] = type(Symbol symbol, map[Symbol,Production] definitions);
 ```
 
@@ -8012,7 +8012,7 @@ The `#` operator will always produce a value of `type[&T]`, where `&T` is bound 
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Type;
 #int
 #rel[int,int]
@@ -8029,7 +8029,7 @@ The following functions are provided on types:
 
 **Types.**
 
-``` rascal
+```rascal
 data Symbol
      = \int()
      | \bool()
@@ -8068,7 +8068,7 @@ that may occur in a ParseTree.
 
 **Types.**
 
-``` rascal
+```rascal
 data Symbol
      = \label(str name, Symbol symbol)
      ;
@@ -8078,7 +8078,7 @@ data Symbol
 
 **Types.**
 
-``` rascal
+```rascal
 data Symbol
      = \set(Symbol symbol)
      | \rel(list[Symbol] symbols)
@@ -8101,7 +8101,7 @@ data Symbol
 
 **Types.**
 
-``` rascal
+```rascal
 data Symbol
      = \parameter(str name, Symbol bound)
      ;
@@ -8111,7 +8111,7 @@ data Symbol
 
 **Types.**
 
-``` rascal
+```rascal
 data Production
      = \cons(Symbol def, list[Symbol] symbols, list[Symbol] kwTypes, set[Attr] attributes)
      | \choice(Symbol def, set[Production] alternatives)
@@ -8142,7 +8142,7 @@ represent productions in syntax rules.
 
 **Types.**
 
-``` rascal
+```rascal
 data Attr
      = \tag(value \tag)
      ;
@@ -8288,7 +8288,7 @@ real and rat.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Type;
 1 == 1.0
 eq(1,1.0)
@@ -8638,7 +8638,7 @@ This function documents and implements the glb operation in Rascal’s type syst
 
 **Types.**
 
-``` rascal
+```rascal
 data Exception
      = typeCastException(Symbol from, type[value] to)
      ;
@@ -8681,7 +8681,7 @@ a value, represented by a symbol.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Type;
 value x = 1;
 typeOf(x)
@@ -9445,7 +9445,7 @@ Compute topological order of the nodes in a graph.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import  analysis::graphs::Graph;
 order({<3,4>, <1,2>, <2,4>, <1,3>});
 ```
@@ -9462,7 +9462,7 @@ Compute strongly connected components in a graph.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import  analysis::graphs::Graph;
 stronglyConnectedComponents({<1, 2>, <2, 3>, <3, 2>, <2, 4>, <4, 2>, <3, 5>, <5, 3>, <4, 5>, <5, 3>});
 ```
@@ -9489,7 +9489,7 @@ Returns the bottom nodes of Graph `G`, i.e., the leaf nodes that don’t have an
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::graphs::Graph;
 bottom({<1,2>, <1,3>, <2,4>, <3,4>});
 ```
@@ -9510,7 +9510,7 @@ Returns the direct predecessors of node `From` in Graph `G`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::graphs::Graph;
 predecessors({<1,2>, <1,3>, <2,4>, <3,4>}, 4);
 ```
@@ -9546,7 +9546,7 @@ nodes in the set `Restr`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::graphs::Graph;
 reachR({<1,2>, <1,3>, <2,4>, <3,4>}, {1}, {1, 2, 3});
 ```
@@ -9568,7 +9568,7 @@ Returns set of nodes in Graph `G` that are reachable from any of the nodes in `S
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::graphs::Graph;
 reachX({<1,2>, <1,3>, <2,4>, <3,4>}, {1}, {2});
 ```
@@ -9603,7 +9603,7 @@ Returns the direct successors of node `From` in Graph `G`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::graphs::Graph;
 successors({<1,2>, <1,3>, <2,4>, <3,4>}, 1);
 ```
@@ -9624,7 +9624,7 @@ Returns the top nodes of Graph `G`, i.e., the root nodes that do not have any pr
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::graphs::Graph;
 top({<1,2>, <1,3>, <2,4>, <3,4>});
 ```
@@ -9647,7 +9647,7 @@ from different components. The graph is assumed to be undirected.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::graphs::Graph;
 connectedComponents({<1,2>, <1,3>, <4,5>, <5,6>});
 ```
@@ -9921,7 +9921,7 @@ Computes the [covariance](http://en.wikipedia.org/wiki/Covariance) between the `
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::statistics::Correlation;
 covariance([<1,12>,<3,12>,<3,11>,<5,7>]);
 ```
@@ -9975,7 +9975,7 @@ Provides the following univariate (single variable) statistics functions:
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::statistics::Descriptive;
 D = [67, 88, 55, 92.5, 102, 51];
 mn = min(D);
@@ -10077,7 +10077,7 @@ Returns the [median](http://en.wikipedia.org/wiki/Median) of the available value
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::statistics::Descriptive;
 median([1,2,5,7,8]);
 median([1,2,2,6,7,8]);
@@ -10231,7 +10231,7 @@ Compute a distribution: count how many times events are mapped to which bucket.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::statistics::Frequency;
 distribution({<"chicken","animal">,<"bear","animal">,<"oak","plant">,<"tulip","plant">});
 distribution({<"alice",2>,<"bob",3>,<"claire",5>},5);
@@ -10254,7 +10254,7 @@ is not comparable to the values set.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::statistics::Frequency;
 D = [1, 2, 1, 1, 3, 5];
 cumFreq(D, 1);
@@ -10276,7 +10276,7 @@ Cumulative percentage of values less than or equal to a given value.
 
 Returns the cumulative percentage of values less than or equal to v (as a proportion between 0 and 1).
 
-``` rascal-shell
+```rascal-shell
 import analysis::statistics::Frequency;
 D = [1, 2, 1, 1, 3, 5];
 cumPct(D, 1);
@@ -10298,7 +10298,7 @@ Percentage of values that are equal to a given value.
 
 Returns the percentage of values that are equal to v (as a proportion between 0 and 1). .Examples
 
-``` rascal-shell
+```rascal-shell
 import analysis::statistics::Frequency;
 D = [1, 2, 1, 1, 3, 5];
 pct(D, 1);
@@ -10362,7 +10362,7 @@ been drawn from a population in which men and women are equal in frequency, the 
 be compared to the theoretical frequencies of 50 men and 50 women. If there were 44 men in the sample and 56 women, then
 we have the following:
 
-``` rascal-shell
+```rascal-shell
 import analysis::statistics::Inference;
 chiSquare([<50, 44>, <50, 56>])
 ```
@@ -10438,7 +10438,7 @@ The t-statistic used is `t = (m1 - m2) / sqrt(var1/n1 + var2/n2)` where
 We use the data from the following [example](http://web.mst.edu/~psyworld/texample.htm#1) to illustrate the t-test.
 First, we compute the t-statistic using the formula given above.
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 import analysis::statistics::Descriptive;
 import List;
@@ -10449,7 +10449,7 @@ s2 = [8,1,4,6,6,4,1,2];
 
 This is the same result as obtained in the cited example. We can also compute it directly using the `tTest` functions:
 
-``` rascal-shell
+```rascal-shell
 import analysis::statistics::Inference;
 tTest(s1, s2);
 ```
@@ -10459,7 +10459,7 @@ smallest significance level at which one can reject the null hypothesis that the
 two-sided alternative that they are different.* Finally, we perform the test around the significance level we just
 obtained:
 
-``` rascal-shell
+```rascal-shell
 tTest(s1,s2,0.40);
 tTest(s1,s2,0.50);
 ```
@@ -10546,19 +10546,19 @@ and 1 (completely unequal distribution).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import analysis::statistics::Inference;
 ```
 
 A completely equal distribution:
 
-``` rascal-shell
+```rascal-shell
 gini([<10000, 1>, <10000, 1>, <10000, 1>]);
 ```
 
 A rather unequal distribution:
 
-``` rascal-shell
+```rascal-shell
 gini([<998000, 1>, <20000, 3>, <117500, 1>, <70000, 2>, <23500, 5>, <45200,1>]);
 ```
 
@@ -10869,7 +10869,7 @@ between different tools.
 
 An RSF file consists of triples of the form
 
-``` rascal
+```rascal
 $RelName$ $Elem_1$ $Elem_2$
 ```
 
@@ -10881,7 +10881,7 @@ Provides the following function:
 
 **Examples.**
 
-``` rascal
+```rascal
 call    main          printf
 call    main          listcreate
 data    main          FILE
@@ -10908,7 +10908,7 @@ Since an RSF file may define more than one relation, a mapping from relation nam
 
 For the RSF file:
 
-``` rascal
+```rascal
 call    main          printf
 call    main          listcreate
 data    main          FILE
@@ -10917,7 +10917,7 @@ data    listcreate    List
 
 `readRSF` will create the following map:
 
-``` rascal
+```rascal
 ("call" : {<"main", "printf">, <"main", "listcreate">},
  "data" : {<"main", "FILE">, <"listcreate", "List">})
 ```
@@ -10951,7 +10951,7 @@ The following functions are provided in the [???](#Rascal-Libraries-lang-csv-IO)
 
 Here is an example CSV file using the default separator (","):
 
-``` rascal
+```rascal
 field_name1,field_name2,field_name3
 aaa,bbb,ccc
 zzz,yyy,xxx
@@ -10959,7 +10959,7 @@ zzz,yyy,xxx
 
 Here is an example CSV file using a non-default separator (";"):
 
-``` rascal
+```rascal
 position;artist;title;year
 1;Eagles;Hotel California;1977
 2;Queen;Bohemian rhapsody;1975
@@ -11032,7 +11032,7 @@ defines AST node types for Java
 
 **Types.**
 
-``` rascal
+```rascal
 data Declaration
      = \compilationUnit(list[Declaration] imports, list[Declaration] types)
      | \compilationUnit(Declaration package, list[Declaration] imports, list[Declaration] types)
@@ -11064,7 +11064,7 @@ data Declaration
 
 **Types.**
 
-``` rascal
+```rascal
 data Expression
      = \arrayAccess(Expression array, Expression index)
      | \newArray(Type \type, list[Expression] dimensions, Expression init)
@@ -11111,7 +11111,7 @@ data Expression
 
 **Types.**
 
-``` rascal
+```rascal
 data Statement
      = \assert(Expression expression)
      | \assert(Expression expression, Expression message)
@@ -11150,7 +11150,7 @@ data Statement
 
 **Types.**
 
-``` rascal
+```rascal
 data Type
      = arrayType(Type \type)
      | parameterizedType(Type \type)
@@ -11177,7 +11177,7 @@ data Type
 
 **Types.**
 
-``` rascal
+```rascal
 data Modifier
      = \private()
      | \public()
@@ -11267,7 +11267,7 @@ For a quick start, go find [???](#createM3FromEclipseProject).
 
 **Types.**
 
-``` rascal
+```rascal
 data M3 (
     rel[loc from, loc to] extends = {},            // classes extending classes and interfaces extending interfaces
     rel[loc from, loc to] implements = {},         // classes implementing interfaces
@@ -11283,7 +11283,7 @@ data M3 (
 
 **Types.**
 
-``` rascal
+```rascal
 data Language (str version="")
      = java()
      ;
@@ -11581,7 +11581,7 @@ model
 
 **Types.**
 
-``` rascal
+```rascal
 anno rel[loc from, loc to] M3@typeDependency;
 ```
 
@@ -11611,7 +11611,7 @@ anno rel[loc from, loc to] M3@typeDependency;
 
 **Types.**
 
-``` rascal
+```rascal
 data Bound
      = \super(list[TypeSymbol] bound)
      | \extends(list[TypeSymbol] bound)
@@ -11623,7 +11623,7 @@ data Bound
 
 **Types.**
 
-``` rascal
+```rascal
 data TypeSymbol
      = \class(loc decl, list[TypeSymbol] typeParameters)
      | \interface(loc decl, list[TypeSymbol] typeParameters)
@@ -11843,14 +11843,14 @@ CPU time in nanoseconds (10<sup>-9</sup> sec).
 
 We use the `fac` function described in [Factorial](/docs/Recipes#Factorial) as example:
 
-``` rascal-shell
+```rascal-shell
 import util::Benchmark;
 import demo::basic::Factorial;
 ```
 
 Here we measure time by using separate calls to `cpuTime` before and after a call to `fac`.
 
-``` rascal-shell
+```rascal-shell
 before = cpuTime();
 fac(50);
 cpuTime() - before;
@@ -11858,7 +11858,7 @@ cpuTime() - before;
 
 The code to be measured can also be passed as a function parameter to `cpuTime`:
 
-``` rascal-shell
+```rascal-shell
 cpuTime( void() { fac(50); } );
 ```
 
@@ -11884,14 +11884,14 @@ System time in nanoseconds (10<sup>-9</sup> sec).
 
 We use the `fac` function described in [Factorial](/docs/Recipes#Factorial) as example:
 
-``` rascal-shell
+```rascal-shell
 import util::Benchmark;
 import demo::basic::Factorial;
 ```
 
 Here we measure time by using separate calls to `sytemTime` before and after a call to `fac`.
 
-``` rascal-shell
+```rascal-shell
 before = systemTime();
 fac(50);
 systemTime() - before;
@@ -11899,7 +11899,7 @@ systemTime() - before;
 
 The code to be measured can also be passed as a function parameter to `systemTime`:
 
-``` rascal-shell
+```rascal-shell
 systemTime( void() { fac(50); } );
 ```
 
@@ -11922,14 +11922,14 @@ User time in nanoseconds (10<sup>-9</sup> sec).
 
 We use the `fac` function described in [Factorial](/docs/Recipes#Factorial) as example:
 
-``` rascal-shell
+```rascal-shell
 import util::Benchmark;
 import demo::basic::Factorial;
 ```
 
 Here we measure time by using separate calls to `userTime` before and after a call to `fac`.
 
-``` rascal-shell
+```rascal-shell
 before = userTime();
 fac(50);
 userTime() - before;
@@ -11937,7 +11937,7 @@ userTime() - before;
 
 The code to be measured can also be passed as a function parameter to `userTime`:
 
-``` rascal-shell
+```rascal-shell
 userTime( void() { fac(50); } );
 ```
 
@@ -11980,7 +11980,7 @@ default the function [realTime](#Benchmark-realTime) is used. A map of labels an
 
 We use the `fac` function described in [Factorial](/docs/Recipes#Factorial) as example:
 
-``` rascal-shell
+```rascal-shell
 import util::Benchmark;
 import demo::basic::Factorial;
 ```
@@ -11988,13 +11988,13 @@ import demo::basic::Factorial;
 We measure two calls to the factorial function with arguments `100`, respectively, `200` (using by default
 [realTime](#Benchmark-realTime) that returns milliseconds):
 
-``` rascal-shell
+```rascal-shell
 benchmark( ("fac100" : void() {fac(100);}, "fac200" : void() {fac(200);}) );
 ```
 
 We can do the same using [userTime](#Benchmark-userTime) that returns nanoseconds:
 
-``` rascal-shell
+```rascal-shell
 benchmark( ("fac100" : void() {fac(100);}, "fac200" : void() {fac(200);}), userTime );
 ```
 
@@ -12052,7 +12052,7 @@ This function forces a garbage collection and can, for instance, be used before 
 
 **Types.**
 
-``` rascal
+```rascal
 data Result[&T]
      = ok()
      | result(&T val)
@@ -12063,7 +12063,7 @@ data Result[&T]
 
 **Types.**
 
-``` rascal
+```rascal
 data Exception
      = StaticError(str message, loc location)
      ;
@@ -12115,7 +12115,7 @@ the duration is set to 1000 ms.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Eval;
 eval("2 * 3;");
 eval(["X = 2 * 3;", "X + 5;"]);
@@ -12143,7 +12143,7 @@ duration is set to 1000 ms.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Eval;
 evalType("2 * 3;");
 evalType("[1, 2, 3];");
@@ -12270,7 +12270,7 @@ Absolute value of the number `n`. The result type is equal to the type of the ar
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 abs(13)
 abs(-13)
@@ -12295,7 +12295,7 @@ Return an arbitrary integer value. When the argument `limit` is given, the gener
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 arbInt();
 arbInt();
@@ -12325,7 +12325,7 @@ Generates an arbitrary real value in the interval \[0.0, 1.0\].
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 arbReal();
 arbReal();
@@ -12361,7 +12361,7 @@ Generate an arbitrary rational value.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 arbRat();
 arbRat();
@@ -12387,7 +12387,7 @@ Computes the *ceiling* of a given number. Also see [floor](#Math-floor).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 ceil(3.2);
 ceil(-3.2);
@@ -12409,7 +12409,7 @@ The cosine of the number `x`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 cos(1.0)
 cos(60 * PI() / 180)
@@ -12437,7 +12437,7 @@ The constant E.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 E();
 ```
@@ -12468,7 +12468,7 @@ Computes the *floor* of a given number. Also see [ceil](#Math-ceil).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 floor(3.2);
 floor(-3.2);
@@ -12490,7 +12490,7 @@ Calculate natural log of `x`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 ln(20.0)
 ln(42.0)
@@ -12512,7 +12512,7 @@ Calculate log\<sub\>base\</sub\> of `x`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 log(9.99999999, 10)
 log(10, 10)
@@ -12555,7 +12555,7 @@ The largest of two numbers. The type of the result is the same as the type of th
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 max(12, 13);
 max(12, 13.5);
@@ -12578,7 +12578,7 @@ The smallest of two numbers. The type of the result is the same as the type of t
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 min(12, 13);
 min(12, -13);
@@ -12611,7 +12611,7 @@ Calculate \<sup\>n\</sup\>RADIC\`x\` where `n` can only be a integer.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 nroot(42 * 42, 2);
 nroot(42 * 42 * 42, 3);
@@ -12630,7 +12630,7 @@ The constant pi.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 PI();
 ```
@@ -12651,7 +12651,7 @@ The calculate `x`\<sup\>\`y\`\</sup\> where `y` can only be a integer.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 pow(sqrt(42), 2)
 pow(12345678901234567890.0, 1000)
@@ -12719,7 +12719,7 @@ Round a number to the nearest multiple of a given number (default 1).
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 round(3.4);
 round(3.5);
@@ -12780,7 +12780,7 @@ Compute the ratio between two numbers as a percentage.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 percent(1r4, 1);
 percent(13,250);
@@ -12803,7 +12803,7 @@ The sine of the number `x`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 sin(0)
 sin(PI() / 2)
@@ -12825,7 +12825,7 @@ Calculate RADIC\`x\`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 sqrt(42 * 42);
 sqrt(12345678901234567890.5 * 12345678901234567890.5);
@@ -12847,7 +12847,7 @@ The tangent of the number `x`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 tan(45 * PI() / 180)
 ```
@@ -12871,7 +12871,7 @@ discarded. Note that this conversion can loose information about the precision o
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 toInt(13)
 toInt(13.5)
@@ -12899,7 +12899,7 @@ Convert a numeric value to a real.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 toReal(12)
 toReal(3.14)
@@ -12917,7 +12917,7 @@ Convert a numeric value to a string.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 toString(12)
 toString(3.14)
@@ -13058,7 +13058,7 @@ Currently, both priority and associated value ("payload") have to be integers. T
 
 **Types.**
 
-``` rascal
+```rascal
 data BinomialTree
      = binomialTree(int priority,            // priority of this tree
                                          int val,                     // payload
@@ -13090,7 +13090,7 @@ data BinomialTree
 
 **Types.**
 
-``` rascal
+```rascal
 data PriorityQueue
      = priorityQueue(list[BinomialTree] trees,  // trees in the heap
                                    int minIndex               // index of minimal tree
@@ -13164,7 +13164,7 @@ A `Resource` datatype and related functions on Eclipse resources.
 
 **Types.**
 
-``` rascal
+```rascal
 data Resource = root(set[Resource] projects)
               | project(loc id, set[Resource] contents)
               | folder(loc id, set[Resource] contents)
@@ -13203,31 +13203,31 @@ The `Resource` library provides the following:
 
 A location that points to a project in the Eclipse workspace named "myProject":
 
-``` rascal
+```rascal
 |project://myProject|
 ```
 
 A location that points to a file named `HelloWorld.java` in the `src` folder of the `example-project` project in the
 workspace:
 
-``` rascal
+```rascal
 |project://example-project/src/HelloWorld.java|
 ```
 
 A location that points to a part of the previous file, namely the first 10 characters on the first line:
 
-``` rascal
+```rascal
 |project://example-project/src/HelloWorld.java|(0,10,1,0,1,10)
 ```
 
 Assuming that the project `|project://example-project|` exists in the current workspace, we can get the following:
 
-``` rascal-shell
+```rascal-shell
 import util::Resources;
 getProject(|project://example-project|);
 ```
 
-``` rascal-shell
+```rascal-shell
 import util::Resources;
 getProject(|project://example-project-which-does-not-exist|);
 ```
@@ -13250,7 +13250,7 @@ Compute the (transitive) dependencies of a project.
 
 Assuming that the project `|project://example-project|` exists in the current workspace, we can get the following:
 
-``` rascal-shell
+```rascal-shell
 import util::Resources;
 dependencies(|project://example-project|);
 ```
@@ -13267,12 +13267,12 @@ Retrieve the hierarchical representation of a single named project.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Resources;
 getProject(|project://example-project|);
 ```
 
-``` rascal-shell
+```rascal-shell
 import util::Resources;
 getProject(|project://example-project-which-does-not-exist|);
 ```
@@ -13291,7 +13291,7 @@ Retrieve the set of project locations of the current Eclipse workspace.
 
 The following example shows the projects as they existed when this page was generated:
 
-``` rascal-shell
+```rascal-shell
 import util::Resources;
 projects();
 ```
@@ -13318,7 +13318,7 @@ Retrieve a full hierarchical representation of all resources in the Eclipse work
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import util::Resources;
 root();
 ```

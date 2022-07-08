@@ -320,7 +320,7 @@ A list is a sequence of values with the following properties:
 
 Formally, a list can be defined as follows. Given the domains `ELEM` (elements) and `LIST` (lists) and the functions:
 
-``` rascal
+```rascal
 nil :             -> LIST
 cons: ELEM x LIST -> LIST
 head: LIST        -> ELEM
@@ -336,7 +336,7 @@ tail: LIST        -> LIST
 `head` (take the first element) and `tail` (take the remainder of a list) are defined functions characterized by the
 axioms:
 
-``` rascal
+```rascal
 head(cons(e, l)) = e
 tail(cons(e, l)) = l
 ```
@@ -508,13 +508,13 @@ Pretty printers also differ in flexibility. They differ in:
 
 The program fragment
 
-``` rascal
+```rascal
 if(x > 10) { System.err.println("x > 10"); } else { System.err.println("x <= 10"); }
 ```
 
 can be pretty printed in many different ways. Here are two variants examples:
 
-``` rascal
+```rascal
 if(x > 10) {
    System.err.println("x > 10");
 } else {
@@ -522,7 +522,7 @@ if(x > 10) {
 }
 ```
 
-``` rascal
+```rascal
 if( x > 10 )
 {
   System.err.println("x > 10");

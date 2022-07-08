@@ -107,7 +107,7 @@ for a list of all available type checker examples.
 
 ### Syntax of Calc
 
-``` rascal
+```rascal
 module lang::calc::Syntax
 
 extend lang::CommonLex;     
@@ -184,7 +184,7 @@ parts as we go. You should be explicitly aware of the fact that type checking co
 
 ### Begin of type checker module for Calc
 
-``` rascal
+```rascal
 module lang::calc::Checker
 
 import lang::calc::Syntax;                  // The Calc syntax
@@ -203,7 +203,7 @@ We import the Calc syntax `lang::calc::Syntax` and then we *extend* the TypePal 
 TypePal has a built-in data type to represent types: `AType`. This data type can be extended to represent
 language-specific types.
 
-``` rascal
+```rascal
 data AType
     = boolType()
     | intType()
@@ -221,7 +221,7 @@ represent these types. `prettyAType` converts them back to a string representati
 Writing a type checker in TypePal amounts to collecting facts and constaints from a source program to be checked. This
 is achieved by the `collect` function that has the form
 
-``` rascal
+```rascal
 void collect(current: syntactic pattern, Collector c){ ... }`
 ```
 
@@ -246,7 +246,7 @@ where *syntactic pattern* corresponds with a rule from the language syntax, in t
 
 A declaration introduces a new name and associates the type of the righthand side expression with it.
 
-``` rascal
+```rascal
 void collect(current: (Decl) `var <Id name> = <Exp exp> ;`, Collector c){
     c.define("<name>", variableId(), current, defType(exp));
     collect(exp, c);
@@ -277,7 +277,7 @@ Here we define `name` as a variable and define its type as the same type as `exp
 An expression consisting of a single identifier, refers to a name introduced in another declaration and gets the type
 introduced in that declaration.
 
-``` rascal
+```rascal
 void collect(current: (Exp) `<Id name>`, Collector c){
     c.use(name, {variableId()});
 }
@@ -300,7 +300,7 @@ this. There are then two possibilities:
 
 ##### Check Exp: Boolean and Integer constants
 
-``` rascal
+```rascal
 void collect(current: (Exp) `<Boolean boolean>`, Collector c){
     c.fact(current, boolType());
 }
@@ -319,7 +319,7 @@ When encountering a Boolean or integer constant we record their type using `c.fa
 
 ##### Check Exp: parentheses
 
-``` rascal
+```rascal
 void collect(current: (Exp) `( <Exp e> )`, Collector c){
     c.fact(current, e);
     collect(e, c);
@@ -334,7 +334,7 @@ A final, essential, step is to collect constraints from the subpart `e`.
 
 Addition of integers given an integer result and addition of Booleans gives a Boolean result.
 
-``` rascal
+```rascal
 void collect(current: (Exp) `<Exp e1> + <Exp e2>`, Collector c){
      c.calculate("addition", current, [e1, e2],
         AType (Solver s) {
@@ -380,7 +380,7 @@ A final, essential, step is to collect constraints from the subparts `e1` and `e
 
 ##### Check Exp: multiplication
 
-``` rascal
+```rascal
 void collect(current: (Exp) `<Exp e1> * <Exp e2>`, Collector c){
      c.calculate("multiplication", current, [e1, e2],
         AType (Solver s) {
@@ -400,7 +400,7 @@ repetition of code that could be factored out.
 
 ##### Check Exp: conditional expression
 
-``` rascal
+```rascal
 void collect(current: (Exp) `if <Exp cond> then <Exp e1> else <Exp e2>`, Collector c){
     c.calculate("if Exp", current, [cond, e1, e2],
         AType(Solver s){
@@ -425,7 +425,7 @@ A final, essential, step is to collect constraints from the subparts `cond`, `e1
 
 ### Getting started
 
-``` rascal
+```rascal
 module lang::calc::Test
 
 extend lang::calc::Checker;
@@ -443,7 +443,7 @@ We need three ingredients for testing:
 
 ### Manual testing
 
-``` rascal
+```rascal
 TModel calcTModelFromTree(Tree pt){
     return collectAndSolve(pt);
 }
@@ -453,7 +453,7 @@ Given a parse tree `pt` for a Calc program, we apply [collectAndSolve](#_collect
 Collector, uses it to collect constraints from `pt` and then creates a Solver to solve all constraints. The result is a
 `TModel`. `calcTModelFromTree` will also be used during automated testing.
 
-``` rascal
+```rascal
 TModel calcTModelFromStr(str text){
     pt = parse(#start[Calc], text).top;
     return calcTModelFromTree(pt);
@@ -473,7 +473,7 @@ With the above machinery in place we can perform some experiments:
 
 ### Automated testing
 
-``` rascal
+```rascal
 bool calcTests() {
      return runTests([|project://typepal-examples/src/lang/calc/tests.ttl|],
                      #Calc, calcTModelFromTree);
@@ -562,7 +562,7 @@ linking (via *paths*) into account, as well as the specific roles of identifiers
 
 The *definition* of an identifier is inside TypePal characterized by a `Define`:
 
-``` rascal
+```rascal
 alias Define  = tuple[loc scope, str id, IdRole idRole, loc defined, DefInfo defInfo];
 ```
 
@@ -582,7 +582,7 @@ where
 
 The *use* of an identifier is characterized by a `Use`:
 
-``` rascal
+```rascal
 data Use
     = use(str id, loc occ, loc scope, set[IdRole] idRoles)
     | useq(list[str] ids, loc occ, loc scope, set[IdRole] idRoles, set[IdRole] qualifierRoles)
@@ -603,7 +603,7 @@ between syntactic entities are paths labelled with user-defined roles. Paths are
 `PathRole`. An example is the import of a module *M* into another module *N* that makes the entities in *M* known inside
 *N*. Here is an example of a path role to mark an import path between two parse trees.
 
-``` rascal
+```rascal
 data PathRole
     = importPath()
     ;
@@ -644,7 +644,7 @@ various Rascal datatypes that can be extended by the author of a typechecker.
 Identifier roles are modelled by the data type `IdRole`. Here is an example where roles are introduced for constants,
 variables, formal parameters and functions:
 
-``` rascal
+```rascal
 data IdRole
     = constantId()
     | variableId()
@@ -663,7 +663,7 @@ Scope roles are modelled by the data type `ScopeRole` and are used to distinguis
 we will see that this can be used, for instance, to search for the innermost scope with a specific role, say the
 innermost function scope. Here is an example that introduces scopes for functions and loops:
 
-``` rascal
+```rascal
 data ScopeRole
     = functionScope()
     | loopScope()
@@ -674,7 +674,7 @@ data ScopeRole
 
 Path roles are modelled by the data type `PathRole`:
 
-``` rascal
+```rascal
 data PathRole
     = importPath()
     | extendPath()
@@ -686,7 +686,7 @@ data PathRole
 The type to be associated with names varies widely for different programming languages and has to be provided by the
 typechecker author. TypePal provides the data type `AType` that provides already some built-in constructors:
 
-``` rascal
+```rascal
 data AType
    = tvar(loc tname)                                    
    | atypeList(list[AType] atypes)                      
@@ -709,7 +709,7 @@ AType that has to be extended with language-specific types.
 The typechecker author also has to provide a function to convert `AType` to string (it is used create readable error
 messages):
 
-``` rascal
+```rascal
 str prettyAType(AType atype);
 ```
 
@@ -718,7 +718,7 @@ str prettyAType(AType atype);
 When defining a name, we usually want to associate information with it such as the type of the defined name. TypePal
 provides the data type `DefInfo` for this purpose:
 
-``` rascal
+```rascal
 data DefInfo
     = noDefInfo()                                                                           
     | defType(value contrib)                                                                
@@ -792,7 +792,7 @@ How to format and report errors, warnings and info messages.
 Reporting may be done both in the Collector and the Solver. It uses values of the datatype `FailMessage` that can be
 created as follows:
 
-``` rascal
+```rascal
 FailMessage error(value src, str msg, value args...);
 FailMessage warning(value src, str msg, value args...);
 FailMessage info(value src, str msg, value args...);
@@ -895,7 +895,7 @@ datatype.
 
 A new `Collector` is created using the function `newCollector`.
 
-``` rascal
+```rascal
 Collector newCollector(str modelName, Tree pt, TypePalConfig config = tconfig());
 ```
 
@@ -913,13 +913,13 @@ been collected from the source program.
 
 Finally, `run` creates the desired `TModel` that will be used by the [Solver](#TypePal-Solver):
 
-``` rascal
+```rascal
 /* Collector field */ TModel () run;
 ```
 
 A typical scenario is (for a given a parse tree `pt` of the program to be checked):
 
-``` rascal
+```rascal
 c = newCollector("my_model", pt);   // create Collector
 collect(pt, c);                     // collect constraints
 model = c.run();                    // create initial TModel to be handled by the Solver
@@ -927,7 +927,7 @@ model = c.run();                    // create initial TModel to be handled by th
 
 The `collect` function has to be supplied by the author of the type checker and looks like this:
 
-``` rascal
+```rascal
 void collect(LanguageConstruct lc, Collector c){ ... }
 ```
 
@@ -945,7 +945,7 @@ where:
 
 The [TypePal Configuration](#TypePal-Configuration) can be retrieved or adjusted by the following two functions:
 
-``` rascal
+```rascal
 /* Collector field */ TypePalConfig () getConfig;
 /* Collector field */ void (TypePalConfig cfg) setConfig;
 ```
@@ -956,7 +956,7 @@ The former returns the current TypePal configuration, the latter sets the curren
 
 Scope management amounts to entering a new scope, leave the current scope and retrieving the current scope:
 
-``` rascal
+```rascal
 /* Collector field */ void (Tree inner) enterScope;
 /* Collector field */ void (Tree inner) leaveScope;
 /* Collector field */ loc () getScope,
@@ -966,7 +966,7 @@ In order to check consistency, `leaveScope` has the inner scope that it is suppo
 
 Here is an example how the `let` expression in [Fun](#_fun) handles subscopes:
 
-``` rascal
+```rascal
 void collect(current: (Expression) `let <Id name> : <Type tp> = <Expression exp1> in <Expression exp2> end`, Collector c) {
      c.enterScope(current);
          c.define("<name>", variableId(), name, defType(tp));
@@ -991,7 +991,7 @@ roles such as `functionScope()` or `labelScope()`.
 
 `setScopeInfo` sets the information for a scope:
 
-``` rascal
+```rascal
 /* Collector field */ void (loc scope, ScopeRole scopeRole, value info) setScopeInfo;
 ```
 
@@ -1005,7 +1005,7 @@ where
 
 `getScopeInfo` retrieves associated scope information:
 
-``` rascal
+```rascal
 /* Collector field */ lrel[loc scope, value scopeInfo]  (ScopeRole scopeRole) getScopeInfo;
 ```
 
@@ -1018,7 +1018,7 @@ where
 Let’s illustrate ScopeInfo with a stripped down version of how the Rascal type checker handles `while` and `break`
 statements:
 
-``` rascal
+```rascal
 data LoopInfo = loopInfo(str name); 
 
 void collect(current: (Statement) `<Label label> while( <{Expression ","}+ conditions> ) <Statement body>`,  Collector c){
@@ -1062,7 +1062,7 @@ type checked. A use case is recording that a certain syntax type is encountered 
 
 Each stack has a string name (`key`) and is created on demand.
 
-``` rascal
+```rascal
 /* Collector field */ void (str key, value val) push
 /* Collector field */ value (str key) pop,
 /* Collector field */ value (str key) top,
@@ -1078,7 +1078,7 @@ to empty.
 
 TModels can be composed by adding the information from one TModel to the other. A use case is module compoisition.
 
-``` rascal
+```rascal
 /* Collector field */ void (TModel tm) addTModel;
 ```
 
@@ -1088,7 +1088,7 @@ TModels can be composed by adding the information from one TModel to the other. 
 
 One or more reports can be added by `report` and `reports`:
 
-``` rascal
+```rascal
 /* Collector field */ void (FailMessage fmsg) report;
 /* Collector field */ void (list[FailMessage] fmgs) reports;
 ```
@@ -1108,7 +1108,7 @@ current scope to another scope.
 
 ### Add a path to a definition
 
-``` rascal
+```rascal
 /* Collector field */ void (Tree occ, set[IdRole] idRoles, PathRole pathRole) addPathToDef;
 ```
 
@@ -1118,7 +1118,7 @@ current scope and the definition.
 
 Here is an example taken from [ModFun](#_modfun):
 
-``` rascal
+```rascal
 void collect(current: (ImportDecl) `import <ModId mid> ;`, Collector c){
      c.addPathToDef(mid, {moduleId()}, importPath());
 }
@@ -1126,7 +1126,7 @@ void collect(current: (ImportDecl) `import <ModId mid> ;`, Collector c){
 
 ### Add a path to a qualified definition
 
-``` rascal
+```rascal
 /* Collector field */ void (list[str] ids, Tree occ, set[IdRole] idRoles, set[IdRole] qualifierRoles, PathRole pathRole) addPathToQualifiedDef;
 ```
 
@@ -1134,7 +1134,7 @@ Similar to `addPathToDef` for the occurrence of a qualified names rather than a 
 
 ### Add a path to a type
 
-``` rascal
+```rascal
 /* Collector field */ void (Tree occ, PathRole pathRole) addPathToType
 ```
 
@@ -1145,7 +1145,7 @@ A prime example is type checking of [Pascal](#_pascal)'s `with` statement which 
 and makes all defined fields available in the body of the `with` statement. Here we create a `withPath` between the
 scope of the with statement and all definitions of the record types of the given record variables:
 
-``` rascal
+```rascal
 void collect(current: (WithStatement) `with <{RecordVariable ","}+ recordVars> do <Statement withStat>`, Collector c){
     c.enterScope(current);
         for(rv <- recordVars){
@@ -1160,7 +1160,7 @@ void collect(current: (WithStatement) `with <{RecordVariable ","}+ recordVars> d
 
 The function `define` adds the definition of a name in the *current* scope:
 
-``` rascal
+```rascal
 /* Collector field */  void (str id, IdRole idRole, value def, DefInfo info) define;
 ```
 
@@ -1176,7 +1176,7 @@ where:
 
 The function `defineInScope` adds the definition of a name in a *given* scope:
 
-``` rascal
+```rascal
 /* Collector field */  void (value scope, str id, IdRole idRole, value def, DefInfo info) defineInScope
 ```
 
@@ -1187,7 +1187,7 @@ The function `defineInScope` adds the definition of a name in a *given* scope:
 There are three functions to describe the occurrence of a name in a parse tree as a use. The most elementary use of a
 name is described by:
 
-``` rascal
+```rascal
 /* Collector field */ void (Tree occ, set[IdRole] idRoles) use,
 ```
 
@@ -1196,7 +1196,7 @@ variable in an expression is typically modelled with this use function.
 
 Here is an example from [Calc](#_calc):
 
-``` rascal
+```rascal
 void collect(current: (Exp) `<Id name>`, Collector c){
     c.use(name, {variableId()});
 }
@@ -1207,7 +1207,7 @@ void collect(current: (Exp) `<Id name>`, Collector c){
 Next we consider the use of qualified names, i.e., a list of identifiers that will be resolved from left to right. We
 will call these identifiers (except the last one) *qualifiers* and the last one the *qualified identifier*.
 
-``` rascal
+```rascal
 /* Collector field */ void (list[str] ids, Tree occ, set[IdRole] idRoles, set[IdRole] qualifierRoles) useQualified;
 ```
 
@@ -1220,7 +1220,7 @@ roles for the qualifiers.
 Many languages support *named types* and names that can be defined inside such a named type. Examples are field names in
 records or method names in classes. `useViaType` handles the use of names defined in a named type:
 
-``` rascal
+```rascal
 /* Collector field */ void (Tree container, Tree selector, set[IdRole] idRolesSel) useViaType
 ```
 
@@ -1234,7 +1234,7 @@ where
 
 Here is an example of field selection from a record in [Struct](#_struct):
 
-``` rascal
+```rascal
 void collect(current:(Expression)`<Expression lhs> . <Id fieldName>`, Collector c) {
     c.useViaType(lhs, fieldName, {fieldId()}); 
     c.fact(current, fieldName); 
@@ -1258,7 +1258,7 @@ no explicit definition is present, the type of these variables is inferred from 
 (LUB) of all the uses of a variable is taken as its type. `useLub` marks variable uses for which this regime has to be
 applied:
 
-``` rascal
+```rascal
 /* Collector field */ void (Tree occ, set[IdRole] idRoles) useLub
 ```
 
@@ -1268,7 +1268,7 @@ See the Rascal type checker for examples.
 
 ATypes may contain type variables and new type variables can be created using `newTypeVar`:
 
-``` rascal
+```rascal
 /* Collector field */ AType (value src) newTypeVar;
 ```
 
@@ -1276,7 +1276,7 @@ Type variables can be bound via unification.
 
 Here is an example of a call expression taken from [UntypedFun](#_untypedfun):
 
-``` rascal
+```rascal
 void collect(current: (Expression) `<Expression exp1>(<Expression exp2>)`, Collector c) {
      tau1 = c.newTypeVar(exp1);
      tau2 = c.newTypeVar(exp2);
@@ -1304,7 +1304,7 @@ of that `calculateEager` or `requireEager`.
 
 The function `fact` registers known type information for a program fragment `src`:
 
-``` rascal
+```rascal
 /* Collector field */ void (Tree src, value atype) fact;
 ```
 
@@ -1312,7 +1312,7 @@ where `atype` can be either an `AType` or a `Tree`. In the latter case the type 
 
 Here are two examples from [Calc](#_calc):
 
-``` rascal
+```rascal
 void collect(current: (Exp) `<Integer integer>`, Collector c){
     c.fact(current, intType()); 
 }
@@ -1334,7 +1334,7 @@ dependencies is given whose types have to be known before this calculator can be
 `calculate` all dependencies should be fully resolved and instantiated, while `calculateEager` can also handle
 dependencies that still contain type variables.
 
-``` rascal
+```rascal
 /* Collector field */ void (str name, Tree src, list[value] dependencies, AType(Solver s) calculator) calculate;
 /* Collector field */ void (str name, Tree src, list[value] dependencies, AType(Solver s) calculator) calculateEager;
 ```
@@ -1350,7 +1350,7 @@ A requirement is a predicate regarding the type or properties of a source tree f
 for `require` all dependencies should be fully resolved and instantiated, while `requireEager` can also handle
 dependencies that still contain type variables.
 
-``` rascal
+```rascal
 /* Collector field */ void (str name, Tree src, list[value] dependencies, void(Solver s) pred) require;
 /* Collector field */ void (str name, Tree src, list[value] dependencies, void(Solver s) pred) requireEager;
 ```
@@ -1367,7 +1367,7 @@ where
 More specific requiremens can be expressed for checking that two subtrees or types are equal, comparable, that the one
 is a subtype of the other, or that they can be unified:
 
-``` rascal
+```rascal
 /* Collector field */ void (value l, value r, FailMessage fmsg) requireEqual;
 /* Collector field */ void (value l, value r, FailMessage fmsg) requireComparable;
 /* Collector field */ void (value l, value r, FailMessage fmsg) requireSubType;
@@ -1426,7 +1426,7 @@ a use-def relation and the used vocabulary (used for name completion).
 Once, an initial TModel has been created by a [Collector](#TypePal-Collector), a Solver takes over to solve constraints
 and produce a final TModel. A new Solver can be created by `newSolver` that comes in two flavours:
 
-``` rascal
+```rascal
 Solver newSolver(Tree pt, TModel tm)
 Solver newSolver(map[str,Tree] namedTrees, TModel tm){
 ```
@@ -1437,13 +1437,13 @@ mutual dependencies.
 
 Finally, `run` creates the final TModel by solving the constraints in the initial TModel:
 
-``` rascal
+```rascal
 /* Solver field */ TModel () run
 ```
 
 A complete type checking scenario (for a given a parse tree `pt` of the program to be checked) is:
 
-``` rascal
+```rascal
 c = newCollector("my_model", pt);  // create Collector
 collect(pt, c);                    // collect constraints
 initial_model = c.run();           // create initial TModel
@@ -1463,7 +1463,7 @@ The final TModel contains valuable information such as
 
 The function `fact` registers known type information for a program fragment `src`:
 
-``` rascal
+```rascal
 /* Solver field */ void (value src, AType atype) fact
 ```
 
@@ -1488,7 +1488,7 @@ is re-evaluated at a later time.
 
 ### equal
 
-``` rascal
+```rascal
 /* Solver field */ bool (value l, value r) equal
 ```
 
@@ -1496,7 +1496,7 @@ The function `equal` determines whether the types of `l` and `r` are equal, the 
 
 ### subtype
 
-``` rascal
+```rascal
 /* Solver field */ bool (value l, value r) subtype
 ```
 
@@ -1505,7 +1505,7 @@ function `getSubType`, see [TypePal Configuration](#TypePal-Configuration).
 
 ### comparable
 
-``` rascal
+```rascal
 /* Solver field */ bool (value l, value r) comparable
 ```
 
@@ -1514,7 +1514,7 @@ user-provided function `getSubType` twice, see [TypePal Configuration](#TypePal-
 
 ### unify
 
-``` rascal
+```rascal
 /* Solver field */ bool (value l, value r) unify
 ```
 
@@ -1524,7 +1524,7 @@ from unification are effectuated when the enclosing calculate succeeds.
 
 ### lub
 
-``` rascal
+```rascal
 /* Solver field */ AType (value l, value r) lub
 ```
 
@@ -1535,7 +1535,7 @@ The function `lub` return the least upper bound of the types of `l` and `r`; it 
 
 ### requireEqual
 
-``` rascal
+```rascal
 /* Solver field */ void (value l, value r, FailMessage fmsg) requireEqual
 ```
 
@@ -1543,7 +1543,7 @@ The function `requireEqual` returns when the types of `l` and `r` are equal, oth
 
 ### requireSubType
 
-``` rascal
+```rascal
 /* Solver field */ void (value l, value r, FailMessage fmsg) requireSubType
 ```
 
@@ -1552,7 +1552,7 @@ it calls the user-provided function `getSubType`, see [TypePal Configuration](#T
 
 ### requireCompare
 
-``` rascal
+```rascal
 /* Solver field */ void (value l, value r, FailMessage fmsg) requireComparable
 ```
 
@@ -1562,7 +1562,7 @@ Configuration](#TypePal-Configuration).
 
 ### requireUnify
 
-``` rascal
+```rascal
 /* Solver field */ void (value l, value r, FailMessage fmsg) requireUnify
 ```
 
@@ -1573,7 +1573,7 @@ require succeeds.
 
 ### requireTrue and requireFalse
 
-``` rascal
+```rascal
 /* Solver field */ void (bool b, FailMessage fmsg) requireTrue
 /* Solver field */ void (bool b, FailMessage fmsg) requireFalse
 ```
@@ -1592,7 +1592,7 @@ is thrown. This will abort the execution of the current requirement or calculato
 The workhorse of TypePal is the function `getType` that determines the type of a given source code fragment in the
 current scope:
 
-``` rascal
+```rascal
 /* Solver field */ AType(value src) getType
 ```
 
@@ -1608,7 +1608,7 @@ Here is how `getType` is used in [Pico](#_pico) to check the addition operator:
 
 <!-- end list -->
 
-``` rascal
+```rascal
 void collect(current: (Expression) `<Expression lhs> + <Expression rhs>`, Collector c){
      c.calculate("addition", current, [lhs, rhs],
         AType (Solver s) { switch([s.getType(lhs), s.getType(rhs)]){
@@ -1626,7 +1626,7 @@ void collect(current: (Expression) `<Expression lhs> + <Expression rhs>`, Collec
 
 The function `getTypeInScope` determines the type of a given source code fragment in a given scope and given roles:
 
-``` rascal
+```rascal
 /* Solver field */ AType (Tree occ, loc scope, set[IdRole] idRoles) getTypeInScope
 ```
 
@@ -1644,7 +1644,7 @@ The function `getTypeInScopeFromName` determines the type of a given name that h
 in a given scope. It is typically used to map a name of a type to its actual type, e.g., mapping the name `POINT` as it
 occurs in a declaration to the actual record type of `POINT`.
 
-``` rascal
+```rascal
 /* Solver field */ AType (str name, loc scope, set[IdRole] idRoles) getTypeInScopeFromName
 ```
 
@@ -1661,7 +1661,7 @@ Here:
 The function `getTypeInType` is typically used to determine parts of a container type such as, e.g., the fields in a
 named record type or the methods in a named class type.
 
-``` rascal
+```rascal
 /* Solver field */ AType (AType containerType, Tree selector, set[IdRole] idRolesSel, loc scope) getTypeInType
 ```
 
@@ -1680,7 +1680,7 @@ Here:
 The function `getAllDefinedInType` is typically used to determine **all** named types that are defined in a container
 type, e.g., all fields in a record type or all methods in a class type.
 
-``` rascal
+```rascal
 /* Solver field */ rel[str id, AType atype] (AType containerType, loc scope, set[IdRole] idRoles) getAllDefinedInType
 ```
 
@@ -1701,7 +1701,7 @@ variables.
 
 ### instantiate
 
-``` rascal
+```rascal
 /* Solver field */ AType (AType atype) instantiate
 ```
 
@@ -1709,7 +1709,7 @@ replaces all type variables occurring in `atype` by their binding (when present)
 
 ### isFullyInstantiated
 
-``` rascal
+```rascal
 /* Solver field */ bool (AType atype) isFullyInstantiated
 ```
 
@@ -1717,7 +1717,7 @@ checks whether `atype` contains any occurrences of type variables.
 
 ### Reporting
 
-``` rascal
+```rascal
 /* Solver field */ bool(FailMessage fmsg) report
 /* Solver field */ bool (list[FailMessage] fmsgs) reports
 ```
@@ -1726,7 +1726,7 @@ checks whether `atype` contains any occurrences of type variables.
 
 ### getConfig
 
-``` rascal
+```rascal
 /* Solver field */ TypePalConfig () getConfig
 ```
 
@@ -1734,7 +1734,7 @@ Returns the current [TypePal Configuration](#TypePal-Configuration).
 
 ### getFacts
 
-``` rascal
+```rascal
 /* Solver field */ map[loc, AType]() getFacts
 ```
 
@@ -1742,7 +1742,7 @@ Returns the type facts known to the Solver as mapping from source location to AT
 
 ### getStore
 
-``` rascal
+```rascal
 /* Solver field */ map[str,value]() getStore
 ```
 
@@ -1782,7 +1782,7 @@ Here is an overview:
 
 ### isAcceptableSimple
 
-``` rascal
+```rascal
 /* Configuration field */ Accept (TModel tm, loc def, Use use) isAcceptableSimple
 ```
 
@@ -1798,7 +1798,7 @@ Here
 `isAcceptableSimple` accepts or rejects a proposed definition for the use of a simple name in a particular role. The
 returned `Accept` data type is defined as:
 
-``` rascal
+```rascal
 data Accept
     = acceptBinding()
     | ignoreContinue()
@@ -1816,14 +1816,14 @@ Typical concerns addressed by `isAcceptableSimple` are:
 
 By comparing the offset of the source locations of definition, respectively, the use, we enforce definition before use:
 
-``` rascal
+```rascal
 Accept myIsAcceptableSimple(TModel tm, loc def, Use use)
     = use.occ.offset > def.offset ? acceptBinding() : ignoreContinue();
 ```
 
 ### isAcceptableQualified
 
-``` rascal
+```rascal
 /* Configuration field */ Accept (TModel tm, loc def, Use use) isAcceptableQualified
 ```
 
@@ -1839,7 +1839,7 @@ Here
 
 ### isAcceptablePath
 
-``` rascal
+```rascal
 /* Configuration field */
 Accept (TModel tm, loc defScope, loc def, Use use, PathRole pathRole) isAcceptablePath
 ```
@@ -1861,7 +1861,7 @@ Here
 To illustrate this, assume a language with modules and imports. A module may contain variable definitions but these are
 not visible from outside the module. This can be enforced as follows:
 
-``` rascal
+```rascal
 Accept myIsAcceptablePath(TModel tm, loc def, Use use, PathRole pathRole) {
     return variableId() in use.idRoles ? ignoreContinue() : acceptBinding();
 }
@@ -1869,7 +1869,7 @@ Accept myIsAcceptablePath(TModel tm, loc def, Use use, PathRole pathRole) {
 
 ### mayOverload
 
-``` rascal
+```rascal
 /* Configuration field */ bool (set[loc] defs, map[loc, Define] defines) mayOverload
 ```
 
@@ -1878,7 +1878,7 @@ Accept myIsAcceptablePath(TModel tm, loc def, Use use, PathRole pathRole) {
 
 In [FWJava](#_fwjava) the only allowed overloading is between class names and constructor names.
 
-``` rascal
+```rascal
 bool fwjMayOverload (set[loc] defs, map[loc, Define] defines) {
     roles = {defines[def].idRole | def <- defs};  
     return roles == {classId(), constructorId()}; 
@@ -1895,7 +1895,7 @@ Various operations on types can be configured by way of user-defined functions.
 
 ### isSubType
 
-``` rascal
+```rascal
 /* Configuration field */ bool (AType l, AType r) isSubType
 ```
 
@@ -1903,7 +1903,7 @@ Function that checks whether `l` is a subtype of `r`.
 
 ### getLub
 
-``` rascal
+```rascal
 /* Configuration field */ AType (AType l, AType r) getLub
 ```
 
@@ -1911,7 +1911,7 @@ Function that computes the least upperbound of two types and `l` and `r`.
 
 ### getMinAType
 
-``` rascal
+```rascal
 /* Configuration field */ AType() getMinAType
 ```
 
@@ -1919,7 +1919,7 @@ Function that returns the *smallest* type of the type lattice.
 
 ### getMaxAType
 
-``` rascal
+```rascal
 /* Configuration field */ AType() getMaxAType
 ```
 
@@ -1927,7 +1927,7 @@ Function that returns the *largest* type of the type lattice.
 
 ### instantiateTypeParameters
 
-``` rascal
+```rascal
 /* Configuration field */ AType (Tree current, AType def, AType ins, AType act, Solver s) instantiateTypeParameters
 ```
 
@@ -1952,7 +1952,7 @@ the parameters.
 
 The definition of `instantiateTypeParameters` for this example is as follows:
 
-``` rascal
+```rascal
 AType structParametersInstantiateTypeParameters(Tree current, structDef(str name1, list[str] formals), structType(str name2, list[AType] actuals), AType t, Solver s){
     if(size(formals) != size(actuals)) throw checkFailed([]);
     bindings = (formals[i] : actuals [i] | int i <- index(formals));
@@ -1967,7 +1967,7 @@ default AType structParametersInstantiateTypeParameters(Tree current, AType def,
 
 ### getTypeNamesAndRole
 
-``` rascal
+```rascal
 /* Configuration field */  tuple[list[str] typeNames, set[IdRole] idRoles] (AType atype) getTypeNamesAndRole
 ```
 
@@ -1982,7 +1982,7 @@ indirect type computations such as [???](#useViaType) and [getTypeInType](#_gett
 
 Here are the definitions for \<\<Struct\>:
 
-``` rascal
+```rascal
 tuple[list[str] typeNames, set[IdRole] idRoles] structGetTypeNamesAndRole(structType(str name)){
     return <[name], {structId()}>; 
 }
@@ -2002,7 +2002,7 @@ net effect is that when the search for a name in `A` fails, the search is contin
 
 ### getTypeInTypeFromDefine
 
-``` rascal
+```rascal
 /* Configuration field */  AType (Define containerDef, str selectorName, set[IdRole] idRolesSel, Solver s) getTypeInTypeFromDefine
 ```
 
@@ -2014,7 +2014,7 @@ In the Rascal type checker common keyword parameters of data declarations are ha
 
 ### getTypeInNamelessType
 
-``` rascal
+```rascal
 /* Configuration field */ AType(AType containerType, Tree selector, loc scope, Solver s) getTypeInNamelessType
 ```
 
@@ -2023,7 +2023,7 @@ case in point is a `length` field on a built-in string type.
 
 In [StaticFields](#_staticfields) this is done as follows:
 
-``` rascal
+```rascal
 AType staticFieldsGetTypeInNamelessType(AType containerType, Tree selector, loc scope, Solver s){
     if(containerType == strType() && "<selector>" == "length") return intType();
     s.report(error(selector, "Undefined field %q on %t", selector, containerType));
@@ -2034,7 +2034,7 @@ AType staticFieldsGetTypeInNamelessType(AType containerType, Tree selector, loc 
 
 ### preSolver
 
-``` rascal
+```rascal
 /* Configuration field */ TModel(map[str,Tree] namedTrees, TModel tm) preSolver
 ```
 
@@ -2042,7 +2042,7 @@ A function `preSolver` that can enrich or transform the TModel before the Solver
 
 ### postSolver
 
-``` rascal
+```rascal
 /* Configuration field */ void (map[str,Tree] namedTrees, Solver s) postSolver
 ```
 
@@ -2052,7 +2052,7 @@ A function `postSolver` that can enrich or transform the TModel after constraint
 
 ### unescapeName
 
-``` rascal
+```rascal
 /* Configuration field */  str(str) unescapeName
 ```
 
@@ -2061,7 +2061,7 @@ from names.
 
 ### validateConstraints
 
-``` rascal
+```rascal
 /* Configuration field */ bool validateConstraints = true
 ```
 
@@ -2074,7 +2074,7 @@ The verbosity of TypePal can be controlled with several configurations settings.
 
 ### showTimes
 
-``` rascal
+```rascal
 /* Configuration field */ bool showTimes = false
 ```
 
@@ -2082,7 +2082,7 @@ When `showTimes` is true, the time of the Collector and Solver phases is printed
 
 ### showSolverSteps
 
-``` rascal
+```rascal
 /* Configuration field */ bool showSolverSteps = false
 ```
 
@@ -2090,7 +2090,7 @@ When `showSolverSteps` is true, each step of the Solver is printed.
 
 ### showSolverIterations
 
-``` rascal
+```rascal
 /* Configuration field */ bool showSolverIterations = false
 ```
 
@@ -2098,7 +2098,7 @@ When `showSolverIterations` is true, information is printed about each iteration
 
 ### showAttempts
 
-``` rascal
+```rascal
 /* Configuration field */ bool showAttempts = false
 ```
 
@@ -2107,7 +2107,7 @@ complete.
 
 ### showTModel
 
-``` rascal
+```rascal
 /* Configuration field */ bool showTModel = false
 ```
 
@@ -2125,7 +2125,7 @@ TypePal provides some utility functions to address common scenarios.
 
 ### collectAndSolve
 
-``` rascal
+```rascal
 TModel collectAndSolve(Tree pt, TypePalConfig config = tconfig(), bool debug = false)
 ```
 
@@ -2140,7 +2140,7 @@ TModel collectAndSolve(Tree pt, TypePalConfig config = tconfig(), bool debug = f
 
 ### getUseDef
 
-``` rascal
+```rascal
 rel[loc, loc] getUseDef(TModel tm)
 ```
 
@@ -2149,7 +2149,7 @@ and definitions.
 
 ### getVocabulary
 
-``` rascal
+```rascal
 set[str] getVocabulary(TModel tm)
 ```
 
@@ -2157,7 +2157,7 @@ Get all defined names in a given TModel. This may be used in an IDE for text com
 
 ### getFacts
 
-``` rascal
+```rascal
 map[loc, AType] getFacts(TModel tm)
 ```
 
@@ -2165,7 +2165,7 @@ Get all the locations and their type in a given TModel.
 
 ### getMessages
 
-``` rascal
+```rascal
 list[Message] getMessages(TModel tm)
 ```
 

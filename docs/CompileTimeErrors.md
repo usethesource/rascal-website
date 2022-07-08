@@ -128,7 +128,7 @@ Warning: How to generate this error?
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 data D = d(int x);
 data D2 = d(str x);
 d(3).x
@@ -156,25 +156,25 @@ Remedies:
 
 Define a function `triple` that multiplies its argument by 3:
 
-``` rascal-shell
+```rascal-shell
 int triple(int x) = 3 * x;
 ```
 
 It works fine:
 
-``` rascal-shell
+```rascal-shell
 triple(5)
 ```
 
 Unless it is called with an argument of a wrong type:
 
-``` rascal-shell
+```rascal-shell
 triple([1,2,3])
 ```
 
 We can define a new version of `triple` function that accepts lists:
 
-``` rascal-shell
+```rascal-shell
 list[int] triple(list[int] L) = [3 * x | x <- L];
 triple([1,2,3]);
 ```
@@ -195,26 +195,26 @@ closure](/docs/Rascal#ReflexiveTransitiveClosure) expect binary relations or tup
 
 This composition is correct:
 
-``` rascal-shell
+```rascal-shell
 {<1,10>, <2,20>} o {<10,100>, <20, 200>};
 ```
 
 This is not, since the first argument has arity 3:
 
-``` rascal-shell
+```rascal-shell
 {<1,5,10>, <2,6,20>} o {<10,100>, <20, 200>};
 ```
 
 These transitive closures are correct:
 
-``` rascal-shell
+```rascal-shell
 {<1,2>, <2,3>,<4,5>}+
 {<1,2>, <2,3>,<4,5>}*
 ```
 
 But these are incorrect:
 
-``` rascal-shell
+```rascal-shell
 {<1,2,3>, <2,3,4>,<4,5,6>}+
 {<1,2,3>, <2,3,4>,<4,5,6>}*
 ```
@@ -236,13 +236,13 @@ Remedy: Fix the datetime value.
 
 A correct datetime value:
 
-``` rascal-shell
+```rascal-shell
 $2013-07-15T09:15:23.123+03:00$;
 ```
 
 Certain errors, like a wrong day number (here: 40) lead to a parse error:
 
-``` rascal-shell
+```rascal-shell
 $2013-07-40T09:15:23.123+03:00$;
 ```
 
@@ -265,13 +265,13 @@ Remedy: remove the qualification.
 
 Using a qualified name gives an error:
 
-``` rascal-shell
+```rascal-shell
 data M::D = d();
 ```
 
 Without the qualification, this is correct:
 
-``` rascal-shell
+```rascal-shell
 data D = d();
 ```
 
@@ -291,25 +291,25 @@ when a date is compared with a time.
 
 Comparing dates with dates:
 
-``` rascal-shell
+```rascal-shell
 $2013-07-15$ < $2014-07-15$
 ```
 
 Or times with times:
 
-``` rascal-shell
+```rascal-shell
 $T20:03:56.901+01:00$ < $T22:00:56.901+01:00$
 ```
 
 Or datetimes with datetimes:
 
-``` rascal-shell
+```rascal-shell
 $2013-01-11T23:03:56.901+01:00$ < $2013-01-11T23:05:00.901+01:00$
 ```
 
 But mixing dates and times gives errors:
 
-``` rascal-shell
+```rascal-shell
 $2013-07-15$ < $T20:03:56.901+01:00$
 ```
 
@@ -370,21 +370,21 @@ first.
 
 This is how the `size` function on lists is declared in the Rascal library:
 
-``` rascal-shell
+```rascal-shell
 @javaClass{org.rascalmpl.library.Prelude}
 public java int size(list[&T] lst);
 ```
 
 Misspelling the class name will generate the JavaMethodLink error:
 
-``` rascal-shell
+```rascal-shell
 @javaClass{org.rascalmpl.library.Preludexxx}
 public java int size(list[&T] lst);
 ```
 
 The same error message is generated if the function declaration contains a body:
 
-``` rascal-shell
+```rascal-shell
 @javaClass{org.rascalmpl.library.Preludexxx}
 public java int size(list[&T] lst){
   return 0;
@@ -427,14 +427,14 @@ first.
 
 This is how the `size` function on lists is declared in the Rascal library:
 
-``` rascal-shell
+```rascal-shell
 @javaClass{org.rascalmpl.library.Prelude}
 public java int size(list[&T] lst);
 ```
 
 This is what happens if the `java` keyword is missing:
 
-``` rascal-shell
+```rascal-shell
 @javaClass{org.rascalmpl.library.Prelude}
 public int size(list[&T] lst);
 ```
@@ -461,7 +461,7 @@ Remedies:
 
 Here is an incorrect definition of function `triple`:
 
-``` rascal-shell
+```rascal-shell
 int triple(int x) {
    x * 3;
 }
@@ -470,7 +470,7 @@ triple(5)
 
 It should look like this:
 
-``` rascal-shell
+```rascal-shell
 int triple(int x) {
    return x * 3;
 }
@@ -479,7 +479,7 @@ triple(5)
 
 This is another solution using the abbreviated function format:
 
-``` rascal-shell
+```rascal-shell
 int triple(int x) = x * 3;
 triple(5)
 ```
@@ -513,13 +513,13 @@ Remedies:
 
 Here is a correct import of the library module `List`:
 
-``` rascal-shell
+```rascal-shell
 import List;
 ```
 
 Here is the effect of a misspelled module name (assuming that you do not have a module `Lis`):
 
-``` rascal-shell
+```rascal-shell
 import Lis;
 ```
 
@@ -561,14 +561,14 @@ Remedies:
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 int incr(int x) = x + 1;
 incr(3, delta=5);
 ```
 
 Here is one solution:
 
-``` rascal-shell
+```rascal-shell
 int incr(int x, int delta=1) = x + delta;
 incr(3, delta=5);
 ```
@@ -607,7 +607,7 @@ If you are an expert developer, please check the body of the offending function 
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 java int incr(int x) {}
 ```
 
@@ -628,7 +628,7 @@ Remedy: replace the expression that computes void by an expression that computes
 
 First define a dummy function that returns void:
 
-``` rascal-shell
+```rascal-shell
 void dummy() { return; }
 [1, *dummy(), 2]
 {1, *dummy(), 2}
@@ -636,7 +636,7 @@ void dummy() { return; }
 
 A solution could be:
 
-``` rascal-shell
+```rascal-shell
 int dummy() { return 17; }
 [1, *dummy(), 2]
 {1, *dummy(), 2}
@@ -661,7 +661,7 @@ Remedy: correct the type.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 bool[int] x;
 list[int,str] l;
 map[str, int, int]  m;
@@ -685,7 +685,7 @@ Remedy: modify the expression in the enumerator to return a value that supports 
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 int x <- 17
 b <- true
 ```
@@ -708,7 +708,7 @@ This error signals the case that thei fields are partially labelled.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 tuple[int n, str] T;
 rel[str name, int] R;
 ```
@@ -731,25 +731,25 @@ Remedy: rename one of the fields in the declaration.
 
 This is correct since all occurrences of `key` have type `int`:
 
-``` rascal-shell
+```rascal-shell
 data D = d1(int key) | d2(str name, int key);
 ```
 
 This is incorrect since `key` is used as `int` and as `str`.
 
-``` rascal-shell
+```rascal-shell
 data D = d1(int key) | d2(str key);
 ```
 
 This can be corrected by choosing other names for the labels:
 
-``` rascal-shell
+```rascal-shell
 data D = d1(int intKey) | d2(str strKey);
 ```
 
 A tuple declaration with a duplicate field name also gives an error:
 
-``` rascal-shell
+```rascal-shell
 tuple[int x, str x] Q = <3,"abc">;
 ```
 
@@ -769,12 +769,12 @@ Remedy: rename one of the type names.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 data D = d(int x);
 alias D = str;
 ```
 
-``` rascal-shell
+```rascal-shell
 alias D = int;
 alias D = str;
 ```
@@ -791,7 +791,7 @@ Remedy: rename one of the variables.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 int n = 3;
 int n = 4;
 ```
@@ -851,7 +851,7 @@ Remedies:
 
 This is correct:
 
-``` rascal-shell
+```rascal-shell
 data Fruit = apple(int n) | orange(int n);
 anno str Fruit @ quality;
 piece = orange(13);
@@ -860,7 +860,7 @@ piece @ quality = "great";
 
 But using a wrong annotation name generates an error:
 
-``` rascal-shell
+```rascal-shell
 piece @ qual;
 ```
 
@@ -887,14 +887,14 @@ Remedies:
 
 Use of the undeclared field `gender`:
 
-``` rascal-shell
+```rascal-shell
 tuple[str name, int age] Jo = <"Jo", 33>;
 Jo.gender;
 ```
 
 A similar example now expressed as ADT:
 
-``` rascal-shell
+```rascal-shell
 data Person = person(str name, int age);
 jo = person("Jo", 33);
 jo.gender;
@@ -927,53 +927,53 @@ Remedies for variables:
 
 Calling the undeclared function `triple` gives an error:
 
-``` rascal-shell
+```rascal-shell
 triple(5)
 ```
 
 We can remedy this by declaring the function:
 
-``` rascal-shell
+```rascal-shell
 int triple(int n) = 3 * n;
 triple(5)
 ```
 
 Calling the library function `size` gives an error if the proper library (in this case: `List`) is not imported
 
-``` rascal-shell
+```rascal-shell
 size([20, 1, 77]);
 ```
 
 The solution is:
 
-``` rascal-shell
+```rascal-shell
 import List;
 size([20, 1, 77]);
 ```
 
 Another solution is to import the complete Rascal library at once:
 
-``` rascal-shell
+```rascal-shell
 import Prelude;
 size([20, 1, 77]);
 ```
 
 Using an undeclared variable gives an error:
 
-``` rascal-shell
+```rascal-shell
 n + 1;
 ```
 
 A variable is introduced by just assigning to it (with or without its expected type):
 
-``` rascal-shell
+```rascal-shell
 n = 3;
 n + 1;
 ```
 
 Or equivalenty (with an expected type):
 
-``` rascal-shell
+```rascal-shell
 int n = 3;
 n + 1;
 ```
@@ -1014,14 +1014,14 @@ first.
 
 This is how the `size` function on lists is declared in the Rascal library:
 
-``` rascal-shell
+```rascal-shell
 @javaClass{org.rascalmpl.library.Prelude}
 public java int size(list[&T] lst);
 ```
 
 This is the result of misspelling the function name (`siz` instead of `size`):
 
-``` rascal-shell
+```rascal-shell
 @javaClass{org.rascalmpl.library.Prelude}
 public java int siz(list[&T] lst);
 ```
@@ -1045,19 +1045,19 @@ Remedies:
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 int incr(int n, int delta=1) = n + delta;
 ```
 
 Calling `incr` with a wrong keyword parameter gives an error:
 
-``` rascal-shell
+```rascal-shell
 incr(3, diff=5);
 ```
 
 This can be fixed by using the correct name for the keyword parameter:
 
-``` rascal-shell
+```rascal-shell
 incr(3, delta=5);
 ```
 
@@ -1081,7 +1081,7 @@ Remedies:
 
 Referring to the non-existing module `M` gives errors:
 
-``` rascal-shell
+```rascal-shell
 M::x = 3;
 M::f(3);
 ```
@@ -1104,14 +1104,14 @@ Remedy: Use an existing scheme.
 
 Misspelling the scheme for Rascal’s standard library (which is `std`) gives an error when the location is used:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 readFileLines(|standard:///demo/basic/Hello.rsc|);
 ```
 
 This is fixed by using the proper scheme name:
 
-``` rascal-shell
+```rascal-shell
 readFileLines(|std:///demo/basic/Hello.rsc|);
 ```
 
@@ -1132,7 +1132,7 @@ Remedy: declare the offending non-terminal.
 
 Here is an example where the non-terminal `Y` is not declared:
 
-``` rascal-shell
+```rascal-shell
 import ParseTree;
 syntax X = "a" Y;
 parse(#X, "ab");
@@ -1165,13 +1165,13 @@ Remedies:
 
 Using the undeclared type `myint` gives an error:
 
-``` rascal-shell
+```rascal-shell
 myint incr(myint n) = n + 1;
 ```
 
 The solkution is to first declares `myint` (here as an alias for `int`):
 
-``` rascal-shell
+```rascal-shell
 alias myint = int;
 myint incr(myint n) = n + 1;
 incr(3);
@@ -1198,13 +1198,13 @@ Remedy:
 
 Here is an example where an undeclared variables occurs in list splicing:
 
-``` rascal-shell
+```rascal-shell
 [1, *x, 3]
 ```
 
 The remedy is here:
 
-``` rascal-shell
+```rascal-shell
 x = 5;
 [1, *x, 3]
 ```
@@ -1230,13 +1230,13 @@ Remedies:
 
 Declare `incr` function with keyword parameter `delta` of type `int`:
 
-``` rascal-shell
+```rascal-shell
 int incr(int x, int delta = 1) = n + delta;
 ```
 
 Erroneous use of `delta` with a string value:
 
-``` rascal-shell
+```rascal-shell
 incr(3, delta="more");
 ```
 
@@ -1258,19 +1258,19 @@ Remedy: adjust the actual type to the expected type.
 
 Declaring variable `n` as `int` and assigning it a `str` value gives an error:
 
-``` rascal-shell
+```rascal-shell
 int n = "abc";
 ```
 
 The solution is to assign an `int` value to `n`:
 
-``` rascal-shell
+```rascal-shell
 int n = 123;
 ```
 
 An `assert` statement expects an argument of type `bool`:
 
-``` rascal-shell
+```rascal-shell
 assert 3;
 ```
 
@@ -1291,13 +1291,13 @@ Remedy: use List concatenation to append an element to a list outside a loop.
 
 This is the typical use of `append`:
 
-``` rascal-shell
+```rascal-shell
 for(int i <- [1..5]) append i*i;
 ```
 
 Using append outside a loop gives an error:
 
-``` rascal-shell
+```rascal-shell
 append 3;
 ```
 
@@ -1324,19 +1324,19 @@ Remedies:
 
 Here is a correct (albeit not very useful) use of `fail` where the pattern match `int N := 35` acts as guard:
 
-``` rascal-shell
+```rascal-shell
 if(int N := 35){ if(N > 10) fail; }
 ```
 
 Any condition (non only one using pattern matching) can act as guard:
 
-``` rascal-shell
+```rascal-shell
 if(true) { fail; }
 ```
 
 An error occurs when `fail` is used outside a conditional context:
 
-``` rascal-shell
+```rascal-shell
 fail;
 ```
 
@@ -1363,25 +1363,25 @@ Here is an example of the use of insert to swap the arguments of red nodes:
 
 Our favorite data type, colored trees:
 
-``` rascal-shell
+```rascal-shell
 data CTree = leaf(int n) | red(CTree left, CTree right) | green(CTree left, CTree right);
 ```
 
 An example tree:
 
-``` rascal-shell
+```rascal-shell
 CTree T = red(green(leaf(1), red(leaf(2), leaf(3))), red(leaf(4), leaf(5)));
 ```
 
 A visit to swap the arguments of red nodes:
 
-``` rascal-shell
+```rascal-shell
 visit(T){ case red(CTree l, CTree r): insert red(r,l); }
 ```
 
 An error occurs when insert is used outside a visit:
 
-``` rascal-shell
+```rascal-shell
 insert red(leaf(1), leaf(2));
 ```
 
@@ -1407,13 +1407,13 @@ Remedies:
 
 This is correct way to add all elements in a list:
 
-``` rascal-shell
+```rascal-shell
 (0 | it + n | int n <- [1,5,9] )
 ```
 
 Using `it` outside a reducer gives an error:
 
-``` rascal-shell
+```rascal-shell
 it + 3
 ```
 
@@ -1430,14 +1430,14 @@ outside a function body.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 int triple(int n) { return 3 * n; }
 triple(5);
 ```
 
 Using return outside a function body gives an error:
 
-``` rascal-shell
+```rascal-shell
 return 3;
 ```
 
@@ -1463,7 +1463,7 @@ Remedy: replace the subject by a non-void value.
 
 here is a (contrived) example that produces this error:
 
-``` rascal-shell
+```rascal-shell
 void dummy() { return; }
 int n := dummy();
 ```
@@ -1485,13 +1485,13 @@ Remedy: assign a value to the variable before its use:
 
 Using the uninitialized variable `x` gives an error:
 
-``` rascal-shell
+```rascal-shell
 x + 5;
 ```
 
 This can be avoided by first initializing `x`:
 
-``` rascal-shell
+```rascal-shell
 x = 3;
 x + 5;
 ```
@@ -1517,31 +1517,31 @@ Remedies:
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 L = [1,2,3];
 ```
 
 Division is not supported on lists:
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3] / 4;
 ```
 
 Combined multiplication and assignment is not supported either:
 
-``` rascal-shell
+```rascal-shell
 L *= 3;
 ```
 
 Taking the time from a date-only value is not supported:
 
-``` rascal-shell
+```rascal-shell
 $2010-07-15$.justTime;
 ```
 
 Calling an integer as a function is not supported:
 
-``` rascal-shell
+```rascal-shell
 17(3, "abc");
 ```
 
@@ -1584,7 +1584,7 @@ Remedies:
 
 Here are some correct uses of subscription:
 
-``` rascal-shell
+```rascal-shell
 "abc"[1];
 [1,2,3][1];
 "f"(1,2,3)[1];
@@ -1593,7 +1593,7 @@ Here are some correct uses of subscription:
 
 Here are some erroneous examples:
 
-``` rascal-shell
+```rascal-shell
 true[1];
 123[1];
 {1,2,3}[1];
@@ -1616,7 +1616,7 @@ Remedies: correct the number of indices used in the subscription.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1,2,3][2,1];
 ("a":1, "b":2, "c":3)["c", "d"];
 <1, 2, 3>[5,6];

@@ -100,27 +100,27 @@ according to that grammar.
 
 First declare a very simple expression language that should recognize expressions like `a`, `a+a`, `a+(a+a)`:
 
-``` rascal-shell
+```rascal-shell
 syntax A = "a";
 syntax E = A | "(" E ")" | E "+" E;
 ```
 
 Next, import the ParseTree module that provides a `parse` function that we will use:
 
-``` rascal-shell
+```rascal-shell
 import ParseTree;
 ```
 
 Entering a first expression goes well, except that the parser generator already predicts future ambiguity. So it prints
 a warning.
 
-``` rascal-shell-error
+```rascal-shell-error
 parse(#e, "a+a");
 ```
 
 The following example triggers the predicted ambiguity indeed:
 
-``` rascal-shell
+```rascal-shell
 parse(#e, "a+a+a");
 ```
 
@@ -129,7 +129,7 @@ associativity of the `+` operator.
 
 Let’s fix this:
 
-``` rascal-shell
+```rascal-shell
 syntax A = "a";
 syntax E = A | "(" E ")" | left E "+" E;
 import ParseTree;
@@ -139,7 +139,7 @@ parse(#e, "a+a+a");
 However, one can also deal with ambiguity differently. For example we could have the parser build a tree for all
 ambiguous interpretations and inspect the resulting data-structure:
 
-``` rascal-shell
+```rascal-shell
 syntax A = "a";
 syntax E = A | "(" E ")" | left E "+" E | left E "*" E;
 import ParseTree;
@@ -158,7 +158,7 @@ if (/docs/amb({a1, a2}) := t)
 
 Or, one could catch the ambiguity and report it like a [Parse Error](#parseError):
 
-``` rascal-shell
+```rascal-shell
 import IO;
 try
   parse(#e, "a+a*a");
@@ -201,13 +201,13 @@ Remedies:
 
 Division by 0 gives an error:
 
-``` rascal-shell
+```rascal-shell
 3/0;
 ```
 
 Giving an out-of-range argument to a mathematical function also gives an error:
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 tan(-550000000000000000000000);
 ```
@@ -215,7 +215,7 @@ tan(-550000000000000000000000);
 We can also catch the `ArithmeticException` error. First import the Rascal exceptions (which are also included in
 `Prelude`) and `IO`:
 
-``` rascal-shell
+```rascal-shell
 import Exception;
 import IO;
 try println(3/0); catch ArithmeticException(msg): println("The message is: <msg>");
@@ -248,32 +248,32 @@ Remedies:
 
 A false assertion gives an error:
 
-``` rascal-shell
+```rascal-shell
 assert 3 > 4;
 ```
 
 Define a function that only increments positive integers:
 
-``` rascal-shell
+```rascal-shell
 int incrPositive(int n) { assert n > 0: "n should be greater than 0"; return n + 1; }
 ```
 
 Calling it with a positive integer is fine:
 
-``` rascal-shell
+```rascal-shell
 incrPositive(3);
 ```
 
 But a negative argument gives an error:
 
-``` rascal-shell
+```rascal-shell
 incrPositive(-3);
 ```
 
 We can also catch the `AssertionFailed` error. First import the Rascal exceptions (which are also included in `Prelude`)
 and `IO`:
 
-``` rascal-shell
+```rascal-shell
 import Exception;
 import IO;
 try println(incrPositive(-3)); catch AssertionFailed(msg): println("incrPositive: <msg>");
@@ -315,27 +315,27 @@ Remedies:
 
 Import the `List` library and introduce `L` with an empty list as value:
 
-``` rascal-shell
+```rascal-shell
 import List;
 L = [];
 ```
 
 Taking the head of an empty list gives an error:
 
-``` rascal-shell
+```rascal-shell
 head(L);
 ```
 
 This is the case when taking the tail as well:
 
-``` rascal-shell
+```rascal-shell
 tail(L);
 ```
 
 We can also catch the `EmptyList` error. First import the Rascal exceptions (which are also included in `Prelude`) and
 `IO`:
 
-``` rascal-shell
+```rascal-shell
 import Exception;
 import IO;
 try
@@ -375,21 +375,21 @@ Remedies:
 
 Import the `Map` library and introduce `M` with an empty map as value:
 
-``` rascal-shell
+```rascal-shell
 import Map;
 M = ();
 ```
 
 Trying to get an arbitrary value from it gives an error:
 
-``` rascal-shell
+```rascal-shell
 getOneFrom(M);
 ```
 
 We can also catch the `EmptyMap` error. First import the Rascal exceptions (which are also included in `Prelude`) and
 `IO`:
 
-``` rascal-shell
+```rascal-shell
 import Exception;
 import IO;
 try
@@ -428,21 +428,21 @@ Remedies:
 
 Import the `Set` library and introduce `S` with an empty set as value:
 
-``` rascal-shell
+```rascal-shell
 import Set;
 S = {};
 ```
 
 Taking an element from an empty set gives an error:
 
-``` rascal-shell
+```rascal-shell
 getOneFrom(S);
 ```
 
 We can also catch the `EmptySet` error. First import the Rascal exceptions (which are also included in `Prelude`) and
 `IO`:
 
-``` rascal-shell
+```rascal-shell
 import Exception;
 import IO;
 try
@@ -489,14 +489,14 @@ Remedies:
 
 Import the `IO` library and attempt to use a non-existing scheme:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 readFile(|myScheme:///example.rsc|);
 ```
 
 We can catch this `IO` error. First import the Rascal exceptions (which are also included in `Prelude`):
 
-``` rascal-shell
+```rascal-shell
 import Exception;
 try
   readFileLines(|myScheme:///example.rsc|);
@@ -541,20 +541,20 @@ Remedies:
 
 Initialize a list `L`:
 
-``` rascal-shell
+```rascal-shell
 L = [0, 10, 20, 30, 40];
 ```
 
 The legal indices are 0, 1, 2, 3, 4, so index 5 gives an error:
 
-``` rascal-shell
+```rascal-shell
 L[5];
 ```
 
 We can catch the `IndexOutOfBounds` error. First import the Rascal exceptions (which are also included in `Prelude`) and
 `IO`:
 
-``` rascal-shell
+```rascal-shell
 import Exception;
 import IO;
 try
@@ -589,14 +589,14 @@ Remedies:
 
 Changing the month of a [DateTime](/docs/Rascal#datetime) to an illegal month (13):
 
-``` rascal-shell
+```rascal-shell
 NOW = $2013-01-13T22:16:51.740+01:00$;
 NOW.month = 13;
 ```
 
 Setting the offset in a location to a negative value:
 
-``` rascal-shell
+```rascal-shell
 someLoc = |home:///abc.txt|;
 someLoc.offset = -1;
 ```
@@ -622,14 +622,14 @@ location value.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 someLoc = |home:///abc.txt|;
 someLoc.scheme = "a:b";
 ```
 
 Another well-known example is a missing path when using `//` (wrong) instead of `///` (good):
 
-``` rascal-shell
+```rascal-shell
 |home:///|;
 |home://|;
 ```
@@ -656,7 +656,7 @@ Thrown by operations on date values that try to update unavailable information.
 
 Setting the `hour` field on a date value throws an exception:
 
-``` rascal-shell
+```rascal-shell
 NOW = $2016-09-18$;
 NOW.hour = 14;
 ```
@@ -686,7 +686,7 @@ location value.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 someLoc = |home:///abc.txt|;
 someLoc.begin = <1, 2>;
 ```
@@ -713,7 +713,7 @@ Thrown by operations on time values that try to update unavailable information.
 
 Setting the `year` field on a time value throws an exception:
 
-``` rascal-shell
+```rascal-shell
 NOW = $T20:11:01.463+00:00$;
 NOW.year = 2020;
 ```
@@ -808,7 +808,7 @@ Remedies:
 
 INFO: Eliminate the double Error: Error:
 
-``` rascal-shell
+```rascal-shell
 data Fruit = apple(int n) | orange(int n);
 anno str Fruit @ quality;
 piece = orange(13);
@@ -817,20 +817,20 @@ piece@quality;
 
 Use the unary postfix operator isDefined `?` to check whether the `quality` annotation is set:
 
-``` rascal-shell
+```rascal-shell
 piece@quality?;
 ```
 
 Use the ternary operator ifDefinedElse `?` to compute an alternative value when the `quality` annotation is not set:
 
-``` rascal-shell
+```rascal-shell
 piece@quality ? "no quality value";
 ```
 
 We can also catch the `NoSuchAnnotation` error. First import the Rascal exceptions (which are also included in
 `Prelude`) and `IO`:
 
-``` rascal-shell
+```rascal-shell
 import Exception;
 import IO;
 try piece@quality; catch NoSuchAnnotation(l): println("No such annotation: <l>");
@@ -838,7 +838,7 @@ try piece@quality; catch NoSuchAnnotation(l): println("No such annotation: <l>")
 
 Finally, we can just assign a value to the `quality` annotation:
 
-``` rascal-shell
+```rascal-shell
 piece@quality = "excellent";
 piece@quality;
 ```
@@ -870,14 +870,14 @@ thrown when a non-existent field is accessed.
 
 Consider this highly simplified view on persons:
 
-``` rascal-shell
+```rascal-shell
 data Person = man(str name, bool beard) | woman(str name, bool necklace);
 jane = woman("jane", false);
 ```
 
 The field `beard` is evidently only applicable to a `man` but not to a woman (didn’t we say "simplified", above):
 
-``` rascal-shell
+```rascal-shell
 jane.beard;
 ```
 
@@ -912,7 +912,7 @@ Remedies:
 
 Import the `Map` and `IO` libraries and introduce map `M`:
 
-``` rascal-shell
+```rascal-shell
 import Map;
 import IO;
 M = ("a" : 1, "b" : 2);
@@ -920,25 +920,25 @@ M = ("a" : 1, "b" : 2);
 
 Indexing `M` with a non-existing key gives an error:
 
-``` rascal-shell
+```rascal-shell
 M["c"]
 ```
 
 Use the postfix isDefined operator `?` to test whether the value is defined:
 
-``` rascal-shell
+```rascal-shell
 if(M["c"]?) println("defined"); else println("not defined");
 ```
 
 Or use the binary ifDefinedElse operator `?` to return an alternative value when the value of `M["c"]` is undefined:
 
-``` rascal-shell
+```rascal-shell
 M["c"] ? 3
 ```
 
 Yet another solution is to use try/catch. First we import the Rascal exceptions (which are also included in `Prelude`):
 
-``` rascal-shell
+```rascal-shell
 import Exception;
 try println(M["c"]); catch NoSuchKey(k): println("Key <k> does not exist");
 ```
@@ -992,31 +992,31 @@ Remedies:
 
 Define the non-terminal `As` that accepts one or more letters `a`:
 
-``` rascal-shell
+```rascal-shell
 syntax As = "a"+;
 ```
 
 Then import `ParseTree` so that we can use the `parse` function:
 
-``` rascal-shell
+```rascal-shell
 import ParseTree;
 ```
 
 Now we can parse sentences consisting of letters `a`:
 
-``` rascal-shell
+```rascal-shell
 parse(#as, "aaaaaaaa");
 ```
 
 But we get an error when parsing syntactically incorrect input (i.e., that does not consists of letters `a` only):
 
-``` rascal-shell
+```rascal-shell
 parse(#as, "aaaabaaa");
 ```
 
 We can also catch the ParseError but first import the Rascal modules `Exception` and `IO`:
 
-``` rascal-shell
+```rascal-shell
 import Exception;
 import IO;
 try
@@ -1048,7 +1048,7 @@ syntactically incorrect regular expression is used.
 
 The following regular expression `/+/` is incorrect (maybe `/a+/` was meant?):
 
-``` rascal-shell
+```rascal-shell
 /+/ := "aaaa";
 ```
 
@@ -1079,7 +1079,7 @@ This exception is thrown when optional information is not available.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 $2016-09-14$.hour;
 someLoc = |home:///abc.txt|;
 someLoc.offset;

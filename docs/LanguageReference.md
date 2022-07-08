@@ -119,7 +119,7 @@ Declare a module.
 
 **Syntax.**
 
-``` rascal
+```rascal
 module Name
 Imports;
 Declaration1;
@@ -140,7 +140,7 @@ A module declaration consists of:
 The module name *Name* will be used when the current module is imported in another module. A module name is in general a
 qualified name of the form:
 
-``` rascal
+```rascal
 Name1::_Name2:: ... ::_Namen
 ```
 
@@ -180,7 +180,7 @@ The only entities that are *visible outside* the module, are the public entities
 different imported modules declare the same visible name, it can be disambiguated by explicitly qualifying it with its
 module name:
 
-``` rascal
+```rascal
 Module :: Name
 ```
 
@@ -190,7 +190,7 @@ Each module resides in a separate file with extension `.rsc`.
 
 Here is the `Hello` module:
 
-``` rascal
+```rascal
 module demo::basic::Hello
 
 import IO;
@@ -230,7 +230,7 @@ module.
 
 Here, is how to import the [IO](/docs/Libraries#io) library:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 println("IO library was imported.");
 ```
@@ -296,26 +296,26 @@ Here are some simple examples of correct and incorrect typing:
 
 We can assign an integer value to an integer variable:
 
-``` rascal-shell
+```rascal-shell
 int i = 3;
 ```
 
 But assigning a string value gives an error:
 
-``` rascal-shell
+```rascal-shell
 int j = "abc";
 ```
 
 The `num` type accepts integer and real values:
 
-``` rascal-shell
+```rascal-shell
 num n = i;
 n = 3.14;
 ```
 
 A variable of type `value` accepts all possible values:
 
-``` rascal-shell
+```rascal-shell
 value v = true;
 v = "abc";
 v = [1, 2, 3];
@@ -350,7 +350,7 @@ The prototypical example is a parse function: how to write a type safe parse fun
 result we expect? Suppose we want to parse a language that has the non-terminals `EXP`, `STAT` and `PROGRAM`. A first,
 naive, solution introduces a parse function for each non-terminal:
 
-``` rascal
+```rascal
 EXP parseEXP(str s){ ... }
 STAT parsePROGRAM(str s) { ... }
 PROGRAM parsePROGRAM(str s) { ... }
@@ -361,13 +361,13 @@ when we do not know the non-terminals before hand.
 
 Now we can write (see [Type Parameters](#typeparameters) for a description of the `&T` notation):
 
-``` rascal
+```rascal
 &T parse(type[&T] start, str s) { ... }
 ```
 
 and use the parse by giving it a type as argument:
 
-``` rascal
+```rascal
 parse(#eXP, "1+3");
 ```
 
@@ -390,7 +390,7 @@ constraint which expresses that actual types bound to *Name* should be a subtype
 
 Here is the definition of the absolute value function `abs` from the [Number](#number) library:
 
-``` rascal
+```rascal
 public &T <: num abs(&T <: num N)
 {
     return N >= 0 ? N : -N;
@@ -399,7 +399,7 @@ public &T <: num abs(&T <: num N)
 
 The argument `N` is constrained to be at most of type `num`.
 
-``` rascal-shell
+```rascal-shell
 import util::Math;
 abs(-3);
 abs(-3.5);
@@ -407,7 +407,7 @@ abs(-3.5);
 
 Here is an example from the [Node](#node) library:
 
-``` rascal
+```rascal
 &T <: node setAnnotations(&T <: node x, map[str, value] annotations);
 ```
 
@@ -415,27 +415,27 @@ Here is an example from the [Node](#node) library:
 type that is at most `node` and adds annotations to it. This makes it possible to set annotations on any [Algebraic Data
 Type](#ADT).
 
-``` rascal-shell
+```rascal-shell
 import Node;
 nd = "f"(10, "abc");
 ```
 
 First we apply `setAnnotations` to a node value:
 
-``` rascal-shell
+```rascal-shell
 setAnnotations(nd, ("color" : "red", "size" : "large"));
 ```
 
 Next, we introduce a new data type `Suite`:
 
-``` rascal-shell
+```rascal-shell
 data Suite = hearts() | diamonds() | clubs() | spades();
 st = diamonds();
 ```
 
 And apply `setAnnotations` to a value of type `Suite`:
 
-``` rascal-shell
+```rascal-shell
 setAnnotations(st, ("player" : "Hossein", "gain" : "120"));
 ```
 
@@ -480,7 +480,7 @@ Let's consider a small example of the use of function parameters in a function d
 Declaration](#function) for more details on function declarations. The following function `swap` returns a
 tuple in which its arguments are swapped and can be applied to arbitrary values in a type safe manner:
 
-``` rascal-shell
+```rascal-shell
 tuple[&B, &A] swap(&A a, &B b) { return <b, a>; }
 swap(1,2);
 swap("abc", 3);
@@ -491,7 +491,7 @@ parameter of the function.
 
 An [Alias](#alias) declaration may also be parameterized. So we can generalize graphs as follows:
 
-``` rascal
+```rascal
 alias Graph[&Node] = rel[&Node, &Node];
 Graph[int] GI = {<1,2>, <3,4>, <4,1>};
 Graph[str] GS = {<"a", "b">, <"c","d">, <"d", "a">};
@@ -519,13 +519,13 @@ calls to the declared constructor functions, see [Constructor](#constructor).
 The following data declaration defines the datatype `Bool` that contains various constants (`tt()` and `ff()` and
 constructor functions `conj` and `disj`.
 
-``` rascal-shell
+```rascal-shell
 data Bool = tt() | ff() | conj(Bool L, Bool R)  | disj(Bool L, Bool R);
 ```
 
 terms of type `Bool` can be constructed using the defined constructors:
 
-``` rascal-shell
+```rascal-shell
 conj(tt(),ff());
 ```
 
@@ -564,7 +564,7 @@ The following rules apply:
 As a convenience, also declarations without an initialization expression are permitted inside functions (but not at the
 module level) and have the form
 
-``` rascal
+```rascal
 Type Name;
 ```
 
@@ -587,21 +587,21 @@ functions. The following rules apply:
 
 Two explicit variable declarations:
 
-``` rascal-shell
+```rascal-shell
 int max = 100;
 min = 0;
 ```
 
 An implicit variable declaration
 
-``` rascal-shell
+```rascal-shell
 day = {<"mon", 1>, <"tue", 2>, <"wed",3>,
        <"thu", 4>, <"fri", 5>, <"sat",6>, <"sun",7>};
 ```
 
 Variable declaration and assignment leading to type error
 
-``` rascal-shell
+```rascal-shell
 int month = 12;
 month ="December";
 ```
@@ -611,7 +611,7 @@ month ="December";
 
 <!-- end list -->
 
-``` rascal-shell
+```rascal-shell
 if( 4 > 3){ x = "abc"; } else { x = "def";}
 x;
 ```
@@ -740,7 +740,7 @@ The *Modifiers* affect *visibility* and *special behaviour* of functions:
 
 Declare a function
 
-``` rascal-shell
+```rascal-shell
 rel[int, int] invert(rel[int,int] R){
    return {<Y, X> | <int X, int Y> <- R };
 }
@@ -748,14 +748,14 @@ rel[int, int] invert(rel[int,int] R){
 
 Call it
 
-``` rascal-shell
+```rascal-shell
 invert({<1,10>, <2,20>});
 ```
 
 In the following example we illustrate the use of type variables in function declarations. Declare an inversion function
 that is applicable to any binary relation:
 
-``` rascal-shell
+```rascal-shell
 rel[&T2, &T1] invert2(rel[&T1,&T2] R){
    return {<Y, X> | <&T1 X, &T2 Y> <- R };
 }
@@ -763,7 +763,7 @@ rel[&T2, &T1] invert2(rel[&T1,&T2] R){
 
 Now apply it to relations with different types:
 
-``` rascal-shell
+```rascal-shell
 invert2({<1,10>, <2,20>});
 invert2({<"mon", 1>, <"tue", 2>});
 ```
@@ -771,7 +771,7 @@ invert2({<"mon", 1>, <"tue", 2>});
 As another example declare a function that can be used to swap the elements of pairs of arbitrary types (also see [Tuple
 Subscription](#subscription)):
 
-``` rascal-shell
+```rascal-shell
 tuple[&T2, &T1] swap(tuple[&T1, &T2] TP) { return <TP[1], TP[0]>;}
 swap(<1, 2>);
 swap(<"wed", 3>);
@@ -779,7 +779,7 @@ swap(<"wed", 3>);
 
 Here we use an overloaded definition with incomparable patterns:
 
-``` rascal-shell
+```rascal-shell
 int f(int i) = 1;
 int f(real r) = 2;
 f(0);
@@ -788,7 +788,7 @@ f(0.0);
 
 And we may use `default`, as in:
 
-``` rascal-shell
+```rascal-shell
 int f(0) = 1;
 default int f(int n) = n * f(n - 1);
 f(0);
@@ -900,7 +900,7 @@ The *start* modifier identifies the start of a grammar. The effect of a start mo
 extra syntax definition before generating a parser that allows layout to before and after the start non-terminal. For
 example:
 
-``` rascal
+```rascal
 layout L = [\ ]*; start Program = Statement*;`
 ```
 
@@ -913,7 +913,7 @@ program, and [Parse Trees](#parseTrees) assigned to variable of that type will a
 The following example makes use of practically all of the [Syntax Definition](#definition) features,
 except parse actions.
 
-``` rascal
+```rascal
 // layout is lists of whitespace characters
 layout MyLayout = [\t\n\ \r\f]*;
 
@@ -979,7 +979,7 @@ name of an alternative.
 
 For example:
 
-``` rascal
+```rascal
 syntax A = a: B  C;
 
 public A a(B b, C c) {
@@ -1001,7 +1001,7 @@ In this example [Action](#action) function the a is replaced by whatever A the `
 
 They can be used as a [Disambiguation](#disambiguation) method, using the `filter` statement, as in:
 
-``` rascal
+```rascal
 syntax E = id: Id i;
 set[Id] types = {};
 
@@ -1051,7 +1051,7 @@ parser generated from Rascal’s [Syntax Definition](#definition)s. Please read
 
 **Examples.**
 
-``` rascal
+```rascal
 import analysis::grammars::Ambiguity;
 diagnose(t); // for any t of which you know it contains an ambiguity
 ```
@@ -1253,7 +1253,7 @@ recursive.
 
 The following snippet uses all [Priority Declaration](#priority) features:
 
-``` rascal
+```rascal
 syntax Exp
   = A: Id
   | B: Number
@@ -1355,7 +1355,7 @@ The type of a parse tree is the symbol that it’s production produces, i.e. `ap
 
 **Examples.**
 
-``` rascal
+```rascal
 // the following definition
 syntax A = "a";
 // would make the following [Test] succeed:
@@ -1373,7 +1373,7 @@ appl(prod(
 // you see that the defined non-terminal A ends up as the production for the outermost node. As the only child is the tree for recognizing the literal a, which is defined to be a single a from the character-class [ a ].
 ```
 
-``` rascal
+```rascal
 // when we use labels in the definitions, they also end up in the trees:
 // the following definition
 lexical A = myA:"a" B bLabel;
@@ -1509,49 +1509,49 @@ to define the effect of keyword reservation and longest match.
 
 A character class that defines all alphanumeric characters:
 
-``` rascal
+```rascal
 lexical AlphaNumeric = [a-zA-Z0-9];
 ```
 
 A character class that defines anything except quotes:
 
-``` rascal
+```rascal
 lexical AnythingExceptQuote = ![\"];
 ```
 
 An identifier class with longest match (can not be followed immediately by \[a-z\]):
 
-``` rascal
+```rascal
 lexical Id = [a-z]+ !>> [a-z];
 ```
 
 An identifier class with longest match and first match (can not be preceded or followed by \[a-z\]):
 
-``` rascal-shell
+```rascal-shell
 lexical Id = [a-z] !<< [a-z]+ !>> [a-z];
 ```
 
 An identifier class with some reserved keywords and longest match:
 
-``` rascal
+```rascal
 lexical Id = [a-z]+ !>> [a-z] \ "if" \ "else" \ "fi";
 ```
 
 An optional else branch coded using sequence and optional symbols:
 
-``` rascal
+```rascal
 syntax Statement = "if" Expression "then" Statement ("else" Statement)? "fi";
 ```
 
 A block of statements separated by semicolons:
 
-``` rascal
+```rascal
 syntax Statement = "{" {Statement ";"}* "}";
 ```
 
 A declaration with an embedded list of alternative modifiers and a list of typed parameters:
 
-``` rascal
+```rascal
 syntax Declaration = ("public" | "private" | "static" | "final")* Type Id "(" {(Type Id) ","}* ")" Statement;
 ```
 
@@ -1594,25 +1594,25 @@ are thus structurally equivalent.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ```
 
 Introduce two aliases `ModuleId` and `Frequency` for the type str.
 
-``` rascal
+```rascal
 alias ModuleId = str;
 alias Frequency = int;
 ```
 
 Another example is an alias definition for a graph containing integer nodes:
 
-``` rascal
+```rascal
 alias IntGraph = rel[int,int];
 ```
 
 Note that the Rascal Standard Library provides a graph data type that is defined as follows:
 
-``` rascal
+```rascal
 alias Graph[&T] = rel[&T, &T];
 ```
 
@@ -1786,11 +1786,11 @@ Concrete patterns.
 
 **Syntax.**
 
-``` rascal
+```rascal
 Concrete pattern with expected symbol type: (Symbol) ` Token1 Token2 ... Tokenn `
 ```
 
-``` rascal
+```rascal
 Typed variable inside a concrete pattern: Type</emphasis> Var>
 ```
 
@@ -1864,7 +1864,7 @@ root.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 data ColoredTree = leaf(int N)
                  | red(ColoredTree left, ColoredTree right)
@@ -1874,7 +1874,7 @@ T = red(red(black(leaf(1), leaf(2)), black(leaf(3), leaf(4))), black(leaf(5), le
 
 Now we match for `black` nodes with `leaf(4)` as second argument:
 
-``` rascal-shell
+```rascal-shell
 for(/docs/black(_,leaf(4)) := T)
     println("Match!");
 ```
@@ -1884,21 +1884,21 @@ print the actual values of the matches, we would need an \[Abstract/Labelled\] p
 
 Here we match all leaves that occur as second argument of `black`:
 
-``` rascal-shell
+```rascal-shell
 for(/docs/black(_,leaf(int N)) := T)
     println("Match <N>");
 ```
 
 Here we list all integers that occur in any leaf:
 
-``` rascal-shell
+```rascal-shell
 for(/docs/int N := T)
     println("Match <N>");
 ```
 
 Rather than printing, we can also collect them in a list using \[$Statements/Append\]:
 
-``` rascal-shell
+```rascal-shell
 for(/docs/int N := T)
     append N;
 ```
@@ -1915,7 +1915,7 @@ A labelled pattern matches the same values as *Pat*, but has as side-effect that
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 data ColoredTree = leaf(int N)
                  | red(ColoredTree left, ColoredTree right)
@@ -1955,7 +1955,7 @@ A list pattern matches a list value (the subject), provided that *Pat*<sub>1</su
     position in the subject list
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 ```
 
@@ -1983,21 +1983,21 @@ import IO;
 A list pattern may also be *non-linear*, i.e., it may contain uses of variables that were bound earlier in the pattern
 (here, the second occurence of `L`):
 
-``` rascal-shell
+```rascal-shell
 if([10, *L, 40, *L, 50] := [10, 20, 30, 40, 20, 30, 50])
    println("Match succeeded, L = <L>");
 ```
 
 Here we see an example, where all pairs of equal elements in a list are printed:
 
-``` rascal-shell
+```rascal-shell
 for([*L1, int N, *L2, N, *L3] := [ 5, 10, 20, 30, 40, 30, 15, 20, 10])
     println("N = <N>");
 ```
 
 Here we print all ways in which a given list can be partitioned in two lists:
 
-``` rascal-shell
+```rascal-shell
 for([*L1, *L2] := [10, 20, 30, 40, 50])
     println("<L1> and <L2>");
 ```
@@ -2034,14 +2034,14 @@ used as abstract pattern. A literal pattern matches with a value that is identic
 
 A literal pattern matches with a value that is equal to it:
 
-``` rascal-shell
+```rascal-shell
 123 := 123
 "abc" := "abc"
 ```
 
 A literal pattern does not match with a value that is not equal to it:
 
-``` rascal-shell
+```rascal-shell
 123 := 456
 "abc" := "def"
 ```
@@ -2049,13 +2049,13 @@ A literal pattern does not match with a value that is not equal to it:
 If the type of the literal pattern is **incomparable** to the subject’s type, a static type error is produced to
 announce that the match is guaranteed to fail:
 
-``` rascal-shell
+```rascal-shell
 123 := "abc";
 ```
 
 However, a literal pattern can be used to filter among other values:
 
-``` rascal-shell
+```rascal-shell
 value x = "abc";
 123 := x;
 x = 123;
@@ -2079,34 +2079,34 @@ and can match zero or more list or set elements. Optionally the **element type**
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 ```
 
 Using lists:
 
-``` rascal-shell
+```rascal-shell
 if([10, *N, 50] := [10, 20, 30, 40, 50])
    println("Match succeeds, N == <N>");
 ```
 
 the above is equivalent with:
 
-``` rascal-shell
+```rascal-shell
 if([10, *int N, 50] := [10, 20, 30, 40, 50])
    println("Match succeeds, N == <N>");
 ```
 
 Using sets:
 
-``` rascal-shell
+```rascal-shell
 if({10, *S, 50} := {50, 40, 30, 30, 10})
    println("Match succeeds, S == <S>");
 ```
 
 the above is equivalent with:
 
-``` rascal-shell
+```rascal-shell
 if({10, *int S, 50} := {50, 40, 30, 30, 10})
    println("Match succeeds, S == <S>");
 ```
@@ -2128,12 +2128,12 @@ that value and *Pat*<sub>1</sub>, *Pat*<sub>2</sub>, …​, *Pat*<sub>n</sub> m
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ```
 
 Match on node values (recall that the function symbol of a node has to be quoted, see \[Values/Node\]):
 
-``` rascal-shell
+```rascal-shell
 import IO;
 if("f"(A,13,B) := "f"("abc", 13, false))
    println("A = <A>, B = <B>");
@@ -2141,7 +2141,7 @@ if("f"(A,13,B) := "f"("abc", 13, false))
 
 Define a data type and use it to match:
 
-``` rascal-shell
+```rascal-shell
 data Color = red(int N) | black(int N);
 if(red(K) := red(13))
    println("K = <K>");
@@ -2235,13 +2235,13 @@ Frequently used elements of Regular Expression Syntax
 
 Here are some examples of regular expression patterns.
 
-``` rascal
+```rascal
 /\brascal\b/i
 ```
 
 does a case-insensitive match (`i`) of the word `rascal` between word boundaries (`\b`). And
 
-``` rascal
+```rascal
 /^.*?<word:\w+><rest:.*$>/m
 ```
 
@@ -2250,7 +2250,7 @@ does a multi-line match (`m`), matches the first consecutive word characters (`\
 
 A variable reference used to make a non-linear pattern:
 
-``` rascal
+```rascal
 /<x:[a-z]+>---<x>/
 ```
 
@@ -2258,14 +2258,14 @@ matches strings like `abc---abc` that consist of two identical sequences of lett
 that are referenced in a regular expression may also come from the context in which the regular expression occurs. For
 instance,
 
-``` rascal
+```rascal
 /<x><n>/
 ```
 
 will use the current values of `x` and `n` as regular expression. For values `"abc"`, respectively, `3` this would be
 equivalent to the regular expression:
 
-``` rascal
+```rascal
 /abc3/
 ```
 
@@ -2275,13 +2275,13 @@ restrictions on the number of repetitions of an element: `/a{3}/` will match exa
 maximum number of occurrences can be defined. Here is how the repetition count can be inserted by a variable reference
 (where `n` is assumed to have an integer value):
 
-``` rascal
+```rascal
 /a{<n>}/
 ```
 
 Taking this example one step further, we can even write
 
-``` rascal
+```rascal
 /<x:a{<n>}>/
 ```
 
@@ -2290,7 +2290,7 @@ variable.
 
 Multi-line matching:
 
-``` rascal-shell
+```rascal-shell
 /XX$/ := "lineoneXX\nlinetwo";
 /XX$/m := "lineoneXX\nlinetwo";
 /(?m)XX$/ := "lineoneXX\nlinetwo";
@@ -2298,7 +2298,7 @@ Multi-line matching:
 
 Case-insensitive matching:
 
-``` rascal-shell
+```rascal-shell
 /XX/ := "some xx";
 /XX/i := "some xx";
 /(?i)XX/ := "some xx";
@@ -2306,7 +2306,7 @@ Case-insensitive matching:
 
 Single-line mode:
 
-``` rascal-shell
+```rascal-shell
 /a.c/ := "abc";
 /a.c/ := "a\nc";
 /a.c/s := "a\nc";
@@ -2315,7 +2315,7 @@ Single-line mode:
 
 Here are examples, how to escape punctuation characters in regular expressions:
 
-``` rascal-shell
+```rascal-shell
 /a\/b/ := "a/b";
 /a\+b/ := "a+b";
 ```
@@ -2349,7 +2349,7 @@ do not contain duplicates). Completely analogous to list patterns, there are spe
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 ```
 
@@ -2376,7 +2376,7 @@ import IO;
 
 Here we see an example, where all possible splits of a set in two subsets are printed:
 
-``` rascal-shell
+```rascal-shell
 for({*S1, *S2} :={30, 20, 10})
     println("<S1> and <S2>");
 ```
@@ -2410,7 +2410,7 @@ the elements of that tuple in order.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 if(<A, B, C> := <13, false, "abc">)
    println("A = <A>, B = <B>, C = <C>");
@@ -2432,20 +2432,20 @@ Warning: This does not seem to work properly. There is a bug.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 ```
 
 Some example data type which contains generic values as well as specific expressions:
 
-``` rascal-shell
+```rascal-shell
 data Exp = val(value v) | add(Exp l, Exp r) | sub(Exp l, Exp r);
 ex = add(add(val("hello"(1,2)),val("bye")), sub(val(1),val(2)));
 ```
 
 Here we constrain the match to find only Exps:
 
-``` rascal-shell
+```rascal-shell
 visit (ex) {
   case [Exp] str name(_,_) : println("node name is <name>");
 }
@@ -2453,7 +2453,7 @@ visit (ex) {
 
 Here we do not constrain the same pattern:
 
-``` rascal-shell
+```rascal-shell
 visit (ex) {
   case str name(_,_) : println("node name is <name>");
 }
@@ -2481,7 +2481,7 @@ This construct is used for:
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 data Lang = add(Lang l, Lang r) | number(int i);
 data Exp = id(str n) | add(Exp l, Exp r) | subtract(Exp l, Exp r) | otherLang(Lang a);
@@ -2517,20 +2517,20 @@ A variable pattern can act in two roles:
 
 Initialize variable `N`
 
-``` rascal-shell
+```rascal-shell
 N = 10;
 ```
 
 and use `N` in a pattern; its value is used as value to match with:
 
-``` rascal-shell
+```rascal-shell
 N := 10;
 N := 20;
 ```
 
 Use a non-existing variable in a pattern, it is bound when the match succeeds:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 if(M := 10)
    println("Match succeeded, M == <M>");
@@ -2546,7 +2546,7 @@ Variable declaration in abstract pattern.
 
 A variable declaration
 
-``` rascal
+```rascal
 Type Var
 ```
 
@@ -2561,20 +2561,20 @@ of those statements.
 
 Let’s first perform a match that succeeds:
 
-``` rascal-shell
+```rascal-shell
 str S := "abc";
 ```
 
 and now we attempt to inspect the value of `S`:
 
-``` rascal-shell
+```rascal-shell
 S;
 ```
 
 As mentioned above: `S` is only bound in the scope of the match expression\! Let’s explore how bindings work in an if
 statement:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 if(str S := "abc")
    println("Match succeeds, S == \"<S>\"");
@@ -2971,7 +2971,7 @@ treat Boolean operator expressions separately. Although we describe patterns in 
 
 The *match* operator
 
-``` rascal
+```rascal
 Pat := Exp
 ```
 
@@ -3037,7 +3037,7 @@ There are also [library functions](/docs/Libraries#boolean) available for Boolea
 
 Consider the following match of a list
 
-``` rascal-shell
+```rascal-shell
 [1, *int L, 2, *int M] := [1,2,3,2,4]
 ```
 
@@ -3052,7 +3052,7 @@ There are two solutions for the above match:
 
 <!-- end list -->
 
-``` rascal-shell
+```rascal-shell
 import IO;
 for ([1, *int L, 2, *int M] := [1,2,3,2,4])
   println("L: <L>, M: <M>");
@@ -3063,7 +3063,7 @@ a match expression occurs in a larger Boolean expression, a subsequent subexpres
 the actual operator — evaluation backtracks to a previously evaluated match operator to try a next solution. Let’s
 illustrate this by extending the above example:
 
-``` rascal
+```rascal
 [1, *int L, 2, *int M] := [1,2,3,2,4] && size(L) > 0
 ```
 
@@ -3083,21 +3083,21 @@ where we are looking for a solution in which L has a non-empty list as value. Ev
 
 <!-- end list -->
 
-``` rascal-shell
+```rascal-shell
 import IO;
 import List;
 ```
 
 for prints them all:
 
-``` rascal-shell
+```rascal-shell
 for ([1, *int L, 2, *int M] := [1,2,3,2,4] && size(L) > 0)
   println("L: <L>, M: <M>");
 ```
 
 if prints the first
 
-``` rascal-shell
+```rascal-shell
 if ([1, *int L, 2, *int M] := [1,2,3,2,4] && size(L) > 0)
   println("L: <L>, M: <M>");
 ```
@@ -3126,19 +3126,19 @@ Yields `true` when all combinations of values of *Exp*<sub>i</sub> are true.
 
 Are all integers 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 even?
 
-``` rascal-shell
+```rascal-shell
 all(int n <- [1 .. 10], n % 2 == 0);
 ```
 
 Are all integers 0, 2, 4, 6, 8, 10 even?
 
-``` rascal-shell
+```rascal-shell
 all(int n <- [0, 2 .. 10], n % 2 == 0);
 ```
 
 When one of the *Exp*<sub>i</sub> enumerates the elements of an empty list, `all` always returns `true`:
 
-``` rascal-shell
+```rascal-shell
 all(int n <- [], n > 0);
 ```
 
@@ -3187,7 +3187,7 @@ argument expressions evaluates to false, then no binding is done either.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 true && false;
 i <- [1,2,3] && (i % 2 == 0)
 import IO;
@@ -3206,7 +3206,7 @@ for (i <- [1,2,3,4] && (i % 2 == 0))
 
 <!-- end list -->
 
-``` rascal-shell
+```rascal-shell
 import IO;
 int i = 0;
 bool incr() { i += 1; return true; }
@@ -3237,7 +3237,7 @@ Yields `true` when at least one combination of values of *Exp*<sub>i</sub> is tr
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 any(int n <- [1 .. 10], n % 2 == 0);
 ```
 
@@ -3277,7 +3277,7 @@ the `⇐⇒`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 false <==> false;
 false <==> true;
@@ -3317,31 +3317,31 @@ Also see [???](#boolean-isDefined) and [Assignment](#assignment).
 
 This test can, for instance, be used to handle the case that a certain key value is not in a map:
 
-``` rascal-shell
+```rascal-shell
 T = ("a" : 1, "b" : 2);
 ```
 
 Trying to access the key `"c"` will result in an error:
 
-``` rascal-shell
+```rascal-shell
 T["c"];
 ```
 
 Using the `?` operator, we can write:
 
-``` rascal-shell
+```rascal-shell
 T["c"] ? 0;
 ```
 
 This is very useful, if we want to modify the associated value, but are not sure whether it exists:
 
-``` rascal-shell
+```rascal-shell
 T["c"] ? 0 += 1;
 ```
 
 Another example using a list:
 
-``` rascal-shell
+```rascal-shell
 L = [10, 20, 30];
 L[4] ? 0;
 ```
@@ -3381,7 +3381,7 @@ evaluated to determine the result.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 false ==> true;
 ```
 
@@ -3407,7 +3407,7 @@ If no exception is generated during the evaluation of *Exp*, the result is `true
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 T = ("a" : 1, "b" : 2);
 T["b"]?
 T["c"]?
@@ -3439,7 +3439,7 @@ description.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 123 := 456;
 [10, *n, 50] := [10, 20, 30, 40, 50];
 {10, *int n, 50} := {50, 40, 30, 30, 10};
@@ -3472,7 +3472,7 @@ The *not* operator on Boolean values defined as follows:
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 !true;
 ```
 
@@ -3499,7 +3499,7 @@ description.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 123 !:= 456;
 [10, *n, 50] !:= [10, 20, 30, 40];
 {10, *n, 50} !:= {40, 30, 30, 10};
@@ -3545,7 +3545,7 @@ required that both sides of an `||` introduce the same variable names of the sam
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 false || true;
 (i <- [1,2,3,4] && i % 2 == 0) || false
@@ -3590,13 +3590,13 @@ Observe that the syntax of a constructor is identical to the syntax of an functi
 
 First, define a datatype `WF` for word frequencies:
 
-``` rascal-shell
+```rascal-shell
 data WF = wf(str word, int freq);
 ```
 
 Then construct a new `WF` value by calling the constructor `wf` with appropriate arguments:
 
-``` rascal-shell
+```rascal-shell
 wf("Rascal", 10000);
 ```
 
@@ -3714,20 +3714,20 @@ There are also [library functions](/docs/Libraries#datetime) available for DateT
 
 Examples of `datetime` values are:
 
-``` rascal-shell
+```rascal-shell
 $2010-07-15$
 $T07:15:23.123+0100$;
 ```
 
 Now introduce a `datetime` value and assign it to `DT`.
 
-``` rascal-shell
+```rascal-shell
 DT = $2010-07-15T09:15:23.123+03:00$;
 ```
 
 Here are examples of some `datatime` fields:
 
-``` rascal-shell
+```rascal-shell
 DT.isDateTime;
 DT.justDate;
 DT.justTime;
@@ -3761,7 +3761,7 @@ Yields `true` if both arguments are identical `datetime` values and `false` othe
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 $2010-07-15$ == $2010-07-15$;
 $2010-07-15$ == $2010-07-14$;
 ```
@@ -3810,7 +3810,7 @@ Yields `true` if the `datetime` value of *Exp*<sub>1</sub> is later in time than
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 $2010-07-15$ > $2010-07-14$;
 $2011-07-15$ > $2010-07-15$;
 ```
@@ -3838,7 +3838,7 @@ Yields `true` if the `datetime` value of *Exp*<sub>1</sub> is later in time than
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 $2011-07-15$ >= $2010-07-15$;
 $2010-07-15$ >= $2010-07-14$;
 ```
@@ -3866,7 +3866,7 @@ Yields `true` if the `datetime` value of *Exp*<sub>1</sub> is earlier in time th
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 $2010-07-14$ < $2010-07-15$;
 $2011-07-15$ < $2010-07-14$;
 ```
@@ -3894,7 +3894,7 @@ Yields `true` if the `datetime` value of *Exp*<sub>1</sub> is earlier in time th
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 $2010-07-15$ <= $2010-07-15$;
 $2011-07-15$ <= $2010-07-14$;
 ```
@@ -3921,7 +3921,7 @@ Yields `true` if both arguments are different `datetime` values and `false` othe
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 $2010-07-15$ != $2010-07-14$;
 $2010-07-15$ != $2010-07-15$;
 ```
@@ -4026,7 +4026,7 @@ There are also [library functions](/docs/Libraries#list) available for List.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3];
 [<1,10>, <2,20>, <3,30>];
 [1, "b", 3];
@@ -4037,7 +4037,7 @@ There are also [library functions](/docs/Libraries#list) available for List.
 List splicing works as follows: by prefixing `L` by the splice operator, its elements are included as elements in the
 enclosing list:
 
-``` rascal-shell
+```rascal-shell
 L = [1, 2, 3];
 [10, L, 20];
 [10, *L, 20];
@@ -4063,7 +4063,7 @@ example.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [] + 1;
 [1] + 2;
 ```
@@ -4072,13 +4072,13 @@ example.
 
 This is concatenation:
 
-``` rascal-shell
+```rascal-shell
 [1] + [2]
 ```
 
 To append a list to a list, use extra brackets:
 
-``` rascal-shell
+```rascal-shell
 [1] + [[2]]
 ```
 
@@ -4108,13 +4108,13 @@ number of generators *Gen*<sub>1</sub>, *Gen*<sub>2</sub>, *Gen*<sub>3</sub>, �
 
 Computing a list of squares of the numbers from 0 to 10 that are divisible by 3:
 
-``` rascal-shell
+```rascal-shell
 [n * n | int n <- [0 .. 10], n % 3 == 0];
 ```
 
 But we can also include the relevant `n` in the resulting list:
 
-``` rascal-shell
+```rascal-shell
 [n, n * n | int n <- [0 .. 10], n % 3 == 0];
 ```
 
@@ -4142,7 +4142,7 @@ Note that the same operator is overloaded for [List Insert](#insert) and [List A
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3] + [4, 5, 6];
 [] + [1]
 [1] + []
@@ -4151,7 +4151,7 @@ Note that the same operator is overloaded for [List Insert](#insert) and [List A
 
 And overloaded usage for insert and append looks like:
 
-``` rascal-shell
+```rascal-shell
 1 + []
 [] + 1
 ```
@@ -4182,7 +4182,7 @@ occurrence of that element in the first list.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3, 4] - [1, 2, 3];
 [1, 2, 3, 4] - [3];
 [1, 2, 3, 4] - 3;
@@ -4213,7 +4213,7 @@ Yields `true` if both arguments are equal lists and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3] == [1, 2, 3];
 [1, 2, 3] == [3, 2, 1];
 ```
@@ -4238,7 +4238,7 @@ Append](#append) for example.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 1 + []
 1 + [2]
 1 + [2,3]
@@ -4249,13 +4249,13 @@ Append](#append) for example.
 
 This is concatenation:
 
-``` rascal-shell
+```rascal-shell
 [1] + [2]
 ```
 
 To insert a list as an element, use extra brackets:
 
-``` rascal-shell
+```rascal-shell
 [[1]] + [2]
 ```
 
@@ -4282,7 +4282,7 @@ Returns the intersection of the two list values of *Exp*<sub>1</sub> and *Exp*<s
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3, 4, 5] & [4, 5, 6];
 ```
 
@@ -4308,7 +4308,7 @@ Yields `true` if both arguments are unequal lists and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3] != [3, 2, 1];
 [1, 2, 3] != [1, 2, 3];
 ```
@@ -4336,13 +4336,13 @@ a tuple for each combination of values from both arguments.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3] * [4, 5, 6];
 ```
 
 Here is a concise way to create a deck of cards:
 
-``` rascal-shell
+```rascal-shell
 ["clubs", "hearts", "diamonds", "spades"] * [1 .. 13];
 ```
 
@@ -4426,13 +4426,13 @@ Some common use cases (with `begin` ⇐ `end`):
 
 Let’s put this into practice now.
 
-``` rascal-shell
+```rascal-shell
 L = [0, 10, 20, 30, 40, 50, 60, 70, 80];
 ```
 
 Slices with begin \< end
 
-``` rascal-shell
+```rascal-shell
 L[1..3];
 L[1..];       // empty end => end of list
 L[..3];       // empty begin => first element of list
@@ -4441,14 +4441,14 @@ L[..];        // both empty => whole list
 
 Slices with begin \>= end
 
-``` rascal-shell
+```rascal-shell
 L[3..1];      // slice contains elements with indices 3 and 2 (in that order)
 L[3..3];      // empty slice when begin == end
 ```
 
 Slices with negative begin or end:
 
-``` rascal-shell
+```rascal-shell
 L[2..-2];     // equivalent to L[2..7]
 L[2..7];
 L[-4..-2];    // equivalent to L[5..7]
@@ -4457,14 +4457,14 @@ L[5..7];
 
 Slices with an explicit second index:
 
-``` rascal-shell
+```rascal-shell
 L[1,3..6];
 L[5,3..];
 ```
 
 Explore error cases:
 
-``` rascal-shell
+```rascal-shell
 L[..10];
 L[1..20];
 ```
@@ -4489,19 +4489,19 @@ The operator `*` splices the elements of a list in an enclosing list.
 
 Consider the following list in which the list `[10, 20, 30]` occurs as list element. It has as type `list[value]`:
 
-``` rascal-shell
+```rascal-shell
 [1, 2, [10, 20, 30], 3, 4];
 ```
 
 The effect of splicing the same list element in the enclosing list gives a flat list of type `list[int]`:
 
-``` rascal-shell
+```rascal-shell
 [1, 2, *[10, 20, 30], 3, 4];
 ```
 
 The same example can be written as:
 
-``` rascal-shell
+```rascal-shell
 L = [10, 20, 30];
 [1, 2, *L, 3, 4];
 ```
@@ -4533,7 +4533,7 @@ otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3] < [1, 2, 3, 4];
 [1, 2, 3, 4] < [1, 2, 3, 4];
 [1, 3, 5] < [1, 2, 3, 4, 5]
@@ -4562,7 +4562,7 @@ otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3, 4] > [1, 2, 3];
 [1, 2, 3, 4] > [1, 2, 3, 4];
 [1, 2, 3, 4] > [1, 2, 3];
@@ -4592,7 +4592,7 @@ otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3] <= [1, 2, 3, 4];
 [1, 2, 3] <= [1, 2, 3];
 [1, 3, 5] <= [1, 2, 3, 4, 5];
@@ -4624,14 +4624,14 @@ case, the exception `IndexOutOfBounds` is thrown.
 
 Introduce a list, assign it to L and retrieve the element with index 1:
 
-``` rascal-shell
+```rascal-shell
 L = [10, 20, 30];
 L[1];
 ```
 
 Explore an error case:
 
-``` rascal-shell
+```rascal-shell
 L[5];
 ```
 
@@ -4658,7 +4658,7 @@ otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3, 4] >= [1, 2, 3];
 [1, 2, 3, 4] >= [1, 2, 3, 4];
 [1, 2, 3, 4] >= [1, 2, 3];
@@ -4688,7 +4688,7 @@ otherwise. The type of *Exp*<sub>1</sub> should be compatible with the element t
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 2 in [1, 2, 3];
 4 in [1, 2, 3];
 ```
@@ -4716,7 +4716,7 @@ otherwise. The type of *Exp*<sub>1</sub> should be compatible with the element t
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 4 notin [1, 2, 3];
 2 notin [1, 2, 3];
 ```
@@ -4776,14 +4776,14 @@ There are also [library functions](/docs/Libraries#listrelation) available for L
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [<1,10>, <2,20>, <3,30>]
 ```
 
 instead of lrel\[int,int\] we can also give `list[tuple[int,int]]` as type of the above expression remember that these
 types are interchangeable.
 
-``` rascal-shell
+```rascal-shell
 [<"a",10>, <"b",20>, <"c",30>]
 [<"a", 1, "b">, <"c", 2, "d">]
 ```
@@ -4810,7 +4810,7 @@ Returns a binary relation that is the [Cartesian product](http://en.wikipedia.or
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1, 2, 3] * [9];
 [1, 2, 3] * [10, 11];
 ```
@@ -4837,7 +4837,7 @@ Returns the composition of two binary list relations.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [<1,10>, <2,20>, <3,15>] o [<10,100>, <20,200>];
 ```
 
@@ -4869,7 +4869,7 @@ Return a list with all values of that field. *Name* stands for itself and is not
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 lrel[str street, int nm] R = [<"abc", 1>, <"abc", 2>, <"def", 4>, <"def", 5>];
 R.street;
 ```
@@ -4897,7 +4897,7 @@ contains tuples that are the result from concatenating the elements from both ar
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [<1,2>, <10,20>] join [<2,3>];
 [<1,2>] join [3, 4];
 [<1,2>, <10,20>] join [<2,3>, <20,30>];
@@ -4943,7 +4943,7 @@ Closure](#transitiveclosure)):
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [<1,2>, <2,3>, <3,4>]*;
 ```
 
@@ -4990,7 +4990,7 @@ these index values as first element with the index values removed from the tuple
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 R = [<1,10>, <2,20>, <1,11>, <3,30>, <2,21>];
 R[1];
 R[{1}];
@@ -5003,7 +5003,7 @@ RR[1,_];
 
 Introduce a relation with economic data and assign it to `GDP`:
 
-``` rascal-shell
+```rascal-shell
 lrel[str country, int year, int amount] GDP =
 [<"US", 2008, 14264600>, <"EU", 2008, 18394115>,
  <"Japan", 2008, 4923761>, <"US", 2007, 13811200>,
@@ -5012,13 +5012,13 @@ lrel[str country, int year, int amount] GDP =
 
 and then retrieve the information for the index `"Japan"`:
 
-``` rascal-shell
+```rascal-shell
 GDP["Japan"];
 ```
 
 or rather for the indices `"Japan"` and `2008`:
 
-``` rascal-shell
+```rascal-shell
 GDP["Japan", 2008];
 ```
 
@@ -5057,7 +5057,7 @@ then the transitive closure R+ can be defined as
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [<1,2>, <2,3>, <3,4>]+;
 ```
 
@@ -5098,7 +5098,7 @@ Location values are represented by the type `loc` and serve the following purpos
 URIs are explained in [Uniform Resource Identifier](http://en.wikipedia.org/wiki/Uniform_Resource_Identifier). From
 their original definition in RFC3986 we cite the following useful overview of an URI:
 
-``` rascal
+```rascal
          foo://example.com:8042/over/there?name=ferret#nose
          \_/   \______________/\_________/ \_________/ \__/
           |           |            |            |        |
@@ -5167,26 +5167,26 @@ Supported protocols are:
 Locations with specific position information should always be generated automatically but for the curious here is an
 example:
 
-``` rascal-shell
+```rascal-shell
 |file:///home/paulk/pico.trm|(0,1,<2,3>,<4,5>)
 ```
 
 Note that this is equivalent to using the `home` scheme:
 
-``` rascal-shell
+```rascal-shell
 |home://pico.trm|(0,1,<2,3>,<4,5>)
 ```
 
 You could read a webpage:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 println(readFile(|http://www.example.org|))
 ```
 
 Addition on locations creates longer paths:
 
-``` rascal-shell
+```rascal-shell
 x = |tmp://myTempDirectory|;
 x += "myTempFile.txt";
 ```
@@ -5213,13 +5213,13 @@ Adds a segment to the path component of a location. This concatenation introduce
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 |tmp:///myDir| + "myFile";
 ```
 
 To get the original back, you can use the `parent` field:
 
-``` rascal-shell
+```rascal-shell
 (|tmp:///myDir| + "myFile").parent
 ```
 
@@ -5426,7 +5426,7 @@ The following functions are provided for maps:
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ("pear" : 1, "apple" : 3, "banana" : 0);
 ```
 
@@ -5452,7 +5452,7 @@ Returns the composition of two maps.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Map;
 ("one" : 1, "two" : 2) o (1 : 10, 2 : 20);
 ```
@@ -5486,25 +5486,25 @@ A map comprehension consists of a number of two contributing expressions *Exp*<s
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ```
 
 Introduce a map of `fruits`:
 
-``` rascal-shell
+```rascal-shell
 fruits = ("pear" : 1, "apple" : 3, "banana" : 0, "berry" : 25, "orange": 35);
 import String;
 ```
 
 Use a map comprehension to filter fruits with a name of at most 5 characters:
 
-``` rascal-shell
+```rascal-shell
 (fruit : fruits[fruit] | fruit <- fruits, size(fruit) <= 5);
 ```
 
 Use a map comprehension to filter fruits with an associated value larger than 10:
 
-``` rascal-shell
+```rascal-shell
 (fruit : fruits[fruit] | fruit <- fruits, fruits[fruit] > 10);
 ```
 
@@ -5531,7 +5531,7 @@ in *Exp*<sub>1</sub> that do have a key that does not occur in *Exp*<sub>2</sub>
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ("apple": 1, "pear": 2) - ("banana": 3, "apple": 4);
 ```
 
@@ -5557,7 +5557,7 @@ Yields `true` if both arguments contain the same key/value pairs, and `false` ot
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ("apple": 1, "pear": 2) == ("pear": 2, "apple": 1);
 ("apple": 1, "pear": 2) == ("apple": 1, "banana": 3)
 ```
@@ -5585,7 +5585,7 @@ key/value pairs that occur in both maps.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ("apple": 1, "pear": 2) & ("banana": 3, "apple": 1);
 ("apple": 1, "pear": 2) & ("banana": 3, "apple": 4);
 ```
@@ -5612,7 +5612,7 @@ Yields `true` if both arguments contain different key/value pairs, and `false` o
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ("apple": 1, "pear": 2) != ("apple": 1, "banana": 3);
 ("apple": 1, "pear": 2) != ("pear": 2, "apple": 1);
 ```
@@ -5640,7 +5640,7 @@ the values of *Exp*<sub>1</sub> and *EXp*<sub>2</sub> are not equal, and `false`
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ("apple": 1, "pear": 2) < ("pear": 2, "apple": 1, "banana" : 3);
 ("apple": 1, "pear": 2) < ("apple": 1, "banana" : 3);
 ```
@@ -5668,7 +5668,7 @@ the values of *Exp*<sub>1</sub> and *EXp*<sub>2</sub> are not equal, and `false`
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ("pear": 2, "apple": 1, "banana" : 3) > ("apple": 1, "pear": 2);
 ("apple": 1, "banana" : 3) > ("apple": 1, "pear": 2);
 ```
@@ -5696,7 +5696,7 @@ the values of *Exp*<sub>1</sub> and *Exp*<sub>2</sub> are equal, and `false` oth
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ("apple": 1, "pear": 2) <= ("pear": 2, "apple": 1);
 ("apple": 1, "pear": 2) <= ("pear": 2, "apple": 1, "banana" : 3);
 ("apple": 1, "pear": 2) <= ("apple": 1, "banana" : 3);
@@ -5725,12 +5725,12 @@ associated value. If this key does not occur in the map, the exception `NoSuchKe
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ```
 
 Introduce a map, assign it to `colors`, and retrieve the element with index `"trumps"`:
 
-``` rascal-shell
+```rascal-shell
 colors = ("hearts":"red", "clover":"black",
           "trumps":"black", "clubs":"red");
 colors["trumps"];
@@ -5738,7 +5738,7 @@ colors["trumps"];
 
 Explore some erroneous subscription expressions:
 
-``` rascal-shell
+```rascal-shell
 colors[0];
 colors["square"];
 ```
@@ -5766,7 +5766,7 @@ the values of *Exp*<sub>1</sub> and *Exp*<sub>2</sub> are equal, and `false` oth
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ("pear": 2, "apple": 1) >= ("apple": 1, "pear": 2);
 ("pear": 2, "apple": 1, "banana" : 3) >= ("apple": 1, "pear": 2);
 ("apple": 1, "banana" : 3) >= ("apple": 1, "pear": 2);
@@ -5796,7 +5796,7 @@ same key in common, that key will be associated in the union with the value asso
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ("apple": 1, "pear": 2) + ("banana": 3, "kiwi": 4);
 ("apple": 1, "pear": 2) + ("banana": 3, "apple": 4);
 ```
@@ -5828,7 +5828,7 @@ otherwise. The type of *Exp*<sub>1</sub> should be compatible with the key type 
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "pear" in ("apple": 1, "pear": 2);
 "pineapple" in ("apple": 1, "pear": 2);
 ```
@@ -5856,7 +5856,7 @@ otherwise. The type of *Exp*<sub>1</sub> should be compatible with the key type 
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "pineapple" notin ("apple": 1, "pear": 2);
 "pear" notin ("apple": 1, "pear": 2);
 ```
@@ -5909,19 +5909,19 @@ The following are provided for nodes:
 
 A node with name "my\_node" and three arguments:
 
-``` rascal-shell
+```rascal-shell
 "my_node"(1, true, "abc");
 ```
 
 A nested node structure:
 
-``` rascal-shell
+```rascal-shell
 "my_node1"(1, "my_node2"(3.5, ["a", "b", "c"]), true);
 ```
 
 A node with named fields:
 
-``` rascal-shell
+```rascal-shell
 "my_node2"(1,2,size=2,age=24);
 ```
 
@@ -5957,7 +5957,7 @@ each node are pairwise equal, otherwise `false`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "f"(1, "abc", true) == "f"(1, "abc", true);
 "f"(1, "abc", true) == "f"(1, "def", true);
 ```
@@ -5986,7 +5986,7 @@ m`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "g"(3) > "f"(10, "abc");
 "f"(10, "abc") > "f"(10);
 ```
@@ -6015,7 +6015,7 @@ G(M1, …​, Mm)` when: \* *N* is equal to *M*, or \* *F* is lexicographically 
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "g"(3) >= "f"(10, "abc");
 "f"(10, "abc") >= "f"(10);
 "f"(10, "abc") >= "f"(10, "abc");
@@ -6045,7 +6045,7 @@ m`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "f"(10, "abc") < "g"(3);
 "f"(10) < "f"(10, "abc");
 ```
@@ -6074,7 +6074,7 @@ G(M1, …​, Mm)` when: \* *N* is equal to *M*, or \* *F* is lexicographically 
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "f"(10, "abc") <= "f"(10, "abc");
 "f"(10) <= "f"(10, "abc");
 ```
@@ -6102,7 +6102,7 @@ children of each node is pairwise unequal, otherwise `true`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "f"(1, "abc", true) != "g"(1, "abc", true);
 "f"(1, "abc", true) != "f"(1, "abc", true);
 ```
@@ -6188,13 +6188,13 @@ Some common use cases (with `begin` ⇐ `end`):
 
 Let’s put this into practice now.
 
-``` rascal-shell
+```rascal-shell
 ND = "f"(0, "abc", 20, false, 40, [3,4,5], 60, {"a", "b"}, 80);
 ```
 
 Slices with begin \< end
 
-``` rascal-shell
+```rascal-shell
 ND[1..3];
 ND[1..];       // empty end => end of list of children
 ND[..3];       // empty begin => first child of list
@@ -6203,14 +6203,14 @@ ND[..];        // both empty => whole list of children
 
 Slices with begin \>= end
 
-``` rascal-shell
+```rascal-shell
 ND[3..1];      // slice contains children with indices 3 and 2 (in that order)
 ND[3..3];      // empty slice when begin == end
 ```
 
 Slices with negative begin or end:
 
-``` rascal-shell
+```rascal-shell
 ND[2..-2];     // equivalent to ND[2..7]
 ND[2..7];
 ND[-4..-2];    // equivalent to ND[5..7]
@@ -6219,14 +6219,14 @@ ND[5..7];
 
 Slices with an explicit second index:
 
-``` rascal-shell
+```rascal-shell
 ND[1,3..6];
 ND[5,3..];
 ```
 
 Explore error cases:
 
-``` rascal-shell
+```rascal-shell
 ND[..10];
 ND[1..20];
 ```
@@ -6255,12 +6255,12 @@ the node. If this is not the case, the exception `IndexOutOfBounds` is thrown.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ```
 
 Introduce a node, assign it to F and retrieve the various arguments:
 
-``` rascal-shell
+```rascal-shell
 F = "f"(1, "abc", false);
 F[0]
 F[1]
@@ -6269,7 +6269,7 @@ F[2]
 
 Explore an error case:
 
-``` rascal-shell
+```rascal-shell
 F[3];
 ```
 
@@ -6341,7 +6341,7 @@ Yields the numerical sum of the values of *Exp*<sub>1</sub> and *Exp*<sub>2</sub
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 12 + 13
 12 + 13.5
 ```
@@ -6370,7 +6370,7 @@ If the value of *Exp* is `true` then the value of *Exp*<sub>1</sub> else the val
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 (3 > 2) ? 10 : 20
 (3 > 20) ? 10 : 20
 ```
@@ -6399,7 +6399,7 @@ Yields the result of dividing the value of *Exp<sub>1</sub>* by the value of *Ex
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 12 / 3
 10 / 3
 12 / 3.0
@@ -6431,7 +6431,7 @@ Yields `true` if the value of both arguments is numerically equal, and `false` o
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 12 == 12
 12 == 12.0
 12 == 13
@@ -6465,7 +6465,7 @@ otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 13 > 12
 12 > 13
 13.5 > 12
@@ -6497,7 +6497,7 @@ and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 13 >= 12
 12 >= 13
 13.5 >= 12
@@ -6529,7 +6529,7 @@ otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 13 < 12
 12 < 13
 13.5 < 12
@@ -6561,7 +6561,7 @@ Yields `true` if the value of *Exp<sub>1</sub>* is numerically less than or equa
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 13 <= 12
 12 <= 13
 13.5 <= 12
@@ -6592,7 +6592,7 @@ Yields the result of multiplying the values of *Exp<sub>1</sub>* and *Exp<sub>2<
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 12 * 13
 12 * 13.5
 -12*13
@@ -6621,7 +6621,7 @@ Yields the negated values of *Exp*.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 -12
 -13.5
 - -12
@@ -6651,7 +6651,7 @@ Yields `true` if the value of both arguments is numerically unequal, and `false`
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 12 != 13
 12 != 12
 12 != 13.0
@@ -6682,7 +6682,7 @@ Yields the remainder when dividing the of *Exp*<sub>1</sub> by the value of *Exp
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 12 % 5
 12 % 6
 ```
@@ -6691,7 +6691,7 @@ Yields the remainder when dividing the of *Exp*<sub>1</sub> by the value of *Exp
 
 Remainder is only defined on integers:
 
-``` rascal-shell
+```rascal-shell
 13.5 % 6
 ```
 
@@ -6719,7 +6719,7 @@ Yields the numerical result of subtracting the value of *Exp*<sub>2</sub> from t
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 13 - 12
 13.5 - 12
 12 - 13
@@ -6747,7 +6747,7 @@ numeric expressions that are not integers.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 [1 .. 10];
 [1, 3 .. 10];
 [0.5, 3.2 .. 10];
@@ -6762,7 +6762,7 @@ Ranges are mostly used to loop over ranges of integers.
 
 In some cases ranges are empty where one could have expected at least one element:
 
-``` rascal-shell
+```rascal-shell
 [1, 3 .. -10];
 ```
 
@@ -6819,13 +6819,13 @@ A type literal wraps a `Symbol` and a map of \`Production\`s.
 
 First import the module `Type`:
 
-``` rascal-shell
+```rascal-shell
 import Type;
 ```
 
 Builtin types can be constructed without definitions, so the reified type representation is simple:
 
-``` rascal-shell
+```rascal-shell
 #int
 #list[int]
 #rel[int from, int to]
@@ -6833,34 +6833,34 @@ Builtin types can be constructed without definitions, so the reified type repres
 
 to get the symbol from the reified type:
 
-``` rascal-shell
+```rascal-shell
 #int.symbol
 ```
 
 or we can use some definitions and reify the defined type to see a different behavior:
 
-``` rascal-shell
+```rascal-shell
 data Nat = zero() | succ(Nat prev) | add(Nat l, Nat r) | mul(Nat l, Nat r);
 #Nat
 ```
 
 and we can get an abstract definition of the constructors of the \[AlgebraicDataType\]:
 
-``` rascal-shell
+```rascal-shell
 import Type;
 #Nat.definitions[adt("Nat",[])]
 ```
 
 we could go the other way around and construct a type literal dynamically:
 
-``` rascal-shell
+```rascal-shell
 type(\int(),())
 type(\int(),()) == #int
 ```
 
 we use type literals often in IO to express an expected type:
 
-``` rascal-shell
+```rascal-shell
 import ValueIO;
 int testInt = readTextValueString(#int, "1");
 tuple[int,int] testTuple = readTextValueString(#tuple[int,int], "\<1,2\>");
@@ -6922,14 +6922,14 @@ There are also [library functions](/docs/Libraries#relation) available for Relat
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {<1,10>, <2,20>, <3,30>}
 ```
 
 instead of `rel[int,int]` we can also give `set[tuple[int,int]]` as type of the above expression remember that these
 types are interchangeable.
 
-``` rascal-shell
+```rascal-shell
 {<"a",10>, <"b",20>, <"c",30>}
 {<"a", 1, "b">, <"c", 2, "d">}
 ```
@@ -6956,7 +6956,7 @@ Returns a binary relation that is the [Cartesian product](http://en.wikipedia.or
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3} * {9};
 {1, 2, 3} * {10, 11};
 ```
@@ -6983,7 +6983,7 @@ Returns the composition of two binary relations.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import Relation;
 {<1,10>, <2,20>, <3,15>} o {<10,100>, <20,200>};
 ```
@@ -7015,7 +7015,7 @@ set with all values of that field. *Name* stands for itself and is not evaluated
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 rel[str street, int nm] R = {<"abc", 1>, <"abc", 2>, <"def", 4>, <"def", 5>};
 R.street;
 ```
@@ -7043,7 +7043,7 @@ are the result from concatenating the elements from both arguments.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {<1,2>, <10,20>} join {<2,3>};
 {<1,2>} join {3, 4};
 {<1,2>, <10,20>} join {<2,3>, <20,30>};
@@ -7085,7 +7085,7 @@ TransitiveClosure](#transitiveclosure)): \* R\* = R<sup>0</sup> + R<sup>1</sup> 
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {<1,2>, <2,3>, <3,4>}*;
 ```
 
@@ -7131,7 +7131,7 @@ these index values as first element with the index values removed from the tuple
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 R = {<1,10>, <2,20>, <1,11>, <3,30>, <2,21>};
 R[1];
 R[{1}];
@@ -7144,7 +7144,7 @@ RR[1,_];
 
 Introduce a relation with economic data and assign it to `GDP`:
 
-``` rascal-shell
+```rascal-shell
 rel[str country, int year, int amount] GDP =
 {<"US", 2008, 14264600>, <"EU", 2008, 18394115>,
  <"Japan", 2008, 4923761>, <"US", 2007, 13811200>,
@@ -7153,13 +7153,13 @@ rel[str country, int year, int amount] GDP =
 
 and then retrieve the information for the index `"Japan"`:
 
-``` rascal-shell
+```rascal-shell
 GDP["Japan"];
 ```
 
 or rather for the indices `"Japan"` and `2008`:
 
-``` rascal-shell
+```rascal-shell
 GDP["Japan", 2008];
 ```
 
@@ -7198,13 +7198,13 @@ then the transitive closure R+ can be defined as
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {<1,2>, <2,3>, <3,4>}+;
 ```
 
 We can also simply (but not necessarily efficiently) define transitive closure ourselves:
 
-``` rascal-shell
+```rascal-shell
 rel[int,int] tclosure(rel[int,int] R) {
    tc = R;
    while(true){
@@ -7284,7 +7284,7 @@ The following operators are provided on sets:
 
 There are also [library functions](/docs/Libraries#set) available for Sets. .Examples \#\# Set types
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3};
 {<1,10>, <2,20>, <3,30>};
 {1, "b", 3};
@@ -7302,19 +7302,19 @@ Note that
 
 Introduce a set variable `S`
 
-``` rascal-shell
+```rascal-shell
 S = {1, 2, 3};
 ```
 
 and observe how the value of `S` is added as single element in another set:
 
-``` rascal-shell
+```rascal-shell
 {10, S, 20};
 ```
 
 or how its elements are added as elements to the other set:
 
-``` rascal-shell
+```rascal-shell
 {10, *S, 20};
 ```
 
@@ -7342,7 +7342,7 @@ number of generators *Gen*<sub>1</sub>, *Gen*<sub>2</sub>, *Gen*<sub>3</sub>, �
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 { N * N | int N <- [0 .. 10]};
 { N * N | int N <- [0 .. 10], N % 3 == 0};
 ```
@@ -7372,7 +7372,7 @@ computed. The difference is computed by removing all elements of the second set 
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3, 4} - {1, 2, 3};
 {1, 2, 3, 4} - {3};
 {1, 2, 3, 4} - 3;
@@ -7401,7 +7401,7 @@ Yields `true` if both arguments are equal sets and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3} == {3, 2, 1};
 {1, 2, 3} == {1, 2};
 ```
@@ -7429,7 +7429,7 @@ The `+` operator will add elements to sets.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3} + 4;
 1 + { 2, 3, 4};
 {1} + 1;
@@ -7461,7 +7461,7 @@ the common elements of both sets.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3, 4, 5} & {4, 5, 6};
 ```
 
@@ -7487,7 +7487,7 @@ Yields `true` if both arguments are unequal sets and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3} != {3, 2, 1};
 {1, 2, 3} != {1, 2};
 ```
@@ -7515,13 +7515,13 @@ tuple for each combination of values from both arguments.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3} * {4, 5, 6};
 ```
 
 A card deck can be created as follows:
 
-``` rascal-shell
+```rascal-shell
 {"clubs", "hearts", "diamonds", "spades"} * {1,2,3,4,5,6,7,8,9,10,11,12,13};
 ```
 
@@ -7545,19 +7545,19 @@ The operator `*` splices the elements of a set in an enclosing set.
 
 Consider the following set in which the set `{10, 20, 30}` occurs as set element. It has as type `set[value]`:
 
-``` rascal-shell
+```rascal-shell
 {1, 2, {10, 20, 30}, 3, 4};
 ```
 
 The effect of splicing the same set element in the enclosing set gives a flat list of type `set[int]`:
 
-``` rascal-shell
+```rascal-shell
 {1, 2, *{10, 20, 30}, 3, 4};
 ```
 
 The same example can be written as:
 
-``` rascal-shell
+```rascal-shell
 S = {10, 20, 30};
 {1, 2, *S, 3, 4};
 ```
@@ -7585,7 +7585,7 @@ otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3} < {1, 2, 3, 4};
 {1, 2, 3} < {1, 3, 4};
 {1, 2, 3} < {1, 2, 3};
@@ -7614,7 +7614,7 @@ otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3, 4} > {3, 2, 1};
 {1, 2, 3, 4} > {4, 3, 2, 1};
 ```
@@ -7642,7 +7642,7 @@ otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3} <= {1, 2, 3, 4};
 {1, 2, 3} <= {1, 2, 3};
 ```
@@ -7669,7 +7669,7 @@ Yields `true` if the value of *Exp*<sub>1</sub> is a superset of the value of *E
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3, 4} >= {3, 2, 1};
 {1, 2, 3, 4} >= {4, 3, 2, 1};
 ```
@@ -7693,7 +7693,7 @@ Insert](#insert) instead.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 {1, 2, 3} + {4, 5, 6};
 {1,2,3} + {2,3,4};
 {1, 2, 3} + {3};
@@ -7723,7 +7723,7 @@ otherwise. The type of *Exp*<sub>1</sub> should be compatible with the element t
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 2 in {1, 2, 3};
 4 in {1, 2, 3};
 ```
@@ -7751,7 +7751,7 @@ otherwise. The type of *Exp*<sub>1</sub> should be compatible with the element t
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 4 notin {1, 2, 3};
 4 notin {1, 2, 3, 4};
 ```
@@ -7851,7 +7851,7 @@ There are also [library functions](/docs/Libraries#string) available for Strings
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 N = 13;
 "The value of N is <N>";
 "The value of N*N is <N*N>";
@@ -7861,7 +7861,7 @@ N = 13;
 As you can see the string value of variables and expressions is interpolated in the result as expected. \<br\> Some
 examples of more advances string interpolation
 
-``` rascal-shell
+```rascal-shell
 "N is <if(N < 10){> small <} else {> large <}>";
 "N is <if(N < 10){> small <} else {> large (<N>)<}>";
 "before <for(x<-[1..5]){>a <x> b <}>after";
@@ -7869,7 +7869,7 @@ examples of more advances string interpolation
 
 multi-line string
 
-``` rascal-shell
+```rascal-shell
 import IO;
 println("hello
 this
@@ -7879,7 +7879,7 @@ this
 
 multi-line string with margin:
 
-``` rascal-shell
+```rascal-shell
 if (true)
   println("this is
           'what
@@ -7890,7 +7890,7 @@ if (true)
 
 auto indent:
 
-``` rascal-shell
+```rascal-shell
 str genMethod(str n) = "int <n>() {
                        '  return 0;
                        '}";
@@ -7929,7 +7929,7 @@ Note that to concatenate other types of values into a string, you can use [Strin
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "abc" + "def";
 ```
 
@@ -7955,7 +7955,7 @@ Yields `true` if both arguments are identical and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "abc" == "abc";
 "abc" == "defghi";
 ```
@@ -7983,7 +7983,7 @@ Yields `true` if the string value of *Exp*<sub>1</sub> is strictly lexicographic
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "abcdef" > "abc";
 "defghi" > "abcdef";
 "a" > "abc";
@@ -8012,7 +8012,7 @@ Yields `true` if the string value of *Exp*<sub>1</sub> is lexicographically grea
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "abc" >= "abc";
 "abcdef" >= "abc";
 "defghi" >= "abcdef";
@@ -8042,7 +8042,7 @@ Yields `true` if the string value of *Exp*<sub>1</sub> is strictly lexicographic
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "abc" < "abcdef";
 "abc" < "defghi";
 "abc" < "a";
@@ -8071,7 +8071,7 @@ Yields `true` if the string value of *Exp*<sub>1</sub> is lexicographically less
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "abc" <= "abc";
 "abc" <= "abcdef";
 "abc" <= "defghi";
@@ -8100,7 +8100,7 @@ Yields `true` if both arguments are not identical and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 "abc" != "defghi";
 "abc" != "abc";
 ```
@@ -8188,13 +8188,13 @@ Some common use cases (with `begin` ⇐ `end`):
 
 Let’s put this into practice now.
 
-``` rascal-shell
+```rascal-shell
 S = "abcdefghi";
 ```
 
 Slices with begin \< end
 
-``` rascal-shell
+```rascal-shell
 S[1..3];
 S[1..];       // empty end => end of string
 S[..3];       // empty begin => first character of string
@@ -8203,14 +8203,14 @@ S[..];        // both empty => whole string
 
 Slices with begin \>= end
 
-``` rascal-shell
+```rascal-shell
 S[3..1];      // slice contains characters with indices 3 and 2 (in that order)
 S[3..3];      // empty slice when begin == end
 ```
 
 Slices with negative begin or end:
 
-``` rascal-shell
+```rascal-shell
 S[2..-2];     // equivalent to S[2..7]
 S[2..7];
 S[-4..-2];    // equivalent to S[5..7]
@@ -8219,14 +8219,14 @@ S[5..7];
 
 Slices with an explicit second index:
 
-``` rascal-shell
+```rascal-shell
 S[1,3..6];
 S[5,3..];
 ```
 
 Explore error cases:
 
-``` rascal-shell
+```rascal-shell
 S[..10];
 S[1..20];
 ```
@@ -8257,14 +8257,14 @@ not the case, the exception `IndexOutOfBounds` is thrown.
 
 Introduce a string, assign it to S and retrieve the element with index 1:
 
-``` rascal-shell
+```rascal-shell
 S = "abc";
 S[1];
 ```
 
 Explore an error case:
 
-``` rascal-shell
+```rascal-shell
 S[5];
 ```
 
@@ -8319,7 +8319,7 @@ The following operators are provided for tuples:
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 tuple[str first, str last, int age] P = <"Jo","Jones",35>;
 P.first;
 P.first = "Bo";
@@ -8347,7 +8347,7 @@ Returns a tuple consisting of the concatenation of the tuple elements of *Exp*<s
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 <"abc", 1, 2.5> + <true, "def">;
 ```
 
@@ -8373,7 +8373,7 @@ Yields `true` if both tuples are identical and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 <1, "abc", true> == <1, "abc", true>;
 ```
 
@@ -8400,7 +8400,7 @@ the value of that field. *Name* stands for itself and is not evaluated.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 tuple[int key, str val] T = <1, "abc">;
 T.val;
 ```
@@ -8434,7 +8434,7 @@ Otherwise the result if `false`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 <1, "def", true> > <1, "abc", true>;
 ```
 
@@ -8467,7 +8467,7 @@ Otherwise the result if `false`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 <1, "abc", true> > <1, "abc", true>;
 <1, "def", true> > <1, "abc", true>;
 ```
@@ -8501,7 +8501,7 @@ Otherwise the result if `false`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 <1, "abc", true> < <1, "def", true>;
 ```
 
@@ -8534,7 +8534,7 @@ Otherwise the result if `false`.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 <1, "abc", true> <= <1, "abc", true>;
 <1, "abc", true> <= <1, "def", true>;
 ```
@@ -8561,7 +8561,7 @@ Yields `true` if both tuples are not identical and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 <1, "abc", true> != <1, "abc">;
 <1, "abc", true> != <1, "abc", true>;
 ```
@@ -8584,7 +8584,7 @@ Subscription retrieves the tuple element with index *Exp*<sub>2</sub> from the t
 
 Introduce a tuple, assign it to T and retrieve the element with index 0:
 
-``` rascal-shell
+```rascal-shell
 T = <"mon", 1>;
 T[0];
 ```
@@ -8644,7 +8644,7 @@ Typing](#staticTyping)) of the types of *Exp*<sub>2</sub> and *Exp*<sub>3</sub>.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ( 3 > 2 ) ? 30 : 40;
 ( 3 < 2 ) ? "abc" : {3, 4};
 ```
@@ -8671,12 +8671,12 @@ Yields `true` if both arguments are identical and `false` otherwise.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ```
 
 Introduce two variables `X`, `Y` and `Z` and force them to be of type `value`:
 
-``` rascal-shell
+```rascal-shell
 value X = "abc";
 value Y = "abc";
 value Z = 3.14;
@@ -8684,13 +8684,13 @@ value Z = 3.14;
 
 Now compare `X` and `Y` for equality:
 
-``` rascal-shell
+```rascal-shell
 X == Y;
 ```
 
 and `X` and `Z`:
 
-``` rascal-shell
+```rascal-shell
 X == Z;
 ```
 
@@ -8728,7 +8728,7 @@ above) the value of *Exp*<sub>1</sub>, and `false` otherwise.
 
 Introduce two variables `X`, `Y` and `Z` and force them to be of type `value`:
 
-``` rascal-shell
+```rascal-shell
 value X = "def";
 value Y = "abc";
 value Z = 3.14;
@@ -8736,13 +8736,13 @@ value Z = 3.14;
 
 Now compare `X` and `Y`:
 
-``` rascal-shell
+```rascal-shell
 X > Y;
 ```
 
 and `X` and `Z`:
 
-``` rascal-shell
+```rascal-shell
 X > Z;
 ```
 
@@ -8780,7 +8780,7 @@ defined above) the value of *Exp*<sub>1</sub> or if both values are equal, and `
 
 Introduce two variables `X`, `Y` and `Z` and force them to be of type `value`:
 
-``` rascal-shell
+```rascal-shell
 value X = "def";
 value Y = "abc";
 value Z = 3.14;
@@ -8788,13 +8788,13 @@ value Z = 3.14;
 
 Now compare `X` and `Y`:
 
-``` rascal-shell
+```rascal-shell
 X >= Y;
 ```
 
 and `X` and `Z`:
 
-``` rascal-shell
+```rascal-shell
 X >= Z;
 ```
 
@@ -8832,7 +8832,7 @@ above) the value of *Exp*<sub>2</sub>, and `false` otherwise.
 
 Introduce two variables `X`, `Y` and `Z` and force them to be of type `value`:
 
-``` rascal-shell
+```rascal-shell
 value X = "abc";
 value Y = "def";
 value Z = 3.14;
@@ -8840,13 +8840,13 @@ value Z = 3.14;
 
 Now compare `X` and `Y`:
 
-``` rascal-shell
+```rascal-shell
 X < Y;
 ```
 
 and `X` and `Z`:
 
-``` rascal-shell
+```rascal-shell
 X < Z;
 ```
 
@@ -8884,7 +8884,7 @@ defined above) the value of *Exp*<sub>2</sub> or if both values are equal, and `
 
 Introduce two variables `X`, `Y` and `Z` and force them to be of type `value`:
 
-``` rascal-shell
+```rascal-shell
 value X = "abc";
 value Y = "def";
 value Z = 3.14;
@@ -8892,13 +8892,13 @@ value Z = 3.14;
 
 Now compare `X` and `Y`:
 
-``` rascal-shell
+```rascal-shell
 X <= Y;
 ```
 
 and `X` and `Z`:
 
-``` rascal-shell
+```rascal-shell
 X <= Z;
 ```
 
@@ -8926,7 +8926,7 @@ Yields `true` if both arguments are not identical and `false` otherwise.
 
 Introduce two variables `X`, `Y` and `Z` and force them to be of type `value`:
 
-``` rascal-shell
+```rascal-shell
 value X = "abc";
 value Y = "abc";
 value Z = 3.14;
@@ -8934,13 +8934,13 @@ value Z = 3.14;
 
 Now compare `X` and `Y` for inequality:
 
-``` rascal-shell
+```rascal-shell
 X != Y;
 ```
 
 and `X` and `Z`:
 
-``` rascal-shell
+```rascal-shell
 X != Z;
 ```
 
@@ -9035,7 +9035,7 @@ value. *Name* stands for itself and is not evaluated.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 tuple[int key, str val] T = <1, "abc">;
 T[val = "def"];
  T;
@@ -9064,7 +9064,7 @@ refers to elements in the order in which they occur in the original value (count
 Suppose we have a relation with traffic information that records the name of the day, the day number, and the length of
 the traffic jams at that day.
 
-``` rascal-shell
+```rascal-shell
 rel[str day, int daynum, int length] Traffic =
 {<"mon", 1, 100>, <"tue", 2, 150>, <"wed", 3, 125>,
  <"thur", 4, 110>, <"fri", 5, 90>};
@@ -9111,7 +9111,7 @@ See [Function Declaration](#function) for more details about function declaratio
 
 First declare a function `square` with argument *n* that returns *n^2*:
 
-``` rascal-shell
+```rascal-shell
 int square(int n) { return n * n; }
 ```
 
@@ -9130,7 +9130,7 @@ Next call `square`. This results in the following steps:
 
 <!-- end list -->
 
-``` rascal-shell
+```rascal-shell
 square(12);
 ```
 
@@ -9170,38 +9170,38 @@ expressions. A generator can use the variables introduced by preceding generator
 
 A list comprehension:
 
-``` rascal-shell
+```rascal-shell
 [ 3 * X | int X <- [1 .. 10] ];
 ```
 
 A list comprehension with a filter:
 
-``` rascal-shell
+```rascal-shell
 [ 3 * X | int X <- [1 .. 10], X > 5];
 ```
 
 A list comprehension with multiple contributing expressions:
 
-``` rascal-shell
+```rascal-shell
 [X, X * X | int X <- [1, 2, 3, 4, 5], X >= 3];
 ```
 
 A set comprehension with a filter:
 
-``` rascal-shell
+```rascal-shell
 {X | int X <- {1, 2, 3, 4, 5}, X >= 3};
 ```
 
 A set comprehension that constructs a relation:
 
-``` rascal-shell
+```rascal-shell
 {<X, Y> | int X <- {1, 2, 3}, int Y <- {2, 3, 4}, X >= Y};
 {<Y, X> | <int X, int Y> <- {<1,10>, <2,20>}};
 ```
 
 Introduce a map of `fruits` and use a map comprehension to filter fruits with an associated value larger than 10:
 
-``` rascal-shell
+```rascal-shell
 fruits = ("pear" : 1, "apple" : 3, "banana" : 0, "berry" : 25, "orange": 35);
 (fruit : fruits[fruit] | fruit <- fruits, fruits[fruit] > 10);
 ```
@@ -9243,7 +9243,7 @@ the values of their elements, respectively, their direct children are enumerated
 Type information is used to check the validity of an enumerator and guard you against mistakes. An impossible enumerator
 like
 
-``` rascal
+```rascal
 int N <- {"apples", "oranges"}
 ```
 
@@ -9267,7 +9267,7 @@ Here are some examples of enumerators:
 
 Here are examples of enumerators in action:
 
-``` rascal-shell
+```rascal-shell
 [ N * N | int N <- [1, 2, 3, 4, 5] ];
 {<N, K> | <str K, int N> <- {<"a",10>, <"b",20>, <"c",30>}};
 ```
@@ -9300,14 +9300,14 @@ combination should be tried by going back to the previous generator.
 
 Adding a filter to a comprehension, may restrict the values that are included in the result of the comprehension:
 
-``` rascal-shell
+```rascal-shell
 [ X * X | int X <- [1, 2, 3, 4, 5, 6] ];
 [ X * X | int X <- [1, 2, 3, 4, 5, 6], X % 3 == 0 ];
 ```
 
 Filters can also be applied to values produced by several generators:
 
-``` rascal-shell
+```rascal-shell
 [<X, Y> | int X <- [0 .. 10], int Y <- [0 .. 10], X + Y == 10]
 ```
 
@@ -9361,7 +9361,7 @@ functional languages.
 
 A reducer is equivalent to the following code:
 
-``` rascal
+```rascal
 it = InitExp; 
 for(Gen1, Gen2, ... ) 
     it = RedExp; 
@@ -9382,7 +9382,7 @@ and is executed as follows:
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 L = [1, 3, 5, 7];
 (0 | it + e | int e <- L);
 (1 | it * e | int e <- L);
@@ -9412,7 +9412,7 @@ Visit the elements in a tree or value.
 
 **Syntax.**
 
-``` rascal
+```rascal
 Strategy visit ( Exp ) {
 case PatternWithAction1;
 case PatternWithAction2;
@@ -9498,7 +9498,7 @@ The precise behaviour of the visit expression depends on the type of the subject
 
 Visit a value and increment a counter for pattern `leaf(int N)` matches:
 
-``` rascal
+```rascal
 visit(t) {
      case leaf(int N): c = c + N;
    };
@@ -9506,7 +9506,7 @@ visit(t) {
 
 Replace all values that match the pattern `red(l, r)`:
 
-``` rascal
+```rascal
 visit(t) {
      case red(l, r) => green(l, r)
    };
@@ -9514,7 +9514,7 @@ visit(t) {
 
 Do a bottom-up visit of an expression and apply the function `simp` to each subexpression:
 
-``` rascal
+```rascal
 bottom-up visit(e){
            case Exp e1 => simp(e1)
          }
@@ -9560,14 +9560,14 @@ current subtree. After both success or failure of the PatternWithAction, the tra
 
 Two examples of variant 1 (replacement):
 
-``` rascal
+```rascal
 case red(CTree l, CTree r) => red(r,l)
 case red(l, r) => green(l, r)
 ```
 
 Three examples of variant 2 (Statement):
 
-``` rascal
+```rascal
 case /Leila/: println("The topic is Starwars");
 case red(_, _):    println("A red root node");
 case red(_,_): c = c + 1;
@@ -9575,7 +9575,7 @@ case red(_,_): c = c + 1;
 
 The action may also be a [Block](#block):
 
-``` rascal
+```rascal
 case red(_,_): { c = c + 1; println("c = <c>"); }
 ```
 
@@ -9663,7 +9663,7 @@ which it occurs.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 for(int i <- [1..5]) append i*i;
 L = for(int i <- [1..5]) append i*i;
 ```
@@ -9695,7 +9695,7 @@ When *Exp*<sub>1</sub> evaluates to `false`, an `AssertionFailed` exception is t
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 assert 1==2 : "is never true";
 int div(int x, int y) {
   assert y != 0 : "y must be non-zero";
@@ -9802,7 +9802,7 @@ Next the assignments `Assignablei = Vi`` are performed for 1 \<= i \<= n.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 data FREQ = wf(str word, int freq);
 W = wf("rascal", 1000);
 wf(S, I) = W;
@@ -9823,7 +9823,7 @@ replaced in *V* by the value of *Exp* resulting in a new value *V*' that is assi
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 data FREQ = wf(str word, int freq);
 W = wf("rascal", 1000);
 W.freq = 100000;
@@ -9846,20 +9846,20 @@ variables for example.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 M = ("Andy": 1, "Brian" : 2);
 ```
 
 Using an `isDefined` assignable can we increment a non-existing entry:
 
-``` rascal-shell
+```rascal-shell
 M["SomebodyElse"] ? 0 += 1;
 M["SomebodyElse"];
 ```
 
 And if we increment an existing entry the ? has no effect:
 
-``` rascal-shell
+```rascal-shell
 M["Andy"] ? 0 += 1;
 M["Andy"]
 ```
@@ -9877,7 +9877,7 @@ First the value *Exp* is determined and should be a tuple of the form `< V1, V2,
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 <A, B, C> = <"abc", 2.5, [1,2,3]>;
 A;
 B;
@@ -9926,14 +9926,14 @@ Let *V* be the current value of *Assignable*.
 
 Replace the elements with index 3, 4, 5 in `L`:
 
-``` rascal-shell
+```rascal-shell
 L = [0,1,2,3,4,5,6,7,8,9];
 L[3..6] = [100,200,300,400,500];
 ```
 
 Replace the elements with index 1, 3, 5, 7 in `L` (note how the elements from `[100,200]` are used in a circular way):
 
-``` rascal-shell
+```rascal-shell
 L = [0,1,2,3,4,5,6,7,8,9];
 L[1,3..8] = [100,200];
 ```
@@ -9941,14 +9941,14 @@ L[1,3..8] = [100,200];
 Replace the elements with index 1, 3, 5, 7 in `L` (note how the unused elements from `[100,200,300,400,500]` are insert
 at index 7):
 
-``` rascal-shell
+```rascal-shell
 L = [0,1,2,3,4,5,6,7,8,9];
 L[1,3..8] = [100,200,300,400,500];
 ```
 
 Similar examples for slicing assignment on strings:
 
-``` rascal-shell
+```rascal-shell
 S = "abcdefghij";
 S[3..6] = "UVWXYZ";
 S = "abcdefghij";
@@ -9959,14 +9959,14 @@ S[1,3..8] = "UVWXYZ";
 
 Replace the elements with index 3, 4, 5 in node `N`:
 
-``` rascal-shell
+```rascal-shell
 N = "f"(0,true,2,"abc",4,5.5,6,{7,77},8,{9,99,999});
 N[3..6] = [100,200,300,400,500];
 ```
 
 Replace the elements with index 1, 3, 5, 7 in `L` (note how the elements from `[100,200]` are used in a circular way):
 
-``` rascal-shell
+```rascal-shell
 N = "f"(0,true,2,"abc",4,5.5,6,{7,77},8,{9,99,999});
 N[1,3..8] = [100,200];
 ```
@@ -9974,7 +9974,7 @@ N[1,3..8] = [100,200];
 Replace the elements with index 1, 3, 5, 7 in `L` (note how the unused elements from `[100,200,300,400,500]` are insert
 at index 7):
 
-``` rascal-shell
+```rascal-shell
 N = "f"(0,true,2,"abc",4,5.5,6,{7,77},8,{9,99,999});
 N[1,3..8] = [100,200,300,400,500];
 ```
@@ -9993,12 +9993,12 @@ the *Assignable*.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ```
 
 Assignable has a list value:
 
-``` rascal-shell
+```rascal-shell
 L = [10,20,30];
 P = L;
 L[1] = 200;
@@ -10006,20 +10006,20 @@ L[1] = 200;
 
 Observe that `P` is unchanged:
 
-``` rascal-shell
+```rascal-shell
 P;
 ```
 
 Assignable has a map value:
 
-``` rascal-shell
+```rascal-shell
 M = ("abc": 1, "def" : 2);
 M["def"] = 3;
 ```
 
 Assignable has a tuple value:
 
-``` rascal-shell
+```rascal-shell
 T = <1, "abc", true>;
 T[1] = "def";
 ```
@@ -10040,7 +10040,7 @@ The expression *Exp* is evaluated and its value is assigned to the variable *Var
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 N = 3;
 N;
 ```
@@ -10067,7 +10067,7 @@ value produced by its last statement (if any).
 
 Here is a contrived block of three expressions (be aware of the last semi-colon):
 
-``` rascal-shell
+```rascal-shell
 {1;2;3;}
 ```
 
@@ -10075,13 +10075,13 @@ its value is `3`.
 
 The effect of a local variable declared in a block can be seen as follows:
 
-``` rascal-shell
+```rascal-shell
 {int x = 3; x*x;}
 ```
 
 After the block we cannot refer to `x`:
 
-``` rascal-shell
+```rascal-shell
 x;
 ```
 
@@ -10103,7 +10103,7 @@ Also see [Continue](#continue) and [Fail](#fail).
 
 Here is an example using break to find the first number divisible by 3:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 for(int i <- [1 .. 10]){
     if(i % 3 == 0){
@@ -10132,7 +10132,7 @@ Also see [Break](#break) and [Fail](#fail).
 
 Here is an example using continue to avoid printing numbers that are divisible by 3:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 for(int i <- [1 .. 10]){
     if(i % 3 == 0)
@@ -10162,7 +10162,7 @@ body Statement.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 int n = 3;
 do { println("n = <n>"); n -= 1; } while (n > 0);
@@ -10170,7 +10170,7 @@ do { println("n = <n>"); n -= 1; } while (n > 0);
 
 Now build a list result using the `append` statement:
 
-``` rascal-shell
+```rascal-shell
 n = 3;
 do { append n * n; n -= 1; } while (n > 0);
 ```
@@ -10219,7 +10219,7 @@ When `fail` is executed:
 Here is an example taken from [Bubble](/docs/Recipes#Bubble). It uses a `fail` for the case that no unsorted element can be
 found in the list of numbers. As a result, the whole case fails and the default case is used.
 
-``` rascal-shell
+```rascal-shell
 import IO;
 public list[int] sort(list[int] numbers){
   switch(numbers){
@@ -10261,7 +10261,7 @@ body Statement.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 for(int n <- [1 .. 5]) println("n = <n>");
 for(int n <- [1 .. 5]) append n * n;
@@ -10296,7 +10296,7 @@ executed.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 if( 3 > 2 ) 30; else 40;
 x = if( 3 > 2 ) 30; else 40;
 if( 3 > 2 ) 30;
@@ -10305,7 +10305,7 @@ if( 3 > 2 ) 30;
 An if-then statement yields `void` when its test is false (demonstrated by the *ok* that is printed by the Rascal
 system):
 
-``` rascal-shell
+```rascal-shell
 if( 2 > 3 ) 30;
 ```
 
@@ -10333,14 +10333,14 @@ The following rule applies:
 
 Consider the following datatype `CTree` and assign a CTree value to variable `T`:
 
-``` rascal-shell
+```rascal-shell
 data CTree = leaf(int n) | red(CTree left, CTree right) | green(CTree left, CTree right);
 CTree T = red(green(leaf(1), red(leaf(2), leaf(3))), red(leaf(4), leaf(5)));
 ```
 
 We can now switch the arguments of all red nodes as follows:
 
-``` rascal-shell
+```rascal-shell
 visit(T){
   case red(CTree l, CTree r): insert red(r,l);
 }
@@ -10348,7 +10348,7 @@ visit(T){
 
 Since this is a very common idiom, we also have a shorthand for it:
 
-``` rascal-shell
+```rascal-shell
 visit(T){
   case red(CTree l, CTree r) => red(r,l)
 }
@@ -10386,14 +10386,14 @@ path through the function body.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 int twice(int n) { return 2 * n; }
 twice(5);
 ```
 
 Functions that only return a value can be abbreviated (and the return is implicit):
 
-``` rascal-shell
+```rascal-shell
 int twiceb(int n) = 2 * n;
 twiceb(5);
 ```
@@ -10428,14 +10428,14 @@ fixed lower bound.
 Let’s consider transitive closure as an example (transitive closure is already available as built-in operator, we use it
 here just as a simple illustration). Transitive closure of a relation is usually defined as:
 
-``` rascal
+```rascal
 R+ = R + (R o R) + (R o R o R) + ...
 ```
 
 In other words, it is the union of successive [Relation Composition](#composition)s of `R` with itself. For a
 given relation `R` this can be expressed as follows:
 
-``` rascal-shell
+```rascal-shell
 rel[int,int] R = {<1,2>, <2,3>, <3,4>};
 T = R;
 solve (T) {
@@ -10452,7 +10452,7 @@ of `case` patterns.
 
 **Syntax.**
 
-``` rascal
+```rascal
 switch ( Exp ) {
 case PatternWithAction1;
 case PatternWithAction2;
@@ -10473,7 +10473,7 @@ the switch acts as a dummy statement. There is no fall through from one case to 
 
 Suppose we want to naively analyze a sentence and print the topic it is about:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 S = "Princess Leila sipped from her rum punch";
 switch(S){
@@ -10526,7 +10526,7 @@ rules apply:
 
 Here is a a variant of string concatenation for ball haters:
 
-``` rascal-shell
+```rascal-shell
 str conc(str x, str y){ if("ball" in {x, y}) throw "I hate balls"; return x + y; }
 conc("fairy", "tale");
 conc("foot", "ball");
@@ -10540,7 +10540,7 @@ Try to execute a statement and catch resulting exceptions.
 
 **Syntax.**
 
-``` rascal
+```rascal
 try
    Statement1;
 catch PatternWithAction1;
@@ -10573,7 +10573,7 @@ as follows:
 Let’s define a variant of the [head](/docs/Libraries#head) function that returns the first element of a list, but throws
 an exception when the list is empty. Our variant will return `0` for an empty list:
 
-``` rascal-shell
+```rascal-shell
 import List;
 import Exception;
 int hd(list[int] x) { try return head(x); catch: return 0; }
@@ -10584,7 +10584,7 @@ hd([]);
 We can also be more specific and catch the `EmptyList` exception (which is available here since we have imported the
 `Exception` module):
 
-``` rascal-shell
+```rascal-shell
 int hd2(list[int] x) { try return head(x); catch EmptyList(): return 0; }
 hd2([]);
 ```
@@ -10605,7 +10605,7 @@ See [Visit](#visit) for the details.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 x = [[1],[2],[3]];
 if (true) {
   // this visit is a nested statement in an if block:
@@ -10638,7 +10638,7 @@ body *Statement*.
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import IO;
 int n = 3;
 while( n > 0 ) { println("n = <n>"); n -= 1; }
@@ -10646,13 +10646,13 @@ while( n > 0 ) { println("n = <n>"); n -= 1; }
 
 Now build a list result using the `append` statement:
 
-``` rascal-shell
+```rascal-shell
 n = 3;
 while (n > 0) { append n * n; n -= 1; }
 ```
 
 Just to be sure, a [List Comprehension](#comprehension) is the superior way to write this:
 
-``` rascal-shell
+```rascal-shell
 [n * n | n <- [3 .. 1]];
 ```

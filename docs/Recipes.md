@@ -89,7 +89,7 @@ that Rascal is ready for our input. Next, we import the library module [IO](/doc
 requires printing. Rascal responds with the feedback `ok` so we know that all went well. Finally, we call `println` and
 proudly observe our first Rascal output\!
 
-``` rascal-shell
+```rascal-shell
 import IO;
 println("Hello world, this is my first Rascal program");
 ```
@@ -98,7 +98,7 @@ println("Hello world, this is my first Rascal program");
 
 A slightly more audacious approach is to wrap the print statement in a function and call it:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 void hello() {
    println("Hello world, this is my first Rascal program");
@@ -111,7 +111,7 @@ function. The first `void ()` part says the result is a function that returns no
 hello()` summarizes its value (or would you prefer a hex dump?). Finally, we call the `hello` function and enjoy its
 output.
 
-``` rascal-shell
+```rascal-shell
 hello();
 ```
 
@@ -119,7 +119,7 @@ hello();
 
 The summit of hello-engineering can be reached by placing all the above in a separate module:
 
-``` rascal
+```rascal
 module demo::basic::Hello
 
 import IO;
@@ -133,7 +133,7 @@ This module should be placed in \<project dir\>/src/demo/basic/Hello.rsc.
 
 Using this Hello module is now simple:
 
-``` rascal-shell
+```rascal-shell
 import demo::basic::Hello;
 hello();
 ```
@@ -153,7 +153,7 @@ Compute the factorial function.
 The [factorial](http://en.wikipedia.org/wiki/Factorial) of a number N is defined as `N * (N-1) * (N-2) * …​ * 1`. Here
 is the Rascal version:
 
-``` rascal
+```rascal
 module demo::basic::Factorial
 
 int fac(int N) = N <= 0 ? 1 : N * fac(N - 1); 
@@ -179,7 +179,7 @@ int fac3(int N)  {
 
 Here is how to use `fac`:
 
-``` rascal-shell
+```rascal-shell
 import demo::basic::Factorial;
 fac(47);
 ```
@@ -190,7 +190,7 @@ fac(47);
 
 Here is an example of `fac2`:
 
-``` rascal-shell
+```rascal-shell
 fac2(47);
 ```
 
@@ -204,7 +204,7 @@ Print a list of squares
 
 How can we print a list of squares? Here is a solution:
 
-``` rascal
+```rascal
 module demo::basic::Squares
 
 import IO; 
@@ -237,21 +237,21 @@ str squaresTemplate(int N)
 
 Here is how `square` can be used:
 
-``` rascal-shell
+```rascal-shell
 import demo::basic::Squares;
 squares(9);
 ```
 
 `squaresTemplate` gives a similar result but now as a string:
 
-``` rascal-shell
+```rascal-shell
 squaresTemplate(9);
 ```
 
 To get a truly identical result we have to import the [IO](/docs/Libraries#io) module and print the value of
 `squaresTemplate`:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 println(squaresTemplate(9));
 ```
@@ -272,7 +272,7 @@ the lyrics can be found [here](http://99-bottles-of-beer.net/lyrics.html).
 
 Here is our version:
 
-``` rascal
+```rascal
 module demo::basic::Bottles
 
 import IO;
@@ -305,7 +305,7 @@ void sing(){
 
 Here is the result:
 
-``` rascal-shell
+```rascal-shell
 import demo::basic::Bottles;
 sing();
 ```
@@ -324,7 +324,7 @@ more efficient library function for sorting.
 
 **Examples.**
 
-``` rascal
+```rascal
 module demo::basic::Bubble
 
 import List;
@@ -407,7 +407,7 @@ out-of-order elements, while the default alternative returns the list if no out-
 
 Let’s put them to the test:
 
-``` rascal-shell
+```rascal-shell
 import demo::basic::Bubble;
 L = [9,8,7,6,5,4,3,2,1];
 sort1(L);
@@ -428,7 +428,7 @@ Produce a list of even numbers.
 Let’s write a function that generates all the even numbers in a list up to a certain maximum. We will do it in a few
 alternative ways: from very imperative to very declarative and some steps in between.
 
-``` rascal-shell
+```rascal-shell
 list[int] even0(int max) {
   list[int] result = [];
   for (int i <- [0..max])
@@ -441,7 +441,7 @@ even0(25);
 
 Now lets remove the temporary type declarations:
 
-``` rascal-shell
+```rascal-shell
 list[int] even1(int max) {
   result = [];
   for (i <- [0..max])
@@ -454,7 +454,7 @@ even1(25);
 
 To make the code shorter, we can inline the condition in the for loop:
 
-``` rascal-shell
+```rascal-shell
 list[int] even2(int max) {
   result = [];
   for (i <- [0..max], i % 2 == 0)
@@ -466,7 +466,7 @@ even2(25);
 
 In fact, for loops may produce lists as values, using the append statement:
 
-``` rascal-shell
+```rascal-shell
 list[int] even3(int max) {
   result = for (i <- [0..max], i % 2 == 0)
     append i;
@@ -477,7 +477,7 @@ even3(25);
 
 So now, the result temporary is not necessary anymore:
 
-``` rascal-shell
+```rascal-shell
 list[int] even4(int max) {
   return for (i <- [0..max], i % 2 == 0)
            append i;
@@ -487,7 +487,7 @@ even4(25);
 
 This code is actually very close to a list comprehension already:
 
-``` rascal-shell
+```rascal-shell
 list[int] even5(int max) {
   return [ i | i <- [0..max], i % 2 == 0];
 }
@@ -496,14 +496,14 @@ even5(25);
 
 And now we can just define `even` using an expression only:
 
-``` rascal-shell
+```rascal-shell
 list[int] even6(int max) = [i | i <- [0..max], i % 2 == 0];
 even6(25);
 ```
 
 Or, perhaps we prefer creating a set instead of a list:
 
-``` rascal-shell
+```rascal-shell
 set[int] even7(int max) = {i | i <- [0..max], i % 2 == 0};
 even7(25);
 ```
@@ -541,7 +541,7 @@ Surprisingly, many candidates fail to pass this test. Solutions to FizzBuzz in v
 
 Here are a few possible Rascal solutions:
 
-``` rascal
+```rascal
 module demo::basic::FizzBuzz
 
 import IO;
@@ -573,7 +573,7 @@ void fizzbuzz3() {
 }
 ```
 
-``` rascal-shell
+```rascal-shell
 import demo::basic::FizzBuzz;
 fizzbuzz();
 ```
@@ -596,7 +596,7 @@ Learning about quines, is about learning how to quote and escape symbols in stri
 
 **Examples.**
 
-``` rascal
+```rascal
 module demo::basic::Quine
 
 import IO;
@@ -637,7 +637,7 @@ in strings.
 
 Let’s do a simple experiment:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 str greeting = "\"Good Morning, Dr. Watson\", said Holmes";
 println("\"" + greeting + "\"");
@@ -649,7 +649,7 @@ and a map of characters to be escaped and returns a result in which all escaping
 the map, also escaping is needed\! We want to say: escape `"` and replace it by `\"`, but since both `"` and `\` have to
 be escaped themselves we have to say: escape `"\""` and replace it by `"\\\""`. The effect is as follows:
 
-``` rascal-shell
+```rascal-shell
 import String;
 println("\"" + escape(greeting, ("\"": "\\\"")) + "\"");
 ```
@@ -658,7 +658,7 @@ And indeed, the two quotes are now properly escaped.
 
 This is exactly what happens at ![4](/images/4.png) in the definition of `quine`:
 
-``` rascal
+```rascal
 println("\"" + escape(program, ("\"" : "\\\"", "\\" : "\\\\")) + "\";");
 ```
 
@@ -667,7 +667,7 @@ due to escaping `"` and `\`.
 
 Now let’s put `quine` to the test.
 
-``` rascal-shell
+```rascal-shell
 import demo::basic::Quine;
 quine();
 ```
@@ -726,7 +726,7 @@ As you know, Rascal supports arbitrarily large numbers cleanly and simply, unlik
 Java. For example, if you want to compute 1000\!, then it’s a simple matter of calling `fact(1000)` at the command line.
 Let’s use this definition of factorial:
 
-``` rascal
+```rascal
 public int fact (int n) {
     if (n <= 1) {
         return 1;
@@ -741,7 +741,7 @@ If you compute `fact(1000)` at the Rascal command line, you get a large number, 
 out stack space, try computing 100\!, then 200\!, then …​ then 1000\!; the run-time will allocate more stack space
 incrementally and automatically if you sneak up to where you want to go).
 
-``` rascal
+```rascal
 rascal> fact(1000);
 int: 402387260077093773543702433923003985719374864210714632543799910429938512398629020592044208486969404800479988610197196058631666872994808558901323829669944590997424504087073759918823627727188732519779505950995276120874975462497043601418278094646496291056393887437886487337119181045825783647849977012476632889835955735432513185323958463075557409114262417474349347553428646576611667797396668820291207379143853719588249808126867838374559731746136085379534524221586593201928090878297308431392844403281231558611036976801357304216168747609675871348312025478589320767169132448426236131412508780208000261683151027341827977704784635868170164365024153691398281264810213092761244896359928705114964975419909342221566832572080821333186116811553615836546984046708975602900950537616475847728421889679646244945160765353408198901385442487984959953319101723355556602139450399736280750137837615307127761926849034352625200015888535147331611702103968175921510907788019393178114194545257223865541461062892187960223838971476088506276862967146674697562911234082439208160153780889893964518263243671616762179168909779911903754031274622289988005195444414282012187361745992642956581746628302955570299024324153181617210465832036786906117260158783520751516284225540265170483304226143974286933061690897968482590125458327168226458066526769958652682272807075781391858178889652208164348344825993266043367660176999612831860788386150279465955131156552036093988180612138558600301435694527224206344631797460594682573103790084024432438465657245014402821885252470935190620929023136493273497565513958720559654228749774011413346962715422845862377387538230483865688976461927383814900140767310446640259899490222221765904339901886018566526485061799702356193897017860040811889729918311021171229845901641921068884387121855646124960798722908519296819372388642614839657382291123125024186649353143970137428531926649875337218940694281434118520158014123344828015051399694290153483077644569099073152433278288269864602789864321139083506217095002597389863554277196742822248757586765752344220207573630569498825087968928162753848863396909959826280956121450994871701244516461260379029309120889086942028510640182154399457156805941872748998094254742173582401063677404595741785160829230135358081840096996372524230560855903700624271243416909004153690105933983835777939410970027753472000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 ```
@@ -782,7 +782,7 @@ to see possible solutions. And using this empirical approach is one way to build
 
 So let’s define a few helper functions and see where that leads us:
 
-``` rascal
+```rascal
 public int countZeros (int n) {
     if (n < 10) {
         return 0;
@@ -802,7 +802,7 @@ This was my first try at the solution (really\!), and there’s a problem: 1000\
 
 What did I do wrong? Oh, right, *trailing* zeros, and the above function counts *all* of the zeros. Let’s try again:
 
-``` rascal
+```rascal
 public int countTrailingZeros (int n) {
     if (n < 10) {
         return 0;
@@ -819,7 +819,7 @@ int: 249
 
 OK, so we’re making progress. Let’s define another function to help us explore the data space:
 
-``` rascal
+```rascal
 public void printLastTwenty (int n){
     for(int i <- [n-19..n+1]) {
         println ("<i>! has <countTrailingZeros(fact(i))> trailing zeros.");
@@ -856,7 +856,7 @@ divisible by 5. But sometimes you add more than one zero: 1000\! adds three zero
 We defined one function above to help us look at the data more compactly; now let’s create another function to look for
 lumps in the data:
 
-``` rascal
+```rascal
 // Printout all i in [0..n] where i! has more trailing zeros than (i-1)!
 public void findLumps (int n) {
     int iMinusOneFactZeros = 0;
@@ -919,7 +919,7 @@ ok
 So probably we’re noticing some patterns here already, and maybe forming some intuition. But let’s first revise our
 lump-finding function to produce even more concise output:
 
-``` rascal
+```rascal
 // We can parameterize the threshold to look for jumps of 2, 3, or 4 zeros
 public void findLumps2 (int n, int tao) {
     int iMinusOneFactZeros = 0;
@@ -1003,7 +1003,7 @@ We want to examine i ← \[1..N+1\]
 
 We can write this in Rascal as:
 
-``` rascal
+```rascal
 public int predictZeros (int N) {
     int k = floorLogBase(N, 5);  // I wrote this
     int nz = 0;
@@ -1025,7 +1025,7 @@ public int predictZeros (int N) {
 Now a little hand validation might convince you that this should work, but let’s write a little verifier function to be
 sure:
 
-``` rascal
+```rascal
 public void verifyTheory (int N) {
     int checkInterval = 100; // for printing
     bool failed = false;
@@ -1074,7 +1074,7 @@ Yikes, what do we do? Well, first let’s look under the hood at the engine. The
 correct, assuming that the functions is calls are correct. So let’s look at the auxiliary functions I wrote (but haven’t
 shown you yet):
 
-``` rascal
+```rascal
 // Log for an arbitrary base
 public real logB(real a, real base) {
     return log(a) / log(base);
@@ -1098,7 +1098,7 @@ Oh right, real numbers are prone to round off error. What should we do?
 
 Well, here’s a bad solution (that "works"):
 
-``` rascal
+```rascal
 public real floor (real a) {
     return toReal(round (a - 0.5 + 0.00001));
 }
@@ -1111,7 +1111,7 @@ software?
 Sometimes, the answer is to do a lot of homework. Lucky for us, here there is a fairly efficient exact solution using
 repeated integer division:
 
-``` rascal
+```rascal
 // Also change predictZeros to call this version
 public int floorLogBase2 (int a, int b) {
     int remaining = a;
@@ -1192,7 +1192,7 @@ another procedure):
 
 ![calls](/images/calls.png)
 
-``` rascal-shell
+```rascal-shell
 import Set;
 import Relation;
 import analysis::graphs::Graph;
@@ -1202,7 +1202,7 @@ Rascal supports basic data types like integers and strings which are sufficient 
 hand. However, we can gain readability by introducing separately named types for the items we are describing. First, we
 introduce therefore a new type `Proc` (an alias for strings) to denote procedures:
 
-``` rascal-shell
+```rascal-shell
 alias Proc = str;
 ```
 
@@ -1210,7 +1210,7 @@ Next, we have to represent the call relation as a Rascal datatype, and the relat
 preparation, we also import the libraries \[$Rascal:Prelude/Set\], \[$Rascal:Prelude/Relation\] and
 \[$Rascal:Libraries/analysis/graphs/Graph\] that will come in handy.
 
-``` rascal-shell
+```rascal-shell
 rel[Proc, Proc] Calls = {<"a", "b">, <"b", "c">, <"b", "d">, <"d", "c">,
                          <"d", "e">, <"f", "e">, <"f", "g">, <"g", "e">};
 ```
@@ -1221,7 +1221,7 @@ Now we are in a good position to start asking some questions.
 set or relation. Since each tuple in the `Calls` relation represents a call between procedures, the number of tuples is
 equal to the number of calls.
 
-``` rascal-shell
+```rascal-shell
 size(Calls);
 ```
 
@@ -1230,20 +1230,20 @@ several others and the number of tuples is therefore not indicative. What we nee
 (as first or second element) in *any* tuple. This is precisely what the function
 \[$Rascal:Libraries/Prelude/Relation/carrier\] gives us:
 
-``` rascal-shell
+```rascal-shell
 carrier(Calls);
 ```
 
 and computing the number of procedures is now easy:
 
-``` rascal-shell
+```rascal-shell
 size(carrier(Calls));
 ```
 
 As an aside, functions \[$Rascal:Prelude/Relation/domain\] and \[$Rascal:Prelude/Relation/range\] do the same for the
 first, respectively, second element of the pairs in a relation:
 
-``` rascal-shell
+```rascal-shell
 domain(Calls);
 range(Calls);
 ```
@@ -1258,7 +1258,7 @@ root nodes of that graph. Similarly, the bottom of a relation corresponds to the
 section called \[$Rascal:Libraries/analysis/graphs/Graph\] for more details. Using this knowledge, the entry points can
 be computed by determining the top of the Calls relation:
 
-``` rascal-shell
+```rascal-shell
 top(Calls);
 ```
 
@@ -1267,7 +1267,7 @@ top(Calls);
 In a similar spirit, we can determine the leaves of this application, i.e., procedures that are being called but do not
 make any calls themselves:
 
-``` rascal-shell
+```rascal-shell
 bottom(Calls);
 ```
 
@@ -1276,7 +1276,7 @@ bottom(Calls);
 We can also determine the indirect calls between procedures, by taking the transitive closure of the Calls relation,
 written as `Calls+`. Observe that the transitive closure will contain both the direct and the indirect calls.
 
-``` rascal-shell
+```rascal-shell
 closureCalls = Calls+;
 ```
 
@@ -1287,7 +1287,7 @@ information, we can determine which procedures are called from each entry point.
 with appropriate procedure name. The index operator yields all right-hand sides of tuples that have a given value as
 left-hand side. This gives the following:
 
-``` rascal-shell
+```rascal-shell
 calledFromA = closureCalls["a"];
 calledFromF = closureCalls["f"];
 ```
@@ -1297,13 +1297,13 @@ calledFromF = closureCalls["f"];
 Finally, we can determine which procedures are called from both entry points by taking the intersection of the two sets
 `calledFromA` and `calledFromF`:
 
-``` rascal-shell
+```rascal-shell
 calledFromA & calledFromF;
 ```
 
 or if your prefer to write all of the above as a one-liner using a \[$Rascal:Expressions/Reducer\] expression:
 
-``` rascal-shell
+```rascal-shell
 (carrier(Calls) | it & (Calls+)[p] | p <- top(Calls));
 ```
 
@@ -1353,7 +1353,7 @@ between two procedures will be lifted to a call between the components to which 
 
 Here is a solution:
 
-``` rascal
+```rascal
 module demo::common::Lift
 
 alias proc = str;
@@ -1377,26 +1377,26 @@ rel[comp,comp] ComponentCalls = lift(Calls, PartOf);
 
 And we can use it as follows:
 
-``` rascal-shell
+```rascal-shell
 import demo::common::Lift;
 ```
 
 Encode the call relation and partOf relation:
 
-``` rascal-shell
+```rascal-shell
 calls = {<"main", "a">, <"main", "b">, <"a", "b">, <"a", "c">, <"a", "d">, <"b", "d">};
 partOf = {<"main", "Appl">, <"a", "Appl">, <"b", "DB">, <"c", "Lib">, <"d", "Lib">};
 ```
 
 and do the lifting:
 
-``` rascal-shell
+```rascal-shell
 lift(calls, partOf);
 ```
 
 Please verify that this corresponds exactly to (c) in the figure above.
 
-``` rascal-shell
+```rascal-shell
 ```
 
 ### Colored Trees
@@ -1422,7 +1422,7 @@ and black nodes and we want to perform the following operations on them:
 
 The definition of ColoredTrees is as follows:
 
-``` rascal
+```rascal
 module demo::common::ColoredTrees
 
 // Define ColoredTrees with red and black nodes and integer leaves
@@ -1482,26 +1482,26 @@ ColoredTree makeGreen(ColoredTree t) {
 
 We can now explore ColoredTrees:
 
-``` rascal-shell
+```rascal-shell
 import demo::common::ColoredTrees;
 rb = red(black(leaf(1), red(leaf(2),leaf(3))), black(leaf(3), leaf(4)));
 ```
 
 Count the red nodes in `rb`:
 
-``` rascal-shell
+```rascal-shell
 cntRed(rb);
 ```
 
 and compute the sum of all leaves:
 
-``` rascal-shell
+```rascal-shell
 addLeaves(rb);
 ```
 
 Finally, we convert all red nodes:
 
-``` rascal-shell
+```rascal-shell
 makeGreen(rb);
 ```
 
@@ -1534,7 +1534,7 @@ In real applications this becomes relevant when counting, for instance, statemen
 
 **Examples.**
 
-``` rascal
+```rascal
 module demo::common::CountConstructors
 
 import Node;
@@ -1595,7 +1595,7 @@ Two data types are introduced `ColoredTree` and `Hand` together with an example 
 
 <!-- end list -->
 
-``` rascal-shell
+```rascal-shell
 import demo::common::CountConstructors;
 count(CT);
 count(H);
@@ -1632,7 +1632,7 @@ that for number `N`, variables `X` and `Y`, and expressions `E1` and `E2` the fo
 
 Here is our solution followed by a list of explanations:
 
-``` rascal
+```rascal
 module demo::common::Derivative
 
 data Exp = con(int n) 
@@ -1684,7 +1684,7 @@ Exp simplify(Exp e){
 
 Let’s differentiate the example expression `E`:
 
-``` rascal-shell
+```rascal-shell
 import demo::common::Derivative;
 dd(E, var("x"));
 ```
@@ -1692,13 +1692,13 @@ dd(E, var("x"));
 As you can see, we managed to compute a derivative, but the result is far more complex than we would like. This is where
 simplification comes in. First try a simple case:
 
-``` rascal-shell
+```rascal-shell
 simplify(mul(var("x"), add(con(3), con(5))));
 ```
 
 Now apply simplification to the result of differentiation:
 
-``` rascal-shell
+```rascal-shell
 simplify(dd(E, var("x")));
 ```
 
@@ -1725,7 +1725,7 @@ class with getters and setters for those fields?
 
 Here is a solution:
 
-``` rascal
+```rascal
 module demo::common::StringTemplate
 
 import String;
@@ -1824,7 +1824,7 @@ discuss some of them:
 
 Let’s see how this works out on actual data:
 
-``` rascal-shell
+```rascal-shell
 import demo::common::StringTemplate;
 import IO;
 fields = (
@@ -1872,7 +1872,7 @@ line.
 
 The main task of `wordCount` is to loop over all lines and to add the word counts per line.
 
-``` rascal
+```rascal
 module demo::common::WordCount::WordCount
 
 import demo::common::WordCount::CountInLine1;
@@ -1901,7 +1901,7 @@ int wordCount(list[str] input, int (str s) countInLine)
 
 Let’s now do some experiments using the [Jabberwocky](#WordCount-Jabberwocky) poem by Lewis Carrol as input.
 
-``` rascal-shell
+```rascal-shell
 import demo::common::WordCount::WordCount;
 import demo::common::WordCount::CountInLine1;
 import demo::common::WordCount::CountInLine2;
@@ -1917,7 +1917,7 @@ It is satisfactory that the three ways of counting words all yield the same resu
 If you are into one-liners, we can include everything you learned from this example in the following alternative
 `wordCount2` function:
 
-``` rascal-shell
+```rascal-shell
 int wordCount2(list[str] lines) = (0 | it + (0 | it + 1 | /\w+/ := line) | str line <- lines);
 wordCount2(Jabberwocky);
 ```
@@ -1925,7 +1925,7 @@ wordCount2(Jabberwocky);
 The function body contains two nested [reducers](/docs/Rascal#Reducer). The inner reducer counts the number of
 words in a line, the outer reducer accumulates all line word counts.
 
-``` rascal-shell
+```rascal-shell
 ```
 
 ### CountInLine1
@@ -1939,7 +1939,7 @@ Count words in a line.
 We count words using a regular expression match in a for loop. Each time that the pattern `/[a-zA-Z0-9_]+/` matches, the
 body of the loop is executed and `count` is incremented.
 
-``` rascal
+```rascal
 module demo::common::WordCount::CountInLine1
 
 int countInLine1(str S){
@@ -1953,7 +1953,7 @@ int countInLine1(str S){
 
 Let’s try it:
 
-``` rascal-shell
+```rascal-shell
 import demo::common::WordCount::CountInLine1;
 countInLine1("Jabberwocky by Lewis Carroll");
 ```
@@ -1968,7 +1968,7 @@ Count words in a line.
 
 A slighly more involved manner of using regular matching in a loop.
 
-``` rascal
+```rascal
 module demo::common::WordCount::CountInLine2
 
 int countInLine2(str S){
@@ -2000,7 +2000,7 @@ summarize: each iteration removes the first word from `S` and counts it.
 
 Here is `countInLine2` in action:
 
-``` rascal-shell
+```rascal-shell
 import demo::common::WordCount::CountInLine2;
 countInLine2("Jabberwocky by Lewis Carroll");
 ```
@@ -2015,7 +2015,7 @@ Count words in a line.
 
 Here is a clever, albeit rather dense, solution that illustrates several Rascal concepts.
 
-``` rascal
+```rascal
 module demo::common::WordCount::CountInLine3
 
 int countInLine3(str S){
@@ -2035,7 +2035,7 @@ to a single value:
 
 Let’s try it:
 
-``` rascal-shell
+```rascal-shell
 import demo::common::WordCount::CountInLine3;
 countInLine3("Jabberwocky by Lewis Carroll");
 ```
@@ -2048,7 +2048,7 @@ Lewis Carroll’s well-known poem.
 
 **Examples.**
 
-``` rascal
+```rascal
 module demo::common::WordCount::Jabberwocky
 
 public list[str] Jabberwocky = [
@@ -2114,7 +2114,7 @@ how to do this.
 
 **Examples.**
 
-``` rascal
+```rascal
 module demo::common::WordReplacement
 
 import String;
@@ -2169,7 +2169,7 @@ str capAll2(str S)
 
 Here are some examples:
 
-``` rascal-shell
+```rascal-shell
 import demo::common::WordReplacement;
 capitalize("rascal");
 capAll1("turn this into a capitalized title")
@@ -2311,7 +2311,7 @@ represent programs in the language in an *abstract* form. Abstract syntax has th
 
 The abstract syntax for Exp looks like this:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Abstract::Syntax
 
 data Exp = con(int n)          
@@ -2328,7 +2328,7 @@ data Exp = con(int n)
 
 Given the abstract syntax for Exp, we can define an interpreter that evaluates expressions:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Abstract::Eval
 import demo::lang::Exp::Abstract::Syntax;
 
@@ -2362,7 +2362,7 @@ In this example we use this mechanism to define separate functions for each case
 
 <!-- end list -->
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Abstract::Syntax;
 import demo::lang::Exp::Abstract::Eval;
 eval(mul(con(7), con(3)));
@@ -2414,7 +2414,7 @@ rules in the grammar with the name of the constructor to which it has to be mapp
 
 Let’s first label the syntax rules of the Exp grammar with constructor names:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Combined::Automatic::Syntax
 
 lexical LAYOUT = [\t-\n\r\ ];
@@ -2443,7 +2443,7 @@ It is good practice to introduce separate modules for parsing and for the conver
 
 Here is the `Parse` module for Exp …​
 
-``` rascal
+```rascal
 module demo::lang::Exp::Combined::Automatic::Parse
 
 import demo::lang::Exp::Combined::Automatic::Syntax;
@@ -2454,14 +2454,14 @@ Tree parseExp(str txt) = parse(#Exp, txt);
 
 and this is how it works:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Combined::Automatic::Parse;
 parseExp("2+3*4");
 ```
 
 We can use `parse` to define `load`:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Combined::Automatic::Load
 
 import demo::lang::Exp::Combined::Automatic::Parse; 
@@ -2481,14 +2481,14 @@ Notes:
 
 Let’s try it:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Combined::Automatic::Load;
 load("2+3*4");
 ```
 
 Remains the definition of the `eval` function:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Combined::Automatic::Eval
 
 import demo::lang::Exp::Abstract::Eval;
@@ -2499,7 +2499,7 @@ int eval(str txt) = eval(load(txt));
 
 Here is the end result:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Combined::Automatic::Eval;
 eval("2+3*4");
 ```
@@ -2514,7 +2514,7 @@ An Exp evaluator that uses a manually written conversion from parse tree to abst
 
 First we define a `parse` function for Exp:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Combined::Manual::Parse
 import demo::lang::Exp::Concrete::WithLayout::Syntax;
 import ParseTree;
@@ -2525,14 +2525,14 @@ demo::lang::Exp::Concrete::WithLayout::Syntax::Exp
 
 and test it:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Combined::Manual::Parse;
 parseExp("2+3");
 ```
 
 Next, we define a `load` function:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Combined::Manual::Load
 
 import demo::lang::Exp::Concrete::WithLayout::Syntax; 
@@ -2568,14 +2568,14 @@ Some comments:
 
 Let’s try it:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Combined::Manual::Load;
 loadExp("2+3");
 ```
 
 What remains is to write the interpreter using the above components:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Combined::Manual::Eval
 
 import demo::lang::Exp::Abstract::Eval;
@@ -2586,7 +2586,7 @@ public int eval(str txt) = eval(loadExp(txt));
 
 Here is how it works:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Combined::Manual::Eval;
 eval("2+3");
 ```
@@ -2619,7 +2619,7 @@ We describe howto write a grammar for Exp and how to use it to implement an eval
 
 Here is the grammar for Exp:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Concrete::NoLayout::Syntax
 
 lexical IntegerLiteral = [0-9]+; 
@@ -2651,7 +2651,7 @@ Notes:
 
 Now that the grammar is in place we want to use it to build an evaluator. Here is how:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Concrete::NoLayout::Eval
 import demo::lang::Exp::Concrete::NoLayout::Syntax;
 
@@ -2695,20 +2695,20 @@ Notes:
 
 What remains, is to check that `eval` works as expected.
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Concrete::NoLayout::Syntax;
 import ParseTree;
 ```
 
 Just checking that `parse` returns a sort of parse tree:
 
-``` rascal-shell
+```rascal-shell
 parse(#Exp, "2+3");
 ```
 
 You will see such parse trees only once, unless you are a researcher in parsing ;-) Here is a demonstration of `eval`:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Concrete::NoLayout::Eval;
 eval("2+3");
 eval("2+3*4");
@@ -2736,7 +2736,7 @@ In Rascal, the major difference between lexical syntax and non-lexical syntax is
 
 The following example extends the grammar for `Exp` in [No Layout](#Concrete-NoLayout) with a layout definition:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Concrete::WithLayout::Syntax
 
 layout Whitespace = [\t-\n\r\ ]*; 
@@ -2756,7 +2756,7 @@ start syntax Exp
 
 And now we can use spaces in our definition of the eval function as well:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Concrete::WithLayout::Eval
 import demo::lang::Exp::Concrete::WithLayout::Syntax;
 
@@ -2782,7 +2782,7 @@ after the `Exp`.
 
 The effect of the layout definition is that before parser generation the following grammar is derived for `Exp`:
 
-``` rascal
+```rascal
 syntax Exp
   = IntegerLiteral
   | bracket "(" Whitespace Exp Whitespace ")"
@@ -2795,7 +2795,7 @@ syntax start[Exp] = Whitespace Exp top Whitespace;
 
 To put this all to the test:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Concrete::WithLayout::Syntax;
 import demo::lang::Exp::Concrete::WithLayout::Eval;
 eval("2 +  3");
@@ -2871,7 +2871,7 @@ Here are several versions of the factorial function that use more and more featu
 
 `F0.func`:
 
-``` rascal
+```rascal
 fact(n) = if n <= 1 then
              1
           else
@@ -2881,7 +2881,7 @@ fact(n) = if n <= 1 then
 
 `F1.func`:
 
-``` rascal
+```rascal
 fact(n) = let
             x = n
           in
@@ -2895,7 +2895,7 @@ fact(n) = let
 
 `F2.func`:
 
-``` rascal
+```rascal
 fact(n) = if n <= 1 then
              n := 1
           else
@@ -2906,7 +2906,7 @@ fact(n) = if n <= 1 then
 
 `F3.func`:
 
-``` rascal
+```rascal
 swap(a, b) =
           let
             temp = *a
@@ -2937,7 +2937,7 @@ For convenience, we use two versions of these examples for each *F*<sub>i</sub>:
 
 For instance, `F0.rsc` looks like this
 
-``` rascal
+```rascal
 module demo::lang::Func::programs::F0
 
 public str F0 =
@@ -2964,7 +2964,7 @@ The abstract syntax for Func.
 
 Here is the abstract syntax for Func:
 
-``` rascal
+```rascal
 module demo::lang::Func::AST
 
 data Prog = prog(list[Func] funcs);
@@ -3005,7 +3005,7 @@ The concrete syntax of Func.
 
 **Examples.**
 
-``` rascal
+```rascal
 module demo::lang::Func::Func
 
 lexical Ident =  [a-zA-Z][a-zA-Z0-9]* !>> [a-zA-Z0-9];
@@ -3100,7 +3100,7 @@ Interpreter Eval0 supports the following features of Func:
 
 Here is the code for Eval0:
 
-``` rascal
+```rascal
 module demo::lang::Func::Eval0
 
 // No let
@@ -3176,7 +3176,7 @@ Some points to note:
 
 Let’s try this on example `F0`:
 
-``` rascal
+```rascal
 fact(n) = if n <= 1 then
              1
           else
@@ -3184,7 +3184,7 @@ fact(n) = if n <= 1 then
           end
 ```
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Func::Load;
 import demo::lang::Func::Eval0;
 import demo::lang::Func::programs::F0;
@@ -3221,7 +3221,7 @@ bindings.
 
 **Examples.**
 
-``` rascal
+```rascal
 module demo::lang::Func::Eval1
 
 // using env, allowing let
@@ -3292,7 +3292,7 @@ int eval1(let(list[Binding] bindings, Exp exp), Env env, PEnv penv) {
 
 Let’s try this with F1:
 
-``` rascal
+```rascal
 fact(n) = let
             x = n
           in
@@ -3306,7 +3306,7 @@ fact(n) = let
 
 The result:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Func::Load;
 import demo::lang::Func::Eval1;
 import demo::lang::Func::programs::F1;
@@ -3342,7 +3342,7 @@ The main additions are local side effects and the sequence operator.
 
 **Examples.**
 
-``` rascal
+```rascal
 module demo::lang::Func::Eval2
 
 // local side effects, returning env
@@ -3464,7 +3464,7 @@ Result2 eval2(seq(Exp lhs, Exp rhs), Env env, PEnv penv)  {
 
 We apply `eval2` to example `F2`:
 
-``` rascal
+```rascal
 fact(n) = if n <= 1 then
              n := 1
           else
@@ -3475,7 +3475,7 @@ fact(n) = if n <= 1 then
 
 Let’s try this.
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Func::Load;
 import demo::lang::Func::Eval2;
 import demo::lang::Func::programs::F2;
@@ -3511,7 +3511,7 @@ The main additions are the address and dereference operators.
 
 **Examples.**
 
-``` rascal
+```rascal
 module demo::lang::Func::Eval3
 
 // pointers into the stack
@@ -3667,7 +3667,7 @@ Result3 eval3(assign(deref(Exp lvalue), Exp e), Env env, PEnv penv, Mem mem) {
 
 We apply `eval3` to example `F3`:
 
-``` rascal
+```rascal
 swap(a, b) =
           let
             temp = *a
@@ -3692,7 +3692,7 @@ fact(n) = let
 
 Let’s try this.
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Func::Load;
 import demo::lang::Func::Eval3;
 import demo::lang::Func::programs::F3;
@@ -3719,7 +3719,7 @@ labelling concrete rules with constructor names of the abstract syntax.
 
 Here is the code for the `load` funcion:
 
-``` rascal
+```rascal
 module demo::lang::Func::Load
 
 import demo::lang::Func::Func;
@@ -3744,7 +3744,7 @@ Both `load` function return an abstract `Prog`.
 
 Let’s try this on example `F0`:
 
-``` rascal
+```rascal
 fact(n) = if n <= 1 then
              1
           else
@@ -3752,7 +3752,7 @@ fact(n) = if n <= 1 then
           end
 ```
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Func::Load;
 import demo::lang::Func::programs::F0;
 load(F0);
@@ -3761,7 +3761,7 @@ load(F0);
 We get the original program and its *abstract syntax tree* of type `Prog` back. In case of doubt, compare this with the
 result in [Parse](#Func-Parse) where we did obtain a parse tree. Next, we try the same from a file:
 
-``` rascal-shell
+```rascal-shell
 load(|std:///demo/lang/Func/programs/F0.func|);
 ```
 
@@ -3781,7 +3781,7 @@ horse is the [parse](/docs/Libraries#parse) function that is available in the
 
 Here is how to parse Func programs from a string or file:
 
-``` rascal
+```rascal
 module demo::lang::Func::Parse
 
 import demo::lang::Func::Func;
@@ -3793,7 +3793,7 @@ Prog parse(str s) = parse(#Prog, s);
 
 Let’s try this on example `F0.func`:
 
-``` rascal
+```rascal
 fact(n) = if n <= 1 then
              1
           else
@@ -3803,7 +3803,7 @@ fact(n) = if n <= 1 then
 
 First, we try the version with a string argument:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Func::Parse;
 import demo::lang::Func::programs::F0;
 parse(F0);
@@ -3813,7 +3813,7 @@ This must be defined as success: we get the original program and its parse tree 
 We use the scheme `std` that refers to files that reside in the Rascal library. See
 \[$Rascal:Expressions/Values/Location\] for further details on other schemes.
 
-``` rascal-shell
+```rascal-shell
 parse(|std:///demo/lang/Func/programs/F0.func|);
 ```
 
@@ -3882,7 +3882,7 @@ The textual syntax of Lisp.
 
 The first step in defining Lisp’s textual format, we define a grammar for it:
 
-``` rascal
+```rascal
 module demo::lang::Lisra::Syntax
 
 layout Whitespace      = [\t-\n\r\ ]*;
@@ -3929,7 +3929,7 @@ There are several aspects of the runtime representation of Lisp programs and Lis
 
 <!-- end list -->
 
-``` rascal
+```rascal
 module demo::lang::Lisra::Runtime
 
 import Prelude;
@@ -3993,7 +3993,7 @@ Parsing a Lisp expression.
 Given the Lisp [Syntax](#Lisra-Syntax), we can now apply it to parse textual Lisp expressions and convert them to the
 runtime representation `Lval`.
 
-``` rascal
+```rascal
 module demo::lang::Lisra::Parse
 
 import Prelude;
@@ -4030,7 +4030,7 @@ Lval build((LispExp)`( <LispExp* lst> )`)  = List([build(l) | l <- lst]);
 
 We use concrete patterns in these definitions. For instance, the argument pattern
 
-``` rascal
+```rascal
 (LispExp)`<IntegerLiteral il>`
 ```
 
@@ -4044,13 +4044,13 @@ More precisely, the text between backquotes should be a string that can be parse
 precedes it (`LispExp` in this example). This is illustrated by the list case where the parentheses appear in the
 concrete pattern:
 
-``` rascal
+```rascal
 (LispExp)`( <LispExp* lst> )`
 ```
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Lisra::Parse;
 import demo::lang::Lisra::Runtime;
 parse("1");
@@ -4069,7 +4069,7 @@ A Lisp pretty printer.
 The purpose of a pretty printer is to convert an internal structure to text. We define here the simplest possible
 solution:
 
-``` rascal
+```rascal
 module demo::lang::Lisra::Pretty
 
 import demo::lang::Lisra::Runtime;
@@ -4083,7 +4083,7 @@ str pretty(Closure(fn)) = "Closure(<fn>)";
 
 Compare the definition of `pretty` with that of `parse`:
 
-``` rascal
+```rascal
 Lval parse(str txt);
 str pretty(Lval x);
 ```
@@ -4091,13 +4091,13 @@ str pretty(Lval x);
 For a well-designed pair of `parse`/`pretty` functions, the latter is the inverse of the former. In other words, for
 every `L` the following should hold:
 
-``` rascal
+```rascal
 parse(pretty(L)) == L
 ```
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Lisra::Runtime;
 import demo::lang::Lisra::Pretty;
 pretty(Integer(42));
@@ -4108,7 +4108,7 @@ pretty(L);
 
 Now let’s explore whether `pretty` is indeed the inverse of `parse`:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Lisra::Parse;
 parse(pretty(L)) == L;
 ```
@@ -4133,7 +4133,7 @@ Rascal provides pattern-directed dispatch: a function with the same name can hav
 called, a pattern match determines which variant of the function will be called. This is used extensively in the
 definitions below:
 
-``` rascal
+```rascal
 module demo::lang::Lisra::Eval
 
 import Prelude;
@@ -4275,7 +4275,7 @@ We now explain the different cases in more detail:
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Lisra::Runtime;
 import demo::lang::Lisra::Eval;
 eval(Integer(5));
@@ -4301,7 +4301,7 @@ It is good practice to write tests for your software.
 
 Here are our tests for Lisra:
 
-``` rascal
+```rascal
 module demo::lang::Lisra::Test
 
 import demo::lang::Lisra::Runtime;
@@ -4396,7 +4396,7 @@ The following aspects of the Pico language will be discussed:
 
 Here is a — not so simple — Pico program that computes the factorial function:
 
-``` rascal
+```rascal
 begin declare input : natural, 
               output : natural,
               repnr : natural,
@@ -4432,7 +4432,7 @@ Abstract syntax for Pico.
 
 Here is the complete abstract syntax for Pico:
 
-``` rascal
+```rascal
 module demo::lang::Pico::Abstract
 
 public data TYPE = natural() | string(); 
@@ -4493,7 +4493,7 @@ Assembly language for Pico.
 
 The [Compile](#Pico-Compile)r will translate Pico programs into the following assembly language.
 
-``` rascal
+```rascal
 module demo::lang::Pico::Assembly
 
 import demo::lang::Pico::Abstract;
@@ -4526,7 +4526,7 @@ Compile a Pico program to assembly language.
 
 The Pico compiler translates Pico programs to [Assembly](#Pico-Assembly) language programs.
 
-``` rascal
+```rascal
 module demo::lang::Pico::Compile
 
 import Prelude;
@@ -4657,14 +4657,14 @@ Notes:
 
 Here is an example:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Pico::Compile;
 compileProgram("begin declare x : natural; x := 47 end");
 ```
 
 Here is the compilation of the factorial program:
 
-``` rascal-shell
+```rascal-shell
 compileProgram("begin declare input : natural,
                '              output : natural,
                '             repnr : natural,
@@ -4698,7 +4698,7 @@ of each branch are connected to the exit of the if-then-else statement as a whol
 
 A control flow graph for Pico programs can be created as follows:
 
-``` rascal
+```rascal
 module demo::lang::Pico::ControlFlow
 
 import analysis::graphs::Graph;
@@ -4812,7 +4812,7 @@ Notes:
 
 We can now create a CFG for a small Pico program:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Pico::ControlFlow;
 cflowProgram("begin declare n : natural, s : string; n := 10; s := \"a\"; while n do s := s + \"a\"; n := n - 1 od end");
 ```
@@ -4829,7 +4829,7 @@ Evaluate a Pico program.
 
 A complete evaluator (interpreter) for Pico is defined below.
 
-``` rascal
+```rascal
 module demo::lang::Pico::Eval
 
 import demo::lang::Pico::Abstract;
@@ -4926,7 +4926,7 @@ Notes:
 
 Here is how to evaluate a Pico program:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Pico::Eval;
 evalProgram("begin declare x : natural, y : natural; x := 1; y := x + 5 end");
 ```
@@ -4939,7 +4939,7 @@ An Integrated Development Environment for Pico.
 
 **Examples.**
 
-``` rascal
+```rascal
 Unresolved directive in Languages/Pico/IDE/IDE.adoc - include::/mnt/c/dev/projects/usethesource/rascal/src/org/rascalmpl/library/demo/lang/Pico/Plugin.rsc[tags=module]
 ```
 
@@ -4988,7 +4988,7 @@ Convert a Pico parse tree into a Pico abstract syntax tree.
 
 The mapping between parse tree and abstract sybtax tree is achieved as follows:
 
-``` rascal
+```rascal
  module demo::lang::Pico::Load
 
 import Prelude;
@@ -5015,7 +5015,7 @@ Notes:
 
 The function `load` can be used as follows:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Pico::Load;
 load("begin declare x : natural; x := 3 end");
 ```
@@ -5030,7 +5030,7 @@ Concrete syntax for Pico.
 
 **Examples.**
 
-``` rascal
+```rascal
 module demo::lang::Pico::Syntax
 
 import ParseTree;
@@ -5125,7 +5125,7 @@ Recall the following properties of Pico that are relevant for type checking:
 
 The type checker is going to check these rules and will produce an error message when they are violated.
 
-``` rascal
+```rascal
 module demo::lang::Pico::Typecheck
 
 import Prelude;
@@ -5268,7 +5268,7 @@ Notes:
 
 Checking an erroneous program goes like this:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Pico::Typecheck;
 checkProgram("begin declare  x : natural; x := \"abc\" end");
 ```
@@ -5289,7 +5289,7 @@ a definition of that variable.
 
 This can be computed as follows:
 
-``` rascal
+```rascal
 module demo::lang::Pico::Uninit
 
 import demo::lang::Pico::Abstract;
@@ -5338,7 +5338,7 @@ The function `uninitProgram` performs this analysis on the source text of a Pico
 
 Here is a simple example, where variable `p` is used without intialization:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Pico::Uninit;
 uninitProgram("begin declare n : natural, m : natural, p : natural; n := 10; m := n + p end");
 ```
@@ -5355,7 +5355,7 @@ The *definitions* of a variable are the source code locations where a variable g
 are the location where the value of that variable is used. Both concepts are relevant for program analysis and are
 defined here.
 
-``` rascal
+```rascal
 module demo::lang::Pico::UseDef
 
 import demo::lang::Pico::Abstract;
@@ -5423,7 +5423,7 @@ Visualize Pico Control Flow Graphs.
 
 **Examples.**
 
-``` rascal
+```rascal
 Unresolved directive in Languages/Pico/Visualize/Visualize.adoc - include::/mnt/c/dev/projects/usethesource/rascal/src/org/rascalmpl/library/demo/lang/Pico/Visualize.rsc[tags=module]
 ```
 
@@ -5446,7 +5446,7 @@ Unresolved directive in Languages/Pico/Visualize/Visualize.adoc - include::/mnt/
 
 Let’s now apply this:
 
-``` rascal-figure
+```rascal-figure
                 import demo::lang::Pico::ControlFlow;
 import demo::lang::Pico::Visualize;
 CFG = cflowProgram("begin declare n : natural, s : string; n := 10; s := \"a\"; while n do s := s + \"a\"; n := n - 1 od end");
@@ -5494,7 +5494,7 @@ These are a number of recipes for measuring different things about Java:
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ```
 
 First we import the basic data types for representing Java. The model is called *M3*, and its definition is split acros
@@ -5502,20 +5502,20 @@ a generic language independent module called \[Rascal:analysis/m3/Core\] and a J
 \[Rascal:lang/java/m3/Core\]. Have a look at the documentation of these modules later. For now we will go through using
 them in a few examples.
 
-``` rascal-shell
+```rascal-shell
 import lang::java::m3::Core;
 ```
 
 Then we import the API for extracting an M3 model from an Eclipse project.
 
-``` rascal-shell
+```rascal-shell
 import lang::java::jdt::m3::Core;
 ```
 
 Calling the following function generates an enormous value representing everything the Eclipse Java compiler knows about
 this project:
 
-``` rascal-shell
+```rascal-shell
 myModel = createM3FromEclipseProject(|project://example-project|);
 ```
 
@@ -5526,7 +5526,7 @@ myModel = createM3FromEclipseProject(|project://example-project|);
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 ```
 
 First we import the basic data types for representing Java. The model is called *M3*, and its definition is split acros
@@ -5534,27 +5534,27 @@ a generic language independent module called \[Rascal:analysis/m3/Core\] and a J
 \[Rascal:lang/java/m3/Core\]. Have a look at the documentation of these modules later. For now we will go through using
 them in a few examples.
 
-``` rascal-shell
+```rascal-shell
 import lang::java::m3::Core;
 ```
 
 Then we import the API for extracting an M3 model from an Eclipse project.
 
-``` rascal-shell
+```rascal-shell
 import lang::java::jdt::m3::Core;
 ```
 
 Calling the following function generates an enormous value representing everything the Eclipse Java compiler knows about
 this project:
 
-``` rascal-shell
+```rascal-shell
 myModel = createM3FromEclipseProject(|project://example-project|);
 ```
 
 Next, let’s focus on the *containment* relation. This defines what parts of the source code are parts of which other
 parts:
 
-``` rascal-shell
+```rascal-shell
 myModel.containment
 ```
 
@@ -5562,19 +5562,19 @@ As you can read, classes contain methods, methods contain variables, etc. Classe
 (nested classes), and methods can even contain classes (anonymous classes). Let’s focus on a specific class, and project
 what it contains from the relation:
 
-``` rascal-shell
+```rascal-shell
 myModel.containment[|java+class:///HelloWorld|]
 ```
 
 Let’s filter the methods:
 
-``` rascal-shell
+```rascal-shell
 helloWorldMethods = [ e | e <- myModel.containment[|java+class:///HelloWorld|], e.scheme == "java+method"];
 ```
 
 And we are ready to compute our first metric. How many methods does this class contain?
 
-``` rascal-shell
+```rascal-shell
 import List;
 size(helloWorldMethods)
 ```
@@ -5583,26 +5583,26 @@ No magic applied\! It is just a little query on a model that knows everything ab
 compute the number of methods for all classes in one big expression. First a function to compute the number for a given
 class:
 
-``` rascal-shell
+```rascal-shell
 int numberOfMethods(loc cl, M3 model) = size([ m | m <- model.containment[cl], isMethod(m)]);
 ```
 
 then we apply this new function to give us a map from classes to integers:
 
-``` rascal-shell
+```rascal-shell
 map[loc class, int methodCount] numberOfMethodsPerClass = (cl:numberOfMethods(cl, myModel) | <cl,_> <- myModel.containment, isClass(cl));
 ```
 
 how about the number of fields?
 
-``` rascal-shell
+```rascal-shell
 int numberOfFields(loc cl, M3 model) = size([ m | m <- model.containment[cl], isField(m)]);
 map[loc class, int fieldCount] numberOfFieldsPerClass = (cl:numberOfFields(cl, myModel) | <cl,_> <- myModel.containment, isClass(cl));
 ```
 
 what is the ratio between fields and methods for each class?
 
-``` rascal-shell
+```rascal-shell
 (cl : (numberOfFieldsPerClass[cl] * 1.0) / (numberOfMethodsPerClass[cl] * 1.0) | cl <- classes(myModel))
 ```
 
@@ -5610,7 +5610,7 @@ what is the ratio between fields and methods for each class?
 
 **Examples.**
 
-``` rascal-shell
+```rascal-shell
 import lang::java::m3::Core;
 import lang::java::jdt::m3::Core;
 import lang::java::jdt::m3::AST;
@@ -5618,56 +5618,56 @@ import lang::java::jdt::m3::AST;
 
 First extract our overview model
 
-``` rascal-shell
+```rascal-shell
 myModel = createM3FromEclipseProject(|project://example-project|);
 ```
 
 Now let’s focus on the methods
 
-``` rascal-shell
+```rascal-shell
 myMethods = methods(myModel);
 ```
 
 What is the source code for a method?
 
-``` rascal-shell
+```rascal-shell
 import IO;
 methodSrc = readFile(|java+method:///HelloWorld/main(java.lang.String%5B%5D)|);
 ```
 
 let’s print it:
 
-``` rascal-shell
+```rascal-shell
 println(methodSrc)
 ```
 
 how many words in this method?
 
-``` rascal-shell
+```rascal-shell
 (0 | it + 1 | /\W+/ := methodSrc)
 ```
 
 let’s get its AST
 
-``` rascal-shell
+```rascal-shell
 methodAST = getMethodASTEclipse(|java+method:///HelloWorld/main(java.lang.String%5B%5D)|, model=myModel);
 ```
 
 Now we count the number of expressions:
 
-``` rascal-shell
+```rascal-shell
 (0 | it + 1 | /Expression _ := methodAST)
 ```
 
 or give us the locations of all expressions:
 
-``` rascal-shell
+```rascal-shell
 [m@src | /Expression m := methodAST]
 ```
 
 the size should be the same, right?
 
-``` rascal-shell
+```rascal-shell
 import List;
 size([m@src | /Expression m := methodAST]) == (0 | it + 1 | /Expression _ := methodAST)
 ```
@@ -5716,7 +5716,7 @@ visualization for them. The global approach is:
 
 Here is our solution:
 
-``` rascal
+```rascal
 module demo::vis::VisADT
 
 //import vis::Figure;
@@ -5756,7 +5756,7 @@ module demo::vis::VisADT
 For the example `ColoredTree` `rb` we can set a standard (see [/Libraries\#std](/docs/Libraries#std))
 [size](/docs/Libraries#size) and standard [gap](/docs/Libraries#gap):
 
-``` rascal-figure
+```rascal-figure
                 import demo::vis::VisADT;
 render(space(visColoredTree(rb), std(size(30)), std(gap(30))));
 ```
@@ -5775,7 +5775,7 @@ Note that:
 Some further custumizations are possible. By default, the tree visualization uses
 [manhattan](/docs/Libraries#manhattan) style. If we turn it off
 
-``` rascal-figure
+```rascal-figure
                 import demo::vis::VisADT;
 render(space(visColoredTree(rb), std(size(30)), std(gap(30)), std(manhattan(false))));
 ```
@@ -5787,7 +5787,7 @@ the result is:
 It is also possible to change the [orientation](/docs/Libraries#orientation) of the tree and draw it, for example,
 from left to right:
 
-``` rascal-figure
+```rascal-figure
                 import demo::vis::VisADT;
 render(space(visColoredTree(rb), std(size(30)), std(gap(30)), std(orientation(leftRight()))));
 ```
@@ -5810,7 +5810,7 @@ Given a 50x50 matrix containing the colors of the Rascal logo, we can reproduce 
 
 Here is the solution:
 
-``` rascal
+```rascal
 module demo::vis::Logo
 
 //import vis::Figure;
@@ -6088,7 +6088,7 @@ module demo::vis::Logo
 
 We can use it as follows:
 
-``` rascal-figure
+```rascal-figure
                 import demo::vis::Logo;
 render(logo());
 ```
@@ -6115,7 +6115,7 @@ Control the height of a box with user input.
 
 Here is a solution:
 
-``` rascal
+```rascal
 module demo::vis::Higher
 
 //import vis::Figure;
@@ -6163,7 +6163,7 @@ as follows:
 
 Rendering this figure:
 
-``` rascal-figure
+```rascal-figure
 import demo::vis::Higher;
 render(higher());
 ```
@@ -6185,7 +6185,7 @@ Drawing a box in many variations.
 
 Drawing a red [box](/docs/Libraries#box) is as simple as this:
 
-``` rascal-figure
+```rascal-figure
 import vis::Figure;
 import vis::Render;
 b = box(fillColor("red"));
@@ -6200,7 +6200,7 @@ and it will look like this:
 
 Wow, the box fills the whole window\! So lets give our box a [size](/docs/Libraries#size):
 
-``` rascal-figure
+```rascal-figure
 import vis::Figure;
 import vis::Render;
 b = box(fillColor("red"), size(200,100));
@@ -6217,7 +6217,7 @@ On screen however, it still fills the whole window as shown above. The lesson he
 So how can we produce a box that does *not* fill the whole window? The answer is to define the size of the box
 *relative* to its surroundings by using [shrink](/docs/Libraries#shrink):
 
-``` rascal-figure
+```rascal-figure
 import vis::Figure;
 import vis::Render;
 b = box(fillColor("red"), shrink(0.5));
@@ -6231,7 +6231,7 @@ which says: *I am a red box and I want to occupy 50% of the available space.* Th
 Shrinking can also be limited to one dimension using [hshrink](/docs/Libraries#hshrink) or
 [vshrink](/docs/Libraries#vshrink):
 
-``` rascal-figure
+```rascal-figure
 import vis::Figure;
 import vis::Render;
 b = box(fillColor("red"), hshrink(0.5));
@@ -6245,7 +6245,7 @@ available space in the vertical direction.\_ The result is:
 
 Relative sizes can also be used when figures are nested.
 
-``` rascal-figure
+```rascal-figure
 import vis::Figure;
 import vis::Render;
 b1 = box(fillColor("red"), hshrink(0.5));
@@ -6259,7 +6259,7 @@ render(b2);
 
 In the above examples we have consistently added the two imports:
 
-``` rascal
+```rascal
 import vis::Figure;
 import vis::Render;
 ```
@@ -6282,7 +6282,7 @@ to read or inspect a parse tree, a visualization can be useful.
 
 We embark on visualizing parse trees for the language Exp:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Concrete::WithLayout::Syntax;
 import ParseTree;
 parse(#Exp, "1+2*3");
@@ -6292,7 +6292,7 @@ As can be seen, even for such a trivial example, the details in the parse tree r
 
 We can visualize it as follows:
 
-``` rascal-figure
+```rascal-figure
 import demo::lang::Exp::Concrete::WithLayout::Syntax;
 import ParseTree;
 import vis::Figure;
@@ -6331,7 +6331,7 @@ Illustrate the effect of various figure properties.
 
 Here is an ellipse with minimum size 200x300 that occupies 80% of the available space:
 
-``` rascal-figure
+```rascal-figure
                 e = ellipse(size(200,100), shrink(0.8));
 render(e);
 ```
@@ -6342,7 +6342,7 @@ render(e);
 
 Change the style of its border using [lineStyle](/docs/Libraries#linestyle):
 
-``` rascal-figure
+```rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), lineStyle("dot"));
 render(e);
 ```
@@ -6351,7 +6351,7 @@ render(e);
 
 Change the thickness of its border using [lineWidth](/docs/Libraries#linewidth):
 
-``` rascal-figure
+```rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), lineWidth(5));
 render(e);
 ```
@@ -6360,7 +6360,7 @@ render(e);
 
 Change the color of its border using [lineColor](/docs/Libraries#linecolor):
 
-``` rascal-figure
+```rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), lineColor("blue"));
 render(e);
 ```
@@ -6369,7 +6369,7 @@ render(e);
 
 Change the color of its area using [fillColor](/docs/Libraries#fillcolor):
 
-``` rascal-figure
+```rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), fillColor("yellow"));
 render(e);
 ```
@@ -6378,7 +6378,7 @@ render(e);
 
 Add a shadow using [shadow](/docs/Libraries#shadow):
 
-``` rascal-figure
+```rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), shadow(true));
 render(e);
 ```
@@ -6387,7 +6387,7 @@ render(e);
 
 Add the color of the shadow using [shadowColor](/docs/Libraries#shadowcolor):
 
-``` rascal-figure
+```rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), shadow(true), shadowColor("grey"));
 render(e);
 ```
@@ -6396,7 +6396,7 @@ render(e);
 
 Finally, enjoy the grande finale:
 
-``` rascal-figure
+```rascal-figure
                 e = ellipse(size(200,100), shrink(0.8), lineStyle("dot"), lineWidth(5), lineColor("blue"), fillColor("yellow"), shadow(true), shadowColor("grey"));
 render(e);
 ```

@@ -107,29 +107,29 @@ and reals but also for list concatenation, set union and the like.
 
 Some example can illustrate the above.
 
-``` rascal-shell
+```rascal-shell
 int I = 3;
 ```
 
 Since I is declared as type `int`, we cannot assign a `real` value to it:
 
-``` rascal-shell
+```rascal-shell
 I = 3.5;
 ```
 
-``` rascal-shell
+```rascal-shell
 num N = 3;
 ```
 
 Since N is declared as type `num`, we can assign both `int` and `real` values to it:
 
-``` rascal-shell
+```rascal-shell
 N = 3.5;
 ```
 
 Since all types are a subtype of type `value`, one can assign values of any type to a variable declared as `value`:
 
-``` rascal-shell
+```rascal-shell
 value V = 3;
 V = "abc";
 V = false;
@@ -137,7 +137,7 @@ V = false;
 
 We can use pattern matching to classify the actual type of a value:
 
-``` rascal-shell
+```rascal-shell
 str classify(value V){
   switch(V){
     case str S: return "A string";
@@ -153,19 +153,19 @@ classify(V);
 In addition to these standard examples, it is interesting that all [Algebraic Data
 Types](/docs/Rascal#ADT) are subtypes of type `node`. Let’s introduce a simple `Color` data type:
 
-``` rascal-shell
+```rascal-shell
 data Color = red(int level) | blue(int level);
 ```
 
 Unsurprisingly, we have:
 
-``` rascal-shell
+```rascal-shell
 Color C = red(3);
 ```
 
 Due to subtyping, we can also have:
 
-``` rascal-shell
+```rascal-shell
 node ND = red(3);
 ```
 
@@ -252,7 +252,7 @@ Here are some examples of the built-in data types:
 A fragment of the datatype that defines the abstract syntax for statements (assignment, if, while) in a programming
 language would look as follows:
 
-``` rascal
+```rascal
 data STAT = asgStat(Id name, EXP exp)
           | ifStat(EXP exp,list[STAT] thenpart,
                            list[STAT] elsepart)
@@ -262,7 +262,7 @@ data STAT = asgStat(Id name, EXP exp)
 
 Here are some examples how Rascal responds to values of the above built-in datatypes:
 
-``` rascal-shell
+```rascal-shell
 true;
 101;
 3.14;
@@ -303,7 +303,7 @@ lifetime avoids sharing and aliasing problems that exist in many languages.
 
 First we, create a list value and assign it to two variables `L` and `M`.
 
-``` rascal-shell
+```rascal-shell
 L = [1, 2, 3];
 M = L;
 ```
@@ -311,19 +311,19 @@ M = L;
 Next we assign a new value to the first element of the list. The effect is that a new list value `[10, 2, 3]` is
 constructed.
 
-``` rascal-shell
+```rascal-shell
 L[0] = 10;
 ```
 
 L is now associated with this new value:
 
-``` rascal-shell
+```rascal-shell
 L;
 ```
 
 But `M` is still associated with the original, unmodified, value.
 
-``` rascal-shell
+```rascal-shell
 M;
 ```
 
@@ -333,14 +333,14 @@ visible via `M`.
 String values are, like all other values, also immutable. Let’s experiment with the
 [replaceAll](/docs/Libraries#replaceall) function:
 
-``` rascal-shell
+```rascal-shell
 import String;
 replaceAll("abracadabra", "a", "A");
 ```
 
 Now assign to variables `S` and `T` the string `"abracadabra"` and let’s see what happens:
 
-``` rascal-shell
+```rascal-shell
 S = "abracadabra";
 T = S;
 S = replaceAll("abracadabra", "a", "A");
@@ -381,14 +381,14 @@ Comprehension](/docs/Rascal#comprehension), and [Map Comprehension](/docs/Rascal
 
 A standard example is
 
-``` rascal-shell
+```rascal-shell
 { x * x | int x <- [1 .. 10], x % 3 == 0 }
 ```
 
 i.e., the squares of the integers in the range `[ 1 .. 10 ]` that are divisible by 3. A more intriguing example (that we
 do not give in full detail) is
 
-``` rascal
+```rascal
 {name | /asgStat(Id name, _) <- P}
 ```
 
@@ -425,14 +425,14 @@ bound when the match is successful. Anonymous (don’t care) positions are indic
 Here is a *regular expression* that matches a line of text, finds the first alphanumeric word in it, and extracts the
 word itself as well as the before and after it (`\W` matches all non-word characters; `\w` matches all word characters):
 
-``` rascal
+```rascal
 /^<before:\W*><word:\w+><after:.*$>/
 ```
 
 Regular expressions follow the Java regular expression syntax with one exception: instead of using numbered groups to
 refer to parts of the subject string that have been matched by a part of the regular expression we use the notation:
 
-``` rascal
+```rascal
 Name</emphasis>:_RegularExpression_>
 ```
 
@@ -440,7 +440,7 @@ If `RegularExpression` matches, the matched substring is assigned to string vari
 
 The following abstract pattern matches the abstract syntax of a while statement defined earlier:
 
-``` rascal
+```rascal
 whileStat(EXP Exp, list[STAT] Stats)
 ```
 
@@ -449,13 +449,13 @@ declared in the context in which the pattern occurs. So-called multi-variables i
 a `  ` suffix: `X</emphasis>` is thus an abbreviation for `list[…​] X` or `set[…​] X`, where the precise element type
 depends on the context. The above pattern can then be written as
 
-``` rascal
+```rascal
 whileStat(EXP Exp, Stats*)
 ```
 
 or, if you are not interested in the actual value of the statements as
 
-``` rascal
+```rascal
 whileStat(EXP Exp, _*)
 ```
 
@@ -481,7 +481,7 @@ drive the control structures. In the latter case, the Boolean expression is exec
 
 A classical if statement:
 
-``` rascal
+```rascal
 if(N <= 0)
      return 1;
   else
@@ -490,7 +490,7 @@ if(N <= 0)
 
 A combination of a generator and a test:
 
-``` rascal
+```rascal
 for(/docs/asgStat(Id name, _) <- P, size(name) > 10){
     println(name);
 }
@@ -520,7 +520,7 @@ Action](/docs/Rascal#pattern-with-action) for more details.
 We use the [ColoredTrees](/docs/Recipes#colored-trees) datatype as example and use a switch to distinguish between red
 and black nodes:
 
-``` rascal-shell
+```rascal-shell
 data ColoredTree =
       leaf(int N)
     | red(ColoredTree left, ColoredTree right)
@@ -584,7 +584,7 @@ See [Function Declaration](/docs/Rascal#function-declaration) for details.
 
 Here is an example of a function that counts the number of assignment statements in a program:
 
-``` rascal
+```rascal
 int countAssignments(PROGRAM P){
     int n = 0;
     visit (P){
@@ -597,7 +597,7 @@ int countAssignments(PROGRAM P){
 
 Consider the following use of higher-order functions:
 
-``` rascal
+```rascal
 int double(int x) { return 2 * x; }
 
 int triple(int x) { return 3 * x; }
@@ -610,7 +610,7 @@ interesting. It takes an integer `x` and a function `multi` (with integer argume
 applies multi to its own argument. `f(5, triple)` will hence return `15`. Function values can also be created
 anonymously as illustrated by the following, alternative, manner of writing this same call to `f`:
 
-``` rascal
+```rascal
 f(5, int (int y){return 3 * y;});
 ```
 
@@ -670,7 +670,7 @@ Here are some examples:
 
 The EXP language can be defined as follows:
 
-``` rascal
+```rascal
 module demo::lang::Exp::Concrete::WithLayout::Syntax
 
 layout Whitespace = [\t-\n\r\ ]*; 
@@ -687,7 +687,7 @@ start syntax Exp
 
 Now you may parse and manipulate programs in the EXP language. Let’s demonstrate parsing an expression:
 
-``` rascal-shell
+```rascal-shell
 import demo::lang::Exp::Concrete::WithLayout::Syntax;
 import ParseTree;
 parse(#start[Exp], "2+3*4");
@@ -783,7 +783,7 @@ See [Enumerator](/docs/Rascal#enumerator) for details.
 
 **Examples.**
 
-``` rascal
+```rascal
 int x <- { 1, 3, 5, 7, 11 }
 int x <- [ 1 .. 10 ]
 /asgStat(Id name, _) <- P
@@ -797,13 +797,13 @@ pattern (`asgStat`). Note the use of an anonymous variable at the `EXP` position
 
 Let’s practice some of these examples.
 
-``` rascal-shell
+```rascal-shell
 int x <- {};
 ```
 
 The enumerator does not produce any value and returns `false`.
 
-``` rascal-shell
+```rascal-shell
 int x <- {1, 3, 5, 7, 11 };
 x;
 ```
@@ -813,7 +813,7 @@ cannot inspect the value of the variable `x` that was bound.
 
 Another example that results in an error:
 
-``` rascal-shell
+```rascal-shell
 str x <- {1, 3, 5, 7, 11 };
 ```
 
@@ -822,7 +822,7 @@ declared as string, and an error results.
 
 A more satisfying use is as follows:
 
-``` rascal-shell
+```rascal-shell
 { x * x | int x <- {1, 3, 5, 7, 11 }};
 ```
 
@@ -831,7 +831,7 @@ When used inside [Comprehensions](/docs/Rascal#comprehensions), or [For](/docs/R
 produced and used. The variables that are introduced by a enumerator are local to the construct in which the enumerator
 is used. Here is a similar example:
 
-``` rascal-shell
+```rascal-shell
 import IO;
 for(int x <- {1, 3, 5, 7, 11 })
     println("x = <x>");
@@ -888,7 +888,7 @@ In a package for symbolic differentiation it is desirable to keep expressions in
 intermediate results like `add(product(con(1), x), mul(con(0), y))` that can be simplified to `x`. The following
 definitions achieve this:
 
-``` rascal
+```rascal
 Exp simp(add(con(n), con(m))) = con(n + m);   
 Exp simp(mul(con(n), con(m))) = con(n * m);
 
