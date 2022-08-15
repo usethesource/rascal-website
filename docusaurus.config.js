@@ -1,6 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+const codeBlock = require('./src/remark/codeblock');
+
+
 // const path = require('path');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
@@ -28,14 +31,19 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/usethesource/rascal-website/tree/website-v2/docs/',
+          remarkPlugins: [
+            // codeBlock
+          ],
         },
         blog: {
           showReadingTime: true,
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/usethesource/rascal-website/tree/website-v2/blog/',
+          editUrl: 'https://github.com/usethesource/rascal-website/tree/website-v2/blog/',
+          remarkPlugins: [
+            // codeBlock
+          ],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -12,15 +12,12 @@ Getting help when working with Rascal
 You can use Rascal in two ways:
 
   - At the command line — the *Command Line Interface* (CLI) or if you prefer the *Read-Eval-Print-Loop* (REPL).
-
   - In an Integrated Development Environment (IDE) like Eclipse.
 
 Both provide help facilities that we discuss in more detail:
 
   - [Help at the command line](#commandLine): Get help when using Rascal at the command line (CLI, REPL).
-
   - [Help in the Integrated Development Environment (IDE)](#IDE): Get help when using Rascal in the IDE.
-
   - [Browsing Documentation](#browsing): Browsing the Rascal documentation.
 
 ## Help at the command line {#commandLine}

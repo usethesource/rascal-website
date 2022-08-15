@@ -104,7 +104,7 @@ For operators on Boolean values see [Boolean](/docs/Rascal#Boolean) in the Rasca
 
 The following functions are defined for Booleans:
 
-  - [arbBool](#Libraries/Prelude/Boolean-arbBool): Return an arbitrary Boolean value.
+  - [arbBool](Libraries#arbbool): Return an arbitrary Boolean value.
 
   - [fromString](#Libraries/Prelude/Boolean-fromString): Convert the strings "true" or "false" to a bool
 
