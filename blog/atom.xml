@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://rascal-mpl.org/blog"/>
     <subtitle>The Rascal Meta Programming Language Blog</subtitle>
-    <icon>https://rascal-mpl.org/img/favicon.ico</icon>
+    <icon>https://rascal-mpl.org/images/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[What is ValLang?]]></title>
         <id>/2017/03/01/what-is-vallang</id>
