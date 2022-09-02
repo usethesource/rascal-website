@@ -12,7 +12,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <div className='hero__text text--center'>
-          <img src='img/rascal_logo.png' className='hero__image' /><br/>
+          <img src='images/rascal_logo.png' className='hero__image' /><br/>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
         </div>
       </div>

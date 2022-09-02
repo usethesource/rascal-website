@@ -78,7 +78,7 @@ const config = {
         title: 'The Rascal Meta Programming Language',
         logo: {
           alt: 'Rascal logo',
-          src: 'img/rascal_large_no_text.png',
+          src: 'images/rascal_large_no_text.png',
         },
         items: [
           {
