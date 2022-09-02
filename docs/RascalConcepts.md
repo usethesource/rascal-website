@@ -207,10 +207,10 @@ Here are some examples of the built-in data types:
 | `str`                     | `"abc"`, `"first\nnext"`, `"result: <X>"` |
 | `loc`                     | `\|file:///etc/passwd\|` |
 | `dateTime`                | `$2101-09-05T07:16:19.714+0200$` |
-| `tuple[_T₁,...,Tₙ]`	| `<1,2>`, `<"john", 43, true>` |
+| `tuple[_T<sub>1</sub>,...,T~n~]`	| `<1,2>`, `<"john", 43, true>` |
 | `list[T]`               | `[]`, `[1]`, `[1,2,3]`, `[true, 2, "abc"]` |
 | `set[T]`                | `{}`, `{1,2,3,5,7}`, `{"john", 4.0}` |
-| `rel[_T₁,...,Tₙ]`   | `{<1,2>,<2,3>,<1,3>}`, `{<1,10,100>, <2,20,200>}` |
+| `rel[_T<sub>1</sub>,...,T~n~]`   | `{<1,2>,<2,3>,<1,3>}`, `{<1,10,100>, <2,20,200>}` |
 | `map[T, U]`           | `()`, `(1:true, 2:false)`, `("a":1, "b":2)` |
 | `node`                    | `f()`, `add(x,y)`, `g("abc", [2,3,4])` |
 
@@ -850,7 +850,7 @@ Static type checking.
 ### Details 
 
 
-![Type Lattice](/assets/3593b16a-523c-42b7-855d-355125647cbb.png)
+![Type Lattice](/assets/94019b41-ffba-4303-9cf4-aeb778991c5a.png)
 
 ### Description 
 

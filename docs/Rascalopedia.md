@@ -8,8 +8,8 @@ The following issues have been detected while preparing this draft document. It 
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/Relation/Relation.md|:41,0 Broken concept link: Libraries:Libraries-Set
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/Language/Language.md|:18,0 Ambiguous concept link: Syntax resolves to all of {"#Languages-Lisra-Syntax","#Syntax-Syntax","#Concept-Syntax","#Languages-Pico-Syntax"}
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/List/List.md|:50,0 Broken concept link: Libraries:Libraries-List
-1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/AbstractSyntaxTree/AbstractSyntaxTree.md|:25,0 Ambiguous concept link: example-text.png resolves to all of {"/assets/3060d5ae-2272-4f59-b2e0-1ad2a1ba2b39.png","/assets/7aae588d-5848-4b81-8176-d97fd3631cf4.png"}
-1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/ParseTree/ParseTree.md|:22,0 Ambiguous concept link: example-text.png resolves to all of {"/assets/3060d5ae-2272-4f59-b2e0-1ad2a1ba2b39.png","/assets/7aae588d-5848-4b81-8176-d97fd3631cf4.png"}
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/AbstractSyntaxTree/AbstractSyntaxTree.md|:25,0 Ambiguous concept link: example-text.png resolves to all of {"/assets/0afb5506-11bf-4c81-9a2f-5e51ac783683.png","/assets/2aa21d81-63aa-4e6b-92e1-8c8b7bf3a1ad.png"}
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/ParseTree/ParseTree.md|:22,0 Ambiguous concept link: example-text.png resolves to all of {"/assets/0afb5506-11bf-4c81-9a2f-5e51ac783683.png","/assets/2aa21d81-63aa-4e6b-92e1-8c8b7bf3a1ad.png"}
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/AbstractDataType/AbstractDataType.md|:25,0 Ambiguous concept link: Rascal:Declarations-AlgebraicDataType resolves to all of {"/Rascal.md#Declarations-AlgebraicDataType","#Declarations-AlgebraicDataType"}
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/Set/Set.md|:29,0 Broken concept link: Libraries:Prelude-Set
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/Set/Set.md|:46,0 Broken concept link: Expressions-Values-List-List
@@ -142,7 +142,7 @@ Robert vam Liere and Wim de Leeuw have visualized liquid flows.
 There is also an http://homepages.cwi.nl/~robertl/movies/flow1.mpg[animated] version.
 
 
-![](/assets/80fcb35f-a4c9-4214-b19e-17665698bad4.jpg)
+![](/assets/0a808c7b-1281-4ce2-87f7-f91ee9f9893b.jpg)
 
 
 
@@ -153,7 +153,7 @@ Facebook's http://apps.facebook.com/friendwheel/[Friend Wheel] shows the connect
 
 
 
-![](/assets/1fb6f639-d515-4a64-8fbc-976a089cdf21.jpg)
+![](/assets/0bc5b455-7899-4abe-9c55-c69047e71e43.jpg)
 
 
 ## Software Visualization
@@ -162,14 +162,14 @@ Stephen Eick http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.67.962[visu
 in all source files of a software system.
 
 
-![](/assets/9a66beac-853e-4db8-ba3b-b04e1b33fa98.png)
+![](/assets/6051d1fa-26f6-458b-9ebf-6e35e3ff8fe6.png)
 
 
 
 Daniel Bierwirth http://www.danielbierwirth.de/index.php/reseachprojects/8-myresearch/mastercurriculumresearchcat/73-bundle-view-software-visualization[shows] the connections (colored lines) between system components (at outer circle).
 
 
-![](/assets/288f396e-6fb8-472c-aabc-41cabc62fb74.jpg)
+![](/assets/bfcdb6cc-8d5e-4e48-9939-9a16cd7f45b1.jpg)
 
 
 
@@ -258,25 +258,25 @@ An unordered set of tuples.
 
 ### Description 
 
-In mathematics, given sets _D_₁, _D_₂, ... _D_ₙ, a
-_n_-ary relation _R_ is characterized by _R_ &subseteq;  _D_₁ &times; _D_₂ &times; ... &times; _D_ₙ.
-In other words, _R_ consists of a set of tuples < _V₁_, ..., _Vₙ_ > where each _V_ᵢ is an element of
-the set _D_ᵢ. When _n_ = 2, we call the relation a http://en.wikipedia.org/wiki/Relation_(mathematics)[binary relation].
+In mathematics, given sets _D_<sub>1</sub>, _D_<sub>2</sub>, ... _D_~n~, a
+_n_-ary relation _R_ is characterized by _R_ &subseteq;  _D_<sub>1</sub> &times; _D_<sub>2</sub> &times; ... &times; _D_~n~.
+In other words, _R_ consists of a set of tuples < _V<sub>1</sub>_, ..., _V~n~_ > where each _V_~i~ is an element of
+the set _D_~i~. When _n_ = 2, we call the relation a http://en.wikipedia.org/wiki/Relation_(mathematics)[binary relation].
 
 In http://en.wikipedia.org/wiki/Relational_algebra[database theory], a relation is a table with a heading and an unordered set of tuples:
 
-| _D₁ Name₁_ | _D₂ Name₂_ | ... | _Dₙ Nameₙ_ |
+| _D<sub>1</sub> Name<sub>1</sub>_ | _D<sub>2</sub> Name<sub>2</sub>_ | ... | _D~n~ Name~n~_ |
 | --- | --- | --- | --- |
-| _V₁₁_        | _V₁₂_        | ... | _V~1n~_        |
-| _V₂₁_        | _V₂₂_        | ... | _V~2n~_         |
-| _V₃₁_        | _V₃₂_        | ... | _V~3n~_         |
+| _V<sub>11</sub>_        | _V<sub>12</sub>_        | ... | _V~1n~_        |
+| _V<sub>21</sub>_        | _V<sub>22</sub>_        | ... | _V~2n~_         |
+| _V<sub>31</sub>_        | _V<sub>32</sub>_        | ... | _V~3n~_         |
 | ...            | ...            | ... |                
 
 
 
 
 In Rascal, a relation is a set of tuples and is characterized by the type:
-`rel[D₁ Name₁, D₂ Name₂, ..., Dₙ Nameₙ]` 
+`rel[D<sub>1</sub> Name<sub>1</sub>, D<sub>2</sub> Name<sub>2</sub>, ..., D~n~ Name~n~]` 
 See [Relation Values](/Rascal.md#Expressions-Values-Relation) and  for a description of relations and their operators
 (since relations are sets all set operators also apply to them, see [Set Values](/Rascal.md#Expressions-Values-Set))
 and [functions on relations]_Libraries:Libraries-Relation (broken link)_
@@ -288,11 +288,11 @@ see [functions on sets]_Libraries:Libraries-Set (broken link)_).
 ## Relations in Daily Life
 
 *  The _parent-of_ or _friend-of_ relation between people.
-   ![](/assets/1cee5aad-5e2e-47a2-ad3a-0b8704195f5b.jpg)
+   ![](/assets/a5241303-8f2f-47fd-9c4c-aa91e52c0330.jpg)
    http://www.translatedmemories.com/bookpgs/Pg10-11CharRelation.jpg[credit]
 *  A character relation map, describing the relations between the characters in a play or soap series.
 *  A listing of the top 2000 songs of all times including the position, artist name, song title, the year the song was published.
-   ![](/assets/d6916c68-b9ce-41cb-9894-2eb3faad598b.jpg)
+   ![](/assets/08553f06-7999-4a3e-aeb7-8e9f47f1a407.jpg)
    http://top2011.radio2.nl/lijst/2010[credit]
 
 
@@ -342,8 +342,8 @@ An ordered, fixed length, sequence of values of possibly different type.
 
 A tuple is an ordered fixed length sequence of values of possibly different type.
 
-In Rascal a tuple is written as `<` V₁, ..., Vₙ `>` and a tuple type has the form `type[T₁, ..., Tₙ]`,
-_T_ᵢ represents the type of element _i_. Tuple have two major applications:
+In Rascal a tuple is written as `<` V<sub>1</sub>, ..., V~n~ `>` and a tuple type has the form `type[T<sub>1</sub>, ..., T~n~]`,
+_T_~i~ represents the type of element _i_. Tuple have two major applications:
 
 *  As tuples in a [Relation](#Relation-Relation).
 *  For ad-hoc packaging of values, for instance, to return multiple-values from a function.
@@ -501,7 +501,7 @@ to the syntax rules of language _L_. There are two possible answers:
 This is shown below:
 
 
-![](/assets/4bdecf1e-dd2e-45ce-8e47-313794e4b109.png)
+![](/assets/b0356094-bc6c-453f-8b7f-778e84a8c38b.png)
 
 
 
@@ -739,11 +739,11 @@ and of [library functions on lists]_Libraries:Libraries-List (broken link)_.
 ## Lists in Daily Life
 
 *  A line of people waiting for the super market checkout or bus stop. 
-   ![](/assets/8566579c-21b0-45b3-8b71-d37142aff9dc.png)
+   ![](/assets/81698a52-2daf-465d-b8a4-b38cd62ea383.png)
    http://www.realbollywood.com[credit]
 *  The wagons of a train.
 *  The Top 100 Music Charts.
-   ![](/assets/38060c2b-5eaf-445f-b1aa-f1fa438e7a0b.png)
+   ![](/assets/376164b2-e917-4809-a3b6-c00c90c4fc80.png)
    http://www.billboard.com/charts/hot-100#/charts/hot-100[credit]
 *  Twitter users ordered according to number of followers.
 *  A _to do_ list.
@@ -792,7 +792,7 @@ the parse tree (left) and abstract syntax tree (right) may look as follows:
 
 
 
-![](/assets/f46ef260-db3d-4b13-a18b-909996392a63.png)
+![](/assets/bd0f2a65-9634-4dc7-9f2c-d0b86bb15d70.png)
 
 
 Note that the parse tree on the left did not preserve the spaces in the original text but there
@@ -822,7 +822,7 @@ A parse tree for the sentence
 
 
 
-![](/assets/8bef6d31-256d-40b3-8d0b-bfbf686bac33.png)
+![](/assets/d4d25171-eb74-451b-90d7-8fbeaf92f383.png)
 
 
 
@@ -855,15 +855,15 @@ See [Algebraic Data Types]_broken:Rascal:Declarations-AlgebraicDataType (ambiguo
 
 ## Abstract Data Types in Daily Life
 
-*  A stack of trays in the local cafetaria: ![](/assets/c7a03fb6-1467-4d3c-a64e-4ebc4c5e4af1.jpg)
+*  A stack of trays in the local cafetaria: ![](/assets/7025e350-8ec3-4ee1-a38a-7fdcf3c732a6.jpg)
    http://www.thermo-box.co.uk/fimi-food-transport-and-handling-products/self-levelling-heated-and-unheated-plate-and-tray-systems.html[credit]
 
 *  A tree:
-   ![](/assets/d3f04066-0a91-45bb-b848-4b675800c47d.jpg)
+   ![](/assets/cb167a15-e617-49dd-b27d-8b2db6d406bd.jpg)
    http://free-extras.com/images/tree-569.htm[credit]
 
 *  Coral:
-   ![](/assets/fc124a3f-dedb-4747-ba51-9515e648cdc3.jpg)
+   ![](/assets/5a8231bd-67bf-4b83-8a41-1880271bb669.jpg)
    http://blog.enn.com/?p=476[credit]
 
 
@@ -949,11 +949,11 @@ and of [library functions on sets]_Libraries:Prelude-Set (broken link)_.
 ## Sets in Daily Life
 
 *  A cutlery set consisting of knife, fork and the like.
-   ![](/assets/6c9b5531-264f-4d04-b491-e4ac5e1ce62f.jpg)
+   ![](/assets/307c14e4-2944-4665-9c5f-948430234605.jpg)
    http://www.ikea.com/gb/en/catalog/products/50087185/[credit]
 *  A crowd of people.
 *  A stamp collection (but be aware that the duplicates will disappear!)
-   ![](/assets/ae6bebe9-b02e-48d9-9a34-49910816d169.jpg)
+   ![](/assets/dae10077-7479-4565-bb49-3daea1f01ac5.jpg)
    http://www.life123.com/hobbies/antiques-collectibles/stamps/stamp-collecting-2.shtml[credit]
 
 ## Sets in computer science

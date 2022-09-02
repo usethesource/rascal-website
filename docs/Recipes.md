@@ -64,7 +64,7 @@ The following issues have been detected while preparing this draft document. It 
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Languages/Languages.md|:17,0 Ambiguous concept link: Recipes:Languages-Lisra resolves to all of {"#Languages-Lisra","/Recipes.md#Languages-Lisra"}
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Languages/Languages.md|:17,0 Ambiguous concept link: Recipes:Languages-Exp resolves to all of {"#Languages-Exp","/Recipes.md#Languages-Exp"}
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Languages/Languages.md|:17,0 Ambiguous concept link: Recipes:Languages-Func resolves to all of {"/Recipes.md#Languages-Func","#Languages-Func"}
-1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Languages/Pico/IDE/IDE.md|:52,0 Ambiguous concept link: Screenshot3.png resolves to all of {"/assets/e9bf3fa4-d88e-4a39-94e6-950b1612f5a7.png","/assets/64009781-8163-4d7a-b8d7-9d9d8f78e798.png"}
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Languages/Pico/IDE/IDE.md|:52,0 Ambiguous concept link: Screenshot3.png resolves to all of {"/assets/0a033108-210f-4985-a9af-84f61f21feba.png","/assets/a512214b-dfa9-4243-be0c-55eab63dae51.png"}
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Languages/Pico/Load/Load.md|:29,0 Broken concept link: Libraries:Prelude-RunTimeException
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Languages/Lisra/Parse/Parse.md|:33,0 Broken concept link: Concrete Patterns
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Languages/Exp/Abstract/Abstract.md|:43,0 Ambiguous concept link: Rascal:Declarations-Function resolves to all of {"#Declarations-Function","/Rascal.md#Declarations-Function"}
@@ -82,7 +82,7 @@ The following issues have been detected while preparing this draft document. It 
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Common/Common.md|:17,0 Ambiguous concept link: Recipes:Common-StringTemplate resolves to all of {"#Common-StringTemplate","/Recipes.md#Common-StringTemplate"}
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Common/Common.md|:17,0 Ambiguous concept link: Recipes:Common-AdHocDataExploration resolves to all of {"/Recipes.md#Common-AdHocDataExploration","#Common-AdHocDataExploration"}
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Common/Common.md|:17,0 Ambiguous concept link: Recipes:Common-CountConstructors resolves to all of {"#Common-CountConstructors","/Recipes.md#Common-CountConstructors"}
-1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Common/CallAnalysis/CallAnalysis.md|:35,0 Ambiguous concept link: CallAnalysis-calls.png resolves to all of {"/assets/13864239-a7ce-4958-83e2-9e4f37f2bde8.png","/assets/ac48f8f2-2105-4c68-91fa-c1409e941c20.png"}
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Common/CallAnalysis/CallAnalysis.md|:35,0 Ambiguous concept link: CallAnalysis-calls.png resolves to all of {"/assets/9e1b1631-ab94-4c06-9130-0d3a042c76b6.png","/assets/cdb00b8d-a56f-4068-80f2-1d9398256678.png"}
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Common/WordCount/WordCount.md|:64,0 Ambiguous concept link: Rascal:Expressions-Reducer resolves to all of {"/Rascal.md#Expressions-Reducer","#Expressions-Reducer"}
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Common/WordCount/CountInLine3/CountInLine3.md|:24,0 Ambiguous concept link: Rascal:Expressions-Reducer resolves to all of {"/Rascal.md#Expressions-Reducer","#Expressions-Reducer"}
 1. [warning] |project://rascal/src/org/rascalmpl/courses/Recipes/Common/WordReplacement/WordReplacement.md|:25,0 Ambiguous concept link: Rascal:Patterns-Regular resolves to all of {"/Rascal.md#Patterns-Regular","#Patterns-Regular"}
@@ -172,7 +172,7 @@ Here is an ellipse with minimum size 200x300 that occupies 80% of the available 
 render(e);
 ```
 
-![](/assets/1a14efd9-eafb-47a8-a758-cfdaa6a8b004.png)
+![](/assets/584aac1c-3acb-4ef6-8741-cc318ee58e8a.png)
 
 (we add the shrink to leave some space for thick lines and shadows below).
 
@@ -182,7 +182,7 @@ Change the style of its border using [lineStyle]_Libraries:Properties-lineStyle 
 render(e);
 ```
 
-![](/assets/ff81414d-4869-46be-b3b6-90bd0d0cb772.png)
+![](/assets/6fbc5516-9d7a-4ae8-91f9-39d8f06786a6.png)
 
 
 Change the thickness of its border using [lineWidth]_Libraries:Properties-lineWidth (broken link)_:
@@ -191,7 +191,7 @@ Change the thickness of its border using [lineWidth]_Libraries:Properties-lineWi
 render(e);
 ```
 
-![](/assets/0fca5305-6d4d-439a-9b18-b52456ff15a0.png)
+![](/assets/4961f85d-dc1e-40e2-bf85-2533f65457a3.png)
 
 
 Change the color of its border using [lineColor]_Libraries:Properties-lineColor (broken link)_:
@@ -200,7 +200,7 @@ Change the color of its border using [lineColor]_Libraries:Properties-lineColor 
 render(e);
 ```
 
-![](/assets/fac61382-4191-4020-8830-1277e0fed407.png)
+![](/assets/a5db3217-1393-460f-9420-c88fd621fd00.png)
 
 
 Change the color of its area using [fillColor]_Libraries:Properties-fillColor (broken link)_:
@@ -209,7 +209,7 @@ Change the color of its area using [fillColor]_Libraries:Properties-fillColor (b
 render(e);
 ```
 
-![](/assets/944ace67-c1a7-49db-8154-a36be123a49b.png)
+![](/assets/0dd9568d-a040-4539-9f1a-7b8db97ce5f7.png)
 
 
 Add a shadow using [shadow]_Libraries:Properties-shadow (broken link)_:
@@ -218,7 +218,7 @@ Add a shadow using [shadow]_Libraries:Properties-shadow (broken link)_:
 render(e);
 ```
 
-![](/assets/85ba66da-c697-470b-aae7-f91e9d42b03a.png)
+![](/assets/48978306-276a-4f95-a3c8-96197b38075d.png)
 
 
 Add the color of the shadow using [shadowColor]_Libraries:Properties-shadowColor (broken link)_:
@@ -227,7 +227,7 @@ Add the color of the shadow using [shadowColor]_Libraries:Properties-shadowColor
 render(e);
 ```
 
-![](/assets/2746a4ca-6a05-4067-bdac-9ab9b4813c08.png)
+![](/assets/3eb7bd5a-3888-4821-aa38-dbc81a150904.png)
 
 
 Finally, enjoy the grande finale:
@@ -236,7 +236,7 @@ Finally, enjoy the grande finale:
 render(e);
 ```
 
-![](/assets/288b036a-0e9d-4547-a61e-b656f3a853ed.png)
+![](/assets/135fa0d4-4648-4c38-b612-76e2bc827014.png)
 
 
 
@@ -282,7 +282,7 @@ render(space(visColoredTree(rb), std(size(30)), std(gap(30))));
 and the result is:
 
 
-![](/assets/61e5bfe8-160e-4ac8-a4ab-cdd4298d680a.png)
+![](/assets/58b67205-f27d-408e-aaf7-66005445ec7c.png)
 
 
 Note that:
@@ -300,7 +300,7 @@ render(space(visColoredTree(rb), std(size(30)), std(gap(30)), std(manhattan(fals
 the result is:
 
 
-![](/assets/7255eaaf-714b-44f0-a589-0b7136e4f289.png)
+![](/assets/b0140d2a-0026-4f74-a62e-724c92e5f432.png)
 
 
 It is also possible to change the [orientation]_Libraries:Properties-orientation (broken link)_ of the tree and draw it, for example, from left to right:
@@ -311,7 +311,7 @@ render(space(visColoredTree(rb), std(size(30)), std(gap(30)), std(orientation(le
 the result is:
 
 
-![](/assets/be09c734-b0ec-45cd-ba4c-971cf8a2ab28.png)
+![](/assets/239426d3-ad86-4854-a33b-05374eff98a9.png)
 
 
 
@@ -338,12 +338,12 @@ render(b);
 ```
 and it will look like this:
 
-![](/assets/5c790c18-f738-49c8-a44e-a1c92c829f0c.png)
+![](/assets/cb045f32-6000-472b-91ba-0c33ba0b4dca.png)
  or rather, it will look like this:
 
 
 
-![](/assets/6123d753-a8b8-4be9-97c4-530985fc7b1c.png)
+![](/assets/458e8b8e-2675-4057-8fa9-7830261813f5.png)
 
 
 Wow, the box fills the whole window! So lets give our box a [size]_Libraries:Properties-size (broken link)_:
@@ -355,7 +355,7 @@ render(b);
 ```
 and it will look like this:
 
-![](/assets/8db979cf-dd6f-4cd9-ac94-2f5baa03393e.png)
+![](/assets/8315fc6c-6984-41ab-8245-59510ca4f0db.png)
 
 
 On screen however, it still fills the whole window as shown above.
@@ -374,7 +374,7 @@ render(b);
 which says: _I am a red box and I want to occupy 50% of the available space._ The result is:
 
 
-![](/assets/5deac250-e771-4855-b194-ef7867af7dc2.png)
+![](/assets/b8886d0a-93e7-43d9-bcf5-a965c2ff28f4.png)
 
 
 Shrinking can also be limited to one dimension using [hshrink]_Libraries:Properties-hshrink (broken link)_ 
@@ -388,7 +388,7 @@ render(b);
 which says:_ I am a red box and I want to occupy 50% of the available space in the horizontal direction and 100% of the available space in the vertical direction._ The result is:
 
 
-![](/assets/64009781-8163-4d7a-b8d7-9d9d8f78e798.png)
+![](/assets/a512214b-dfa9-4243-be0c-55eab63dae51.png)
 
 
 Relative sizes can also be used when figures are nested.
@@ -401,7 +401,7 @@ b2 = box(b1, fillColor("yellow"), size(200,100));
 render(b2);
 ```
 
-![](/assets/abb0431e-fcd0-4bd6-bb7c-03bd05782a15.png)     
+![](/assets/6a0a88a6-18d0-4e47-9d23-2552f6faa4c9.png)     
 
 
 
@@ -462,7 +462,7 @@ render(higher());
 gives
 
 
-![](/assets/8733d233-181e-4d60-91f7-9822dc1196a2.png)
+![](/assets/8fc864af-f4b6-4d00-a43a-57b42c5f45e3.png)
 
 
 Unfortunately we cannot show the interaction here, so run this example from the `demo` directory and watch how the height of the box changes when you enter a new number in the text field.
@@ -498,12 +498,12 @@ render(logo());
 ```
 will produce:
 
-![](/assets/1da6f84b-bcfd-4fae-ac1c-37989bd10d34.png)
+![](/assets/afa23e46-1279-45bf-a508-32016cd8528f.png)
 
 or as a screenshot:
 
 
-![](/assets/24bff4b2-4a75-4d57-bc4a-b1e9bfe94a38.png)
+![](/assets/3f8ac50b-3741-4c10-8c82-7daf35267d39.png)
 
 
 
@@ -548,7 +548,7 @@ render(visParsetree(parse(#Exp, "1+2*3")));
 ```
 With as result:
 
-![](/assets/fe43ee8f-07d7-44af-a29e-879d4e3a8d20.png)
+![](/assets/b124d77f-b05f-4760-a8e7-116356d7c57f.png)
 
 
 The figure is interactive (not available here):
@@ -2194,14 +2194,14 @@ include::{LibDir}demo/lang/Pico/Plugin.rsc[tags=module]
 Let's write a Pico program that produces a string of "a"s:
 
 
-![](/assets/f604d65f-271b-4e6d-8071-2b1537fc7ad7.png)
+![](/assets/feae3cb8-fd8b-4038-a0cb-c11dc2c54bab.png)
 
 
 As can be seen in the editor above, we get an error since we made a typo (missing comma) in the declarations. We correct it:
 
 
 
-![](/assets/ba8bf80c-5ad1-48d4-9f02-4b18d439d3d7.png)
+![](/assets/73ac828d-d873-4c67-9f4e-aacd18097a6c.png)
 
 
 Now it turns out that we had erroneously used the `+` operator on strings (it should be `||`). We correct it:
@@ -2213,7 +2213,7 @@ Now it turns out that we had erroneously used the `+` operator on strings (it sh
 Now we get a warning that variable `n` is not initialized. We correct it and get an error-free and warning-free program:
 
 
-![](/assets/a4f43f4a-e889-4563-b38a-16a6248bbc1c.png)
+![](/assets/5c37f47d-bd75-47fe-8bc1-dd47612f2a80.png)
 
 
 
@@ -2361,7 +2361,7 @@ render(visCFG(CFG.graph));
 The resulting visualization looks like this: 
 
 
-![](/assets/74c94e2b-b257-4081-b9a4-f08bf2467ca1.png)
+![](/assets/0bb8fb29-5a34-4b63-a9d3-fbab4355f3c5.png)
 
 
 
@@ -4169,10 +4169,10 @@ include::{LibDir}demo/lang/Func/programs/F3.func[]
 ```
 
                 
-For convenience, we use two versions of these examples for each _F_ᵢ:
+For convenience, we use two versions of these examples for each _F_~i~:
 
-*  A file _Fᵢ_`.func` that contains the code as shown above.
-*  A file _Fᵢ_`.rsc` a Rascal file that declares a string variable _Fᵢ_ with the same content.
+*  A file _F~i~_`.func` that contains the code as shown above.
+*  A file _F~i~_`.rsc` a Rascal file that declares a string variable _F~i~_ with the same content.
 
 
 For instance, `F0.rsc` looks like this 
@@ -5300,7 +5300,7 @@ A frequently occurring problem is that we know the call relation of a system but
 Consider the following figure:
 
 
-![](/assets/ed6668a3-e73a-430d-b990-7d5998afc586.png)
+![](/assets/828cfd52-95e5-414d-8f7d-5e8808a80200.png)
 
 
 (a) Shows the calls between procedures;
@@ -5799,7 +5799,7 @@ So here's the solution:
 
 Let N be a positive integer.  
 
-Let k = floor (log₅ N)
+Let k = floor (log<sub>5</sub> N)
 
 Start a counter at zero, call it nz
 

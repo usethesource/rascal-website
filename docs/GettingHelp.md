@@ -61,7 +61,7 @@ Suppose we want to learn about `while` statement in Rascal and
 the type `help while` at the command line. This will show the following
 results (actual results may differ):
 
-![](/assets/cd7021a6-1913-4ca6-a6ff-a66d7202aabc.png)
+![](/assets/d23adf2f-7810-43f5-88be-e98d269834f0.png)
 
 In the right pane you find the search results,
 most relevant first (this happpens to be the

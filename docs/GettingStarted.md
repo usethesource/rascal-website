@@ -1,3 +1,10 @@
+## Document preparation issues
+
+The following issues have been detected while preparing this draft document. It is not ready for publication.
+
+1. [warning] |project://rascal/src/org/rascalmpl/courses/GettingStarted/GettingStarted.md|:36,0 Broken concept link: GettingHelp
+1. [warning] |project://rascal/src/org/rascalmpl/courses/GettingStarted/GettingStarted.md|:37,0 Broken concept link: GettingHelp:GettingHelp-FurtherReading
+
 ## Getting Started with Rascal {#GettingStarted}
 
 ### Synopsis 
@@ -33,8 +40,8 @@ In the Eclipse version, Rascal modules can be edited and a command console is al
 NOTE: Add a screenshot
 
 Where to go from here: 
-have a look at [Getting Help](#GettingHelp) and in particular 
-[further reading](/GettingHelp.md#FurtherReading-FurtherReading)
+have a look at [Getting Help]_GettingHelp (broken link)_ and in particular 
+[further reading]_GettingHelp:GettingHelp-FurtherReading (broken link)_
 or just click  the RascalTutor logo image:/images/rascal-tutor-small.png[width="40",heigth="40"] 
 at the top left of each Tutor page.
 

@@ -140,7 +140,7 @@ TypePal provides configuration options for
 
 Here is an overview:
 
-![](/assets/cd6c7a65-7c7d-4c85-8146-cd93d1ee7d5f.png)
+![](/assets/94c9813c-e420-4182-a61d-1e6146165aed.png)
 
 == Name Resolution & Overloading
 
@@ -451,7 +451,7 @@ to access and change its internal state. The global services provided by a `Coll
 
 The functions provided by a `Collector` are summarized below:
 
-![](/assets/91efd9b3-2a8a-4822-8d23-ef65334d4564.png)
+![](/assets/1ffe5f6b-2d04-4ff4-8d0f-14803fd36f67.png)
 
 Three dozen functions are available that fall into the following categories:
 
@@ -895,7 +895,7 @@ The purpose of a Solver is to solve the constraints that have been gathered by t
 and to produce a TModel.
 The functions provided by a Solver are summarized below:
 
-![](/assets/93464cf6-2a6e-4a97-9780-f06019ec7f7b.png)
+![](/assets/f76e10fc-fc1d-4cb0-baee-3d1268dca08b.png)
 
 Two dozen functions (some very similar to the ones provided for [Collector](#Collector-Collector)) are available 
 that fall into the following categories:
@@ -1335,7 +1335,7 @@ we follow semantic path to other trees (either in the current tree or in other t
 This is illustrated below, where a name occurrence _O_ 
 can be resolved to definitions _D1_ (syntactic resolution), _D2_ (semantic resolution) and/or _D3_ (semantic resolution).
 
-![](/assets/fc793b23-9711-40a8-9a66-a99fc88d8de8.png)
+![](/assets/25387165-2e89-4600-b6d5-098282c0c9af.png)
 
 IMPORTANT: Name resolution need not have a unique solution. 
 Therefore the author of a TypePal-based type checker can provide functions to 
@@ -1456,7 +1456,7 @@ Type checking using TypePal proceeds in the following stages:
 This approach is very flexible, since each of the stages can be called separately, enabeling a pipeline with 
 user-defined model transformations inbetween.
 
-![](/assets/921e3ec6-3733-4480-b014-f1a5a591c600.png)
+![](/assets/f3a2a1e6-3135-4122-81b1-0d3f735945c8.png)
 
 This whole process starts with a syntax for the language we want to analyze (let's call that language _L_ for now). 
 The _L_ syntax is used to parse the _L_ program we want to type check. The result is a parse tree.

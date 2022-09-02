@@ -42,7 +42,7 @@ We give various answers to these questions:
 ### Synopsis 
 Rascal excels in supporting the Extract-Analyze-SYnthesize (EASY) paradigm.
 
-![](/assets/e0330546-7488-4ef2-878b-256f453b7fed.png)
+![](/assets/ae1c7b02-8353-4aec-adef-ec64ba728acf.png)
 
 // explicitly separate image from Description 
 
@@ -139,7 +139,7 @@ _Daniel_ is a concurrency researcher at one of the largest hardware manufacturer
 ### Synopsis 
 System renovation.
 
-![](/assets/2d75829a-3425-478a-af67-a98afcd6f1d6.png)
+![](/assets/ca79f545-edcc-4437-916a-0bb1fdc4de0d.png)
 
 // explicitly separate image from Description 
 
@@ -170,7 +170,7 @@ Strategies to solve problems in various domains using Rascal.
 Extraction Analysis Synthesis  
 
 [[Problem-Solving-Workflow]]
-![Problem Solving Workflow](/assets/fb4722cd-4f46-4cd9-afad-0f028e76f6b2.png)
+![Problem Solving Workflow](/assets/c18abda0-a8ca-487f-a977-d11386d0a95f.png)
 
 ### Description 
 Before you study more complicated examples, it is useful to discuss some general problem solving 
@@ -205,7 +205,7 @@ It consists of three optional phases:
 *  Is synthesis needed, then define the synthesis phase, see [Synthesis](#SolutionStrategies-Synthesis).
 
 [[Validation-Workflow]]
-![Validation Workflow](/assets/8625df75-ac0e-4698-bb7d-07582d3ef299.png)
+![Validation Workflow](/assets/e53bb3e5-4787-4ac6-bc61-83664de91aab.png)
 
 Each phase is subject to a validation and improvement workflow as shown in the second figure _Validation-Workflow (broken link)_. 
 Each individual phase as well as the combination of phases may introduce errors and has thus to be carefully validated. 
@@ -213,7 +213,7 @@ In combination with the detailed strategies for each phase, this forms a complet
 using Rascal.
 
 [[Requirements-Workflow]]
-![Requirements Workflow](/assets/e1fea4a1-75cc-41b3-9edd-7dfa24acbe3f.png)
+![Requirements Workflow](/assets/e63e8ca1-5f4b-4368-a2eb-aaadb43ae964.png)
 
 A major question in every problem solving situation is how to determine the requirements for each phase of the solution. 
 For instance, how do we know what to extract from the source code if we do not know what the desired end results of the project are? 
@@ -256,7 +256,7 @@ Strategies to analyze software systems.
 
 
 [[Analysis-Workflow]]
-![Analysis Workflow](/assets/2519c09e-466e-4999-b0ae-7f62f2d07dd8.png)
+![Analysis Workflow](/assets/7240b897-5ce3-4908-812d-48437d8fa7d6.png)
 
 ### Description 
 The analysis workflow is shown in the figure _Analysis-Workflow (broken link)_ below and consists of two steps:
@@ -306,7 +306,7 @@ Strategies to synthesise results.
 
 
 [[Synthesis-Workflow]]
-![Synthesis Workflow](/assets/b5879309-0b73-4997-b91b-f8d2d1b59506.png)
+![Synthesis Workflow](/assets/6108afbe-49e2-48a9-a1b4-93928a87418c.png)
 
 ### Description 
 Results are synthesized as shown in the Figure _Synthesis-Workflow (broken link)_ above. This consists of the following steps:
@@ -360,7 +360,7 @@ Strategies to extract facts from software systems.
 
 
 [[Extraction-Workflow]]
-![Extraction Workflow](/assets/0c711544-7034-42f1-81c1-36e6ed4b0fb0.png)
+![Extraction Workflow](/assets/7cf9280d-69e6-497f-b325-76730a0938db.png)
 
 ### Description 
  
