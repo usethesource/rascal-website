@@ -1,44 +1,40 @@
----
-sidebar_position: 2
-title: Getting Started
----
-**Synopsis.**
+## Getting Started with Rascal {#GettingStarted}
 
-First steps using Rascal (OUTDATED)
+### Synopsis 
+First steps using Rascal
 
-**Description.**
+### Index 
+help
+
+### Description 
 
 You can start using Rascal by following these steps:
 
-  - **Download and Install** Rascal by carefully following the instructions at the [Rascal
-    Website](/docs/GettingStarted).
+* *Download and Install* Rascal by carefully following the instructions at the http://www.rascal-mpl.org/start/[Rascal Website].
 
-> **Caution**
-> 
-> Please respect the recommended versions of Java (JDK) and Eclipse (Eclipse for RCP Developers). In case of
-> installation problems you can consult the [trouble shooting](http://www.rascal-mpl.org/help/troubleshooting.html) page
-> or [StackOverflow](http://stackoverflow.com/questions/tagged/rascal).
+CAUTION: Please respect the recommended versions of Java (JDK) and Eclipse (Eclipse for RCP Developers).
+In case of installation problems you can consult the http://www.rascal-mpl.org/help/troubleshooting.html[trouble shooting] page
+or http://stackoverflow.com/questions/tagged/rascal[StackOverflow].
 
-  - **Start** Rascal. The Rascal system comes in two flavours: a command line version and a version integrated in
-    Eclipse.
 
-At the command line the Rascal system can be invoked by typing the command `rascal`. Next, the Rascal prompt `rascal>`
-appears and you can start typing commands (declarations, statements, expressions). To simplify interactive use,
-semicolons (`;`) that end commands may be omitted at the top level.
+* *Start* Rascal. The Rascal system comes in two flavours: a command line version and a version integrated in Eclipse.
 
-> **Note**
-> 
-> `rascal` command is not yet standard installed
 
-> **Note**
-> 
-> Add a screenshot
+At the command line the Rascal system can be invoked by typing the command `*rascal*`. 
+Next, the Rascal prompt `*rascal>*` appears and you can start typing commands (declarations, statements, expressions). 
+To simplify interactive use, semicolons (`;`) that end commands may be omitted at the top level.
+
+NOTE: `rascal` command is not yet standard installed
+
+NOTE: Add a screenshot
 
 In the Eclipse version, Rascal modules can be edited and a command console is also available.
 
-> **Note**
-> 
-> Add a screenshot
+NOTE: Add a screenshot
 
-Where to go from here: have a look at [Getting Help](/docs/GettingHelp) and in particular [further
-reading](/docs/GettingHelp#FurtherReading) or just click the RascalTutor logo ![rascal tutor small](/images/rascal-tutor-small.png) at the top left of each Tutor page.
+Where to go from here: 
+have a look at [Getting Help](#GettingHelp) and in particular 
+[further reading](/GettingHelp.md#FurtherReading-FurtherReading)
+or just click  the RascalTutor logo image:/images/rascal-tutor-small.png[width="40",heigth="40"] 
+at the top left of each Tutor page.
+
