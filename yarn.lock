@@ -3672,20 +3672,10 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001297, caniuse-lite@^1.0.30001313:
-  version "1.0.30001314"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001314.tgz#65c7f9fb7e4594fca0a333bec1d8939662377596"
-  integrity sha512-0zaSO+TnCHtHJIbpLroX7nsD+vYuOVjl3uzFbJO1wMVbuveJA0RK2WcQA9ZUIOiO0/ArMiMgHJLxfEZhQiC0kw==
-
-caniuse-lite@^1.0.30001317:
-  version "1.0.30001324"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001324.tgz#e17c3a8b34822b02d5d15639d570057550074884"
-  integrity sha512-/eYp1J6zYh1alySQB4uzYFkLmxxI8tk0kxldbNHXp8+v+rdMKdUBNjRLz7T7fz6Iox+1lIdYpc7rq6ZcXfTukg==
-
-caniuse-lite@^1.0.30001332, caniuse-lite@^1.0.30001335:
-  version "1.0.30001341"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001341.tgz#59590c8ffa8b5939cf4161f00827b8873ad72498"
-  integrity sha512-2SodVrFFtvGENGCv0ChVJIDQ0KPaS1cg7/qtfMaICgeMolDdo/Z2OD32F0Aq9yl6F4YFwGPBS5AaPqNYiW4PoA==
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001297, caniuse-lite@^1.0.30001313, caniuse-lite@^1.0.30001317, caniuse-lite@^1.0.30001332, caniuse-lite@^1.0.30001335:
+  version "1.0.30001388"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001388.tgz"
+  integrity sha512-znVbq4OUjqgLxMxoNX2ZeeLR0d7lcDiE5uJ4eUiWdml1J1EkxbnQq6opT9jb9SMfJxB0XA16/ziHwni4u1I3GQ==
 
 ccount@^1.0.0:
   version "1.1.0"

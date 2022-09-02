@@ -1,982 +1,1129 @@
----
-sidebar_position: 12
-title: Glossary
----
+## Document preparation issues
 
-**Synopsis.**
+The following issues have been detected while preparing this draft document. It is not ready for publication.
 
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/Visualization/Visualization.md|:27,0 Broken concept link: Libraries:Libraries-Vis
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/Grammar/Grammar.md|:5,0 Broken concept link: Concept-Syntax-Syntax
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/Relation/Relation.md|:39,0 Broken concept link: Libraries:Libraries-Relation
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/Relation/Relation.md|:41,0 Broken concept link: Libraries:Libraries-Set
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/Language/Language.md|:18,0 Ambiguous concept link: Syntax resolves to all of {"#Languages-Lisra-Syntax","#Syntax-Syntax","#Concept-Syntax","#Languages-Pico-Syntax"}
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/List/List.md|:50,0 Broken concept link: Libraries:Libraries-List
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/AbstractSyntaxTree/AbstractSyntaxTree.md|:25,0 Ambiguous concept link: example-text.png resolves to all of {"/assets/3060d5ae-2272-4f59-b2e0-1ad2a1ba2b39.png","/assets/7aae588d-5848-4b81-8176-d97fd3631cf4.png"}
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/ParseTree/ParseTree.md|:22,0 Ambiguous concept link: example-text.png resolves to all of {"/assets/3060d5ae-2272-4f59-b2e0-1ad2a1ba2b39.png","/assets/7aae588d-5848-4b81-8176-d97fd3631cf4.png"}
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/AbstractDataType/AbstractDataType.md|:25,0 Ambiguous concept link: Rascal:Declarations-AlgebraicDataType resolves to all of {"/Rascal.md#Declarations-AlgebraicDataType","#Declarations-AlgebraicDataType"}
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/Set/Set.md|:29,0 Broken concept link: Libraries:Prelude-Set
+1. [warning] |project://rascal/src/org/rascalmpl/courses/Rascalopedia/Set/Set.md|:46,0 Broken concept link: Expressions-Values-List-List
+
+## Rascalopedia {#Rascalopedia}
+
+### Synopsis 
 Overview of important terms and concepts.
 
-**Description.**
 
-Rascalopedia gives a quick overview of the most important terms and concepts that are relevant for metaprogrammers in
-general and metaprogrammers using Rascal in particular.
+
+### Function 
+       
+
+
+### Description 
+
+Rascalopedia gives a quick overview of the most important terms and concepts
+that are relevant for metaprogrammers in general and metaprogrammers using Rascal in particular.
 
 Rascalopedia is work in progress. Please send us your suggestions for new concepts.
 
 These are the currently covered topics:
 
-  - [AbstractDataType](#abstractdatatype): A definition of a data type.
-
-  - [Abstract Syntax Tree](#abstractsyntaxtree): Representation of the abstract syntactic structure of a
-    program.
-
-  - [Compiler](#compiler): Tranform source code to an executable form.
-
-  - [Domain Specific Language](#domainspecificlanguage): Programming language targeted for a particular
-    application domain.
-
-  - [Dynamic Semantics](#dynamicsemantics): Description of the execution behaviour of a program.
-
-  - [Grammar](#grammar): A synonym for [Syntax](#syntax).
-
-  - [Interpreter](#interpreter): Directly execute the statements of a program.
-
-  - [Language](#language): The set of strings defined by a [Grammar](#grammar).
-
-  - [Language Definition](#languagedefinition): Description of all aspects of a language.
-
-  - [List](#list): An ordered sequence of values.
-
-  - [MetaProgramming](#metaprogramming): Analysis or transformation of one program by another program.
-
-  - [ParseTree](#parsetree): Detailed represention of the concrete syntactic structure of a program.
-
-  - [Parser](#parser): Check that a text adheres to the rules of a language (and return a
-    [ParseTree](#parsetree)).
-
-  - [Prettyprinter](#prettyprinter): Transform an [Abstract Syntax Tree](#abstractsyntaxtree)
-    into a formatted string.
-
-  - [Refactoring](#refactoring): Restructuring source code to improve its internal structure without
-    changing its external behaviour.
-
-  - [Relation](#relation): An unordered set of tuples.
-
-  - [Scope](#scope): The visibility and accessibility of names in a program.
-
-  - [Set](#set): An unordered collection of values without duplicates.
-
-  - [Software Engineering](#softwareengineering): Discpline of design, building and maintaining software.
-
-  - [Software Evolution](#softwareevolution): Understanding and managing the continuous change of software.
-
-  - [Software Metric](#softwaremetric): A metric to measure a source code property.
-
-  - [Static Semantics](#staticsemantics): Description of the properties of a program that can be
-    determined/checked before it is executed.
-
-  - [Syntax](#syntax): The rules that describe correctly structured programs in a language.
-
-  - [Testing](#testing): Determine that the quality and functionality of software.
-
-  - [Tuple](#tuple): An ordered, fixed length, sequence of values of possibly different type.
-
-  - [Typechecker](#typechecker): Checks the type rules for a source language.
-
-  - [Visualization](#visualization): Visual presentation of scientific or abstract data.
-
-## AbstractDataType
-
-**Synopsis.**
-
-A definition of a data type.
-
-**Description.**
-
-An [Abstract Data Type](http://en.wikipedia.org/wiki/Abstract_data_type) is a mathematical description of a structure
-that can be implemented in various ways. For instance, a stack data type can be characterized by `empty` (the empty
-stack), two functions `push` and `pop` and axioms that define them. At the implementation level, a stack can be
-implemented using a list, array or something else.
-
-In functional languages, and also in Rascal, abstract datatypes (or ADTs for short) are used to define new data types.
-Well-known examples are [stack](http://en.wikipedia.org/wiki/Stack_(data_structure)) and
-[tree](http://en.wikipedia.org/wiki/Tree_(data_structure)).
-
-See [Algebraic Data Types](/docs/Rascal#ADT) and [Constructors](/docs/Rascal#Constructor) in the
-[Rascal Language Reference](/docs/Rascal).
-
-### Abstract Data Types in Daily Life
-
-  - A stack of trays in the local cafetaria: ![dispenser](/images/dispenser.jpg)
-    [credit](http://www.thermo-box.co.uk/fimi-food-transport-and-handling-products/self-levelling-heated-and-unheated-plate-and-tray-systems.html)
-
-  - A tree: ![tree](/images/tree.jpg) [credit](http://free-extras.com/images/tree-569.htm)
-
-  - Coral: ![coral](/images/coral.jpg) [credit](http://blog.enn.com/?p=476)
-
-### Abstract Data Types in computer science
-
-  - The run-time stack of a programming language interpreter.
-
-  - A search tree.
-
-  - An ontology.
-
-### Abstract Data Types in Rascal
-
-  - A tree data type:
-
-<!-- end list -->
-
-    data MyTree = leaf(int n) | tree(str name, MyTree left, MyTree right);
-
-## Abstract Syntax Tree
-
-**Synopsis.**
-
-Representation of the abstract syntactic structure of a program.
-
-**Description.**
-
-A [ParseTree](#parsetree) is a detailed and very precise represention of the concrete syntactic structure
-of a program. It may even be so detailed that it contains every space, comment and parenthesis in the original source
-text. In many cases a less detailed representation is sufficient and an abstract syntax tree (or AST for short) is used.
-
-**Examples.**
-
-For the input sentence
-
-![example-text](/images/example-text.png)
-
-the parse tree (left) and abstract syntax tree (right) may look as follows:
-
-![parse-ast](/images/parse-ast.png)
-
-Note that the parse tree on the left did not preserve the spaces in the original text but there are parse tree formats
-(including the one used by Rascal) that preserve all textual information.
-
-## Compiler
-
-**Synopsis.**
-
-Tranform source code to an executable form.
-
-**Description.**
-
-A [compiler](http://en.wikipedia.org/wiki/Compiler) transforms the source code of a program (in a source langue) to an
-executable form (in a target language) and consists of the following phases:
-
-  - [Parser](#parser): read the source code and build an [Abstract Syntax
-    Tree](#abstractsyntaxtree).
-
-  - [Typechecker](#typechecker): perform a semantic analysis of the code, resolve all names and verify that
-    the program is type correct.
-
-  - Optimisation: perform optimisations (e.g., constant folding, dead code elimination, call unfolding). This can be
-    seen as a form of [Refactoring](#refactoring).
-
-  - Code generation: generate the final code, this can be asembly language or directly executable code.
-
-## Domain Specific Language
-
-**Synopsis.**
-
-Programming language targeted for a particular application domain.
-
-  - SQL (querying data bases).
-
-  - HTML (web pages).
-
-  - CSS (presentation of HTML pages).
-
-  - Excel (spreadsheets).
-
-  - BibTex (bibliography).
-
-  - BNF (grammars).
-
-  - Regular expressions (text matching).
-
-## Dynamic Semantics
-
-**Synopsis.**
-
-Description of the execution behaviour of a program.
-
-**Description.**
-
-Dynamic semantics describes the execution behaviour of a program and includes:
-
-  - Treatment of declarations, names, variables and [Scope](#scope)s.
-
-  - Execution of procedures, statements and expressions.
-
-Contrast with [Static Semantics](#staticsemantics) that describes pre-execution behaviour.
-
-## Grammar
-
-**Synopsis.**
-
-A synonym for [Syntax](#syntax).
-
-## Interpreter
-
-**Synopsis.**
-
+* [Rascalopedia:Interpreter](/Rascalopedia.md#Interpreter-Interpreter)
+* [Rascalopedia:Visualization](/Rascalopedia.md#Visualization-Visualization)
+* [Rascalopedia:Meta programming](/Rascalopedia.md#MetaProgramming-MetaProgramming)
+* [Rascalopedia:Grammar](/Rascalopedia.md#Grammar-Grammar)
+* [Rascalopedia:Relation](/Rascalopedia.md#Relation-Relation)
+* [Rascalopedia:Tuple](/Rascalopedia.md#Tuple-Tuple)
+* [Rascalopedia:Prettyprinter](/Rascalopedia.md#Prettyprinter-Prettyprinter)
+* [Rascalopedia:Language definition](/Rascalopedia.md#LanguageDefinition-LanguageDefinition)
+* [Rascalopedia:Language](/Rascalopedia.md#Language-Language)
+* [Rascalopedia:Scope](/Rascalopedia.md#Scope-Scope)
+* [Rascalopedia:Parser](/Rascalopedia.md#Parser-Parser)
+* [Rascalopedia:Static semantics](/Rascalopedia.md#StaticSemantics-StaticSemantics)
+* [Rascalopedia:Software metric](/Rascalopedia.md#SoftwareMetric-SoftwareMetric)
+* [Rascalopedia:Dynamic semantics](/Rascalopedia.md#DynamicSemantics-DynamicSemantics)
+* [Rascalopedia:Testing](/Rascalopedia.md#Testing-Testing)
+* [Rascalopedia:Software engineering](/Rascalopedia.md#SoftwareEngineering-SoftwareEngineering)
+* [Rascalopedia:Software evolution](/Rascalopedia.md#SoftwareEvolution-SoftwareEvolution)
+* [Rascalopedia:List](/Rascalopedia.md#List-List)
+* [Rascalopedia:Abstract syntax tree](/Rascalopedia.md#AbstractSyntaxTree-AbstractSyntaxTree)
+* [Rascalopedia:Parse tree](/Rascalopedia.md#ParseTree-ParseTree)
+* [Rascalopedia:Abstract data type](/Rascalopedia.md#AbstractDataType-AbstractDataType)
+* [Rascalopedia:Refactoring](/Rascalopedia.md#Refactoring-Refactoring)
+* [Rascalopedia:Set](/Rascalopedia.md#Set-Set)
+* [Rascalopedia:Syntax](/Rascalopedia.md#Syntax-Syntax)
+* [Rascalopedia:Domain specific language](/Rascalopedia.md#DomainSpecificLanguage-DomainSpecificLanguage)
+* [Rascalopedia:Compiler](/Rascalopedia.md#Compiler-Compiler)
+* [Rascalopedia:Typechecker](/Rascalopedia.md#Typechecker-Typechecker)
+
+
+## Interpreter {#Interpreter-Interpreter}
+
+### Synopsis 
 Directly execute the statements of a program.
 
-**Description.**
+
+
+### Function 
+       
+
+
+### Description 
 
 There are two methods to execute a program that is written in some source language:
 
-  - An [Interpreter](http://en.wikipedia.org/wiki/Interpreter_(computing)) directly executes the source statements
-    (but see the variations below).
+*  An http://en.wikipedia.org/wiki/Interpreter_(computing)[Interpreter] directly executes the source statements (but see the variations below).
+*  A [Compiler](#Compiler-Compiler) translates the source program to some efficient executable form. That executable form is then executed by a hardware
+  processor.
 
-  - A [Compiler](#compiler) translates the source program to some efficient executable form. That
-    executable form is then executed by a hardware processor.
 
 Interpreters exist in many flavours:
 
 1.  Direct execution of the source.
-
-2.  First parse the source text and build an [Abstract Syntax Tree](#abstractsyntaxtree) that is then
-    interpreted.
-
-3.  As (2), but convert the AST first to an intermediate form that is more suitable for execution. Then interpret that
-    intermediate form.
-
+2.  First parse the source text and build an [Abstract Syntax Tree](#AbstractSyntaxTree-AbstractSyntaxTree) that is then interpreted.
+3.  As (2), but convert the AST first to an intermediate form that is more suitable for execution.
+  Then interpret that intermediate form.
 4.  As (2), but compile frequently executed parts of the the AST to executable code.
+
 
 Clearly, going down this list, the interpreter more and more starts resembling a compiler.
 
 The advantages of interpreters versus compiler are:
 
-  - Interpreter:
-    
-      - Pro: simpler than compiler, faster development loop, better debugging facilities, better error messages.
-    
-      - Con: slower.
+*  Interpreter:
+**  Pro: simpler than compiler, faster development loop, better debugging facilities, better error messages.
+**  Con: slower.
+*  Compiler:
+**  Pro: fast execution.
+**  Con: complex, optimizations are error-prone.
 
-  - Compiler:
-    
-      - Pro: fast execution.
-    
-      - Con: complex, optimizations are error-prone.
 
-## Language
 
-**Synopsis.**
 
-The set of strings defined by a [Grammar](#grammar).
 
-**Description.**
 
-A [Grammar](#grammar) or [Syntax](#syntax) defines the formation rules for a language. A
-language is the (possible infinite) set of strings that are defined by a grammar.
+## Visualization {#Visualization-Visualization}
 
-  - The language of strings of at most 5 `a` 's: the finite set `{"a", "aa", "aaa", "aaaa", "aaaaa"}`.
+### Synopsis 
+Visual presentation of scientific or abstract data.
 
-  - The language of strings that correspond to even numbers: the infinite set `{"0", "2", "4", "6", …​}`
 
-  - The Java language: the infinite set of syntactically correct Java programs.
 
-## Language Definition
+### Function 
+       
 
-**Synopsis.**
 
+### Description 
+
+Visualization is the activity of presenting scientific data or abstract structures
+in a visual form. There are several subareas:
+
+*  http://en.wikipedia.org/wiki/Scientific_visualization[Scientific visualization]: deals with data that are geometric in nature and
+  may have a time dimension.
+*  http://en.wikipedia.org/wiki/Information_visualization[Information visualization](: deals with abstract data structures like trees, graphs and relations.
+* http://en.wikipedia.org/wiki/Software_visualization[Software Visualization]: deals with facts related to software.
+
+
+The [Visualization Library]_Libraries:Libraries-Vis (broken link)_ library provides a framework for interactive visualization.
+Simple examples can be found in [visualization recipes](/Recipes.md#Visualization-Visualization).
+
+### Examples 
+
+## Scientific visualization
+
+
+Robert vam Liere and Wim de Leeuw have visualized liquid flows.
+There is also an http://homepages.cwi.nl/~robertl/movies/flow1.mpg[animated] version.
+
+
+![](/assets/80fcb35f-a4c9-4214-b19e-17665698bad4.jpg)
+
+
+
+## Information Visualization
+
+
+Facebook's http://apps.facebook.com/friendwheel/[Friend Wheel] shows the connection between friends:
+
+
+
+![](/assets/1fb6f639-d515-4a64-8fbc-976a089cdf21.jpg)
+
+
+## Software Visualization
+
+Stephen Eick http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.67.962[visualizes] the frequency of execution for each line
+in all source files of a software system.
+
+
+![](/assets/9a66beac-853e-4db8-ba3b-b04e1b33fa98.png)
+
+
+
+Daniel Bierwirth http://www.danielbierwirth.de/index.php/reseachprojects/8-myresearch/mastercurriculumresearchcat/73-bundle-view-software-visualization[shows] the connections (colored lines) between system components (at outer circle).
+
+
+![](/assets/288f396e-6fb8-472c-aabc-41cabc62fb74.jpg)
+
+
+
+
+
+## MetaProgramming {#MetaProgramming-MetaProgramming}
+
+### Synopsis 
+Analysis or transformation of one program by another program.
+
+
+
+### Function 
+       
+
+
+### Description 
+All programs have data as input and produce other data as output.
+A typical example is a desktop calculator program:
+after entering some numbers and operators, the program displays an answer.
+For most programs the data are numeric (calculator, spreadsheet)
+or textual (text editor, word processor).
+
+A _metaprogram_ is a program that uses programs as data. Writing
+metaprograms is called http://en.wikipedia.org/wiki/Metaprogramming[metaprogramming].
+
+A metaprogram has to be written in some programming language itself.
+This is called the _metalanguage_.
+
+The program that is manipulated by the metaprogram is called the _source program_ (also: _object program_)
+and is written in the _source language_ (also: _object language_).
+
+In some cases the metaprogram transforms the source program into a _target program_ in a _target language_. 
+
+### Examples 
+
+A [Refactoring](#Refactoring-Refactoring) tool for restructuring Java code:
+
+*  Metaprogram: the refactoring tool.
+*  Metalanguage: in most cases Java.
+*  Source program: the user's Java program to be refactored.
+*  Source language: Java.
+*  Target program: the refactored user's program.
+*  Target language: Java.
+
+
+A Java [Compiler](#Compiler-Compiler):
+
+*  Metaprogram: the Java compiler.
+*  Metalanguage: in most cases Java.
+*  Source program: the user's Java program to be compiled.
+*  Source language: Java.
+*  Target program: the code that is generated by the compiler.
+*  Target language: instructions for the JVM (Java Virtual Machine) or machine code, depending on the hardware platform.
+
+
+A tool to compute [Software Metric](#SoftwareMetric-SoftwareMetric)s of Java programs
+
+*  Metaprogram: the metrics tool.
+*  Metalanguage: varies per tool: Java, Rascal.
+*  Source program: the user's Java program for metrics will be computed.
+*  Source language Java.
+*  Target program: the value of the computed metric.
+*  Target language: number.
+
+
+
+
+## Grammar {#Grammar-Grammar}
+
+### Synopsis 
+
+A synonym for _Concept-Syntax-Syntax (broken link)_.
+
+
+## Relation {#Relation-Relation}
+
+### Synopsis 
+An unordered set of tuples.
+
+
+
+### Function 
+       
+
+
+### Description 
+
+In mathematics, given sets _D_₁, _D_₂, ... _D_ₙ, a
+_n_-ary relation _R_ is characterized by _R_ &subseteq;  _D_₁ &times; _D_₂ &times; ... &times; _D_ₙ.
+In other words, _R_ consists of a set of tuples < _V₁_, ..., _Vₙ_ > where each _V_ᵢ is an element of
+the set _D_ᵢ. When _n_ = 2, we call the relation a http://en.wikipedia.org/wiki/Relation_(mathematics)[binary relation].
+
+In http://en.wikipedia.org/wiki/Relational_algebra[database theory], a relation is a table with a heading and an unordered set of tuples:
+
+| _D₁ Name₁_ | _D₂ Name₂_ | ... | _Dₙ Nameₙ_ |
+| --- | --- | --- | --- |
+| _V₁₁_        | _V₁₂_        | ... | _V~1n~_        |
+| _V₂₁_        | _V₂₂_        | ... | _V~2n~_         |
+| _V₃₁_        | _V₃₂_        | ... | _V~3n~_         |
+| ...            | ...            | ... |                
+
+
+
+
+In Rascal, a relation is a set of tuples and is characterized by the type:
+`rel[D₁ Name₁, D₂ Name₂, ..., Dₙ Nameₙ]` 
+See [Relation Values](/Rascal.md#Expressions-Values-Relation) and  for a description of relations and their operators
+(since relations are sets all set operators also apply to them, see [Set Values](/Rascal.md#Expressions-Values-Set))
+and [functions on relations]_Libraries:Libraries-Relation (broken link)_
+(and here again, since relations are sets all set operators also apply to them, 
+see [functions on sets]_Libraries:Libraries-Set (broken link)_).
+
+
+### Examples 
+## Relations in Daily Life
+
+*  The _parent-of_ or _friend-of_ relation between people.
+   ![](/assets/1cee5aad-5e2e-47a2-ad3a-0b8704195f5b.jpg)
+   http://www.translatedmemories.com/bookpgs/Pg10-11CharRelation.jpg[credit]
+*  A character relation map, describing the relations between the characters in a play or soap series.
+*  A listing of the top 2000 songs of all times including the position, artist name, song title, the year the song was published.
+   ![](/assets/d6916c68-b9ce-41cb-9894-2eb3faad598b.jpg)
+   http://top2011.radio2.nl/lijst/2010[credit]
+
+
+## Relations in computer science
+
+*  A relational data base.
+*  Login information including user name, password, home directory, etc.
+
+
+## Relations in Rascal
+
+*  A parent child relation:
+```rascal
+rel[str parent, str child] = {
+<"Paul", "Eva">,
+<"Paul", "Thomas">,
+<"Jurgen", "Simon">,
+<"Jurgen", "David">,
+<"Tijs", "Mats">
+};
+```
+*  A fragment of the top 2000 relation:
+```rascal
+rel[int position, str artist, str title, int year] Top2000 = {
+<1, "Eagles", "Hotel California",1977>,
+<2, "Queen", "Bohemian rhapsody", 1975>,
+<3, "Boudewijn de Groot", "Avond", 1997>,
+...
+};
+```
+
+
+
+
+## Tuple {#Tuple-Tuple}
+
+### Synopsis 
+An ordered, fixed length, sequence of values of possibly different type.
+
+
+
+### Function 
+       
+
+
+### Description 
+
+A tuple is an ordered fixed length sequence of values of possibly different type.
+
+In Rascal a tuple is written as `<` V₁, ..., Vₙ `>` and a tuple type has the form `type[T₁, ..., Tₙ]`,
+_T_ᵢ represents the type of element _i_. Tuple have two major applications:
+
+*  As tuples in a [Relation](#Relation-Relation).
+*  For ad-hoc packaging of values, for instance, to return multiple-values from a function.
+
+
+See [Tuple Values](/Rascal.md#Expressions-Values-Tuple) for the operations on tuples.
+
+
+
+
+
+## Prettyprinter {#Prettyprinter-Prettyprinter}
+
+### Synopsis 
+Transform an [Abstract Syntax Tree](#AbstractSyntaxTree-AbstractSyntaxTree) into a formatted string.
+
+
+
+### Function 
+       
+
+
+### Description 
+A http://en.wikipedia.org/wiki/Prettyprint[pretty printer]
+formats the source code of programs. Alternative names are _formatter_ or _beautifier_.
+Pretty printers differ in the inputs they accept:
+
+*  The source text itself.
+*  A [Parse tree](#ParseTree-ParseTree) that corresponds to the source text. This variant is also called _unparser_.
+*  An [Abstract Syntax Tree](#AbstractSyntaxTree-AbstractSyntaxTree) that corresponds to the source text.
+
+
+Pretty printers also differ in flexibility. They differ in:
+
+*  The source language(s) they can accept.
+*  The adaptability of the formatting rules.
+
+### Examples 
+The program fragment
+```rascal
+if(x > 10) { System.err.println("x > 10"); } else { System.err.println("x <= 10"); }
+```
+can be pretty printed in many different ways. Here are two variants examples:
+```rascal
+if(x > 10) { 
+   System.err.println("x > 10"); 
+} else { 
+   System.err.println("x <= 10"); 
+}
+```
+
+```rascal
+if( x > 10 )
+{ 
+  System.err.println("x > 10"); 
+} else 
+{ 
+   System.err.println("x <= 10"); 
+}
+```
+
+
+
+## Language Definition {#LanguageDefinition-LanguageDefinition}
+
+### Synopsis 
 Description of all aspects of a language.
 
-**Description.**
 
-A language definition defines all relevant aspects of a programming language or [Domain Specific
-Language](#domainspecificlanguage) and includes:
 
-  - A [Grammar](#grammar) (including lexical and contect-free syntax).
+### Function 
+       
 
-  - Rules to describe the textual formatting of a language. These rules are sufficient to generate a
-    [Prettyprinter](#prettyprinter) for it.
 
-  - Rules that describe the [Static Semantics](#staticsemantics) of a language. These rules are sufficient
-    to generate a [Typechecker](#typechecker).
+### Description 
+A language definition defines all relevant aspects of a programming language or [Domain Specific Language](#DomainSpecificLanguage-DomainSpecificLanguage) and includes:
 
-  - Rules that describe the [Dynamic Semantics](#dynamicsemantics) of a language. These rules are
-    sufficient to generate an [Interpreter](#interpreter) for it.
+*  A [Grammar](#Grammar-Grammar) (including lexical and contect-free syntax).
+*  Rules to describe the textual formatting of a language. 
+  These rules are sufficient to generate a [Prettyprinter](#Prettyprinter-Prettyprinter) for it.
+*  Rules that describe the [Static Semantics](#StaticSemantics-StaticSemantics) of a language.
+  These rules are sufficient to generate a [Typechecker](#Typechecker-Typechecker).
+*  Rules that describe the [Dynamic Semantics](#DynamicSemantics-DynamicSemantics) of a language. 
+  These rules are sufficient to generate an [Interpreter](#Interpreter-Interpreter) for it.
+*  Rules how to generate code.
 
-  - Rules how to generate code.
 
-Other aspects of a language definition may include editor behaviour, highlighting, debugging, outlining, auto-completion
-and more.
+Other aspects of a language definition may include editor behaviour, highlighting, debugging, outlining, auto-completion and more.
 
-## List
 
-**Synopsis.**
 
+
+
+## Language {#Language-Language}
+
+### Synopsis 
+The set of strings defined by a [Grammar](#Grammar-Grammar).
+
+
+
+### Function 
+       
+
+
+### Description 
+
+A [Grammar](#Grammar-Grammar) or _broken:Syntax (ambiguous link)_ defines the formation rules for a language.
+A language is the (possible infinite) set of strings that are defined by a grammar.
+
+### Examples 
+
+*  The language of strings of at most 5 `a` 's: the finite set `{"a",  "aa", "aaa", "aaaa", "aaaaa"}`.
+*  The language of strings that correspond to even numbers: the infinite set `{"0", "2", "4", "6", ...}`
+*  The Java language: the infinite set of syntactically correct Java programs.
+
+
+
+
+## Scope {#Scope-Scope}
+
+### Synopsis 
+The visibility and accessibility of names in a program.
+
+
+
+### Function 
+       
+
+
+
+
+
+
+
+## Parser {#Parser-Parser}
+
+### Synopsis 
+Check that a text adheres to the rules of a language (and return a [Parse tree](#ParseTree-ParseTree)).
+
+
+
+### Function 
+       
+
+
+### Description 
+
+A http://en.wikipedia.org/wiki/Parsing[parser] checks that a text in language _L_ indeed adheres 
+to the syntax rules of language _L_. There are two possible answers:
+
+*  _Yes_. A [Parse tree](#ParseTree-ParseTree) is returned that shows how the text adheres to the syntax rules.
+*  _No_. Error messages pin point the location where the text deviates from the syntax rules.
+
+
+This is shown below:
+
+
+![](/assets/4bdecf1e-dd2e-45ce-8e47-313794e4b109.png)
+
+
+
+
+
+
+## Static Semantics {#StaticSemantics-StaticSemantics}
+
+### Synopsis 
+Description of the properties of a program that can be determined/checked before it is executed.
+
+
+
+### Function 
+       
+
+
+### Description 
+The static semantics of a program describe all properties that can be determined before the program is executed.
+A [Typechecker](#Typechecker-Typechecker) is a tool that checks the properties of a program as described by its static semantics.
+
+Static semantics describes properties that are relevant before a program is executed and 
+differs from [Dynamic Semantics](#DynamicSemantics-DynamicSemantics) that
+describes the execution behaviour itself.
+
+### Examples 
+
+Examples of static semantic properties include:
+
+*  The proper use of types.
+*  The proper use of names.
+
+
+Language with substantial static semantics: Java, Haskell, Rascal.
+Languages with only dynamic semantics: Python, Ruby.
+
+
+
+
+
+## Software Metric {#SoftwareMetric-SoftwareMetric}
+
+### Synopsis 
+A metric to measure a source code property.
+
+
+
+### Function 
+       
+
+
+### Description 
+A software metric is a quantitative measure about source code.
+A combination of one or more metrics can be used to quantitatively characterize
+aspects of http://en.wikipedia.org/wiki/Software_quality[software quality].
+Various quality aspects are of interest such as size, reliability, maintainability and so on.
+
+### Examples 
+
+Examples of software metrics are:
+
+*  Source lines of code (http://en.wikipedia.org/wiki/Source_lines_of_code[SLOC]) measures the size of software.
+  The larger the size, the more is needed to build and maintain it.
+*  http://en.wikipedia.org/wiki/Cyclomatic_complexity[Cyclomatic complexity] measures logical complexity of code.
+  Software components with a high cyclomatic complexity are hard to understand and maintain.
+* http://en.wikipedia.org/wiki/Coupling_(computer_science)[Coupling] measures the coupling between software components.
+  High coupling indicates problems in the structure of a system.
+
+
+
+
+## Dynamic Semantics {#DynamicSemantics-DynamicSemantics}
+
+### Synopsis 
+Description of the execution behaviour of a program.
+
+
+
+### Function 
+       
+
+
+### Description 
+Dynamic semantics describes the execution behaviour of a program and includes:
+
+*  Treatment of declarations, names, variables and [Scope](#Scope-Scope)s.
+*  Execution of procedures, statements and expressions.
+
+Contrast with [Static Semantics](#StaticSemantics-StaticSemantics) that describes pre-execution behaviour.
+
+
+
+
+
+## Testing {#Testing-Testing}
+
+### Synopsis 
+Determine that the quality and functionality of software.
+
+
+
+### Function 
+       
+
+
+### Description 
+
+http://en.wikipedia.org/wiki/Software_testing[Software testing] is the process to determine
+that a software system meets its specifications and works as expected. This is done by 
+manually or automatically executing test cases and observe the result.
+
+
+
+
+
+## Software Engineering {#SoftwareEngineering-SoftwareEngineering}
+
+### Synopsis 
+Discpline of design, building and maintaining software.
+
+
+
+### Function 
+       
+
+
+### Description 
+http://en.wikipedia.org/wiki/Software_engineering[Software engineering] is the discipline that encompasses all aspects
+of creating software and encompasses:
+
+*  _Requirements engineering_: determine what the future owners and users of a software system expect.
+*  _Software Design_: design the global architecture as well as as the technical details.
+*  _Software Construction_: build software according to its specification.
+*  _Software Testing_: test that software works according to its specifications.
+*  _Software Deployment_: distribute software to its users.
+*  _Software Maintenance_: maintain software after it has been deployed.
+
+
+There are various models to organize the above activities. The classical http://en.wikipedia.org/wiki/Waterfall_model[waterfall model]
+organizes them sequentially. Variations are more iterative and allow to go back to earlier phases.
+Waterfall-based methods follow solid engineering practices but may lead to much bureacracy and an inflexible process that
+cannot easily cope with changing requirements.
+
+Other approaches promote http://en.wikipedia.org/wiki/Agile_software_development[agile development]
+and are characterized by very short iterations that include all the above activities.
+Agile methods aim to produce prototypes as early as possible and this makes it easier for future users
+to assess the prototype and suggest changes.
+
+
+
+
+
+## Software Evolution {#SoftwareEvolution-SoftwareEvolution}
+
+### Synopsis 
+Understanding and managing the continuous change of software.
+
+
+
+### Function 
+       
+
+
+### Description 
+
+http://en.wikipedia.org/wiki/Meir_M._Lehman[Meir M. Lehman] was one of the first scientist to observe
+that software evolves over its lifetime. He formulated several http://en.wikipedia.org/wiki/Lehman's_laws_of_software_evolution[laws]
+about software evolution. Here are three examples of his laws (slightly paraphrased):
+
+*  _Continuing Change_: Programs must be continually adapted or they become progressively less usefull.
+*  _Increasing Complexity_: When a program evolves, its complexity increases unless work is done to maintain or reduce it.
+*  _Continuing Growth_: The functional content of programs must be continually increased to maintain user satisfaction over their lifetime.
+
+
+_Software evolution_ is a specialisation in [Software Engineering](#SoftwareEngineering-SoftwareEngineering) that address the following:
+
+*  Understanding the reasons for software evolution.
+*  Understanding the impact of software evolution on the structure and quality of source code.
+*  Developing [Software Metric](#SoftwareMetric-SoftwareMetric)s and tools to measure the impact of software evolution.
+*  Developing methods and tools for the better understanding of source code.
+*  Developing [Refactoring](#Refactoring-Refactoring) tools to counter the effects of software evolution.
+
+
+
+
+
+## List {#List-List}
+
+### Synopsis 
 An ordered sequence of values.
 
-**Description.**
 
+
+### Function 
+       
+
+
+### Description 
 A list is a sequence of values with the following properties:
 
-  - The list maybe empty.
+*  The list maybe empty.
+*  The values in the list are _ordered_.
+*  The same value may occur more than once.
+*  The list has a size that is equal to the number of values in the list.
+*  Each element in a list _L_ has an index. The first element has index 0. The last element has index `size(L)-1`.
 
-  - The values in the list are *ordered*.
-
-  - The same value may occur more than once.
-
-  - The list has a size that is equal to the number of values in the list.
-
-  - Each element in a list *L* has an index. The first element has index 0. The last element has index `size(L)-1`.
 
 Formally, a list can be defined as follows. Given the domains `ELEM` (elements) and `LIST` (lists) and the functions:
-
 ```rascal
 nil :             -> LIST
 cons: ELEM x LIST -> LIST
 head: LIST        -> ELEM
 tail: LIST        -> LIST
 ```
+`nil` and `cons` are so-called _constructor functions_ that define the values in `LIST`. They can be paraphrased as:
 
-`nil` and `cons` are so-called *constructor functions* that define the values in `LIST`. They can be paraphrased as:
+*  The _empty list_ `nil` is an element of `LIST`.
+*  If `e` is an element of `ELEM` and `l` is an element of LIST, then `cons(e, l)` is also an element in `LIST`.
 
-  - The *empty list* `nil` is an element of `LIST`.
 
-  - If `e` is an element of `ELEM` and `l` is an element of LIST, then `cons(e, l)` is also an element in `LIST`.
-
-`head` (take the first element) and `tail` (take the remainder of a list) are defined functions characterized by the
-axioms:
-
+`head` (take the first element) and `tail` (take the remainder of a list)
+are defined functions characterized by the axioms:
 ```rascal
 head(cons(e, l)) = e
 tail(cons(e, l)) = l
 ```
+The cases `head(nil)` and `tail(nil)` are left undefined (and usually correspond to a runtime error in a programming language).
 
-The cases `head(nil)` and `tail(nil)` are left undefined (and usually correspond to a runtime error in a programming
-language).
+In Rascal, lists are surrounded by brackets `[` and `]` and the elements are separated by commas.
+Each list has a type of the form `list[T]`, where _T_ is the smallest common type of all list elements.
+Read the description of [lists and their operators](/Rascal.md#Expressions-Values-List)
+and of [library functions on lists]_Libraries:Libraries-List (broken link)_.
 
-In Rascal, lists are surrounded by brackets `[` and `]` and the elements are separated by commas. Each list has a type
-of the form `list[T]`, where *T* is the smallest common type of all list elements. Read the description of [lists and
-their operators](/docs/Rascal#List) and of [library functions on lists](/docs/Libraries#list).
+### Examples 
+## Lists in Daily Life
 
-### Lists in Daily Life
+*  A line of people waiting for the super market checkout or bus stop. 
+   ![](/assets/8566579c-21b0-45b3-8b71-d37142aff9dc.png)
+   http://www.realbollywood.com[credit]
+*  The wagons of a train.
+*  The Top 100 Music Charts.
+   ![](/assets/38060c2b-5eaf-445f-b1aa-f1fa438e7a0b.png)
+   http://www.billboard.com/charts/hot-100#/charts/hot-100[credit]
+*  Twitter users ordered according to number of followers.
+*  A _to do_ list.
 
-  - A line of people waiting for the super market checkout or bus stop. ![bustop](/images/queue.png)
-    [credit](http://www.realbollywood.com)
 
-  - The wagons of a train.
+## Lists in computer science
 
-  - The Top 100 Music Charts. ![hot100.png](/images/hot100.png)
-    [credit](http://www.billboard.com/charts/hot-100#/charts/hot-100)
+*  The locations in a computer memory.
+*  The list of processes that use most cpu time.
+*  The list of procedures that are called by a given procedure.
 
-  - Twitter users ordered according to number of followers.
 
-  - A *to do* list.
+## Lists in Rascal
 
-### Lists in computer science
+*  The empty list: `[]`. Its type is `list[void]`.
+*  A list of integers: `[3, 1, 4]`. Its type is `list[int]`.
+*  A list of mixed-type values: `[3, "a", 4]`. Its type is `list[value]`.
 
-  - The locations in a computer memory.
 
-  - The list of processes that use most cpu time.
 
-  - The list of procedures that are called by a given procedure.
 
-### Lists in Rascal
+## Abstract Syntax Tree {#AbstractSyntaxTree-AbstractSyntaxTree}
 
-  - The empty list: `[]`. Its type is `list[void]`.
+### Synopsis 
+Representation of the abstract syntactic structure of a program.
 
-  - A list of integers: `[3, 1, 4]`. Its type is `list[int]`.
 
-  - A list of mixed-type values: `[3, "a", 4]`. Its type is `list[value]`.
 
-## MetaProgramming
+### Function 
+       
 
-**Synopsis.**
 
-Analysis or transformation of one program by another program.
+### Description 
+A [Parse tree](#ParseTree-ParseTree) is a detailed and very precise represention of the concrete syntactic structure of a program.
+It may even be so detailed that it contains every space, comment and parenthesis in the original source text.
+In many cases a less detailed representation is sufficient and an abstract syntax tree (or AST for short) is used.
 
-**Description.**
+### Examples 
 
-All programs have data as input and produce other data as output. A typical example is a desktop calculator program:
-after entering some numbers and operators, the program displays an answer. For most programs the data are numeric
-(calculator, spreadsheet) or textual (text editor, word processor).
+For the input sentence
 
-A *metaprogram* is a program that uses programs as data. Writing metaprograms is called
-[metaprogramming](http://en.wikipedia.org/wiki/Metaprogramming).
+![]_broken:example-text.png (ambiguous link)_
 
-A metaprogram has to be written in some programming language itself. This is called the *metalanguage*.
 
-The program that is manipulated by the metaprogram is called the *source program* (also: *object program*) and is
-written in the *source language* (also: *object language*).
+the parse tree (left) and abstract syntax tree (right) may look as follows:
 
-In some cases the metaprogram transforms the source program into a *target program* in a *target language*.
 
-**Examples.**
 
-A [Refactoring](#refactoring) tool for restructuring Java code:
+![](/assets/f46ef260-db3d-4b13-a18b-909996392a63.png)
 
-  - Metaprogram: the refactoring tool.
 
-  - Metalanguage: in most cases Java.
+Note that the parse tree on the left did not preserve the spaces in the original text but there
+are parse tree formats (including the one used by Rascal) that preserve all textual information.
 
-  - Source program: the user’s Java program to be refactored.
 
-  - Source language: Java.
 
-  - Target program: the refactored user’s program.
 
-  - Target language: Java.
+## ParseTree {#ParseTree-ParseTree}
 
-A Java [Compiler](#compiler):
-
-  - Metaprogram: the Java compiler.
-
-  - Metalanguage: in most cases Java.
-
-  - Source program: the user’s Java program to be compiled.
-
-  - Source language: Java.
-
-  - Target program: the code that is generated by the compiler.
-
-  - Target language: instructions for the JVM (Java Virtual Machine) or machine code, depending on the hardware
-    platform.
-
-A tool to compute [Software Metric](#softwaremetric)s of Java programs
-
-  - Metaprogram: the metrics tool.
-
-  - Metalanguage: varies per tool: Java, Rascal.
-
-  - Source program: the user’s Java program for metrics will be computed.
-
-  - Source language Java.
-
-  - Target program: the value of the computed metric.
-
-  - Target language: number.
-
-## ParseTree
-
-**Synopsis.**
-
+### Synopsis 
 Detailed represention of the concrete syntactic structure of a program.
 
-**Description.**
 
-A parse tree is a detailed and very precise represention of the concrete syntactic structure of a program. It may even
-be so detailed that it contains every space, comment and parenthesis in the original source text.
 
-**Examples.**
+### Function 
+       
 
-A parse tree for the sentence ![example](/images/example-text.png)
 
-![parse-tree](/images/parse-tree.png)
+### Description 
+A parse tree is a detailed and very precise represention of the concrete syntactic structure of a program.
+It may even be so detailed that it contains every space, comment and parenthesis in the original source text.
 
-## Parser
+### Examples 
+A parse tree for the sentence 
+![]_broken:example-text.png (ambiguous link)_
 
-**Synopsis.**
 
-Check that a text adheres to the rules of a language (and return a [ParseTree](#parsetree)).
 
-**Description.**
+![](/assets/8bef6d31-256d-40b3-8d0b-bfbf686bac33.png)
 
-A [parser](http://en.wikipedia.org/wiki/Parsing) checks that a text in language *L* indeed adheres to the syntax rules
-of language *L*. There are two possible answers:
 
-  - *Yes*. A [ParseTree](#parsetree) is returned that shows how the text adheres to the syntax rules.
 
-  - *No*. Error messages pin point the location where the text deviates from the syntax rules.
 
-This is shown below:
 
-![parser](/images/parser.png)
+## AbstractDataType {#AbstractDataType-AbstractDataType}
 
-## Prettyprinter
+### Synopsis 
+A definition of a data type.
 
-**Synopsis.**
 
-Transform an [Abstract Syntax Tree](#abstractsyntaxtree) into a formatted string.
 
-**Description.**
+### Function 
+       
 
-A [pretty printer](http://en.wikipedia.org/wiki/Prettyprint) formats the source code of programs. Alternative names are
-*formatter* or *beautifier*. Pretty printers differ in the inputs they accept:
 
-  - The source text itself.
+### Description 
+An http://en.wikipedia.org/wiki/Abstract_data_type[Abstract Data Type] is a mathematical description of a structure
+that can be implemented in various ways. For instance, a stack data type can be characterized by `empty` (the empty stack),
+two functions `push` and `pop` and axioms that define them. At the implementation level, a stack
+can be implemented using a list, array or something else.
 
-  - A [ParseTree](#parsetree) that corresponds to the source text. This variant is also called *unparser*.
+In functional languages, and also in Rascal, abstract datatypes (or ADTs for short)
+are used to define new data types. Well-known examples are http://en.wikipedia.org/wiki/Stack_(data_structure)[stack] and http://en.wikipedia.org/wiki/Tree_(data_structure)[tree].
 
-  - An [Abstract Syntax Tree](#abstractsyntaxtree) that corresponds to the source text.
+See [Algebraic Data Types]_broken:Rascal:Declarations-AlgebraicDataType (ambiguous link)_ and 
+[Constructors](/Rascal.md#Expressions-Values-Constructor) in the [Rascal Language Reference](#Rascal).
 
-Pretty printers also differ in flexibility. They differ in:
+### Examples 
 
-  - The source language(s) they can accept.
+## Abstract Data Types in Daily Life
 
-  - The adaptability of the formatting rules.
+*  A stack of trays in the local cafetaria: ![](/assets/c7a03fb6-1467-4d3c-a64e-4ebc4c5e4af1.jpg)
+   http://www.thermo-box.co.uk/fimi-food-transport-and-handling-products/self-levelling-heated-and-unheated-plate-and-tray-systems.html[credit]
 
-**Examples.**
+*  A tree:
+   ![](/assets/d3f04066-0a91-45bb-b848-4b675800c47d.jpg)
+   http://free-extras.com/images/tree-569.htm[credit]
 
-The program fragment
+*  Coral:
+   ![](/assets/fc124a3f-dedb-4747-ba51-9515e648cdc3.jpg)
+   http://blog.enn.com/?p=476[credit]
 
+
+## Abstract Data Types in computer science
+
+*  The run-time stack of a programming language interpreter.
+*  A search tree.
+*  An ontology.
+
+
+## Abstract Data Types in Rascal
+
+*  A tree data type:
 ```rascal
-if(x > 10) { System.err.println("x > 10"); } else { System.err.println("x <= 10"); }
+data MyTree = leaf(int n) | tree(str name, MyTree left, MyTree right);
 ```
 
-can be pretty printed in many different ways. Here are two variants examples:
 
-```rascal
-if(x > 10) {
-   System.err.println("x > 10");
-} else {
-   System.err.println("x <= 10");
-}
-```
 
-```rascal
-if( x > 10 )
-{
-  System.err.println("x > 10");
-} else
-{
-   System.err.println("x <= 10");
-}
-```
 
-## Refactoring
+## Refactoring {#Refactoring-Refactoring}
 
-**Synopsis.**
-
+### Synopsis 
 Restructuring source code to improve its internal structure without changing its external behaviour.
 
-**Description.**
 
-Refactoring was popularized by [Martin Fowler](http://martinfowler.com/refactoring/) and aims at improving source code
-quality. The basic philosophy is to identify small, atomic, refactoring steps that improve the internal structure of the
-code but do not change its external behaviour. The supposed simplicity of these steps must guarantee their correctness.
 
-Atomic steps can be combined to create large and complex refactorings. The major Interactive Development
-Environements — [Eclipse](http://www.eclipse.org/), [IntelliJ](http://www.jetbrains.com/idea/), [Visual
-Studio](http://www.microsoft.com/visualstudio/en-us) — provide interactive support for refactoring.
+### Function 
+       
 
-**Examples.**
 
+### Description 
+Refactoring was popularized by http://martinfowler.com/refactoring/[Martin Fowler] and aims at improving source code quality.
+The basic philosophy is to identify small, atomic, refactoring steps that improve the internal structure
+of the code but do not change its external behaviour.
+The supposed simplicity of these steps must guarantee their correctness.
+
+Atomic steps can be combined to create large and complex refactorings.
+The major Interactive Development Environements --
+http://www.eclipse.org/[Eclipse],
+http://www.jetbrains.com/idea/[IntelliJ],
+http://www.microsoft.com/visualstudio/en-us[Visual Studio] --
+provide interactive support for refactoring.
+
+### Examples 
 Some well-known refactorings are:
 
-  - [Rename Method](http://martinfowler.com/refactoring/catalog/renameMethod.html)
+*  http://martinfowler.com/refactoring/catalog/renameMethod.html[Rename Method]
+*  http://martinfowler.com/refactoring/catalog/encapsulateField.html[Encapsulate Field]
+*  http://martinfowler.com/refactoring/catalog/extractMethod.html[Extract Methods]
 
-  - [Encapsulate Field](http://martinfowler.com/refactoring/catalog/encapsulateField.html)
 
-  - [Extract Methods](http://martinfowler.com/refactoring/catalog/extractMethod.html)
 
-## Relation
 
-**Synopsis.**
+## Set {#Set-Set}
 
-An unordered set of tuples.
-
-**Description.**
-
-In mathematics, given sets *D*<sub>1</sub>, *D*<sub>2</sub>, …​ *D*<sub>n</sub>, a *n*-ary relation *R* is characterized
-by *R* SUBSETEQ *D*<sub>1</sub> × *D*<sub>2</sub> × …​ × *D*<sub>n</sub>. In other words, *R* consists of a set of
-tuples \< *V<sub>1</sub>*, …​, *V<sub>n</sub>* \> where each *V*<sub>i</sub> is an element of the set *D*<sub>i</sub>.
-When *n* = 2, we call the relation a [binary relation](http://en.wikipedia.org/wiki/Relation_(mathematics)).
-
-In [database theory](http://en.wikipedia.org/wiki/Relational_algebra), a relation is a table with a heading and an
-unordered set of tuples:
-
-| *D<sub>1</sub> Name<sub>1</sub>* | *D<sub>2</sub> Name<sub>2</sub>* | …​ | *D<sub>n</sub> Name<sub>n</sub>* |
-| -------------------------------- | -------------------------------- | -- | -------------------------------- |
-| *V<sub>11</sub>*                 | *V<sub>12</sub>*                 | …​ | *V<sub>1n</sub>*                 |
-| *V<sub>21</sub>*                 | *V<sub>22</sub>*                 | …​ | *V<sub>2n</sub>*                 |
-| *V<sub>31</sub>*                 | *V<sub>32</sub>*                 | …​ | *V<sub>3n</sub>*                 |
-| …​                               | …​                               | …​ |                                  |
-
-In Rascal, a relation is a set of tuples and is characterized by the type: `rel[D1 Name1, D2 Name2, …​, Dn Namen]` See
-[Relation Values](/docs/Rascal#Relation) and for a description of relations and their operators (since relations are
-sets all set operators also apply to them, see [Set Values](/docs/Rascal#Set)) and [functions on
-relations](/docs/Libraries#relation) (and here again, since relations are sets all set operators also apply to
-them, see [functions on sets](/docs/Libraries#set)).
-
-### Relations in Daily Life
-
-  - The *parent-of* or *friend-of* relation between people. ![char-relation](/images/char-relation.jpg) [credit](http://www.translatedmemories.com/bookpgs/Pg10-11CharRelation.jpg)
-
-  - A character relation map, describing the relations between the characters in a play or soap series.
-
-  - A listing of the top 2000 songs of all times including the position, artist name, song title, the year the song was published. ![top2000-2010](/images/top2000-2010.jpg) [credit](http://top2011.radio2.nl/lijst/2010)
-
-### Relations in computer science
-
-  - A relational data base.
-
-  - Login information including user name, password, home directory, etc.
-
-### Relations in Rascal
-
-  - A parent child relation:
-
-<!-- end list -->
-
-    rel[str parent, str child] = {
-    <"Paul", "Eva">,
-    <"Paul", "Thomas">,
-    <"Jurgen", "Simon">,
-    <"Jurgen", "David">,
-    <"Tijs", "Mats">
-    };
-
-  - A fragment of the top 2000 relation:
-
-<!-- end list -->
-
-    rel[int position, str artist, str title, int year] Top2000 = {
-    <1, "Eagles", "Hotel California",1977>,
-    <2, "Queen", "Bohemian rhapsody", 1975>,
-    <3, "Boudewijn de Groot", "Avond", 1997>,
-    ...
-    };
-
-## Scope
-
-**Synopsis.**
-
-The visibility and accessibility of names in a program.
-
-## Set
-
-**Synopsis.**
-
+### Synopsis 
 An unordered collection of values without duplicates.
 
-**Description.**
+
+
+### Function 
+       
+
+
+### Description 
 
 A set is a collection of values with the following properties:
 
-  - The set maybe empty.
+*  The set maybe empty.
+*  The values in the list are _unordered_.
+*  A value can only occur once.
+*  The set has a size that is equal to the number of values in the set.
 
-  - The values in the list are *unordered*.
 
-  - A value can only occur once.
+In Rascal, sets are surrounded by braces `{` and `}` and the elements are separated by commas.
+Each set has a type of the form `set[T]`, where _T_ is the smallest common type of all set elements.
+Read the description of [sets and their operators](/Rascal.md#Expressions-Values-Set)
+and of [library functions on sets]_Libraries:Prelude-Set (broken link)_.
 
-  - The set has a size that is equal to the number of values in the set.
+### Examples 
 
-In Rascal, sets are surrounded by braces `{` and `}` and the elements are separated by commas. Each set has a type of
-the form `set[T]`, where *T* is the smallest common type of all set elements. Read the description of [sets and their
-operators](/docs/Rascal#Set) and of [library functions on sets](/docs/Libraries#set).
+## Sets in Daily Life
 
-### Sets in Daily Life
+*  A cutlery set consisting of knife, fork and the like.
+   ![](/assets/6c9b5531-264f-4d04-b491-e4ac5e1ce62f.jpg)
+   http://www.ikea.com/gb/en/catalog/products/50087185/[credit]
+*  A crowd of people.
+*  A stamp collection (but be aware that the duplicates will disappear!)
+   ![](/assets/ae6bebe9-b02e-48d9-9a34-49910816d169.jpg)
+   http://www.life123.com/hobbies/antiques-collectibles/stamps/stamp-collecting-2.shtml[credit]
 
-  - A cutlery set consisting of knife, fork and the like. ![cutlery-set](/images/cutlery-set.jpg)
-    [credit](http://www.ikea.com/gb/en/catalog/products/50087185/)
+## Sets in computer science
 
-  - A crowd of people.
 
-  - A stamp collection (but be aware that the duplicates will disappear\!)
-    ![stamp-collecting](/images/stamp-collecting.jpg)
-    [credit](http://www.life123.com/hobbies/antiques-collectibles/stamps/stamp-collecting-2.shtml)
+*  The files in a directory. Of course, when you order them (by name, modification date) you need a _Expressions-Values-List-List (broken link)_ to represent them.
+*  The set of moves an opponent can play in a game.
+*  The set of nodes in a network.
 
-### Sets in computer science
 
-  - The files in a directory. Of course, when you order them (by name, modification date) you need a
-    [List](#list) to represent them.
+## Sets in Rascal
 
-  - The set of moves an opponent can play in a game.
+*  The empty set: `{}`. Its type is `set[void]`.
+*  A set of integers: `{3, 1, 4}`. Its type is `set[int]`.
+*  A set of mixed-type values: `{3, "a", 4}`. Its type is `set[value]`.
 
-  - The set of nodes in a network.
 
-### Sets in Rascal
 
-  - The empty set: `{}`. Its type is `set[void]`.
 
-  - A set of integers: `{3, 1, 4}`. Its type is `set[int]`.
+## Syntax {#Syntax-Syntax}
 
-  - A set of mixed-type values: `{3, "a", 4}`. Its type is `set[value]`.
-
-## Software Engineering
-
-**Synopsis.**
-
-Discpline of design, building and maintaining software.
-
-**Description.**
-
-[Software engineering](http://en.wikipedia.org/wiki/Software_engineering) is the discipline that encompasses all aspects
-of creating software and encompasses:
-
-  - *Requirements engineering*: determine what the future owners and users of a software system expect.
-
-  - *Software Design*: design the global architecture as well as as the technical details.
-
-  - *Software Construction*: build software according to its specification.
-
-  - *Software Testing*: test that software works according to its specifications.
-
-  - *Software Deployment*: distribute software to its users.
-
-  - *Software Maintenance*: maintain software after it has been deployed.
-
-There are various models to organize the above activities. The classical [waterfall
-model](http://en.wikipedia.org/wiki/Waterfall_model) organizes them sequentially. Variations are more iterative and
-allow to go back to earlier phases. Waterfall-based methods follow solid engineering practices but may lead to much
-bureacracy and an inflexible process that cannot easily cope with changing requirements.
-
-Other approaches promote [agile development](http://en.wikipedia.org/wiki/Agile_software_development) and are
-characterized by very short iterations that include all the above activities. Agile methods aim to produce prototypes as
-early as possible and this makes it easier for future users to assess the prototype and suggest changes.
-
-## Software Evolution
-
-**Synopsis.**
-
-Understanding and managing the continuous change of software.
-
-**Description.**
-
-[Meir M. Lehman](http://en.wikipedia.org/wiki/Meir_M._Lehman) was one of the first scientist to observe that software
-evolves over its lifetime. He formulated several
-[laws](http://en.wikipedia.org/wiki/Lehman’s_laws_of_software_evolution) about software evolution. Here are three
-examples of his laws (slightly paraphrased):
-
-  - *Continuing Change*: Programs must be continually adapted or they become progressively less usefull.
-
-  - *Increasing Complexity*: When a program evolves, its complexity increases unless work is done to maintain or reduce
-    it.
-
-  - *Continuing Growth*: The functional content of programs must be continually increased to maintain user satisfaction
-    over their lifetime.
-
-*Software evolution* is a specialisation in [Software Engineering](#softwareengineering) that address the
-following:
-
-  - Understanding the reasons for software evolution.
-
-  - Understanding the impact of software evolution on the structure and quality of source code.
-
-  - Developing [Software Metric](#softwaremetric)s and tools to measure the impact of software evolution.
-
-  - Developing methods and tools for the better understanding of source code.
-
-  - Developing [Refactoring](#refactoring) tools to counter the effects of software evolution.
-
-## Software Metric
-
-**Synopsis.**
-
-A metric to measure a source code property.
-
-**Description.**
-
-A software metric is a quantitative measure about source code. A combination of one or more metrics can be used to
-quantitatively characterize aspects of [software quality](http://en.wikipedia.org/wiki/Software_quality). Various
-quality aspects are of interest such as size, reliability, maintainability and so on.
-
-**Examples.**
-
-Examples of software metrics are:
-
-  - Source lines of code ([SLOC](http://en.wikipedia.org/wiki/Source_lines_of_code)) measures the size of software. The
-    larger the size, the more is needed to build and maintain it.
-
-  - [Cyclomatic complexity](http://en.wikipedia.org/wiki/Cyclomatic_complexity) measures logical complexity of code.
-    Software components with a high cyclomatic complexity are hard to understand and maintain.
-
-  - [Coupling](http://en.wikipedia.org/wiki/Coupling_(computer_science)) measures the coupling between software
-    components. High coupling indicates problems in the structure of a system.
-
-## Static Semantics
-
-**Synopsis.**
-
-Description of the properties of a program that can be determined/checked before it is executed.
-
-**Description.**
-
-The static semantics of a program describe all properties that can be determined before the program is executed. A
-[Typechecker](#typechecker) is a tool that checks the properties of a program as described by its static
-semantics.
-
-Static semantics describes properties that are relevant before a program is executed and differs from [Dynamic
-Semantics](#dynamicsemantics) that describes the execution behaviour itself.
-
-**Examples.**
-
-Examples of static semantic properties include:
-
-  - The proper use of types.
-
-  - The proper use of names.
-
-Language with substantial static semantics: Java, Haskell, Rascal. Languages with only dynamic semantics: Python, Ruby.
-
-## Syntax
-
-**Synopsis.**
-
+### Synopsis 
 The rules that describe correctly structured programs in a language.
 
-**Description.**
 
-According to the [Merriam-Webster](http://www.merriam-webster.com/dictionary/syntax) dictionary *syntax* means
 
-  - the way in which linguistic elements (as words) are put together to form constituents (as phrases or clauses);
+### Function 
+       
 
-  - the part of grammar dealing with this.
 
-[Dictionary.com](http://dictionary.reference.com/browse/syntax) is more elaborate and defines *syntax* as:
+### Description 
 
-  - *Linguistics*:
-    
-      - a. the study of the rules for the formation of grammatical sentences in a language.
-    
-      - b. the study of the patterns of formation of sentences and phrases from words.
-    
-      - c. the rules or patterns so studied: English syntax.
-    
-      - d. a presentation of these: a syntax of English.
-    
-      - e. an instance of these: the syntax of a sentence.
+According to the http://www.merriam-webster.com/dictionary/syntax[Merriam-Webster] dictionary _syntax_ means
 
-  - *Computers*: the grammatical rules and structural patterns governing the ordered use of appropriate words and
-    symbols for issuing commands, writing code, etc., in a particular software application or programming language.
+*  the way in which linguistic elements (as words) are put together to form constituents (as phrases or clauses);
+*  the part of grammar dealing with this.
 
-[Wikipedia](http://en.wikipedia.org/wiki/Syntax_(programming_languages) says: the syntax of a programming language is
-the set of rules that define the combinations of symbols that are considered to be correctly structured programs in that
-language.
 
-In linguistics, a [Grammar](#grammar) is a concept that includes syntax. However, in the cases that are
-relevant for meta-programming they can be used interchangeably. We will use them as synonyms.
+http://dictionary.reference.com/browse/syntax[Dictionary.com] is more elaborate and defines _syntax_ as:
+
+*  _Linguistics_:
+**  a. the study of the rules for the formation of grammatical sentences in a language.
+**  b. the study of the patterns of formation of sentences and phrases from words.
+**  c. the rules or patterns so studied: English syntax.
+**  d. a presentation of these: a syntax of English.
+**  e. an instance of these: the syntax of a sentence.
+
+*  _Computers_:  the grammatical rules and structural patterns governing the ordered use of appropriate words and symbols for issuing commands, writing code, etc., in a particular software application or programming language.
+
+
+http://en.wikipedia.org/wiki/Syntax_(programming_languages[Wikipedia] says:  the syntax of a programming language is the
+set of rules that define the combinations of symbols that are considered to be correctly structured programs in that language.
+
+In linguistics, a [Grammar](#Grammar-Grammar) is a concept that includes syntax.
+However, in the cases that are relevant for meta-programming they can be used interchangeably.
+We will use them as synonyms.
 
 In programming languages a further subdivision can be made:
 
-  - *Lexical syntax* defines the form of the lowest level textual items such as keywords, numeric constants, and string
-    constants.
+*  _Lexical syntax_ defines the form of the lowest level textual items such as keywords, numeric constants, and string constants.
+*  _Context-free syntax_ defines the global structure of statements, procedures and modules.
 
-  - *Context-free syntax* defines the global structure of statements, procedures and modules.
 
-A [Parser](#parser) checks that a text in language *L* indeed adheres to the syntax rules of language *L*.
-There are two possible answers:
+A [Parser](#Parser-Parser) checks that a text in language _L_ indeed adheres 
+to the syntax rules of language _L_. There are two possible answers:
 
-  - *Yes*. A [ParseTree](#parsetree) is returned that shows how the text adheres to the syntax rules.
+*  _Yes_. A [Parse tree](#ParseTree-ParseTree) is returned that shows how the text adheres to the syntax rules.
+*  _No_. Error messages pin point the location where the text deviates from the syntax rules.
 
-  - *No*. Error messages pin point the location where the text deviates from the syntax rules.
 
-## Testing
 
-**Synopsis.**
 
-Determine that the quality and functionality of software.
 
-**Description.**
+## Domain Specific Language {#DomainSpecificLanguage-DomainSpecificLanguage}
 
-[Software testing](http://en.wikipedia.org/wiki/Software_testing) is the process to determine that a software system
-meets its specifications and works as expected. This is done by manually or automatically executing test cases and
-observe the result.
+### Synopsis 
+Programming language targeted for a particular application domain.
 
-## Tuple
 
-**Synopsis.**
 
-An ordered, fixed length, sequence of values of possibly different type.
+### Function 
+       
 
-**Description.**
 
-A tuple is an ordered fixed length sequence of values of possibly different type.
 
-In Rascal a tuple is written as `<` *V*<sub>1</sub>, …​, *V*<sub>n</sub> `>` and a tuple type has the form `type[T1, …​,
-Tn]`, *T*<sub>i</sub> represents the type of element *i*. Tuple have two major applications:
+### Examples 
 
-  - As tuples in a [Relation](#relation).
+*  SQL (querying data bases).
+*  HTML (web pages).
+*  CSS (presentation of HTML pages).
+*  Excel (spreadsheets).
+*  BibTex (bibliography).
+*  BNF (grammars).
+*  Regular expressions (text matching).
 
-  - For ad-hoc packaging of values, for instance, to return multiple-values from a function.
 
-See [Tuple Values](/docs/Rascal#Tuple) for the operations on tuples.
 
-## Typechecker
 
-**Synopsis.**
+## Compiler {#Compiler-Compiler}
 
+### Synopsis 
+Tranform source code to an executable form.
+
+
+
+### Function 
+       
+
+
+### Description 
+
+A http://en.wikipedia.org/wiki/Compiler[compiler] transforms the source code of a program (in a source langue) to an executable form
+(in a target language)
+and consists of the following phases:
+
+*  [Parser](#Parser-Parser): read the source code and build an [Abstract Syntax Tree](#AbstractSyntaxTree-AbstractSyntaxTree).
+*  [Typechecker](#Typechecker-Typechecker): perform a semantic analysis of the code, resolve all names
+  and verify that the program is type correct.
+*  Optimisation: perform optimisations (e.g., constant folding, dead code elimination, call unfolding).
+  This can be seen as a form of [Refactoring](#Refactoring-Refactoring).
+*  Code generation: generate the final code, this can be asembly language or directly executable code.
+
+
+
+
+
+## Typechecker {#Typechecker-Typechecker}
+
+### Synopsis 
 Checks the type rules for a source language.
 
-**Description.**
 
-A [type system](http://en.wikipedia.org/wiki/Type_system) is a set of rules that defines how values, variables and
-functions may be used in a given programming languages.
 
-A type checker, checks that these rules are enforced. The moment that type checking can be done differs per type system,
-but two extremes exist:
+### Function 
+       
 
-  - *Static type checking*: all checking is done before the program is executed.
 
-  - *Dynamic type checking*: all checking is done during execution of the program.
+### Description 
 
-  - *Hybrid type checking*: when possible checks are done before execution, the remaining checks are done during
-    execution.
+A http://en.wikipedia.org/wiki/Type_system[type system] is a set of rules that defines how values,
+variables and functions may be used in a given programming languages.
+
+A type checker, checks that these rules are enforced. The moment that type checking can be done differs
+per type system, but two extremes exist:
+
+*  _Static type checking_: all checking is done before the program is executed.
+*  _Dynamic type checking_: all checking is done during execution of the program.
+*  _Hybrid type checking_: when possible checks are done before execution, the remaining checks are done during execution. 
+
 
 These different styles of type checking have different trade offs:
 
-  - Static typechecking:
-    
-      - Pro: most errors are found before execution.
-    
-      - Con: more type declarations have to be written by the programmer and in some situations the type systems limits
-        what can be expressed.
+*  Static typechecking:
+**  Pro: most errors are found before execution.
+**  Con: more type declarations have to be written by the programmer and in some situations the type systems limits what can be expressed.
+*  Dynamic checking:
+**  Pro: most flexible and expressive.
+**  Con: errors can only be found during execution.
+*  Hybrid (or gradual) type checking:
+**  Pro: a reasonable compromise.
+**  Con not be as safe as full static typechecking.
 
-  - Dynamic checking:
-    
-      - Pro: most flexible and expressive.
-    
-      - Con: errors can only be found during execution.
 
-  - Hybrid (or gradual) type checking:
-    
-      - Pro: a reasonable compromise.
-    
-      - Con not be as safe as full static typechecking.
 
-<!-- end list -->
+### Examples 
 
-  - If in Java a variable has been declared as `bool` it cannot be added to an integer.
+*  If in Java a variable has been declared as `bool` it cannot be added to an integer.
+*  If in Java a method has three formal parameters, it cannot be called with four actual parameters.
+*  In Python, a variable can first get a string value assigned and later on an integer value.
 
-  - If in Java a method has three formal parameters, it cannot be called with four actual parameters.
 
-  - In Python, a variable can first get a string value assigned and later on an integer value.
 
-## Visualization
 
-**Synopsis.**
-
-Visual presentation of scientific or abstract data.
-
-**Description.**
-
-Visualization is the activity of presenting scientific data or abstract structures in a visual form. There are several
-subareas:
-
-  - [Scientific visualization](http://en.wikipedia.org/wiki/Scientific_visualization): deals with data that are
-    geometric in nature and may have a time dimension.
-
-  - [Information visualization](http://en.wikipedia.org/wiki/Information_visualization)(: deals with abstract data
-    structures like trees, graphs and relations.
-
-  - [Software Visualization](http://en.wikipedia.org/wiki/Software_visualization): deals with facts related to software.
-
-The [Visualization Library](/docs/Libraries#vis) library provides a framework for interactive visualization. Simple
-examples can be found in [visualization recipes](/docs/Recipes#Visualization).
-
-### Scientific visualization
-
-**Examples.**
-
-Robert vam Liere and Wim de Leeuw have visualized liquid flows. There is also an
-[animated](http://homepages.cwi.nl/~robertl/movies/flow1.mpg) version.
-
-![flow](/images/flow.jpg)
-
-### Information Visualization
-
-Facebook’s [Friend Wheel](http://apps.facebook.com/friendwheel/) shows the connection between friends:
-
-![friends](/images/friends.jpg)
-
-### Software Visualization
-
-Stephen Eick [visualizes](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.67.962) the frequency of execution for
-each line in all source files of a software system.
-
-![frequency](/images/freq.png)
-
-Daniel Bierwirth
-[shows](http://www.danielbierwirth.de/index.php/reseachprojects/8-myresearch/mastercurriculumresearchcat/73-bundle-view-software-visualization)
-the connections (colored lines) between system components (at outer circle).
-
-![bundle](/images/bundle.jpg)
