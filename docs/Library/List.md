@@ -217,9 +217,9 @@ Get an arbitrary element from a list. See [take one from](/Library/List/List-tak
 rascal>import List;
 ok
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "elephant"
-rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "snake"
+rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
+str: "elephant"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "zebra"
 ```
@@ -986,9 +986,9 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [2,3,1,4]
+list[int]: [4,3,1,2]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["zebra","snake","owl","elephant"]
+list[str]: ["snake","owl","elephant","zebra"]
 ```
 
 ## function split {#List-split}
@@ -1144,13 +1144,13 @@ ok
 rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <30,[10,20,40,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <10,[20,30,40,50]>
+tuple[int,list[int]]: <50,[10,20,30,40]>
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <40,[10,20,30,50]>
+tuple[int,list[int]]: <10,[20,30,40,50]>
+rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
+tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"snake",["zebra","elephant","owl"]>
-rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 ```
