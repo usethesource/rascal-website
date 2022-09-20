@@ -1,0 +1,46 @@
+---
+title: UndeclaredNonTerminal
+---
+
+#### Synopsis
+
+A syntax rule uses an undeclared non-terminal.
+
+#### Syntax
+
+#### Types
+
+#### Function
+       
+#### Usage
+
+#### Description
+
+All non-terminals that occur in a [syntax definition](/Rascal/Declarations/SyntaxDefinition)
+should be declared in some rule.
+This error is generated when this is not the case.
+
+Remedy: declare the offending non-terminal.
+
+#### Examples
+
+Here is an example where the non-terminal `Y` is not declared:
+
+```rascal-shell
+rascal>import ParseTree;
+ok
+rascal>syntax X = "a" Y;
+ok
+rascal>parse(#X, "ab");
+|std:///ParseTree.rsc|(18984,5,<500,140>,<500,145>): Undeclared non-terminal: Y in module $GENERATED_PARSER$37351774
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredNonTerminal/UndeclaredNonTerminal.html|
+ok
+```
+
+#### Benefits
+
+#### Pitfalls
+
+The source location of the non-terminal is not yet available, so the error message mentions the module in which this occurs.
+
+
