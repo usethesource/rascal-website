@@ -77,7 +77,7 @@ Get the current datetime.
 rascal>import DateTime;
 ok
 rascal>now();
-datetime: $2022-09-20T09:17:31.109+00:00$
+datetime: $2022-09-20T09:28:08.669+00:00$
 ```
 
 ## function createDate {#DateTime-createDate}
@@ -183,9 +183,9 @@ Split an existing datetime into a tuple with the date and the time.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.348+00:00$
+datetime: $2022-09-20T09:28:08.908+00:00$
 rascal>splitDateTime(N);
-tuple[datetime date,datetime time]: <$2022-09-20$,$T09:17:31.348+00:00$>
+tuple[datetime date,datetime time]: <$2022-09-20$,$T09:28:08.908+00:00$>
 ```
 
 ## function incrementYears {#DateTime-incrementYears}
@@ -205,11 +205,11 @@ Increment the years by given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.397+00:00$
+datetime: $2022-09-20T09:28:08.954+00:00$
 rascal>incrementYears(N);
-datetime: $2023-09-20T09:17:31.397+00:00$
+datetime: $2023-09-20T09:28:08.954+00:00$
 rascal>incrementYears(N, 5);
-datetime: $2027-09-20T09:17:31.397+00:00$
+datetime: $2027-09-20T09:28:08.954+00:00$
 ```
 
 ## function incrementMonths {#DateTime-incrementMonths}
@@ -230,11 +230,11 @@ Increment the months by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.447+00:00$
+datetime: $2022-09-20T09:28:09.003+00:00$
 rascal>incrementMonths(N);
-datetime: $2022-10-20T09:17:31.447+00:00$
+datetime: $2022-10-20T09:28:09.003+00:00$
 rascal>incrementMonths(N, 5);
-datetime: $2023-02-20T09:17:31.447+00:00$
+datetime: $2023-02-20T09:28:09.003+00:00$
 ```
 
 ## function incrementDays {#DateTime-incrementDays}
@@ -254,11 +254,11 @@ Increment the days by given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.496+00:00$
+datetime: $2022-09-20T09:28:09.052+00:00$
 rascal>incrementDays(N);
-datetime: $2022-09-21T09:17:31.496+00:00$
+datetime: $2022-09-21T09:28:09.052+00:00$
 rascal>incrementDays(N, 5);
-datetime: $2022-09-25T09:17:31.496+00:00$
+datetime: $2022-09-25T09:28:09.052+00:00$
 ```
 
 ## function incrementHours {#DateTime-incrementHours}
@@ -278,11 +278,11 @@ Increment the hours by a given amount or by 1.`
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.549+00:00$
+datetime: $2022-09-20T09:28:09.100+00:00$
 rascal>incrementHours(N);
-datetime: $2022-09-20T10:17:31.549+00:00$
+datetime: $2022-09-20T10:28:09.100+00:00$
 rascal>incrementHours(N, 5);
-datetime: $2022-09-20T14:17:31.549+00:00$
+datetime: $2022-09-20T14:28:09.100+00:00$
 ```
 
 ## function incrementMinutes {#DateTime-incrementMinutes}
@@ -302,11 +302,11 @@ Increment the minutes by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.598+00:00$
+datetime: $2022-09-20T09:28:09.148+00:00$
 rascal>incrementMinutes(N);
-datetime: $2022-09-20T09:18:31.598+00:00$
+datetime: $2022-09-20T09:29:09.148+00:00$
 rascal>incrementMinutes(N, 5);
-datetime: $2022-09-20T09:22:31.598+00:00$
+datetime: $2022-09-20T09:33:09.148+00:00$
 ```
 
 ## function incrementSeconds {#DateTime-incrementSeconds}
@@ -326,11 +326,11 @@ Increment the seconds by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.648+00:00$
+datetime: $2022-09-20T09:28:09.200+00:00$
 rascal>incrementSeconds(N);
-datetime: $2022-09-20T09:17:32.648+00:00$
+datetime: $2022-09-20T09:28:10.200+00:00$
 rascal>incrementSeconds(N, 5);
-datetime: $2022-09-20T09:17:36.648+00:00$
+datetime: $2022-09-20T09:28:14.200+00:00$
 ```
 
 ## function incrementMilliseconds {#DateTime-incrementMilliseconds}
@@ -350,11 +350,11 @@ Increment the milliseconds by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.699+00:00$
+datetime: $2022-09-20T09:28:09.249+00:00$
 rascal>incrementMilliseconds(N);
-datetime: $2022-09-20T09:17:31.700+00:00$
+datetime: $2022-09-20T09:28:09.250+00:00$
 rascal>incrementMilliseconds(N, 5);
-datetime: $2022-09-20T09:17:31.704+00:00$
+datetime: $2022-09-20T09:28:09.254+00:00$
 ```
 
 ## function decrementYears {#DateTime-decrementYears}
@@ -374,11 +374,11 @@ Decrement the years by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.745+00:00$
+datetime: $2022-09-20T09:28:09.297+00:00$
 rascal>decrementYears(N);
-datetime: $2021-09-20T09:17:31.745+00:00$
+datetime: $2021-09-20T09:28:09.297+00:00$
 rascal>decrementYears(N, 5);
-datetime: $2017-09-20T09:17:31.745+00:00$
+datetime: $2017-09-20T09:28:09.297+00:00$
 ```
 
 ## function decrementMonths {#DateTime-decrementMonths}
@@ -398,11 +398,11 @@ Decrement the months by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.794+00:00$
+datetime: $2022-09-20T09:28:09.345+00:00$
 rascal>decrementMonths(N);
-datetime: $2022-08-20T09:17:31.794+00:00$
+datetime: $2022-08-20T09:28:09.345+00:00$
 rascal>decrementMonths(N, 5);
-datetime: $2022-04-20T09:17:31.794+00:00$
+datetime: $2022-04-20T09:28:09.345+00:00$
 ```
 
 ## function decrementDays {#DateTime-decrementDays}
@@ -422,11 +422,11 @@ Decrement the days by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.842+00:00$
+datetime: $2022-09-20T09:28:09.392+00:00$
 rascal>decrementDays(N);
-datetime: $2022-09-19T09:17:31.842+00:00$
+datetime: $2022-09-19T09:28:09.392+00:00$
 rascal>decrementDays(N, 3);
-datetime: $2022-09-17T09:17:31.842+00:00$
+datetime: $2022-09-17T09:28:09.392+00:00$
 ```
 
 ## function decrementHours {#DateTime-decrementHours}
@@ -446,11 +446,11 @@ Decrement the hours by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.894+00:00$
+datetime: $2022-09-20T09:28:09.442+00:00$
 rascal>decrementHours(N);
-datetime: $2022-09-20T08:17:31.894+00:00$
+datetime: $2022-09-20T08:28:09.442+00:00$
 rascal>decrementHours(N, 5);
-datetime: $2022-09-20T04:17:31.894+00:00$
+datetime: $2022-09-20T04:28:09.442+00:00$
 ```
 
 ## function decrementMinutes {#DateTime-decrementMinutes}
@@ -470,11 +470,11 @@ Decrement the minutes by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.944+00:00$
+datetime: $2022-09-20T09:28:09.489+00:00$
 rascal>decrementMinutes(N);
-datetime: $2022-09-20T09:16:31.944+00:00$
+datetime: $2022-09-20T09:27:09.489+00:00$
 rascal>decrementMinutes(N, 5);
-datetime: $2022-09-20T09:12:31.944+00:00$
+datetime: $2022-09-20T09:23:09.489+00:00$
 ```
 
 ## function decrementSeconds {#DateTime-decrementSeconds}
@@ -494,11 +494,11 @@ Decrement the seconds by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:31.994+00:00$
+datetime: $2022-09-20T09:28:09.541+00:00$
 rascal>decrementSeconds(N);
-datetime: $2022-09-20T09:17:30.994+00:00$
+datetime: $2022-09-20T09:28:08.541+00:00$
 rascal>decrementSeconds(N, 5);
-datetime: $2022-09-20T09:17:26.994+00:00$
+datetime: $2022-09-20T09:28:04.541+00:00$
 ```
 
 ## function decrementMilliseconds {#DateTime-decrementMilliseconds}
@@ -518,11 +518,11 @@ Decrement the milliseconds by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:32.046+00:00$
+datetime: $2022-09-20T09:28:09.589+00:00$
 rascal>decrementMilliseconds(N);
-datetime: $2022-09-20T09:17:32.045+00:00$
+datetime: $2022-09-20T09:28:09.588+00:00$
 rascal>decrementMilliseconds(N, 5);
-datetime: $2022-09-20T09:17:32.041+00:00$
+datetime: $2022-09-20T09:28:09.584+00:00$
 ```
 
 ## data interval {#DateTime-interval}
@@ -554,11 +554,11 @@ Given two datetime values, create an interval.
 rascal>import DateTime;
 ok
 rascal>B = now();
-datetime: $2022-09-20T09:17:32.098+00:00$
+datetime: $2022-09-20T09:28:09.639+00:00$
 rascal>E = incrementDays(B, 2);
-datetime: $2022-09-22T09:17:32.098+00:00$
+datetime: $2022-09-22T09:28:09.639+00:00$
 rascal>createInterval(B, E);
-interval: Interval($2022-09-20T09:17:32.098+00:00$,$2022-09-22T09:17:32.098+00:00$)
+interval: Interval($2022-09-20T09:28:09.639+00:00$,$2022-09-22T09:28:09.639+00:00$)
 ```
 
 ## data Duration {#DateTime-Duration}
@@ -595,13 +595,13 @@ Create a new duration representing the duration between the begin and end dates.
 rascal>import DateTime;
 ok
 rascal>B = now();
-datetime: $2022-09-20T09:17:32.156+00:00$
+datetime: $2022-09-20T09:28:09.692+00:00$
 rascal>E1 = incrementHours(B);
-datetime: $2022-09-20T10:17:32.156+00:00$
+datetime: $2022-09-20T10:28:09.692+00:00$
 rascal>createDuration(B, E1);
 Duration: duration(0,0,0,1,0,0,0)
 rascal>E2 = incrementMinutes(B);
-datetime: $2022-09-20T09:18:32.156+00:00$
+datetime: $2022-09-20T09:29:09.692+00:00$
 rascal>createDuration(B, E2);
 Duration: duration(0,0,0,0,1,0,0)
 ```
@@ -622,11 +622,11 @@ Return the number of days in an interval, including the begin and end days.
 rascal>import DateTime;
 ok
 rascal>B = now();
-datetime: $2022-09-20T09:17:32.208+00:00$
+datetime: $2022-09-20T09:28:09.744+00:00$
 rascal>E = incrementDays(B, 2);
-datetime: $2022-09-22T09:17:32.208+00:00$
+datetime: $2022-09-22T09:28:09.744+00:00$
 rascal>I = createInterval(B, E);
-interval: Interval($2022-09-20T09:17:32.208+00:00$,$2022-09-22T09:17:32.208+00:00$)
+interval: Interval($2022-09-20T09:28:09.744+00:00$,$2022-09-22T09:28:09.744+00:00$)
 rascal>daysInInterval(I);
 int: 2
 ```
@@ -647,9 +647,9 @@ Return the difference between two dates and/or datetimes in days.
 rascal>import DateTime;
 ok
 rascal>B = now();
-datetime: $2022-09-20T09:17:32.263+00:00$
+datetime: $2022-09-20T09:28:09.793+00:00$
 rascal>E = incrementDays(B, 2);
-datetime: $2022-09-22T09:17:32.263+00:00$
+datetime: $2022-09-22T09:28:09.793+00:00$
 rascal>daysDiff(B, E);
 int: 2
 ```
@@ -674,11 +674,11 @@ Given an interval `i`, return a list of days `[i.begin, ..., i.end]`.
 rascal>import DateTime;
 ok
 rascal>B = now();
-datetime: $2022-09-20T09:17:32.323+00:00$
+datetime: $2022-09-20T09:28:09.843+00:00$
 rascal>E = incrementDays(B, 2);
-datetime: $2022-09-22T09:17:32.323+00:00$
+datetime: $2022-09-22T09:28:09.843+00:00$
 rascal>I = createInterval(B, E);
-interval: Interval($2022-09-20T09:17:32.323+00:00$,$2022-09-22T09:17:32.323+00:00$)
+interval: Interval($2022-09-20T09:28:09.843+00:00$,$2022-09-22T09:28:09.843+00:00$)
 rascal>dateRangeByDay(I);
 list[datetime]: [$2022-09-20$,$2022-09-21$,$2022-09-22$]
 ```
@@ -830,11 +830,11 @@ Print an input time using the given format string.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:32.640+00:00$
+datetime: $2022-09-20T09:28:10.137+00:00$
 rascal>printTime(N);
-str: "09:17:32.640+0000"
+str: "09:28:10.137+0000"
 rascal>printTime(N, "HH/mm/ss");
-str: "09/17/32"
+str: "09/28/10"
 ```
 
 ## function printTimeInLocale {#DateTime-printTimeInLocale}
@@ -864,13 +864,13 @@ Print an input datetime using the given format string.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-20T09:17:32.701+00:00$
+datetime: $2022-09-20T09:28:10.187+00:00$
 rascal>printDateTime(N);
-str: "2022-09-20 09:17:32.701+0000"
+str: "2022-09-20 09:28:10.187+0000"
 rascal>printDateTime(N, "yyyy-MM-dd\'T\'HH:mm:ss.SSSZZ");
-str: "2022-09-20T09:17:32.701+0000"
+str: "2022-09-20T09:28:10.187+0000"
 rascal>printDateTime(N, "YYYY/MM/dd/HH/mm/ss");
-str: "2022/09/20/09/17/32"
+str: "2022/09/20/09/28/10"
 ```
 
 ## function printDateTimeInLocale {#DateTime-printDateTimeInLocale}
@@ -899,6 +899,6 @@ Create a new arbitrary datetime.
 rascal>import DateTime;
 ok
 rascal>arbDateTime();
-datetime: $1992-01-06T20:30:27.000+00:00$
+datetime: $1978-11-25T12:24:21.000+00:00$
 ```
 

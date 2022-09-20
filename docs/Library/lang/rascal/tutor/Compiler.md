@@ -26,7 +26,7 @@ compiles .rsc and .md files to markdown by executing Rascal-specific code and in
   the document.
 
   For (nested) folders in the srcs folders, which do not contain an `index.md` file, or
-  a <name>.md file where the name is equal to the name of the current folder, a fresh index.md
+  a `<name>.md` file where the name is equal to the name of the current folder, a fresh index.md
   file is generated.
 
 
