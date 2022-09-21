@@ -77,16 +77,16 @@ Each section starts with a keyword that should appear at the begin of a line.
 The first two sections (Name and Synopsis) are mandatory,
 
 Here is a brief summary of the sections of a concept:
-* [Name](/docs//Tutor/Concept/Name)
-* [Synopsis](/docs//Tutor/Concept/Synopsis)
-* [./Syntax](/docs//Tutor/Concept/Syntax)
-* [Types](/docs//Tutor/Concept/Types)
-* [./Function](/docs//Tutor/Concept/Function)
-* [Details](/docs//Tutor/Concept/Details)
-* [Description](/docs//Tutor/Concept/Description)
-* [Examples](/docs//Tutor/Concept/Examples)
-* [Benefits](/docs//Tutor/Concept/Benefits)
-* [Pitfalls](/docs//Tutor/Concept/Pitfalls)
+* [Name](/docs/Tutor/Concept/Name)
+* [Synopsis](/docs/Tutor/Concept/Synopsis)
+* [./Syntax](/docs/Tutor/Concept/Syntax)
+* [Types](/docs/Tutor/Concept/Types)
+* [./Function](/docs/Tutor/Concept/Function)
+* [Details](/docs/Tutor/Concept/Details)
+* [Description](/docs/Tutor/Concept/Description)
+* [Examples](/docs/Tutor/Concept/Examples)
+* [Benefits](/docs/Tutor/Concept/Benefits)
+* [Pitfalls](/docs/Tutor/Concept/Pitfalls)
 
 
 .Examples

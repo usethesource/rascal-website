@@ -57,7 +57,7 @@ The following topics will be described here:
 * [Tutor:Concept](/docs//Tutor/Concept)
 * [Tutor:Maintenance](/docs//Tutor/Maintenance)
 * [Tutor:Markup](/docs//Tutor/Markup)
-* [Tutor:Tutor](/docs//Tutor/)
+* [Tutor:Tutor](/docs/Tutor/)
 
 #### Examples
 
@@ -73,5 +73,5 @@ The following topics will be described here:
 * We have to run the tutor compiler manually to find out about possible errors. There is no IDE support yet.
 * The Tutor compiler is not incremental yet. It will re-compile everything from scratch even if nothing has changed.
 * Downstream tools, such as Docusaurus, may detect issues that the tutor compiler does not detect. For example broken links that are not [Concept](/docs//Tutor/Concept) links will not be detected early. This means you may have to go back and fix the documentation, release it in a `jar` and then try the downstream tool again.
-* The interactive [Question markup](/docs//Tutor/Markup/QuestionMarkup) part of the compiler is currently under maintenance and therefore unavailable.
+* The interactive [Question markup](/docs/Tutor/Markup/QuestionMarkup) part of the compiler is currently under maintenance and therefore unavailable.
 

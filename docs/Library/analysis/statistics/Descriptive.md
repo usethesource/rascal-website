@@ -15,22 +15,22 @@ Descriptive Statistics.
 
 Provides the following univariate (single variable) statistics functions:
 
-* [Library:function:analysis::statistics::Descriptive::central moment](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-centralMoment)
-* [Library:function:analysis::statistics::Descriptive::geometric mean](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-geometricMean)
-* [Library:function:analysis::statistics::Descriptive::kurtosis](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-kurtosis)
-* [Library:function:analysis::statistics::Descriptive::kurtosis excess](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-kurtosisExcess)
-* [Library:function:analysis::statistics::Descriptive::max](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-max)
-* [Library:function:analysis::statistics::Descriptive::mean](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-mean)
-* [Library:function:analysis::statistics::Descriptive::median](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-median)
-* [Library:function:analysis::statistics::Descriptive::middle](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-middle)
-* [Library:function:analysis::statistics::Descriptive::min](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-min)
-* [Library:function:analysis::statistics::Descriptive::moment](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-moment)
-* [Library:function:analysis::statistics::Descriptive::percentile](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-percentile)
-* [Library:function:analysis::statistics::Descriptive::skewness](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-skewness)
-* [Library:function:analysis::statistics::Descriptive::standard deviation](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-standardDeviation)
-* [Library:function:analysis::statistics::Descriptive::sum](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-sum)
-* [Library:function:analysis::statistics::Descriptive::sumsq](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-sumsq)
-* [Library:function:analysis::statistics::Descriptive::variance](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-variance)
+* [Library:function:analysis::statistics::Descriptive::central moment](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-centralMoment)
+* [Library:function:analysis::statistics::Descriptive::geometric mean](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-geometricMean)
+* [Library:function:analysis::statistics::Descriptive::kurtosis](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-kurtosis)
+* [Library:function:analysis::statistics::Descriptive::kurtosis excess](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-kurtosisExcess)
+* [Library:function:analysis::statistics::Descriptive::max](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-max)
+* [Library:function:analysis::statistics::Descriptive::mean](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-mean)
+* [Library:function:analysis::statistics::Descriptive::median](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-median)
+* [Library:function:analysis::statistics::Descriptive::middle](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-middle)
+* [Library:function:analysis::statistics::Descriptive::min](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-min)
+* [Library:function:analysis::statistics::Descriptive::moment](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-moment)
+* [Library:function:analysis::statistics::Descriptive::percentile](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-percentile)
+* [Library:function:analysis::statistics::Descriptive::skewness](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-skewness)
+* [Library:function:analysis::statistics::Descriptive::standard deviation](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-standardDeviation)
+* [Library:function:analysis::statistics::Descriptive::sum](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-sum)
+* [Library:function:analysis::statistics::Descriptive::sumsq](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-sumsq)
+* [Library:function:analysis::statistics::Descriptive::variance](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-variance)
 
 #### Examples
 
@@ -142,7 +142,7 @@ Median of data values.
 #### Description
 
 Returns the http://en.wikipedia.org/wiki/Median[median] of the available values.
-This is the same as the 50th [percentile](/docs//Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-percentile).
+This is the same as the 50th [percentile](/docs/Library/analysis/statistics/Descriptive#analysis::statistics::Descriptive-percentile).
 
 #### Examples
 

@@ -16,7 +16,7 @@ Use of `fail` statement outside a condtional context.
 
 #### Description
 
-A [fail](/docs//Rascal/Statements/Fail) statement is only allowed inside conditional statements.
+A [fail](/docs/Rascal/Statements/Fail) statement is only allowed inside conditional statements.
 This error is generated when `fail` is used outside a conditional context.
 
 Remedies:

@@ -24,22 +24,22 @@ can be implemented using a list, array or something else.
 In functional languages, and also in Rascal, abstract datatypes (or ADTs for short)
 are used to define new data types. Well-known examples are http://en.wikipedia.org/wiki/Stack_(data_structure)[stack] and http://en.wikipedia.org/wiki/Tree_(data_structure)[tree].
 
-See [Algebraic Data Types](/docs//Rascal/Declarations/AlgebraicDataType) and 
-[Constructors](/docs//Rascal/Expressions/Values/Constructor) in the [Rascal Language Reference](/docs//Rascal/).
+See [Algebraic Data Types](/docs/Rascal/Declarations/AlgebraicDataType) and 
+[Constructors](/docs/Rascal/Expressions/Values/Constructor) in the [Rascal Language Reference](/docs/Rascal/).
 
 #### Examples
 
 ## Abstract Data Types in Daily Life
 
-*  A stack of trays in the local cafetaria: ![](/docs//assets/Rascalopedia/AbstractDataType/dispenser.jpg)
+*  A stack of trays in the local cafetaria: ![](/assets/Rascalopedia/AbstractDataType/dispenser.jpg)
    [credit](http://www.thermo-box.co.uk/fimi-food-transport-and-handling-products/self-levelling-heated-and-unheated-plate-and-tray-systems.html)
 
 *  A tree:
-   ![](/docs//assets/Rascalopedia/AbstractDataType/tree.jpg)
+   ![](/assets/Rascalopedia/AbstractDataType/tree.jpg)
    [credit](http://free-extras.com/images/tree-569.htm)
 
 *  Coral:
-   ![](/docs//assets/Rascalopedia/AbstractDataType/coral.jpg)
+   ![](/assets/Rascalopedia/AbstractDataType/coral.jpg)
    [credit](http://blog.enn.com/?p=476)
 
 

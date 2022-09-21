@@ -21,7 +21,7 @@ _MarkedText_
 #### Description
 
 The full summary of a concept consists of the Synopsis and the optional elements
-[./Syntax](/docs//Tutor/Concept/Syntax), [Types](/docs//Tutor/Concept/Types) and [./Function](/docs//Tutor/Concept/Function).
+[./Syntax](/docs/Tutor/Concept/Syntax), [Types](/docs/Tutor/Concept/Types) and [./Function](/docs/Tutor/Concept/Function).
 
 Synopsis is *mandatory* (this is not yet enforced).
 

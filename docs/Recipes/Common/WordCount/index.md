@@ -21,8 +21,8 @@ A word is here defined as one or more letters (lowercase or uppercase), digits a
 
 We split the problem in two parts:
 
-*  Count the words in a single line. We explore three ways to do this in an imperative ([Count in line1](/docs//Recipes/Common/WordCount/CountInLine1)], [Count in line2](/docs//Recipes/Common/WordCount/CountInLine2))
-  and a functional style ([Count in line3](/docs//Recipes/Common/WordCount/CountInLine3)).
+*  Count the words in a single line. We explore three ways to do this in an imperative ([Count in line1](/docs/Recipes/Common/WordCount/CountInLine1)], [Count in line2](/docs/Recipes/Common/WordCount/CountInLine2))
+  and a functional style ([Count in line3](/docs/Recipes/Common/WordCount/CountInLine3)).
 *  Next we apply the single line counter to all the lines.
 
 
@@ -79,10 +79,10 @@ test bool tstWordCount6(str txt) {
 ```
 
                 
-<1> An [enumerator](/docs//Rascal/Expressions/Comprehensions/Enumerator) is used to generated all the lines in the list of lines.
+<1> An [enumerator](/docs/Rascal/Expressions/Comprehensions/Enumerator) is used to generated all the lines in the list of lines.
 <2> The argument function `countInLine` is applied to count the number of words in each line.
 
-Let's now do some experiments using the [Jabberwocky](/docs//Recipes/Common/WordCount/Jabberwocky) poem by Lewis Carrol as input.
+Let's now do some experiments using the [Jabberwocky](/docs/Recipes/Common/WordCount/Jabberwocky) poem by Lewis Carrol as input.
 
 
 ```rascal-shell
@@ -114,7 +114,7 @@ int (list[str]): function(|prompt:///|(0,94,<1,0>,<1,94>))
 rascal>wordCount2(Jabberwocky);
 int: 216
 ```
-The function body contains two nested [reducers](/docs//Rascal/Expressions/Reducer).
+The function body contains two nested [reducers](/docs/Rascal/Expressions/Reducer).
 The inner reducer counts the number of words in a line, the outer reducer accumulates all line word counts.
 
 

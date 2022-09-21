@@ -30,8 +30,8 @@ where each sentence is a string over the language generated from `Nonterminal`. 
 #### Description
 
 A concrete syntax fragment allows the programmer to write patterns and expressions in the language that is currently analyzed, 
-transformed or generated. The [./Concrete Syntax](/docs//Rascal/Expressions/ConcreteSyntax) feature is derived from [Syntax Definition](/docs//Rascal/Declarations/SyntaxDefinition)s. 
-For any non-terminal defined in a [Syntax Definition](/docs//Rascal/Declarations/SyntaxDefinition), you may use [./Concrete Syntax](/docs//Rascal/Expressions/ConcreteSyntax) to match or generate its parse trees.
+transformed or generated. The [./Concrete Syntax](/docs/Rascal/Expressions/ConcreteSyntax) feature is derived from [Syntax Definition](/docs/Rascal/Declarations/SyntaxDefinition)s. 
+For any non-terminal defined in a [Syntax Definition](/docs/Rascal/Declarations/SyntaxDefinition), you may use [./Concrete Syntax](/docs/Rascal/Expressions/ConcreteSyntax) to match or generate its parse trees.
 
 #### Examples
 

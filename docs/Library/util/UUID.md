@@ -20,7 +20,7 @@ generates a unique identifier shaped as a `loc`
 
 This function generates a UUID, see http://en.wikipedia.org/wiki/Universally_unique_identifier.
 Since UUIDs are useful to assign an opaque and unique identity to data, the function returns
-a [Location](/docs//Rascal/Expressions/Values/Location) (which is the preferred representation for encoding identities in Rascal)
+a [Location](/docs/Rascal/Expressions/Values/Location) (which is the preferred representation for encoding identities in Rascal)
 
 #### Examples
 
@@ -34,7 +34,7 @@ The uuid() function generates a location with the authority showing the literal 
 
 ```rascal-shell
 rascal>uuid()
-loc: |uuid://d0f5982c-ad3c-4484-bebc-1db35865cef3|
+loc: |uuid://1afcffab-6814-4d34-ba2e-beea99df1da9|
 ```
 
 Use it to relate identies to data objects, as in this example which adds a field to a relation:
@@ -56,29 +56,29 @@ rel[int,int]: {
 }
 rascal>rel[int n, int square, loc id] myUniqueData = { <i,j,uuid()> | <i,j> <- myData };
 rel[int n,int square,loc id]: {
-  <4,16,|uuid://fe1d0a08-fc56-4258-a289-4308baab2456|>,
-  <2,4,|uuid://539d0c22-c1d7-4c0b-b5ef-37edc24c4701|>,
-  <10,100,|uuid://320a24cc-386c-4be8-996b-4cbeeec4fed6|>,
-  <3,9,|uuid://c8db36b6-9674-49f2-8927-195bbc57c06d|>,
-  <7,49,|uuid://c2426409-e82b-40e3-b5e8-466c0c99fa12|>,
-  <6,36,|uuid://848fbae7-6505-4caa-86b5-dbedba195f29|>,
-  <8,64,|uuid://a2719b31-4cb6-40f4-85d2-30dade998066|>,
-  <5,25,|uuid://6a817249-3a87-4cf2-9b1d-21c640b017ce|>,
-  <1,1,|uuid://f7fc449c-4c39-49ac-9c02-b54b88cc68f7|>,
-  <9,81,|uuid://d22c4959-1de4-473a-881a-aec49c6c8624|>
+  <3,9,|uuid://b70380a0-424f-4f60-9a23-2c1379bff450|>,
+  <6,36,|uuid://b26784cb-71da-49ff-8e5d-34b9b767ed38|>,
+  <10,100,|uuid://9f184c09-221a-428b-a712-1f0cacb5d8ef|>,
+  <4,16,|uuid://6588766e-de16-43f2-86d2-d7fba63cbe2a|>,
+  <8,64,|uuid://71ffcbd9-155c-42ac-af0f-35302ea97daa|>,
+  <9,81,|uuid://4478803f-2eb7-4d78-8cf2-2fea59599fd6|>,
+  <5,25,|uuid://89aed3d1-a490-4fb5-b1f7-1986934a52ca|>,
+  <7,49,|uuid://5b0ced48-bbcf-426c-85a5-6a6a755addda|>,
+  <1,1,|uuid://9d37aae6-be18-44a0-99e3-8c4d596e9d3a|>,
+  <2,4,|uuid://b1fa34d1-640e-4a51-be72-7cf23c66746d|>
 }
 rascal>map[tuple[int i, int j] t, loc id] myUniqueMap = (<i,j>:uuid() | <i,j> <- myData );
 map[tuple[int i,int j] t, loc id]: (
-  <6,36>:|uuid://8e5b4877-cde3-473b-870d-c5d938af2815|,
-  <2,4>:|uuid://f58a364f-d223-4fcd-a0e8-1d7fae89bb82|,
-  <7,49>:|uuid://60369dd6-22d3-4304-b21d-14347e2895e9|,
-  <9,81>:|uuid://469b45cd-5f1d-4e4a-b346-f2eb9bb396f6|,
-  <8,64>:|uuid://457ab586-ead2-4ebe-accb-610c718ff586|,
-  <5,25>:|uuid://1e138427-e64d-4045-a74b-622c1376fcf5|,
-  <4,16>:|uuid://6c8f39c2-ccd4-413f-a78b-8e0d0db3aa7f|,
-  <1,1>:|uuid://bfe3d651-f8bb-4ba2-a840-f80bd42f4e08|,
-  <10,100>:|uuid://905d1548-5691-4def-bea3-768c70504775|,
-  <3,9>:|uuid://2f45793a-aa03-449a-b343-fe1d97d9e3ce|
+  <6,36>:|uuid://bd1389dc-8252-44ce-b7a5-1420906e5289|,
+  <2,4>:|uuid://b74c156b-3737-4443-b5ba-073a4bd640fc|,
+  <7,49>:|uuid://3710549b-21b3-4bc9-964c-9d31a532439c|,
+  <9,81>:|uuid://ca25f09b-71d3-4bbc-8b72-34cc82d1d67e|,
+  <8,64>:|uuid://0047e791-a9a6-47d0-954a-987c97f2335e|,
+  <5,25>:|uuid://22430518-73e1-452c-a158-f6a142be5fb0|,
+  <4,16>:|uuid://06d5a071-769b-4191-accf-ebf5a09b1fc9|,
+  <1,1>:|uuid://2e986248-7d18-4dd6-a318-073ff8077b31|,
+  <10,100>:|uuid://afdcd5f8-e6a2-4dc7-b0af-647067100399|,
+  <3,9>:|uuid://4472fb59-8991-41b1-951a-0f9cf3358f62|
 )
 ```
 Note how uuid() should always generate a fresh value:
@@ -90,13 +90,13 @@ bool: true
 
 #### Benefits
 
-*  [Location](/docs//Rascal/Expressions/Values/Location)s are used for identifying program elements or model elements in Rascal. The uuid() function provides
+*  [Location](/docs/Rascal/Expressions/Values/Location)s are used for identifying program elements or model elements in Rascal. The uuid() function provides
 an quick-and-easy way of acquiring such an identity without having to design a naming scheme.
 
 #### Pitfalls
 
-*  UUIDs are a quick and dirty way of identifying data which may lead to hard to debug code. A naming scheme for [Location](/docs//Rascal/Expressions/Values/Location)s is better because it generates human readable
-[Location](/docs//Rascal/Expressions/Values/Location)s which carry meaning. For example consider the difference in readability between these two values:
+*  UUIDs are a quick and dirty way of identifying data which may lead to hard to debug code. A naming scheme for [Location](/docs/Rascal/Expressions/Values/Location)s is better because it generates human readable
+[Location](/docs/Rascal/Expressions/Values/Location)s which carry meaning. For example consider the difference in readability between these two values:
 `|uuid://47fdcd64-4fd0-41a1-8aa3-61c5b272c3fc|` and `|java+class:///java/lang/Object|`. Both may lead to the same 
 results in your computation, but if we print either of them out, one of them is opaque and the other is transparent. A transparent naming scheme is preferable for
 debugging purposes.

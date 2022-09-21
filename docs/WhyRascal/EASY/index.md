@@ -6,7 +6,7 @@ title: The Extract-Analyze-SYnthesize (EASY) paradigm
 
 Rascal excels in supporting the Extract-Analyze-SYnthesize (EASY) paradigm.
 
-![](/docs//assets/WhyRascal/EASY/easy-workflow.png)
+![](/assets/WhyRascal/EASY/easy-workflow.png)
 
 // explicitly separate image from Description 
 

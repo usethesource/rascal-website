@@ -28,20 +28,20 @@ The following types of questions are supported:
 *  _Value_: question about the _value_ of a Rascal expression.
 
 
-[Text](/docs//Tutor/Markup/QuestionMarkup/Text) gives the question text and lists all possible good answers.
+[Text](/docs/Tutor/Markup/QuestionMarkup/Text) gives the question text and lists all possible good answers.
 
-[Choice](/docs//Tutor/Markup/QuestionMarkup/Choice) is a straightforward listing of good and bad answers.
+[Choice](/docs/Tutor/Markup/QuestionMarkup/Choice) is a straightforward listing of good and bad answers.
 
-[./Type](/docs//Tutor/Markup/QuestionMarkup/Type) and [./Value](/docs//Tutor/Markup/QuestionMarkup/Value) questions are based on a template that consists of an optional _listing_ and an _equality_:
+[./Type](/docs/Tutor/Markup/QuestionMarkup/Type) and [./Value](/docs/Tutor/Markup/QuestionMarkup/Value) questions are based on a template that consists of an optional _listing_ and an _equality_:
 
-![](/docs//assets/Tutor/Markup/QuestionMarkup/Question.png)
+![](/assets/Tutor/Markup/QuestionMarkup/Question.png)
 
 
 There should be exactly one _hole_ (indicated by `<?>`) in this template that is to be filled in by the student; it may occur in the listing
 or in one of the sides of the equality. The general structure is therefore: _fill in the hole such that the equality holds_.
 Given that the listing is optional, this template represents 5 different question styles.
 
-[./Type](/docs//Tutor/Markup/QuestionMarkup/Type) and [./Value](/docs//Tutor/Markup/QuestionMarkup/Value) questions use [Type descriptor](/docs//Tutor/Markup/QuestionMarkup/TypeDescriptor)s to describe desired values and share certain common steps (_QSteps_):
+[./Type](/docs/Tutor/Markup/QuestionMarkup/Type) and [./Value](/docs/Tutor/Markup/QuestionMarkup/Value) questions use [Type descriptor](/docs/Tutor/Markup/QuestionMarkup/TypeDescriptor)s to describe desired values and share certain common steps (_QSteps_):
 
 * `prep: RascalCommand` describes preparatory steps needed to execute the question. Typically, required
   imports can be listed here.

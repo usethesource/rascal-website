@@ -14,7 +14,7 @@ Literal in abstract pattern.
 
 #### Description
 
-A literal of one of the basic types [Boolean](/docs//Rascal/Expressions/Values/Boolean), [Integer](/docs//Rascal/Expressions/Values/Integer), [Real](/docs//Rascal/Expressions/Values/Real), [Number](/docs//Rascal/Expressions/Values/Number), [String](/docs//Rascal/Expressions/Values/String), [Location](/docs//Rascal/Expressions/Values/Location), or [Date time](/docs//Rascal/Expressions/Values/DateTime)
+A literal of one of the basic types [Boolean](/docs/Rascal/Expressions/Values/Boolean), [Integer](/docs/Rascal/Expressions/Values/Integer), [Real](/docs/Rascal/Expressions/Values/Real), [Number](/docs/Rascal/Expressions/Values/Number), [String](/docs/Rascal/Expressions/Values/String), [Location](/docs/Rascal/Expressions/Values/Location), or [Date time](/docs/Rascal/Expressions/Values/DateTime)
 can be used as abstract pattern.
 A literal pattern matches with a value that is identical to the literal.
 

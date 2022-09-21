@@ -16,7 +16,7 @@ A scheme is used in a location for wich no provider has been registered.
 
 #### Description
 
-[Locations](/docs//Rascal/Expressions/Values/Location) provide very flexible ways to access files and external data sources.
+[Locations](/docs/Rascal/Expressions/Values/Location) provide very flexible ways to access files and external data sources.
 There any many protocols (called _schemes_) that can be used (e.g., `file`, `http`, `home` and many others).
 This error is generated when an unknown scheme is used.
 

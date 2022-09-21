@@ -42,8 +42,8 @@ An n-ary list relation with m tuples is denoted by
  `[< E<sub>11</sub>, E<sub>12</sub>, ..., E~1n~>,< E<sub>21</sub>, E<sub>22</sub>, ..., E~2n~>, ..., < E~m1~, E~m2~, ..., E~mn~>]`, 
 where the _E_~ij~ are expressions that yield the desired element type _T_~i~.
 
-Since list relations are a form of list all operations (see [List](/docs//Rascal/Expressions/Values/List)) and functions
-(see [Library:module:List](/docs//Library/List)) are also applicable to relations.
+Since list relations are a form of list all operations (see [List](/docs/Rascal/Expressions/Values/List)) and functions
+(see [Library:module:List](/docs/Library/List)) are also applicable to relations.
 
 The following additional operators are provided for list relations:
 * ((Rascal:Expressions/Values/ListRelation))
@@ -55,7 +55,7 @@ The following additional operators are provided for list relations:
 * ((Rascal:Expressions/Values/ListRelation/Subscription))
 * ((Rascal:Expressions/Values/ListRelation/TransitiveClosure))
 
-There are also [library functions](/docs//Library/ListRelation) available for list relations.
+There are also [library functions](/docs/Library/ListRelation) available for list relations.
 
 
 #### Examples

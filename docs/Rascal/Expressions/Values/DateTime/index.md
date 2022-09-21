@@ -47,7 +47,7 @@ The following fields provide access to information about the value, but cannot b
 
 
 The following fields provide access to the individual components of date, time and datetime values,
-and can be accessed using [Field selection](/docs//Rascal/Expressions/Values/DateTime/FieldSelection) and be assigned using [Field selection](/docs//Rascal/Expressions/Values/DateTime/FieldSelection):
+and can be accessed using [Field selection](/docs/Rascal/Expressions/Values/DateTime/FieldSelection) and be assigned using [Field selection](/docs/Rascal/Expressions/Values/DateTime/FieldSelection):
 
 *  `year`
 *  `month`
@@ -91,7 +91,7 @@ The following operators are defined for DateTime:
 The following functions are defined for DateTime:
 loctoc::[Rascal/Libraries/Prelude/DateTime,1]
 
-There are also [library functions](/docs//Library/DateTime) available for DateTime.
+There are also [library functions](/docs/Library/DateTime) available for DateTime.
 
 #### Examples
 

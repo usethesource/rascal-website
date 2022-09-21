@@ -20,7 +20,7 @@ Union of two set values.
 
 #### Description
 
-The `+` operator computes set union if both operands are sets. If one of the operands is not a set, it acts as [Insert](/docs//Rascal/Expressions/Values/Set/Insert) instead.
+The `+` operator computes set union if both operands are sets. If one of the operands is not a set, it acts as [Insert](/docs/Rascal/Expressions/Values/Set/Insert) instead.
 
 #### Examples
 

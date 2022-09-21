@@ -32,8 +32,8 @@ Now we will follow the [EASY][EASY](/docs//WhyRascal/EASY) paradigm:
 
 These are a number of recipes for measuring different things about Java:
 
-*  [Measuring classes](/docs//Recipes/Metrics/MeasuringJava/MeasuringClasses)
-*  [Measuring methods](/docs//Recipes/Metrics/MeasuringJava/MeasuringMethods)
+*  [Measuring classes](/docs/Recipes/Metrics/MeasuringJava/MeasuringClasses)
+*  [Measuring methods](/docs/Recipes/Metrics/MeasuringJava/MeasuringMethods)
 
 #### Examples
 
@@ -224,11 +224,11 @@ M3: m3(
 
 #### Benefits
 
-*  Notice that _all_ these [Location](/docs//Rascal/Expressions/Values/Location) literals are hyperlinks and you can click on them to go the source code that they point to. Try it!
+*  Notice that _all_ these [Location](/docs/Rascal/Expressions/Values/Location) literals are hyperlinks and you can click on them to go the source code that they point to. Try it!
 * M3 models are great for metrics, but also they are the basis for many other static analyses
-* See [Measuring classes](/docs//Recipes/Metrics/MeasuringJava/MeasuringClasses) and [Measuring methods](/docs//Recipes/Metrics/MeasuringJava/MeasuringMethods) for more benefits
+* See [Measuring classes](/docs/Recipes/Metrics/MeasuringJava/MeasuringClasses) and [Measuring methods](/docs/Recipes/Metrics/MeasuringJava/MeasuringMethods) for more benefits
 
 #### Pitfalls
 
-* See [Measuring classes](/docs//Recipes/Metrics/MeasuringJava/MeasuringClasses) and [Measuring methods](/docs//Recipes/Metrics/MeasuringJava/MeasuringMethods) for more pitfalls
+* See [Measuring classes](/docs/Recipes/Metrics/MeasuringJava/MeasuringClasses) and [Measuring methods](/docs/Recipes/Metrics/MeasuringJava/MeasuringMethods) for more pitfalls
 

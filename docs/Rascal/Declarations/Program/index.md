@@ -4,7 +4,7 @@ title: Program
 
 #### Synopsis
 
-A Rascal program consists of a number of [Module](/docs//Rascal/Declarations/Module)s.
+A Rascal program consists of a number of [Module](/docs/Rascal/Declarations/Module)s.
 
 #### Syntax
 
@@ -14,7 +14,7 @@ A Rascal program consists of a number of [Module](/docs//Rascal/Declarations/Mod
 
 #### Description
 
-A Rascal program consists of a number of [Module](/docs//Rascal/Declarations/Module), each stored in a separate file with extension `.rsc`.
+A Rascal program consists of a number of [Module](/docs/Rascal/Declarations/Module), each stored in a separate file with extension `.rsc`.
 
 
 #### Examples

@@ -36,13 +36,13 @@ The concept name of this concept is `ReferenceToConcept` while its display name 
 
 We can create a reference to the `InlineMarkup` concept in the current course in the following ways:
 
-* `\[Inline Markup](/docs//Tutor/Markup/InlineMarkup)` (using the display name) gives [Inline Markup](/docs//Tutor/Markup/InlineMarkup).
-* `\[Inline markup](/docs//Tutor/Markup/InlineMarkup)` (using its parent concept name and concept name) gives [Inline markup](/docs//Tutor/Markup/InlineMarkup).
-* `\[see inline markup](/docs//Tutor/Markup/InlineMarkup)` gives [see inline markup](/docs//Tutor/Markup/InlineMarkup)
+* `\[Inline Markup](/docs/Tutor/Markup/InlineMarkup)` (using the display name) gives [Inline Markup](/docs/Tutor/Markup/InlineMarkup).
+* `\[Inline markup](/docs/Tutor/Markup/InlineMarkup)` (using its parent concept name and concept name) gives [Inline markup](/docs/Tutor/Markup/InlineMarkup).
+* `\[see inline markup](/docs/Tutor/Markup/InlineMarkup)` gives [see inline markup](/docs/Tutor/Markup/InlineMarkup)
 
 Here is a reference to another course:
 
-* `\[If statement](/docs//Rascal/Statements/If)` gives [If statement](/docs//Rascal/Statements/If).
+* `\[If statement](/docs/Rascal/Statements/If)` gives [If statement](/docs/Rascal/Statements/If).
 
 #### Benefits
 

@@ -19,7 +19,7 @@ Markup for a variable.
 
 #### Description
 
-Variables in text and code are represented by [Italic](/docs//Tutor/Markup/InlineMarkup/Italic) markup. 
+Variables in text and code are represented by [Italic](/docs/Tutor/Markup/InlineMarkup/Italic) markup. 
 They may be followed by one or more subscripts (enclosed by `~` and `~`) or superscripts (enclosed by `^` and `^`)
 
 #### Examples

@@ -7,11 +7,11 @@ keywords:
 
 #### Synopsis
 
-The [Visit](/docs//Rascal/Expressions/Visit) expression can also be used directly as a statement
+The [Visit](/docs/Rascal/Expressions/Visit) expression can also be used directly as a statement
 
 #### Syntax
 
-See [Visit](/docs//Rascal/Expressions/Visit).
+See [Visit](/docs/Rascal/Expressions/Visit).
 
 #### Types
 
@@ -19,7 +19,7 @@ See [Visit](/docs//Rascal/Expressions/Visit).
 
 #### Description
 
-See [Visit](/docs//Rascal/Expressions/Visit) for the details.
+See [Visit](/docs/Rascal/Expressions/Visit) for the details.
 
 #### Examples
 

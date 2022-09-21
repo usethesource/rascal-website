@@ -385,14 +385,14 @@ bool: true
 
 #### Benefits
 
-* Click on any of the printed source [Rascal:Location](/docs//Rascal/Expressions/Values/Location)s in the terminal and the IDE brings you to the file.
-* The method AST contains all structural/syntactic information about a method and its signature. They are defined in the [lang::java::m3::AST](/docs//Library/lang/java/m3/AST) module.
+* Click on any of the printed source [Rascal:Location](/docs/Rascal/Expressions/Values/Location)s in the terminal and the IDE brings you to the file.
+* The method AST contains all structural/syntactic information about a method and its signature. They are defined in the [lang::java::m3::AST](/docs/Library/lang/java/m3/AST) module.
 * every node in the AST has been annotated with a `src` field to explain where exactly in the file it came from
-* when name and type resolution is `true` for [create ast from file](/docs//Library/lang/java/m3/AST#lang::java::m3::AST-createAstFromFile), the `decl` fields on given nodes point to the resolved qualified names of a reference. These qualified names coincide with the overview [M3](/docs//Library/lang/java/m3/Core) model contents. 
+* when name and type resolution is `true` for [create ast from file](/docs/Library/lang/java/m3/AST#lang::java::m3::AST-createAstFromFile), the `decl` fields on given nodes point to the resolved qualified names of a reference. These qualified names coincide with the overview [M3](/docs/Library/lang/java/m3/Core) model contents. 
 * [Pattern matching](/docs//RascalConcepts/PatternMatching) is a very powerful way of exploring and changing ASTs
 * AST and M3 models exist for other programming languages than Java. Your skills developed here may transfer to there.
 * AST and M3 creation is fully based on reusing the Eclipse JDT compiler stack, which has a high quality and can also recover from local errors in input files.
-* [Location](/docs//Rascal/Expressions/Values/Location) values like `|java+method:///org/rascalmpl/ast/Statement/VariableDeclaration/clone()|` that occur in ASTs and M3 relations are _clickable_ in the terminal window and will take you to the source code identified by the URI (and the offset).
+* [Location](/docs/Rascal/Expressions/Values/Location) values like `|java+method:///org/rascalmpl/ast/Statement/VariableDeclaration/clone()|` that occur in ASTs and M3 relations are _clickable_ in the terminal window and will take you to the source code identified by the URI (and the offset).
 
 #### Pitfalls
 

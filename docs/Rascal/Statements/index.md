@@ -37,7 +37,7 @@ The following statements are available:
 * ((Rascal:Statements/While))
 
 
-![](/docs//assets/Rascal/Statements/statement-parts.png)
+![](/assets/Rascal/Statements/statement-parts.png)
 
 
 #### Examples

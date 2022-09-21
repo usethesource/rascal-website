@@ -37,7 +37,7 @@ These are the currently covered topics:
 * [Rascalopedia:Parse tree](/docs//Rascalopedia/ParseTree)
 * [Rascalopedia:Parser](/docs//Rascalopedia/Parser)
 * [Rascalopedia:Prettyprinter](/docs//Rascalopedia/Prettyprinter)
-* [Rascalopedia:Rascalopedia](/docs//Rascalopedia/)
+* [Rascalopedia:Rascalopedia](/docs/Rascalopedia/)
 * [Rascalopedia:Refactoring](/docs//Rascalopedia/Refactoring)
 * [Rascalopedia:Relation](/docs//Rascalopedia/Relation)
 * [Rascalopedia:Scope](/docs//Rascalopedia/Scope)

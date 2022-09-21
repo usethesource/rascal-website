@@ -38,7 +38,7 @@ This was created to implement documentation pages with example REPL runs.
 
 #### Synopsis
 
-Instantiates a [Command executor](/docs//Library/lang/rascal/tutor/repl/TutorCommandExecutor#lang::rascal::tutor::repl::TutorCommandExecutor-CommandExecutor) to simulate a REPL
+Instantiates a [Command executor](/docs/Library/lang/rascal/tutor/repl/TutorCommandExecutor#lang::rascal::tutor::repl::TutorCommandExecutor-CommandExecutor) to simulate a REPL
 
 #### Examples
 

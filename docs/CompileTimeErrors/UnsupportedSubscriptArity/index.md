@@ -17,12 +17,12 @@ Wrong number of subscripts is used.
 #### Description
 
 Subscription is available for values of various types including: 
-[string](/docs//Rascal/Expressions/Values/String/Subscription), 
-[node](/docs//Rascal/Expressions/Values/Node/Subscription),
-[list](/docs//Rascal/Expressions/Values/List/Subscription), 
-[map](/docs//Rascal/Expressions/Values/Map/Subscription), 
-[tuple](/docs//Rascal/Expressions/Values/Tuple/Subscription) and 
-[relation](/docs//Rascal/Expressions/Values/Relation/Subscription).
+[string](/docs/Rascal/Expressions/Values/String/Subscription), 
+[node](/docs/Rascal/Expressions/Values/Node/Subscription),
+[list](/docs/Rascal/Expressions/Values/List/Subscription), 
+[map](/docs/Rascal/Expressions/Values/Map/Subscription), 
+[tuple](/docs/Rascal/Expressions/Values/Tuple/Subscription) and 
+[relation](/docs/Rascal/Expressions/Values/Relation/Subscription).
 This error is generated when subscription is applied to a value that does support subscription but not the number
 of indices that are used.
 

@@ -26,19 +26,19 @@ A set is a collection of values with the following properties:
 
 In Rascal, sets are surrounded by braces `{` and `}` and the elements are separated by commas.
 Each set has a type of the form `set[T]`, where _T_ is the smallest common type of all set elements.
-Read the description of [sets and their operators](/docs//Rascal/Expressions/Values/Set)
-and of [library functions on sets](/docs//Library/Set).
+Read the description of [sets and their operators](/docs/Rascal/Expressions/Values/Set)
+and of [library functions on sets](/docs/Library/Set).
 
 #### Examples
 
 ## Sets in Daily Life
 
 *  A cutlery set consisting of knife, fork and the like.
-   ![](/docs//assets/Rascalopedia/Set/cutlery-set.jpg)
+   ![](/assets/Rascalopedia/Set/cutlery-set.jpg)
    [credit](http://www.ikea.com/gb/en/catalog/products/50087185/)
 *  A crowd of people.
 *  A stamp collection (but be aware that the duplicates will disappear!)
-   ![](/docs//assets/Rascalopedia/Set/stamp-collecting.jpg)
+   ![](/assets/Rascalopedia/Set/stamp-collecting.jpg)
    [credit](http://www.life123.com/hobbies/antiques-collectibles/stamps/stamp-collecting-2.shtml)
 
 ## Sets in Computer Science

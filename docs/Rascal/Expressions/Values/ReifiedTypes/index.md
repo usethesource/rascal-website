@@ -23,11 +23,11 @@ The type reify expression operator has two functions in one go:
 *  it transforms type literals into values that represent them (an isomorphic relation)
 *  it reifies the declarations necessary to build values of the types as well
 
-As a result a reified type can be used to reconstruct a type and the abstract ([Algebraic Data Type](/docs//Rascal/Declarations/AlgebraicDataType)) or concrete ([Syntax Definition](/docs//Rascal/Declarations/SyntaxDefinition)) grammar that produced it. 
+As a result a reified type can be used to reconstruct a type and the abstract ([Algebraic Data Type](/docs/Rascal/Declarations/AlgebraicDataType)) or concrete ([Syntax Definition](/docs/Rascal/Declarations/SyntaxDefinition)) grammar that produced it. 
 
-Type literals have a nice interaction with [Type Parameters](/docs//Rascal/Declarations/StaticTyping/TypeParameters), since they can be used to bind a type parameter without having to provide a value of the type. An example is the [Parse tree::parse](/docs//Library/ParseTree/ParseTree-parse) function in [Library:Parse tree](/docs//Library/ParseTree) (see below for an example usage).
+Type literals have a nice interaction with [Type Parameters](/docs/Rascal/Declarations/StaticTyping/TypeParameters), since they can be used to bind a type parameter without having to provide a value of the type. An example is the [Parse tree::parse](/docs/Library/ParseTree/ParseTree-parse) function in [Library:Parse tree](/docs/Library/ParseTree) (see below for an example usage).
 
-The values that are used to represent types are declared in the [Library:module:Type](/docs//Library/Type) module and [Library:Parse tree](/docs//Library/ParseTree) modules, namely `Symbol` is the data-type to represent types symbolically and `Production` is the data-type for representing grammatical constructs. 
+The values that are used to represent types are declared in the [Library:module:Type](/docs/Library/Type) module and [Library:Parse tree](/docs/Library/ParseTree) modules, namely `Symbol` is the data-type to represent types symbolically and `Production` is the data-type for representing grammatical constructs. 
 
 A type literal wraps a `Symbol` and a map of `Production`s.
 

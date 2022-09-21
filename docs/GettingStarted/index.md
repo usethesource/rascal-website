@@ -41,6 +41,6 @@ msg
 :::
 
 Where to go from here: 
-have a look at [Getting Help](/docs//GettingHelp/) and in particular 
+have a look at [Getting Help](/docs/GettingHelp/) and in particular 
 [further reading][Getting help:Further reading](/docs//GettingHelp/FurtherReading)
 

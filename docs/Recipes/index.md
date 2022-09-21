@@ -21,7 +21,7 @@ It consists of the following parts:
 * [Recipes:Common](/docs//Recipes/Common)
 * [Recipes:Languages](/docs//Recipes/Languages)
 * [Recipes:Metrics](/docs//Recipes/Metrics)
-* [Recipes:Recipes](/docs//Recipes/)
+* [Recipes:Recipes](/docs/Recipes/)
 
 The following features are covered:
 

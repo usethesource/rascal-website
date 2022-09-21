@@ -19,7 +19,7 @@ checker is currently under development.
 * [Compile time errors:Ambiguous function reference](/docs//CompileTimeErrors/AmbiguousFunctionReference)
 * [Compile time errors:Argument mismatch](/docs//CompileTimeErrors/ArgumentMismatch)
 * [Compile time errors:Arity](/docs//CompileTimeErrors/Arity)
-* [Compile time errors:Compile time errors](/docs//CompileTimeErrors/)
+* [Compile time errors:Compile time errors](/docs/CompileTimeErrors/)
 * [Compile time errors:Date time syntax](/docs//CompileTimeErrors/DateTimeSyntax)
 * [Compile time errors:Illegal qualified declaration](/docs//CompileTimeErrors/IllegalQualifiedDeclaration)
 * [Compile time errors:Invalid date time comparison](/docs//CompileTimeErrors/InvalidDateTimeComparison)

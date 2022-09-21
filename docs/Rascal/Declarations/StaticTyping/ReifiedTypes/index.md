@@ -45,7 +45,7 @@ PROGRAM parsePROGRAM(str s) { ... }
 Unfortunately this solution does not scale well to large languages with many non-terminals and it breaks down completely 
 when we do not know the non-terminals before hand.
 
-Now we can write (see [Type Parameters](/docs//Rascal/Declarations/StaticTyping/TypeParameters) for a description of the `&T` notation):
+Now we can write (see [Type Parameters](/docs/Rascal/Declarations/StaticTyping/TypeParameters) for a description of the `&T` notation):
 
 ```rascal
 &T parse(type[&T] start, str s) { ... }

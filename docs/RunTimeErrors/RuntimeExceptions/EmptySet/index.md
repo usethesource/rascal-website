@@ -18,15 +18,15 @@ Illegal operation on an empty set.
 
 #### Description
 
-Rascal provides many operations and functions on sets, see [set values](/docs//Rascal/Expressions/Values/Set)
-and [set functions](/docs//Library/Set).
+Rascal provides many operations and functions on sets, see [set values](/docs/Rascal/Expressions/Values/Set)
+and [set functions](/docs/Library/Set).
 This error is generated when a function or operations cannot handle the empty set.
 
 Remedies:
 
-*  Guard the function or operation with a test on the empty set ([isEmpty](/docs//Library/Set#Set-isEmpty)) and 
+*  Guard the function or operation with a test on the empty set ([isEmpty](/docs/Library/Set#Set-isEmpty)) and 
   take alternative action in that case.
-*  Catch the `EmptySet` yourself, see [try catch](/docs//Rascal/Statements/TryCatch).
+*  Catch the `EmptySet` yourself, see [try catch](/docs/Rascal/Statements/TryCatch).
 
 #### Examples
 

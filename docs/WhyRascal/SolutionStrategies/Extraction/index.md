@@ -14,7 +14,7 @@ Strategies to extract facts from software systems.
 
 #### Description
 
-![Extraction workflow](/docs//assets/WhyRascal/SolutionStrategies/Extraction/define-extraction.png)
+![Extraction workflow](/assets/WhyRascal/SolutionStrategies/Extraction/define-extraction.png)
 
 How can we extract facts from the _System under Investigation_ (SUI) that we are interested in? 
 The extraction workflow is shown in the figure above and consists of the following steps:

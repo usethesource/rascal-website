@@ -58,15 +58,15 @@ This behaviour is applicable in the context of all Rascal constructs where a pat
 
 *  Boolean expressions: when a pattern match fails that is part of a Boolean expression, further solutions are tried in order to try to make the Boolean expression true.
 
-*  Tests in [For](/docs//Rascal/Statements/For), [While](/docs//Rascal/Statements/While), [Do](/docs//Rascal/Statements/Do) statements.
+*  Tests in [For](/docs/Rascal/Statements/For), [While](/docs/Rascal/Statements/While), [Do](/docs/Rascal/Statements/Do) statements.
 
-*  Tests in [Any](/docs//Rascal/Expressions/Values/Boolean/Any) and [All](/docs//Rascal/Expressions/Values/Boolean/All) expressions.
+*  Tests in [Any](/docs/Rascal/Expressions/Values/Boolean/Any) and [All](/docs/Rascal/Expressions/Values/Boolean/All) expressions.
 
-*  Tests and [Enumerator](/docs//Rascal/Expressions/Comprehensions/Enumerator)s in comprehensions.
+*  Tests and [Enumerator](/docs/Rascal/Expressions/Comprehensions/Enumerator)s in comprehensions.
 
-*  Pattern matches in cases of a [Visit](/docs//Rascal/Expressions/Visit).
+*  Pattern matches in cases of a [Visit](/docs/Rascal/Expressions/Visit).
 
-*  Pattern matches in cases of a [Switch](/docs//Rascal/Statements/Switch).
+*  Pattern matches in cases of a [Switch](/docs/Rascal/Statements/Switch).
 
 
 The following operators are provided for Boolean:
@@ -83,7 +83,7 @@ The following operators are provided for Boolean:
 * ((Rascal:Expressions/Values/Boolean/NoMatch))
 * ((Rascal:Expressions/Values/Boolean/Or))
 
-There are also [library functions](/docs//Library/Boolean) available for Booleans.
+There are also [library functions](/docs/Library/Boolean) available for Booleans.
 
 #### Examples
 

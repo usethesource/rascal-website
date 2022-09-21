@@ -45,7 +45,7 @@ alias Graph[&T] = rel[&T, &T];
 ```
 In other words the standard graph datatype can be parameterized with any element type.
 
-See [Type Parameters](/docs//Rascal/Declarations/StaticTyping/TypeParameters) for other examples parameterized alias declarations.
+See [Type Parameters](/docs/Rascal/Declarations/StaticTyping/TypeParameters) for other examples parameterized alias declarations.
 
 #### Benefits
 

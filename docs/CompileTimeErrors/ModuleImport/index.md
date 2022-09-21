@@ -17,7 +17,7 @@ A Rascal module could not be imported.
 #### Description
 
 Rascal programs are split up in modules.
-An [import](/docs//Rascal/Declarations/Import) declaration is used to include one module in another.
+An [import](/docs/Rascal/Declarations/Import) declaration is used to include one module in another.
 This error indicates that a module import failed.
 This can be caused by 
 

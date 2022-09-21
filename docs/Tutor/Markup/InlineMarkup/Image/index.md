@@ -39,18 +39,18 @@ msg
 
 ##  Example 1 
 ```
-![](/docs//assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
+![](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
 ```
 will produce:
 
-![](/docs//assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
+![](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
 
 ##  Example 2 
 ```
-![](/docs//assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
+![](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
 ```
 
-![](/docs//assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
+![](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
 
 produces a reduced image floating at the right.
 
@@ -58,11 +58,11 @@ produces a reduced image floating at the right.
 
 And, finally,
 ```
-![](/docs//assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
+![](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
 ```
 produces a clickable image that links back to the source of the image.
 
-![](/docs//assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
+![](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
 
 Try it!
 

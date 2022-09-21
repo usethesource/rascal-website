@@ -13,52 +13,52 @@ Library functions for date and time.
 
 #### Description
 
-For operators on `datetime` see [DateTime](/docs//Rascal/Expressions/Values/DateTime) in the Rascal Language Reference.
+For operators on `datetime` see [DateTime](/docs/Rascal/Expressions/Values/DateTime) in the Rascal Language Reference.
 
 The following functions are defined for datetime:
-* [Library:constructor:Date time::Interval](/docs//Library/DateTime#DateTime-Interval)
-* [Library:constructor:Date time::duration](/docs//Library/DateTime#DateTime-duration)
-* [Library:data:Date time::Duration](/docs//Library/DateTime#DateTime-Duration)
-* [Library:data:Date time::interval](/docs//Library/DateTime#DateTime-interval)
-* [Library:function:Date time::arb date time](/docs//Library/DateTime#DateTime-arbDateTime)
-* [Library:function:Date time::create date](/docs//Library/DateTime#DateTime-createDate)
-* [Library:function:Date time::create date time](/docs//Library/DateTime#DateTime-createDateTime)
-* [Library:function:Date time::create duration](/docs//Library/DateTime#DateTime-createDuration)
-* [Library:function:Date time::create duration internal](/docs//Library/DateTime#DateTime-createDurationInternal)
-* [Library:function:Date time::create interval](/docs//Library/DateTime#DateTime-createInterval)
-* [Library:function:Date time::create time](/docs//Library/DateTime#DateTime-createTime)
-* [Library:function:Date time::date range by day](/docs//Library/DateTime#DateTime-dateRangeByDay)
-* [Library:function:Date time::days diff](/docs//Library/DateTime#DateTime-daysDiff)
-* [Library:function:Date time::days in interval](/docs//Library/DateTime#DateTime-daysInInterval)
-* [Library:function:Date time::decrement days](/docs//Library/DateTime#DateTime-decrementDays)
-* [Library:function:Date time::decrement hours](/docs//Library/DateTime#DateTime-decrementHours)
-* [Library:function:Date time::decrement milliseconds](/docs//Library/DateTime#DateTime-decrementMilliseconds)
-* [Library:function:Date time::decrement minutes](/docs//Library/DateTime#DateTime-decrementMinutes)
-* [Library:function:Date time::decrement months](/docs//Library/DateTime#DateTime-decrementMonths)
-* [Library:function:Date time::decrement seconds](/docs//Library/DateTime#DateTime-decrementSeconds)
-* [Library:function:Date time::decrement years](/docs//Library/DateTime#DateTime-decrementYears)
-* [Library:function:Date time::increment days](/docs//Library/DateTime#DateTime-incrementDays)
-* [Library:function:Date time::increment hours](/docs//Library/DateTime#DateTime-incrementHours)
-* [Library:function:Date time::increment milliseconds](/docs//Library/DateTime#DateTime-incrementMilliseconds)
-* [Library:function:Date time::increment minutes](/docs//Library/DateTime#DateTime-incrementMinutes)
-* [Library:function:Date time::increment months](/docs//Library/DateTime#DateTime-incrementMonths)
-* [Library:function:Date time::increment seconds](/docs//Library/DateTime#DateTime-incrementSeconds)
-* [Library:function:Date time::increment years](/docs//Library/DateTime#DateTime-incrementYears)
-* [Library:function:Date time::join date and time](/docs//Library/DateTime#DateTime-joinDateAndTime)
-* [Library:function:Date time::now](/docs//Library/DateTime#DateTime-now)
-* [Library:function:Date time::parse date](/docs//Library/DateTime#DateTime-parseDate)
-* [Library:function:Date time::parse date in locale](/docs//Library/DateTime#DateTime-parseDateInLocale)
-* [Library:function:Date time::parse date time](/docs//Library/DateTime#DateTime-parseDateTime)
-* [Library:function:Date time::parse date time in locale](/docs//Library/DateTime#DateTime-parseDateTimeInLocale)
-* [Library:function:Date time::parse time](/docs//Library/DateTime#DateTime-parseTime)
-* [Library:function:Date time::parse time in locale](/docs//Library/DateTime#DateTime-parseTimeInLocale)
-* [Library:function:Date time::print date](/docs//Library/DateTime#DateTime-printDate)
-* [Library:function:Date time::print date in locale](/docs//Library/DateTime#DateTime-printDateInLocale)
-* [Library:function:Date time::print date time](/docs//Library/DateTime#DateTime-printDateTime)
-* [Library:function:Date time::print date time in locale](/docs//Library/DateTime#DateTime-printDateTimeInLocale)
-* [Library:function:Date time::print time](/docs//Library/DateTime#DateTime-printTime)
-* [Library:function:Date time::print time in locale](/docs//Library/DateTime#DateTime-printTimeInLocale)
-* [Library:function:Date time::split date time](/docs//Library/DateTime#DateTime-splitDateTime)
+* [Library:constructor:Date time::Interval](/docs/Library/DateTime#DateTime-Interval)
+* [Library:constructor:Date time::duration](/docs/Library/DateTime#DateTime-duration)
+* [Library:data:Date time::Duration](/docs/Library/DateTime#DateTime-Duration)
+* [Library:data:Date time::interval](/docs/Library/DateTime#DateTime-interval)
+* [Library:function:Date time::arb date time](/docs/Library/DateTime#DateTime-arbDateTime)
+* [Library:function:Date time::create date](/docs/Library/DateTime#DateTime-createDate)
+* [Library:function:Date time::create date time](/docs/Library/DateTime#DateTime-createDateTime)
+* [Library:function:Date time::create duration](/docs/Library/DateTime#DateTime-createDuration)
+* [Library:function:Date time::create duration internal](/docs/Library/DateTime#DateTime-createDurationInternal)
+* [Library:function:Date time::create interval](/docs/Library/DateTime#DateTime-createInterval)
+* [Library:function:Date time::create time](/docs/Library/DateTime#DateTime-createTime)
+* [Library:function:Date time::date range by day](/docs/Library/DateTime#DateTime-dateRangeByDay)
+* [Library:function:Date time::days diff](/docs/Library/DateTime#DateTime-daysDiff)
+* [Library:function:Date time::days in interval](/docs/Library/DateTime#DateTime-daysInInterval)
+* [Library:function:Date time::decrement days](/docs/Library/DateTime#DateTime-decrementDays)
+* [Library:function:Date time::decrement hours](/docs/Library/DateTime#DateTime-decrementHours)
+* [Library:function:Date time::decrement milliseconds](/docs/Library/DateTime#DateTime-decrementMilliseconds)
+* [Library:function:Date time::decrement minutes](/docs/Library/DateTime#DateTime-decrementMinutes)
+* [Library:function:Date time::decrement months](/docs/Library/DateTime#DateTime-decrementMonths)
+* [Library:function:Date time::decrement seconds](/docs/Library/DateTime#DateTime-decrementSeconds)
+* [Library:function:Date time::decrement years](/docs/Library/DateTime#DateTime-decrementYears)
+* [Library:function:Date time::increment days](/docs/Library/DateTime#DateTime-incrementDays)
+* [Library:function:Date time::increment hours](/docs/Library/DateTime#DateTime-incrementHours)
+* [Library:function:Date time::increment milliseconds](/docs/Library/DateTime#DateTime-incrementMilliseconds)
+* [Library:function:Date time::increment minutes](/docs/Library/DateTime#DateTime-incrementMinutes)
+* [Library:function:Date time::increment months](/docs/Library/DateTime#DateTime-incrementMonths)
+* [Library:function:Date time::increment seconds](/docs/Library/DateTime#DateTime-incrementSeconds)
+* [Library:function:Date time::increment years](/docs/Library/DateTime#DateTime-incrementYears)
+* [Library:function:Date time::join date and time](/docs/Library/DateTime#DateTime-joinDateAndTime)
+* [Library:function:Date time::now](/docs/Library/DateTime#DateTime-now)
+* [Library:function:Date time::parse date](/docs/Library/DateTime#DateTime-parseDate)
+* [Library:function:Date time::parse date in locale](/docs/Library/DateTime#DateTime-parseDateInLocale)
+* [Library:function:Date time::parse date time](/docs/Library/DateTime#DateTime-parseDateTime)
+* [Library:function:Date time::parse date time in locale](/docs/Library/DateTime#DateTime-parseDateTimeInLocale)
+* [Library:function:Date time::parse time](/docs/Library/DateTime#DateTime-parseTime)
+* [Library:function:Date time::parse time in locale](/docs/Library/DateTime#DateTime-parseTimeInLocale)
+* [Library:function:Date time::print date](/docs/Library/DateTime#DateTime-printDate)
+* [Library:function:Date time::print date in locale](/docs/Library/DateTime#DateTime-printDateInLocale)
+* [Library:function:Date time::print date time](/docs/Library/DateTime#DateTime-printDateTime)
+* [Library:function:Date time::print date time in locale](/docs/Library/DateTime#DateTime-printDateTimeInLocale)
+* [Library:function:Date time::print time](/docs/Library/DateTime#DateTime-printTime)
+* [Library:function:Date time::print time in locale](/docs/Library/DateTime#DateTime-printTimeInLocale)
+* [Library:function:Date time::split date time](/docs/Library/DateTime#DateTime-splitDateTime)
 
 
 ## function now {#DateTime-now}
@@ -77,7 +77,7 @@ Get the current datetime.
 rascal>import DateTime;
 ok
 rascal>now();
-datetime: $2022-09-21T16:01:19.258+00:00$
+datetime: $2022-09-21T16:08:32.570+00:00$
 ```
 
 ## function createDate {#DateTime-createDate}
@@ -183,9 +183,9 @@ Split an existing datetime into a tuple with the date and the time.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:19.573+00:00$
+datetime: $2022-09-21T16:08:32.807+00:00$
 rascal>splitDateTime(N);
-tuple[datetime date,datetime time]: <$2022-09-21$,$T16:01:19.573+00:00$>
+tuple[datetime date,datetime time]: <$2022-09-21$,$T16:08:32.807+00:00$>
 ```
 
 ## function incrementYears {#DateTime-incrementYears}
@@ -205,11 +205,11 @@ Increment the years by given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:19.632+00:00$
+datetime: $2022-09-21T16:08:32.854+00:00$
 rascal>incrementYears(N);
-datetime: $2023-09-21T16:01:19.632+00:00$
+datetime: $2023-09-21T16:08:32.854+00:00$
 rascal>incrementYears(N, 5);
-datetime: $2027-09-21T16:01:19.632+00:00$
+datetime: $2027-09-21T16:08:32.854+00:00$
 ```
 
 ## function incrementMonths {#DateTime-incrementMonths}
@@ -230,11 +230,11 @@ Increment the months by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:19.707+00:00$
+datetime: $2022-09-21T16:08:32.901+00:00$
 rascal>incrementMonths(N);
-datetime: $2022-10-21T16:01:19.707+00:00$
+datetime: $2022-10-21T16:08:32.901+00:00$
 rascal>incrementMonths(N, 5);
-datetime: $2023-02-21T16:01:19.707+00:00$
+datetime: $2023-02-21T16:08:32.901+00:00$
 ```
 
 ## function incrementDays {#DateTime-incrementDays}
@@ -254,11 +254,11 @@ Increment the days by given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:19.758+00:00$
+datetime: $2022-09-21T16:08:32.956+00:00$
 rascal>incrementDays(N);
-datetime: $2022-09-22T16:01:19.758+00:00$
+datetime: $2022-09-22T16:08:32.956+00:00$
 rascal>incrementDays(N, 5);
-datetime: $2022-09-26T16:01:19.758+00:00$
+datetime: $2022-09-26T16:08:32.956+00:00$
 ```
 
 ## function incrementHours {#DateTime-incrementHours}
@@ -278,11 +278,11 @@ Increment the hours by a given amount or by 1.`
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:19.810+00:00$
+datetime: $2022-09-21T16:08:33.017+00:00$
 rascal>incrementHours(N);
-datetime: $2022-09-21T17:01:19.810+00:00$
+datetime: $2022-09-21T17:08:33.017+00:00$
 rascal>incrementHours(N, 5);
-datetime: $2022-09-21T21:01:19.810+00:00$
+datetime: $2022-09-21T21:08:33.017+00:00$
 ```
 
 ## function incrementMinutes {#DateTime-incrementMinutes}
@@ -302,11 +302,11 @@ Increment the minutes by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:19.857+00:00$
+datetime: $2022-09-21T16:08:33.076+00:00$
 rascal>incrementMinutes(N);
-datetime: $2022-09-21T16:02:19.857+00:00$
+datetime: $2022-09-21T16:09:33.076+00:00$
 rascal>incrementMinutes(N, 5);
-datetime: $2022-09-21T16:06:19.857+00:00$
+datetime: $2022-09-21T16:13:33.076+00:00$
 ```
 
 ## function incrementSeconds {#DateTime-incrementSeconds}
@@ -326,11 +326,11 @@ Increment the seconds by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:19.903+00:00$
+datetime: $2022-09-21T16:08:33.132+00:00$
 rascal>incrementSeconds(N);
-datetime: $2022-09-21T16:01:20.903+00:00$
+datetime: $2022-09-21T16:08:34.132+00:00$
 rascal>incrementSeconds(N, 5);
-datetime: $2022-09-21T16:01:24.903+00:00$
+datetime: $2022-09-21T16:08:38.132+00:00$
 ```
 
 ## function incrementMilliseconds {#DateTime-incrementMilliseconds}
@@ -350,11 +350,11 @@ Increment the milliseconds by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:19.951+00:00$
+datetime: $2022-09-21T16:08:33.192+00:00$
 rascal>incrementMilliseconds(N);
-datetime: $2022-09-21T16:01:19.952+00:00$
+datetime: $2022-09-21T16:08:33.193+00:00$
 rascal>incrementMilliseconds(N, 5);
-datetime: $2022-09-21T16:01:19.956+00:00$
+datetime: $2022-09-21T16:08:33.197+00:00$
 ```
 
 ## function decrementYears {#DateTime-decrementYears}
@@ -374,11 +374,11 @@ Decrement the years by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:20.000+00:00$
+datetime: $2022-09-21T16:08:33.256+00:00$
 rascal>decrementYears(N);
-datetime: $2021-09-21T16:01:20.000+00:00$
+datetime: $2021-09-21T16:08:33.256+00:00$
 rascal>decrementYears(N, 5);
-datetime: $2017-09-21T16:01:20.000+00:00$
+datetime: $2017-09-21T16:08:33.256+00:00$
 ```
 
 ## function decrementMonths {#DateTime-decrementMonths}
@@ -398,11 +398,11 @@ Decrement the months by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:20.049+00:00$
+datetime: $2022-09-21T16:08:33.312+00:00$
 rascal>decrementMonths(N);
-datetime: $2022-08-21T16:01:20.049+00:00$
+datetime: $2022-08-21T16:08:33.312+00:00$
 rascal>decrementMonths(N, 5);
-datetime: $2022-04-21T16:01:20.049+00:00$
+datetime: $2022-04-21T16:08:33.312+00:00$
 ```
 
 ## function decrementDays {#DateTime-decrementDays}
@@ -422,11 +422,11 @@ Decrement the days by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:20.096+00:00$
+datetime: $2022-09-21T16:08:33.367+00:00$
 rascal>decrementDays(N);
-datetime: $2022-09-20T16:01:20.096+00:00$
+datetime: $2022-09-20T16:08:33.367+00:00$
 rascal>decrementDays(N, 3);
-datetime: $2022-09-18T16:01:20.096+00:00$
+datetime: $2022-09-18T16:08:33.367+00:00$
 ```
 
 ## function decrementHours {#DateTime-decrementHours}
@@ -446,11 +446,11 @@ Decrement the hours by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:20.144+00:00$
+datetime: $2022-09-21T16:08:33.427+00:00$
 rascal>decrementHours(N);
-datetime: $2022-09-21T15:01:20.144+00:00$
+datetime: $2022-09-21T15:08:33.427+00:00$
 rascal>decrementHours(N, 5);
-datetime: $2022-09-21T11:01:20.144+00:00$
+datetime: $2022-09-21T11:08:33.427+00:00$
 ```
 
 ## function decrementMinutes {#DateTime-decrementMinutes}
@@ -470,11 +470,11 @@ Decrement the minutes by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:20.190+00:00$
+datetime: $2022-09-21T16:08:33.485+00:00$
 rascal>decrementMinutes(N);
-datetime: $2022-09-21T16:00:20.190+00:00$
+datetime: $2022-09-21T16:07:33.485+00:00$
 rascal>decrementMinutes(N, 5);
-datetime: $2022-09-21T15:56:20.190+00:00$
+datetime: $2022-09-21T16:03:33.485+00:00$
 ```
 
 ## function decrementSeconds {#DateTime-decrementSeconds}
@@ -494,11 +494,11 @@ Decrement the seconds by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:20.239+00:00$
+datetime: $2022-09-21T16:08:33.544+00:00$
 rascal>decrementSeconds(N);
-datetime: $2022-09-21T16:01:19.239+00:00$
+datetime: $2022-09-21T16:08:32.544+00:00$
 rascal>decrementSeconds(N, 5);
-datetime: $2022-09-21T16:01:15.239+00:00$
+datetime: $2022-09-21T16:08:28.544+00:00$
 ```
 
 ## function decrementMilliseconds {#DateTime-decrementMilliseconds}
@@ -518,11 +518,11 @@ Decrement the milliseconds by a given amount or by 1.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:20.290+00:00$
+datetime: $2022-09-21T16:08:33.605+00:00$
 rascal>decrementMilliseconds(N);
-datetime: $2022-09-21T16:01:20.289+00:00$
+datetime: $2022-09-21T16:08:33.604+00:00$
 rascal>decrementMilliseconds(N, 5);
-datetime: $2022-09-21T16:01:20.285+00:00$
+datetime: $2022-09-21T16:08:33.600+00:00$
 ```
 
 ## data interval {#DateTime-interval}
@@ -554,11 +554,11 @@ Given two datetime values, create an interval.
 rascal>import DateTime;
 ok
 rascal>B = now();
-datetime: $2022-09-21T16:01:20.344+00:00$
+datetime: $2022-09-21T16:08:33.662+00:00$
 rascal>E = incrementDays(B, 2);
-datetime: $2022-09-23T16:01:20.344+00:00$
+datetime: $2022-09-23T16:08:33.662+00:00$
 rascal>createInterval(B, E);
-interval: Interval($2022-09-21T16:01:20.344+00:00$,$2022-09-23T16:01:20.344+00:00$)
+interval: Interval($2022-09-21T16:08:33.662+00:00$,$2022-09-23T16:08:33.662+00:00$)
 ```
 
 ## data Duration {#DateTime-Duration}
@@ -595,13 +595,13 @@ Create a new duration representing the duration between the begin and end dates.
 rascal>import DateTime;
 ok
 rascal>B = now();
-datetime: $2022-09-21T16:01:20.398+00:00$
+datetime: $2022-09-21T16:08:33.748+00:00$
 rascal>E1 = incrementHours(B);
-datetime: $2022-09-21T17:01:20.398+00:00$
+datetime: $2022-09-21T17:08:33.748+00:00$
 rascal>createDuration(B, E1);
 Duration: duration(0,0,0,1,0,0,0)
 rascal>E2 = incrementMinutes(B);
-datetime: $2022-09-21T16:02:20.398+00:00$
+datetime: $2022-09-21T16:09:33.748+00:00$
 rascal>createDuration(B, E2);
 Duration: duration(0,0,0,0,1,0,0)
 ```
@@ -622,11 +622,11 @@ Return the number of days in an interval, including the begin and end days.
 rascal>import DateTime;
 ok
 rascal>B = now();
-datetime: $2022-09-21T16:01:20.450+00:00$
+datetime: $2022-09-21T16:08:33.812+00:00$
 rascal>E = incrementDays(B, 2);
-datetime: $2022-09-23T16:01:20.450+00:00$
+datetime: $2022-09-23T16:08:33.812+00:00$
 rascal>I = createInterval(B, E);
-interval: Interval($2022-09-21T16:01:20.450+00:00$,$2022-09-23T16:01:20.450+00:00$)
+interval: Interval($2022-09-21T16:08:33.812+00:00$,$2022-09-23T16:08:33.812+00:00$)
 rascal>daysInInterval(I);
 int: 2
 ```
@@ -647,9 +647,9 @@ Return the difference between two dates and/or datetimes in days.
 rascal>import DateTime;
 ok
 rascal>B = now();
-datetime: $2022-09-21T16:01:20.501+00:00$
+datetime: $2022-09-21T16:08:33.864+00:00$
 rascal>E = incrementDays(B, 2);
-datetime: $2022-09-23T16:01:20.501+00:00$
+datetime: $2022-09-23T16:08:33.864+00:00$
 rascal>daysDiff(B, E);
 int: 2
 ```
@@ -674,11 +674,11 @@ Given an interval `i`, return a list of days `[i.begin, ..., i.end]`.
 rascal>import DateTime;
 ok
 rascal>B = now();
-datetime: $2022-09-21T16:01:20.551+00:00$
+datetime: $2022-09-21T16:08:33.915+00:00$
 rascal>E = incrementDays(B, 2);
-datetime: $2022-09-23T16:01:20.551+00:00$
+datetime: $2022-09-23T16:08:33.915+00:00$
 rascal>I = createInterval(B, E);
-interval: Interval($2022-09-21T16:01:20.551+00:00$,$2022-09-23T16:01:20.551+00:00$)
+interval: Interval($2022-09-21T16:08:33.915+00:00$,$2022-09-23T16:08:33.915+00:00$)
 rascal>dateRangeByDay(I);
 list[datetime]: [$2022-09-21$,$2022-09-22$,$2022-09-23$]
 ```
@@ -830,11 +830,11 @@ Print an input time using the given format string.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:20.848+00:00$
+datetime: $2022-09-21T16:08:34.211+00:00$
 rascal>printTime(N);
-str: "16:01:20.848+0000"
+str: "16:08:34.211+0000"
 rascal>printTime(N, "HH/mm/ss");
-str: "16/01/20"
+str: "16/08/34"
 ```
 
 ## function printTimeInLocale {#DateTime-printTimeInLocale}
@@ -864,13 +864,13 @@ Print an input datetime using the given format string.
 rascal>import DateTime;
 ok
 rascal>N = now();
-datetime: $2022-09-21T16:01:20.898+00:00$
+datetime: $2022-09-21T16:08:34.263+00:00$
 rascal>printDateTime(N);
-str: "2022-09-21 16:01:20.898+0000"
+str: "2022-09-21 16:08:34.263+0000"
 rascal>printDateTime(N, "yyyy-MM-dd\'T\'HH:mm:ss.SSSZZ");
-str: "2022-09-21T16:01:20.898+0000"
+str: "2022-09-21T16:08:34.263+0000"
 rascal>printDateTime(N, "YYYY/MM/dd/HH/mm/ss");
-str: "2022/09/21/16/01/20"
+str: "2022/09/21/16/08/34"
 ```
 
 ## function printDateTimeInLocale {#DateTime-printDateTimeInLocale}
@@ -899,6 +899,6 @@ Create a new arbitrary datetime.
 rascal>import DateTime;
 ok
 rascal>arbDateTime();
-datetime: $2023-04-17T02:02:36.000+00:00$
+datetime: $2018-05-29T04:38:55.000+00:00$
 ```
 

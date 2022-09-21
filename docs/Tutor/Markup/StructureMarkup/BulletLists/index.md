@@ -64,10 +64,10 @@ will produce:
 
 #### Benefits
 
-* [Bullet lists](/docs//Tutor/Markup/StructureMarkup/BulletLists) and [Numbered lists](/docs//Tutor/Markup/StructureMarkup/NumberedLists) can be nested under eachother.
+* [Bullet lists](/docs/Tutor/Markup/StructureMarkup/BulletLists) and [Numbered lists](/docs/Tutor/Markup/StructureMarkup/NumberedLists) can be nested under eachother.
 
 #### Pitfalls
 
-* An empty line is required _after_ [Bullet lists](/docs//Tutor/Markup/StructureMarkup/BulletLists).
+* An empty line is required _after_ [Bullet lists](/docs/Tutor/Markup/StructureMarkup/BulletLists).
 
 

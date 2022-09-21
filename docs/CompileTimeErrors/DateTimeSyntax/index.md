@@ -16,7 +16,7 @@ A datetime value is syntactically incorrect.
 
 #### Description
 
-Datetime values have a rather complex format as described in [datetime](/docs//Rascal/Expressions/Values/DateTime).
+Datetime values have a rather complex format as described in [datetime](/docs/Rascal/Expressions/Values/DateTime).
 Some errors in the format are treated as syntax errors, others generate the `DateTimeSyntax` error.
 
 Remedy: Fix the datetime value notation.
