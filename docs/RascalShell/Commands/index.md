@@ -10,7 +10,7 @@ RascalShell commands
 
 The RascalShell provides several built-in commands:
 
-* [Rascal shell:Commands](/RascalShell/Commands)
+* [Rascal shell:Commands](/docs//RascalShell/Commands)
 * ((RascalShell:Commands/Clear))
 * ((RascalShell:Commands/Edit))
 * ((RascalShell:Commands/Help))

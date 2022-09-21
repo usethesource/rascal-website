@@ -29,7 +29,7 @@ Concatenate two lists.
 
 The `+` operator concatenates the elements of the two lists in order of appearance. 
 
-Note that the same operator is overloaded for [Insert](/Rascal/Expressions/Values/List/Insert) and [Append](/Rascal/Expressions/Values/List/Append).
+Note that the same operator is overloaded for [Insert](/docs//Rascal/Expressions/Values/List/Insert) and [Append](/docs//Rascal/Expressions/Values/List/Append).
 
 #### Examples
 

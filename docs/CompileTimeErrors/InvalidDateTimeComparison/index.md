@@ -16,7 +16,7 @@ Attempt to compare a date with a time.
 
 #### Description
 
-[datetime](/Rascal/Expressions/Values/DateTime) values may contain two components: date and time.
+[datetime](/docs//Rascal/Expressions/Values/DateTime) values may contain two components: date and time.
 Datetime values that contain both a date and a time can be compared.
 Dates can also be compared with dates, and times with times.
 This error is generated when a date is compared with a time.

@@ -13,24 +13,24 @@ Library functions for list relations.
 
 #### Description
 
-For operators on listrelations see [ListRelation](/Rascal/Expressions/Values/ListRelation) in the Rascal Language Reference.
+For operators on listrelations see [ListRelation](/docs//Rascal/Expressions/Values/ListRelation) in the Rascal Language Reference.
 
 The following functions are defined for list relations :
-* [Library:function:List relation::carrier](/Library/ListRelation#ListRelation-carrier)
-* [Library:function:List relation::carrierR](/Library/ListRelation#ListRelation-carrierR)
-* [Library:function:List relation::carrierX](/Library/ListRelation#ListRelation-carrierX)
-* [Library:function:List relation::complement](/Library/ListRelation#ListRelation-complement)
-* [Library:function:List relation::domain](/Library/ListRelation#ListRelation-domain)
-* [Library:function:List relation::domainR](/Library/ListRelation#ListRelation-domainR)
-* [Library:function:List relation::domainX](/Library/ListRelation#ListRelation-domainX)
-* [Library:function:List relation::group domain by range](/Library/ListRelation#ListRelation-groupDomainByRange)
-* [Library:function:List relation::group range by domain](/Library/ListRelation#ListRelation-groupRangeByDomain)
-* [Library:function:List relation::ident](/Library/ListRelation#ListRelation-ident)
-* [Library:function:List relation::index](/Library/ListRelation#ListRelation-index)
-* [Library:function:List relation::invert](/Library/ListRelation#ListRelation-invert)
-* [Library:function:List relation::range](/Library/ListRelation#ListRelation-range)
-* [Library:function:List relation::rangeR](/Library/ListRelation#ListRelation-rangeR)
-* [Library:function:List relation::rangeX](/Library/ListRelation#ListRelation-rangeX)
+* [Library:function:List relation::carrier](/docs//Library/ListRelation#ListRelation-carrier)
+* [Library:function:List relation::carrierR](/docs//Library/ListRelation#ListRelation-carrierR)
+* [Library:function:List relation::carrierX](/docs//Library/ListRelation#ListRelation-carrierX)
+* [Library:function:List relation::complement](/docs//Library/ListRelation#ListRelation-complement)
+* [Library:function:List relation::domain](/docs//Library/ListRelation#ListRelation-domain)
+* [Library:function:List relation::domainR](/docs//Library/ListRelation#ListRelation-domainR)
+* [Library:function:List relation::domainX](/docs//Library/ListRelation#ListRelation-domainX)
+* [Library:function:List relation::group domain by range](/docs//Library/ListRelation#ListRelation-groupDomainByRange)
+* [Library:function:List relation::group range by domain](/docs//Library/ListRelation#ListRelation-groupRangeByDomain)
+* [Library:function:List relation::ident](/docs//Library/ListRelation#ListRelation-ident)
+* [Library:function:List relation::index](/docs//Library/ListRelation#ListRelation-index)
+* [Library:function:List relation::invert](/docs//Library/ListRelation#ListRelation-invert)
+* [Library:function:List relation::range](/docs//Library/ListRelation#ListRelation-range)
+* [Library:function:List relation::rangeR](/docs//Library/ListRelation#ListRelation-rangeR)
+* [Library:function:List relation::rangeX](/docs//Library/ListRelation#ListRelation-rangeX)
 
 
 ## function carrier {#ListRelation-carrier}

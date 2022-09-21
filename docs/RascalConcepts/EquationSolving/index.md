@@ -19,7 +19,7 @@ This is a declarative way of programming: specify the constraints that a problem
 satisfy and how potential solutions can be generated. 
 The actual solution (if any) is found by enumerating solutions and testing their compliance with the constraints.
 
-Rascal provides a [Solve](/Rascal/Statements/Solve) statement that helps writing constraint solvers. 
+Rascal provides a [Solve](/docs//Rascal/Statements/Solve) statement that helps writing constraint solvers. 
 
 #### Examples
 

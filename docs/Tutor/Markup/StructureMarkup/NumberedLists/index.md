@@ -27,7 +27,7 @@ A list item ends with:
 *  the start of a new list item.
 *  an empty line.
 
-[Bullet lists](/Tutor/Markup/StructureMarkup/BulletLists) and [Numbered lists](/Tutor/Markup/StructureMarkup/NumberedLists) can be mixed.
+[Bullet lists](/docs//Tutor/Markup/StructureMarkup/BulletLists) and [Numbered lists](/docs//Tutor/Markup/StructureMarkup/NumberedLists) can be mixed.
 
 #### Examples
 

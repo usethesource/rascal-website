@@ -6,7 +6,7 @@ title: The Extract-Analyze-SYnthesize (EASY) paradigm
 
 Rascal excels in supporting the Extract-Analyze-SYnthesize (EASY) paradigm.
 
-![](/assets/WhyRascal/EASY/easy-workflow.png)
+![](/docs//assets/WhyRascal/EASY/easy-workflow.png)
 
 // explicitly separate image from Description 
 
@@ -22,7 +22,7 @@ This is an abstract view on solving meta-programming problems, but is rather com
 Rascal has been designed to fully support problem solving that fits the EASY paradigm.
 We will discuss the following use cases represented by different _personas_:
 
-* [Why rascal:EASY](/WhyRascal/EASY)
+* [Why rascal:EASY](/docs//WhyRascal/EASY)
 * ((WhyRascal:EASY/Concurrency))
 * ((WhyRascal:EASY/Forensics))
 * ((WhyRascal:EASY/ModelDrivenEngineering))

@@ -17,11 +17,11 @@ At the highest level, a course consists of concept files, which are translated t
 [AsciiDoc](http://asciidoctor.org) files,
 which in their turn, can be translated to html, pdf, epub and other output formats:
 
-![](/assets/Tutor/Architecture/Global.png)
+![](/docs//assets/Tutor/Architecture/Global.png)
 
 The compilation and runtime use of a single course are organized as follows:
 
-![](/assets/Tutor/Architecture/CompileUse.png)
+![](/docs//assets/Tutor/Architecture/CompileUse.png)
 
 A course is a directory with concept files. Each concept file yields:
 

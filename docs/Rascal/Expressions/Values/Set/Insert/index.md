@@ -46,6 +46,6 @@ set[int]: {1}
 
 #### Pitfalls
 
-*  if both operands of `+` are a set then it acts as [Union](/Rascal/Expressions/Values/Set/Union).
+*  if both operands of `+` are a set then it acts as [Union](/docs//Rascal/Expressions/Values/Set/Union).
 
 

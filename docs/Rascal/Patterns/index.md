@@ -9,13 +9,13 @@ and then to bind variables to parts of the matched value.
 
 #### Syntax
 
-For most of the [Values](/Rascal/Expressions/Values), there is a corresponding pattern matching operator. Then there are
+For most of the [Values](/docs//Rascal/Expressions/Values), there is a corresponding pattern matching operator. Then there are
 some "higher-order" matching operators which make complex patterns out of simpler ones. 
 This is the complete list:
  
 | Pattern              | Syntax                                                                       |
 | --- | --- |
-| Literal              | [Boolean](/Rascal/Expressions/Values/Boolean), [Integer](/Rascal/Expressions/Values/Integer), [Real](/Rascal/Expressions/Values/Real), [Number](/Rascal/Expressions/Values/Number), [String](/Rascal/Expressions/Values/String), [Location](/Rascal/Expressions/Values/Location), or [Date time](/Rascal/Expressions/Values/DateTime) |
+| Literal              | [Boolean](/docs//Rascal/Expressions/Values/Boolean), [Integer](/docs//Rascal/Expressions/Values/Integer), [Real](/docs//Rascal/Expressions/Values/Real), [Number](/docs//Rascal/Expressions/Values/Number), [String](/docs//Rascal/Expressions/Values/String), [Location](/docs//Rascal/Expressions/Values/Location), or [Date time](/docs//Rascal/Expressions/Values/DateTime) |
 | Regular Expression   | `/<Regular Expression>/` |
 | Variable declaration | `Type Var`                                                               |
 | Multi-variable       | `*Var`, `*Type Var`                                                    |
@@ -41,7 +41,7 @@ Patterns are used to *dispatch* functions and conditional control flow, to *extr
 from values and to conditionally *filter* values. The pattern following pattern kinds can be arbitrarily nested, following
 the above syntax:
 
-* [Rascal:Patterns](/Rascal/Patterns)
+* [Rascal:Patterns](/docs//Rascal/Patterns)
 * ((Rascal:Patterns/Concrete))
 * ((Rascal:Patterns/Descendant))
 * ((Rascal:Patterns/Labelled))
@@ -59,11 +59,11 @@ the above syntax:
 
 All these patterns may be used in:
 
-*  cases of a [Switch](/Rascal/Statements/Switch) or [visit statements](/Rascal/Statements/Visit) or [visit expressions](/Rascal/Expressions/Visit), 
-*  on the left of the [Match](/Rascal/Expressions/Values/Boolean/Match) operator (`:=`),
-*  on the left of the [Enumerator](/Rascal/Expressions/Comprehensions/Enumerator) operator (`<-`), and
-*  as formal parameters of [Function](/Rascal/Declarations/Function)s. 
-*  [Try catch](/Rascal/Statements/TryCatch) statements to match thrown exceptions.
+*  cases of a [Switch](/docs//Rascal/Statements/Switch) or [visit statements](/docs//Rascal/Statements/Visit) or [visit expressions](/docs//Rascal/Expressions/Visit), 
+*  on the left of the [Match](/docs//Rascal/Expressions/Values/Boolean/Match) operator (`:=`),
+*  on the left of the [Enumerator](/docs//Rascal/Expressions/Comprehensions/Enumerator) operator (`<-`), and
+*  as formal parameters of [Function](/docs//Rascal/Declarations/Function)s. 
+*  [Try catch](/docs//Rascal/Statements/TryCatch) statements to match thrown exceptions.
 
 Each pattern binds variables in a conditional scope:
 

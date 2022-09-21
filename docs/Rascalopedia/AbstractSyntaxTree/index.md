@@ -16,7 +16,7 @@ Representation of the abstract syntactic structure of a program.
 
 #### Description
 
-A [Parse tree](/Rascalopedia/ParseTree) is a detailed and very precise represention of the concrete syntactic structure of a program.
+A [Parse tree](/docs//Rascalopedia/ParseTree) is a detailed and very precise represention of the concrete syntactic structure of a program.
 It may even be so detailed that it contains every space, comment and parenthesis in the original source text.
 In many cases a less detailed representation is sufficient and an abstract syntax tree (or AST for short) is used.
 
@@ -24,14 +24,14 @@ In many cases a less detailed representation is sufficient and an abstract synta
 
 For the input sentence
 
-![](/assets/Rascalopedia/ParseTree/example-text.png)
+![](/docs//assets/Rascalopedia/ParseTree/example-text.png)
 
 
 the parse tree (left) and abstract syntax tree (right) may look as follows:
 
 
 
-![](/assets/Rascalopedia/AbstractSyntaxTree/parse-ast.png)
+![](/docs//assets/Rascalopedia/AbstractSyntaxTree/parse-ast.png)
 
 
 Note that the parse tree on the left did not preserve the spaces in the original text but there

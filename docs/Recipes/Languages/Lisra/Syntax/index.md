@@ -49,7 +49,7 @@ of `LispExp`s surrouned by parentheses.
 
 #### Examples
 
-This grammar is demonstrated in [Parse](/Recipes/Languages/Lisra/Parse).
+This grammar is demonstrated in [Parse](/docs//Recipes/Languages/Lisra/Parse).
 
 #### Benefits
 

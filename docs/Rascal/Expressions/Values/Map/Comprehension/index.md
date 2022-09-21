@@ -29,7 +29,7 @@ A map comprehension generates a map value.
 
 A map comprehension consists of a number of two contributing expressions _Exp_<sub>1</sub> (for key values), 
 and _Exp_<sub>2</sub> (the values associated with those key values) and a number of
-generators _Gen_<sub>1</sub>, _Gen_<sub>2</sub>, _Gen_<sub>3</sub>, ... that are evaluated as described in [Comprehensions](/Rascal/Expressions/Comprehensions).
+generators _Gen_<sub>1</sub>, _Gen_<sub>2</sub>, _Gen_<sub>3</sub>, ... that are evaluated as described in [Comprehensions](/docs//Rascal/Expressions/Comprehensions).
 
 #### Examples
 

@@ -22,7 +22,7 @@ the program is executed.
 
 The types are ordered in a so-called _type lattice_ shown in the following figure.
 
-![](/assets/RascalConcepts/StaticTyping/type-lattice.png)
+![](/docs//assets/RascalConcepts/StaticTyping/type-lattice.png)
 
 
 The arrows describe a _subtype-of_ relation between types. The type `void` is the _smallest_ type and 
@@ -48,7 +48,7 @@ The Rascal type system has various advanced features that are described separate
 *  Declarations of [Function]s and [AlgebraicDataType]s may be parameterized and [Type Constraints] can be used to define
    constraints on the actual type to be used.
 *  The formal arguments of functions are bound to _values_ but in exceptional cases
-  a function may need a type as argument value, [Reified types](/Rascal/Expressions/Values/ReifiedTypes) make this possible.
+  a function may need a type as argument value, [Reified types](/docs//Rascal/Expressions/Values/ReifiedTypes) make this possible.
 
 #### Examples
 

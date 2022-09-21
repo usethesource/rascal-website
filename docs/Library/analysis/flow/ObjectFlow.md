@@ -19,7 +19,7 @@ representation for object flow. We may translate for example
 Java to this intermediate language and then analyze object flow
 based on the simpler language.
   
-The implementation in this file is intended to work with [M3](/Library/analysis/m3/Core/#analysis::m3::Core-M3) models
+The implementation in this file is intended to work with [M3](/docs//Library/analysis/m3/Core/#analysis::m3::Core-M3) models
 
 
 ## data FlowProgram {#analysis-flow-ObjectFlow-FlowProgram}

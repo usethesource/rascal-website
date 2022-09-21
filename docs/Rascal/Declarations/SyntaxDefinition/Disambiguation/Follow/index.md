@@ -8,7 +8,7 @@ keywords:
 
 #### Synopsis
 
-A conditional [Symbol](/Rascal/Declarations/SyntaxDefinition/Symbol), constraining the characters that can immediately follow a symbol in the input source text.
+A conditional [./Symbol](/docs//Rascal/Declarations/SyntaxDefinition/Symbol), constraining the characters that can immediately follow a symbol in the input source text.
 
 #### Syntax
 
@@ -16,7 +16,7 @@ A conditional [Symbol](/Rascal/Declarations/SyntaxDefinition/Symbol), constraini
 *  `Symbol !>> constraint`
 
 
-where a _constraint_ is any character class, a literal or a keyword non-terminal [Symbol](/Rascal/Declarations/SyntaxDefinition/Symbol).
+where a _constraint_ is any character class, a literal or a keyword non-terminal [Symbol](/docs//Rascal/Declarations/SyntaxDefinition/Symbol).
 
 #### Types
 

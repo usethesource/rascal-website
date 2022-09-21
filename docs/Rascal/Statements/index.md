@@ -15,7 +15,7 @@ All Rascal statements.
 #### Description
 
 The following statements are available:
-* [Rascal:Statements](/Rascal/Statements)
+* [Rascal:Statements](/docs//Rascal/Statements)
 * ((Rascal:Statements/Append))
 * ((Rascal:Statements/Assert))
 * ((Rascal:Statements/Assignment))
@@ -37,7 +37,7 @@ The following statements are available:
 * ((Rascal:Statements/While))
 
 
-![](/assets/Rascal/Statements/statement-parts.png)
+![](/docs//assets/Rascal/Statements/statement-parts.png)
 
 
 #### Examples

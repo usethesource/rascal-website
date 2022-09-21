@@ -24,7 +24,7 @@ Remedies:
 
 #### Examples
 
-Changing the month of a [DateTime](/Rascal/Expressions/Values/DateTime) to an illegal month (13):
+Changing the month of a [DateTime](/docs//Rascal/Expressions/Values/DateTime) to an illegal month (13):
 
 ```rascal-shell
 rascal>NOW = $2013-01-13T22:16:51.740+01:00$;

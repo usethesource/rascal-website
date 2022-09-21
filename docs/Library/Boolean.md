@@ -13,14 +13,14 @@ Library functions for Booleans.
 
 #### Description
 
-For operators on Boolean values see [Boolean](/Rascal/Expressions/Values/Boolean) in the Rascal Language Reference.
+For operators on Boolean values see [Boolean](/docs//Rascal/Expressions/Values/Boolean) in the Rascal Language Reference.
 
 The following functions are defined for Booleans:
-* [Library:function:Boolean::arb bool](/Library/Boolean#Boolean-arbBool)
-* [Library:function:Boolean::from string](/Library/Boolean#Boolean-fromString)
-* [Library:function:Boolean::to int](/Library/Boolean#Boolean-toInt)
-* [Library:function:Boolean::to real](/Library/Boolean#Boolean-toReal)
-* [Library:function:Boolean::to string](/Library/Boolean#Boolean-toString)
+* [Library:function:Boolean::arb bool](/docs//Library/Boolean#Boolean-arbBool)
+* [Library:function:Boolean::from string](/docs//Library/Boolean#Boolean-fromString)
+* [Library:function:Boolean::to int](/docs//Library/Boolean#Boolean-toInt)
+* [Library:function:Boolean::to real](/docs//Library/Boolean#Boolean-toReal)
+* [Library:function:Boolean::to string](/docs//Library/Boolean#Boolean-toString)
 
 
 ## function arbBool {#Boolean-arbBool}
@@ -39,7 +39,7 @@ Return an arbitrary Boolean value.
 rascal>import Boolean;
 ok
 rascal>arbBool();
-bool: true
+bool: false
 rascal>arbBool();
 bool: true
 rascal>arbBool();

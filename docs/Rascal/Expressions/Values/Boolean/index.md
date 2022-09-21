@@ -29,7 +29,7 @@ The Booleans are represented by the type `bool` which has two values: `true` and
 The Boolean operators (to be more precise: operators with a value of type Boolean as result) have _short-circuit_ semantics. 
 This means that the operands are evaluated until the outcome of the operator is known.
 
-Most operators are self-explanatory except the match (:=) and no match (!:=) operators that are also the main reason to treat Boolean operator expressions separately. Although we describe patterns in full detail in [Patterns](/Rascal/Patterns), a preview is useful here. A pattern can
+Most operators are self-explanatory except the match (:=) and no match (!:=) operators that are also the main reason to treat Boolean operator expressions separately. Although we describe patterns in full detail in [Patterns](/docs//Rascal/Patterns), a preview is useful here. A pattern can
 
 *  match (or not match) any arbitrary value (that we will call the _subject value_);
 
@@ -52,21 +52,21 @@ is evaluated as follows:
 
 
 This looks and _is_ nice and dandy, so why all this fuss about Boolean operators?
-The catch is that--as we will see in [Patterns](/Rascal/Patterns)--a match need not be unique. This means that there may be more than one way of matching the subject value resulting in different variable bindings. 
+The catch is that--as we will see in [Patterns](/docs//Rascal/Patterns)--a match need not be unique. This means that there may be more than one way of matching the subject value resulting in different variable bindings. 
 
 This behaviour is applicable in the context of all Rascal constructs where a pattern match determines the flow of control of the program, in particular:
 
 *  Boolean expressions: when a pattern match fails that is part of a Boolean expression, further solutions are tried in order to try to make the Boolean expression true.
 
-*  Tests in [For](/Rascal/Statements/For), [While](/Rascal/Statements/While), [Do](/Rascal/Statements/Do) statements.
+*  Tests in [For](/docs//Rascal/Statements/For), [While](/docs//Rascal/Statements/While), [Do](/docs//Rascal/Statements/Do) statements.
 
-*  Tests in [Any](/Rascal/Expressions/Values/Boolean/Any) and [All](/Rascal/Expressions/Values/Boolean/All) expressions.
+*  Tests in [Any](/docs//Rascal/Expressions/Values/Boolean/Any) and [All](/docs//Rascal/Expressions/Values/Boolean/All) expressions.
 
-*  Tests and [Enumerator](/Rascal/Expressions/Comprehensions/Enumerator)s in comprehensions.
+*  Tests and [Enumerator](/docs//Rascal/Expressions/Comprehensions/Enumerator)s in comprehensions.
 
-*  Pattern matches in cases of a [Visit](/Rascal/Expressions/Visit).
+*  Pattern matches in cases of a [Visit](/docs//Rascal/Expressions/Visit).
 
-*  Pattern matches in cases of a [Switch](/Rascal/Statements/Switch).
+*  Pattern matches in cases of a [Switch](/docs//Rascal/Statements/Switch).
 
 
 The following operators are provided for Boolean:
@@ -83,7 +83,7 @@ The following operators are provided for Boolean:
 * ((Rascal:Expressions/Values/Boolean/NoMatch))
 * ((Rascal:Expressions/Values/Boolean/Or))
 
-There are also [library functions](/Library/Boolean) available for Booleans.
+There are also [library functions](/docs//Library/Boolean) available for Booleans.
 
 #### Examples
 

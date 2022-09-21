@@ -269,7 +269,7 @@ tuple[set[CFNode] entry,Graph[CFNode] graph,set[CFNode] exit]: <{entry(|unknown:
 },{exit()}>
 ```
 
-Is the above not very motivating to move on to [Visualize](/Recipes/Languages/Pico/Visualize)?
+Is the above not very motivating to move on to [Visualize](/docs//Recipes/Languages/Pico/Visualize)?
 
 #### Benefits
 

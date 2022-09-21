@@ -29,7 +29,7 @@ A list item ends with:
 *  the start of a new list item.
 *  an empty line.
 
-_List-Bullet (broken link)_s and _List-Numbered (broken link)_s can be mixed.
+
 
 #### Examples
 
@@ -64,8 +64,10 @@ will produce:
 
 #### Benefits
 
+* [Bullet lists](/docs//Tutor/Markup/StructureMarkup/BulletLists) and [Numbered lists](/docs//Tutor/Markup/StructureMarkup/NumberedLists) can be nested under eachother.
+
 #### Pitfalls
 
-* An empty line is required _after_ a _BulletList (broken link)_.
+* An empty line is required _after_ [Bullet lists](/docs//Tutor/Markup/StructureMarkup/BulletLists).
 
 

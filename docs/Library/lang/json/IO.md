@@ -6,10 +6,9 @@ title: "lang::json::IO"
 
 `import lang::json::IO;`
 
-
 #### Synopsis
 
-(de)serialization of JSON values. 
+(De)serialization of JSON values.
 
 
 ## function toJSON {#lang-json-IO-toJSON}

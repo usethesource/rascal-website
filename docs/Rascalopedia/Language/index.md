@@ -4,7 +4,7 @@ title: Language
 
 #### Synopsis
 
-The set of strings defined by a [Rascalopedia:Grammar](/Rascalopedia/Grammar).
+The set of strings defined by a [Rascalopedia:Grammar](/docs//Rascalopedia/Grammar).
 
 #### Syntax
 
@@ -16,7 +16,7 @@ The set of strings defined by a [Rascalopedia:Grammar](/Rascalopedia/Grammar).
 
 #### Description
 
-A [Rascalopedia:Grammar](/Rascalopedia/Grammar) or [Rascalopedia:Syntax](/Rascalopedia/Syntax) defines the formation rules for a language.
+A [Rascalopedia:Grammar](/docs//Rascalopedia/Grammar) or [Rascalopedia:Syntax](/docs//Rascalopedia/Syntax) defines the formation rules for a language.
 A language is the (possible infinite) set of strings that are defined by a grammar.
 
 #### Examples

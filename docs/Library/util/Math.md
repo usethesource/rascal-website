@@ -17,45 +17,45 @@ Mathematical functions.
 
 The `Math` library provides the following functions:
 
-* [Library:function:util::Math::E](/Library/util/Math#util::Math-E)
-* [Library:function:util::Math::PI](/Library/util/Math#util::Math-PI)
-* [Library:function:util::Math::abs](/Library/util/Math#util::Math-abs)
-* [Library:function:util::Math::arb int](/Library/util/Math#util::Math-arbInt)
-* [Library:function:util::Math::arb prime](/Library/util/Math#util::Math-arbPrime)
-* [Library:function:util::Math::arb rat](/Library/util/Math#util::Math-arbRat)
-* [Library:function:util::Math::arb real](/Library/util/Math#util::Math-arbReal)
-* [Library:function:util::Math::arb seed](/Library/util/Math#util::Math-arbSeed)
-* [Library:function:util::Math::ceil](/Library/util/Math#util::Math-ceil)
-* [Library:function:util::Math::cos](/Library/util/Math#util::Math-cos)
-* [Library:function:util::Math::denominator](/Library/util/Math#util::Math-denominator)
-* [Library:function:util::Math::exp](/Library/util/Math#util::Math-exp)
-* [Library:function:util::Math::fit double](/Library/util/Math#util::Math-fitDouble)
-* [Library:function:util::Math::fit float](/Library/util/Math#util::Math-fitFloat)
-* [Library:function:util::Math::floor](/Library/util/Math#util::Math-floor)
-* [Library:function:util::Math::ln](/Library/util/Math#util::Math-ln)
-* [Library:function:util::Math::log](/Library/util/Math#util::Math-log)
-* [Library:function:util::Math::log10](/Library/util/Math#util::Math-log10)
-* [Library:function:util::Math::log2](/Library/util/Math#util::Math-log2)
-* [Library:function:util::Math::max](/Library/util/Math#util::Math-max)
-* [Library:function:util::Math::min](/Library/util/Math#util::Math-min)
-* [Library:function:util::Math::nroot](/Library/util/Math#util::Math-nroot)
-* [Library:function:util::Math::numerator](/Library/util/Math#util::Math-numerator)
-* [Library:function:util::Math::percent](/Library/util/Math#util::Math-percent)
-* [Library:function:util::Math::pow](/Library/util/Math#util::Math-pow)
-* [Library:function:util::Math::precision](/Library/util/Math#util::Math-precision)
-* [Library:function:util::Math::primes](/Library/util/Math#util::Math-primes)
-* [Library:function:util::Math::remainder](/Library/util/Math#util::Math-remainder)
-* [Library:function:util::Math::round](/Library/util/Math#util::Math-round)
-* [Library:function:util::Math::scale](/Library/util/Math#util::Math-scale)
-* [Library:function:util::Math::set precision](/Library/util/Math#util::Math-setPrecision)
-* [Library:function:util::Math::sin](/Library/util/Math#util::Math-sin)
-* [Library:function:util::Math::sqrt](/Library/util/Math#util::Math-sqrt)
-* [Library:function:util::Math::tan](/Library/util/Math#util::Math-tan)
-* [Library:function:util::Math::to int](/Library/util/Math#util::Math-toInt)
-* [Library:function:util::Math::to rat](/Library/util/Math#util::Math-toRat)
-* [Library:function:util::Math::to real](/Library/util/Math#util::Math-toReal)
-* [Library:function:util::Math::to string](/Library/util/Math#util::Math-toString)
-* [Library:function:util::Math::unscaled](/Library/util/Math#util::Math-unscaled)
+* [Library:function:util::Math::E](/docs//Library/util/Math#util::Math-E)
+* [Library:function:util::Math::PI](/docs//Library/util/Math#util::Math-PI)
+* [Library:function:util::Math::abs](/docs//Library/util/Math#util::Math-abs)
+* [Library:function:util::Math::arb int](/docs//Library/util/Math#util::Math-arbInt)
+* [Library:function:util::Math::arb prime](/docs//Library/util/Math#util::Math-arbPrime)
+* [Library:function:util::Math::arb rat](/docs//Library/util/Math#util::Math-arbRat)
+* [Library:function:util::Math::arb real](/docs//Library/util/Math#util::Math-arbReal)
+* [Library:function:util::Math::arb seed](/docs//Library/util/Math#util::Math-arbSeed)
+* [Library:function:util::Math::ceil](/docs//Library/util/Math#util::Math-ceil)
+* [Library:function:util::Math::cos](/docs//Library/util/Math#util::Math-cos)
+* [Library:function:util::Math::denominator](/docs//Library/util/Math#util::Math-denominator)
+* [Library:function:util::Math::exp](/docs//Library/util/Math#util::Math-exp)
+* [Library:function:util::Math::fit double](/docs//Library/util/Math#util::Math-fitDouble)
+* [Library:function:util::Math::fit float](/docs//Library/util/Math#util::Math-fitFloat)
+* [Library:function:util::Math::floor](/docs//Library/util/Math#util::Math-floor)
+* [Library:function:util::Math::ln](/docs//Library/util/Math#util::Math-ln)
+* [Library:function:util::Math::log](/docs//Library/util/Math#util::Math-log)
+* [Library:function:util::Math::log10](/docs//Library/util/Math#util::Math-log10)
+* [Library:function:util::Math::log2](/docs//Library/util/Math#util::Math-log2)
+* [Library:function:util::Math::max](/docs//Library/util/Math#util::Math-max)
+* [Library:function:util::Math::min](/docs//Library/util/Math#util::Math-min)
+* [Library:function:util::Math::nroot](/docs//Library/util/Math#util::Math-nroot)
+* [Library:function:util::Math::numerator](/docs//Library/util/Math#util::Math-numerator)
+* [Library:function:util::Math::percent](/docs//Library/util/Math#util::Math-percent)
+* [Library:function:util::Math::pow](/docs//Library/util/Math#util::Math-pow)
+* [Library:function:util::Math::precision](/docs//Library/util/Math#util::Math-precision)
+* [Library:function:util::Math::primes](/docs//Library/util/Math#util::Math-primes)
+* [Library:function:util::Math::remainder](/docs//Library/util/Math#util::Math-remainder)
+* [Library:function:util::Math::round](/docs//Library/util/Math#util::Math-round)
+* [Library:function:util::Math::scale](/docs//Library/util/Math#util::Math-scale)
+* [Library:function:util::Math::set precision](/docs//Library/util/Math#util::Math-setPrecision)
+* [Library:function:util::Math::sin](/docs//Library/util/Math#util::Math-sin)
+* [Library:function:util::Math::sqrt](/docs//Library/util/Math#util::Math-sqrt)
+* [Library:function:util::Math::tan](/docs//Library/util/Math#util::Math-tan)
+* [Library:function:util::Math::to int](/docs//Library/util/Math#util::Math-toInt)
+* [Library:function:util::Math::to rat](/docs//Library/util/Math#util::Math-toRat)
+* [Library:function:util::Math::to real](/docs//Library/util/Math#util::Math-toReal)
+* [Library:function:util::Math::to string](/docs//Library/util/Math#util::Math-toString)
+* [Library:function:util::Math::unscaled](/docs//Library/util/Math#util::Math-unscaled)
 
 
 ## function abs {#util-Math-abs}
@@ -109,17 +109,17 @@ i.e., the limit is exclusive.
 rascal>import util::Math;
 ok
 rascal>arbInt();
-int: -2091760161
+int: 1601243973
 rascal>arbInt();
-int: 1591464178
+int: -2064891107
 rascal>arbInt();
-int: 1978990132
+int: 384959237
 rascal>arbInt(10);
-int: 8
+int: 9
 rascal>arbInt(10);
-int: 1
+int: 7
 rascal>arbInt(10);
-int: 1
+int: 7
 ```
 
 #### Benefits
@@ -146,11 +146,11 @@ Generates an arbitrary real value in the interval [0.0, 1.0].
 rascal>import util::Math;
 ok
 rascal>arbReal();
-real: 0.5089406984165689
+real: 0.8876642823699081
 rascal>arbReal();
-real: 0.4714926262523478
+real: 0.07363442269342757
 rascal>arbReal();
-real: 0.6824863548338787
+real: 0.5742289699035624
 ```
 
 ## function arbSeed {#util-Math-arbSeed}
@@ -164,8 +164,8 @@ Define the seed for the generation of arbitrary values.
 
 #### Description
 
-Define the seed for the generation of arbitrary values such as [arb bool](/Library/Boolean#Boolean-arbBool), [arb int](/Library/util/Math#util::Math-arbInt), [arb real](/Library/util/Math#util::Math-arbReal),
-[arb rat](/Library/util/Math#util::Math-arbRat), [get one from](/Library/List/List-getOneFrom),[get one from](/Library/Set/Set-getOneFrom), [take one from](/Library/List/List-takeOneFrom) and [take one from](/Library/Set/Set-takeOneFrom). [arb seed](/Library/util/Math#util::Math-arbSeed) resets the random number generator that
+Define the seed for the generation of arbitrary values such as [arb bool](/docs//Library/Boolean#Boolean-arbBool), [arb int](/docs//Library/util/Math#util::Math-arbInt), [arb real](/docs//Library/util/Math#util::Math-arbReal),
+[arb rat](/docs//Library/util/Math#util::Math-arbRat), [get one from](/docs//Library/List/List-getOneFrom),[get one from](/docs//Library/Set/Set-getOneFrom), [take one from](/docs//Library/List/List-takeOneFrom) and [take one from](/docs//Library/Set/Set-takeOneFrom). [arb seed](/docs//Library/util/Math#util::Math-arbSeed) resets the random number generator that
 is used to choose arbitrary values. This can be used to generate a reproducible series of choices.
 
 ## function arbRat {#util-Math-arbRat}
@@ -185,17 +185,17 @@ Generate an arbitrary rational value.
 rascal>import util::Math;
 ok
 rascal>arbRat();
-rat: -655138156r242985145
+rat: -481642681r428963598
 rascal>arbRat();
-rat: 101495870r133371041
+rat: 1611190535r1127241994
 rascal>arbRat();
-rat: 93302440r498909569
+rat: 410061853r538675563
 rascal>arbRat(10,100);
-rat: 1r12
+rat: 0r
 rascal>arbRat(10,100);
-rat: 3r4
+rat: 1r14
 rascal>arbRat(10,100);
-rat: 5r56
+rat: 2r31
 ```
 
 ## function ceil {#util-Math-ceil}
@@ -210,7 +210,7 @@ Compute the smallest integer that is larger than a given number.
 #### Description
 
 Computes the _ceiling_ of a given number.
-Also see [util::Math::floor](/Library/util/Math/util::Math-floor).
+Also see [util::Math::floor](/docs//Library/util/Math/util::Math-floor).
 
 #### Examples
 
@@ -301,7 +301,7 @@ Compute the largest integer that is smaller than a given number.
 #### Description
 
 Computes the _floor_ of a given number.
-Also see [util::Math::ceil](/Library/util/Math/util::Math-ceil).
+Also see [util::Math::ceil](/docs//Library/util/Math/util::Math-ceil).
 
 #### Examples
 

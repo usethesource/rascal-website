@@ -27,7 +27,7 @@ Concatenate two strings.
 
 Concatenates the string values of _Exp_<sub>1</sub> and _Exp_<sub>2</sub>.
 
-Note that to concatenate other types of values into a string, you can use [String](/Rascal/Expressions/Values/String) interpolation.
+Note that to concatenate other types of values into a string, you can use [String](/docs//Rascal/Expressions/Values/String) interpolation.
 
 #### Examples
 

@@ -18,10 +18,10 @@ To simplify later processing, Func programs are converted to an abstract syntax 
 
 #### Examples
 
-The concrete syntax for Func is described in [Concrete syntax](/Recipes/Languages/Func/ConcreteSyntax) and its
-abstract syntax in [Abstract syntax](/Recipes/Languages/Func/AbstractSyntax).
+The concrete syntax for Func is described in [Concrete syntax](/docs//Recipes/Languages/Func/ConcreteSyntax) and its
+abstract syntax in [Abstract syntax](/docs//Recipes/Languages/Func/AbstractSyntax).
 Rather than manually writing conversion rules from Func parse trees to Func abstract syntax trees
-we use our secret weapon: [implode](/Library/ParseTree#ParseTree-implode) that performs the mapping for us.
+we use our secret weapon: [implode](/docs//Library/ParseTree#ParseTree-implode) that performs the mapping for us.
 As you see when you compare the concrete and abstract syntax, the ground work has already been done
 by appropriately labelling concrete rules with constructor names of the abstract syntax.
 
@@ -123,7 +123,7 @@ Prog: prog(
   comments=())
 ```
 We get the original program and its __abstract syntax tree__ of type `Prog` back.
-In case of doubt, compare this with the result in [Parse](/Recipes/Languages/Func/Parse) where we did obtain a parse tree.
+In case of doubt, compare this with the result in [Parse](/docs//Recipes/Languages/Func/Parse) where we did obtain a parse tree.
 Next, we try the same from a file:
 
 ```rascal-shell

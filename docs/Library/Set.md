@@ -15,34 +15,34 @@ Library functions for sets.
 
 #### Description
 
-For operators on sets see [Set](/Rascal/Expressions/Values/Set) in the Rascal Language Reference.
+For operators on sets see [Set](/docs//Rascal/Expressions/Values/Set) in the Rascal Language Reference.
 
 The following functions are defined for sets:
-* [Library:function:Set::classify](/Library/Set#Set-classify)
-* [Library:function:Set::get first from](/Library/Set#Set-getFirstFrom)
-* [Library:function:Set::get one from](/Library/Set#Set-getOneFrom)
-* [Library:function:Set::group](/Library/Set#Set-group)
-* [Library:function:Set::index](/Library/Set#Set-index)
-* [Library:function:Set::is empty](/Library/Set#Set-isEmpty)
-* [Library:function:Set::ito string](/Library/Set#Set-itoString)
-* [Library:function:Set::jaccard](/Library/Set#Set-jaccard)
-* [Library:function:Set::mapper](/Library/Set#Set-mapper)
-* [Library:function:Set::max](/Library/Set#Set-max)
-* [Library:function:Set::min](/Library/Set#Set-min)
-* [Library:function:Set::power](/Library/Set#Set-power)
-* [Library:function:Set::power1](/Library/Set#Set-power1)
-* [Library:function:Set::reducer](/Library/Set#Set-reducer)
-* [Library:function:Set::size](/Library/Set#Set-size)
-* [Library:function:Set::sort](/Library/Set#Set-sort)
-* [Library:function:Set::sum](/Library/Set#Set-sum)
-* [Library:function:Set::take first from](/Library/Set#Set-takeFirstFrom)
-* [Library:function:Set::take one from](/Library/Set#Set-takeOneFrom)
-* [Library:function:Set::to list](/Library/Set#Set-toList)
-* [Library:function:Set::to map](/Library/Set#Set-toMap)
-* [Library:function:Set::to map unique](/Library/Set#Set-toMapUnique)
-* [Library:function:Set::to string](/Library/Set#Set-toString)
-* [Library:function:Set::top](/Library/Set#Set-top)
-* [Library:function:Set::union](/Library/Set#Set-union)
+* [Library:function:Set::classify](/docs//Library/Set#Set-classify)
+* [Library:function:Set::get first from](/docs//Library/Set#Set-getFirstFrom)
+* [Library:function:Set::get one from](/docs//Library/Set#Set-getOneFrom)
+* [Library:function:Set::group](/docs//Library/Set#Set-group)
+* [Library:function:Set::index](/docs//Library/Set#Set-index)
+* [Library:function:Set::is empty](/docs//Library/Set#Set-isEmpty)
+* [Library:function:Set::ito string](/docs//Library/Set#Set-itoString)
+* [Library:function:Set::jaccard](/docs//Library/Set#Set-jaccard)
+* [Library:function:Set::mapper](/docs//Library/Set#Set-mapper)
+* [Library:function:Set::max](/docs//Library/Set#Set-max)
+* [Library:function:Set::min](/docs//Library/Set#Set-min)
+* [Library:function:Set::power](/docs//Library/Set#Set-power)
+* [Library:function:Set::power1](/docs//Library/Set#Set-power1)
+* [Library:function:Set::reducer](/docs//Library/Set#Set-reducer)
+* [Library:function:Set::size](/docs//Library/Set#Set-size)
+* [Library:function:Set::sort](/docs//Library/Set#Set-sort)
+* [Library:function:Set::sum](/docs//Library/Set#Set-sum)
+* [Library:function:Set::take first from](/docs//Library/Set#Set-takeFirstFrom)
+* [Library:function:Set::take one from](/docs//Library/Set#Set-takeOneFrom)
+* [Library:function:Set::to list](/docs//Library/Set#Set-toList)
+* [Library:function:Set::to map](/docs//Library/Set#Set-toMap)
+* [Library:function:Set::to map unique](/docs//Library/Set#Set-toMapUnique)
+* [Library:function:Set::to string](/docs//Library/Set#Set-toString)
+* [Library:function:Set::top](/docs//Library/Set#Set-top)
+* [Library:function:Set::union](/docs//Library/Set#Set-union)
 
 
 ## function classify {#Set-classify}
@@ -372,7 +372,7 @@ int: 100
 
 #### Pitfalls
 
-WARNING: This function is *deprecated*, use a [reducer](/Rascal/Expressions/Reducer) instead.
+WARNING: This function is *deprecated*, use a [reducer](/docs//Rascal/Expressions/Reducer) instead.
 
 ## function size {#Set-size}
 
@@ -422,11 +422,11 @@ ok
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "snake"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "elephant"
+str: "zebra"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "elephant"
+str: "zebra"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "snake"
+str: "zebra"
 ```
 
 ## function getFirstFrom {#Set-getFirstFrom}
@@ -461,7 +461,7 @@ Remove an arbitrary element from a set, returns the element and a set without th
 #### Description
 
 Remove an arbitrary element from set `s` and return a tuple consisting of the element and a set without that element.
- Also see [get one from](/Library/Set/Set-getOneFrom).
+ Also see [get one from](/docs//Library/Set/Set-getOneFrom).
 
 #### Examples
 
@@ -470,9 +470,9 @@ Remove an arbitrary element from set `s` and return a tuple consisting of the el
 rascal>import Set;
 ok
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <1,{3,2,4}>
+tuple[int,set[int]]: <2,{1,3,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <4,{1,3,2}>
+tuple[int,set[int]]: <1,{3,2,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
 tuple[int,set[int]]: <2,{1,3,4}>
 ```

@@ -8,7 +8,7 @@ title: "lang::java::m3::Core"
 
 #### Synopsis
 
-Extends the M3 [analysis::m3::Core](/Library/analysis/m3/Core) with Java specific concepts such as inheritance and overriding.
+Extends the M3 [analysis::m3::Core](/docs//Library/analysis/m3/Core) with Java specific concepts such as inheritance and overriding.
 
 
 ## data M3 {#lang-java-m3-Core-M3}

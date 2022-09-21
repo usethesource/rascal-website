@@ -22,9 +22,9 @@ Rascal _expressions_, _statements_ and _declarations_.
 Next to Rascal language expressions, the shell features a number of specific commands available
 only in the shell:
 
-* [Rascal shell:REPL](/RascalShell/REPL)
-* [Rascal shell:Completion](/RascalShell/Completion)
-* [History](/RascalShell/History)
-* [Commands](/RascalShell/Commands)
-* [Keyboard](/RascalShell/Keyboard)
+* [Rascal shell:REPL](/docs//RascalShell/REPL)
+* [Rascal shell:Completion](/docs//RascalShell/Completion)
+* [History](/docs//RascalShell/History)
+* [Commands](/docs//RascalShell/Commands)
+* [Keyboard](/docs//RascalShell/Keyboard)
 

@@ -6,7 +6,7 @@ title: Renovation
 
 System renovation.
 
-![](/assets/WhyRascal/EASY/Renovation/extract-analyze-view-paradigm.png)
+![](/docs//assets/WhyRascal/EASY/Renovation/extract-analyze-view-paradigm.png)
 
 // explicitly separate image from Description 
 

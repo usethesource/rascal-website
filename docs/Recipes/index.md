@@ -17,11 +17,11 @@ Recipes for writing Rascal programs.
 These _Rascal Recipes_ are a work-in-progress but will gradually evolve into a collection of basic Rascal language examples and use cases.
 It consists of the following parts:
 
-* [Recipes:Basic](/Recipes/Basic)
-* [Recipes:Common](/Recipes/Common)
-* [Recipes:Languages](/Recipes/Languages)
-* [Recipes:Metrics](/Recipes/Metrics)
-* [Recipes:Recipes](/Recipes/)
+* [Recipes:Basic](/docs//Recipes/Basic)
+* [Recipes:Common](/docs//Recipes/Common)
+* [Recipes:Languages](/docs//Recipes/Languages)
+* [Recipes:Metrics](/docs//Recipes/Metrics)
+* [Recipes:Recipes](/docs//Recipes/)
 
 The following features are covered:
 

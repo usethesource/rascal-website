@@ -32,7 +32,7 @@ Gentle introduction to the main concepts of the Rascal language.
 #### Description
 
 Rascal is based on a dozen concepts and having a global understanding of them will help to grasp the language more quickly.
-Here we will informally explain and illustrate these concepts and often we will refer to the [Rascal Language Reference](/Rascal/)
+Here we will informally explain and illustrate these concepts and often we will refer to the [Rascal Language Reference](/docs//Rascal/)
 for further details. In other words, we are providing here a friendly front-end for the actual language description.
 
 Most language concepts are described separately but some features we just mention here:
@@ -44,21 +44,21 @@ Most language concepts are described separately but some features we just mentio
 *  There is an extensive library for built-in datatypes, input/output, fact extraction from Java source code, visualization, and more.
 
 Here are the concepts to be discussed:
-* [Static typing](/RascalConcepts/StaticTyping)
-* [Datatypes](/RascalConcepts/Datatypes)
-* [Immutable values](/RascalConcepts/ImmutableValues)
-* [Enumerating](/RascalConcepts/Enumerating)
-* [Comprehensions](/RascalConcepts/Comprehensions)
-* [Pattern matching](/RascalConcepts/PatternMatching)
-* [Control structures](/RascalConcepts/ControlStructures)
-* [Case distinction](/RascalConcepts/CaseDistinction)
-* [Visiting](/RascalConcepts/Visiting)
-* [Functions](/RascalConcepts/Functions)
-* [Syntax definition and parsing](/RascalConcepts/SyntaxDefinitionAndParsing)
-* [Rewriting](/RascalConcepts/Rewriting)
-* [IDEConstruction](/RascalConcepts/IDEConstruction)
-* [Code models](/RascalConcepts/CodeModels)
-* [Equation solving](/RascalConcepts/EquationSolving)
+* [Static typing](/docs//RascalConcepts/StaticTyping)
+* [Datatypes](/docs//RascalConcepts/Datatypes)
+* [Immutable values](/docs//RascalConcepts/ImmutableValues)
+* [Enumerating](/docs//RascalConcepts/Enumerating)
+* [Comprehensions](/docs//RascalConcepts/Comprehensions)
+* [Pattern matching](/docs//RascalConcepts/PatternMatching)
+* [Control structures](/docs//RascalConcepts/ControlStructures)
+* [Case distinction](/docs//RascalConcepts/CaseDistinction)
+* [Visiting](/docs//RascalConcepts/Visiting)
+* [Functions](/docs//RascalConcepts/Functions)
+* [Syntax definition and parsing](/docs//RascalConcepts/SyntaxDefinitionAndParsing)
+* [Rewriting](/docs//RascalConcepts/Rewriting)
+* [IDEConstruction](/docs//RascalConcepts/IDEConstruction)
+* [Code models](/docs//RascalConcepts/CodeModels)
+* [Equation solving](/docs//RascalConcepts/EquationSolving)
 
 #### Examples
 
