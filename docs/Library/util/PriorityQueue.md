@@ -1,5 +1,5 @@
 ---
-title: "util::PriorityQueue"
+title: "module util::PriorityQueue"
 ---
 
 #### Usage

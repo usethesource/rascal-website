@@ -1,4 +1,6 @@
-# lang::rascal::tests::library::lang
+---
+title: lang::rascal::tests::library::lang
+---
 
 
    * [java](../../../../../../Library/lang/rascal/tests/library/lang/java)

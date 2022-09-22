@@ -1,5 +1,5 @@
 ---
-title: "lang::yaml::Model"
+title: "module lang::yaml::Model"
 ---
 
 #### Usage

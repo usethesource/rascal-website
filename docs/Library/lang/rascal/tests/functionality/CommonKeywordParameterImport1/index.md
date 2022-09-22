@@ -1,4 +1,6 @@
-# lang::rascal::tests::functionality::CommonKeywordParameterImport1
+---
+title: lang::rascal::tests::functionality::CommonKeywordParameterImport1
+---
 
 
    * [DiamondTop](../../../../../../Library/lang/rascal/tests/functionality/CommonKeywordParameterImport1/DiamondTop.md)

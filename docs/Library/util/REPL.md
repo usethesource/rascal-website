@@ -1,5 +1,5 @@
 ---
-title: "util::REPL"
+title: "module util::REPL"
 ---
 
 #### Usage

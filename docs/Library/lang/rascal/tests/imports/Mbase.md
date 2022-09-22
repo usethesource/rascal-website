@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::imports::Mbase"
+title: "module lang::rascal::tests::imports::Mbase"
 ---
 
 #### Usage

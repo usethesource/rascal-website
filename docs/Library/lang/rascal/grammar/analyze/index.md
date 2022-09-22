@@ -1,4 +1,6 @@
-# lang::rascal::grammar::analyze
+---
+title: lang::rascal::grammar::analyze
+---
 
 
    * [DefUse](../../../../../Library/lang/rascal/grammar/analyze/DefUse.md)

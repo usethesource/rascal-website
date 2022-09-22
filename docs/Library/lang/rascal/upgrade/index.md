@@ -1,4 +1,6 @@
-# lang::rascal::upgrade
+---
+title: lang::rascal::upgrade
+---
 
 
    * [UpgradePostfixStarAndPlusToPrefix](../../../../Library/lang/rascal/upgrade/UpgradePostfixStarAndPlusToPrefix.md)

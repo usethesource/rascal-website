@@ -1,5 +1,5 @@
 ---
-title: "lang::csv::ast::CSV"
+title: "module lang::csv::ast::CSV"
 ---
 
 #### Usage

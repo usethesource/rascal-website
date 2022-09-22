@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Switch"
+title: "module lang::rascal::tests::functionality::Switch"
 ---
 
 #### Usage

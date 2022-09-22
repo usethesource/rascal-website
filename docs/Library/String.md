@@ -1,5 +1,5 @@
 ---
-title: "String"
+title: "module String"
 ---
 
 #### Usage

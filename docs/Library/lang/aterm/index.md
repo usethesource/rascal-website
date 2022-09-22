@@ -1,4 +1,6 @@
-# lang::aterm
+---
+title: lang::aterm
+---
 
 
    * [syntax](../../../Library/lang/aterm/syntax)

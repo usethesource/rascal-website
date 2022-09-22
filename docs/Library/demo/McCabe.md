@@ -1,5 +1,5 @@
 ---
-title: "demo::McCabe"
+title: "module demo::McCabe"
 ---
 
 #### Usage

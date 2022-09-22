@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::TryCatch"
+title: "module lang::rascal::tests::functionality::TryCatch"
 ---
 
 #### Usage

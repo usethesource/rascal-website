@@ -10,7 +10,7 @@ Solutions for some common tasks.
 
 We discuss the following tasks:
 
-* [Recipes:Common](../..//Recipes/Common)
+* [Recipes:Common](../../Recipes/Common)
 * ((Recipes:Common/AdHocDataExploration))
 * ((Recipes:Common/CallAnalysis))
 * ((Recipes:Common/CallLifting))

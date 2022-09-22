@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::analysis::statistics::RangeUtils"
+title: "module lang::rascal::tests::library::analysis::statistics::RangeUtils"
 ---
 
 #### Usage

@@ -1,2 +1,4 @@
-# lang::csv::examples
+---
+title: lang::csv::examples
+---
 

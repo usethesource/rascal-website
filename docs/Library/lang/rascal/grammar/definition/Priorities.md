@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::definition::Priorities"
+title: "module lang::rascal::grammar::definition::Priorities"
 ---
 
 #### Usage

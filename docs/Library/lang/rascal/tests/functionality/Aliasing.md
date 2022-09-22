@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Aliasing"
+title: "module lang::rascal::tests::functionality::Aliasing"
 ---
 
 #### Usage

@@ -1,4 +1,6 @@
-# lang::json
+---
+title: lang::json
+---
 
 
    * [examples](../../../Library/lang/json/examples)

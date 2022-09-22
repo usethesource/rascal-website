@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tutor::conversions::ConvertSections"
+title: "module lang::rascal::tutor::conversions::ConvertSections"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Range"
+title: "module lang::rascal::tests::functionality::Range"
 ---
 
 #### Usage

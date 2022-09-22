@@ -1,5 +1,5 @@
 ---
-title: "analysis::m3::FlowGraph"
+title: "module analysis::m3::FlowGraph"
 ---
 
 #### Usage

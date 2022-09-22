@@ -1,4 +1,6 @@
-# lang::rascal::tests::library
+---
+title: lang::rascal::tests::library
+---
 
 
    * [String](../../../../../Library/lang/rascal/tests/library/String.md)

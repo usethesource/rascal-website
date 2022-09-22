@@ -1,5 +1,5 @@
 ---
-title: "lang::box::util::Box"
+title: "module lang::box::util::Box"
 ---
 
 #### Usage

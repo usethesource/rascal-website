@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Func::Eval2"
+title: "module demo::lang::Func::Eval2"
 ---
 
 #### Usage

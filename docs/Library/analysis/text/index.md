@@ -1,4 +1,6 @@
-# analysis::text
+---
+title: analysis::text
+---
 
 
    * [search](../../../Library/analysis/text/search)

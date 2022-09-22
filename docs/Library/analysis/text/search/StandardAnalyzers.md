@@ -1,5 +1,5 @@
 ---
-title: "analysis::text::search::StandardAnalyzers"
+title: "module analysis::text::search::StandardAnalyzers"
 ---
 
 #### Usage

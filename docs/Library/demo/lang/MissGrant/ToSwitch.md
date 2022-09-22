@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::MissGrant::ToSwitch"
+title: "module demo::lang::MissGrant::ToSwitch"
 ---
 
 #### Usage

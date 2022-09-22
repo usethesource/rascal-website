@@ -1,5 +1,5 @@
 ---
-title: "lang::aterm::IO"
+title: "module lang::aterm::IO"
 ---
 
 #### Usage

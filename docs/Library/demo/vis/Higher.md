@@ -1,5 +1,5 @@
 ---
-title: "demo::vis::Higher"
+title: "module demo::vis::Higher"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::std::Comment"
+title: "module lang::std::Comment"
 ---
 
 #### Usage

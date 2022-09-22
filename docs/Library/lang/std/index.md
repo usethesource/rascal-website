@@ -1,4 +1,6 @@
-# lang::std
+---
+title: lang::std
+---
 
 
    * [ASCII](../../../Library/lang/std/ASCII.md)

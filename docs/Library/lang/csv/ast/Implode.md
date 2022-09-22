@@ -1,5 +1,5 @@
 ---
-title: "lang::csv::ast::Implode"
+title: "module lang::csv::ast::Implode"
 ---
 
 #### Usage

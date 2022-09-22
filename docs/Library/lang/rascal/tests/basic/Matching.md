@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::Matching"
+title: "module lang::rascal::tests::basic::Matching"
 ---
 
 #### Usage

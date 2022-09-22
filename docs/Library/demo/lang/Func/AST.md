@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Func::AST"
+title: "module demo::lang::Func::AST"
 ---
 
 #### Usage

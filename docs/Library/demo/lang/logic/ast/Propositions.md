@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::logic::ast::Propositions"
+title: "module demo::lang::logic::ast::Propositions"
 ---
 
 #### Usage

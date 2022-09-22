@@ -1,5 +1,5 @@
 ---
-title: "analysis::text::search::Grammars"
+title: "module analysis::text::search::Grammars"
 ---
 
 #### Usage

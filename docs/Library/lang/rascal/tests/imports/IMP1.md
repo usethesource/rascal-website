@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::imports::IMP1"
+title: "module lang::rascal::tests::imports::IMP1"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::format::Grammar"
+title: "module lang::rascal::format::Grammar"
 ---
 
 #### Usage

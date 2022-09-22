@@ -1,4 +1,6 @@
-# demo::vis
+---
+title: demo::vis
+---
 
 
    * [Logo](../../../Library/demo/vis/Logo.md)

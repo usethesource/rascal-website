@@ -1,5 +1,5 @@
 ---
-title: "lang::csv::IO"
+title: "module lang::csv::IO"
 ---
 
 #### Usage

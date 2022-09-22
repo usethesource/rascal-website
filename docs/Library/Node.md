@@ -1,5 +1,5 @@
 ---
-title: "Node"
+title: "module Node"
 ---
 
 #### Usage

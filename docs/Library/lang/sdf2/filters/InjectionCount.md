@@ -1,5 +1,5 @@
 ---
-title: "lang::sdf2::filters::InjectionCount"
+title: "module lang::sdf2::filters::InjectionCount"
 ---
 
 #### Usage

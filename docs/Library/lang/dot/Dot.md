@@ -1,5 +1,5 @@
 ---
-title: "lang::dot::Dot"
+title: "module lang::dot::Dot"
 ---
 
 #### Usage

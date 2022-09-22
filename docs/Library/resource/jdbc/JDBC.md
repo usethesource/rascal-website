@@ -1,5 +1,5 @@
 ---
-title: "resource::jdbc::JDBC"
+title: "module resource::jdbc::JDBC"
 ---
 
 #### Usage

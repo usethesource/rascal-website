@@ -1,5 +1,5 @@
 ---
-title: "lang::box::\\syntax::Box"
+title: "module lang::box::\\syntax::Box"
 ---
 
 #### Usage

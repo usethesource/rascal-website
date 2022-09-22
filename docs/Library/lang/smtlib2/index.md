@@ -1,4 +1,6 @@
-# lang::smtlib2
+---
+title: lang::smtlib2
+---
 
 
    * [solve](../../../Library/lang/smtlib2/solve)

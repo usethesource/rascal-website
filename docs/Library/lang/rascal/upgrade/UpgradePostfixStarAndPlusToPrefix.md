@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::upgrade::UpgradePostfixStarAndPlusToPrefix"
+title: "module lang::rascal::upgrade::UpgradePostfixStarAndPlusToPrefix"
 ---
 
 #### Usage

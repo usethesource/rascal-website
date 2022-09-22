@@ -1,5 +1,5 @@
 ---
-title: "demo::basic::Quine"
+title: "module demo::basic::Quine"
 ---
 
 #### Usage

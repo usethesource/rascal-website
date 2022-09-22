@@ -1,5 +1,5 @@
 ---
-title: "lang::smtlib2::command::response::Syntax"
+title: "module lang::smtlib2::command::response::Syntax"
 ---
 
 #### Usage

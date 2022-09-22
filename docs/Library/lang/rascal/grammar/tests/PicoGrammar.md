@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::tests::PicoGrammar"
+title: "module lang::rascal::grammar::tests::PicoGrammar"
 ---
 
 #### Usage

@@ -1,4 +1,6 @@
-# lang::rascal::grammar::tests
+---
+title: lang::rascal::grammar::tests
+---
 
 
    * [LookaheadTests](../../../../../Library/lang/rascal/grammar/tests/LookaheadTests.md)

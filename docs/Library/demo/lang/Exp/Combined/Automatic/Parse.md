@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Exp::Combined::Automatic::Parse"
+title: "module demo::lang::Exp::Combined::Automatic::Parse"
 ---
 
 #### Usage

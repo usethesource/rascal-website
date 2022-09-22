@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::Relations"
+title: "module lang::rascal::tests::basic::Relations"
 ---
 
 #### Usage

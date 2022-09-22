@@ -1,5 +1,5 @@
 ---
-title: "analysis::text::stemming::Snowball"
+title: "module analysis::text::stemming::Snowball"
 ---
 
 #### Usage

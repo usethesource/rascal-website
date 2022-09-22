@@ -1,4 +1,6 @@
-# demo::lang::logic::syntax
+---
+title: demo::lang::logic::syntax
+---
 
 
    * [Booleans](../../../../../Library/demo/lang/logic/syntax/Booleans.md)

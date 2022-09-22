@@ -1,4 +1,6 @@
-# demo::lang::MissGrant
+---
+title: demo::lang::MissGrant
+---
 
 
    * [Outline](../../../../Library/demo/lang/MissGrant/Outline.md)

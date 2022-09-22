@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::ValueIO"
+title: "module lang::rascal::tests::library::ValueIO"
 ---
 
 #### Usage

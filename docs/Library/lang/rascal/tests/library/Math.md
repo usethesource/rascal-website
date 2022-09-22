@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::Math"
+title: "module lang::rascal::tests::library::Math"
 ---
 
 #### Usage

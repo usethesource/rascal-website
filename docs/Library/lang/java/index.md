@@ -1,4 +1,6 @@
-# lang::java
+---
+title: lang::java
+---
 
 
    * [m3](../../../Library/lang/java/m3)

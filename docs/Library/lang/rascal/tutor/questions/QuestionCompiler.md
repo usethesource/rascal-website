@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tutor::questions::QuestionCompiler"
+title: "module lang::rascal::tutor::questions::QuestionCompiler"
 ---
 
 #### Usage

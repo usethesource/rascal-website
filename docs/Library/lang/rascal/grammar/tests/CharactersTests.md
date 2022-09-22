@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::tests::CharactersTests"
+title: "module lang::rascal::grammar::tests::CharactersTests"
 ---
 
 #### Usage

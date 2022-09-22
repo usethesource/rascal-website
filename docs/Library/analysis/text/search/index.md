@@ -1,4 +1,6 @@
-# analysis::text::search
+---
+title: analysis::text::search
+---
 
 
    * [Lucene](../../../../Library/analysis/text/search/Lucene.md)

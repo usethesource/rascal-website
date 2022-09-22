@@ -1,5 +1,5 @@
 ---
-title: "analysis::graphs::Graph"
+title: "module analysis::graphs::Graph"
 ---
 
 #### Usage

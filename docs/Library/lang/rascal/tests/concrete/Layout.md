@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::Layout"
+title: "module lang::rascal::tests::concrete::Layout"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::html5::DOM"
+title: "module lang::html5::DOM"
 ---
 
 #### Usage

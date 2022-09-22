@@ -1,5 +1,5 @@
 ---
-title: "analysis::statistics::Inference"
+title: "module analysis::statistics::Inference"
 ---
 
 #### Usage

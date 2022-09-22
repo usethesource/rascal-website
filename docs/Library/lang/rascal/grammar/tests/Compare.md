@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::tests::Compare"
+title: "module lang::rascal::grammar::tests::Compare"
 ---
 
 #### Usage

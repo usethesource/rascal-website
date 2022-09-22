@@ -1,5 +1,5 @@
 ---
-title: "analysis::text::search::LuceneTest"
+title: "module analysis::text::search::LuceneTest"
 ---
 
 #### Usage

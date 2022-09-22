@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::tests::LookaheadTests"
+title: "module lang::rascal::grammar::tests::LookaheadTests"
 ---
 
 #### Usage

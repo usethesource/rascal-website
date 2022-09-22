@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Assignment"
+title: "module lang::rascal::tests::functionality::Assignment"
 ---
 
 #### Usage

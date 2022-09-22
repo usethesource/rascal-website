@@ -1,4 +1,6 @@
-# lang::rascal::tests::extends1
+---
+title: lang::rascal::tests::extends1
+---
 
 
    * [Base](../../../../../Library/lang/rascal/tests/extends1/Base.md)

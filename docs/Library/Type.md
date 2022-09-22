@@ -1,5 +1,5 @@
 ---
-title: "Type"
+title: "module Type"
 ---
 
 #### Usage

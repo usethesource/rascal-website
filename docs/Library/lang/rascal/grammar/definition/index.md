@@ -1,4 +1,6 @@
-# lang::rascal::grammar::definition
+---
+title: lang::rascal::grammar::definition
+---
 
 
    * [Modules](../../../../../Library/lang/rascal/grammar/definition/Modules.md)

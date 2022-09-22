@@ -1,5 +1,5 @@
 ---
-title: "lang::dimacs::\\syntax::Dimacs"
+title: "module lang::dimacs::\\syntax::Dimacs"
 ---
 
 #### Usage

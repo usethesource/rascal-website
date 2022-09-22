@@ -1,2 +1,4 @@
-# demo::lang::turing::examples
+---
+title: demo::lang::turing::examples
+---
 

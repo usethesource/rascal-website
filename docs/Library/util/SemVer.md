@@ -1,5 +1,5 @@
 ---
-title: "util::SemVer"
+title: "module util::SemVer"
 ---
 
 #### Usage

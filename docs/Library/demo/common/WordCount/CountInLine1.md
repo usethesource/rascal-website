@@ -1,5 +1,5 @@
 ---
-title: "demo::common::WordCount::CountInLine1"
+title: "module demo::common::WordCount::CountInLine1"
 ---
 
 #### Usage

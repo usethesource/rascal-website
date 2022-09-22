@@ -1,5 +1,5 @@
 ---
-title: "util::IDEServices"
+title: "module util::IDEServices"
 ---
 
 #### Usage

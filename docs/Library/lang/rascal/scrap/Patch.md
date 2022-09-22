@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::scrap::Patch"
+title: "module lang::rascal::scrap::Patch"
 ---
 
 #### Usage

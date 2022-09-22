@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Accumulating"
+title: "module lang::rascal::tests::functionality::Accumulating"
 ---
 
 #### Usage

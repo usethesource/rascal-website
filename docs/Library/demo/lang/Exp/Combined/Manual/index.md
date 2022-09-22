@@ -1,4 +1,6 @@
-# demo::lang::Exp::Combined::Manual
+---
+title: demo::lang::Exp::Combined::Manual
+---
 
 
    * [Parse](../../../../../../Library/demo/lang/Exp/Combined/Manual/Parse.md)

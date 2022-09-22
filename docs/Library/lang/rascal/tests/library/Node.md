@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::Node"
+title: "module lang::rascal::tests::library::Node"
 ---
 
 #### Usage

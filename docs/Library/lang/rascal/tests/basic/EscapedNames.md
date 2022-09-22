@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::EscapedNames"
+title: "module lang::rascal::tests::basic::EscapedNames"
 ---
 
 #### Usage

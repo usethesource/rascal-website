@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::KeywordParameterImport1::DiamondLeft"
+title: "module lang::rascal::tests::functionality::KeywordParameterImport1::DiamondLeft"
 ---
 
 #### Usage

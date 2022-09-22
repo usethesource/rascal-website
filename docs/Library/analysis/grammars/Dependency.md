@@ -1,5 +1,5 @@
 ---
-title: "analysis::grammars::Dependency"
+title: "module analysis::grammars::Dependency"
 ---
 
 #### Usage

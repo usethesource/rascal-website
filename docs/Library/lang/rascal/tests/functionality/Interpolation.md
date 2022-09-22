@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Interpolation"
+title: "module lang::rascal::tests::functionality::Interpolation"
 ---
 
 #### Usage

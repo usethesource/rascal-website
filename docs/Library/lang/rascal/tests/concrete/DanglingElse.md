@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::DanglingElse"
+title: "module lang::rascal::tests::concrete::DanglingElse"
 ---
 
 #### Usage

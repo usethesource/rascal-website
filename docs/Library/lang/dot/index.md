@@ -1,4 +1,6 @@
-# lang::dot
+---
+title: lang::dot
+---
 
 
    * [Dot](../../../Library/lang/dot/Dot.md)

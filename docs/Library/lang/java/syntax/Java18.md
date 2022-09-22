@@ -1,5 +1,5 @@
 ---
-title: "lang::java::\\syntax::Java18"
+title: "module lang::java::\\syntax::Java18"
 ---
 
 #### Usage

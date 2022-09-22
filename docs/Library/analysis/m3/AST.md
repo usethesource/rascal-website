@@ -1,5 +1,5 @@
 ---
-title: "analysis::m3::AST"
+title: "module analysis::m3::AST"
 ---
 
 #### Usage

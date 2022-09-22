@@ -1,5 +1,5 @@
 ---
-title: "demo::basic::FizzBuzz"
+title: "module demo::basic::FizzBuzz"
 ---
 
 #### Usage

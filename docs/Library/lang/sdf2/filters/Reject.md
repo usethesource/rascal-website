@@ -1,5 +1,5 @@
 ---
-title: "lang::sdf2::filters::Reject"
+title: "module lang::sdf2::filters::Reject"
 ---
 
 #### Usage

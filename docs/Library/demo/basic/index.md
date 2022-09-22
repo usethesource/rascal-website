@@ -1,4 +1,6 @@
-# demo::basic
+---
+title: demo::basic
+---
 
 
    * [Ackermann](../../../Library/demo/basic/Ackermann.md)

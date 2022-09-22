@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Backtracking"
+title: "module lang::rascal::tests::functionality::Backtracking"
 ---
 
 #### Usage

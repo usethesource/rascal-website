@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::String"
+title: "module lang::rascal::tests::library::String"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "demo::vis::Logo"
+title: "module demo::vis::Logo"
 ---
 
 #### Usage

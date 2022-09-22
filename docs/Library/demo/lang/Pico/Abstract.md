@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Pico::Abstract"
+title: "module demo::lang::Pico::Abstract"
 ---
 
 #### Usage

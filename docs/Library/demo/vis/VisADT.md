@@ -1,5 +1,5 @@
 ---
-title: "demo::vis::VisADT"
+title: "module demo::vis::VisADT"
 ---
 
 #### Usage

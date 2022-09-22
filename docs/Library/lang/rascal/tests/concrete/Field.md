@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::Field"
+title: "module lang::rascal::tests::concrete::Field"
 ---
 
 #### Usage

@@ -1,4 +1,6 @@
-# analysis::formalconcepts
+---
+title: analysis::formalconcepts
+---
 
 
    * [CXTIO](../../../Library/analysis/formalconcepts/CXTIO.md)

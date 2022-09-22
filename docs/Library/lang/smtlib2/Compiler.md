@@ -1,5 +1,5 @@
 ---
-title: "lang::smtlib2::Compiler"
+title: "module lang::smtlib2::Compiler"
 ---
 
 #### Usage

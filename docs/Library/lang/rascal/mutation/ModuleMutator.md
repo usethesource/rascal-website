@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::mutation::ModuleMutator"
+title: "module lang::rascal::mutation::ModuleMutator"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::std::Whitespace"
+title: "module lang::std::Whitespace"
 ---
 
 #### Usage

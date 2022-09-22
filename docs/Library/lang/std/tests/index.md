@@ -1,4 +1,6 @@
-# lang::std::tests
+---
+title: lang::std::tests
+---
 
 
    * [ASCII](../../../../Library/lang/std/tests/ASCII.md)

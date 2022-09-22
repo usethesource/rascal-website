@@ -1,5 +1,5 @@
 ---
-title: "lang::std::ASCII"
+title: "module lang::std::ASCII"
 ---
 
 #### Usage

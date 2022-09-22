@@ -1,5 +1,5 @@
 ---
-title: "lang::box::util::Box2Text"
+title: "module lang::box::util::Box2Text"
 ---
 
 #### Usage

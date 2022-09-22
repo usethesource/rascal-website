@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::extends1::ABSTRACTTYPE"
+title: "module lang::rascal::tests::extends1::ABSTRACTTYPE"
 ---
 
 #### Usage

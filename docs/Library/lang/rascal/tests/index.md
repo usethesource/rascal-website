@@ -1,4 +1,6 @@
-# lang::rascal::tests
+---
+title: lang::rascal::tests
+---
 
 
    * [functionality](../../../../Library/lang/rascal/tests/functionality)

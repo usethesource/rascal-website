@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::IsDefined"
+title: "module lang::rascal::tests::basic::IsDefined"
 ---
 
 #### Usage

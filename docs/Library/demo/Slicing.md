@@ -1,5 +1,5 @@
 ---
-title: "demo::Slicing"
+title: "module demo::Slicing"
 ---
 
 #### Usage

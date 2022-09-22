@@ -1,5 +1,5 @@
 ---
-title: "analysis::statistics::Correlation"
+title: "module analysis::statistics::Correlation"
 ---
 
 #### Usage

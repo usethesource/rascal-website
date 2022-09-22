@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Exp::Abstract::Test"
+title: "module demo::lang::Exp::Abstract::Test"
 ---
 
 #### Usage

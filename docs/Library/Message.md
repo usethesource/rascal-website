@@ -1,5 +1,5 @@
 ---
-title: "Message"
+title: "module Message"
 ---
 
 #### Usage

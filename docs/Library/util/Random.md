@@ -1,5 +1,5 @@
 ---
-title: "util::Random"
+title: "module util::Random"
 ---
 
 #### Usage

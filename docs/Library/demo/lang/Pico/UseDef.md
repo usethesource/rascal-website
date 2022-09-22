@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Pico::UseDef"
+title: "module demo::lang::Pico::UseDef"
 ---
 
 #### Usage

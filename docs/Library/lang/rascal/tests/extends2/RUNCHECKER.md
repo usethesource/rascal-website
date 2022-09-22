@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::extends2::RUNCHECKER"
+title: "module lang::rascal::tests::extends2::RUNCHECKER"
 ---
 
 #### Usage

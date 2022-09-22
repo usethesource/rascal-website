@@ -1,5 +1,5 @@
 ---
-title: "demo::common::WordCount::Jabberwocky"
+title: "module demo::common::WordCount::Jabberwocky"
 ---
 
 #### Usage

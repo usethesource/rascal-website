@@ -1,5 +1,5 @@
 ---
-title: "demo::common::StringTemplate"
+title: "module demo::common::StringTemplate"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "analysis::flow::ControlFlow"
+title: "module analysis::flow::ControlFlow"
 ---
 
 #### Usage

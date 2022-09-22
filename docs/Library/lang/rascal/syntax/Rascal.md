@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::\\syntax::Rascal"
+title: "module lang::rascal::\\syntax::Rascal"
 ---
 
 #### Usage

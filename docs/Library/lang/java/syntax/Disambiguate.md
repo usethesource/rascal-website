@@ -1,5 +1,5 @@
 ---
-title: "lang::java::\\syntax::Disambiguate"
+title: "module lang::java::\\syntax::Disambiguate"
 ---
 
 #### Usage

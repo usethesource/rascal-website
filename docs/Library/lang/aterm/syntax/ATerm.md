@@ -1,5 +1,5 @@
 ---
-title: "lang::aterm::\\syntax::ATerm"
+title: "module lang::aterm::\\syntax::ATerm"
 ---
 
 #### Usage

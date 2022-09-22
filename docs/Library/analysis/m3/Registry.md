@@ -1,5 +1,5 @@
 ---
-title: "analysis::m3::Registry"
+title: "module analysis::m3::Registry"
 ---
 
 #### Usage

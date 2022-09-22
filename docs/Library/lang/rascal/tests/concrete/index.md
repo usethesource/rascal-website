@@ -1,4 +1,6 @@
-# lang::rascal::tests::concrete
+---
+title: lang::rascal::tests::concrete
+---
 
 
    * [DanglingElse](../../../../../Library/lang/rascal/tests/concrete/DanglingElse.md)

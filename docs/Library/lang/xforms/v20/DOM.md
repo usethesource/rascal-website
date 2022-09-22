@@ -1,5 +1,5 @@
 ---
-title: "lang::xforms::v20::DOM"
+title: "module lang::xforms::v20::DOM"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::java::m3::TypeHierarchy"
+title: "module lang::java::m3::TypeHierarchy"
 ---
 
 #### Usage

@@ -1,4 +1,6 @@
-# lang::rascal::tests::functionality
+---
+title: lang::rascal::tests::functionality
+---
 
 
    * [CommonKeywordParameterImport1](../../../../../Library/lang/rascal/tests/functionality/CommonKeywordParameterImport1)

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Visit2"
+title: "module lang::rascal::tests::functionality::Visit2"
 ---
 
 #### Usage

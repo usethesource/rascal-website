@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::\\syntax::tests::KnownIssues"
+title: "module lang::rascal::\\syntax::tests::KnownIssues"
 ---
 
 #### Usage

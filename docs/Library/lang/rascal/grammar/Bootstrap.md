@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::Bootstrap"
+title: "module lang::rascal::grammar::Bootstrap"
 ---
 
 #### Usage

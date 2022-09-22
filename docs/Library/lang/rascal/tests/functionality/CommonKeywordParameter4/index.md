@@ -1,4 +1,6 @@
-# lang::rascal::tests::functionality::CommonKeywordParameter4
+---
+title: lang::rascal::tests::functionality::CommonKeywordParameter4
+---
 
 
    * [A](../../../../../../Library/lang/rascal/tests/functionality/CommonKeywordParameter4/A.md)

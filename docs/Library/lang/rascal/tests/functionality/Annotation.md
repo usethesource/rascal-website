@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Annotation"
+title: "module lang::rascal::tests::functionality::Annotation"
 ---
 
 #### Usage

@@ -1,4 +1,6 @@
-# lang::java::syntax
+---
+title: lang::java::syntax
+---
 
 
    * [Disambiguate](../../../../Library/lang/java/syntax/Disambiguate.md)

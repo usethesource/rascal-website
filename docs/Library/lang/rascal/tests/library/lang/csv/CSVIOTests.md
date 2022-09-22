@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::lang::csv::CSVIOTests"
+title: "module lang::rascal::tests::library::lang::csv::CSVIOTests"
 ---
 
 #### Usage

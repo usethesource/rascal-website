@@ -1,4 +1,6 @@
-# lang::rascal::grammar
+---
+title: lang::rascal::grammar
+---
 
 
    * [Lookahead](../../../../Library/lang/rascal/grammar/Lookahead.md)

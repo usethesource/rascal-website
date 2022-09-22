@@ -1,4 +1,6 @@
-# lang::rascal::meta
+---
+title: lang::rascal::meta
+---
 
 
    * [ModuleInfoTests](../../../../Library/lang/rascal/meta/ModuleInfoTests.md)

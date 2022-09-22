@@ -25,7 +25,7 @@ Typed variable inside a concrete pattern: <_Type_ _Var_>
 #### Description
 
 A concrete pattern is a pattern for matching a [Library:module:Parse tree](../../../Library/ParseTree). The notation of a concrete pattern is the *object language* itself, the language that the parse tree describes. 
-In other words, you can use a code example to match parsed code using a concrete pattern. These concrete code examples can contain [Variable](../../../Rascal/Patterns/Variable)s like the other [Patterns](../../..//Rascal/Patterns).
+In other words, you can use a code example to match parsed code using a concrete pattern. These concrete code examples can contain [Variable](../../../Rascal/Patterns/Variable)s like the other [Patterns](../../../Rascal/Patterns).
 
 The mechanism of concete patterns gives a good notation for matching complex structures such as a [Library:module:Parse tree](../../../Library/ParseTree), and it works in a simple manner:
    

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::analysis::formalconcepts::FCATest"
+title: "module lang::rascal::tests::library::analysis::formalconcepts::FCATest"
 ---
 
 #### Usage

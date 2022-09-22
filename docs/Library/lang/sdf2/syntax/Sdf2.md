@@ -1,5 +1,5 @@
 ---
-title: "lang::sdf2::\\syntax::Sdf2"
+title: "module lang::sdf2::\\syntax::Sdf2"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tutor::Indexer"
+title: "module lang::rascal::tutor::Indexer"
 ---
 
 #### Usage
@@ -24,4 +24,12 @@ title: "lang::rascal::tutor::Indexer"
 ## function isImageFile {#lang-rascal-tutor-Indexer-isImageFile}
 
 * ``bool isImageFile(loc f)``
+
+## function safeExtract {#lang-rascal-tutor-Indexer-safeExtract}
+
+* ``list[DeclarationInfo] safeExtract(loc f)``
+
+#### Synopsis
+
+ignores extracting errors because they will be found later
 

@@ -1,4 +1,6 @@
-# lang::smtlib2::theory
+---
+title: lang::smtlib2::theory
+---
 
 
    * [core](../../../../Library/lang/smtlib2/theory/core)

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::ParserGenerator"
+title: "module lang::rascal::grammar::ParserGenerator"
 ---
 
 #### Usage

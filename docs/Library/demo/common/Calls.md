@@ -1,5 +1,5 @@
 ---
-title: "demo::common::Calls"
+title: "module demo::common::Calls"
 ---
 
 #### Usage

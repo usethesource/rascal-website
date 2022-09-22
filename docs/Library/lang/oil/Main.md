@@ -1,5 +1,5 @@
 ---
-title: "lang::oil::Main"
+title: "module lang::oil::Main"
 ---
 
 #### Usage

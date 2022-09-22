@@ -1,2 +1,4 @@
-# analysis::clustering
+---
+title: analysis::clustering
+---
 

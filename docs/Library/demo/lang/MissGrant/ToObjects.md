@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::MissGrant::ToObjects"
+title: "module demo::lang::MissGrant::ToObjects"
 ---
 
 #### Usage

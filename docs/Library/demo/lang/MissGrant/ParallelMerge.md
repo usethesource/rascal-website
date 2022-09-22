@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::MissGrant::ParallelMerge"
+title: "module demo::lang::MissGrant::ParallelMerge"
 ---
 
 #### Usage

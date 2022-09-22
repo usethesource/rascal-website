@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::turing::l1::interpreter::Interpreter"
+title: "module demo::lang::turing::l1::interpreter::Interpreter"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::Matching"
+title: "module lang::rascal::tests::concrete::Matching"
 ---
 
 #### Usage

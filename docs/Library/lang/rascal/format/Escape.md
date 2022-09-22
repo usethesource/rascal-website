@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::format::Escape"
+title: "module lang::rascal::format::Escape"
 ---
 
 #### Usage

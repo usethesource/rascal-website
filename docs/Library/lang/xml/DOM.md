@@ -1,5 +1,5 @@
 ---
-title: "lang::xml::DOM"
+title: "module lang::xml::DOM"
 ---
 
 #### Usage

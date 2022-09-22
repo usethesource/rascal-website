@@ -1,5 +1,5 @@
 ---
-title: "lang::c90::\\syntax::C"
+title: "module lang::c90::\\syntax::C"
 ---
 
 #### Usage

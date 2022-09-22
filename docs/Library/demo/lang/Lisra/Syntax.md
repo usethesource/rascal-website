@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Lisra::Syntax"
+title: "module demo::lang::Lisra::Syntax"
 ---
 
 #### Usage

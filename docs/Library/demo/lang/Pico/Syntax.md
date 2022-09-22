@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Pico::Syntax"
+title: "module demo::lang::Pico::Syntax"
 ---
 
 #### Usage

@@ -1,4 +1,6 @@
-# lang::html5
+---
+title: lang::html5
+---
 
 
    * [DOM](../../../Library/lang/html5/DOM.md)

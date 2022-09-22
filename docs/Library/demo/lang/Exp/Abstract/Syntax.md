@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Exp::Abstract::Syntax"
+title: "module demo::lang::Exp::Abstract::Syntax"
 ---
 
 #### Usage

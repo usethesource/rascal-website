@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::extends2::COLLECTOR"
+title: "module lang::rascal::tests::extends2::COLLECTOR"
 ---
 
 #### Usage

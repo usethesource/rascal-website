@@ -1,5 +1,5 @@
 ---
-title: "demo::common::Trans"
+title: "module demo::common::Trans"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::lang::xml::XMLIOTests"
+title: "module lang::rascal::tests::library::lang::xml::XMLIOTests"
 ---
 
 #### Usage

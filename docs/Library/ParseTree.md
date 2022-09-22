@@ -1,5 +1,5 @@
 ---
-title: "ParseTree"
+title: "module ParseTree"
 ---
 
 #### Usage
@@ -27,7 +27,7 @@ while the leaf nodes are labeled by terminals (characters) of the grammar.
 *  `Tree` is a subtype of the type [node](../Rascal/Expressions/Values/Node).
 *  All types (non-terminals) declared in [syntax definitions](../Rascal/Declarations/SyntaxDefinition) are sub-types of `Tree`.
 *  All [concrete syntax expressions](../Rascal/Expressions/ConcreteSyntax) produce parse trees with a type corresponding to a non-terminals.
-*  Trees can be annotated in various ways, see features for [IDE construction][Rascal concepts:IDEConstruction](..//RascalConcepts/IDEConstruction).
+*  Trees can be annotated in various ways, see features for [IDE construction][Rascal concepts:IDEConstruction](../RascalConcepts/IDEConstruction).
    Most importantly the `\loc` annotation always points to the source location of any (sub) parse tree.
 
 

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::\\syntax::tests::ParsingRegressionTests"
+title: "module lang::rascal::\\syntax::tests::ParsingRegressionTests"
 ---
 
 #### Usage

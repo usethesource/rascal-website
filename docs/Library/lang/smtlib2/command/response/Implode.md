@@ -1,5 +1,5 @@
 ---
-title: "lang::smtlib2::command::response::Implode"
+title: "module lang::smtlib2::command::response::Implode"
 ---
 
 #### Usage

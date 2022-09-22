@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tutor::questions::ValueGenerator"
+title: "module lang::rascal::tutor::questions::ValueGenerator"
 ---
 
 #### Usage

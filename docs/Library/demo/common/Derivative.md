@@ -1,5 +1,5 @@
 ---
-title: "demo::common::Derivative"
+title: "module demo::common::Derivative"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Pico::Load"
+title: "module demo::lang::Pico::Load"
 ---
 
 #### Usage

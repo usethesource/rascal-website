@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::extends1::UseImportBase"
+title: "module lang::rascal::tests::extends1::UseImportBase"
 ---
 
 #### Usage

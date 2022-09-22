@@ -29,7 +29,7 @@ According to the [Merriam-Webster](http://www.merriam-webster.com/dictionary/syn
 http://en.wikipedia.org/wiki/Syntax_(programming_languages[Wikipedia] says:  the syntax of a programming language is the
 set of rules that define the combinations of symbols that are considered to be correctly structured programs in that language.
 
-In linguistics, a [Rascalopedia:Grammar](../..//Rascalopedia/Grammar) is a concept that includes syntax.
+In linguistics, a [Rascalopedia:Grammar](../../Rascalopedia/Grammar) is a concept that includes syntax.
 However, in the cases that are relevant for meta-programming they can be used interchangeably.
 We will use them as synonyms.
 
@@ -39,7 +39,7 @@ In programming languages a further subdivision can be made:
 *  _Context-free syntax_ defines the global structure of statements, procedures and modules.
 
 
-A [Parser](../..//Rascalopedia/Parser) checks that a text in language _L_ indeed adheres 
+A [Parser](../../Rascalopedia/Parser) checks that a text in language _L_ indeed adheres 
 to the syntax rules of language _L_. There are two possible answers:
 
 *  _Yes_. A [Parse tree](../../Rascalopedia/ParseTree) is returned that shows how the text adheres to the syntax rules.

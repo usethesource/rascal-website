@@ -1,5 +1,5 @@
 ---
-title: "lang::std::Layout"
+title: "module lang::std::Layout"
 ---
 
 #### Usage

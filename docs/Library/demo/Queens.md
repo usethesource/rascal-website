@@ -1,5 +1,5 @@
 ---
-title: "demo::Queens"
+title: "module demo::Queens"
 ---
 
 #### Usage

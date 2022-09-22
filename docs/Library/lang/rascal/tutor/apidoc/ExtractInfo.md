@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tutor::apidoc::ExtractInfo"
+title: "module lang::rascal::tutor::apidoc::ExtractInfo"
 ---
 
 #### Usage

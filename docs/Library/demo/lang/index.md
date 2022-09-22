@@ -1,4 +1,6 @@
-# demo::lang
+---
+title: demo::lang
+---
 
 
    * [logic](../../../Library/demo/lang/logic)

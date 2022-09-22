@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::turing::l2::check::Check"
+title: "module demo::lang::turing::l2::check::Check"
 ---
 
 #### Usage

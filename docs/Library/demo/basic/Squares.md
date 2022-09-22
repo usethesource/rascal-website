@@ -1,5 +1,5 @@
 ---
-title: "demo::basic::Squares"
+title: "module demo::basic::Squares"
 ---
 
 #### Usage

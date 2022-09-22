@@ -1,5 +1,5 @@
 ---
-title: "analysis::grammars::DefUse"
+title: "module analysis::grammars::DefUse"
 ---
 
 #### Usage

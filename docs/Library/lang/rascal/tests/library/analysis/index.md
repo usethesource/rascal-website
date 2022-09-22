@@ -1,4 +1,6 @@
-# lang::rascal::tests::library::analysis
+---
+title: lang::rascal::tests::library::analysis
+---
 
 
    * [statistics](../../../../../../Library/lang/rascal/tests/library/analysis/statistics)

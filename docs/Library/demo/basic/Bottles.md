@@ -1,5 +1,5 @@
 ---
-title: "demo::basic::Bottles"
+title: "module demo::basic::Bottles"
 ---
 
 #### Usage

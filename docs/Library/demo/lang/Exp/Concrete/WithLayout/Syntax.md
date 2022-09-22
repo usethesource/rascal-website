@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Exp::Concrete::WithLayout::Syntax"
+title: "module demo::lang::Exp::Concrete::WithLayout::Syntax"
 ---
 
 #### Usage

@@ -1,4 +1,6 @@
-# lang::rascal::tutor::conversions
+---
+title: lang::rascal::tutor::conversions
+---
 
 
    * [Includes](../../../../../Library/lang/rascal/tutor/conversions/Includes.md)

@@ -1,5 +1,5 @@
 ---
-title: "lang::json::ast::Implode"
+title: "module lang::json::ast::Implode"
 ---
 
 #### Usage

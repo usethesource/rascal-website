@@ -1,5 +1,5 @@
 ---
-title: "demo::common::LiftTest"
+title: "module demo::common::LiftTest"
 ---
 
 #### Usage

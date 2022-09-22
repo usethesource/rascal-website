@@ -1,4 +1,6 @@
-# analysis::flow
+---
+title: analysis::flow
+---
 
 
    * [ObjectFlow](../../../Library/analysis/flow/ObjectFlow.md)

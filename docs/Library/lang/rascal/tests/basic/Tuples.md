@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::Tuples"
+title: "module lang::rascal::tests::basic::Tuples"
 ---
 
 #### Usage

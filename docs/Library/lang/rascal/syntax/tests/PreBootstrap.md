@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::\\syntax::tests::PreBootstrap"
+title: "module lang::rascal::\\syntax::tests::PreBootstrap"
 ---
 
 #### Usage

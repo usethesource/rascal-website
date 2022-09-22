@@ -1,5 +1,5 @@
 ---
-title: "analysis::statistics::Descriptive"
+title: "module analysis::statistics::Descriptive"
 ---
 
 #### Usage

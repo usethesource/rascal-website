@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::KeywordParameterImport2::Import2"
+title: "module lang::rascal::tests::functionality::KeywordParameterImport2::Import2"
 ---
 
 #### Usage

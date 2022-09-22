@@ -33,7 +33,7 @@ The details declaration also influences the order and contents of the [Table of 
 
 #### Examples
 
-In [Concept](../../..//Tutor/Concept) we want to order the details in the order as they appear in the concept description.
+In [Concept](../../../Tutor/Concept) we want to order the details in the order as they appear in the concept description.
 Its `Details` meta-data is therefore:
 
 ```

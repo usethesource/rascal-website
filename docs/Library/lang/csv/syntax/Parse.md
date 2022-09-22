@@ -1,5 +1,5 @@
 ---
-title: "lang::csv::\\syntax::Parse"
+title: "module lang::csv::\\syntax::Parse"
 ---
 
 #### Usage

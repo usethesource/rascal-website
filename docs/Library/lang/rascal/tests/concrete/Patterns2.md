@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::Patterns2"
+title: "module lang::rascal::tests::concrete::Patterns2"
 ---
 
 #### Usage

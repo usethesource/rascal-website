@@ -1,5 +1,5 @@
 ---
-title: "demo::common::ColoredTrees"
+title: "module demo::common::ColoredTrees"
 ---
 
 #### Usage

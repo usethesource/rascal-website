@@ -1,5 +1,5 @@
 ---
-title: "util::Highlight"
+title: "module util::Highlight"
 ---
 
 #### Usage

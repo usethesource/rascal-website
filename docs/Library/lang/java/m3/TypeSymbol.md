@@ -1,5 +1,5 @@
 ---
-title: "lang::java::m3::TypeSymbol"
+title: "module lang::java::m3::TypeSymbol"
 ---
 
 #### Usage

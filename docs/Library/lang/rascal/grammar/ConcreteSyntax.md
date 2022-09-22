@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::ConcreteSyntax"
+title: "module lang::rascal::grammar::ConcreteSyntax"
 ---
 
 #### Usage

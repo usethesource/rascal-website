@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tutor::Names"
+title: "module lang::rascal::tutor::Names"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "Relation"
+title: "module Relation"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "util::Monitor"
+title: "module util::Monitor"
 ---
 
 #### Usage

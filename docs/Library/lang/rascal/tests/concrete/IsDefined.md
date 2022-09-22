@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::IsDefined"
+title: "module lang::rascal::tests::concrete::IsDefined"
 ---
 
 #### Usage

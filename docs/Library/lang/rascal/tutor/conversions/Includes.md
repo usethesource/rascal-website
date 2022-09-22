@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tutor::conversions::Includes"
+title: "module lang::rascal::tutor::conversions::Includes"
 ---
 
 #### Usage

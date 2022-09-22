@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::turing::l2::cst::Syntax"
+title: "module demo::lang::turing::l2::cst::Syntax"
 ---
 
 #### Usage

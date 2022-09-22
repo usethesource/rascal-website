@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::Booleans"
+title: "module lang::rascal::tests::basic::Booleans"
 ---
 
 #### Usage

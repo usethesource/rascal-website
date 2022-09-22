@@ -1,4 +1,6 @@
-# demo::lang::logic::ast
+---
+title: demo::lang::logic::ast
+---
 
 
    * [Booleans](../../../../../Library/demo/lang/logic/ast/Booleans.md)

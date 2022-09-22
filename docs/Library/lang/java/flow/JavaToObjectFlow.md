@@ -1,5 +1,5 @@
 ---
-title: "lang::java::flow::JavaToObjectFlow"
+title: "module lang::java::flow::JavaToObjectFlow"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "Set"
+title: "module Set"
 ---
 
 #### Usage
@@ -416,7 +416,7 @@ Pick an arbitrary element from a set.
 rascal>import Set;
 ok
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "zebra"
+str: "elephant"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "zebra"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
@@ -466,9 +466,9 @@ Remove an arbitrary element from set `s` and return a tuple consisting of the el
 rascal>import Set;
 ok
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <4,{1,3,2}>
+tuple[int,set[int]]: <1,{3,2,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <4,{1,3,2}>
+tuple[int,set[int]]: <2,{1,3,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
 tuple[int,set[int]]: <4,{1,3,2}>
 ```

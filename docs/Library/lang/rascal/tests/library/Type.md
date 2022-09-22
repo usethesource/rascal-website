@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::Type"
+title: "module lang::rascal::tests::library::Type"
 ---
 
 #### Usage

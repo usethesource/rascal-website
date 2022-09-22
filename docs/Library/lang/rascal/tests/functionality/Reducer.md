@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Reducer"
+title: "module lang::rascal::tests::functionality::Reducer"
 ---
 
 #### Usage

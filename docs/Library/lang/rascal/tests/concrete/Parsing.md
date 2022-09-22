@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::Parsing"
+title: "module lang::rascal::tests::concrete::Parsing"
 ---
 
 #### Usage

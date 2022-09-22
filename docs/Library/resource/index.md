@@ -1,4 +1,6 @@
-# resource
+---
+title: resource
+---
 
 
    * [jdbc](../../Library/resource/jdbc)

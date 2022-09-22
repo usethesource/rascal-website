@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::definition::Literals"
+title: "module lang::rascal::grammar::definition::Literals"
 ---
 
 #### Usage

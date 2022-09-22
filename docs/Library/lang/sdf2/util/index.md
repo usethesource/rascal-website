@@ -1,4 +1,6 @@
-# lang::sdf2::util
+---
+title: lang::sdf2::util
+---
 
 
    * [SDF2Grammar](../../../../Library/lang/sdf2/util/SDF2Grammar.md)

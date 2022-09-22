@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::Map"
+title: "module lang::rascal::tests::library::Map"
 ---
 
 #### Usage

@@ -37,7 +37,7 @@ Patterns are used to *dispatch* functions and conditional control flow, to *extr
 from values and to conditionally *filter* values. The pattern following pattern kinds can be arbitrarily nested, following
 the above syntax:
 
-* [Rascal:Patterns](../..//Rascal/Patterns)
+* [Rascal:Patterns](../../Rascal/Patterns)
 * ((Rascal:Patterns/Concrete))
 * ((Rascal:Patterns/Descendant))
 * ((Rascal:Patterns/Labelled))

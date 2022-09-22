@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::util::PriorityQueueTests"
+title: "module lang::rascal::tests::library::util::PriorityQueueTests"
 ---
 
 #### Usage

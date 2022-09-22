@@ -1,4 +1,6 @@
-# lang::rascal
+---
+title: lang::rascal
+---
 
 
    * [ide](../../../Library/lang/rascal/ide)

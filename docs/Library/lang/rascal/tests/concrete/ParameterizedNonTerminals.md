@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::ParameterizedNonTerminals"
+title: "module lang::rascal::tests::concrete::ParameterizedNonTerminals"
 ---
 
 #### Usage

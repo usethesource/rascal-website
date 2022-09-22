@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Statement"
+title: "module lang::rascal::tests::functionality::Statement"
 ---
 
 #### Usage

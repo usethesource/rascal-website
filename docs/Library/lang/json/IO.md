@@ -1,5 +1,5 @@
 ---
-title: "lang::json::IO"
+title: "module lang::json::IO"
 ---
 
 #### Usage

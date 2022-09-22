@@ -1,5 +1,5 @@
 ---
-title: "lang::java::m3::Core"
+title: "module lang::java::m3::Core"
 ---
 
 #### Usage

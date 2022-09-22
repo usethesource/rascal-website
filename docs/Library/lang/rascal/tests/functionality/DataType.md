@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::DataType"
+title: "module lang::rascal::tests::functionality::DataType"
 ---
 
 #### Usage

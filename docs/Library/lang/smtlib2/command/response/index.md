@@ -1,4 +1,6 @@
-# lang::smtlib2::command::response
+---
+title: lang::smtlib2::command::response
+---
 
 
    * [Ast](../../../../../Library/lang/smtlib2/command/response/Ast.md)

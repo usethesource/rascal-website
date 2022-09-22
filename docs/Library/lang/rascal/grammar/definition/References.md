@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::definition::References"
+title: "module lang::rascal::grammar::definition::References"
 ---
 
 #### Usage

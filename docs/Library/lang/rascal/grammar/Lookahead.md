@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::Lookahead"
+title: "module lang::rascal::grammar::Lookahead"
 ---
 
 #### Usage

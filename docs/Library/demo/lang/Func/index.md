@@ -1,4 +1,6 @@
-# demo::lang::Func
+---
+title: demo::lang::Func
+---
 
 
    * [Test](../../../../Library/demo/lang/Func/Test.md)

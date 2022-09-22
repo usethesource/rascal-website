@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::analysis::statistics::DescriptiveTests"
+title: "module lang::rascal::tests::library::analysis::statistics::DescriptiveTests"
 ---
 
 #### Usage

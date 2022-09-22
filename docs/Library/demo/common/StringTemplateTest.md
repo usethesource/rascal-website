@@ -1,5 +1,5 @@
 ---
-title: "demo::common::StringTemplateTest"
+title: "module demo::common::StringTemplateTest"
 ---
 
 #### Usage

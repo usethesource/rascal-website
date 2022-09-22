@@ -1,5 +1,5 @@
 ---
-title: "Prelude"
+title: "module Prelude"
 ---
 
 #### Usage

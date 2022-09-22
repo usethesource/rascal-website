@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Reification"
+title: "module lang::rascal::tests::functionality::Reification"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Comprehension"
+title: "module lang::rascal::tests::functionality::Comprehension"
 ---
 
 #### Usage

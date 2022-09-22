@@ -1,4 +1,6 @@
-# demo::lang::Func::programs
+---
+title: demo::lang::Func::programs
+---
 
 
    * [F2](../../../../../Library/demo/lang/Func/programs/F2.md)

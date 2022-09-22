@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::MissGrant::Outline"
+title: "module demo::lang::MissGrant::Outline"
 ---
 
 #### Usage

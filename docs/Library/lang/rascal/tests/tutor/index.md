@@ -1,2 +1,4 @@
-# lang::rascal::tests::tutor
+---
+title: lang::rascal::tests::tutor
+---
 

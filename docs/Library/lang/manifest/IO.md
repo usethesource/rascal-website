@@ -1,5 +1,5 @@
 ---
-title: "lang::manifest::IO"
+title: "module lang::manifest::IO"
 ---
 
 #### Usage

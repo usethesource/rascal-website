@@ -1,5 +1,5 @@
 ---
-title: "analysis::diff::edits::ExecuteTextEdits"
+title: "module analysis::diff::edits::ExecuteTextEdits"
 ---
 
 #### Usage

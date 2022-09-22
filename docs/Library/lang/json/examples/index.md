@@ -1,2 +1,4 @@
-# lang::json::examples
+---
+title: lang::json::examples
+---
 

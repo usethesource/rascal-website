@@ -1,5 +1,5 @@
 ---
-title: "Grammar"
+title: "module Grammar"
 ---
 
 #### Usage

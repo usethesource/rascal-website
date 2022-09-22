@@ -1,4 +1,6 @@
-# analysis::statistics
+---
+title: analysis::statistics
+---
 
 
    * [Frequency](../../../Library/analysis/statistics/Frequency.md)

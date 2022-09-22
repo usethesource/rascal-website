@@ -1,5 +1,5 @@
 ---
-title: "demo::Mod17"
+title: "module demo::Mod17"
 ---
 
 #### Usage

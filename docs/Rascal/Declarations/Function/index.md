@@ -52,7 +52,7 @@ Inside the function body, the type of this parameter will therefore be `list[Typ
 ##  Variant 3 and 4 
 
 
-All formal parameter of a function can be [Patterns](../../..//Rascal/Patterns). There are some restrictions however:
+All formal parameter of a function can be [Patterns](../../../Rascal/Patterns). There are some restrictions however:
 
 *  A Pattern in formal parameter positions may not refer to variables in the scope.
 *  Patterns in formal parameter positions may not introduce fresh variables without an explicit type. 

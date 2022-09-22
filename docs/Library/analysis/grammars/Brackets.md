@@ -1,5 +1,5 @@
 ---
-title: "analysis::grammars::Brackets"
+title: "module analysis::grammars::Brackets"
 ---
 
 #### Usage

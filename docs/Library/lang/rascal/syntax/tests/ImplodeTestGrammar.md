@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::\\syntax::tests::ImplodeTestGrammar"
+title: "module lang::rascal::\\syntax::tests::ImplodeTestGrammar"
 ---
 
 #### Usage

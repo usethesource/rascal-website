@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::MissGrant::ToMethods"
+title: "module demo::lang::MissGrant::ToMethods"
 ---
 
 #### Usage

@@ -39,7 +39,7 @@ where _Associativity_ is nothing, or one of `assoc`, `left`, `right` or `non-ass
 
 Rascal supports full context-free grammars for syntax definition. It generates scannerless parsers from these definitions. 
 These parsers produce [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees) that can be further processed by Rascal using [./Concrete Syntax](../../../Rascal/Expressions/ConcreteSyntax) fragments
- in [Patterns](../../..//Rascal/Patterns) and [Expressions](../../..//Rascal/Expressions), or they can be _imploded_ to [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType)s.
+ in [Patterns](../../../Rascal/Patterns) and [Expressions](../../../Rascal/Expressions), or they can be _imploded_ to [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType)s.
 
 There are four kinds of non-terminals that can be defined with slightly different characteristics.
 

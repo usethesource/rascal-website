@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::SubscriptAndSlice"
+title: "module lang::rascal::tests::concrete::SubscriptAndSlice"
 ---
 
 #### Usage

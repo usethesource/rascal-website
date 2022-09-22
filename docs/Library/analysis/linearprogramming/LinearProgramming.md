@@ -1,5 +1,5 @@
 ---
-title: "analysis::linearprogramming::LinearProgramming"
+title: "module analysis::linearprogramming::LinearProgramming"
 ---
 
 #### Usage

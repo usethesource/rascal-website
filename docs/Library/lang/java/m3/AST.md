@@ -1,5 +1,5 @@
 ---
-title: "lang::java::m3::AST"
+title: "module lang::java::m3::AST"
 ---
 
 #### Usage

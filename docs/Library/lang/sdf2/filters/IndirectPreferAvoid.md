@@ -1,5 +1,5 @@
 ---
-title: "lang::sdf2::filters::IndirectPreferAvoid"
+title: "module lang::sdf2::filters::IndirectPreferAvoid"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::util::SemVerTests"
+title: "module lang::rascal::tests::library::util::SemVerTests"
 ---
 
 #### Usage

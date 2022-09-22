@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::SyntaxTreeGenerator"
+title: "module lang::rascal::grammar::SyntaxTreeGenerator"
 ---
 
 #### Usage

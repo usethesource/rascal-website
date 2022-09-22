@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::definition::Attributes"
+title: "module lang::rascal::grammar::definition::Attributes"
 ---
 
 #### Usage

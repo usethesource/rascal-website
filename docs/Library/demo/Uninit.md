@@ -1,5 +1,5 @@
 ---
-title: "demo::Uninit"
+title: "module demo::Uninit"
 ---
 
 #### Usage

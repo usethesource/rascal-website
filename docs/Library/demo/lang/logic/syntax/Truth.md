@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::logic::\\syntax::Truth"
+title: "module demo::lang::logic::\\syntax::Truth"
 ---
 
 #### Usage

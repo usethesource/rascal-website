@@ -1,4 +1,6 @@
-# demo::common::WordCount
+---
+title: demo::common::WordCount
+---
 
 
    * [WordCount](../../../../Library/demo/common/WordCount/WordCount.md)

@@ -1,4 +1,6 @@
-# demo::lang::Exp::Concrete::WithLayout
+---
+title: demo::lang::Exp::Concrete::WithLayout
+---
 
 
    * [Eval](../../../../../../Library/demo/lang/Exp/Concrete/WithLayout/Eval.md)

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::Intermix"
+title: "module lang::rascal::tests::basic::Intermix"
 ---
 
 #### Usage

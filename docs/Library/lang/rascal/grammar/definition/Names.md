@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::definition::Names"
+title: "module lang::rascal::grammar::definition::Names"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tutor::repl::TutorCommandExecutor"
+title: "module lang::rascal::tutor::repl::TutorCommandExecutor"
 ---
 
 #### Usage
@@ -28,7 +28,7 @@ A closure-based object wrapper for Rascal REPL
 
 
 Using an instance of CommandExecutor you can simulate the exact interactions
-between a Rascal [Rascal shell:REPL](../../../../..//RascalShell/REPL) user and the REPL. 
+between a Rascal [Rascal shell:REPL](../../../../../RascalShell/REPL) user and the REPL. 
 
 This was created to implement documentation pages with example REPL runs.
 

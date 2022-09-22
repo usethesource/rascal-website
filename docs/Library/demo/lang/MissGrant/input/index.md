@@ -1,2 +1,4 @@
-# demo::lang::MissGrant::input
+---
+title: demo::lang::MissGrant::input
+---
 

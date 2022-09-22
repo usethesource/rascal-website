@@ -1,5 +1,5 @@
 ---
-title: "lang::sdf2::util::SDF2Grammar"
+title: "module lang::sdf2::util::SDF2Grammar"
 ---
 
 #### Usage

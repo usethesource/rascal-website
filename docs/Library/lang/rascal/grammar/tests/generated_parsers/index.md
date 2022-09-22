@@ -1,2 +1,4 @@
-# lang::rascal::grammar::tests::generated_parsers
+---
+title: lang::rascal::grammar::tests::generated_parsers
+---
 

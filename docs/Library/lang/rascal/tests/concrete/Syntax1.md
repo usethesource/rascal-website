@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::Syntax1"
+title: "module lang::rascal::tests::concrete::Syntax1"
 ---
 
 #### Usage

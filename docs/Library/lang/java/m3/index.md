@@ -1,4 +1,6 @@
-# lang::java::m3
+---
+title: lang::java::m3
+---
 
 
    * [TypeSymbol](../../../../Library/lang/java/m3/TypeSymbol.md)

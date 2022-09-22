@@ -1,5 +1,5 @@
 ---
-title: "lang::sdf2::filters::FilterCycles"
+title: "module lang::sdf2::filters::FilterCycles"
 ---
 
 #### Usage

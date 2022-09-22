@@ -1,4 +1,6 @@
-# lang::rascal::tests::library::analysis::statistics
+---
+title: lang::rascal::tests::library::analysis::statistics
+---
 
 
    * [RangeUtils](../../../../../../../Library/lang/rascal/tests/library/analysis/statistics/RangeUtils.md)

@@ -1,4 +1,6 @@
-# analysis::graphs
+---
+title: analysis::graphs
+---
 
 
    * [Graph](../../../Library/analysis/graphs/Graph.md)

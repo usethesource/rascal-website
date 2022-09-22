@@ -1,4 +1,6 @@
-# lang::pico::syntax
+---
+title: lang::pico::syntax
+---
 
 
    * [Main](../../../../Library/lang/pico/syntax/Main.md)

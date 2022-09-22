@@ -1,4 +1,6 @@
-# lang::rascal::tests::basic
+---
+title: lang::rascal::tests::basic
+---
 
 
    * [Strings1](../../../../../Library/lang/rascal/tests/basic/Strings1.md)

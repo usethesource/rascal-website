@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::extends2::CHECKER"
+title: "module lang::rascal::tests::extends2::CHECKER"
 ---
 
 #### Usage

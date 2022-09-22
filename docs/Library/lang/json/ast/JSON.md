@@ -1,5 +1,5 @@
 ---
-title: "lang::json::ast::JSON"
+title: "module lang::json::ast::JSON"
 ---
 
 #### Usage

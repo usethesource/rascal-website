@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::imports::Imports2"
+title: "module lang::rascal::tests::imports::Imports2"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::Integer"
+title: "module lang::rascal::tests::library::Integer"
 ---
 
 #### Usage

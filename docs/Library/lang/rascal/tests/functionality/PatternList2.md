@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::PatternList2"
+title: "module lang::rascal::tests::functionality::PatternList2"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::definition::Regular"
+title: "module lang::rascal::grammar::definition::Regular"
 ---
 
 #### Usage

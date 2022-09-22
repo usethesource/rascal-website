@@ -1,5 +1,5 @@
 ---
-title: "analysis::statistics::SimpleRegression"
+title: "module analysis::statistics::SimpleRegression"
 ---
 
 #### Usage

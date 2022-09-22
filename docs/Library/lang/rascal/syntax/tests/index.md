@@ -1,4 +1,6 @@
-# lang::rascal::syntax::tests
+---
+title: lang::rascal::syntax::tests
+---
 
 
    * [KnownIssues](../../../../../Library/lang/rascal/syntax/tests/KnownIssues.md)

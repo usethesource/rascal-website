@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::logic::\\syntax::Booleans"
+title: "module demo::lang::logic::\\syntax::Booleans"
 ---
 
 #### Usage

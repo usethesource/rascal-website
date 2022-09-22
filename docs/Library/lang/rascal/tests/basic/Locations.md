@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::Locations"
+title: "module lang::rascal::tests::basic::Locations"
 ---
 
 #### Usage

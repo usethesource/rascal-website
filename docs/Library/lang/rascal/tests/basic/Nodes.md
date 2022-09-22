@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::Nodes"
+title: "module lang::rascal::tests::basic::Nodes"
 ---
 
 #### Usage

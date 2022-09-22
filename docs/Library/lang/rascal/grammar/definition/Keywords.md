@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::definition::Keywords"
+title: "module lang::rascal::grammar::definition::Keywords"
 ---
 
 #### Usage

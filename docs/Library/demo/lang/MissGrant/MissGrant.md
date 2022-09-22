@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::MissGrant::MissGrant"
+title: "module demo::lang::MissGrant::MissGrant"
 ---
 
 #### Usage

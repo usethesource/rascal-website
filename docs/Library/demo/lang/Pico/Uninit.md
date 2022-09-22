@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Pico::Uninit"
+title: "module demo::lang::Pico::Uninit"
 ---
 
 #### Usage

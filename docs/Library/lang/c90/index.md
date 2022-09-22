@@ -1,4 +1,6 @@
-# lang::c90
+---
+title: lang::c90
+---
 
 
    * [syntax](../../../Library/lang/c90/syntax)

@@ -1,4 +1,6 @@
-# demo::lang::Pico
+---
+title: demo::lang::Pico
+---
 
 
    * [Typecheck](../../../../Library/demo/lang/Pico/Typecheck.md)

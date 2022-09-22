@@ -1,5 +1,5 @@
 ---
-title: "lang::sdf2::filters::DirectThenCountPreferAvoid"
+title: "module lang::sdf2::filters::DirectThenCountPreferAvoid"
 ---
 
 #### Usage

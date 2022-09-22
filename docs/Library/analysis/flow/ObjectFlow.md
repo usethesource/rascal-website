@@ -1,5 +1,5 @@
 ---
-title: "analysis::flow::ObjectFlow"
+title: "module analysis::flow::ObjectFlow"
 ---
 
 #### Usage

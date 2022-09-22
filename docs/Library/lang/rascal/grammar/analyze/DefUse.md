@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::analyze::DefUse"
+title: "module lang::rascal::grammar::analyze::DefUse"
 ---
 
 #### Usage

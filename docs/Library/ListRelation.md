@@ -1,5 +1,5 @@
 ---
-title: "ListRelation"
+title: "module ListRelation"
 ---
 
 #### Usage

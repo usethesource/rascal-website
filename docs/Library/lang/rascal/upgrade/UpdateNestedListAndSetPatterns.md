@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::upgrade::UpdateNestedListAndSetPatterns"
+title: "module lang::rascal::upgrade::UpdateNestedListAndSetPatterns"
 ---
 
 #### Usage

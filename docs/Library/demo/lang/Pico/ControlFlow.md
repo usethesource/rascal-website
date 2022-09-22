@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Pico::ControlFlow"
+title: "module demo::lang::Pico::ControlFlow"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::Memoization"
+title: "module lang::rascal::tests::basic::Memoization"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::java::m3::Registry"
+title: "module lang::java::m3::Registry"
 ---
 
 #### Usage

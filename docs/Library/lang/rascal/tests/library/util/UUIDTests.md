@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::util::UUIDTests"
+title: "module lang::rascal::tests::library::util::UUIDTests"
 ---
 
 #### Usage

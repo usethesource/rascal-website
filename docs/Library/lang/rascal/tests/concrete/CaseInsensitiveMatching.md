@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::CaseInsensitiveMatching"
+title: "module lang::rascal::tests::concrete::CaseInsensitiveMatching"
 ---
 
 #### Usage

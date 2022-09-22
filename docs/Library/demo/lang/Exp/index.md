@@ -1,4 +1,6 @@
-# demo::lang::Exp
+---
+title: demo::lang::Exp
+---
 
 
    * [Abstract](../../../../Library/demo/lang/Exp/Abstract)

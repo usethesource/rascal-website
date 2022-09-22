@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::PrefixMatching"
+title: "module lang::rascal::tests::concrete::PrefixMatching"
 ---
 
 #### Usage

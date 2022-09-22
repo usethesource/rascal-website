@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::extends1::Base2"
+title: "module lang::rascal::tests::extends1::Base2"
 ---
 
 #### Usage

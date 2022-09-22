@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::imports::ModuleInitRange"
+title: "module lang::rascal::tests::imports::ModuleInitRange"
 ---
 
 #### Usage

@@ -1,4 +1,6 @@
-# lang::rascal::tests::extend_function1
+---
+title: lang::rascal::tests::extend_function1
+---
 
 
    * [M1](../../../../../Library/lang/rascal/tests/extend_function1/M1.md)

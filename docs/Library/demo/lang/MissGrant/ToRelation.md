@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::MissGrant::ToRelation"
+title: "module demo::lang::MissGrant::ToRelation"
 ---
 
 #### Usage

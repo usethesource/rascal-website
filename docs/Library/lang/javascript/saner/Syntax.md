@@ -1,5 +1,5 @@
 ---
-title: "lang::javascript::saner::Syntax"
+title: "module lang::javascript::saner::Syntax"
 ---
 
 #### Usage

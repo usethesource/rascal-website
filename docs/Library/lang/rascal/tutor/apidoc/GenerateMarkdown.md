@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tutor::apidoc::GenerateMarkdown"
+title: "module lang::rascal::tutor::apidoc::GenerateMarkdown"
 ---
 
 #### Usage

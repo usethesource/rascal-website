@@ -1,5 +1,5 @@
 ---
-title: "lang::html::IO"
+title: "module lang::html::IO"
 ---
 
 #### Usage

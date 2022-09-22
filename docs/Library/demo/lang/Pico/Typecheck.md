@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Pico::Typecheck"
+title: "module demo::lang::Pico::Typecheck"
 ---
 
 #### Usage

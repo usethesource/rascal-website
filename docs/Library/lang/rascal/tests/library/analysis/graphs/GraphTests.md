@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::analysis::graphs::GraphTests"
+title: "module lang::rascal::tests::library::analysis::graphs::GraphTests"
 ---
 
 #### Usage

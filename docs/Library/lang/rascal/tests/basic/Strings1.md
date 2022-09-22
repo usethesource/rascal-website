@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::Strings1"
+title: "module lang::rascal::tests::basic::Strings1"
 ---
 
 #### Usage

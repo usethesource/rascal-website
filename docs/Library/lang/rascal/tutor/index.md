@@ -1,4 +1,6 @@
-# lang::rascal::tutor
+---
+title: lang::rascal::tutor
+---
 
 
    * [Includer](../../../../Library/lang/rascal/tutor/Includer.md)

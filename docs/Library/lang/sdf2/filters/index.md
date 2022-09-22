@@ -1,4 +1,6 @@
-# lang::sdf2::filters
+---
+title: lang::sdf2::filters
+---
 
 
    * [Reject](../../../../Library/lang/sdf2/filters/Reject.md)

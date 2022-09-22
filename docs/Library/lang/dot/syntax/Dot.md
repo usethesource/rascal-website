@@ -1,5 +1,5 @@
 ---
-title: "lang::dot::\\syntax::Dot"
+title: "module lang::dot::\\syntax::Dot"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "analysis::m3::Core"
+title: "module analysis::m3::Core"
 ---
 
 #### Usage

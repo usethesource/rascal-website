@@ -1,5 +1,5 @@
 ---
-title: "util::Test"
+title: "module util::Test"
 ---
 
 #### Usage

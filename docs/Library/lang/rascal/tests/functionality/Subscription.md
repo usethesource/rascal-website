@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Subscription"
+title: "module lang::rascal::tests::functionality::Subscription"
 ---
 
 #### Usage

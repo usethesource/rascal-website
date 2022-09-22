@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::scaffold::GenOperators"
+title: "module lang::rascal::scaffold::GenOperators"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "demo::common::WordReplacement"
+title: "module demo::common::WordReplacement"
 ---
 
 #### Usage

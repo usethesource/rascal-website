@@ -1,4 +1,6 @@
-# analysis::linearprogramming
+---
+title: analysis::linearprogramming
+---
 
 
    * [LLLinearProgramming](../../../Library/analysis/linearprogramming/LLLinearProgramming.md)

@@ -1,2 +1,4 @@
-# lang::xml::examples
+---
+title: lang::xml::examples
+---
 

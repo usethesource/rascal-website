@@ -1,4 +1,6 @@
-# lang::rascal::tutor::apidoc
+---
+title: lang::rascal::tutor::apidoc
+---
 
 
    * [DeclarationInfo](../../../../../Library/lang/rascal/tutor/apidoc/DeclarationInfo.md)

@@ -1,4 +1,6 @@
-# lang::smtlib2::command
+---
+title: lang::smtlib2::command
+---
 
 
    * [response](../../../../Library/lang/smtlib2/command/response)

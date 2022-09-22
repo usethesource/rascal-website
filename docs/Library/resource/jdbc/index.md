@@ -1,4 +1,6 @@
-# resource::jdbc
+---
+title: resource::jdbc
+---
 
 
    * [JDBC](../../../Library/resource/jdbc/JDBC.md)

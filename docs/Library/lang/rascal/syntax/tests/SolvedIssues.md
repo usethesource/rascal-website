@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::\\syntax::tests::SolvedIssues"
+title: "module lang::rascal::\\syntax::tests::SolvedIssues"
 ---
 
 #### Usage

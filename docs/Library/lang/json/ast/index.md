@@ -1,4 +1,6 @@
-# lang::json::ast
+---
+title: lang::json::ast
+---
 
 
    * [JSON](../../../../Library/lang/json/ast/JSON.md)

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::definition::Layout"
+title: "module lang::rascal::grammar::definition::Layout"
 ---
 
 #### Usage

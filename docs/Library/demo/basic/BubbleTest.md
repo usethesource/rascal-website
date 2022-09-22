@@ -1,5 +1,5 @@
 ---
-title: "demo::basic::BubbleTest"
+title: "module demo::basic::BubbleTest"
 ---
 
 #### Usage

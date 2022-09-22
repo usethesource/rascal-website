@@ -1,4 +1,6 @@
-# analysis::diff::edits
+---
+title: analysis::diff::edits
+---
 
 
    * [TextEdits](../../../../Library/analysis/diff/edits/TextEdits.md)

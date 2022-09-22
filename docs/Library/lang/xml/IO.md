@@ -1,5 +1,5 @@
 ---
-title: "lang::xml::IO"
+title: "module lang::xml::IO"
 ---
 
 #### Usage

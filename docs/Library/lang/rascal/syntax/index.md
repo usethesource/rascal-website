@@ -1,4 +1,6 @@
-# lang::rascal::syntax
+---
+title: lang::rascal::syntax
+---
 
 
    * [tests](../../../../Library/lang/rascal/syntax/tests)

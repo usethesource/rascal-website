@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::ide::Outline"
+title: "module lang::rascal::ide::Outline"
 ---
 
 #### Usage

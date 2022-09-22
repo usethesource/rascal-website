@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Projection"
+title: "module lang::rascal::tests::functionality::Projection"
 ---
 
 #### Usage

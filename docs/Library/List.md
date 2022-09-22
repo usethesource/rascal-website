@@ -1,5 +1,5 @@
 ---
-title: "List"
+title: "module List"
 ---
 
 #### Usage
@@ -217,11 +217,11 @@ Get an arbitrary element from a list. See [take one from](../Library/List#List-t
 rascal>import List;
 ok
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
+str: "snake"
+rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
+str: "zebra"
+rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "owl"
-rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "snake"
-rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "snake"
 ```
 
 ## function getFirstFrom {#List-getFirstFrom}
@@ -984,9 +984,9 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [4,2,1,3]
+list[int]: [2,4,1,3]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["zebra","elephant","owl","snake"]
+list[str]: ["zebra","owl","snake","elephant"]
 ```
 
 ## function split {#List-split}
@@ -1140,17 +1140,17 @@ See [get one from](../Library/List#List-getOneFrom) to only selected an element 
 rascal>import List;
 ok
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <40,[10,20,30,50]>
-rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <50,[10,20,30,40]>
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <10,[20,30,40,50]>
+tuple[int,list[int]]: <40,[10,20,30,50]>
+rascal>takeOneFrom([10,20,30,40,50]);
+tuple[int,list[int]]: <30,[10,20,40,50]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
+tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
+tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
+tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 ```
 
 ## function takeWhile {#List-takeWhile}

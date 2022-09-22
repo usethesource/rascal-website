@@ -1,4 +1,6 @@
-# lang::rascal::tests::imports
+---
+title: lang::rascal::tests::imports
+---
 
 
    * [Mbase](../../../../../Library/lang/rascal/tests/imports/Mbase.md)

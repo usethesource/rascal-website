@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::extends2::TYPEPAL"
+title: "module lang::rascal::tests::extends2::TYPEPAL"
 ---
 
 #### Usage

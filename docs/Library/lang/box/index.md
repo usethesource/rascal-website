@@ -1,4 +1,6 @@
-# lang::box
+---
+title: lang::box
+---
 
 
    * [util](../../../Library/lang/box/util)

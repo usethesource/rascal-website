@@ -1,4 +1,6 @@
-# lang::rascal::tests::library::util
+---
+title: lang::rascal::tests::library::util
+---
 
 
    * [UUIDTests](../../../../../../Library/lang/rascal/tests/library/util/UUIDTests.md)

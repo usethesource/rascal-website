@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::analyze::Dependency"
+title: "module lang::rascal::grammar::analyze::Dependency"
 ---
 
 #### Usage

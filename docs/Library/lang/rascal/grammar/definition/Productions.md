@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::definition::Productions"
+title: "module lang::rascal::grammar::definition::Productions"
 ---
 
 #### Usage

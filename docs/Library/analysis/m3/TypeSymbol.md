@@ -1,5 +1,5 @@
 ---
-title: "analysis::m3::TypeSymbol"
+title: "module analysis::m3::TypeSymbol"
 ---
 
 #### Usage

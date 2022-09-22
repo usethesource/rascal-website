@@ -1,2 +1,4 @@
-# lang::rascal::doc
+---
+title: lang::rascal::doc
+---
 

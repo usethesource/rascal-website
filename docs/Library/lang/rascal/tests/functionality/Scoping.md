@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::Scoping"
+title: "module lang::rascal::tests::functionality::Scoping"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rsf::IO"
+title: "module lang::rsf::IO"
 ---
 
 #### Usage

@@ -76,7 +76,7 @@ compile(pcfg);
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Libraries/Libraries.md|
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Libraries/Boolean|
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Questions|
-list[Message]: [warning(
+list[Message]: [error(
     "Ambiguous concept link: CallAnalysis resolves to all of these: /Recipes/Common/CallAnalysis /Test/CallAnalysis /Library/lang/rascal/tutor/examples/Test/CallAnalysis /Test/CallAnalysis/index.md ",
     |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Test.md|(523,1,<25,0>,<25,1>),
     cause="Please choose from the following options to disambiguate: \n    Recipes:Common-CallAnalysis resolves to /Recipes/Common/CallAnalysis\n    Library:lang-rascal-tutor-examples-Test-CallAnalysis resolves to /Library/lang/rascal/tutor/examples/Test/CallAnalysis\n    lang-rascal-tutor-examples-Test-CallAnalysis resolves to /Library/lang/rascal/tutor/examples/Test/CallAnalysis\n    Test:Test-CallAnalysis resolves to /Test/CallAnalysis\n    Recipes:CallAnalysis resolves to /Recipes/Common/CallAnalysis\n    Test:package:CallAnalysis resolves to /Test/CallAnalysis/index.md\n    Library:CallAnalysis resolves to /Library/lang/rascal/tutor/examples/Test/CallAnalysis\n    Common-CallAnalysis resolves to /Recipes/Common/CallAnalysis")]

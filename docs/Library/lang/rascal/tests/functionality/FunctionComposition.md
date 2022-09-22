@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::FunctionComposition"
+title: "module lang::rascal::tests::functionality::FunctionComposition"
 ---
 
 #### Usage

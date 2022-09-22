@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Lisra::Parse"
+title: "module demo::lang::Lisra::Parse"
 ---
 
 #### Usage

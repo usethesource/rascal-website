@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tutor::questions::ConvertQuestions"
+title: "module lang::rascal::tutor::questions::ConvertQuestions"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::CommonKeywordParameter4::C"
+title: "module lang::rascal::tests::functionality::CommonKeywordParameter4::C"
 ---
 
 #### Usage

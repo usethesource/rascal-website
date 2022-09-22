@@ -1,5 +1,5 @@
 ---
-title: "lang::sdf2::util::Importer"
+title: "module lang::sdf2::util::Importer"
 ---
 
 #### Usage

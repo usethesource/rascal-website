@@ -1,2 +1,4 @@
-# demo::lang::Pico::programs
+---
+title: demo::lang::Pico::programs
+---
 

@@ -1,5 +1,5 @@
 ---
-title: "lang::sexp::\\syntax::SExp"
+title: "module lang::sexp::\\syntax::SExp"
 ---
 
 #### Usage

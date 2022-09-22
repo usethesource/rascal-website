@@ -1,4 +1,6 @@
-# lang::xml
+---
+title: lang::xml
+---
 
 
    * [DOM](../../../Library/lang/xml/DOM.md)

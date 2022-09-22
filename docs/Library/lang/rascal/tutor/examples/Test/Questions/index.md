@@ -1,2 +1,4 @@
-# lang::rascal::tutor::examples::Test::Questions
+---
+title: lang::rascal::tutor::examples::Test::Questions
+---
 

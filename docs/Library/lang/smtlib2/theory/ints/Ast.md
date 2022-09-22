@@ -1,5 +1,5 @@
 ---
-title: "lang::smtlib2::theory::ints::Ast"
+title: "module lang::smtlib2::theory::ints::Ast"
 ---
 
 #### Usage

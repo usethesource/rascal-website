@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::CommonKeywordParameterImport3::Tests"
+title: "module lang::rascal::tests::functionality::CommonKeywordParameterImport3::Tests"
 ---
 
 #### Usage

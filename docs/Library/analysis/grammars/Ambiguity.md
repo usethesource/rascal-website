@@ -1,5 +1,5 @@
 ---
-title: "analysis::grammars::Ambiguity"
+title: "module analysis::grammars::Ambiguity"
 ---
 
 #### Usage

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tutor::Includer"
+title: "module lang::rascal::tutor::Includer"
 ---
 
 #### Usage

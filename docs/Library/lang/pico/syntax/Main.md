@@ -1,5 +1,5 @@
 ---
-title: "lang::pico::\\syntax::Main"
+title: "module lang::pico::\\syntax::Main"
 ---
 
 #### Usage

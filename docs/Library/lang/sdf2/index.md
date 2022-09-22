@@ -1,4 +1,6 @@
-# lang::sdf2
+---
+title: lang::sdf2
+---
 
 
    * [filters](../../../Library/lang/sdf2/filters)

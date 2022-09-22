@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::MissGrant::DesugarResetEvents"
+title: "module demo::lang::MissGrant::DesugarResetEvents"
 ---
 
 #### Usage

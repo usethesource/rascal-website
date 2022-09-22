@@ -1,4 +1,6 @@
-# analysis::m3
+---
+title: analysis::m3
+---
 
 
    * [TypeSymbol](../../../Library/analysis/m3/TypeSymbol.md)

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::definition::Symbols"
+title: "module lang::rascal::grammar::definition::Symbols"
 ---
 
 #### Usage

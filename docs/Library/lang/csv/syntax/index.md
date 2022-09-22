@@ -1,4 +1,6 @@
-# lang::csv::syntax
+---
+title: lang::csv::syntax
+---
 
 
    * [CSV](../../../../Library/lang/csv/syntax/CSV.md)

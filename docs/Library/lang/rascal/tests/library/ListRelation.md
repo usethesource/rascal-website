@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::ListRelation"
+title: "module lang::rascal::tests::library::ListRelation"
 ---
 
 #### Usage

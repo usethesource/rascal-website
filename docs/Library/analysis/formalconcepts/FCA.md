@@ -1,5 +1,5 @@
 ---
-title: "analysis::formalconcepts::FCA"
+title: "module analysis::formalconcepts::FCA"
 ---
 
 #### Usage

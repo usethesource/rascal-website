@@ -1,4 +1,6 @@
-# lang::rascal::tutor::questions
+---
+title: lang::rascal::tutor::questions
+---
 
 
    * [QuestionCompiler](../../../../../Library/lang/rascal/tutor/questions/QuestionCompiler.md)

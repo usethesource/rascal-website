@@ -1,4 +1,6 @@
-# analysis::grammars
+---
+title: analysis::grammars
+---
 
 
    * [Ambiguity](../../../Library/analysis/grammars/Ambiguity.md)

@@ -1,5 +1,5 @@
 ---
-title: "util::tasks::Manager"
+title: "module util::tasks::Manager"
 ---
 
 #### Usage

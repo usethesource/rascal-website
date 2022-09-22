@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::Exp::Combined::Manual::Load"
+title: "module demo::lang::Exp::Combined::Manual::Load"
 ---
 
 #### Usage

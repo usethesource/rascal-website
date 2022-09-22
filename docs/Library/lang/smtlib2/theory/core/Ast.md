@@ -1,5 +1,5 @@
 ---
-title: "lang::smtlib2::theory::core::Ast"
+title: "module lang::smtlib2::theory::core::Ast"
 ---
 
 #### Usage

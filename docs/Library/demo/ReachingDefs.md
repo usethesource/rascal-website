@@ -1,5 +1,5 @@
 ---
-title: "demo::ReachingDefs"
+title: "module demo::ReachingDefs"
 ---
 
 #### Usage

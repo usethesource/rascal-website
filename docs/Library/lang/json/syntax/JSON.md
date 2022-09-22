@@ -1,5 +1,5 @@
 ---
-title: "lang::json::\\syntax::JSON"
+title: "module lang::json::\\syntax::JSON"
 ---
 
 #### Usage

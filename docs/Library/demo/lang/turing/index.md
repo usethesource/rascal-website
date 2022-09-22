@@ -1,4 +1,6 @@
-# demo::lang::turing
+---
+title: demo::lang::turing
+---
 
 
    * [l2](../../../../Library/demo/lang/turing/l2)

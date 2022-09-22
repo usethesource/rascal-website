@@ -1,5 +1,5 @@
 ---
-title: "demo::basic::Ackermann"
+title: "module demo::basic::Ackermann"
 ---
 
 #### Usage

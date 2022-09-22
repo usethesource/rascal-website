@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::RegExp"
+title: "module lang::rascal::tests::functionality::RegExp"
 ---
 
 #### Usage

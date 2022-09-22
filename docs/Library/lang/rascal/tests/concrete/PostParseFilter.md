@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::PostParseFilter"
+title: "module lang::rascal::tests::concrete::PostParseFilter"
 ---
 
 #### Usage

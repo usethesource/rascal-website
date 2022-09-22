@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::DynamicDispatch"
+title: "module lang::rascal::tests::basic::DynamicDispatch"
 ---
 
 #### Usage

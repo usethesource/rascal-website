@@ -1,5 +1,5 @@
 ---
-title: "lang::sdf2::filters::CountPreferAvoid"
+title: "module lang::sdf2::filters::CountPreferAvoid"
 ---
 
 #### Usage

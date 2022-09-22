@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::turing::l1::cst::Parse"
+title: "module demo::lang::turing::l1::cst::Parse"
 ---
 
 #### Usage

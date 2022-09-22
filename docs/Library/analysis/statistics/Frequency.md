@@ -1,5 +1,5 @@
 ---
-title: "analysis::statistics::Frequency"
+title: "module analysis::statistics::Frequency"
 ---
 
 #### Usage

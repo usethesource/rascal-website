@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::TestsForTests"
+title: "module lang::rascal::tests::basic::TestsForTests"
 ---
 
 #### Usage

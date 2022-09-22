@@ -1,4 +1,6 @@
-# analysis
+---
+title: analysis
+---
 
 
    * [statistics](../../Library/analysis/statistics)

@@ -1,5 +1,5 @@
 ---
-title: "lang::diff::unified::UnifiedDiff"
+title: "module lang::diff::unified::UnifiedDiff"
 ---
 
 #### Usage

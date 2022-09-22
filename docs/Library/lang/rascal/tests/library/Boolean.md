@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::library::Boolean"
+title: "module lang::rascal::tests::library::Boolean"
 ---
 
 #### Usage

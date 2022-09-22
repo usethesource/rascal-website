@@ -1,5 +1,5 @@
 ---
-title: "demo::common::CountConstructors"
+title: "module demo::common::CountConstructors"
 ---
 
 #### Usage

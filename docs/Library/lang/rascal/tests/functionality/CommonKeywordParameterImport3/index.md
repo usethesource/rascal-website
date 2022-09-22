@@ -1,4 +1,6 @@
-# lang::rascal::tests::functionality::CommonKeywordParameterImport3
+---
+title: lang::rascal::tests::functionality::CommonKeywordParameterImport3
+---
 
 
    * [D](../../../../../../Library/lang/rascal/tests/functionality/CommonKeywordParameterImport3/D.md)

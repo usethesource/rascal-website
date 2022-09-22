@@ -1,4 +1,6 @@
-# lang::rascal::format
+---
+title: lang::rascal::format
+---
 
 
    * [Escape](../../../../Library/lang/rascal/format/Escape.md)

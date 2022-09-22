@@ -1,5 +1,5 @@
 ---
-title: "lang::sexp::SExp"
+title: "module lang::sexp::SExp"
 ---
 
 #### Usage

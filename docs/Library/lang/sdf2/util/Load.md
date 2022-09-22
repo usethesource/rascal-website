@@ -1,5 +1,5 @@
 ---
-title: "lang::sdf2::util::Load"
+title: "module lang::sdf2::util::Load"
 ---
 
 #### Usage

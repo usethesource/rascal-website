@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tutor::apidoc::DeclarationInfo"
+title: "module lang::rascal::tutor::apidoc::DeclarationInfo"
 ---
 
 #### Usage

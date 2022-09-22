@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::definition::Characters"
+title: "module lang::rascal::grammar::definition::Characters"
 ---
 
 #### Usage

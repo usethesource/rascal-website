@@ -1,5 +1,5 @@
 ---
-title: "Exception"
+title: "module Exception"
 ---
 
 #### Usage

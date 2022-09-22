@@ -1,4 +1,6 @@
-# lang::box::syntax
+---
+title: lang::box::syntax
+---
 
 
    * [Box](../../../../Library/lang/box/syntax/Box.md)

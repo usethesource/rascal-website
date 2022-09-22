@@ -1,4 +1,6 @@
-# demo::lang::Exp::Abstract
+---
+title: demo::lang::Exp::Abstract
+---
 
 
    * [Test](../../../../../Library/demo/lang/Exp/Abstract/Test.md)

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::Character"
+title: "module lang::rascal::tests::concrete::Character"
 ---
 
 #### Usage

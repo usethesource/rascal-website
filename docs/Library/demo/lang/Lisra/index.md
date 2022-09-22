@@ -1,4 +1,6 @@
-# demo::lang::Lisra
+---
+title: demo::lang::Lisra
+---
 
 
    * [Test](../../../../Library/demo/lang/Lisra/Test.md)

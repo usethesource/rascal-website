@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::functionality::PatternTuple"
+title: "module lang::rascal::tests::functionality::PatternTuple"
 ---
 
 #### Usage

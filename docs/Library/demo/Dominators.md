@@ -1,5 +1,5 @@
 ---
-title: "demo::Dominators"
+title: "module demo::Dominators"
 ---
 
 #### Usage

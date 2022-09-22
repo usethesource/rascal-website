@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::meta::ModuleInfoTests"
+title: "module lang::rascal::meta::ModuleInfoTests"
 ---
 
 #### Usage

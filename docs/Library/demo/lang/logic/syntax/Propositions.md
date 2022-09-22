@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::logic::\\syntax::Propositions"
+title: "module demo::lang::logic::\\syntax::Propositions"
 ---
 
 #### Usage

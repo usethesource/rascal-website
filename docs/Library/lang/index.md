@@ -1,4 +1,6 @@
-# lang
+---
+title: lang
+---
 
 
    * [aut](../../Library/lang/aut)

@@ -1,5 +1,5 @@
 ---
-title: "analysis::grammars::LOC"
+title: "module analysis::grammars::LOC"
 ---
 
 #### Usage

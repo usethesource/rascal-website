@@ -1,5 +1,5 @@
 ---
-title: "demo::basic::Factorial"
+title: "module demo::basic::Factorial"
 ---
 
 #### Usage

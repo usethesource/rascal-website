@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::Equality"
+title: "module lang::rascal::tests::basic::Equality"
 ---
 
 #### Usage

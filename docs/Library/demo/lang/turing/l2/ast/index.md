@@ -1,4 +1,6 @@
-# demo::lang::turing::l2::ast
+---
+title: demo::lang::turing::l2::ast
+---
 
 
    * [Turing](../../../../../../Library/demo/lang/turing/l2/ast/Turing.md)

@@ -1,4 +1,6 @@
-# lang::rascal::tests::extends2
+---
+title: lang::rascal::tests::extends2
+---
 
 
    * [TYPEPAL](../../../../../Library/lang/rascal/tests/extends2/TYPEPAL.md)

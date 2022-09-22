@@ -1,5 +1,5 @@
 ---
-title: "demo::common::WordCount::WordCount"
+title: "module demo::common::WordCount::WordCount"
 ---
 
 #### Usage

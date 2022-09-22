@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::MissGrant::CheckController"
+title: "module demo::lang::MissGrant::CheckController"
 ---
 
 #### Usage

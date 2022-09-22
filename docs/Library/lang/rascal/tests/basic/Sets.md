@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::Sets"
+title: "module lang::rascal::tests::basic::Sets"
 ---
 
 #### Usage

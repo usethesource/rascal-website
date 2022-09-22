@@ -1,4 +1,6 @@
-# demo::lang::turing::l1
+---
+title: demo::lang::turing::l1
+---
 
 
    * [interpreter](../../../../../Library/demo/lang/turing/l1/interpreter)

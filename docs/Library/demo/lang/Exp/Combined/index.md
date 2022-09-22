@@ -1,4 +1,6 @@
-# demo::lang::Exp::Combined
+---
+title: demo::lang::Exp::Combined
+---
 
 
    * [Automatic](../../../../../Library/demo/lang/Exp/Combined/Automatic)

@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::SolvedIssues"
+title: "module lang::rascal::tests::basic::SolvedIssues"
 ---
 
 #### Usage

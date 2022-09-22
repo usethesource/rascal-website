@@ -1,5 +1,5 @@
 ---
-title: "lang::std::Id"
+title: "module lang::std::Id"
 ---
 
 #### Usage

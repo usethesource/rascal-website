@@ -1,5 +1,5 @@
 ---
-title: "analysis::graphs::LabeledGraph"
+title: "module analysis::graphs::LabeledGraph"
 ---
 
 #### Usage

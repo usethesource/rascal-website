@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::SyntaxKeywordFields"
+title: "module lang::rascal::tests::concrete::SyntaxKeywordFields"
 ---
 
 #### Usage

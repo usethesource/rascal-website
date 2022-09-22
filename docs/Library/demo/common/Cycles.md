@@ -1,5 +1,5 @@
 ---
-title: "demo::common::Cycles"
+title: "module demo::common::Cycles"
 ---
 
 #### Usage

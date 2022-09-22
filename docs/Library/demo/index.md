@@ -1,4 +1,6 @@
-# demo
+---
+title: demo
+---
 
 
    * [ReachingDefs](../../Library/demo/ReachingDefs.md)

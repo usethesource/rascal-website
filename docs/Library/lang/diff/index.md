@@ -1,4 +1,6 @@
-# lang::diff
+---
+title: lang::diff
+---
 
 
    * [unified](../../../Library/lang/diff/unified)

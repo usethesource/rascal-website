@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::basic::Exceptions"
+title: "module lang::rascal::tests::basic::Exceptions"
 ---
 
 #### Usage

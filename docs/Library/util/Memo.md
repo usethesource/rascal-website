@@ -1,5 +1,5 @@
 ---
-title: "util::Memo"
+title: "module util::Memo"
 ---
 
 #### Usage

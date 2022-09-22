@@ -1,5 +1,5 @@
 ---
-title: "lang::aut::IO"
+title: "module lang::aut::IO"
 ---
 
 #### Usage

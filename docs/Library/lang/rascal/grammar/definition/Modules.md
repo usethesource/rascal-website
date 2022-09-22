@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::grammar::definition::Modules"
+title: "module lang::rascal::grammar::definition::Modules"
 ---
 
 #### Usage

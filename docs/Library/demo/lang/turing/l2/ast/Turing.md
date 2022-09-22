@@ -1,5 +1,5 @@
 ---
-title: "demo::lang::turing::l2::ast::Turing"
+title: "module demo::lang::turing::l2::ast::Turing"
 ---
 
 #### Usage

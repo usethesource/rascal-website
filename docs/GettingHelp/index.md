@@ -28,7 +28,7 @@ You can use Rascal in two ways:
 
 Both provide help facilities that we discuss in more detail:
 
-* [Command line](..//GettingHelp/CommandLine)
-* [Getting help:IDE](..//GettingHelp/IDE)
-* [Browsing](..//GettingHelp/Browsing)
+* [Command line](../GettingHelp/CommandLine)
+* [Getting help:IDE](../GettingHelp/IDE)
+* [Browsing](../GettingHelp/Browsing)
 

@@ -1,5 +1,5 @@
 ---
-title: "util::Maybe"
+title: "module util::Maybe"
 ---
 
 #### Usage

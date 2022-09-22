@@ -1,5 +1,5 @@
 ---
-title: "lang::rascal::tests::concrete::FieldProjectionBug"
+title: "module lang::rascal::tests::concrete::FieldProjectionBug"
 ---
 
 #### Usage

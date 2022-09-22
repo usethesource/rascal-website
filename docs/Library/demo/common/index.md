@@ -1,4 +1,6 @@
-# demo::common
+---
+title: demo::common
+---
 
 
    * [ColoredTrees](../../../Library/demo/common/ColoredTrees.md)
