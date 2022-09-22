@@ -21,8 +21,6 @@ Less than or equal operator on string values.
 | `str`     |  `str`    | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if the string value of _Exp_<sub>1</sub> is lexicographically less
@@ -41,7 +39,5 @@ bool: true
 rascal>"abc" <= "a";
 bool: false
 ```
-
-#### Benefits
 
 

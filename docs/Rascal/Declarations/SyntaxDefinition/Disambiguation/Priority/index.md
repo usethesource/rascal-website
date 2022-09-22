@@ -16,13 +16,9 @@ Declare the priority of operators.
 *  `syntax Exp = alt<sub>1</sub> | alt<sub>2</sub> > alt<sub>3</sub> | alt<sub>4</sub>`, where the `|` signifies groups of equal priority
 *  `syntax Exp = associativity ( _alt<sub>1</sub> | ... ) > _alt<sub>2</sub>`, where an associativity group denotes a group of equal priority
 
-#### Types
-
-#### Function
-
 #### Description
 
-Priority declarations define a partial ordering between the productions _within a single non-terminal_. The feature is specifically designed to fit with the semantics of expression sub-languages embedded in programming languages. There exist other mechanisms for [Disambiguation](/docs/Rascal/Declarations/SyntaxDefinition/Disambiguation), if [Priority](/docs/Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority) does not work for you.
+Priority declarations define a partial ordering between the productions _within a single non-terminal_. The feature is specifically designed to fit with the semantics of expression sub-languages embedded in programming languages. There exist other mechanisms for [Disambiguation](../../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation), if [Priority](../../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority) does not work for you.
 
 The semantics of a priority relation `A > B` is that B will not be nested under A in the left-most or right-most position.
 Any other position of A will allow B fine. Note that the priority relation you define is transitively closed, so if A > B and B > C then A > C.
@@ -39,7 +35,7 @@ A finer point is that Rascal restricts the filtering of priority such that it is
 
 #### Examples
 
-The following snippet uses all [Priority](/docs/Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority) features:
+The following snippet uses all [Priority](../../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority) features:
 ```rascal
 syntax Exp 
   = A: Id

@@ -14,10 +14,6 @@ Retrieve a tuple field by its index position.
 
 `Exp<sub>1</sub> [ Exp<sub>2</sub> ]`
 
-#### Types
-
-#### Function
-
 #### Description
 
 Subscription retrieves the tuple element with index _Exp_<sub>2</sub> from the tuple value of _Exp_<sub>1</sub>.
@@ -32,7 +28,5 @@ tuple[str,int]: <"mon",1>
 rascal>T[0];
 str: "mon"
 ```
-
-#### Benefits
 
 

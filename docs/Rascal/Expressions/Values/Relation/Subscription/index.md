@@ -14,8 +14,6 @@ keywords:
 
 Indexing of a relation via tuple values.
 
-#### Types
-
 ##### Single Value Variant 1
 
 |     |     |     |     |     |

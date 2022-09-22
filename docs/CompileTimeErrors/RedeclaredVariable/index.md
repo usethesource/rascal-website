@@ -6,14 +6,6 @@ title: RedeclaredVariable
 
 A variable with the same name has been declared in the same scope.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Remedy: rename one of the variables.
@@ -29,7 +21,5 @@ rascal>int n = 4;
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/RedeclaredVariable/RedeclaredVariable.html|
 ok
 ```
-
-#### Benefits
 
 

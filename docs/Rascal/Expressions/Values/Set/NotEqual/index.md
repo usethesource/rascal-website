@@ -20,8 +20,6 @@ Not equal operator on set values.
 | `set[T<sub>1</sub>]` |  `set[T<sub>2</sub>]` | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if both arguments are unequal sets and `false` otherwise.
@@ -35,7 +33,5 @@ bool: false
 rascal>{1, 2, 3} != {1, 2};
 bool: true
 ```
-
-#### Benefits
 
 

@@ -22,8 +22,6 @@ The _or_ operator on Boolean values.
 | `bool`    | `bool`     | `bool`                |
 
 
-#### Function
-
 #### Description
 
 The _or_ operator on Boolean values defined as follows:
@@ -59,7 +57,5 @@ true for 2
 true for 4
 list[void]: []
 ```
-
-#### Benefits
 
 

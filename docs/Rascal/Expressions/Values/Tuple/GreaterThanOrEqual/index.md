@@ -21,8 +21,6 @@ Greater than or equal operator on tuple values.
 | `tuple[ T<sub>11</sub>, T<sub>12</sub>, ... ]` |  `tuple[ T<sub>21</sub>, T<sub>22</sub>, ... ]` | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if 
@@ -43,7 +41,5 @@ bool: false
 rascal><1, "def", true> > <1, "abc", true>;
 bool: true
 ```
-
-#### Benefits
 
 

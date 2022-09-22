@@ -20,10 +20,6 @@ int fac(int n) {
 }
 ``````
 
-#### Types
-
-#### Function
-
 #### Description
 
 You can use the triple backquotes to encapsulate a piece of literal source text. The language name indicates
@@ -79,7 +75,5 @@ That block simply produces this:
 int fac(0) = 1;
 default int fac(int n) = n * fac(n - 1);
 ```
-
-#### Benefits
 
 

@@ -6,14 +6,6 @@ title: AbstractDataType
 
 A definition of a data type.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 An [Abstract Data Type](http://en.wikipedia.org/wiki/Abstract_data_type) is a mathematical description of a structure
@@ -24,10 +16,8 @@ can be implemented using a list, array or something else.
 In functional languages, and also in Rascal, abstract datatypes (or ADTs for short)
 are used to define new data types. Well-known examples are http://en.wikipedia.org/wiki/Stack_(data_structure)[stack] and http://en.wikipedia.org/wiki/Tree_(data_structure)[tree].
 
-See [Algebraic Data Types](/docs/Rascal/Declarations/AlgebraicDataType) and 
-[Constructors](/docs/Rascal/Expressions/Values/Constructor) in the [Rascal Language Reference](/docs/Rascal/).
-
-#### Examples
+See [Algebraic Data Types](../../Rascal/Declarations/AlgebraicDataType) and 
+[Constructors](../../Rascal/Expressions/Values/Constructor) in the [Rascal Language Reference](../../Rascal/).
 
 ## Abstract Data Types in Daily Life
 
@@ -56,7 +46,5 @@ See [Algebraic Data Types](/docs/Rascal/Declarations/AlgebraicDataType) and
 ```rascal
 data MyTree = leaf(int n) | tree(str name, MyTree left, MyTree right);
 ```
-
-#### Benefits
 
 

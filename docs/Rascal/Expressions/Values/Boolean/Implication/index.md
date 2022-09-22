@@ -22,8 +22,6 @@ The _implication_ operator on Boolean values.
 | `bool`       | `bool`         | `bool`  |
 
 
-#### Function
-
 #### Description
 
 The _implication_ operator on Boolean values defined as follows:
@@ -46,7 +44,5 @@ rascal>false ==> true;
 bool: true
 ```
 
-
-#### Benefits
 
 

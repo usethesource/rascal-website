@@ -14,10 +14,6 @@ Type constraints restrict the acceptable type for parameters.
 
 `& Name <: Type`
 
-#### Types
-
-#### Function
-
 #### Description
 
 Constraints can be imposed on the actual types to which a type parameter may be bound. 
@@ -26,7 +22,7 @@ actual types bound to _Name_ should be a subtype of _Type_.
 
 #### Examples
 
-Here is the definition of the absolute value function `abs` from the [./Number](/docs/Rascal/Expressions/Values/Number) library:
+Here is the definition of the absolute value function `abs` from the [./Number](../../../../Rascal/Expressions/Values/Number) library:
 ```rascal
 public &T <: num abs(&T <: num N)
 {
@@ -44,13 +40,13 @@ rascal>abs(-3.5);
 real: 3.5
 ```
 
-Here is an example from the [Node](/docs/Rascal/Expressions/Values/Node) library:
+Here is an example from the [Node](../../../../Rascal/Expressions/Values/Node) library:
 ```rascal
 &T <: node setAnnotations(&T <: node x, map[str, value] annotations);
 ```
 (we don't give the body of this function since it has been implemented in Java).
 `setAnnotations` takes a value of any type that is at most `node` and adds annotations to it.
-This makes it possible to set annotations on any [Algebraic Data Type](/docs/Rascal/Declarations/AlgebraicDataType).
+This makes it possible to set annotations on any [Algebraic Data Type](../../../../Rascal/Declarations/AlgebraicDataType).
 
 
 ```rascal-shell
@@ -81,7 +77,5 @@ And apply `setAnnotations` to a value of type `Suite`:
 rascal>setAnnotations(st, ("player" : "Hossein", "gain" : "120"));
 Suite: diamonds(player="Hossein",gain="120")
 ```
-
-#### Benefits
 
 

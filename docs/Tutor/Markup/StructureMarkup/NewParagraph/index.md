@@ -6,12 +6,6 @@ title: NewParagraph
 
 Introduce a new paragraph.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 A new paragraph is created by a single empty line.
@@ -34,7 +28,5 @@ line2
 
 line3
 line4
-
-#### Benefits
 
 

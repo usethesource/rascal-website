@@ -6,14 +6,6 @@ title: Software Engineering
 
 Discpline of design, building and maintaining software.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 [Software engineering](http://en.wikipedia.org/wiki/Software_engineering) is the discipline that encompasses all aspects
@@ -36,9 +28,5 @@ Other approaches promote [agile development](http://en.wikipedia.org/wiki/Agile_
 and are characterized by very short iterations that include all the above activities.
 Agile methods aim to produce prototypes as early as possible and this makes it easier for future users
 to assess the prototype and suggest changes.
-
-#### Examples
-
-#### Benefits
 
 

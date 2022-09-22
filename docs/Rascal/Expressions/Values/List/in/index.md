@@ -22,8 +22,6 @@ Membership test on list elements.
 | `T<sub>1</sub>`  <: `T<sub>2</sub>` |  `list[T<sub>2</sub>]`  | `bool`               |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if the value of Exp<sub>1</sub> occurs as element in the value of Exp<sub>2</sub> and `false` otherwise. 
@@ -38,7 +36,5 @@ bool: true
 rascal>4 in [1, 2, 3];
 bool: false
 ```
-
-#### Benefits
 
 

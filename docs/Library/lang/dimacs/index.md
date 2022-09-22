@@ -1,4 +1,4 @@
 # lang::dimacs
 
 
-   * [syntax](/docs/Library/lang/dimacs/syntax)
+   * [syntax](../../../Library/lang/dimacs/syntax)

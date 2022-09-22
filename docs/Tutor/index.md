@@ -6,21 +6,15 @@ title: Tutor
 
 The Rascal Tutor compiler can be used to create, maintain and follow (interactive) documentation.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
-The RascalTutor is an interactive [Authoring](/docs//Tutor/Authoring) and learning environment intended to create and follow interactive courses related to the Rascal language.
+The RascalTutor is an interactive [Authoring](..//Tutor/Authoring) and learning environment intended to create and follow interactive courses related to the Rascal language.
 It is based on the following principles and ideas:
 
-* The basic notion is a [Concept](/docs//Tutor/Concept). Each concept has a _name_ and contains a fixed set of subsections that describe it.
+* The basic notion is a [Concept](..//Tutor/Concept). Each concept has a _name_ and contains a fixed set of subsections that describe it.
 * A course is a _concept tree_:
   The central subject of the course is the root of the concept tree, and all subtrees further explain their parent concept.
-* A Rascal code module is a [Concept](/docs//Tutor/Concept) to the tuturo compiler as well, in order to provide [API](/docs//Tutor/API) documentation for every Rascal module. The declarations it contains are not sub-concepts but rather sub-sections of that concept.
+* A Rascal code module is a [Concept](..//Tutor/Concept) to the tuturo compiler as well, in order to provide [API](..//Tutor/API) documentation for every Rascal module. The declarations it contains are not sub-concepts but rather sub-sections of that concept.
 * A folder with Rascal modules is also a ((Concept). If it has an `index.md` file this is used to document it, otherwise an `index.md` file is generated.
 
 A _student_ using a course can:
@@ -51,15 +45,13 @@ in most cases we directly refer to
 
 The following topics will be described here:
 
-* [Tutor:API](/docs//Tutor/API)
-* [Tutor:Architecture](/docs//Tutor/Architecture)
-* [Tutor:Authoring](/docs//Tutor/Authoring)
-* [Tutor:Concept](/docs//Tutor/Concept)
-* [Tutor:Maintenance](/docs//Tutor/Maintenance)
-* [Tutor:Markup](/docs//Tutor/Markup)
-* [Tutor:Tutor](/docs/Tutor/)
-
-#### Examples
+* [Tutor:API](..//Tutor/API)
+* [Tutor:Architecture](..//Tutor/Architecture)
+* [Tutor:Authoring](..//Tutor/Authoring)
+* [Tutor:Concept](..//Tutor/Concept)
+* [Tutor:Maintenance](..//Tutor/Maintenance)
+* [Tutor:Markup](..//Tutor/Markup)
+* [Tutor:Tutor](../Tutor/)
 
 #### Benefits
 
@@ -72,6 +64,6 @@ The following topics will be described here:
 
 * We have to run the tutor compiler manually to find out about possible errors. There is no IDE support yet.
 * The Tutor compiler is not incremental yet. It will re-compile everything from scratch even if nothing has changed.
-* Downstream tools, such as Docusaurus, may detect issues that the tutor compiler does not detect. For example broken links that are not [Concept](/docs//Tutor/Concept) links will not be detected early. This means you may have to go back and fix the documentation, release it in a `jar` and then try the downstream tool again.
-* The interactive [Question markup](/docs/Tutor/Markup/QuestionMarkup) part of the compiler is currently under maintenance and therefore unavailable.
+* Downstream tools, such as Docusaurus, may detect issues that the tutor compiler does not detect. For example broken links that are not [Concept](..//Tutor/Concept) links will not be detected early. This means you may have to go back and fix the documentation, release it in a `jar` and then try the downstream tool again.
+* The interactive [Question markup](../Tutor/Markup/QuestionMarkup) part of the compiler is currently under maintenance and therefore unavailable.
 

@@ -1,4 +1,4 @@
 # lang::rascal::ide
 
 
-   * [Outline](/docs/Library/lang/rascal/ide/Outline.md)
+   * [Outline](../../../../Library/lang/rascal/ide/Outline.md)

@@ -6,12 +6,6 @@ title: Enumerating
 
 Enumerating values.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Enumerating regards the enumeration of the values in a given (finite) domain, be it the elements in a list, the substrings of a string, 
@@ -19,7 +13,7 @@ or all the nodes in a tree.
 Each value that is enumerated is first matched against a pattern before it can possibly contribute to the result of 
 the enumerator. An enumerator yields `true` as long as it has generated a new value, and `false` otherwise.
 
-See [Enumerator](/docs/Rascal/Expressions/Comprehensions/Enumerator) for details.
+See [Enumerator](../../Rascal/Expressions/Comprehensions/Enumerator) for details.
 
 #### Examples
 
@@ -72,8 +66,8 @@ A more satisfying use is as follows:
 rascal>{ x * x | int x <- {1, 3, 5, 7, 11 }};
 set[int]: {121,1,9,49,25}
 ```
-When used inside [Comprehensions](/docs/Rascal/Expressions/Comprehensions), 
-or [For](/docs/Rascal/Statements/For), [Do](/docs/Rascal/Statements/Do), or [While](/docs/Rascal/Statements/While) 
+When used inside [Comprehensions](../../Rascal/Expressions/Comprehensions), 
+or [For](../../Rascal/Statements/For), [Do](../../Rascal/Statements/Do), or [While](../../Rascal/Statements/While) 
 statement, all values of the generator will be produced and used.
 The variables that are introduced by a enumerator are local to the construct in which the enumerator is used.
 Here is a similar example:
@@ -91,8 +85,6 @@ x = 3
 x = 11
 list[void]: []
 ```
-
-#### Benefits
 
 #### Pitfalls
 

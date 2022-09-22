@@ -26,11 +26,9 @@ where `Exp<sub>2</sub>` and `Exp<sub>4</sub>` are optional.
 | `str`         | `int`     | `int`       | `int`     |  `str`                                                                            |
 
 
-#### Function
-
 #### Description
 
-A String slice is similar to a list [Slice](/docs/Rascal/Expressions/Values/List/Slice) and uses the integer values of _Exp_<sub>2</sub> and _Exp_<sub>4</sub> to determine the `begin` (*inclusive*) and `end` (*exclusive*)
+A String slice is similar to a list [Slice](../../../../../Rascal/Expressions/Values/List/Slice) and uses the integer values of _Exp_<sub>2</sub> and _Exp_<sub>4</sub> to determine the `begin` (*inclusive*) and `end` (*exclusive*)
 of a slice from the string value _S_ of _Exp_<sub>1</sub>. Negative indices count from the end of the string backwards.
 Using the second form, an extra index _Exp_<sub>3</sub> is given that determines the
 index of the second element in the slice and establishes the `step` between

@@ -21,8 +21,6 @@ Equal operator on values.
 | `value`     |  `value`  | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if both arguments are identical and `false` otherwise.
@@ -54,7 +52,5 @@ and `X` and `Z`:
 rascal>X == Z;
 bool: false
 ```
-
-#### Benefits
 
 

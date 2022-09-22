@@ -1,4 +1,4 @@
 # lang::html
 
 
-   * [IO](/docs/Library/lang/html/IO.md)
+   * [IO](../../../Library/lang/html/IO.md)

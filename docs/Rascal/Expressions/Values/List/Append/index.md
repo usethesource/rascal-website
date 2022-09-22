@@ -9,8 +9,6 @@ keywords:
 
 Append an element at the end of a list
 
-#### Syntax
-
 #### Types
 
 //
@@ -20,11 +18,9 @@ Append an element at the end of a list
 | `list[T<sub>1</sub>]` |  `T<sub>2</sub>`       | `list[lub(T<sub>1</sub>,T<sub>2</sub>)]`  |
 
 
-#### Function
-
 #### Description
 
-The operator `+` appends an element at the end of a list. The `+` is one of those [Operators](/docs/Rascal/Expressions/Operators) which are overloaded. It can also mean [Insert](/docs/Rascal/Expressions/Values/List/Insert) or [Concatenation](/docs/Rascal/Expressions/Values/List/Concatenation) for example.
+The operator `+` appends an element at the end of a list. The `+` is one of those [Operators](../../../../../Rascal/Expressions/Operators) which are overloaded. It can also mean [Insert](../../../../../Rascal/Expressions/Values/List/Insert) or [Concatenation](../../../../../Rascal/Expressions/Values/List/Concatenation) for example.
 
 #### Examples
 
@@ -40,7 +36,7 @@ list[int]: [1,2]
 
 .Pitfalls:
 
-* If both operands of `+` are a list, then it acts as [Concatenation](/docs/Rascal/Expressions/Values/List/Concatenation) 
+* If both operands of `+` are a list, then it acts as [Concatenation](../../../../../Rascal/Expressions/Values/List/Concatenation) 
 
 This is concatenation:
 

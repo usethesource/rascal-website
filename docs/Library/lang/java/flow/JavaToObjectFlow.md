@@ -13,7 +13,7 @@ mapping all of Java to the object flow language
 
 #### Description
 
-More information can be found in [analysis::flow::Object flow](/docs/Library/analysis/flow/ObjectFlow).
+More information can be found in [analysis::flow::Object flow](../../../../Library/analysis/flow/ObjectFlow).
 
 
 ## function createOFG {#lang-java-flow-JavaToObjectFlow-createOFG}

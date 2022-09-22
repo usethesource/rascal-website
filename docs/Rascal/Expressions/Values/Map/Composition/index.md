@@ -20,8 +20,6 @@ Composition of two map values.
 | `map[T<sub>1</sub>, T<sub>2</sub>]` | `map[T<sub>2</sub>, T<sub>3</sub>]` | `map[T<sub>1</sub>, T<sub>3</sub>]`  |
 
 
-#### Function
-
 #### Description
 
 Returns the composition of two maps.
@@ -35,8 +33,6 @@ ok
 rascal>("one" : 1, "two" : 2) o (1 : 10, 2 : 20);
 map[str, int]: ("one":10,"two":20)
 ```
-
-#### Benefits
 
 #### Pitfalls
 

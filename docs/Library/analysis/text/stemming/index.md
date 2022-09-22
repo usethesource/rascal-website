@@ -1,4 +1,4 @@
 # analysis::text::stemming
 
 
-   * [Snowball](/docs/Library/analysis/text/stemming/Snowball.md)
+   * [Snowball](../../../../Library/analysis/text/stemming/Snowball.md)

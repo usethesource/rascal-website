@@ -21,12 +21,12 @@ information between spreadsheets and databases. A CSV file has the following str
 
 The following functions are provided:
 
-* [Library:function:lang::csv::IO::generate](/docs/Library/lang/csv/IO#lang::csv::IO-generate)
-* [Library:function:lang::csv::IO::get c s v type](/docs/Library/lang/csv/IO#lang::csv::IO-getCSVType)
-* [Library:function:lang::csv::IO::load c sV](/docs/Library/lang/csv/IO#lang::csv::IO-loadCSV)
-* [Library:function:lang::csv::IO::load normalized c sV](/docs/Library/lang/csv/IO#lang::csv::IO-loadNormalizedCSV)
-* [Library:function:lang::csv::IO::read c sV](/docs/Library/lang/csv/IO#lang::csv::IO-readCSV)
-* [Library:function:lang::csv::IO::write c sV](/docs/Library/lang/csv/IO#lang::csv::IO-writeCSV)
+* [Library:function:lang::csv::IO::generate](../../../Library/lang/csv/IO#lang::csv::IO-generate)
+* [Library:function:lang::csv::IO::get c s v type](../../../Library/lang/csv/IO#lang::csv::IO-getCSVType)
+* [Library:function:lang::csv::IO::load c sV](../../../Library/lang/csv/IO#lang::csv::IO-loadCSV)
+* [Library:function:lang::csv::IO::load normalized c sV](../../../Library/lang/csv/IO#lang::csv::IO-loadNormalizedCSV)
+* [Library:function:lang::csv::IO::read c sV](../../../Library/lang/csv/IO#lang::csv::IO-readCSV)
+* [Library:function:lang::csv::IO::write c sV](../../../Library/lang/csv/IO#lang::csv::IO-writeCSV)
 
 #### Examples
 

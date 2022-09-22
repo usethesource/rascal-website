@@ -22,8 +22,6 @@ Composition of two list relation values.
 | `lrel[T<sub>1</sub>, T<sub>2</sub>]` | `lrel[T<sub>2</sub>, T<sub>3</sub>]` | `lrel[T<sub>1</sub>, T<sub>3</sub>]` |
 
 
-#### Function
-
 #### Description
 
 Returns the composition of two binary list relations.
@@ -38,8 +36,6 @@ lrel[int,int]: [
   <2,200>
 ]
 ```
-
-#### Benefits
 
 #### Pitfalls
 

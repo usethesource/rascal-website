@@ -6,12 +6,6 @@ title: Static Typing
 
 Static type checking.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 ![Type Lattice](/assets/RascalConcepts/StaticTyping/type-lattice.png)
@@ -102,7 +96,7 @@ rascal>classify(V);
 str: "Another type"
 ```
 
-In addition to these standard examples, it is interesting that all [Algebraic Data Types](/docs/Rascal/Declarations/AlgebraicDataType) are subtypes of type `node`.
+In addition to these standard examples, it is interesting that all [Algebraic Data Types](../../Rascal/Declarations/AlgebraicDataType) are subtypes of type `node`.
 Let's introduce a simple `Color` data type:
 
 ```rascal-shell
@@ -123,8 +117,6 @@ node: red(3)
 ```
 
 One example of the actual application of subtypes can be found in 
-[Count Constructors](/docs/Recipes/Common/CountConstructors).
-
-#### Benefits
+[Count Constructors](../../Recipes/Common/CountConstructors).
 
 

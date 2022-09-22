@@ -11,14 +11,6 @@ keywords:
 
 Assign a single element of a structured value.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Let _V_ be the current value of _Assignable_. The value of _Exp_<sub>1</sub> is used as index in _V_ and 
@@ -63,7 +55,5 @@ rascal>T[1] = "def";
 tuple[int,str,bool]: <1,"def",true>
 ```
 NOTE: See https://github.com/usethesource/rascal/issues/948
-
-#### Benefits
 
 

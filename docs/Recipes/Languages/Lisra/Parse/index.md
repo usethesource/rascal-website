@@ -6,17 +6,9 @@ title: Parse
 
 Parsing a Lisp expression.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
-Given the Lisp [Syntax](/docs/Recipes/Languages/Lisra/Syntax), we can now apply it to parse textual Lisp expressions
+Given the Lisp [Syntax](../../../../Recipes/Languages/Lisra/Syntax), we can now apply it to parse textual Lisp expressions
 and convert them to the runtime representation `Lval`.
 
 
@@ -54,7 +46,7 @@ test bool parse5() = parse("(123 abc)") == List([Integer(123), Atom("abc")]);
 
 <2> Function `build` is defined in cases, to handle the various parse tree forms.
     Fortunately, we do not have to spell out the details of the parse tree, but we can use concrete
-    patterns instead (see [concrete patterns](/docs/Rascal/Patterns/Concrete), below).
+    patterns instead (see [concrete patterns](../../../../Rascal/Patterns/Concrete), below).
  
    The right-hand sides deserve some attention. Here the argument `il` is a _parse tree_ (!!) that represents an integer literal.
    We first convert it to a string using string interpolation (`"<il>"`) and then convert it to an integer.
@@ -101,7 +93,5 @@ Lval: List([
     Integer(7)
   ])
 ```
-
-#### Benefits
 
 

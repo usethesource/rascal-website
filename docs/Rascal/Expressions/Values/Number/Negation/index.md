@@ -21,8 +21,6 @@ Negate a numeric value.
 | `real`   |  `real`     |
 
 
-#### Function
-
 #### Description
 
 Yields the negated values of _Exp_.
@@ -38,7 +36,5 @@ real: -13.5
 rascal>- -12
 int: 12
 ```
-
-#### Benefits
 
 

@@ -6,14 +6,6 @@ title: UnsupportedOperation
 
 Attempt to apply a operation to a value for which the operation is not defined.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 This error is generated when an unsupported operation is applied to (a combination of) values.
@@ -64,7 +56,5 @@ rascal>17(3, "abc");
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UnsupportedOperation/UnsupportedOperation.html|
 ok
 ```
-
-#### Benefits
 
 

@@ -11,23 +11,13 @@ details:
 
 Some basic, _hello world_-like, examples of Rascal programs.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 We discuss the following examples:
-* [Hello](/docs/Recipes/Basic/Hello)
-* [Factorial](/docs/Recipes/Basic/Factorial)
-* [Squares](/docs/Recipes/Basic/Squares)
+* [Hello](../../Recipes/Basic/Hello)
+* [Factorial](../../Recipes/Basic/Factorial)
+* [Squares](../../Recipes/Basic/Squares)
 
-
-#### Examples
-
-#### Benefits
 
 #### Pitfalls
 

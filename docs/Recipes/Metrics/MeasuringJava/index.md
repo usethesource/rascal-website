@@ -6,14 +6,6 @@ title: Measuring Java
 
 A few steps using the M3 model to compute basic metrics for a Java project in Eclipse.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 
@@ -23,7 +15,7 @@ This is a recipe for computing basic or more advanced metrics from a Java projec
 *  You have a Java project in your Eclipse workspace that compiles without errors. Let's call it `HelloWorld`.
 
 
-Now we will follow the [EASY][EASY](/docs//WhyRascal/EASY) paradigm:
+Now we will follow the [EASY][EASY](../../..//WhyRascal/EASY) paradigm:
 
 *  a library will be used to _parse_ the Java code generating [Rascalopedia:AbstractSyntaxTree]
 *  the same library will generate a [Rascal:Values/Relation]al model to represent interesting facts between Java source code artifacts
@@ -32,8 +24,8 @@ Now we will follow the [EASY][EASY](/docs//WhyRascal/EASY) paradigm:
 
 These are a number of recipes for measuring different things about Java:
 
-*  [Measuring classes](/docs/Recipes/Metrics/MeasuringJava/MeasuringClasses)
-*  [Measuring methods](/docs/Recipes/Metrics/MeasuringJava/MeasuringMethods)
+*  [Measuring classes](../../../Recipes/Metrics/MeasuringJava/MeasuringClasses)
+*  [Measuring methods](../../../Recipes/Metrics/MeasuringJava/MeasuringMethods)
 
 #### Examples
 
@@ -224,11 +216,11 @@ M3: m3(
 
 #### Benefits
 
-*  Notice that _all_ these [Location](/docs/Rascal/Expressions/Values/Location) literals are hyperlinks and you can click on them to go the source code that they point to. Try it!
+*  Notice that _all_ these [Location](../../../Rascal/Expressions/Values/Location) literals are hyperlinks and you can click on them to go the source code that they point to. Try it!
 * M3 models are great for metrics, but also they are the basis for many other static analyses
-* See [Measuring classes](/docs/Recipes/Metrics/MeasuringJava/MeasuringClasses) and [Measuring methods](/docs/Recipes/Metrics/MeasuringJava/MeasuringMethods) for more benefits
+* See [Measuring classes](../../../Recipes/Metrics/MeasuringJava/MeasuringClasses) and [Measuring methods](../../../Recipes/Metrics/MeasuringJava/MeasuringMethods) for more benefits
 
 #### Pitfalls
 
-* See [Measuring classes](/docs/Recipes/Metrics/MeasuringJava/MeasuringClasses) and [Measuring methods](/docs/Recipes/Metrics/MeasuringJava/MeasuringMethods) for more pitfalls
+* See [Measuring classes](../../../Recipes/Metrics/MeasuringJava/MeasuringClasses) and [Measuring methods](../../../Recipes/Metrics/MeasuringJava/MeasuringMethods) for more pitfalls
 

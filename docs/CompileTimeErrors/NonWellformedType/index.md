@@ -6,14 +6,6 @@ title: NonWellformedType
 
 A type in a declaration is not wellformed.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Types should respect some structural rules and this error signals a violation of these rules.
@@ -44,6 +36,4 @@ rascal>set[int,str] s;
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/NonWellformedType/NonWellformedType.html|
 ok
 ```
-#### Benefits
-
 

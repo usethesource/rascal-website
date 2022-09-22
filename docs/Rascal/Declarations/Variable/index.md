@@ -18,8 +18,6 @@ Declare a variable.
 | `Type` | `<: Type` |
 
 
-#### Function
-
 #### Description
 
 The effect of a variable declaration is to introduce a new variable _Name_ and
@@ -87,8 +85,6 @@ rascal>month ="December";
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UnexpectedType/UnexpectedType.html|
 ok
 ```
-
-#### Benefits
 
 #### Pitfalls
 

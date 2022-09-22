@@ -13,10 +13,6 @@ Declare an alias for a type.
 
 `alias Name  = Type;`
 
-#### Types
-
-#### Function
-
 #### Description
 
 Everything can be expressed using the elementary types and values that are provided by Rascal. 
@@ -45,8 +41,6 @@ alias Graph[&T] = rel[&T, &T];
 ```
 In other words the standard graph datatype can be parameterized with any element type.
 
-See [Type Parameters](/docs/Rascal/Declarations/StaticTyping/TypeParameters) for other examples parameterized alias declarations.
-
-#### Benefits
+See [Type Parameters](../../../Rascal/Declarations/StaticTyping/TypeParameters) for other examples parameterized alias declarations.
 
 

@@ -1,4 +1,4 @@
 # lang::c90
 
 
-   * [syntax](/docs/Library/lang/c90/syntax)
+   * [syntax](../../../Library/lang/c90/syntax)

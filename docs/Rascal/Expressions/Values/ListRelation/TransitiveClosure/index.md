@@ -21,8 +21,6 @@ Transitive closure on binary list relation values.
 | `lrel[T<sub>1</sub>, T<sub>2</sub>]` | `lrel[T<sub>1</sub>, T<sub>2</sub>]`  |
 
 
-#### Function
-
 #### Description
 
 Returns the transitive closure of a binary listrelation.
@@ -54,7 +52,5 @@ lrel[int,int]: [
   <1,4>
 ]
 ```
-
-#### Benefits
 
 

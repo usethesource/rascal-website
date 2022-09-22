@@ -33,12 +33,6 @@ and where `Modifiers` may be:
 
 *  `("public" | "private")? ("java" | "test" | "default")?`
 
-#### Types
-
-#### Function
-
-#### Description
-
 ##  Variant 1 
 
 A function declaration introduces a new function with name _name_, typed formal parameters `Type<sub>1</sub> Var<sub>1</sub>`, a return type _Type_
@@ -58,7 +52,7 @@ Inside the function body, the type of this parameter will therefore be `list[Typ
 ##  Variant 3 and 4 
 
 
-All formal parameter of a function can be [Patterns](/docs//Rascal/Patterns). There are some restrictions however:
+All formal parameter of a function can be [Patterns](../../..//Rascal/Patterns). There are some restrictions however:
 
 *  A Pattern in formal parameter positions may not refer to variables in the scope.
 *  Patterns in formal parameter positions may not introduce fresh variables without an explicit type. 
@@ -76,22 +70,22 @@ All formal parameter of a function can be [Patterns](/docs//Rascal/Patterns). Th
 ##  Parameterized types in function declaration 
 
 
-The types that occur in function declarations may also contain [Type Parameters](/docs/Rascal/Declarations/StaticTyping/TypeParameters).
+The types that occur in function declarations may also contain [Type Parameters](../../../Rascal/Declarations/StaticTyping/TypeParameters).
 In this way functions can be defined for arbitrary types. The type variable is bound (statically) at by the types of the parameters given at location of the call. The result type must be used at least once in any of the parameters.
 
 ##  Overloading 
 
  
 Function definitions may be overloaded, i.e. a function with the same name may be defined twice and 
-a function may redefine a constructor of an [Algebraic Data Type](/docs/Rascal/Declarations/AlgebraicDataType) or a [Syntax Definition](/docs/Rascal/Declarations/SyntaxDefinition).
+a function may redefine a constructor of an [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType) or a [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition).
 
 There are some restrictions however:
 
 *  Overloaded alternatives for the same function name but with different patterns must return the same type.
 *  Overloaded alternatives for the same function name must have mutually exclusive patterns, unless one alternative is labeled `default` and the other is not. The patterns of formal parameters are mutually exclusive if for at least one parameter position:
 **  They range over incomparable types, as in `int f(int a)` and `int f(real a)`, or
-**  They range over different alternatives of an [Algebraic Data Type](/docs/Rascal/Declarations/AlgebraicDataType), as in `int f(and(Bool a, Bool b))` and `int f(or(Bool a, Bool b))`
-**  They range over different alternatives of a [Syntax Definition](/docs/Rascal/Declarations/SyntaxDefinition)
+**  They range over different alternatives of an [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType), as in `int f(and(Bool a, Bool b))` and `int f(or(Bool a, Bool b))`
+**  They range over different alternatives of a [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition)
 **  And note that deep matches using the `/` alternative are considered to be of type `value` and therefore overlap with all other patterns.
 *  Overlapping patterns are allowed if the one alternative has the `default` modified while the other does not.
 *  If a function is fallible, it uses the `fail` statement to back-track to a different alternative, then there must be a `default` alternative defined which can handle the general case. An [AlgebraicDataType] or a [SyntaxDefinition] with the same name and return type counts as a `default` alternative.
@@ -109,10 +103,10 @@ The _Modifiers_ affect _visibility_ and _special behaviour_ of functions:
        `javaClass` annotation that determines where the Java implementation can be found.
    **  `test` declares that this is a test function. A test function is a boolean function (currently) without arguments. 
         It can be called as any other function. However, it can also be called automatically
-        by the unit test framework, by typing `:test` at the command line, see [Help](/docs/RascalShell/Commands/Help).
+        by the unit test framework, by typing `:test` at the command line, see [Help](../../../RascalShell/Commands/Help).
    **  `default` declares an alternative for an overloaded function that will only be tried after 
-        all non-default alternatives have been tried. Note that [Algebraic Data Type](/docs/Rascal/Declarations/AlgebraicDataType)s and [Syntax Definition](/docs/Rascal/Declarations/SyntaxDefinition)s 
-        _implicitly_ define `default` functions that may be overloaded by normal [Function](/docs/Rascal/Declarations/Function)s.
+        all non-default alternatives have been tried. Note that [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType)s and [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition)s 
+        _implicitly_ define `default` functions that may be overloaded by normal [Function](../../../Rascal/Declarations/Function)s.
 
 
 #### Examples
@@ -159,7 +153,7 @@ rel[int,str]: {
 }
 ```
 As another example declare a function that can be used to swap the elements of pairs of arbitrary types
-(also see [Subscription](/docs/Rascal/Expressions/Values/Tuple/Subscription)):
+(also see [Subscription](../../../Rascal/Expressions/Values/Tuple/Subscription)):
 
 ```rascal-shell
 rascal>tuple[&T2, &T1] swap(tuple[&T1, &T2] TP) { return <TP[1], TP[0]>;}
@@ -198,8 +192,8 @@ rascal>f(2);
 int: 2
 ```
 
-In combination with an [Algebraic Data Type](/docs/Rascal/Declarations/AlgebraicDataType), which defines `default` functions implicitly for every alternative, 
-we can define canonicalization functions. The same holds for [Syntax Definition](/docs/Rascal/Declarations/SyntaxDefinition)s, see [Action](/docs/Rascal/Declarations/SyntaxDefinition/Action)s.
+In combination with an [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType), which defines `default` functions implicitly for every alternative, 
+we can define canonicalization functions. The same holds for [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition)s, see [Action](../../../Rascal/Declarations/SyntaxDefinition/Action)s.
 
 This definition implies a default function for t(), f() and neg(B):
 
@@ -224,7 +218,7 @@ B: f()
 #### Benefits
 
 * Overloaded functions can be extended by other modules that extend the current module, and even be "fused" by modules that extend different modules that define the same overloaded signature. In this way you can write language processors **modularly**. The open extensibility of overloaded functions in Rascal is a way to circumvent the classes ["Expression Problem".](https://en.wikipedia.org/wiki/Expression_problem)
-* Overloaded functions including complex pattern matching at the parameter positions are as powerful as term rewriting systems; they _are_ a kind of term rewriting system. Together with the [Syntax definition](/docs/Rascal/Declarations/SyntaxDefinition) and [Algebraic data type](/docs/Rascal/Declarations/AlgebraicDataType) features (serving as many-sorted algebraic signatures), the overloaded functions allow for "algebraic specification" as a style of programming in Rascal. 
+* Overloaded functions including complex pattern matching at the parameter positions are as powerful as term rewriting systems; they _are_ a kind of term rewriting system. Together with the [Syntax definition](../../../Rascal/Declarations/SyntaxDefinition) and [Algebraic data type](../../../Rascal/Declarations/AlgebraicDataType) features (serving as many-sorted algebraic signatures), the overloaded functions allow for "algebraic specification" as a style of programming in Rascal. 
 
 #### Pitfalls
 

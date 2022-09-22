@@ -6,14 +6,6 @@ title: Factorial
 
 Compute the factorial function.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
-#### Description
-
 #### Examples
 
 The [factorial](http://en.wikipedia.org/wiki/Factorial)
@@ -45,7 +37,7 @@ test bool tfac47() = fac(47) == 258623241511168180642964355153611979969197632389
 ```
           
 <1> `fac` is defined using a conditional expression to distinguish cases.
-<2> `fac2` distinguishes cases using pattern-based dispatch ([Rascal Functions](/docs/Rascal/Declarations/Function)).
+<2> `fac2` distinguishes cases using pattern-based dispatch ([Rascal Functions](../../../Rascal/Declarations/Function)).
     Here the case for `0` is defined.
 <3> Here all other cases for `fac2` are defined (as indicated by the `default` keyword).
 <4> `fac3` shows a more imperative implementation of factorial.
@@ -68,7 +60,5 @@ Here is an example of `fac2`:
 rascal>fac2(47);
 int: 258623241511168180642964355153611979969197632389120000000000
 ```
-
-#### Benefits
 
 

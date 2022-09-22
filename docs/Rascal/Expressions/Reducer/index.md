@@ -16,10 +16,6 @@ Reduce generated values to a single value.
 
 `( InitExp | RedExp | Gen<sub>1</sub>, Gen<sub>2</sub>, ... )`
 
-#### Types
-
-#### Function
-
 #### Description
 
 A reducer resembles the http://en.wikipedia.org/wiki/Fold_(higher-order_function)[fold] function
@@ -53,7 +49,5 @@ int: 16
 rascal>(1 | it * e | int e <- L);
 int: 105
 ```
-
-#### Benefits
 
 

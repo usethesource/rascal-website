@@ -10,25 +10,19 @@ keywords:
 
 Set in abstract pattern.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 A set pattern matches a set value (the subject), provided that _Pat_<sub>1</sub>, _Pat_<sub>2</sub>, ..., _Pat_~n~ match the elements of that set in *any* order
 (recall that the elements of a set are unordered and do not contain duplicates).
 Completely analogous to list patterns, there are special cases when one of the patterns _Pat_~i~ is
 
-*  a [Variable declaration](/docs/Rascal/Patterns/VariableDeclaration) with a type that is identical to the element type of the subject set: the variable is matched with one value  in the subject set.
+*  a [Variable declaration](../../../Rascal/Patterns/VariableDeclaration) with a type that is identical to the element type of the subject set: the variable is matched with one value  in the subject set.
 
-*  a [Multi variable](/docs/Rascal/Patterns/MultiVariable), with an optional element type that is identical to the element type of the subject set: set matching is applied and the variable can match an arbitrary number (in arbitrary order) of elements of the subject set.
+*  a [Multi variable](../../../Rascal/Patterns/MultiVariable), with an optional element type that is identical to the element type of the subject set: set matching is applied and the variable can match an arbitrary number (in arbitrary order) of elements of the subject set.
 
-*  a [Variable](/docs/Rascal/Patterns/Variable), where the variable has been declared with a set type, but not initialized, outside the pattern: set matching is applied and the variable can match an arbitrary number (in arbitrary order) of elements of the subject set.
+*  a [Variable](../../../Rascal/Patterns/Variable), where the variable has been declared with a set type, but not initialized, outside the pattern: set matching is applied and the variable can match an arbitrary number (in arbitrary order) of elements of the subject set.
 
-*  a [Variable](/docs/Rascal/Patterns/Variable), where the variable has been declared with a type equal to the element type of the subject, but not initialized, outside the pattern: the variable is matched with one value in the subject set.
+*  a [Variable](../../../Rascal/Patterns/Variable), where the variable has been declared with a type equal to the element type of the subject, but not initialized, outside the pattern: the variable is matched with one value in the subject set.
 
 
 
@@ -110,7 +104,5 @@ rascal>if({10, N, 30, 40, 50} := {50, 40, 30, 20, 10})
 Match succeeded, N = 20
 ok
 ```
-
-#### Benefits
 
 

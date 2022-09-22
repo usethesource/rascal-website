@@ -6,14 +6,6 @@ title: UndeclaredType
 
 Use of a type that has not been declared.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 A type has to be declared before it can be used.
@@ -43,7 +35,5 @@ int (int): function(|prompt:///|(0,28,<1,0>,<1,28>))
 rascal>incr(3);
 int: 4
 ```
-
-#### Benefits
 
 

@@ -21,8 +21,6 @@ Greater than operator on string values.
 | `str`     |  `str`    | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if the string value of _Exp_<sub>1</sub> is strictly lexicographically greater
@@ -39,7 +37,5 @@ bool: true
 rascal>"a" > "abc";
 bool: false
 ```
-
-#### Benefits
 
 

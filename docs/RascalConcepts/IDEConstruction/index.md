@@ -6,12 +6,6 @@ title: IDE Construction
 
 Extend an IDE with interactive, language-specific, features (Eclipse or VSCode)
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Meta-programs become most useful, when they are integrated with an Interactive Development Environment (IDE). 

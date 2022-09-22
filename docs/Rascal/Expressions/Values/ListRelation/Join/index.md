@@ -23,8 +23,6 @@ Join two list relation values.
 | `lrel[ T<sub>11</sub>, T<sub>12</sub>, T<sub>13</sub>, ... ]` |  `lrel[ T<sub>21</sub>, T<sub>22</sub>, T<sub>23</sub>, ... ]` | `lrel[ T<sub>11</sub>, T<sub>12</sub>, T<sub>13</sub>, ..., T<sub>21</sub>, T<sub>22</sub>, T<sub>23</sub>, ... ]`  |
 
 
-#### Function
-
 #### Description
 
 ListRelation resulting from the natural join of the list relation values of the two arguments.
@@ -52,7 +50,5 @@ lrel[int,int,int,int]: [
   <10,20,20,30>
 ]
 ```
-
-#### Benefits
 
 

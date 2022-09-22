@@ -23,8 +23,6 @@ Division on numeric values.
 | `real`     |  `real`    | `real`                |
 
 
-#### Function
-
 #### Description
 
 Yields the result of dividing the value of _Exp<sub>1</sub>_ by the value of _Exp<sub>2</sub>_.
@@ -45,7 +43,5 @@ rascal>12 / 0
 |prompt:///|(5,1,<1,5>,<1,6>): ArithmeticException("/ by zero")
 ok
 ```
-
-#### Benefits
 
 

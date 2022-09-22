@@ -14,10 +14,6 @@ Return a value as result of a [Function].
 *  `return;`
 *  `return Exp`
 
-#### Types
-
-#### Function
-
 #### Description
 
 A return statement comes in two variants: without and with an expression,
@@ -52,7 +48,5 @@ int (int): function(|prompt:///|(0,26,<1,0>,<1,26>))
 rascal>twiceb(5);
 int: 10
 ```
-
-#### Benefits
 
 

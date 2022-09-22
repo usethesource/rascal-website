@@ -6,19 +6,13 @@ title: String Template
 
 Using string templates to generate code.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Many websites and code generators use template-based code generation. They start from a text template that contains embedded variables and code. The template is "executed" by replacing the embedded variables and code by their string value. Languages like PHP and Ruby are popular for this feature. Let's see how we can do this in Rascal. 
 
 Rascal provides string templates that rival what is provided in
 [Ruby](http://www.ruby-doc.org/stdlib/libdoc/erb/rdoc/ERB.html), [PHP](http://www.php.net/) or [ANTLR](http://www.stringtemplate.org/).
-They are fully described in [string values](/docs/Rascal/Expressions/Values/String).
+They are fully described in [string values](../../../Rascal/Expressions/Values/String).
 
 #### Examples
 

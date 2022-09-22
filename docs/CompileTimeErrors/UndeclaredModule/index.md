@@ -6,14 +6,6 @@ title: UndeclaredModule
 
 Reference to a non-existing module.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 This can, for example, occur in a qualified name.
@@ -35,7 +27,5 @@ rascal>M::f(3);
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredModule/UndeclaredModule.html|
 ok
 ```
-
-#### Benefits
 
 

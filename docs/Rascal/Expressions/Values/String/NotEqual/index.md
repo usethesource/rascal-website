@@ -20,8 +20,6 @@ Not equal operator on string values.
 | `str`     |  `str`    | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if both arguments are not identical and `false` otherwise.
@@ -35,7 +33,5 @@ bool: true
 rascal>"abc" != "abc";
 bool: false
 ```
-
-#### Benefits
 
 

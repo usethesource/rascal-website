@@ -1,4 +1,4 @@
 # lang::manifest
 
 
-   * [IO](/docs/Library/lang/manifest/IO.md)
+   * [IO](../../../Library/lang/manifest/IO.md)

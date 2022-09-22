@@ -14,10 +14,6 @@ msg
 (((TODO-image syntax has changed)))
 :::
 
-#### Types
-
-#### Function
-
 #### Description
 
 Describes an image to be included:
@@ -34,8 +30,6 @@ There is a "TODO" in the documentation source:
 msg
 (((TODO:For further styling of images, see http://asciidoctor.org/docs/user-manual/#images.)))
 :::
-
-#### Examples
 
 ##  Example 1 
 ```
@@ -65,7 +59,5 @@ produces a clickable image that links back to the source of the image.
 ![](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
 
 Try it!
-
-#### Benefits
 
 

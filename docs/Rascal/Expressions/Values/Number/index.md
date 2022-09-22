@@ -11,15 +11,9 @@ keywords:
 
 Numeric values.
 
-#### Syntax
-
 #### Types
 
 `int`, `real`, `num`
-
-#### Usage
-
-#### Function
 
 #### Description
 
@@ -41,9 +35,5 @@ The following operations are provided on numbers:
 * ((Rascal:Expressions/Values/Number/NotEqual))
 * ((Rascal:Expressions/Values/Number/Remainder))
 * ((Rascal:Expressions/Values/Number/Subtraction))
-
-#### Examples
-
-#### Benefits
 
 

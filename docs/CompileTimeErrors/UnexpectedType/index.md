@@ -6,20 +6,12 @@ title: UnexpectedType
 
 A value of a different type was expected.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 This error signals an incompatibility between expected type and actual type.
 Some of the situations in which this may occur are
-[assert](/docs/Rascal/Statements/Assert), [variable](/docs/Rascal/Declarations/Variable),
-[solve](/docs/Rascal/Statements/Solve).
+[assert](../../Rascal/Statements/Assert), [variable](../../Rascal/Declarations/Variable),
+[solve](../../Rascal/Statements/Solve).
 
 Remedy: adjust the actual type to the expected type.
 
@@ -43,7 +35,5 @@ An `assert` statement expects an argument of type `bool`:
 rascal>assert 3;
 ok
 ```
-
-#### Benefits
 
 

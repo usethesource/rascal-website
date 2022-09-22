@@ -21,10 +21,6 @@ Node values.
 | `str`      | `value`    | `value`    | ... | `node`                               |
 
 
-#### Usage
-
-#### Function
-
 #### Description
 
 Values of type `node` represent untyped trees and are constructed as follows:

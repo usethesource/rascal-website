@@ -8,8 +8,6 @@ keywords:
 
 Splice the elements of a set in an enclosing set.
 
-#### Syntax
-
 #### Types
 
 
@@ -17,10 +15,6 @@ Splice the elements of a set in an enclosing set.
 | --- | --- | --- | --- |
 |`T`   | `T<sub>1</sub>`  |  `T~n~`   | `set[lub(T<sub>1</sub>, ..., T, ...,T~n~)]`     |
 
-
-#### Function
-       
-#### Usage
 
 #### Description
 
@@ -48,7 +42,5 @@ set[int]: {10,20,30}
 rascal>{1, 2, *S, 3, 4};
 set[int]: {10,1,3,20,2,4,30}
 ```
-
-#### Benefits
 
 

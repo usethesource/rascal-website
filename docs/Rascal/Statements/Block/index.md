@@ -15,10 +15,6 @@ Group statements into a block.
 
 `{ Statement<sub>1</sub>; ... ; Statement~n~ }`
 
-#### Types
-
-#### Function
-
 #### Description
 
 A _block_ consists of a sequence of statements separated by semi-colons.
@@ -52,7 +48,5 @@ Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/Undeclared
 ok
 ```
 
-
-#### Benefits
 
 

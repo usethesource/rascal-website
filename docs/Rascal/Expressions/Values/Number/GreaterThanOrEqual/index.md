@@ -23,8 +23,6 @@ Greater than or equal operator on numeric values.
 | `real`     |  `real`    | `bool`                 |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if the value of Exp<sub>1</sub> is numerically greater than or equal to the value of Exp<sub>2</sub>, and `false` otherwise.
@@ -42,7 +40,5 @@ bool: true
 rascal>12.5 >= 13
 bool: false
 ```
-
-#### Benefits
 
 

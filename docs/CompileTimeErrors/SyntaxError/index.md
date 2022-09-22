@@ -6,14 +6,6 @@ title: SyntaxError
 
 Text in a module or entered via the command line violates the Rascal syntax.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 This error is generated when a text is expected to be Rascal but does not comply with the Rascal syntax.
@@ -34,9 +26,5 @@ When you are completely desparate and cannot find the syntax error, the followin
       Move the `/*` marker to the middle of the bottom part and repeat.
    ** The module does not parse. The syntax error is in the top part.
       Move the `/*` marker to the middle of the top part and repeat.
-
-#### Examples
-
-#### Benefits
 
 

@@ -13,10 +13,6 @@ Solve a set of equalities by fixed-point iteration.
 
 `solve(Var<sub>1</sub>, Var<sub>2</sub>, ..., Var~n~; Exp) Statement;`
 
-#### Types
-
-#### Function
-
 #### Description
 
 Rascal provides a solve statement for performing arbitrary fixed-point computations. This means, repeating a certain computation as long as it causes changes. This can, for instance, be used for the solution of sets of simultaneous 
@@ -38,7 +34,7 @@ we use it here just as a simple illustration). Transitive closure of a relation 
 ```rascal
 R+ = R + (R o R) + (R o R o R) + ...
 ```
-In other words, it is the union of successive [Composition](/docs/Rascal/Expressions/Values/Relation/Composition)s of `R` with itself. 
+In other words, it is the union of successive [Composition](../../../Rascal/Expressions/Values/Relation/Composition)s of `R` with itself. 
 For a given relation `R` this can be expressed as follows:
 
 ```rascal-shell
@@ -66,7 +62,5 @@ rel[int,int]: {
   <2,4>
 }
 ```
-
-#### Benefits
 
 

@@ -22,8 +22,6 @@ Less than operator on datetime values.
 | `datetime`     |  `datetime`    | `bool`               |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if the `datetime` value of Exp<sub>1</sub> is earlier in time than the `datetime` value
@@ -38,7 +36,5 @@ bool: true
 rascal>$2011-07-15$ < $2010-07-14$;
 bool: false
 ```
-
-#### Benefits
 
 

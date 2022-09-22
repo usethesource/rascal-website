@@ -21,8 +21,6 @@ Cartesian product of two list relation values.
 | `list[T<sub>1</sub>]` | `list[T<sub>2</sub>]` | `lrel[T<sub>1</sub>, T<sub>2</sub>]`  |
 
 
-#### Function
-
 #### Description
 
 Returns a binary relation that is the [Cartesian product](http://en.wikipedia.org/wiki/Cartesian_product) of two lists.
@@ -47,7 +45,5 @@ lrel[int,int]: [
   <3,11>
 ]
 ```
-
-#### Benefits
 
 

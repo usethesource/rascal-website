@@ -6,12 +6,6 @@ title: StaticTyping
 
 The static type system of Rascal.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Rascal is based on static typing, this means that as many errors and inconsistencies as possible are spotted before 
@@ -48,7 +42,7 @@ The Rascal type system has various advanced features that are described separate
 *  Declarations of [Function]s and [AlgebraicDataType]s may be parameterized and [Type Constraints] can be used to define
    constraints on the actual type to be used.
 *  The formal arguments of functions are bound to _values_ but in exceptional cases
-  a function may need a type as argument value, [Reified types](/docs/Rascal/Expressions/Values/ReifiedTypes) make this possible.
+  a function may need a type as argument value, [Reified types](../../../Rascal/Expressions/Values/ReifiedTypes) make this possible.
 
 #### Examples
 
@@ -86,7 +80,5 @@ value: "abc"
 rascal>v = [1, 2, 3];
 value: [1,2,3]
 ```
-
-#### Benefits
 
 

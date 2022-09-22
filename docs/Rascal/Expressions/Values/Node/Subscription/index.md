@@ -21,8 +21,6 @@ Retrieve an argument of a node via its index.
 | `node`        | `int`     | `value`                 |
 
 
-#### Function
-
 #### Description
 
 Node subscription uses the integer value of _Exp_<sub>2</sub> as index in the argument list of the node value of _Exp_<sub>1</sub>.

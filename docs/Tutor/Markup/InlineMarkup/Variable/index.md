@@ -13,13 +13,9 @@ Markup for a variable.
 * `\VarName\^Index^`
 
 
-#### Types
-
-#### Function
-
 #### Description
 
-Variables in text and code are represented by [Italic](/docs/Tutor/Markup/InlineMarkup/Italic) markup. 
+Variables in text and code are represented by [Italic](../../../../Tutor/Markup/InlineMarkup/Italic) markup. 
 They may be followed by one or more subscripts (enclosed by `~` and `~`) or superscripts (enclosed by `^` and `^`)
 
 #### Examples
@@ -31,7 +27,5 @@ They may be followed by one or more subscripts (enclosed by `~` and `~`) or supe
 * `\Var\^1^` gives _Var_^1^.
 
 * `\Var\^1^\<sub>2</sub>` gives _Var_^1^<sub>2</sub>.
-
-#### Benefits
 
 

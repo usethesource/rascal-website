@@ -13,49 +13,49 @@ Library functions for strings.
 
 #### Description
 
-For operators on strings see [String](/docs/Rascal/Expressions/Values/String) in the Rascal Language Reference.
+For operators on strings see [String](../Rascal/Expressions/Values/String) in the Rascal Language Reference.
 
 The following functions are defined for strings:
-* [Library:function:String::arb string](/docs/Library/String#String-arbString)
-* [Library:function:String::capitalize](/docs/Library/String#String-capitalize)
-* [Library:function:String::center](/docs/Library/String#String-center)
-* [Library:function:String::char at](/docs/Library/String#String-charAt)
-* [Library:function:String::chars](/docs/Library/String#String-chars)
-* [Library:function:String::contains](/docs/Library/String#String-contains)
-* [Library:function:String::deescape](/docs/Library/String#String-deescape)
-* [Library:function:String::ends with](/docs/Library/String#String-endsWith)
-* [Library:function:String::escape](/docs/Library/String#String-escape)
-* [Library:function:String::find all](/docs/Library/String#String-findAll)
-* [Library:function:String::find first](/docs/Library/String#String-findFirst)
-* [Library:function:String::find last](/docs/Library/String#String-findLast)
-* [Library:function:String::format](/docs/Library/String#String-format)
-* [Library:function:String::from base64](/docs/Library/String#String-fromBase64)
-* [Library:function:String::is empty](/docs/Library/String#String-isEmpty)
-* [Library:function:String::is valid character](/docs/Library/String#String-isValidCharacter)
-* [Library:function:String::left](/docs/Library/String#String-left)
-* [Library:function:String::replace all](/docs/Library/String#String-replaceAll)
-* [Library:function:String::replace first](/docs/Library/String#String-replaceFirst)
-* [Library:function:String::replace last](/docs/Library/String#String-replaceLast)
-* [Library:function:String::reverse](/docs/Library/String#String-reverse)
-* [Library:function:String::rexp match](/docs/Library/String#String-rexpMatch)
-* [Library:function:String::right](/docs/Library/String#String-right)
-* [Library:function:String::size](/docs/Library/String#String-size)
-* [Library:function:String::split](/docs/Library/String#String-split)
-* [Library:function:String::squeeze](/docs/Library/String#String-squeeze)
-* [Library:function:String::starts with](/docs/Library/String#String-startsWith)
-* [Library:function:String::string char](/docs/Library/String#String-stringChar)
-* [Library:function:String::string chars](/docs/Library/String#String-stringChars)
-* [Library:function:String::substitute](/docs/Library/String#String-substitute)
-* [Library:function:String::substring](/docs/Library/String#String-substring)
-* [Library:function:String::to base64](/docs/Library/String#String-toBase64)
-* [Library:function:String::to int](/docs/Library/String#String-toInt)
-* [Library:function:String::to location](/docs/Library/String#String-toLocation)
-* [Library:function:String::to lower case](/docs/Library/String#String-toLowerCase)
-* [Library:function:String::to real](/docs/Library/String#String-toReal)
-* [Library:function:String::to upper case](/docs/Library/String#String-toUpperCase)
-* [Library:function:String::trim](/docs/Library/String#String-trim)
-* [Library:function:String::uncapitalize](/docs/Library/String#String-uncapitalize)
-* [Library:function:String::wrap](/docs/Library/String#String-wrap)
+* [Library:function:String::arb string](../Library/String#String-arbString)
+* [Library:function:String::capitalize](../Library/String#String-capitalize)
+* [Library:function:String::center](../Library/String#String-center)
+* [Library:function:String::char at](../Library/String#String-charAt)
+* [Library:function:String::chars](../Library/String#String-chars)
+* [Library:function:String::contains](../Library/String#String-contains)
+* [Library:function:String::deescape](../Library/String#String-deescape)
+* [Library:function:String::ends with](../Library/String#String-endsWith)
+* [Library:function:String::escape](../Library/String#String-escape)
+* [Library:function:String::find all](../Library/String#String-findAll)
+* [Library:function:String::find first](../Library/String#String-findFirst)
+* [Library:function:String::find last](../Library/String#String-findLast)
+* [Library:function:String::format](../Library/String#String-format)
+* [Library:function:String::from base64](../Library/String#String-fromBase64)
+* [Library:function:String::is empty](../Library/String#String-isEmpty)
+* [Library:function:String::is valid character](../Library/String#String-isValidCharacter)
+* [Library:function:String::left](../Library/String#String-left)
+* [Library:function:String::replace all](../Library/String#String-replaceAll)
+* [Library:function:String::replace first](../Library/String#String-replaceFirst)
+* [Library:function:String::replace last](../Library/String#String-replaceLast)
+* [Library:function:String::reverse](../Library/String#String-reverse)
+* [Library:function:String::rexp match](../Library/String#String-rexpMatch)
+* [Library:function:String::right](../Library/String#String-right)
+* [Library:function:String::size](../Library/String#String-size)
+* [Library:function:String::split](../Library/String#String-split)
+* [Library:function:String::squeeze](../Library/String#String-squeeze)
+* [Library:function:String::starts with](../Library/String#String-startsWith)
+* [Library:function:String::string char](../Library/String#String-stringChar)
+* [Library:function:String::string chars](../Library/String#String-stringChars)
+* [Library:function:String::substitute](../Library/String#String-substitute)
+* [Library:function:String::substring](../Library/String#String-substring)
+* [Library:function:String::to base64](../Library/String#String-toBase64)
+* [Library:function:String::to int](../Library/String#String-toInt)
+* [Library:function:String::to location](../Library/String#String-toLocation)
+* [Library:function:String::to lower case](../Library/String#String-toLowerCase)
+* [Library:function:String::to real](../Library/String#String-toReal)
+* [Library:function:String::to upper case](../Library/String#String-toUpperCase)
+* [Library:function:String::trim](../Library/String#String-trim)
+* [Library:function:String::uncapitalize](../Library/String#String-uncapitalize)
+* [Library:function:String::wrap](../Library/String#String-wrap)
 
 
 ## function center {#String-center}
@@ -97,7 +97,7 @@ Return character in a string by its index position.
 #### Description
 
 Return the character at position `i` in string `s` as integer character code.
-Also see [string char](/docs/Library/String#String-stringChar) that converts character codes back to string.
+Also see [string char](../Library/String#String-stringChar) that converts character codes back to string.
 
 #### Examples
 
@@ -122,7 +122,7 @@ Return characters of a string.
 #### Description
 
 Return a list of the characters of `s` as integer character codes.
-Also see [string chars](/docs/Library/String#String-stringChars) that converts character codes back to string.
+Also see [string chars](../Library/String#String-stringChars) that converts character codes back to string.
 
 #### Examples
 
@@ -239,7 +239,7 @@ Find all occurrences of a string in another string.
 Find all occurrences of string `find` in string `subject`.
 The result is a (possible empty) list of positions where `find` matches.
 
-See also [find first](/docs/Library/String#String-findFirst) and [find last](/docs/Library/String#String-findLast).
+See also [find first](../Library/String#String-findFirst) and [find last](../Library/String#String-findLast).
 
 #### Examples
 
@@ -269,7 +269,7 @@ Find the first occurrence of a string in another string.
 Find the first occurrence of string `find` in string `subject`.
 The result is either a position in `subject` or `-1` when `find` is not found.
 
-Also see [find all](/docs/Library/String#String-findAll) and [find last](/docs/Library/String#String-findLast).
+Also see [find all](../Library/String#String-findAll) and [find last](../Library/String#String-findLast).
 
 #### Examples
 
@@ -299,7 +299,7 @@ Find the last occurrence of a string in another string.
 Find the last occurrence of string `find` in string `subject`.
 The result is either a position in `subject` or `-1` when `find` is not found.
 
-Also see [find all](/docs/Library/String#String-findAll) and [find first](/docs/Library/String#String-findFirst).
+Also see [find all](../Library/String#String-findAll) and [find first](../Library/String#String-findFirst).
 
 #### Examples
 
@@ -360,7 +360,7 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-str: "rYdOBT"
+str: ""
 rascal>arbString(10);
 str: ""
 ```
@@ -404,7 +404,7 @@ Replace all occurrences of a string in another string.
 #### Description
 
 Return a copy of `subject` in which all occurrences of `find` (if any) have been replaced by `replacement`.
-Also see [replace first](/docs/Library/String#String-replaceFirst) and [replace last](/docs/Library/String#String-replaceLast).
+Also see [replace first](../Library/String#String-replaceFirst) and [replace last](../Library/String#String-replaceLast).
 
 #### Examples
 
@@ -436,7 +436,7 @@ Replace the first occurrence of a string in another string.
 #### Description
 
 Return a copy of `subject` in which the first occurrence of `find` (if it exists) has been replaced by `replacement`.
-Also see [replace all](/docs/Library/String#String-replaceAll) and [replace last](/docs/Library/String#String-replaceLast).
+Also see [replace all](../Library/String#String-replaceAll) and [replace last](../Library/String#String-replaceLast).
 
 #### Examples
 
@@ -468,7 +468,7 @@ Replace the last occurrence of a string in another string.
 #### Description
 
 Return a copy of `subject` in which the last occurrence of `find` (if it exists) has been replaced by `replacement`.
-Also see [replace first](/docs/Library/String#String-replaceFirst) and [replace last](/docs/Library/String#String-replaceLast).
+Also see [replace first](../Library/String#String-replaceFirst) and [replace last](../Library/String#String-replaceLast).
 
 #### Examples
 
@@ -707,7 +707,7 @@ Convert the characters in a string value to lower case.
 
 #### Description
 
-Convert all characters in string `s` to lowercase. Also see [to upper case](/docs/Library/String#String-toUpperCase).
+Convert all characters in string `s` to lowercase. Also see [to upper case](../Library/String#String-toUpperCase).
 
 #### Examples
 
@@ -762,7 +762,7 @@ Convert the characters in a string value to upper case.
 
 Converts all characters in string `s` to upper case.
 
-Also see [to lower case](/docs/Library/String#String-toLowerCase).
+Also see [to lower case](../Library/String#String-toLowerCase).
 
 #### Examples
 

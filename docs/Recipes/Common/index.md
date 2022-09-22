@@ -6,17 +6,11 @@ title: Common
 
 Solutions for some common tasks.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 We discuss the following tasks:
 
-* [Recipes:Common](/docs//Recipes/Common)
+* [Recipes:Common](../..//Recipes/Common)
 * ((Recipes:Common/AdHocDataExploration))
 * ((Recipes:Common/CallAnalysis))
 * ((Recipes:Common/CallLifting))
@@ -26,9 +20,5 @@ We discuss the following tasks:
 * ((Recipes:Common/StringTemplate))
 * ((Recipes:Common/WordCount))
 * ((Recipes:Common/WordReplacement))
-
-#### Examples
-
-#### Benefits
 
 

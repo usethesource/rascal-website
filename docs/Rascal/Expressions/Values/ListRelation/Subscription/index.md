@@ -16,8 +16,6 @@ Indexing of a list relation via tuple values.
 
 *  `Exp<sub>0</sub> [ Exp<sub>1</sub>]`
 
-#### Types
-
 ## Variant 1
 
 
@@ -33,8 +31,6 @@ Indexing of a list relation via tuple values.
 |
 | `lrel[T<sub>1</sub>, T<sub>2</sub>, ... T~m~]`    | `list[T<sub>1</sub>]` | `lrel[T<sub>2</sub>, T<sub>3</sub>, ... T~m~]`   |
 
-
-#### Function
 
 #### Description
 
@@ -117,7 +113,5 @@ or rather for the indices `"Japan"` and `2008`:
 rascal>GDP["Japan", 2008];
 list[int]: [4923761]
 ```
-
-#### Benefits
 
 

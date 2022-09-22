@@ -6,14 +6,6 @@ title: UndeclaredVariable
 
 Use of a variable that has not been declared.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 A variable can only be used when it has been declared and initialized.

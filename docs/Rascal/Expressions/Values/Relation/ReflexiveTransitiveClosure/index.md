@@ -21,8 +21,6 @@ The reflexive transitive closure of a binary relation.
 | `rel[T<sub>1</sub>, T<sub>2</sub>]` | `rel[T<sub>1</sub>, T<sub>2</sub>]`  |
 
 
-#### Function
-
 #### Description
 
 Reflexive transitive closure is defined by repeated composition of a relation.
@@ -35,7 +33,7 @@ If we define for a given relation R:
 *  `...`
 
 then the reflexive transitive closure R* can be defined in two ways:
-(also see [Transitive closure](/docs/Rascal/Expressions/Values/Relation/TransitiveClosure)):
+(also see [Transitive closure](../../../../../Rascal/Expressions/Values/Relation/TransitiveClosure)):
 
 *  `R* = R<sub>0</sub> + R<sub>1</sub> + R<sub>2</sub> + R<sub>3</sub> + ...`
 *  `R* = R<sub>0</sub> + R+`
@@ -59,7 +57,5 @@ rel[int,int]: {
   <2,4>
 }
 ```
-
-#### Benefits
 
 

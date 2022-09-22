@@ -23,8 +23,6 @@ Addition on numeric values.
 | `real`     |  `real`    | `real`                |
 
 
-#### Function
-
 #### Description
 
 Yields the numerical sum of the values of _Exp_<sub>1</sub> and _Exp_<sub>2</sub>.
@@ -38,7 +36,5 @@ int: 25
 rascal>12 + 13.5
 real: 25.5
 ```
-
-#### Benefits
 
 

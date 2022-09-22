@@ -11,10 +11,6 @@ A question about a Rascal type.
 *  `QType OptName : TypeDescriptor`
 *  `QType OptName : QSteps Test Listing`
 
-#### Types
-
-#### Function
-
 #### Description
 
 A type question presents a Rascal expressions and poses a question about its type.
@@ -22,7 +18,7 @@ A type question presents a Rascal expressions and poses a question about its typ
 _OptName_ is an optional name of the question (enclosed between `[` and `]`).
 If _OptName_ is missing, the question gets a unique number as name.
 
-The desired type is given by a [Type descriptor](/docs/Tutor/Markup/QuestionMarkup/TypeDescriptor).
+The desired type is given by a [Type descriptor](../../../../Tutor/Markup/QuestionMarkup/TypeDescriptor).
 
 The first form presents the value generated for the _TypeDescriptor_ and asks about its type.
 
@@ -46,7 +42,5 @@ The following question can be paraphrased as: _I give you an addition of a set o
 ```rascal
 QType: <A:set[arb[int,str,real]]> + <B:same[A]>
 ```
-
-#### Benefits
 
 

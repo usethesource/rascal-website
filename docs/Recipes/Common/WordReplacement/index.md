@@ -6,12 +6,6 @@ title: Word Replacement
 
 Replace words in a string.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Suppose you are a book editor and want to ensure that all chapter
@@ -70,7 +64,7 @@ test bool tstCapAll2() = capAll2("turn this into a title") == "Turn This Into A 
 
                 
 <1> We start by introducing a helper function `capitalize` that does the actual capitalization of a single word.
-    See [Regular Pattern](/docs/Rascal/Patterns/Regular) for details about regular expression patterns.
+    See [Regular Pattern](../../../Rascal/Patterns/Regular) for details about regular expression patterns.
     Next we give two versions of a capitalization functions for a sentence:
 
 <2> `capAll1` uses a while loop to find subsequent words and to replace them by a capitalized version.
@@ -90,7 +84,5 @@ str: "Turn This Into A Capitalized Title"
 rascal>capAll2("turn this into a capitalized title")
 str: "Turn This Into A Capitalized Title"
 ```
-
-#### Benefits
 
 

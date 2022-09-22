@@ -4,7 +4,7 @@ title: Filter
 
 #### Synopsis
 
-Filter values in a [Comprehension](/docs/Rascal/Expressions/Values/List/Comprehension)], [Comprehension](/docs/Rascal/Expressions/Values/Set/Comprehension) or [Comprehension](/docs/Rascal/Expressions/Values/Map/Comprehension).
+Filter values in a [Comprehension](../../../../Rascal/Expressions/Values/List/Comprehension)], [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension) or [Comprehension](../../../../Rascal/Expressions/Values/Map/Comprehension).
 
 #### Syntax
 
@@ -18,8 +18,6 @@ Filter values in a [Comprehension](/docs/Rascal/Expressions/Values/List/Comprehe
 | --- |
 | `bool`   |
 
-
-#### Function
 
 #### Description
 
@@ -55,7 +53,5 @@ lrel[int,int]: [
   <9,1>
 ]
 ```
-
-#### Benefits
 
 

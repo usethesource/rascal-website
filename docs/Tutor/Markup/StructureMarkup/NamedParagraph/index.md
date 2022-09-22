@@ -12,10 +12,6 @@ Mark up for a named paragraph.
 *  `\### ParagraphName`
 *  ...
 
-#### Types
-
-#### Function
-
 #### Description
 
 A NamedParagraph produces a named paragraph of a level that is determined by the number of `#` characters preceding the _ParagraphName_.
@@ -27,10 +23,6 @@ The input:
 `## Paragraph`
 
 will give
-
-## Paragraph
-
-#### Benefits
 
 #### Pitfalls
 

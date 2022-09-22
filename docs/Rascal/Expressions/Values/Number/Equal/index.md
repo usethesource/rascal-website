@@ -23,8 +23,6 @@ Equality operator on numeric values.
 | `real`     |  `real`    | `bool`                 |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if the value of both arguments is numerically equal, and `false` otherwise.
@@ -46,7 +44,5 @@ bool: true
 rascal>3.14 == 3
 bool: false
 ```
-
-#### Benefits
 
 

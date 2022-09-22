@@ -6,21 +6,11 @@ title: Hello
 
 Variations on the ubiquitous _Hello World_ example.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
-#### Description
-
-#### Examples
-
 ##  `hello` on command line 
 
 
 We demonstrate hello via an interactive session with the Rascal system. First we get the prompt `rascal>` that shows that Rascal is ready for our input. 
-Next, we import the library module [IO](/docs/Library/IO) since hello world requires printing. Rascal responds with the feedback `ok` so we know that all went well. Finally, we call `println` and proudly observe our first Rascal output!
+Next, we import the library module [IO](../../../Library/IO) since hello world requires printing. Rascal responds with the feedback `ok` so we know that all went well. Finally, we call `println` and proudly observe our first Rascal output!
 
 ```rascal-shell
 rascal>import IO;
@@ -97,7 +87,5 @@ The `hello` function is by default visible outside the `Hello` module.
 We could stress this by adding writing `public void hello() { ... }`.
 Restricting visibility to the module itself can be achieved by adding the keyword `private`
 to the definition of `hello`.
-
-#### Benefits
 
 

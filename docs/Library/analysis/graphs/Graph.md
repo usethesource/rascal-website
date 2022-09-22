@@ -18,22 +18,22 @@ A `Graph` datatype with associated functions.
 #### Description
 
 The Graph data type is a binary relation and all operators and functions defined
-on [relations](/docs/Rascal/Expressions/Values/Relation) are also defined on Graphs.
+on [relations](../../../Rascal/Expressions/Values/Relation) are also defined on Graphs.
 
 The `Graph` library provides the following functions:
 * ((Library:alias:analysis::graphs::Graph::Graph[&T]))
-* [Library:function:analysis::graphs::Graph::bottom](/docs/Library/analysis/graphs/Graph#analysis::graphs::Graph-bottom)
-* [Library:function:analysis::graphs::Graph::connected components](/docs/Library/analysis/graphs/Graph#analysis::graphs::Graph-connectedComponents)
-* [Library:function:analysis::graphs::Graph::order](/docs/Library/analysis/graphs/Graph#analysis::graphs::Graph-order)
-* [Library:function:analysis::graphs::Graph::predecessors](/docs/Library/analysis/graphs/Graph#analysis::graphs::Graph-predecessors)
-* [Library:function:analysis::graphs::Graph::reach](/docs/Library/analysis/graphs/Graph#analysis::graphs::Graph-reach)
-* [Library:function:analysis::graphs::Graph::reachR](/docs/Library/analysis/graphs/Graph#analysis::graphs::Graph-reachR)
-* [Library:function:analysis::graphs::Graph::reachX](/docs/Library/analysis/graphs/Graph#analysis::graphs::Graph-reachX)
-* [Library:function:analysis::graphs::Graph::shortest path pair](/docs/Library/analysis/graphs/Graph#analysis::graphs::Graph-shortestPathPair)
-* [Library:function:analysis::graphs::Graph::strongly connected components](/docs/Library/analysis/graphs/Graph#analysis::graphs::Graph-stronglyConnectedComponents)
-* [Library:function:analysis::graphs::Graph::strongly connected components and top sort](/docs/Library/analysis/graphs/Graph#analysis::graphs::Graph-stronglyConnectedComponentsAndTopSort)
-* [Library:function:analysis::graphs::Graph::successors](/docs/Library/analysis/graphs/Graph#analysis::graphs::Graph-successors)
-* [Library:function:analysis::graphs::Graph::top](/docs/Library/analysis/graphs/Graph#analysis::graphs::Graph-top)
+* [Library:function:analysis::graphs::Graph::bottom](../../../Library/analysis/graphs/Graph#analysis::graphs::Graph-bottom)
+* [Library:function:analysis::graphs::Graph::connected components](../../../Library/analysis/graphs/Graph#analysis::graphs::Graph-connectedComponents)
+* [Library:function:analysis::graphs::Graph::order](../../../Library/analysis/graphs/Graph#analysis::graphs::Graph-order)
+* [Library:function:analysis::graphs::Graph::predecessors](../../../Library/analysis/graphs/Graph#analysis::graphs::Graph-predecessors)
+* [Library:function:analysis::graphs::Graph::reach](../../../Library/analysis/graphs/Graph#analysis::graphs::Graph-reach)
+* [Library:function:analysis::graphs::Graph::reachR](../../../Library/analysis/graphs/Graph#analysis::graphs::Graph-reachR)
+* [Library:function:analysis::graphs::Graph::reachX](../../../Library/analysis/graphs/Graph#analysis::graphs::Graph-reachX)
+* [Library:function:analysis::graphs::Graph::shortest path pair](../../../Library/analysis/graphs/Graph#analysis::graphs::Graph-shortestPathPair)
+* [Library:function:analysis::graphs::Graph::strongly connected components](../../../Library/analysis/graphs/Graph#analysis::graphs::Graph-stronglyConnectedComponents)
+* [Library:function:analysis::graphs::Graph::strongly connected components and top sort](../../../Library/analysis/graphs/Graph#analysis::graphs::Graph-stronglyConnectedComponentsAndTopSort)
+* [Library:function:analysis::graphs::Graph::successors](../../../Library/analysis/graphs/Graph#analysis::graphs::Graph-successors)
+* [Library:function:analysis::graphs::Graph::top](../../../Library/analysis/graphs/Graph#analysis::graphs::Graph-top)
 
 
 ## alias Graph[&T] {#analysis-graphs-Graph-Graph[&T]}

@@ -35,10 +35,6 @@ A _TypeDescriptor_ is one of
 *  `arb[TypeDescriptor<sub>1</sub>, TypeDescriptor<sub>2</sub>]`
 *  `same[TypeName]`
 
-#### Types
-
-#### Function
-
 #### Description
 
 A TypeDescriptor is used to describe Rascal types and values in questions and are used to automatically generate
@@ -61,8 +57,6 @@ extensions that are helpfull when generating values:
 | `list[int]`         | A list of integers |
 | `set[int[0,10]]`    | A set of integers between 0 and 10  |
 
-
-#### Benefits
 
 #### Pitfalls
 

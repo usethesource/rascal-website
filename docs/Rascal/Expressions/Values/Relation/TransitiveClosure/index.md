@@ -21,8 +21,6 @@ Transitive closure on binary relation values.
 | `rel[T<sub>1</sub>, T<sub>2</sub>]` | `rel[T<sub>1</sub>, T<sub>2</sub>]`  |
 
 
-#### Function
-
 #### Description
 
 Returns the transitive closure of a binary relation.
@@ -77,7 +75,5 @@ rel[int,int]: {
   <2,4>
 }
 ```
-
-#### Benefits
 
 

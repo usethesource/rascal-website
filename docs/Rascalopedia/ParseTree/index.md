@@ -6,14 +6,6 @@ title: ParseTree
 
 Detailed represention of the concrete syntactic structure of a program.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 A parse tree is a detailed and very precise represention of the concrete syntactic structure of a program.
@@ -26,7 +18,5 @@ A parse tree for the sentence
 
 ![](/assets/Rascalopedia/ParseTree/parse-tree.png)
 
-
-#### Benefits
 
 

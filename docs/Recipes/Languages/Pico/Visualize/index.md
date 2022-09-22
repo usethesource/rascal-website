@@ -6,14 +6,6 @@ title: Visualize
 
 Visualize Pico Control Flow Graphs.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 :::caution
@@ -52,7 +44,5 @@ The resulting visualization looks like this:
 
 
 ![](/assets/Recipes/Languages/Pico/Visualize/cfg1.png)
-
-#### Benefits
 
 

@@ -6,12 +6,6 @@ title: No Layout
 
 A version of Exp based on concrete syntax.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 We describe howto write a grammar for Exp and how to use it to implement an evaluator.
@@ -117,7 +111,5 @@ rascal>eval("(2+3)*4");
 int: 20
 ```
 
-
-#### Benefits
 
 

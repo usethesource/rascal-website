@@ -19,17 +19,11 @@ Assign to a slice of a list or string.
 
 
 `Exp<sub>1</sub>` and `Exp<sub>3</sub>` are optional
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
-A slice assignment is defined for [List](/docs/Rascal/Expressions/Values/List), [String](/docs/Rascal/Expressions/Values/String) and [Node](/docs/Rascal/Expressions/Values/Node) 
+A slice assignment is defined for [List](../../../../Rascal/Expressions/Values/List), [String](../../../../Rascal/Expressions/Values/String) and [Node](../../../../Rascal/Expressions/Values/Node) 
 and aims to replace a slice from the old value of the assignable by a new value. 
-See [Slice](/docs/Rascal/Expressions/Values/List/Slice), [Slice](/docs/Rascal/Expressions/Values/String/Slice) or [Slice](/docs/Rascal/Expressions/Values/Node/Slice) for a more detailed explanation of slicing.
+See [Slice](../../../../Rascal/Expressions/Values/List/Slice), [Slice](../../../../Rascal/Expressions/Values/String/Slice) or [Slice](../../../../Rascal/Expressions/Values/Node/Slice) for a more detailed explanation of slicing.
 
 Let _V_ be the current value of _Assignable_.
 
@@ -181,7 +175,5 @@ node: "f"(
   8,
   {999,9,99})
 ```
-
-#### Benefits
 
 

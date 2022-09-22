@@ -285,12 +285,12 @@ for (r <- sort(getKeywordParameters(myModel)<0>)) println("  <r>");
 list[void]: []
 ```
 
-See [analysis::m3::Core](/docs/Library/analysis/m3/Core) for the definition of the language-independent relations and [lang::java::m3::Core](/docs/Library/lang/java/m3/Core) for the Java-specific extensions.
+See [analysis::m3::Core](../../../../Library/analysis/m3/Core) for the definition of the language-independent relations and [lang::java::m3::Core](../../../../Library/lang/java/m3/Core) for the Java-specific extensions.
 
 #### Benefits
 
 * Rascal values, such as M3 models, are fully text-based. That means what you see on screen is what is in memory, and vice versa. Nothing is hidden or implicit. No magic!
-* Using relational calculus operators like [Intersection](/docs/Rascal/Expressions/Values/Set/Intersection), [Union](/docs/Rascal/Expressions/Values/Set/Union), [Composition](/docs/Rascal/Expressions/Values/Relation/Composition), [Comprehension](/docs/Rascal/Expressions/Values/Set/Comprehension) you can query M3 models in many different ways.
+* Using relational calculus operators like [Intersection](../../../../Rascal/Expressions/Values/Set/Intersection), [Union](../../../../Rascal/Expressions/Values/Set/Union), [Composition](../../../../Rascal/Expressions/Values/Relation/Composition), [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension) you can query M3 models in many different ways.
 * M3 models encapsulate *everything* there is to know about the structure of a Java project. Using the knowledge of the Eclipse JDT compiler we derive types and names, semantic relations that can be queried at will.
 * M3 models are *composable*; you could extract them for different projects that depend on each-other and combine them before running an analysis on the whole
 * There are other M3 models for other languages, with similar ideas and design. You can transfer your analysis skills to those lanaguges, but also make analyses that cross the boundaries of programming languages (consider javascript and java, or java and C via JNI, etc.)

@@ -6,18 +6,10 @@ title: NotEnumerable
 
 A value that cannot be enumerated is used in an enumerator.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
-An [enumerator](/docs/Rascal/Expressions/Comprehensions/Enumerator) like `int n <- V` is used in 
-[comprehensions](/docs/Rascal/Expressions/Comprehensions) to enumerate the values in `V`.
+An [enumerator](../../Rascal/Expressions/Comprehensions/Enumerator) like `int n <- V` is used in 
+[comprehensions](../../Rascal/Expressions/Comprehensions) to enumerate the values in `V`.
 This error is produced when `V` is a value that does not support enumeration.
 This is typically the case for atomic values like numbers, Booleans and Strings,
 
@@ -34,7 +26,5 @@ rascal>b <- true
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/NotEnumerable/NotEnumerable.html|
 ok
 ```
-
-#### Benefits
 
 

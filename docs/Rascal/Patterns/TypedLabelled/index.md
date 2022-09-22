@@ -9,12 +9,6 @@ keywords:
 
 Typed, labelled, abstract pattern.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 A typed, labelled, pattern matches when the subject value has type _Type_ and _Pat_ matches. 
@@ -23,7 +17,7 @@ The matched value is assigned to _Var_.
 This construct is used for:
 
 *  binding the _whole pattern_ to a variable while also matching some stuff out of it: `MyType t : someComplexPattern(f(int a), int b))`. 
-   This is similar to [Labelled](/docs/Rascal/Patterns/Labelled)s patterns but with an extra type
+   This is similar to [Labelled](../../../Rascal/Patterns/Labelled)s patterns but with an extra type
 *  to assert that the pattern has a certain type. This can be useful in disambiguating a constructor name, as in the example below.
 
 #### Examples
@@ -60,7 +54,5 @@ Exp: add(
         number(1),
         number(2)))))
 ```
-
-#### Benefits
 
 

@@ -1,6 +1,6 @@
 # lang::java
 
 
-   * [m3](/docs/Library/lang/java/m3)
-   * [syntax](/docs/Library/lang/java/syntax)
-   * [flow](/docs/Library/lang/java/flow)
+   * [m3](../../../Library/lang/java/m3)
+   * [syntax](../../../Library/lang/java/syntax)
+   * [flow](../../../Library/lang/java/flow)

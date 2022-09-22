@@ -15,10 +15,6 @@ Numeric range of values.
 *  `[ Exp<sub>1</sub> .. Exp<sub>3</sub> ]`
 *  `[ Exp<sub>1</sub>, Exp<sub>2</sub> .. Exp<sub>3</sub> ]`
 
-#### Types
-
-#### Function
-
 #### Description
 
 Ranges are a shorthand for describing lists of integers from 
@@ -26,7 +22,7 @@ _Exp_<sub>1</sub> up to (exclusive) _Exp_<sub>3</sub> with increments of 1.
 When _Exp_<sub>2</sub> is present it is taken as the second element of the list
 and _Exp_<sub>2</sub> - _Exp_<sub>1</sub> is used as increment for the subsequent list elements.
 
-A range with integer expressions is identical to a list [Slice](/docs/Rascal/Expressions/Values/List/Slice).
+A range with integer expressions is identical to a list [Slice](../../../../Rascal/Expressions/Values/List/Slice).
 However, a range may also contain numeric expressions that are not integers.
 
 #### Examples

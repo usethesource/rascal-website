@@ -23,8 +23,6 @@ The difference between two lists.
 
 
 
-#### Function
-
 #### Description
 
 If both _Exp_<sub>1</sub> and _Exp_<sub>2</sub> have a list as value, the result is the difference of these two list values. 
@@ -49,7 +47,5 @@ list[int]: [2,3,1,2,3]
 rascal>[1, 2, 3, 1, 2, 3] - [1, 2];
 list[int]: [3,1,2,3]
 ```
-
-#### Benefits
 
 

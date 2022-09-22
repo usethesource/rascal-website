@@ -6,19 +6,9 @@ title: Assembly
 
 Assembly language for Pico.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
-#### Description
-
 #### Examples
 
-The [Compile](/docs/Recipes/Languages/Pico/Compile)r will translate Pico programs into the following assembly language.
+The [Compile](../../../../Recipes/Languages/Pico/Compile)r will translate Pico programs into the following assembly language.
 
 ```rascal
 // tag::module[]
@@ -47,6 +37,4 @@ public data Instr =
 ```
 
                 
-#### Benefits
-
 

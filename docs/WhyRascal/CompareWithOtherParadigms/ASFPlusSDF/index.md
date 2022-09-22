@@ -6,12 +6,6 @@ title: ASF+SDF
 
 Rascal explained for ASF+SDF programmers.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Rascal is the successor of the specification language ASF+SDF that is part of the [ASF+SDF Meta-Environment](http://www.meta-environment.org).
@@ -59,9 +53,5 @@ What are the differences between ASF+SDF and Rascal? What are the commonalities?
 
 *  Rascal is supported by a modern, Eclipse-based, IDE, unlike the simple IDE of the ASF+SDF Meta-Environment.
   IDE services like keyword highlighting, outlining, and more are available for the Rascal programmer.
-
-#### Examples
-
-#### Benefits
 
 

@@ -22,8 +22,6 @@ Select a field (column) from a list relation value.
 | `lrel[T<sub>1</sub> L<sub>1</sub>, T<sub>2</sub> L<sub>2</sub>, ... ]` | `list[T~i~]`     |
 
 
-#### Function
-
 #### Description
 
 _Exp_ should evaluate to a list relation that has an _i_-th field label _L_~i~ that is identical to _Name_.
@@ -44,7 +42,5 @@ lrel[str street,int nm]: [
 rascal>R.street;
 list[str]: ["abc","abc","def","def"]
 ```
-
-#### Benefits
 
 

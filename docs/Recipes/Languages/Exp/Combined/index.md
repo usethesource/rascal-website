@@ -6,12 +6,6 @@ title: Combined
 
 Combine concrete syntax with abstract syntax.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Concrete syntax gives full control over the textual appearance of a language and leads to parse trees
@@ -22,12 +16,8 @@ the type checking, code generation, transformation, or optimization to be done o
 
 How can we bridge this gap? We discuss two approaches:
 
-*  [Manual](/docs/Recipes/Languages/Exp/Combined/Manual): a transformation is written manually to convert parse trees to abstract syntax trees.
-*  [Automatic](/docs/Recipes/Languages/Exp/Combined/Automatic): the library function [Rascal:implode] is used to automate this transformation.
+*  [Manual](../../../../Recipes/Languages/Exp/Combined/Manual): a transformation is written manually to convert parse trees to abstract syntax trees.
+*  [Automatic](../../../../Recipes/Languages/Exp/Combined/Automatic): the library function [Rascal:implode] is used to automate this transformation.
 
-
-#### Examples
-
-#### Benefits
 
 

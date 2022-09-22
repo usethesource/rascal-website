@@ -6,14 +6,6 @@ title: Test
 
 Tests for the Lisp interpreter.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 It is good practice to write tests for your software.
@@ -63,8 +55,4 @@ test bool eval24() = eval("(begin (define F (lambda (x) y)) (set! y 10) (F 1))")
 ```
 
                 
-#### Examples
-
-#### Benefits
-
 

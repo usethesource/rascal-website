@@ -21,8 +21,6 @@ Select a field (column) from a relation value.
 | `rel[T<sub>1</sub> L<sub>1</sub>, T<sub>2</sub> L<sub>2</sub>, ... ]` | `set[T~i~]`      |
 
 
-#### Function
-
 #### Description
 
 _Exp_ should evaluate to a relation that has an _i_-th field label _L_~i~ that is identical to _Name_.
@@ -43,7 +41,5 @@ rel[str street,int nm]: {
 rascal>R.street;
 set[str]: {"abc","def"}
 ```
-
-#### Benefits
 
 

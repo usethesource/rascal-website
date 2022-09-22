@@ -6,14 +6,6 @@ title: Squares
 
 Print a list of squares
 
-#### Syntax
-
-#### Types
-
-#### Function
-
-#### Description
-
 #### Examples
 
 How can we print a list of squares? Here is a solution:
@@ -42,9 +34,9 @@ str squaresTemplate(int N) // <4>
 
 ```
            
-<1> The [IO](/docs/Library/IO) module is imported since we want to print things using `println`.
+<1> The [IO](../../../Library/IO) module is imported since we want to print things using `println`.
 
-<2> [String](/docs/Rascal/Expressions/Values/String) interpolation is used several times.
+<2> [String](../../../Rascal/Expressions/Values/String) interpolation is used several times.
     Here the value of `N` is inserted in the header message.
 
 <3> The values of `I` and `I * I` are inserted in each line that is printed.
@@ -80,7 +72,7 @@ rascal>squaresTemplate(9);
 str: "Table of squares from 1 to 9\n\n  1 squared = 1\n  2 squared = 4\n  3 squared = 9\n  4 squared = 16\n  5 squared = 25\n  6 squared = 36\n  7 squared = 49\n  8 squared = 64\n  9 squared = 81"
 ```
 
-To get a truly identical result we have to import the [IO](/docs/Library/IO) module 
+To get a truly identical result we have to import the [IO](../../../Library/IO) module 
 and print the value of `squaresTemplate`:
 
 ```rascal-shell
@@ -102,7 +94,5 @@ Table of squares from 1 to 9
 ok
 ```
 
-
-#### Benefits
 
 

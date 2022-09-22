@@ -16,7 +16,7 @@ Rascal's type system, implemented in Rascal itself.
 The goal of this module is to provide:
 
 *  reflection capabilities that are useful for deserialization and validation of data, and 
-*  to provide the basic building blocks for syntax trees (see [module:Parse tree](/docs/Library/ParseTree))
+*  to provide the basic building blocks for syntax trees (see [module:Parse tree](../Library/ParseTree))
 
 The following definition is built into Rascal:
 ```rascal
@@ -131,7 +131,7 @@ We define here:
 <3>  Composite types.
 <4>  Parameters that represent a type variable.
 
-In [module:Parse tree](/docs/Library/ParseTree), see [Symbol](/docs/Library/ParseTree#ParseTree-Symbol), 
+In [module:Parse tree](../Library/ParseTree), see [Symbol](../Library/ParseTree#ParseTree-Symbol), 
 Symbols will be further extended with the symbols that may occur in a parse tree.
 
 ## data Symbol {#Type-Symbol}
@@ -195,7 +195,7 @@ Productions represent abstract (recursive) definitions of abstract data type con
 * `choice`: the choice between various alternatives.
 * `composition`: composition of two productions.
 
-In ParseTree, see [Production](/docs/Library/ParseTree#ParseTree-Production), 
+In ParseTree, see [Production](../Library/ParseTree#ParseTree-Production), 
 Productions will be further extended and will be used to represent productions in syntax rules.
 
 ## data Attr {#Type-Attr}
@@ -568,7 +568,7 @@ Symbol: int()
 #### Pitfalls
 
 *  Note that the `typeOf` function does not produce definitions, like the 
-   [reify](/docs/Rascal/Expressions/Values/ReifiedTypes) operator `#` does, 
+   [reify](../Rascal/Expressions/Values/ReifiedTypes) operator `#` does, 
    since values may escape the scope in which they've been constructed leaving their contents possibly undefined.
 
 ## function isIntType {#Type-isIntType}

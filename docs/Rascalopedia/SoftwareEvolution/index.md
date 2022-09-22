@@ -6,14 +6,6 @@ title: Software Evolution
 
 Understanding and managing the continuous change of software.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 [Meir M. Lehman](http://en.wikipedia.org/wiki/Meir_M._Lehman) was one of the first scientist to observe
@@ -25,16 +17,12 @@ about software evolution. Here are three examples of his laws (slightly paraphra
 *  _Continuing Growth_: The functional content of programs must be continually increased to maintain user satisfaction over their lifetime.
 
 
-_Software evolution_ is a specialisation in [Software Engineering](/docs//Rascalopedia/SoftwareEngineering) that address the following:
+_Software evolution_ is a specialisation in [Software Engineering](../..//Rascalopedia/SoftwareEngineering) that address the following:
 
 *  Understanding the reasons for software evolution.
 *  Understanding the impact of software evolution on the structure and quality of source code.
-*  Developing [Software Metric](/docs//Rascalopedia/SoftwareMetric)s and tools to measure the impact of software evolution.
+*  Developing [Software Metric](../..//Rascalopedia/SoftwareMetric)s and tools to measure the impact of software evolution.
 *  Developing methods and tools for the better understanding of source code.
-*  Developing [Refactoring](/docs//Rascalopedia/Refactoring) tools to counter the effects of software evolution.
-
-#### Examples
-
-#### Benefits
+*  Developing [Refactoring](../..//Rascalopedia/Refactoring) tools to counter the effects of software evolution.
 
 

@@ -22,14 +22,12 @@ Test whether expression has a defined value, otherwise provide alternative.
 | `T<sub>1</sub>`   | `T<sub>2</sub>`   |  `T<sub>2</sub> <: T<sub>1</sub>`  |
 
 
-#### Function
-
 #### Description
 
 If no exception is generated during the evaluation of _Exp_<sub>1</sub>, the result of `Exp<sub>1</sub> ? Exp<sub>2</sub>` is the value of _Exp_<sub>1</sub>.
 Otherwise, it is the value of _Exp_<sub>2</sub>.
 
-Also see [Is defined](/docs/Rascal/Expressions/Values/Boolean/IsDefined) and [Assignment](/docs/Rascal/Statements/Assignment).
+Also see [Is defined](../../../../../Rascal/Expressions/Values/Boolean/IsDefined) and [Assignment](../../../../../Rascal/Statements/Assignment).
 
 #### Examples
 
@@ -68,7 +66,5 @@ rascal>L[4] ? 0;
 int: 0
 ```
 It is, however, not possible to assign to index positions outside the list.
-
-#### Benefits
 
 

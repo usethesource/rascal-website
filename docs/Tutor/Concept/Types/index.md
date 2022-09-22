@@ -14,10 +14,6 @@ Part of the synopsis that describes any types or typing rules introduced by this
 _MarkedText_
 ```
 
-#### Types
-
-#### Function
-
 #### Description
 
 The `Types` section describes any types that are involved in the concept that is described.
@@ -57,7 +53,5 @@ The result will be displayed as:
 | --- | --- | --- | --- |
 | `bool`  |  T<sub>1</sub>        | T<sub>2</sub>         | `lub(T<sub>1</sub>, T<sub>2</sub>)`                               |
 
-
-#### Benefits
 
 

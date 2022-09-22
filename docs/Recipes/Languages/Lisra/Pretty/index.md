@@ -6,14 +6,6 @@ title: Pretty
 
 A Lisp pretty printer.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 The purpose of a pretty printer is to convert an internal structure to text.
@@ -79,7 +71,5 @@ ok
 rascal>parse(pretty(L)) == L;
 bool: true
 ```
-
-#### Benefits
 
 

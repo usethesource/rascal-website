@@ -22,8 +22,6 @@ Equality on lists.
 | `list[T<sub>1</sub>]` |  `list[T<sub>2</sub>]` | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if both arguments are equal lists and `false` otherwise.
@@ -37,7 +35,5 @@ bool: true
 rascal>[1, 2, 3] == [3, 2, 1];
 bool: false
 ```
-
-#### Benefits
 
 

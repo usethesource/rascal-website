@@ -6,12 +6,6 @@ title: Eval3
 
 A complete Func interpreter including support for the address and dereference operators.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Interpreter Eval3 supports the following features of Func: 
@@ -238,7 +232,5 @@ tuple[list[int],int]: <[10],3628800>
 ```
 
 
-
-#### Benefits
 
 

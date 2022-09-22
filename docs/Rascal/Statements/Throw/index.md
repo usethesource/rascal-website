@@ -13,17 +13,13 @@ Throw any value as an exception up the call stack.
 
 `throw Exp`
 
-#### Types
-
-#### Function
-
 #### Description
 
 A throw statement causes the immediate abortion of the execution of the current function with _Exp_ \'s value as exception value.
-The exception can be caught by a [Try Catch](/docs/Rascal/Statements/TryCatch) statement in the current function or in one of its callers.
+The exception can be caught by a [Try Catch](../../../Rascal/Statements/TryCatch) statement in the current function or in one of its callers.
 If the exception is not caught, the execution of the Rascal program is terminated. The following rules apply:
 
-*  The static type of _Exp_ should be `RuntimeException`, see [RuntimeException](/docs/Library/Exception#Exception-RuntimeException).
+*  The static type of _Exp_ should be `RuntimeException`, see [RuntimeException](../../../Library/Exception#Exception-RuntimeException).
 
 *  The Rascal program may contain data declarations that extend the type `RuntimeException`.
 
@@ -43,7 +39,5 @@ rascal>conc("foot", "ball");
 ok
 ```
 
-
-#### Benefits
 
 

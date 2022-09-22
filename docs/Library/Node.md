@@ -13,25 +13,25 @@ Library functions for nodes.
 
 #### Description
 
-For operators on nodes see [Node](/docs/Rascal/Expressions/Values/Node) in the Rascal Language Reference.
+For operators on nodes see [Node](../Rascal/Expressions/Values/Node) in the Rascal Language Reference.
 
 The following functions are defined for nodes:
-* [Library:function:Node::arb node](/docs/Library/Node#Node-arbNode)
-* [Library:function:Node::arity](/docs/Library/Node#Node-arity)
-* [Library:function:Node::del annotation](/docs/Library/Node#Node-delAnnotation)
-* [Library:function:Node::del annotations](/docs/Library/Node#Node-delAnnotations)
-* [Library:function:Node::del annotations rec](/docs/Library/Node#Node-delAnnotationsRec)
-* [Library:function:Node::get annotations](/docs/Library/Node#Node-getAnnotations)
-* [Library:function:Node::get children](/docs/Library/Node#Node-getChildren)
-* [Library:function:Node::get keyword parameters](/docs/Library/Node#Node-getKeywordParameters)
-* [Library:function:Node::get name](/docs/Library/Node#Node-getName)
-* [Library:function:Node::ito string](/docs/Library/Node#Node-itoString)
-* [Library:function:Node::make node](/docs/Library/Node#Node-makeNode)
-* [Library:function:Node::set annotations](/docs/Library/Node#Node-setAnnotations)
-* [Library:function:Node::set keyword parameters](/docs/Library/Node#Node-setKeywordParameters)
-* [Library:function:Node::to string](/docs/Library/Node#Node-toString)
-* [Library:function:Node::unset](/docs/Library/Node#Node-unset)
-* [Library:function:Node::unset rec](/docs/Library/Node#Node-unsetRec)
+* [Library:function:Node::arb node](../Library/Node#Node-arbNode)
+* [Library:function:Node::arity](../Library/Node#Node-arity)
+* [Library:function:Node::del annotation](../Library/Node#Node-delAnnotation)
+* [Library:function:Node::del annotations](../Library/Node#Node-delAnnotations)
+* [Library:function:Node::del annotations rec](../Library/Node#Node-delAnnotationsRec)
+* [Library:function:Node::get annotations](../Library/Node#Node-getAnnotations)
+* [Library:function:Node::get children](../Library/Node#Node-getChildren)
+* [Library:function:Node::get keyword parameters](../Library/Node#Node-getKeywordParameters)
+* [Library:function:Node::get name](../Library/Node#Node-getName)
+* [Library:function:Node::ito string](../Library/Node#Node-itoString)
+* [Library:function:Node::make node](../Library/Node#Node-makeNode)
+* [Library:function:Node::set annotations](../Library/Node#Node-setAnnotations)
+* [Library:function:Node::set keyword parameters](../Library/Node#Node-setKeywordParameters)
+* [Library:function:Node::to string](../Library/Node#Node-toString)
+* [Library:function:Node::unset](../Library/Node#Node-unset)
+* [Library:function:Node::unset rec](../Library/Node#Node-unsetRec)
 
 
 ## function arity {#Node-arity}

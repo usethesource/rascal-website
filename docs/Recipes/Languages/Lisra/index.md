@@ -14,14 +14,6 @@ details:
 
 A Lisp interpreter in Rascal.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Writing a Lisp interpreter is a classical challenge. 
@@ -97,15 +89,11 @@ A Lisp interpreter consists of the following parts:
 
 We discuss all these aspects:
 
-* [Syntax](/docs/Recipes/Languages/Lisra/Syntax)
-* [Runtime](/docs/Recipes/Languages/Lisra/Runtime)
-* [Parse](/docs/Recipes/Languages/Lisra/Parse)
-* [Pretty](/docs/Recipes/Languages/Lisra/Pretty)
-* [Eval](/docs/Recipes/Languages/Lisra/Eval)
-* [./Test](/docs/Recipes/Languages/Lisra/Test)
-
-#### Examples
-
-#### Benefits
+* [Syntax](../../../Recipes/Languages/Lisra/Syntax)
+* [Runtime](../../../Recipes/Languages/Lisra/Runtime)
+* [Parse](../../../Recipes/Languages/Lisra/Parse)
+* [Pretty](../../../Recipes/Languages/Lisra/Pretty)
+* [Eval](../../../Recipes/Languages/Lisra/Eval)
+* [./Test](../../../Recipes/Languages/Lisra/Test)
 
 

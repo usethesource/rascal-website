@@ -1,5 +1,3 @@
-## If
-
 #### Synopsis
 
 Conditional statement.

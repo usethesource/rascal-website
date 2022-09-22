@@ -28,8 +28,6 @@ Conditional statement.
 | `bool`  |  T<sub>1</sub>        | T<sub>2</sub>         | `lub(T<sub>1</sub>, T<sub>2</sub>)`                               |
 
 
-#### Function
-
 #### Description
 
 The test _Exp_ is evaluated and its outcome determines the statement to be executed: 
@@ -55,7 +53,5 @@ An if-then statement yields `void`  when its test is false
 rascal>if( 2 > 3 ) 30;
 ok
 ```
-
-#### Benefits
 
 

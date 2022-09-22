@@ -6,17 +6,6 @@ title: Syntax
 
 Concrete syntax for Pico.
 
-#### Syntax
-
-
-#### Types
-
-#### Function
-       
-#### Usage
-
-#### Description
-
 #### Examples
 
 
@@ -88,7 +77,5 @@ Notes:
 *  The start symbol of the Pico grammar is called `Program`.
 *  The rules for `Expression` describe the priority and associativity of the operators: all operators are left-associative and `||` has a higher priority then `+` and `-`.
 *  Two auxiliary functions `program` are defined that parse a given string or a given location as Pico program.
-
-#### Benefits
 
 

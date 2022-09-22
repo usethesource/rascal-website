@@ -19,13 +19,13 @@ Parse of a syntactically incorrect string.
 #### Description
 
 This error is generated when during the execution of a Rascal program the
-[parse](/docs/Library/ParseTree#ParseTree-parse) function is applied to a syntactically incorrect input sentence.
+[parse](../../../Library/ParseTree#ParseTree-parse) function is applied to a syntactically incorrect input sentence.
 
 Remedies:
 
 *  Correct the input sentence.
 *  Adapt the grammar so that it accepts the input sentence.
-*  Catch the ParseError yourself, see [try catch](/docs/Rascal/Statements/TryCatch).
+*  Catch the ParseError yourself, see [try catch](../../../Rascal/Statements/TryCatch).
 
 
 #### Examples
@@ -72,7 +72,5 @@ Your input cannot be parsed: |unknown:///|(4,1,<1,4>,<1,5>)
 ok
 ```
 
-
-#### Benefits
 
 

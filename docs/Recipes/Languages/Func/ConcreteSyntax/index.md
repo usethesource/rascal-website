@@ -6,14 +6,6 @@ title: Concrete Syntax
 
 The concrete syntax of Func.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
-#### Description
-
 #### Examples
 
 
@@ -77,7 +69,5 @@ The concrete syntax of Func uses many features of Rascal's syntax definitions. S
 **  One non-terminal is designated as start symbol (`Prog`).
 **  Each alternative has a label, this is for the benefit of converting parse trees to abstract syntaxt trees.
 **  Each alternative spells out its priority and associativity.
-
-#### Benefits
 
 

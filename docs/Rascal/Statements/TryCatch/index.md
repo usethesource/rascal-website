@@ -23,17 +23,13 @@ catch: _Statement<sub>2</sub>_;
 finally: _Statement<sub>3</sub>_;
 ```
 
-#### Types
-
-#### Function
-
 #### Description
 
-A try catch statement has as purpose to catch any [Exceptions](/docs/Library/Exception) that are raised 
+A try catch statement has as purpose to catch any [Exceptions](../../../Library/Exception) that are raised 
 during the execution of _Statement_<sub>1</sub>.
 These exceptions may caused by:
 
-*  The execution of an explicit [Throw](/docs/Rascal/Statements/Throw) statement.
+*  The execution of an explicit [Throw](../../../Rascal/Statements/Throw) statement.
 
 *  The Rascal system that discovers an abnormal condition, e.g., an out of bounds error when accessing a list element.
 
@@ -49,7 +45,7 @@ Their meaning is as follows:
 
 #### Examples
 
-Let's define a variant of the [head](/docs/Library/List#List-head) function that returns the first element of a list,
+Let's define a variant of the [head](../../../Library/List#List-head) function that returns the first element of a list,
 but throws an exception when the list is empty. Our variant will return `0` for an empty list:
 
 ```rascal-shell
@@ -74,7 +70,5 @@ rascal>hd2([]);
 int: 0
 ```
 
-
-#### Benefits
 
 

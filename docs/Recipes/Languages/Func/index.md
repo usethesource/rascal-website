@@ -6,12 +6,6 @@ title: Func
 
 Func is a tiny functional language; we present several interpreters for it.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Func is a functional language with the following features:
@@ -33,7 +27,7 @@ Func is a functional language with the following features:
 
 
 Some features add more complexity to an interpreter, therefore
-we present four interpreters [Eval0](/docs/Recipes/Languages/Func/Eval0), [Eval1](/docs/Recipes/Languages/Func/Eval1), [Eval2](/docs/Recipes/Languages/Func/Eval2) and [Eval2](/docs/Recipes/Languages/Func/Eval2)
+we present four interpreters [Eval0](../../../Recipes/Languages/Func/Eval0), [Eval1](../../../Recipes/Languages/Func/Eval1), [Eval2](../../../Recipes/Languages/Func/Eval2) and [Eval2](../../../Recipes/Languages/Func/Eval2)
 that implement increasingly complex features:
 
 
@@ -137,6 +131,4 @@ NOTE: Note the escaped `<` character in `\\<=`. This is necessary since `<` and 
 in strings to enclose interpolations (insertion of the value of a Rascal expression).
 Both symbols need to be escaped when used as literal symbol and not as interpolation.
                 
-#### Benefits
-
 

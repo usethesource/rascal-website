@@ -6,14 +6,6 @@ title: Abstract Syntax
 
 The abstract syntax for Func.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
-#### Description
-
 #### Examples
 
 Here is the abstract syntax for Func:
@@ -54,9 +46,7 @@ data Binding = binding(str var, Exp exp);
 ```
 
                 
-Observe that the abstract syntax follows the structure of the [Concrete syntax](/docs/Recipes/Languages/Func/ConcreteSyntax) but
+Observe that the abstract syntax follows the structure of the [Concrete syntax](../../../../Recipes/Languages/Func/ConcreteSyntax) but
 omits details such as operator priorities, parentheses, and the like.
-
-#### Benefits
 
 

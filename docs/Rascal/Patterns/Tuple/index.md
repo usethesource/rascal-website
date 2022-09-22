@@ -10,12 +10,6 @@ keywords:
 
 Tuple in abstract pattern.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 A tuple pattern matches a tuple value, provided that _Pat_<sub>1</sub>, _Pat_<sub>2</sub>, ..., _Pat_~n~  match the elements of that tuple in order.
@@ -32,7 +26,5 @@ rascal>if(<A, B, C> := <13, false, "abc">)
 A = 13, B = false, C = abc
 ok
 ```
-
-#### Benefits
 
 

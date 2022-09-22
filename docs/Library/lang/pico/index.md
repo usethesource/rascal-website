@@ -1,4 +1,4 @@
 # lang::pico
 
 
-   * [syntax](/docs/Library/lang/pico/syntax)
+   * [syntax](../../../Library/lang/pico/syntax)

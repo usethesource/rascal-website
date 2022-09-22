@@ -6,17 +6,9 @@ title: UnitializedVariable
 
 Use of a variable that has not been initialized.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
-A [variable](/docs/Rascal/Declarations/Variable) has to be initialized before it can be used.
+A [variable](../../Rascal/Declarations/Variable) has to be initialized before it can be used.
 This error is generated when an uninitialzed variable is used.
 
 Remedy: assign a value to the variable before its use:
@@ -37,7 +29,5 @@ int: 3
 rascal>x + 5;
 int: 8
 ```
-
-#### Benefits
 
 

@@ -6,14 +6,6 @@ title: MetaProgramming
 
 Analysis or transformation of one program by another program.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 All programs have data as input and produce other data as output.
@@ -35,7 +27,7 @@ In some cases the metaprogram transforms the source program into a _target progr
 
 #### Examples
 
-A [Refactoring](/docs//Rascalopedia/Refactoring) tool for restructuring Java code:
+A [Refactoring](../..//Rascalopedia/Refactoring) tool for restructuring Java code:
 
 *  Metaprogram: the refactoring tool.
 *  Metalanguage: in most cases Java.
@@ -45,7 +37,7 @@ A [Refactoring](/docs//Rascalopedia/Refactoring) tool for restructuring Java cod
 *  Target language: Java.
 
 
-A Java [Compiler](/docs//Rascalopedia/Compiler):
+A Java [Compiler](../..//Rascalopedia/Compiler):
 
 *  Metaprogram: the Java compiler.
 *  Metalanguage: in most cases Java.
@@ -55,7 +47,7 @@ A Java [Compiler](/docs//Rascalopedia/Compiler):
 *  Target language: instructions for the JVM (Java Virtual Machine) or machine code, depending on the hardware platform.
 
 
-A tool to compute [Software Metric](/docs//Rascalopedia/SoftwareMetric)s of Java programs
+A tool to compute [Software Metric](../..//Rascalopedia/SoftwareMetric)s of Java programs
 
 *  Metaprogram: the metrics tool.
 *  Metalanguage: varies per tool: Java, Rascal.
@@ -63,7 +55,5 @@ A tool to compute [Software Metric](/docs//Rascalopedia/SoftwareMetric)s of Java
 *  Source language Java.
 *  Target program: the value of the computed metric.
 *  Target language: number.
-
-#### Benefits
 
 

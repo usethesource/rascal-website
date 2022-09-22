@@ -14,10 +14,6 @@ Gives a concise explanation of a concept.
 _MarkedText_
 ```
 
-#### Types
-
-#### Function
-
 #### Description
 
 The `Description` section gives a concise explanation of a concept.
@@ -31,8 +27,6 @@ The `Description` section of the concept `Description` (= the previous section) 
 
 The `Description` section gives a concise explanation of a concept.
 ```
-
-#### Benefits
 
 #### Pitfalls
 

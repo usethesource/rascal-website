@@ -51,3 +51,12 @@ data Message (str cause="")
 * ``str addSpaces(/^<prefix:.*[a-z0-9]><postfix:[A-Z].+>/)``
 * ``default str addSpaces(str s)``
 
+## function pathToRoot {#lang-rascal-tutor-Names-pathToRoot}
+
+* ``str pathToRoot(loc root, loc src)``
+* ``str pathToRoot(loc root, loc src)``
+
+#### Synopsis
+
+produces `"../../.."` for pathToRoot(|aap:///a/b|, |aap:///a/b/c/d|)  
+

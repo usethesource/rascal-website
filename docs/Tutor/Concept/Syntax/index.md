@@ -14,10 +14,6 @@ Part of the synopsis that summarizes syntax introduced by this concept.
 _MarkedText_
 ```
 
-#### Types
-
-#### Function
-
 #### Description
 
 The syntax section is intended to describe syntactic aspects of language constructs.
@@ -33,7 +29,5 @@ The syntax section for an if-then statement can be written as:
 
 `if ( Exp ) Statement;`
 ```
-
-#### Benefits
 
 

@@ -31,8 +31,6 @@ The part following the second pipe symbol (`|`) is optional.
 
 `loc`
 
-#### Function
-
 #### Description
 
 Location values are represented by the type `loc` and serve the following purposes:
@@ -205,7 +203,5 @@ loc: |tmp://myTempDirectory/myTempFile.txt|
 //----
 //|project://example-project/src|.ls
 //---- -->
-
-#### Benefits
 
 

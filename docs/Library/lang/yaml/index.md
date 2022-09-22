@@ -1,4 +1,4 @@
 # lang::yaml
 
 
-   * [Model](/docs/Library/lang/yaml/Model.md)
+   * [Model](../../../Library/lang/yaml/Model.md)

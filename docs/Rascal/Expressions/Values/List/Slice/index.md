@@ -29,8 +29,6 @@ where _Exp_<sub>2</sub> and _Exp_<sub>4</sub> are optional.
 | `list[T<sub>1</sub>]` | `int`     | `int`       | `int`     |  `list[T<sub>1</sub>]`                                                                 |
 
 
-#### Function
-
 #### Description
 
 List slicing uses the integer values of _Exp_<sub>2</sub> and _Exp_<sub>4</sub> to determine the `begin` (*inclusive*) and `end` (*exclusive*)

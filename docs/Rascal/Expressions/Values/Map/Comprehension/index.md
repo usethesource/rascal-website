@@ -23,13 +23,11 @@ A map comprehension generates a map value.
 | `T<sub>1</sub>`   | `T<sub>2</sub>`   | `map[T<sub>1</sub>, T<sub>2</sub>]`                               |
 
 
-#### Function
-
 #### Description
 
 A map comprehension consists of a number of two contributing expressions _Exp_<sub>1</sub> (for key values), 
 and _Exp_<sub>2</sub> (the values associated with those key values) and a number of
-generators _Gen_<sub>1</sub>, _Gen_<sub>2</sub>, _Gen_<sub>3</sub>, ... that are evaluated as described in [Comprehensions](/docs/Rascal/Expressions/Comprehensions).
+generators _Gen_<sub>1</sub>, _Gen_<sub>2</sub>, _Gen_<sub>3</sub>, ... that are evaluated as described in [Comprehensions](../../../../../Rascal/Expressions/Comprehensions).
 
 #### Examples
 
@@ -56,7 +54,5 @@ Use a map comprehension to filter fruits with an associated value larger than 10
 rascal>(fruit : fruits[fruit] | fruit <- fruits, fruits[fruit] > 10);
 map[str, int]: ("orange":35,"berry":25)
 ```
-
-#### Benefits
 
 

@@ -6,19 +6,11 @@ title: Ambiguity Detection
 
 Ambiguity detection helps to find ambiguities in syntax definitions.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
-AmbiDexter is a tool that analyzes [Syntax Definition](/docs/Rascal/Declarations/SyntaxDefinition)s, including their [Disambiguation](/docs/Rascal/Declarations/SyntaxDefinition/Disambiguation)s, to try and determine which ambiguities it contains. 
+AmbiDexter is a tool that analyzes [Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition)s, including their [Disambiguation](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation)s, to try and determine which ambiguities it contains. 
 Static detection of ambiguity is not decidable, nevertheless AmbiDexter does a fine job at finding them. 
 
-
-#### Examples
 
 #### Benefits
 

@@ -20,8 +20,6 @@ Negated membership test on the keys of a map.
 | `T<sub>1</sub>`  <: `TK`  |  `map[TK, TV]` | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if the value of Exp<sub>1</sub> does not occur as key in the map value of Exp<sub>2</sub> and `false` otherwise. 
@@ -36,7 +34,5 @@ bool: true
 rascal>"pear" notin ("apple": 1, "pear": 2);
 bool: false
 ```
-
-#### Benefits
 
 

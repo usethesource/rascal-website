@@ -6,14 +6,6 @@ title: NoKeywordParameters
 
 A function that is declared without keyword parameters is called with keyword parameters.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Functions maybe declared with or without keyword parameters.
@@ -41,7 +33,5 @@ int (int, int delta = ...): function(|prompt:///|(0,41,<1,0>,<1,41>))
 rascal>incr(3, delta=5);
 int: 8
 ```
-
-#### Benefits
 
 

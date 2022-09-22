@@ -6,14 +6,6 @@ title: UndeclaredKeywordParameter
 
 A function is called with a keyword parameter that was not declared in the function's declaration.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Rascal functions may have keyword parameters. This error is generated when a function call uses an undeclared keyword parameter.
@@ -42,7 +34,5 @@ This can be fixed by using the correct name for the keyword parameter:
 rascal>incr(3, delta=5);
 int: 8
 ```
-
-#### Benefits
 
 

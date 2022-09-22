@@ -1,6 +1,6 @@
 # demo::vis
 
 
-   * [Logo](/docs/Library/demo/vis/Logo.md)
-   * [Higher](/docs/Library/demo/vis/Higher.md)
-   * [VisADT](/docs/Library/demo/vis/VisADT.md)
+   * [Logo](../../../Library/demo/vis/Logo.md)
+   * [Higher](../../../Library/demo/vis/Higher.md)
+   * [VisADT](../../../Library/demo/vis/VisADT.md)

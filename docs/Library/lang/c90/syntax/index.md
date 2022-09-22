@@ -1,4 +1,4 @@
 # lang::c90::syntax
 
 
-   * [C](/docs/Library/lang/c90/syntax/C.md)
+   * [C](../../../../Library/lang/c90/syntax/C.md)

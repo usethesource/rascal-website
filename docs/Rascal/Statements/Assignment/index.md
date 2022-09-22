@@ -38,10 +38,6 @@ An _Assignable_ is one of the following:
 *   `Assignable @ Name`
 *   `Name ( Assignable, Assignable, ... )`
 
-#### Types
-
-#### Function
-
 #### Description
 
 The purpose of an assignment is to assign a new value to a simple variable or to an element of a more complex data structure. 
@@ -73,10 +69,5 @@ We distinguish the following forms of assignment:
 * ((Rascal:Statements/Assignment/Slice))
 * ((Rascal:Statements/Assignment/Subscription))
 * ((Rascal:Statements/Assignment/Variable))
-
-#### Examples
-
-
-#### Benefits
 
 

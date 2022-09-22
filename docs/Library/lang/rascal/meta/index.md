@@ -1,5 +1,5 @@
 # lang::rascal::meta
 
 
-   * [ModuleInfoTests](/docs/Library/lang/rascal/meta/ModuleInfoTests.md)
-   * [ModuleInfo](/docs/Library/lang/rascal/meta/ModuleInfo.md)
+   * [ModuleInfoTests](../../../../Library/lang/rascal/meta/ModuleInfoTests.md)
+   * [ModuleInfo](../../../../Library/lang/rascal/meta/ModuleInfo.md)

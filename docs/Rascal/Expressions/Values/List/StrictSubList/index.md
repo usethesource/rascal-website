@@ -21,8 +21,6 @@ The strict sublist operator on lists.
 | `list[T<sub>1</sub>]` |  `list[T<sub>2</sub>]` | `bool`               |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if the value of Exp<sub>1</sub> is a strict sublist of the value of Exp<sub>2</sub>,  and `false` otherwise.
@@ -38,7 +36,5 @@ bool: false
 rascal>[1, 3, 5] < [1, 2, 3, 4, 5]
 bool: true
 ```
-
-#### Benefits
 
 

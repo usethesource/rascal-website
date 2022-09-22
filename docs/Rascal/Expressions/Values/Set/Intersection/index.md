@@ -20,8 +20,6 @@ Intersection of two sets.
 | `set[T<sub>1</sub>]` |  `set[T<sub>2</sub>]`   | `set[lub(T<sub>1</sub>,T<sub>2</sub>)]`  |
 
 
-#### Function
-
 #### Description
 
 Returns the intersection of the two set values of _Exp_<sub>1</sub> and _Exp_<sub>2</sub>.
@@ -34,7 +32,5 @@ The intersection consists of the common elements of both sets.
 rascal>{1, 2, 3, 4, 5} & {4, 5, 6};
 set[int]: {5,4}
 ```
-
-#### Benefits
 
 

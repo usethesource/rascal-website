@@ -14,10 +14,6 @@ Multi-variable (also known as Splice-variable) in abstract pattern.
 *  `*Var`
 *  `*Type Var`
 
-#### Types
-
-#### Function
-
 #### Description
 
 A multi-variable is an abbreviation for a variable declaration pattern.
@@ -67,8 +63,6 @@ rascal>if({10, *int S, 50} := {50, 40, 30, 30, 10})
 Match succeeds, S == {40,30}
 ok
 ```
-
-#### Benefits
 
 #### Pitfalls
 

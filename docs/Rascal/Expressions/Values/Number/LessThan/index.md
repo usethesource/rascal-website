@@ -23,8 +23,6 @@ Less than operator on numeric values.
 | `real`     |  `real`    | `bool`               |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if the value of Exp<sub>1</sub> is numerically less than the value of Exp<sub>2</sub>, and `false` otherwise.
@@ -42,7 +40,5 @@ bool: false
 rascal>12.5 < 13
 bool: true
 ```
-
-#### Benefits
 
 

@@ -21,8 +21,6 @@ Select a field from a tuple by its field name.
 |`tuple[ T<sub>1</sub> L<sub>1</sub>, T<sub>2</sub> L<sub>2</sub>, ... ]` |  `L~i~` | `T~i~`         |
 
 
-#### Function
-
 #### Description
 
 Field selection applies to tuples with named elements.
@@ -38,7 +36,5 @@ tuple[int key,str val]: <1,"abc">
 rascal>T.val;
 str: "abc"
 ```
-
-#### Benefits
 
 

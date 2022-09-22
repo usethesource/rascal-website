@@ -6,8 +6,6 @@ title: Index Out Of Bounds
 
 Index is out of bounds.
 
-#### Syntax
-
 #### Types
 
 `data RuntimeException = IndexOutOfBounds(int index)`
@@ -18,19 +16,19 @@ Index is out of bounds.
 
 #### Description
 
-Subscription is possible on various ordered types, including [list](/docs/Rascal/Expressions/Values/List/Subscription),
+Subscription is possible on various ordered types, including [list](../../../Rascal/Expressions/Values/List/Subscription),
 link:{RascaLangl}#Tuple-Subscription[tuple], and
-[node](/docs/Rascal/Expressions/Values/Node/Subscription).
+[node](../../../Rascal/Expressions/Values/Node/Subscription).
 This error is generated when a subscript is out of bounds for the value that is being subscripted.
 
 Remedies:
 
 * Guard the subscription with a test that the index is within bounds.
 * Make your code less dependent on index values. Suggestions:
-  ** Use the [index](/docs/Library/List#List-index) to produce all legal indices of a list. 
+  ** Use the [index](../../../Library/List#List-index) to produce all legal indices of a list. 
      Instead of `for(int i <- [0..size(L)]) { ... }` use `for(int i <- index(L)) { ... }`.
-  ** Use a [list slice](/docs/Rascal/Expressions/Values/List/Slice) to automate part of the index computation.
-*  Catch the `IndexOutOfBounds` yourself, see [try catch](/docs/Rascal/Statements/TryCatch).
+  ** Use a [list slice](../../../Rascal/Expressions/Values/List/Slice) to automate part of the index computation.
+*  Catch the `IndexOutOfBounds` yourself, see [try catch](../../../Rascal/Statements/TryCatch).
 
 
 #### Examples
@@ -66,7 +64,5 @@ The message is: 5
 ok
 ```
 
-
-#### Benefits
 
 

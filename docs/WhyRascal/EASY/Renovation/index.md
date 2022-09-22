@@ -21,8 +21,4 @@ She will need to analyze the sources of that system to understand how it can be 
 Having completed this first cycle, Charlotte may be interested in which procedures can be called from the entry points and so on and so forth. Results will be typically represented as pictures that display the relationships that were found. In the case of source code analysis, a variation of our workflow scheme is quite common. It is then called the extract-analyze-view paradigm and
  is shown in the figure.
 
-#### Examples
-
-#### Benefits
-
 

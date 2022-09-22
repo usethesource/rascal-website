@@ -20,8 +20,6 @@ Not equal operator on datetime values.
 | `datetime`     |  `datetime`    | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if both arguments are different `datetime` values and `false` otherwise.
@@ -35,7 +33,5 @@ bool: true
 rascal>$2010-07-15$ != $2010-07-15$;
 bool: false
 ```
-
-#### Benefits
 
 

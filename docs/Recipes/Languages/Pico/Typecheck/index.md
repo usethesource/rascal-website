@@ -6,16 +6,6 @@ title: Typecheck
 
 Typechecker for Pico programs.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
-#### Description
-
 #### Examples
 
 Recall the following properties of Pico that are relevant for type checking:
@@ -178,7 +168,5 @@ lrel[loc l,str msg]: [<|unknown:///|(33,5,<1,33>,<1,38>),"Required natural, got 
 ```
 
 The error location will be use later to give specific messages in the IDE.
-
-#### Benefits
 
 

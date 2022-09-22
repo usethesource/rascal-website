@@ -22,8 +22,6 @@ The _equivalence_ operator on Boolean values.
 | `bool`       | `bool`         | `bool`  |
 
 
-#### Function
-
 #### Description
 
 The _equivalence_ operator on Boolean values defined as follows:
@@ -59,7 +57,5 @@ for ((i <- [1,2]) <==> (j <- [1,2,3]))
 (i <- [1,2] && (i % 2 == 0)) <==> (j <- [1,2,3] && (j % 3 == 0))
 for ((i <- [1,2] && (i % 2 == 0)) <==> (j <- [1,2,3] && (j % 3 == 0))) 
   println("true!");
-
-#### Benefits
 
 

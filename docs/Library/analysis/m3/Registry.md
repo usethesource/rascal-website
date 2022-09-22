@@ -30,17 +30,17 @@ Register an M3 model for a certain project name.
 The effect of registering a project is that the m3 URI resolver knows how to find the physical source location
 for qualified names.
 
-Note that [register project](/docs/Library/analysis/m3/Registry#analysis::m3::Registry-registerProject) will be called usually as a side-effect of a function that extracts a model for
+Note that [register project](../../../Library/analysis/m3/Registry#analysis::m3::Registry-registerProject) will be called usually as a side-effect of a function that extracts a model for
 a specific language.  
 
 #### Benefits
 
-*  this enables qualified names as [Location](/docs/Rascal/Expressions/Values/Location)s to be hyperlinks in the IDE
+*  this enables qualified names as [Location](../../../Rascal/Expressions/Values/Location)s to be hyperlinks in the IDE
 
 #### Pitfalls
 
 *  the registry is a global store that will retain links to M3 models even when they are not in use anymore. The 
-programmer should take care to call [unregister project](/docs/Library/analysis/m3/Registry#analysis::m3::Registry-unregisterProject) to prevent memory leakage.
+programmer should take care to call [unregister project](../../../Library/analysis/m3/Registry#analysis::m3::Registry-unregisterProject) to prevent memory leakage.
 
 ## function unregisterProject {#analysis-m3-Registry-unregisterProject}
 

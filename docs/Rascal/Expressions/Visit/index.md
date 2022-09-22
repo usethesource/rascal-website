@@ -28,13 +28,9 @@ default: ...
 }
 ```
 
-#### Types
-
-#### Function
-
 #### Description
 
-Visiting, recursively traversing, the nodes in a deeply nested data-structure is a very common task in the [EASY][EASY](/docs//WhyRascal/EASY) domain. 
+Visiting, recursively traversing, the nodes in a deeply nested data-structure is a very common task in the [EASY][EASY](../../..//WhyRascal/EASY) domain. 
 In many cases (but certainly not all) this data-structure is a syntax tree of some source code file 
 and the nodes correspond to expressions or statements. 
 
@@ -53,10 +49,10 @@ There are three frequently occurring scenarios:
 The visit expression in Rascal can accommodate all these (and more) use cases.
 
 Given a subject term (the current value of _Exp_) and a list of cases 
-(consisting of a sequence of [Pattern with Action](/docs/Rascal/Expressions/Visit/PatternWithAction)s, it traverses the term. 
+(consisting of a sequence of [Pattern with Action](../../../Rascal/Expressions/Visit/PatternWithAction)s, it traverses the term. 
 Depending on the precise actions it may perform replacement (mimicking a transformer), 
 update local variables (mimicking an accumulator) or a combination of these two (accumulating transformer). 
-If *any* of the actions contains an [Insert](/docs/Rascal/Statements/Insert) statement, 
+If *any* of the actions contains an [Insert](../../../Rascal/Statements/Insert) statement, 
 the value of the visit expression is a new value that is obtained by successive insertions in the subject 
 term by executing one or more cases. Otherwise, the original value of the subject term is returned.
 
@@ -95,9 +91,9 @@ The execution of the cases has the following effect:
 
       *** `Pattern => Exp` is equivalent to `Pattern : insert Exp;`.
 
-   ** Execution of a [Fail](/docs/Rascal/Statements/Fail) statement: the next case is tried.
+   ** Execution of a [Fail](../../../Rascal/Statements/Fail) statement: the next case is tried.
 
-   ** Execution of a [Return](/docs/Rascal/Statements/Return) statement that returns a value from the enclosing function.
+   ** Execution of a [Return](../../../Rascal/Statements/Return) statement that returns a value from the enclosing function.
 
 The precise behaviour of the visit expression depends on the type of the subject:
 
@@ -130,10 +126,8 @@ bottom-up visit(e){
          }
 ```
 
-More examples can, for instance, be found in Recipes, see [ColoredTrees](/docs/Recipes/Common/ColoredTrees), 
-[WordReplacement](/docs/Recipes/Common/WordReplacement), [CountConstructors](/docs/Recipes/Common/CountConstructors), 
-and [Derivative](/docs/Recipes/Common/Derivative).
-
-#### Benefits
+More examples can, for instance, be found in Recipes, see [ColoredTrees](../../../Recipes/Common/ColoredTrees), 
+[WordReplacement](../../../Recipes/Common/WordReplacement), [CountConstructors](../../../Recipes/Common/CountConstructors), 
+and [Derivative](../../../Recipes/Common/Derivative).
 
 

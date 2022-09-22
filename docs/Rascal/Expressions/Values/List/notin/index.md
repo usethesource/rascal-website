@@ -22,8 +22,6 @@ Negated membership test on lists.
 | `T<sub>1</sub>`  <: `T<sub>2</sub>` |  `list[T<sub>2</sub>]`  | `bool`                   |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if the value of Exp<sub>1</sub> does not occur as element in the value of Exp<sub>2</sub> and `false` otherwise. 
@@ -38,7 +36,5 @@ bool: true
 rascal>2 notin [1, 2, 3];
 bool: false
 ```
-
-#### Benefits
 
 

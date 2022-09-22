@@ -9,14 +9,6 @@ keywords:
 
 Assign to a field of a tuple, relation or datatype.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 The value `V` of _Assignable_ is determined and should be of a type that has a field _Name_.
@@ -33,7 +25,5 @@ FREQ: wf("rascal",1000)
 rascal>W.freq = 100000;
 FREQ: wf("rascal",100000)
 ```
-
-#### Benefits
 
 

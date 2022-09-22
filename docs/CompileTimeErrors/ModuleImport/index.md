@@ -6,18 +6,10 @@ title: ModuleImport
 
 A Rascal module could not be imported.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Rascal programs are split up in modules.
-An [import](/docs/Rascal/Declarations/Import) declaration is used to include one module in another.
+An [import](../../Rascal/Declarations/Import) declaration is used to include one module in another.
 This error indicates that a module import failed.
 This can be caused by 
 
@@ -47,7 +39,5 @@ Here is the effect of a misspelled module name (assuming that you do not have a 
 rascal>import Lis;
 ok
 ```
-
-#### Benefits
 
 

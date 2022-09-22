@@ -22,8 +22,6 @@ Tuple values.
 | `T<sub>1</sub>`    |  T<sub>2</sub>     | ...   | `tuple[T<sub>1</sub>, T<sub>2</sub>, ... ]`  |
 
 
-#### Function
-
 #### Description
 
 A tuple is a sequence of elements with the following properties:
@@ -61,7 +59,5 @@ str: "Jo"
 rascal>P.first = "Bo";
 tuple[str first,str last,int age]: <"Bo","Jones",35>
 ```
-
-#### Benefits
 
 

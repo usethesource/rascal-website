@@ -41,7 +41,7 @@ int: 66
 * _emphasis_
 * *bold*
 * [Rascal Web site](http:///rascal-mpl.org)
-* [./Call analysis](/docs/Library/lang/rascal/tutor/examples/Test/CallAnalysis) 
+* [./Call analysis](../../../../../../Library/lang/rascal/tutor/examples/Test/CallAnalysis) 
 * Table:
 
   | Module | LOC |

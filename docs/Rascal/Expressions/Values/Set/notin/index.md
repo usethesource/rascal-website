@@ -21,8 +21,6 @@ Negated membership test on set values.
 | `T<sub>1</sub>`  <: `T<sub>2</sub>` |  `set[T<sub>2</sub>]` | `bool`                   |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if the value of Exp<sub>1</sub> does not occur as element in the value of Exp<sub>2</sub> and `false` otherwise. The type of _Exp_<sub>1</sub> should be compatible with the element type of _Exp_<sub>2</sub>.
@@ -36,7 +34,5 @@ bool: true
 rascal>4 notin {1, 2, 3, 4};
 bool: false
 ```
-
-#### Benefits
 
 

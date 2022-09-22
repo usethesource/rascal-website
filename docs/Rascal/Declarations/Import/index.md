@@ -13,10 +13,6 @@ Declare the import a module.
 
 `import QualifiedName;`
 
-#### Types
-
-#### Function
-
 #### Description
 
 An import has as effect that all public entities declared in module _QualifiedName_ are made available to the importing module. Circular imports are allowed. All publicly visible entities in the imported module become available in the importing module.
@@ -25,7 +21,7 @@ Import is _non-transitive_, i.e., the visible entities from an imported module a
 
 #### Examples
 
-Here, is how to import the [IO](/docs/Library/IO) library:
+Here, is how to import the [IO](../../../Library/IO) library:
 
 ```rascal-shell
 rascal>import IO;
@@ -35,7 +31,5 @@ println("IO library was imported.");
 IO library was imported.
 ok
 ```
-
-#### Benefits
 
 

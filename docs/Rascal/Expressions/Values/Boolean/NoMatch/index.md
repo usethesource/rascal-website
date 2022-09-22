@@ -22,11 +22,9 @@ Negated [Boolean Match] operator.
 | [Patterns]  | `value` | `bool`           |
 
 
-#### Function
-
 #### Description
 
-See [Pattern Matching](/docs//RascalConcepts/PatternMatching) for an introduction to pattern matching and [Patterns](/docs//Rascal/Patterns) for a complete description.
+See [Pattern Matching](../../../../..//RascalConcepts/PatternMatching) for an introduction to pattern matching and [Patterns](../../../../..//Rascal/Patterns) for a complete description.
 
 #### Examples
 
@@ -39,7 +37,5 @@ bool: true
 rascal>{10, *n, 50} !:= {40, 30, 30, 10};
 bool: true
 ```
-
-#### Benefits
 
 

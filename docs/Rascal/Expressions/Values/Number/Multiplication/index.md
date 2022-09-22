@@ -23,8 +23,6 @@ Multiply two numeric values.
 | `real`    |  `real`    | `real`               |
 
 
-#### Function
-
 #### Description
 
 Yields the result of multiplying the values of _Exp<sub>1</sub>_ and _Exp<sub>2</sub>_.
@@ -40,7 +38,5 @@ real: 162.0
 rascal>-12*13
 int: -156
 ```
-
-#### Benefits
 
 

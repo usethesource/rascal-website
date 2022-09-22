@@ -6,17 +6,9 @@ title: Tag Declaration
 
 Tag declarations are not implemented (yet).
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Tag declarations explain which type the expected value of a tag should have.
-
-#### Examples
 
 #### Benefits
 

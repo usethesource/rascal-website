@@ -23,10 +23,6 @@ Map values.
 | `TK<sub>1</sub>`     |  `TV<sub>1</sub>`    |  `TK<sub>2</sub>`    | `TV<sub>2</sub>`     | ... | `map[lub(TK<sub>1</sub>, TK<sub>2</sub>, ... ) , lub(TV<sub>1</sub>, TV<sub>2</sub>, ... )]`  |
 
 
-#### Usage
-
-#### Function
-
 #### Description
 
 A map is a set of key/value pairs and has the following properties:
@@ -63,7 +59,5 @@ The following functions are provided for maps:
 rascal>("pear" : 1, "apple" : 3, "banana" : 0);
 map[str, int]: ("banana":0,"pear":1,"apple":3)
 ```
-
-#### Benefits
 
 

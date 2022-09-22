@@ -21,8 +21,6 @@ Join two relation values.
 | `rel[ T<sub>11</sub>, T<sub>12</sub>, T<sub>13</sub>, ... ]` |  `rel[ T<sub>21</sub>, T<sub>22</sub>, T<sub>23</sub>, ... ]` | `rel[ T<sub>11</sub>, T<sub>12</sub>, T<sub>13</sub>, ..., T<sub>21</sub>, T<sub>22</sub>, T<sub>23</sub>, ... ]`  |
 
 
-#### Function
-
 #### Description
 
 Relation resulting from the natural join of the relation values of the two arguments.
@@ -50,7 +48,5 @@ rel[int,int,int,int]: {
   <1,2,20,30>
 }
 ```
-
-#### Benefits
 
 

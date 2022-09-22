@@ -21,8 +21,6 @@ Compute the product of two lists.
 | `list[T<sub>1</sub>]` |  `list[T<sub>2</sub>]` | `list[tuple[T<sub>1</sub>,T<sub>2</sub>]]`   |
 
 
-#### Function
-
 #### Description
 
 Yields a list of tuples resulting from the product of the values of _Exp_<sub>1</sub> and _Exp_<sub>2</sub>. 
@@ -100,7 +98,5 @@ lrel[str,int]: [
   <"spades",12>
 ]
 ```
-
-#### Benefits
 
 

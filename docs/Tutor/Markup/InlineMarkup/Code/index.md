@@ -8,15 +8,9 @@ Create inline code fragments.
 
 #### Syntax
 
-#### Syntax
-
 ```
 \`MarkedText`
 ```
-
-#### Types
-
-#### Function
 
 #### Description
 
@@ -26,7 +20,5 @@ Inside the _MarkedText_, other markup can be used.
 #### Examples
 
 ` `if` ` --- that is ` followed by `if` followed by ` --- gives `if`.
-
-#### Benefits
 
 

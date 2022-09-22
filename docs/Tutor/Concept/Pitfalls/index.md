@@ -14,14 +14,4 @@ Comprehensive list of known shortcomings or usage problems of the concept.
 _MarkedText_
 ```
 
-#### Types
-
-#### Function
-
-#### Description
-
-#### Examples
-
-#### Benefits
-
 

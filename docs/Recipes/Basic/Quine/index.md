@@ -6,12 +6,6 @@ title: Quine
 
 A self-reproducing program.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 A http://en.wikipedia.org/wiki/Quine_(computing)[quine]
@@ -111,7 +105,5 @@ ok
 ```
 If you follow this output line-by-line you will see that it
 is identical to the original source code of module `Quine`.
-
-#### Benefits
 
 

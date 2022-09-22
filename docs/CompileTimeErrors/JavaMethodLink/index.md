@@ -6,14 +6,6 @@ title: JavaMethodLink
 
 Cannot link to a Java method.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Rascal functions can be implemented in Java. This is the case for many functions in the standard library.
@@ -303,69 +295,37 @@ org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.librar
 	at org.rascalmpl.interpreter.result.OverloadedFunction.callWith(OverloadedFunction.java:409)
 	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:372)
 	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
-	at org.rascalmpl.semantics.dynamic.Expression$List.interpret(Expression.java:1510)
 	at org.rascalmpl.semantics.dynamic.Statement$Expression.interpret(Statement.java:365)
 	at org.rascalmpl.semantics.dynamic.Statement$Return.interpret(Statement.java:782)
+	at org.rascalmpl.semantics.dynamic.Statement$IfThenElse.interpret(Statement.java:679)
 	at org.rascalmpl.interpreter.result.RascalFunction.runBody(RascalFunction.java:385)
 	at org.rascalmpl.interpreter.result.RascalFunction.call(RascalFunction.java:326)
 	at org.rascalmpl.interpreter.result.OverloadedFunction.callWith(OverloadedFunction.java:409)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:372)
+	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:369)
 	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
-	at org.rascalmpl.semantics.dynamic.Expression$List.interpret(Expression.java:1510)
 	at org.rascalmpl.semantics.dynamic.Statement$Expression.interpret(Statement.java:365)
 	at org.rascalmpl.semantics.dynamic.Statement$Return.interpret(Statement.java:782)
+	at org.rascalmpl.semantics.dynamic.Statement$IfThenElse.interpret(Statement.java:679)
 	at org.rascalmpl.interpreter.result.RascalFunction.runBody(RascalFunction.java:385)
 	at org.rascalmpl.interpreter.result.RascalFunction.call(RascalFunction.java:326)
 	at org.rascalmpl.interpreter.result.OverloadedFunction.callWith(OverloadedFunction.java:409)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:372)
+	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:369)
 	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
-	at org.rascalmpl.semantics.dynamic.Expression$List.interpret(Expression.java:1510)
 	at org.rascalmpl.semantics.dynamic.Statement$Expression.interpret(Statement.java:365)
 	at org.rascalmpl.semantics.dynamic.Statement$Return.interpret(Statement.java:782)
+	at org.rascalmpl.semantics.dynamic.Statement$IfThenElse.interpret(Statement.java:679)
 	at org.rascalmpl.interpreter.result.RascalFunction.runBody(RascalFunction.java:385)
 	at org.rascalmpl.interpreter.result.RascalFunction.call(RascalFunction.java:326)
 	at org.rascalmpl.interpreter.result.OverloadedFunction.callWith(OverloadedFunction.java:409)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:372)
+	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:369)
 	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
-	at org.rascalmpl.semantics.dynamic.Expression$List.interpret(Expression.java:1510)
 	at org.rascalmpl.semantics.dynamic.Statement$Expression.interpret(Statement.java:365)
 	at org.rascalmpl.semantics.dynamic.Statement$Return.interpret(Statement.java:782)
+	at org.rascalmpl.semantics.dynamic.Statement$IfThenElse.interpret(Statement.java:679)
 	at org.rascalmpl.interpreter.result.RascalFunction.runBody(RascalFunction.java:385)
 	at org.rascalmpl.interpreter.result.RascalFunction.call(RascalFunction.java:326)
 	at org.rascalmpl.interpreter.result.OverloadedFunction.callWith(OverloadedFunction.java:409)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:372)
-	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
-	at org.rascalmpl.semantics.dynamic.Expression$List.interpret(Expression.java:1510)
-	at org.rascalmpl.semantics.dynamic.Statement$Expression.interpret(Statement.java:365)
-	at org.rascalmpl.semantics.dynamic.Statement$Return.interpret(Statement.java:782)
-	at org.rascalmpl.interpreter.result.RascalFunction.runBody(RascalFunction.java:385)
-	at org.rascalmpl.interpreter.result.RascalFunction.call(RascalFunction.java:326)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.callWith(OverloadedFunction.java:409)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:372)
-	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
-	at org.rascalmpl.semantics.dynamic.Expression$List.interpret(Expression.java:1510)
-	at org.rascalmpl.semantics.dynamic.Statement$Expression.interpret(Statement.java:365)
-	at org.rascalmpl.semantics.dynamic.Statement$Return.interpret(Statement.java:782)
-	at org.rascalmpl.interpreter.result.RascalFunction.runBody(RascalFunction.java:385)
-	at org.rascalmpl.interpreter.result.RascalFunction.call(RascalFunction.java:326)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.callWith(OverloadedFunction.java:409)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:372)
-	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
-	at org.rascalmpl.semantics.dynamic.Expression$List.interpret(Expression.java:1510)
-	at org.rascalmpl.semantics.dynamic.Statement$Expression.interpret(Statement.java:365)
-	at org.rascalmpl.semantics.dynamic.Statement$Return.interpret(Statement.java:782)
-	at org.rascalmpl.interpreter.result.RascalFunction.runBody(RascalFunction.java:385)
-	at org.rascalmpl.interpreter.result.RascalFunction.call(RascalFunction.java:326)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.callWith(OverloadedFunction.java:409)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:372)
-	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
-	at org.rascalmpl.semantics.dynamic.Expression$List.interpret(Expression.java:1510)
-	at org.rascalmpl.semantics.dynamic.Statement$Expression.interpret(Statement.java:365)
-	at org.rascalmpl.semantics.dynamic.Statement$Return.interpret(Statement.java:782)
-	at org.rascalmpl.interpreter.result.RascalFunction.runBody(RascalFunction.java:385)
-	at org.rascalmpl.interpreter.result.RascalFunction.call(RascalFunction.java:326)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.callWith(OverloadedFunction.java:409)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:372)
+	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:369)
 	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
 	at org.rascalmpl.semantics.dynamic.Expression$List.interpret(Expression.java:1510)
 	at org.rascalmpl.semantics.dynamic.Statement$Expression.interpret(Statement.java:365)
@@ -510,7 +470,5 @@ ok
 ```
 
 
-
-#### Benefits
 
 

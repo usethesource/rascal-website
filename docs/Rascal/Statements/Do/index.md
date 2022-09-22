@@ -14,17 +14,13 @@ Repeat statements while condition holds.
 
 `do Statement while ( Exp );`
 
-#### Types
-
-#### Function
-
 #### Description
 
 _Statement_ is executed repeatedly, as long as the Boolean expression _Exp_ yields true. 
 Expression _Exp_ is executed from scratch in each repetition and only the first true value (if any) is used.
 
 By default, the value of a do statement is the empty list. 
-In general, the value of a do statement consists of all values contributed by [Append](/docs/Rascal/Statements/Append) statements 
+In general, the value of a do statement consists of all values contributed by [Append](../../../Rascal/Statements/Append) statements 
 that are executed during the repeated execution of its body Statement.
 
 #### Examples
@@ -50,7 +46,5 @@ int: 3
 rascal>do { append n * n; n -= 1; } while (n > 0);
 list[int]: [9,4,1]
 ```
-
-#### Benefits
 
 

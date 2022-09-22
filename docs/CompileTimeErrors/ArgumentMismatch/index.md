@@ -6,14 +6,6 @@ title: ArgumentMismatch
 
 The called signature does not match any defined function.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 A function has a name and a signature (the names and types of its arguments). 
@@ -54,7 +46,5 @@ list[int] (list[int]): function(|prompt:///|(0,49,<1,0>,<1,49>))
 rascal>triple([1,2,3]);
 list[int]: [3,6,9]
 ```
-
-#### Benefits
 
 

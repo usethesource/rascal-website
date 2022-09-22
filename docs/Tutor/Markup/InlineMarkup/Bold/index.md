@@ -12,16 +12,8 @@ Create *bold* text.
 \*_Text_*
 ```
 
-#### Types
-
-#### Function
-
-#### Description
-
 #### Examples
 
 `\*bold*` gives *bold*.
-
-#### Benefits
 
 

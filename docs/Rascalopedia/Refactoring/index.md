@@ -6,14 +6,6 @@ title: Refactoring
 
 Restructuring source code to improve its internal structure without changing its external behaviour.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Refactoring was popularized by [Martin Fowler](http://martinfowler.com/refactoring/) and aims at improving source code quality.
@@ -35,7 +27,5 @@ Some well-known refactorings are:
 *  [Rename Method](http://martinfowler.com/refactoring/catalog/renameMethod.html)
 *  [Encapsulate Field](http://martinfowler.com/refactoring/catalog/encapsulateField.html)
 *  [Extract Methods](http://martinfowler.com/refactoring/catalog/extractMethod.html)
-
-#### Benefits
 
 

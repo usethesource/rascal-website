@@ -6,16 +6,6 @@ title: IDE
 
 An Integrated Development Environment for Pico.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
-#### Description
-
 #### Examples
 
 
@@ -60,7 +50,5 @@ Now we get a warning that variable `n` is not initialized. We correct it and get
 
 ![](/assets/Recipes/Languages/Pico/IDE/Screenshot4.png)
 
-
-#### Benefits
 
 

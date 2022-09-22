@@ -6,20 +6,12 @@ title: NonVoidTypeRequired
 
 A type other than `void` is needed.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 This error is generated when a value is needed, so an expression of any type but the `void` type.
 
 The most prominent examples are splicing for 
-[list](/docs/Rascal/Expressions/Values/List/Splice) and [set](/docs/Rascal/Expressions/Values/Set/Splice).
+[list](../../Rascal/Expressions/Values/List/Splice) and [set](../../Rascal/Expressions/Values/Set/Splice).
 
 Remedy: replace the expression of type `void` by an expression that computes a value.
 
@@ -50,7 +42,5 @@ list[int]: [1,17,2]
 rascal>{1, *dummy(), 2}
 set[int]: {1,2,17}
 ```
-
-#### Benefits
 
 

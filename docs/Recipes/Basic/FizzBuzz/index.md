@@ -6,12 +6,6 @@ title: FizzBuzz
 
 We solve a well-known job interview puzzle.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 [FizzBuzz](http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html) is a well-known puzzle that is used at job interviews.
@@ -173,7 +167,5 @@ Fizz
 Buzz
 ok
 ```
-
-#### Benefits
 
 

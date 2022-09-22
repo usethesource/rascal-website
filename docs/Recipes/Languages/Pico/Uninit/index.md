@@ -6,16 +6,6 @@ title: Uninit
 
 Find unitialized variables in a Pico program.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
-#### Description
-
 #### Examples
 
 Uninitialized variables are variables that are used without being initialized.
@@ -93,7 +83,5 @@ rel[loc location,str name,STATEMENT stat]: {<|unknown:///|(71,1,<1,71>,<1,72>),"
     comments=())>}
 ```
 
-
-#### Benefits
 
 

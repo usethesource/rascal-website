@@ -6,29 +6,23 @@ title: Datatypes
 
 Built-in and user-defined datatypes.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Rascal provides a rich set of datatypes:
 
-*  [Boolean](/docs/Rascal/Expressions/Values/Boolean) (`bool`).
-*  Infinite precision [Integer](/docs/Rascal/Expressions/Values/Integer) (`int`), 
-   [Real](/docs/Rascal/Expressions/Values/Real) (`real`), and [Number](/docs/Rascal/Expressions/Values/Number) (`num`).
-*  [String](/docs/Rascal/Expressions/Values/String)s (`str`) that can act as templates with embedded expressions and statements. 
-*  Source code [Location](/docs/Rascal/Expressions/Values/Location)s (`loc`) based on an extension of Universal Resource Identifiers (URI) that allow precise description of text areas in local and remote files.
-*  Date and time values ([DateTime](/docs/Rascal/Expressions/Values/DateTime), `datetime`).
-*  [List](/docs/Rascal/Expressions/Values/List) (`list`).
-*  [Tuple](/docs/Rascal/Expressions/Values/Tuple) (`tuple`).
-*  [Set](/docs/Rascal/Expressions/Values/Set) (`set`).
-*  [Map](/docs/Rascal/Expressions/Values/Map) (`map`) 
-*  [Relation](/docs/Rascal/Expressions/Values/Relation) (`rel`). 
-*  Untyped tree structures ([Node](/docs/Rascal/Expressions/Values/Node), `node`).  
-*  User-defined algebraic datatypes ([Algebraic Data Type](/docs/Rascal/Declarations/AlgebraicDataType), `data`) allow the introduction of problem-specific types and are a subtype of node. 
+*  [Boolean](../../Rascal/Expressions/Values/Boolean) (`bool`).
+*  Infinite precision [Integer](../../Rascal/Expressions/Values/Integer) (`int`), 
+   [Real](../../Rascal/Expressions/Values/Real) (`real`), and [Number](../../Rascal/Expressions/Values/Number) (`num`).
+*  [String](../../Rascal/Expressions/Values/String)s (`str`) that can act as templates with embedded expressions and statements. 
+*  Source code [Location](../../Rascal/Expressions/Values/Location)s (`loc`) based on an extension of Universal Resource Identifiers (URI) that allow precise description of text areas in local and remote files.
+*  Date and time values ([DateTime](../../Rascal/Expressions/Values/DateTime), `datetime`).
+*  [List](../../Rascal/Expressions/Values/List) (`list`).
+*  [Tuple](../../Rascal/Expressions/Values/Tuple) (`tuple`).
+*  [Set](../../Rascal/Expressions/Values/Set) (`set`).
+*  [Map](../../Rascal/Expressions/Values/Map) (`map`) 
+*  [Relation](../../Rascal/Expressions/Values/Relation) (`rel`). 
+*  Untyped tree structures ([Node](../../Rascal/Expressions/Values/Node), `node`).  
+*  User-defined algebraic datatypes ([Algebraic Data Type](../../Rascal/Declarations/AlgebraicDataType), `data`) allow the introduction of problem-specific types and are a subtype of node. 
   This makes it possible to have typed
   and untyped views on the same data. 
   A special case are syntax trees that are the result of parsing source files are represented 
@@ -111,7 +105,5 @@ rascal>"abc"(1, 2, 3);
 node: "abc"(1,2,3)
 ```
 
-
-#### Benefits
 
 

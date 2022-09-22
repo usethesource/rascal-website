@@ -4,19 +4,11 @@ title: Language
 
 #### Synopsis
 
-The set of strings defined by a [Rascalopedia:Grammar](/docs//Rascalopedia/Grammar).
-
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
+The set of strings defined by a [Rascalopedia:Grammar](../..//Rascalopedia/Grammar).
 
 #### Description
 
-A [Rascalopedia:Grammar](/docs//Rascalopedia/Grammar) or [Rascalopedia:Syntax](/docs//Rascalopedia/Syntax) defines the formation rules for a language.
+A [Rascalopedia:Grammar](../..//Rascalopedia/Grammar) or [Rascalopedia:Syntax](../..//Rascalopedia/Syntax) defines the formation rules for a language.
 A language is the (possible infinite) set of strings that are defined by a grammar.
 
 #### Examples
@@ -24,7 +16,5 @@ A language is the (possible infinite) set of strings that are defined by a gramm
 *  The language of strings of at most 5 `a` 's: the finite set `{"a",  "aa", "aaa", "aaaa", "aaaaa"}`.
 *  The language of strings that correspond to even numbers: the infinite set `{"0", "2", "4", "6", ...}`
 *  The Java language: the infinite set of syntactically correct Java programs.
-
-#### Benefits
 
 

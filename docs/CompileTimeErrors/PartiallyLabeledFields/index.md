@@ -6,14 +6,6 @@ title: PartiallyLabeledFields
 
 In a tuple or relation all fields should have names or none at all.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 The fields in tuples and relations can optionally be labelled with a name.
@@ -37,6 +29,4 @@ rascal>rel[str name, int] R;
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/PartiallyLabeledFields/PartiallyLabeledFields.html|
 ok
 ```
-#### Benefits
-
 

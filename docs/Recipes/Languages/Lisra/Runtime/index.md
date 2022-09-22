@@ -6,14 +6,6 @@ title: Runtime
 
 The runtime representation of Lisp programs and data.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 There are several aspects of the runtime representation of Lisp programs and Lisp data
@@ -84,9 +76,5 @@ alias Result = tuple[Lval val, Env env]; // <6>
 <6> Finally, we define `Result` as a tuple of an `Lval` and an `Env`.
     Each step during interpretation will thus return the value it computed and
     a possibly modified environment.
-
-#### Examples
-
-#### Benefits
 
 

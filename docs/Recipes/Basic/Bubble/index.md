@@ -6,17 +6,11 @@ title: Bubble
 
 Variout styles to write bubble sort.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 [Bubble sort](http://en.wikipedia.org/wiki/Bubble_sort) is a classical (albeit not the most efficient) technique to sort lists of values.
 We present here several styles to implement bubble sort. 
-Also see [sort](/docs/Library/List#List-sort) for a more efficient library function for sorting.
+Also see [sort](../../../Library/List#List-sort) for a more efficient library function for sorting.
 
 #### Examples
 
@@ -133,7 +127,5 @@ rascal>sort5(L);
 list[int]: [1,2,3,4,5,6,7,8,9]
 ```
 
-
-#### Benefits
 
 

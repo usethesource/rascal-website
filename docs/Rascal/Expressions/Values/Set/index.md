@@ -13,8 +13,6 @@ Set values.
 
 `{ Exp<sub>1</sub>, Exp<sub>2</sub>, ... }`
 
-#### Usage
-
 #### Types
 
 
@@ -22,8 +20,6 @@ Set values.
 | --- | --- | --- | --- |
 | _T<sub>1</sub>_    | _T<sub>2</sub>_    |  ...  |  set[ lub(_T<sub>1</sub>_, _T<sub>2</sub>_, ... ) ]  |
 
-
-#### Function
 
 #### Description
 
@@ -60,9 +56,7 @@ The following operators are provided on sets:
 * ((Rascal:Expressions/Values/Set/in))
 * ((Rascal:Expressions/Values/Set/notin))
 
-There are also [library functions](/docs/Library/Set) available for Sets.
-#### Examples
-
+There are also [library functions](../../../../Library/Set) available for Sets.
 ##  Set types 
 
 
@@ -116,7 +110,5 @@ or how its elements are added as elements to the other set:
 rascal>{10, *S, 20};
 set[int]: {10,1,3,20,2}
 ```
-
-#### Benefits
 
 

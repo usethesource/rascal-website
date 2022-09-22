@@ -1,5 +1,5 @@
 # demo::lang::logic
 
 
-   * [ast](/docs/Library/demo/lang/logic/ast)
-   * [syntax](/docs/Library/demo/lang/logic/syntax)
+   * [ast](../../../../Library/demo/lang/logic/ast)
+   * [syntax](../../../../Library/demo/lang/logic/syntax)

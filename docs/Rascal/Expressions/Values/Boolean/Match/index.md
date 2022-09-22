@@ -19,14 +19,12 @@ Match a pattern against an expression.
 
 | `Pat`      | `Exp` |`Pat := Exp` |
 | --- | --- | --- |
-| [Patterns](/docs//Rascal/Patterns) | `value` | `bool`         |
+| [Patterns](../../../../..//Rascal/Patterns) | `value` | `bool`         |
 
-
-#### Function
 
 #### Description
 
-See [Pattern Matching](/docs//RascalConcepts/PatternMatching) for an introduction to pattern matching and [Patterns](/docs//Rascal/Patterns) for a complete description.
+See [Pattern Matching](../../../../..//RascalConcepts/PatternMatching) for an introduction to pattern matching and [Patterns](../../../../..//Rascal/Patterns) for a complete description.
 
 #### Examples
 
@@ -39,6 +37,4 @@ bool: true
 rascal>{10, *int n, 50} := {50, 40, 30, 30, 10};
 bool: true
 ```
-#### Benefits
-
 

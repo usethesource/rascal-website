@@ -23,8 +23,6 @@ Any combination of argument values is true.
 |`bool`     | `bool`    | ... | `bool`                           |
 
 
-#### Function
-
 #### Description
 
 Yields `true` when at least one combination of values of _Exp_~i~ is true.
@@ -36,7 +34,5 @@ Yields `true` when at least one combination of values of _Exp_~i~ is true.
 rascal>any(int n <- [1 .. 10], n % 2 == 0);
 bool: true
 ```
-
-#### Benefits
 
 

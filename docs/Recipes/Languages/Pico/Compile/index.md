@@ -6,19 +6,9 @@ title: Compile
 
 Compile a Pico program to assembly language.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
-#### Description
-
 #### Examples
 
-The Pico compiler translates Pico programs to [Assembly](/docs/Recipes/Languages/Pico/Assembly) language programs.
+The Pico compiler translates Pico programs to [Assembly](../../../../Recipes/Languages/Pico/Assembly) language programs.
 
 
 ```rascal
@@ -221,7 +211,5 @@ list[Instr]: [
   label("L2")
 ]
 ```
-
-#### Benefits
 
 

@@ -13,18 +13,14 @@ Let the current alternative of a pattern match fail.
 
 `fail;`
 
-#### Types
-
-#### Function
-
 #### Description
 
 A `fail` statement is only allowed in statements that are controlled by the outcome of a pattern match:
 
-*  The [Patterns](/docs//Rascal/Patterns) in a [Pattern with Action](/docs/Rascal/Expressions/Visit/PatternWithAction) in [Switch](/docs/Rascal/Statements/Switch) or [Visit](/docs/Rascal/Statements/Visit) statement controls the statements in the action part.
-*  The test (expression) of a [While](/docs/Rascal/Statements/While) or [Do](/docs/Rascal/Statements/Do) statement controls the statements in the body part.
-*  The test (expressions) of a [For](/docs/Rascal/Statements/For) statement control the statements in the body part.
-*  The formal parameter declaration of a [Function](/docs/Rascal/Declarations/Function).
+*  The [Patterns](../../..//Rascal/Patterns) in a [Pattern with Action](../../../Rascal/Expressions/Visit/PatternWithAction) in [Switch](../../../Rascal/Statements/Switch) or [Visit](../../../Rascal/Statements/Visit) statement controls the statements in the action part.
+*  The test (expression) of a [While](../../../Rascal/Statements/While) or [Do](../../../Rascal/Statements/Do) statement controls the statements in the body part.
+*  The test (expressions) of a [For](../../../Rascal/Statements/For) statement control the statements in the body part.
+*  The formal parameter declaration of a [Function](../../../Rascal/Declarations/Function).
 
 
 The `fail` statement is associated with the innermost pattern match by which it is controlled.
@@ -40,7 +36,7 @@ When `fail` is executed:
 
 #### Examples
 
-Here is an example taken from [Bubble](/docs/Recipes/Basic/Bubble). 
+Here is an example taken from [Bubble](../../../Recipes/Basic/Bubble). 
 It uses a `fail` for the case that no unsorted element can be found in the list of numbers.
 As a result, the whole case fails and the default case is used.
 
@@ -62,7 +58,5 @@ list[int] (list[int]): function(|prompt:///|(0,252,<1,0>,<11,1>))
 rascal>sort([10, 1, 5, 3]);
 list[int]: [1,3,5,10]
 ```
-
-#### Benefits
 
 

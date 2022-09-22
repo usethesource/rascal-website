@@ -22,8 +22,6 @@ Locations can be concatenated with strings to add segments to the path component
 | `loc`     | `str`     | `loc`                |
 
 
-#### Function
-
 #### Description
 
 Adds a segment to the path component of a location.
@@ -42,6 +40,4 @@ To get the original back, you can use the `parent` field:
 rascal>(|tmp:///myDir| + "myFile").parent
 loc: |tmp:///myDir|
 ```
-#### Benefits
-
 

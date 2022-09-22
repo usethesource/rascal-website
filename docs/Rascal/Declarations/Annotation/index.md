@@ -8,19 +8,15 @@ keywords:
 
 #### Synopsis
 
-Declare an annotation type for nodes. This feature is deprecated; please use [keyword fields](/docs/Rascal/Declarations/AlgebraicDataType) instead.
+Declare an annotation type for nodes. This feature is deprecated; please use [keyword fields](../../../Rascal/Declarations/AlgebraicDataType) instead.
 
 #### Syntax
 
 `anno AnnoType OnType @ Name`
 
-#### Types
-
-#### Function
-
 #### Description
 
-An annotation may be associated with any node value, be it a pure node or some [Algebraic Data Type](/docs/Rascal/Declarations/AlgebraicDataType) derived from it.
+An annotation may be associated with any node value, be it a pure node or some [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType) derived from it.
 
 Annotations are intended to attach application data to values,
 like adding position information or control flow information to source code or adding visualization information to a graph.
@@ -47,9 +43,7 @@ The following constructs are provided for handling annotations:
 
 Examples have been removed since this feature is deprecated. 
 
-#### Benefits
-
 #### Pitfalls
 
-* Annotations are cumbersome since they change the structure of [Values](/docs/Rascal/Expressions/Values) without changing the semantics of the identity of a value. This is why they are deprecated.
+* Annotations are cumbersome since they change the structure of [Values](../../../Rascal/Expressions/Values) without changing the semantics of the identity of a value. This is why they are deprecated.
 

@@ -6,12 +6,6 @@ title: Authoring
 
 Creating and writing a course for the Rascal Tutor.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 The life cycle of a course consists of the following steps:
@@ -32,8 +26,6 @@ Concepts are represented as directories for the following reasons:
 * To contain all figures and other files that are included in the concept. In this way:
   ** A complete concept can be easily moved or renamed as a single unit.
   ** Name clashes between included files per concept are avoided.
-
-#### Examples
 
 #### Benefits
 

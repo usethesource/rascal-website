@@ -22,8 +22,6 @@ Equality on datetime values.
 | `datetime`     |  `datetime`    | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if both arguments are identical `datetime` values and `false` otherwise.
@@ -37,7 +35,5 @@ bool: true
 rascal>$2010-07-15$ == $2010-07-14$;
 bool: false
 ```
-
-#### Benefits
 
 

@@ -21,8 +21,6 @@ Retrieve a value by its key in map.
 | `map[T<sub>1</sub>, T<sub>2</sub>]` | `T<sub>1</sub>`   | `T<sub>2</sub>`                |
 
 
-#### Function
-
 #### Description
 
 Map subscription uses the value of _Exp_<sub>2</sub> as key in the map value of _Exp_<sub>1</sub> and returns the associated value.
@@ -54,7 +52,5 @@ rascal>colors["square"];
 	at $shell$(|prompt:///|(0,17,<1,0>,<1,17>))
 ok
 ```
-
-#### Benefits
 
 

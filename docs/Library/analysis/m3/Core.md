@@ -13,7 +13,7 @@ M3 common source code model represent facts extracted from source code for use i
 
 #### Description
 
-The M3 [Library:analysis::m3::Core](/docs/Library/analysis/m3/Core) defines basic concepts such as:
+The M3 [Library:analysis::m3::Core](../../../Library/analysis/m3/Core) defines basic concepts such as:
 
 *  qualified names: we use [$Values/Location]s to model qualified names for each programming language
 *  containment: which artifacts are contained in which other artifacts
@@ -21,7 +21,7 @@ The M3 [Library:analysis::m3::Core](/docs/Library/analysis/m3/Core) defines basi
 *  uses: where declared artifacts are used
 *  types: which artifacts has which types
 
-From this [Library:analysis::m3::Core](/docs/Library/analysis/m3/Core) is supposed to be extended with features specific for a programming language. See for example [Java M3](/docs/Library/lang/java/m3/Core).
+From this [Library:analysis::m3::Core](../../../Library/analysis/m3/Core) is supposed to be extended with features specific for a programming language. See for example [Java M3](../../../Library/lang/java/m3/Core).
 
 #### Benefits
 
@@ -127,12 +127,10 @@ constructs a recursive FileSystem from a binary [Location] relation.
 
 transform the containment relation to a recursive tree model
 
-#### Description
-
 #### Benefits
 
 *  Transforming the containment relation to a tree model allows further analysis using operators
-such as [Visit](/docs/Rascal/Statements/Visit) and [Descendant](/docs/Rascal/Patterns/Descendant) which is sometimes more convenient.
+such as [Visit](../../../Rascal/Statements/Visit) and [Descendant](../../../Rascal/Patterns/Descendant) which is sometimes more convenient.
 
 #### Pitfalls
 

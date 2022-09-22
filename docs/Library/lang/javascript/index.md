@@ -1,4 +1,4 @@
 # lang::javascript
 
 
-   * [saner](/docs/Library/lang/javascript/saner)
+   * [saner](../../../Library/lang/javascript/saner)

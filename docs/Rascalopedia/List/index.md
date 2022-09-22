@@ -6,14 +6,6 @@ title: List
 
 An ordered sequence of values.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 A list is a sequence of values with the following properties:
@@ -48,10 +40,8 @@ The cases `head(nil)` and `tail(nil)` are left undefined (and usually correspond
 
 In Rascal, lists are surrounded by brackets `[` and `]` and the elements are separated by commas.
 Each list has a type of the form `list[T]`, where _T_ is the smallest common type of all list elements.
-Read the description of [lists and their operators](/docs/Rascal/Expressions/Values/List)
-and of [library functions on lists](/docs/Library/List).
-
-#### Examples
+Read the description of [lists and their operators](../../Rascal/Expressions/Values/List)
+and of [library functions on lists](../../Library/List).
 
 ## Lists in Daily Life
 
@@ -78,7 +68,5 @@ and of [library functions on lists](/docs/Library/List).
 *  The empty list: `[]`. Its type is `list[void]`.
 *  A list of integers: `[3, 1, 4]`. Its type is `list[int]`.
 *  A list of mixed-type values: `[3, "a", 4]`. Its type is `list[value]`.
-
-#### Benefits
 
 

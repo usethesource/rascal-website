@@ -6,14 +6,6 @@ title: Jabberwocky
 
 Lewis Carroll's well-known poem.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
-#### Description
-
 #### Examples
 
 
@@ -78,6 +70,4 @@ public list[str] Jabberwocky = [
 ```
 
                 
-#### Benefits
-
 

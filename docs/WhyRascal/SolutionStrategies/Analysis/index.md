@@ -6,12 +6,6 @@ title: Analysis
 
 Strategies to analyze software systems.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 The analysis workflow is shown in the figure below and consists of two steps:
@@ -45,9 +39,5 @@ The Rascal features that are frequently used for analysis are:
 *  The solve statement for constraint solving.
 
 *  Rewrite rules to simplify results and to enforce constraints.
-
-#### Examples
-
-#### Benefits
 
 

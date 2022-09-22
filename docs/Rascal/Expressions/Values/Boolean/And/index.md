@@ -22,8 +22,6 @@ Boolean _and_ operator.
 | `bool`       | `bool`         | `bool`  |
 
 
-#### Function
-
 #### Description
 
 The _and_ operator on Boolean values defined as follows:

@@ -9,12 +9,6 @@ keywords:
 
 Deep match in an abstract pattern.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 A descendant pattern
@@ -89,7 +83,5 @@ rascal>for(/int N := T)
 >>>>>>>    append N;
 list[int]: [1,2,3,4,5,4]
 ```
-
-#### Benefits
 
 

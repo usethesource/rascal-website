@@ -6,14 +6,6 @@ title: CountInLine2
 
 Count words in a line.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
-#### Description
-
 #### Examples
 
 A slighly more involved manner of using regular matching in a loop.
@@ -63,7 +55,5 @@ ok
 rascal>countInLine2("Jabberwocky by Lewis Carroll");
 int: 4
 ```
-
-#### Benefits
 
 

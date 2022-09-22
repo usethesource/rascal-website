@@ -6,14 +6,6 @@ title: UndeclaredFunction
 
 A function is called that has not been declared.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 All functions, constructors and variables have to be declared before they can be used.
@@ -91,7 +83,5 @@ int: 3
 rascal>n + 1;
 int: 4
 ```
-
-#### Benefits
 
 

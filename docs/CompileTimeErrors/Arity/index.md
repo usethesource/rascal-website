@@ -6,19 +6,11 @@ title: Arity
 
 The number of arguments of an operator differ from what is required.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
-Various operators like [composition](/docs/Rascal/Expressions/Values/Relation/Composition), 
-[transitive closure](/docs/Rascal/Expressions/Values/Relation/TransitiveClosure) and 
-[reflexive transitive closure](/docs/Rascal/Expressions/Values/Relation/ReflexiveTransitiveClosure) 
+Various operators like [composition](../../Rascal/Expressions/Values/Relation/Composition), 
+[transitive closure](../../Rascal/Expressions/Values/Relation/TransitiveClosure) and 
+[reflexive transitive closure](../../Rascal/Expressions/Values/Relation/ReflexiveTransitiveClosure) 
 expect binary relations or tuples as arguments.
 
 #### Examples
@@ -72,6 +64,4 @@ rascal>{<1,2,3>, <2,3,4>,<4,5,6>}*
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/Arity/Arity.html|
 ok
 ```
-#### Benefits
-
 

@@ -21,8 +21,6 @@ Composition of two relation values.
 | `rel[T<sub>1</sub>, T<sub>2</sub>]` | `rel[T<sub>2</sub>, T<sub>3</sub>]` | `rel[T<sub>1</sub>, T<sub>3</sub>]`  |
 
 
-#### Function
-
 #### Description
 
 Returns the composition of two binary relations.
@@ -39,8 +37,6 @@ rel[int,int]: {
   <2,200>
 }
 ```
-
-#### Benefits
 
 #### Pitfalls
 

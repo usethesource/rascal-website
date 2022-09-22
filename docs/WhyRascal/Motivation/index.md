@@ -6,12 +6,6 @@ title: Motivation
 
 The distinguishing features of Rascal and how they solve real problems.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 _Meta-programs_ are programs that analyze, transform or generate other programs. Ordinary programs work on data; meta-programs work on programs. 

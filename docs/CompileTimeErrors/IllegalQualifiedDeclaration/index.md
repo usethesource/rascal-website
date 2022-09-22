@@ -6,14 +6,6 @@ title: IllegalQualifiedDeclaration
 
 Qualified names cannot be declared.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 When the same name is declared in different modules, a qualified name can be used to refer to a specific version of that name.
@@ -35,7 +27,5 @@ Without the qualification, this is correct:
 rascal>data D = d();
 ok
 ```
-
-#### Benefits
 
 

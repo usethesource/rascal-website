@@ -26,12 +26,6 @@ data Maybe[&A]
 
 Data type to represent an optional value.
 
-#### Types
-
-#### Usage
-
-#### Description
-
 #### Examples
 
 ```rascal

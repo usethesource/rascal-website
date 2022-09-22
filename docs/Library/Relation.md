@@ -13,24 +13,24 @@ Library functions for relations.
 
 #### Description
 
-For operators on relations see [Relation](/docs/Rascal/Expressions/Values/Relation) in the Rascal Language Reference.
+For operators on relations see [Relation](../Rascal/Expressions/Values/Relation) in the Rascal Language Reference.
 
 The following functions are defined for relations:
-* [Library:function:Relation::carrier](/docs/Library/Relation#Relation-carrier)
-* [Library:function:Relation::carrierR](/docs/Library/Relation#Relation-carrierR)
-* [Library:function:Relation::carrierX](/docs/Library/Relation#Relation-carrierX)
-* [Library:function:Relation::complement](/docs/Library/Relation#Relation-complement)
-* [Library:function:Relation::domain](/docs/Library/Relation#Relation-domain)
-* [Library:function:Relation::domainR](/docs/Library/Relation#Relation-domainR)
-* [Library:function:Relation::domainX](/docs/Library/Relation#Relation-domainX)
-* [Library:function:Relation::group domain by range](/docs/Library/Relation#Relation-groupDomainByRange)
-* [Library:function:Relation::group range by domain](/docs/Library/Relation#Relation-groupRangeByDomain)
-* [Library:function:Relation::ident](/docs/Library/Relation#Relation-ident)
-* [Library:function:Relation::index](/docs/Library/Relation#Relation-index)
-* [Library:function:Relation::invert](/docs/Library/Relation#Relation-invert)
-* [Library:function:Relation::range](/docs/Library/Relation#Relation-range)
-* [Library:function:Relation::rangeR](/docs/Library/Relation#Relation-rangeR)
-* [Library:function:Relation::rangeX](/docs/Library/Relation#Relation-rangeX)
+* [Library:function:Relation::carrier](../Library/Relation#Relation-carrier)
+* [Library:function:Relation::carrierR](../Library/Relation#Relation-carrierR)
+* [Library:function:Relation::carrierX](../Library/Relation#Relation-carrierX)
+* [Library:function:Relation::complement](../Library/Relation#Relation-complement)
+* [Library:function:Relation::domain](../Library/Relation#Relation-domain)
+* [Library:function:Relation::domainR](../Library/Relation#Relation-domainR)
+* [Library:function:Relation::domainX](../Library/Relation#Relation-domainX)
+* [Library:function:Relation::group domain by range](../Library/Relation#Relation-groupDomainByRange)
+* [Library:function:Relation::group range by domain](../Library/Relation#Relation-groupRangeByDomain)
+* [Library:function:Relation::ident](../Library/Relation#Relation-ident)
+* [Library:function:Relation::index](../Library/Relation#Relation-index)
+* [Library:function:Relation::invert](../Library/Relation#Relation-invert)
+* [Library:function:Relation::range](../Library/Relation#Relation-range)
+* [Library:function:Relation::rangeR](../Library/Relation#Relation-rangeR)
+* [Library:function:Relation::rangeX](../Library/Relation#Relation-rangeX)
 
 
 ## function carrier {#Relation-carrier}

@@ -21,8 +21,6 @@ Cartesian product of two relation values.
 | `set[T<sub>1</sub>]`  | `set[T<sub>2</sub>]`  | `rel[T<sub>1</sub>, T<sub>2</sub>]`   |
 
 
-#### Function
-
 #### Description
 
 Returns a binary relation that is the [Cartesian product](http://en.wikipedia.org/wiki/Cartesian_product) of two sets.
@@ -47,7 +45,5 @@ rel[int,int]: {
   <2,11>
 }
 ```
-
-#### Benefits
 
 

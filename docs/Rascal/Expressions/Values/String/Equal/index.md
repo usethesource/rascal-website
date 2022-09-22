@@ -21,8 +21,6 @@ Equality operator on string values.
 | `str`     |  `str`    | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if both arguments are identical and `false` otherwise.
@@ -36,7 +34,5 @@ bool: true
 rascal>"abc" == "defghi";
 bool: false
 ```
-
-#### Benefits
 
 

@@ -6,14 +6,6 @@ title: MissingReturn
 
 A return statement is missing from a function body.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Functions return some value (except functions that have return type `void`).
@@ -56,7 +48,5 @@ int (int): function(|prompt:///|(0,26,<1,0>,<1,26>))
 rascal>triple(5)
 int: 15
 ```
-
-#### Benefits
 
 

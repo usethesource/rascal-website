@@ -6,19 +6,11 @@ title: UnguardedInsert
 
 An `insert` occurs outside a `visit` expression.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
-An insert statement may only occur in the action part of a [pattern with action](/docs/Rascal/Expressions/Visit/PatternWithAction), 
+An insert statement may only occur in the action part of a [pattern with action](../../Rascal/Expressions/Visit/PatternWithAction), 
 more precisely in a case in a 
-[visit](/docs/Rascal/Expressions/Visit) expression. 
+[visit](../../Rascal/Expressions/Visit) expression. 
 
 Remedies:
 
@@ -71,7 +63,5 @@ rascal>insert red(leaf(1), leaf(2));
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UnguardedInsert/UnguardedInsert.html|
 ok
 ```
-
-#### Benefits
 
 

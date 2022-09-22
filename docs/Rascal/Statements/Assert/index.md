@@ -22,8 +22,6 @@ An executable assertion.
 | `bool`    | `str`      |
 
 
-#### Function
-
 #### Description
 
 An assert statement may occur everywhere where a declaration is allowed. It has two forms:
@@ -50,7 +48,5 @@ rascal>div(4,0);
 	at $shell$(|prompt:///|(0,9,<1,0>,<1,9>))
 ok
 ```
-
-#### Benefits
 
 

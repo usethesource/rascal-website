@@ -28,7 +28,7 @@ A closure-based object wrapper for Rascal REPL
 
 
 Using an instance of CommandExecutor you can simulate the exact interactions
-between a Rascal [Rascal shell:REPL](/docs//RascalShell/REPL) user and the REPL. 
+between a Rascal [Rascal shell:REPL](../../../../..//RascalShell/REPL) user and the REPL. 
 
 This was created to implement documentation pages with example REPL runs.
 
@@ -38,7 +38,7 @@ This was created to implement documentation pages with example REPL runs.
 
 #### Synopsis
 
-Instantiates a [Command executor](/docs/Library/lang/rascal/tutor/repl/TutorCommandExecutor#lang::rascal::tutor::repl::TutorCommandExecutor-CommandExecutor) to simulate a REPL
+Instantiates a [Command executor](../../../../../Library/lang/rascal/tutor/repl/TutorCommandExecutor#lang::rascal::tutor::repl::TutorCommandExecutor-CommandExecutor) to simulate a REPL
 
 #### Examples
 

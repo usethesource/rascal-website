@@ -53,7 +53,7 @@ Note that a command can be one of:
 *  SyntaxDefinition
    
 
-The notable exclusion are [Expressions](/docs//Rascal/Expressions). An Expression is not allowed as a command to the eval function. You can easily make
+The notable exclusion are [Expressions](../..//Rascal/Expressions). An Expression is not allowed as a command to the eval function. You can easily make
 a Statement from an Expression by adding a semi-colon.
  
 An optional `duration` argument may be present to limit the time

@@ -20,8 +20,6 @@ The product of two set values.
 | `set[T<sub>1</sub>]` |  `set[T<sub>2</sub>]` | `rel[T<sub>1</sub>,T<sub>2</sub>]`   |
 
 
-#### Function
-
 #### Description
 
 Yields a relation resulting from the product of the values of _Exp_<sub>1</sub> and _Exp_<sub>2</sub>. It contains a tuple for each combination of values from both arguments.
@@ -102,7 +100,5 @@ rel[str,int]: {
   <"diamonds",8>
 }
 ```
-
-#### Benefits
 
 

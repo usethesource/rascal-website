@@ -6,12 +6,6 @@ title: Immutable Values
 
 Immutable values.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Values are the basic building blocks of a language and the type of values determines how they may be used.
@@ -57,7 +51,7 @@ In pointer-based languages and in object-oriented languages the change to the or
 via `M`.
 
 
-String values are, like all other values, also immutable. Let's experiment with the [replaceAll](/docs/Library/String#String-replaceAll) function:
+String values are, like all other values, also immutable. Let's experiment with the [replaceAll](../../Library/String#String-replaceAll) function:
 
 ```rascal-shell
 rascal>import String;

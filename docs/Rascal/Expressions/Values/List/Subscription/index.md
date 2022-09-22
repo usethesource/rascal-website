@@ -23,8 +23,6 @@ Retrieve a list element via its index.
 | `list[T<sub>1</sub>]` | `int`     | `T<sub>1</sub>`              |
 
 
-#### Function
-
 #### Description
 
 List subscription uses the integer value of _Exp_<sub>2</sub> as index in the list value of _Exp_<sub>1</sub>.
@@ -49,7 +47,5 @@ rascal>L[5];
 	at $shell$(|prompt:///|(0,5,<1,0>,<1,5>))
 ok
 ```
-
-#### Benefits
 
 

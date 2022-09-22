@@ -15,24 +15,20 @@ Annotation without a value.
 `import Exception;` (only needed when `NoSuchAnnotation` is used in `catch`)
 
 
-#### Function
-       
-#### Usage
-
 #### Description
 
-An [annotation](/docs/Rascal/Declarations/Annotation) can be associated with any node value
-(including any [algebraic data type](/docs/Rascal/Declarations/AlgebraicDataType)).
+An [annotation](../../../Rascal/Declarations/Annotation) can be associated with any node value
+(including any [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType)).
 This error is generated when the value of an annotation is requested but has not been defined.
 
 Remedies:
 
 *  Ensure that the annotation value is properly initialized for all relevant parts of the node value. 
 *  Use the 
-   [isDefined](/docs/Rascal/Expressions/Values/Boolean/IsDefined) and 
-   [ifDefinedElse](/docs/Rascal/Expressions/Values/Boolean/IfDefinedElse) operators to check whether the annotation value 
+   [isDefined](../../../Rascal/Expressions/Values/Boolean/IsDefined) and 
+   [ifDefinedElse](../../../Rascal/Expressions/Values/Boolean/IfDefinedElse) operators to check whether the annotation value 
    is set and act accordingly.
-*  Catch the `NoSuchAnnotation yourself`, see [try catch](/docs/Rascal/Statements/TryCatch).
+*  Catch the `NoSuchAnnotation yourself`, see [try catch](../../../Rascal/Statements/TryCatch).
 
 #### Examples
 
@@ -84,8 +80,6 @@ Fruit: orange(13,quality="excellent")
 rascal>piece@quality;
 str: "excellent"
 ```
-
-#### Benefits
 
 #### Pitfalls
 

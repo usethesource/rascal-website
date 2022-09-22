@@ -6,14 +6,6 @@ title: AmbiguousFunctionReference
 
 An ambiguous function name
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Warning: How to generate this error? 
@@ -31,7 +23,5 @@ int: 3
 rascal>d("a").x
 str: "a"
 ```
-
-#### Benefits
 
 

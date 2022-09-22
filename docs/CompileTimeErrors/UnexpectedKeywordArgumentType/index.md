@@ -6,14 +6,6 @@ title: UnexpectedKeywordArgumentType
 
 The actual value of a keyword argument is not compatible with its declared type.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Functions may be declared to have keyword parameters. Each keyword parameters has a type, a name and a default value.
@@ -40,7 +32,5 @@ rascal>incr(3, delta="more");
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UnexpectedType/UnexpectedType.html|
 ok
 ```
-
-#### Benefits
 
 

@@ -17,10 +17,6 @@ The general scheme is:
    * `danger`
 
 
-#### Types
-
-#### Function
-
 #### Description
 
 An admonition is remark that should draw the reader's attention.

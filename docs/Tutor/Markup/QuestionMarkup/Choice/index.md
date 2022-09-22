@@ -15,10 +15,6 @@ _GoodOrBad_<sub>2</sub>: _Choice_<sub>2</sub>
 ...
 ```
 
-#### Types
-
-#### Function
-
 #### Description
 
 Asks a multiple-choice questions described by _MarkedText_.
@@ -44,7 +40,5 @@ will produce the question `Faster` in the questions section below.
 And, by the way, the [High-speed train](http://en.wikipedia.org/wiki/High-speed_rail) wins with over 570 km/hour compared to
 [Ferrari](http://en.wikipedia.org/wiki/Ferrari_F430) (315 km/hour), [Apache](http://en.wikipedia.org/wiki/Boeing_AH-64_Apache) (293 km/hour)
 and [Hovercraft](http://en.wikipedia.org/wiki/Hovercraft) (137 km/hour).
-
-#### Benefits
 
 

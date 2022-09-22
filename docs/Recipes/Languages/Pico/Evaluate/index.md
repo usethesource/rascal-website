@@ -6,16 +6,6 @@ title: Evaluate
 
 Evaluate a Pico program.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
-#### Description
-
 #### Examples
 
 A complete evaluator (interpreter) for Pico is defined below.
@@ -129,7 +119,5 @@ map[str, PicoValue]: (
   "y":natval(6)
 )
 ```
-
-#### Benefits
 
 

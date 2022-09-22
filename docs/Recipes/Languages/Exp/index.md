@@ -7,12 +7,6 @@ title: Exp
 The _hello world_ of syntax definition and language definition.
 It illustrates how to define concrete and abstract syntax and how to use concrete and abstract patterns to evaluate expressions.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Our sample language Exp contains the following elements:
@@ -30,7 +24,5 @@ Our sample language Exp contains the following elements:
 *  `2+3+4`
 *  `2+3*4`
 *  `(2+3)*4`
-
-#### Benefits
 
 

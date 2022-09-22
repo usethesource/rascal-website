@@ -6,14 +6,6 @@ title: Typechecker
 
 Checks the type rules for a source language.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 A [type system](http://en.wikipedia.org/wiki/Type_system) is a set of rules that defines how values,
@@ -46,7 +38,5 @@ These different styles of type checking have different trade offs:
 *  If in Java a variable has been declared as `bool` it cannot be added to an integer.
 *  If in Java a method has three formal parameters, it cannot be called with four actual parameters.
 *  In Python, a variable can first get a string value assigned and later on an integer value.
-
-#### Benefits
 
 

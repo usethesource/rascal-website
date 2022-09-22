@@ -6,17 +6,9 @@ title: UnguardedReturn
 
 A return statement occurs outside a function body.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
-A [return](/docs/Rascal/Statements/Return) statement is used to return a value from a function.
+A [return](../../Rascal/Statements/Return) statement is used to return a value from a function.
 It is an error to use it outside a function body.
 
 #### Examples
@@ -34,6 +26,4 @@ Using return outside a function body gives an error:
 rascal>return 3;
 ok
 ```
-#### Benefits
-
 

@@ -21,8 +21,6 @@ Concatenate two tuple values.
 | `tuple[ T<sub>11</sub>, T<sub>12</sub>, ... ]` |  `tuple[ T<sub>21</sub>, T<sub>22</sub>, ... ]` | `tuple[ T<sub>11</sub>, T<sub>12</sub>, ..., T<sub>21</sub>, T<sub>22</sub>, ... ]` |
 
 
-#### Function
-
 #### Description
 
 Returns a tuple consisting of the concatenation of the tuple elements of _Exp_<sub>1</sub> and _Exp_<sub>2</sub>.
@@ -34,7 +32,5 @@ Returns a tuple consisting of the concatenation of the tuple elements of _Exp_<s
 rascal><"abc", 1, 2.5> + <true, "def">;
 tuple[str,int,real,bool,str]: <"abc",1,2.5,true,"def">
 ```
-
-#### Benefits
 
 

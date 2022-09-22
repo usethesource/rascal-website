@@ -9,8 +9,6 @@ keywords:
 
 Splice the elements of a list in an enclosing list.
 
-#### Syntax
-
 #### Types
 
 //
@@ -20,10 +18,6 @@ Splice the elements of a list in an enclosing list.
 | --- | --- | --- | --- |
 |`T`   | `T<sub>1</sub>`  |  `T~n~`   | `list[lub(T<sub>1</sub>, ..., T, ...,T~n~)]`     |
 
-
-#### Function
-       
-#### Usage
 
 #### Description
 

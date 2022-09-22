@@ -12,16 +12,8 @@ Create _italic_ text.
 _Text_
 ```
 
-#### Types
-
-#### Function
-
-#### Description
-
 #### Examples
 
 * `_italic_` gives _italic_.
-
-#### Benefits
 
 

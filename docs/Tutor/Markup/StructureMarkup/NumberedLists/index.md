@@ -13,10 +13,6 @@ Here `␠` is used to represent a visible space:
 * ``␠␠␠1. MarkedText``
 * ``␠␠␠␠␠␠1. MarkedText``
 
-#### Types
-
-#### Function
-
 #### Description
 
 Numbered Lists create, possibly nested, lists of numbered points.
@@ -27,7 +23,7 @@ A list item ends with:
 *  the start of a new list item.
 *  an empty line.
 
-[Bullet lists](/docs/Tutor/Markup/StructureMarkup/BulletLists) and [Numbered lists](/docs/Tutor/Markup/StructureMarkup/NumberedLists) can be mixed.
+[Bullet lists](../../../../Tutor/Markup/StructureMarkup/BulletLists) and [Numbered lists](../../../../Tutor/Markup/StructureMarkup/NumberedLists) can be mixed.
 
 #### Examples
 
@@ -58,8 +54,6 @@ will produce:
    1.  First subitem.
    1.  Second subitem.
 1. Second item
-
-#### Benefits
 
 #### Pitfalls
 

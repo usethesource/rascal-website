@@ -22,8 +22,6 @@ All argument expressions are true.
 |`bool`     | `bool`    | ... | `bool`                           |
 
 
-#### Function
-
 #### Description
 
 Yields `true` when all combinations of values of _Exp_~i~ are true.
@@ -49,8 +47,6 @@ When one of the _Exp_~i~ enumerates the elements of an empty list, `all` always 
 rascal>all(int n <- [], n > 0);
 bool: false
 ```
-
-#### Benefits
 
 #### Pitfalls
 

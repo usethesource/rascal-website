@@ -21,8 +21,6 @@ Retrieve a substring via its index.
 | `str`         | `int`     | `str`                  |
 
 
-#### Function
-
 #### Description
 
 String subscription uses the integer value of _Exp_<sub>2</sub> as index in the string value of _Exp_<sub>1</sub>.

@@ -20,8 +20,6 @@ Not equal operator on node values.
 | `node`     |  `node`    | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if the node names of the values of _Exp_<sub>1</sub> and _Exp_<sub>2</sub> are unequal or
@@ -36,7 +34,5 @@ bool: true
 rascal>"f"(1, "abc", true) != "f"(1, "abc", true);
 bool: false
 ```
-
-#### Benefits
 
 

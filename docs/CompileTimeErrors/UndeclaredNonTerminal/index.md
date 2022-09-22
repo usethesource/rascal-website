@@ -6,17 +6,9 @@ title: UndeclaredNonTerminal
 
 A syntax rule uses an undeclared non-terminal.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
-All non-terminals that occur in a [syntax definition](/docs/Rascal/Declarations/SyntaxDefinition)
+All non-terminals that occur in a [syntax definition](../../Rascal/Declarations/SyntaxDefinition)
 should be declared in some rule.
 This error is generated when this is not the case.
 
@@ -36,8 +28,6 @@ rascal>parse(#X, "ab");
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredNonTerminal/UndeclaredNonTerminal.html|
 ok
 ```
-
-#### Benefits
 
 #### Pitfalls
 

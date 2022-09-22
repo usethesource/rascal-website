@@ -6,12 +6,6 @@ title: Ad Hoc Data Exploration
 
 Using Rascal to explore an interesting data space.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 The problem we will look at comes from mathematics, and has a precise analytical solution, but
@@ -399,9 +393,5 @@ And we're done.  But what did we learn here?  Here's what I think:
 **  Are you measuring what you think you are measuring?  How do you know?
 
 
-
-#### Examples
-
-#### Benefits
 
 

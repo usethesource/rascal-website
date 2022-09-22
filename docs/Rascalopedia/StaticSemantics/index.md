@@ -6,21 +6,13 @@ title: Static Semantics
 
 Description of the properties of a program that can be determined/checked before it is executed.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 The static semantics of a program describe all properties that can be determined before the program is executed.
-A [Typechecker](/docs//Rascalopedia/Typechecker) is a tool that checks the properties of a program as described by its static semantics.
+A [Typechecker](../..//Rascalopedia/Typechecker) is a tool that checks the properties of a program as described by its static semantics.
 
 Static semantics describes properties that are relevant before a program is executed and 
-differs from [Dynamic Semantics](/docs//Rascalopedia/DynamicSemantics) that
+differs from [Dynamic Semantics](../..//Rascalopedia/DynamicSemantics) that
 describes the execution behaviour itself.
 
 #### Examples
@@ -33,8 +25,5 @@ Examples of static semantic properties include:
 
 Language with substantial static semantics: Java, Haskell, Rascal.
 Languages with only dynamic semantics: Python, Ruby.
-
-#### Benefits
-
 
 

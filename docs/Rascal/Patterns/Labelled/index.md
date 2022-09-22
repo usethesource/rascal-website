@@ -9,12 +9,6 @@ keywords:
 
 Labelled abstract pattern.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 A labelled pattern matches the same values as _Pat_, but has as side-effect that the matched value is assigned to _Var_.
@@ -49,7 +43,5 @@ Match black(leaf(5),leaf(4))
 list[void]: []
 ```
 We use an *anonymous variable* `_` at a position where we don't care about the actual value that is matched.
-
-#### Benefits
 
 

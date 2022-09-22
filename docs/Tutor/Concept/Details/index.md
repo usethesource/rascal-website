@@ -29,11 +29,11 @@ This alphabetical order can be influenced by explicitly stating concepts in the 
 The effect is that the concepts listed there will be shown first, followed by the unmentioned subconcepts
 in alphabetical order.
 
-The details declaration also influences the order and contents of the [Table of contents](/docs/Tutor/Markup/StructureMarkup/TableOfContents) markup.
+The details declaration also influences the order and contents of the [Table of contents](../../../Tutor/Markup/StructureMarkup/TableOfContents) markup.
 
 #### Examples
 
-In [Concept](/docs//Tutor/Concept) we want to order the details in the order as they appear in the concept description.
+In [Concept](../../..//Tutor/Concept) we want to order the details in the order as they appear in the concept description.
 Its `Details` meta-data is therefore:
 
 ```

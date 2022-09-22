@@ -13,10 +13,6 @@ Enumerate all values in a given subject value.
 
 `Pattern <- Exp`
 
-#### Types
-
-#### Function
-
 #### Description
 
 An enumerator generates all the values in a given subject value. 
@@ -76,7 +72,5 @@ rel[int,str]: {
   <30,"c">
 }
 ```
-
-#### Benefits
 
 

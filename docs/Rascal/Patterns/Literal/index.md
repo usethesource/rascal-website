@@ -6,15 +6,9 @@ title: Literal Pattern
 
 Literal in abstract pattern.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
-A literal of one of the basic types [Boolean](/docs/Rascal/Expressions/Values/Boolean), [Integer](/docs/Rascal/Expressions/Values/Integer), [Real](/docs/Rascal/Expressions/Values/Real), [Number](/docs/Rascal/Expressions/Values/Number), [String](/docs/Rascal/Expressions/Values/String), [Location](/docs/Rascal/Expressions/Values/Location), or [Date time](/docs/Rascal/Expressions/Values/DateTime)
+A literal of one of the basic types [Boolean](../../../Rascal/Expressions/Values/Boolean), [Integer](../../../Rascal/Expressions/Values/Integer), [Real](../../../Rascal/Expressions/Values/Real), [Number](../../../Rascal/Expressions/Values/Number), [String](../../../Rascal/Expressions/Values/String), [Location](../../../Rascal/Expressions/Values/Location), or [Date time](../../../Rascal/Expressions/Values/DateTime)
 can be used as abstract pattern.
 A literal pattern matches with a value that is identical to the literal.
 
@@ -56,7 +50,5 @@ rascal>123 := x;
 bool: true
 ```
 
-
-#### Benefits
 
 

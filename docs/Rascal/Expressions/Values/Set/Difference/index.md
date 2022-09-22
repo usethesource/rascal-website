@@ -22,8 +22,6 @@ The difference between two sets.
 
 
 
-#### Function
-
 #### Description
 
 If both _Exp_<sub>1</sub> and _Exp_<sub>2</sub> have a set as value, the result is the difference of these two set values. 
@@ -43,7 +41,5 @@ set[int]: {1,2,4}
 rascal>{1, 2, 3, 4} - {5, 6, 7};
 set[int]: {1,3,2,4}
 ```
-
-#### Benefits
 
 

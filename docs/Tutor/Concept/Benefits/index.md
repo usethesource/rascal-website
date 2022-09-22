@@ -14,14 +14,4 @@ Briefly lists known advantages of the concept.
 _MarkedText_
 ```
 
-#### Types
-
-#### Function
-
-#### Description
-
-#### Examples
-
-#### Benefits
-
 

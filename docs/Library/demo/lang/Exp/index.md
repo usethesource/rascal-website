@@ -1,6 +1,6 @@
 # demo::lang::Exp
 
 
-   * [Abstract](/docs/Library/demo/lang/Exp/Abstract)
-   * [Concrete](/docs/Library/demo/lang/Exp/Concrete)
-   * [Combined](/docs/Library/demo/lang/Exp/Combined)
+   * [Abstract](../../../../Library/demo/lang/Exp/Abstract)
+   * [Concrete](../../../../Library/demo/lang/Exp/Concrete)
+   * [Combined](../../../../Library/demo/lang/Exp/Combined)

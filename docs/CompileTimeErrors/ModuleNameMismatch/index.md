@@ -6,14 +6,6 @@ title: ModuleNameMismatch
 
 Module name and file name are different.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 A Rascal module has a name (the name that follows the `module` keyword) and it is stored in a file.
@@ -25,9 +17,5 @@ Remedies:
 
 *  Rename the module.
 *  Rename the file.
-
-#### Examples
-
-#### Benefits
 
 

@@ -6,12 +6,6 @@ title: Eval0
 
 A Func interpreter that does not support let-expressions and pointers.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Interpreter Eval0 supports the following features of Func:
@@ -123,7 +117,5 @@ ok
 rascal>eval0("fact", [10], load(F0));
 value: 3628800
 ```
-
-#### Benefits
 
 

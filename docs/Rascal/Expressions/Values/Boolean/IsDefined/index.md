@@ -22,8 +22,6 @@ Test whether the value of an expression is defined.
 |  `T`   |   `bool`      |
 
 
-#### Function
-
 #### Description
 
 If no exception is generated during the evaluation of _Exp_, 
@@ -46,7 +44,5 @@ bool: true
 rascal>L[5]?
 bool: false
 ```
-
-#### Benefits
 
 

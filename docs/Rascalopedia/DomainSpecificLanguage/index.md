@@ -6,16 +6,6 @@ title: Domain Specific Language
 
 Programming language targeted for a particular application domain.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
-#### Description
-
 #### Examples
 
 *  SQL (querying data bases).
@@ -25,7 +15,5 @@ Programming language targeted for a particular application domain.
 *  BibTex (bibliography).
 *  BNF (grammars).
 *  Regular expressions (text matching).
-
-#### Benefits
 
 

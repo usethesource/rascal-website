@@ -6,13 +6,9 @@ title: Value
 
 Values of type `value`.
 
-#### Syntax
-
 #### Types
 
 `value`
-
-#### Function
 
 #### Description
 
@@ -28,9 +24,5 @@ The following operators are provided for values:
 * ((Rascal:Expressions/Values/Value/LessThan))
 * ((Rascal:Expressions/Values/Value/LessThanOrEqual))
 * ((Rascal:Expressions/Values/Value/NotEqual))
-
-#### Examples
-
-#### Benefits
 
 

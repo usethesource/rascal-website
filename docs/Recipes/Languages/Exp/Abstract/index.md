@@ -6,12 +6,6 @@ title: Abstract
 
 A version of Exp based on abstract syntax.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 The [abstract syntax](http://en.wikipedia.org/wiki/Abstract_syntax) for a language is a
@@ -65,7 +59,7 @@ test bool tstEval4() = eval(add(con(3), mul(con(4), con(5)))) == 23;
 ```
 
            
-Here we see Rascal's _pattern-directed invocation_ in action (see [Function Declaration](/docs/Rascal/Declarations/Function)).
+Here we see Rascal's _pattern-directed invocation_ in action (see [Function Declaration](../../../../Rascal/Declarations/Function)).
 The essence is this: in other languages the formal parameters in a function declaration
 are just that: formal parameters, i.e., single names that can be used inside the function and
 that are bound when the function is called.
@@ -101,7 +95,5 @@ int: 23
 ```
 Entering expressions in abstract syntax form is no fun, and this is where concrete syntax comes to the rescue.
 
-
-#### Benefits
 
 

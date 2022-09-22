@@ -6,14 +6,6 @@ title: Pico
 
 The classical toy language, including a specialized IDE.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Pico is a toy language that has been used as example over the years in many projects and disguishes,
@@ -80,7 +72,5 @@ Notes:
 <2> Pico has no multiplication operator so we have to simulate it with repeated addition (yes, simplicity comes at a price!).
 
 
-
-#### Benefits
 
 

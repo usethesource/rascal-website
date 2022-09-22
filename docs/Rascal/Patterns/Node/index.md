@@ -6,12 +6,6 @@ title: Node pattern
 
 Node in abstract pattern.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 A node pattern matches a node value or a datatype value, provided that _Name_ matches with the constructor symbol of that value 
@@ -44,7 +38,5 @@ rascal>if(red(K) := red(13))
 K = 13
 ok
 ```
-
-#### Benefits
 
 

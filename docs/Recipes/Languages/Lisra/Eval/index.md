@@ -6,19 +6,11 @@ title: Eval
 
 A Lisp interpreter.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Here is the core of our Lisp interpreter. Its basic functionality is to take
 
-*  An `Lval` and an Environment (both defined in [Runtime](/docs/Recipes/Languages/Lisra/Runtime)).
+*  An `Lval` and an Environment (both defined in [Runtime](../../../../Recipes/Languages/Lisra/Runtime)).
 *  Distinguish the various forms an `Lval` can have and compute the
   effect of evaluating it.
 *  Return a `Result` that captures the value just computed and possibleside-effects
@@ -192,6 +184,6 @@ Lval: Integer(12)
 
 #### Pitfalls
 
-*  It is no pleasure to type in `Lval`s directly, that is why a parser is needed, see [Parse](/docs/Recipes/Languages/Lisra/Parse).
+*  It is no pleasure to type in `Lval`s directly, that is why a parser is needed, see [Parse](../../../../Recipes/Languages/Lisra/Parse).
 
 

@@ -1,4 +1,4 @@
 # lang::aut
 
 
-   * [IO](/docs/Library/lang/aut/IO.md)
+   * [IO](../../../Library/lang/aut/IO.md)

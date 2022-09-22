@@ -6,14 +6,6 @@ title: Rascalopedia
 
 Overview of important terms and concepts.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Rascalopedia gives a quick overview of the most important terms and concepts
@@ -23,33 +15,33 @@ Rascalopedia is work in progress. Please send us your suggestions for new concep
 
 These are the currently covered topics:
 
-* [Rascalopedia:Abstract data type](/docs//Rascalopedia/AbstractDataType)
-* [Rascalopedia:Abstract syntax tree](/docs//Rascalopedia/AbstractSyntaxTree)
-* [Rascalopedia:Compiler](/docs//Rascalopedia/Compiler)
-* [Rascalopedia:Domain specific language](/docs//Rascalopedia/DomainSpecificLanguage)
-* [Rascalopedia:Dynamic semantics](/docs//Rascalopedia/DynamicSemantics)
-* [Rascalopedia:Grammar](/docs//Rascalopedia/Grammar)
-* [Rascalopedia:Interpreter](/docs//Rascalopedia/Interpreter)
-* [Rascalopedia:Language](/docs//Rascalopedia/Language)
-* [Rascalopedia:Language definition](/docs//Rascalopedia/LanguageDefinition)
-* [Rascalopedia:List](/docs//Rascalopedia/List)
-* [Rascalopedia:Meta programming](/docs//Rascalopedia/MetaProgramming)
-* [Rascalopedia:Parse tree](/docs//Rascalopedia/ParseTree)
-* [Rascalopedia:Parser](/docs//Rascalopedia/Parser)
-* [Rascalopedia:Prettyprinter](/docs//Rascalopedia/Prettyprinter)
-* [Rascalopedia:Rascalopedia](/docs/Rascalopedia/)
-* [Rascalopedia:Refactoring](/docs//Rascalopedia/Refactoring)
-* [Rascalopedia:Relation](/docs//Rascalopedia/Relation)
-* [Rascalopedia:Scope](/docs//Rascalopedia/Scope)
-* [Rascalopedia:Set](/docs//Rascalopedia/Set)
-* [Rascalopedia:Software engineering](/docs//Rascalopedia/SoftwareEngineering)
-* [Rascalopedia:Software evolution](/docs//Rascalopedia/SoftwareEvolution)
-* [Rascalopedia:Software metric](/docs//Rascalopedia/SoftwareMetric)
-* [Rascalopedia:Static semantics](/docs//Rascalopedia/StaticSemantics)
-* [Rascalopedia:Syntax](/docs//Rascalopedia/Syntax)
-* [Rascalopedia:Testing](/docs//Rascalopedia/Testing)
-* [Rascalopedia:Tuple](/docs//Rascalopedia/Tuple)
-* [Rascalopedia:Typechecker](/docs//Rascalopedia/Typechecker)
-* [Rascalopedia:Visualization](/docs//Rascalopedia/Visualization)
+* [Rascalopedia:Abstract data type](..//Rascalopedia/AbstractDataType)
+* [Rascalopedia:Abstract syntax tree](..//Rascalopedia/AbstractSyntaxTree)
+* [Rascalopedia:Compiler](..//Rascalopedia/Compiler)
+* [Rascalopedia:Domain specific language](..//Rascalopedia/DomainSpecificLanguage)
+* [Rascalopedia:Dynamic semantics](..//Rascalopedia/DynamicSemantics)
+* [Rascalopedia:Grammar](..//Rascalopedia/Grammar)
+* [Rascalopedia:Interpreter](..//Rascalopedia/Interpreter)
+* [Rascalopedia:Language](..//Rascalopedia/Language)
+* [Rascalopedia:Language definition](..//Rascalopedia/LanguageDefinition)
+* [Rascalopedia:List](..//Rascalopedia/List)
+* [Rascalopedia:Meta programming](..//Rascalopedia/MetaProgramming)
+* [Rascalopedia:Parse tree](..//Rascalopedia/ParseTree)
+* [Rascalopedia:Parser](..//Rascalopedia/Parser)
+* [Rascalopedia:Prettyprinter](..//Rascalopedia/Prettyprinter)
+* [Rascalopedia:Rascalopedia](../Rascalopedia/)
+* [Rascalopedia:Refactoring](..//Rascalopedia/Refactoring)
+* [Rascalopedia:Relation](..//Rascalopedia/Relation)
+* [Rascalopedia:Scope](..//Rascalopedia/Scope)
+* [Rascalopedia:Set](..//Rascalopedia/Set)
+* [Rascalopedia:Software engineering](..//Rascalopedia/SoftwareEngineering)
+* [Rascalopedia:Software evolution](..//Rascalopedia/SoftwareEvolution)
+* [Rascalopedia:Software metric](..//Rascalopedia/SoftwareMetric)
+* [Rascalopedia:Static semantics](..//Rascalopedia/StaticSemantics)
+* [Rascalopedia:Syntax](..//Rascalopedia/Syntax)
+* [Rascalopedia:Testing](..//Rascalopedia/Testing)
+* [Rascalopedia:Tuple](..//Rascalopedia/Tuple)
+* [Rascalopedia:Typechecker](..//Rascalopedia/Typechecker)
+* [Rascalopedia:Visualization](..//Rascalopedia/Visualization)
 
 

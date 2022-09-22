@@ -6,14 +6,6 @@ title: CountInLine3
 
 Count words in a line.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
-#### Description
-
 #### Examples
 
 Here is a clever, albeit rather dense, solution that illustrates several Rascal concepts.
@@ -34,7 +26,7 @@ test bool tstCountInLine3b() = countInLine3("Jabberwocky by Lewis Carroll") == 4
 ```
 
                 
-We use a [reducer](/docs/Rascal/Expressions/Reducer) that is a recipe to reduce the values produced by one or more generators
+We use a [reducer](../../../../Rascal/Expressions/Reducer) that is a recipe to reduce the values produced by one or more generators
   to a single value:
   
 * `0` is the initial value of the reducer
@@ -51,7 +43,5 @@ ok
 rascal>countInLine3("Jabberwocky by Lewis Carroll");
 int: 4
 ```
-
-#### Benefits
 
 

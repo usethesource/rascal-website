@@ -6,17 +6,9 @@ title: RedeclaredField
 
 A field name is redeclared.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
-The definition of an [algebraic data type](/docs/Rascal/Declarations/AlgebraicDataType) consists of a number of constructor functions.
+The definition of an [algebraic data type](../../Rascal/Declarations/AlgebraicDataType) consists of a number of constructor functions.
 Each constructor has named fields but the same field name may only be used in different constructors
 if it has the same type in all occurrences in the declaration.
 
@@ -49,7 +41,5 @@ A tuple declaration with a duplicate field name also gives an error:
 rascal>tuple[int x, str x] Q = <3,"abc">;
 ok
 ```
-
-#### Benefits
 
 

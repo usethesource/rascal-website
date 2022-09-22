@@ -21,8 +21,6 @@ Equal operator on set values.
 | `set[T<sub>1</sub>]` |  `set[T<sub>2</sub>]` | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if both arguments are equal sets and `false` otherwise.
@@ -36,7 +34,5 @@ bool: true
 rascal>{1, 2, 3} == {1, 2};
 bool: false
 ```
-
-#### Benefits
 
 

@@ -1,5 +1,5 @@
 # lang::box
 
 
-   * [util](/docs/Library/lang/box/util)
-   * [syntax](/docs/Library/lang/box/syntax)
+   * [util](../../../Library/lang/box/util)
+   * [syntax](../../../Library/lang/box/syntax)

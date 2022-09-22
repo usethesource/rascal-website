@@ -1,4 +1,4 @@
 # lang::json::syntax
 
 
-   * [JSON](/docs/Library/lang/json/syntax/JSON.md)
+   * [JSON](../../../../Library/lang/json/syntax/JSON.md)

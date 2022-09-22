@@ -7,12 +7,6 @@ title: Eval1
 Like Eval0 but with support for let-expressions.
 
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Interpreter Eval1 supports the following features of Func: 
@@ -140,7 +134,5 @@ ok
 rascal>eval1("fact", [10], load(F1));
 int: 3628800
 ```
-
-#### Benefits
 
 

@@ -6,17 +6,11 @@ title: Parse
 
 Parse a Func program from a string or a file.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Parsing uses the syntax rules for a given start non-terminnal to parse a string and turn it into a parse tree.
-The work horse is the [parse](/docs/Library/ParseTree#ParseTree-parse) function that is available in the 
-[ParseTree](/docs/Library/ParseTree) library.
+The work horse is the [parse](../../../../Library/ParseTree#ParseTree-parse) function that is available in the 
+[ParseTree](../../../../Library/ParseTree) library.
 
 #### Examples
 
@@ -71,7 +65,5 @@ Prog: (Prog) `fact(n) = if n <= 1 then
              n * fact(n-1)
           end`
 ```
-
-#### Benefits
 
 

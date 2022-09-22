@@ -6,12 +6,6 @@ title: Call Analysis
 
 Analyzing the call structure of an application.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Suppose a mystery box ends up on your desk. When you open it, it contains a huge software system with several questions attached to it:

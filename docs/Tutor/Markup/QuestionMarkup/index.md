@@ -6,12 +6,6 @@ title: QuestionMarkup
 
 Mark up for interactive questions.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 :::caution
@@ -28,11 +22,11 @@ The following types of questions are supported:
 *  _Value_: question about the _value_ of a Rascal expression.
 
 
-[Text](/docs/Tutor/Markup/QuestionMarkup/Text) gives the question text and lists all possible good answers.
+[Text](../../../Tutor/Markup/QuestionMarkup/Text) gives the question text and lists all possible good answers.
 
-[Choice](/docs/Tutor/Markup/QuestionMarkup/Choice) is a straightforward listing of good and bad answers.
+[Choice](../../../Tutor/Markup/QuestionMarkup/Choice) is a straightforward listing of good and bad answers.
 
-[./Type](/docs/Tutor/Markup/QuestionMarkup/Type) and [./Value](/docs/Tutor/Markup/QuestionMarkup/Value) questions are based on a template that consists of an optional _listing_ and an _equality_:
+[./Type](../../../Tutor/Markup/QuestionMarkup/Type) and [./Value](../../../Tutor/Markup/QuestionMarkup/Value) questions are based on a template that consists of an optional _listing_ and an _equality_:
 
 ![](/assets/Tutor/Markup/QuestionMarkup/Question.png)
 
@@ -41,7 +35,7 @@ There should be exactly one _hole_ (indicated by `<?>`) in this template that is
 or in one of the sides of the equality. The general structure is therefore: _fill in the hole such that the equality holds_.
 Given that the listing is optional, this template represents 5 different question styles.
 
-[./Type](/docs/Tutor/Markup/QuestionMarkup/Type) and [./Value](/docs/Tutor/Markup/QuestionMarkup/Value) questions use [Type descriptor](/docs/Tutor/Markup/QuestionMarkup/TypeDescriptor)s to describe desired values and share certain common steps (_QSteps_):
+[./Type](../../../Tutor/Markup/QuestionMarkup/Type) and [./Value](../../../Tutor/Markup/QuestionMarkup/Value) questions use [Type descriptor](../../../Tutor/Markup/QuestionMarkup/TypeDescriptor)s to describe desired values and share certain common steps (_QSteps_):
 
 * `prep: RascalCommand` describes preparatory steps needed to execute the question. Typically, required
   imports can be listed here.
@@ -63,7 +57,5 @@ Given that the listing is optional, this template represents 5 different questio
 *  `type: set[int]`: the required type is `set[int]`.
 *  `hint: One or more integers separated by comma's`.
 *  `test: <A> + <?> == <C>`: the student has to replace `<?>` by an answwer that makes the equality true.
-
-#### Benefits
 
 

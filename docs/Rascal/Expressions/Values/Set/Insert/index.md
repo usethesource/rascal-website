@@ -22,8 +22,6 @@ Add an element to a set.
 | `T<sub>1</sub>`      |  `set[T<sub>2</sub>]` | `set[lub(T<sub>1</sub>,T<sub>2</sub>)]`   |
 
 
-#### Function
-
 #### Description
 
 The `+` operator will add elements to sets.
@@ -42,10 +40,8 @@ rascal>1 + {1};
 set[int]: {1}
 ```
 
-#### Benefits
-
 #### Pitfalls
 
-*  if both operands of `+` are a set then it acts as [Union](/docs/Rascal/Expressions/Values/Set/Union).
+*  if both operands of `+` are a set then it acts as [Union](../../../../../Rascal/Expressions/Values/Set/Union).
 
 

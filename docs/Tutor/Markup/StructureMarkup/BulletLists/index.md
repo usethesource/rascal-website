@@ -15,10 +15,6 @@ Here `␠` is used to mark a space character:
 *  `␠␠␠␠␠␠* MarkedText`
 *  ...
 
-#### Types
-
-#### Function
-
 #### Description
 
 Bullet lists create, possibly nested, lists of points.
@@ -64,10 +60,10 @@ will produce:
 
 #### Benefits
 
-* [Bullet lists](/docs/Tutor/Markup/StructureMarkup/BulletLists) and [Numbered lists](/docs/Tutor/Markup/StructureMarkup/NumberedLists) can be nested under eachother.
+* [Bullet lists](../../../../Tutor/Markup/StructureMarkup/BulletLists) and [Numbered lists](../../../../Tutor/Markup/StructureMarkup/NumberedLists) can be nested under eachother.
 
 #### Pitfalls
 
-* An empty line is required _after_ [Bullet lists](/docs/Tutor/Markup/StructureMarkup/BulletLists).
+* An empty line is required _after_ [Bullet lists](../../../../Tutor/Markup/StructureMarkup/BulletLists).
 
 

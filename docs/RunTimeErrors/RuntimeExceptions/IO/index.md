@@ -6,8 +6,6 @@ title: IO
 
 An input/output operation caused an error.
 
-#### Syntax
-
 #### Types
 
 `data RuntimeException = IO(str message);`
@@ -20,7 +18,7 @@ An input/output operation caused an error.
 
 This error can be generated for many reasons.
 
-First there may be a problem in the [location](/docs/Rascal/Expressions/Values/Location) that is used.
+First there may be a problem in the [location](../../../Rascal/Expressions/Values/Location) that is used.
 It maybe that the _schemes_ is not supported.
 Examples of supported schemes include `http`, `file`, `home`, `std`, `rascal` and `project`.
 It can also be the case that the _host_ that occurs in the location cannot be found.
@@ -33,7 +31,7 @@ Remedies:
 
 *  Check for any errors in the location you are using.
 *  Check that you are allowed to read or write the resource indicated by the location.
-*  Catch `IO` using a [try catch](/docs/Rascal/Statements/TryCatch).
+*  Catch `IO` using a [try catch](../../../Rascal/Statements/TryCatch).
 
 #### Examples
 
@@ -61,7 +59,5 @@ rascal>try
 This did not work: Unsupported scheme 'myScheme'
 ok
 ```
-
-#### Benefits
 
 

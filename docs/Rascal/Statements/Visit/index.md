@@ -7,19 +7,15 @@ keywords:
 
 #### Synopsis
 
-The [Visit](/docs/Rascal/Expressions/Visit) expression can also be used directly as a statement
+The [Visit](../../../Rascal/Expressions/Visit) expression can also be used directly as a statement
 
 #### Syntax
 
-See [Visit](/docs/Rascal/Expressions/Visit).
-
-#### Types
-
-#### Function
+See [Visit](../../../Rascal/Expressions/Visit).
 
 #### Description
 
-See [Visit](/docs/Rascal/Expressions/Visit) for the details.
+See [Visit](../../../Rascal/Expressions/Visit) for the details.
 
 #### Examples
 
@@ -45,7 +41,5 @@ list[list[int]]: [
   [4]
 ]
 ```
-
-#### Benefits
 
 

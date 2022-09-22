@@ -6,14 +6,6 @@ title: Manual
 
 An Exp evaluator that uses a manually written conversion from parse tree to abstract syntax tree.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
-#### Description
-
 #### Examples
 
 First we define a `parse` function for Exp:
@@ -113,7 +105,5 @@ ok
 rascal>eval("2+3");
 int: 5
 ```
-
-#### Benefits
 
 

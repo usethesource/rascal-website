@@ -6,14 +6,6 @@ title: Syntax
 
 The textual syntax of Lisp.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 The first step in defining Lisp's textual format, we define a grammar for it:
@@ -49,8 +41,6 @@ of `LispExp`s surrouned by parentheses.
 
 #### Examples
 
-This grammar is demonstrated in [Parse](/docs/Recipes/Languages/Lisra/Parse).
-
-#### Benefits
+This grammar is demonstrated in [Parse](../../../../Recipes/Languages/Lisra/Parse).
 
 

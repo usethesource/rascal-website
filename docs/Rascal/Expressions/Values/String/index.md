@@ -66,13 +66,9 @@ where `_StringChar~i~_ may be one of the following:
 
 
 
-#### Usage
-
 #### Types
 
 `str`
-
-#### Function
 
 #### Description
 
@@ -102,7 +98,7 @@ The following operators are defined for Strings:
 * ((Rascal:Expressions/Values/String/Slice))
 * ((Rascal:Expressions/Values/String/Subscription))
 
-There are also [library functions](/docs/Library/String) available for Strings.
+There are also [library functions](../../../../Library/String) available for Strings.
 
 #### Examples
 

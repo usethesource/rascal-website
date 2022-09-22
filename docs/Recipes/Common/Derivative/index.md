@@ -6,12 +6,6 @@ title: Derivative
 
 Symbolic differentiation.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Computing the http://en.wikipedia.org/wiki/Differentiation_(mathematics)[derivative] of an expression with respect to some variable is a classical calculus problem. Loosely speaking, a derivative can be thought of as how much one quantity is changing in response to changes in some other quantity; for example, the derivative of the position of a moving object with respect to time is the object's instantaneous velocity.
@@ -117,7 +111,5 @@ Now apply simplification to the result of differentiation:
 rascal>simplify(dd(E, var("x")));
 Exp: con(5)
 ```
-
-#### Benefits
 
 

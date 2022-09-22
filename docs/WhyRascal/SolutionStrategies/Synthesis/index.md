@@ -6,12 +6,6 @@ title: Synthesis
 
 Strategies to synthesise results.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 ![Synthesis,Workflow][synthesis.png](/assets/WhyRascal/SolutionStrategies/Synthesis/define-synthesis.png)
@@ -50,9 +44,5 @@ The Rascal features that are frequently used for synthesis are:
 *  Visits of datastructures and on-the-fly code generation.
 
 *  Rewrite rules.
-
-#### Examples
-
-#### Benefits
 
 

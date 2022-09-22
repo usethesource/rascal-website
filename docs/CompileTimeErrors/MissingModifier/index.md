@@ -6,14 +6,6 @@ title: MissingModifier
 
 A modifier is missing in a declaration.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 Rascal functions can be implemented in Java. This is the case for many functions in the standard library.
@@ -54,7 +46,5 @@ rascal>@javaClass{org.rascalmpl.library.Prelude}
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/MissingModifier/MissingModifier.html|
 ok
 ```
-
-#### Benefits
 
 

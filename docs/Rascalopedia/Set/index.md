@@ -6,14 +6,6 @@ title: Set
 
 An unordered collection of values without duplicates.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 A set is a collection of values with the following properties:
@@ -26,10 +18,8 @@ A set is a collection of values with the following properties:
 
 In Rascal, sets are surrounded by braces `{` and `}` and the elements are separated by commas.
 Each set has a type of the form `set[T]`, where _T_ is the smallest common type of all set elements.
-Read the description of [sets and their operators](/docs/Rascal/Expressions/Values/Set)
-and of [library functions on sets](/docs/Library/Set).
-
-#### Examples
+Read the description of [sets and their operators](../../Rascal/Expressions/Values/Set)
+and of [library functions on sets](../../Library/Set).
 
 ## Sets in Daily Life
 
@@ -43,7 +33,7 @@ and of [library functions on sets](/docs/Library/Set).
 
 ## Sets in Computer Science
 
-*  The files in a directory. Of course, when you order them (by name, modification date) you need a [Rascalopedia:List](/docs//Rascalopedia/List) to represent them.
+*  The files in a directory. Of course, when you order them (by name, modification date) you need a [Rascalopedia:List](../..//Rascalopedia/List) to represent them.
 *  The set of moves an opponent can play in a game.
 *  The set of nodes in a network.
 
@@ -52,7 +42,5 @@ and of [library functions on sets](/docs/Library/Set).
 *  The empty set: `{}`. Its type is `set[void]`.
 *  A set of integers: `{3, 1, 4}`. Its type is `set[int]`.
 *  A set of mixed-type values: `{3, "a", 4}`. Its type is `set[value]`.
-
-#### Benefits
 
 

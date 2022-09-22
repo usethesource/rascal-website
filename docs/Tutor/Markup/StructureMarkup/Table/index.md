@@ -17,10 +17,6 @@ Mark up for a table.
 
 ----
 
-#### Types
-
-#### Function
-
 #### Description
 
 The simplest table starts and ends with `|`, each row is separated by an empty line and each column starts with `|`.
@@ -30,8 +26,6 @@ There is a "TODO" in the documentation source:
 msg
 (((TODO:See http://asciidoctor.org/docs/user-manual/#tables for details.)))
 :::
-
-#### Examples
 
 ##  Example 1 
 

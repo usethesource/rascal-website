@@ -22,7 +22,7 @@ a numeric function  is called with an out-of-range argument.
 Remedies:
 
 *  Check the validity of the argument before you call the function or apply the operator.
-*  Catch the `ArithmeticException` yourself, see [try catch](/docs/Rascal/Statements/TryCatch) statement.
+*  Catch the `ArithmeticException` yourself, see [try catch](../../../Rascal/Statements/TryCatch) statement.
 
 #### Examples
 
@@ -56,7 +56,5 @@ try println(3/0); catch ArithmeticException(msg): println("The message is: <msg>
 The message is: / by zero
 ok
 ```
-
-#### Benefits
 
 

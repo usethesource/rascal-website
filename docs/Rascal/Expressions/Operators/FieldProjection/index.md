@@ -14,10 +14,6 @@ Projection of tuple.
 
 `Exp < Field<sub>1</sub>, Field<sub>2</sub> ... >`
 
-#### Types
-
-#### Function
-
 #### Description
 
 _Exp_ should evaluate to a tuple or relation, and _Field_~i~ should be a field name or an integer constant
@@ -56,7 +52,5 @@ rel[int length,str day]: {
 }
 ```
 Field projection thus selects parts from a larger value that has a fixed number of parts. The selection is based on position and not on value and can be used to completely reorder or remove the parts of a larger value.
-
-#### Benefits
 
 

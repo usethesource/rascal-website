@@ -6,12 +6,6 @@ title: Even
 
 Produce a list of even numbers.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Let's write a function that generates all the even numbers in a list up to a certain maximum. We will do it in a few alternative 
@@ -106,8 +100,6 @@ set[int] (int): function(|prompt:///|(0,58,<1,0>,<1,58>))
 rascal>even7(25);
 set[int]: {10,16,8,14,20,2,4,6,24,12,22,18,0}
 ```
-
-#### Examples
 
 #### Benefits
 

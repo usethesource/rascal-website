@@ -21,8 +21,6 @@ Greater than or equal operator on values.
 | `value`   |  `value`  | `bool`               |
 
 
-#### Function
-
 #### Description
 
 By brute force, a total less than operator between two values _V_<sub>1</sub> and _V_<sub>2</sub> of arbitrary types _T_<sub>1</sub> and _T_<sub>2</sub> is defined:
@@ -59,7 +57,5 @@ and `X` and `Z`:
 rascal>X >= Z;
 bool: false
 ```
-
-#### Benefits
 
 

@@ -22,8 +22,6 @@ Subtract two numeric values.
 | `real`    |  `real`    | `real`               |
 
 
-#### Function
-
 #### Description
 
 Yields the numerical result of subtracting the value of _Exp_<sub>2</sub> from the value of _Exp_<sub>1</sub>.
@@ -41,7 +39,5 @@ int: -1
 rascal>12 - 13.5
 real: -1.5
 ```
-
-#### Benefits
 
 

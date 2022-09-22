@@ -20,8 +20,6 @@ Not equal operator on tuple values.
 | `tuple[ T<sub>11</sub>, T<sub>12</sub>, ... ]` |  `tuple[ T<sub>21</sub>, T<sub>22</sub>, ... ]` | `bool`                |
 
 
-#### Function
-
 #### Description
 
 Yields `true` if both tuples are not identical and `false` otherwise.
@@ -35,7 +33,5 @@ bool: true
 rascal><1, "abc", true> != <1, "abc", true>;
 bool: false
 ```
-
-#### Benefits
 
 

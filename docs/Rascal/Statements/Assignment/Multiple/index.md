@@ -11,14 +11,6 @@ keywords:
 
 Assign to multiple assignables.
 
-#### Syntax
-
-#### Types
-
-#### Function
-       
-#### Usage
-
 #### Description
 
 First the value _Exp_ is determined and should be a tuple of the form `< V<sub>1</sub>, V<sub>2</sub>, ..., V~n~ >`.
@@ -37,7 +29,5 @@ real: 2.5
 rascal>C;
 list[int]: [1,2,3]
 ```
-
-#### Benefits
 
 

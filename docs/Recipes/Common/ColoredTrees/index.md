@@ -6,12 +6,6 @@ title: Colored Trees
 
 Computations on binary trees.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 We consider binary trees---trees with exactly two children---that have integers as their leaves. 

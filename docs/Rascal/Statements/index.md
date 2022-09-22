@@ -6,16 +6,10 @@ title: Statements
 
 All Rascal statements.
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 The following statements are available:
-* [Rascal:Statements](/docs//Rascal/Statements)
+* [Rascal:Statements](../..//Rascal/Statements)
 * ((Rascal:Statements/Append))
 * ((Rascal:Statements/Assert))
 * ((Rascal:Statements/Assignment))
@@ -39,9 +33,5 @@ The following statements are available:
 
 ![](/assets/Rascal/Statements/statement-parts.png)
 
-
-#### Examples
-
-#### Benefits
 
 

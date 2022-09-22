@@ -7,12 +7,6 @@ title: Eval2
 Like Eval1 but with support for sequences and assignments.
 
 
-#### Syntax
-
-#### Types
-
-#### Function
-
 #### Description
 
 Interpreter Eval2 supports the following features of Func: 
@@ -187,7 +181,5 @@ ok
 rascal>eval2("fact", [10], load(F2));
 tuple[map[str, int],int]: <("n":3628800),3628800>
 ```
-
-#### Benefits
 
 

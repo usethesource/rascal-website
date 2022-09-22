@@ -24,10 +24,6 @@ List values.
 | `T<sub>1</sub>`    | `T<sub>2</sub>`    |  ...  |  `list[lub(T<sub>1</sub>, T<sub>2</sub>, ... )]`  |
 
 
-#### Usage
-
-#### Function
-
 #### Description
 
 A list is an ordered sequence of values and has the following properties:
@@ -65,7 +61,7 @@ The following operators are provided on list:
 * ((Rascal:Expressions/Values/List/in))
 * ((Rascal:Expressions/Values/List/notin))
 
-There are also [library functions](/docs/Library/List) available for List.
+There are also [library functions](../../../../Library/List) available for List.
 
 #### Examples
 
@@ -107,7 +103,5 @@ list[value]: [
 rascal>[10, *L, 20];
 list[int]: [10,1,2,3,20]
 ```
-
-#### Benefits
 
 

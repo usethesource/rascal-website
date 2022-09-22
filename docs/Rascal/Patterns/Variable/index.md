@@ -10,10 +10,6 @@ Variable in abstract pattern.
 
 _Var_
 
-#### Types
-
-#### Function
-
 #### Description
 
 A variable pattern can act in two roles:
@@ -22,7 +18,7 @@ A variable pattern can act in two roles:
 
 *  If _Var_ has not been defined before (or it has been declared but not initialized) then it matches any value. 
     That value is assigned to _Var_. The scope of this variable is the outermost expression in which the pattern occurs
-or the enclosing [./If](/docs/Rascal/Statements/If), [While](/docs/Rascal/Statements/While), or [Do](/docs/Rascal/Statements/Do) if the pattern occurs in the test expression of those statements.
+or the enclosing [./If](../../../Rascal/Statements/If), [While](../../../Rascal/Statements/While), or [Do](../../../Rascal/Statements/Do) if the pattern occurs in the test expression of those statements.
 
 #### Examples
 
@@ -51,7 +47,5 @@ rascal>if(M := 10)
 Match succeeded, M == 10
 ok
 ```
-
-#### Benefits
 
 
