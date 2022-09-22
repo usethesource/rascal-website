@@ -10,8 +10,8 @@ and language support for a number of common exchange formats and programming lan
 
 #### Description
 
-The basic `Prelude` module that contain utility functions for daily usage are right here in the 
-root of the library. To include them all in one go, use [Prelude](../Library/Prelude):
+The basic `Prelude` modules that contain utility functions for daily usage are right here in the 
+root of the library. To include them all in one go, use the [Prelude](../Library/Prelude) module:
 
 
 ```rascal-shell
@@ -30,7 +30,7 @@ The [Library:module:IO](../Library/IO) module is otherwise most commonly used, b
 
 * The standard library comes with "batteries included", a number of reusable data-types and data-structures for building code analysis and manipulation tools. See for example [analysis::m3::Core](../Library/analysis/m3/Core).
 * Utility functions are sorted per data-type. So if you need something that operates on [List](../Rascal/Expressions/Values/List)then look in the [Library:module:List](../Library/List) module of the library. For [Set](../Rascal/Expressions/Values/Set) look in [Library:module:Set](../Library/Set), etc.
-* To process [CSV](../Library/lang/csv/index.md), [XML](lang::xml)), [JSON](lang::json), [YAML](lang::yaml) you will find utilities here, even even support to access [SQL](../Library/resource/jdbc/JDBC) databases via JDBC.
+* To process [CSV](../Library/lang/csv/index.md), [XML](lang::xml)), [JSON](lang::json), [YAML](lang::yaml) you will find utilities here, even support to access [SQL](../Library/resource/jdbc/JDBC.md) databases via JDBC.
 
 #### Pitfalls
 
