@@ -1,14 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const codeBlock = require('./src/remark/codeblock');
-
-
-// const path = require('path');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
-// console.log(__dirname);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -30,7 +24,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/usethesource/rascal-website/tree/website-v2/docs/',
+          editUrl: 'https://github.com/usethesource/rascal/tree/main/src/org/rascalmpl/courses/',
           remarkPlugins: [
             // codeBlock
           ],
