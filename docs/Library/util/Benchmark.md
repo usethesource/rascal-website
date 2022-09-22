@@ -129,11 +129,11 @@ Here we measure time by using separate calls to `cpuTime` before and after a cal
 
 ```rascal-shell
 rascal>before = cpuTimeNow();
-int: 3163223712000
+int: 3842372212000
 rascal>fac(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>cpuTimeNow() - before;
-int: 2892000
+int: 3878000
 ```
 
 See also [cpu time of](/docs/Library/util/Benchmark#util::Benchmark-cpuTimeOf) for a more convenient way of measuring the time spent during a block of code.
@@ -240,11 +240,11 @@ Here we measure time by using separate calls to `sytemTime` before and after a c
 
 ```rascal-shell
 rascal>before = systemTimeNow();
-int: 146198267000
+int: 169217854000
 rascal>fac(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>systemTimeNow() - before;
-int: 73000
+int: 100000
 ```
 
 ## function systemTimeOf {#util-Benchmark-systemTimeOf}
@@ -286,7 +286,7 @@ User time in nanoseconds (10^-9^ sec)
 Returns the CPU time that the current thread has executed in user mode in nanoseconds.
 
 * The returned value is of nanoseconds precision but not necessarily nanoseconds accuracy.
-* As distinguished from [now](/docs/Library/DateTime/DateTime-now) which returns the wall clock time since the Unix epoch.
+* As distinguished from [now](/docs/Library/DateTime#DateTime-now) which returns the wall clock time since the Unix epoch.
 * CPU time is the number of CPU cycles times the OS-registered clock speed.
 * The other [CPU time](/docs/Library/util/Benchmark#util::Benchmark-cpuTimeNow), next to [user time](/docs/Library/util/Benchmark#util::Benchmark-userTimeNow) is spent in [system time](/docs/Library/util/Benchmark#util::Benchmark-systemTimeNow).
 
@@ -306,11 +306,11 @@ Here we measure time by using separate calls to `userTime` before and after a ca
 
 ```rascal-shell
 rascal>before = userTimeNow();
-int: 3017170114000
+int: 3673316119000
 rascal>fac(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>userTimeNow() - before;
-int: 2863000
+int: 3562000
 ```
 
 ## function userTimeOf {#util-Benchmark-userTimeOf}
@@ -388,7 +388,7 @@ rascal>benchmark(
 >>>>>>>                  fac(200);
 >>>>>>>            })
 >>>>>>>   , userTimeOf);
-map[str, num]: ("fac100":2244000,"fac200":4379000)
+map[str, num]: ("fac100":2078000,"fac200":4068000)
 ```
 
 ## function gc {#util-Benchmark-gc}

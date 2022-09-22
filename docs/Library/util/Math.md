@@ -109,17 +109,17 @@ i.e., the limit is exclusive.
 rascal>import util::Math;
 ok
 rascal>arbInt();
-int: 757713959
+int: 1169348705
 rascal>arbInt();
-int: 1676688612
+int: -798406872
 rascal>arbInt();
-int: 1119740910
+int: -1154132917
 rascal>arbInt(10);
-int: 5
+int: 4
 rascal>arbInt(10);
-int: 1
+int: 3
 rascal>arbInt(10);
-int: 2
+int: 0
 ```
 
 #### Benefits
@@ -146,11 +146,11 @@ Generates an arbitrary real value in the interval [0.0, 1.0].
 rascal>import util::Math;
 ok
 rascal>arbReal();
-real: 0.3798267667326888
+real: 0.26958099055517204
 rascal>arbReal();
-real: 0.9455509961948854
+real: 0.28435648569718985
 rascal>arbReal();
-real: 0.5189119950513255
+real: 0.5952588185908505
 ```
 
 ## function arbSeed {#util-Math-arbSeed}
@@ -165,7 +165,7 @@ Define the seed for the generation of arbitrary values.
 #### Description
 
 Define the seed for the generation of arbitrary values such as [arb bool](/docs/Library/Boolean#Boolean-arbBool), [arb int](/docs/Library/util/Math#util::Math-arbInt), [arb real](/docs/Library/util/Math#util::Math-arbReal),
-[arb rat](/docs/Library/util/Math#util::Math-arbRat), [get one from](/docs/Library/List/List-getOneFrom),[get one from](/docs/Library/Set/Set-getOneFrom), [take one from](/docs/Library/List/List-takeOneFrom) and [take one from](/docs/Library/Set/Set-takeOneFrom). [arb seed](/docs/Library/util/Math#util::Math-arbSeed) resets the random number generator that
+[arb rat](/docs/Library/util/Math#util::Math-arbRat), [get one from](/docs/Library/List#List-getOneFrom),[get one from](/docs/Library/Set#Set-getOneFrom), [take one from](/docs/Library/List#List-takeOneFrom) and [take one from](/docs/Library/Set#Set-takeOneFrom). [arb seed](/docs/Library/util/Math#util::Math-arbSeed) resets the random number generator that
 is used to choose arbitrary values. This can be used to generate a reproducible series of choices.
 
 ## function arbRat {#util-Math-arbRat}
@@ -185,17 +185,17 @@ Generate an arbitrary rational value.
 rascal>import util::Math;
 ok
 rascal>arbRat();
-rat: 60687843r27457468
+rat: -696045729r474329270
 rascal>arbRat();
-rat: 1486190305r1369041513
+rat: 4680631r10049797
 rascal>arbRat();
-rat: -46601265r24505729
+rat: -1031872109r1794474793
 rascal>arbRat(10,100);
-rat: 5r71
+rat: 2r83
 rascal>arbRat(10,100);
-rat: 1r11
+rat: 0r
 rascal>arbRat(10,100);
-rat: 9r19
+rat: 4r27
 ```
 
 ## function ceil {#util-Math-ceil}
@@ -210,7 +210,7 @@ Compute the smallest integer that is larger than a given number.
 #### Description
 
 Computes the _ceiling_ of a given number.
-Also see [util::Math::floor](/docs/Library/util/Math/util::Math-floor).
+Also see [util::Math::floor](/docs/Library/util/Math#util::Math-floor).
 
 #### Examples
 
@@ -301,7 +301,7 @@ Compute the largest integer that is smaller than a given number.
 #### Description
 
 Computes the _floor_ of a given number.
-Also see [util::Math::ceil](/docs/Library/util/Math/util::Math-ceil).
+Also see [util::Math::ceil](/docs/Library/util/Math#util::Math-ceil).
 
 #### Examples
 

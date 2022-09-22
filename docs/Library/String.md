@@ -97,7 +97,7 @@ Return character in a string by its index position.
 #### Description
 
 Return the character at position `i` in string `s` as integer character code.
-Also see [string char](/docs/Library/String/String-stringChar) that converts character codes back to string.
+Also see [string char](/docs/Library/String#String-stringChar) that converts character codes back to string.
 
 #### Examples
 
@@ -122,7 +122,7 @@ Return characters of a string.
 #### Description
 
 Return a list of the characters of `s` as integer character codes.
-Also see [string chars](/docs/Library/String/String-stringChars) that converts character codes back to string.
+Also see [string chars](/docs/Library/String#String-stringChars) that converts character codes back to string.
 
 #### Examples
 
@@ -360,7 +360,7 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-str: "97558"
+str: "rYdOBT"
 rascal>arbString(10);
 str: ""
 ```

@@ -181,7 +181,7 @@ Node: document(element(
 
 The DOM instance contains every single character (including spaces and newlines)
 as they appear in the source file.
-As expected, the result is of type [lang::xml::DOM::Node](/docs/Library/lang/xml/DOM/lang::xml::DOM-Node).
+As expected, the result is of type [lang::xml::DOM::Node](/docs/Library/lang/xml/DOM#lang::xml::DOM-Node).
 
 ## function parseXMLDOMTrim {#lang-xml-DOM-parseXMLDOMTrim}
 

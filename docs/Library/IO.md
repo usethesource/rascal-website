@@ -206,7 +206,7 @@ Print a value and return true.
 #### Description
 
 Print a value and return `true`. This is useful for debugging complex Boolean expressions or comprehensions.
-The only difference between this function and [println](/docs/Library/IO/IO-println) is that its return type is `bool` rather than `void`.
+The only difference between this function and [println](/docs/Library/IO#IO-println) is that its return type is `bool` rather than `void`.
 
 #### Examples
 
@@ -294,9 +294,9 @@ Print an indented representation of a value.
 
 #### Description
 
-See [iprint exp](/docs/Library/IO/IO-iprintExp) for a version that returns its argument as result
-and [iprintln](/docs/Library/IO/IO-iprintln) for a version that adds a newline
-and [iprint to file](/docs/Library/IO/IO-iprintToFile) for a version that prints to a file.
+See [iprint exp](/docs/Library/IO#IO-iprintExp) for a version that returns its argument as result
+and [iprintln](/docs/Library/IO#IO-iprintln) for a version that adds a newline
+and [iprint to file](/docs/Library/IO#IO-iprintToFile) for a version that prints to a file.
 
 #### Examples
 
@@ -325,9 +325,9 @@ Print an indented representation of a value to the specified location.
 
 #### Description
 
-See [iprint](/docs/Library/IO/IO-iprint) for a version that displays the result on the console
-and [iprint exp](/docs/Library/IO/IO-iprintExp) for a version that returns its argument as result
-and [iprintln](/docs/Library/IO/IO-iprintln) for a version that adds a newline.
+See [iprint](/docs/Library/IO#IO-iprint) for a version that displays the result on the console
+and [iprint exp](/docs/Library/IO#IO-iprintExp) for a version that returns its argument as result
+and [iprintln](/docs/Library/IO#IO-iprintln) for a version that adds a newline.
 
 #### Examples
 
@@ -354,7 +354,7 @@ Print an indented representation of a value and returns the value as result.
 
 #### Description
 
-See [iprintln exp](/docs/Library/IO/IO-iprintlnExp) for a version that adds a newline.
+See [iprintln exp](/docs/Library/IO#IO-iprintlnExp) for a version that adds a newline.
 
 #### Examples
 
@@ -387,7 +387,7 @@ Print an indented representation of a value followed by a newline and returns th
 
 #### Description
 
-See [iprint exp](/docs/Library/IO/IO-iprintExp) for a version that does not add a newline.
+See [iprint exp](/docs/Library/IO#IO-iprintExp) for a version that does not add a newline.
 
 #### Examples
 
@@ -420,11 +420,11 @@ Print a indented representation of a value and add a newline at the end.
 
 #### Description
 
-See [iprintln exp](/docs/Library/IO/IO-iprintlnExp) for a version that returns its argument as result
-and [iprint](/docs/Library/IO/IO-iprint) for a version that does not add a newline.
+See [iprintln exp](/docs/Library/IO#IO-iprintlnExp) for a version that returns its argument as result
+and [iprint](/docs/Library/IO#IO-iprint) for a version that does not add a newline.
 
 By default we only print the first 1000 lines, if you want to print larger values, either 
-use [write text value file](/docs/Library/ValueIO/ValueIO-writeTextValueFile) or change the limit with the lineLimit parameter.
+use [write text value file](/docs/Library/ValueIO#ValueIO-writeTextValueFile) or change the limit with the lineLimit parameter.
 
 #### Examples
 
@@ -567,7 +567,7 @@ List all entries in the standard library:
 
 ```rascal-shell
 rascal>listEntries(|std:///|);
-list[str]: ["String.rsc","Location.rsc","demo","Prelude$Less.class","Prelude$ReleasableCallback.class","analysis","Set.rsc","util","Node.rsc","Exception.rsc","Type.class","Message.rsc","Prelude$ByteBufferBackedInputStream.class","Prelude$Sorting.class","Prelude.class","ValueIO.rsc","Prelude$NodeComparator.class","lang","Type.rsc","Prelude$3.class","Relation.rsc","Prelude$Distance.class","DateTime.rsc","Boolean.rsc","Prelude$1.class","ListRelation.rsc","List.rsc","resource","Content.rsc","Traversal.rsc","Grammar.rsc","Prelude.rsc","Prelude$Backtrack.class","ParseTree.rsc","Prelude$2.class","IO.rsc","Map.rsc"]
+list[str]: ["String.rsc","Location.rsc","demo","Prelude$Less.class","Prelude$ReleasableCallback.class","analysis","Set.rsc","util","Node.rsc","Exception.rsc","Type.class","Message.rsc","Prelude$ByteBufferBackedInputStream.class","Prelude$Sorting.class","Prelude.class","ValueIO.rsc","Prelude$NodeComparator.class","lang","Type.rsc","Prelude$3.class","Relation.rsc","Prelude$Distance.class","DateTime.rsc","Boolean.rsc","Prelude$1.class","ListRelation.rsc","List.rsc","Prelude$4.class","resource","Content.rsc","Traversal.rsc","Grammar.rsc","Prelude.rsc","Prelude$Backtrack.class","ParseTree.rsc","Prelude$2.class","IO.rsc","Map.rsc"]
 ```
 
 ## function mkDirectory {#IO-mkDirectory}
@@ -595,13 +595,13 @@ Print a value without subsequent newline.
 #### Description
 
 Print a value on the output stream.
-See [println](/docs/Library/IO/IO-println) for a version that adds a newline
-and [print exp](/docs/Library/IO/IO-printExp) for a version that returns its argument as value.
+See [println](/docs/Library/IO#IO-println) for a version that adds a newline
+and [print exp](/docs/Library/IO#IO-printExp) for a version that returns its argument as value.
 
 
 #### Examples
 
-Note that the only difference with [println](/docs/Library/IO/IO-println) is that no newline is added after the value is printed
+Note that the only difference with [println](/docs/Library/IO#IO-println) is that no newline is added after the value is printed
 
 ```rascal-shell
 rascal>import IO;
@@ -654,8 +654,8 @@ Print a value to the output stream and add a newline.
 #### Description
 
 Print a value on the output stream followed by a newline.
-See [print](/docs/Library/IO/IO-print) for a version that does not add a newline
-and [println exp](/docs/Library/IO/IO-printlnExp) for a version that returns its argument as value.
+See [print](/docs/Library/IO#IO-print) for a version that does not add a newline
+and [println exp](/docs/Library/IO#IO-printlnExp) for a version that returns its argument as value.
 
 #### Examples
 

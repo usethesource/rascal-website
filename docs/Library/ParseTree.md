@@ -38,9 +38,9 @@ and [concrete syntax patterns](/docs/Rascal/Patterns/Concrete).
 _Advanced users_ may want to create tools that analyze any parse tree, regardless of the 
 [syntax definition](/docs/Rascal/Declarations/SyntaxDefinition) that generated it, you can manipulate them on the abstract level.
 
-A parse tree is of type [Tree](/docs/Library/ParseTree/ParseTree-Tree) using the auxiliary types 
-[Production](/docs/Library/ParseTree/ParseTree-Production), [Symbol](/docs/Library/ParseTree/ParseTree-Symbol), [Condition](/docs/Library/ParseTree/ParseTree-Condition),
-[Attr](/docs/Library/ParseTree/ParseTree-Attr), [Associativity](/docs/Library/ParseTree/ParseTree-Associativity), [Char range](/docs/Library/ParseTree/ParseTree-CharRange).
+A parse tree is of type [Tree](/docs/Library/ParseTree#ParseTree-Tree) using the auxiliary types 
+[Production](/docs/Library/ParseTree#ParseTree-Production), [Symbol](/docs/Library/ParseTree#ParseTree-Symbol), [Condition](/docs/Library/ParseTree#ParseTree-Condition),
+[Attr](/docs/Library/ParseTree#ParseTree-Attr), [Associativity](/docs/Library/ParseTree#ParseTree-Associativity), [Char range](/docs/Library/ParseTree#ParseTree-CharRange).
 Effectively, a parse tree is a nested tree structure of type `Tree`. 
 
 *  Most internal nodes are applications (`appl`) of a `Production` to a list of children `Tree` nodes. 
@@ -204,7 +204,7 @@ Production in ParseTrees
 
 #### Description
 
-The type `Production` is introduced in [Library:module:Type](/docs/Library/Type), see [Production](/docs/Library/Type/Type-Production). Here we extend it with the symbols
+The type `Production` is introduced in [Library:module:Type](/docs/Library/Type), see [Production](/docs/Library/Type#Type-Production). Here we extend it with the symbols
 that can occur in a ParseTree. We also extend productions with basic combinators allowing to
 construct ordered and un-ordered compositions, and associativity groups.
 
@@ -304,7 +304,7 @@ Symbols that can occur in a ParseTree
 
 #### Description
 
-The type `Symbol` is introduced in [Library:module:Type](/docs/Library/Type), see [Symbol](/docs/Library/Type/Type-Symbol), to represent the basic Rascal types,
+The type `Symbol` is introduced in [Library:module:Type](/docs/Library/Type), see [Symbol](/docs/Library/Type#Type-Symbol), to represent the basic Rascal types,
 e.g., `int`, `list`, and `rel`. Here we extend it with the symbols that may occur in a ParseTree.
 
 <1>  The `start` symbol wraps any symbol to indicate that it is a start symbol of the grammar and
@@ -429,9 +429,9 @@ Normalization of associativity.
 
 #### Description
 
-* The [choice](/docs/Library/Type/Type-choice) constructor under associativity is flattened.
+* The [choice](/docs/Library/Type#Type-choice) constructor under associativity is flattened.
 * Nested (equal) associativity is flattened.
-* [priority](/docs/Library/ParseTree/ParseTree-priority) under an associativity group defaults to choice.
+* [priority](/docs/Library/ParseTree#ParseTree-priority) under an associativity group defaults to choice.
 
 ## function parse {#ParseTree-parse}
 
@@ -585,7 +585,7 @@ Yield the string of characters that form the leafs of the given parse tree.
 
 #### Description
 
-`unparse` is the inverse function of [parse](/docs/Library/ParseTree/ParseTree-parse), i.e., for every syntactically correct string _TXT_ of
+`unparse` is the inverse function of [parse](/docs/Library/ParseTree#ParseTree-parse), i.e., for every syntactically correct string _TXT_ of
 type `S`, the following holds:
 ```rascal
 unparse(parse(#S, _TXT_)) == _TXT_

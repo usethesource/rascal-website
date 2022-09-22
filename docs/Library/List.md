@@ -158,7 +158,7 @@ Drop elements from the head of a list.
 #### Description
 
 Drop `n` elements (or `size(lst)` elements if `size(lst) < n`) from the head of `lst`.
-See [take](/docs/Library/List/List-take) to get elements from the head of a list].
+See [take](/docs/Library/List#List-take) to get elements from the head of a list].
 
 #### Examples
 
@@ -208,7 +208,7 @@ Pick a random element from a list.
 
 #### Description
 
-Get an arbitrary element from a list. See [take one from](/docs/Library/List/List-takeOneFrom) for a function that also removes the selected element.
+Get an arbitrary element from a list. See [take one from](/docs/Library/List#List-takeOneFrom) for a function that also removes the selected element.
 
 #### Examples
 
@@ -221,7 +221,7 @@ str: "owl"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "zebra"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "zebra"
+str: "elephant"
 ```
 
 ## function getFirstFrom {#List-getFirstFrom}
@@ -236,7 +236,7 @@ Pick first element from a list.
 
 #### Description
 
-Get the first element from a list. As opposed to [get one from](/docs/Library/List/List-getOneFrom) this function always returns the same (first) list element.
+Get the first element from a list. As opposed to [get one from](/docs/Library/List#List-getOneFrom) this function always returns the same (first) list element.
 
 ## function head {#List-head}
 
@@ -252,7 +252,7 @@ Get the first element(s) from a list.
 #### Description
 
 * Returns the first element of a list or throws `EmptyList` when the list is empty. 
-  This is identical to [top](/docs/Library/List/List-top).
+  This is identical to [top](/docs/Library/List#List-top).
 * Returns the first `n` elements of a list or throws `IndexOutOfBounds` when the list is too short. 
   This is similar to [take](/docs/Library/List#List-take).
 
@@ -310,7 +310,7 @@ Split a list in a head and a tail.
 
 #### Description
 
-This function is identical to [pop](/docs/Library/List/List-pop).
+This function is identical to [pop](/docs/Library/List#List-pop).
 
 #### Examples
 
@@ -367,7 +367,7 @@ Index of first occurrence of an element in a list.
 #### Description
 
 Return index of first occurrence of `elt` in `lst`, or `-1` if `elt` is not found.
-Also see [last index of](/docs/Library/List/List-lastIndexOf).
+Also see [last index of](/docs/Library/List#List-lastIndexOf).
 
 #### Examples
 
@@ -506,7 +506,7 @@ Return the last element of a list, if any.
 
 #### Description
 
-Also see [tail](/docs/Library/List/List-tail) that returns a list of one or more of the last elements of a list.
+Also see [tail](/docs/Library/List#List-tail) that returns a list of one or more of the last elements of a list.
 
 #### Examples
 
@@ -535,7 +535,7 @@ Return index of last occurrence of elt in lst, or -1 if elt is not found.
 
 #### Description
 
-Also see [index of](/docs/Library/List/List-indexOf).
+Also see [index of](/docs/Library/List#List-indexOf).
 
 #### Examples
 
@@ -726,7 +726,7 @@ Pop top element from list, return a tuple.
 #### Description
 
 This function is identical to [head tail](/docs/Library/List#List-headTail).
-Also see [push](/docs/Library/List/List-push) and [top](/docs/Library/List/List-top).
+Also see [push](/docs/Library/List#List-push) and [top](/docs/Library/List#List-top).
 
 #### Examples
 
@@ -776,7 +776,7 @@ Push an element in front of a list.
 
 #### Description
 
-Also see [pop](/docs/Library/List/List-pop) and [top](/docs/Library/List/List-top).
+Also see [pop](/docs/Library/List#List-pop) and [top](/docs/Library/List#List-top).
 
 #### Examples
 
@@ -946,7 +946,7 @@ list[str]: ["mango","strawberry","pear","pineapple","banana","grape","kiwi"]
 rascal>sort(fruits);
 list[str]: ["banana","grape","kiwi","mango","pear","pineapple","strawberry"]
 rascal>sort(fruits, bool(str a, str b){ return size(a) > size(b); });
-list[str]: ["strawberry","pineapple","banana","grape","mango","pear","kiwi"]
+list[str]: ["strawberry","pineapple","banana","mango","grape","pear","kiwi"]
 ```
 
 ## function isSorted {#List-isSorted}
@@ -986,9 +986,9 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [2,3,4,1]
+list[int]: [1,3,4,2]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["owl","elephant","snake","zebra"]
+list[str]: ["zebra","owl","elephant","snake"]
 ```
 
 ## function split {#List-split}
@@ -1100,7 +1100,7 @@ Get number of elements from the head of a list.
 #### Description
 
 Get `n` elements (or `size(lst)` elements if `size(lst) < n`) from the head of the list.
-See [drop](/docs/Library/List/List-drop) to remove elements from the head of a list.
+See [drop](/docs/Library/List#List-drop) to remove elements from the head of a list.
 
 #### Examples
 
@@ -1133,7 +1133,7 @@ Select an arbitrary element from `lst`, and return a tuple consisting of:
 *  a new list consisting of all elements of `lst` except the selected element.
 
 
-See [get one from](/docs/Library/List/List-getOneFrom) to only selected an element from a list.
+See [get one from](/docs/Library/List#List-getOneFrom) to only selected an element from a list.
 
 #### Examples
 
@@ -1142,17 +1142,17 @@ See [get one from](/docs/Library/List/List-getOneFrom) to only selected an eleme
 rascal>import List;
 ok
 rascal>takeOneFrom([10,20,30,40,50]);
+tuple[int,list[int]]: <40,[10,20,30,50]>
+rascal>takeOneFrom([10,20,30,40,50]);
+tuple[int,list[int]]: <40,[10,20,30,50]>
+rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <20,[10,30,40,50]>
-rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <40,[10,20,30,50]>
-rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <40,[10,20,30,50]>
-rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
+tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
+rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
+tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 ```
 
 ## function takeWhile {#List-takeWhile}
@@ -1257,8 +1257,8 @@ The keys in a map are unique by definition.
 Take the top element of a list.
 #### Description
 
-This function is identical to [head](/docs/Library/List/List-head).
-Also see [pop](/docs/Library/List/List-pop) and [push](/docs/Library/List/List-push).
+This function is identical to [head](/docs/Library/List#List-head).
+Also see [pop](/docs/Library/List#List-pop) and [push](/docs/Library/List#List-push).
 
 #### Examples
 
@@ -1399,7 +1399,7 @@ Make a pair (triple) of lists from a list of pairs (triples).
 
 #### Description
 
-Also see [unzip3](/docs/Library/List/List-unzip3);
+Also see [unzip3](/docs/Library/List#List-unzip3);
 
 #### Examples
 
@@ -1450,7 +1450,7 @@ Make a list of pairs from two (three) lists of the same length.
 
 #### Description
 
-Also see [unzip3](/docs/Library/List/List-unzip3).
+Also see [unzip3](/docs/Library/List#List-unzip3).
 
 #### Examples
 

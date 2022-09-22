@@ -151,7 +151,7 @@ str: "apple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "apple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "apple"
+str: "pear"
 ```
 
 ## function invert {#Map-invert}
@@ -198,7 +198,7 @@ the `MultipleKey` exception is raised since
 an attempt is made to create a map where more than one 
 value would be associated with the same key.
 
-Also see [invert](/docs/Library/Map/Map-invert) and [module:Exception](/docs/Library/Exception).
+Also see [invert](/docs/Library/Map#Map-invert) and [module:Exception](/docs/Library/Exception).
 
 #### Examples
 

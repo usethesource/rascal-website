@@ -131,7 +131,7 @@ We define here:
 <3>  Composite types.
 <4>  Parameters that represent a type variable.
 
-In [module:Parse tree](/docs/Library/ParseTree), see [Symbol](/docs/Library/ParseTree/ParseTree-Symbol), 
+In [module:Parse tree](/docs/Library/ParseTree), see [Symbol](/docs/Library/ParseTree#ParseTree-Symbol), 
 Symbols will be further extended with the symbols that may occur in a parse tree.
 
 ## data Symbol {#Type-Symbol}
@@ -195,7 +195,7 @@ Productions represent abstract (recursive) definitions of abstract data type con
 * `choice`: the choice between various alternatives.
 * `composition`: composition of two productions.
 
-In ParseTree, see [Production](/docs/Library/ParseTree/ParseTree-Production), 
+In ParseTree, see [Production](/docs/Library/ParseTree#ParseTree-Production), 
 Productions will be further extended and will be used to represent productions in syntax rules.
 
 ## data Attr {#Type-Attr}

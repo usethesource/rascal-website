@@ -12,7 +12,7 @@ The tutor compiler translates Rascal modules and Markdown files to Docusaurus Ma
 * Indexing sub-concepts and resolving links to them (internally)
 * Implementing local tables of contents for listing nested subconcepts in the parent file
 * Collecting and linking local image files
-* Supporting subscripts as in `Type<sub>1</sub>` and `Type<sub>21</sub>` by translation to Unicode
+* Supporting subscripts and superscripts as in `Type<sub>1</sub>` and `Type^21^` by translation to Unicode
 * Collecting Rascal source modules and the function and data declarations in them to generating API documentations in markdown notation
 * Running `rascal-shell` blocks on the Rascal REPL and collecting resulting HTML visualizations as screenshots (unfinished)
 * Executing the questions DSL to produce embedded interactive questions (unfinished)
@@ -79,7 +79,7 @@ compile(pcfg);
 list[Message]: [warning(
     "Ambiguous concept link: CallAnalysis resolves to all of these: /Recipes/Common/CallAnalysis /Test/CallAnalysis /Library/lang/rascal/tutor/examples/Test/CallAnalysis /Test/CallAnalysis/index.md ",
     |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Test.md|(523,1,<25,0>,<25,1>),
-    cause="Please choose from the following options to disambiguate: \n    Recipes:Common-CallAnalysis resolves to /Recipes/Common/CallAnalysis\n    Library:lang-rascal-tutor-examples-Test-CallAnalysis resolves to /Library/lang/rascal/tutor/examples/Test/CallAnalysis\n    lang-rascal-tutor-examples-Test-CallAnalysis resolves to /Library/lang/rascal/tutor/examples/Test/CallAnalysis\n    Recipes:CallAnalysis resolves to /Recipes/Common/CallAnalysis\n    Test:package:CallAnalysis resolves to /Test/CallAnalysis/index.md\n    Library:CallAnalysis resolves to /Library/lang/rascal/tutor/examples/Test/CallAnalysis\n    Common-CallAnalysis resolves to /Recipes/Common/CallAnalysis")]
+    cause="Please choose from the following options to disambiguate: \n    Recipes:Common-CallAnalysis resolves to /Recipes/Common/CallAnalysis\n    Library:lang-rascal-tutor-examples-Test-CallAnalysis resolves to /Library/lang/rascal/tutor/examples/Test/CallAnalysis\n    lang-rascal-tutor-examples-Test-CallAnalysis resolves to /Library/lang/rascal/tutor/examples/Test/CallAnalysis\n    Test:Test-CallAnalysis resolves to /Test/CallAnalysis\n    Recipes:CallAnalysis resolves to /Recipes/Common/CallAnalysis\n    Test:package:CallAnalysis resolves to /Test/CallAnalysis/index.md\n    Library:CallAnalysis resolves to /Library/lang/rascal/tutor/examples/Test/CallAnalysis\n    Common-CallAnalysis resolves to /Recipes/Common/CallAnalysis")]
 ```
 
 Afterwards you will find all the generated files in `./target/classes/doc/` including an `index.value` file for later reference, and you can use a mark-down editor or compiler to further process the .md files. Note that these markdown files are _generated_, so they should be processed downstream automatically rather than by hand. Nevertheless while debugging it can be useful to explore what has been generated manually using a markdown editor.
