@@ -285,7 +285,7 @@ for (r <- sort(getKeywordParameters(myModel)<0>)) println("  <r>");
 list[void]: []
 ```
 
-See [analysis::m3::Core](../../../../Library/analysis/m3/Core.md) for the definition of the language-independent relations and [lang::java::m3::Core](../../../../Library/lang/java/m3/Core.md) for the Java-specific extensions.
+See [Core](../../../../Library/analysis/m3/Core.md) for the definition of the language-independent relations and [Core](../../../../Library/lang/java/m3/Core.md) for the Java-specific extensions.
 
 #### Benefits
 

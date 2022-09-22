@@ -13,8 +13,8 @@ A word is here defined as one or more letters (lowercase or uppercase), digits a
 
 We split the problem in two parts:
 
-*  Count the words in a single line. We explore three ways to do this in an imperative ([Count in line1](../../../Recipes/Common/WordCount/CountInLine1)], [Count in line2](../../../Recipes/Common/WordCount/CountInLine2))
-  and a functional style ([Count in line3](../../../Recipes/Common/WordCount/CountInLine3)).
+*  Count the words in a single line. We explore three ways to do this in an imperative ([count in line1](../../../Recipes/Common/WordCount/CountInLine1)], [count in line2](../../../Recipes/Common/WordCount/CountInLine2))
+  and a functional style ([count in line3](../../../Recipes/Common/WordCount/CountInLine3)).
 *  Next we apply the single line counter to all the lines.
 
 

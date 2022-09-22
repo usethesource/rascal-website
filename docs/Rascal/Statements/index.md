@@ -9,7 +9,7 @@ All Rascal statements.
 #### Description
 
 The following statements are available:
-* [Rascal:Statements](../../Rascal/Statements)
+* [Statements](../../Rascal/Statements)
 * ((Rascal:Statements/Append))
 * ((Rascal:Statements/Assert))
 * ((Rascal:Statements/Assignment))

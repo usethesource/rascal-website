@@ -16,31 +16,31 @@ Library functions for sets.
 For operators on sets see [Set](../Rascal/Expressions/Values/Set) in the Rascal Language Reference.
 
 The following functions are defined for sets:
-* [Library:function:Set::classify](../Library/Set.md#Set-classify)
-* [Library:function:Set::get first from](../Library/Set.md#Set-getFirstFrom)
-* [Library:function:Set::get one from](../Library/Set.md#Set-getOneFrom)
-* [Library:function:Set::group](../Library/Set.md#Set-group)
-* [Library:function:Set::index](../Library/Set.md#Set-index)
-* [Library:function:Set::is empty](../Library/Set.md#Set-isEmpty)
-* [Library:function:Set::ito string](../Library/Set.md#Set-itoString)
-* [Library:function:Set::jaccard](../Library/Set.md#Set-jaccard)
-* [Library:function:Set::mapper](../Library/Set.md#Set-mapper)
-* [Library:function:Set::max](../Library/Set.md#Set-max)
-* [Library:function:Set::min](../Library/Set.md#Set-min)
-* [Library:function:Set::power](../Library/Set.md#Set-power)
-* [Library:function:Set::power1](../Library/Set.md#Set-power1)
-* [Library:function:Set::reducer](../Library/Set.md#Set-reducer)
-* [Library:function:Set::size](../Library/Set.md#Set-size)
-* [Library:function:Set::sort](../Library/Set.md#Set-sort)
-* [Library:function:Set::sum](../Library/Set.md#Set-sum)
-* [Library:function:Set::take first from](../Library/Set.md#Set-takeFirstFrom)
-* [Library:function:Set::take one from](../Library/Set.md#Set-takeOneFrom)
-* [Library:function:Set::to list](../Library/Set.md#Set-toList)
-* [Library:function:Set::to map](../Library/Set.md#Set-toMap)
-* [Library:function:Set::to map unique](../Library/Set.md#Set-toMapUnique)
-* [Library:function:Set::to string](../Library/Set.md#Set-toString)
-* [Library:function:Set::top](../Library/Set.md#Set-top)
-* [Library:function:Set::union](../Library/Set.md#Set-union)
+* [classify](../Library/Set.md#Set-classify)
+* [getFirstFrom](../Library/Set.md#Set-getFirstFrom)
+* [getOneFrom](../Library/Set.md#Set-getOneFrom)
+* [group](../Library/Set.md#Set-group)
+* [index](../Library/Set.md#Set-index)
+* [isEmpty](../Library/Set.md#Set-isEmpty)
+* [itoString](../Library/Set.md#Set-itoString)
+* [jaccard](../Library/Set.md#Set-jaccard)
+* [mapper](../Library/Set.md#Set-mapper)
+* [max](../Library/Set.md#Set-max)
+* [min](../Library/Set.md#Set-min)
+* [power](../Library/Set.md#Set-power)
+* [power1](../Library/Set.md#Set-power1)
+* [reducer](../Library/Set.md#Set-reducer)
+* [size](../Library/Set.md#Set-size)
+* [sort](../Library/Set.md#Set-sort)
+* [sum](../Library/Set.md#Set-sum)
+* [takeFirstFrom](../Library/Set.md#Set-takeFirstFrom)
+* [takeOneFrom](../Library/Set.md#Set-takeOneFrom)
+* [toList](../Library/Set.md#Set-toList)
+* [toMap](../Library/Set.md#Set-toMap)
+* [toMapUnique](../Library/Set.md#Set-toMapUnique)
+* [toString](../Library/Set.md#Set-toString)
+* [top](../Library/Set.md#Set-top)
+* [union](../Library/Set.md#Set-union)
 
 
 ## function classify {#Set-classify}
@@ -418,11 +418,11 @@ ok
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "elephant"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "zebra"
-rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "snake"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "zebra"
+rascal>getOneFrom({"elephant", "zebra", "snake"});
+str: "elephant"
 ```
 
 ## function getFirstFrom {#Set-getFirstFrom}
@@ -457,7 +457,7 @@ Remove an arbitrary element from a set, returns the element and a set without th
 #### Description
 
 Remove an arbitrary element from set `s` and return a tuple consisting of the element and a set without that element.
- Also see [get one from](../Library/Set.md#Set-getOneFrom).
+ Also see [getOneFrom](../Library/Set.md#Set-getOneFrom).
 
 #### Examples
 
@@ -466,11 +466,11 @@ Remove an arbitrary element from set `s` and return a tuple consisting of the el
 rascal>import Set;
 ok
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <3,{1,2,4}>
+tuple[int,set[int]]: <4,{1,3,2}>
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <2,{1,3,4}>
+tuple[int,set[int]]: <4,{1,3,2}>
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <2,{1,3,4}>
+tuple[int,set[int]]: <1,{3,2,4}>
 ```
 
 ## function takeFirstFrom {#Set-takeFirstFrom}

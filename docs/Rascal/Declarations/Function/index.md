@@ -218,7 +218,7 @@ B: f()
 #### Benefits
 
 * Overloaded functions can be extended by other modules that extend the current module, and even be "fused" by modules that extend different modules that define the same overloaded signature. In this way you can write language processors **modularly**. The open extensibility of overloaded functions in Rascal is a way to circumvent the classes ["Expression Problem".](https://en.wikipedia.org/wiki/Expression_problem)
-* Overloaded functions including complex pattern matching at the parameter positions are as powerful as term rewriting systems; they _are_ a kind of term rewriting system. Together with the [Syntax definition](../../../Rascal/Declarations/SyntaxDefinition) and [Algebraic data type](../../../Rascal/Declarations/AlgebraicDataType) features (serving as many-sorted algebraic signatures), the overloaded functions allow for "algebraic specification" as a style of programming in Rascal. 
+* Overloaded functions including complex pattern matching at the parameter positions are as powerful as term rewriting systems; they _are_ a kind of term rewriting system. Together with the [syntax definition](../../../Rascal/Declarations/SyntaxDefinition) and [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType) features (serving as many-sorted algebraic signatures), the overloaded functions allow for "algebraic specification" as a style of programming in Rascal. 
 
 #### Pitfalls
 

@@ -18,25 +18,25 @@ to lowest precedence. In other words, operators listed earlier in the table bind
 | Operator | See  | Short Description |
 | ---      | ---  | ---               |
 | `Exp . Name` |
-| [Field selection](../../../Rascal/Expressions/Values/Location/FieldSelection), |
-  [Field selection](../../../Rascal/Expressions/Values/DateTime/FieldSelection), |
-  [Field selection](../../../Rascal/Expressions/Values/Tuple/FieldSelection), |
-  [Field selection](../../../Rascal/Expressions/Values/Relation/FieldSelection), |
+| [FieldSelection](../../../Rascal/Expressions/Values/Location/FieldSelection), |
+  [FieldSelection](../../../Rascal/Expressions/Values/DateTime/FieldSelection), |
+  [FieldSelection](../../../Rascal/Expressions/Values/Tuple/FieldSelection), |
+  [FieldSelection](../../../Rascal/Expressions/Values/Relation/FieldSelection), |
 | Select named field from structured value |
 | `Exp<sub>1</sub> [ Name = Exp<sub>2</sub> ]` |
-| [Field assignment](../../../Rascal/Expressions/Operators/FieldAssignment) |
+| [field assignment](../../../Rascal/Expressions/Operators/FieldAssignment) |
 | Change value of named field of structured value |
 | `Exp < field<sub>1</sub>, ... >` |
-| [Field projection](../../../Rascal/Expressions/Operators/FieldProjection) |
+| [field projection](../../../Rascal/Expressions/Operators/FieldProjection) |
 | Select fields from relation or structured value |
 | `Exp is Name` |
-| [Library:Parse tree](../../../Library/ParseTree.md), |
-  [Concrete syntax](../../../Rascal/Expressions/ConcreteSyntax), |
+| [parse tree](../../../Library/ParseTree.md), |
+  [ConcreteSyntax](../../../Rascal/Expressions/ConcreteSyntax), |
   [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType) |
 | Returns true if and only if the constructor name of the value produced by _Exp_ is equal to _Name_ |
 | `Exp has Name`  |
-| [Library:Parse tree](../../../Library/ParseTree.md), |
-  [Concrete syntax](../../../Rascal/Expressions/ConcreteSyntax), |
+| [parse tree](../../../Library/ParseTree.md), |
+  [ConcreteSyntax](../../../Rascal/Expressions/ConcreteSyntax), |
   [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType) |
 | Returns true if and only if the constructor (node or parse tree) of the value produced by _Exp_ has any field labeled _Name_ |
 | `Exp<sub>1</sub> [ Exp<sub>2</sub> , Exp<sub>3</sub>, .... ]` |
@@ -51,7 +51,7 @@ to lowest precedence. In other words, operators listed earlier in the table bind
   [Slice](../../../Rascal/Expressions/Values/Node/Slice) |
 | Retrieve a slice from a list, string, or node. |
 |  `Exp?` |
-| [Is defined](../../../Rascal/Expressions/Values/Boolean/IsDefined) |
+| [IsDefined](../../../Rascal/Expressions/Values/Boolean/IsDefined) |
 | Test whether an expression has a defined value |
 |  `!Exp` |
 | [Negation](../../../Rascal/Expressions/Values/Boolean/Negation) |
@@ -60,12 +60,12 @@ to lowest precedence. In other words, operators listed earlier in the table bind
 | [Negation](../../../Rascal/Expressions/Values/Number/Negation) |
 | Negation of numbers |
 | `Exp +` |
-| [Transitive closure](../../../Rascal/Expressions/Values/Relation/TransitiveClosure), |
-  [Transitive closure](../../../Rascal/Expressions/Values/ListRelation/TransitiveClosure), |
+| [TransitiveClosure](../../../Rascal/Expressions/Values/Relation/TransitiveClosure), |
+  [TransitiveClosure](../../../Rascal/Expressions/Values/ListRelation/TransitiveClosure), |
 | Transitive closure on relation or list relation |
 | `Exp *` |
-| [Reflexive transitive closure](../../../Rascal/Expressions/Values/Relation/ReflexiveTransitiveClosure), |
-  [Reflexive transitive closure](../../../Rascal/Expressions/Values/ListRelation/ReflexiveTransitiveClosure) |
+| [ReflexiveTransitiveClosure](../../../Rascal/Expressions/Values/Relation/ReflexiveTransitiveClosure), |
+  [ReflexiveTransitiveClosure](../../../Rascal/Expressions/Values/ListRelation/ReflexiveTransitiveClosure) |
 | Reflexive transitive closure on relation or list relation |
 | `Exp @ Name` |
 | [Annotation](../../../Rascal/Declarations/Annotation) |
@@ -87,7 +87,7 @@ to lowest precedence. In other words, operators listed earlier in the table bind
 | [Multiplication](../../../Rascal/Expressions/Values/Number/Multiplication), |
   [Product](../../../Rascal/Expressions/Values/List/Product), |
   [Product](../../../Rascal/Expressions/Values/Set/Product), |
-  [Cartesian product](../../../Rascal/Expressions/Values/Relation/CartesianProduct) |
+  [CartesianProduct](../../../Rascal/Expressions/Values/Relation/CartesianProduct) |
 | Multiply numbers; product of list, set, or relation |
 | `Exp<sub>1</sub> & Exp<sub>2</sub>` |
 | [Intersection](../../../Rascal/Expressions/Values/List/Intersection), |
@@ -102,7 +102,7 @@ to lowest precedence. In other words, operators listed earlier in the table bind
   [Concatenation](../../../Rascal/Expressions/Values/Tuple/Concatenation), |
   [Union](../../../Rascal/Expressions/Values/Set/Union), |
   [Union](../../../Rascal/Expressions/Values/Map/Union), |
-  [Add segment](../../../Rascal/Expressions/Values/Location/AddSegment) |
+  [AddSegment](../../../Rascal/Expressions/Values/Location/AddSegment) |
 | Add numbers; concatenate string, list or tuple;  |
   union on set (including relation), or map; |
   concatenate location and string |
@@ -126,46 +126,46 @@ to lowest precedence. In other words, operators listed earlier in the table bind
   [notin](../../../Rascal/Expressions/Values/Map/notin) |
 | Negated membership test for element in  list, map, set (including relation) |
 | `Exp<sub>1</sub> <= Exp<sub>2</sub>` |
-| [Less than or equal](../../../Rascal/Expressions/Values/Number/LessThanOrEqual), |
-  [Less than or equal](../../../Rascal/Expressions/Values/String/LessThanOrEqual), |
-  [Less than or equal](../../../Rascal/Expressions/Values/Location/LessThanOrEqual), |
-  [Less than or equal](../../../Rascal/Expressions/Values/DateTime/LessThanOrEqual), |
-  [Sub list](../../../Rascal/Expressions/Values/List/SubList), |
-  [Sub set](../../../Rascal/Expressions/Values/Set/SubSet), |
-  [Sub map](../../../Rascal/Expressions/Values/Map/SubMap) |
+| [LessThanOrEqual](../../../Rascal/Expressions/Values/Number/LessThanOrEqual), |
+  [LessThanOrEqual](../../../Rascal/Expressions/Values/String/LessThanOrEqual), |
+  [LessThanOrEqual](../../../Rascal/Expressions/Values/Location/LessThanOrEqual), |
+  [LessThanOrEqual](../../../Rascal/Expressions/Values/DateTime/LessThanOrEqual), |
+  [SubList](../../../Rascal/Expressions/Values/List/SubList), |
+  [SubSet](../../../Rascal/Expressions/Values/Set/SubSet), |
+  [SubMap](../../../Rascal/Expressions/Values/Map/SubMap) |
 | Less than or equal on all values |
 | `Exp<sub>1</sub> < Exp<sub>2</sub>` |
-| [Less than](../../../Rascal/Expressions/Values/Number/LessThan), |
-  [Less than](../../../Rascal/Expressions/Values/String/LessThan), |
-  [Less than](../../../Rascal/Expressions/Values/Location/LessThan), |
-  [Less than](../../../Rascal/Expressions/Values/DateTime/LessThan), |
-  [Strict sub list](../../../Rascal/Expressions/Values/List/StrictSubList), |
-  [Strict sub set](../../../Rascal/Expressions/Values/Set/StrictSubSet), |
-  [Strict sub map](../../../Rascal/Expressions/Values/Map/StrictSubMap) |
+| [LessThan](../../../Rascal/Expressions/Values/Number/LessThan), |
+  [LessThan](../../../Rascal/Expressions/Values/String/LessThan), |
+  [LessThan](../../../Rascal/Expressions/Values/Location/LessThan), |
+  [LessThan](../../../Rascal/Expressions/Values/DateTime/LessThan), |
+  [StrictSubList](../../../Rascal/Expressions/Values/List/StrictSubList), |
+  [StrictSubSet](../../../Rascal/Expressions/Values/Set/StrictSubSet), |
+  [StrictSubMap](../../../Rascal/Expressions/Values/Map/StrictSubMap) |
 | Less than on all values |
 | `Exp<sub>1</sub> >= Exp<sub>2</sub>` |
-| [Greater than or equal](../../../Rascal/Expressions/Values/Number/GreaterThanOrEqual), |
-  [Greater than or equal](../../../Rascal/Expressions/Values/String/GreaterThanOrEqual), |
-  [Greater than or equal](../../../Rascal/Expressions/Values/Location/GreaterThanOrEqual), |
-  [Greater than or equal](../../../Rascal/Expressions/Values/DateTime/GreaterThanOrEqual), |
-  [Super list](../../../Rascal/Expressions/Values/List/SuperList), |
-  [Super set](../../../Rascal/Expressions/Values/Set/SuperSet), |
-  [Super map](../../../Rascal/Expressions/Values/Map/SuperMap) |
+| [GreaterThanOrEqual](../../../Rascal/Expressions/Values/Number/GreaterThanOrEqual), |
+  [GreaterThanOrEqual](../../../Rascal/Expressions/Values/String/GreaterThanOrEqual), |
+  [GreaterThanOrEqual](../../../Rascal/Expressions/Values/Location/GreaterThanOrEqual), |
+  [GreaterThanOrEqual](../../../Rascal/Expressions/Values/DateTime/GreaterThanOrEqual), |
+  [SuperList](../../../Rascal/Expressions/Values/List/SuperList), |
+  [SuperSet](../../../Rascal/Expressions/Values/Set/SuperSet), |
+  [SuperMap](../../../Rascal/Expressions/Values/Map/SuperMap) |
 | Greater than or equal on all values |
 | `Exp<sub>1</sub> > Exp<sub>2</sub>` |
-| [Greater than](../../../Rascal/Expressions/Values/Number/GreaterThan), |
-  [Greater than](../../../Rascal/Expressions/Values/String/GreaterThan), |
-  [Greater than](../../../Rascal/Expressions/Values/Location/GreaterThan), |
-  [Greater than](../../../Rascal/Expressions/Values/DateTime/GreaterThan), |
-  [Strict super list](../../../Rascal/Expressions/Values/List/StrictSuperList), |
-  [Strict super set](../../../Rascal/Expressions/Values/Set/StrictSuperSet), |
-  [Strict super map](../../../Rascal/Expressions/Values/Map/StrictSuperMap) |
+| [GreaterThan](../../../Rascal/Expressions/Values/Number/GreaterThan), |
+  [GreaterThan](../../../Rascal/Expressions/Values/String/GreaterThan), |
+  [GreaterThan](../../../Rascal/Expressions/Values/Location/GreaterThan), |
+  [GreaterThan](../../../Rascal/Expressions/Values/DateTime/GreaterThan), |
+  [StrictSuperList](../../../Rascal/Expressions/Values/List/StrictSuperList), |
+  [StrictSuperSet](../../../Rascal/Expressions/Values/Set/StrictSuperSet), |
+  [StrictSuperMap](../../../Rascal/Expressions/Values/Map/StrictSuperMap) |
 | Greater than on all values. |
 |  `Pat := Exp` |
 | [Match](../../../Rascal/Expressions/Values/Boolean/Match) |
 | Pattern matches value of expression |
 |  `Pat !:= Exp` |
-| [No match](../../../Rascal/Expressions/Values/Boolean/NoMatch) |
+| [NoMatch](../../../Rascal/Expressions/Values/Boolean/NoMatch) |
 | Pattern does not match value of expression |
 | `Exp<sub>1</sub> == Exp<sub>2</sub>` |
 | [Equal](../../../Rascal/Expressions/Values/Number/Equal), |
@@ -177,16 +177,16 @@ to lowest precedence. In other words, operators listed earlier in the table bind
   [Equal](../../../Rascal/Expressions/Values/Map/Equal) |
 | Equality on all values |
 | `Exp<sub>1</sub> != Exp<sub>2</sub>` |
-| [Not equal](../../../Rascal/Expressions/Values/Number/NotEqual), |
-  [Not equal](../../../Rascal/Expressions/Values/String/NotEqual), |
-  [Not equal](../../../Rascal/Expressions/Values/Location/NotEqual), |
-  [Not equal](../../../Rascal/Expressions/Values/DateTime/NotEqual), |
-  [Not equal](../../../Rascal/Expressions/Values/List/NotEqual), |
-  [Not equal](../../../Rascal/Expressions/Values/Set/NotEqual), |
-  [Not equal](../../../Rascal/Expressions/Values/Map/NotEqual) |
+| [NotEqual](../../../Rascal/Expressions/Values/Number/NotEqual), |
+  [NotEqual](../../../Rascal/Expressions/Values/String/NotEqual), |
+  [NotEqual](../../../Rascal/Expressions/Values/Location/NotEqual), |
+  [NotEqual](../../../Rascal/Expressions/Values/DateTime/NotEqual), |
+  [NotEqual](../../../Rascal/Expressions/Values/List/NotEqual), |
+  [NotEqual](../../../Rascal/Expressions/Values/Set/NotEqual), |
+  [NotEqual](../../../Rascal/Expressions/Values/Map/NotEqual) |
 | Inequality on all values |
 | `Exp<sub>1</sub> ? Exp<sub>2</sub>` |
-| [If defined else](../../../Rascal/Expressions/Values/Boolean/IfDefinedElse) |
+| [IfDefinedElse](../../../Rascal/Expressions/Values/Boolean/IfDefinedElse) |
 | Value of expression when it is defined, otherwise alternative value |
 | `Exp<sub>1</sub> ? Exp<sub>2</sub> : Exp<sub>3</sub>` |
 | [Conditional](../../../Rascal/Expressions/Values/Value/Conditional) |

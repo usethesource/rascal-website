@@ -16,22 +16,22 @@ Library functions for nodes.
 For operators on nodes see [Node](../Rascal/Expressions/Values/Node) in the Rascal Language Reference.
 
 The following functions are defined for nodes:
-* [Library:function:Node::arb node](../Library/Node.md#Node-arbNode)
-* [Library:function:Node::arity](../Library/Node.md#Node-arity)
-* [Library:function:Node::del annotation](../Library/Node.md#Node-delAnnotation)
-* [Library:function:Node::del annotations](../Library/Node.md#Node-delAnnotations)
-* [Library:function:Node::del annotations rec](../Library/Node.md#Node-delAnnotationsRec)
-* [Library:function:Node::get annotations](../Library/Node.md#Node-getAnnotations)
-* [Library:function:Node::get children](../Library/Node.md#Node-getChildren)
-* [Library:function:Node::get keyword parameters](../Library/Node.md#Node-getKeywordParameters)
-* [Library:function:Node::get name](../Library/Node.md#Node-getName)
-* [Library:function:Node::ito string](../Library/Node.md#Node-itoString)
-* [Library:function:Node::make node](../Library/Node.md#Node-makeNode)
-* [Library:function:Node::set annotations](../Library/Node.md#Node-setAnnotations)
-* [Library:function:Node::set keyword parameters](../Library/Node.md#Node-setKeywordParameters)
-* [Library:function:Node::to string](../Library/Node.md#Node-toString)
-* [Library:function:Node::unset](../Library/Node.md#Node-unset)
-* [Library:function:Node::unset rec](../Library/Node.md#Node-unsetRec)
+* [arbNode](../Library/Node.md#Node-arbNode)
+* [arity](../Library/Node.md#Node-arity)
+* [delAnnotation](../Library/Node.md#Node-delAnnotation)
+* [delAnnotations](../Library/Node.md#Node-delAnnotations)
+* [delAnnotationsRec](../Library/Node.md#Node-delAnnotationsRec)
+* [getAnnotations](../Library/Node.md#Node-getAnnotations)
+* [getChildren](../Library/Node.md#Node-getChildren)
+* [getKeywordParameters](../Library/Node.md#Node-getKeywordParameters)
+* [getName](../Library/Node.md#Node-getName)
+* [itoString](../Library/Node.md#Node-itoString)
+* [makeNode](../Library/Node.md#Node-makeNode)
+* [setAnnotations](../Library/Node.md#Node-setAnnotations)
+* [setKeywordParameters](../Library/Node.md#Node-setKeywordParameters)
+* [toString](../Library/Node.md#Node-toString)
+* [unset](../Library/Node.md#Node-unset)
+* [unsetRec](../Library/Node.md#Node-unsetRec)
 
 
 ## function arity {#Node-arity}

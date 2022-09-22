@@ -33,7 +33,7 @@ If we define for a given relation R:
 *  `...`
 
 then the reflexive transitive closure R* can be defined in two ways:
-(also see [Transitive closure](../../../../../Rascal/Expressions/Values/Relation/TransitiveClosure)):
+(also see [TransitiveClosure](../../../../../Rascal/Expressions/Values/Relation/TransitiveClosure)):
 
 *  `R* = R<sub>0</sub> + R<sub>1</sub> + R<sub>2</sub> + R<sub>3</sub> + ...`
 *  `R* = R<sub>0</sub> + R+`

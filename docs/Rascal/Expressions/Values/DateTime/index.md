@@ -43,7 +43,7 @@ The following fields provide access to information about the value, but cannot b
 
 
 The following fields provide access to the individual components of date, time and datetime values,
-and can be accessed using [Field selection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection) and be assigned using [Field selection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection):
+and can be accessed using [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection) and be assigned using [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection):
 
 *  `year`
 *  `month`

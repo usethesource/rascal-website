@@ -8,7 +8,7 @@ Actions are functions that are called when parse trees are constructed (right af
 
 #### Description
 
-A so-called [Action](../../../../Rascal/Declarations/SyntaxDefinition/Action) is a normal rascal [Function](../../../../Rascal/Declarations/Function) that overloads a [Syntax definition](../../../../Rascal/Declarations/SyntaxDefinition). 
+A so-called [Action](../../../../Rascal/Declarations/SyntaxDefinition/Action) is a normal rascal [Function](../../../../Rascal/Declarations/Function) that overloads a [syntax definition](../../../../Rascal/Declarations/SyntaxDefinition). 
 A [Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition), very similar to [Algebraic Data Type](../../../../Rascal/Declarations/AlgebraicDataType) definitions, defines a constructor for a parse tree node. 
 This constructor is the default function, and when it is overloaded by a non-default function this overloaded function will be tried first. 
 You can overload any labeled [Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition) using the name of an alternative.

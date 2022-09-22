@@ -8,7 +8,7 @@ Pattern matching has not been properly initialized.
 
 #### Description
 
-[Pattern matching][Rascal concepts:Pattern matching](../../RascalConcepts/PatternMatching) requires two ingredients:
+[Pattern matching][pattern matching](../../RascalConcepts/PatternMatching) requires two ingredients:
 
 *  One of the many [patterns](../../Rascal/Patterns).
 *  A non-void subject value to which the pattern is applied.

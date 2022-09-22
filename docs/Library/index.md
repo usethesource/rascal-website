@@ -23,7 +23,7 @@ Hello Rascal!
 ok
 ```
 
-The [Library:module:IO](../Library/IO.md) module is otherwise most commonly used, because it contains [println](../Library/IO.md#IO-println).
+The [IO](../Library/IO.md) module is otherwise most commonly used, because it contains [println](../Library/IO.md#IO-println).
 
 The standard library has its own [Location](../Rascal/Expressions/Values/Location) scheme `std` which can be used to explore
 its folder structure on the REPL. Note that source locations have auto-complete for the path component.
@@ -75,41 +75,41 @@ list[loc]: [
 ```
 
 These are the entry points to the entire library:
-* [Library:Analysis](../Library/analysis/index.md)
-* [Library:Demo](../Library/demo/index.md)
-* [Library:Index](../Library/lang/rascal/tutor/Indexer.md#lang::rascal::tutor::Indexer-Index)
-* [Library:Lang](../Library/lang/index.md)
-* [Library:Resource](../Library/resource/index.md)
-* [Library:Util](../Library/util/index.md)
-* [Library:module:Boolean](../Library/Boolean.md)
-* [Library:module:Content](../Library/Content.md)
-* [Library:module:Date time](../Library/DateTime.md)
-* [Library:module:Exception](../Library/Exception.md)
-* [Library:module:Grammar](../Library/Grammar.md)
-* [Library:module:IO](../Library/IO.md)
-* [Library:module:List](../Library/List.md)
-* [Library:module:List relation](../Library/ListRelation.md)
-* [Library:module:Location](../Library/Location.md)
-* [Library:module:Map](../Library/Map.md)
-* [Library:module:Message](../Library/Message.md)
-* [Library:module:Node](../Library/Node.md)
-* [Library:module:Parse tree](../Library/ParseTree.md)
-* [Library:module:Prelude](../Library/Prelude.md)
-* [Library:module:Relation](../Library/Relation.md)
-* [Library:module:Set](../Library/Set.md)
-* [Library:module:String](../Library/String.md)
-* [Library:module:Traversal](../Library/Traversal.md)
-* [Library:module:Type](../Library/Type.md)
-* [Library:module:Value iO](../Library/ValueIO.md)
+* [Analysis](../Library/analysis/index.md)
+* [Demo](../Library/demo/index.md)
+* [Index](../Library/lang/rascal/tutor/Indexer.md#lang::rascal::tutor::Indexer-Index)
+* [Lang](../Library/lang/index.md)
+* [Resource](../Library/resource/index.md)
+* [Util](../Library/util/index.md)
+* [Boolean](../Library/Boolean.md)
+* [Content](../Library/Content.md)
+* [date time](../Library/DateTime.md)
+* [Exception](../Library/Exception.md)
+* [Grammar](../Library/Grammar.md)
+* [IO](../Library/IO.md)
+* [List](../Library/List.md)
+* [list relation](../Library/ListRelation.md)
+* [Location](../Library/Location.md)
+* [Map](../Library/Map.md)
+* [Message](../Library/Message.md)
+* [Node](../Library/Node.md)
+* [parse tree](../Library/ParseTree.md)
+* [Prelude](../Library/Prelude.md)
+* [Relation](../Library/Relation.md)
+* [Set](../Library/Set.md)
+* [String](../Library/String.md)
+* [Traversal](../Library/Traversal.md)
+* [Type](../Library/Type.md)
+* [value iO](../Library/ValueIO.md)
 
 #### Benefits
 
-* The standard library comes with "batteries included", a number of reusable data-types and data-structures for building code analysis and manipulation tools. See for example [analysis::m3::Core](../Library/analysis/m3/Core.md).
-* Utility functions are sorted per data-type. So if you need something that operates on [List](../Rascal/Expressions/Values/List)then look in the [Library:module:List](../Library/List.md) module of the library. For [Set](../Rascal/Expressions/Values/Set) look in [Library:module:Set](../Library/Set.md), etc.
+* The standard library comes with "batteries included", a number of reusable data-types and data-structures for building code analysis and manipulation tools. See for example [Core](../Library/analysis/m3/Core.md).
+* Utility functions are sorted per data-type. So if you need something that operates on [List](../Rascal/Expressions/Values/List)then look in the [List](../Library/List.md) module of the library. For [Set](../Rascal/Expressions/Values/Set) look in [Set](../Library/Set.md), etc.
 * To process [CSV](../Library/lang/csv/index.md), [XML](../Library/lang/xml/index.md), [JSON](../Library/lang/json/index.md), [YAML](../Library/lang/yaml/index.md) you will find utilities here, even support to access [SQL](../Library/resource/jdbc/JDBC.md) databases via JDBC.
 
 #### Pitfalls
 
 * [Prelude](../Library/Prelude.md) is a rather big collection of functions to have imported. It is sometimes better to cherry-pick the modules you need.
-* Some languages in [Library:package:lang](../Library/lang/index.md) are not 100% tested and up-to-date. We are extracting these one-by-one to experimental library packages.
+* Some languages in [lang](../Library/lang/index.md) are not 100% tested and up-to-date. We are extracting these one-by-one to experimental library packages.
 

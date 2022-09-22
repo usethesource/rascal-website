@@ -16,21 +16,21 @@ Library functions for relations.
 For operators on relations see [Relation](../Rascal/Expressions/Values/Relation) in the Rascal Language Reference.
 
 The following functions are defined for relations:
-* [Library:function:Relation::carrier](../Library/Relation.md#Relation-carrier)
-* [Library:function:Relation::carrierR](../Library/Relation.md#Relation-carrierR)
-* [Library:function:Relation::carrierX](../Library/Relation.md#Relation-carrierX)
-* [Library:function:Relation::complement](../Library/Relation.md#Relation-complement)
-* [Library:function:Relation::domain](../Library/Relation.md#Relation-domain)
-* [Library:function:Relation::domainR](../Library/Relation.md#Relation-domainR)
-* [Library:function:Relation::domainX](../Library/Relation.md#Relation-domainX)
-* [Library:function:Relation::group domain by range](../Library/Relation.md#Relation-groupDomainByRange)
-* [Library:function:Relation::group range by domain](../Library/Relation.md#Relation-groupRangeByDomain)
-* [Library:function:Relation::ident](../Library/Relation.md#Relation-ident)
-* [Library:function:Relation::index](../Library/Relation.md#Relation-index)
-* [Library:function:Relation::invert](../Library/Relation.md#Relation-invert)
-* [Library:function:Relation::range](../Library/Relation.md#Relation-range)
-* [Library:function:Relation::rangeR](../Library/Relation.md#Relation-rangeR)
-* [Library:function:Relation::rangeX](../Library/Relation.md#Relation-rangeX)
+* [carrier](../Library/Relation.md#Relation-carrier)
+* [carrierR](../Library/Relation.md#Relation-carrierR)
+* [carrierX](../Library/Relation.md#Relation-carrierX)
+* [complement](../Library/Relation.md#Relation-complement)
+* [domain](../Library/Relation.md#Relation-domain)
+* [domainR](../Library/Relation.md#Relation-domainR)
+* [domainX](../Library/Relation.md#Relation-domainX)
+* [groupDomainByRange](../Library/Relation.md#Relation-groupDomainByRange)
+* [groupRangeByDomain](../Library/Relation.md#Relation-groupRangeByDomain)
+* [ident](../Library/Relation.md#Relation-ident)
+* [index](../Library/Relation.md#Relation-index)
+* [invert](../Library/Relation.md#Relation-invert)
+* [range](../Library/Relation.md#Relation-range)
+* [rangeR](../Library/Relation.md#Relation-rangeR)
+* [rangeX](../Library/Relation.md#Relation-rangeX)
 
 
 ## function carrier {#Relation-carrier}

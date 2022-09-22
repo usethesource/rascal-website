@@ -16,61 +16,61 @@ Library functions for lists.
 For operators on lists see [List](../Rascal/Expressions/Values/List) in the Rascal Language Reference.
 
 The following functions are available for lists:
-* [Library:function:List::concat](../Library/List.md#List-concat)
-* [Library:function:List::delete](../Library/List.md#List-delete)
-* [Library:function:List::distribution](../Library/List.md#List-distribution)
-* [Library:function:List::drop](../Library/List.md#List-drop)
-* [Library:function:List::dup](../Library/List.md#List-dup)
-* [Library:function:List::element at](../Library/List.md#List-elementAt)
-* [Library:function:List::get first from](../Library/List.md#List-getFirstFrom)
-* [Library:function:List::get one from](../Library/List.md#List-getOneFrom)
-* [Library:function:List::head](../Library/List.md#List-head)
-* [Library:function:List::head tail](../Library/List.md#List-headTail)
-* [Library:function:List::index](../Library/List.md#List-index)
-* [Library:function:List::index of](../Library/List.md#List-indexOf)
-* [Library:function:List::insert at](../Library/List.md#List-insertAt)
-* [Library:function:List::intercalate](../Library/List.md#List-intercalate)
-* [Library:function:List::intersperse](../Library/List.md#List-intersperse)
-* [Library:function:List::is empty](../Library/List.md#List-isEmpty)
-* [Library:function:List::is sorted](../Library/List.md#List-isSorted)
-* [Library:function:List::ito string](../Library/List.md#List-itoString)
-* [Library:function:List::last](../Library/List.md#List-last)
-* [Library:function:List::last index of](../Library/List.md#List-lastIndexOf)
-* [Library:function:List::mapper](../Library/List.md#List-mapper)
-* [Library:function:List::max](../Library/List.md#List-max)
-* [Library:function:List::merge](../Library/List.md#List-merge)
-* [Library:function:List::min](../Library/List.md#List-min)
-* [Library:function:List::mix](../Library/List.md#List-mix)
-* [Library:function:List::permutations](../Library/List.md#List-permutations)
-* [Library:function:List::permutations bag](../Library/List.md#List-permutationsBag)
-* [Library:function:List::pop](../Library/List.md#List-pop)
-* [Library:function:List::prefix](../Library/List.md#List-prefix)
-* [Library:function:List::push](../Library/List.md#List-push)
-* [Library:function:List::reducer](../Library/List.md#List-reducer)
-* [Library:function:List::remove](../Library/List.md#List-remove)
-* [Library:function:List::remove from bag](../Library/List.md#List-removeFromBag)
-* [Library:function:List::reverse](../Library/List.md#List-reverse)
-* [Library:function:List::shuffle](../Library/List.md#List-shuffle)
-* [Library:function:List::size](../Library/List.md#List-size)
-* [Library:function:List::slice](../Library/List.md#List-slice)
-* [Library:function:List::sort](../Library/List.md#List-sort)
-* [Library:function:List::split](../Library/List.md#List-split)
-* [Library:function:List::sum](../Library/List.md#List-sum)
-* [Library:function:List::tail](../Library/List.md#List-tail)
-* [Library:function:List::take](../Library/List.md#List-take)
-* [Library:function:List::take one from](../Library/List.md#List-takeOneFrom)
-* [Library:function:List::take while](../Library/List.md#List-takeWhile)
-* [Library:function:List::to map](../Library/List.md#List-toMap)
-* [Library:function:List::to map unique](../Library/List.md#List-toMapUnique)
-* [Library:function:List::to rel](../Library/List.md#List-toRel)
-* [Library:function:List::to set](../Library/List.md#List-toSet)
-* [Library:function:List::to string](../Library/List.md#List-toString)
-* [Library:function:List::top](../Library/List.md#List-top)
-* [Library:function:List::unzip2](../Library/List.md#List-unzip2)
-* [Library:function:List::unzip3](../Library/List.md#List-unzip3)
-* [Library:function:List::up till](../Library/List.md#List-upTill)
-* [Library:function:List::zip2](../Library/List.md#List-zip2)
-* [Library:function:List::zip3](../Library/List.md#List-zip3)
+* [concat](../Library/List.md#List-concat)
+* [delete](../Library/List.md#List-delete)
+* [distribution](../Library/List.md#List-distribution)
+* [drop](../Library/List.md#List-drop)
+* [dup](../Library/List.md#List-dup)
+* [elementAt](../Library/List.md#List-elementAt)
+* [getFirstFrom](../Library/List.md#List-getFirstFrom)
+* [getOneFrom](../Library/List.md#List-getOneFrom)
+* [head](../Library/List.md#List-head)
+* [headTail](../Library/List.md#List-headTail)
+* [index](../Library/List.md#List-index)
+* [indexOf](../Library/List.md#List-indexOf)
+* [insertAt](../Library/List.md#List-insertAt)
+* [intercalate](../Library/List.md#List-intercalate)
+* [intersperse](../Library/List.md#List-intersperse)
+* [isEmpty](../Library/List.md#List-isEmpty)
+* [isSorted](../Library/List.md#List-isSorted)
+* [itoString](../Library/List.md#List-itoString)
+* [last](../Library/List.md#List-last)
+* [lastIndexOf](../Library/List.md#List-lastIndexOf)
+* [mapper](../Library/List.md#List-mapper)
+* [max](../Library/List.md#List-max)
+* [merge](../Library/List.md#List-merge)
+* [min](../Library/List.md#List-min)
+* [mix](../Library/List.md#List-mix)
+* [permutations](../Library/List.md#List-permutations)
+* [permutationsBag](../Library/List.md#List-permutationsBag)
+* [pop](../Library/List.md#List-pop)
+* [prefix](../Library/List.md#List-prefix)
+* [push](../Library/List.md#List-push)
+* [reducer](../Library/List.md#List-reducer)
+* [remove](../Library/List.md#List-remove)
+* [removeFromBag](../Library/List.md#List-removeFromBag)
+* [reverse](../Library/List.md#List-reverse)
+* [shuffle](../Library/List.md#List-shuffle)
+* [size](../Library/List.md#List-size)
+* [slice](../Library/List.md#List-slice)
+* [sort](../Library/List.md#List-sort)
+* [split](../Library/List.md#List-split)
+* [sum](../Library/List.md#List-sum)
+* [tail](../Library/List.md#List-tail)
+* [take](../Library/List.md#List-take)
+* [takeOneFrom](../Library/List.md#List-takeOneFrom)
+* [takeWhile](../Library/List.md#List-takeWhile)
+* [toMap](../Library/List.md#List-toMap)
+* [toMapUnique](../Library/List.md#List-toMapUnique)
+* [toRel](../Library/List.md#List-toRel)
+* [toSet](../Library/List.md#List-toSet)
+* [toString](../Library/List.md#List-toString)
+* [top](../Library/List.md#List-top)
+* [unzip2](../Library/List.md#List-unzip2)
+* [unzip3](../Library/List.md#List-unzip3)
+* [upTill](../Library/List.md#List-upTill)
+* [zip2](../Library/List.md#List-zip2)
+* [zip3](../Library/List.md#List-zip3)
 
 
 ## function concat {#List-concat}
@@ -208,7 +208,7 @@ Pick a random element from a list.
 
 #### Description
 
-Get an arbitrary element from a list. See [take one from](../Library/List.md#List-takeOneFrom) for a function that also removes the selected element.
+Get an arbitrary element from a list. See [takeOneFrom](../Library/List.md#List-takeOneFrom) for a function that also removes the selected element.
 
 #### Examples
 
@@ -217,11 +217,11 @@ Get an arbitrary element from a list. See [take one from](../Library/List.md#Lis
 rascal>import List;
 ok
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "snake"
-rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "elephant"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "snake"
+rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
+str: "zebra"
 ```
 
 ## function getFirstFrom {#List-getFirstFrom}
@@ -236,7 +236,7 @@ Pick first element from a list.
 
 #### Description
 
-Get the first element from a list. As opposed to [get one from](../Library/List.md#List-getOneFrom) this function always returns the same (first) list element.
+Get the first element from a list. As opposed to [getOneFrom](../Library/List.md#List-getOneFrom) this function always returns the same (first) list element.
 
 ## function head {#List-head}
 
@@ -367,7 +367,7 @@ Index of first occurrence of an element in a list.
 #### Description
 
 Return index of first occurrence of `elt` in `lst`, or `-1` if `elt` is not found.
-Also see [last index of](../Library/List.md#List-lastIndexOf).
+Also see [lastIndexOf](../Library/List.md#List-lastIndexOf).
 
 #### Examples
 
@@ -535,7 +535,7 @@ Return index of last occurrence of elt in lst, or -1 if elt is not found.
 
 #### Description
 
-Also see [index of](../Library/List.md#List-indexOf).
+Also see [indexOf](../Library/List.md#List-indexOf).
 
 #### Examples
 
@@ -944,7 +944,7 @@ list[str]: ["mango","strawberry","pear","pineapple","banana","grape","kiwi"]
 rascal>sort(fruits);
 list[str]: ["banana","grape","kiwi","mango","pear","pineapple","strawberry"]
 rascal>sort(fruits, bool(str a, str b){ return size(a) > size(b); });
-list[str]: ["strawberry","pineapple","banana","grape","mango","pear","kiwi"]
+list[str]: ["strawberry","pineapple","banana","mango","grape","pear","kiwi"]
 ```
 
 ## function isSorted {#List-isSorted}
@@ -984,9 +984,9 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [4,1,2,3]
+list[int]: [1,3,2,4]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["owl","zebra","elephant","snake"]
+list[str]: ["zebra","snake","elephant","owl"]
 ```
 
 ## function split {#List-split}
@@ -1131,7 +1131,7 @@ Select an arbitrary element from `lst`, and return a tuple consisting of:
 *  a new list consisting of all elements of `lst` except the selected element.
 
 
-See [get one from](../Library/List.md#List-getOneFrom) to only selected an element from a list.
+See [getOneFrom](../Library/List.md#List-getOneFrom) to only selected an element from a list.
 
 #### Examples
 
@@ -1140,17 +1140,17 @@ See [get one from](../Library/List.md#List-getOneFrom) to only selected an eleme
 rascal>import List;
 ok
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <50,[10,20,30,40]>
+tuple[int,list[int]]: <20,[10,30,40,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <10,[20,30,40,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <50,[10,20,30,40]>
-rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
-rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
+tuple[int,list[int]]: <20,[10,30,40,50]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
+rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
+tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
+rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
+tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
 ```
 
 ## function takeWhile {#List-takeWhile}

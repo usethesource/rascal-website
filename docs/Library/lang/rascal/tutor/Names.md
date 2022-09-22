@@ -48,7 +48,9 @@ data Message (str cause="")
 
 ## function addSpaces {#lang-rascal-tutor-Names-addSpaces}
 
-* ``str addSpaces(/^<prefix:.*[a-z0-9]><postfix:[A-Z].+>/)``
+* ``str addSpaces(/^<prefix:[^:]+>:<postfix:[^:].*>$/)``
+* ``str addSpaces(/^<prefix:.+>::<name:[^:]+>$/)``
+* ``str addSpaces(/^<prefix:[A-Za-z0-9\ ]+[a-z0-9]><postfix:[A-Z].+>/)``
 * ``default str addSpaces(str s)``
 
 ## function pathToRoot {#lang-rascal-tutor-Names-pathToRoot}

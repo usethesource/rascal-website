@@ -29,7 +29,7 @@ This alphabetical order can be influenced by explicitly stating concepts in the 
 The effect is that the concepts listed there will be shown first, followed by the unmentioned subconcepts
 in alphabetical order.
 
-The details declaration also influences the order and contents of the [Table of contents](../../../Tutor/Markup/StructureMarkup/TableOfContents) markup.
+The details declaration also influences the order and contents of the [table of contents](../../../Tutor/Markup/StructureMarkup/TableOfContents) markup.
 
 #### Examples
 

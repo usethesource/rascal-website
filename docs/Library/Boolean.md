@@ -16,11 +16,11 @@ Library functions for Booleans.
 For operators on Boolean values see [Boolean](../Rascal/Expressions/Values/Boolean) in the Rascal Language Reference.
 
 The following functions are defined for Booleans:
-* [Library:function:Boolean::arb bool](../Library/Boolean.md#Boolean-arbBool)
-* [Library:function:Boolean::from string](../Library/Boolean.md#Boolean-fromString)
-* [Library:function:Boolean::to int](../Library/Boolean.md#Boolean-toInt)
-* [Library:function:Boolean::to real](../Library/Boolean.md#Boolean-toReal)
-* [Library:function:Boolean::to string](../Library/Boolean.md#Boolean-toString)
+* [arbBool](../Library/Boolean.md#Boolean-arbBool)
+* [fromString](../Library/Boolean.md#Boolean-fromString)
+* [toInt](../Library/Boolean.md#Boolean-toInt)
+* [toReal](../Library/Boolean.md#Boolean-toReal)
+* [toString](../Library/Boolean.md#Boolean-toString)
 
 
 ## function arbBool {#Boolean-arbBool}
@@ -43,7 +43,7 @@ bool: false
 rascal>arbBool();
 bool: true
 rascal>arbBool();
-bool: true
+bool: false
 ```
 
 #### Benefits

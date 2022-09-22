@@ -14,13 +14,13 @@ Statistical inference methods.
 #### Description
 
 The following functions are provided:
-* [Library:function:analysis::statistics::Inference::anova f value](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaFValue)
-* [Library:function:analysis::statistics::Inference::anova p value](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaPValue)
-* [Library:function:analysis::statistics::Inference::anova test](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaTest)
-* [Library:function:analysis::statistics::Inference::chi square](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-chiSquare)
-* [Library:function:analysis::statistics::Inference::chi square test](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-chiSquareTest)
-* [Library:function:analysis::statistics::Inference::gini](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-gini)
-* [Library:function:analysis::statistics::Inference::t test](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-tTest)
+* [anovaFValue](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaFValue)
+* [anovaPValue](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaPValue)
+* [anovaTest](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaTest)
+* [chiSquare](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-chiSquare)
+* [chiSquareTest](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-chiSquareTest)
+* [gini](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-gini)
+* [tTest](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-tTest)
 
 
 ## function chiSquare {#analysis-statistics-Inference-chiSquare}

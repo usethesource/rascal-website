@@ -45,13 +45,13 @@ in most cases we directly refer to
 
 The following topics will be described here:
 
-* [Tutor:API](../Tutor/API)
-* [Tutor:Architecture](../Tutor/Architecture)
-* [Tutor:Authoring](../Tutor/Authoring)
-* [Tutor:Concept](../Tutor/Concept)
-* [Tutor:Maintenance](../Tutor/Maintenance)
-* [Tutor:Markup](../Tutor/Markup)
-* [Tutor:Tutor](../Tutor/)
+* [API](../Tutor/API)
+* [Architecture](../Tutor/Architecture)
+* [Authoring](../Tutor/Authoring)
+* [Concept](../Tutor/Concept)
+* [Maintenance](../Tutor/Maintenance)
+* [Markup](../Tutor/Markup)
+* [Tutor](../Tutor/)
 
 #### Benefits
 
@@ -65,5 +65,5 @@ The following topics will be described here:
 * We have to run the tutor compiler manually to find out about possible errors. There is no IDE support yet.
 * The Tutor compiler is not incremental yet. It will re-compile everything from scratch even if nothing has changed.
 * Downstream tools, such as Docusaurus, may detect issues that the tutor compiler does not detect. For example broken links that are not [Concept](../Tutor/Concept) links will not be detected early. This means you may have to go back and fix the documentation, release it in a `jar` and then try the downstream tool again.
-* The interactive [Question markup](../Tutor/Markup/QuestionMarkup) part of the compiler is currently under maintenance and therefore unavailable.
+* The interactive [question markup](../Tutor/Markup/QuestionMarkup) part of the compiler is currently under maintenance and therefore unavailable.
 

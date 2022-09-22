@@ -33,7 +33,7 @@ The concept name of this concept is `ReferenceToConcept` while its display name 
 We can create a reference to the `InlineMarkup` concept in the current course in the following ways:
 
 * `\[Inline Markup](../../../../Tutor/Markup/InlineMarkup)` (using the display name) gives [Inline Markup](../../../../Tutor/Markup/InlineMarkup).
-* `\[Inline markup](../../../../Tutor/Markup/InlineMarkup)` (using its parent concept name and concept name) gives [Inline markup](../../../../Tutor/Markup/InlineMarkup).
+* `\[InlineMarkup](../../../../Tutor/Markup/InlineMarkup)` (using its parent concept name and concept name) gives [InlineMarkup](../../../../Tutor/Markup/InlineMarkup).
 * `\[see inline markup](../../../../Tutor/Markup/InlineMarkup)` gives [see inline markup](../../../../Tutor/Markup/InlineMarkup)
 
 Here is a reference to another course:

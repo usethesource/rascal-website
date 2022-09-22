@@ -17,7 +17,7 @@ Special cases exist when one of the patterns _Pat_~i~ is
 
 *  a [Variable](../../../Rascal/Patterns/Variable) with a type that is identical to the element type of the subject list: the variable is matched with the value at the corresponding position in the subject list.
 
-*  a [Multi variable](../../../Rascal/Patterns/MultiVariable), with an optional element type that is identical to the element type of the subject list: list matching is applied and the variable can match an arbitrary number of elements of the subject list.
+*  a [MultiVariable](../../../Rascal/Patterns/MultiVariable), with an optional element type that is identical to the element type of the subject list: list matching is applied and the variable can match an arbitrary number of elements of the subject list.
 
 *  a [Variable](../../../Rascal/Patterns/Variable), where the variable has been declared with a list type, but not initialized, outside the pattern: list matching is applied and the variable can match an arbitrary number of elements of the subject list.
 

@@ -39,7 +39,7 @@ An n-ary list relation with m tuples is denoted by
 where the _E_~ij~ are expressions that yield the desired element type _T_~i~.
 
 Since list relations are a form of list all operations (see [List](../../../../Rascal/Expressions/Values/List)) and functions
-(see [Library:module:List](../../../../Library/List.md)) are also applicable to relations.
+(see [List](../../../../Library/List.md)) are also applicable to relations.
 
 The following additional operators are provided for list relations:
 * ((Rascal:Expressions/Values/ListRelation))

@@ -12,8 +12,8 @@ To simplify later processing, Func programs are converted to an abstract syntax 
 
 #### Examples
 
-The concrete syntax for Func is described in [Concrete syntax](../../../../Recipes/Languages/Func/ConcreteSyntax) and its
-abstract syntax in [Abstract syntax](../../../../Recipes/Languages/Func/AbstractSyntax).
+The concrete syntax for Func is described in [ConcreteSyntax](../../../../Recipes/Languages/Func/ConcreteSyntax) and its
+abstract syntax in [AbstractSyntax](../../../../Recipes/Languages/Func/AbstractSyntax).
 Rather than manually writing conversion rules from Func parse trees to Func abstract syntax trees
 we use our secret weapon: [implode](../../../../Library/ParseTree.md#ParseTree-implode) that performs the mapping for us.
 As you see when you compare the concrete and abstract syntax, the ground work has already been done

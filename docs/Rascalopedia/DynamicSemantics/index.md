@@ -10,7 +10,7 @@ Description of the execution behaviour of a program.
 
 Dynamic semantics describes the execution behaviour of a program and includes:
 
-*  Treatment of declarations, names, variables and [Rascalopedia:Scope](../../Rascalopedia/Scope)s.
+*  Treatment of declarations, names, variables and [Scope](../../Rascalopedia/Scope)s.
 *  Execution of procedures, statements and expressions.
 
 Contrast with [Static Semantics](../../Rascalopedia/StaticSemantics) that describes pre-execution behaviour.

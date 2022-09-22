@@ -27,7 +27,7 @@ while the leaf nodes are labeled by terminals (characters) of the grammar.
 *  `Tree` is a subtype of the type [node](../Rascal/Expressions/Values/Node).
 *  All types (non-terminals) declared in [syntax definitions](../Rascal/Declarations/SyntaxDefinition) are sub-types of `Tree`.
 *  All [concrete syntax expressions](../Rascal/Expressions/ConcreteSyntax) produce parse trees with a type corresponding to a non-terminals.
-*  Trees can be annotated in various ways, see features for [IDE construction][Rascal concepts:IDEConstruction](../RascalConcepts/IDEConstruction).
+*  Trees can be annotated in various ways, see features for [IDE construction][IDEConstruction](../RascalConcepts/IDEConstruction).
    Most importantly the `\loc` annotation always points to the source location of any (sub) parse tree.
 
 
@@ -40,7 +40,7 @@ _Advanced users_ may want to create tools that analyze any parse tree, regardles
 
 A parse tree is of type [Tree](../Library/ParseTree.md#ParseTree-Tree) using the auxiliary types 
 [Production](../Library/ParseTree.md#ParseTree-Production), [Symbol](../Library/ParseTree.md#ParseTree-Symbol), [Condition](../Library/ParseTree.md#ParseTree-Condition),
-[Attr](../Library/ParseTree.md#ParseTree-Attr), [Associativity](../Library/ParseTree.md#ParseTree-Associativity), [Char range](../Library/ParseTree.md#ParseTree-CharRange).
+[Attr](../Library/ParseTree.md#ParseTree-Attr), [Associativity](../Library/ParseTree.md#ParseTree-Associativity), [CharRange](../Library/ParseTree.md#ParseTree-CharRange).
 Effectively, a parse tree is a nested tree structure of type `Tree`. 
 
 *  Most internal nodes are applications (`appl`) of a `Production` to a list of children `Tree` nodes. 
@@ -200,7 +200,7 @@ Production in ParseTrees
 
 #### Description
 
-The type `Production` is introduced in [Library:module:Type](../Library/Type.md), see [Production](../Library/Type.md#Type-Production). Here we extend it with the symbols
+The type `Production` is introduced in [Type](../Library/Type.md), see [Production](../Library/Type.md#Type-Production). Here we extend it with the symbols
 that can occur in a ParseTree. We also extend productions with basic combinators allowing to
 construct ordered and un-ordered compositions, and associativity groups.
 
@@ -300,7 +300,7 @@ Symbols that can occur in a ParseTree
 
 #### Description
 
-The type `Symbol` is introduced in [Library:module:Type](../Library/Type.md), see [Symbol](../Library/Type.md#Type-Symbol), to represent the basic Rascal types,
+The type `Symbol` is introduced in [Type](../Library/Type.md), see [Symbol](../Library/Type.md#Type-Symbol), to represent the basic Rascal types,
 e.g., `int`, `list`, and `rel`. Here we extend it with the symbols that may occur in a ParseTree.
 
 <1>  The `start` symbol wraps any symbol to indicate that it is a start symbol of the grammar and

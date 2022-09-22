@@ -38,20 +38,20 @@ Most language concepts are described separately but some features we just mentio
 *  There is an extensive library for built-in datatypes, input/output, fact extraction from Java source code, visualization, and more.
 
 Here are the concepts to be discussed:
-* [Static typing](../RascalConcepts/StaticTyping)
+* [StaticTyping](../RascalConcepts/StaticTyping)
 * [Datatypes](../RascalConcepts/Datatypes)
-* [Immutable values](../RascalConcepts/ImmutableValues)
+* [immutable values](../RascalConcepts/ImmutableValues)
 * [Enumerating](../RascalConcepts/Enumerating)
 * [Comprehensions](../RascalConcepts/Comprehensions)
-* [Pattern matching](../RascalConcepts/PatternMatching)
-* [Control structures](../RascalConcepts/ControlStructures)
-* [Case distinction](../RascalConcepts/CaseDistinction)
+* [pattern matching](../RascalConcepts/PatternMatching)
+* [control structures](../RascalConcepts/ControlStructures)
+* [case distinction](../RascalConcepts/CaseDistinction)
 * [Visiting](../RascalConcepts/Visiting)
 * [Functions](../RascalConcepts/Functions)
-* [Syntax definition and parsing](../RascalConcepts/SyntaxDefinitionAndParsing)
+* [syntax definition and parsing](../RascalConcepts/SyntaxDefinitionAndParsing)
 * [Rewriting](../RascalConcepts/Rewriting)
 * [IDEConstruction](../RascalConcepts/IDEConstruction)
-* [Code models](../RascalConcepts/CodeModels)
-* [Equation solving](../RascalConcepts/EquationSolving)
+* [code models](../RascalConcepts/CodeModels)
+* [equation solving](../RascalConcepts/EquationSolving)
 
 

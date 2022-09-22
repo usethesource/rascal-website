@@ -16,46 +16,46 @@ Library functions for strings.
 For operators on strings see [String](../Rascal/Expressions/Values/String) in the Rascal Language Reference.
 
 The following functions are defined for strings:
-* [Library:function:String::arb string](../Library/String.md#String-arbString)
-* [Library:function:String::capitalize](../Library/String.md#String-capitalize)
-* [Library:function:String::center](../Library/String.md#String-center)
-* [Library:function:String::char at](../Library/String.md#String-charAt)
-* [Library:function:String::chars](../Library/String.md#String-chars)
-* [Library:function:String::contains](../Library/String.md#String-contains)
-* [Library:function:String::deescape](../Library/String.md#String-deescape)
-* [Library:function:String::ends with](../Library/String.md#String-endsWith)
-* [Library:function:String::escape](../Library/String.md#String-escape)
-* [Library:function:String::find all](../Library/String.md#String-findAll)
-* [Library:function:String::find first](../Library/String.md#String-findFirst)
-* [Library:function:String::find last](../Library/String.md#String-findLast)
-* [Library:function:String::format](../Library/String.md#String-format)
-* [Library:function:String::from base64](../Library/String.md#String-fromBase64)
-* [Library:function:String::is empty](../Library/String.md#String-isEmpty)
-* [Library:function:String::is valid character](../Library/String.md#String-isValidCharacter)
-* [Library:function:String::left](../Library/String.md#String-left)
-* [Library:function:String::replace all](../Library/String.md#String-replaceAll)
-* [Library:function:String::replace first](../Library/String.md#String-replaceFirst)
-* [Library:function:String::replace last](../Library/String.md#String-replaceLast)
-* [Library:function:String::reverse](../Library/String.md#String-reverse)
-* [Library:function:String::rexp match](../Library/String.md#String-rexpMatch)
-* [Library:function:String::right](../Library/String.md#String-right)
-* [Library:function:String::size](../Library/String.md#String-size)
-* [Library:function:String::split](../Library/String.md#String-split)
-* [Library:function:String::squeeze](../Library/String.md#String-squeeze)
-* [Library:function:String::starts with](../Library/String.md#String-startsWith)
-* [Library:function:String::string char](../Library/String.md#String-stringChar)
-* [Library:function:String::string chars](../Library/String.md#String-stringChars)
-* [Library:function:String::substitute](../Library/String.md#String-substitute)
-* [Library:function:String::substring](../Library/String.md#String-substring)
-* [Library:function:String::to base64](../Library/String.md#String-toBase64)
-* [Library:function:String::to int](../Library/String.md#String-toInt)
-* [Library:function:String::to location](../Library/String.md#String-toLocation)
-* [Library:function:String::to lower case](../Library/String.md#String-toLowerCase)
-* [Library:function:String::to real](../Library/String.md#String-toReal)
-* [Library:function:String::to upper case](../Library/String.md#String-toUpperCase)
-* [Library:function:String::trim](../Library/String.md#String-trim)
-* [Library:function:String::uncapitalize](../Library/String.md#String-uncapitalize)
-* [Library:function:String::wrap](../Library/String.md#String-wrap)
+* [arbString](../Library/String.md#String-arbString)
+* [capitalize](../Library/String.md#String-capitalize)
+* [center](../Library/String.md#String-center)
+* [charAt](../Library/String.md#String-charAt)
+* [chars](../Library/String.md#String-chars)
+* [contains](../Library/String.md#String-contains)
+* [deescape](../Library/String.md#String-deescape)
+* [endsWith](../Library/String.md#String-endsWith)
+* [escape](../Library/String.md#String-escape)
+* [findAll](../Library/String.md#String-findAll)
+* [findFirst](../Library/String.md#String-findFirst)
+* [findLast](../Library/String.md#String-findLast)
+* [format](../Library/String.md#String-format)
+* [fromBase64](../Library/String.md#String-fromBase64)
+* [isEmpty](../Library/String.md#String-isEmpty)
+* [isValidCharacter](../Library/String.md#String-isValidCharacter)
+* [left](../Library/String.md#String-left)
+* [replaceAll](../Library/String.md#String-replaceAll)
+* [replaceFirst](../Library/String.md#String-replaceFirst)
+* [replaceLast](../Library/String.md#String-replaceLast)
+* [reverse](../Library/String.md#String-reverse)
+* [rexpMatch](../Library/String.md#String-rexpMatch)
+* [right](../Library/String.md#String-right)
+* [size](../Library/String.md#String-size)
+* [split](../Library/String.md#String-split)
+* [squeeze](../Library/String.md#String-squeeze)
+* [startsWith](../Library/String.md#String-startsWith)
+* [stringChar](../Library/String.md#String-stringChar)
+* [stringChars](../Library/String.md#String-stringChars)
+* [substitute](../Library/String.md#String-substitute)
+* [substring](../Library/String.md#String-substring)
+* [toBase64](../Library/String.md#String-toBase64)
+* [toInt](../Library/String.md#String-toInt)
+* [toLocation](../Library/String.md#String-toLocation)
+* [toLowerCase](../Library/String.md#String-toLowerCase)
+* [toReal](../Library/String.md#String-toReal)
+* [toUpperCase](../Library/String.md#String-toUpperCase)
+* [trim](../Library/String.md#String-trim)
+* [uncapitalize](../Library/String.md#String-uncapitalize)
+* [wrap](../Library/String.md#String-wrap)
 
 
 ## function center {#String-center}
@@ -97,7 +97,7 @@ Return character in a string by its index position.
 #### Description
 
 Return the character at position `i` in string `s` as integer character code.
-Also see [string char](../Library/String.md#String-stringChar) that converts character codes back to string.
+Also see [stringChar](../Library/String.md#String-stringChar) that converts character codes back to string.
 
 #### Examples
 
@@ -122,7 +122,7 @@ Return characters of a string.
 #### Description
 
 Return a list of the characters of `s` as integer character codes.
-Also see [string chars](../Library/String.md#String-stringChars) that converts character codes back to string.
+Also see [stringChars](../Library/String.md#String-stringChars) that converts character codes back to string.
 
 #### Examples
 

@@ -11,7 +11,7 @@ The expressions available in Rascal.
 The expression is the basic unit of evaluation and may consist of the ingredients shown in the figure.
 
 *  An elementary _literal value_, e.g. constants of the types [Boolean](../../Rascal/Expressions/Values/Boolean), [Integer](../../Rascal/Expressions/Values/Integer), [Real](../../Rascal/Expressions/Values/Real), 
-  [Number](../../Rascal/Expressions/Values/Number), [String](../../Rascal/Expressions/Values/String), [Location](../../Rascal/Expressions/Values/Location) or [Date time](../../Rascal/Expressions/Values/DateTime).
+  [Number](../../Rascal/Expressions/Values/Number), [String](../../Rascal/Expressions/Values/String), [Location](../../Rascal/Expressions/Values/Location) or [DateTime](../../Rascal/Expressions/Values/DateTime).
 
 *  A _structured value_ for [List](../../Rascal/Expressions/Values/List), [Set](../../Rascal/Expressions/Values/Set), [Map](../../Rascal/Expressions/Values/Map), [Tuple](../../Rascal/Expressions/Values/Tuple) or [Relation](../../Rascal/Expressions/Values/Relation). 
   The elements are first evaluated before the structured value is built.

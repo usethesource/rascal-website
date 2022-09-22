@@ -5,7 +5,7 @@ title: API documentation
 #### Synopsis
 
 The Tutor compiler reads Rascal source files and produces [Concept](../../Tutor/Concept) markdown files 
-for each [Rascal:Module](../../Rascal/Declarations/Module).
+for each [Module](../../Rascal/Declarations/Module).
 
 #### Description
 
@@ -30,7 +30,7 @@ title: <moduleName>
 
 So, for all standard [Concept](../../Tutor/Concept) headers, like `Synopsis` and `Benefits` there is a place at every declaration.
 
-The content of the header paragraphs is either directly derived from source code (like function signature and data definitions), or it is taken from the following [Rascal:Tag](../../Rascal/Declarations/Tag) definitions on each declaration:
+The content of the header paragraphs is either directly derived from source code (like function signature and data definitions), or it is taken from the following [Tag](../../Rascal/Declarations/Tag) definitions on each declaration:
 * `@doc` may contain literally the headers of a [Concept](../../Tutor/Concept), like `#### Synopsis`. This notation is deprecated in favor of the tags below.
 * `@synopsis` is a single line description of the definition.
 * `@description` is a multi-line explanantion of the definition.

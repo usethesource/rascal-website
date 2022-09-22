@@ -15,7 +15,7 @@ This is the complete list:
  
 | Pattern              | Syntax                                                                       |
 | --- | --- |
-| Literal              | [Boolean](../../Rascal/Expressions/Values/Boolean), [Integer](../../Rascal/Expressions/Values/Integer), [Real](../../Rascal/Expressions/Values/Real), [Number](../../Rascal/Expressions/Values/Number), [String](../../Rascal/Expressions/Values/String), [Location](../../Rascal/Expressions/Values/Location), or [Date time](../../Rascal/Expressions/Values/DateTime) |
+| Literal              | [Boolean](../../Rascal/Expressions/Values/Boolean), [Integer](../../Rascal/Expressions/Values/Integer), [Real](../../Rascal/Expressions/Values/Real), [Number](../../Rascal/Expressions/Values/Number), [String](../../Rascal/Expressions/Values/String), [Location](../../Rascal/Expressions/Values/Location), or [DateTime](../../Rascal/Expressions/Values/DateTime) |
 | Regular Expression   | `/<Regular Expression>/` |
 | Variable declaration | `Type Var`                                                               |
 | Multi-variable       | `*Var`, `*Type Var`                                                    |
@@ -37,7 +37,7 @@ Patterns are used to *dispatch* functions and conditional control flow, to *extr
 from values and to conditionally *filter* values. The pattern following pattern kinds can be arbitrarily nested, following
 the above syntax:
 
-* [Rascal:Patterns](../../Rascal/Patterns)
+* [Patterns](../../Rascal/Patterns)
 * ((Rascal:Patterns/Concrete))
 * ((Rascal:Patterns/Descendant))
 * ((Rascal:Patterns/Labelled))
@@ -59,7 +59,7 @@ All these patterns may be used in:
 *  on the left of the [Match](../../Rascal/Expressions/Values/Boolean/Match) operator (`:=`),
 *  on the left of the [Enumerator](../../Rascal/Expressions/Comprehensions/Enumerator) operator (`<-`), and
 *  as formal parameters of [Function](../../Rascal/Declarations/Function)s. 
-*  [Try catch](../../Rascal/Statements/TryCatch) statements to match thrown exceptions.
+*  [try catch](../../Rascal/Statements/TryCatch) statements to match thrown exceptions.
 
 Each pattern binds variables in a conditional scope:
 

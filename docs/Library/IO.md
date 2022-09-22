@@ -14,70 +14,70 @@ Library functions for input/output.
 #### Description
 
 The following input/output functions are defined:
-* [Library:constructor:IO::change event](../Library/IO.md#IO-changeEvent)
-* [Library:constructor:IO::created](../Library/IO.md#IO-created)
-* [Library:constructor:IO::deleted](../Library/IO.md#IO-deleted)
-* [Library:constructor:IO::directory](../Library/IO.md#IO-directory)
-* [Library:constructor:IO::file](../Library/IO.md#IO-file)
-* [Library:constructor:IO::modified](../Library/IO.md#IO-modified)
-* [Library:data:IO::Location change event](../Library/IO.md#IO-LocationChangeEvent)
-* [Library:data:IO::Location change type](../Library/IO.md#IO-LocationChangeType)
-* [Library:data:IO::Location type](../Library/IO.md#IO-LocationType)
-* [Library:function:IO::append to file](../Library/IO.md#IO-appendToFile)
-* [Library:function:IO::append to file enc](../Library/IO.md#IO-appendToFileEnc)
-* [Library:function:IO::arb loc](../Library/IO.md#IO-arbLoc)
-* [Library:function:IO::bprintln](../Library/IO.md#IO-bprintln)
-* [Library:function:IO::can encode](../Library/IO.md#IO-canEncode)
-* [Library:function:IO::charsets](../Library/IO.md#IO-charsets)
-* [Library:function:IO::copy](../Library/IO.md#IO-copy)
-* [Library:function:IO::copy directory](../Library/IO.md#IO-copyDirectory)
-* [Library:function:IO::copy file](../Library/IO.md#IO-copyFile)
-* [Library:function:IO::create link](../Library/IO.md#IO-createLink)
-* [Library:function:IO::created](../Library/IO.md#IO-created)
-* [Library:function:IO::exists](../Library/IO.md#IO-exists)
-* [Library:function:IO::find](../Library/IO.md#IO-find)
-* [Library:function:IO::iprint](../Library/IO.md#IO-iprint)
-* [Library:function:IO::iprint exp](../Library/IO.md#IO-iprintExp)
-* [Library:function:IO::iprint to file](../Library/IO.md#IO-iprintToFile)
-* [Library:function:IO::iprint to string](../Library/IO.md#IO-iprintToString)
-* [Library:function:IO::iprintln](../Library/IO.md#IO-iprintln)
-* [Library:function:IO::iprintln exp](../Library/IO.md#IO-iprintlnExp)
-* [Library:function:IO::is directory](../Library/IO.md#IO-isDirectory)
-* [Library:function:IO::is file](../Library/IO.md#IO-isFile)
-* [Library:function:IO::last modified](../Library/IO.md#IO-lastModified)
-* [Library:function:IO::list entries](../Library/IO.md#IO-listEntries)
-* [Library:function:IO::md5 hash](../Library/IO.md#IO-md5Hash)
-* [Library:function:IO::md5 hash file](../Library/IO.md#IO-md5HashFile)
-* [Library:function:IO::mk directory](../Library/IO.md#IO-mkDirectory)
-* [Library:function:IO::move](../Library/IO.md#IO-move)
-* [Library:function:IO::print](../Library/IO.md#IO-print)
-* [Library:function:IO::print exp](../Library/IO.md#IO-printExp)
-* [Library:function:IO::println](../Library/IO.md#IO-println)
-* [Library:function:IO::println exp](../Library/IO.md#IO-printlnExp)
-* [Library:function:IO::read base64](../Library/IO.md#IO-readBase64)
-* [Library:function:IO::read file](../Library/IO.md#IO-readFile)
-* [Library:function:IO::read file bytes](../Library/IO.md#IO-readFileBytes)
-* [Library:function:IO::read file enc](../Library/IO.md#IO-readFileEnc)
-* [Library:function:IO::read file lines](../Library/IO.md#IO-readFileLines)
-* [Library:function:IO::read file lines enc](../Library/IO.md#IO-readFileLinesEnc)
-* [Library:function:IO::register locations](../Library/IO.md#IO-registerLocations)
-* [Library:function:IO::remove](../Library/IO.md#IO-remove)
-* [Library:function:IO::resolve location](../Library/IO.md#IO-resolveLocation)
-* [Library:function:IO::rprint](../Library/IO.md#IO-rprint)
-* [Library:function:IO::rprintln](../Library/IO.md#IO-rprintln)
-* [Library:function:IO::set last modified](../Library/IO.md#IO-setLastModified)
-* [Library:function:IO::to base64](../Library/IO.md#IO-toBase64)
-* [Library:function:IO::touch](../Library/IO.md#IO-touch)
-* [Library:function:IO::unregister locations](../Library/IO.md#IO-unregisterLocations)
-* [Library:function:IO::unwatch](../Library/IO.md#IO-unwatch)
-* [Library:function:IO::uudecode](../Library/IO.md#IO-uudecode)
-* [Library:function:IO::uuencode](../Library/IO.md#IO-uuencode)
-* [Library:function:IO::watch](../Library/IO.md#IO-watch)
-* [Library:function:IO::write base64](../Library/IO.md#IO-writeBase64)
-* [Library:function:IO::write file](../Library/IO.md#IO-writeFile)
-* [Library:function:IO::write file bytes](../Library/IO.md#IO-writeFileBytes)
-* [Library:function:IO::write file enc](../Library/IO.md#IO-writeFileEnc)
-* [Library:function:IO::write file lines](../Library/IO.md#IO-writeFileLines)
+* [changeEvent](../Library/IO.md#IO-changeEvent)
+* [created](../Library/IO.md#IO-created)
+* [deleted](../Library/IO.md#IO-deleted)
+* [directory](../Library/IO.md#IO-directory)
+* [file](../Library/IO.md#IO-file)
+* [modified](../Library/IO.md#IO-modified)
+* [LocationChangeEvent](../Library/IO.md#IO-LocationChangeEvent)
+* [LocationChangeType](../Library/IO.md#IO-LocationChangeType)
+* [LocationType](../Library/IO.md#IO-LocationType)
+* [appendToFile](../Library/IO.md#IO-appendToFile)
+* [appendToFileEnc](../Library/IO.md#IO-appendToFileEnc)
+* [arbLoc](../Library/IO.md#IO-arbLoc)
+* [bprintln](../Library/IO.md#IO-bprintln)
+* [canEncode](../Library/IO.md#IO-canEncode)
+* [charsets](../Library/IO.md#IO-charsets)
+* [copy](../Library/IO.md#IO-copy)
+* [copyDirectory](../Library/IO.md#IO-copyDirectory)
+* [copyFile](../Library/IO.md#IO-copyFile)
+* [createLink](../Library/IO.md#IO-createLink)
+* [created](../Library/IO.md#IO-created)
+* [exists](../Library/IO.md#IO-exists)
+* [find](../Library/IO.md#IO-find)
+* [iprint](../Library/IO.md#IO-iprint)
+* [iprintExp](../Library/IO.md#IO-iprintExp)
+* [iprintToFile](../Library/IO.md#IO-iprintToFile)
+* [iprintToString](../Library/IO.md#IO-iprintToString)
+* [iprintln](../Library/IO.md#IO-iprintln)
+* [iprintlnExp](../Library/IO.md#IO-iprintlnExp)
+* [isDirectory](../Library/IO.md#IO-isDirectory)
+* [isFile](../Library/IO.md#IO-isFile)
+* [lastModified](../Library/IO.md#IO-lastModified)
+* [listEntries](../Library/IO.md#IO-listEntries)
+* [md5Hash](../Library/IO.md#IO-md5Hash)
+* [md5HashFile](../Library/IO.md#IO-md5HashFile)
+* [mkDirectory](../Library/IO.md#IO-mkDirectory)
+* [move](../Library/IO.md#IO-move)
+* [print](../Library/IO.md#IO-print)
+* [printExp](../Library/IO.md#IO-printExp)
+* [println](../Library/IO.md#IO-println)
+* [printlnExp](../Library/IO.md#IO-printlnExp)
+* [readBase64](../Library/IO.md#IO-readBase64)
+* [readFile](../Library/IO.md#IO-readFile)
+* [readFileBytes](../Library/IO.md#IO-readFileBytes)
+* [readFileEnc](../Library/IO.md#IO-readFileEnc)
+* [readFileLines](../Library/IO.md#IO-readFileLines)
+* [readFileLinesEnc](../Library/IO.md#IO-readFileLinesEnc)
+* [registerLocations](../Library/IO.md#IO-registerLocations)
+* [remove](../Library/IO.md#IO-remove)
+* [resolveLocation](../Library/IO.md#IO-resolveLocation)
+* [rprint](../Library/IO.md#IO-rprint)
+* [rprintln](../Library/IO.md#IO-rprintln)
+* [setLastModified](../Library/IO.md#IO-setLastModified)
+* [toBase64](../Library/IO.md#IO-toBase64)
+* [touch](../Library/IO.md#IO-touch)
+* [unregisterLocations](../Library/IO.md#IO-unregisterLocations)
+* [unwatch](../Library/IO.md#IO-unwatch)
+* [uudecode](../Library/IO.md#IO-uudecode)
+* [uuencode](../Library/IO.md#IO-uuencode)
+* [watch](../Library/IO.md#IO-watch)
+* [writeBase64](../Library/IO.md#IO-writeBase64)
+* [writeFile](../Library/IO.md#IO-writeFile)
+* [writeFileBytes](../Library/IO.md#IO-writeFileBytes)
+* [writeFileEnc](../Library/IO.md#IO-writeFileEnc)
+* [writeFileLines](../Library/IO.md#IO-writeFileLines)
 
 
 ## function registerLocations {#IO-registerLocations}
@@ -294,9 +294,9 @@ Print an indented representation of a value.
 
 #### Description
 
-See [iprint exp](../Library/IO.md#IO-iprintExp) for a version that returns its argument as result
+See [iprintExp](../Library/IO.md#IO-iprintExp) for a version that returns its argument as result
 and [iprintln](../Library/IO.md#IO-iprintln) for a version that adds a newline
-and [iprint to file](../Library/IO.md#IO-iprintToFile) for a version that prints to a file.
+and [iprintToFile](../Library/IO.md#IO-iprintToFile) for a version that prints to a file.
 
 #### Examples
 
@@ -326,7 +326,7 @@ Print an indented representation of a value to the specified location.
 #### Description
 
 See [iprint](../Library/IO.md#IO-iprint) for a version that displays the result on the console
-and [iprint exp](../Library/IO.md#IO-iprintExp) for a version that returns its argument as result
+and [iprintExp](../Library/IO.md#IO-iprintExp) for a version that returns its argument as result
 and [iprintln](../Library/IO.md#IO-iprintln) for a version that adds a newline.
 
 #### Examples
@@ -354,7 +354,7 @@ Print an indented representation of a value and returns the value as result.
 
 #### Description
 
-See [iprintln exp](../Library/IO.md#IO-iprintlnExp) for a version that adds a newline.
+See [iprintlnExp](../Library/IO.md#IO-iprintlnExp) for a version that adds a newline.
 
 #### Examples
 
@@ -387,7 +387,7 @@ Print an indented representation of a value followed by a newline and returns th
 
 #### Description
 
-See [iprint exp](../Library/IO.md#IO-iprintExp) for a version that does not add a newline.
+See [iprintExp](../Library/IO.md#IO-iprintExp) for a version that does not add a newline.
 
 #### Examples
 
@@ -420,11 +420,11 @@ Print a indented representation of a value and add a newline at the end.
 
 #### Description
 
-See [iprintln exp](../Library/IO.md#IO-iprintlnExp) for a version that returns its argument as result
+See [iprintlnExp](../Library/IO.md#IO-iprintlnExp) for a version that returns its argument as result
 and [iprint](../Library/IO.md#IO-iprint) for a version that does not add a newline.
 
 By default we only print the first 1000 lines, if you want to print larger values, either 
-use [write text value file](../Library/ValueIO.md#ValueIO-writeTextValueFile) or change the limit with the lineLimit parameter.
+use [writeTextValueFile](../Library/ValueIO.md#ValueIO-writeTextValueFile) or change the limit with the lineLimit parameter.
 
 #### Examples
 
@@ -596,7 +596,7 @@ Print a value without subsequent newline.
 
 Print a value on the output stream.
 See [println](../Library/IO.md#IO-println) for a version that adds a newline
-and [print exp](../Library/IO.md#IO-printExp) for a version that returns its argument as value.
+and [printExp](../Library/IO.md#IO-printExp) for a version that returns its argument as value.
 
 
 #### Examples
@@ -655,7 +655,7 @@ Print a value to the output stream and add a newline.
 
 Print a value on the output stream followed by a newline.
 See [print](../Library/IO.md#IO-print) for a version that does not add a newline
-and [println exp](../Library/IO.md#IO-printlnExp) for a version that returns its argument as value.
+and [printlnExp](../Library/IO.md#IO-printlnExp) for a version that returns its argument as value.
 
 #### Examples
 

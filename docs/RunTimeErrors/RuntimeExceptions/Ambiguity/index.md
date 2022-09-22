@@ -105,7 +105,7 @@ alternative 2: prod(sort("E"),[sort("E"),layouts("$default$"),lit("*"),layouts("
 ok
 ```
 
-Or, one could catch the ambiguity and report it like a [Parse error](../../../RunTimeErrors/RuntimeExceptions/ParseError):
+Or, one could catch the ambiguity and report it like a [ParseError](../../../RunTimeErrors/RuntimeExceptions/ParseError):
 
 
 ```rascal-shell

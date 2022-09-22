@@ -14,24 +14,24 @@ Functions for time measurement and benchmarking.
 #### Description
 
 The `Benchmark` library provides the following functions:
-* [Library:function:util::Benchmark::benchmark](../../Library/util/Benchmark.md#util::Benchmark-benchmark)
-* [Library:function:util::Benchmark::cpu time now](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeNow)
-* [Library:function:util::Benchmark::cpu time of](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf)
-* [Library:function:util::Benchmark::gc](../../Library/util/Benchmark.md#util::Benchmark-gc)
-* [Library:function:util::Benchmark::get free memory](../../Library/util/Benchmark.md#util::Benchmark-getFreeMemory)
-* [Library:function:util::Benchmark::get max free memory](../../Library/util/Benchmark.md#util::Benchmark-getMaxFreeMemory)
-* [Library:function:util::Benchmark::get max memory](../../Library/util/Benchmark.md#util::Benchmark-getMaxMemory)
-* [Library:function:util::Benchmark::get milli time now](../../Library/util/Benchmark.md#util::Benchmark-getMilliTimeNow)
-* [Library:function:util::Benchmark::get nano time now](../../Library/util/Benchmark.md#util::Benchmark-getNanoTimeNow)
-* [Library:function:util::Benchmark::get total memory](../../Library/util/Benchmark.md#util::Benchmark-getTotalMemory)
-* [Library:function:util::Benchmark::get used memory](../../Library/util/Benchmark.md#util::Benchmark-getUsedMemory)
-* [Library:function:util::Benchmark::heap dump](../../Library/util/Benchmark.md#util::Benchmark-heapDump)
-* [Library:function:util::Benchmark::real time now](../../Library/util/Benchmark.md#util::Benchmark-realTimeNow)
-* [Library:function:util::Benchmark::real time of](../../Library/util/Benchmark.md#util::Benchmark-realTimeOf)
-* [Library:function:util::Benchmark::system time now](../../Library/util/Benchmark.md#util::Benchmark-systemTimeNow)
-* [Library:function:util::Benchmark::system time of](../../Library/util/Benchmark.md#util::Benchmark-systemTimeOf)
-* [Library:function:util::Benchmark::user time now](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow)
-* [Library:function:util::Benchmark::user time of](../../Library/util/Benchmark.md#util::Benchmark-userTimeOf)
+* [benchmark](../../Library/util/Benchmark.md#util::Benchmark-benchmark)
+* [cpuTimeNow](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeNow)
+* [cpuTimeOf](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf)
+* [gc](../../Library/util/Benchmark.md#util::Benchmark-gc)
+* [getFreeMemory](../../Library/util/Benchmark.md#util::Benchmark-getFreeMemory)
+* [getMaxFreeMemory](../../Library/util/Benchmark.md#util::Benchmark-getMaxFreeMemory)
+* [getMaxMemory](../../Library/util/Benchmark.md#util::Benchmark-getMaxMemory)
+* [getMilliTimeNow](../../Library/util/Benchmark.md#util::Benchmark-getMilliTimeNow)
+* [getNanoTimeNow](../../Library/util/Benchmark.md#util::Benchmark-getNanoTimeNow)
+* [getTotalMemory](../../Library/util/Benchmark.md#util::Benchmark-getTotalMemory)
+* [getUsedMemory](../../Library/util/Benchmark.md#util::Benchmark-getUsedMemory)
+* [heapDump](../../Library/util/Benchmark.md#util::Benchmark-heapDump)
+* [realTimeNow](../../Library/util/Benchmark.md#util::Benchmark-realTimeNow)
+* [realTimeOf](../../Library/util/Benchmark.md#util::Benchmark-realTimeOf)
+* [systemTimeNow](../../Library/util/Benchmark.md#util::Benchmark-systemTimeNow)
+* [systemTimeOf](../../Library/util/Benchmark.md#util::Benchmark-systemTimeOf)
+* [userTimeNow](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow)
+* [userTimeOf](../../Library/util/Benchmark.md#util::Benchmark-userTimeOf)
 
 
 ## function heapDump {#util-Benchmark-heapDump}
@@ -129,11 +129,11 @@ Here we measure time by using separate calls to `cpuTime` before and after a cal
 
 ```rascal-shell
 rascal>before = cpuTimeNow();
-int: 887882034000
+int: 968288957000
 rascal>fac(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>cpuTimeNow() - before;
-int: 3011000
+int: 3571000
 ```
 
 See also [cpu time of](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf) for a more convenient way of measuring the time spent during a block of code.
@@ -240,11 +240,11 @@ Here we measure time by using separate calls to `sytemTime` before and after a c
 
 ```rascal-shell
 rascal>before = systemTimeNow();
-int: 38792904000
+int: 42821021000
 rascal>fac(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>systemTimeNow() - before;
-int: 64000
+int: 97000
 ```
 
 ## function systemTimeOf {#util-Benchmark-systemTimeOf}
@@ -269,7 +269,7 @@ rascal>systemTimeOf(
 >>>>>>>      fac(50); 
 >>>>>>>   } 
 >>>>>>>);
-int: 13000
+int: 20000
 ```
 
 ## function userTimeNow {#util-Benchmark-userTimeNow}
@@ -306,11 +306,11 @@ Here we measure time by using separate calls to `userTime` before and after a ca
 
 ```rascal-shell
 rascal>before = userTimeNow();
-int: 849231556000
+int: 925612690000
 rascal>fac(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>userTimeNow() - before;
-int: 2795000
+int: 3545000
 ```
 
 ## function userTimeOf {#util-Benchmark-userTimeOf}
@@ -374,7 +374,7 @@ rascal>benchmark(
 >>>>>>>                  fac(200);
 >>>>>>>               }) 
 >>>>>>>   );
-map[str, num]: ("fac100":3,"fac200":4)
+map[str, num]: ("fac100":2,"fac200":4)
 ```
 
 We can do the same using [user time now](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow) that returns nanoseconds:
@@ -388,7 +388,7 @@ rascal>benchmark(
 >>>>>>>                  fac(200);
 >>>>>>>            })
 >>>>>>>   , userTimeOf);
-map[str, num]: ("fac100":2213000,"fac200":4399000)
+map[str, num]: ("fac100":2120000,"fac200":4258000)
 ```
 
 ## function gc {#util-Benchmark-gc}
