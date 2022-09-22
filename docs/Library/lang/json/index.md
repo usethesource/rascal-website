@@ -1,7 +1,7 @@
 # lang::json
 
 
-   * [examples](Library/lang/json/examples)
-   * [ast](Library/lang/json/ast)
-   * [syntax](Library/lang/json/syntax)
-   * [IO](Library/lang/json/IO.md)
+   * [examples](/docs/Library/lang/json/examples)
+   * [ast](/docs/Library/lang/json/ast)
+   * [syntax](/docs/Library/lang/json/syntax)
+   * [IO](/docs/Library/lang/json/IO.md)

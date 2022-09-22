@@ -1,5 +1,5 @@
 # analysis::formalconcepts
 
 
-   * [CXTIO](Library/analysis/formalconcepts/CXTIO.md)
-   * [FCA](Library/analysis/formalconcepts/FCA.md)
+   * [CXTIO](/docs/Library/analysis/formalconcepts/CXTIO.md)
+   * [FCA](/docs/Library/analysis/formalconcepts/FCA.md)

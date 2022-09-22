@@ -1,13 +1,13 @@
 # analysis
 
 
-   * [statistics](Library/analysis/statistics)
-   * [clustering](Library/analysis/clustering)
-   * [diff](Library/analysis/diff)
-   * [grammars](Library/analysis/grammars)
-   * [formalconcepts](Library/analysis/formalconcepts)
-   * [m3](Library/analysis/m3)
-   * [graphs](Library/analysis/graphs)
-   * [text](Library/analysis/text)
-   * [linearprogramming](Library/analysis/linearprogramming)
-   * [flow](Library/analysis/flow)
+   * [statistics](/docs/Library/analysis/statistics)
+   * [clustering](/docs/Library/analysis/clustering)
+   * [diff](/docs/Library/analysis/diff)
+   * [grammars](/docs/Library/analysis/grammars)
+   * [formalconcepts](/docs/Library/analysis/formalconcepts)
+   * [m3](/docs/Library/analysis/m3)
+   * [graphs](/docs/Library/analysis/graphs)
+   * [text](/docs/Library/analysis/text)
+   * [linearprogramming](/docs/Library/analysis/linearprogramming)
+   * [flow](/docs/Library/analysis/flow)

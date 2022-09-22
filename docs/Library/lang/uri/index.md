@@ -1,4 +1,4 @@
 # lang::uri
 
 
-   * [syntax](Library/lang/uri/syntax)
+   * [syntax](/docs/Library/lang/uri/syntax)

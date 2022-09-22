@@ -1,4 +1,4 @@
 # lang::rsf
 
 
-   * [IO](Library/lang/rsf/IO.md)
+   * [IO](/docs/Library/lang/rsf/IO.md)

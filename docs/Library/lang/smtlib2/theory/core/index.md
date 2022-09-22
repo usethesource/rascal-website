@@ -1,4 +1,4 @@
 # lang::smtlib2::theory::core
 
 
-   * [Ast](Library/lang/smtlib2/theory/core/Ast.md)
+   * [Ast](/docs/Library/lang/smtlib2/theory/core/Ast.md)

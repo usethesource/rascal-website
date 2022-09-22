@@ -1,5 +1,5 @@
 # lang::smtlib2::theory
 
 
-   * [core](Library/lang/smtlib2/theory/core)
-   * [ints](Library/lang/smtlib2/theory/ints)
+   * [core](/docs/Library/lang/smtlib2/theory/core)
+   * [ints](/docs/Library/lang/smtlib2/theory/ints)

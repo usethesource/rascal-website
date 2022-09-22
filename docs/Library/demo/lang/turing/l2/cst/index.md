@@ -1,5 +1,5 @@
 # demo::lang::turing::l2::cst
 
 
-   * [Parse](Library/demo/lang/turing/l2/cst/Parse.md)
-   * [Syntax](Library/demo/lang/turing/l2/cst/Syntax.md)
+   * [Parse](/docs/Library/demo/lang/turing/l2/cst/Parse.md)
+   * [Syntax](/docs/Library/demo/lang/turing/l2/cst/Syntax.md)

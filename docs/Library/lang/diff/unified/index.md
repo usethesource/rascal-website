@@ -1,4 +1,4 @@
 # lang::diff::unified
 
 
-   * [UnifiedDiff](Library/lang/diff/unified/UnifiedDiff.md)
+   * [UnifiedDiff](/docs/Library/lang/diff/unified/UnifiedDiff.md)

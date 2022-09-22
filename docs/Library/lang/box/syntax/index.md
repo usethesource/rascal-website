@@ -1,4 +1,4 @@
 # lang::box::syntax
 
 
-   * [Box](Library/lang/box/syntax/Box.md)
+   * [Box](/docs/Library/lang/box/syntax/Box.md)

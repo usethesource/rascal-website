@@ -1,4 +1,4 @@
 # lang::dot::syntax
 
 
-   * [Dot](Library/lang/dot/syntax/Dot.md)
+   * [Dot](/docs/Library/lang/dot/syntax/Dot.md)

@@ -1,5 +1,5 @@
 # lang::box::util
 
 
-   * [Box](Library/lang/box/util/Box.md)
-   * [Box2Text](Library/lang/box/util/Box2Text.md)
+   * [Box](/docs/Library/lang/box/util/Box.md)
+   * [Box2Text](/docs/Library/lang/box/util/Box2Text.md)

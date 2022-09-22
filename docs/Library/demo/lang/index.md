@@ -1,10 +1,10 @@
 # demo::lang
 
 
-   * [logic](Library/demo/lang/logic)
-   * [Pico](Library/demo/lang/Pico)
-   * [Lisra](Library/demo/lang/Lisra)
-   * [turing](Library/demo/lang/turing)
-   * [Exp](Library/demo/lang/Exp)
-   * [MissGrant](Library/demo/lang/MissGrant)
-   * [Func](Library/demo/lang/Func)
+   * [logic](/docs/Library/demo/lang/logic)
+   * [Pico](/docs/Library/demo/lang/Pico)
+   * [Lisra](/docs/Library/demo/lang/Lisra)
+   * [turing](/docs/Library/demo/lang/turing)
+   * [Exp](/docs/Library/demo/lang/Exp)
+   * [MissGrant](/docs/Library/demo/lang/MissGrant)
+   * [Func](/docs/Library/demo/lang/Func)

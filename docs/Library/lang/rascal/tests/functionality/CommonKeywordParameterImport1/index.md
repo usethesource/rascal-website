@@ -1,7 +1,7 @@
 # lang::rascal::tests::functionality::CommonKeywordParameterImport1
 
 
-   * [DiamondTop](Library/lang/rascal/tests/functionality/CommonKeywordParameterImport1/DiamondTop.md)
-   * [DiamondLeft](Library/lang/rascal/tests/functionality/CommonKeywordParameterImport1/DiamondLeft.md)
-   * [DiamondBottom](Library/lang/rascal/tests/functionality/CommonKeywordParameterImport1/DiamondBottom.md)
-   * [DiamondRight](Library/lang/rascal/tests/functionality/CommonKeywordParameterImport1/DiamondRight.md)
+   * [DiamondTop](/docs/Library/lang/rascal/tests/functionality/CommonKeywordParameterImport1/DiamondTop.md)
+   * [DiamondLeft](/docs/Library/lang/rascal/tests/functionality/CommonKeywordParameterImport1/DiamondLeft.md)
+   * [DiamondBottom](/docs/Library/lang/rascal/tests/functionality/CommonKeywordParameterImport1/DiamondBottom.md)
+   * [DiamondRight](/docs/Library/lang/rascal/tests/functionality/CommonKeywordParameterImport1/DiamondRight.md)

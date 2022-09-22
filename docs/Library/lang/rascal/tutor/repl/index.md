@@ -1,4 +1,4 @@
 # lang::rascal::tutor::repl
 
 
-   * [TutorCommandExecutor](Library/lang/rascal/tutor/repl/TutorCommandExecutor.md)
+   * [TutorCommandExecutor](/docs/Library/lang/rascal/tutor/repl/TutorCommandExecutor.md)

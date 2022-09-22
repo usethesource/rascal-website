@@ -1,12 +1,12 @@
 # demo::basic
 
 
-   * [Ackermann](Library/demo/basic/Ackermann.md)
-   * [Hello](Library/demo/basic/Hello.md)
-   * [Factorial](Library/demo/basic/Factorial.md)
-   * [Squares](Library/demo/basic/Squares.md)
-   * [FizzBuzz](Library/demo/basic/FizzBuzz.md)
-   * [Quine](Library/demo/basic/Quine.md)
-   * [Bottles](Library/demo/basic/Bottles.md)
-   * [BubbleTest](Library/demo/basic/BubbleTest.md)
-   * [Bubble](Library/demo/basic/Bubble.md)
+   * [Ackermann](/docs/Library/demo/basic/Ackermann.md)
+   * [Hello](/docs/Library/demo/basic/Hello.md)
+   * [Factorial](/docs/Library/demo/basic/Factorial.md)
+   * [Squares](/docs/Library/demo/basic/Squares.md)
+   * [FizzBuzz](/docs/Library/demo/basic/FizzBuzz.md)
+   * [Quine](/docs/Library/demo/basic/Quine.md)
+   * [Bottles](/docs/Library/demo/basic/Bottles.md)
+   * [BubbleTest](/docs/Library/demo/basic/BubbleTest.md)
+   * [Bubble](/docs/Library/demo/basic/Bubble.md)

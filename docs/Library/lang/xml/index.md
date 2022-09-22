@@ -1,6 +1,6 @@
 # lang::xml
 
 
-   * [DOM](Library/lang/xml/DOM.md)
-   * [examples](Library/lang/xml/examples)
-   * [IO](Library/lang/xml/IO.md)
+   * [DOM](/docs/Library/lang/xml/DOM.md)
+   * [examples](/docs/Library/lang/xml/examples)
+   * [IO](/docs/Library/lang/xml/IO.md)

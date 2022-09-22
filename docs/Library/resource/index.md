@@ -1,4 +1,4 @@
 # resource
 
 
-   * [jdbc](Library/resource/jdbc)
+   * [jdbc](/docs/Library/resource/jdbc)

@@ -1,4 +1,4 @@
 # analysis::diff
 
 
-   * [edits](Library/analysis/diff/edits)
+   * [edits](/docs/Library/analysis/diff/edits)

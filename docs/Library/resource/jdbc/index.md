@@ -1,4 +1,4 @@
 # resource::jdbc
 
 
-   * [JDBC](Library/resource/jdbc/JDBC.md)
+   * [JDBC](/docs/Library/resource/jdbc/JDBC.md)

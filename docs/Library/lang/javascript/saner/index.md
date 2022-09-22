@@ -1,4 +1,4 @@
 # lang::javascript::saner
 
 
-   * [Syntax](Library/lang/javascript/saner/Syntax.md)
+   * [Syntax](/docs/Library/lang/javascript/saner/Syntax.md)

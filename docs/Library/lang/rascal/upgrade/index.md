@@ -1,5 +1,5 @@
 # lang::rascal::upgrade
 
 
-   * [UpgradePostfixStarAndPlusToPrefix](Library/lang/rascal/upgrade/UpgradePostfixStarAndPlusToPrefix.md)
-   * [UpdateNestedListAndSetPatterns](Library/lang/rascal/upgrade/UpdateNestedListAndSetPatterns.md)
+   * [UpgradePostfixStarAndPlusToPrefix](/docs/Library/lang/rascal/upgrade/UpgradePostfixStarAndPlusToPrefix.md)
+   * [UpdateNestedListAndSetPatterns](/docs/Library/lang/rascal/upgrade/UpdateNestedListAndSetPatterns.md)

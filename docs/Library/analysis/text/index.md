@@ -1,5 +1,5 @@
 # analysis::text
 
 
-   * [search](Library/analysis/text/search)
-   * [stemming](Library/analysis/text/stemming)
+   * [search](/docs/Library/analysis/text/search)
+   * [stemming](/docs/Library/analysis/text/stemming)

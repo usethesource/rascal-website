@@ -1,4 +1,4 @@
 # lang::rascal::tests::library::analysis::graphs
 
 
-   * [GraphTests](Library/lang/rascal/tests/library/analysis/graphs/GraphTests.md)
+   * [GraphTests](/docs/Library/lang/rascal/tests/library/analysis/graphs/GraphTests.md)
