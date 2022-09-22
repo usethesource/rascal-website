@@ -3,4 +3,4 @@ title: resource
 ---
 
 
-   * [jdbc](../../Library/resource/jdbc)
+* [jdbc](../../Library/resource/jdbc)

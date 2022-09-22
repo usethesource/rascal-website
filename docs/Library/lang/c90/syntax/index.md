@@ -3,4 +3,4 @@ title: lang::c90::syntax
 ---
 
 
-   * [C](../../../../Library/lang/c90/syntax/C.md)
+* [C](../../../../Library/lang/c90/syntax/C.md)

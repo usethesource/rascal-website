@@ -3,4 +3,4 @@ title: analysis::diff
 ---
 
 
-   * [edits](../../../Library/analysis/diff/edits)
+* [edits](../../../Library/analysis/diff/edits)

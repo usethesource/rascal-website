@@ -3,4 +3,4 @@ title: lang::pico::syntax
 ---
 
 
-   * [Main](../../../../Library/lang/pico/syntax/Main.md)
+* [Main](../../../../Library/lang/pico/syntax/Main.md)

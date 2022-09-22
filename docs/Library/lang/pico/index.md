@@ -3,4 +3,4 @@ title: lang::pico
 ---
 
 
-   * [syntax](../../../Library/lang/pico/syntax)
+* [syntax](../../../Library/lang/pico/syntax)

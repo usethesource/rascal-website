@@ -3,4 +3,4 @@ title: lang::dimacs
 ---
 
 
-   * [syntax](../../../Library/lang/dimacs/syntax)
+* [syntax](../../../Library/lang/dimacs/syntax)

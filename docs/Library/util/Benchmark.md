@@ -129,11 +129,11 @@ Here we measure time by using separate calls to `cpuTime` before and after a cal
 
 ```rascal-shell
 rascal>before = cpuTimeNow();
-int: 805656650000
+int: 887882034000
 rascal>fac(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>cpuTimeNow() - before;
-int: 3650000
+int: 3011000
 ```
 
 See also [cpu time of](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf) for a more convenient way of measuring the time spent during a block of code.
@@ -240,11 +240,11 @@ Here we measure time by using separate calls to `sytemTime` before and after a c
 
 ```rascal-shell
 rascal>before = systemTimeNow();
-int: 35230952000
+int: 38792904000
 rascal>fac(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>systemTimeNow() - before;
-int: 80000
+int: 64000
 ```
 
 ## function systemTimeOf {#util-Benchmark-systemTimeOf}
@@ -269,7 +269,7 @@ rascal>systemTimeOf(
 >>>>>>>      fac(50); 
 >>>>>>>   } 
 >>>>>>>);
-int: 17000
+int: 13000
 ```
 
 ## function userTimeNow {#util-Benchmark-userTimeNow}
@@ -306,11 +306,11 @@ Here we measure time by using separate calls to `userTime` before and after a ca
 
 ```rascal-shell
 rascal>before = userTimeNow();
-int: 770567536000
+int: 849231556000
 rascal>fac(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>userTimeNow() - before;
-int: 3332000
+int: 2795000
 ```
 
 ## function userTimeOf {#util-Benchmark-userTimeOf}
@@ -374,7 +374,7 @@ rascal>benchmark(
 >>>>>>>                  fac(200);
 >>>>>>>               }) 
 >>>>>>>   );
-map[str, num]: ("fac100":2,"fac200":4)
+map[str, num]: ("fac100":3,"fac200":4)
 ```
 
 We can do the same using [user time now](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow) that returns nanoseconds:
@@ -388,7 +388,7 @@ rascal>benchmark(
 >>>>>>>                  fac(200);
 >>>>>>>            })
 >>>>>>>   , userTimeOf);
-map[str, num]: ("fac100":1992000,"fac200":3896000)
+map[str, num]: ("fac100":2213000,"fac200":4399000)
 ```
 
 ## function gc {#util-Benchmark-gc}
