@@ -24,7 +24,7 @@ Robert vam Liere and Wim de Leeuw have visualized liquid flows.
 There is also an [animated](http://homepages.cwi.nl/~robertl/movies/flow1.mpg) version.
 
 
-![](/assets/Rascalopedia/Visualization/flow.jpg)
+![][flow.jpg](/assets/Rascalopedia/Visualization/flow.jpg)
 
 
 
@@ -33,7 +33,7 @@ There is also an [animated](http://homepages.cwi.nl/~robertl/movies/flow1.mpg) v
 
 Facebook's Friend Wheel showed the connection between friends:
 
-![](/assets/Rascalopedia/Visualization/friends.jpg)
+![][friends.jpg](/assets/Rascalopedia/Visualization/friends.jpg)
 
 
 ## Software Visualization
@@ -42,14 +42,14 @@ Stephen Eick [visualizes](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.
 in all source files of a software system.
 
 
-![](/assets/Rascalopedia/Visualization/freq.png)
+![][freq.png](/assets/Rascalopedia/Visualization/freq.png)
 
 
 
 Daniel Bierwirth [shows](http://www.danielbierwirth.de/index.php/reseachprojects/8-myresearch/mastercurriculumresearchcat/73-bundle-view-software-visualization) the connections (colored lines) between system components (at outer circle).
 
 
-![](/assets/Rascalopedia/Visualization/bundle.jpg)
+![][bundle.jpg](/assets/Rascalopedia/Visualization/bundle.jpg)
 
 
 

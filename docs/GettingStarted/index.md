@@ -42,5 +42,5 @@ msg
 
 Where to go from here: 
 have a look at [Getting Help](../GettingHelp/) and in particular 
-[further reading][further reading](../GettingHelp/FurtherReading)
+[further reading](../GettingHelp/FurtherReading)
 

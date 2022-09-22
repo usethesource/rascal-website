@@ -370,7 +370,7 @@ int: 100
 
 #### Pitfalls
 
-WARNING: This function is *deprecated*, use a [reducer][Reducer](../Rascal/Expressions/Reducer) instead.
+WARNING: This function is *deprecated*, use a [reducer](../Rascal/Expressions/Reducer) instead.
 
 ## function size {#Set-size}
 
@@ -418,11 +418,11 @@ ok
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "elephant"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "zebra"
-rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "elephant"
+str: "snake"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "snake"
+rascal>getOneFrom({"elephant", "zebra", "snake"});
+str: "elephant"
 ```
 
 ## function getFirstFrom {#Set-getFirstFrom}
@@ -470,7 +470,7 @@ tuple[int,set[int]]: <3,{1,2,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
 tuple[int,set[int]]: <2,{1,3,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <1,{3,2,4}>
+tuple[int,set[int]]: <2,{1,3,4}>
 ```
 
 ## function takeFirstFrom {#Set-takeFirstFrom}

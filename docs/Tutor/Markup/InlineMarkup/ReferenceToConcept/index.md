@@ -34,11 +34,11 @@ We can create a reference to the `InlineMarkup` concept in the current course in
 
 * `\[Inline Markup](../../../../Tutor/Markup/InlineMarkup)` (using the display name) gives [Inline Markup](../../../../Tutor/Markup/InlineMarkup).
 * `\[InlineMarkup](../../../../Tutor/Markup/InlineMarkup)` (using its parent concept name and concept name) gives [InlineMarkup](../../../../Tutor/Markup/InlineMarkup).
-* `\[see inline markup][InlineMarkup](../../../../Tutor/Markup/InlineMarkup)` gives [see inline markup][InlineMarkup](../../../../Tutor/Markup/InlineMarkup)
+* `\[see inline markup](../../../../Tutor/Markup/InlineMarkup)` gives [see inline markup](../../../../Tutor/Markup/InlineMarkup)
 
 Here is a reference to another course:
 
-* `\[If statement][If](../../../../Rascal/Statements/If)` gives [If statement][If](../../../../Rascal/Statements/If).
+* `\[If statement](../../../../Rascal/Statements/If)` gives [If statement](../../../../Rascal/Statements/If).
 
 #### Pitfalls
 

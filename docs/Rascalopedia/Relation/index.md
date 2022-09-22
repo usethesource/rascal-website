@@ -37,11 +37,11 @@ see [functions on sets](../../Library/Set.md)).
 ## Relations in Daily Life
 
 *  The _parent-of_ or _friend-of_ relation between people.
-   ![](/assets/Rascalopedia/Relation/char-relation.jpg)
+   ![][relation.jpg](/assets/Rascalopedia/Relation/char-relation.jpg)
    [credit](http://www.translatedmemories.com/bookpgs/Pg10-11CharRelation.jpg)
 *  A character relation map, describing the relations between the characters in a play or soap series.
 *  A listing of the top 2000 songs of all times including the position, artist name, song title, the year the song was published.
-   ![](/assets/Rascalopedia/Relation/top2000-2010.jpg)
+   ![][2010.jpg](/assets/Rascalopedia/Relation/top2000-2010.jpg)
    [credit](http://top2011.radio2.nl/lijst/2010)
 
 

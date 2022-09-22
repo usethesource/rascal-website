@@ -43,6 +43,6 @@ render(visCFG(CFG.graph));
 The resulting visualization looks like this: 
 
 
-![](/assets/Recipes/Languages/Pico/Visualize/cfg1.png)
+![][cfg1.png](/assets/Recipes/Languages/Pico/Visualize/cfg1.png)
 
 

@@ -46,11 +46,11 @@ and of [library functions on lists](../../Library/List.md).
 ## Lists in Daily Life
 
 *  A line of people waiting for the super market checkout or bus stop. 
-   ![](/assets/Rascalopedia/List/queue.png)
+   ![][queue.png](/assets/Rascalopedia/List/queue.png)
    [credit](http://www.realbollywood.com)
 *  The wagons of a train.
 *  The Top 100 Music Charts.
-   ![](/assets/Rascalopedia/List/hot100.png)
+   ![][hot100.png](/assets/Rascalopedia/List/hot100.png)
    [credit](http://www.billboard.com/charts/hot-100#/charts/hot-100)
 *  Twitter users ordered according to number of followers.
 *  A _to do_ list.

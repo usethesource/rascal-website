@@ -219,9 +219,9 @@ ok
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "elephant"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "snake"
+str: "elephant"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "owl"
+str: "elephant"
 ```
 
 ## function getFirstFrom {#List-getFirstFrom}
@@ -353,7 +353,7 @@ list[int]: [0,1,2,3]
 
 #### Benefits
 
-This function is useful in [for][For](../Rascal/Statements/For) loops over lists.
+This function is useful in [for](../Rascal/Statements/For) loops over lists.
 
 ## function indexOf {#List-indexOf}
 
@@ -818,7 +818,7 @@ int: 100
 #### Pitfalls
 
 WARNING:
-This function is *deprecated*, use a [reducer][Reducer](../Rascal/Expressions/Reducer) instead.
+This function is *deprecated*, use a [reducer](../Rascal/Expressions/Reducer) instead.
 
 ## function remove {#List-remove}
 
@@ -984,9 +984,9 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [1,4,2,3]
+list[int]: [4,1,2,3]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["elephant","snake","owl","zebra"]
+list[str]: ["zebra","snake","elephant","owl"]
 ```
 
 ## function split {#List-split}
@@ -1144,13 +1144,13 @@ tuple[int,list[int]]: <40,[10,20,30,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <20,[10,30,40,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <40,[10,20,30,50]>
+tuple[int,list[int]]: <20,[10,30,40,50]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"snake",["zebra","elephant","owl"]>
-rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"snake",["zebra","elephant","owl"]>
+tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
+rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
+tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 ```
 
 ## function takeWhile {#List-takeWhile}

@@ -362,7 +362,7 @@ ok
 rascal>arbString(3);
 str: ""
 rascal>arbString(10);
-str: "U"
+str: "w2"
 ```
 
 ## function left {#String-left}

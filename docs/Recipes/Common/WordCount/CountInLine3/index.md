@@ -26,7 +26,7 @@ test bool tstCountInLine3b() = countInLine3("Jabberwocky by Lewis Carroll") == 4
 ```
 
                 
-We use a [reducer][Reducer](../../../../Rascal/Expressions/Reducer) that is a recipe to reduce the values produced by one or more generators
+We use a [reducer](../../../../Rascal/Expressions/Reducer) that is a recipe to reduce the values produced by one or more generators
   to a single value:
   
 * `0` is the initial value of the reducer

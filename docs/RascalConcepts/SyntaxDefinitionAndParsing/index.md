@@ -13,18 +13,18 @@ There are two main approaches to this:
 
 *  _Lexical information_: Use regular expressions to extract useful, but somewhat superficial, flat, information. 
    This can be achieved using regular expression patterns, 
-   see [Regular Expression Pattern][Regular](../../Rascal/Patterns/Regular)s.
+   see [Regular Expression Pattern](../../Rascal/Patterns/Regular)s.
 *  _Structured information_: Use syntax analysis to extract the complete, nested, structure of the source code 
    in the form of a syntax tree. Rascal can directly manipulate the parse trees, but it also enables user-defined
    mappings from parse tree to abstract syntax tree.
 
 
-Using [Syntax Definitions][SyntaxDefinition](../../Rascal/Declarations/SyntaxDefinition) you can define the syntax of any (programming) language. Then Rascal:
+Using [Syntax Definitions](../../Rascal/Declarations/SyntaxDefinition) you can define the syntax of any (programming) language. Then Rascal:
 
 *  will generate the parser, and
 *  will provide pattern matching and pattern construction on parse trees and abstract syntax trees,
-   see [Abstract Patterns][Node](../../Rascal/Patterns/Node) and    
-  [Concrete Patterns][Concrete](../../Rascal/Patterns/Concrete).
+   see [Abstract Patterns](../../Rascal/Patterns/Node) and    
+  [Concrete Patterns](../../Rascal/Patterns/Concrete).
 
 #### Examples
 
@@ -89,7 +89,7 @@ The points we want to make are:
 
 
 See [Recipes](../../Recipes/) for a more extensive presentation of the 
-[EXP][Exp](../../Recipes/Languages/Exp)
+[EXP](../../Recipes/Languages/Exp)
 language and [Languages](../../Recipes/Languages) for other language examples.
 
 #### Pitfalls

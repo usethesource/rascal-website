@@ -24,11 +24,11 @@ and of [library functions on sets](../../Library/Set.md).
 ## Sets in Daily Life
 
 *  A cutlery set consisting of knife, fork and the like.
-   ![](/assets/Rascalopedia/Set/cutlery-set.jpg)
+   ![][set.jpg](/assets/Rascalopedia/Set/cutlery-set.jpg)
    [credit](http://www.ikea.com/gb/en/catalog/products/50087185/)
 *  A crowd of people.
 *  A stamp collection (but be aware that the duplicates will disappear!)
-   ![](/assets/Rascalopedia/Set/stamp-collecting.jpg)
+   ![][collecting.jpg](/assets/Rascalopedia/Set/stamp-collecting.jpg)
    [credit](http://www.life123.com/hobbies/antiques-collectibles/stamps/stamp-collecting-2.shtml)
 
 ## Sets in Computer Science

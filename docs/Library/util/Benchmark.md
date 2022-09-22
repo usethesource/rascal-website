@@ -117,7 +117,7 @@ CPU time in nanoseconds (10^-9^ sec)
 #### Examples
 
 
-We use the `fac` function described in [Factorial][Factorial](../../Recipes/Basic/Factorial) as example:
+We use the `fac` function described in [Factorial](../../Recipes/Basic/Factorial) as example:
 
 ```rascal-shell
 rascal>import util::Benchmark;
@@ -129,11 +129,11 @@ Here we measure time by using separate calls to `cpuTime` before and after a cal
 
 ```rascal-shell
 rascal>before = cpuTimeNow();
-int: 1264678346000
+int: 1448934032000
 rascal>fac(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>cpuTimeNow() - before;
-int: 4022000
+int: 3168000
 ```
 
 See also [cpu time of](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf) for a more convenient way of measuring the time spent during a block of code.
@@ -225,7 +225,7 @@ Returns the CPU time that the current thread has executed in system mode in nano
 #### Examples
 
 
-We use the `fac` function described in [Factorial][Factorial](../../Recipes/Basic/Factorial) as example:
+We use the `fac` function described in [Factorial](../../Recipes/Basic/Factorial) as example:
 
 
 ```rascal-shell
@@ -240,11 +240,11 @@ Here we measure time by using separate calls to `sytemTime` before and after a c
 
 ```rascal-shell
 rascal>before = systemTimeNow();
-int: 56541541000
+int: 64093085000
 rascal>fac(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>systemTimeNow() - before;
-int: 83000
+int: 67000
 ```
 
 ## function systemTimeOf {#util-Benchmark-systemTimeOf}
@@ -269,7 +269,7 @@ rascal>systemTimeOf(
 >>>>>>>      fac(50); 
 >>>>>>>   } 
 >>>>>>>);
-int: 14000
+int: 12000
 ```
 
 ## function userTimeNow {#util-Benchmark-userTimeNow}
@@ -293,7 +293,7 @@ Returns the CPU time that the current thread has executed in user mode in nanose
 #### Examples
 
 
-We use the `fac` function described in [Factorial][Factorial](../../Recipes/Basic/Factorial) as example:
+We use the `fac` function described in [Factorial](../../Recipes/Basic/Factorial) as example:
 
 
 ```rascal-shell
@@ -306,11 +306,11 @@ Here we measure time by using separate calls to `userTime` before and after a ca
 
 ```rascal-shell
 rascal>before = userTimeNow();
-int: 1208301788000
+int: 1384991243000
 rascal>fac(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>userTimeNow() - before;
-int: 3372000
+int: 3541000
 ```
 
 ## function userTimeOf {#util-Benchmark-userTimeOf}
@@ -353,7 +353,7 @@ An optional `duration` argument can be used to specify the function to perform t
 #### Examples
 
 
-We use the `fac` function described in [Factorial][Factorial](../../Recipes/Basic/Factorial) as example:
+We use the `fac` function described in [Factorial](../../Recipes/Basic/Factorial) as example:
 
 ```rascal-shell
 rascal>import util::Benchmark;
@@ -374,7 +374,7 @@ rascal>benchmark(
 >>>>>>>                  fac(200);
 >>>>>>>               }) 
 >>>>>>>   );
-map[str, num]: ("fac100":2,"fac200":4)
+map[str, num]: ("fac100":3,"fac200":5)
 ```
 
 We can do the same using [user time now](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow) that returns nanoseconds:
@@ -388,7 +388,7 @@ rascal>benchmark(
 >>>>>>>                  fac(200);
 >>>>>>>            })
 >>>>>>>   , userTimeOf);
-map[str, num]: ("fac100":2017000,"fac200":3904000)
+map[str, num]: ("fac100":3166000,"fac200":5488000)
 ```
 
 ## function gc {#util-Benchmark-gc}

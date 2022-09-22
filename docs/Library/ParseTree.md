@@ -25,18 +25,18 @@ while the leaf nodes are labeled by terminals (characters) of the grammar.
 `Tree` is the universal parse tree data type in Rascal and can be used to represent parse trees for any language.
 
 *  `Tree` is a subtype of the type [node](../Rascal/Expressions/Values/Node).
-*  All types (non-terminals) declared in [syntax definitions][SyntaxDefinition](../Rascal/Declarations/SyntaxDefinition) are sub-types of `Tree`.
-*  All [concrete syntax expressions][ConcreteSyntax](../Rascal/Expressions/ConcreteSyntax) produce parse trees with a type corresponding to a non-terminals.
-*  Trees can be annotated in various ways, see features for [IDE construction][IDEConstruction](../RascalConcepts/IDEConstruction).
+*  All types (non-terminals) declared in [syntax definitions](../Rascal/Declarations/SyntaxDefinition) are sub-types of `Tree`.
+*  All [concrete syntax expressions](../Rascal/Expressions/ConcreteSyntax) produce parse trees with a type corresponding to a non-terminals.
+*  Trees can be annotated in various ways, see features for [IDE construction](../RascalConcepts/IDEConstruction).
    Most importantly the `\loc` annotation always points to the source location of any (sub) parse tree.
 
 
 Parse trees are usually analyzed and constructed using 
-[concrete syntax expressions][ConcreteSyntax](../Rascal/Expressions/ConcreteSyntax)
-and [concrete syntax patterns][Concrete](../Rascal/Patterns/Concrete).
+[concrete syntax expressions](../Rascal/Expressions/ConcreteSyntax)
+and [concrete syntax patterns](../Rascal/Patterns/Concrete).
  
 _Advanced users_ may want to create tools that analyze any parse tree, regardless of the 
-[syntax definition][SyntaxDefinition](../Rascal/Declarations/SyntaxDefinition) that generated it, you can manipulate them on the abstract level.
+[syntax definition](../Rascal/Declarations/SyntaxDefinition) that generated it, you can manipulate them on the abstract level.
 
 A parse tree is of type [Tree](../Library/ParseTree.md#ParseTree-Tree) using the auxiliary types 
 [Production](../Library/ParseTree.md#ParseTree-Production), [Symbol](../Library/ParseTree.md#ParseTree-Symbol), [Condition](../Library/ParseTree.md#ParseTree-Condition),
@@ -45,7 +45,7 @@ Effectively, a parse tree is a nested tree structure of type `Tree`.
 
 *  Most internal nodes are applications (`appl`) of a `Production` to a list of children `Tree` nodes. 
    `Production` is the abstract representation of a rule in a
-   [syntax definition][SyntaxDefinition](../Rascal/Declarations/SyntaxDefinition), 
+   [syntax definition](../Rascal/Declarations/SyntaxDefinition), 
    which consists of a definition of an alternative for a `Symbol` by a list of `Symbols`.
 *  The leaves of a parse tree are always
 characters (`char`), which have an integer index in the UTF8 table. 
@@ -55,16 +55,16 @@ alternative `Tree` nodes.
 
 
 The `Production` and `Symbol` types are an abstract notation for rules in 
-[syntax definitions][SyntaxDefinition](../Rascal/Declarations/SyntaxDefinition),
+[syntax definitions](../Rascal/Declarations/SyntaxDefinition),
 while the `Tree` type is the actual notation for parse trees. 
 
 Parse trees are called parse forests when they contain `amb` nodes.
 
 You can analyze and manipulate parse trees in three ways:
 
-*  Directly on the `Tree` level, just like any other [algebraic data type][AlgebraicDataType](../Rascal/Declarations/AlgebraicDataType).
-*  Using [concrete syntax expressions][ConcreteSyntax](../Rascal/Expressions/ConcreteSyntax)
-and [concrete syntax patterns][Concrete](../Rascal/Patterns/Concrete).
+*  Directly on the `Tree` level, just like any other [algebraic data type](../Rascal/Declarations/AlgebraicDataType).
+*  Using [concrete syntax expressions](../Rascal/Expressions/ConcreteSyntax)
+and [concrete syntax patterns](../Rascal/Patterns/Concrete).
 *  Using [actions](../Rascal/Declarations/SyntaxDefinition/Action).
 
 

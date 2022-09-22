@@ -12,11 +12,11 @@ Pattern matching determines whether a given pattern matches a given value.
 The outcome can be `false` (no match) or `true` (a match). A pattern match that succeeds may bind values to variables.
 
 Pattern matching is _the_ mechanism for case distinction 
-([Switch][Switch](../../Rascal/Statements/Switch) statement) and search ([Visit][Visit](../../Rascal/Expressions/Visit) statement) in Rascal. 
+([Switch](../../Rascal/Statements/Switch) statement) and search ([Visit](../../Rascal/Expressions/Visit) statement) in Rascal. 
 Patterns can also be used in an explicit match operator `:=` and can then be part of larger boolean expressions. 
 Since a pattern match may have more than one solution, local backtracking over the alternatives of a match is provided. 
 Patterns can also be used in [Enumerators](../../Rascal/Expressions/Comprehensions/Enumerator)s and control structures like 
-[For][For](../../Rascal/Statements/For) and [While][While](../../Rascal/Statements/While) statement.
+[For](../../Rascal/Statements/For) and [While](../../Rascal/Statements/While) statement.
 
 A very rich pattern language is provided that includes string matching based on regular expressions, 
 matching of abstract patterns, and matching of concrete syntax patterns. 
@@ -62,7 +62,7 @@ whileStat(EXP Exp, _*)
 ```
 
 When there is a grammar for this example language, we can also write concrete patterns as described in
-[Concrete Patterns][Concrete](../../Rascal/Patterns/Concrete).
+[Concrete Patterns](../../Rascal/Patterns/Concrete).
 
 
 

@@ -65,7 +65,7 @@ test bool tstEval4() = eval(" 3 + 4*5 ") == 23;
 
 ```
 
-Note that [Pattern Matching][pattern matching](../../../../../RascalConcepts/PatternMatching) will _ignore_ all trees in layout positions, such that the parse tree of "1 + \\n1" will match against `<Exp e1> + <Exp e2>`. The same goes for equality on parse trees.
+Note that [Pattern Matching](../../../../../RascalConcepts/PatternMatching) will _ignore_ all trees in layout positions, such that the parse tree of "1 + \\n1" will match against `<Exp e1> + <Exp e2>`. The same goes for equality on parse trees.
 
 For the above example Rascal will insert the `Whitespace` non-terminal between every element of the syntax rules for `Exp`.
 Moreover, for the start production (See [No Layout](../../../../../Recipes/Languages/Exp/Concrete/NoLayout)) `Whitespace` will be added before and after the `Exp`.

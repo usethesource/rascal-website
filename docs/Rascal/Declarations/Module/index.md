@@ -37,7 +37,7 @@ which corresponds to a path relative to the root of the current workspace.
 
 The constituents of a module are shown in the figure below.
 
-![](/assets/Rascal/Declarations/Module/module-parts.png)
+![][parts.png](/assets/Rascal/Declarations/Module/module-parts.png)
 
 
 An [Import](../../../Rascal/Declarations/Import) declares other modules that are used by the current module.
@@ -94,6 +94,6 @@ Finally, it declares the `hello` function.
 
 The actual source of this module can be found in `library/demo/basic/Hello.rsc` in the Rascal sources.
 
-More ways to write this example are discussed in the [Hello][Hello](../../../Recipes/Basic/Hello) example in [Recipes](../../../Recipes/).
+More ways to write this example are discussed in the [Hello](../../../Recipes/Basic/Hello) example in [Recipes](../../../Recipes/).
 
 

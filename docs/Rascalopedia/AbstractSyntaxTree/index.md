@@ -16,14 +16,14 @@ In many cases a less detailed representation is sufficient and an abstract synta
 
 For the input sentence
 
-![](/assets/Rascalopedia/ParseTree/example-text.png)
+![][text.png](/assets/Rascalopedia/ParseTree/example-text.png)
 
 
 the parse tree (left) and abstract syntax tree (right) may look as follows:
 
 
 
-![](/assets/Rascalopedia/AbstractSyntaxTree/parse-ast.png)
+![][ast.png](/assets/Rascalopedia/AbstractSyntaxTree/parse-ast.png)
 
 
 Note that the parse tree on the left did not preserve the spaces in the original text but there

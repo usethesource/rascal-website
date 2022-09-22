@@ -8,7 +8,7 @@ Strategies to synthesise results.
 
 #### Description
 
-![Synthesis,Workflow][synthesis.png](/assets/WhyRascal/SolutionStrategies/Synthesis/define-synthesis.png)
+![Synthesis,Workflow](/assets/WhyRascal/SolutionStrategies/Synthesis/define-synthesis.png)
 
 Results are synthesized as shown in the Figure above. This consists of the following steps:
 

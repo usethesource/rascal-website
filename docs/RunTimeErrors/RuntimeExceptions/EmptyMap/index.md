@@ -24,7 +24,7 @@ Remedies:
 
 *  Guard the function or operation with a test on the empty map ([isEmpty](../../../Library/Map.md#Map-isEmpty)) and 
   take alternative action in that case.
-*  Catch the `EmptyMap` yourself, see [try catch][TryCatch](../../../Rascal/Statements/TryCatch).
+*  Catch the `EmptyMap` yourself, see [try catch](../../../Rascal/Statements/TryCatch).
 
 #### Examples
 

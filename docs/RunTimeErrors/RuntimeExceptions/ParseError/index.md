@@ -25,7 +25,7 @@ Remedies:
 
 *  Correct the input sentence.
 *  Adapt the grammar so that it accepts the input sentence.
-*  Catch the ParseError yourself, see [try catch][TryCatch](../../../Rascal/Statements/TryCatch).
+*  Catch the ParseError yourself, see [try catch](../../../Rascal/Statements/TryCatch).
 
 
 #### Examples

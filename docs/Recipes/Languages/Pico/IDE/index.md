@@ -29,26 +29,26 @@ An Integrated Development Environment for Pico.
 Let's write a Pico program that produces a string of "a"s:
 
 
-![](/assets/Recipes/Languages/Pico/IDE/Screenshot1.png)
+![][Screenshot1.png](/assets/Recipes/Languages/Pico/IDE/Screenshot1.png)
 
 
 As can be seen in the editor above, we get an error since we made a typo (missing comma) in the declarations. We correct it:
 
 
 
-![](/assets/Recipes/Languages/Pico/IDE/Screenshot2.png)
+![][Screenshot2.png](/assets/Recipes/Languages/Pico/IDE/Screenshot2.png)
 
 
 Now it turns out that we had erroneously used the `+` operator on strings (it should be `||`). We correct it:
 
 
-![](/assets/Recipes/Languages/Pico/IDE/Screenshot3.png)
+![][Screenshot3.png](/assets/Recipes/Languages/Pico/IDE/Screenshot3.png)
 
 
 Now we get a warning that variable `n` is not initialized. We correct it and get an error-free and warning-free program:
 
 
-![](/assets/Recipes/Languages/Pico/IDE/Screenshot4.png)
+![][Screenshot4.png](/assets/Recipes/Languages/Pico/IDE/Screenshot4.png)
 
 
 

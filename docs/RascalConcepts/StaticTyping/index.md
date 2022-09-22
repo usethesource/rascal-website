@@ -96,7 +96,7 @@ rascal>classify(V);
 str: "Another type"
 ```
 
-In addition to these standard examples, it is interesting that all [Algebraic Data Types][AlgebraicDataType](../../Rascal/Declarations/AlgebraicDataType) are subtypes of type `node`.
+In addition to these standard examples, it is interesting that all [Algebraic Data Types](../../Rascal/Declarations/AlgebraicDataType) are subtypes of type `node`.
 Let's introduce a simple `Color` data type:
 
 ```rascal-shell
@@ -117,6 +117,6 @@ node: red(3)
 ```
 
 One example of the actual application of subtypes can be found in 
-[Count Constructors][CountConstructors](../../Recipes/Common/CountConstructors).
+[Count Constructors](../../Recipes/Common/CountConstructors).
 
 

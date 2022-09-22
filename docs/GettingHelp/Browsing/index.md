@@ -18,7 +18,7 @@ Suppose we want to learn about `while` statement in Rascal and
 the type `help while` at the command line. This will show the following
 results (actual results may differ):
 
-![](/assets/GettingHelp/Browsing/search-results-while.png)
+![][while.png](/assets/GettingHelp/Browsing/search-results-while.png)
 
 :::caution
 There is a "TODO" in the documentation source:
@@ -41,7 +41,7 @@ in _courses_, each course consist of
 a hierarchy of _concepts_.
 The documentation for `while` is found in the
 course named [Rascal](../../Rascal/)
-and the complete name is [Rascal/Statements/While][While](../../Rascal/Statements/While).
+and the complete name is [Rascal/Statements/While](../../Rascal/Statements/While).
 
 There are other courses like [Help](../../RascalShell/Commands/Help) (this course)
 and [Recipes](../../Recipes/) and the search for while

@@ -106,7 +106,7 @@ int (list[str]): function(|prompt:///|(0,94,<1,0>,<1,94>))
 rascal>wordCount2(Jabberwocky);
 int: 216
 ```
-The function body contains two nested [reducers][Reducer](../../../Rascal/Expressions/Reducer).
+The function body contains two nested [reducers](../../../Rascal/Expressions/Reducer).
 The inner reducer counts the number of words in a line, the outer reducer accumulates all line word counts.
 
 

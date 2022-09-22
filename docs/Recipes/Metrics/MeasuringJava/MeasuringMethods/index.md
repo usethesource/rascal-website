@@ -352,7 +352,7 @@ set[Declaration]: {method(
       []))}
 ```
 
-If `methodASTs` would have been an empty set, then the [search pattern][pattern matching](../../../../RascalConcepts/PatternMatching) `/Declaration d` or the condition `d.decl == ...` would have failed on this example. But it didn't! It found exactly one match.
+If `methodASTs` would have been an empty set, then the [search pattern](../../../../RascalConcepts/PatternMatching) `/Declaration d` or the condition `d.decl == ...` would have failed on this example. But it didn't! It found exactly one match.
 
 Now we count the number of expressions:
 

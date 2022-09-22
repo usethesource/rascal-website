@@ -14,9 +14,9 @@ It may even be so detailed that it contains every space, comment and parenthesis
 #### Examples
 
 A parse tree for the sentence 
-![](/assets/Rascalopedia/ParseTree/example-text.png)
+![][text.png](/assets/Rascalopedia/ParseTree/example-text.png)
 
-![](/assets/Rascalopedia/ParseTree/parse-tree.png)
+![][tree.png](/assets/Rascalopedia/ParseTree/parse-tree.png)
 
 
 
