@@ -42,14 +42,14 @@ Since list relations are a form of list all operations (see [List](../../../../R
 (see [List](../../../../Library/List.md)) are also applicable to relations.
 
 The following additional operators are provided for list relations:
-* ((Rascal:Expressions/Values/ListRelation))
-* ((Rascal:Expressions/Values/ListRelation/CartesianProduct))
-* ((Rascal:Expressions/Values/ListRelation/Composition))
-* ((Rascal:Expressions/Values/ListRelation/FieldSelection))
-* ((Rascal:Expressions/Values/ListRelation/Join))
-* ((Rascal:Expressions/Values/ListRelation/ReflexiveTransitiveClosure))
-* ((Rascal:Expressions/Values/ListRelation/Subscription))
-* ((Rascal:Expressions/Values/ListRelation/TransitiveClosure))
+* [ListRelation](../../../../Rascal/Expressions/Values/ListRelation)
+* [CartesianProduct](../../../../Rascal/Expressions/Values/ListRelation/CartesianProduct)
+* [Composition](../../../../Rascal/Expressions/Values/ListRelation/Composition)
+* [FieldSelection](../../../../Rascal/Expressions/Values/ListRelation/FieldSelection)
+* [Join](../../../../Rascal/Expressions/Values/ListRelation/Join)
+* [ReflexiveTransitiveClosure](../../../../Rascal/Expressions/Values/ListRelation/ReflexiveTransitiveClosure)
+* [Subscription](../../../../Rascal/Expressions/Values/ListRelation/Subscription)
+* [TransitiveClosure](../../../../Rascal/Expressions/Values/ListRelation/TransitiveClosure)
 
 There are also [library functions](../../../../Library/ListRelation.md) available for list relations.
 

@@ -28,7 +28,7 @@ Remedies:
   ** Use the [index](../../../Library/List.md#List-index) to produce all legal indices of a list. 
      Instead of `for(int i <- [0..size(L)]) { ... }` use `for(int i <- index(L)) { ... }`.
   ** Use a [list slice](../../../Rascal/Expressions/Values/List/Slice) to automate part of the index computation.
-*  Catch the `IndexOutOfBounds` yourself, see [try catch](../../../Rascal/Statements/TryCatch).
+*  Catch the `IndexOutOfBounds` yourself, see [try catch][TryCatch](../../../Rascal/Statements/TryCatch).
 
 
 #### Examples

@@ -66,18 +66,18 @@ This behaviour is applicable in the context of all Rascal constructs where a pat
 
 
 The following operators are provided for Boolean:
-* ((Rascal:Expressions/Values/Boolean))
-* ((Rascal:Expressions/Values/Boolean/All))
-* ((Rascal:Expressions/Values/Boolean/And))
-* ((Rascal:Expressions/Values/Boolean/Any))
-* ((Rascal:Expressions/Values/Boolean/Equivalence))
-* ((Rascal:Expressions/Values/Boolean/IfDefinedElse))
-* ((Rascal:Expressions/Values/Boolean/Implication))
-* ((Rascal:Expressions/Values/Boolean/IsDefined))
-* ((Rascal:Expressions/Values/Boolean/Match))
-* ((Rascal:Expressions/Values/Boolean/Negation))
-* ((Rascal:Expressions/Values/Boolean/NoMatch))
-* ((Rascal:Expressions/Values/Boolean/Or))
+* [Boolean](../../../../Rascal/Expressions/Values/Boolean)
+* [All](../../../../Rascal/Expressions/Values/Boolean/All)
+* [And](../../../../Rascal/Expressions/Values/Boolean/And)
+* [Any](../../../../Rascal/Expressions/Values/Boolean/Any)
+* [Equivalence](../../../../Rascal/Expressions/Values/Boolean/Equivalence)
+* [IfDefinedElse](../../../../Rascal/Expressions/Values/Boolean/IfDefinedElse)
+* [Implication](../../../../Rascal/Expressions/Values/Boolean/Implication)
+* [IsDefined](../../../../Rascal/Expressions/Values/Boolean/IsDefined)
+* [Match](../../../../Rascal/Expressions/Values/Boolean/Match)
+* [Negation](../../../../Rascal/Expressions/Values/Boolean/Negation)
+* [NoMatch](../../../../Rascal/Expressions/Values/Boolean/NoMatch)
+* [Or](../../../../Rascal/Expressions/Values/Boolean/Or)
 
 There are also [library functions](../../../../Library/Boolean.md) available for Booleans.
 

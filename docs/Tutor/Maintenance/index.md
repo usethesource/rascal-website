@@ -11,8 +11,8 @@ How to maintain a course.
 The following topics are discussed:
 
 * [Maintenance](../../Tutor/Maintenance)
-* ((Tutor:Maintenance/Adding))
-* ((Tutor:Maintenance/Removing))
-* ((Tutor:Maintenance/Renaming))
+* [Adding](../../Tutor/Maintenance/Adding)
+* [Removing](../../Tutor/Maintenance/Removing)
+* [Renaming](../../Tutor/Maintenance/Renaming)
 
 

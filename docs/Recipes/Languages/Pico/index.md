@@ -28,19 +28,19 @@ Pico has a single purpose in life: being so simple that specifications of every 
 
 The following aspects of the Pico language will be discussed:
 
-* ((Recipes:Languages/Pico))
-* ((Recipes:Languages/Pico/Abstract))
-* ((Recipes:Languages/Pico/Assembly))
-* ((Recipes:Languages/Pico/Compile))
-* ((Recipes:Languages/Pico/ControlFlow))
-* ((Recipes:Languages/Pico/Evaluate))
-* ((Recipes:Languages/Pico/IDE))
-* ((Recipes:Languages/Pico/Load))
-* ((Recipes:Languages/Pico/Syntax))
-* ((Recipes:Languages/Pico/Typecheck))
-* ((Recipes:Languages/Pico/Uninit))
-* ((Recipes:Languages/Pico/UseDef))
-* ((Recipes:Languages/Pico/Visualize))
+* [Pico](../../../Recipes/Languages/Pico)
+* [Abstract](../../../Recipes/Languages/Pico/Abstract)
+* [Assembly](../../../Recipes/Languages/Pico/Assembly)
+* [Compile](../../../Recipes/Languages/Pico/Compile)
+* [ControlFlow](../../../Recipes/Languages/Pico/ControlFlow)
+* [Evaluate](../../../Recipes/Languages/Pico/Evaluate)
+* [IDE](../../../Recipes/Languages/Pico/IDE)
+* [Load](../../../Recipes/Languages/Pico/Load)
+* [Syntax](../../../Recipes/Languages/Pico/Syntax)
+* [Typecheck](../../../Recipes/Languages/Pico/Typecheck)
+* [Uninit](../../../Recipes/Languages/Pico/Uninit)
+* [UseDef](../../../Recipes/Languages/Pico/UseDef)
+* [Visualize](../../../Recipes/Languages/Pico/Visualize)
 
 #### Examples
 

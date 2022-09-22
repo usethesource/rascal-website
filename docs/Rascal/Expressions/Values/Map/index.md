@@ -36,21 +36,21 @@ Maps resemble functions rather than relations in the sense that only a single va
 
 The following functions are provided for maps:
 
-* ((Rascal:Expressions/Values/Map))
-* ((Rascal:Expressions/Values/Map/Composition))
-* ((Rascal:Expressions/Values/Map/Comprehension))
-* ((Rascal:Expressions/Values/Map/Difference))
-* ((Rascal:Expressions/Values/Map/Equal))
-* ((Rascal:Expressions/Values/Map/Intersection))
-* ((Rascal:Expressions/Values/Map/NotEqual))
-* ((Rascal:Expressions/Values/Map/StrictSubMap))
-* ((Rascal:Expressions/Values/Map/StrictSuperMap))
-* ((Rascal:Expressions/Values/Map/SubMap))
-* ((Rascal:Expressions/Values/Map/Subscription))
-* ((Rascal:Expressions/Values/Map/SuperMap))
-* ((Rascal:Expressions/Values/Map/Union))
-* ((Rascal:Expressions/Values/Map/in))
-* ((Rascal:Expressions/Values/Map/notin))
+* [Map](../../../../Rascal/Expressions/Values/Map)
+* [Composition](../../../../Rascal/Expressions/Values/Map/Composition)
+* [Comprehension](../../../../Rascal/Expressions/Values/Map/Comprehension)
+* [Difference](../../../../Rascal/Expressions/Values/Map/Difference)
+* [Equal](../../../../Rascal/Expressions/Values/Map/Equal)
+* [Intersection](../../../../Rascal/Expressions/Values/Map/Intersection)
+* [NotEqual](../../../../Rascal/Expressions/Values/Map/NotEqual)
+* [StrictSubMap](../../../../Rascal/Expressions/Values/Map/StrictSubMap)
+* [StrictSuperMap](../../../../Rascal/Expressions/Values/Map/StrictSuperMap)
+* [SubMap](../../../../Rascal/Expressions/Values/Map/SubMap)
+* [Subscription](../../../../Rascal/Expressions/Values/Map/Subscription)
+* [SuperMap](../../../../Rascal/Expressions/Values/Map/SuperMap)
+* [Union](../../../../Rascal/Expressions/Values/Map/Union)
+* [in](../../../../Rascal/Expressions/Values/Map/in)
+* [notin](../../../../Rascal/Expressions/Values/Map/notin)
 
 #### Examples
 

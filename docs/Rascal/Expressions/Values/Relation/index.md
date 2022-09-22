@@ -41,14 +41,14 @@ Since relations are a form of set all operations (see [Set](../../../../Rascal/E
 (see [Set](../../../../Library/Set.md)) are also applicable to relations.
 
 The following additional operators are provided for relations:
-* ((Rascal:Expressions/Values/Relation))
-* ((Rascal:Expressions/Values/Relation/CartesianProduct))
-* ((Rascal:Expressions/Values/Relation/Composition))
-* ((Rascal:Expressions/Values/Relation/FieldSelection))
-* ((Rascal:Expressions/Values/Relation/Join))
-* ((Rascal:Expressions/Values/Relation/ReflexiveTransitiveClosure))
-* ((Rascal:Expressions/Values/Relation/Subscription))
-* ((Rascal:Expressions/Values/Relation/TransitiveClosure))
+* [Relation](../../../../Rascal/Expressions/Values/Relation)
+* [CartesianProduct](../../../../Rascal/Expressions/Values/Relation/CartesianProduct)
+* [Composition](../../../../Rascal/Expressions/Values/Relation/Composition)
+* [FieldSelection](../../../../Rascal/Expressions/Values/Relation/FieldSelection)
+* [Join](../../../../Rascal/Expressions/Values/Relation/Join)
+* [ReflexiveTransitiveClosure](../../../../Rascal/Expressions/Values/Relation/ReflexiveTransitiveClosure)
+* [Subscription](../../../../Rascal/Expressions/Values/Relation/Subscription)
+* [TransitiveClosure](../../../../Rascal/Expressions/Values/Relation/TransitiveClosure)
 
 There are also [library functions](../../../../Library/Relation.md) available for Relations.
 

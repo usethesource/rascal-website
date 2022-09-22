@@ -31,7 +31,7 @@ Remedies:
 
 *  Check for any errors in the location you are using.
 *  Check that you are allowed to read or write the resource indicated by the location.
-*  Catch `IO` using a [try catch](../../../Rascal/Statements/TryCatch).
+*  Catch `IO` using a [try catch][TryCatch](../../../Rascal/Statements/TryCatch).
 
 #### Examples
 

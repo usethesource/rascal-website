@@ -10,7 +10,7 @@ Mark up in Rascal source code.
 
 The mark up of concepts inside Rascal source code requires two steps:
 
-* ((Tutor:Markup/SourceCodeMarkup))
-* ((Tutor:Markup/SourceCodeMarkup/DocAnnotations))
+* [SourceCodeMarkup](../../../Tutor/Markup/SourceCodeMarkup)
+* [DocAnnotations](../../../Tutor/Markup/SourceCodeMarkup/DocAnnotations)
 
 

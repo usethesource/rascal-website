@@ -122,6 +122,6 @@ ok
 
 Here are some pointers for further disambiguation help:
 
-* [Syntax Definitions](../../../Rascal/Declarations/SyntaxDefinition).
+* [Syntax Definitions][SyntaxDefinition](../../../Rascal/Declarations/SyntaxDefinition).
 * [Disambiguation features](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation).
 

@@ -75,14 +75,14 @@ The `isDate`, `isTime`, and `isDateTime` fields can be checked in advance to det
 kind of value is stored in a variable of type `datetime`.
 
 The following operators are defined for DateTime:
-* ((Rascal:Expressions/Values/DateTime))
-* ((Rascal:Expressions/Values/DateTime/Equal))
-* ((Rascal:Expressions/Values/DateTime/FieldSelection))
-* ((Rascal:Expressions/Values/DateTime/GreaterThan))
-* ((Rascal:Expressions/Values/DateTime/GreaterThanOrEqual))
-* ((Rascal:Expressions/Values/DateTime/LessThan))
-* ((Rascal:Expressions/Values/DateTime/LessThanOrEqual))
-* ((Rascal:Expressions/Values/DateTime/NotEqual))
+* [DateTime](../../../../Rascal/Expressions/Values/DateTime)
+* [Equal](../../../../Rascal/Expressions/Values/DateTime/Equal)
+* [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection)
+* [GreaterThan](../../../../Rascal/Expressions/Values/DateTime/GreaterThan)
+* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/DateTime/GreaterThanOrEqual)
+* [LessThan](../../../../Rascal/Expressions/Values/DateTime/LessThan)
+* [LessThanOrEqual](../../../../Rascal/Expressions/Values/DateTime/LessThanOrEqual)
+* [NotEqual](../../../../Rascal/Expressions/Values/DateTime/NotEqual)
 
 The following functions are defined for DateTime:
 loctoc::[Rascal/Libraries/Prelude/DateTime,1]

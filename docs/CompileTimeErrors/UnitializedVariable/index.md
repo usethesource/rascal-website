@@ -8,7 +8,7 @@ Use of a variable that has not been initialized.
 
 #### Description
 
-A [variable](../../Rascal/Declarations/Variable) has to be initialized before it can be used.
+A [variable][Variable](../../Rascal/Declarations/Variable) has to be initialized before it can be used.
 This error is generated when an uninitialzed variable is used.
 
 Remedy: assign a value to the variable before its use:

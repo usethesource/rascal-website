@@ -25,7 +25,7 @@ Remedies:
 *  Use the 
    [isDefined](../../../Rascal/Expressions/Values/Boolean/IsDefined) and 
    [ifDefinedElse](../../../Rascal/Expressions/Values/Boolean/IfDefinedElse) operator to guard a lookup in a map.
-*  Catch the `NoSuchKey` yourself, see [try catch](../../../Rascal/Statements/TryCatch).
+*  Catch the `NoSuchKey` yourself, see [try catch][TryCatch](../../../Rascal/Statements/TryCatch).
 
 #### Examples
 

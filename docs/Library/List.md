@@ -221,7 +221,7 @@ str: "elephant"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "snake"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "zebra"
+str: "owl"
 ```
 
 ## function getFirstFrom {#List-getFirstFrom}
@@ -353,7 +353,7 @@ list[int]: [0,1,2,3]
 
 #### Benefits
 
-This function is useful in [for](../Rascal/Statements/For) loops over lists.
+This function is useful in [for][For](../Rascal/Statements/For) loops over lists.
 
 ## function indexOf {#List-indexOf}
 
@@ -818,7 +818,7 @@ int: 100
 #### Pitfalls
 
 WARNING:
-This function is *deprecated*, use a [reducer](../Rascal/Expressions/Reducer) instead.
+This function is *deprecated*, use a [reducer][Reducer](../Rascal/Expressions/Reducer) instead.
 
 ## function remove {#List-remove}
 
@@ -944,7 +944,7 @@ list[str]: ["mango","strawberry","pear","pineapple","banana","grape","kiwi"]
 rascal>sort(fruits);
 list[str]: ["banana","grape","kiwi","mango","pear","pineapple","strawberry"]
 rascal>sort(fruits, bool(str a, str b){ return size(a) > size(b); });
-list[str]: ["strawberry","pineapple","banana","mango","grape","pear","kiwi"]
+list[str]: ["strawberry","pineapple","banana","grape","mango","pear","kiwi"]
 ```
 
 ## function isSorted {#List-isSorted}
@@ -984,9 +984,9 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [1,3,2,4]
+list[int]: [1,4,2,3]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["zebra","snake","elephant","owl"]
+list[str]: ["elephant","snake","owl","zebra"]
 ```
 
 ## function split {#List-split}
@@ -1140,17 +1140,17 @@ See [getOneFrom](../Library/List.md#List-getOneFrom) to only selected an element
 rascal>import List;
 ok
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <20,[10,30,40,50]>
-rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <10,[20,30,40,50]>
+tuple[int,list[int]]: <40,[10,20,30,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <20,[10,30,40,50]>
+rascal>takeOneFrom([10,20,30,40,50]);
+tuple[int,list[int]]: <40,[10,20,30,50]>
+rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
+tuple[str,list[str]]: <"snake",["zebra","elephant","owl"]>
+rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
+tuple[str,list[str]]: <"snake",["zebra","elephant","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
-rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
-rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
 ```
 
 ## function takeWhile {#List-takeWhile}

@@ -39,22 +39,22 @@ To achieve splicing of these elements, i.e., the insertion of the elements of th
 it has to be prefixed by the splice operator `*`.
 
 The following operators are provided on sets:
-* ((Rascal:Expressions/Values/Set))
-* ((Rascal:Expressions/Values/Set/Comprehension))
-* ((Rascal:Expressions/Values/Set/Difference))
-* ((Rascal:Expressions/Values/Set/Equal))
-* ((Rascal:Expressions/Values/Set/Insert))
-* ((Rascal:Expressions/Values/Set/Intersection))
-* ((Rascal:Expressions/Values/Set/NotEqual))
-* ((Rascal:Expressions/Values/Set/Product))
-* ((Rascal:Expressions/Values/Set/Splice))
-* ((Rascal:Expressions/Values/Set/StrictSubSet))
-* ((Rascal:Expressions/Values/Set/StrictSuperSet))
-* ((Rascal:Expressions/Values/Set/SubSet))
-* ((Rascal:Expressions/Values/Set/SuperSet))
-* ((Rascal:Expressions/Values/Set/Union))
-* ((Rascal:Expressions/Values/Set/in))
-* ((Rascal:Expressions/Values/Set/notin))
+* [Set](../../../../Rascal/Expressions/Values/Set)
+* [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension)
+* [Difference](../../../../Rascal/Expressions/Values/Set/Difference)
+* [Equal](../../../../Rascal/Expressions/Values/Set/Equal)
+* [Insert](../../../../Rascal/Expressions/Values/Set/Insert)
+* [Intersection](../../../../Rascal/Expressions/Values/Set/Intersection)
+* [NotEqual](../../../../Rascal/Expressions/Values/Set/NotEqual)
+* [Product](../../../../Rascal/Expressions/Values/Set/Product)
+* [Splice](../../../../Rascal/Expressions/Values/Set/Splice)
+* [StrictSubSet](../../../../Rascal/Expressions/Values/Set/StrictSubSet)
+* [StrictSuperSet](../../../../Rascal/Expressions/Values/Set/StrictSuperSet)
+* [SubSet](../../../../Rascal/Expressions/Values/Set/SubSet)
+* [SuperSet](../../../../Rascal/Expressions/Values/Set/SuperSet)
+* [Union](../../../../Rascal/Expressions/Values/Set/Union)
+* [in](../../../../Rascal/Expressions/Values/Set/in)
+* [notin](../../../../Rascal/Expressions/Values/Set/notin)
 
 There are also [library functions](../../../../Library/Set.md) available for Sets.
 ##  Set types 

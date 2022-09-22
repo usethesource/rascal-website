@@ -10,6 +10,6 @@ provide numerical output.
 #### Description
 
 * [Metrics](../../Recipes/Metrics)
-* ((Recipes:Metrics/MeasuringJava))
+* [MeasuringJava](../../Recipes/Metrics/MeasuringJava)
 
 

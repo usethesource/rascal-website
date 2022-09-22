@@ -24,7 +24,7 @@ Remedies:
 
 * Guard the function or operation with a test on the empty list ([isEmpty](../../../Library/List.md#List-isEmpty)) and 
   take alternative action in that case.
-* Catch the `EmptyList` yourself, see [try catch](../../../Rascal/Statements/TryCatch).
+* Catch the `EmptyList` yourself, see [try catch][TryCatch](../../../Rascal/Statements/TryCatch).
 
 
 #### Examples

@@ -12,11 +12,11 @@ rascal>import Content;
 ok
 rascal>html("this is some \<strong\>HTML\</strong\> output")
 <div class="rascal-html-output">
-  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9092/"></iframe>
+  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9104/"></iframe>
 </div>
 rascal>file(|https://www.rascal-mpl.org/assets/ico/favicon.png|)
 <div class="rascal-html-output">
-  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9092/"></iframe>
+  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9104/"></iframe>
 </div>
 rascal>1 + 1 == 2
 bool: true
@@ -24,7 +24,7 @@ rascal>int count = 1;
 int: 1
 rascal>content("counter", Response (Request _) { count += 1; return response("count: <count>"); })
 <div class="rascal-html-output">
-  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9093/"></iframe>
+  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9105/"></iframe>
 </div>
 rascal>count;
 int: 1
@@ -32,7 +32,7 @@ rascal>count = 66;
 int: 66
 rascal>content("counter", Response (Request _) { count += 1; return response("count: <count>"); })
 <div class="rascal-html-output">
-  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9093/"></iframe>
+  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9105/"></iframe>
 </div>
 rascal>count;
 int: 66
@@ -62,11 +62,11 @@ Horizontal rule:
 * `code`
 * `in code: italics`
 
-* ((Library:Lang/rascal/tutor/examples/Test))
-* ((Library:Lang/rascal/tutor/examples/Test/CallAnalysis))
-* ((Library:Lang/rascal/tutor/examples/Test/If))
-* ((Library:Lang/rascal/tutor/examples/Test/Libraries))
-* ((Library:Lang/rascal/tutor/examples/Test/Questions))
+* [Test](../../../../../../Library/lang/rascal/tutor/examples/Test/index.md)
+* [CallAnalysis](../../../../../../Library/lang/rascal/tutor/examples/Test/CallAnalysis/index.md)
+* [If](../../../../../../Library/lang/rascal/tutor/examples/Test/If/index.md)
+* [Libraries](../../../../../../Library/lang/rascal/tutor/examples/Test/Libraries/index.md)
+* [Questions](../../../../../../Library/lang/rascal/tutor/examples/Test/Questions/index.md)
 
 ## Benefits {/Lang/rascal/tutor/examples/Test}
 

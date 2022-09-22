@@ -94,6 +94,6 @@ Finally, it declares the `hello` function.
 
 The actual source of this module can be found in `library/demo/basic/Hello.rsc` in the Rascal sources.
 
-More ways to write this example are discussed in the [Hello](../../../Recipes/Basic/Hello) example in [Recipes](../../../Recipes/).
+More ways to write this example are discussed in the [Hello][Hello](../../../Recipes/Basic/Hello) example in [Recipes](../../../Recipes/).
 
 

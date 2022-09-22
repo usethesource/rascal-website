@@ -12,7 +12,7 @@ In [colored trees](../../../Recipes/Common/ColoredTrees), we have seen a functio
 Is it possible to define a function that can count constructors in a value of any algerbaic data type?
 
 We exploit the subtype relation (see [Static Typing][static typing](../../../RascalConcepts/StaticTyping)) 
-between [algebraic data types](../../../Rascal/Declarations/AlgebraicDataType)s 
+between [algebraic data types][AlgebraicDataType](../../../Rascal/Declarations/AlgebraicDataType)s 
 and the type [node](../../../Rascal/Expressions/Values/Node) to achieve this.
 
 In real applications this becomes relevant when counting, for instance, statement types in programs.

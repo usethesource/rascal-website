@@ -24,7 +24,7 @@ Remedies:
 
 *  Guard the function or operation with a test on the empty set ([isEmpty](../../../Library/Set.md#Set-isEmpty)) and 
   take alternative action in that case.
-*  Catch the `EmptySet` yourself, see [try catch](../../../Rascal/Statements/TryCatch).
+*  Catch the `EmptySet` yourself, see [try catch][TryCatch](../../../Rascal/Statements/TryCatch).
 
 #### Examples
 

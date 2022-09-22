@@ -10,10 +10,10 @@ Definitions of several languages and their tools.
 
 Examples of several languages and the implementation of tools like interpreters and compilers:
 * [Languages](../../Recipes/Languages)
-* ((Recipes:Languages/Exp))
-* ((Recipes:Languages/Func))
-* ((Recipes:Languages/Lisra))
-* ((Recipes:Languages/Pico))
+* [Exp](../../Recipes/Languages/Exp)
+* [Func](../../Recipes/Languages/Func)
+* [Lisra](../../Recipes/Languages/Lisra)
+* [Pico](../../Recipes/Languages/Pico)
 
 Other languages that we are considering (but are not yet described):
 

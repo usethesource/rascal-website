@@ -66,8 +66,8 @@ A more satisfying use is as follows:
 rascal>{ x * x | int x <- {1, 3, 5, 7, 11 }};
 set[int]: {121,1,9,49,25}
 ```
-When used inside [Comprehensions](../../Rascal/Expressions/Comprehensions), 
-or [For](../../Rascal/Statements/For), [Do](../../Rascal/Statements/Do), or [While](../../Rascal/Statements/While) 
+When used inside [Comprehensions][Comprehensions](../../Rascal/Expressions/Comprehensions), 
+or [For][For](../../Rascal/Statements/For), [Do][Do](../../Rascal/Statements/Do), or [While][While](../../Rascal/Statements/While) 
 statement, all values of the generator will be produced and used.
 The variables that are introduced by a enumerator are local to the construct in which the enumerator is used.
 Here is a similar example:

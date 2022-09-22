@@ -10,8 +10,8 @@ A value of a different type was expected.
 
 This error signals an incompatibility between expected type and actual type.
 Some of the situations in which this may occur are
-[assert](../../Rascal/Statements/Assert), [variable](../../Rascal/Declarations/Variable),
-[solve](../../Rascal/Statements/Solve).
+[assert][Assert](../../Rascal/Statements/Assert), [variable][Variable](../../Rascal/Declarations/Variable),
+[solve][Solve](../../Rascal/Statements/Solve).
 
 Remedy: adjust the actual type to the expected type.
 

@@ -12,6 +12,6 @@ Rascal provides both familiar and unfamiliar features. These will be appreciated
 that are expert in other language paradigms. We provide the following comparisons:
 
 * [compare with other paradigms](../../WhyRascal/CompareWithOtherParadigms)
-* ((WhyRascal:CompareWithOtherParadigms/ASFPlusSDF))
-* ((WhyRascal:CompareWithOtherParadigms/OO))
+* [ASFPlusSDF](../../WhyRascal/CompareWithOtherParadigms/ASFPlusSDF)
+* [OO](../../WhyRascal/CompareWithOtherParadigms/OO)
 

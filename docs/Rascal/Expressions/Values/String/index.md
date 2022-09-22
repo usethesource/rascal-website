@@ -87,16 +87,16 @@ In the interpolation variant of these statements the block or blocks that are pa
 _Auto-indent_: Expressions that get interpolated in a string will be auto-indented. This means that each line that results from the evaluation of the expression is prefixed with the indentation level of the position of the expression in the current string.
 
 The following operators are defined for Strings:
-* ((Rascal:Expressions/Values/String))
-* ((Rascal:Expressions/Values/String/Concatenation))
-* ((Rascal:Expressions/Values/String/Equal))
-* ((Rascal:Expressions/Values/String/GreaterThan))
-* ((Rascal:Expressions/Values/String/GreaterThanOrEqual))
-* ((Rascal:Expressions/Values/String/LessThan))
-* ((Rascal:Expressions/Values/String/LessThanOrEqual))
-* ((Rascal:Expressions/Values/String/NotEqual))
-* ((Rascal:Expressions/Values/String/Slice))
-* ((Rascal:Expressions/Values/String/Subscription))
+* [String](../../../../Rascal/Expressions/Values/String)
+* [Concatenation](../../../../Rascal/Expressions/Values/String/Concatenation)
+* [Equal](../../../../Rascal/Expressions/Values/String/Equal)
+* [GreaterThan](../../../../Rascal/Expressions/Values/String/GreaterThan)
+* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/String/GreaterThanOrEqual)
+* [LessThan](../../../../Rascal/Expressions/Values/String/LessThan)
+* [LessThanOrEqual](../../../../Rascal/Expressions/Values/String/LessThanOrEqual)
+* [NotEqual](../../../../Rascal/Expressions/Values/String/NotEqual)
+* [Slice](../../../../Rascal/Expressions/Values/String/Slice)
+* [Subscription](../../../../Rascal/Expressions/Values/String/Subscription)
 
 There are also [library functions](../../../../Library/String.md) available for Strings.
 

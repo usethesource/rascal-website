@@ -22,7 +22,7 @@ Rascal provides a rich set of datatypes:
 *  [Map](../../Rascal/Expressions/Values/Map) (`map`) 
 *  [Relation](../../Rascal/Expressions/Values/Relation) (`rel`). 
 *  Untyped tree structures ([Node](../../Rascal/Expressions/Values/Node), `node`).  
-*  User-defined algebraic datatypes ([Algebraic Data Type](../../Rascal/Declarations/AlgebraicDataType), `data`) allow the introduction of problem-specific types and are a subtype of node. 
+*  User-defined algebraic datatypes ([Algebraic Data Type][AlgebraicDataType](../../Rascal/Declarations/AlgebraicDataType), `data`) allow the introduction of problem-specific types and are a subtype of node. 
   This makes it possible to have typed
   and untyped views on the same data. 
   A special case are syntax trees that are the result of parsing source files are represented 

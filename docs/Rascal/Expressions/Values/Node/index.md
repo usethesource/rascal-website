@@ -30,15 +30,15 @@ Values of type `node` represent untyped trees and are constructed as follows:
 * optionally, unordered named fields can be added as well.
 
 The following are provided for nodes:
-* ((Rascal:Expressions/Values/Node))
-* ((Rascal:Expressions/Values/Node/Equal))
-* ((Rascal:Expressions/Values/Node/GreaterThan))
-* ((Rascal:Expressions/Values/Node/GreaterThanOrEqual))
-* ((Rascal:Expressions/Values/Node/LessThan))
-* ((Rascal:Expressions/Values/Node/LessThanOrEqual))
-* ((Rascal:Expressions/Values/Node/NotEqual))
-* ((Rascal:Expressions/Values/Node/Slice))
-* ((Rascal:Expressions/Values/Node/Subscription))
+* [Node](../../../../Rascal/Expressions/Values/Node)
+* [Equal](../../../../Rascal/Expressions/Values/Node/Equal)
+* [GreaterThan](../../../../Rascal/Expressions/Values/Node/GreaterThan)
+* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/Node/GreaterThanOrEqual)
+* [LessThan](../../../../Rascal/Expressions/Values/Node/LessThan)
+* [LessThanOrEqual](../../../../Rascal/Expressions/Values/Node/LessThanOrEqual)
+* [NotEqual](../../../../Rascal/Expressions/Values/Node/NotEqual)
+* [Slice](../../../../Rascal/Expressions/Values/Node/Slice)
+* [Subscription](../../../../Rascal/Expressions/Values/Node/Subscription)
 
 #### Examples
 

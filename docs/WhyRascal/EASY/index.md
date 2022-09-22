@@ -23,10 +23,10 @@ Rascal has been designed to fully support problem solving that fits the EASY par
 We will discuss the following use cases represented by different _personas_:
 
 * [EASY](../../WhyRascal/EASY)
-* ((WhyRascal:EASY/Concurrency))
-* ((WhyRascal:EASY/Forensics))
-* ((WhyRascal:EASY/ModelDrivenEngineering))
-* ((WhyRascal:EASY/Renovation))
-* ((WhyRascal:EASY/Security))
+* [Concurrency](../../WhyRascal/EASY/Concurrency)
+* [Forensics](../../WhyRascal/EASY/Forensics)
+* [ModelDrivenEngineering](../../WhyRascal/EASY/ModelDrivenEngineering)
+* [Renovation](../../WhyRascal/EASY/Renovation)
+* [Security](../../WhyRascal/EASY/Security)
 
 
