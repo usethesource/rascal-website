@@ -29,9 +29,9 @@ In Rascal, a relation is a set of tuples and is characterized by the type:
 `rel[D<sub>1</sub> Name<sub>1</sub>, D<sub>2</sub> Name<sub>2</sub>, ..., D~n~ Name~n~]` 
 See [Relation Values](../../Rascal/Expressions/Values/Relation) and  for a description of relations and their operators
 (since relations are sets all set operators also apply to them, see [Set Values](../../Rascal/Expressions/Values/Set))
-and [functions on relations](../../Library/Relation)
+and [functions on relations](../../Library/Relation.md)
 (and here again, since relations are sets all set operators also apply to them, 
-see [functions on sets](../../Library/Set)).
+see [functions on sets](../../Library/Set.md)).
 
 
 ## Relations in Daily Life

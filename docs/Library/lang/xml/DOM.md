@@ -20,35 +20,35 @@ The Document Object Model [DOM](http://en.wikipedia.org/wiki/Document_Object_Mod
 way of representing and manipulating HTML, XHTML and XML documents. In this module we represent the DOM as a 
 Rascal [Algebraic data type](../../../Rascal/Declarations/AlgebraicDataType) using [keyword parameters](../../../Rascal/Declarations/Function) for the optional attributes.
 
-In [lang::xml::IO](../../../Library/lang/xml/IO) a different approach is taken, where each XML document is mapped to an instance of 
+In [lang::xml::IO](../../../Library/lang/xml/IO.md) a different approach is taken, where each XML document is mapped to an instance of 
 the `node` class, which gives a more direct one-to-ony mapping as opposed to the DOM encoding here.
 If you are studying XML documents in general, then the current module is the place to be. If you
-are reading in specific data which is only accidentally encoded as XML, then have a look at [lang::xml::IO](../../../Library/lang/xml/IO).
+are reading in specific data which is only accidentally encoded as XML, then have a look at [lang::xml::IO](../../../Library/lang/xml/IO.md).
 
 The following functions are provided:
 
-* [Library:constructor:lang::xml::DOM::attribute](../../../Library/lang/xml/DOM#lang::xml::DOM-attribute)
-* [Library:constructor:lang::xml::DOM::cdata](../../../Library/lang/xml/DOM#lang::xml::DOM-cdata)
-* [Library:constructor:lang::xml::DOM::char data](../../../Library/lang/xml/DOM#lang::xml::DOM-charData)
-* [Library:constructor:lang::xml::DOM::char ref](../../../Library/lang/xml/DOM#lang::xml::DOM-charRef)
-* [Library:constructor:lang::xml::DOM::comment](../../../Library/lang/xml/DOM#lang::xml::DOM-comment)
-* [Library:constructor:lang::xml::DOM::document](../../../Library/lang/xml/DOM#lang::xml::DOM-document)
-* [Library:constructor:lang::xml::DOM::element](../../../Library/lang/xml/DOM#lang::xml::DOM-element)
-* [Library:constructor:lang::xml::DOM::entity ref](../../../Library/lang/xml/DOM#lang::xml::DOM-entityRef)
-* [Library:constructor:lang::xml::DOM::namespace](../../../Library/lang/xml/DOM#lang::xml::DOM-namespace)
-* [Library:constructor:lang::xml::DOM::none](../../../Library/lang/xml/DOM#lang::xml::DOM-none)
-* [Library:constructor:lang::xml::DOM::pi](../../../Library/lang/xml/DOM#lang::xml::DOM-pi)
-* [Library:data:lang::xml::DOM::Namespace](../../../Library/lang/xml/DOM#lang::xml::DOM-Namespace)
-* [Library:data:lang::xml::DOM::Node](../../../Library/lang/xml/DOM#lang::xml::DOM-Node)
-* [Library:function:lang::xml::DOM::attribute](../../../Library/lang/xml/DOM#lang::xml::DOM-attribute)
-* [Library:function:lang::xml::DOM::element](../../../Library/lang/xml/DOM#lang::xml::DOM-element)
-* [Library:function:lang::xml::DOM::implode](../../../Library/lang/xml/DOM#lang::xml::DOM-implode)
-* [Library:function:lang::xml::DOM::parse x m l d oM](../../../Library/lang/xml/DOM#lang::xml::DOM-parseXMLDOM)
-* [Library:function:lang::xml::DOM::parse x m l d o m trim](../../../Library/lang/xml/DOM#lang::xml::DOM-parseXMLDOMTrim)
-* [Library:function:lang::xml::DOM::to x mL](../../../Library/lang/xml/DOM#lang::xml::DOM-toXML)
-* [Library:function:lang::xml::DOM::xml compact](../../../Library/lang/xml/DOM#lang::xml::DOM-xmlCompact)
-* [Library:function:lang::xml::DOM::xml pretty](../../../Library/lang/xml/DOM#lang::xml::DOM-xmlPretty)
-* [Library:function:lang::xml::DOM::xml raw](../../../Library/lang/xml/DOM#lang::xml::DOM-xmlRaw)
+* [Library:constructor:lang::xml::DOM::attribute](../../../Library/lang/xml/DOM.md#lang::xml::DOM-attribute)
+* [Library:constructor:lang::xml::DOM::cdata](../../../Library/lang/xml/DOM.md#lang::xml::DOM-cdata)
+* [Library:constructor:lang::xml::DOM::char data](../../../Library/lang/xml/DOM.md#lang::xml::DOM-charData)
+* [Library:constructor:lang::xml::DOM::char ref](../../../Library/lang/xml/DOM.md#lang::xml::DOM-charRef)
+* [Library:constructor:lang::xml::DOM::comment](../../../Library/lang/xml/DOM.md#lang::xml::DOM-comment)
+* [Library:constructor:lang::xml::DOM::document](../../../Library/lang/xml/DOM.md#lang::xml::DOM-document)
+* [Library:constructor:lang::xml::DOM::element](../../../Library/lang/xml/DOM.md#lang::xml::DOM-element)
+* [Library:constructor:lang::xml::DOM::entity ref](../../../Library/lang/xml/DOM.md#lang::xml::DOM-entityRef)
+* [Library:constructor:lang::xml::DOM::namespace](../../../Library/lang/xml/DOM.md#lang::xml::DOM-namespace)
+* [Library:constructor:lang::xml::DOM::none](../../../Library/lang/xml/DOM.md#lang::xml::DOM-none)
+* [Library:constructor:lang::xml::DOM::pi](../../../Library/lang/xml/DOM.md#lang::xml::DOM-pi)
+* [Library:data:lang::xml::DOM::Namespace](../../../Library/lang/xml/DOM.md#lang::xml::DOM-Namespace)
+* [Library:data:lang::xml::DOM::Node](../../../Library/lang/xml/DOM.md#lang::xml::DOM-Node)
+* [Library:function:lang::xml::DOM::attribute](../../../Library/lang/xml/DOM.md#lang::xml::DOM-attribute)
+* [Library:function:lang::xml::DOM::element](../../../Library/lang/xml/DOM.md#lang::xml::DOM-element)
+* [Library:function:lang::xml::DOM::implode](../../../Library/lang/xml/DOM.md#lang::xml::DOM-implode)
+* [Library:function:lang::xml::DOM::parse x m l d oM](../../../Library/lang/xml/DOM.md#lang::xml::DOM-parseXMLDOM)
+* [Library:function:lang::xml::DOM::parse x m l d o m trim](../../../Library/lang/xml/DOM.md#lang::xml::DOM-parseXMLDOMTrim)
+* [Library:function:lang::xml::DOM::to x mL](../../../Library/lang/xml/DOM.md#lang::xml::DOM-toXML)
+* [Library:function:lang::xml::DOM::xml compact](../../../Library/lang/xml/DOM.md#lang::xml::DOM-xmlCompact)
+* [Library:function:lang::xml::DOM::xml pretty](../../../Library/lang/xml/DOM.md#lang::xml::DOM-xmlPretty)
+* [Library:function:lang::xml::DOM::xml raw](../../../Library/lang/xml/DOM.md#lang::xml::DOM-xmlRaw)
 
 
 ## data Node {#lang-xml-DOM-Node}
@@ -179,7 +179,7 @@ Node: document(element(
 
 The DOM instance contains every single character (including spaces and newlines)
 as they appear in the source file.
-As expected, the result is of type [lang::xml::DOM::Node](../../../Library/lang/xml/DOM#lang::xml::DOM-Node).
+As expected, the result is of type [lang::xml::DOM::Node](../../../Library/lang/xml/DOM.md#lang::xml::DOM-Node).
 
 ## function parseXMLDOMTrim {#lang-xml-DOM-parseXMLDOMTrim}
 
@@ -239,7 +239,7 @@ Node: document(element(
     ]))
 ```
 All whitespace characters have been removed and do not occur in the trimmed DOM instance.
-Compare this with the output of [parse x m l d oM](../../../Library/lang/xml/DOM#lang::xml::DOM-parseXMLDOM).
+Compare this with the output of [parse x m l d oM](../../../Library/lang/xml/DOM.md#lang::xml::DOM-parseXMLDOM).
 
 ## function xmlRaw {#lang-xml-DOM-xmlRaw}
 

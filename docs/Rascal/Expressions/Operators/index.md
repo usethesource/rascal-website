@@ -30,12 +30,12 @@ to lowest precedence. In other words, operators listed earlier in the table bind
 | [Field projection](../../../Rascal/Expressions/Operators/FieldProjection) |
 | Select fields from relation or structured value |
 | `Exp is Name` |
-| [Library:Parse tree](../../../Library/ParseTree), |
+| [Library:Parse tree](../../../Library/ParseTree.md), |
   [Concrete syntax](../../../Rascal/Expressions/ConcreteSyntax), |
   [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType) |
 | Returns true if and only if the constructor name of the value produced by _Exp_ is equal to _Name_ |
 | `Exp has Name`  |
-| [Library:Parse tree](../../../Library/ParseTree), |
+| [Library:Parse tree](../../../Library/ParseTree.md), |
   [Concrete syntax](../../../Rascal/Expressions/ConcreteSyntax), |
   [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType) |
 | Returns true if and only if the constructor (node or parse tree) of the value produced by _Exp_ has any field labeled _Name_ |

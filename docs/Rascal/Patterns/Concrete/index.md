@@ -24,16 +24,16 @@ Typed variable inside a concrete pattern: <_Type_ _Var_>
 
 #### Description
 
-A concrete pattern is a pattern for matching a [Library:module:Parse tree](../../../Library/ParseTree). The notation of a concrete pattern is the *object language* itself, the language that the parse tree describes. 
+A concrete pattern is a pattern for matching a [Library:module:Parse tree](../../../Library/ParseTree.md). The notation of a concrete pattern is the *object language* itself, the language that the parse tree describes. 
 In other words, you can use a code example to match parsed code using a concrete pattern. These concrete code examples can contain [Variable](../../../Rascal/Patterns/Variable)s like the other [Patterns](../../../Rascal/Patterns).
 
-The mechanism of concete patterns gives a good notation for matching complex structures such as a [Library:module:Parse tree](../../../Library/ParseTree), and it works in a simple manner:
+The mechanism of concete patterns gives a good notation for matching complex structures such as a [Library:module:Parse tree](../../../Library/ParseTree.md), and it works in a simple manner:
    
    * the input code is parsed using a parser generated from a [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition); this generates parse trees.
    * the pattern example code is parsed using the *same* parser; this generates parse trees with [Variable](../../../Rascal/Patterns/Variable)s.
    * the parse tree with the [Variable](../../../Rascal/Patterns/Variable)s is matches against the parse tree of the input code, similarly to the way [Node](../../../Rascal/Patterns/Node) work.     
  
-So, you could say that [Concrete](../../../Rascal/Patterns/Concrete) are a short notation for otherwise highly complex [Node](../../../Rascal/Patterns/Node) on [Library:module:Parse tree](../../../Library/ParseTree).  Note that the [Variable declaration](../../../Rascal/Patterns/VariableDeclaration)s in a concrete pattern can
+So, you could say that [Concrete](../../../Rascal/Patterns/Concrete) are a short notation for otherwise highly complex [Node](../../../Rascal/Patterns/Node) on [Library:module:Parse tree](../../../Library/ParseTree.md).  Note that the [Variable declaration](../../../Rascal/Patterns/VariableDeclaration)s in a concrete pattern can
 only occur in the pattern at the location where the code for a full non-terminal of the [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition) would be. The structure of a concrete pattern follows the structure of the 
 grammar in the [Syntax definition](../../../Rascal/Declarations/SyntaxDefinition) and the types of the [Variable](../../../Rascal/Patterns/Variable)s are the syntax non-terminals of the [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition).  
 

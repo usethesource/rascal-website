@@ -14,21 +14,21 @@ Statistical methods for simple regression.
 #### Description
 
 The following functions are provided:
-* [Library:function:analysis::statistics::Simple regression::R](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-R)
-* [Library:function:analysis::statistics::Simple regression::RSquare](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-RSquare)
-* [Library:function:analysis::statistics::Simple regression::XSum squares](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-XSumSquares)
-* [Library:function:analysis::statistics::Simple regression::intercept](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-intercept)
-* [Library:function:analysis::statistics::Simple regression::intercept std err](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-interceptStdErr)
-* [Library:function:analysis::statistics::Simple regression::mean square error](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-meanSquareError)
-* [Library:function:analysis::statistics::Simple regression::predict](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-predict)
-* [Library:function:analysis::statistics::Simple regression::regression sum squares](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-regressionSumSquares)
-* [Library:function:analysis::statistics::Simple regression::significance](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-significance)
-* [Library:function:analysis::statistics::Simple regression::slope](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-slope)
-* [Library:function:analysis::statistics::Simple regression::slope confidence interval](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-slopeConfidenceInterval)
-* [Library:function:analysis::statistics::Simple regression::slope std err](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-slopeStdErr)
-* [Library:function:analysis::statistics::Simple regression::sum of cross products](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-sumOfCrossProducts)
-* [Library:function:analysis::statistics::Simple regression::sum squared errors](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-sumSquaredErrors)
-* [Library:function:analysis::statistics::Simple regression::total sum squares](../../../Library/analysis/statistics/SimpleRegression#analysis::statistics::SimpleRegression-totalSumSquares)
+* [Library:function:analysis::statistics::Simple regression::R](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-R)
+* [Library:function:analysis::statistics::Simple regression::RSquare](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-RSquare)
+* [Library:function:analysis::statistics::Simple regression::XSum squares](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-XSumSquares)
+* [Library:function:analysis::statistics::Simple regression::intercept](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-intercept)
+* [Library:function:analysis::statistics::Simple regression::intercept std err](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-interceptStdErr)
+* [Library:function:analysis::statistics::Simple regression::mean square error](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-meanSquareError)
+* [Library:function:analysis::statistics::Simple regression::predict](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-predict)
+* [Library:function:analysis::statistics::Simple regression::regression sum squares](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-regressionSumSquares)
+* [Library:function:analysis::statistics::Simple regression::significance](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-significance)
+* [Library:function:analysis::statistics::Simple regression::slope](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-slope)
+* [Library:function:analysis::statistics::Simple regression::slope confidence interval](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-slopeConfidenceInterval)
+* [Library:function:analysis::statistics::Simple regression::slope std err](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-slopeStdErr)
+* [Library:function:analysis::statistics::Simple regression::sum of cross products](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-sumOfCrossProducts)
+* [Library:function:analysis::statistics::Simple regression::sum squared errors](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-sumSquaredErrors)
+* [Library:function:analysis::statistics::Simple regression::total sum squares](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-totalSumSquares)
 
 
 ## function intercept {#analysis-statistics-SimpleRegression-intercept}
@@ -81,7 +81,7 @@ Pearson's product-moment correlation coefficient.
 #### Description
 
 Computes Pearson's product-moment correlation coefficient.
-More functions related to this coefficient can be found in [module:analysis::statistics::Correlation](../../../Library/analysis/statistics/Correlation).
+More functions related to this coefficient can be found in [module:analysis::statistics::Correlation](../../../Library/analysis/statistics/Correlation.md).
 
 ## function regressionSumSquares {#analysis-statistics-SimpleRegression-regressionSumSquares}
 

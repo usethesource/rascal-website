@@ -61,7 +61,7 @@ The following operators are provided on list:
 * ((Rascal:Expressions/Values/List/in))
 * ((Rascal:Expressions/Values/List/notin))
 
-There are also [library functions](../../../../Library/List) available for List.
+There are also [library functions](../../../../Library/List.md) available for List.
 
 #### Examples
 

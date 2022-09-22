@@ -56,7 +56,7 @@ The following operators are provided on sets:
 * ((Rascal:Expressions/Values/Set/in))
 * ((Rascal:Expressions/Values/Set/notin))
 
-There are also [library functions](../../../../Library/Set) available for Sets.
+There are also [library functions](../../../../Library/Set.md) available for Sets.
 ##  Set types 
 
 

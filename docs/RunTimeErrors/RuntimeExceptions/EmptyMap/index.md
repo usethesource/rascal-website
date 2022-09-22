@@ -17,12 +17,12 @@ Illegal operation on an empty map.
 #### Description
 
 Rascal provides many operations and functions on maps, see [map values](../../../Rascal/Expressions/Values/Map)
-and [map functions](../../../Library/Map).
+and [map functions](../../../Library/Map.md).
 This error is generated when a function or operations cannot handle the empty map case.
 
 Remedies: 
 
-*  Guard the function or operation with a test on the empty map ([isEmpty](../../../Library/Map#Map-isEmpty)) and 
+*  Guard the function or operation with a test on the empty map ([isEmpty](../../../Library/Map.md#Map-isEmpty)) and 
   take alternative action in that case.
 *  Catch the `EmptyMap` yourself, see [try catch](../../../Rascal/Statements/TryCatch).
 

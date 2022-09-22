@@ -38,7 +38,7 @@ An n-ary relations with m tuples is denoted by
 where the _E_~ij~ are expressions that yield the desired element type _T_~i~.
 
 Since relations are a form of set all operations (see [Set](../../../../Rascal/Expressions/Values/Set)) and functions
-(see [Library:Set](../../../../Library/Set)) are also applicable to relations.
+(see [Library:Set](../../../../Library/Set.md)) are also applicable to relations.
 
 The following additional operators are provided for relations:
 * ((Rascal:Expressions/Values/Relation))
@@ -50,7 +50,7 @@ The following additional operators are provided for relations:
 * ((Rascal:Expressions/Values/Relation/Subscription))
 * ((Rascal:Expressions/Values/Relation/TransitiveClosure))
 
-There are also [library functions](../../../../Library/Relation) available for Relations.
+There are also [library functions](../../../../Library/Relation.md) available for Relations.
 
 
 #### Examples

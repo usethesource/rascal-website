@@ -14,13 +14,13 @@ Statistical inference methods.
 #### Description
 
 The following functions are provided:
-* [Library:function:analysis::statistics::Inference::anova f value](../../../Library/analysis/statistics/Inference#analysis::statistics::Inference-anovaFValue)
-* [Library:function:analysis::statistics::Inference::anova p value](../../../Library/analysis/statistics/Inference#analysis::statistics::Inference-anovaPValue)
-* [Library:function:analysis::statistics::Inference::anova test](../../../Library/analysis/statistics/Inference#analysis::statistics::Inference-anovaTest)
-* [Library:function:analysis::statistics::Inference::chi square](../../../Library/analysis/statistics/Inference#analysis::statistics::Inference-chiSquare)
-* [Library:function:analysis::statistics::Inference::chi square test](../../../Library/analysis/statistics/Inference#analysis::statistics::Inference-chiSquareTest)
-* [Library:function:analysis::statistics::Inference::gini](../../../Library/analysis/statistics/Inference#analysis::statistics::Inference-gini)
-* [Library:function:analysis::statistics::Inference::t test](../../../Library/analysis/statistics/Inference#analysis::statistics::Inference-tTest)
+* [Library:function:analysis::statistics::Inference::anova f value](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaFValue)
+* [Library:function:analysis::statistics::Inference::anova p value](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaPValue)
+* [Library:function:analysis::statistics::Inference::anova test](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaTest)
+* [Library:function:analysis::statistics::Inference::chi square](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-chiSquare)
+* [Library:function:analysis::statistics::Inference::chi square test](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-chiSquareTest)
+* [Library:function:analysis::statistics::Inference::gini](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-gini)
+* [Library:function:analysis::statistics::Inference::t test](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-tTest)
 
 
 ## function chiSquare {#analysis-statistics-Inference-chiSquare}
@@ -182,7 +182,7 @@ Perform http://en.wikipedia.org/wiki/Analysis_of_variance[Analysis of Variance t
 also described http://www.statsoft.com/textbook/anova-manova/[here].
 
 Computes the exact p-value using the formula `p = 1 - cumulativeProbability(F)`
-where `F` is the [anova f value](../../../Library/analysis/statistics/Inference#analysis::statistics::Inference-anovaFValue).
+where `F` is the [anova f value](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaFValue).
 
 ## function anovaTest {#analysis-statistics-Inference-anovaTest}
 
@@ -201,7 +201,7 @@ also described http://www.statsoft.com/textbook/anova-manova/[here].
 Returns true iff the estimated p-value is less than `alpha` (0 < `alpha` <= 0.5).
 
 The exact p-value is computed using the formula `p = 1 - cumulativeProbability(F)`
-where `F` is the [anova f value](../../../Library/analysis/statistics/Inference#analysis::statistics::Inference-anovaFValue).
+where `F` is the [anova f value](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaFValue).
 
 ## function gini {#analysis-statistics-Inference-gini}
 

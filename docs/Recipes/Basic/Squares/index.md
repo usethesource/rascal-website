@@ -34,7 +34,7 @@ str squaresTemplate(int N) // <4>
 
 ```
            
-<1> The [IO](../../../Library/IO) module is imported since we want to print things using `println`.
+<1> The [IO](../../../Library/IO.md) module is imported since we want to print things using `println`.
 
 <2> [String](../../../Rascal/Expressions/Values/String) interpolation is used several times.
     Here the value of `N` is inserted in the header message.
@@ -72,7 +72,7 @@ rascal>squaresTemplate(9);
 str: "Table of squares from 1 to 9\n\n  1 squared = 1\n  2 squared = 4\n  3 squared = 9\n  4 squared = 16\n  5 squared = 25\n  6 squared = 36\n  7 squared = 49\n  8 squared = 64\n  9 squared = 81"
 ```
 
-To get a truly identical result we have to import the [IO](../../../Library/IO) module 
+To get a truly identical result we have to import the [IO](../../../Library/IO.md) module 
 and print the value of `squaresTemplate`:
 
 ```rascal-shell

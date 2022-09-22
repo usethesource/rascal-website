@@ -89,7 +89,7 @@ void hello() {
 ```
 
                 
-It defines a module with the name `demo::basic::Hello` and imports the [IO](../../../Library/IO) library.
+It defines a module with the name `demo::basic::Hello` and imports the [IO](../../../Library/IO.md) library.
 Finally, it declares the `hello` function.
 
 The actual source of this module can be found in `library/demo/basic/Hello.rsc` in the Rascal sources.

@@ -10,7 +10,7 @@ Variout styles to write bubble sort.
 
 [Bubble sort](http://en.wikipedia.org/wiki/Bubble_sort) is a classical (albeit not the most efficient) technique to sort lists of values.
 We present here several styles to implement bubble sort. 
-Also see [sort](../../../Library/List#List-sort) for a more efficient library function for sorting.
+Also see [sort](../../../Library/List.md#List-sort) for a more efficient library function for sorting.
 
 #### Examples
 

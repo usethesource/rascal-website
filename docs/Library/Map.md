@@ -16,23 +16,23 @@ Library functions for maps.
 For operators on maps see [Map](../Rascal/Expressions/Values/Map) in the Rascal Language Reference.
 
 The following functions are defined for maps:
-* [Library:function:Map::delete](../Library/Map#Map-delete)
-* [Library:function:Map::domain](../Library/Map#Map-domain)
-* [Library:function:Map::domainR](../Library/Map#Map-domainR)
-* [Library:function:Map::domainX](../Library/Map#Map-domainX)
-* [Library:function:Map::get one from](../Library/Map#Map-getOneFrom)
-* [Library:function:Map::invert](../Library/Map#Map-invert)
-* [Library:function:Map::invert unique](../Library/Map#Map-invertUnique)
-* [Library:function:Map::is empty](../Library/Map#Map-isEmpty)
-* [Library:function:Map::ito string](../Library/Map#Map-itoString)
-* [Library:function:Map::mapper](../Library/Map#Map-mapper)
-* [Library:function:Map::range](../Library/Map#Map-range)
-* [Library:function:Map::rangeR](../Library/Map#Map-rangeR)
-* [Library:function:Map::rangeX](../Library/Map#Map-rangeX)
-* [Library:function:Map::size](../Library/Map#Map-size)
-* [Library:function:Map::to list](../Library/Map#Map-toList)
-* [Library:function:Map::to rel](../Library/Map#Map-toRel)
-* [Library:function:Map::to string](../Library/Map#Map-toString)
+* [Library:function:Map::delete](../Library/Map.md#Map-delete)
+* [Library:function:Map::domain](../Library/Map.md#Map-domain)
+* [Library:function:Map::domainR](../Library/Map.md#Map-domainR)
+* [Library:function:Map::domainX](../Library/Map.md#Map-domainX)
+* [Library:function:Map::get one from](../Library/Map.md#Map-getOneFrom)
+* [Library:function:Map::invert](../Library/Map.md#Map-invert)
+* [Library:function:Map::invert unique](../Library/Map.md#Map-invertUnique)
+* [Library:function:Map::is empty](../Library/Map.md#Map-isEmpty)
+* [Library:function:Map::ito string](../Library/Map.md#Map-itoString)
+* [Library:function:Map::mapper](../Library/Map.md#Map-mapper)
+* [Library:function:Map::range](../Library/Map.md#Map-range)
+* [Library:function:Map::rangeR](../Library/Map.md#Map-rangeR)
+* [Library:function:Map::rangeX](../Library/Map.md#Map-rangeX)
+* [Library:function:Map::size](../Library/Map.md#Map-size)
+* [Library:function:Map::to list](../Library/Map.md#Map-toList)
+* [Library:function:Map::to rel](../Library/Map.md#Map-toRel)
+* [Library:function:Map::to string](../Library/Map.md#Map-toString)
 
 
 ## function delete {#Map-delete}
@@ -147,11 +147,11 @@ Returns an arbitrary key of map `M`.
 rascal>import Map;
 ok
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "apple"
+str: "pineapple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "apple"
+str: "pineapple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "apple"
+str: "pineapple"
 ```
 
 ## function invert {#Map-invert}
@@ -166,7 +166,7 @@ Invert the (key,value) pairs in a map.
 #### Description
 
 Returns inverted map in which each value in the old map `M` is associated with a set of key values from the old map.
-Also see [invert unique](../Library/Map#Map-invertUnique).
+Also see [invert unique](../Library/Map.md#Map-invertUnique).
 
 #### Examples
 
@@ -198,7 +198,7 @@ the `MultipleKey` exception is raised since
 an attempt is made to create a map where more than one 
 value would be associated with the same key.
 
-Also see [invert](../Library/Map#Map-invert) and [module:Exception](../Library/Exception).
+Also see [invert](../Library/Map.md#Map-invert) and [module:Exception](../Library/Exception.md).
 
 #### Examples
 

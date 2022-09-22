@@ -79,7 +79,7 @@ The following operators are provided for Boolean:
 * ((Rascal:Expressions/Values/Boolean/NoMatch))
 * ((Rascal:Expressions/Values/Boolean/Or))
 
-There are also [library functions](../../../../Library/Boolean) available for Booleans.
+There are also [library functions](../../../../Library/Boolean.md) available for Booleans.
 
 #### Examples
 

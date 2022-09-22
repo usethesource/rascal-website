@@ -19,7 +19,7 @@ Parse of a syntactically incorrect string.
 #### Description
 
 This error is generated when during the execution of a Rascal program the
-[parse](../../../Library/ParseTree#ParseTree-parse) function is applied to a syntactically incorrect input sentence.
+[parse](../../../Library/ParseTree.md#ParseTree-parse) function is applied to a syntactically incorrect input sentence.
 
 Remedies:
 

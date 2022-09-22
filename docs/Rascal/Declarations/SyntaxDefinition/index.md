@@ -74,7 +74,7 @@ The latter two represent [Disambiguation](../../../Rascal/Declarations/SyntaxDef
 
 Alternatives can be named or not. The names are essential only if:
 
-*  you need to [implode](../../../Library/ParseTree#ParseTree-implode) [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees)
+*  you need to [implode](../../../Library/ParseTree.md#ParseTree-implode) [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees)
 *  you need to use the `is` expression, as in `myStatement is ifThenElse` instead of using concrete pattern matching.
 *  you want to write [Action](../../../Rascal/Declarations/SyntaxDefinition/Action)s that triggers on the construction of the alternative.
 

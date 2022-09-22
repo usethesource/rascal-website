@@ -22,20 +22,20 @@ Priority queues maintain (priority, value) pairs in sorted order. They are imple
 http://en.wikipedia.org/wiki/Binomial_heap[Binomial Heap]. Priority queue are, for instance, used to implement shortest path algorithms.
 
 Provides the following functions:
-* [Library:constructor:util::Priority queue::binomial tree](../../Library/util/PriorityQueue#util::PriorityQueue-binomialTree)
-* [Library:constructor:util::Priority queue::priority queue](../../Library/util/PriorityQueue#util::PriorityQueue-priorityQueue)
-* [Library:data:util::Priority queue::Binomial tree](../../Library/util/PriorityQueue#util::PriorityQueue-BinomialTree)
-* [Library:data:util::Priority queue::Priority queue](../../Library/util/PriorityQueue#util::PriorityQueue-PriorityQueue)
-* [Library:function:util::Priority queue::add](../../Library/util/PriorityQueue#util::PriorityQueue-add)
-* [Library:function:util::Priority queue::add sub tree](../../Library/util/PriorityQueue#util::PriorityQueue-addSubTree)
-* [Library:function:util::Priority queue::extract minimum](../../Library/util/PriorityQueue#util::PriorityQueue-extractMinimum)
-* [Library:function:util::Priority queue::find minimum](../../Library/util/PriorityQueue#util::PriorityQueue-findMinimum)
-* [Library:function:util::Priority queue::insert element](../../Library/util/PriorityQueue#util::PriorityQueue-insertElement)
-* [Library:function:util::Priority queue::is empty](../../Library/util/PriorityQueue#util::PriorityQueue-isEmpty)
-* [Library:function:util::Priority queue::merge queue](../../Library/util/PriorityQueue#util::PriorityQueue-mergeQueue)
-* [Library:function:util::Priority queue::merge tree](../../Library/util/PriorityQueue#util::PriorityQueue-mergeTree)
-* [Library:function:util::Priority queue::mk priority queue](../../Library/util/PriorityQueue#util::PriorityQueue-mkPriorityQueue)
-* [Library:function:util::Priority queue::to string](../../Library/util/PriorityQueue#util::PriorityQueue-toString)
+* [Library:constructor:util::Priority queue::binomial tree](../../Library/util/PriorityQueue.md#util::PriorityQueue-binomialTree)
+* [Library:constructor:util::Priority queue::priority queue](../../Library/util/PriorityQueue.md#util::PriorityQueue-priorityQueue)
+* [Library:data:util::Priority queue::Binomial tree](../../Library/util/PriorityQueue.md#util::PriorityQueue-BinomialTree)
+* [Library:data:util::Priority queue::Priority queue](../../Library/util/PriorityQueue.md#util::PriorityQueue-PriorityQueue)
+* [Library:function:util::Priority queue::add](../../Library/util/PriorityQueue.md#util::PriorityQueue-add)
+* [Library:function:util::Priority queue::add sub tree](../../Library/util/PriorityQueue.md#util::PriorityQueue-addSubTree)
+* [Library:function:util::Priority queue::extract minimum](../../Library/util/PriorityQueue.md#util::PriorityQueue-extractMinimum)
+* [Library:function:util::Priority queue::find minimum](../../Library/util/PriorityQueue.md#util::PriorityQueue-findMinimum)
+* [Library:function:util::Priority queue::insert element](../../Library/util/PriorityQueue.md#util::PriorityQueue-insertElement)
+* [Library:function:util::Priority queue::is empty](../../Library/util/PriorityQueue.md#util::PriorityQueue-isEmpty)
+* [Library:function:util::Priority queue::merge queue](../../Library/util/PriorityQueue.md#util::PriorityQueue-mergeQueue)
+* [Library:function:util::Priority queue::merge tree](../../Library/util/PriorityQueue.md#util::PriorityQueue-mergeTree)
+* [Library:function:util::Priority queue::mk priority queue](../../Library/util/PriorityQueue.md#util::PriorityQueue-mkPriorityQueue)
+* [Library:function:util::Priority queue::to string](../../Library/util/PriorityQueue.md#util::PriorityQueue-toString)
 
 #### Pitfalls
 
