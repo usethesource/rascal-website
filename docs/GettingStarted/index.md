@@ -2,45 +2,71 @@
 title: Getting Started with Rascal
 keywords:
   - help
+  - start
+  - download
+  - install
 ---
 
-#### Synopsis
+#### Download and installation
 
-First steps using Rascal
+Rascal is deployed as one of four easy-to-use packages:
+1. A standalone "jar" file, which can be downloaded [here](https://update.rascal-mpl.org/console/rascal-shell-stable.jar)
+2. A Visual Studio Code extension, which can be found [here](https://marketplace.visualstudio.com/items?itemName=usethesource.rascalmpl) or search for "Rascal" in the "Extension" view in VScode itself.
+3. An Eclipse plugin, for which the update site is <https://update.rascal-mpl.org/stable/>.
+4. A set of Maven MOJOs, for which the plugin repository is <https://releases.usethesource.io/maven/>
 
-#### Description
+For developers on Rascal itself or experimental libraries, who want to work with on continuously integrated and tests releases please have a look at the [Developers](../Developers/) course.
 
-You can start using Rascal by following these steps:
+#### Running Rascal: starting a terminal with a read-eval-print-loop
 
-* *Download and Install* Rascal by carefully following the instructions at the [Rascal Website](http://www.rascal-mpl.org/start/).
+1. On the Unix or Windows commandline, simply start a [rascal shell](../RascalShell/) by: `java rascal-<version>.jar`
+2. In VScode, in the command palette type `Rascal` and select `Create Rascal Terminal`
+3. In Eclipse, from the button bar select the button with the Rascal logo.
 
-CAUTION: Please respect the recommended versions of Java (JDK) and Eclipse (Eclipse for RCP Developers).
-In case of installation problems you can consult the [trouble shooting](http://www.rascal-mpl.org/help/troubleshooting.html) page
-or [StackOverflow](http://stackoverflow.com/questions/tagged/rascal).
+You will be prompted for input right away. Here we show how to quit the terminal:
+```rascal
+:quit
+```
+
+Similarly you could type `CTRL+D` which indicates end-of-file to terminate the process. More information 
+about the features of the shell can be found [here](../RascalShell/). At the prompt you can type [Expressions](../Rascal/Expressions), [Statements](../Rascal/Statements) and _Rascal::Declarations (broken link)_.
 
 
-* *Start* Rascal. The Rascal system comes in two flavours: a command line version and a version integrated in Eclipse.
-
-
-At the command line the Rascal system can be invoked by typing the command `*rascal*`. 
-Next, the Rascal prompt `*rascal>*` appears and you can start typing commands (declarations, statements, expressions). 
-To simplify interactive use, semicolons (`;`) that end commands may be omitted at the top level.
-
-NOTE: `rascal` command is not yet standard installed
-
-NOTE: Add a screenshot
-
-In the Eclipse version, Rascal modules can be edited and a command console is also available.
-
-NOTE: Add a screenshot
-
-:::caution
-There is a "TODO" in the documentation source:
-msg
-(((TODO-this is not up-to-date)))
+```rascal-shell
+rascal>1 + 1
+int: 2
+rascal>myList = [ i | i <- [1..11], i % 2 == 0]
+>>>>>>>import Prelude;
+```
+:::danger
+Rascal code execution failed (unexpectedly) during compilation of this documentation.
+<pre>
+        ^ Parse error here
+</pre>
 :::
 
-Where to go from here: 
-have a look at [Getting Help](../GettingHelp/) and in particular 
-[further reading](../GettingHelp/FurtherReading)
+```rascal-shell
+ok
+rascal>println("Hello <myList> is <size(myList) long">);
+```
+:::danger
+Rascal code execution failed (unexpectedly) during compilation of this documentation.
+<pre>
+                                                     ^ Parse error here
+</pre>
+:::
+
+```rascal-shell
+ok
+```
+
+#### Troubleshooting
+
+In case of trouble, there is no need to panic. [Help](../GettingHelp/) is nearby.
+
+* Common troubles are documented [here](../GettingHelp/FAQ)
+* If you have a question that probably has Rascal _source code_ as an answer, go to [StackOverflow](http://stackoverflow.com/questions/tagged/rascal). Either find your answer directly, or you are welcome to post a new question using the tag `[rascal]`.
+* If you think you've run into a bug, we are very happy to receive your report on [Github](http://github.com/usethesource/rascal/issues). 
+* If any documentation is unclear, incomplete or ambiguous you are also invited to submit a report there, but you may also use the `edit` button below to propose a fix.
+
 

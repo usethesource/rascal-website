@@ -2,13 +2,25 @@
 title: Further Reading
 keywords:
   - help
+  - howto
+  - "how-to"
+  - recipe
 ---
 
-#### Synopsis
+#### Core Rascal
 
-How to continue reading the Rascal documentation
+1. To get how-to recipes for common meta-programming tasks in Rascal, we refer to the [Rascal recipes](../../Recipes/)
+1. To learn how to use the [rascal shell](../../RascalShell/), go [here](../../RascalShell/)
+1. To understand the terminology used in Rascal and by Rascal programmers, [[RascalConcepts]] is a dictionary and [[Rascalopedia]] is a focused encyclopedia of meta programming.
+1. To understand error messages produced by Rascal, there is information on all _RuntimeErrors (broken link)_ and [compile time errors](../../CompileTimeErrors/).
+1. To know everything about every detail of Rascal syntax and semantics, the [Rascal reference manual](../../Rascal/) applies.
+1. The full standard _Library (broken link)_ is documented _(here) Library (broken link)_.
 
-#### Description
+#### Libraries
 
-TODO: this has to be rewritten with the new layout of the homepage in mind.
+:::caution
+There is a "TODO" in the documentation source:
+msg
+(((TODO)))
+:::
 

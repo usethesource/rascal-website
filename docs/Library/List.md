@@ -217,11 +217,11 @@ Get an arbitrary element from a list. See [takeOneFrom](../Library/List.md#List-
 rascal>import List;
 ok
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "elephant"
+str: "snake"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "elephant"
+str: "zebra"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "elephant"
+str: "zebra"
 ```
 
 ## function getFirstFrom {#List-getFirstFrom}
@@ -984,9 +984,9 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [4,1,2,3]
+list[int]: [2,3,1,4]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["zebra","snake","elephant","owl"]
+list[str]: ["snake","owl","zebra","elephant"]
 ```
 
 ## function split {#List-split}
@@ -1140,15 +1140,15 @@ See [getOneFrom](../Library/List.md#List-getOneFrom) to only selected an element
 rascal>import List;
 ok
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <40,[10,20,30,50]>
+tuple[int,list[int]]: <10,[20,30,40,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <20,[10,30,40,50]>
+tuple[int,list[int]]: <30,[10,20,40,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <20,[10,30,40,50]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
+tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
+tuple[str,list[str]]: <"snake",["zebra","elephant","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 ```
