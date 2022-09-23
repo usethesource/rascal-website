@@ -9,7 +9,7 @@ Compute the factorial function.
 #### Examples
 
 The [factorial](http://en.wikipedia.org/wiki/Factorial)
-of a number N is defined as `N * (N-1) * (N-2) * ... * 1`.
+of a number `n` is defined as `n * (n-1) * (n-2) * ... * 1`.
 Here is the Rascal version:
 
 ```rascal
@@ -37,7 +37,7 @@ test bool tfac47() = fac3(47) == 25862324151116818064296435515361197996919763238
 
 ```
           
-<1> `fac` is defined using a conditional expression to distinguish cases.
+<1> `fac1` is defined using a conditional expression to distinguish cases.
 <2> `fac2` distinguishes cases using pattern-based dispatch ([Rascal Functions](../../../Rascal/Declarations/Function)).
     Here the case for `0` is defined.
 <3> Here all other cases for `fac2` are defined (as indicated by the `default` keyword).
@@ -49,18 +49,8 @@ Here is how to use `fac`:
 ```rascal-shell
 rascal>import demo::basic::Factorial;
 ok
-rascal>fac(47);
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-<pre>
-|prompt:///|(0,3,<1,0>,<1,3>): Undeclared variable: fac
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-</pre>
-:::
-
-```rascal-shell
-ok
+rascal>fac1(47);
+int: 258623241511168180642964355153611979969197632389120000000000
 ```
 
 NOTE: Indeed, Rascal supports arbitrary length numbers.
