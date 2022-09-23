@@ -11,8 +11,6 @@ Lewis Carroll's well-known poem.
 
 ```rascal
 
-//START
-// tag::module[]
 module demo::common::WordCount::Jabberwocky
 
 
@@ -65,7 +63,6 @@ public list[str] Jabberwocky = [
 	"All mimsy were the borogoves,",
 	"And the mome raths outgrabe."
 ];
-// end::module[]
 
 ```
 

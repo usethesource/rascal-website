@@ -22,41 +22,29 @@ For developers on Rascal itself or experimental libraries, who want to work with
 1. On the Unix or Windows commandline, simply start a [rascal shell](../RascalShell/) by: `java rascal-<version>.jar`
 2. In VScode, in the command palette type `Rascal` and select `Create Rascal Terminal`
 3. In Eclipse, from the button bar select the button with the Rascal logo.
+4. With Maven, create a pom.xml which includes the above plugin and type: `mvn rascal:console`
 
-You will be prompted for input right away. Here we show how to quit the terminal:
+You will be prompted for input right after the version is printed and information about the current search paths. 
+
+Here we show how to quit the terminal:
 ```rascal
 :quit
 ```
 
 Similarly you could type `CTRL+D` which indicates end-of-file to terminate the process. More information 
-about the features of the shell can be found [here](../RascalShell/). At the prompt you can type [Expressions](../Rascal/Expressions), [Statements](../Rascal/Statements) and _Rascal::Declarations (broken link)_.
+about the features of the shell can be found [here](../RascalShell/). At the prompt you can type [Expressions](../Rascal/Expressions), [Statements](../Rascal/Statements) and [Declarations](../Rascal/Declarations).
 
 
 ```rascal-shell
 rascal>1 + 1
 int: 2
-rascal>myList = [ i | i <- [1..11], i % 2 == 0]
->>>>>>>import Prelude;
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-<pre>
-        ^ Parse error here
-</pre>
-:::
-
-```rascal-shell
+rascal>myList = [ i | i <- [1..11], i % 2 == 0];
+list[int]: [2,4,6,8,10]
+rascal>import Prelude;
 ok
-rascal>println("Hello <myList> is <size(myList) long">);
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-<pre>
-                                                     ^ Parse error here
-</pre>
-:::
-
-```rascal-shell
+rascal>println("Hello <myList> is <size(myList)> long");
+println("Hello <myList> is <size(myList)> long");
+Hello [2,4,6,8,10] is 5 long
 ok
 ```
 
@@ -64,7 +52,7 @@ ok
 
 In case of trouble, there is no need to panic. [Help](../GettingHelp/) is nearby.
 
-* Common troubles are documented [here](../GettingHelp/FAQ)
+* Common troubles with installation and first runs are documented [here](../GettingStarted/Troubleshooting)
 * If you have a question that probably has Rascal _source code_ as an answer, go to [StackOverflow](http://stackoverflow.com/questions/tagged/rascal). Either find your answer directly, or you are welcome to post a new question using the tag `[rascal]`.
 * If you think you've run into a bug, we are very happy to receive your report on [Github](http://github.com/usethesource/rascal/issues). 
 * If any documentation is unclear, incomplete or ambiguous you are also invited to submit a report there, but you may also use the `edit` button below to propose a fix.

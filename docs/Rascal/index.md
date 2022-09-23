@@ -20,7 +20,7 @@ Here we describe _all_ features of the Rascal language in detail, for reference 
 * [Expressions](../Rascal/Expressions)
 * [Statements](../Rascal/Statements)
 
-You can find more (accessible) information related to Rascal here:
+You can find more (accessible) information about programming in Rascal here:
 
 *  [Why Rascal](../WhyRascal/): gives the motivation for the Rascal language and describes various usage scenarios.
 *  [Getting Started](../GettingStarted/) describes how to download, install and start Rascal.

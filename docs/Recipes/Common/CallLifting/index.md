@@ -36,8 +36,6 @@ Here is a solution:
 
 ```rascal
 
-//START
-// tag::module[]
 module demo::common::Lift
 
 

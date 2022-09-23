@@ -14,16 +14,15 @@ and `count` is incremented.
 
 ```rascal
 
-//START
-// tag::module[]
 module demo::common::WordCount::CountInLine1
 
 
 
-int countInLine1(str S){
+
+int countInLine1(str s) {
   int count = 0;
-  for(/[a-zA-Z0-9_]+/ := S){
-       count += 1;
+  for (/[a-zA-Z0-9_]+/ := s) {
+    count += 1;
   }
   return count;
 }

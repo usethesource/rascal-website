@@ -64,7 +64,7 @@ module demo::basic::Hello
 import IO;
 
 void hello() {
-   println("Hello world, this is my first Rascal program");
+   println("Hello world, this is my first Rascal program!");
 }
 
 ```
@@ -79,7 +79,7 @@ rascal>import demo::basic::Hello;
 ok
 rascal>hello();
 hello();
-Hello world, this is my first Rascal program
+Hello world, this is my first Rascal program!
 ok
 ```
 

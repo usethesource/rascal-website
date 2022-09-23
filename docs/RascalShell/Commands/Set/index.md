@@ -1,5 +1,9 @@
 ---
 title: Set Command
+keywords:
+  - set
+  - tracing
+  - profiling
 ---
 
 #### Synopsis
@@ -36,20 +40,20 @@ rascal>import demo::basic::Factorial;
 ok
 rascal>:set tracing true
 ok
-rascal>fac(5)
-fac(5)
-call  >Factorial::fac(5)
-call  >>Factorial::fac(4)
-call  >>>Factorial::fac(3)
-call  >>>>Factorial::fac(2)
-call  >>>>>Factorial::fac(1)
-call  >>>>>>Factorial::fac(0)
-return>>>>>>>Factorial::fac:1
-return>>>>>>Factorial::fac:1
-return>>>>>Factorial::fac:2
-return>>>>Factorial::fac:6
-return>>>Factorial::fac:24
-return>>Factorial::fac:120
+rascal>fac1(5)
+fac1(5)
+call  >Factorial::fac1(5)
+call  >>Factorial::fac1(4)
+call  >>>Factorial::fac1(3)
+call  >>>>Factorial::fac1(2)
+call  >>>>>Factorial::fac1(1)
+call  >>>>>>Factorial::fac1(0)
+return>>>>>>>Factorial::fac1:1
+return>>>>>>Factorial::fac1:1
+return>>>>>Factorial::fac1:2
+return>>>>Factorial::fac1:6
+return>>>Factorial::fac1:24
+return>>Factorial::fac1:120
 int: 120
 ```
 
@@ -59,7 +63,7 @@ Turn trace off and execute the same function:
 ```rascal-shell
 rascal>:set tracing false
 ok
-rascal>fac(5)
+rascal>fac1(5)
 int: 120
 ```
 

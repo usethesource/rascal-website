@@ -6,4 +6,8 @@ title: "module demo::common::WordCount::Jabberwocky"
 
 `import demo::common::WordCount::Jabberwocky;`
 
+#### Synopsis
+
+Data source module for use with other example code.
+
 

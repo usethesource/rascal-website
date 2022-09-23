@@ -12,25 +12,22 @@ How can we print a list of squares? Here is a solution:
 
 ```rascal
 
-//START
-// tag::module[]
 module demo::basic::Squares
 
 import IO;
 
-void squares(int N){
-  println("Table of squares from 1 to <N>\n"); // <2>
-  for(int I <- [1 .. N + 1])
+
+void squares(int n) {
+  println("Table of squares from 1 to <n>\n"); // <2>
+  for (int I <- [1 .. n + 1])
       println("<I> squared = <I * I>");        // <3>
 }
 
-// a solution with a multi line string template:
 
 str squaresTemplate(int N) // <4>
   = "Table of squares from 1 to <N>
     '<for (int I <- [1 .. N + 1]) {>
     '  <I> squared = <I * I><}>";
-// end::module[]
 
 ```
            

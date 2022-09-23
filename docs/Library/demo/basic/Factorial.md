@@ -6,19 +6,35 @@ title: "module demo::basic::Factorial"
 
 `import demo::basic::Factorial;`
 
+#### Synopsis
 
-## function fac {#demo-basic-Factorial-fac}
+demonstrating factorial in Rascal
 
-* ``int fac(int N)``
+
+## function fac1 {#demo-basic-Factorial-fac1}
+
+* ``int fac1(int n)``
+
+#### Synopsis
+
+fac1 demonstrates the ternary conditional and recursion
 
 ## function fac2 {#demo-basic-Factorial-fac2}
 
 * ``int fac2(0)``
-* ``default int fac2(int N)``
+* ``default int fac2(int n)``
+
+#### Synopsis
+
+fac2 demonstrates overloading and dynamic dispatch with pattern matching
 
 ## function fac3 {#demo-basic-Factorial-fac3}
 
-* ``int fac3(int N)``
+* ``int fac3(int n)``
+
+#### Synopsis
+
+fac3 demonstrates structured programming and recursion
 
 ## function tfac0 {#demo-basic-Factorial-tfac0}
 

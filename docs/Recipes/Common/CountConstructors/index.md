@@ -21,7 +21,6 @@ In real applications this becomes relevant when counting, for instance, statemen
 
 
 ```rascal
-// tag::module[]
 module demo::common::CountConstructors
 
 import Node;

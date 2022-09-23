@@ -129,11 +129,11 @@ Here we measure time by using separate calls to `cpuTime` before and after a cal
 
 ```rascal-shell
 rascal>before = cpuTimeNow();
-int: 1687279416000
-rascal>fac(50);
+int: 2468336103000
+rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>cpuTimeNow() - before;
-int: 3532000
+int: 4197000
 ```
 
 See also [cpu time of](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf) for a more convenient way of measuring the time spent during a block of code.
@@ -240,11 +240,11 @@ Here we measure time by using separate calls to `sytemTime` before and after a c
 
 ```rascal-shell
 rascal>before = systemTimeNow();
-int: 76461746000
-rascal>fac(50);
+int: 113871047000
+rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>systemTimeNow() - before;
-int: 81000
+int: 99000
 ```
 
 ## function systemTimeOf {#util-Benchmark-systemTimeOf}
@@ -266,10 +266,10 @@ rascal>import demo::basic::Factorial;
 ok
 rascal>systemTimeOf(
 >>>>>>>   void() { 
->>>>>>>      fac(50); 
+>>>>>>>      fac1(50); 
 >>>>>>>   } 
 >>>>>>>);
-int: 16000
+int: 21000
 ```
 
 ## function userTimeNow {#util-Benchmark-userTimeNow}
@@ -306,11 +306,11 @@ Here we measure time by using separate calls to `userTime` before and after a ca
 
 ```rascal-shell
 rascal>before = userTimeNow();
-int: 1610974245000
-rascal>fac(50);
+int: 2354667872000
+rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>userTimeNow() - before;
-int: 3523000
+int: 4096000
 ```
 
 ## function userTimeOf {#util-Benchmark-userTimeOf}
@@ -368,13 +368,13 @@ We measure two calls to the factorial function with arguments `100`, respectivel
 ```rascal-shell
 rascal>benchmark(
 >>>>>>>   ("fac100" : void() {
->>>>>>>                  fac(100);
+>>>>>>>                  fac1(100);
 >>>>>>>               }, 
 >>>>>>>   "fac200" :  void() {
->>>>>>>                  fac(200);
+>>>>>>>                  fac1(200);
 >>>>>>>               }) 
 >>>>>>>   );
-map[str, num]: ("fac100":2,"fac200":5)
+map[str, num]: ("fac100":3,"fac200":6)
 ```
 
 We can do the same using [user time now](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow) that returns nanoseconds:
@@ -382,13 +382,13 @@ We can do the same using [user time now](../../Library/util/Benchmark.md#util::B
 ```rascal-shell
 rascal>benchmark( 
 >>>>>>>   ("fac100" : void() {
->>>>>>>                  fac(100);
+>>>>>>>                  fac1(100);
 >>>>>>>            }, 
 >>>>>>>   "fac200" : void() {
->>>>>>>                  fac(200);
+>>>>>>>                  fac1(200);
 >>>>>>>            })
 >>>>>>>   , userTimeOf);
-map[str, num]: ("fac100":2592000,"fac200":4820000)
+map[str, num]: ("fac100":2711000,"fac200":5649000)
 ```
 
 ## function gc {#util-Benchmark-gc}

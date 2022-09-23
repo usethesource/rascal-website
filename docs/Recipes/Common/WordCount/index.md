@@ -29,8 +29,6 @@ The main task of `wordCount` is to loop over all lines and to add the word count
 
 ```rascal
 
-//START
-// tag::module[]
 module demo::common::WordCount::WordCount
 
 import demo::common::WordCount::CountInLine1;
@@ -39,15 +37,25 @@ import demo::common::WordCount::CountInLine3;
 import demo::common::WordCount::Jabberwocky;
 
 import String;
+import List;
+
 
 int wordCount(list[str] input, int (str s) countInLine)
 {
   count = 0;
-  for(str line <- input){ // <1>
+  for (str line <- input){ // <1>
      count += countInLine(line); // <2>
   }
   return count;
 }
+
+
+int wordCountReduce(list[str] input, int (str s) countInline)
+  = (0 | it + countInline(line) | str line <- input);
+
+
+int wordCountMapSum(list[str] input, int (str s) countInLine)
+  = sum(mapper(input, countInLine));
 test bool tstWordCount2() = wordCount(Jabberwocky, countInLine1) == wordCount(Jabberwocky, countInLine3);
 
 test bool tstWordCount3() = wordCount(Jabberwocky, countInLine2) == wordCount(Jabberwocky, countInLine3);

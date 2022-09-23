@@ -14,25 +14,26 @@ Here is the Rascal version:
 
 ```rascal
 
-//START
-// tag::module[]
 module demo::basic::Factorial
 
 
 
-int fac(int N) = N <= 0 ? 1 : N * fac(N - 1); //<1>
+
+int fac1(int n) = n <= 0 ? 1 : n * fac1(n - 1); //<1>
+
 
 int fac2(0) = 1;  //<2>
-default int fac2(int N) = N * fac2(N - 1); //<3>
+default int fac2(int n) = n * fac2(n - 1); //<3>
 
-int fac3(int N)  { //<4>
-  if (N == 0) 
+
+int fac3(int n)  { //<4>
+  if (n == 0) 
      return 1;
-  return N * fac3(N - 1);
+  return n * fac3(n - 1);
 }
-test bool tfac1()  = fac(1)  == 1;
-test bool tfac2()  = fac(4)  == 24;
-test bool tfac47() = fac(47) == 258623241511168180642964355153611979969197632389120000000000;
+test bool tfac1()  = fac2(1)  == 1;
+test bool tfac2()  = fac3(4)  == 24;
+test bool tfac47() = fac3(47) == 258623241511168180642964355153611979969197632389120000000000;
 
 ```
           
@@ -49,7 +50,17 @@ Here is how to use `fac`:
 rascal>import demo::basic::Factorial;
 ok
 rascal>fac(47);
-int: 258623241511168180642964355153611979969197632389120000000000
+```
+:::danger
+Rascal code execution failed (unexpectedly) during compilation of this documentation.
+<pre>
+|prompt:///|(0,3,<1,0>,<1,3>): Undeclared variable: fac
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
+</pre>
+:::
+
+```rascal-shell
+ok
 ```
 
 NOTE: Indeed, Rascal supports arbitrary length numbers.

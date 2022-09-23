@@ -12,14 +12,13 @@ Here is a clever, albeit rather dense, solution that illustrates several Rascal 
 
 ```rascal
 
-//START
-// tag::module[]
 module demo::common::WordCount::CountInLine3
 
 
 
-int countInLine3(str S){
-  return (0 | it + 1 | /\w+/ := S);
+
+int countInLine3(str s) {
+  return (0 | it + 1 | /\w+/ := s);
 }
 test bool tstCountInLine3b() = countInLine3("Jabberwocky by Lewis Carroll") == 4;
 

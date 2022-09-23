@@ -12,9 +12,8 @@ A slighly more involved manner of using regular matching in a loop.
 
 ```rascal
 
-//START
-// tag::module[]
 module demo::common::WordCount::CountInLine2
+
 
 
 

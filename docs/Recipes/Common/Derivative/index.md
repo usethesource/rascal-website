@@ -25,7 +25,7 @@ Here is our solution followed by a list of explanations:
 
 
 ```rascal
-// tag::module[]
+
 module demo::common::Derivative
 
 
