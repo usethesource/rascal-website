@@ -4,9 +4,6 @@
 const math = require('remark-math');
 const katex = require('rehype-katex');
 
-
-var path = require("path"); // for shiki language
-
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -54,21 +51,6 @@ const config = {
         },
       }),
     ],
-    // [
-    //      'docusaurus-preset-shiki-twoslash',
-    //      {
-    //        themes: ["min-light", "nord"],
-    //        langs: [
-    //         {
-    //           id: 'Rascal',
-    //           aliases: ['rascal', 'rascal-shell'],
-    //           scopeName: 'source.rascal',
-    //           path: path.resolve( 'src/util/Rascal.tmLanguage.plist')
-             
-    //         }
-    //        ]
-    //      },
-    // ],
   ],
   stylesheets: [
     {
