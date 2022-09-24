@@ -52,7 +52,7 @@ ok
 
 In case of trouble, there is no need to panic. [Help](../GettingHelp/) is nearby.
 
-* Common troubles with installation and first runs are documented [here](../GettingStarted/Troubleshooting)
+* Common troubles with installation and first runs are documented _(here) Troubleshooting (broken link)_
 * If you have a question that probably has Rascal _source code_ as an answer, go to [StackOverflow](http://stackoverflow.com/questions/tagged/rascal). Either find your answer directly, or you are welcome to post a new question using the tag `[rascal]`.
 * If you think you've run into a bug, we are very happy to receive your report on [Github](http://github.com/usethesource/rascal/issues). 
 * If any documentation is unclear, incomplete or ambiguous you are also invited to submit a report there, but you may also use the `edit` button below to propose a fix.

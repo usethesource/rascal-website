@@ -285,6 +285,7 @@ println(S);
 <heading font="bold">Reminder</heading>
 <body>Don't forget to run the Rascal tests!</body>
 </note>
+
 ok
 ```
 Apart from an extra XML header, the original source file `F` and the output `S` of `xmlRaw` are identical.
@@ -326,6 +327,7 @@ rascal>println(S);
 println(S);
 <?xml version="1.0" encoding="UTF-8"?>
 <note><to>Jurgen</to><to>Tijs</to><from>Paul</from><date>2012-04-01</date><heading font="bold">Reminder</heading><body>Don't forget to run the Rascal tests!</body></note>
+
 ok
 ```
 The output `S` of `xmlCompact` is a version of the original source file `F` with all white space removed.
@@ -375,6 +377,7 @@ println(S);
   <heading font="bold">Reminder</heading>
   <body>Don't forget to run the Rascal tests!</body>
 </note>
+
 ok
 ```
 The output `S` of `xmlPretty` is a pretty printed version of the original source file `F`.

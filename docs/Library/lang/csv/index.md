@@ -3,7 +3,7 @@ title: lang::csv
 ---
 
 
-* [examples](../../../Library/lang/csv/examples)
 * [ast](../../../Library/lang/csv/ast)
-* [syntax](../../../Library/lang/csv/syntax)
+* [examples](../../../Library/lang/csv/examples)
 * [IO](../../../Library/lang/csv/IO.md)
+* [syntax](../../../Library/lang/csv/syntax)

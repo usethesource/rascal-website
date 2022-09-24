@@ -360,9 +360,9 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-str: "66"
+str: ""
 rascal>arbString(10);
-str: "PrxNPWoes"
+str: " \t\t\t\t\n"
 ```
 
 ## function left {#String-left}

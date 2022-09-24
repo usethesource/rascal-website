@@ -22,3 +22,11 @@
 .hero__image {
   height: 10rem;
 }
+
+[data-theme="light"] .shiki.nord {
+  /* display: none; */
+}
+
+[data-theme="dark"] .shiki.min-light {
+  /* display: none; */
+}

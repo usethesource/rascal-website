@@ -1,6 +1,12 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+const math = require('remark-math');
+const katex = require('rehype-katex');
+
+
+var path = require("path"); // for shiki language
+
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -26,8 +32,10 @@ const config = {
           // Please change this to your repo.
           editUrl: 'https://github.com/usethesource/rascal/tree/main/src/org/rascalmpl/courses/',
           remarkPlugins: [
-            // codeBlock
+            // codeBlock,
+            math
           ],
+          rehypePlugins: [katex],
         },
         blog: {
           showReadingTime: true,
@@ -36,14 +44,40 @@ const config = {
           // Please change this to your repo.
           editUrl: 'https://github.com/usethesource/rascal-website/tree/website-v2/blog/',
           remarkPlugins: [
-            // codeBlock
+            // codeBlock,
+            math
           ],
+          rehypePlugins: [katex],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
+    // [
+    //      'docusaurus-preset-shiki-twoslash',
+    //      {
+    //        themes: ["min-light", "nord"],
+    //        langs: [
+    //         {
+    //           id: 'Rascal',
+    //           aliases: ['rascal', 'rascal-shell'],
+    //           scopeName: 'source.rascal',
+    //           path: path.resolve( 'src/util/Rascal.tmLanguage')
+             
+    //         }
+    //        ]
+    //      },
+    // ],
+  ],
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
   plugins: [
     [

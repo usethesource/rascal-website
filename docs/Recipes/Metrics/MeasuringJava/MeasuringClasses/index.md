@@ -28,15 +28,15 @@ ok
 rascal>|tmp:///snakes-and-ladders/src/snakes/|.ls
 list[loc]: [
   |tmp:///snakes-and-ladders/src/snakes/Die.java|,
-  |tmp:///snakes-and-ladders/src/snakes/SimpleGameTest.java|,
-  |tmp:///snakes-and-ladders/src/snakes/LastSquare.java|,
-  |tmp:///snakes-and-ladders/src/snakes/Snake.java|,
-  |tmp:///snakes-and-ladders/src/snakes/Ladder.java|,
-  |tmp:///snakes-and-ladders/src/snakes/FirstSquare.java|,
   |tmp:///snakes-and-ladders/src/snakes/DieTest.java|,
-  |tmp:///snakes-and-ladders/src/snakes/Player.java|,
+  |tmp:///snakes-and-ladders/src/snakes/FirstSquare.java|,
   |tmp:///snakes-and-ladders/src/snakes/Game.java|,
   |tmp:///snakes-and-ladders/src/snakes/ISquare.java|,
+  |tmp:///snakes-and-ladders/src/snakes/Ladder.java|,
+  |tmp:///snakes-and-ladders/src/snakes/LastSquare.java|,
+  |tmp:///snakes-and-ladders/src/snakes/Player.java|,
+  |tmp:///snakes-and-ladders/src/snakes/SimpleGameTest.java|,
+  |tmp:///snakes-and-ladders/src/snakes/Snake.java|,
   |tmp:///snakes-and-ladders/src/snakes/Square.java|
 ]
 ```

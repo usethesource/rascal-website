@@ -493,7 +493,7 @@ Determine the last modification date of the Rascal standard library:
 
 ```rascal-shell
 rascal>lastModified(|std:///IO.rsc|);
-datetime: $2022-09-19T14:36:02.942+00:00$
+datetime: $2022-09-23T14:17:03.804+00:00$
 ```
 
 ## function created {#IO-created}
@@ -520,7 +520,7 @@ Determine the last modification date of the Rascal standard library:
 
 ```rascal-shell
 rascal>created(|std:///IO.rsc|);
-datetime: $2022-09-19T14:36:02.942+00:00$
+datetime: $2022-09-23T14:17:03.804+00:00$
 ```
 
 ## function touch {#IO-touch}
@@ -567,7 +567,7 @@ List all entries in the standard library:
 
 ```rascal-shell
 rascal>listEntries(|std:///|);
-list[str]: ["String.rsc","Location.rsc","demo","Prelude$Less.class","Prelude$ReleasableCallback.class","analysis","Set.rsc","util","Node.rsc","Exception.rsc","Type.class","Message.rsc","Prelude$ByteBufferBackedInputStream.class","Prelude$Sorting.class","Prelude.class","ValueIO.rsc","Prelude$NodeComparator.class","lang","Type.rsc","index.md","Prelude$3.class","Relation.rsc","Prelude$Distance.class","DateTime.rsc","Boolean.rsc","Prelude$1.class","ListRelation.rsc","List.rsc","Prelude$4.class","resource","Content.rsc","Traversal.rsc","Grammar.rsc","Prelude.rsc","Prelude$Backtrack.class","ParseTree.rsc","Prelude$2.class","IO.rsc","Map.rsc"]
+list[str]: ["analysis","Boolean.rsc","Content.rsc","DateTime.rsc","demo","Exception.rsc","Grammar.rsc","index.md","IO.rsc","lang","List.rsc","ListRelation.rsc","Location.rsc","Map.rsc","Message.rsc","Node.rsc","ParseTree.rsc","Prelude$1.class","Prelude$2.class","Prelude$3.class","Prelude$Backtrack.class","Prelude$ByteBufferBackedInputStream.class","Prelude$Distance.class","Prelude$Less.class","Prelude$NodeComparator.class","Prelude$ReleasableCallback.class","Prelude$Sorting.class","Prelude.class","Prelude.rsc","Relation.rsc","resource","Set.rsc","String.rsc","Traversal.rsc","Type.class","Type.rsc","util","ValueIO.rsc"]
 ```
 
 ## function mkDirectory {#IO-mkDirectory}
@@ -701,6 +701,7 @@ Just print a newline
 ```rascal-shell
 rascal>println();
 println();
+
 ok
 ```
 
