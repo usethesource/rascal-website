@@ -16,18 +16,16 @@ Declare a function.
 
 #### Syntax
 
-*  `Modifiers Type Name( Type<sub>1</sub> Var<sub>1</sub>, ..., Type~n~ Var~n~ ) Body`
-*  `Modifiers Type Name( Type<sub>1</sub> Var<sub>1</sub>, ..., Type~n~ Var~n~ Type<sub>0</sub> Name<sub>0</sub>... ) Body`
-*  `Modifiers Type Name( Pattern<sub>1</sub>, ..., Pattern~n~) Body`
-*  `Modifiers Type Name( Pattern<sub>1</sub>, ..., Pattern~n~, Type<sub>0</sub> Name<sub>0</sub>...) Body`
-
+*  `Modifiers Type Name( Type~1~ Var~1~, ..., Type~n~ Var~n~ ) Body`
+*  `Modifiers Type Name( Type~1~ Var~1~, ..., Type~n~ Var~n~ Type~0~ Name~0~... ) Body`
+*  `Modifiers Type Name( Pattern~1~, ..., Pattern~n~) Body`
+*  `Modifiers Type Name( Pattern~1~, ..., Pattern~n~, Type~0~ Name~0~...) Body`
 
 where `Body` is one of:
 
 *  `{ Statements }`
-*  `throws Exception<sub>1</sub>, Exception<sub>2</sub>, ... { Statements }`
+*  `throws Exception~1~, Exception~2~, ... { Statements }`
 *  `= Expression;`
-
 
 and where `Modifiers` may be:
 
@@ -35,7 +33,7 @@ and where `Modifiers` may be:
 
 ##  Variant 1 
 
-A function declaration introduces a new function with name _name_, typed formal parameters `Type<sub>1</sub> Var<sub>1</sub>`, a return type _Type_
+A function declaration introduces a new function with name _name_, typed formal parameters `Type~1~ Var~1~`, a return type _Type_
 and a _Statement_ that forms the function body.
 The type of _Statement_ should be equal to _Type_.
 
@@ -47,10 +45,9 @@ A function may have a variable list of arguments, this has as syntax variant 2 g
 
 The last parameter of a function may be followed by `...` and this has as effect that all remaining actual parameters
 that occur in a call to this function are collected as list value of the last formal parameter. 
-Inside the function body, the type of this parameter will therefore be `list[Type<sub>0</sub>]`.
+Inside the function body, the type of this parameter will therefore be `list[Type~0~]`.
 
 ##  Variant 3 and 4 
-
 
 All formal parameter of a function can be [Patterns](../../../Rascal/Patterns). There are some restrictions however:
 
@@ -58,24 +55,19 @@ All formal parameter of a function can be [Patterns](../../../Rascal/Patterns). 
 *  Patterns in formal parameter positions may not introduce fresh variables without an explicit type. 
 *  The last parameter, if followed by `...` can only be a normal typed parameters, not just any pattern.
 
-
 ##  Body types 
-
 
 *  Functions with list of statements as bodies must eventually use `return` or `fail` on every control flow path. 
 *  The declarations to `throw` an exception are documentation only
 *  Single expressions can be bodies of functions, the return value is the value of the expression.
 
-
 ##  Parameterized types in function declaration 
-
 
 The types that occur in function declarations may also contain [Type Parameters](../../../Rascal/Declarations/StaticTyping/TypeParameters).
 In this way functions can be defined for arbitrary types. The type variable is bound (statically) at by the types of the parameters given at location of the call. The result type must be used at least once in any of the parameters.
 
 ##  Overloading 
 
- 
 Function definitions may be overloaded, i.e. a function with the same name may be defined twice and 
 a function may redefine a constructor of an [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType) or a [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition).
 
@@ -90,7 +82,6 @@ There are some restrictions however:
 *  Overlapping patterns are allowed if the one alternative has the `default` modified while the other does not.
 *  If a function is fallible, it uses the `fail` statement to back-track to a different alternative, then there must be a `default` alternative defined which can handle the general case. An [AlgebraicDataType] or a [SyntaxDefinition] with the same name and return type counts as a `default` alternative.
 *  `default` functions may not fail.
-
 
 ##  Modifiers 
 
@@ -108,12 +99,11 @@ The _Modifiers_ affect _visibility_ and _special behaviour_ of functions:
         all non-default alternatives have been tried. Note that [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType)s and [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition)s 
         _implicitly_ define `default` functions that may be overloaded by normal [Function](../../../Rascal/Declarations/Function)s.
 
-
 #### Examples
 
 Declare a function
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>rel[int, int] invert(rel[int,int] R){
 >>>>>>>   return {<Y, X> | <int X, int Y> <- R };
 >>>>>>>}
@@ -121,7 +111,7 @@ rel[int,int] (rel[int,int]): function(|prompt:///|(0,82,<1,0>,<3,1>))
 ```
 Call it
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>invert({<1,10>, <2,20>});
 rel[int,int]: {
   <10,1>,
@@ -132,7 +122,7 @@ rel[int,int]: {
 In the following example we illustrate the use of type variables in function declarations.
 Declare an inversion function that is applicable to any binary relation:
 
-```rascal-shell
+```rascal-shell 
 rascal>rel[&T2, &T1] invert2(rel[&T1,&T2] R){  
 >>>>>>>   return {<Y, X> | <&T1 X, &T2 Y> <- R };
 >>>>>>>}
@@ -140,7 +130,7 @@ set[tuple[&T2,&T1]] (set[tuple[&T1,&T2]]): function(|prompt:///|(0,85,<1,0>,<3,1
 ```
 Now apply it to relations with different types:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>invert2({<1,10>, <2,20>});
 rel[int,int]: {
   <10,1>,
@@ -155,7 +145,7 @@ rel[int,str]: {
 As another example declare a function that can be used to swap the elements of pairs of arbitrary types
 (also see [Subscription](../../../Rascal/Expressions/Values/Tuple/Subscription)):
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>tuple[&T2, &T1] swap(tuple[&T1, &T2] TP) { return <TP[1], TP[0]>;}
 tuple[&T2,&T1] (tuple[&T1,&T2]): function(|prompt:///|(0,66,<1,0>,<1,66>))
 rascal>swap(<1, 2>);
@@ -166,8 +156,7 @@ tuple[int,str]: <3,"wed">
 
 Here we use an overloaded definition with incomparable patterns:
 
-
-```rascal-shell
+```rascal-shell 
 rascal>int f(int i) = 1;
 int (int): function(|prompt:///|(0,17,<1,0>,<1,17>))
 rascal>int f(real r) = 2;
@@ -180,8 +169,7 @@ int: 2
 
 And we may use `default`, as in:
 
-
-```rascal-shell
+```rascal-shell 
 rascal>int f(0) = 1;
 int (int): function(|prompt:///|(0,13,<1,0>,<1,13>))
 rascal>default int f(int n) = n * f(n - 1);
@@ -197,16 +185,14 @@ we can define canonicalization functions. The same holds for [Syntax Definition]
 
 This definition implies a default function for t(), f() and neg(B):
 
-
-```rascal-shell
+```rascal-shell ,continue
 rascal>data B = t() | f() | neg(B);
 ok
 ```
 
 The following definition will remove any nested neg before it is even constructed:
 
-
-```rascal-shell
+```rascal-shell ,continue
 rascal>B neg(neg(B b)) = b;
 B (B): function(|prompt:///|(0,20,<1,0>,<1,20>))
 rascal>neg(t());

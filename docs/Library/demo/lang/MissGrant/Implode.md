@@ -6,7 +6,6 @@ title: "module demo::lang::MissGrant::Implode"
 
 `import demo::lang::MissGrant::Implode;`
 
-
 ## function implode {#demo-lang-MissGrant-Implode-implode}
 
 * ``demo::lang::MissGrant::AST::Controller implode(demo::lang::MissGrant::MissGrant::Controller pt)``

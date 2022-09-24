@@ -6,14 +6,13 @@ title: "module Set"
 
 `import Set;`
 
-
 #### Synopsis
 
 Library functions for sets.
 
 #### Description
 
-For operators on sets see [Set](../Rascal/Expressions/Values/Set) in the Rascal Language Reference.
+For operators on sets see [Set](../Rascal/Expressions/Values/Set/) in the Rascal Language Reference.
 
 The following functions are defined for sets:
 * [classify](../Library/Set.md#Set-classify)
@@ -42,11 +41,9 @@ The following functions are defined for sets:
 * [top](../Library/Set.md#Set-top)
 * [union](../Library/Set.md#Set-union)
 
-
 ## function classify {#Set-classify}
 
 * ``map[&K,set[&V]] classify(set[&V] input, &K (&V) getClass)``
-
 
 #### Synopsis
 
@@ -56,19 +53,19 @@ Classify elements in a set.
 
 We classify animals by their number of legs.
 
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 ```
 Create a map from animals to number of legs.
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>legs = ("bird": 2, "dog": 4, "human": 2, "snake": 0, "spider": 8, "millepede": 1000, "crab": 8, "cat": 4);
 map[str, int]: ("snake":0,"spider":8,"human":2,"crab":8,"cat":4,"bird":2,"dog":4,"millepede":1000)
 ```
 Define function `nLegs` that returns the number of legs for each animal (or `0` when the animal is unknown):
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>int nLegs(str animal){
 >>>>>>>    return legs[animal] ? 0;
 >>>>>>>}
@@ -76,7 +73,7 @@ int (str): function(|prompt:///|(0,53,<1,0>,<3,1>))
 ```
 Now classify a set of animals:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>classify({"bird", "dog", "human", "spider", "millepede", "zebra", "crab", "cat"}, nLegs);
 map[int, set[str]]: (
   8:{"spider","crab"},
@@ -91,7 +88,6 @@ map[int, set[str]]: (
 
 * ``set[set[&T]] group(set[&T] input, bool (&T a, &T b) similar)``
 
-
 #### Synopsis
 
 Group elements in a set given an equivalence function.
@@ -100,19 +96,19 @@ Group elements in a set given an equivalence function.
 
 We classify animals by their number of legs.
 
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 ```
 Create a map from animals to number of legs.
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>legs = ("bird": 2, "dog": 4, "human": 2, "snake": 0, "spider": 8, "millepede": 1000, "crab": 8, "cat": 4);
 map[str, int]: ("snake":0,"spider":8,"human":2,"crab":8,"cat":4,"bird":2,"dog":4,"millepede":1000)
 ```
 Define function `nLegs` that returns the number of legs fro each animal (or `0` when the animal is unknown):
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>int nLegs(str animal){
 >>>>>>>    return legs[animal] ? 0;
 >>>>>>>}
@@ -122,7 +118,7 @@ bool (str, str): function(|prompt:///|(0,50,<1,0>,<1,50>))
 ```
 Now group a set of animals:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>group({"bird", "dog", "human", "spider", "millepede", "zebra", "crab", "cat"}, similar);
 set[set[str]]: {
   {"spider"},
@@ -141,15 +137,13 @@ WARNING: check compiler.
 
 * ``map[&T,int] index(set[&T] s)``
 
-
 #### Synopsis
 
 Map set elements to a fixed index.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>index({"elephant", "zebra", "snake"});
@@ -159,7 +153,6 @@ map[str, int]: ("snake":0,"zebra":1,"elephant":2)
 ## function isEmpty {#Set-isEmpty}
 
 * ``bool isEmpty(set[&T] st)``
-
 
 #### Synopsis
 
@@ -171,8 +164,7 @@ Yields `true` if `s` is empty, and `false` otherwise.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>isEmpty({1, 2, 3});
@@ -185,7 +177,6 @@ bool: true
 
 * ``set[&U] mapper(set[&T] st, &U (&T) fn)``
 
-
 #### Synopsis
 
 Apply a function to all set elements and return set of results.
@@ -196,8 +187,7 @@ Return a set obtained by applying function `fn` to all elements of set `s`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>int incr(int x) { return x + 1; }
@@ -210,15 +200,13 @@ set[int]: {5,3,2,4}
 
 * ``&T max(set[&T] st)``
 
-
 #### Synopsis
 
 Determine the largest element of a set.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>max({1, 3, 5, 2, 4});
@@ -231,21 +219,18 @@ str: "zebra"
 
 * ``&T min(set[&T] st)``
 
-
 #### Synopsis
 
 Determine the smallest element of a set.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>min({1, 3, 5, 4, 2});
 int: 1
 ```
-
 
 #### Synopsis
 
@@ -253,8 +238,7 @@ Smallest element of a set.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>min({1, 3, 5, 2, 4});
@@ -267,7 +251,6 @@ str: "elephant"
 
 * ``set[set[&T]] power(set[&T] st)``
 
-
 #### Synopsis
 
 Determine the powerset of a set.
@@ -278,8 +261,7 @@ Returns a set with all subsets of `s`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>power({1,2,3,4});
@@ -307,7 +289,6 @@ set[set[int]]: {
 
 * ``set[set[&T]] power1(set[&T] st)``
 
-
 #### Synopsis
 
 The powerset (excluding the empty set) of a set value.
@@ -318,8 +299,7 @@ Returns all subsets (excluding the empty set) of `s`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>power1({1,2,3,4});
@@ -347,7 +327,6 @@ set[set[int]]: {
 * ``&T reducer(set[&T] st, &T (&T,&T) fn, &T unit)``
 * ``&T reducer(set[&T] _:{})``
 
-
 #### Synopsis
 
 Apply a function to successive elements of a set and combine the results (__deprecated__).
@@ -358,8 +337,7 @@ Apply the function `fn` to successive elements of set `s` starting with `unit`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>int add(int x, int y) { return x + y; }
@@ -370,12 +348,11 @@ int: 100
 
 #### Pitfalls
 
-WARNING: This function is *deprecated*, use a [reducer](../Rascal/Expressions/Reducer) instead.
+WARNING: This function is *deprecated*, use a [reducer](../Rascal/Expressions/Reducer/) instead.
 
 ## function size {#Set-size}
 
 * ``int size(set[&T] st)``
-
 
 #### Synopsis
 
@@ -383,8 +360,7 @@ Determine the number of elements in a set.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>size({1,2,3,4});
@@ -404,32 +380,35 @@ int: 0
 
 * ``&T getOneFrom(set[&T] st)``
 
-
 #### Synopsis
 
 Pick an arbitrary element from a set.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>getOneFrom({"elephant", "zebra", "snake"});
+<<<<<<< HEAD
 str: "snake"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "elephant"
+=======
+str: "zebra"
+>>>>>>> 2a7f585b (all links end with a slash now..)
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "zebra"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "snake"
+rascal>getOneFrom({"elephant", "zebra", "snake"});
+str: "elephant"
 ```
 
 ## function getFirstFrom {#Set-getFirstFrom}
 
 * ``&T getFirstFrom({&T f, *&T _})``
 * ``&T getFirstFrom(set[&T] _:{})``
-
 
 #### Synopsis
 
@@ -449,7 +428,6 @@ This function helps to make set-based code more deterministic, for instance, for
 
 * ``tuple[&T, set[&T]] takeOneFrom(set[&T] st)``
 
-
 #### Synopsis
 
 Remove an arbitrary element from a set, returns the element and a set without that element.
@@ -461,23 +439,29 @@ Remove an arbitrary element from set `s` and return a tuple consisting of the el
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>takeOneFrom({1, 2, 3, 4});
+<<<<<<< HEAD
 tuple[int,set[int]]: <3,{1,2,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
 tuple[int,set[int]]: <4,{1,3,2}>
 rascal>takeOneFrom({1, 2, 3, 4});
 tuple[int,set[int]]: <1,{3,2,4}>
+=======
+tuple[int,set[int]]: <4,{1,3,2}>
+rascal>takeOneFrom({1, 2, 3, 4});
+tuple[int,set[int]]: <4,{1,3,2}>
+rascal>takeOneFrom({1, 2, 3, 4});
+tuple[int,set[int]]: <3,{1,2,4}>
+>>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 ## function takeFirstFrom {#Set-takeFirstFrom}
 
 * ``tuple[&T, set[&T]] takeFirstFrom({&T f, *&T r})``
 * ``tuple[&T, set[&T]] takeFirstFrom(set[&T] _:{})``
-
 
 #### Synopsis
 
@@ -491,15 +475,13 @@ element of a set.
 
 * ``list[&T] toList(set[&T] st)``
 
-
 #### Synopsis
 
 Convert a set to a list.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>toList({1, 2, 3, 4});
@@ -509,7 +491,7 @@ list[str]: ["snake","zebra","elephant"]
 ```
 Note that the same result can be obtained using splicing:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>s = {1,2,3,4};
 set[int]: {1,3,2,4}
 rascal>l = [*s];
@@ -524,7 +506,6 @@ Recall that the elements of a set are unordered and that there is no guarantee i
 
 * ``map[&A,set[&B]] toMap(rel[&A, &B] st)``
 
-
 #### Synopsis
 
 Convert a set of tuples to a map; each key is associated with a set of values.
@@ -536,8 +517,7 @@ is associated with the set of second elements of all tuples with the same first 
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>toMap({<"a", 1>, <"b", 2>, <"a", 10>});
@@ -551,7 +531,6 @@ map[str, set[int]]: (
 
 * ``map[&A,&B] toMapUnique(rel[&A, &B] st) throws MultipleKey``
 
-
 #### Synopsis
 
 Convert a set of tuples to a map (provided that there are no multiple keys).
@@ -562,8 +541,7 @@ Convert a set of tuples to a map. The result should be a legal map (i.e., withou
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>import Set;
 ok
 rascal>toMapUnique({<"a", 1>, <"b", 2>, <"c", 10>});
@@ -571,7 +549,7 @@ map[str, int]: ("a":1,"b":2,"c":10)
 ```
 Now explore an erroneous example:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>toMapUnique({<"a", 1>, <"b", 2>, <"a", 10>});
 |std:///Set.rsc|(9297,543,<442,0>,<462,70>): MultipleKey("a",10,1)
 	at *** somewhere ***(|std:///Set.rsc|(9297,543,<442,0>,<462,70>))
@@ -583,15 +561,13 @@ ok
 
 * ``str toString(set[&T] st)``
 
-
 #### Synopsis
 
 Convert a set to a string.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>toString({1, 2, 3});
@@ -608,15 +584,13 @@ Recall that the elements of a set are unordered and that there is no guarantee i
 
 * ``str itoString(set[&T] st)``
 
-
 #### Synopsis
 
 Convert a set to an indented string.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>toString({1, 2, 3});
@@ -634,7 +608,6 @@ Recall that the elements of a set are unordered and that there is no guarantee i
 * ``list[&T] sort(set[&T] s)``
 * ``list[&T] sort(set[&T] l, bool (&T a, &T b) less)``
 
- 
 #### Synopsis
 
 Sort the elements of a set.
@@ -652,8 +625,7 @@ This function `lessThan` (<) function should implement a strict partial order, m
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Set;
 ok
 rascal>import String;
@@ -673,7 +645,6 @@ list[str]: ["strawberry","pineapple","banana","mango","grape","kiwi","pear"]
 * ``list[&T] top(int k, set[&T] l, bool (&T a, &T b) less)``
 * ``list[&T] top(int k, set[&T] l)``
 
-
 .Synopsis Produce the smallest `k` elements of a set as sorted by the `less` function
 
 #### Description
@@ -690,7 +661,6 @@ If `k` is a negative number, `top` will return the largest `abs(k)` elements of 
 
 * ``set[&T] union(set[set[&T]] sets)``
 
-
 #### Synopsis
 
 Flatten a set of sets into a single set.  
@@ -698,7 +668,6 @@ Flatten a set of sets into a single set.
 ## function jaccard {#Set-jaccard}
 
 * ``real jaccard(set[value] x, set[value] y)``
-
 
 #### Synopsis
 

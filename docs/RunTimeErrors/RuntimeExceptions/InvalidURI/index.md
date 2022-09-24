@@ -16,13 +16,12 @@ An invalid URI is created at runtime.
 
 #### Description
 
-Thrown by operations on [source locations](../../../Rascal/Expressions/Values/Location) that would 
+Thrown by operations on [source locations](../../../Rascal/Expressions/Values/Location/) that would 
 lead to an invalid URI part of a source location value.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>someLoc = |home:///abc.txt|;
 loc: |home:///abc.txt|
 rascal>someLoc.scheme = "a:b";
@@ -33,7 +32,7 @@ ok
 
 Another well-known example is a missing path when using `//` (wrong) instead of `///` (good):
 
-```rascal-shell
+```rascal-shell ,error
 rascal>|home:///|;
 loc: |home:///|
 rascal>|home://|;

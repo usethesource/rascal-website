@@ -14,15 +14,15 @@ Each case is comparable to a _transaction_: when the pattern succeeds and the fo
 executed successfully, all changes to variables made by the statement are committed and thus become permanent. 
 The variables bound by the pattern are always local to the statement associated with the case. 
 
-See [Switch](../../Rascal/Statements/Switch),[Visit](../../Rascal/Expressions/Visit) and 
-[Pattern With Action](../../Rascal/Expressions/Visit/PatternWithAction) for more details.
+See [Switch](../../Rascal/Statements/Switch/),[Visit](../../Rascal/Expressions/Visit/) and 
+[Pattern With Action](../../Rascal/Expressions/Visit/PatternWithAction/) for more details.
 
 #### Examples
 
-We use the [ColoredTrees](../../Recipes/Common/ColoredTrees) datatype as example and use a switch to
+We use the [ColoredTrees](../../Recipes/Common/ColoredTrees/) datatype as example and use a switch to
 distinguish between red and black nodes:
 
-```rascal-shell
+```rascal-shell 
 rascal>data ColoredTree = 
 >>>>>>>      leaf(int N) 
 >>>>>>>    | red(ColoredTree left, ColoredTree right) 
@@ -50,5 +50,4 @@ rascal>switch (CT){
 A red root node
 ok
 ```
-
 

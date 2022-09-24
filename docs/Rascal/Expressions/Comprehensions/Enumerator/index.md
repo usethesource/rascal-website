@@ -59,10 +59,9 @@ Here are some examples of enumerators:
 
 *  `int N <- 17`, will only generate the value `17`.
 
-
 Here are examples of enumerators in action:
 
-```rascal-shell
+```rascal-shell 
 rascal>[ N * N | int N <- [1, 2, 3, 4, 5] ];
 list[int]: [1,4,9,16,25]
 rascal>{<N, K> | <str K, int N> <- {<"a",10>, <"b",20>, <"c",30>}};
@@ -72,5 +71,4 @@ rel[int,str]: {
   <30,"c">
 }
 ```
-
 

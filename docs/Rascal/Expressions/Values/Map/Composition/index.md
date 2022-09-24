@@ -11,14 +11,13 @@ Composition of two map values.
 
 #### Syntax
 
-`Exp<sub>1</sub> o Exp<sub>2</sub>`
+`Exp~1~ o Exp~2~`
 
 #### Types
 
-|`Exp<sub>1</sub>`            | `Exp<sub>2</sub>`           | `Exp<sub>1</sub> o Exp<sub>2</sub>`  |
+|`Exp~1~`            | `Exp~2~`           | `Exp~1~ o Exp~2~`  |
 | --- | --- | --- |
-| `map[T<sub>1</sub>, T<sub>2</sub>]` | `map[T<sub>2</sub>, T<sub>3</sub>]` | `map[T<sub>1</sub>, T<sub>3</sub>]`  |
-
+| `map[T~1~, T~2~]` | `map[T~2~, T~3~]` | `map[T~1~, T~3~]`  |
 
 #### Description
 
@@ -26,8 +25,7 @@ Returns the composition of two maps.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>("one" : 1, "two" : 2) o (1 : 10, 2 : 20);

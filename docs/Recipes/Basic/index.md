@@ -18,9 +18,7 @@ We discuss the following examples:
 * [Factorial](../../Recipes/Basic/Factorial)
 * [Squares](../../Recipes/Basic/Squares)
 
-
 #### Pitfalls
 
 These programs illustrate various features of Rascal; they are *not representative* as use cases of the language.
-
 

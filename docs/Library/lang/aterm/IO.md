@@ -6,7 +6,6 @@ title: "module lang::aterm::IO"
 
 `import lang::aterm::IO;`
 
-
 ## function readTextATermFile {#lang-aterm-IO-readTextATermFile}
 
 * ``&T readTextATermFile(type[&T] begin, loc location)``
@@ -17,7 +16,6 @@ read an ATerm from a text file
 ## function readATermFromFile {#lang-aterm-IO-readATermFromFile}
 
 * ``value readATermFromFile(str fileName)``
-
 
 #### Synopsis
 

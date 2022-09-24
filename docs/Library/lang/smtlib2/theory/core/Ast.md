@@ -6,9 +6,7 @@ title: "module lang::smtlib2::theory::core::Ast"
 
 `import lang::smtlib2::theory::core::Ast;`
 
-
 	Synopsis: AST for the SMTLIBv2 Core theory (boolean logic)
-
 
 ## data Sort {#lang-smtlib2-theory-core-Ast-Sort}
 

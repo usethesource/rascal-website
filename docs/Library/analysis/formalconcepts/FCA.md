@@ -6,7 +6,6 @@ title: "module analysis::formalconcepts::FCA"
 
 `import analysis::formalconcepts::FCA;`
 
-
 #### Synopsis
 
 Library for Formal Concept Analysis
@@ -17,7 +16,6 @@ Formal Concept Analysis is a somewhat ubiquitous tool in software analysis proje
 It can be used to find latent groups of objects that share the same attributes in a dataset. 
 Typically, we apply `FCA` to a relation `rel[&O objects, &A attributes]`, which represents
 extracted source code artifacts and their attributes.
-
 
 ## alias FormalContext[&Object, &Attribute] {#analysis-formalconcepts-FCA-FormalContext[&Object, &Attribute]}
 
@@ -43,7 +41,6 @@ extracted source code artifacts and their attributes.
 
 * ``ConceptLattice[&Object, &Attribute] fca (FormalContext[&Object, &Attribute] fc)``
 
-
 #### Synopsis
 
 Computes Concept Lattice given the Object Attribute Relation.
@@ -52,7 +49,6 @@ Computes Concept Lattice given the Object Attribute Relation.
 
 * ``DotGraph toDot(ConceptLattice[&Object, &Attribute] cl)``
 * ``DotGraph toDot(ConceptLattice[&Object, &Attribute] cl, bool lab)``
-
 
 #### Synopsis
 
@@ -118,7 +114,6 @@ Computes Dot Graph from Concept Lattice.
 ## function toDotString {#analysis-formalconcepts-FCA-toDotString}
 
 * ``str toDotString(ConceptLattice[&Object, &Attribute]  q)``
-
 
 #### Synopsis
 

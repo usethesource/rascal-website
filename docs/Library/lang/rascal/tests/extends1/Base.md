@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends1::Base"
 
 `import lang::rascal::tests::extends1::Base;`
 
-
 ## alias INTEGER {#lang-rascal-tests-extends1-Base-INTEGER}
 
 * `int`

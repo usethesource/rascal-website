@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends1::UseExtendBase"
 
 `import lang::rascal::tests::extends1::UseExtendBase;`
 
-
 ## function base1 {#lang-rascal-tests-extends1-UseExtendBase-base1}
 
 * ``test bool base1()``

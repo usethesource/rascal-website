@@ -59,4 +59,3 @@ will produce:
 
 * An empty line is required _after_ a NumberedList
 
-

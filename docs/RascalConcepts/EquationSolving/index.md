@@ -13,7 +13,7 @@ This is a declarative way of programming: specify the constraints that a problem
 satisfy and how potential solutions can be generated. 
 The actual solution (if any) is found by enumerating solutions and testing their compliance with the constraints.
 
-Rascal provides a [Solve](../../Rascal/Statements/Solve) statement that helps writing constraint solvers. 
+Rascal provides a [Solve](../../Rascal/Statements/Solve/) statement that helps writing constraint solvers. 
 
 #### Examples
 
@@ -21,5 +21,4 @@ A typical example is data flow analysis where the propagation of values through 
 Their solution can be found with the solve statement.
 
 WARNING: add links
-
 

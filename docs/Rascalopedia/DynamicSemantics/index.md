@@ -15,4 +15,3 @@ Dynamic semantics describes the execution behaviour of a program and includes:
 
 Contrast with [Static Semantics](../../Rascalopedia/StaticSemantics) that describes pre-execution behaviour.
 
-

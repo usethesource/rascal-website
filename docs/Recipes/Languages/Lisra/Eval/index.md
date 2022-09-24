@@ -16,25 +16,20 @@ Here is the core of our Lisp interpreter. Its basic functionality is to take
 *  Return a `Result` that captures the value just computed and possibleside-effects
 on the environment.
 
-
 Rascal provides pattern-directed dispatch: a function with the same name
 can have complete patterns as arguments. When called, a pattern match determines which
 variant of the function will be called. This is used extensively in the definitions below:
 
-
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Lisra::Eval
 
 import Prelude;
 import demo::lang::Lisra::Parse;
 import demo::lang::Lisra::Runtime;
 
-Lval eval(Lval x) = eval(x, [()]).val;
-
-// Evaluate an Lval in a given environment and return a Result.
-
 Result eval(str exp) = eval(parse(exp),  [()]);
+
+Lval eval(Lval x) = eval(x, [()]).val;
 
 Result eval(Integer(int x), Env e) = <Integer(x), e>; // <1>
 
@@ -56,7 +51,6 @@ Result eval(List([Atom("set!"), var, exp]), Env e) { // <4>
 Result eval(List([Atom("if"), Lval tst, Lval conseq, Lval alt]), Env e) = // <5>
   eval(tst, e).val != FALSE ? eval(conseq, e) : eval(alt, e);
        
-                                                           
 Result eval(List([Atom("begin"), *Lval exps]) , Env e) { // <6>
   val = FALSE;
   for(Lval exp <- exps){
@@ -85,7 +79,6 @@ default Result eval(List([ *Lval exps ]), Env e) { // <9>
 
 //default Result eval(Lval exp, Env e) = <exp, e>;
 
-                                                            
 // Apply an Lval to a list of arguments and return a Result
 Result apply(Closure(Result(list[Lval] args, Env env) fn), list[Lval] args, Env e) { // <10>
   return <fn(args, e).val, e>;
@@ -110,11 +103,9 @@ default Result apply(Lval a,     list[Lval] b, Env e) { // <12>
   println("Cannot apply <a> to <b> using <e>");
   return <FALSE, e>;
 }
-// end::module[]
 
 ```
 
-                
 We now explain the different cases in more detail:
 
 <1> An integer constant evaluates to itself. Note how `Integer(int x)` is used as first
@@ -164,8 +155,7 @@ We now explain the different cases in more detail:
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Lisra::Runtime;
 ok
 rascal>import demo::lang::Lisra::Eval;
@@ -185,5 +175,4 @@ Lval: Integer(12)
 #### Pitfalls
 
 *  It is no pleasure to type in `Lval`s directly, that is why a parser is needed, see [Parse](../../../../Recipes/Languages/Lisra/Parse).
-
 

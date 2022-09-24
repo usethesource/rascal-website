@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends1::Base1"
 
 `import lang::rascal::tests::extends1::Base1;`
 
-
 ## data A {#lang-rascal-tests-extends1-Base1-A}
 
 ```rascal

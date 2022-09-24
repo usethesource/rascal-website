@@ -19,7 +19,7 @@ an ambiguity is found while parsing the sentence according to that grammar.
 First declare a very simple expression language that should
 recognize expressions like `a`, `a+a`, `a+(a+a)`:
 
-```rascal-shell
+```rascal-shell 
 rascal>syntax A = "a";
 ok
 rascal>syntax E = A | "(" E ")" | E "+" E;
@@ -27,21 +27,20 @@ ok
 ```
 Next, import the ParseTree module that provides a `parse` function that we will use:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import ParseTree;
 ok
 ```
 Entering a first expression goes well, except that the parser generator already predicts future ambiguity. So it prints a warning.
 
-```rascal-shell
+```rascal-shell -error,continue
 rascal>parse(#E, "a+a");
 E: (E) `a+a`
 ```
 
 The following example triggers the predicted ambiguity indeed:
 
-
-```rascal-shell
+```rascal-shell ,continue,errors
 rascal>parse(#E, "a+a+a");
 |TODO:///|: Ambiguity(
   |unknown:///|(0,5,<1,0>,<1,5>),
@@ -54,8 +53,7 @@ because we did forget to define the associativity of the `+` operator.
 
 Let's fix this:
 
-
-```rascal-shell
+```rascal-shell ,errors
 rascal>syntax A = "a";
 ok
 rascal>syntax E = A | "(" E ")" | left E "+" E;
@@ -69,8 +67,7 @@ E: (E) `a+a+a`
 However, one can also deal with ambiguity differently. For example we could have the parser build a tree
 for all ambiguous interpretations and inspect the resulting data-structure:
 
-
-```rascal-shell
+```rascal-shell ,errors
 rascal>syntax A = "a";
 ok
 rascal>syntax E = A | "(" E ")" | left E "+" E | left E "*" E;
@@ -107,8 +104,7 @@ ok
 
 Or, one could catch the ambiguity and report it like a [ParseError](../../../RunTimeErrors/RuntimeExceptions/ParseError):
 
-
-```rascal-shell
+```rascal-shell ,continue
 rascal>import IO;
 ok
 rascal>try 
@@ -122,6 +118,6 @@ ok
 
 Here are some pointers for further disambiguation help:
 
-* [Syntax Definitions](../../../Rascal/Declarations/SyntaxDefinition).
-* [Disambiguation features](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation).
+* [Syntax Definitions](../../../Rascal/Declarations/SyntaxDefinition/).
+* [Disambiguation features](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/).
 

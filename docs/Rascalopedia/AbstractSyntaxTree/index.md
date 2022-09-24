@@ -18,13 +18,9 @@ For the input sentence
 
 ![][text.png](/assets/Rascalopedia/ParseTree/example-text.png)
 
-
 the parse tree (left) and abstract syntax tree (right) may look as follows:
 
-
-
 ![][ast.png](/assets/Rascalopedia/AbstractSyntaxTree/parse-ast.png)
-
 
 Note that the parse tree on the left did not preserve the spaces in the original text but there
 are parse tree formats (including the one used by Rascal) that preserve all textual information.

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::KeywordParameterImport2::Test
 
 `import lang::rascal::tests::functionality::KeywordParameterImport2::Tests;`
 
-
 ## function sameModuleDef1 {#lang-rascal-tests-functionality-KeywordParameterImport2-Tests-sameModuleDef1}
 
 * ``test bool sameModuleDef1()``

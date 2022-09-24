@@ -6,14 +6,13 @@ title: "module Boolean"
 
 `import Boolean;`
 
-
 #### Synopsis
 
 Library functions for Booleans.
 
 #### Description
 
-For operators on Boolean values see [Boolean](../Rascal/Expressions/Values/Boolean) in the Rascal Language Reference.
+For operators on Boolean values see [Boolean](../Rascal/Expressions/Values/Boolean/) in the Rascal Language Reference.
 
 The following functions are defined for Booleans:
 * [arbBool](../Library/Boolean.md#Boolean-arbBool)
@@ -22,11 +21,9 @@ The following functions are defined for Booleans:
 * [toReal](../Library/Boolean.md#Boolean-toReal)
 * [toString](../Library/Boolean.md#Boolean-toString)
 
-
 ## function arbBool {#Boolean-arbBool}
 
 * ``bool arbBool()``
-
 
 #### Synopsis
 
@@ -34,11 +31,17 @@ Return an arbitrary Boolean value.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Boolean;
 ok
 rascal>arbBool();
+<<<<<<< HEAD
+=======
+bool: false
+rascal>arbBool();
+bool: true
+rascal>arbBool();
+>>>>>>> 2a7f585b (all links end with a slash now..)
 bool: false
 rascal>arbBool();
 bool: true
@@ -54,7 +57,6 @@ bool: true
 
 * ``bool fromString(str s)``
 
-
 #### Synopsis
 
 Convert the strings "true" or "false" to a bool.
@@ -62,7 +64,6 @@ Convert the strings "true" or "false" to a bool.
 ## function toInt {#Boolean-toInt}
 
 * ``int toInt(bool b)``
-
 
 #### Synopsis
 
@@ -74,8 +75,7 @@ Maps `true` to `1` and `false` to `0`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Boolean;
 ok
 rascal>toInt(true);
@@ -88,7 +88,6 @@ int: 0
 
 * ``real toReal(bool b)``
 
-
 #### Synopsis
 
 Convert Boolean value to real.
@@ -99,8 +98,7 @@ Maps `true` to `1.0` and `false` to `0.0`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Boolean;
 ok
 rascal>toReal(true);
@@ -113,7 +111,6 @@ real: 0.0
 
 * ``str toString(bool b)``
 
-
 #### Synopsis
 
 Convert Boolean value to string.
@@ -124,8 +121,7 @@ Maps `true` to `"true"` and `false` to `"false"`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Boolean;
 ok
 rascal>toString(true);

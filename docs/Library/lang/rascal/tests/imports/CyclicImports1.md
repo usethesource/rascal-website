@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::imports::CyclicImports1"
 
 `import lang::rascal::tests::imports::CyclicImports1;`
 
-
 ## function Cycle1 {#lang-rascal-tests-imports-CyclicImports1-Cycle1}
 
 * ``test bool Cycle1()``

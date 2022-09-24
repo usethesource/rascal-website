@@ -6,14 +6,13 @@ title: "module Location"
 
 `import Location;`
 
-
 #### Synopsis
 
 Library functions for source locations.
 
 #### Description
 
-For a description of source locations see [Location](../Rascal/Expressions/Values/Location) in the Rascal Language Reference.
+For a description of source locations see [Location](../Rascal/Expressions/Values/Location/) in the Rascal Language Reference.
 
 The following functions are defined for source locations:
 * [beginsAfter](../Library/Location.md#Location-beginsAfter)
@@ -34,11 +33,9 @@ The following functions are defined for source locations:
 A source location `l` refers to a text fragment in another file or resource. To ease the description we will
 talk about _`l` 's text_ instead of _the text `l` refers to_.
 
-
 ## function relativize {#Location-relativize}
 
 * ``loc relativize(loc outside, loc inside)``
-
 
 #### Synopsis
 
@@ -53,7 +50,6 @@ If the outside does not envelop the inside, then the original loc is returned.
 
 * ``bool isSameFile(loc l, loc r)``
 
-
 #### Synopsis
 
 Check that two locations refer to the same file.
@@ -61,7 +57,6 @@ Check that two locations refer to the same file.
 ## function isLexicallyLess {#Location-isLexicallyLess}
 
 * ``bool isLexicallyLess(loc l, loc r)``
-
 
 #### Synopsis
 
@@ -80,7 +75,6 @@ This ordering regards the location value itself as opposed to the text it refers
 
 * ``str getContent(loc l)``
 
-
 #### Synopsis
 
 Get the textual content a location refers to.
@@ -88,7 +82,6 @@ Get the textual content a location refers to.
 ## function isStrictlyContainedIn {#Location-isStrictlyContainedIn}
 
 * ``bool isStrictlyContainedIn(loc inner, loc outer)``
-
 
 #### Synopsis
 
@@ -98,7 +91,6 @@ Is a location textually (strictly) contained in another location?
 
 Strict containment between two locations `inner` and `outer` holds when
 
-
 - `outer` 's text begins before `inner` 's text, or
 - `outer` 's text ends after `inner` 's text, or
 - both.
@@ -106,7 +98,6 @@ Strict containment between two locations `inner` and `outer` holds when
 ## function isContainedIn {#Location-isContainedIn}
 
 * ``bool isContainedIn(loc inner, loc outer)``
-
 
 #### Synopsis
 
@@ -116,14 +107,12 @@ Is a location textually contained in another location?
 
 Containment between two locations `inner` and `outer` holds when
 
-
 - `inner` and `outer` are equal, or
 - `inner` is strictly contained in `outer`.
 
 ## function beginsBefore {#Location-beginsBefore}
 
 * ``bool beginsBefore(loc l, loc r)``
-
 
 #### Synopsis
 
@@ -132,7 +121,6 @@ Begins a location's text before (but may overlap with) another location's text?
 ## function isBefore {#Location-isBefore}
 
 * ``bool isBefore(loc l, loc r)``
-
 
 #### Synopsis
 
@@ -146,7 +134,6 @@ Begins and ends a location's text before another location's text?
 
 * ``bool isImmediatelyBefore(loc l, loc r)``
 
-
 #### Synopsis
 
 Occurs a location's text _immediately_ before another location's text?
@@ -158,7 +145,6 @@ Occurs a location's text _immediately_ before another location's text?
 ## function beginsAfter {#Location-beginsAfter}
 
 * ``bool beginsAfter(loc l, loc r)``
-
 
 #### Synopsis
 
@@ -172,7 +158,6 @@ In other words, `l` 's text may end before or after the end of `r` 's text.
 
 * ``bool isAfter(loc l, loc r)``
 
-
 #### Synopsis
 
 Is a location's text completely after another location's text?
@@ -180,7 +165,6 @@ Is a location's text completely after another location's text?
 ## function isImmediatelyAfter {#Location-isImmediatelyAfter}
 
 * ``bool isImmediatelyAfter(loc l, loc r)``
-
 
 #### Synopsis
 
@@ -190,7 +174,6 @@ Is a location's text _immediately_ after another location's text?
 
 * ``bool isOverlapping(loc l, loc r)``
 
-
 #### Synopsis
 
 Refer two locations to text that overlaps?
@@ -198,7 +181,6 @@ Refer two locations to text that overlaps?
 ## function cover {#Location-cover}
 
 * ``loc cover(list[loc] locs)``
-
 
 #### Synopsis
 

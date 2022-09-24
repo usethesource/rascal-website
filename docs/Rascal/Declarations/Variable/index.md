@@ -17,7 +17,6 @@ Declare a variable.
 | --- | --- |
 | `Type` | `<: Type` |
 
-
 #### Description
 
 The effect of a variable declaration is to introduce a new variable _Name_ and
@@ -31,7 +30,6 @@ The following rules apply:
 *  Double declarations in the same scope are not allowed.
 
 *  The type of _Exp_ should be compatible with _Type_, i.e., it should be a subtype of _Type_.
-
 
 As a convenience, also declarations without an initialization expression are permitted inside functions (but not at the module level)
  and have the form
@@ -54,7 +52,7 @@ Rascal provides local type inference, which allows the implicit declaration of v
 
 Two explicit variable declarations:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>int max = 100;
 int: 100
 rascal>min = 0;
@@ -62,7 +60,7 @@ int: 0
 ```
 An implicit variable declaration
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>day = {<"mon", 1>, <"tue", 2>, <"wed",3>, 
 >>>>>>>       <"thu", 4>, <"fri", 5>, <"sat",6>, <"sun",7>};
 rel[str,int]: {
@@ -77,7 +75,7 @@ rel[str,int]: {
 ```
 Variable declaration and assignment leading to type error
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>int month = 12;
 int: 12
 rascal>month ="December";
@@ -91,8 +89,7 @@ ok
 *  Local type inference for variables always uses the smallest possible scope for a variable; this implies that
   a variable introduced in an inner scope is not available outside that scope. Here is how things can go wrong:
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>if( 4 > 3){ x = "abc"; } else { x = "def";}
 str: "abc"
 rascal>x;
@@ -100,5 +97,4 @@ rascal>x;
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
 ok
 ```
-
 

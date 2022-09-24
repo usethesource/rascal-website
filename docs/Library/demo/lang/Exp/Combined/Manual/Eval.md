@@ -6,7 +6,6 @@ title: "module demo::lang::Exp::Combined::Manual::Eval"
 
 `import demo::lang::Exp::Combined::Manual::Eval;`
 
-
 ## function eval {#demo-lang-Exp-Combined-Manual-Eval-eval}
 
 * ``int eval(str txt)``

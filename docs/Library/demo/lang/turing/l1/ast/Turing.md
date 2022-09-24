@@ -6,7 +6,6 @@ title: "module demo::lang::turing::l1::ast::Turing"
 
 `import demo::lang::turing::l1::ast::Turing;`
 
-
 ## data Program {#demo-lang-turing-l1-ast-Turing-Program}
 
 ```rascal

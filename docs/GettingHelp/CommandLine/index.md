@@ -15,8 +15,7 @@ Get help when using Rascal at the command line (CLI, REPL, [rascal shell](../../
 
 While using the command line interface you can get help like so:
 
-
-```rascal-shell
+```rascal-shell 
 rascal>:help
 :help
 Welcome to the Rascal command shell.
@@ -45,4 +44,3 @@ ok
 
 To quit the repl use `:quit`
   
-

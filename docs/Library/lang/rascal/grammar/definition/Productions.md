@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::definition::Productions"
 
 `import lang::rascal::grammar::definition::Productions;`
 
-
 ## function syntax2grammar {#lang-rascal-grammar-definition-Productions-syntax2grammar}
 
 * ``Grammar syntax2grammar(set[SyntaxDefinition] defs)``

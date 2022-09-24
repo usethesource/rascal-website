@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::RegExp"
 
 `import lang::rascal::tests::functionality::RegExp;`
 
-
 ## function match1 {#lang-rascal-tests-functionality-RegExp-match1}
 
 * ``test bool match1()``

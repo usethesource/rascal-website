@@ -6,7 +6,6 @@ title: "module analysis::text::search::Grammars"
 
 `import analysis::text::search::Grammars;`
 
-
 ## function analyzerFromGrammar {#analysis-text-search-Grammars-analyzerFromGrammar}
 
 * ``Analyzer analyzerFromGrammar(type[&T <: Tree] grammar)``

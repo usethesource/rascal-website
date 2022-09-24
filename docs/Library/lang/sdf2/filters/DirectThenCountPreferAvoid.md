@@ -6,11 +6,9 @@ title: "module lang::sdf2::filters::DirectThenCountPreferAvoid"
 
 `import lang::sdf2::filters::DirectThenCountPreferAvoid;`
 
-
 ## function directThenCountPreferAvoidFilter {#lang-sdf2-filters-DirectThenCountPreferAvoid-directThenCountPreferAvoidFilter}
 
 * ``&T <:Tree directThenCountPreferAvoidFilter(amb(set[&T <:Tree] alternatives))``
-
 
 Import his module if you want prefer/avoid filtering with counting enabled for your grammar. Use @prefer and @avoid to
 label alternatives.

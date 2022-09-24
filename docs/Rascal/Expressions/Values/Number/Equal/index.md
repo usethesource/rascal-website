@@ -11,17 +11,15 @@ Equality operator on numeric values.
 
 #### Syntax
 
-`Exp<sub>1</sub> == Exp<sub>2</sub>`
+`Exp~1~ == Exp~2~`
 
 #### Types
 
-
-| `Exp<sub>1</sub>`  |  `Exp<sub>2</sub>` | `Exp<sub>1</sub> == Exp<sub>2</sub>`   |
+| `Exp~1~`  |  `Exp~2~` | `Exp~1~ == Exp~2~`   |
 | --- | --- | --- |
 | `int`      |  `int`     | `bool`                 |
 | `int`      |  `real`    | `bool`                 |
 | `real`     |  `real`    | `bool`                 |
-
 
 #### Description
 
@@ -29,8 +27,7 @@ Yields `true` if the value of both arguments is numerically equal, and `false` o
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>12 == 12
 bool: true
 rascal>12 == 12.0
@@ -44,5 +41,4 @@ bool: true
 rascal>3.14 == 3
 bool: false
 ```
-
 

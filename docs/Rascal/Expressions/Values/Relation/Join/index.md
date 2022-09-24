@@ -11,15 +11,13 @@ Join two relation values.
 
 #### Syntax
 
-`Exp<sub>1</sub> join Exp<sub>2</sub>`
+`Exp~1~ join Exp~2~`
 
 #### Types
 
-
-| `Exp<sub>1</sub>`                            |  `Exp<sub>2</sub>`                            | `Exp<sub>1</sub> join Exp<sub>2</sub>`                                             |
+| `Exp~1~`                            |  `Exp~2~`                            | `Exp~1~ join Exp~2~`                                             |
 | --- | --- | --- |
-| `rel[ T<sub>11</sub>, T<sub>12</sub>, T<sub>13</sub>, ... ]` |  `rel[ T<sub>21</sub>, T<sub>22</sub>, T<sub>23</sub>, ... ]` | `rel[ T<sub>11</sub>, T<sub>12</sub>, T<sub>13</sub>, ..., T<sub>21</sub>, T<sub>22</sub>, T<sub>23</sub>, ... ]`  |
-
+| `rel[ T~11~, T~12~, T~13~, ... ]` |  `rel[ T~21~, T~22~, T~23~, ... ]` | `rel[ T~11~, T~12~, T~13~, ..., T~21~, T~22~, T~23~, ... ]`  |
 
 #### Description
 
@@ -28,8 +26,7 @@ This relation contains tuples that are the result from concatenating the element
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>{<1,2>, <10,20>} join {<2,3>};
 rel[int,int,int,int]: {
   <1,2,2,3>,
@@ -48,5 +45,4 @@ rel[int,int,int,int]: {
   <1,2,20,30>
 }
 ```
-
 

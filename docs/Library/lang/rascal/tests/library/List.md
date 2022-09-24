@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::List"
 
 `import lang::rascal::tests::library::List;`
 
-
 ## function concat2 {#lang-rascal-tests-library-List-concat2}
 
 * ``test bool concat2()``

@@ -24,7 +24,6 @@ where:
 
 *  _EL_ and _EC_ are integers expressions giving the end line and end column.
 
-
 The part following the second pipe symbol (`|`) is optional.
 
 #### Types
@@ -38,7 +37,6 @@ Location values are represented by the type `loc` and serve the following purpos
 *  Providing a uniform mechanism for accessing local or remote files. This is used in all IO-related library functions.
 *  If the optional part is present they serve as text coordinates in a specific local or remote source file.
   This is very handy to associate a source code location which extracted facts.
-
 
 URIs are explained in [Uniform Resource Identifier](http://en.wikipedia.org/wiki/Uniform_Resource_Identifier). From their original definition in RFC3986 we cite the following useful overview of an URI:
 ```rascal
@@ -90,7 +88,6 @@ The elements of a location value can be accessed and modified using the standard
 
 * `end.line`, `end.column` end line and column of text area.
 
-
 Supported protocols are:
 
 | Scheme name and pattern | Description |
@@ -106,18 +103,17 @@ Supported protocols are:
 | `project://projectName/projectRelativePath`       | access a project in the current instance of Eclipse.  |
 | `bundleresource://bundleId/bundleRelativePath`    | access OSGI bundles. Only active in Eclipse context  |
 
-
 #### Examples
 
 Locations with specific position information should always be generated automatically but for the curious here is an example:
 
-```rascal-shell
+```rascal-shell 
 rascal>|file:///home/paulk/pico.trm|(0,1,<2,3>,<4,5>)
 loc: |file:///home/paulk/pico.trm|(0,1,<2,3>,<4,5>)
 ```
 Note that this is equivalent to using the `home` scheme:
 
-```rascal-shell
+```rascal-shell 
 rascal>|home://pico.trm|(0,1,<2,3>,<4,5>)
 loc: |home://pico.trm|(0,1,<2,3>,<4,5>)
 ```
@@ -130,11 +126,9 @@ loc: |home://pico.trm|(0,1,<2,3>,<4,5>)
 //|project://example-project/src/HelloWorld.java|
 //---- -->
 
-
 You could read a webpage:
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>println(readFile(|http://www.example.org|))
@@ -191,7 +185,7 @@ ok
 
 Addition on locations creates longer paths:
 
-```rascal-shell
+```rascal-shell 
 rascal>x = |tmp://myTempDirectory|;
 loc: |tmp://myTempDirectory|
 rascal>x += "myTempFile.txt";
@@ -204,5 +198,4 @@ loc: |tmp://myTempDirectory/myTempFile.txt|
 //----
 //|project://example-project/src|.ls
 //---- -->
-
 

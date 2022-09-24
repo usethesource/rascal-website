@@ -6,4 +6,3 @@ title: "module lang::std::Whitespace"
 
 `import lang::std::Whitespace;`
 
-

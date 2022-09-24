@@ -6,7 +6,6 @@ title: "module demo::lang::Pico::Compile"
 
 `import demo::lang::Pico::Compile;`
 
-
 ## alias Instrs {#demo-lang-Pico-Compile-Instrs}
 
 * `list[Instr]`
@@ -19,6 +18,10 @@ title: "module demo::lang::Pico::Compile"
 * ``Instrs compileExp(add(EXP E1, EXP E2))``
 * ``Instrs compileExp(sub(EXP E1, EXP E2))``
 * ``Instrs compileExp(conc(EXP E1, EXP E2))``
+
+#### Synopsis
+
+Compile expressions to stackmachine instructions
 
 ## function nextLabel {#demo-lang-Pico-Compile-nextLabel}
 

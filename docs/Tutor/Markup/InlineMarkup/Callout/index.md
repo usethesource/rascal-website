@@ -41,4 +41,3 @@ will give:
 
 Callout are most usefull to place markers in code fragments for later reference in explanatory text.
 
-

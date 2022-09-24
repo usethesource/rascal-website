@@ -12,15 +12,13 @@ Tuple values.
 
 #### Syntax
 
-`< Exp<sub>1</sub>, Exp<sub>2</sub>, ... >`
+`< Exp~1~, Exp~2~, ... >`
 
 #### Types
 
-
-| `Exp<sub>1</sub>`  | `Exp<sub>2</sub>`  |  ...  | `< Exp<sub>1</sub>, Exp<sub>2</sub>, ... >`  |
+| `Exp~1~`  | `Exp~2~`  |  ...  | `< Exp~1~, Exp~2~, ... >`  |
 | --- | --- | --- | --- |
-| `T<sub>1</sub>`    |  T<sub>2</sub>     | ...   | `tuple[T<sub>1</sub>, T<sub>2</sub>, ... ]`  |
-
+| `T~1~`    |  T~2~     | ...   | `tuple[T~1~, T~2~, ... ]`  |
 
 #### Description
 
@@ -32,12 +30,10 @@ A tuple is a sequence of elements with the following properties:
 
 *  Each tuple is fixed-width, i.e., has the same number of elements.
 
-
-Tuples are represented by the type `tuple[T<sub>1</sub> L<sub>1</sub>, T<sub>2</sub> L<sub>2</sub>, ...]`, 
-where _T_<sub>1</sub>, _T_<sub>2</sub>, ... are arbitrary types and _L_<sub>1</sub>, _L_<sub>2</sub>, ... are optional labels. 
+Tuples are represented by the type `tuple[T~1~ L~1~, T~2~ L~2~, ...]`, 
+where _T_~1~, _T_~2~, ... are arbitrary types and _L_~1~, _L_~2~, ... are optional labels. 
 
 The following operators are provided for tuples:
-* [Tuple](../../../../Rascal/Expressions/Values/Tuple)
 * [Concatenation](../../../../Rascal/Expressions/Values/Tuple/Concatenation)
 * [Equal](../../../../Rascal/Expressions/Values/Tuple/Equal)
 * [FieldSelection](../../../../Rascal/Expressions/Values/Tuple/FieldSelection)
@@ -50,8 +46,7 @@ The following operators are provided for tuples:
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>tuple[str first, str last, int age] P = <"Jo","Jones",35>;
 tuple[str first,str last,int age]: <"Jo","Jones",35>
 rascal>P.first;
@@ -59,5 +54,4 @@ str: "Jo"
 rascal>P.first = "Bo";
 tuple[str first,str last,int age]: <"Bo","Jones",35>
 ```
-
 

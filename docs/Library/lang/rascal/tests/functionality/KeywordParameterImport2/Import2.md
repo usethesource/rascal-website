@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::KeywordParameterImport2::Impo
 
 `import lang::rascal::tests::functionality::KeywordParameterImport2::Import2;`
 
-
 ## data L {#lang-rascal-tests-functionality-KeywordParameterImport2-Import2-L}
 
 ```rascal

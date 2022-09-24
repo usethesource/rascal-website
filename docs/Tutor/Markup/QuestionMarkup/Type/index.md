@@ -37,10 +37,8 @@ QType: <A:set[int]>
 
 ##  Question 2 
 
-
 The following question can be paraphrased as: _I give you an addition of a set of integers, strings or reals and another set of the same type; what is the type of the result?_
 ```rascal
 QType: <A:set[arb[int,str,real]]> + <B:same[A]>
 ```
-
 

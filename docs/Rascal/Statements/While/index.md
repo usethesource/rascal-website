@@ -5,8 +5,6 @@ keywords:
 
 ---
 
-
-
 #### Synopsis
 
 While loop.
@@ -28,8 +26,7 @@ of its body _Statement_.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>int n = 3;
@@ -43,7 +40,7 @@ list[void]: []
 ```
 Now build a list result using the `append` statement:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>n = 3;
 int: 3
 rascal>while (n > 0) { append n * n; n -= 1; }
@@ -52,9 +49,8 @@ list[int]: [9,4,1]
 
 Just to be sure, a [Comprehension](../../../Rascal/Expressions/Values/List/Comprehension) is the superior way to write this:
 
-```rascal-shell
+```rascal-shell 
 rascal>[n * n | n <- [3 .. 1]];
 list[int]: [9,4]
 ```
-
 

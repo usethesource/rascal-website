@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::util::SemVerTests"
 
 `import lang::rascal::tests::library::util::SemVerTests;`
 
-
 ## function lessVersion1 {#lang-rascal-tests-library-util-SemVerTests-lessVersion1}
 
 * ``test bool lessVersion1()``

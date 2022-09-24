@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::definition::Names"
 
 `import lang::rascal::grammar::definition::Names;`
 
-
 ## function resolve {#lang-rascal-grammar-definition-Names-resolve}
 
 * ``Grammar resolve(Grammar d)``

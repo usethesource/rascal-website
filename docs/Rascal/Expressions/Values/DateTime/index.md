@@ -41,7 +41,6 @@ The following fields provide access to information about the value, but cannot b
 * `justDate`: returns the time component of a time or datetime value.
 * `century`: returns the century component of a year for date or datetime values.
 
-
 The following fields provide access to the individual components of date, time and datetime values,
 and can be accessed using [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection) and be assigned using [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection):
 
@@ -54,7 +53,6 @@ and can be accessed using [FieldSelection](../../../../Rascal/Expressions/Values
 *  `millisecond`
 *  `timezoneOffsetHours`
 *  `timezoneOffsetMinutes`
-
 
 Not all fields are available on all values as indicated by the following table:
 
@@ -70,12 +68,10 @@ Not all fields are available on all values as indicated by the following table:
 | `timezoneOffsetHours`   |        |  x         | x       |
 | `timezoneOffsetMinutes` |        |  x         | x       |
 
-
 The `isDate`, `isTime`, and `isDateTime` fields can be checked in advance to determine what
 kind of value is stored in a variable of type `datetime`.
 
 The following operators are defined for DateTime:
-* [DateTime](../../../../Rascal/Expressions/Values/DateTime)
 * [Equal](../../../../Rascal/Expressions/Values/DateTime/Equal)
 * [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection)
 * [GreaterThan](../../../../Rascal/Expressions/Values/DateTime/GreaterThan)
@@ -87,13 +83,13 @@ The following operators are defined for DateTime:
 The following functions are defined for DateTime:
 loctoc::[Rascal/Libraries/Prelude/DateTime,1]
 
-There are also [library functions](../../../../Library/DateTime.md) available for DateTime.
+There are also [library functions](../../../../Library/DateTime.md/) available for DateTime.
 
 #### Examples
 
 Examples of `datetime` values are:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>$2010-07-15$
 datetime: $2010-07-15$
 rascal>$2010-07-15T07:15:23.123+0100$;
@@ -101,13 +97,13 @@ datetime: $2010-07-15T07:15:23.123+01:00$
 ```
 Now introduce a `datetime` value and assign it to `DT`.
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>DT = $2010-07-15T09:15:23.123+03:00$;
 datetime: $2010-07-15T09:15:23.123+03:00$
 ```
 Here are examples of some `datatime` fields:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>DT.isDateTime;
 bool: true
 rascal>DT.justDate;
@@ -122,5 +118,4 @@ int: 20
 
 * In normal parlance, the year 2010 is in the 21th century. The `century` field, however, just returns the century component of a given year, e.g., for 2010 this is 20.
 * `DT.justTime` prints a time literal that currently can not be parsed back into a value to due to issue #1443.
-
 

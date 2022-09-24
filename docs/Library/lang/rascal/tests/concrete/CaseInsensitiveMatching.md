@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::concrete::CaseInsensitiveMatching"
 
 `import lang::rascal::tests::concrete::CaseInsensitiveMatching;`
 
-
 ## function matchAnyway1 {#lang-rascal-tests-concrete-CaseInsensitiveMatching-matchAnyway1}
 
 * ``test bool matchAnyway1()``

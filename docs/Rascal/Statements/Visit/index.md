@@ -19,8 +19,7 @@ See [Visit](../../../Rascal/Expressions/Visit) for the details.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>x = [[1],[2],[3]];
 list[list[int]]: [
   [1],
@@ -41,5 +40,4 @@ list[list[int]]: [
   [4]
 ]
 ```
-
 

@@ -6,7 +6,6 @@ title: "module lang::rascal::tutor::questions::ParseQuestions"
 
 `import lang::rascal::tutor::questions::ParseQuestions;`
 
-
 ## function parse {#lang-rascal-tutor-questions-ParseQuestions-parse}
 
 * ``Questions parse(str src, loc l)``

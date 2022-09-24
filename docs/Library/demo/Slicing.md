@@ -6,7 +6,6 @@ title: "module demo::Slicing"
 
 `import demo::Slicing;`
 
-
 ## function BackwardSlice {#demo-Slicing-BackwardSlice}
 
 * ``set[use] BackwardSlice( 	set[stat] CONTROLSTATEMENT,  	rel[stat,stat] PRED, 	rel[stat,var] USES, 	rel[stat,var] DEFS,	 	use Criterion)``

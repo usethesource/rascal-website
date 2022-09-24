@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::analysis::statistics::DescriptiveTe
 
 `import lang::rascal::tests::library::analysis::statistics::DescriptiveTests;`
 
-
 ## function eq {#lang-rascal-tests-library-analysis-statistics-DescriptiveTests-eq}
 
 * ``bool eq(num a, num b)``

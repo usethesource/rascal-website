@@ -30,4 +30,3 @@ If a concept is a [Concept](../../../Tutor/Concept) or [Module](../../../Rascal/
 * Add new `SubConcept`s as above or new [Module](../../../Rascal/Declarations/Module)s, as above.
 * an `index.md` file will be generated for the folder
 
-

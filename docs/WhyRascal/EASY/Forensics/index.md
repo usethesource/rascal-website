@@ -22,4 +22,3 @@ _Bernd_ is a senior software engineer working at the Berlin headquarters of a fo
         addMoreCode();
      ```
         
-

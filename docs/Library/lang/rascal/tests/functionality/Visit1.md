@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::Visit1"
 
 `import lang::rascal::tests::functionality::Visit1;`
 
-
 ## function visit1a {#lang-rascal-tests-functionality-Visit1-visit1a}
 
 * ``test bool visit1a()``

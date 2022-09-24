@@ -8,7 +8,7 @@ A version of Exp based on abstract syntax.
 
 #### Description
 
-The [abstract syntax](http://en.wikipedia.org/wiki/Abstract_syntax) for a language is a
+The [abstract syntax](../../../../Rascalopedia/AbstractSyntaxTree/) for a language is a
 data type that is used to represent programs in the language in an _abstract_ form.
 Abstract syntax has the following properties:
 
@@ -21,31 +21,26 @@ Abstract syntax has the following properties:
 
 The abstract syntax for Exp looks like this:
 
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Exp::Abstract::Syntax
 
-
-
-data Exp = con(int n)          // <1>
-         | mul(Exp e1, Exp e2) // <2>
-         | add(Exp e1, Exp e2) // <3>
-         ;
-// end::module[]
+data Exp 
+    = con(int n)          // <1>
+    | mul(Exp e1, Exp e2) // <2>
+    | add(Exp e1, Exp e2) // <3>
+    ;
 
 ```
 
-                
-<1> Defines integer constants, e.g., `con(123)`.
-<2> Defines multiplication, e.g., `mul(con(2),con(3))`.
-<3> Defines addition, e.g., `add(con(2),con(3))`.
-
+* Line 4 defines integer constants, e.g., `con(123)`.
+* Line 5 defines multiplication, e.g., `mul(con(2),con(3))`.
+* Line 6 defines addition, e.g., `add(con(2),con(3))`.
 
 Given the abstract syntax for Exp, we can define an interpreter that evaluates
-expressions:
+expressions. An interpreter, in this case, is a function that takes `Exp` as input
+and produces `int` as output:
 
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Exp::Abstract::Eval
 import demo::lang::Exp::Abstract::Syntax;
 
@@ -58,8 +53,7 @@ test bool tstEval4() = eval(add(con(3), mul(con(4), con(5)))) == 23;
 
 ```
 
-           
-Here we see Rascal's _pattern-directed invocation_ in action (see [Function Declaration](../../../../Rascal/Declarations/Function)).
+Here we see Rascal's _pattern-directed invocation_ in action (see [Function Declaration](../../../../Rascal/Declarations/Function/)).
 The essence is this: in other languages the formal parameters in a function declaration
 are just that: formal parameters, i.e., single names that can be used inside the function and
 that are bound when the function is called.
@@ -72,7 +66,6 @@ The big advantage of pattern-directed invocation is modularity and extensibility
 *  The treatment of the cases in the abstract syntax is decoupled.
 *  If the abstract is extended later on with new cases, the functions for the old cases can be reused.
 
-
 In this example we use this mechanism to define separate functions for each case in the abstract syntax.
 
 <1> Defines the case for evaluating integer constants: they evaluate to themselves.
@@ -81,9 +74,7 @@ In this example we use this mechanism to define separate functions for each case
 <3> Defines the case for evaluating addition: first evaluate the arguments `e1` and `e2`
     and return the addition of their values.
 
-
-
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Exp::Abstract::Syntax;
 ok
 rascal>import demo::lang::Exp::Abstract::Eval;
@@ -94,6 +85,4 @@ rascal>eval(add(con(3), mul(con(4), con(5))));
 int: 23
 ```
 Entering expressions in abstract syntax form is no fun, and this is where concrete syntax comes to the rescue.
-
-
 

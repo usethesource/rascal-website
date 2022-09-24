@@ -12,10 +12,8 @@ Demonstrates a file-system crawler
 
 #### Description
 
-
 Note that this functionality also resides in [FileSystem](../../../Library/util/FileSystem.md).
 This demo use different styles including a for-loop that produces a list value.
-
 
 ## function crawl {#demo-common-Crawl-crawl}
 

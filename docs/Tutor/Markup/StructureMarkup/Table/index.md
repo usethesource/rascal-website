@@ -43,7 +43,6 @@ gives:
 | 11 | 12 | 13 |
 | 21 | 22 | 23 |
 
-
 ##  Example 2 
 
 :::caution
@@ -71,7 +70,6 @@ gives (with column B centered):
 | 11 | 12 | 13 |
 | 21 | 22 | 23 |
 
-
 ##  Example 3 
 
 ```rascal
@@ -91,7 +89,6 @@ gives (with column C right-aligned):
 | 11 | 12 | 13 |
 | 21 | 22 | 23 |
 
-
 ##  Example 4 
 
 ```rascal
@@ -107,9 +104,7 @@ gives (note the escaped `|` character in one table entry):
 | --- | --- |
 | `A \| B` | Or operator |
 
-
 #### Benefits
 
 Table formatting are versatile and include, sizing, subtables, column spans, and more, see  http://asciidoctor.org/docs/user-manual/#tables.
-
 

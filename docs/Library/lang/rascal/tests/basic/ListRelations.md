@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::ListRelations"
 
 `import lang::rascal::tests::basic::ListRelations;`
 
-
 ## function product {#lang-rascal-tests-basic-ListRelations-product}
 
 * ``test bool product(list[&A]X, list[&B] Y)``

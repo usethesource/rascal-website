@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::CommonKeywordParameterImport3
 
 `import lang::rascal::tests::functionality::CommonKeywordParameterImport3::D;`
 
-
 ## function Dx1_y1 {#lang-rascal-tests-functionality-CommonKeywordParameterImport3-D-Dx1_y1}
 
 * ``test bool Dx1_y1()``

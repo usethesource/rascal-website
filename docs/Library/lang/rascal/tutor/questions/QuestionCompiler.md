@@ -6,7 +6,6 @@ title: "module lang::rascal::tutor::questions::QuestionCompiler"
 
 `import lang::rascal::tutor::questions::QuestionCompiler;`
 
-
 ## function countGenAndUse {#lang-rascal-tutor-questions-QuestionCompiler-countGenAndUse}
 
 * ``int countGenAndUse((Cmd) `<EvalCmd c>`)``

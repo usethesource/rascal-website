@@ -32,10 +32,9 @@ Here we show how to quit the terminal:
 ```
 
 Similarly you could type `CTRL+D` which indicates end-of-file to terminate the process. More information 
-about the features of the shell can be found [here](../RascalShell/). At the prompt you can type [Expressions](../Rascal/Expressions), [Statements](../Rascal/Statements) and [Declarations](../Rascal/Declarations).
+about the features of the shell can be found [here](../RascalShell//). At the prompt you can type [Expressions](../Rascal/Expressions), [Statements](../Rascal/Statements) and [Declarations](../Rascal/Declarations).
 
-
-```rascal-shell
+```rascal-shell 
 rascal>1 + 1
 int: 2
 rascal>myList = [ i | i <- [1..11], i % 2 == 0];
@@ -50,11 +49,14 @@ ok
 
 #### Troubleshooting
 
-In case of trouble, there is no need to panic. [Help](../GettingHelp/) is nearby.
+In case of trouble, there is no need to panic. [Help](../GettingHelp//) is nearby.
 
+<<<<<<< HEAD
 * Common troubles with installation and first runs are documented _(here) Troubleshooting (broken link)_
+=======
+* Common troubles with installation and first runs are documented [here](../GettingStarted/Troubleshooting/)
+>>>>>>> 2a7f585b (all links end with a slash now..)
 * If you have a question that probably has Rascal _source code_ as an answer, go to [StackOverflow](http://stackoverflow.com/questions/tagged/rascal). Either find your answer directly, or you are welcome to post a new question using the tag `[rascal]`.
 * If you think you've run into a bug, we are very happy to receive your report on [Github](http://github.com/usethesource/rascal/issues). 
 * If any documentation is unclear, incomplete or ambiguous you are also invited to submit a report there, but you may also use the `edit` button below to propose a fix.
-
 

@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::tests::PicoGrammar"
 
 `import lang::rascal::grammar::tests::PicoGrammar;`
 
-
 ## function generatePicoParser {#lang-rascal-grammar-tests-PicoGrammar-generatePicoParser}
 
 * ``str generatePicoParser()``

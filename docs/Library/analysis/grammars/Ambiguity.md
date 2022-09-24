@@ -6,7 +6,6 @@ title: "module analysis::grammars::Ambiguity"
 
 `import analysis::grammars::Ambiguity;`
 
-
 ## function diagnose {#analysis-grammars-Ambiguity-diagnose}
 
 * ``list[Message] diagnose(Tree t)``

@@ -15,8 +15,7 @@ The exits of each branch are connected to the exit of the if-then-else statement
 
 A control flow graph for Pico programs can be created as follows:
 
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Pico::ControlFlow
 
 import analysis::graphs::Graph;
@@ -25,10 +24,11 @@ import demo::lang::Pico::Load;
 import List;
 
 public data CFNode // <1>
-	= entry(loc location)
-	| exit()
-	| choice(loc location, EXP exp)
-	| statement(loc location, STATEMENT stat);
+    = entry(loc location)
+    | exit()
+    | choice(loc location, EXP exp)
+    | statement(loc location, STATEMENT stat)
+    ;
 
 alias CFGraph = tuple[set[CFNode] entry, Graph[CFNode] graph, set[CFNode] exit]; // <2>
 
@@ -72,11 +72,9 @@ CFGraph cflowProgram(PROGRAM P:program(list[DECL] _, list[STATEMENT] Series)){ /
 }
 
 public CFGraph cflowProgram(str txt) = cflowProgram(load(txt)); // <8>
-// end::module[]
 
 ```
 
-                
 Notes:
 
 <1> First we define a data type `CFNODE` that represents the various elements of a control flow graph:
@@ -124,7 +122,7 @@ Notes:
 
 We can now create a CFG for a small Pico program:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Pico::ControlFlow;
 ok
 rascal>cflowProgram("begin declare n : natural, s : string; n := 10; s := \"a\"; while n do s := s + \"a\"; n := n - 1 od end");
@@ -260,5 +258,4 @@ tuple[set[CFNode] entry,Graph[CFNode] graph,set[CFNode] exit]: <{entry(|unknown:
 ```
 
 Is the above not very motivating to move on to [Visualize](../../../../Recipes/Languages/Pico/Visualize)?
-
 

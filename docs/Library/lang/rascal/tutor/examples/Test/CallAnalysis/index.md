@@ -18,22 +18,20 @@ Let's see how these questions can be answered using Rascal.
 Examples:
 Consider the following call graph (a box represents a procedure and an arrow represents a call from one procedure to another procedure):
 
-![calls](/assets/Library/lang/rascal/tutor/examples/Test/CallAnalysis/calls.png)
-
-
+![calls](/assets/Library/lang/rascal/tutor/examples/Test/CallAnalysis/calls.png/)
 
 Rascal supports basic data types like integers and strings which are sufficient to formulate and answer the questions at hand. However, we
 can gain readability by introducing separately named types for the items we are describing. 
 First, we introduce therefore a new type `Proc` (an alias for strings) to denote procedures:
 
-```rascal-shell
+```rascal-shell 
 rascal>alias Proc = str;
 ok
 ```
 Next, we have to represent the call relation as a Rascal datatype, and the relation is the most appropriate for it.
 As preparation, we also import the libraries [$Rascal:Prelude/Set], [$Rascal:Prelude/Relation] and [$Rascal:Prelude/Graph] that will come in handy.
 
-```rascal-shell
+```rascal-shell -continue
 rascal>import Set;
 ok
 rascal>import Relation;
@@ -59,7 +57,7 @@ We use the function [Rascal:Set/size] to determine the number of elements in a s
 Since each tuple in the `Calls` relation represents a call between procedures, the number of tuples is equal
 to the number of calls.
 
-```rascal-shell
+```rascal-shell -continue
 rascal>size(Calls);
 int: 8
 ```
@@ -67,19 +65,19 @@ __How many procedures occur in this system?__ This question is more subtle, sinc
 several others and the number of tuples is therefore not indicative. What we need are the set of procedures that
 occur (as first or second element) in _any_ tuple. This is precisely what the function [$Rascal:carrier] gives us:
 
-```rascal-shell
+```rascal-shell -continue
 rascal>carrier(Calls)
 set[str]: {"a","b","c","d","e","f","g"}
 ```
 and computing the number of procedures is now easy:
 
-```rascal-shell
+```rascal-shell -continue
 rascal>size(carrier(Calls));
 int: 7
 ```
 As an aside, functions [$Rascal:Prelude/Relation/domain] and [$Rascal:Prelude/Relation/range] do the same for the first, respectively, second element of the pairs in a relation:
 
-```rascal-shell
+```rascal-shell -continue
 rascal>domain(Calls);
 set[str]: {"a","b","d","f","g"}
 rascal>range(Calls);
@@ -93,7 +91,7 @@ right-hand side. When a relation is viewed as a graph, its top corresponds to th
 relation corresponds to the leaf nodes of the graph. See the section called ?Graph? for more details. Using this knowledge, the entry
 points can be computed by determining the top of the Calls relation:
 
-```rascal-shell
+```rascal-shell -continue
 rascal>top(Calls);
 set[str]: {"a","f"}
 ```
@@ -102,7 +100,7 @@ __What are the leaves of this application?__
 In a similar spirit, we can determine the leaves of this application, i.e., procedures that are being called but do not make any calls
 themselves:
 
-```rascal-shell
+```rascal-shell -continue
 rascal>bottom(Calls);
 set[str]: {"c","e"}
 ```
@@ -111,7 +109,7 @@ __Which procedures call each other indirectly?__
 We can also determine the indirect calls between procedures, by taking the transitive closure of the Calls relation, written as `Calls+`. 
 Observe that the transitive closure will contain both the direct and the indirect calls.
 
-```rascal-shell
+```rascal-shell -continue
 rascal>rel[Proc,Proc] closureCalls = Calls+;
 rel[str,str]: {
   <"g","e">,
@@ -134,7 +132,7 @@ We now know the entry points for this application ("a" and "f") and the indirect
 we can determine which procedures are called from each entry point. This is done by indexing closureCalls with appropriate procedure name.
 The index operator yields all right-hand sides of tuples that have a given value as left-hand side. This gives the following:
 
-```rascal-shell
+```rascal-shell -continue
 rascal>set[Proc] calledFromA = closureCalls["a"];
 set[str]: {"b","c","d","e"}
 rascal>set[Proc] calledFromF = closureCalls["f"];
@@ -144,13 +142,13 @@ __Which procedures are called from all entry points?__
 Finally, we can determine which procedures are called from both entry points by taking the intersection of the two sets 
  `calledFromA` and `calledFromF`:
 
-```rascal-shell
+```rascal-shell -continue
 rascal>calledFromA & calledFromF
 set[str]: {"e"}
 ```
 or if your prefer to write all of the above as a one-liner using a [$Rascal:Expressions/Reducer] expression:
 
-```rascal-shell
+```rascal-shell -continue
 rascal>(carrier(Calls) | it & (Calls+)[p] | p <- top(Calls));
 set[str]: {"e"}
 ```

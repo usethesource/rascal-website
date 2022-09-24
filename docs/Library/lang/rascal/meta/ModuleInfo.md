@@ -6,7 +6,6 @@ title: "module lang::rascal::meta::ModuleInfo"
 
 `import lang::rascal::meta::ModuleInfo;`
 
-
 ## data ImportsInfo {#lang-rascal-meta-ModuleInfo-ImportsInfo}
 
 ```rascal

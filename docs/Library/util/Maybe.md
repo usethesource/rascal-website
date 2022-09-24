@@ -6,11 +6,9 @@ title: "module util::Maybe"
 
 `import util::Maybe;`
 
-
 #### Synopsis
 
 Represent an optional value.
-
 
 ## data Maybe {#util-Maybe-Maybe}
 
@@ -20,7 +18,6 @@ data Maybe[&A]
      | just(&A val)
      ;
 ```
-
 
 #### Synopsis
 

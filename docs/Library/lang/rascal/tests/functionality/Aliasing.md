@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::Aliasing"
 
 `import lang::rascal::tests::functionality::Aliasing;`
 
-
 ## alias INTEGER0 {#lang-rascal-tests-functionality-Aliasing-INTEGER0}
 
 * `int`

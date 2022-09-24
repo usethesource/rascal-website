@@ -6,7 +6,6 @@ title: "module lang::xml::IO"
 
 `import lang::xml::IO;`
 
-
 ## function readXML {#lang-xml-IO-readXML}
 
 * ``node readXML(loc file, bool trim = true, bool fullyQualify = false)``

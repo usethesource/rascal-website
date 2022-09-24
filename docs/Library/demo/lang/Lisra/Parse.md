@@ -6,7 +6,6 @@ title: "module demo::lang::Lisra::Parse"
 
 `import demo::lang::Lisra::Parse;`
 
-
 ## function parse {#demo-lang-Lisra-Parse-parse}
 
 * ``Lval parse(str txt)``
@@ -16,6 +15,10 @@ title: "module demo::lang::Lisra::Parse"
 * ``Lval build((LispExp)`<IntegerLiteral il>`)``
 * ``Lval build((LispExp)`<AtomExp at>`)``
 * ``Lval build((LispExp)`( <LispExp* lst> )`)``
+
+#### Synopsis
+
+Build Abstract Syntax Tree: Transform a LispExp to an Lval
 
 ## function build1 {#demo-lang-Lisra-Parse-build1}
 

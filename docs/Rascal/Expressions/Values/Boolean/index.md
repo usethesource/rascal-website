@@ -31,7 +31,6 @@ Most operators are self-explanatory except the match (:=) and no match (!:=) ope
 
 *  during the match variables may be bound to subvalues of the subject value.
 
-
 The _match_ operator
 ```rascal
 _Pat_ := _Exp_
@@ -45,7 +44,6 @@ is evaluated as follows:
 *  if the match succeeds, any variables in the pattern are bound to subvalues of the subject value and the match expression yields `true`;
 
 *  if the match fails, no variables are bound and the match expression yields `false`.
-
 
 This looks and _is_ nice and dandy, so why all this fuss about Boolean operators?
 The catch is that--as we will see in [Patterns](../../../../Rascal/Patterns)--a match need not be unique. This means that there may be more than one way of matching the subject value resulting in different variable bindings. 
@@ -64,9 +62,7 @@ This behaviour is applicable in the context of all Rascal constructs where a pat
 
 *  Pattern matches in cases of a [Switch](../../../../Rascal/Statements/Switch).
 
-
 The following operators are provided for Boolean:
-* [Boolean](../../../../Rascal/Expressions/Values/Boolean)
 * [All](../../../../Rascal/Expressions/Values/Boolean/All)
 * [And](../../../../Rascal/Expressions/Values/Boolean/And)
 * [Any](../../../../Rascal/Expressions/Values/Boolean/Any)
@@ -79,13 +75,13 @@ The following operators are provided for Boolean:
 * [NoMatch](../../../../Rascal/Expressions/Values/Boolean/NoMatch)
 * [Or](../../../../Rascal/Expressions/Values/Boolean/Or)
 
-There are also [library functions](../../../../Library/Boolean.md) available for Booleans.
+There are also [library functions](../../../../Library/Boolean.md/) available for Booleans.
 
 #### Examples
 
 Consider the following match of a list
 
-```rascal-shell
+```rascal-shell 
 rascal>[1, *int L, 2, *int M] := [1,2,3,2,4]
 bool: true
 ```
@@ -97,8 +93,7 @@ There are two solutions for the above match:
 
 *  `L` = `[2,3]` and `M` =` [4]`.
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>for ([1, *int L, 2, *int M] := [1,2,3,2,4])
@@ -127,8 +122,7 @@ where we are looking for a solution in which L has a non-empty list as value. Ev
 
 *  The result of evaluating the complete expression is `true`.
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>import List;
@@ -136,7 +130,7 @@ ok
 ```
 for prints them all:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>for ([1, *int L, 2, *int M] := [1,2,3,2,4] && size(L) > 0)
 >>>>>>>  println("L: <L>, M: <M>");
   println("L: <L>, M: <M>");
@@ -145,12 +139,11 @@ list[void]: []
 ```
 if prints the first
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>if ([1, *int L, 2, *int M] := [1,2,3,2,4] && size(L) > 0)
 >>>>>>>  println("L: <L>, M: <M>");
   println("L: <L>, M: <M>");
 L: [2,3], M: [4]
 ok
 ```
-
 

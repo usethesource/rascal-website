@@ -12,8 +12,7 @@ Remedy: rename one of the variables.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>int n = 3;
 int: 3
 rascal>int n = 4;
@@ -21,5 +20,4 @@ rascal>int n = 4;
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/RedeclaredVariable/RedeclaredVariable.html|
 ok
 ```
-
 

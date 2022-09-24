@@ -6,7 +6,6 @@ title: "module demo::Dominators"
 
 `import demo::Dominators;`
 
-
 ## function dominators {#demo-Dominators-dominators}
 
 * ``rel[&T, set[&T]] dominators(rel[&T,&T] PRED, &T ROOT)``

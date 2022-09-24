@@ -57,7 +57,6 @@ _MarkedText_
 _MarkedText_
 ```
 
-
 ```
 .Pitfalls
 _MarkedText_
@@ -88,7 +87,6 @@ Here is a brief summary of the sections of a concept:
 * [Benefits](../../Tutor/Concept/Benefits)
 * [Pitfalls](../../Tutor/Concept/Pitfalls)
 
-
 .Examples
 
 .Benefits
@@ -97,5 +95,4 @@ Here is a brief summary of the sections of a concept:
 
 * Note that all section names start with a period, e.g., `.Examples`.
 * No space is allowed before the section name.
-
 

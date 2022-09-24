@@ -12,4 +12,3 @@ Determine that the quality and functionality of software.
 that a software system meets its specifications and works as expected. This is done by 
 manually or automatically executing test cases and observe the result.
 
-

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::concrete::Layout"
 
 `import lang::rascal::tests::concrete::Layout;`
 
-
 ## function layoutA {#lang-rascal-tests-concrete-Layout-layoutA}
 
 * ``test bool layoutA()``

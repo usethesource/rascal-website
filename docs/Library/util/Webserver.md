@@ -6,7 +6,6 @@ title: "module util::Webserver"
 
 `import util::Webserver;`
 
-
 ## function serve {#util-Webserver-serve}
 
 * ``void serve(loc server, Response (Request) callback, bool asDaemon = true)``

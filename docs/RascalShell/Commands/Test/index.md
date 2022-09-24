@@ -19,8 +19,7 @@ in the terminal.
 
 Execute the tests in an imported module:
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import demo::basic::Factorial;
 ok
 rascal>test
@@ -28,7 +27,7 @@ rascal>test
 
 Execute the tests in the `Integers` module in the Rascal test suite:
 
-```rascal-shell
+```rascal-shell 
 rascal>test lang::rascal::tests::basic::Integers
 ```
 

@@ -8,12 +8,9 @@ Lewis Carroll's well-known poem.
 
 #### Examples
 
-
-```rascal
+```rascal 
 
 module demo::common::WordCount::Jabberwocky
-
-
 
 public list[str] Jabberwocky = [
 	"Jabberwocky by Lewis Carroll",
@@ -65,6 +62,4 @@ public list[str] Jabberwocky = [
 ];
 
 ```
-
-                
 

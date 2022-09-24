@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::Reification"
 
 `import lang::rascal::tests::functionality::Reification;`
 
-
 ## data P {#lang-rascal-tests-functionality-Reification-P}
 
 ```rascal

@@ -8,9 +8,7 @@ We demonstrate how to extract interesting and accurate information about Java me
 
 #### Examples
 
-
-
-```rascal-shell
+```rascal-shell 
 rascal>import lang::java::m3::Core;
 ok
 rascal>import lang::java::m3::AST;
@@ -19,7 +17,7 @@ ok
 
 Now we can extract our overview model, using the classpath we derived:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>myModel = createM3FromDirectory(|tmp:///snakes-and-ladders/src|);
 M3: m3(
   |tmp:///snakes-and-ladders/src|,
@@ -73,7 +71,7 @@ M3: m3(
 ```
 Now let's focus on the methods:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>myMethods = methods(myModel);
 set[loc]: {
   |java+method:///snakes/Game/isValidPosition(int)|,
@@ -154,7 +152,7 @@ set[loc]: {
 ```
 What is the source code for any given method?
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import IO;
 ok
 rascal>methodSrc = readFile(|java+method:///snakes/Square/landHereOrGoHome()|);
@@ -162,7 +160,7 @@ str: "public ISquare landHereOrGoHome() {\n\t\treturn this.isOccupied() ? game.f
 ```
 Let's print it for readability's sake:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>println(methodSrc)
 println(methodSrc)
 public ISquare landHereOrGoHome() {
@@ -172,13 +170,13 @@ ok
 ```
 How many words in this method? Let's use a regex :-)
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>(0 | it + 1 | /\W+/ := methodSrc)
 int: 9
 ```
 But now, let's get its AST
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>methodFiles = myModel.declarations[|java+method:///snakes/Square/landHereOrGoHome()|];
 set[loc]: {|tmp:///snakes-and-ladders/src/snakes/Square.java|(678,94,<37,1>,<39,2>)}
 ```
@@ -352,17 +350,17 @@ set[Declaration]: {method(
       []))}
 ```
 
-If `methodASTs` would have been an empty set, then the [search pattern](../../../../RascalConcepts/PatternMatching) `/Declaration d` or the condition `d.decl == ...` would have failed on this example. But it didn't! It found exactly one match.
+If `methodASTs` would have been an empty set, then the [search pattern](../../../../RascalConcepts/PatternMatching/) `/Declaration d` or the condition `d.decl == ...` would have failed on this example. But it didn't! It found exactly one match.
 
 Now we count the number of expressions:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>(0 | it + 1 | /Expression _ := methodASTs)
 int: 7
 ```
 or give us the locations of all expressions:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>[m.src | /Expression m := methodASTs]
 list[loc]: [
   |tmp:///snakes-and-ladders/src/snakes/Square.java|(685,7,<37,8>,<37,15>),
@@ -376,7 +374,7 @@ list[loc]: [
 ```
 the size should be the same, right?
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import List;
 ok
 rascal>size([m.src | /Expression m := methodASTs]) == (0 | it + 1 | /Expression _ := methodASTs)
@@ -388,7 +386,7 @@ bool: true
 * Click on any of the printed source [Location](../../../../Rascal/Expressions/Values/Location)s in the terminal and the IDE brings you to the file.
 * The method AST contains all structural/syntactic information about a method and its signature. They are defined in the [AST](../../../../Library/lang/java/m3/AST.md) module.
 * every node in the AST has been annotated with a `src` field to explain where exactly in the file it came from
-* when name and type resolution is `true` for [create ast from file](../../../../Library/lang/java/m3/AST.md#lang::java::m3::AST-createAstFromFile), the `decl` fields on given nodes point to the resolved qualified names of a reference. These qualified names coincide with the overview [M3](../../../../Library/lang/java/m3/Core.md) model contents. 
+* when name and type resolution is `true` for [create ast from file](../../../../Library/lang/java/m3/AST.md#lang::java::m3::AST-createAstFromFile), the `decl` fields on given nodes point to the resolved qualified names of a reference. These qualified names coincide with the overview [M3](../../../../Library/lang/java/m3/Core.md/) model contents. 
 * [pattern matching](../../../../RascalConcepts/PatternMatching) is a very powerful way of exploring and changing ASTs
 * AST and M3 models exist for other programming languages than Java. Your skills developed here may transfer to there.
 * AST and M3 creation is fully based on reusing the Eclipse JDT compiler stack, which has a high quality and can also recover from local errors in input files.

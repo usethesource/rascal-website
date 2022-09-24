@@ -12,19 +12,18 @@ Functions and constructors can be called or invoked in a uniform style.
 
 #### Syntax
 
-* function call with positional parameters `Name ( Exp<sub>1</sub>, Exp<sub>2</sub>, ... )`
-* function call with keyword parameters `Name (Name<sub>1</sub> = Exp<sub>1</sub>, Name<sub>2</sub> = Exp<sub>2</sub>, ...)`
-* function call with both positional and keyword parameters `Name (Exp<sub>1</sub>, Exp<sub>2</sub>, ..., Name<sub>1</sub> = Exp<sub>1</sub>, Name<sub>2</sub> = Exp<sub>2</sub>, ...)`
-* function calls with computed functions `Exp ( Exp<sub>1</sub>, Exp<sub>2</sub>, ..., Name<sub>1</sub> = Exp<sub>1</sub>, Name<sub>2</sub> = Exp<sub>2</sub>, ...) 
+* function call with positional parameters `Name ( Exp~1~, Exp~2~, ... )`
+* function call with keyword parameters `Name (Name~1~ = Exp~1~, Name~2~ = Exp~2~, ...)`
+* function call with both positional and keyword parameters `Name (Exp~1~, Exp~2~, ..., Name~1~ = Exp~1~, Name~2~ = Exp~2~, ...)`
+* function calls with computed functions `Exp ( Exp~1~, Exp~2~, ..., Name~1~ = Exp~1~, Name~2~ = Exp~2~, ...) 
 
 #### Types
 
 //
 
-| `Exp<sub>1</sub>`  | `Exp<sub>2</sub>` | ... | `Name ( Exp<sub>1</sub>, Exp<sub>2</sub>, ... )`  |
+| `Exp~1~`  | `Exp~2~` | ... | `Name ( Exp~1~, Exp~2~, ... )`  |
 | --- | --- | --- | --- |
-| `T<sub>1</sub>`    | `T<sub>2</sub>`   | ... | Determined by _Name_, _T~i~_ and function declarations  |
-
+| `T~1~`    | `T~2~`   | ... | Determined by _Name_, _T~i~_ and function declarations  |
 
 #### Description
 
@@ -50,8 +49,8 @@ For more information:
 * see [Function](../../../Rascal/Declarations/Function) for more details about function declarations.
 * see [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType) for more details about constructor declarations.
 
-In case of [function overloading](../../../Rascal/Declarations/Function), where there a more definitions of the same function (the same name and argument arity), there is a selection process called "dynamic dispatch". The functions are tried in arbitrary order,
-and if their signature [matches](../../../RascalConcepts/PatternMatching), and their body does not [Fail](../../../Rascal/Statements/Fail), then the return value of that function is used. Otherwise, the next function alternative is tried until a succesful alternative is found. 
+In case of [function overloading](../../../Rascal/Declarations/Function/), where there a more definitions of the same function (the same name and argument arity), there is a selection process called "dynamic dispatch". The functions are tried in arbitrary order,
+and if their signature [matches](../../../RascalConcepts/PatternMatching/), and their body does not [Fail](../../../Rascal/Statements/Fail), then the return value of that function is used. Otherwise, the next function alternative is tried until a succesful alternative is found. 
 If the match of the signature is non-unitary, it involves backtracking, then a single function
 may be tried many times.
 
@@ -61,7 +60,7 @@ If the name of the function in the call is
 
 First declare a function `square` with argument _n_ that returns _n^2_:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>int square(int n) { return n * n; }
 int (int): function(|prompt:///|(0,35,<1,0>,<1,35>))
 ```
@@ -75,8 +74,7 @@ Next call `square`. This results in the following steps:
 * Execute the body of `square`.
 * The return value of square is the vale of the call:
 
-
-```rascal-shell
+```rascal-shell ,continue
 rascal>square(12);
 int: 144
 ```
@@ -86,5 +84,4 @@ int: 144
 * calls with positional parameters are the classical way of function invocation in Mathematics and Computer Science
 * calls with keyword parameters provide readability at the call site and we do not have to remember the invocation order
 * calls with keyword parameters are always bound by defaults, so there is never a `null` reference
-
 

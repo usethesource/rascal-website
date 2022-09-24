@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::TryCatch"
 
 `import lang::rascal::tests::functionality::TryCatch;`
 
-
 ## data NODEA {#lang-rascal-tests-functionality-TryCatch-NODEA}
 
 ```rascal

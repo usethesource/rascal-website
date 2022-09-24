@@ -6,7 +6,6 @@ title: "module demo::lang::Pico::Abstract"
 
 `import demo::lang::Pico::Abstract;`
 
-
 ## data TYPE {#demo-lang-Pico-Abstract-TYPE}
 
 ```rascal

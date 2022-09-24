@@ -6,7 +6,6 @@ title: "module demo::lang::Pico::Syntax"
 
 `import demo::lang::Pico::Syntax;`
 
-
 ## function program {#demo-lang-Pico-Syntax-program}
 
 * ``start[Program] program(str s)``

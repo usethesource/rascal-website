@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::CommonKeywordParameter4::C"
 
 `import lang::rascal::tests::functionality::CommonKeywordParameter4::C;`
 
-
 ## data D {#lang-rascal-tests-functionality-CommonKeywordParameter4-C-D}
 
 ```rascal

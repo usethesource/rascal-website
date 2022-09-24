@@ -14,13 +14,11 @@ Examples of violations are:
 *  a non-parametric type has parameters.
 *  a parametric type has an incorrect number of parameters.
 
-
 Remedy: correct the type.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>bool[int] x;
 ok
 rascal>list[int,str] l;

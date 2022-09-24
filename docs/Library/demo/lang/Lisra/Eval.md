@@ -6,11 +6,10 @@ title: "module demo::lang::Lisra::Eval"
 
 `import demo::lang::Lisra::Eval;`
 
-
 ## function eval {#demo-lang-Lisra-Eval-eval}
 
-* ``Lval eval(Lval x)``
 * ``Result eval(str exp)``
+* ``Lval eval(Lval x)``
 * ``Result eval(Integer(int x), Env e)``
 * ``Result eval(var:Atom(str name), Env e)``
 * ``Result eval(List([Atom("quote"), *Lval exps]), Env e)``
@@ -20,6 +19,10 @@ title: "module demo::lang::Lisra::Eval"
 * ``Result eval(List([Atom("define"), var, exp]), Env e)``
 * ``Result eval(List([Atom("lambda"), List(list[Lval] vars), exp]), Env defEnv)``
 * ``default Result eval(List([ *Lval exps ]), Env e)``
+
+#### Synopsis
+
+Parse and Evaluate an expression in an empty environment
 
 ## function apply {#demo-lang-Lisra-Eval-apply}
 

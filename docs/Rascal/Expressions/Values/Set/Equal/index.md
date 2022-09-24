@@ -11,15 +11,13 @@ Equal operator on set values.
 
 #### Syntax
 
-`Exp<sub>1</sub> == Exp<sub>2</sub>`
+`Exp~1~ == Exp~2~`
 
 #### Types
 
-
-| `Exp<sub>1</sub>`    |  `Exp<sub>2</sub>`    | `Exp<sub>1</sub> == Exp<sub>2</sub>`  |
+| `Exp~1~`    |  `Exp~2~`    | `Exp~1~ == Exp~2~`  |
 | --- | --- | --- |
-| `set[T<sub>1</sub>]` |  `set[T<sub>2</sub>]` | `bool`                |
-
+| `set[T~1~]` |  `set[T~2~]` | `bool`                |
 
 #### Description
 
@@ -27,12 +25,10 @@ Yields `true` if both arguments are equal sets and `false` otherwise.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>{1, 2, 3} == {3, 2, 1};
 bool: true
 rascal>{1, 2, 3} == {1, 2};
 bool: false
 ```
-
 

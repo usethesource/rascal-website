@@ -10,4 +10,3 @@ Test statement (__deprecated__).
 
 The `test` statement is deprecated and is replaced by the `test` modifier in function declarations, see [Function](../../../Rascal/Declarations/Function).
 
-

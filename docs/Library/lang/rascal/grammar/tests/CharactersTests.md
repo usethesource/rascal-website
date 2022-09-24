@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::tests::CharactersTests"
 
 `import lang::rascal::grammar::tests::CharactersTests;`
 
-
 ## function testFlip {#lang-rascal-grammar-tests-CharactersTests-testFlip}
 
 * ``test bool testFlip()``

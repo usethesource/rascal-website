@@ -29,7 +29,7 @@ String values.
 
 #### Syntax
 
-`"StringChar<sub>1</sub>StringChar<sub>2</sub>..."`
+`"StringChar~1~StringChar~2~..."`
 where `_StringChar~i~_ may be one of the following:
 
 *  __Ordinary character__: Any character except `<`, `>`, `"`, `'` or `\`.
@@ -40,10 +40,9 @@ where `_StringChar~i~_ may be one of the following:
 **  `\r`: carriage return
 **  `\b`: backspace
 **  `\f`: vertical feed
-**  `\u hexDigit<sub>1</sub> hexDigit<sub>2</sub> hexDigit<sub>3</sub> hexDigit<sub>4</sub>` : hexadecimal escapes with four digit indexes into UNICODE.
-**  `\U hexDigit<sub>1</sub> hexDigit<sub>2</sub> hexDigit<sub>3</sub> hexDigit<sub>4</sub> hexDigit<sub>5</sub> hexDigit<sub>6</sub>` : hexadecimal escapes with six digit indexes into UNICODE.
-**  `\ ahexDigit<sub>1</sub> hexDigit<sub>2</sub>`:  hexadecimal escapes with 2 digit indexes into ASCII (0x0 ... 0x7F).
-
+**  `\u hexDigit~1~ hexDigit~2~ hexDigit~3~ hexDigit~4~` : hexadecimal escapes with four digit indexes into UNICODE.
+**  `\U hexDigit~1~ hexDigit~2~ hexDigit~3~ hexDigit~4~ hexDigit~5~ hexDigit~6~` : hexadecimal escapes with six digit indexes into UNICODE.
+**  `\ ahexDigit~1~ hexDigit~2~`:  hexadecimal escapes with 2 digit indexes into ASCII (0x0 ... 0x7F).
 
 *  __String Interpolation__: 
 
@@ -51,20 +50,17 @@ where `_StringChar~i~_ may be one of the following:
 | --- | --- |
 | `<Exp>` | Interpolate the value of the expression as a string |
 | `<if(Exp){> ... StringChars ... <}>` | Conditional inclusion of _Text_, where _StringChars_ may use variables introduced in _Exp_ |
-| `<if(Exp){> ... StringChars<sub>1</sub> ... <} else {>  ... StringChars<sub>2</sub> ... <}>` | Conditional inclusion of either _StringChars<sub>1</sub>_ or _StringChars<sub>2</sub>_ |
+| `<if(Exp){> ... StringChars~1~ ... <} else {>  ... StringChars~2~ ... <}>` | Conditional inclusion of either _StringChars~1~_ or _StringChars~2~_ |
 | `<for(Exp){>... StringChars ... <}>` | Iterative splicing of _StringChars_ into the result, where _StringChars_ may use variables introduced in _Exp_. |
 | `<while(Exp){> ... StringChars ... <}>` | Iterative splicing of _StringChars_ into the result, where _StringChars_ may use variables introduced in _Exp_. |
 | `<do {>... StringChars ... <} while (Exp)>` | Iterative splicing of _StringChars_ into the result, where _StringChars_ may use variables introduced in _Exp_. |
-
 
 *  __Multiline__:
 
 | Form | Description  |
 | --- | --- |
-| `StringChars<sub>1</sub>\n StringChars<sub>2</sub> `   | Strings can be multi-line without an escape or continuation marker  |
-| `StringChars<sub>2</sub>\n '  StringChars<sub>2</sub>` | A margin character `'` indicates where the next line starts  |
-
-
+| `StringChars~1~\n StringChars~2~ `   | Strings can be multi-line without an escape or continuation marker  |
+| `StringChars~2~\n '  StringChars~2~` | A margin character `'` indicates where the next line starts  |
 
 #### Types
 
@@ -87,7 +83,6 @@ In the interpolation variant of these statements the block or blocks that are pa
 _Auto-indent_: Expressions that get interpolated in a string will be auto-indented. This means that each line that results from the evaluation of the expression is prefixed with the indentation level of the position of the expression in the current string.
 
 The following operators are defined for Strings:
-* [String](../../../../Rascal/Expressions/Values/String)
 * [Concatenation](../../../../Rascal/Expressions/Values/String/Concatenation)
 * [Equal](../../../../Rascal/Expressions/Values/String/Equal)
 * [GreaterThan](../../../../Rascal/Expressions/Values/String/GreaterThan)
@@ -98,12 +93,11 @@ The following operators are defined for Strings:
 * [Slice](../../../../Rascal/Expressions/Values/String/Slice)
 * [Subscription](../../../../Rascal/Expressions/Values/String/Subscription)
 
-There are also [library functions](../../../../Library/String.md) available for Strings.
+There are also [library functions](../../../../Library/String.md/) available for Strings.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>N = 13;
 int: 13
 rascal>"The value of N is <N>";
@@ -117,7 +111,7 @@ As you can see the string value of variables and expressions is interpolated in 
 <br />
 Some examples of more advances string interpolation 
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>"N is <if(N < 10){> small <} else {> large <}>";
 str: "N is  large "
 rascal>"N is <if(N < 10){> small <} else {> large (<N>)<}>";
@@ -127,7 +121,7 @@ str: "before a 1 b a 2 b a 3 b a 4 b after"
 ```
 multi-line string
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import IO;
 ok
 rascal>println("hello
@@ -143,7 +137,7 @@ ok
 ```
 multi-line string with margin:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>if (true)
 >>>>>>>  println("this is
 >>>>>>>          'what
@@ -160,7 +154,7 @@ ok
 ```
 auto indent:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>str genMethod(str n) = "int <n>() {
 >>>>>>>                       '  return 0;
 >>>>>>>                       '}";
@@ -179,10 +173,8 @@ class myClass {
 ok
 ```
 
-
 #### Benefits
 
 String interpolation enables very flexible template-based text generation as used in generators for
 source code, markup and the like.
-
 

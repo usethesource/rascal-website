@@ -6,7 +6,6 @@ title: "module demo::common::LiftTest"
 
 `import demo::common::LiftTest;`
 
-
 ## function t1 {#demo-common-LiftTest-t1}
 
 * ``test bool t1()``

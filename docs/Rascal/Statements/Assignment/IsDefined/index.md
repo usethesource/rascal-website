@@ -10,8 +10,8 @@ Assign but replace if value is not defined.
 
 #### Description
 
-First the value of _Exp_<sub>1</sub> is determined and if that is defined it is assigned to _Assignable_. 
-Otherwise, the value of _Exp_<sub>2</sub> is assigned to _Assignable_.
+First the value of _Exp_~1~ is determined and if that is defined it is assigned to _Assignable_. 
+Otherwise, the value of _Exp_~2~ is assigned to _Assignable_.
 
 Values which can be undefined are:
 * in [Map](../../../../Rascal/Expressions/Values/Map)s where the key is _not_ set
@@ -23,14 +23,13 @@ No other values can be used in an undefined state, so the ? operator does not ma
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>M = ("Andy": 1, "Brian" : 2);
 map[str, int]: ("Andy":1,"Brian":2)
 ```
 Using an `isDefined` assignable can we increment a non-existing entry:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>M["SomebodyElse"] ? 0 += 1;
 map[str, int]: ("Andy":1,"Brian":2,"SomebodyElse":1)
 rascal>M["SomebodyElse"];
@@ -38,7 +37,7 @@ int: 1
 ```
 And if we increment an existing entry the ? has no effect:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>M["Andy"] ? 0 += 1;
 map[str, int]: ("Andy":2,"Brian":2,"SomebodyElse":1)
 rascal>M["Andy"]
@@ -48,5 +47,4 @@ int: 2
 #### Benefits
 
 * short notation that inline initialization of map values, keyword fields or annotations without having to write a lot of boilerplate if-then-else statements. 
-
 

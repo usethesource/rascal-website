@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::Tuples"
 
 `import lang::rascal::tests::basic::Tuples;`
 
-
 ## function subscription1 {#lang-rascal-tests-basic-Tuples-subscription1}
 
 * ``test bool subscription1(tuple[&A] T)``

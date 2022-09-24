@@ -6,7 +6,6 @@ title: "module demo::lang::Lisra::Test"
 
 `import demo::lang::Lisra::Test;`
 
-
 ## function eval01 {#demo-lang-Lisra-Test-eval01}
 
 * ``test bool eval01()``

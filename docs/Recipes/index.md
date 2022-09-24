@@ -15,7 +15,6 @@ It consists of the following parts:
 * [Common](../Recipes/Common)
 * [Languages](../Recipes/Languages)
 * [Metrics](../Recipes/Metrics)
-* [Recipes](../Recipes/)
 
 The following features are covered:
 
@@ -29,5 +28,4 @@ The following features are covered:
 *  Code generation.
 *  IDE extensions.
 *  Visualization.
-
 

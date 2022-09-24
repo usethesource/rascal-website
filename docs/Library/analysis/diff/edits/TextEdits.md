@@ -6,7 +6,6 @@ title: "module analysis::diff::edits::TextEdits"
 
 `import analysis::diff::edits::TextEdits;`
 
-
 ## data DocumentEdit {#analysis-diff-edits-TextEdits-DocumentEdit}
 
 ```rascal

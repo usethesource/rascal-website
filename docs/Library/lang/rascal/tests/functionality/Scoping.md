@@ -6,4 +6,3 @@ title: "module lang::rascal::tests::functionality::Scoping"
 
 `import lang::rascal::tests::functionality::Scoping;`
 
-

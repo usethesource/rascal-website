@@ -12,17 +12,15 @@ List values.
 
 #### Syntax
 
-`[ Exp<sub>1</sub>, Exp<sub>2</sub>, ... ]`
+`[ Exp~1~, Exp~2~, ... ]`
 
 #### Types
 
 //
 
-
-|  `Exp<sub>1</sub>` |  `Exp<sub>2</sub>` |  ...  |  `[ Exp<sub>1</sub>, Exp<sub>2</sub>, ... ]`    |
+|  `Exp~1~` |  `Exp~2~` |  ...  |  `[ Exp~1~, Exp~2~, ... ]`    |
 | --- | --- | --- | --- |
-| `T<sub>1</sub>`    | `T<sub>2</sub>`    |  ...  |  `list[lub(T<sub>1</sub>, T<sub>2</sub>, ... )]`  |
-
+| `T~1~`    | `T~2~`    |  ...  |  `list[lub(T~1~, T~2~, ... )]`  |
 
 #### Description
 
@@ -32,7 +30,6 @@ A list is an ordered sequence of values and has the following properties:
 *  The order of the elements matters.
 *  A list may contain an element more than once.
 
-
 The type of a list has the form `list[T]`,
 where `T` is an arbitrary type.
 
@@ -41,7 +38,6 @@ To achieve _splicing_ of these elements, i.e., the insertion of the elements of 
 it has to be prefixed by the splice operator `*`.
 
 The following operators are provided on list:
-* [List](../../../../Rascal/Expressions/Values/List)
 * [Append](../../../../Rascal/Expressions/Values/List/Append)
 * [Comprehension](../../../../Rascal/Expressions/Values/List/Comprehension)
 * [Concatenation](../../../../Rascal/Expressions/Values/List/Concatenation)
@@ -61,12 +57,11 @@ The following operators are provided on list:
 * [in](../../../../Rascal/Expressions/Values/List/in)
 * [notin](../../../../Rascal/Expressions/Values/List/notin)
 
-There are also [library functions](../../../../Library/List.md) available for List.
+There are also [library functions](../../../../Library/List.md/) available for List.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>[1, 2, 3];
 list[int]: [1,2,3]
 rascal>[<1,10>, <2,20>, <3,30>];
@@ -91,7 +86,7 @@ list[list[str]]: [
 ```
 List splicing works as follows: by prefixing `L` by the splice operator, its elements are included as elements in the enclosing list:
 
-```rascal-shell
+```rascal-shell 
 rascal>L = [1, 2, 3];
 list[int]: [1,2,3]
 rascal>[10, L, 20];
@@ -103,5 +98,4 @@ list[value]: [
 rascal>[10, *L, 20];
 list[int]: [10,1,2,3,20]
 ```
-
 

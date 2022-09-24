@@ -25,4 +25,3 @@ See [Number](../../../../Rascal/Expressions/Values/Number) for all operations on
 *  1.5
 *  3.14e-123
 
-

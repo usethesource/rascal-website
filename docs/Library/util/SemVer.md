@@ -6,11 +6,9 @@ title: "module util::SemVer"
 
 `import util::SemVer;`
 
-
 ## function satisfiesVersion {#util-SemVer-satisfiesVersion}
 
 * ``bool satisfiesVersion(str version, str rangeSet)``
-
 
 #### Synopsis
 

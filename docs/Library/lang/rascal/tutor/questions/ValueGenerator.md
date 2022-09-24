@@ -6,7 +6,6 @@ title: "module lang::rascal::tutor::questions::ValueGenerator"
 
 `import lang::rascal::tutor::questions::ValueGenerator;`
 
-
 ## function generateType {#lang-rascal-tutor-questions-ValueGenerator-generateType}
 
 * ``Type generateType(Type tp)``

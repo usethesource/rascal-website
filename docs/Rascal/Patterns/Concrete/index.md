@@ -16,7 +16,7 @@ Concrete patterns.
 #### Syntax
 
 ```rascal
-Concrete pattern with expected symbol type: (_Symbol_) ` Token<sub>1</sub> Token<sub>2</sub> ... Token~n~ `
+Concrete pattern with expected symbol type: (_Symbol_) ` Token~1~ Token~2~ ... Token~n~ `
 ```
 ```rascal
 Typed variable inside a concrete pattern: <_Type_ _Var_>
@@ -45,7 +45,7 @@ Examples (in a context where an appropriate concrete syntax has been defined):
 
 *  Quoted syntax pattern with two pattern variable declarations:
 
-```rascal-shell
+```rascal-shell 
 rascal>import ParseTree;
 ok
 rascal>syntax Id = [a-z]+;
@@ -67,7 +67,5 @@ Some observations about this example:
 
 ** When this example pattern actually matches the variable `a` is bound and can be used again like any other [Variable](../../../Rascal/Patterns/Variable). 
 
-
-A full example of concrete patterns can be found in [WithLayout](../../../Recipes/Languages/Exp/Concrete/WithLayout).
-
+A full example of concrete patterns can be found in [WithLayout](../../../Recipes/Languages/Exp/Concrete/WithLayout/).
 

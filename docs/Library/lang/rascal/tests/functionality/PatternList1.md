@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::PatternList1"
 
 `import lang::rascal::tests::functionality::PatternList1;`
 
-
 ## function matchModuleVar1 {#lang-rascal-tests-functionality-PatternList1-matchModuleVar1}
 
 * ``test bool matchModuleVar1()``

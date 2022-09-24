@@ -10,7 +10,6 @@ A Func interpreter that does not support let-expressions and pointers.
 
 Interpreter Eval0 supports the following features of Func:
 
-
 | Feature              | Eval0 |
 | --- | --- |
 | function declaration | y |
@@ -26,13 +25,11 @@ Interpreter Eval0 supports the following features of Func:
 | address operator     |
 | dereference operator |
 
-
 #### Examples
 
 Here is the code for Eval0:
 
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Func::Eval0
 
 // No let
@@ -47,7 +44,6 @@ value eval0(str main, list[int] args, Prog prog) { // <2>
   f = penv[main];
   return eval0(subst(f.body, f.formals, args), penv);
 }
-
 
 Exp subst(Exp exp, list[str] vars, list[int] values) { // <3>
   env = ( vars[i]: values[i] | i <- index(vars) );
@@ -95,7 +91,6 @@ Some points to note:
     *  A substitution is made in the body of the called function, replacing formal parameters by actual values.
     *  The result of this substitution is evaluated.
 
-
 Let's try this on example `F0`:
 ```rascal
 fact(n) = if n <= 1 then
@@ -105,9 +100,7 @@ fact(n) = if n <= 1 then
           end
 ```
 
-                
-
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Func::Load;
 ok
 rascal>import demo::lang::Func::Eval0;
@@ -117,5 +110,4 @@ ok
 rascal>eval0("fact", [10], load(F0));
 value: 3628800
 ```
-
 

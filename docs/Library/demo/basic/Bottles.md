@@ -6,7 +6,6 @@ title: "module demo::basic::Bottles"
 
 `import demo::basic::Bottles;`
 
-
 ## function bottles {#demo-basic-Bottles-bottles}
 
 * ``str bottles(0)``

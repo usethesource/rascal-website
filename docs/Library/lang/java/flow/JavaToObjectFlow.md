@@ -6,7 +6,6 @@ title: "module lang::java::flow::JavaToObjectFlow"
 
 `import lang::java::flow::JavaToObjectFlow;`
 
-
 #### Synopsis
 
 mapping all of Java to the object flow language
@@ -14,7 +13,6 @@ mapping all of Java to the object flow language
 #### Description
 
 More information can be found in [ObjectFlow](../../../../Library/analysis/flow/ObjectFlow.md).
-
 
 ## function createOFG {#lang-java-flow-JavaToObjectFlow-createOFG}
 

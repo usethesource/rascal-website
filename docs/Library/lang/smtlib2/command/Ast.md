@@ -6,9 +6,7 @@ title: "module lang::smtlib2::command::Ast"
 
 `import lang::smtlib2::command::Ast;`
 
-
 	Synopsis: The SMTLIBv2 Command AST. This is the basic AST needed to construct SMTLIBv2 constraint problems. Sorts, Expressions and Literals are implemented in the different theories
-
 
 ## data Script {#lang-smtlib2-command-Ast-Script}
 

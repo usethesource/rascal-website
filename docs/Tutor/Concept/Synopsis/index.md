@@ -21,4 +21,3 @@ The full summary of a concept consists of the Synopsis and the optional elements
 
 Synopsis is *mandatory* (this is not yet enforced).
 
-

@@ -11,17 +11,15 @@ The not equal operator on location values.
 
 #### Syntax
 
-`Exp<sub>1</sub> != Exp<sub>2</sub>`
+`Exp~1~ != Exp~2~`
 
 #### Types
 
-| `Exp<sub>1</sub>` | `Exp<sub>2</sub>` | `Exp<sub>1</sub> != Exp<sub>2</sub>`  |
+| `Exp~1~` | `Exp~2~` | `Exp~1~ != Exp~2~`  |
 | --- | --- | --- |
 | `loc`     |  `loc`    | `bool`                |
-
 
 #### Description
 
 Yields `true` if both arguments are not identical and `false` otherwise.
-
 

@@ -21,13 +21,13 @@ Remedies:
 
 Using the undeclared type `myint` gives an error:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>myint incr(myint n) = n + 1;
 ok
 ```
 The solkution is to first declares `myint` (here as an alias for `int`):
 
-```rascal-shell
+```rascal-shell ,error
 rascal>alias myint = int;
 ok
 rascal>myint incr(myint n) = n + 1;
@@ -35,5 +35,4 @@ int (int): function(|prompt:///|(0,28,<1,0>,<1,28>))
 rascal>incr(3);
 int: 4
 ```
-
 

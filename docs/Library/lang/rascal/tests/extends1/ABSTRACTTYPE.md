@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends1::ABSTRACTTYPE"
 
 `import lang::rascal::tests::extends1::ABSTRACTTYPE;`
 
-
 ## data SYM {#lang-rascal-tests-extends1-ABSTRACTTYPE-SYM}
 
 ```rascal

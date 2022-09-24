@@ -8,7 +8,6 @@ title: "module lang::rascal::tests::basic::Generics"
 
 tests specific aspects of generic functions and generic data-types in Rascal
 
-
 ## data Wrapper {#lang-rascal-tests-basic-Generics-Wrapper}
 
 ```rascal

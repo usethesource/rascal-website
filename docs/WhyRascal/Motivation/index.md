@@ -53,4 +53,3 @@ High-level control structures make analysis and synthesis of complex data struct
 *  __Generic types__ allow writing functions that are applicable for many different types.
 *  __Eclipse integration__ makes Rascal programming a breeze. All familiar tools are at your fingertips.
 
-

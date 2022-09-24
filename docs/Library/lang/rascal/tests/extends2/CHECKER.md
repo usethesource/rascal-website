@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends2::CHECKER"
 
 `import lang::rascal::tests::extends2::CHECKER;`
 
-
 ## function collect {#lang-rascal-tests-extends2-CHECKER-collect}
 
 * ``str collect(int _)``

@@ -6,7 +6,6 @@ title: "module lang::json::ast::Implode"
 
 `import lang::json::ast::Implode;`
 
-
 ## function removeEnds {#lang-json-ast-Implode-removeEnds}
 
 * ``str removeEnds(str s)``

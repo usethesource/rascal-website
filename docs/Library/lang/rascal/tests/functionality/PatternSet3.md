@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::PatternSet3"
 
 `import lang::rascal::tests::functionality::PatternSet3;`
 
-
 ## function INTERSECT {#lang-rascal-tests-functionality-PatternSet3-INTERSECT}
 
 * ``TYPESET INTERSECT({ SUBTYPES(INTERSECT({ TYPESET tset, *TYPESET rest})), tset, *TYPESET rest1 })``

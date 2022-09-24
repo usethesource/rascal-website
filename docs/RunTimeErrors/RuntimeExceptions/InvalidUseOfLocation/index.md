@@ -16,13 +16,12 @@ Invalid use of a source location at runtime.
 
 #### Description
 
-Thrown by operations on [source locations](../../../Rascal/Expressions/Values/Location) that would 
+Thrown by operations on [source locations](../../../Rascal/Expressions/Values/Location/) that would 
 lead to an inconsistent or incomplete location value.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>someLoc = |home:///abc.txt|;
 loc: |home:///abc.txt|
 rascal>someLoc.begin = <1, 2>;

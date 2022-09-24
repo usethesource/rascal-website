@@ -7,8 +7,8 @@ keywords:
 
 #### Syntax
 
-* `Exp<sub>0</sub> [Exp<sub>1</sub>, Exp<sub>2</sub>, ..., Exp~n~]`
-* `Exp<sub>0</sub> [Exp<sub>1</sub>]`
+* `Exp~0~ [Exp~1~, Exp~2~, ..., Exp~n~]`
+* `Exp~0~ [Exp~1~]`
 
 #### Synopsis
 
@@ -18,25 +18,22 @@ Indexing of a relation via tuple values.
 
 |     |     |     |     |     |
 | --- | --- | --- | --- | --- |
-| `_Exp<sub>0</sub>`                         | `Exp<sub>1</sub>` | `Exp<sub>2</sub>` | ... | `Exp0_ [ Exp<sub>1</sub>, Exp<sub>2</sub>, ... ]`  |
-| `rel[T<sub>1</sub>, T<sub>2</sub>, ... T~m~]`    | `int`     |  `int`    | ... | `rel[T~n~, _T~n+1~_, ... T~m~]`  |
-
+| `_Exp~0~`                         | `Exp~1~` | `Exp~2~` | ... | `Exp0_ [ Exp~1~, Exp~2~, ... ]`  |
+| `rel[T~1~, T~2~, ... T~m~]`    | `int`     |  `int`    | ... | `rel[T~n~, _T~n+1~_, ... T~m~]`  |
 
 ##### Set of Values Variant 
 
-| `Exp<sub>0</sub>`                         | `Exp<sub>1</sub>`     | `Exp<sub>0</sub> [ Exp<sub>1</sub> ]`             |
+| `Exp~0~`                         | `Exp~1~`     | `Exp~0~ [ Exp~1~ ]`             |
 | --- | --- | --- |
-| `rel[T<sub>1</sub>, T<sub>2</sub>, ... T~m~]`    | `set[T<sub>1</sub>]`  | `rel[T<sub>2</sub>, T<sub>2</sub>, ... T~m~]`    |
-
-
+| `rel[T~1~, T~2~, ... T~m~]`    | `set[T~1~]`  | `rel[T~2~, T~2~, ... T~m~]`    |
 
 #### Description
 
-Relation resulting from subscription of a relation _Exp_<sub>0</sub>.
+Relation resulting from subscription of a relation _Exp_~0~.
 
 ##### Single Value Variant
 
-Subscription with the index values of _Exp_<sub>1</sub>, _Exp_<sub>2</sub>, .... 
+Subscription with the index values of _Exp_~1~, _Exp_~2~, .... 
 The result is a relation with all tuples that have these index values as first elements 
 with the index values removed from the tuple. 
 If the resulting tuple has only a single element, a set is returned instead of a relation. 
@@ -44,14 +41,13 @@ A wildcard `_` as index value matches all possible values at that index position
 
 ##### Set of Values Variant 
 
-Subscription with a set of the index values of _Exp_<sub>1</sub>.
+Subscription with a set of the index values of _Exp_~1~.
 The result is a relation with all tuples that have these index values as first element
 with the index values removed from the tuple. 
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>R = {<1,10>, <2,20>, <1,11>, <3,30>, <2,21>};
 rel[int,int]: {
   <3,30>,
@@ -85,7 +81,7 @@ set[int]: {100,101}
 ```
 Introduce a relation with economic data and assign it to `GDP`:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>rel[str country, int year, int amount] GDP =
 >>>>>>>{<"US", 2008, 14264600>, <"EU", 2008, 18394115>,
 >>>>>>> <"Japan", 2008, 4923761>, <"US", 2007, 13811200>, 
@@ -101,7 +97,7 @@ rel[str country,int year,int amount]: {
 ```
 and then retrieve the information for the index `"Japan"`:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>GDP["Japan"];
 rel[int,int]: {
   <2007,4376705>,
@@ -110,10 +106,8 @@ rel[int,int]: {
 ```
 or rather for the indices `"Japan"` and `2008`:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>GDP["Japan", 2008];
 set[int]: {4923761}
 ```
-
-
 

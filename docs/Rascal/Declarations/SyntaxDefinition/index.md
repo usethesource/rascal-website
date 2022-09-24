@@ -23,15 +23,13 @@ Syntax Definitions allow the definition of parsers for programming languages, do
 *  `layout Nonterminal = Alternatives;`
 *  `keyword Nonterminal = Alternatives;`
 
-
 where _Start_ is either `start` or nothing, and _Alternatives_ are one of:
 
 *  `Tags Associativity Symbols`
 *  `Tags Associativity Name : Symbols`
 *  `Associativity ( Alternatives )`
-*  `Alternatives<sub>1</sub> | Alternatives<sub>2</sub>`  
-*  `Alternatives<sub>1</sub> > Alternatives<sub>2</sub>`  
-
+*  `Alternatives~1~ | Alternatives~2~`  
+*  `Alternatives~1~ > Alternatives~2~`  
 
 where _Associativity_ is nothing, or one of `assoc`, `left`, `right` or `non-assoc`, and _Tags_ are a possibly empty list of tags.
 
@@ -49,7 +47,7 @@ There are four kinds of non-terminals that can be defined with slightly differen
 
 *  _Lexical_ non-terminals are just like _syntax_ non-terminals, very much like _syntax_ non-terminals. 
    However, the definition of a lexical is _not_ modified with interleaved layout non-terminals. 
-   And, the structure of lexicals is not traversed by the [visit statement](../../../Rascal/Statements/Visit) and equality is checked between lexicals 
+   And, the structure of lexicals is not traversed by the [visit statement](../../../Rascal/Statements/Visit/) and equality is checked between lexicals 
    by checking the characters (not its structure) for equality. 
 
 *  _Layout_ non-terminals are just like _syntax_ non-terminals as well. However, they are used to preprocess all _syntax_ definitions in the same module scope (see above).
@@ -59,7 +57,6 @@ There are four kinds of non-terminals that can be defined with slightly differen
    where some disambiguation constructs require finite, non-empty enumeration of strings. 
    The prime example is the definition of reserved keywords.
 
-
 Each alternative of a syntax definition is defined by a list of [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol)s. Each of the [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol)s can be labeled or not.
 The alternative of a defined syntax type may be labeled or not as well. With the label additional operations are activated on the corresponding parse trees:
 
@@ -68,16 +65,14 @@ The alternative of a defined syntax type may be labeled or not as well. With the
 *  [Action](../../../Rascal/Declarations/SyntaxDefinition/Action) functions can be written to override the construction of a parse tree, using the label of an alternative as the function name
 *  [implode] uses labeled alternatives to map to an [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType)
 
-
 Alternatives can be combined in a single [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition) using the `|`, `>` and associativity combinators.
 The latter two represent [Disambiguation](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation) constructs that you should read more about. The `|` is a short-hand for not having to repeat `syntax A =` for every alternative of `A`.
 
 Alternatives can be named or not. The names are essential only if:
 
-*  you need to [implode](../../../Library/ParseTree.md#ParseTree-implode) [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees)
+*  you need to [implode](../../../Library/ParseTree.md#ParseTree-implode/) [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees)
 *  you need to use the `is` expression, as in `myStatement is ifThenElse` instead of using concrete pattern matching.
 *  you want to write [Action](../../../Rascal/Declarations/SyntaxDefinition/Action)s that triggers on the construction of the alternative.
-
 
 However, it is generally a good idea to name your rules even if you do not need them. 
 Note that a name may be reused for different alternatives for a single non-terminal, 
@@ -95,7 +90,6 @@ layout L = [\ ]*; start Program = Statement*;`
 will produce `syntax start[Program] = L Program top L;`. 
 Note that the `start[Program]` type is now available in your program, and [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees) assigned to variable of that 
 type will allow access to the _top_ field.
-
 
 #### Examples
 
@@ -140,5 +134,4 @@ syntax Expression
 
 *  Grammars may be ambiguous, so read about [Disambiguation](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation), [Ambiguity Detection](../../../Rascal/Declarations/SyntaxDefinition/AmbiguityDetection) and [Ambiguity Diagnosis](../../../Rascal/Declarations/SyntaxDefinition/AmbiguityDiagnosis).
 *  Static grammar checker is not implemented yet.
-
 

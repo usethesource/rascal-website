@@ -56,4 +56,3 @@ a weakly imperative language. Rascal is, however, closer, to functional language
 
 *  Rascal is executed by an interpreter written in Java, or it can be compiled to Java classes.
 
-

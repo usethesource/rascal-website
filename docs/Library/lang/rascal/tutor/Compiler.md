@@ -12,7 +12,6 @@ compiles .rsc and .md files to markdown by executing Rascal-specific code and in
 
 #### Description
 
-
   This compiler collects .rsc files and .md files from a PathConfig's srcs folders.
   
   Every .rsc file is compiled to a .md file with an outline of the declarations contained
@@ -28,7 +27,6 @@ compiles .rsc and .md files to markdown by executing Rascal-specific code and in
   For (nested) folders in the srcs folders, which do not contain an `index.md` file, or
   a `<name>.md` file where the name is equal to the name of the current folder, a fresh index.md
   file is generated.
-
 
 ## function defaultCompile {#lang-rascal-tutor-Compiler-defaultCompile}
 
@@ -92,8 +90,6 @@ This uses another nested directory listing to construct information for the TOC 
 * ``list[Output] compileMarkdown([str first:/^\s*\(\(\(\s*TOC\s*\)\)\)\s*$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls)``
 * ``list[Output] compileMarkdown([str first:/^\s*\(\(\(\s*TODO<msg:[^\)]*>\s*\)\)\)\s*$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls)``
 * ``list[Output] compileMarkdown([str first:/^\s*\(\(\|<url:[^\|]+>\|\)\)\s*$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls)``
-* ``list[Output] compileMarkdown([/^<prefix:.*>~<words:[A-Z0-9\-_0-9]+>~<postfix:.*>$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls)``
-* ``list[Output] compileMarkdown([/^<prefix:.*>^<words:[A-Z0-9\-_0-9]+>^<postfix:.*>$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls)``
 * ``list[Output] compileMarkdown([/^<prefix:.*>\[<title:[^\]]+>\]\(\(<link:[A-Za-z0-9\-\ \t\.\:]+>\)\)<postfix:.*>$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls)``
 * ``default list[Output] compileMarkdown([/^<prefix:.*>\(\(<link:[A-Za-z0-9\-\ \t\.\:]+>\)\)<postfix:.*>$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls)``
 * ``list[Output] compileMarkdown([a:/^\-\-\-\s*$/, *str header, b:/^\-\-\-\s*$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls)``

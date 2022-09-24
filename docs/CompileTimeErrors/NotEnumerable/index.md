@@ -8,8 +8,8 @@ A value that cannot be enumerated is used in an enumerator.
 
 #### Description
 
-An [enumerator](../../Rascal/Expressions/Comprehensions/Enumerator) like `int n <- V` is used in 
-[comprehensions](../../Rascal/Expressions/Comprehensions) to enumerate the values in `V`.
+An [enumerator](../../Rascal/Expressions/Comprehensions/Enumerator/) like `int n <- V` is used in 
+[comprehensions](../../Rascal/Expressions/Comprehensions/) to enumerate the values in `V`.
 This error is produced when `V` is a value that does not support enumeration.
 This is typically the case for atomic values like numbers, Booleans and Strings,
 
@@ -17,8 +17,7 @@ Remedy: modify the expression in the enumerator to return a value that supports 
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>int x <- 17
 ok
 rascal>b <- true
@@ -26,5 +25,4 @@ rascal>b <- true
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/NotEnumerable/NotEnumerable.html|
 ok
 ```
-
 

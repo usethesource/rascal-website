@@ -6,7 +6,6 @@ title: "module analysis::m3::Registry"
 
 `import analysis::m3::Registry;`
 
-
 #### Synopsis
 
 in memory database for [analysis/m3/Core] models for resolving hyperlinks
@@ -15,11 +14,9 @@ in memory database for [analysis/m3/Core] models for resolving hyperlinks
 
 The functions in this file are used to register m3 models in a global in-memory database. When a source location is clicked this database is used used to resolve logical source locations, such as `|java+class:///java/lang/Object|` to physical source locations such as `|file:///usr/lib/blabla.java|`.
 
-
 ## function registerProject {#analysis-m3-Registry-registerProject}
 
 * ``void registerProject(loc project, M3 model)``
-
 
 #### Synopsis
 
@@ -46,7 +43,6 @@ programmer should take care to call [unregister project](../../../Library/analys
 
 * ``void unregisterProject(loc project, M3 model)``
 
- 
 #### Synopsis
 
 unregister an M3 model for a certain project name.
@@ -69,7 +65,6 @@ removed from the registry, clearing memory.
 
 * ``void unregisterProjectSchemes(loc project, set[str] schemes)``
 
-  
 #### Synopsis
 
 unregister an M3 model for a set of given schemes

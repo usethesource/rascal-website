@@ -6,7 +6,6 @@ title: "module lang::rascal::ide::Outline"
 
 `import lang::rascal::ide::Outline;`
 
-
 ## function outline {#lang-rascal-ide-Outline-outline}
 
 * ``node outline(start[Module] m)``

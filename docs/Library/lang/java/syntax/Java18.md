@@ -6,7 +6,6 @@ title: "module lang::java::\\syntax::Java18"
 
 `import lang::java::\syntax::Java18;`
 
-
 This Java grammar is based on the following references:
 
 * https://docs.oracle.com/javase/specs/jls/se8/html/jls-19.html
@@ -23,5 +22,4 @@ This Java grammar is based on the following references:
 are still encoded with non-terminals)
 * same for the Statements; too many non-terminals for handy use with concrete-syntax patterns
 * the grammar is not well tested
-
 

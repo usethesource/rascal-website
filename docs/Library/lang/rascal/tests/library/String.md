@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::String"
 
 `import lang::rascal::tests::library::String;`
 
-
 ## function center1 {#lang-rascal-tests-library-String-center1}
 
 * ``test bool center1()``

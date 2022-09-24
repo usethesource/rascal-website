@@ -12,9 +12,9 @@ Declare the priority of operators.
 
 #### Syntax
 
-*  `syntax Exp = alt<sub>1</sub> > alt<sub>2</sub> > alt<sub>3</sub>` is the basic syntax for priorities.
-*  `syntax Exp = alt<sub>1</sub> | alt<sub>2</sub> > alt<sub>3</sub> | alt<sub>4</sub>`, where the `|` signifies groups of equal priority
-*  `syntax Exp = associativity ( _alt<sub>1</sub> | ... ) > _alt<sub>2</sub>`, where an associativity group denotes a group of equal priority
+*  `syntax Exp = alt~1~ > alt~2~ > alt~3~` is the basic syntax for priorities.
+*  `syntax Exp = alt~1~ | alt~2~ > alt~3~ | alt~4~`, where the `|` signifies groups of equal priority
+*  `syntax Exp = associativity ( _alt~1~ | ... ) > _alt~2~`, where an associativity group denotes a group of equal priority
 
 #### Description
 
@@ -31,7 +31,6 @@ A finer point is that Rascal restricts the filtering of priority such that it is
 | __Child Left-most:__ `E = E "+"` | No filter        | No filter                    | Filter under right            | Filter under right      |
 | __Child Right-most:__ `E = "+" E`| No filter        | Filter under left            | No filter                     | Filter under left       |
 | __Child Both:__ `E = E "+" E`    | No filter        | Filter under left            | Filter under right            | Filter under left and right  |
-
 
 #### Examples
 
@@ -54,7 +53,6 @@ A short explanation:
 *  C and D both have higher priority then E and F, which means that E and F may not be directly nested under C or D.
 *  However: E and F will be allowed under the second argument of C because it is not an outermost position. That's fine because `1 [2 + 3]` is not ambiguous. 
 
-
 Here a number of strings for this language, with brackets to show how they will be parsed: 
 
 *  "1 + 2 * 3" will be parsed as "1 + (2 * 3)" because E > F.
@@ -74,5 +72,4 @@ Here a number of strings for this language, with brackets to show how they will 
 *  When a priority does not have a filtering effect, such as in `E = E "+" > E "*"` it is usually better to use normal alternative composition: `E = E "+" | E "*"`. There is no difference in the semantics of parsing, but the latter expression is more intentional.
 *  You should not hide right or left recursion behind a nullable non-terminal, since the system will not filter the ambiguity then. Example: 
 E = left "a"? E "*" E > E "+" E will remain ambiguous. This should be written as: E = left ("a" E "*" E | E "*" E ) > E "+" E; (unfolding the optional such that E becomes explicitly left-most).
-
 

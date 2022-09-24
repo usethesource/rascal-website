@@ -6,7 +6,6 @@ title: "module demo::lang::Func::Eval1"
 
 `import demo::lang::Func::Eval1;`
 
-
 ## alias Env {#demo-lang-Func-Eval1-Env}
 
 * `map[str, int]`

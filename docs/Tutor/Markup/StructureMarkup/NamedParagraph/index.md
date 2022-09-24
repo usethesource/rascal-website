@@ -29,4 +29,3 @@ will give
 * NamedParagraphs have at least two hash signs (`##`). A single hash is reserved for the Concept level.
 * A NamedParagraph should start at the start of a line.
 
-

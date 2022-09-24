@@ -25,11 +25,9 @@ Func is a functional language with the following features:
   **  an address of a variables (denoted by `&`).
   **  derefence of a variable (denoted by `*`).
 
-
 Some features add more complexity to an interpreter, therefore
 we present four interpreters [Eval0](../../../Recipes/Languages/Func/Eval0), [Eval1](../../../Recipes/Languages/Func/Eval1), [Eval2](../../../Recipes/Languages/Func/Eval2) and [Eval2](../../../Recipes/Languages/Func/Eval2)
 that implement increasingly complex features:
-
 
 | Feature              | Eval0 | Eval1 | Eval2 | Eval3 |
 | --- | --- | --- | --- | --- |
@@ -45,7 +43,6 @@ that implement increasingly complex features:
 | assignment           |       |       | y     | y |
 | address operator     |       |       |       | y |
 | dereference operator |       |       |       | y |
-
 
 #### Examples
 
@@ -108,12 +105,10 @@ fact(n) = let
 	      end
 ```
 
-                
 For convenience, we use two versions of these examples for each _F_~i~:
 
 *  A file _F~i~_`.func` that contains the code as shown above.
 *  A file _F~i~_`.rsc` a Rascal file that declares a string variable _F~i~_ with the same content.
-
 
 For instance, `F0.rsc` looks like this 
 ```rascal
@@ -131,4 +126,3 @@ NOTE: Note the escaped `<` character in `\\<=`. This is necessary since `<` and 
 in strings to enclose interpolations (insertion of the value of a Rascal expression).
 Both symbols need to be escaped when used as literal symbol and not as interpolation.
                 
-

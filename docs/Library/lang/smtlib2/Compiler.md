@@ -6,9 +6,7 @@ title: "module lang::smtlib2::Compiler"
 
 `import lang::smtlib2::Compiler;`
 
-
 	Synopsis: Translate the SMTLIBv2 AST to string so that it can be interpreted by a SMTLIBv2 compliant solver 
-
 
 ## function toString {#lang-smtlib2-Compiler-toString}
 

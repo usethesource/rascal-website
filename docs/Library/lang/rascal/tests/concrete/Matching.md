@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::concrete::Matching"
 
 `import lang::rascal::tests::concrete::Matching;`
 
-
 ## function f {#lang-rascal-tests-concrete-Matching-f}
 
 * ``int f({A ","}* l)``

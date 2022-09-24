@@ -11,10 +11,9 @@ Union of two set values.
 
 #### Types
 
-| `Exp<sub>1</sub>`    |  `Exp<sub>2</sub>`    | `Exp<sub>1</sub> + Exp<sub>2</sub>`       |
+| `Exp~1~`    |  `Exp~2~`    | `Exp~1~ + Exp~2~`       |
 | --- | --- | --- |
-| `set[T<sub>1</sub>]` |  `set[T<sub>2</sub>]` | `set[lub(T<sub>1</sub>,T<sub>2</sub>)]`   |
-
+| `set[T~1~]` |  `set[T~2~]` | `set[lub(T~1~,T~2~)]`   |
 
 #### Description
 
@@ -22,8 +21,7 @@ The `+` operator computes set union if both operands are sets. If one of the ope
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>{1, 2, 3} + {4, 5, 6};
 set[int]: {5,1,3,2,4,6}
 rascal>{1,2,3} + {2,3,4};
@@ -33,5 +31,4 @@ set[int]: {1,3,2}
 rascal>{2} + { 2, 3, 4};
 set[int]: {3,2,4}
 ```
-
 

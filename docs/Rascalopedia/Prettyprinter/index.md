@@ -16,7 +16,6 @@ Pretty printers differ in the inputs they accept:
 *  A [parse tree](../../Rascalopedia/ParseTree) that corresponds to the source text. This variant is also called _unparser_.
 *  An [Abstract Syntax Tree](../../Rascalopedia/AbstractSyntaxTree) that corresponds to the source text.
 
-
 Pretty printers also differ in flexibility. They differ in:
 
 *  The source language(s) they can accept.

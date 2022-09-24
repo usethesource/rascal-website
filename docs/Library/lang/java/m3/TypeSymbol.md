@@ -6,7 +6,6 @@ title: "module lang::java::m3::TypeSymbol"
 
 `import lang::java::m3::TypeSymbol;`
 
-
 ## data Bound {#lang-java-m3-TypeSymbol-Bound}
 
 ```rascal

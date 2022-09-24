@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::Locations"
 
 `import lang::rascal::tests::basic::Locations;`
 
-
 ## function singleChar {#lang-rascal-tests-basic-Locations-singleChar}
 
 * ``int singleChar(str s)``

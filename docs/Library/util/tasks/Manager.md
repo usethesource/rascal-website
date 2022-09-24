@@ -6,7 +6,6 @@ title: "module util::tasks::Manager"
 
 `import util::tasks::Manager;`
 
-
 ## alias Task[&T,&N] {#util-tasks-Manager-Task[&T,&N]}
 
 * `bool (Transaction tr, type[&T] key, &N name)`

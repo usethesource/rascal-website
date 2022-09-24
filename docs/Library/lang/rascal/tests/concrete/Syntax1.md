@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::concrete::Syntax1"
 
 `import lang::rascal::tests::concrete::Syntax1;`
 
-
 ## function tX1 {#lang-rascal-tests-concrete-Syntax1-tX1}
 
 * ``test bool tX1()``

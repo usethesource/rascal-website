@@ -6,7 +6,6 @@ title: "module demo::lang::MissGrant::Step"
 
 `import demo::lang::MissGrant::Step;`
 
-
 ## alias Output {#demo-lang-MissGrant-Step-Output}
 
 * `tuple[str state, list[str] commands]`

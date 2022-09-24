@@ -16,7 +16,5 @@ Remedy: Contact the Rascal developers:
 *  Read the currently open issues at the Rascal's issue tracker at
    https://github.com/cwi-swat/rascal/issues?state=open[]. If your problem has not yet been reported by someone else, please report it here.
 
-
 If you are an expert developer and have implemented your own extension in Java, please check your own extension code first.
-
 

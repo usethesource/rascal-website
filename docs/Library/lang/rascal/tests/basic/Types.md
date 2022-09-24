@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::Types"
 
 `import lang::rascal::tests::basic::Types;`
 
-
 ## function unwrap {#lang-rascal-tests-basic-Types-unwrap}
 
 * ``Symbol unwrap(\label(str lbl, Symbol s))``

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::PatternSet2"
 
 `import lang::rascal::tests::functionality::PatternSet2;`
 
-
 ## data TYPESET {#lang-rascal-tests-functionality-PatternSet2-TYPESET}
 
 ```rascal

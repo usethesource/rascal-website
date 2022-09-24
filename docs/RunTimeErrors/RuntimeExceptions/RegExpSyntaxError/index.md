@@ -23,7 +23,7 @@ This exception is thrown when a syntactically incorrect regular expression is us
 
 The following regular expression `/+/` is incorrect (maybe `/a+/` was meant?):
 
-```rascal-shell
+```rascal-shell ,error
 rascal>/+/ := "aaaa";
 ok
 ```

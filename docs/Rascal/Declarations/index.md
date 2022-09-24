@@ -34,5 +34,3 @@ The following concepts are relevant for declarations:
 * [Annotation](../../Rascal/Declarations/Annotation)
 * [Tag](../../Rascal/Declarations/Tag)
 
-
-

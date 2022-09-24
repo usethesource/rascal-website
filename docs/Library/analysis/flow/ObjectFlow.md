@@ -6,7 +6,6 @@ title: "module analysis::flow::ObjectFlow"
 
 `import analysis::flow::ObjectFlow;`
 
-
 #### Synopsis
 
 Intermediate Language and Basic Algorithms for object flow analysis
@@ -20,7 +19,6 @@ Java to this intermediate language and then analyze object flow
 based on the simpler language.
   
 The implementation in this file is intended to work with [Core-M3](../../../Library/analysis/m3/Core.md#analysis::m3::Core-M3) models
-
 
 ## data FlowProgram {#analysis-flow-ObjectFlow-FlowProgram}
 

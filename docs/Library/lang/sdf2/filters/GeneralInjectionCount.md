@@ -6,7 +6,6 @@ title: "module lang::sdf2::filters::GeneralInjectionCount"
 
 `import lang::sdf2::filters::GeneralInjectionCount;`
 
-
 ## function injection {#lang-sdf2-filters-GeneralInjectionCount-injection}
 
 * ``default bool injection(Tree _)``

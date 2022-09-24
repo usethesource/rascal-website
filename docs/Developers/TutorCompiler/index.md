@@ -11,7 +11,7 @@ The tutor compiler translates Rascal modules and Markdown files to Docusaurus Ma
 * Indexing sub-concepts and resolving links to them (internally)
 * Implementing local tables of contents for listing nested subconcepts in the parent file
 * Collecting and linking local image files
-* Supporting subscripts and superscripts as in `Type<sub>1</sub>` and `Type^21^` by translation to Unicode
+* Supporting subscripts and superscripts as in `Type~1~` and `Type^21^` by translation MDX Text tags.
 * Collecting Rascal source modules and the function and data declarations in them to generating API documentations in markdown notation
 * Running `rascal-shell` blocks on the Rascal REPL and collecting resulting HTML visualizations as screenshots (unfinished)
 * Executing the questions DSL to produce embedded interactive questions (unfinished)
@@ -27,13 +27,11 @@ The tutor compiler is located here: [src/org/rascalmpl/library/lang/rascal/tutor
    2. use Eclipse to "Run as Java Program", also `RascalShell`
    4. use `java -jar target/rascal-<version>-SNAPSHOT.jar`
 
- 
 Note that it's indeed best to run the rascal REPL as described above, otherwise you might miss fixes in the Java-implemented part of the tutor, or other related changes in the interpreter that needed fixing to build the tutor.
 
 So start a Rascal REPL first. At least you need these three modules loaded:
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>import util::Reflective;
@@ -44,8 +42,7 @@ ok
 
 Then we create the configuration for running the compiler, using the `PathConfig` data-type from `util::Reflective`:
 
-
-```rascal-shell
+```rascal-shell ,continue
 rascal>pcfg = pathConfig(srcs=[|project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test|] , bin=|tmp:///rascal-tmp/doc|);
 PathConfig: pathConfig(
   bin=|tmp:///rascal-tmp/doc|,
@@ -58,8 +55,7 @@ Another way to link between courses is via `PathConfig.libs`. The jars in that l
 
 Now we run the compiler:
 
-
-```rascal-shell
+```rascal-shell ,continue
 rascal>compile(pcfg);
 compile(pcfg);
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Test.md|

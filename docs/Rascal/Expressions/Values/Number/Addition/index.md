@@ -11,30 +11,26 @@ Addition on numeric values.
 
 #### Syntax
 
-`Exp<sub>1</sub> + Exp<sub>2</sub>`
+`Exp~1~ + Exp~2~`
 
 #### Types
 
-
-| `Exp<sub>1</sub>`  |  `Exp<sub>2</sub>` | `Exp<sub>1</sub> + Exp<sub>2</sub>`  |
+| `Exp~1~`  |  `Exp~2~` | `Exp~1~ + Exp~2~`  |
 | --- | --- | --- |
 | `int`      |  `int`     | `int`                 |
 | `int`      |  `real`    | `real`                |
 | `real`     |  `real`    | `real`                |
 
-
 #### Description
 
-Yields the numerical sum of the values of _Exp_<sub>1</sub> and _Exp_<sub>2</sub>.
+Yields the numerical sum of the values of _Exp_~1~ and _Exp_~2~.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>12 + 13
 int: 25
 rascal>12 + 13.5
 real: 25.5
 ```
-
 

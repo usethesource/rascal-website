@@ -11,30 +11,27 @@ Greater than operator on datetime values.
 
 #### Syntax
 
-`Exp<sub>1</sub> > Exp<sub>2</sub>`
+`Exp~1~ > Exp~2~`
 
 #### Types
 
 //
 
-| `Exp<sub>1</sub>`      | `Exp<sub>2</sub>`      | `Exp<sub>1</sub> > Exp<sub>2</sub>`  |
+| `Exp~1~`      | `Exp~2~`      | `Exp~1~ > Exp~2~`  |
 | --- | --- | --- |
 | `datetime`     |  `datetime`    | `bool`               |
 
-
 #### Description
 
-Yields `true` if the `datetime` value of Exp<sub>1</sub> is later in time than the `datetime` value
-of _Exp_<sub>2</sub>, and `false` otherwise.
+Yields `true` if the `datetime` value of Exp~1~ is later in time than the `datetime` value
+of _Exp_~2~, and `false` otherwise.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>$2010-07-15$ > $2010-07-14$;
 bool: true
 rascal>$2011-07-15$ > $2010-07-15$;
 bool: true
 ```
-
 

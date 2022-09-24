@@ -14,11 +14,10 @@ Define associativity of operators
 
 #### Syntax
 
-*  `syntax Exp = Assoc Label Symbol<sub>1</sub> Symbol<sub>2</sub> ...`
-*  `syntax Exp = Assoc ( Alt<sub>1</sub> | Alt<sub>2</sub> | ... )`
-*  `syntax Exp = Assoc Symbol<sub>1</sub> Symbol<sub>2</sub> ...`
+*  `syntax Exp = Assoc Label Symbol~1~ Symbol~2~ ...`
+*  `syntax Exp = Assoc ( Alt~1~ | Alt~2~ | ... )`
+*  `syntax Exp = Assoc Symbol~1~ Symbol~2~ ...`
  
-
 Here _Assoc_ is one of: `left`, `right`, `assoc` or `non-assoc`. See [Syntax Definition](../../../../../Rascal/Declarations/SyntaxDefinition)s on how to define alternatives and [Symbol](../../../../../Rascal/Declarations/SyntaxDefinition/Symbol)s.
 
 #### Description
@@ -31,7 +30,7 @@ The semantics are that an associativity modifier will instruct the parser to dis
 *  `right` will disallow productions to directly nest in their _left-most_ position.
 *  `non-assoc` will disallow productions to directly nest in either their left-most or their right-most position.
 
-When associativity is declared for a group of productions, e.g. `left ( Alt<sub>1</sub> | _Alt <sub>2</sub>_ | Alt<sub>3</sub>)`, then each alternative will be mutually associative to each other alternative _and itself_. If an alternative of a group defines its own local associativity, as in `left ( right Alt<sub>1</sub> | Alt<sub>2</sub> | Alt<sub>3</sub>)`, then _Alt_<sub>1</sub> is right associative with respect to itself and left associative with respect to all others in the group. 
+When associativity is declared for a group of productions, e.g. `left ( Alt~1~ | _Alt ~2~_ | Alt~3~)`, then each alternative will be mutually associative to each other alternative _and itself_. If an alternative of a group defines its own local associativity, as in `left ( right Alt~1~ | Alt~2~ | Alt~3~)`, then _Alt_~1~ is right associative with respect to itself and left associative with respect to all others in the group. 
 
 A finer point is that associativity has no effect on any other position than the left-most and right-most position (see also [Priority](../../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority)). This is to guarantee that associativity does not introduce parse errors. The following tables explain when an associativity declaration filters, given two productions `father` and `child` that share an associativity group.
 | If `left (Parent | Child)`      | Parent None: `E = "[" E "]"` | Parent Left-most: `E = E "*"` |Parent  Right-most: `E = "*" E` | Parent Both: `E = E "*" E`   |
@@ -41,16 +40,12 @@ A finer point is that associativity has no effect on any other position than the
 | __Child Right-most:__ `E = "+" E`| No filter        | No filter            | No filter                     | No filter       |
 | __Child Both:__ `E = E "+" E`    | No filter        | No filter            | Filter under right            | Filter under right      |
 
-
 | If `right (Parent | Child)` | Parent None: `E = "[" E "]"` | Parent Left-most: `E = E "*"` |Parent  Right-most: `E = "*" E` | Parent Both: `E = E "*" E`   |
 | --- | --- | --- | --- | --- | --- |
 | __Child None:__ `E = "{" E "}"` | No filter        | No filter                    | No filter              | No filter               |
 | __Child Left-most:__ `E = E "+"` | No filter       | No filter                    | No filter              | No filter      |
 | __Child Right-most:__ `E = "+" E`| No filter       | Filter under left            | No filter              | Filter under left       |
 | __Child Both:__ `E = E "+" E`   | No filter        | Filter under left            | No filter              | Filter under left   |
-
-
-
 
 #### Benefits
 
@@ -70,7 +65,5 @@ A finer point is that associativity has no effect on any other position than the
 |`E = left ( E "+" | E "+" E);` | `E = E "+" > E "+" E;`  |
 |`E = right ( E "+" | E "+" E);` | `E = E "+" E > E "+" ;` |
 
-
 //
-
 

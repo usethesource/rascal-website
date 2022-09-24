@@ -12,9 +12,7 @@ It is good practice to write tests for your software.
 
 Here are our tests for Lisra:
 
-
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Lisra::Test
 
 import demo::lang::Lisra::Runtime;
@@ -50,9 +48,6 @@ test bool eval21() = eval("(begin (define fac (lambda (n) (if (\> n 1) (* n (fac
 test bool eval22() = eval("(begin (define length (lambda (x) (if(null? x) 0 (+ 1 (length (cdr x)))))) (length (quote (1 2 3))))").val == Integer(3);
 test bool eval23() = eval("(begin (define rev (lambda (x) (if (null? x) () (append (rev (cdr x)) (car x))))) (rev (quote 1 2 3)))").val == List([Integer(3), Integer(2), Integer(1)]);
 test bool eval24() = eval("(begin (define F (lambda (x) y)) (set! y 10) (F 1))").val == Integer(10);
-// end::module[]
 
 ```
-
-                
 

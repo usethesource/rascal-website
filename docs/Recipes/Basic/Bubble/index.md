@@ -10,17 +10,15 @@ Variout styles to write bubble sort.
 
 [Bubble sort](http://en.wikipedia.org/wiki/Bubble_sort) is a classical (albeit not the most efficient) technique to sort lists of values.
 We present here several styles to implement bubble sort. 
-Also see [sort](../../../Library/List.md#List-sort) for a more efficient library function for sorting.
+Also see [sort](../../../Library/List.md#List-sort/) for a more efficient library function for sorting.
 
 #### Examples
 
-
-```rascal
+```rascal 
 
 module demo::basic::Bubble
 
 import List;
-
 
 list[int] sort1(list[int] numbers) { 
   if (size(numbers) > 0) {
@@ -35,7 +33,6 @@ list[int] sort1(list[int] numbers) {
   return numbers;
 }
 
-
 list[int] sort2(list[int] numbers) {
   switch(numbers){
     case [*int nums1, int p, int q, *int nums2]:
@@ -48,13 +45,11 @@ list[int] sort2(list[int] numbers) {
    }
 }
 
-
 list[int] sort3(list[int] numbers) {
   while ([*int nums1, int p, *int nums2, int q, *int nums3] := numbers && p > q)
         numbers = nums1 + [q] + nums2 + [p] + nums3;
   return numbers;
 }
-
 
 list[int] sort4(list[int] numbers) {
   solve (numbers) {
@@ -63,7 +58,6 @@ list[int] sort4(list[int] numbers) {
   }
   return numbers;
 }
-
 
 list[int] sort5([*int nums1, int p, *int nums2, int q, *int nums3]) {
   if (p > q) 
@@ -74,13 +68,11 @@ list[int] sort5([*int nums1, int p, *int nums2, int q, *int nums3]) {
 
 default list[int] sort5(list[int] x) = x;
 
-
 list[int] sort6([*int nums1, int p, *int nums2, int q, *int nums3]) 
   = sort5([*nums1, q, *nums2, p, *nums3])
   when p > q; 
 
 default list[int] sort6(list[int] x) = x;
-
 
 bool isSorted(list[int] lst) = !any(int i <- index(lst), int j <- index(lst), (i < j) && (lst[i] > lst[j]));
 test bool sorted1b() = isSorted([10]);
@@ -105,7 +97,6 @@ when a not-yet-sorted pair is encountered, the elements are exchanged, and `sort
    the case as a whole can still fail.
 *  a default case.
 
-
 `sort3` also uses list matching but in a more declarative style: as long as there are unsorted elements in the list (possibly with intervening elements), exchange them.
 
 `sort4` is identical to `sort3`, except that the shorter `*`-notation for list variables is used and that the type declaration for the
@@ -115,7 +106,7 @@ the non-list variables has been omitted.
 
 Let's put them to the test:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::basic::Bubble;
 ok
 rascal>L = [9,8,7,6,5,4,3,2,1];
@@ -131,6 +122,4 @@ list[int]: [1,2,3,4,5,6,7,8,9]
 rascal>sort5(L);
 list[int]: [1,2,3,4,5,6,7,8,9]
 ```
-
-
 

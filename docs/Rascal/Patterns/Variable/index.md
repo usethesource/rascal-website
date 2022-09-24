@@ -24,13 +24,13 @@ or the enclosing [./If](../../../Rascal/Statements/If), [While](../../../Rascal/
 
 Initialize variable `N`
 
-```rascal-shell
+```rascal-shell 
 rascal>N = 10;
 int: 10
 ```
 and use `N` in a pattern; its value is used as value to match with:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>N := 10;
 bool: true
 rascal>N := 20;
@@ -38,7 +38,7 @@ bool: false
 ```
 Use a non-existing variable in a pattern, it is bound when the match succeeds:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import IO;
 ok
 rascal>if(M := 10)
@@ -47,5 +47,4 @@ rascal>if(M := 10)
 Match succeeded, M == 10
 ok
 ```
-
 

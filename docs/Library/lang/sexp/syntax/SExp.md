@@ -6,11 +6,9 @@ title: "module lang::sexp::\\syntax::SExp"
 
 `import lang::sexp::\syntax::SExp;`
 
-
 #### Synopsis
 
 Syntax definition for S-Expressions, based on http://people.csail.mit.edu/rivest/Sexp.txt
-
 
 ## function raw {#lang-sexp-\syntax-SExp-raw}
 

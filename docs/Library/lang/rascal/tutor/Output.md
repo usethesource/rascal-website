@@ -6,7 +6,6 @@ title: "module lang::rascal::tutor::Output"
 
 `import lang::rascal::tutor::Output;`
 
-
 ## data Output {#lang-rascal-tutor-Output-Output}
 
 ```rascal

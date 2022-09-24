@@ -6,7 +6,6 @@ title: "module demo::Queens"
 
 `import demo::Queens;`
 
-
 ## alias Pos {#demo-Queens-Pos}
 
 * `tuple[int x,int y]`

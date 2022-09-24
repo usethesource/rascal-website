@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::analysis::graphs::GraphTests"
 
 `import lang::rascal::tests::library::analysis::graphs::GraphTests;`
 
-
 ## function bottom1 {#lang-rascal-tests-library-analysis-graphs-GraphTests-bottom1}
 
 * ``test bool bottom1()``

@@ -10,24 +10,21 @@ The product of two set values.
 
 #### Syntax
 
-`Exp<sub>1</sub> * Exp<sub>2</sub>`
+`Exp~1~ * Exp~2~`
 
 #### Types
 
-
-| `Exp<sub>1</sub>`    |  `Exp<sub>2</sub>`    | `Exp<sub>1</sub> * Exp<sub>2</sub>`  |
+| `Exp~1~`    |  `Exp~2~`    | `Exp~1~ * Exp~2~`  |
 | --- | --- | --- |
-| `set[T<sub>1</sub>]` |  `set[T<sub>2</sub>]` | `rel[T<sub>1</sub>,T<sub>2</sub>]`   |
-
+| `set[T~1~]` |  `set[T~2~]` | `rel[T~1~,T~2~]`   |
 
 #### Description
 
-Yields a relation resulting from the product of the values of _Exp_<sub>1</sub> and _Exp_<sub>2</sub>. It contains a tuple for each combination of values from both arguments.
+Yields a relation resulting from the product of the values of _Exp_~1~ and _Exp_~2~. It contains a tuple for each combination of values from both arguments.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>{1, 2, 3} * {4, 5, 6};
 rel[int,int]: {
   <1,5>,
@@ -43,7 +40,7 @@ rel[int,int]: {
 ```
 A card deck can be created as follows:
 
-```rascal-shell
+```rascal-shell 
 rascal>{"clubs", "hearts", "diamonds", "spades"} * {1,2,3,4,5,6,7,8,9,10,11,12,13};
 rel[str,int]: {
   <"hearts",10>,
@@ -100,5 +97,4 @@ rel[str,int]: {
   <"diamonds",8>
 }
 ```
-
 

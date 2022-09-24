@@ -17,4 +17,3 @@ A language is the (possible infinite) set of strings that are defined by a gramm
 *  The language of strings that correspond to even numbers: the infinite set `{"0", "2", "4", "6", ...}`
 *  The Java language: the infinite set of syntactically correct Java programs.
 
-

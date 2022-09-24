@@ -6,7 +6,6 @@ title: "module analysis::m3::AST"
 
 `import analysis::m3::AST;`
 
-
 #### Synopsis
 
 a symbolic representation for abstract syntax trees of programming languages.
@@ -39,7 +38,6 @@ a variable declaration, etc.
 
 *  Even though different languages may map to the same syntactic construct, this does not mean that the semantics is the same. Downstream
 metrics or other analysis tools should still take semantic differences between programming languages into account. 
-
 
 ## data \AST {#analysis-m3-AST-\AST}
 

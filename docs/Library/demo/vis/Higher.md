@@ -6,4 +6,3 @@ title: "module demo::vis::Higher"
 
 `import demo::vis::Higher;`
 
-

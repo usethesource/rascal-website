@@ -22,8 +22,7 @@ This construct is used for:
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>data Lang = add(Lang l, Lang r) | number(int i);
@@ -54,5 +53,4 @@ Exp: add(
         number(1),
         number(2)))))
 ```
-
 

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::imports::ModuleInitRange"
 
 `import lang::rascal::tests::imports::ModuleInitRange;`
 
-
 ## function rangeInit {#lang-rascal-tests-imports-ModuleInitRange-rangeInit}
 
 * ``test bool rangeInit()``

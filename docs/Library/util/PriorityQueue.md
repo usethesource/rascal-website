@@ -6,8 +6,6 @@ title: "module util::PriorityQueue"
 
 `import util::PriorityQueue;`
 
-
-
 #### Synopsis
 
 A `PriorityQueue` datatype and associated functions.
@@ -40,7 +38,6 @@ Provides the following functions:
 #### Pitfalls
 
 Currently, both priority and associated value ("payload") have to be integers. This will be generalized.
-
 
 ## data BinomialTree {#util-PriorityQueue-BinomialTree}
 

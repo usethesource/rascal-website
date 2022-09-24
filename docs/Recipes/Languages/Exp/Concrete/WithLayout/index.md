@@ -16,11 +16,9 @@ In Rascal, the major difference between lexical syntax and non-lexical syntax is
   each element. 
 * Which 'layout' (whitespace and/or source code comments) will be accepted has to be defined explicitly by the grammar writer.
 
-
 The following example extends the grammar for `Exp` in [No Layout](../../../../../Recipes/Languages/Exp/Concrete/NoLayout) with a layout definition:
 
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Exp::Concrete::WithLayout::Syntax
 
 layout Whitespace = [\t-\n\r\ ]*; // <1>
@@ -40,8 +38,7 @@ start syntax Exp
 
 And now we can use spaces in our definition of the eval function as well:
 
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Exp::Concrete::WithLayout::Eval
 import demo::lang::Exp::Concrete::WithLayout::Syntax;
 
@@ -54,7 +51,6 @@ int eval((Exp)`<IntegerLiteral l>`) = toInt("<l>");
 int eval((Exp)`<Exp e1> * <Exp e2>`) = eval(e1) * eval(e2);  
 int eval((Exp)`<Exp e1> + <Exp e2>`) = eval(e1) + eval(e2); 
 int eval((Exp)`( <Exp e> )`) = eval(e);                    
-// end::module[]
 
 value main() {
   return eval(" 2+3");
@@ -65,7 +61,7 @@ test bool tstEval4() = eval(" 3 + 4*5 ") == 23;
 
 ```
 
-Note that [Pattern Matching](../../../../../RascalConcepts/PatternMatching) will _ignore_ all trees in layout positions, such that the parse tree of "1 + \\n1" will match against `<Exp e1> + <Exp e2>`. The same goes for equality on parse trees.
+Note that [Pattern Matching](../../../../../RascalConcepts/PatternMatching/) will _ignore_ all trees in layout positions, such that the parse tree of "1 + \\n1" will match against `<Exp e1> + <Exp e2>`. The same goes for equality on parse trees.
 
 For the above example Rascal will insert the `Whitespace` non-terminal between every element of the syntax rules for `Exp`.
 Moreover, for the start production (See [No Layout](../../../../../Recipes/Languages/Exp/Concrete/NoLayout)) `Whitespace` will be added before and after the `Exp`.
@@ -86,7 +82,7 @@ syntax start[Exp] = Whitespace Exp top Whitespace;
 
 To put this all to the test:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Exp::Concrete::WithLayout::Syntax;
 ok
 rascal>import demo::lang::Exp::Concrete::WithLayout::Eval;
@@ -102,5 +98,4 @@ int: 20
 #### Pitfalls
 
 *  If the grammar for `Exp` would contain an optional symbol, as in `syntax Exp = Exp "+"? Exp`, then it would be ambiguous. Does a space in "1 1", belong to the `Whitespace` before or after the missing `+`? To disambiguate the `layout` definition should be changed to `layout Whitespace = [\ \t\n\r]* !>> [\ \t\n\r]`. That will make sure the space goes with the first Whitespace, because even an empty Whitespace list must never be followed immediately by a space.
-
 

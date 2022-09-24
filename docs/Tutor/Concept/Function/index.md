@@ -18,7 +18,6 @@ _MarkedText_
 
 Here is an example for the `readFile` function:
 
-
 #### Syntax
 
 ```
@@ -26,5 +25,4 @@ Here is an example for the `readFile` function:
 
 str readFile(loc file) throws UnsupportedScheme(loc file), PathNotFound(loc file), IOError(str msg)
 ```
-
 

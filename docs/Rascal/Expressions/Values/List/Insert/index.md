@@ -13,10 +13,9 @@ add an element in front of a list
 
 //
 
-| `Exp<sub>1</sub>`     |  `Exp<sub>2</sub>`     | `Exp<sub>1</sub> + Exp<sub>2</sub>`       |
+| `Exp~1~`     |  `Exp~2~`     | `Exp~1~ + Exp~2~`       |
 | --- | --- | --- |
-| `T<sub>1</sub>`       |  `list[T<sub>2</sub>]` | `list[lub(T<sub>1</sub>,T<sub>2</sub>)]`  |
-
+| `T~1~`       |  `list[T~2~]` | `list[lub(T~1~,T~2~)]`  |
 
 #### Description
 
@@ -24,8 +23,7 @@ The `+` operator can insert an element in front of a list. Note that `+` is one 
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>1 + []
 list[int]: [1]
 rascal>1 + [2]
@@ -40,18 +38,17 @@ list[int]: [1,2,3]
 
 This is concatenation:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>[1] + [2]
 list[int]: [1,2]
 ```
 To insert a list as an element, use extra brackets:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>[[1]] + [2]
 list[value]: [
   [1],
   2
 ]
 ```
-
 

@@ -6,7 +6,6 @@ title: "module demo::common::ColoredTrees"
 
 `import demo::common::ColoredTrees;`
 
-
 ## data ColoredTree {#demo-common-ColoredTrees-ColoredTree}
 
 ```rascal

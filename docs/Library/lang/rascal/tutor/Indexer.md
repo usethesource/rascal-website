@@ -6,7 +6,6 @@ title: "module lang::rascal::tutor::Indexer"
 
 `import lang::rascal::tutor::Indexer;`
 
-
 ## alias Index {#lang-rascal-tutor-Indexer-Index}
 
 * `rel[str reference, str url]`

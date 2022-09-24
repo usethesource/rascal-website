@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::concrete::SubscriptAndSlice"
 
 `import lang::rascal::tests::concrete::SubscriptAndSlice;`
 
-
 ## function eqNoSrc {#lang-rascal-tests-concrete-SubscriptAndSlice-eqNoSrc}
 
 * ``bool eqNoSrc(Tree t, Tree u)``

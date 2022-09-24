@@ -36,7 +36,6 @@ The content of the header paragraphs is either directly derived from source code
 * `@description` is a multi-line explanantion of the definition.
 * `@benefits`, `@pitfalls`, `@examples`, `@types`, `@name` and `@function` each follow the intent of the standard [Concept](../../Tutor/Concept) headers.
 
-
 #### Benefits
 
 * A (small) part of documentation writing is automated. The information about the name of a function, data or annotation declaration, or its signature is always consistent.

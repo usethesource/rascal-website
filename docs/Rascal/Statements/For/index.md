@@ -11,7 +11,7 @@ For loop.
 
 #### Syntax
 
-`for ( Exp<sub>1</sub> , Exp<sub>2</sub> , ... , Exp~n~ ) Statement;`
+`for ( Exp~1~ , Exp~2~ , ... , Exp~n~ ) Statement;`
 
 #### Description
 
@@ -25,8 +25,7 @@ the value of a for statement consists of all values contributed by [Append](../.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>for(int n <- [1 .. 5]) println("n = <n>");
@@ -39,5 +38,4 @@ list[void]: []
 rascal>for(int n <- [1 .. 5]) append n * n;
 list[int]: [1,4,9,16]
 ```
-
 

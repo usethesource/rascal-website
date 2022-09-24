@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::concrete::Locations"
 
 `import lang::rascal::tests::concrete::Locations;`
 
-
 ## function main {#lang-rascal-tests-concrete-Locations-main}
 
 * ``value main()``

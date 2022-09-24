@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends1::CHECKTYPES"
 
 `import lang::rascal::tests::extends1::CHECKTYPES;`
 
-
 ## function CTcomparable1 {#lang-rascal-tests-extends1-CHECKTYPES-CTcomparable1}
 
 * ``test bool CTcomparable1()``

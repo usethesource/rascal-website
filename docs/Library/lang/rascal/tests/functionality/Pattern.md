@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::Pattern"
 
 `import lang::rascal::tests::functionality::Pattern;`
 
-
 ## data F {#lang-rascal-tests-functionality-Pattern-F}
 
 ```rascal

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::Declaration"
 
 `import lang::rascal::tests::functionality::Declaration;`
 
-
 ## function localTypeInferenceBottomScope {#lang-rascal-tests-functionality-Declaration-localTypeInferenceBottomScope}
 
 * ``test bool localTypeInferenceBottomScope()``

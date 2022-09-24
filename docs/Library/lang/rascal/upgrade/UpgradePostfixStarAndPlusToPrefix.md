@@ -6,7 +6,6 @@ title: "module lang::rascal::upgrade::UpgradePostfixStarAndPlusToPrefix"
 
 `import lang::rascal::upgrade::UpgradePostfixStarAndPlusToPrefix;`
 
-
 ## function report {#lang-rascal-upgrade-UpgradePostfixStarAndPlusToPrefix-report}
 
 * ``list[Message] report(loc root)``

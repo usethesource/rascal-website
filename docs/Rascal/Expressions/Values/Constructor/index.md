@@ -8,16 +8,15 @@ Constructors create values for user-defined datatypes (Algebraic Datatypes).
 
 #### Syntax
 
-`Name ( Exp<sub>1</sub>, Exp<sub>2</sub>, ... )`
+`Name ( Exp~1~, Exp~2~, ... )`
 
 #### Types
 
 //
 
-| `Exp<sub>1</sub>` | `Exp<sub>2</sub>` | ... |  `Name ( Exp<sub>1</sub>, Exp<sub>2</sub>, ... )`  |
+| `Exp~1~` | `Exp~2~` | ... |  `Name ( Exp~1~, Exp~2~, ... )`  |
 | --- | --- | --- | --- |
-| `T<sub>1</sub>`   | `T<sub>2</sub>`   | ... | Depends on ADT declaration           |
-
+| `T~1~`   | `T~2~`   | ... | Depends on ADT declaration           |
 
 #### Description
 
@@ -40,15 +39,14 @@ Observe that the syntax of a constructor is identical to the syntax of an functi
 
 First, define a datatype `WF` for word frequencies:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>data WF = wf(str word, int freq);
 ok
 ```
 Then construct a new `WF` value by calling the constructor `wf` with appropriate arguments:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>wf("Rascal", 10000);
 WF: wf("Rascal",10000)
 ```
-
 

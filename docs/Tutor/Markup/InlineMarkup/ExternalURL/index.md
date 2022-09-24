@@ -11,7 +11,6 @@ Refer to an external URL.
 * `URL`
 * `URL[MarkedText]`
 
-
 #### Description
 
 Creates a link to an external url _URL_.
@@ -28,5 +27,4 @@ gives http://www.rascal-mpl.org and
 [Rascal](http://www.rascal-mpl.org)
 ```
 gives [Rascal](http://www.rascal-mpl.org). Try it!
-
 

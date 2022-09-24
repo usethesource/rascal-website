@@ -6,7 +6,6 @@ title: "module demo::lang::Exp::Concrete::NoLayout::Eval"
 
 `import demo::lang::Exp::Concrete::NoLayout::Eval;`
 
-
 ## function eval {#demo-lang-Exp-Concrete-NoLayout-Eval-eval}
 
 * ``int eval(str txt)``

@@ -11,15 +11,13 @@ Set values.
 
 #### Syntax
 
-`{ Exp<sub>1</sub>, Exp<sub>2</sub>, ... }`
+`{ Exp~1~, Exp~2~, ... }`
 
 #### Types
 
-
-|  `Exp<sub>1</sub>` |  `Exp<sub>2</sub>` |  ...  |  `{ Exp<sub>1</sub>, Exp<sub>2</sub>, ... }`    |
+|  `Exp~1~` |  `Exp~2~` |  ...  |  `{ Exp~1~, Exp~2~, ... }`    |
 | --- | --- | --- | --- |
-| _T<sub>1</sub>_    | _T<sub>2</sub>_    |  ...  |  set[ lub(_T<sub>1</sub>_, _T<sub>2</sub>_, ... ) ]  |
-
+| _T~1~_    | _T~2~_    |  ...  |  set[ lub(_T~1~_, _T~2~_, ... ) ]  |
 
 #### Description
 
@@ -30,7 +28,6 @@ A set is an unordered sequence of values and has the following properties:
 *  A set contains an element only once. In other words, duplicate elements are eliminated and no 
   matter how many times an element is added to a set, it will occur in it only once.
 
-
 The type of a set has the form `set[T]`,
 where `T` is an arbitrary type.
 
@@ -39,7 +36,6 @@ To achieve splicing of these elements, i.e., the insertion of the elements of th
 it has to be prefixed by the splice operator `*`.
 
 The following operators are provided on sets:
-* [Set](../../../../Rascal/Expressions/Values/Set)
 * [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension)
 * [Difference](../../../../Rascal/Expressions/Values/Set/Difference)
 * [Equal](../../../../Rascal/Expressions/Values/Set/Equal)
@@ -56,11 +52,10 @@ The following operators are provided on sets:
 * [in](../../../../Rascal/Expressions/Values/Set/in)
 * [notin](../../../../Rascal/Expressions/Values/Set/notin)
 
-There are also [library functions](../../../../Library/Set.md) available for Sets.
+There are also [library functions](../../../../Library/Set.md/) available for Sets.
 ##  Set types 
 
-
-```rascal-shell
+```rascal-shell 
 rascal>{1, 2, 3};
 set[int]: {1,3,2}
 rascal>{<1,10>, <2,20>, <3,30>};
@@ -88,27 +83,24 @@ Note that
 *  `{1, 2, 3}` and `{3, 2, 1}` are identical sets (since order is not relevant).
 *  `{1, 2, 3}` and `{1, 2, 3, 1}` are also identical sets (since duplication is not relevant).
 
-
-
 ##  Set splicing 
 
 Introduce a set variable `S`
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>S = {1, 2, 3};
 set[int]: {1,3,2}
 ```
 and observe how the value of `S` is added as single element in another set:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>{10, S, 20};
 set[value]: {10,20,{1,3,2}}
 ```
 or how its elements are added as elements to the other set:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>{10, *S, 20};
 set[int]: {10,1,3,20,2}
 ```
-
 

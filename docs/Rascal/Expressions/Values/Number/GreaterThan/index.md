@@ -11,26 +11,23 @@ Greater than operator on numeric values.
 
 #### Syntax
 
-`Exp<sub>1</sub> > Exp<sub>2</sub>`
+`Exp~1~ > Exp~2~`
 
 #### Types
 
-
-| `Exp<sub>1</sub>`  |  `Exp<sub>2</sub>` | `Exp<sub>1</sub> > Exp<sub>2</sub>`   |
+| `Exp~1~`  |  `Exp~2~` | `Exp~1~ > Exp~2~`   |
 | --- | --- | --- |
 | `int`      |  `int`     | `bool`                |
 | `int`      |  `real`    | `bool`                |
 | `real`     |  `real`    | `bool`                |
 
-
 #### Description
 
-Yields `true` if the value of Exp<sub>1</sub> is numerically greater than the value of Exp<sub>2</sub>, and `false` otherwise.
+Yields `true` if the value of Exp~1~ is numerically greater than the value of Exp~2~, and `false` otherwise.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>13 > 12
 bool: true
 rascal>12 > 13
@@ -40,5 +37,4 @@ bool: true
 rascal>12.5 > 13
 bool: false
 ```
-
 

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::imports::IMP1"
 
 `import lang::rascal::tests::imports::IMP1;`
 
-
 ## function dup_imp1 {#lang-rascal-tests-imports-IMP1-dup_imp1}
 
 * ``str dup_imp1(str s)``

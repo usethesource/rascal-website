@@ -6,7 +6,6 @@ title: "module util::Memo"
 
 `import util::Memo;`
 
-
 ## data MemoExpireConfiguration {#util-Memo-MemoExpireConfiguration}
 
 ```rascal

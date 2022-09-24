@@ -18,7 +18,6 @@ Filter values in a [Comprehension](../../../../Rascal/Expressions/Values/List/Co
 | --- |
 | `bool`   |
 
-
 #### Description
 
 A  filter is a boolean-valued expression. 
@@ -31,7 +30,7 @@ and that another combination should be tried by going back to the previous gener
 
 Adding a filter to a comprehension, may restrict the values that are included in the result of the comprehension:
 
-```rascal-shell
+```rascal-shell 
 rascal>[ X * X | int X <- [1, 2, 3, 4, 5, 6] ];
 list[int]: [1,4,9,16,25,36]
 rascal>[ X * X | int X <- [1, 2, 3, 4, 5, 6], X % 3 == 0 ];
@@ -39,7 +38,7 @@ list[int]: [9,36]
 ```
 Filters can also be applied to values produced by several generators:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>[<X, Y> | int X <- [0 .. 10], int Y <- [0 .. 10], X + Y == 10]
 lrel[int,int]: [
   <1,9>,
@@ -53,5 +52,4 @@ lrel[int,int]: [
   <9,1>
 ]
 ```
-
 

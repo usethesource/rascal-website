@@ -11,35 +11,30 @@ Less than or equal operator on tuple values.
 
 #### Syntax
 
-`Exp<sub>1</sub> <= Exp<sub>2</sub>`
+`Exp~1~ <= Exp~2~`
 
 #### Types
 
-
-| `Exp<sub>1</sub>`                      |  `Exp<sub>2</sub>`                      | `Exp<sub>1</sub> <= Exp<sub>2</sub>`  |
+| `Exp~1~`                      |  `Exp~2~`                      | `Exp~1~ <= Exp~2~`  |
 | --- | --- | --- |
-| `tuple[ T<sub>11</sub>, T<sub>12</sub>, ... ]` |  `tuple[ T<sub>21</sub>, T<sub>22</sub>, ... ]` | `bool`                |
-
+| `tuple[ T~11~, T~12~, ... ]` |  `tuple[ T~21~, T~22~, ... ]` | `bool`                |
 
 #### Description
 
 Yields `true` if 
 
 *  both tuples are equal, or
-*  the left-most element in the tuple value of _Exp<sub>1</sub>_ that differs from the corresponding element in the tuple 
-value of _Exp_<sub>2</sub> is less than that element in _Exp_<sub>2</sub>.
-
+*  the left-most element in the tuple value of _Exp~1~_ that differs from the corresponding element in the tuple 
+value of _Exp_~2~ is less than that element in _Exp_~2~.
 
 Otherwise the result if `false`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal><1, "abc", true> <= <1, "abc", true>;
 bool: true
 rascal><1, "abc", true> <= <1, "def", true>;
 bool: true
 ```
-
 

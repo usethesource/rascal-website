@@ -17,8 +17,8 @@ against a number of `case` patterns.
 
 ```rascal
 switch ( _Exp_ ) {
-case _PatternWithAction<sub>1</sub>_;
-case _PatternWithAction<sub>2</sub>_;
+case _PatternWithAction~1~_;
+case _PatternWithAction~2~_;
 ...
 default: ...
 }
@@ -37,7 +37,7 @@ There is no fall through from one case to the next.
 
 Suppose we want to naively analyze a sentence and print the topic it is about:
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>S = "Princess Leila sipped from her rum punch";
@@ -56,5 +56,4 @@ From the printed message you can infer that the cases are tried in the order in 
 #### Pitfalls
 
 The switch statement does not yet return a value, this will be changed.
-
 

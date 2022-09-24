@@ -11,25 +11,22 @@ Compute the product of two lists.
 
 #### Syntax
 
-`Exp<sub>1</sub> * Exp<sub>2</sub>`
+`Exp~1~ * Exp~2~`
 
 #### Types
 
-
-| `Exp<sub>1</sub>`     |  `Exp<sub>2</sub>`     | `Exp<sub>1</sub> * Exp<sub>2</sub>`          |
+| `Exp~1~`     |  `Exp~2~`     | `Exp~1~ * Exp~2~`          |
 | --- | --- | --- |
-| `list[T<sub>1</sub>]` |  `list[T<sub>2</sub>]` | `list[tuple[T<sub>1</sub>,T<sub>2</sub>]]`   |
-
+| `list[T~1~]` |  `list[T~2~]` | `list[tuple[T~1~,T~2~]]`   |
 
 #### Description
 
-Yields a list of tuples resulting from the product of the values of _Exp_<sub>1</sub> and _Exp_<sub>2</sub>. 
+Yields a list of tuples resulting from the product of the values of _Exp_~1~ and _Exp_~2~. 
 It contains a tuple for each combination of values from both arguments.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>[1, 2, 3] * [4, 5, 6];
 lrel[int,int]: [
   <1,4>,
@@ -45,7 +42,7 @@ lrel[int,int]: [
 ```
 Here is a concise way to create a deck of cards:
 
-```rascal-shell
+```rascal-shell 
 rascal>["clubs", "hearts", "diamonds", "spades"] * [1 .. 13];
 lrel[str,int]: [
   <"clubs",1>,
@@ -98,5 +95,4 @@ lrel[str,int]: [
   <"spades",12>
 ]
 ```
-
 

@@ -19,7 +19,6 @@ _MarkedText_
 The syntax section is intended to describe syntactic aspects of language constructs.
 The contents of this section are arbitrary text.
 
-
 #### Examples
 
 The syntax section for an if-then statement can be written as:
@@ -29,5 +28,4 @@ The syntax section for an if-then statement can be written as:
 
 `if ( Exp ) Statement;`
 ```
-
 

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::KeywordParameter"
 
 `import lang::rascal::tests::functionality::KeywordParameter;`
 
-
 ## function f {#lang-rascal-tests-functionality-KeywordParameter-f}
 
 * ``str f(int i, str k = "empty", int j = 0)``

@@ -13,8 +13,7 @@ and language support for a number of common exchange formats and programming lan
 The basic `Prelude` modules that contain utility functions for daily usage are right here in the 
 root of the library. To include them all in one go, use the [Prelude](../Library/Prelude.md) module:
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Prelude;
 ok
 rascal>println("Hello Rascal!");
@@ -28,8 +27,7 @@ The [IO](../Library/IO.md) module is otherwise most commonly used, because it co
 The standard library has its own [Location](../Rascal/Expressions/Values/Location) scheme `std` which can be used to explore
 its folder structure on the REPL. Note that source locations have auto-complete for the path component.
 
-
-```rascal-shell
+```rascal-shell 
 rascal>|std:///|.ls
 list[loc]: [
   |std:///analysis|,
@@ -60,6 +58,26 @@ list[loc]: [
   |std:///Prelude$ReleasableCallback.class|,
   |std:///Prelude$Sorting.class|,
   |std:///Prelude.class|,
+<<<<<<< HEAD
+=======
+  |std:///ValueIO.rsc|,
+  |std:///Prelude$NodeComparator.class|,
+  |std:///lang|,
+  |std:///Type.rsc|,
+  |std:///index.md|,
+  |std:///Prelude$3.class|,
+  |std:///Relation.rsc|,
+  |std:///Prelude$Distance.class|,
+  |std:///DateTime.rsc|,
+  |std:///Boolean.rsc|,
+  |std:///Prelude$1.class|,
+  |std:///ListRelation.rsc|,
+  |std:///List.rsc|,
+  |std:///resource|,
+  |std:///Content.rsc|,
+  |std:///Traversal.rsc|,
+  |std:///Grammar.rsc|,
+>>>>>>> 2a7f585b (all links end with a slash now..)
   |std:///Prelude.rsc|,
   |std:///Relation.rsc|,
   |std:///resource|,
@@ -76,7 +94,6 @@ list[loc]: [
 These are the entry points to the entire library:
 * [Analysis](../Library/analysis/index.md)
 * [Demo](../Library/demo/index.md)
-* [Index](../Library/lang/rascal/tutor/Indexer.md#lang::rascal::tutor::Indexer-Index)
 * [Lang](../Library/lang/index.md)
 * [Resource](../Library/resource/index.md)
 * [Util](../Library/util/index.md)
@@ -105,7 +122,7 @@ These are the entry points to the entire library:
 
 * The standard library comes with "batteries included", a number of reusable data-types and data-structures for building code analysis and manipulation tools. See for example [Core](../Library/analysis/m3/Core.md).
 * Utility functions are sorted per data-type. So if you need something that operates on [List](../Rascal/Expressions/Values/List)then look in the [List](../Library/List.md) module of the library. For [Set](../Rascal/Expressions/Values/Set) look in [Set](../Library/Set.md), etc.
-* To process [CSV](../Library/lang/csv/index.md), [XML](../Library/lang/xml/index.md), [JSON](../Library/lang/json/index.md), [YAML](../Library/lang/yaml/index.md) you will find utilities here, even support to access [SQL](../Library/resource/jdbc/JDBC.md) databases via JDBC.
+* To process [CSV](../Library/lang/csv/index.md/), [XML](../Library/lang/xml/index.md/), [JSON](../Library/lang/json/index.md/), [YAML](../Library/lang/yaml/index.md/) you will find utilities here, even support to access [SQL](../Library/resource/jdbc/JDBC.md/) databases via JDBC.
 
 #### Pitfalls
 

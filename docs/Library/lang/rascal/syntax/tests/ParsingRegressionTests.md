@@ -6,7 +6,6 @@ title: "module lang::rascal::\\syntax::tests::ParsingRegressionTests"
 
 `import lang::rascal::\syntax::tests::ParsingRegressionTests;`
 
-
 ## function hasAmb {#lang-rascal-\syntax-tests-ParsingRegressionTests-hasAmb}
 
 * ``bool hasAmb(Tree x)``

@@ -18,14 +18,13 @@ Warning: This does not seem to work properly. There is a bug.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 ```
 Some example data type which contains generic values as well as specific expressions:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>data Exp = val(value v) | add(Exp l, Exp r) | sub(Exp l, Exp r);
 ok
 rascal>ex = add(add(val("hello"(1,2)),val("bye")), sub(val(1),val(2)));
@@ -39,7 +38,7 @@ Exp: add(
 ```
 Here we constrain the match to find only Exps:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>visit (ex) {
 >>>>>>>  case [Exp] str name(_,_) : println("node name is <name>");
 >>>>>>>}
@@ -58,7 +57,7 @@ Exp: add(
 ```
 Here we do not constrain the same pattern:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>visit (ex) {
 >>>>>>>  case str name(_,_) : println("node name is <name>");
 >>>>>>>}
@@ -75,5 +74,4 @@ Exp: add(
     val(1),
     val(2)))
 ```
-
 

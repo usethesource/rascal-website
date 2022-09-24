@@ -19,7 +19,7 @@ Remedies:
 
 Referring to the non-existing module `M` gives errors:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>M::x = 3;
 ok
 rascal>M::f(3);
@@ -27,5 +27,4 @@ rascal>M::f(3);
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredModule/UndeclaredModule.html|
 ok
 ```
-
 

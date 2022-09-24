@@ -10,24 +10,23 @@ Built-in and user-defined datatypes.
 
 Rascal provides a rich set of datatypes:
 
-*  [Boolean](../../Rascal/Expressions/Values/Boolean) (`bool`).
-*  Infinite precision [Integer](../../Rascal/Expressions/Values/Integer) (`int`), 
-   [Real](../../Rascal/Expressions/Values/Real) (`real`), and [Number](../../Rascal/Expressions/Values/Number) (`num`).
-*  [String](../../Rascal/Expressions/Values/String)s (`str`) that can act as templates with embedded expressions and statements. 
-*  Source code [Location](../../Rascal/Expressions/Values/Location)s (`loc`) based on an extension of Universal Resource Identifiers (URI) that allow precise description of text areas in local and remote files.
-*  Date and time values ([DateTime](../../Rascal/Expressions/Values/DateTime), `datetime`).
-*  [List](../../Rascal/Expressions/Values/List) (`list`).
-*  [Tuple](../../Rascal/Expressions/Values/Tuple) (`tuple`).
-*  [Set](../../Rascal/Expressions/Values/Set) (`set`).
-*  [Map](../../Rascal/Expressions/Values/Map) (`map`) 
-*  [Relation](../../Rascal/Expressions/Values/Relation) (`rel`). 
-*  Untyped tree structures ([Node](../../Rascal/Expressions/Values/Node), `node`).  
-*  User-defined algebraic datatypes ([Algebraic Data Type](../../Rascal/Declarations/AlgebraicDataType), `data`) allow the introduction of problem-specific types and are a subtype of node. 
+*  [Boolean](../../Rascal/Expressions/Values/Boolean/) (`bool`).
+*  Infinite precision [Integer](../../Rascal/Expressions/Values/Integer/) (`int`), 
+   [Real](../../Rascal/Expressions/Values/Real/) (`real`), and [Number](../../Rascal/Expressions/Values/Number/) (`num`).
+*  [String](../../Rascal/Expressions/Values/String/)s (`str`) that can act as templates with embedded expressions and statements. 
+*  Source code [Location](../../Rascal/Expressions/Values/Location/)s (`loc`) based on an extension of Universal Resource Identifiers (URI) that allow precise description of text areas in local and remote files.
+*  Date and time values ([DateTime](../../Rascal/Expressions/Values/DateTime/), `datetime`).
+*  [List](../../Rascal/Expressions/Values/List/) (`list`).
+*  [Tuple](../../Rascal/Expressions/Values/Tuple/) (`tuple`).
+*  [Set](../../Rascal/Expressions/Values/Set/) (`set`).
+*  [Map](../../Rascal/Expressions/Values/Map/) (`map`) 
+*  [Relation](../../Rascal/Expressions/Values/Relation/) (`rel`). 
+*  Untyped tree structures ([Node](../../Rascal/Expressions/Values/Node/), `node`).  
+*  User-defined algebraic datatypes ([Algebraic Data Type](../../Rascal/Declarations/AlgebraicDataType/), `data`) allow the introduction of problem-specific types and are a subtype of node. 
   This makes it possible to have typed
   and untyped views on the same data. 
   A special case are syntax trees that are the result of parsing source files are represented 
   as datatypes (`Tree`).
-
 
 There is a wealth of built-in operators and library functions available on the standard datatypes. 
 
@@ -54,13 +53,12 @@ Here are some examples of the built-in data types:
 | `str`                     | `"abc"`, `"first\nnext"`, `"result: <X>"` |
 | `loc`                     | `\|file:///etc/passwd\|` |
 | `dateTime`                | `$2101-09-05T07:16:19.714+0200$` |
-| `tuple[_T<sub>1</sub>,...,T~n~]`	| `<1,2>`, `<"john", 43, true>` |
+| `tuple[_T~1~,...,T~n~]`	| `<1,2>`, `<"john", 43, true>` |
 | `list[T]`               | `[]`, `[1]`, `[1,2,3]`, `[true, 2, "abc"]` |
 | `set[T]`                | `{}`, `{1,2,3,5,7}`, `{"john", 4.0}` |
-| `rel[_T<sub>1</sub>,...,T~n~]`   | `{<1,2>,<2,3>,<1,3>}`, `{<1,10,100>, <2,20,200>}` |
+| `rel[_T~1~,...,T~n~]`   | `{<1,2>,<2,3>,<1,3>}`, `{<1,10,100>, <2,20,200>}` |
 | `map[T, U]`           | `()`, `(1:true, 2:false)`, `("a":1, "b":2)` |
 | `node`                    | `f()`, `add(x,y)`, `g("abc", [2,3,4])` |
-
 
 A fragment of the datatype that defines the abstract syntax for statements (assignment, if, while) in a programming language would look as follows:
 
@@ -74,7 +72,7 @@ data STAT = asgStat(Id name, EXP exp)
 
 Here are some examples how Rascal responds to values of the above built-in datatypes:
 
-```rascal-shell
+```rascal-shell 
 rascal>true;
 bool: true
 rascal>101;
@@ -104,6 +102,4 @@ map[str, int]: ("oranges":150,"bananas":75,"apples":100)
 rascal>"abc"(1, 2, 3);
 node: "abc"(1,2,3)
 ```
-
-
 

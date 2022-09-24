@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::analysis::formalconcepts::FCATest"
 
 `import lang::rascal::tests::library::analysis::formalconcepts::FCATest;`
 
-
 ## data IntProperties {#lang-rascal-tests-library-analysis-formalconcepts-FCATest-IntProperties}
 
 ```rascal

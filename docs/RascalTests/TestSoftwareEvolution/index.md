@@ -58,7 +58,6 @@ QType: <A:list[arb[int,real,str,loc]]>
 
 QType: <A:map[str,arb]>
 
-
 QType: 
 make: A = int
 type: set[int]
@@ -139,10 +138,4 @@ public bool isPalindrome(list[str] words){
 test: isPalindrome(["a", "b", "b", "a"]) == true;
 
 ``````
-
-
-
-
-
-
 

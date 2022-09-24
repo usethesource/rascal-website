@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends1::Base3"
 
 `import lang::rascal::tests::extends1::Base3;`
 
-
 ## function EXTENDED_FUNCTION {#lang-rascal-tests-extends1-Base3-EXTENDED_FUNCTION}
 
 * ``default str EXTENDED_FUNCTION(Tree _)``

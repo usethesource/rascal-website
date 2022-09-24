@@ -17,8 +17,7 @@ that matches _Pat_ and is used to match, for instance, tree nodes at an arbitrar
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>data ColoredTree = leaf(int N)
@@ -40,7 +39,7 @@ ColoredTree: red(
 ```
 Now we match for `black` nodes with `leaf(4)` as second argument:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>for(/black(_,leaf(4)) := T)
 >>>>>>>    println("Match!");
     println("Match!");
@@ -53,7 +52,7 @@ In order to print the actual values of the matches, we would need an [Abstract/L
 
 Here we match all leaves that occur as second argument of `black`:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>for(/black(_,leaf(int N)) := T)
 >>>>>>>    println("Match <N>");
     println("Match <N>");
@@ -64,7 +63,7 @@ list[void]: []
 ```
 Here we list all integers that occur in any leaf:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>for(/int N := T)
 >>>>>>>    println("Match <N>");
     println("Match <N>");
@@ -78,10 +77,9 @@ list[void]: []
 ```
 Rather than printing, we can also collect them in a list using [$Statements/Append]:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>for(/int N := T)
 >>>>>>>    append N;
 list[int]: [1,2,3,4,5,4]
 ```
-
 

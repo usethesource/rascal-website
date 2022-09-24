@@ -20,13 +20,11 @@ Our trees can have red and black nodes and we want to perform the following oper
 
 The definition of ColoredTrees is as follows:
 
-```rascal
+```rascal 
 
 module demo::common::ColoredTrees
 
 // Define ColoredTrees with red and black nodes and integer leaves
-
-
 
 data ColoredTree = leaf(int N) // <1>
                  | red(ColoredTree left, ColoredTree right) 
@@ -82,7 +80,7 @@ the counter `c` for each red one.
 
 We can now explore ColoredTrees:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::common::ColoredTrees;
 ok
 rascal>rb = red(black(leaf(1), red(leaf(2),leaf(3))), black(leaf(3), leaf(4)));
@@ -98,19 +96,19 @@ ColoredTree: red(
 ```
 Count the red nodes in `rb`:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>cntRed(rb);
 int: 2
 ```
 and compute the sum of all leaves:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>addLeaves(rb);
 int: 13
 ```
 Finally, we convert all red nodes:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>makeGreen(rb);
 ColoredTree: green(
   black(
@@ -134,5 +132,4 @@ programming languages.
 #### Pitfalls
 
 The visit statement is based on a new paradigm one has to learn.
-
 

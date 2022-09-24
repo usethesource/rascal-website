@@ -8,7 +8,6 @@ title: "module util::SystemAPI"
 
 API to the System for example System Variables or System Commands.
 
-
 ## function getSystemProperty {#util-SystemAPI-getSystemProperty}
 
 * ``str getSystemProperty(str property)``

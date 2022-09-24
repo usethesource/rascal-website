@@ -19,8 +19,7 @@ RascalShell provides a history of previously entered commands. This can be acces
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>a = 1;
 int: 1
 rascal>b = 2;

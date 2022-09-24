@@ -6,9 +6,8 @@ title: "module lang::java::\\syntax::Disambiguate"
 
 `import lang::java::\syntax::Disambiguate;`
 
-
     Import this module to Disambiguate the ambiguity cause by the prefix operators +/- and infix operators +/-.
-    An example of this ambiguity is `A + B`` . This could be `A (+B)` or `(A) + (B)`.
+    An example of this ambiguity is (A) + (B) . This could be (A)(+ (B)) or`(A + B)`.
     We need to have a symbol table to decide if A is a type and thus a TypeCast, or it is a field/variable access.
     
     Java lacks operator overloading, therefore, prefix operators only work on numeric types.
@@ -22,7 +21,6 @@ title: "module lang::java::\\syntax::Disambiguate"
     - Shadowing of Integer/Double/Float
     - An invalid type cast: (String)+(A) where A has a numeric type
       (This expression would be an uncompilable, and we would disambiguate it as a infix expression) 
-
 
 ## function isNumeric {#lang-java-\syntax-Disambiguate-isNumeric}
 

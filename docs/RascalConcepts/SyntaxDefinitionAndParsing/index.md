@@ -13,18 +13,17 @@ There are two main approaches to this:
 
 *  _Lexical information_: Use regular expressions to extract useful, but somewhat superficial, flat, information. 
    This can be achieved using regular expression patterns, 
-   see [Regular Expression Pattern](../../Rascal/Patterns/Regular)s.
+   see [Regular Expression Pattern](../../Rascal/Patterns/Regular/)s.
 *  _Structured information_: Use syntax analysis to extract the complete, nested, structure of the source code 
    in the form of a syntax tree. Rascal can directly manipulate the parse trees, but it also enables user-defined
    mappings from parse tree to abstract syntax tree.
 
-
-Using [Syntax Definitions](../../Rascal/Declarations/SyntaxDefinition) you can define the syntax of any (programming) language. Then Rascal:
+Using [Syntax Definitions](../../Rascal/Declarations/SyntaxDefinition/) you can define the syntax of any (programming) language. Then Rascal:
 
 *  will generate the parser, and
 *  will provide pattern matching and pattern construction on parse trees and abstract syntax trees,
-   see [Abstract Patterns](../../Rascal/Patterns/Node) and    
-  [Concrete Patterns](../../Rascal/Patterns/Concrete).
+   see [Abstract Patterns](../../Rascal/Patterns/Node/) and    
+  [Concrete Patterns](../../Rascal/Patterns/Concrete/).
 
 #### Examples
 
@@ -44,12 +43,9 @@ Here are some examples:
 *  `2+3*4`
 *  `(2+3)*4`
 
-
 The EXP language can be defined as follows:
 
-
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Exp::Concrete::WithLayout::Syntax
 
 layout Whitespace = [\t-\n\r\ ]*; // <1>
@@ -65,10 +61,9 @@ start syntax Exp
 
 ```
 
-                
 Now you may parse and manipulate programs in the EXP language. Let's demonstrate parsing an expression:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Exp::Concrete::WithLayout::Syntax;
 ok
 rascal>import ParseTree;
@@ -87,10 +82,9 @@ The points we want to make are:
 *  Parser generation is completely implicit.
 *  Given a syntax definition, it can be used immediately for parsing.
 
-
-See [Recipes](../../Recipes/) for a more extensive presentation of the 
-[EXP](../../Recipes/Languages/Exp)
-language and [Languages](../../Recipes/Languages) for other language examples.
+See [Recipes](../../Recipes//) for a more extensive presentation of the 
+[EXP](../../Recipes/Languages/Exp/)
+language and [Languages](../../Recipes/Languages/) for other language examples.
 
 #### Pitfalls
 

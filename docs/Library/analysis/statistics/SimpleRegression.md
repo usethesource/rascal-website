@@ -6,7 +6,6 @@ title: "module analysis::statistics::SimpleRegression"
 
 `import analysis::statistics::SimpleRegression;`
 
-
 #### Synopsis
 
 Statistical methods for simple regression.
@@ -30,11 +29,9 @@ The following functions are provided:
 * [sumSquaredErrors](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-sumSquaredErrors)
 * [totalSumSquares](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-totalSumSquares)
 
-
 ## function intercept {#analysis-statistics-SimpleRegression-intercept}
 
 * ``num intercept(lrel[num,num] values) throws IllegalArgument``
-
 
 #### Synopsis
 
@@ -48,7 +45,6 @@ The least squares estimate of the intercept is computed using these http://www.x
 
 * ``num interceptStdErr(lrel[num,num] values) throws IllegalArgument``
 
-
 #### Synopsis
 
 Standard error of intercept estimate.
@@ -59,7 +55,6 @@ Returns the http://www.xycoon.com/standarderrorb0.htm[standard error of the inte
 ## function meanSquareError {#analysis-statistics-SimpleRegression-meanSquareError}
 
 * ``num meanSquareError(lrel[num,num] values) throws IllegalArgument``
-
 
 #### Synopsis
 
@@ -72,7 +67,6 @@ Returns the sum of squared errors divided by the degrees of freedom, usually abb
 ## function R {#analysis-statistics-SimpleRegression-R}
 
 * ``num R(lrel[num,num] values) throws IllegalArgument``
-
 
 #### Synopsis
 
@@ -87,7 +81,6 @@ More functions related to this coefficient can be found in [Correlation](../../.
 
 * ``num regressionSumSquares(list[tuple[num,num]] values) throws IllegalArgument``
 
-
 #### Synopsis
 
 Sum of squared deviations of the predicted y values about their mean.
@@ -101,7 +94,6 @@ This is usually abbreviated SSR or http://www.xycoon.com/SumOfSquares.htm[SSM].
 
 * ``num RSquare(lrel[num,num] values) throws IllegalArgument``
 
-
 #### Synopsis
 
 Coefficient of determination.
@@ -113,7 +105,6 @@ It provides a measure of how well future outcomes are likely to be predicted by 
 ## function significance {#analysis-statistics-SimpleRegression-significance}
 
 * ``num significance(lrel[num,num] values) throws IllegalArgument``
-
 
 #### Synopsis
 
@@ -132,7 +123,6 @@ http://en.wikipedia.org/wiki/Bivariate_normal_distribution[Bivariate Normal Dist
 
 * ``num slope(lrel[num,num] values) throws IllegalArgument``
 
-
 #### Synopsis
 
 Slope of regression line.
@@ -146,7 +136,6 @@ The slope is sometimes denoted b1.
 
 * ``num slopeConfidenceInterval(lrel[num,num] values) throws IllegalArgument``
 
-
 #### Synopsis
 
 The 95% slope confidence interval.
@@ -158,7 +147,6 @@ The 95% confidence interval is
 
 (slope - slopeConfidenceInterval, slope + slopeConfidenceInterval)
 
-
 #### Pitfalls
 
 The validity of this statistic depends on the assumption that the observations included in the model are drawn from a 
@@ -167,7 +155,6 @@ http://en.wikipedia.org/wiki/Bivariate_normal_distribution[Bivariate Normal Dist
 ## function slopeStdErr {#analysis-statistics-SimpleRegression-slopeStdErr}
 
 * ``num slopeStdErr(lrel[num,num] values) throws IllegalArgument``
-
 
 #### Synopsis
 
@@ -180,7 +167,6 @@ Returns the http://www.xycoon.com/standarderrorb0.htm[standard error of the slop
 
 * ``num sumOfCrossProducts(lrel[num,num] values) throws IllegalArgument``
 
-
 #### Synopsis
 
 Sum of cross products of observations.
@@ -191,7 +177,6 @@ Returns the sum of crossproducts, x__~i~*y__~i~.
 ## function sumSquaredErrors {#analysis-statistics-SimpleRegression-sumSquaredErrors}
 
 * ``num sumSquaredErrors(lrel[num,num] values) throws IllegalArgument``
-
 
 #### Synopsis
 
@@ -211,7 +196,6 @@ The return value is constrained to be non-negative, i.e., if due to rounding err
 
 * ``num totalSumSquares(lrel[num,num] values) throws IllegalArgument``
 
-
 #### Synopsis
 
 Sum of squared deviations.
@@ -224,7 +208,6 @@ This is defined as http://www.xycoon.com/SumOfSquares.htm[SSTO].
 
 * ``num XSumSquares(lrel[num,num] values) throws IllegalArgument``
 
-
 #### Synopsis
 
 Sum of squared deviations of x values about their mean.
@@ -236,7 +219,6 @@ Returns the sum of squared deviations of the x values about their mean.
 ## function predict {#analysis-statistics-SimpleRegression-predict}
 
 * ``num predict(lrel[num,num] values, num x) throws IllegalArgument``
-
 
 #### Synopsis
 

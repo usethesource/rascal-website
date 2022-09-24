@@ -6,4 +6,3 @@ title: "module lang::c90::\\syntax::C"
 
 `import lang::c90::\syntax::C;`
 
-

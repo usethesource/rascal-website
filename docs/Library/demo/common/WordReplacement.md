@@ -10,7 +10,6 @@ title: "module demo::common::WordReplacement"
 
 Demonstrate capitalizing all words in a string
 
-
 ## function capitalize {#demo-common-WordReplacement-capitalize}
 
 * ``str capitalize(str word:/^<letter:[a-z]><rest:.*>/)``

@@ -23,7 +23,7 @@ try to update unavailable information.
 
 Setting the `hour` field on a date value throws an exception:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>NOW = $2016-09-18$;
 datetime: $2016-09-18$
 rascal>NOW.hour = 14;
@@ -33,5 +33,4 @@ ok
 ```
 
 NOTE: Exception is not shown properly
-
 

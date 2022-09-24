@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::Relations"
 
 `import lang::rascal::tests::basic::Relations;`
 
-
 ## function product {#lang-rascal-tests-basic-Relations-product}
 
 * ``test bool product(set[&A]X, set[&B] Y)``

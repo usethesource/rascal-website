@@ -6,7 +6,6 @@ title: "module demo::lang::turing::l2::format::Format"
 
 `import demo::lang::turing::l2::format::Format;`
 
-
 ## function turing2box {#demo-lang-turing-l2-format-Format-turing2box}
 
 * ``Box turing2box(Program p)``

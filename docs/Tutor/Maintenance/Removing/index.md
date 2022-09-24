@@ -13,4 +13,3 @@ To remove a concept _C_:
 *  Remove subdirectory _C_ (and its subdirectories) using standard commands.
 *  Recompile the course.
 
-

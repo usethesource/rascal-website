@@ -20,7 +20,7 @@ Remedies:
 
 Here is an incorrect definition of function `triple`:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>int triple(int x) {
 >>>>>>>   x * 3;
 >>>>>>>}
@@ -32,7 +32,7 @@ ok
 ```
 It should look like this:
 
-```rascal-shell
+```rascal-shell 
 rascal>int triple(int x) {
 >>>>>>>   return x * 3;
 >>>>>>>}
@@ -42,11 +42,10 @@ int: 15
 ```
 This is another solution using the abbreviated function format:
 
-```rascal-shell
+```rascal-shell 
 rascal>int triple(int x) = x * 3;
 int (int): function(|prompt:///|(0,26,<1,0>,<1,26>))
 rascal>triple(5)
 int: 15
 ```
-
 

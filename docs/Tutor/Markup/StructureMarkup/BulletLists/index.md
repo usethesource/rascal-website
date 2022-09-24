@@ -25,8 +25,6 @@ A list item ends with:
 *  the start of a new list item.
 *  an empty line.
 
-
-
 #### Examples
 
 The input
@@ -40,7 +38,6 @@ will produce:
 
 *  First item.
 *  Second item.
-
 
 The input
 
@@ -65,5 +62,4 @@ will produce:
 #### Pitfalls
 
 * An empty line is required _after_ [bullet lists](../../../../Tutor/Markup/StructureMarkup/BulletLists).
-
 

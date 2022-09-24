@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::Node"
 
 `import lang::rascal::tests::library::Node;`
 
-
 ## data XNODE {#lang-rascal-tests-library-Node-XNODE}
 
 ```rascal

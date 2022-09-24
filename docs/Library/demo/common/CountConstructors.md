@@ -6,7 +6,6 @@ title: "module demo::common::CountConstructors"
 
 `import demo::common::CountConstructors;`
 
-
 ## data ColoredTree {#demo-common-CountConstructors-ColoredTree}
 
 ```rascal

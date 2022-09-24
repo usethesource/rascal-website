@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends1::Extension1"
 
 `import lang::rascal::tests::extends1::Extension1;`
 
-
 ## function EXTENDED_FUNCTION {#lang-rascal-tests-extends1-Extension1-EXTENDED_FUNCTION}
 
 * ``str EXTENDED_FUNCTION(a())``

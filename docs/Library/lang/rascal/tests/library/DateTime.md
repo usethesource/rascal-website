@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::DateTime"
 
 `import lang::rascal::tests::library::DateTime;`
 
-
 ## function createDate_sampled {#lang-rascal-tests-library-DateTime-createDate_sampled}
 
 * ``test bool createDate_sampled(datetime gen)``

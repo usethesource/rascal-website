@@ -8,7 +8,7 @@ Use of `fail` statement outside a condtional context.
 
 #### Description
 
-A [fail](../../Rascal/Statements/Fail) statement is only allowed inside conditional statements.
+A [fail](../../Rascal/Statements/Fail/) statement is only allowed inside conditional statements.
 This error is generated when `fail` is used outside a conditional context.
 
 Remedies:
@@ -21,21 +21,20 @@ Remedies:
 
 Here is a correct (albeit not very useful) use of `fail` where the pattern match `int N := 35` acts as guard:
 
-```rascal-shell
+```rascal-shell 
 rascal>if(int N := 35){ if(N > 10) fail; }
 ok
 ```
 Any condition (non only one using pattern matching) can act as guard:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>if(true) { fail; }
 ok
 ```
 An error occurs when `fail` is used outside a conditional context:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>fail;
 ok
 ```
-
 

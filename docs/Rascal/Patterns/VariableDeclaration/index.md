@@ -23,13 +23,13 @@ or the enclosing [If](../../../Rascal/Statements/If), [While](../../../Rascal/St
 
 Let's first perform a match that succeeds:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>str S := "abc";
 bool: true
 ```
 and now we attempt to inspect the value of `S`:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>S;
 |prompt:///|(0,1,<1,0>,<1,1>): Undeclared variable: S
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
@@ -39,7 +39,7 @@ ok
 As mentioned above: `S` is only bound in the scope of the match expression!
 Let's explore how bindings work in an if statement:
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>if(str S := "abc")
@@ -48,5 +48,4 @@ rascal>if(str S := "abc")
 Match succeeds, S == "abc"
 ok
 ```
-
 

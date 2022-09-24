@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::Intermix"
 
 `import lang::rascal::tests::basic::Intermix;`
 
-
 ## function simpler {#lang-rascal-tests-basic-Intermix-simpler}
 
 * ``test bool simpler()``

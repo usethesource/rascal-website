@@ -6,7 +6,6 @@ title: "module analysis::linearprogramming::LinearProgramming"
 
 `import analysis::linearprogramming::LinearProgramming;`
 
-
 ## alias Coefficients {#analysis-linearprogramming-LinearProgramming-Coefficients}
 
 * `map[str var,num coef]`

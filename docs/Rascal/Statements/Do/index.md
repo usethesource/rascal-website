@@ -25,8 +25,7 @@ that are executed during the repeated execution of its body Statement.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>int n = 3;
@@ -40,11 +39,10 @@ list[void]: []
 ```
 Now build a list result using the `append` statement:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>n = 3;
 int: 3
 rascal>do { append n * n; n -= 1; } while (n > 0);
 list[int]: [9,4,1]
 ```
-
 

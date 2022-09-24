@@ -26,7 +26,7 @@ Gentle introduction to the main concepts of the Rascal language.
 #### Description
 
 Rascal is based on a dozen concepts and having a global understanding of them will help to grasp the language more quickly.
-Here we will informally explain and illustrate these concepts and often we will refer to the [Rascal Language Reference](../Rascal/)
+Here we will informally explain and illustrate these concepts and often we will refer to the [Rascal Language Reference](../Rascal//)
 for further details. In other words, we are providing here a friendly front-end for the actual language description.
 
 Most language concepts are described separately but some features we just mention here:
@@ -53,5 +53,4 @@ Here are the concepts to be discussed:
 * [IDEConstruction](../RascalConcepts/IDEConstruction)
 * [code models](../RascalConcepts/CodeModels)
 * [equation solving](../RascalConcepts/EquationSolving)
-
 

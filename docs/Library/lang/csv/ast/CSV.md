@@ -6,7 +6,6 @@ title: "module lang::csv::ast::CSV"
 
 `import lang::csv::ast::CSV;`
 
-
 ## data Table {#lang-csv-ast-CSV-Table}
 
 ```rascal

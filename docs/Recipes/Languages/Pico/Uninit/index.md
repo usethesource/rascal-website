@@ -14,8 +14,7 @@ to a specific use of a variable, where that path does not contain a definition o
 
 This can be computed as follows:
 
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Pico::Uninit
 
 import demo::lang::Pico::Abstract;
@@ -39,11 +38,9 @@ public set[Occurrence] uninitProgram(PROGRAM P) {
 }
 
 public set[Occurrence] uninitProgram(str txt) = uninitProgram(load(txt)); // <5>
-// end::module[]
 
 ```
 
-                
 <1> First, we determine the variable definitions of the program,
 <2> and its control flow graph.
 <3> Next we ask for every use of a variable the question: can it be reached from the entries
@@ -57,12 +54,11 @@ public set[Occurrence] uninitProgram(str txt) = uninitProgram(load(txt)); // <5>
         that covers the location of the current variable.
 <4> The complete comprehension returns the set of occurrences of uninitialized variables.
 
-
 The function `uninitProgram` performs this analysis on the source text of a Pico program.
 
 Here is a simple example, where variable `p` is used without intialization:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Pico::Uninit;
 ok
 rascal>uninitProgram("begin declare n : natural, m : natural, p : natural; n := 10; m := n + p end");
@@ -82,6 +78,4 @@ rel[loc location,str name,STATEMENT stat]: {<|unknown:///|(71,1,<1,71>,<1,72>),"
     location=|unknown:///|(62,10,<1,62>,<1,72>),
     comments=())>}
 ```
-
-
 

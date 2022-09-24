@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::Number"
 
 `import lang::rascal::tests::library::Number;`
 
-
 ## function compare1 {#lang-rascal-tests-library-Number-compare1}
 
 * ``test bool compare1()``

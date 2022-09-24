@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::concrete::SyntaxKeywordFields"
 
 `import lang::rascal::tests::concrete::SyntaxKeywordFields;`
 
-
 ## data Tree {#lang-rascal-tests-concrete-SyntaxKeywordFields-Tree}
 
 ```rascal

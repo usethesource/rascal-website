@@ -6,7 +6,6 @@ title: Unavailable Information
 
 Requested information is unavailable at runtime
 
-
 #### Types
 
 `data RuntimeException = UnavailableInformation(str message);`
@@ -19,16 +18,15 @@ Requested information is unavailable at runtime
 
 Several datetypes may contain optional information that is not always available:
 
-* In a [datetime](../../../Rascal/Expressions/Values/DateTime) value the date or the time may be missing.
-* In a [location](../../../Rascal/Expressions/Values/Location) value, various fields are optional, 
+* In a [datetime](../../../Rascal/Expressions/Values/DateTime/) value the date or the time may be missing.
+* In a [location](../../../Rascal/Expressions/Values/Location/) value, various fields are optional, 
   e.g., `port`, `offset`, `begin` and `end`.
   
 This exception is thrown when optional information is not available.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>$2016-09-14$.hour;
 ok
 rascal>someLoc = |home:///abc.txt|;

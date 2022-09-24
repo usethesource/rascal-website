@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::tests::LiteralsTests"
 
 `import lang::rascal::grammar::tests::LiteralsTests;`
 
-
 ## function tstLiteral1 {#lang-rascal-grammar-tests-LiteralsTests-tstLiteral1}
 
 * ``test bool tstLiteral1()``

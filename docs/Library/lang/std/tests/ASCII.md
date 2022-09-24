@@ -6,7 +6,6 @@ title: "module lang::std::tests::ASCII"
 
 `import lang::std::tests::ASCII;`
 
-
 ## function ascii1 {#lang-std-tests-ASCII-ascii1}
 
 * ``test bool ascii1()``

@@ -6,9 +6,7 @@ title: "module lang::smtlib2::command::response::Ast"
 
 `import lang::smtlib2::command::response::Ast;`
 
-
 	Synopsis: Represents the AST of the SMT solver response
-
 
 ## data Response {#lang-smtlib2-command-response-Ast-Response}
 

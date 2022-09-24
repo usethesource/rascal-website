@@ -30,7 +30,6 @@ In this example [Action](../../../../Rascal/Declarations/SyntaxDefinition/Action
 *  When a [./Concrete Syntax](../../../../Rascal/Expressions/ConcreteSyntax) expression is executed.
 *  When [Parse Trees](../../../../Rascal/Declarations/SyntaxDefinition/ParseTrees) are constructed "manually".
 
-
 They can be used as a [Disambiguation](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation) method, using the `filter` statement, as in:
 ```rascal
 syntax E = id: Id i;

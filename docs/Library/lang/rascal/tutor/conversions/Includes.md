@@ -6,7 +6,6 @@ title: "module lang::rascal::tutor::conversions::Includes"
 
 `import lang::rascal::tutor::conversions::Includes;`
 
-
 ## function findModuleIncludes {#lang-rascal-tutor-conversions-Includes-findModuleIncludes}
 
 * ``list[loc] findModuleIncludes()``

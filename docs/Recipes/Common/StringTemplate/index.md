@@ -12,7 +12,7 @@ Many websites and code generators use template-based code generation. They start
 
 Rascal provides string templates that rival what is provided in
 [Ruby](http://www.ruby-doc.org/stdlib/libdoc/erb/rdoc/ERB.html), [PHP](http://www.php.net/) or [ANTLR](http://www.stringtemplate.org/).
-They are fully described in [string values](../../../Rascal/Expressions/Values/String).
+They are fully described in [string values](../../../Rascal/Expressions/Values/String/).
 
 #### Examples
 
@@ -22,30 +22,26 @@ how can we generate a Java class with getters and setters for those fields?
 
 Here is a solution:
 
-```rascal
+```rascal 
 
 module demo::common::StringTemplate
 
 import String;
 import List;
 
-
 str capitalize(str s) = "<toUpperCase(s[0])><s[1..]>";
   
-
 private str genSetter(map[str,str] fields, str x) {
   return "public void set<capitalize(x)>(<fields[x]> <x>) {
          '  this.<x> = <x>;
          '}";
 }
 
-
 private str genGetter(map[str,str] fields, str x) {
   return "public <fields[x]> get<capitalize(x)>() {
          '  return <x>;
          '}";
 }
-
 
 str genClass(str name, map[str,str] fields) { // <2>
   return 
@@ -92,14 +88,12 @@ str cperson =
 
 ```
 
-                
 <1> An auxiliary function `capitalize` is defined to capitalize the first character of a string.
 
 <2> Here is the heavy lifting done: `genClass` is defined that takes as arguments:
 
 *  the `name` of the class, and
 *  a map `fields` that associates field names with their type (both string values).
-
 
 Function `genClass` returns a string that contains several _string interpolations_ delimited by `<` and `>`.
 Let's discuss some of them:
@@ -114,7 +108,7 @@ Let's discuss some of them:
 
 Let's see how this works out on actual data:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::common::StringTemplate;
 ok
 rascal>import IO;
@@ -165,5 +159,4 @@ ok
 
 *  In more complex cases, it can be better to introduce an abstract datatype to represent the desired code and to use string templates to
 produce the actual textual representation of that code.
-
 

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::ValueIO"
 
 `import lang::rascal::tests::library::ValueIO;`
 
-
 ## data Bool {#lang-rascal-tests-library-ValueIO-Bool}
 
 ```rascal

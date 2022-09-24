@@ -5,7 +5,7 @@ Conditional statement.
 #### Syntax
 
 * `if ( Exp ) Statement;`
-* `if ( Exp ) Statement<sub>1</sub> else Statement<sub>2</sub>;`
+* `if ( Exp ) Statement~1~ else Statement~2~;`
 
 #### Types
 
@@ -13,24 +13,20 @@ Conditional statement.
 | --- | --- |
 | `bool`  |  `void`                     |
 
-
-| `Exp` | Statement<sub>1</sub> | Statement<sub>2</sub> | `if ( Exp ) Statement<sub>1</sub> else Statement<sub>2</sub>;` |
+| `Exp` | Statement~1~ | Statement~2~ | `if ( Exp ) Statement~1~ else Statement~2~;` |
 | --- | --- | --- | --- |
-| `bool`  |  T<sub>1</sub>        | T<sub>2</sub>         | `lub(T<sub>1</sub>, T<sub>2</sub>)` |
-
-
+| `bool`  |  T~1~        | T~2~         | `lub(T~1~, T~2~)` |
 
 #### Description
 
 The test _Exp_ is evaluated and its outcome determines the statement to be executed: 
-_Statement<sub>1</sub>_ if _Exp_ yields `true` and _Statement<sub>2</sub>_ otherwise. 
+_Statement~1~_ if _Exp_ yields `true` and _Statement~2~_ otherwise. 
 The value of an if-then statement is equal to _Statement_ when its test is true. Otherwise it is void.
 The value of an if-then-else statement is the value of the statement that was executed.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>if( 3 > 2 ) 30; else 40;
 int: 30
 rascal>x = if( 3 > 2 ) 30; else 40;
@@ -41,7 +37,7 @@ int: 30
 An if-then statement yields `void`  when its test is false
 (demonstrated by the __ok__ that is printed by the Rascal system):
 
-```rascal-shell
+```rascal-shell -continue
 rascal>if( 2 > 3 ) 30;
 ok
 ```

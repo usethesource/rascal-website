@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends1::PARENT"
 
 `import lang::rascal::tests::extends1::PARENT;`
 
-
 ## function dontShareANameResolutionCache1 {#lang-rascal-tests-extends1-PARENT-dontShareANameResolutionCache1}
 
 * ``test bool dontShareANameResolutionCache1()``

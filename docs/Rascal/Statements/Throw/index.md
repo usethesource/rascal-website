@@ -19,7 +19,7 @@ A throw statement causes the immediate abortion of the execution of the current 
 The exception can be caught by a [Try Catch](../../../Rascal/Statements/TryCatch) statement in the current function or in one of its callers.
 If the exception is not caught, the execution of the Rascal program is terminated. The following rules apply:
 
-*  The static type of _Exp_ should be `RuntimeException`, see [RuntimeException](../../../Library/Exception.md#Exception-RuntimeException).
+*  The static type of _Exp_ should be `RuntimeException`, see [RuntimeException](../../../Library/Exception.md#Exception-RuntimeException/).
 
 *  The Rascal program may contain data declarations that extend the type `RuntimeException`.
 
@@ -27,7 +27,7 @@ If the exception is not caught, the execution of the Rascal program is terminate
 
 Here is a a variant of string concatenation for ball haters:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>str conc(str x, str y){ if("ball" in {x, y}) throw "I hate balls"; return x + y; }
 str (str, str): function(|prompt:///|(0,82,<1,0>,<1,82>))
 rascal>conc("fairy", "tale");
@@ -38,6 +38,4 @@ rascal>conc("foot", "ball");
 	at $shell$(|prompt:///|(0,21,<1,0>,<1,21>))
 ok
 ```
-
-
 

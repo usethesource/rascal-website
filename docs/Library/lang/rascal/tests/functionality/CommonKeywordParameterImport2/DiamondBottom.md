@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::CommonKeywordParameterImport2
 
 `import lang::rascal::tests::functionality::CommonKeywordParameterImport2::DiamondBottom;`
 
-
 ## function diamondTest {#lang-rascal-tests-functionality-CommonKeywordParameterImport2-DiamondBottom-diamondTest}
 
 * ``test bool diamondTest()``

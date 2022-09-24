@@ -6,14 +6,13 @@ title: "module String"
 
 `import String;`
 
-
 #### Synopsis
 
 Library functions for strings.
 
 #### Description
 
-For operators on strings see [String](../Rascal/Expressions/Values/String) in the Rascal Language Reference.
+For operators on strings see [String](../Rascal/Expressions/Values/String/) in the Rascal Language Reference.
 
 The following functions are defined for strings:
 * [arbString](../Library/String.md#String-arbString)
@@ -57,12 +56,10 @@ The following functions are defined for strings:
 * [uncapitalize](../Library/String.md#String-uncapitalize)
 * [wrap](../Library/String.md#String-wrap)
 
-
 ## function center {#String-center}
 
 * ``str center(str s, int n)``
 * ``str center(str s, int n, str pad)``
-
 
 #### Synopsis
 
@@ -75,8 +72,7 @@ Center a string in given space.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>center("abc", 10);
@@ -89,7 +85,6 @@ str: "xxxabcxxxx"
 
 * ``int charAt(str s, int i) throws IndexOutOfBounds``
 
-
 #### Synopsis
 
 Return character in a string by its index position.
@@ -101,8 +96,7 @@ Also see [stringChar](../Library/String.md#String-stringChar) that converts char
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>charAt("abc", 0);
@@ -115,7 +109,6 @@ str: "a"
 
 * ``list[int] chars(str s)``
 
-
 #### Synopsis
 
 Return characters of a string.
@@ -126,8 +119,7 @@ Also see [stringChars](../Library/String.md#String-stringChars) that converts ch
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>chars("abc");
@@ -140,7 +132,6 @@ bool: true
 
 * ``bool contains(str input, str find)``
 
-
 #### Synopsis
 
 Check that a string contains another string.
@@ -151,8 +142,7 @@ Check whether the string `find` occurs as substring in the string `subject`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>contains("abracadabra", "bra");
@@ -165,7 +155,6 @@ bool: false
 
 * ``str deescape(str s)``
 
-
 #### Synopsis
 
 Replace escaped characters by the escaped character itself (using Rascal escape conventions).
@@ -173,7 +162,6 @@ Replace escaped characters by the escaped character itself (using Rascal escape 
 ## function endsWith {#String-endsWith}
 
 * ``bool endsWith(str subject, str suffix)``
-
 
 #### Synopsis
 
@@ -185,8 +173,7 @@ Yields `true` if string `subject` ends with the string `suffix`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>endsWith("Hello.rsc", ".rsc");
@@ -196,7 +183,6 @@ bool: true
 ## function escape {#String-escape}
 
 * ``str escape(str subject, map[str,str] mapping)``
-
 
 #### Synopsis
 
@@ -209,8 +195,7 @@ has been replaced by its associated value.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>import IO;
@@ -229,7 +214,6 @@ ok
 
 * ``list[int] findAll(str subject, str find)``
 
-
 #### Synopsis
 
 Find all occurrences of a string in another string.
@@ -243,8 +227,7 @@ See also [find first](../Library/String.md#String-findFirst) and [find last](../
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>findAll("abracadabra", "a");
@@ -259,7 +242,6 @@ list[int]: []
 
 * ``int findFirst(str subject, str find)``
 
-
 #### Synopsis
 
 Find the first occurrence of a string in another string.
@@ -273,8 +255,7 @@ Also see [find all](../Library/String.md#String-findAll) and [find last](../Libr
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>findFirst("abracadabra", "a");
@@ -289,7 +270,6 @@ int: -1
 
 * ``int findLast(str subject, str find)``
 
-
 #### Synopsis
 
 Find the last occurrence of a string in another string.
@@ -303,8 +283,7 @@ Also see [find all](../Library/String.md#String-findAll) and [find first](../Lib
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>findLast("abracadabra", "a");
@@ -319,7 +298,6 @@ int: -1
 
 * ``bool isEmpty(str s)``
 
-
 #### Synopsis
 
 Check whether a string is empty.
@@ -330,8 +308,7 @@ Returns `true` if string `s` is empty.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>isEmpty("");
@@ -344,7 +321,6 @@ bool: false
 
 * ``str arbString(int n)``
 
-
 #### Synopsis
 
 Generate a arbitrary string.
@@ -355,21 +331,25 @@ Returns a string of maximum `n` length, with arbitrary characters.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>arbString(3);
+<<<<<<< HEAD
 str: ""
 rascal>arbString(10);
 str: " \t\t\t\t\n"
+=======
+str: "톒"
+rascal>arbString(10);
+str: "mFhBgj0"
+>>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 ## function left {#String-left}
 
 * ``str left(str s, int n)``
 * ``str left(str s, int n, str pad)``
-
 
 #### Synopsis
 
@@ -382,8 +362,7 @@ Left alignment of string in given space.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>left("abc", 10);
@@ -396,7 +375,6 @@ str: "abcxxxxxxx"
 
 * ``str replaceAll(str subject, str find, str replacement)``
 
-
 #### Synopsis
 
 Replace all occurrences of a string in another string.
@@ -408,8 +386,7 @@ Also see [replace first](../Library/String.md#String-replaceFirst) and [replace 
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>replaceAll("abracadabra", "a", "A");
@@ -428,7 +405,6 @@ Note that `find` is a string (as opposed to, for instance, a regular expression 
 
 * ``str replaceFirst(str subject, str find, str replacement)``
 
-
 #### Synopsis
 
 Replace the first occurrence of a string in another string.
@@ -440,8 +416,7 @@ Also see [replace all](../Library/String.md#String-replaceAll) and [replace last
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>replaceFirst("abracadabra", "a", "A");
@@ -460,7 +435,6 @@ Note that `find` is a string (as opposed to, for instance, a regular expression 
 
 * ``str replaceLast(str subject, str find, str replacement)``
 
-
 #### Synopsis
 
 Replace the last occurrence of a string in another string.
@@ -472,8 +446,7 @@ Also see [replace first](../Library/String.md#String-replaceFirst) and [replace 
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>replaceLast("abracadabra", "a", "A");
@@ -492,7 +465,6 @@ Note that `find` is a string (as opposed to, for instance, a regular expression 
 
 * ``str reverse(str s)``
 
-
 #### Synopsis
 
 Return a string with all characters in reverse order.
@@ -503,8 +475,7 @@ Returns string with all characters of string `s` in reverse order.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>reverse("abc");
@@ -516,15 +487,13 @@ str: "cba"
 * ``str right(str s, int n)``
 * ``str right(str s, int n, str pad)``
 
-
 #### Synopsis
 
 Right align s in string of length n using space.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>right("abc", 10);
@@ -532,7 +501,6 @@ str: "       abc"
 rascal>right("abc", 10, "x");
 str: "xxxxxxxabc"
 ```
-
 
 #### Synopsis
 
@@ -545,8 +513,7 @@ Right alignment of a string value in a given space.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>right("abc", 10);
@@ -559,7 +526,6 @@ str: "xxxxxxxabc"
 
 * ``int size(str s)``
 
-
 #### Synopsis
 
 Determine length of a string value.
@@ -570,8 +536,7 @@ Returns the length (number of characters) in string `s`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>size("abc");
@@ -584,7 +549,6 @@ int: 0
 
 * ``bool startsWith(str subject, str prefix)``
 
-
 #### Synopsis
 
 Check whether a string starts with a given prefix.
@@ -595,8 +559,7 @@ Yields `true` if string `subject` starts with the string `prefix`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>startsWith("Hello.rsc", "Hell");
@@ -607,7 +570,6 @@ bool: true
 
 * ``str stringChar(int char) throws IllegalArgument``
 
-
 #### Synopsis
 
 Convert a character code into a string. 
@@ -615,7 +577,6 @@ Convert a character code into a string.
 ## function stringChars {#String-stringChars}
 
 * ``str stringChars(list[int] chars) throws IllegalArgument``
-
 
 #### Synopsis
 
@@ -625,7 +586,6 @@ Convert a list of character codes into a string.
 
 * ``bool isValidCharacter(int ch)``
 
-
 #### Synopsis
 
 Check that a given integer value is a valid Unicode code point.
@@ -634,7 +594,6 @@ Check that a given integer value is a valid Unicode code point.
 
 * ``str substring(str s, int begin)``
 * ``str substring(str s, int begin, int end)``
-
 
 #### Synopsis
 
@@ -647,8 +606,7 @@ Extract a substring from a string value.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>substring("abcdef", 2);
@@ -662,7 +620,6 @@ str: "cd"
 * ``int toInt(str s) throws IllegalArgument``
 * ``int toInt(str s, int r) throws IllegalArgument``
 
-
 #### Synopsis
 
 Convert a string value to integer.
@@ -672,13 +629,11 @@ Convert a string value to integer.
 *  Converts string `s` to integer. 
 *  Convert string `s` to integer using radix `r`.
 
-
 Throws `IllegalArgument` when `s` cannot be converted.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>import String;
 ok
 rascal>toInt("11");
@@ -688,7 +643,7 @@ int: 9
 ```
 Now try an erroneous argument:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>toInt("abc");
 |std:///String.rsc|(11107,480,<549,0>,<575,52>): IllegalArgument("abc","For input string: \"abc\"")
 	at *** somewhere ***(|std:///String.rsc|(11107,480,<549,0>,<575,52>))
@@ -700,7 +655,6 @@ ok
 
 * ``str toLowerCase(str s)``
 
-
 #### Synopsis
 
 Convert the characters in a string value to lower case.
@@ -711,8 +665,7 @@ Convert all characters in string `s` to lowercase. Also see [to upper case](../L
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>toLowerCase("AaBbCc123");
@@ -722,7 +675,6 @@ str: "aabbcc123"
 ## function toReal {#String-toReal}
 
 * ``real toReal(str s)``
-
 
 #### Synopsis
 
@@ -734,8 +686,7 @@ Converts string `s` to a real. Throws `IllegalArgument` when `s` cannot be conve
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>import String;
 ok
 rascal>toReal("2.5e-3");
@@ -753,7 +704,6 @@ ok
 
 * ``str toUpperCase(str s)``
 
-
 #### Synopsis
 
 Convert the characters in a string value to upper case.
@@ -766,8 +716,7 @@ Also see [to lower case](../Library/String.md#String-toLowerCase).
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>toUpperCase("AaBbCc123");
@@ -778,15 +727,13 @@ str: "AABBCC123"
 
 * ``str trim(str s)``
 
-
 #### Synopsis
 
 Returns string with leading and trailing whitespace removed.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>trim("  jelly
@@ -797,7 +744,6 @@ str: "jelly\nbeans"
 ## function squeeze {#String-squeeze}
 
 * ``str squeeze(str src, str charSet)``
-
 
 #### Synopsis
 
@@ -810,8 +756,7 @@ for the allowed syntax in `charSet`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>squeeze("hello", "el");
@@ -821,7 +766,6 @@ str: "helo"
 ## function split {#String-split}
 
 * ``list[str] split(str sep, str src)``
-
 
 #### Synopsis
 
@@ -847,7 +791,6 @@ Split a string into a list of strings based on a literal separator.
 
 * ``str wrap(str src, int wrapLength)``
 
-
 #### Synopsis
 
 Word wrap a string to fit in a certain width.
@@ -864,7 +807,6 @@ Inserts newlines in a string in order to fit the string in a certain width. It o
 
 * ``bool rexpMatch(str s, str re)``
 
-
 #### Synopsis
 
 Determine if a string matches the given (Java-syntax) regular expression.
@@ -872,7 +814,6 @@ Determine if a string matches the given (Java-syntax) regular expression.
 ## function toLocation {#String-toLocation}
 
 * ``loc toLocation(str s)``
-
 
 #### Synopsis
 
@@ -885,8 +826,7 @@ Convert a string value to a (source code) location.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>toLocation("http://grammarware.net");
@@ -899,15 +839,13 @@ loc: |cwd:///document.xml|
 
 * ``str substitute(str src, map[loc,str] s)``
 
-
 #### Synopsis
 
 Substitute substrings in a string based on a substitution map from location to string.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import String;
 ok
 rascal>substitute("abc", (|stdin:///|(1,1): "d"))

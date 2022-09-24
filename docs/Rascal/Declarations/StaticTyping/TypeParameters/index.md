@@ -26,7 +26,6 @@ The following syntactic positions are _binding occurrences_ for type parameters:
 
 *  The alternatives of a data type. Binding and replacement is identical to that of function declarations.
 
-
 All other occurrences of type parameters are _using occurrences_. The following rules apply:
 
 *  When the same type parameter is used at different binding occurrences it should be bound to the same actual type.
@@ -40,7 +39,7 @@ for more details on function declarations.
 The following function `swap` returns a tuple in which its arguments are swapped and can be applied to arbitrary values 
 in a type safe manner:
 
-```rascal-shell
+```rascal-shell 
 rascal>tuple[&B, &A] swap(&A a, &B b) { return <b, a>; }
 tuple[&B,&A] (&A, &B): function(|prompt:///|(0,49,<1,0>,<1,49>))
 rascal>swap(1,2);
@@ -58,5 +57,4 @@ Graph[str] GS = {<"a", "b">, <"c","d">, <"d", "a">};
 ```
 The type parameters that are used in the type in the right part of the alias declaration 
 should be defined in the left part of the alias definition.
-
 

@@ -14,4 +14,3 @@ Comprehensive list of known shortcomings or usage problems of the concept.
 _MarkedText_
 ```
 
-

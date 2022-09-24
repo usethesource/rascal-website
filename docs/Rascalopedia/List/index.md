@@ -16,7 +16,6 @@ A list is a sequence of values with the following properties:
 *  The list has a size that is equal to the number of values in the list.
 *  Each element in a list _L_ has an index. The first element has index 0. The last element has index `size(L)-1`.
 
-
 Formally, a list can be defined as follows. Given the domains `ELEM` (elements) and `LIST` (lists) and the functions:
 ```rascal
 nil :             -> LIST
@@ -29,7 +28,6 @@ tail: LIST        -> LIST
 *  The _empty list_ `nil` is an element of `LIST`.
 *  If `e` is an element of `ELEM` and `l` is an element of LIST, then `cons(e, l)` is also an element in `LIST`.
 
-
 `head` (take the first element) and `tail` (take the remainder of a list)
 are defined functions characterized by the axioms:
 ```rascal
@@ -40,8 +38,8 @@ The cases `head(nil)` and `tail(nil)` are left undefined (and usually correspond
 
 In Rascal, lists are surrounded by brackets `[` and `]` and the elements are separated by commas.
 Each list has a type of the form `list[T]`, where _T_ is the smallest common type of all list elements.
-Read the description of [lists and their operators](../../Rascal/Expressions/Values/List)
-and of [library functions on lists](../../Library/List.md).
+Read the description of [lists and their operators](../../Rascal/Expressions/Values/List/)
+and of [library functions on lists](../../Library/List.md/).
 
 ## Lists in Daily Life
 
@@ -55,18 +53,15 @@ and of [library functions on lists](../../Library/List.md).
 *  Twitter users ordered according to number of followers.
 *  A _to do_ list.
 
-
 ## Lists in computer science
 
 *  The locations in a computer memory.
 *  The list of processes that use most cpu time.
 *  The list of procedures that are called by a given procedure.
 
-
 ## Lists in Rascal
 
 *  The empty list: `[]`. Its type is `list[void]`.
 *  A list of integers: `[3, 1, 4]`. Its type is `list[int]`.
 *  A list of mixed-type values: `[3, "a", 4]`. Its type is `list[value]`.
-
 

@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::tests::LayoutTests"
 
 `import lang::rascal::grammar::tests::LayoutTests;`
 
-
 ## function intermix1 {#lang-rascal-grammar-tests-LayoutTests-intermix1}
 
 * ``test bool intermix1()``

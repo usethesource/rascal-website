@@ -6,7 +6,6 @@ title: "module util::FileSystem"
 
 `import util::FileSystem;`
 
-
 ## data FileSystem {#util-FileSystem-FileSystem}
 
 ```rascal
@@ -32,7 +31,6 @@ data FileSystem
 ## function visibleFiles {#util-FileSystem-visibleFiles}
 
 * ``set[loc] visibleFiles(loc l)``
-
 
 #### Synopsis
 

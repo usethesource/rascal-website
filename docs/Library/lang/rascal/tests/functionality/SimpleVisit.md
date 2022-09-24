@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::SimpleVisit"
 
 `import lang::rascal::tests::functionality::SimpleVisit;`
 
-
 ## data B {#lang-rascal-tests-functionality-SimpleVisit-B}
 
 ```rascal

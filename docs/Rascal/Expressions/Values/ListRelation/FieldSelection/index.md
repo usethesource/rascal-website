@@ -15,12 +15,10 @@ Select a field (column) from a list relation value.
 
 #### Types
 
-
 |`Exp`                                 | `Exp . Name`  |
 | --- | --- |
 |
-| `lrel[T<sub>1</sub> L<sub>1</sub>, T<sub>2</sub> L<sub>2</sub>, ... ]` | `list[T~i~]`     |
-
+| `lrel[T~1~ L~1~, T~2~ L~2~, ... ]` | `list[T~i~]`     |
 
 #### Description
 
@@ -30,8 +28,7 @@ _Name_ stands for itself and is not evaluated.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>lrel[str street, int nm] R = [<"abc", 1>, <"abc", 2>, <"def", 4>, <"def", 5>];
 lrel[str street,int nm]: [
   <"abc",1>,
@@ -42,5 +39,4 @@ lrel[str street,int nm]: [
 rascal>R.street;
 list[str]: ["abc","abc","def","def"]
 ```
-
 

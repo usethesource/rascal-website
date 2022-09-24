@@ -21,7 +21,6 @@ The _not_ operator on Boolean values.
 | --- | --- |
 | `bool`   | `bool`     |
 
-
 #### Description
 
 The _not_ operator on Boolean values defined as follows:
@@ -31,13 +30,10 @@ The _not_ operator on Boolean values defined as follows:
 | `true`   | `false`    |
 | `false`  | `true`     |
 
-
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>!true;
 bool: false
 ```
-
 

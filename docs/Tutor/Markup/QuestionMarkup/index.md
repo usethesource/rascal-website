@@ -21,7 +21,6 @@ The following types of questions are supported:
 *  _Type_: question about the _type_ of a Rascal expression.
 *  _Value_: question about the _value_ of a Rascal expression.
 
-
 [Text](../../../Tutor/Markup/QuestionMarkup/Text) gives the question text and lists all possible good answers.
 
 [Choice](../../../Tutor/Markup/QuestionMarkup/Choice) is a straightforward listing of good and bad answers.
@@ -29,7 +28,6 @@ The following types of questions are supported:
 [./Type](../../../Tutor/Markup/QuestionMarkup/Type) and [./Value](../../../Tutor/Markup/QuestionMarkup/Value) questions are based on a template that consists of an optional _listing_ and an _equality_:
 
 ![][Question.png](/assets/Tutor/Markup/QuestionMarkup/Question.png)
-
 
 There should be exactly one _hole_ (indicated by `<?>`) in this template that is to be filled in by the student; it may occur in the listing
 or in one of the sides of the equality. The general structure is therefore: _fill in the hole such that the equality holds_.
@@ -45,7 +43,7 @@ Given that the listing is optional, this template represents 5 different questio
    _Expr_ may contain references to previously introduced variables using `<`Var`>`.
 * `type: TypeDescriptor`
 * `hint: Text`: a hint to be given to the student in response to a wrong answer. _Text_ may contain references to previously introduced variables.
-* `test: Expr<sub>1</sub> == Expr<sub>2</sub>`: the equality that should hold. The expressions may contain references to variables. One side may contain a hole (`<?>`).
+* `test: Expr~1~ == Expr~2~`: the equality that should hold. The expressions may contain references to variables. One side may contain a hole (`<?>`).
 * `list: Text`: a listing that runs until the next question or the end of the concept. It may contain a hole.
 
 #### Examples
@@ -57,5 +55,4 @@ Given that the listing is optional, this template represents 5 different questio
 *  `type: set[int]`: the required type is `set[int]`.
 *  `hint: One or more integers separated by comma's`.
 *  `test: <A> + <?> == <C>`: the student has to replace `<?>` by an answwer that makes the equality true.
-
 

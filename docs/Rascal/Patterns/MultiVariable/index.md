@@ -22,14 +22,13 @@ Optionally the *element type* of the multi-variable may be specified.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 ```
 Using lists:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>if([10, *N, 50] := [10, 20, 30, 40, 50])
 >>>>>>>   println("Match succeeds, N == <N>");
    println("Match succeeds, N == <N>");
@@ -38,7 +37,7 @@ ok
 ```
 the above is equivalent with:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>if([10, *int N, 50] := [10, 20, 30, 40, 50])
 >>>>>>>   println("Match succeeds, N == <N>");
    println("Match succeeds, N == <N>");
@@ -47,7 +46,7 @@ ok
 ```
 Using sets:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>if({10, *S, 50} := {50, 40, 30, 30, 10})
 >>>>>>>   println("Match succeeds, S == <S>");
    println("Match succeeds, S == <S>");
@@ -56,7 +55,7 @@ ok
 ```
 the above is equivalent with:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>if({10, *int S, 50} := {50, 40, 30, 30, 10})
 >>>>>>>   println("Match succeeds, S == <S>");
    println("Match succeeds, S == <S>");
@@ -67,5 +66,4 @@ ok
 #### Pitfalls
 
 In older versions of Rascal the type of a multi-variable had to be a list or set type.
-
 

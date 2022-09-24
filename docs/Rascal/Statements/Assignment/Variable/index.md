@@ -15,12 +15,10 @@ The expression _Exp_ is evaluated and its value is assigned to the variable _Var
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>N = 3;
 int: 3
 rascal>N;
 int: 3
 ```
-
 

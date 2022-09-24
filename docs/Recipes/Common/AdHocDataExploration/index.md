@@ -238,7 +238,7 @@ So here's the solution:
 
 Let N be a positive integer.  
 
-Let k = floor (log<sub>5</sub> N)
+Let k = floor (log~5~ N)
 
 Start a counter at zero, call it nz
 
@@ -391,7 +391,4 @@ And we're done.  But what did we learn here?  Here's what I think:
 
 *  Document and later challenge your assumptions 
 **  Are you measuring what you think you are measuring?  How do you know?
-
-
-
 

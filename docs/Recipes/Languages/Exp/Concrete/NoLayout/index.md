@@ -10,13 +10,11 @@ A version of Exp based on concrete syntax.
 
 We describe howto write a grammar for Exp and how to use it to implement an evaluator.
 
-
 #### Examples
 
 Here is the grammar for Exp:
 
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Exp::Concrete::NoLayout::Syntax
     
 lexical IntegerLiteral = [0-9]+; // <1>
@@ -42,11 +40,9 @@ Notes:
 <6> Defines alternative #4: addition. The `>` says again that the previous rule has a higher priority than the current one.
     The keyword `left` marks this as a left-associative rule.
 
-
 Now that the grammar is in place we want to use it to build an evaluator. Here is how:
 
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Exp::Concrete::NoLayout::Eval
 import demo::lang::Exp::Concrete::NoLayout::Syntax;
 
@@ -82,10 +78,9 @@ Notes:
 <5> Handle the addition case.
 <6> Handles the case of parentheses.
 
-
 What remains, is to check that `eval` works as expected.
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Exp::Concrete::NoLayout::Syntax;
 ok
 rascal>import ParseTree;
@@ -93,14 +88,14 @@ ok
 ```
 Just checking that `parse` returns a sort of parse tree:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>parse(#Exp, "2+3");
 Exp: (Exp) `2+3`
 ```
 You will see such parse trees only once, unless you are a researcher in parsing ;-)
 Here is a demonstration of `eval`:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import demo::lang::Exp::Concrete::NoLayout::Eval;
 ok
 rascal>eval("2+3");
@@ -110,6 +105,4 @@ int: 14
 rascal>eval("(2+3)*4");
 int: 20
 ```
-
-
 

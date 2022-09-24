@@ -10,9 +10,7 @@ Compile a Pico program to assembly language.
 
 The Pico compiler translates Pico programs to [Assembly](../../../../Recipes/Languages/Pico/Assembly) language programs.
 
-
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Pico::Compile
 
 import Prelude;
@@ -21,8 +19,6 @@ import demo::lang::Pico::Assembly;
 import demo::lang::Pico::Load;
 
 alias Instrs = list[Instr]; // <1>
-
-// compile Expressions.
 
 Instrs compileExp(natCon(int N)) = [pushNat(N)]; // <2>
 
@@ -102,11 +98,9 @@ public Instrs compileProgram(PROGRAM P){ // <8>
 }
 
 public Instrs compileProgram(str txt) = compileProgram(load(txt));
-// end::module[]
 
 ```
 
-                
 Notes:
 
 <1> We introduce `Instrs` as an alias for a list of assembly language instructions.
@@ -130,10 +124,9 @@ Notes:
 
 <8>  `compileProgram` compiles a gives Pico program to assembly language.
 
-
 Here is an example:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Pico::Compile;
 ok
 rascal>compileProgram("begin declare x : natural; x := 47 end");
@@ -146,7 +139,7 @@ list[Instr]: [
 ```
 Here is the compilation of the factorial program:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>compileProgram("begin declare input : natural,  
 >>>>>>>               '              output : natural,           
 >>>>>>>               '             repnr : natural,
@@ -211,5 +204,4 @@ list[Instr]: [
   label("L2")
 ]
 ```
-
 

@@ -16,7 +16,6 @@ The general scheme is:
    * `caution`
    * `danger`
 
-
 #### Description
 
 An admonition is remark that should draw the reader's attention.
@@ -62,7 +61,6 @@ MarkedText
 :::caution 
 Careful now..
 :::
-
 
 ``````
 :::danger 

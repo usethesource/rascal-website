@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::DynamicDispatch"
 
 `import lang::rascal::tests::basic::DynamicDispatch;`
 
-
 ## data D {#lang-rascal-tests-basic-DynamicDispatch-D}
 
 ```rascal

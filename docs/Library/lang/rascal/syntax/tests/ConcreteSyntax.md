@@ -6,7 +6,6 @@ title: "module lang::rascal::\\syntax::tests::ConcreteSyntax"
 
 `import lang::rascal::\syntax::tests::ConcreteSyntax;`
 
-
 ## function typeMatch {#lang-rascal-\syntax-tests-ConcreteSyntax-typeMatch}
 
 * ``test bool typeMatch()``

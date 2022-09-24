@@ -6,7 +6,6 @@ title: "module lang::rascal::\\syntax::tests::PreBootstrap"
 
 `import lang::rascal::\syntax::tests::PreBootstrap;`
 
-
 ## function expr {#lang-rascal-\syntax-tests-PreBootstrap-expr}
 
 * ``test bool expr()``

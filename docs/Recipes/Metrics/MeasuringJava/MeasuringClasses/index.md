@@ -8,14 +8,11 @@ A typical example of how to use M3 to analyze Java classes.
 
 #### Examples
 
-
 First we import the basic data types for representing Java. The model is called _M3_, and its definition is split acros a generic
 language independent module called [Rascal:analysis/m3/Core] and a Java specific part called [Rascal:lang/java/m3/Core]. Have a look at the documentation 
 of these modules later. For now we will go through using them in a few examples.
 
-
-
-```rascal-shell
+```rascal-shell 
 rascal>import lang::java::m3::Core;
 ok
 rascal>import lang::java::m3::AST;
@@ -24,7 +21,7 @@ ok
 
 "Snakes and Ladders" is an example Java project of which we have stored the source code in `|tmp:///snakes-and-ladders/src|`
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>|tmp:///snakes-and-ladders/src/snakes/|.ls
 list[loc]: [
   |tmp:///snakes-and-ladders/src/snakes/Die.java|,
@@ -43,7 +40,7 @@ list[loc]: [
 
 Now we can extract our overview model, using the classpath we derived:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>myModel = createM3FromDirectory(|tmp:///snakes-and-ladders/src|);
 M3: m3(
   |tmp:///snakes-and-ladders/src|,
@@ -98,7 +95,7 @@ M3: m3(
 
 Next, let's focus on the _containment_ relation. This defines what parts of the source code are parts of which other parts:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>myModel.containment
 rel[loc from,loc to]: {
   <|java+method:///snakes/Game/isValidPosition(int)|,|java+parameter:///snakes/Game/isValidPosition(int)/scope(position)/scope(0)/position|>,
@@ -139,7 +136,7 @@ You are looking at a binary relation of type `rel[loc from,loc to]`, where `from
 
 As you can read, classes contain methods, methods contain variables, etc. Classes could also contain other classes (nested classes), and methods can even contain classes (anonymous classes). Let's focus on a specific class, and project what it contains from the relation:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import IO;
 ok
 rascal>println(readFile(|java+class:///snakes/Snake|))
@@ -165,13 +162,13 @@ set[loc]: {
 ```
 Let's filter the methods:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>snakeMethods = [ e | e <- myModel.containment[|java+class:///snakes/Snake|], e.scheme == "java+method"];
 list[loc]: [|java+method:///snakes/Snake/squareLabel()|]
 ```
 And we are ready to compute our first metric. How many methods does this class contain?
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import List;
 ok
 rascal>size(snakeMethods)
@@ -184,7 +181,7 @@ The quality of a metric's implementation is defined by its independent definitio
 
 Let's generalize and compute the number of methods for all classes in one big expression. First we make a new function to compute the number for any given class. Now we reuse `isMethod` for a change, which includes normal methods, constructors and static initializers:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>int numberOfMethods(loc cl, M3 model) = size([ m | m <- model.containment[cl], isMethod(m)]);
 int (loc, M3): function(|prompt:///|(0,93,<1,0>,<1,93>))
 rascal>numberOfMethods(|java+class:///snakes/Snake|, myModel)
@@ -193,7 +190,7 @@ int: 2
 
 Then we apply this new function to give us a map from classes to integers:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>classes(myModel)
 set[loc]: {
   |java+class:///snakes/Game|,
@@ -223,7 +220,7 @@ map[loc class, int methodCount]: (
 ```
 How about the number of fields?
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>int numberOfFields(loc cl, M3 model) = size([ m | m <- model.containment[cl], isField(m)]);
 int (loc, M3): function(|prompt:///|(0,91,<1,0>,<1,91>))
 rascal>map[loc class, int fieldCount] numberOfFieldsPerClass = (cl:numberOfFields(cl, myModel) | cl <- classes(myModel));
@@ -242,7 +239,7 @@ map[loc class, int fieldCount]: (
 ```
 What is the ratio between fields and methods for each class?
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>(cl : (numberOfFieldsPerClass[cl] * 1.0) / (numberOfMethodsPerClass[cl] * 1.0) | cl <- classes(myModel))
 map[loc, real]: (
   |java+class:///snakes/Game|:0.2,
@@ -260,7 +257,7 @@ map[loc, real]: (
 
 There is a lot more to discover in M3 models. These are the currently available relations in an M3 model:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import Node;
 ok
 rascal>import Set;

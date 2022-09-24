@@ -20,7 +20,7 @@ details:
   - Browsing
 ---
 
-* To [get started](../GettingStarted/) with download, installation and your first run, look [here](../GettingStarted/).
+* To [get started](../GettingStarted//) with download, installation and your first run, look [here](../GettingStarted//).
 * To quit the [rascal shell](../RascalShell/) prompt type `:quit`
 * To get initial help using the [rascal shell](../RascalShell/) prompt type `:help` 
 * In case you ran into other troubles, please refer to:
@@ -33,5 +33,4 @@ details:
    3. In VScode use the command palette and search for `Rascal` for more commands.
 * For specific application topics, "Howto" kind of information, etc. please go to [further reading](../GettingHelp/FurtherReading).
 * There is a lot of documentation on Rascal and its libraries. Read the [Browsing](../GettingHelp/Browsing) page on how to navigate it.
-
 

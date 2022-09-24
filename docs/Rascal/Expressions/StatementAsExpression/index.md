@@ -15,4 +15,3 @@ This is further explained in the sections for the relevant statements, see [If](
 
 It is likely that the design of Rascal will evolve into completely merging expressions and statements.
 
-

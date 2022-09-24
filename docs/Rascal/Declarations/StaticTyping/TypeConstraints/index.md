@@ -31,7 +31,7 @@ public &T <: num abs(&T <: num N)
 ```
 The argument `N` is constrained to be at most of type `num`.
 
-```rascal-shell
+```rascal-shell 
 rascal>import util::Math;
 ok
 rascal>abs(-3);
@@ -48,8 +48,7 @@ Here is an example from the [Node](../../../../Rascal/Expressions/Values/Node) l
 `setAnnotations` takes a value of any type that is at most `node` and adds annotations to it.
 This makes it possible to set annotations on any [Algebraic Data Type](../../../../Rascal/Declarations/AlgebraicDataType).
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Node;
 ok
 rascal>nd = "f"(10, "abc");
@@ -57,7 +56,7 @@ node: "f"(10,"abc")
 ```
 First we apply `setAnnotations` to a node value:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>setAnnotations(nd, ("color" : "red", "size" : "large"));
 node: "f"(10,"abc",
   size="large",
@@ -65,7 +64,7 @@ node: "f"(10,"abc",
 ```
 Next, we introduce a new data type `Suite`:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>data Suite = hearts() | diamonds() | clubs() | spades();
 ok
 rascal>st = diamonds();
@@ -73,9 +72,8 @@ Suite: diamonds()
 ```
 And apply `setAnnotations` to a value of type `Suite`:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>setAnnotations(st, ("player" : "Hossein", "gain" : "120"));
 Suite: diamonds(player="Hossein",gain="120")
 ```
-
 

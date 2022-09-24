@@ -16,8 +16,7 @@ The value of that field is replaced in _V_ by the value of _Exp_ resulting in a 
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>data FREQ = wf(str word, int freq);
 ok
 rascal>W = wf("rascal", 1000);
@@ -25,5 +24,4 @@ FREQ: wf("rascal",1000)
 rascal>W.freq = 100000;
 FREQ: wf("rascal",100000)
 ```
-
 

@@ -15,10 +15,7 @@ that have to be described:
 *  The handling of the _scope_ of variables (see `Scope`, `Env`, `makeEnv` and `find` below).
 *  The way the interpreter returns its results (see `Result` below).
 
-
-
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Lisra::Runtime
 
 import Prelude;
@@ -49,12 +46,9 @@ public Lval TRUE  = Atom("#t"); // <5>
 public Lval FALSE = Atom("#f");
 
 alias Result = tuple[Lval val, Env env]; // <6>
-// end::module[]
-     
 
 ```
 
-                
 <1> The data type `Lval` takes care of the representation of Lisp values.
     It covers integers, atoms, lists and closures (the representation of a functions and
     the context in which it will be executed).
@@ -76,5 +70,4 @@ alias Result = tuple[Lval val, Env env]; // <6>
 <6> Finally, we define `Result` as a tuple of an `Lval` and an `Env`.
     Each step during interpretation will thus return the value it computed and
     a possibly modified environment.
-
 

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::Visit2"
 
 `import lang::rascal::tests::functionality::Visit2;`
 
-
 ## function cntLit {#lang-rascal-tests-functionality-Visit2-cntLit}
 
 * ``test bool cntLit()``

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::IsDefined"
 
 `import lang::rascal::tests::basic::IsDefined;`
 
-
 ## function isDefinedStr1 {#lang-rascal-tests-basic-IsDefined-isDefinedStr1}
 
 * ``test bool isDefinedStr1()``

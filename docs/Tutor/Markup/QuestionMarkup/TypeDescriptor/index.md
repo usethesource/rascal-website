@@ -26,13 +26,13 @@ A _TypeDescriptor_ is one of
 *  `list[TypeDescriptor]`
 *  `set[TypeDescriptor]`
 *  `map[TypeDescriptor,TypeDescriptor]`
-*  `tuple[TypeDescriptor<sub>1</sub>, TypeDescriptor<sub>2</sub>, ...]`
+*  `tuple[TypeDescriptor~1~, TypeDescriptor~2~, ...]`
 *  `void`
 *  `value`
 *  `arb`
 *  `arb[Int]`
-*  `arb[Int, TypeDescriptor<sub>1</sub>, TypeDescriptor<sub>2</sub>]`
-*  `arb[TypeDescriptor<sub>1</sub>, TypeDescriptor<sub>2</sub>]`
+*  `arb[Int, TypeDescriptor~1~, TypeDescriptor~2~]`
+*  `arb[TypeDescriptor~1~, TypeDescriptor~2~]`
 *  `same[TypeName]`
 
 #### Description
@@ -57,11 +57,9 @@ extensions that are helpfull when generating values:
 | `list[int]`         | A list of integers |
 | `set[int[0,10]]`    | A set of integers between 0 and 10  |
 
-
 #### Pitfalls
 
 *  There is currently an arbitrary built-in limit that restricts generated lists, sets,
    maps and relations to at most 5 elements.
 *  There is no support for labeled tuples.
-
 

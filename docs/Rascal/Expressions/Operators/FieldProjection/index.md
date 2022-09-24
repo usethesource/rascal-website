@@ -12,7 +12,7 @@ Projection of tuple.
 
 #### Syntax
 
-`Exp < Field<sub>1</sub>, Field<sub>2</sub> ... >`
+`Exp < Field~1~, Field~2~ ... >`
 
 #### Description
 
@@ -23,7 +23,7 @@ _Exp_ should evaluate to a tuple or relation, and _Field_~i~ should be a field n
 
 Suppose we have a relation with traffic information that records the name of the day, the day number, and the length of the traffic jams at that day.
 
-```rascal-shell
+```rascal-shell 
 rascal>rel[str day, int daynum, int length] Traffic = 
 >>>>>>>{<"mon", 1, 100>, <"tue", 2, 150>, <"wed", 3, 125>, 
 >>>>>>> <"thur", 4, 110>, <"fri", 5, 90>};
@@ -52,5 +52,4 @@ rel[int length,str day]: {
 }
 ```
 Field projection thus selects parts from a larger value that has a fixed number of parts. The selection is based on position and not on value and can be used to completely reorder or remove the parts of a larger value.
-
 

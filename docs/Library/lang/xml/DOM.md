@@ -12,13 +12,11 @@ Functions for reading and writing XML files to and from a "DOM" representation.
 
 #### Description
 
-
-
 [XML](http://en.wikipedia.org/wiki/XML) is a widely used markup language for encoding and exchanging documents.
 
 The Document Object Model [DOM](http://en.wikipedia.org/wiki/Document_Object_Model) is a cross-platform and language-independent
 way of representing and manipulating HTML, XHTML and XML documents. In this module we represent the DOM as a 
-Rascal [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType) using [keyword parameters](../../../Rascal/Declarations/Function) for the optional attributes.
+Rascal [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType) using [keyword parameters](../../../Rascal/Declarations/Function/) for the optional attributes.
 
 In [IO](../../../Library/lang/xml/IO.md) a different approach is taken, where each XML document is mapped to an instance of 
 the `node` class, which gives a more direct one-to-ony mapping as opposed to the DOM encoding here.
@@ -50,7 +48,6 @@ The following functions are provided:
 * [xmlPretty](../../../Library/lang/xml/DOM.md#lang::xml::DOM-xmlPretty)
 * [xmlRaw](../../../Library/lang/xml/DOM.md#lang::xml::DOM-xmlRaw)
 
-
 ## data Node {#lang-xml-DOM-Node}
 
 ```rascal
@@ -66,7 +63,6 @@ data Node
      | charRef(int code)
      ;
 ```
-
 
 #### Synopsis
 
@@ -98,7 +94,6 @@ data Namespace
 
 * ``Node attribute(str name, str text)``
 
-
 #### Synopsis
 
 Auxiliary constructor for XML attribute without namespace.
@@ -106,7 +101,6 @@ Auxiliary constructor for XML attribute without namespace.
 ## function element {#lang-xml-DOM-element}
 
 * ``Node element(str name, list[Node] kids)``
-
 
 #### Synopsis
 
@@ -116,7 +110,6 @@ Auxiliary constructor for XML element without namespace.
 
 * ``Node parseXMLDOM(str src)``
 
-
 #### Synopsis
 
 Parse an XML document and return a DOM instance.
@@ -125,7 +118,7 @@ Parse an XML document and return a DOM instance.
 
 Read the sample note file, parse it, and construct a DOM instance.
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>import lang::xml::DOM;
@@ -185,7 +178,6 @@ As expected, the result is of type [Node](../../../Library/lang/xml/DOM.md#lang:
 
 * ``Node parseXMLDOMTrim(str src)``
 
-
 #### Synopsis
 
 Parse an XML document and trim it (remove layout).
@@ -194,7 +186,7 @@ Parse an XML document and trim it (remove layout).
 
 Read the sample note file, parse it, and construct a DOM instance (using `parseXMLDOMTrim`).
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>import lang::xml::DOM;
@@ -245,7 +237,6 @@ Compare this with the output of [parse x m l d oM](../../../Library/lang/xml/DOM
 
 * ``str xmlRaw(Node x)``
 
-
 #### Synopsis
 
 Convert a DOM instance to a raw XML string.
@@ -254,7 +245,7 @@ Convert a DOM instance to a raw XML string.
 
 Read the sample note file, parse it, construct a DOM instance, and convert it to a string:
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>import lang::xml::DOM;
@@ -294,7 +285,6 @@ Apart from an extra XML header, the original source file `F` and the output `S` 
 
 * ``str xmlCompact(Node x)``
 
-
 #### Synopsis
 
 Convert a DOM instance to a compact XML string (with minimal white space).
@@ -303,7 +293,7 @@ Convert a DOM instance to a compact XML string (with minimal white space).
 
 Read the sample note file, parse it, construct a DOM instance, and convert it to a string:
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>import lang::xml::DOM;
@@ -336,7 +326,6 @@ The output `S` of `xmlCompact` is a version of the original source file `F` with
 
 * ``str xmlPretty(Node x)``
 
-
 #### Synopsis
 
 Convert a DOM instance to a pretty printed XML string.
@@ -345,8 +334,7 @@ Convert a DOM instance to a pretty printed XML string.
 
 Read the sample note file, parse it, construct a DOM instance, and convert it to a string:
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>import lang::xml::DOM;

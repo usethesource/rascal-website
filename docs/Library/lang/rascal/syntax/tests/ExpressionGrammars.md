@@ -6,7 +6,6 @@ title: "module lang::rascal::\\syntax::tests::ExpressionGrammars"
 
 `import lang::rascal::\syntax::tests::ExpressionGrammars;`
 
-
 ## function removeBrackets {#lang-rascal-\syntax-tests-ExpressionGrammars-removeBrackets}
 
 * ``Exp removeBrackets(Exp e)``

@@ -11,19 +11,16 @@ The less than operator on location values.
 
 #### Syntax
 
-`Exp<sub>1</sub> < Exp<sub>2</sub>`
+`Exp~1~ < Exp~2~`
 
 #### Types
 
-
-| `Exp<sub>1</sub>` | `Exp<sub>2</sub>` | `Exp<sub>1</sub> < Exp<sub>2</sub>`  |
+| `Exp~1~` | `Exp~2~` | `Exp~1~ < Exp~2~`  |
 | --- | --- | --- |
 | `loc`     |  `loc`    | `bool`                |
 
-
 #### Description
 
-Yields `true` if the location value of _Exp_<sub>1</sub> is strictly textually contained
-in the location value of _Exp_<sub>2</sub>, and `false` otherwise.
-
+Yields `true` if the location value of _Exp_~1~ is strictly textually contained
+in the location value of _Exp_~2~, and `false` otherwise.
 

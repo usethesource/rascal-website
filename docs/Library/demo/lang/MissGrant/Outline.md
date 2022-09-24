@@ -6,7 +6,6 @@ title: "module demo::lang::MissGrant::Outline"
 
 `import demo::lang::MissGrant::Outline;`
 
-
 ## function outlineController {#demo-lang-MissGrant-Outline-outlineController}
 
 * ``node outlineController(Controller ctl)``

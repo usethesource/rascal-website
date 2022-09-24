@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::Matching"
 
 `import lang::rascal::tests::basic::Matching;`
 
-
 ## data T1 {#lang-rascal-tests-basic-Matching-T1}
 
 ```rascal

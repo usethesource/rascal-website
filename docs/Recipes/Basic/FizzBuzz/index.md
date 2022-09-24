@@ -22,12 +22,11 @@ Solutions to FizzBuzz in various languages are available [here](http://www.geeks
 
 Here are a few possible Rascal solutions:
 
-```rascal
+```rascal 
 
 module demo::basic::FizzBuzz
 
 import IO;
-
 
 void fizzbuzz1() {
    for (int n <- [1 .. 101]){
@@ -35,7 +34,6 @@ void fizzbuzz1() {
       println((fb == "") ?"<n>" : fb);
    }
 }
-
 
 void fizzbuzz2() {
   for (n <- [1..101]) 
@@ -46,7 +44,6 @@ void fizzbuzz2() {
       default: println(n);
     }
 }
- 
  
 void fizzbuzz3() {
   for (n <- [1..101]) {
@@ -64,8 +61,7 @@ void fizzbuzz3() {
 
 ```
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import demo::basic::FizzBuzz;
 ok
 rascal>fizzbuzz1();
@@ -172,5 +168,4 @@ Fizz
 Buzz
 ok
 ```
-
 

@@ -6,7 +6,6 @@ title: "module demo::lang::MissGrant::ToDot"
 
 `import demo::lang::MissGrant::ToDot;`
 
-
 ## function nodeLabel {#demo-lang-MissGrant-ToDot-nodeLabel}
 
 * ``str nodeLabel(ActionRel s, str n)``

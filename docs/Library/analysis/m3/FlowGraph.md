@@ -6,7 +6,6 @@ title: "module analysis::m3::FlowGraph"
 
 `import analysis::m3::FlowGraph;`
 
-
 ## data M3 {#analysis-m3-FlowGraph-M3}
 
 ```rascal

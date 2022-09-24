@@ -6,7 +6,6 @@ title: "module lang::oil::Main"
 
 `import lang::oil::Main;`
 
-
 #### Synopsis
 
 Object Instantiation Language (OIL) for building Java objects at run-time.
@@ -37,7 +36,6 @@ from Java.
 
 *  The OIL language is experimental and not used much. It is unfinished and there may be bugs.
 
-
 ## data Exp {#lang-oil-Main-Exp}
 
 ```rascal
@@ -58,7 +56,6 @@ data Exp
 
 * ``str interpret(list[Exp] e)``
 * ``str interpret(Exp e)``
-
 
 #### Synopsis
 

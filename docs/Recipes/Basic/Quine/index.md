@@ -17,14 +17,12 @@ quines in many different programming languages.
 
 Learning about quines, is about learning how to quote and escape symbols in strings.
 
-
 #### Examples
 
 ```rascal
 demo::basic::Quine
 ```
 
-                
 <1> A remarkable point in the code: the string variable `program` has as value
    the text of the module `Quine` upto here. 
 <2> The definition of `program` ends here.
@@ -38,7 +36,7 @@ Now here is the catch: we have to be very carefull in handling special character
 
 Let's do a simple experiment:
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>str greeting = "\"Good Morning, Dr. Watson\", said Holmes";
@@ -55,7 +53,7 @@ Be aware that in the map, also escaping is needed!
 We want to say: escape `"` and replace it by `\"`, but since both `"` and `\` have to be escaped themselves
 we have to say: escape `"\""` and replace it by `"\\\""`. The effect is as follows:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import String;
 ok
 rascal>println("\"" + escape(greeting, ("\"": "\\\"")) + "\"");
@@ -74,7 +72,7 @@ The mesmerizing amount of `\` characters can be explained due to escaping `"` an
 
 Now let's put `quine` to the test.
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::basic::Quine;
 ok
 rascal>quine();
@@ -105,5 +103,4 @@ ok
 ```
 If you follow this output line-by-line you will see that it
 is identical to the original source code of module `Quine`.
-
 

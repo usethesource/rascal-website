@@ -10,14 +10,13 @@ Assembly language for Pico.
 
 The [Compile](../../../../Recipes/Languages/Pico/Compile)r will translate Pico programs into the following assembly language.
 
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Pico::Assembly
 
 import demo::lang::Pico::Abstract;
 
-public data Instr =
-       dclNat(PicoId Id)    // Reserve a memory location for a natural variable
+public data Instr 
+     = dclNat(PicoId Id)    // Reserve a memory location for a natural variable
      | dclStr(PicoId Id)    // Reserve a memory location for a string variable
      | pushNat(int intCon)  // Push integer constant on the stack
      | pushStr(str strCon)  // Push string constant on the stack
@@ -32,9 +31,6 @@ public data Instr =
      | gotrue(str label)    // Go to instruction with given label, if top equals 0
      | gofalse(str label)   // Go to instruction with given label, if top not equal to 0
      ;
-// tag::module[]     
 
 ```
-
-                
 

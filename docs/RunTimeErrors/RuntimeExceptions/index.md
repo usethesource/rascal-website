@@ -9,7 +9,6 @@ All runtime exceptions that can occur during execution of a Rascal program.
 #### Description
 
 The following exceptions can be trown as the result of a run-time error:
-* [runtime exceptions](../../RunTimeErrors/RuntimeExceptions)
 * [Ambiguity](../../RunTimeErrors/RuntimeExceptions/Ambiguity)
 * [ArithmeticException](../../RunTimeErrors/RuntimeExceptions/ArithmeticException)
 * [AssertionFailed](../../RunTimeErrors/RuntimeExceptions/AssertionFailed)

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::Math"
 
 `import lang::rascal::tests::library::Math;`
 
-
 ## function abs1 {#lang-rascal-tests-library-Math-abs1}
 
 * ``test bool abs1()``

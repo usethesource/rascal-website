@@ -12,12 +12,9 @@ We count words using a regular expression match in a for loop.
 Each time that the pattern `/[a-zA-Z0-9_]+/` matches, the body of the loop is executed
 and `count` is incremented.
 
-```rascal
+```rascal 
 
 module demo::common::WordCount::CountInLine1
-
-
-
 
 int countInLine1(str s) {
   int count = 0;
@@ -30,14 +27,12 @@ test bool tstCountInLine1b() = countInLine1("Jabberwocky by Lewis Carroll") == 4
 
 ```
 
-                
 Let's try it:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::common::WordCount::CountInLine1;
 ok
 rascal>countInLine1("Jabberwocky by Lewis Carroll");
 int: 4
 ```
-
 

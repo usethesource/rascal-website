@@ -9,7 +9,5 @@ provide numerical output.
 
 #### Description
 
-* [Metrics](../../Recipes/Metrics)
 * [MeasuringJava](../../Recipes/Metrics/MeasuringJava)
-
 

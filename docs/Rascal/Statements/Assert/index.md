@@ -11,30 +11,27 @@ An executable assertion.
 
 #### Syntax
 
-*  `assert Exp<sub>1</sub>`
-*  `assert Exp<sub>1</sub> : Exp<sub>2</sub>`
+*  `assert Exp~1~`
+*  `assert Exp~1~ : Exp~2~`
 
 #### Types
 
-
-| `Exp<sub>1</sub>` | `Exp<sub>2</sub>`  |
+| `Exp~1~` | `Exp~2~`  |
 | --- | --- |
 | `bool`    | `str`      |
-
 
 #### Description
 
 An assert statement may occur everywhere where a declaration is allowed. It has two forms:
 
-An assert statement consists of a Boolean expression _Exp_<sub>1</sub> and an optional string expression _Exp_<sub>2</sub>
+An assert statement consists of a Boolean expression _Exp_~1~ and an optional string expression _Exp_~2~
 that serves as a identifying message for this assertion. 
 
-When _Exp_<sub>1</sub> evaluates to `false`, an `AssertionFailed` exception is thrown.
+When _Exp_~1~ evaluates to `false`, an `AssertionFailed` exception is thrown.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>assert 1==2 : "is never true";
 ok
 rascal>int div(int x, int y) {
@@ -48,5 +45,4 @@ rascal>div(4,0);
 	at $shell$(|prompt:///|(0,9,<1,0>,<1,9>))
 ok
 ```
-
 

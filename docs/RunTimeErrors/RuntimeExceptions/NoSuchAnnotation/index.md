@@ -14,28 +14,26 @@ Annotation without a value.
 
 `import Exception;` (only needed when `NoSuchAnnotation` is used in `catch`)
 
-
 #### Description
 
-An [annotation](../../../Rascal/Declarations/Annotation) can be associated with any node value
-(including any [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType)).
+An [annotation](../../../Rascal/Declarations/Annotation/) can be associated with any node value
+(including any [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/)).
 This error is generated when the value of an annotation is requested but has not been defined.
 
 Remedies:
 
 *  Ensure that the annotation value is properly initialized for all relevant parts of the node value. 
 *  Use the 
-   [isDefined](../../../Rascal/Expressions/Values/Boolean/IsDefined) and 
-   [ifDefinedElse](../../../Rascal/Expressions/Values/Boolean/IfDefinedElse) operators to check whether the annotation value 
+   [isDefined](../../../Rascal/Expressions/Values/Boolean/IsDefined/) and 
+   [ifDefinedElse](../../../Rascal/Expressions/Values/Boolean/IfDefinedElse/) operators to check whether the annotation value 
    is set and act accordingly.
-*  Catch the `NoSuchAnnotation yourself`, see [try catch](../../../Rascal/Statements/TryCatch).
+*  Catch the `NoSuchAnnotation yourself`, see [try catch](../../../Rascal/Statements/TryCatch/).
 
 #### Examples
 
 INFO: Eliminate the double [red]##Error: Error:##
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>data Fruit = apple(int n) | orange(int n);
 ok
 rascal>anno str Fruit @ quality;
@@ -49,20 +47,20 @@ ok
 ```
 Use the unary postfix operator isDefined `?` to check whether the `quality` annotation is set:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>piece@quality?;
 bool: false
 ```
 Use the ternary operator ifDefinedElse `?` to compute an alternative value when the `quality` annotation is not set:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>piece@quality ? "no quality value";
 str: "no quality value"
 ```
 We can also catch the `NoSuchAnnotation` error. First import the Rascal exceptions (which are also included in `Prelude`)
 and `IO`:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>import Exception;
 ok
 rascal>import IO;
@@ -74,7 +72,7 @@ ok
 ```
 Finally, we can just assign a value to the `quality` annotation:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>piece@quality = "excellent";
 Fruit: orange(13,quality="excellent")
 rascal>piece@quality;
@@ -84,5 +82,4 @@ str: "excellent"
 #### Pitfalls
 
 WARNING: Using white space around the `@` confuses the Rascal parser
-
 

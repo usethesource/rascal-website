@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::ListRelation"
 
 `import lang::rascal::tests::library::ListRelation;`
 
-
 ## function carrier1 {#lang-rascal-tests-library-ListRelation-carrier1}
 
 * ``test bool carrier1()``

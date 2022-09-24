@@ -51,7 +51,6 @@ The following topics will be described here:
 * [Concept](../Tutor/Concept)
 * [Maintenance](../Tutor/Maintenance)
 * [Markup](../Tutor/Markup)
-* [Tutor](../Tutor/)
 
 #### Benefits
 

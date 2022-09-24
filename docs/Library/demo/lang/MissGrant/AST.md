@@ -6,7 +6,6 @@ title: "module demo::lang::MissGrant::AST"
 
 `import demo::lang::MissGrant::AST;`
 
-
 ## data Controller {#demo-lang-MissGrant-AST-Controller}
 
 ```rascal

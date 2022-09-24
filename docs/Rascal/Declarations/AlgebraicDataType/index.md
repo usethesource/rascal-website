@@ -5,7 +5,6 @@ keywords:
 
 ---
 
-
 #### Synopsis
 
 Define a user-defined type (Algebraic Data Type).
@@ -24,17 +23,16 @@ see [Constructor](../../../Rascal/Expressions/Values/Constructor).
 The following data declaration defines the datatype `Bool` that contains various constants (`tt()` and `ff()`
 and constructor functions `conj` and `disj`.
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>data Bool = tt() | ff() | conj(Bool L, Bool R)  | disj(Bool L, Bool R);
 ok
 ```
 terms of type `Bool` can be constructed using the defined constructors:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>conj(tt(),ff());
 Bool: conj(
   tt(),
   ff())
 ```
-
 

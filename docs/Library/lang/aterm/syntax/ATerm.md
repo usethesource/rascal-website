@@ -6,4 +6,3 @@ title: "module lang::aterm::\\syntax::ATerm"
 
 `import lang::aterm::\syntax::ATerm;`
 
-

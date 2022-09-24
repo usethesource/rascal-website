@@ -8,7 +8,7 @@ The special variable `it` occurs outside a reducer expression.
 
 #### Description
 
-A [reducer](../../Rascal/Expressions/Reducer) is used to reduce all elements in a collection to a sngle value.
+A [reducer](../../Rascal/Expressions/Reducer/) is used to reduce all elements in a collection to a sngle value.
 The special variable `it` represents the currently reduced value and can be modified inside the reducer.
 This error is generated when `it` i used otuside the a reducer.
 
@@ -21,15 +21,14 @@ Remedies:
 
 This is correct way to add all elements in a list:
 
-```rascal-shell
+```rascal-shell 
 rascal>(0 | it + n | int n <- [1,5,9] )
 int: 15
 ```
 Using `it` outside a reducer gives an error:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>it + 3
 ok
 ```
-
 

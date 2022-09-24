@@ -6,7 +6,6 @@ title: "module lang::sdf2::util::Load"
 
 `import lang::sdf2::util::Load;`
 
-
 ## function loadSDF2Module {#lang-sdf2-util-Load-loadSDF2Module}
 
 * ``SDF loadSDF2Module(str name, PathConfig pcfg)``

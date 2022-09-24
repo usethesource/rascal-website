@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::concrete::Parsing"
 
 `import lang::rascal::tests::concrete::Parsing;`
 
-
 ## function strExpr {#lang-rascal-tests-concrete-Parsing-strExpr}
 
 * ``test bool strExpr()``

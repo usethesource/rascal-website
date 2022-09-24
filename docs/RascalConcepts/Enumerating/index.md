@@ -13,7 +13,7 @@ or all the nodes in a tree.
 Each value that is enumerated is first matched against a pattern before it can possibly contribute to the result of 
 the enumerator. An enumerator yields `true` as long as it has generated a new value, and `false` otherwise.
 
-See [Enumerator](../../Rascal/Expressions/Comprehensions/Enumerator) for details.
+See [Enumerator](../../Rascal/Expressions/Comprehensions/Enumerator/) for details.
 
 #### Examples
 
@@ -32,15 +32,13 @@ Note the use of an anonymous variable at the `EXP` position in the pattern.
 
 Let's practice some of these examples.
 
-
-```rascal-shell
+```rascal-shell 
 rascal>int x <- {};
 bool: false
 ```
 The enumerator does not produce any value and returns `false`.
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>int x <- {1, 3, 5, 7, 11 };
 bool: true
 rascal>x;
@@ -53,7 +51,7 @@ Apparently, we cannot inspect the value of the variable `x` that was bound.
 
 Another example that results in an error:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>str x <- {1, 3, 5, 7, 11 };
 ok
 ```
@@ -62,17 +60,17 @@ and an error results.
 
 A more satisfying use is as follows:
 
-```rascal-shell
+```rascal-shell 
 rascal>{ x * x | int x <- {1, 3, 5, 7, 11 }};
 set[int]: {121,1,9,49,25}
 ```
-When used inside [Comprehensions](../../Rascal/Expressions/Comprehensions), 
-or [For](../../Rascal/Statements/For), [Do](../../Rascal/Statements/Do), or [While](../../Rascal/Statements/While) 
+When used inside [Comprehensions](../../Rascal/Expressions/Comprehensions/), 
+or [For](../../Rascal/Statements/For/), [Do](../../Rascal/Statements/Do/), or [While](../../Rascal/Statements/While/) 
 statement, all values of the generator will be produced and used.
 The variables that are introduced by a enumerator are local to the construct in which the enumerator is used.
 Here is a similar example:
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>for(int x <- {1, 3, 5, 7, 11 })
@@ -89,5 +87,4 @@ list[void]: []
 #### Pitfalls
 
 The variables that are bound by an enumerator are local to the statement in which the enumerator is used.
-
 

@@ -17,17 +17,16 @@ A comprehension consists of an expression that determines the successive element
 result and a list of enumerators and tests (boolean expressions). 
 The enumerators produce values and the tests filter them. 
 
-See [Comprehensions](../../Rascal/Expressions/Comprehensions), 
-[List Comprehension](../../Rascal/Expressions/Values/List/Comprehension), 
-[Set Comprehension](../../Rascal/Expressions/Values/Set/Comprehension), and
-[Map Comprehension](../../Rascal/Expressions/Values/Map/Comprehension) for details.
+See [Comprehensions](../../Rascal/Expressions/Comprehensions/), 
+[List Comprehension](../../Rascal/Expressions/Values/List/Comprehension/), 
+[Set Comprehension](../../Rascal/Expressions/Values/Set/Comprehension/), and
+[Map Comprehension](../../Rascal/Expressions/Values/Map/Comprehension/) for details.
 
 #### Examples
 
 A standard example is
 
-
-```rascal-shell
+```rascal-shell 
 rascal>{ x * x | int x <- [1 .. 10], x % 3 == 0 }
 set[int]: {9,81,36}
 ```
@@ -37,8 +36,7 @@ are divisible by 3. A more intriguing example (that we do not give in full detai
 ```rascal
 {name | /asgStat(Id name, _) <- P}
 ```
-which traverses program `P` (using the _descendant match_ operator `/`, see [Patterns](../../Rascal/Patterns/Node)) 
+which traverses program `P` (using the _descendant match_ operator `/`, see [Patterns](../../Rascal/Patterns/Node/)) 
 and constructs a set of all identifiers that occur on the left hand 
 side of assignment statements in `P`.
-
 

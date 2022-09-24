@@ -6,14 +6,13 @@ title: "module Map"
 
 `import Map;`
 
-
 #### Synopsis
 
 Library functions for maps.
 
 #### Description
 
-For operators on maps see [Map](../Rascal/Expressions/Values/Map) in the Rascal Language Reference.
+For operators on maps see [Map](../Rascal/Expressions/Values/Map/) in the Rascal Language Reference.
 
 The following functions are defined for maps:
 * [delete](../Library/Map.md#Map-delete)
@@ -34,11 +33,9 @@ The following functions are defined for maps:
 * [toRel](../Library/Map.md#Map-toRel)
 * [toString](../Library/Map.md#Map-toString)
 
-
 ## function delete {#Map-delete}
 
 * ``map[&K,&V] delete(map[&K,&V] m, &K k)``
-
 
 #### Synopsis
 
@@ -50,8 +47,7 @@ Returns the map `m` minus the key `k`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>delete(("apple":1,"pear":2), "apple");
@@ -61,7 +57,6 @@ map[str, int]: ("pear":2)
 ## function domain {#Map-domain}
 
 * ``set[&K] domain(map[&K, &V] M)``
-
 
 #### Synopsis
 
@@ -73,8 +68,7 @@ Returns the domain (set of keys) of map `M`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>domain(("apple": 1, "pear": 2));
@@ -84,7 +78,6 @@ set[str]: {"pear","apple"}
 ## function domainR {#Map-domainR}
 
 * ``map[&K, &V] domainR(map[&K, &V] M, set[&K] S)``
-
 
 #### Synopsis
 
@@ -96,8 +89,7 @@ Return the map `M` restricted to pairs with key in `S`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>domainR(("apple": 1, "pear": 2, "orange": 3), {"apple", "pear"});
@@ -107,7 +99,6 @@ map[str, int]: ("pear":2,"apple":1)
 ## function domainX {#Map-domainX}
 
 * ``map[&K, &V] domainX(map[&K, &V] M, set[&K] S)``
-
 
 #### Synopsis
 
@@ -119,8 +110,7 @@ Return the map `M` restricted to pairs with key not in `S`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>domainX(("apple": 1, "pear": 2, "orange": 3), {"apple", "pear"});
@@ -130,7 +120,6 @@ map[str, int]: ("orange":3)
 ## function getOneFrom {#Map-getOneFrom}
 
 * ``&K getOneFrom(map[&K, &V] M)``
-
 
 #### Synopsis
 
@@ -142,22 +131,28 @@ Returns an arbitrary key of map `M`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
+<<<<<<< HEAD
 str: "pineapple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "pear"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "pineapple"
+=======
+str: "apple"
+rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
+str: "pear"
+rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
+str: "pear"
+>>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 ## function invert {#Map-invert}
 
 * ``map[&V, set[&K]] invert(map[&K, &V] M)``
-
 
 #### Synopsis
 
@@ -170,8 +165,7 @@ Also see [invert unique](../Library/Map.md#Map-invertUnique).
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>invert(("apple": 1, "pear": 2, "orange": 1));
@@ -184,7 +178,6 @@ map[int, set[str]]: (
 ## function invertUnique {#Map-invertUnique}
 
 * ``map[&V, &K] invertUnique(map[&K, &V] M)``
-
 
 #### Synopsis
 
@@ -202,8 +195,7 @@ Also see [invert](../Library/Map.md#Map-invert) and [Exception](../Library/Excep
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>import Map;
 ok
 rascal>invertUnique(("apple": 1, "pear": 2, "orange": 3));
@@ -211,7 +203,7 @@ map[int, str]: (1:"apple",3:"orange",2:"pear")
 ```
 Here is an examples that generates an exception:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>invertUnique(("apple": 1, "pear": 2, "orange": 1));
 |std:///Map.rsc|(2854,732,<144,0>,<171,54>): MultipleKey(1,"apple","orange")
 	at *** somewhere ***(|std:///Map.rsc|(2854,732,<144,0>,<171,54>))
@@ -223,7 +215,6 @@ ok
 
 * ``bool isEmpty(map[&K, &V] M)``
 
-
 #### Synopsis
 
 Test whether a map is empty.
@@ -234,8 +225,7 @@ Returns `true` if map `M` is empty, and `false` otherwise.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>isEmpty(());
@@ -248,7 +238,6 @@ bool: false
 
 * ``map[&K, &V] mapper(map[&K, &V] M, &L (&K) F, &W (&V) G)``
 
-
 #### Synopsis
 
 Apply a function to all (key, value) pairs in a map.
@@ -259,8 +248,7 @@ Apply the functions `F` and `G` to each key/value pair in a map and return the t
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>str prefix(str s) { return "X" + s; }
@@ -275,7 +263,6 @@ map[str, int]: ("Xapple":2,"Xorange":4,"Xpear":3)
 
 * ``set[&V] range(map[&K, &V] M)``
 
-
 #### Synopsis
 
 The range (set of values that correspond to its keys) of a map.
@@ -286,8 +273,7 @@ Returns the range (set of values) of map `M`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>range(("apple": 1, "pear": 2));
@@ -297,7 +283,6 @@ set[int]: {1,2}
 ## function rangeR {#Map-rangeR}
 
 * ``map[&K, &V] rangeR(map[&K, &V] M, set[&V] S)``
-
 
 #### Synopsis
 
@@ -309,8 +294,7 @@ Returns the map restricted to pairs with values in `S`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>rangeR(("apple": 1, "pear": 2, "orange": 3), {2, 3});
@@ -320,7 +304,6 @@ map[str, int]: ("pear":2,"orange":3)
 ## function rangeX {#Map-rangeX}
 
 * ``map[&K, &V] rangeX(map[&K, &V] M, set[&V] S)``
-
 
 #### Synopsis
 
@@ -332,8 +315,7 @@ Returns the map restricted to pairs with values not in `S`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>rangeX(("apple": 1, "pear": 2, "orange": 3), {2, 3});
@@ -343,7 +325,6 @@ map[str, int]: ("apple":1)
 ## function size {#Map-size}
 
 * ``int size(map[&K, &V] M)``
-
 
 #### Synopsis
 
@@ -355,8 +336,7 @@ Returns the number of pairs in map `M`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>size(("apple": 1, "pear": 2, "orange": 3));
@@ -367,15 +347,13 @@ int: 3
 
 * ``list[tuple[&K, &V]] toList(map[&K, &V] M)``
 
-
 #### Synopsis
 
 Convert a map to a list of tuples.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>toList(("apple": 1, "pear": 2, "orange": 3));
@@ -392,15 +370,13 @@ lrel[str,int]: [
 * ``rel[&K,&V] toRel(map[&K, list[&V]] M)``
 * ``default java rel[&K, &V] toRel(map[&K, &V] M)``
 
-
 #### Synopsis
 
 Convert a map to a relation.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>toRel(("apple": 1, "pear": 2, "orange": 3));
@@ -415,15 +391,13 @@ rel[str,int]: {
 
 * ``str toString(map[&K, &V] M)``
 
-
 #### Synopsis
 
 Convert a map to a string.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>toString(("apple": 1, "pear": 2, "orange": 3));
@@ -434,15 +408,13 @@ str: "(\"pear\":2,\"orange\":3,\"apple\":1)"
 
 * ``str itoString(map[&K, &V] M)``
 
-
 #### Synopsis
 
 Convert a map to a indented string.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Map;
 ok
 rascal>itoString(("apple": 1, "pear": 2, "orange": 3));

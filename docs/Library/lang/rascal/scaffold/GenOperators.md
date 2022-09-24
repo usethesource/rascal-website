@@ -6,7 +6,6 @@ title: "module lang::rascal::scaffold::GenOperators"
 
 `import lang::rascal::scaffold::GenOperators;`
 
-
 ## function numOfCases {#lang-rascal-scaffold-GenOperators-numOfCases}
 
 * ``int numOfCases()``

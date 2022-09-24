@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::concrete::Syntax2"
 
 `import lang::rascal::tests::concrete::Syntax2;`
 
-
 ## function Pico1 {#lang-rascal-tests-concrete-Syntax2-Pico1}
 
 * ``test bool Pico1()``

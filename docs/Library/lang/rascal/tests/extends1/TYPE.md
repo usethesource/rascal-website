@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends1::TYPE"
 
 `import lang::rascal::tests::extends1::TYPE;`
 
-
 ## data SYM {#lang-rascal-tests-extends1-TYPE-SYM}
 
 ```rascal

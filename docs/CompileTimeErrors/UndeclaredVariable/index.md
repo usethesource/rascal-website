@@ -24,14 +24,14 @@ Remedy:
 
 Here is an example where an undeclared variables occurs in list splicing:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>[1, *x, 3]
 ok
 ```
 
 The remedy is here:
 
-```rascal-shell
+```rascal-shell 
 rascal>x = 5;
 int: 5
 rascal>[1, *x, 3]

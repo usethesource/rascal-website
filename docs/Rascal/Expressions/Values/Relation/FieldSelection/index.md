@@ -15,11 +15,9 @@ Select a field (column) from a relation value.
 
 #### Types
 
-
 |`Exp`                                | `Exp . Name`  |
 | --- | --- |
-| `rel[T<sub>1</sub> L<sub>1</sub>, T<sub>2</sub> L<sub>2</sub>, ... ]` | `set[T~i~]`      |
-
+| `rel[T~1~ L~1~, T~2~ L~2~, ... ]` | `set[T~i~]`      |
 
 #### Description
 
@@ -29,8 +27,7 @@ _Name_ stands for itself and is not evaluated.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>rel[str street, int nm] R = {<"abc", 1>, <"abc", 2>, <"def", 4>, <"def", 5>};
 rel[str street,int nm]: {
   <"abc",1>,
@@ -41,5 +38,4 @@ rel[str street,int nm]: {
 rascal>R.street;
 set[str]: {"abc","def"}
 ```
-
 

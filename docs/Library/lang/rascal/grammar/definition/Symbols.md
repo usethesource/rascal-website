@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::definition::Symbols"
 
 `import lang::rascal::grammar::definition::Symbols;`
 
-
 ## function striprec {#lang-rascal-grammar-definition-Symbols-striprec}
 
 * ``default Symbol striprec(Symbol s_ori)``

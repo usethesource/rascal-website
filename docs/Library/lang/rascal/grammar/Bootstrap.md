@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::Bootstrap"
 
 `import lang::rascal::grammar::Bootstrap;`
 
-
 ## function getRascalGrammar {#lang-rascal-grammar-Bootstrap-getRascalGrammar}
 
 * ``Grammar getRascalGrammar(loc grammarFile)``

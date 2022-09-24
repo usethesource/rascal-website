@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::definition::Modules"
 
 `import lang::rascal::grammar::definition::Modules;`
 
-
 ## function modules2grammar {#lang-rascal-grammar-definition-Modules-modules2grammar}
 
 * ``Grammar modules2grammar(str main, map[str name, tuple[set[str] imports, set[str] extends, set[SyntaxDefinition] defs] \mod] mods)``
@@ -23,7 +22,6 @@ Converts concrete syntax definitions to abstract grammar definitions
 ## function fuse {#lang-rascal-grammar-definition-Modules-fuse}
 
 * ``Grammar fuse(GrammarDefinition def)``
-
 
   Combines a set of modules into one big Grammar, projecting only the rules that
   are visible locally, or via import and extend.

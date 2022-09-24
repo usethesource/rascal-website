@@ -6,14 +6,13 @@ title: "module Node"
 
 `import Node;`
 
-
 #### Synopsis
 
 Library functions for nodes.
 
 #### Description
 
-For operators on nodes see [Node](../Rascal/Expressions/Values/Node) in the Rascal Language Reference.
+For operators on nodes see [Node](../Rascal/Expressions/Values/Node/) in the Rascal Language Reference.
 
 The following functions are defined for nodes:
 * [arbNode](../Library/Node.md#Node-arbNode)
@@ -33,11 +32,9 @@ The following functions are defined for nodes:
 * [unset](../Library/Node.md#Node-unset)
 * [unsetRec](../Library/Node.md#Node-unsetRec)
 
-
 ## function arity {#Node-arity}
 
 * ``int arity(node T)``
-
 
 #### Synopsis
 
@@ -45,8 +42,7 @@ Determine the number of children of a node.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Node;
 ok
 rascal>arity("f"(10, "abc"));
@@ -59,15 +55,13 @@ int: 3
 
 * ``list[value] getChildren(node T)``
 
-
 #### Synopsis
 
 Get the children of a node.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Node;
 ok
 rascal>getChildren("f"(10, "abc"));
@@ -78,15 +72,13 @@ list[value]: [10,"abc"]
 
 * ``map[str,value] getKeywordParameters(node T)``
 
-
 #### Synopsis
 
 Get the keyword parameters of a node.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Node;
 ok
 rascal>getKeywordParameters("f"(10, "abc", height=0));
@@ -101,15 +93,13 @@ map[str, value]: ("height":0)
 
 * ``&T <: node setKeywordParameters(&T <: node x, map[str,value] keywordParameters)``
 
-
 #### Synopsis
 
 Set the keyword parameters of a node.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Node;
 ok
 rascal>setKeywordParameters("f"(10, "abc"), ("height":0));
@@ -125,15 +115,13 @@ node: "f"(10,"abc",
 
 * ``str getName(node T)``
 
-
 #### Synopsis
 
 Determine the name of a node.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Node;
 ok
 rascal>getName("f"(10, "abc"));
@@ -144,15 +132,13 @@ str: "f"
 
 * ``node makeNode(str N, value V..., map[str, value] keywordParameters = ())``
 
-
 #### Synopsis
 
 Create a node given its function name and arguments.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Node;
 ok
 rascal>makeNode("f", [10, "abc"]);
@@ -162,7 +148,6 @@ node: "f"(10,"abc")
 ## function unset {#Node-unset}
 
 * ``&T <: node unset(&T <: node x, str keywordParameter)``
-
 
 #### Synopsis
 
@@ -177,7 +162,6 @@ Reset a specific keyword parameter back to their default on a node.
 * ``&T <: node unset(&T <: node x, set[str] keywordParameters)``
 * ``&T <: node unset(&T <: node x)``
 
-
 #### Synopsis
 
 Reset a set of keyword parameters back to their default on a node.
@@ -189,7 +173,6 @@ Reset a set of keyword parameters back to their default on a node.
 ## function unsetRec {#Node-unsetRec}
 
 * ``&T unsetRec(&T x)``
-
 
 #### Synopsis
 
@@ -204,7 +187,6 @@ Recursively reset all keyword parameters of the node and its children back to th
 * ``&T unsetRec(&T x, str keywordParameter)``
 * ``&T <: node unsetRec(&T <: node x, set[str] keywordParameters)``
 
-
 #### Synopsis
 
 Recursively reset a specific keyword parameter of the node and its children back to its default.
@@ -217,15 +199,13 @@ Recursively reset a specific keyword parameter of the node and its children back
 
 * ``str toString(node T)``
 
-
 #### Synopsis
 
 Convert a node to a string.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Node;
 ok
 rascal>F = "f"(10, "abc", color="red", size="large");
@@ -240,15 +220,13 @@ str: "\"f\"(10,\"abc\",size=\"large\",color=\"red\")"
 
 * ``str itoString(node T)``
 
-
 #### Synopsis
 
 Convert a node to an indented string.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Node;
 ok
 rascal>F = "f"(10, "abc", color="red", size="large");

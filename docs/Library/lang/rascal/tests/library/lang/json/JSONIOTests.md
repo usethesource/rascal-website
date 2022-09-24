@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::library::lang::json::JSONIOTests"
 
 `import lang::rascal::tests::library::lang::json::JSONIOTests;`
 
-
 ## function jsonFeaturesSupported {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonFeaturesSupported}
 
 * ``bool jsonFeaturesSupported(value v)``

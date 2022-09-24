@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::Lists"
 
 `import lang::rascal::tests::basic::Lists;`
 
-
 ## function isConcat {#lang-rascal-tests-basic-Lists-isConcat}
 
 * ``bool isConcat(list[&T] A, list[&T] B, list[&T] C)``

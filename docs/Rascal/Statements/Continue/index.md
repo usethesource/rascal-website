@@ -22,7 +22,7 @@ Also see [Break](../../../Rascal/Statements/Break) and [Fail](../../../Rascal/St
 
 Here is an example using continue to avoid printing numbers that are divisible by 3:
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>for(int i <- [1 .. 10]){
@@ -39,5 +39,4 @@ i = 7
 i = 8
 list[void]: []
 ```
-
 

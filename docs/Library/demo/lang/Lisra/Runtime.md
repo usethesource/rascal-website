@@ -6,7 +6,6 @@ title: "module demo::lang::Lisra::Runtime"
 
 `import demo::lang::Lisra::Runtime;`
 
-
 ## data Lval {#demo-lang-Lisra-Runtime-Lval}
 
 ```rascal

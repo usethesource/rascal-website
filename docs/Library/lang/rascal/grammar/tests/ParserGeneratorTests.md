@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::tests::ParserGeneratorTests"
 
 `import lang::rascal::grammar::tests::ParserGeneratorTests;`
 
-
 ## function tstEsc1 {#lang-rascal-grammar-tests-ParserGeneratorTests-tstEsc1}
 
 * ``test bool tstEsc1()``

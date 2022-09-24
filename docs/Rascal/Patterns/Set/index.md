@@ -12,7 +12,7 @@ Set in abstract pattern.
 
 #### Description
 
-A set pattern matches a set value (the subject), provided that _Pat_<sub>1</sub>, _Pat_<sub>2</sub>, ..., _Pat_~n~ match the elements of that set in *any* order
+A set pattern matches a set value (the subject), provided that _Pat_~1~, _Pat_~2~, ..., _Pat_~n~ match the elements of that set in *any* order
 (recall that the elements of a set are unordered and do not contain duplicates).
 Completely analogous to list patterns, there are special cases when one of the patterns _Pat_~i~ is
 
@@ -24,20 +24,16 @@ Completely analogous to list patterns, there are special cases when one of the p
 
 *  a [Variable](../../../Rascal/Patterns/Variable), where the variable has been declared with a type equal to the element type of the subject, but not initialized, outside the pattern: the variable is matched with one value in the subject set.
 
-
-
-
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 ```
 
 * A single variable
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>if({10, 30, 40, 50, int N} := {10, 20, 30, 40, 50})
 >>>>>>>   println("Match succeeded, N = <N>");
    println("Match succeeded, N = <N>");
@@ -47,7 +43,7 @@ ok
 
 * An untyped multi-variable:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>if({10, *S, 50} := {50, 40, 30, 20, 10})
 >>>>>>>   println("Match succeeded, S = <S>");
    println("Match succeeded, S = <S>");
@@ -57,7 +53,7 @@ ok
 
 * A typed multi-variable:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>if({10, *int S, 50} := {50, 40, 30, 20, 10})
 >>>>>>>   println("Match succeeded, S = <S>");
    println("Match succeeded, S = <S>");
@@ -66,7 +62,7 @@ ok
 ```
 Here we see an example, where all possible splits of a set in two subsets are printed:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>for({*S1, *S2} :={30, 20, 10})
 >>>>>>>    println("<S1> and <S2>");
     println("<S1> and <S2>");
@@ -83,7 +79,7 @@ list[void]: []
 
 * Already declared set variable:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>set[int] S;
 ok
 rascal>if({10, *S, 50} := {10, 20, 30, 40, 50})
@@ -95,7 +91,7 @@ ok
 
 * Already declared element variable:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>int N;
 ok
 rascal>if({10, N, 30, 40, 50} := {50, 40, 30, 20, 10})
@@ -104,5 +100,4 @@ rascal>if({10, N, 30, 40, 50} := {50, 40, 30, 20, 10})
 Match succeeded, N = 20
 ok
 ```
-
 

@@ -21,7 +21,7 @@ Also see [Continue](../../../Rascal/Statements/Continue) and [Fail](../../../Ras
 
 Here is an example using break to find the first number divisible by 3:
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>for(int i <- [1 .. 10]){
@@ -34,5 +34,4 @@ rascal>for(int i <- [1 .. 10]){
 i = 3 is divisible by 3
 list[void]: []
 ```
-
 

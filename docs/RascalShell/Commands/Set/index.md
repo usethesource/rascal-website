@@ -35,7 +35,7 @@ The options are:
 
 Turn `tracing` on and execute a function:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::basic::Factorial;
 ok
 rascal>:set tracing true
@@ -59,8 +59,7 @@ int: 120
 
 Turn trace off and execute the same function:
 
-
-```rascal-shell
+```rascal-shell ,continue
 rascal>:set tracing false
 ok
 rascal>fac1(5)

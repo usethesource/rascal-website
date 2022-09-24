@@ -6,7 +6,6 @@ title: "module IO"
 
 `import IO;`
 
-
 #### Synopsis
 
 Library functions for input/output.
@@ -79,11 +78,9 @@ The following input/output functions are defined:
 * [writeFileEnc](../Library/IO.md#IO-writeFileEnc)
 * [writeFileLines](../Library/IO.md#IO-writeFileLines)
 
-
 ## function registerLocations {#IO-registerLocations}
 
 * ``void registerLocations(str scheme, str authority, map[loc logical, loc physical] m)``
-
 
 #### Synopsis
 
@@ -98,7 +95,6 @@ of a file on disk or from some webserver or source repository location.
 Using this function you can create your own schemes. The authority field is used for scoping the 
 names you wish to resolve to certain projects. This way one name can resolve to different locations 
 in different projects.
-
 
 #### Benefits
 
@@ -116,7 +112,6 @@ may expect problems. The registry is not automatically invalidated.
 
 * ``void unregisterLocations(str scheme, str authority)``
 
-
 #### Synopsis
 
 undo the effect of [registerLocations]
@@ -132,7 +127,6 @@ For debugging or for memory management you may wish to remove a lookup table.
 ## function appendToFile {#IO-appendToFile}
 
 * ``void appendToFile(loc file, value V...) throws PathNotFound, IO``
-
 
 #### Synopsis
 
@@ -160,7 +154,6 @@ Else the same method of deciding the character set is used as in [read file](../
 
 * ``void appendToFileEnc(loc file, str charset, value V...) throws PathNotFound, IO``
 
-
 #### Synopsis
 
 Append a value to a file.
@@ -180,7 +173,6 @@ Files are encoded using the charset provided.
 
 * ``set[str] charsets()``
 
-
 #### Synopsis
 
 Returns all available character sets.
@@ -189,7 +181,6 @@ Returns all available character sets.
 
 * ``set[str] canEncode(str charset)``
 
-
 #### Synopsis
 
 Returns whether this charset can be used for encoding (use with [write file](../Library/IO.md#IO-writeFile))
@@ -197,7 +188,6 @@ Returns whether this charset can be used for encoding (use with [write file](../
 ## function bprintln {#IO-bprintln}
 
 * ``bool bprintln(value arg)``
-
 
 #### Synopsis
 
@@ -210,8 +200,7 @@ The only difference between this function and [println](../Library/IO.md#IO-prin
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>bprintln("Hello World");
@@ -224,7 +213,6 @@ bool: true
 
 * ``bool exists(loc file)``
 
-
 #### Synopsis
 
 Check whether a given location exists.
@@ -235,14 +223,13 @@ Check whether a certain location exists, i.e., whether an actual file is associa
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 ```
 Does the library file `IO.rsc` exist?
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>exists(|std:///IO.rsc|);
 bool: true
 ```
@@ -251,21 +238,19 @@ bool: true
 
 * ``loc find(str name, list[loc] path) throws PathNotFound``
 
-
 #### Synopsis
 
 Find a named file in a list of locations.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 ```
 Find the file `IO.rsc` in the standard library:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>find("IO.rsc", [|std:///|]);
 loc: |std:///IO.rsc|
 ```
@@ -273,7 +258,6 @@ loc: |std:///IO.rsc|
 ## function isDirectory {#IO-isDirectory}
 
 * ``bool isDirectory(loc file)``
-
 
 #### Synopsis
 
@@ -287,7 +271,6 @@ Check whether the location `file` is a directory.
 
 * ``void iprint(value arg, int lineLimit = 1000)``
 
-
 #### Synopsis
 
 Print an indented representation of a value.
@@ -300,8 +283,7 @@ and [iprintToFile](../Library/IO.md#IO-iprintToFile) for a version that prints t
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>iprint(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
@@ -318,7 +300,6 @@ ok
 
 * ``void iprintToFile(loc file, value arg)``
 
-
 #### Synopsis
 
 Print an indented representation of a value to the specified location.
@@ -331,8 +312,7 @@ and [iprintln](../Library/IO.md#IO-iprintln) for a version that adds a newline.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>iprintToFile(|file:///tmp/fruits.txt|, ["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
@@ -347,7 +327,6 @@ ok
 
 * ``&T iprintExp(&T v)``
 
-
 #### Synopsis
 
 Print an indented representation of a value and returns the value as result.
@@ -358,8 +337,7 @@ See [iprintlnExp](../Library/IO.md#IO-iprintlnExp) for a version that adds a new
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>iprintExp(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
@@ -380,7 +358,6 @@ list[value]: [
 
 * ``&T iprintlnExp(&T v)``
 
-
 #### Synopsis
 
 Print an indented representation of a value followed by a newline and returns the value as result.
@@ -391,8 +368,7 @@ See [iprintExp](../Library/IO.md#IO-iprintExp) for a version that does not add a
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>iprintlnExp(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
@@ -413,7 +389,6 @@ list[value]: [
 
 * ``void iprintln(value arg, int lineLimit = 1000)``
 
-
 #### Synopsis
 
 Print a indented representation of a value and add a newline at the end.
@@ -428,8 +403,7 @@ use [writeTextValueFile](../Library/ValueIO.md#ValueIO-writeTextValueFile) or ch
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>iprintln(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
@@ -460,7 +434,6 @@ ok
 
 * ``bool isFile(loc file)``
 
-
 #### Synopsis
 
 Check whether a given location is actually a file (and not a directory).
@@ -473,7 +446,6 @@ Check whether location `file` is actually a file.
 
 * ``datetime lastModified(loc file)``
 
-
 #### Synopsis
 
 Last modification date of a location.
@@ -484,22 +456,24 @@ Returns last modification time of the file at location `file`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 ```
 Determine the last modification date of the Rascal standard library:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>lastModified(|std:///IO.rsc|);
+<<<<<<< HEAD
 datetime: $2022-09-23T14:17:03.804+00:00$
+=======
+datetime: $2022-09-24T13:53:54.027+00:00$
+>>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 ## function created {#IO-created}
 
 * ``datetime created(loc file)``
-
 
 #### Synopsis
 
@@ -511,42 +485,40 @@ Returns the creation time of the file at location `file`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 ```
 Determine the last modification date of the Rascal standard library:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>created(|std:///IO.rsc|);
+<<<<<<< HEAD
 datetime: $2022-09-23T14:17:03.804+00:00$
+=======
+datetime: $2022-09-24T13:53:54.027+00:00$
+>>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 ## function touch {#IO-touch}
 
 * ``void touch(loc file)``
 
-
 #### Synopsis
 
 Set the modification date of a file to `now` or create the file if it did not exist yet
  
-
 ## function setLastModified {#IO-setLastModified}
 
 * ``void setLastModified(loc file, datetime timestamp)``
 
- 
 #### Synopsis
 
 Set the modification date of a file to the timestamp
  
-
 ## function listEntries {#IO-listEntries}
 
 * ``list[str] listEntries(loc file)``
-
 
 #### Synopsis
 
@@ -558,22 +530,24 @@ List the entries in directory `file`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>import IO;
 ok
 ```
 List all entries in the standard library:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>listEntries(|std:///|);
+<<<<<<< HEAD
 list[str]: ["analysis","Boolean.rsc","Content.rsc","DateTime.rsc","demo","Exception.rsc","Grammar.rsc","index.md","IO.rsc","lang","List.rsc","ListRelation.rsc","Location.rsc","Map.rsc","Message.rsc","Node.rsc","ParseTree.rsc","Prelude$1.class","Prelude$2.class","Prelude$3.class","Prelude$Backtrack.class","Prelude$ByteBufferBackedInputStream.class","Prelude$Distance.class","Prelude$Less.class","Prelude$NodeComparator.class","Prelude$ReleasableCallback.class","Prelude$Sorting.class","Prelude.class","Prelude.rsc","Relation.rsc","resource","Set.rsc","String.rsc","Traversal.rsc","Type.class","Type.rsc","util","ValueIO.rsc"]
+=======
+list[str]: ["String.rsc","Location.rsc","demo","Prelude$Less.class","Prelude$ReleasableCallback.class","analysis","Set.rsc","util","Node.rsc","Exception.rsc","Type.class","Message.rsc","Prelude$ByteBufferBackedInputStream.class","Prelude$Sorting.class","Prelude.class","ValueIO.rsc","Prelude$NodeComparator.class","lang","Type.rsc","index.md","Prelude$3.class","Relation.rsc","Prelude$Distance.class","DateTime.rsc","Boolean.rsc","Prelude$1.class","ListRelation.rsc","List.rsc","resource","Content.rsc","Traversal.rsc","Grammar.rsc","Prelude.rsc","Prelude$Backtrack.class","ParseTree.rsc","Prelude$2.class","IO.rsc","Map.rsc"]
+>>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 ## function mkDirectory {#IO-mkDirectory}
 
 * ``void mkDirectory(loc file) throws PathNotFound, IO``
-
 
 #### Synopsis
 
@@ -587,7 +561,6 @@ Create a directory at location `file`.
 
 * ``void print(value arg)``
 
-
 #### Synopsis
 
 Print a value without subsequent newline.
@@ -598,12 +571,11 @@ Print a value on the output stream.
 See [println](../Library/IO.md#IO-println) for a version that adds a newline
 and [printExp](../Library/IO.md#IO-printExp) for a version that returns its argument as value.
 
-
 #### Examples
 
 Note that the only difference with [println](../Library/IO.md#IO-println) is that no newline is added after the value is printed
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>print("Hello World");
@@ -620,15 +592,13 @@ glued to the output of `print`.
 * ``&T printExp(&T v)``
 * ``&T printExp(str msg, &T v)``
 
-
 #### Synopsis
 
 Print a value and return it as result.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>printExp(3.14);
@@ -646,7 +616,6 @@ real: 3.14
 * ``void println(value arg)``
 * ``void println()``
 
-
 #### Synopsis
 
 Print a value to the output stream and add a newline.
@@ -659,8 +628,7 @@ and [printlnExp](../Library/IO.md#IO-printlnExp) for a version that returns its 
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>println("Hello World");
@@ -670,7 +638,7 @@ ok
 ```
 Introduce variable S and print it:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>S = "Hello World";
 str: "Hello World"
 rascal>println(S);
@@ -680,7 +648,7 @@ ok
 ```
 Introduce variable L and print it:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>L = ["a", "b", "c"];
 list[str]: ["a","b","c"]
 rascal>println(L);
@@ -690,7 +658,7 @@ ok
 ```
 Use a string template to print several values:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>println("<S>: <L>");
 println("<S>: <L>");
 Hello World: ["a","b","c"]
@@ -698,7 +666,7 @@ ok
 ```
 Just print a newline
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>println();
 println();
 
@@ -710,15 +678,13 @@ ok
 * ``&T printlnExp(&T v)``
 * ``&T printlnExp(str msg, &T v)``
 
-
 #### Synopsis
 
 Print a value followed by a newline and return it as result.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>printlnExp(3.14);
@@ -737,7 +703,6 @@ output of `printExp`.
 
 * ``void rprint(value arg)``
 
-
 #### Synopsis
 
 Raw print of a value.
@@ -750,7 +715,6 @@ This function is only available for internal use in the Rascal development team.
 
 * ``void rprintln(value arg)``
 
-
 #### Synopsis
 
 Raw print of a value followed by newline.
@@ -762,7 +726,6 @@ This function is only available for internal use in the Rascal development team.
 ## function readFile {#IO-readFile}
 
 * ``str readFile(loc file) throws PathNotFound, IO``
-
 
 #### Synopsis
 
@@ -779,7 +742,7 @@ A text file can be encoded in many different character sets, most common are UTF
 If you know the encoding of the file, please use the [read file enc](../Library/IO.md#IO-readFileEnc) and [read file lines enc](../Library/IO.md#IO-readFileLinesEnc) overloads.
 If you do not know, we try to detect this. This detection is explained below:
 
-*  If the implementation of the used scheme in the [location](../Rascal/Expressions/Values/Location) 
+*  If the implementation of the used scheme in the [location](../Rascal/Expressions/Values/Location/) 
    (e.g.,`|project:///|`) defines the charset of the file then this is used.
 *  Otherwise if the file contains a UTF8/16/32 http://en.wikipedia.org/wiki/Byte_order_mark[BOM], 
    then this is used.
@@ -788,7 +751,7 @@ If you do not know, we try to detect this. This detection is explained below:
    **  Are the first 32 bytes valid UTF-32? Then use UTF-32.
 *  Finally, we fall back to the system default (as given by the Java Runtime Environment).
 
-*To summarize*, we use UTF-8 by default, except if the [location](../Rascal/Expressions/Values/Location) has available meta-data, the file contains a BOM, or
+*To summarize*, we use UTF-8 by default, except if the [location](../Rascal/Expressions/Values/Location/) has available meta-data, the file contains a BOM, or
 the first 32 bytes of the file are not valid UTF-8.
 
 #### Pitfalls
@@ -800,7 +763,6 @@ the first 32 bytes of the file are not valid UTF-8.
 ## function readFileEnc {#IO-readFileEnc}
 
 * ``str readFileEnc(loc file, str charset) throws PathNotFound, IO``
-
 
 #### Synopsis
 
@@ -831,7 +793,6 @@ Also see [read file lines enc](../Library/IO.md#IO-readFileLinesEnc).
 
 * ``list[int] readFileBytes(loc file) throws PathNotFound, IO``
 
-
 #### Synopsis
 
 Read the contents of a file and return it as a list of bytes.
@@ -839,7 +800,6 @@ Read the contents of a file and return it as a list of bytes.
 ## function readFileLines {#IO-readFileLines}
 
 * ``list[str] readFileLines(loc file) throws PathNotFound, IO``
-
 
 #### Synopsis
 
@@ -870,18 +830,15 @@ Writes a list of strings to a file, where each separate string is ended with a n
 
 #### Benefits
 
-
   * mirrors [read file lines](../Library/IO.md#IO-readFileLines) in its functionality
 
 #### Pitfalls
-
 
   * if the individual elements of the list also contain newlines, the output may have more lines than list elements
 
 ## function readFileLinesEnc {#IO-readFileLinesEnc}
 
 * ``list[str] readFileLinesEnc(loc file, str charset) throws PathNotFound, IO``
-
 
 #### Synopsis
 
@@ -899,7 +856,6 @@ Also see [read file lines](../Library/IO.md#IO-readFileLines).
 ## function writeFile {#IO-writeFile}
 
 * ``void writeFile(loc file, value V...) throws PathNotFound, IO``
-
 
 #### Synopsis
 
@@ -920,7 +876,6 @@ Files are encoded in UTF-8, in case this is not desired, use [write file enc](..
 
 * ``void writeFileBytes(loc file, list[int] bytes) throws PathNotFound, IO``
 
-
 #### Synopsis
 
 Write a list of bytes to a file.
@@ -928,7 +883,6 @@ Write a list of bytes to a file.
 ## function writeFileEnc {#IO-writeFileEnc}
 
 * ``void writeFileEnc(loc file, str charset, value V...) throws PathNotFound, IO``
-
 
 #### Synopsis
 
@@ -948,7 +902,6 @@ Files are encoded using the charset provided.
 ## function md5HashFile {#IO-md5HashFile}
 
 * ``str md5HashFile(loc file) throws PathNotFound, IO``
-
 
 #### Synopsis
 

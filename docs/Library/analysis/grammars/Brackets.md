@@ -6,7 +6,6 @@ title: "module analysis::grammars::Brackets"
 
 `import analysis::grammars::Brackets;`
 
-
 ## function prioritiesOf {#analysis-grammars-Brackets-prioritiesOf}
 
 * ``DoNotNest prioritiesOf(type[&T] t)``

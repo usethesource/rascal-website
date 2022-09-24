@@ -11,9 +11,7 @@ A Lisp pretty printer.
 The purpose of a pretty printer is to convert an internal structure to text.
 We define here the simplest possible solution:
 
-
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Lisra::Pretty
 
 import demo::lang::Lisra::Runtime;
@@ -29,7 +27,6 @@ test bool pretty5() = pretty(List([Integer(123), Atom("abc")])) == "( 123 abc )"
 
 ```
 
-                
 Compare the definition of `pretty` with that of `parse`:
 ```rascal
 Lval parse(str txt);
@@ -44,8 +41,7 @@ parse(pretty(L)) == L
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Lisra::Runtime;
 ok
 rascal>import demo::lang::Lisra::Pretty;
@@ -65,11 +61,10 @@ str: "( + 5 7 )"
 ```
 Now let's explore whether `pretty` is indeed the inverse of `parse`:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import demo::lang::Lisra::Parse;
 ok
 rascal>parse(pretty(L)) == L;
 bool: true
 ```
-
 

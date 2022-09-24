@@ -20,16 +20,15 @@ This is the complete list:
 | Variable declaration | `Type Var`                                                               |
 | Multi-variable       | `*Var`, `*Type Var`                                                    |
 | Variable             | `Var`                                                                      |
-| List                 | `[ Pat<sub>1</sub>, Pat<sub>2</sub>, ..., Pat~n~ ]`                                         |
-| Set                  | `{ Pat<sub>1</sub>, Pat<sub>2</sub>, ..., Pat~n~ }`                                         |
-| Tuple                | `< Pat<sub>1</sub>, Pat<sub>2</sub>, ..., Pat~n~ >`                                         |
-| Node                 | `Name ( Pat<sub>1</sub>, Pat<sub>2</sub>, ..., Pat~n~ )`                                  |
+| List                 | `[ Pat~1~, Pat~2~, ..., Pat~n~ ]`                                         |
+| Set                  | `{ Pat~1~, Pat~2~, ..., Pat~n~ }`                                         |
+| Tuple                | `< Pat~1~, Pat~2~, ..., Pat~n~ >`                                         |
+| Node                 | `Name ( Pat~1~, Pat~2~, ..., Pat~n~ )`                                  |
 | Descendant           | `/ Pat`                                                                    |
 | Labelled             | `Var : Pat`                                                               |
 | TypedLabelled        | `Type Var : Pat`                                                       |
 | TypeConstrained      |  `[Type] Pat` |
-| Concrete             | (Symbol) ` Token<sub>1</sub> Token<sub>2</sub> ... Token~n~ `                                                          |
-
+| Concrete             | (Symbol) ` Token~1~ Token~2~ ... Token~n~ `                                                          |
 
 #### Description
 
@@ -37,7 +36,6 @@ Patterns are used to *dispatch* functions and conditional control flow, to *extr
 from values and to conditionally *filter* values. The pattern following pattern kinds can be arbitrarily nested, following
 the above syntax:
 
-* [Patterns](../../Rascal/Patterns)
 * [Concrete](../../Rascal/Patterns/Concrete)
 * [Descendant](../../Rascal/Patterns/Descendant)
 * [Labelled](../../Rascal/Patterns/Labelled)
@@ -55,7 +53,7 @@ the above syntax:
 
 All these patterns may be used in:
 
-*  cases of a [Switch](../../Rascal/Statements/Switch) or [visit statements](../../Rascal/Statements/Visit) or [visit expressions](../../Rascal/Expressions/Visit), 
+*  cases of a [Switch](../../Rascal/Statements/Switch) or [visit statements](../../Rascal/Statements/Visit/) or [visit expressions](../../Rascal/Expressions/Visit/), 
 *  on the left of the [Match](../../Rascal/Expressions/Values/Boolean/Match) operator (`:=`),
 *  on the left of the [Enumerator](../../Rascal/Expressions/Comprehensions/Enumerator) operator (`<-`), and
 *  as formal parameters of [Function](../../Rascal/Declarations/Function)s. 
@@ -74,5 +72,4 @@ Each pattern binds variables in a conditional scope:
 which `<Throw>`s an exception with the value which is not matched can be used to find out why this is happening.
 * If a variable is bound in the scope of a pattern, then it acts as an `==` test, so make sure to use fresh variables
 to avoid such accidental collisions. 
-
 

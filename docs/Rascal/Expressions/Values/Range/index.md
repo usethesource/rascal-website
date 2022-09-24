@@ -12,23 +12,22 @@ Numeric range of values.
 
 #### Syntax
 
-*  `[ Exp<sub>1</sub> .. Exp<sub>3</sub> ]`
-*  `[ Exp<sub>1</sub>, Exp<sub>2</sub> .. Exp<sub>3</sub> ]`
+*  `[ Exp~1~ .. Exp~3~ ]`
+*  `[ Exp~1~, Exp~2~ .. Exp~3~ ]`
 
 #### Description
 
 Ranges are a shorthand for describing lists of integers from 
-_Exp_<sub>1</sub> up to (exclusive) _Exp_<sub>3</sub> with increments of 1.
-When _Exp_<sub>2</sub> is present it is taken as the second element of the list
-and _Exp_<sub>2</sub> - _Exp_<sub>1</sub> is used as increment for the subsequent list elements.
+_Exp_~1~ up to (exclusive) _Exp_~3~ with increments of 1.
+When _Exp_~2~ is present it is taken as the second element of the list
+and _Exp_~2~ - _Exp_~1~ is used as increment for the subsequent list elements.
 
 A range with integer expressions is identical to a list [Slice](../../../../Rascal/Expressions/Values/List/Slice).
 However, a range may also contain numeric expressions that are not integers.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>[1 .. 10];
 list[int]: [1,2,3,4,5,6,7,8,9]
 rascal>[1, 3 .. 10];
@@ -47,9 +46,8 @@ Ranges are mostly used to loop over ranges of integers.
 
 In some cases ranges are empty where one could have expected at least one element:
 
-```rascal-shell
+```rascal-shell 
 rascal>[1, 3 .. -10];
 list[int]: []
 ```
-
 

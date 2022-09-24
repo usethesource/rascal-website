@@ -6,9 +6,7 @@ title: "module lang::smtlib2::theory::ints::Ast"
 
 `import lang::smtlib2::theory::ints::Ast;`
 
-
 	Synopsis: AST for the SMTLIBv2 Ints theory
-
 
 ## data Sort {#lang-smtlib2-theory-ints-Ast-Sort}
 

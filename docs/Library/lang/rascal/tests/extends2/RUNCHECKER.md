@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends2::RUNCHECKER"
 
 `import lang::rascal::tests::extends2::RUNCHECKER;`
 
-
 ## function main {#lang-rascal-tests-extends2-RUNCHECKER-main}
 
 * ``str main()``

@@ -13,8 +13,7 @@ Strategies to solve problems in various domains using Rascal.
 
 #### Description
 
-
-![Problem-solving workflow](/assets/WhyRascal/SolutionStrategies/problem-solving.png)
+![Problem-solving workflow](/assets/WhyRascal/SolutionStrategies/problem-solving.png/)
 
 Before you study more complicated examples, it is useful to discuss some general problem solving 
 strategies that are relevant in Rascal's application domain.
@@ -36,7 +35,6 @@ To appreciate these general strategies, it is good to keep some specific problem
 
 *  __Interactive refactoring__: given known _code smells_ a user can interactively indicate how these smells should be removed. The refactoring features in Eclipse and Visual Studio are examples.
 
-
 With these examples in mind, we can study the overall problem solving workflow as shown 
 in the figure above.
 It consists of three optional phases:
@@ -48,7 +46,7 @@ It consists of three optional phases:
 *  Is synthesis needed, then define the synthesis phase, see [Synthesis](../../WhyRascal/SolutionStrategies/Synthesis).
 
 [[Validation-Workflow]]
-![Validation Workflow](/assets/WhyRascal/SolutionStrategies/validation.png)
+![Validation Workflow](/assets/WhyRascal/SolutionStrategies/validation.png/)
 
 Each phase is subject to a validation and improvement workflow as shown in the second figure. 
 Each individual phase as well as the combination of phases may introduce errors and has thus to be carefully validated. 
@@ -56,7 +54,7 @@ In combination with the detailed strategies for each phase, this forms a complet
 using Rascal.
 
 [[Requirements-Workflow]]
-![Requirements Workflow](/assets/WhyRascal/SolutionStrategies/requirements.png)
+![Requirements Workflow](/assets/WhyRascal/SolutionStrategies/requirements.png/)
 
 A major question in every problem solving situation is how to determine the requirements for each phase of the solution. 
 For instance, how do we know what to extract from the source code if we do not know what the desired end results of the project are? 
@@ -71,7 +69,6 @@ This is shown in the third figure and amounts to the phases:
 
 *  Requirements of the extraction phase. As a last step, one can make an inventory of the facts that have to be extracted to form the starting point for the analysis phase. Typical facts include method calls, inheritance relations, control flow graphs, usage patterns of specific library functions or language constructs.
 
-
 You will have no problem in identifying requirements for each phase when you apply them to a specific 
 example from the list given earlier.
 
@@ -82,5 +79,4 @@ We will discuss:
 * [Extraction](../../WhyRascal/SolutionStrategies/Extraction)
 * [Analysis](../../WhyRascal/SolutionStrategies/Analysis)
 * [Synthesis](../../WhyRascal/SolutionStrategies/Synthesis)
-
 

@@ -6,7 +6,6 @@ title: "module lang::rascal::upgrade::UpdateNestedListAndSetPatterns"
 
 `import lang::rascal::upgrade::UpdateNestedListAndSetPatterns;`
 
-
 ## function report {#lang-rascal-upgrade-UpdateNestedListAndSetPatterns-report}
 
 * ``list[Message] report(loc root)``

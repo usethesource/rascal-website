@@ -20,12 +20,10 @@ It appends the value of _Exp_ to the resulting list value of the loop construct 
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>for(int i <- [1..5]) append i*i;
 list[int]: [1,4,9,16]
 rascal>L = for(int i <- [1..5]) append i*i;
 list[int]: [1,4,9,16]
 ```
-
 

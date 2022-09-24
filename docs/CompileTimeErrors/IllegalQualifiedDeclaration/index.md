@@ -17,15 +17,14 @@ Remedy: remove the qualification.
 
 Using a qualified name gives an error:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>data M::D = d();
 ok
 ```
 Without the qualification, this is correct:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>data D = d();
 ok
 ```
-
 

@@ -11,15 +11,13 @@ Cartesian product of two list relation values.
 
 #### Syntax
 
-`Exp<sub>1</sub> * Exp<sub>2</sub>`
+`Exp~1~ * Exp~2~`
 
 #### Types
 
-
-|`Exp<sub>1</sub>`      | `Exp<sub>2</sub>`     | `Exp<sub>1</sub> * Exp<sub>2</sub>`   |
+|`Exp~1~`      | `Exp~2~`     | `Exp~1~ * Exp~2~`   |
 | --- | --- | --- |
-| `list[T<sub>1</sub>]` | `list[T<sub>2</sub>]` | `lrel[T<sub>1</sub>, T<sub>2</sub>]`  |
-
+| `list[T~1~]` | `list[T~2~]` | `lrel[T~1~, T~2~]`  |
 
 #### Description
 
@@ -27,8 +25,7 @@ Returns a binary relation that is the [Cartesian product](http://en.wikipedia.or
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>[1, 2, 3] * [9];
 lrel[int,int]: [
   <1,9>,
@@ -45,5 +42,4 @@ lrel[int,int]: [
   <3,11>
 ]
 ```
-
 

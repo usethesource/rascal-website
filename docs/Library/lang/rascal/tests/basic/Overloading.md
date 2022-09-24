@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::Overloading"
 
 `import lang::rascal::tests::basic::Overloading;`
 
-
 ## function overloading1 {#lang-rascal-tests-basic-Overloading-overloading1}
 
 * ``test bool overloading1()``

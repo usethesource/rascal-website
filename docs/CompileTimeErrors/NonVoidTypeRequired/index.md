@@ -11,7 +11,7 @@ A type other than `void` is needed.
 This error is generated when a value is needed, so an expression of any type but the `void` type.
 
 The most prominent examples are splicing for 
-[list](../../Rascal/Expressions/Values/List/Splice) and [set](../../Rascal/Expressions/Values/Set/Splice).
+[list](../../Rascal/Expressions/Values/List/Splice/) and [set](../../Rascal/Expressions/Values/Set/Splice/).
 
 Remedy: replace the expression of type `void` by an expression that computes a value.
 
@@ -19,7 +19,7 @@ Remedy: replace the expression of type `void` by an expression that computes a v
 
 First define a dummy function that returns void:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>void dummy() { return; }
 void (): function(|prompt:///|(0,24,<1,0>,<1,24>))
 rascal>[1, *dummy(), 2]
@@ -33,8 +33,7 @@ ok
 ```
 A solution could be:
 
-
-```rascal-shell
+```rascal-shell 
 rascal>int dummy() { return 17; }
 int (): function(|prompt:///|(0,26,<1,0>,<1,26>))
 rascal>[1, *dummy(), 2]
@@ -42,5 +41,4 @@ list[int]: [1,17,2]
 rascal>{1, *dummy(), 2}
 set[int]: {1,2,17}
 ```
-
 

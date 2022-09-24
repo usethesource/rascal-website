@@ -6,7 +6,6 @@ title: "module lang::dot::Dot"
 
 `import lang::dot::Dot;`
 
-
 ## alias Id {#lang-dot-Dot-Id}
 
 * `str`

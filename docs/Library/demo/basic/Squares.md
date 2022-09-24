@@ -10,7 +10,6 @@ title: "module demo::basic::Squares"
 
 Demo of printing a table of squares
 
-
 ## function squares {#demo-basic-Squares-squares}
 
 * ``void squares(int n)``

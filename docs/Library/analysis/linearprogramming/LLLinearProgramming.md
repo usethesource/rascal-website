@@ -6,7 +6,6 @@ title: "module analysis::linearprogramming::LLLinearProgramming"
 
 `import analysis::linearprogramming::LLLinearProgramming;`
 
-
 ## alias LLCoefficients {#analysis-linearprogramming-LLLinearProgramming-LLCoefficients}
 
 * `list[num]`

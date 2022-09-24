@@ -30,4 +30,3 @@ diagnose(t); // for any t of which you know it contains an ambiguity
 *  DrAmbiguity proposes several [Disambiguation]s for each ambiguity, only few of which make sense from a language design point of view!
 *  DrAmbiguity is now only a library function, while it should be integrated into the Rascal IDE
 
-

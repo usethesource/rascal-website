@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::Statement"
 
 `import lang::rascal::tests::functionality::Statement;`
 
-
 ## function testAssert1 {#lang-rascal-tests-functionality-Statement-testAssert1}
 
 * ``test bool testAssert1()``

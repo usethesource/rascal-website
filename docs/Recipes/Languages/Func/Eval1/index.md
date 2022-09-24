@@ -6,11 +6,9 @@ title: Eval1
 
 Like Eval0 but with support for let-expressions.
 
-
 #### Description
 
 Interpreter Eval1 supports the following features of Func: 
-
 
 | Feature              | Eval1 |
 | --- | --- |
@@ -27,17 +25,12 @@ Interpreter Eval1 supports the following features of Func:
 | address operator     |
 | dereference operator |
 
-
-
-
 In particular, the let construct is supported and this requires the addition
 of an extra environment for <name, value> bindings.
 
 #### Examples
 
-
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Func::Eval1
 
 // using env, allowing let
@@ -55,7 +48,6 @@ int eval1(str main, list[int] args, Prog prog) {
   env = ( f.formals[i] : args[i] | i <- index(f.formals) ); 
   return eval1(f.body, env, penv);
 }
-
 
 int eval1(nat(int nat), Env env, PEnv penv)  = nat;
 
@@ -98,16 +90,13 @@ int eval1(let(list[Binding] bindings, Exp exp), Env env, PEnv penv) { // <3>
    env += ( b.var : eval1(b.exp, env, penv) | b <- bindings );  
    return eval1(exp, env, penv);  
 }
-// end::module[]
 
 ```
 
-                
 <1> The alias `Env` is introduced that maps strings to integers.
     All evaluation functions get an extra Env argument.
 <2> The environment is used to retrieve a variable's value.
 <3> The environment is extended with new bindings.
-
 
 Let's try this with F1:
 ```rascal
@@ -124,7 +113,7 @@ fact(n) = let
 
 The result:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Func::Load;
 ok
 rascal>import demo::lang::Func::Eval1;
@@ -134,5 +123,4 @@ ok
 rascal>eval1("fact", [10], load(F1));
 int: 3628800
 ```
-
 

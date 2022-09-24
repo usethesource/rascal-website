@@ -16,21 +16,21 @@ Illegal operation on an empty map.
 
 #### Description
 
-Rascal provides many operations and functions on maps, see [map values](../../../Rascal/Expressions/Values/Map)
-and [map functions](../../../Library/Map.md).
+Rascal provides many operations and functions on maps, see [map values](../../../Rascal/Expressions/Values/Map/)
+and [map functions](../../../Library/Map.md/).
 This error is generated when a function or operations cannot handle the empty map case.
 
 Remedies: 
 
-*  Guard the function or operation with a test on the empty map ([isEmpty](../../../Library/Map.md#Map-isEmpty)) and 
+*  Guard the function or operation with a test on the empty map ([isEmpty](../../../Library/Map.md#Map-isEmpty/)) and 
   take alternative action in that case.
-*  Catch the `EmptyMap` yourself, see [try catch](../../../Rascal/Statements/TryCatch).
+*  Catch the `EmptyMap` yourself, see [try catch](../../../Rascal/Statements/TryCatch/).
 
 #### Examples
 
 Import the `Map` library and introduce `M` with an empty map as value:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>import Map;
 ok
 rascal>M = ();
@@ -38,7 +38,7 @@ map[void, void]: ()
 ```
 Trying to get an arbitrary value from it gives an error:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>getOneFrom(M);
 |std:///Map.rsc|(2033,403,<103,0>,<122,41>): EmptyMap()
 	at *** somewhere ***(|std:///Map.rsc|(2033,403,<103,0>,<122,41>))
@@ -48,7 +48,7 @@ ok
 We can also catch the `EmptyMap` error. First import the Rascal exceptions (which are also included in `Prelude`)
 and `IO`:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>import Exception;
 ok
 rascal>import IO;
@@ -61,5 +61,4 @@ rascal>try
 Cannot use getOneFrom on empty map
 ok
 ```
-
 

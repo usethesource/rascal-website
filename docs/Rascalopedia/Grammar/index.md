@@ -6,4 +6,3 @@ title: Grammar
 
 A synonym for [Syntax](../../Tutor/Concept/Syntax).
 
-

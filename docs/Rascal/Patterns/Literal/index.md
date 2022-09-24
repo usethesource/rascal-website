@@ -16,7 +16,7 @@ A literal pattern matches with a value that is identical to the literal.
 
 A literal pattern matches with a value that is equal to it:
 
-```rascal-shell
+```rascal-shell 
 rascal>123 := 123
 bool: true
 rascal>"abc" := "abc"
@@ -24,7 +24,7 @@ bool: true
 ```
 A literal pattern does not match with a value that is not equal to it:
 
-```rascal-shell
+```rascal-shell 
 rascal>123 := 456
 bool: false
 rascal>"abc" := "def"
@@ -33,13 +33,13 @@ bool: false
 If the type of the literal pattern is *incomparable* to the subject's type, a static type error is produced
 to announce that the match is guaranteed to fail:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>123 := "abc";
 ok
 ```
 However, a literal pattern can be used to filter among other values:
 
-```rascal-shell
+```rascal-shell 
 rascal>value x = "abc";
 value: "abc"
 rascal>123 := x;
@@ -49,6 +49,4 @@ value: 123
 rascal>123 := x;
 bool: true
 ```
-
-
 

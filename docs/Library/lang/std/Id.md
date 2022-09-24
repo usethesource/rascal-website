@@ -6,4 +6,3 @@ title: "module lang::std::Id"
 
 `import lang::std::Id;`
 
-

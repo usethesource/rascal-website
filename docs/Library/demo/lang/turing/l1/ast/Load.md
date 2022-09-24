@@ -6,7 +6,6 @@ title: "module demo::lang::turing::l1::ast::Load"
 
 `import demo::lang::turing::l1::ast::Load;`
 
-
 ## function load {#demo-lang-turing-l1-ast-Load-load}
 
 * ``Program load(str inp)``

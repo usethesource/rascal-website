@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends1::PARSETREE"
 
 `import lang::rascal::tests::extends1::PARSETREE;`
 
-
 ## data SYM {#lang-rascal-tests-extends1-PARSETREE-SYM}
 
 ```rascal

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::extends1::BaseExtended"
 
 `import lang::rascal::tests::extends1::BaseExtended;`
 
-
 ## alias STRING {#lang-rascal-tests-extends1-BaseExtended-STRING}
 
 * `str`

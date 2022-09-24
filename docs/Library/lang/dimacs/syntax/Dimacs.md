@@ -6,4 +6,3 @@ title: "module lang::dimacs::\\syntax::Dimacs"
 
 `import lang::dimacs::\syntax::Dimacs;`
 
-

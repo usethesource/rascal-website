@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::Projection"
 
 `import lang::rascal::tests::functionality::Projection;`
 
-
 ## function nonEmpty1 {#lang-rascal-tests-functionality-Projection-nonEmpty1}
 
 * ``test bool nonEmpty1()``

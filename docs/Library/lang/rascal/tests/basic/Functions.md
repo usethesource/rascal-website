@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::Functions"
 
 `import lang::rascal::tests::basic::Functions;`
 
-
 ## data B {#lang-rascal-tests-basic-Functions-B}
 
 ```rascal

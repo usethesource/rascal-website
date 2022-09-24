@@ -26,7 +26,7 @@ The following rule applies:
 
 Consider the following datatype `CTree` and assign a CTree value to variable `T`:
 
-```rascal-shell
+```rascal-shell 
 rascal>data CTree = leaf(int n) | red(CTree left, CTree right) | green(CTree left, CTree right);
 ok
 rascal>CTree T = red(green(leaf(1), red(leaf(2), leaf(3))), red(leaf(4), leaf(5)));
@@ -42,7 +42,7 @@ CTree: red(
 ```
 We can now switch the arguments of all red nodes as follows:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>visit(T){
 >>>>>>>  case red(CTree l, CTree r): insert red(r,l);
 >>>>>>>}
@@ -58,7 +58,7 @@ CTree: red(
 ```
 Since this is a very common idiom, we also have a shorthand for it:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>visit(T){
 >>>>>>>  case red(CTree l, CTree r) => red(r,l)
 >>>>>>>}
@@ -77,5 +77,4 @@ CTree: red(
 
 There is a glitch in the Rascal syntax that _requires_ a semicolon after a case (as in the first example),
 but refuses it in the abbreviated version using `=>` (the second example).
-
 

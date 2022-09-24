@@ -10,7 +10,6 @@ title: "module lang::json::IO"
 
 (De)serialization of JSON values.
 
-
 ## function toJSON {#lang-json-IO-toJSON}
 
 * ``str toJSON(value v)``

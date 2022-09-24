@@ -6,11 +6,9 @@ title: "module lang::rascal::format::Escape"
 
 `import lang::rascal::format::Escape;`
 
-
 ## function makeCharClassChar {#lang-rascal-format-Escape-makeCharClassChar}
 
 * ``str makeCharClassChar(int ch)``
-
 
   Creates a Rascal-character-classes escaped string character from a given
   decimal index into the UTF8 table. 
@@ -18,7 +16,6 @@ title: "module lang::rascal::format::Escape"
 ## function makeStringChar {#lang-rascal-format-Escape-makeStringChar}
 
 * ``str makeStringChar(int ch)``
-
 
   Creates a Rascal escaped string character from a given decimal index into the UTF8 table.
 
@@ -46,13 +43,11 @@ title: "module lang::rascal::format::Escape"
 
 * ``str escape(str s)``
 
-
   Escapes the characters of the given string using the Rascal escaping conventions.
 
 ## function quote {#lang-rascal-format-Escape-quote}
 
 * ``str quote(str s)``
-
 
   Escapes the characters of the given string using the Rascal escaping conventions.
   and surround by " quotes.
@@ -60,7 +55,6 @@ title: "module lang::rascal::format::Escape"
 ## function ciquote {#lang-rascal-format-Escape-ciquote}
 
 * ``str ciquote(str s)``
-
 
   Escapes the characters of the given string using the Rascal escaping conventions.
   and surround by ' quotes.

@@ -6,14 +6,13 @@ title: "module ListRelation"
 
 `import ListRelation;`
 
-
 #### Synopsis
 
 Library functions for list relations.
 
 #### Description
 
-For operators on listrelations see [ListRelation](../Rascal/Expressions/Values/ListRelation) in the Rascal Language Reference.
+For operators on listrelations see [ListRelation](../Rascal/Expressions/Values/ListRelation/) in the Rascal Language Reference.
 
 The following functions are defined for list relations :
 * [carrier](../Library/ListRelation.md#ListRelation-carrier)
@@ -32,7 +31,6 @@ The following functions are defined for list relations :
 * [rangeR](../Library/ListRelation.md#ListRelation-rangeR)
 * [rangeX](../Library/ListRelation.md#ListRelation-rangeX)
 
-
 ## function carrier {#ListRelation-carrier}
 
 * ``list[&T]  carrier (lrel[&T,&T] R)``
@@ -40,15 +38,13 @@ The following functions are defined for list relations :
 * ``list[&T]  carrier (lrel[&T,&T,&T,&T] R)``
 * ``list[&T]  carrier (lrel[&T,&T,&T,&T,&T] R)``
 
-
 #### Synopsis
 
 Return the list of all elements in any tuple in a list relation.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>carrier([<1,10>, <2,20>]);
@@ -64,7 +60,6 @@ list[int]: [1,10,100,1000,2,20,200,2000]
 * ``lrel[&T,&T,&T,&T] carrierR (lrel[&T,&T,&T,&T] R, set[&T] S)``
 * ``lrel[&T,&T,&T,&T,&T] carrierR (lrel[&T,&T,&T,&T,&T] R, set[&T] S)``
 
-
 #### Synopsis
 
 A list relation restricted to certain element values in tuples.
@@ -75,8 +70,7 @@ Returns list relation `R` restricted to tuples with elements in set `S`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>carrierR([<1,10>, <2,20>, <3,30>], {10, 1, 20});
@@ -90,7 +84,6 @@ lrel[int,int]: [<1,10>]
 * ``lrel[&T,&T,&T,&T] carrierX (lrel[&T,&T,&T,&T] R, set[&T] S)``
 * ``lrel[&T,&T,&T,&T,&T] carrierX (lrel[&T,&T,&T,&T,&T] R, set[&T] S)``
 
-
 #### Synopsis
 
 A list relation excluding tuples containing certain values.
@@ -101,8 +94,7 @@ Returns list relation `R` excluding tuples with some element in `S`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>carrierX([<1,10>, <2,20>, <3,30>], {10, 1, 20});
@@ -116,7 +108,6 @@ lrel[int,int]: [<3,30>]
 * ``lrel[&T0, &T1, &T2, &T3] complement(lrel[&T0, &T1, &T2, &T3] R)``
 * ``lrel[&T0, &T1, &T2, &T3, &T4] complement(lrel[&T0, &T1, &T2, &T3, &T4] R)``
 
-
 #### Synopsis
 
 Complement of a list relation.
@@ -129,16 +120,14 @@ The function `complement` returns the complement of `R` relative to `U`, in othe
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 ```
 
 Declare `R` and compute corresponding `U`:
 
-
-```rascal-shell
+```rascal-shell ,continue
 rascal>R = [<1,10>, <2, 20>, <3, 30>];
 lrel[int,int]: [
   <1,10>,
@@ -161,7 +150,7 @@ lrel[int,int]: [
 
 Here is the complement of `R` computed in two ways:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>U - R;
 lrel[int,int]: [
   <1,20>,
@@ -189,7 +178,6 @@ lrel[int,int]: [
 * ``list[&T0] domain(lrel[&T0,&T1,&T2,&T3]     R)``
 * ``list[&T0] domain(lrel[&T0,&T1,&T2,&T3,&T4] R)``
 
-
 #### Synopsis
 
 Domain of a list relation: a list consisting of the first element of each tuple, uniquely.
@@ -202,8 +190,7 @@ but all occurences after the first occurrence of an element have been removed.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>domain([<1,10>, <2,20>]);
@@ -223,7 +210,6 @@ list[str]: ["mon","tue"]
 * ``lrel[&T0,&T1,&T2,&T3] domainR (lrel[&T0,&T1,&T2,&T3] R, list[&T0] L)``
 * ``lrel[&T0,&T1,&T2,&T3,&T4] domainR (lrel[&T0,&T1,&T2,&T3,&T4] R, list[&T0] L)``
 
-
 #### Synopsis
 
 List relation restricted to certain domain elements.
@@ -234,8 +220,7 @@ Restriction of a list relation `R` to tuples with first element in `S`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>domainR([<1,10>, <2,20>, <3,30>], {3, 1});
@@ -252,7 +237,6 @@ lrel[int,int]: [
 * ``lrel[&T0, &T1, &T2, &T3] domainX (lrel[&T0, &T1, &T2, &T3] R, set[&T0] S)``
 * ``lrel[&T0, &T1, &T2, &T3, &T4] domainX (lrel[&T0, &T1, &T2, &T3, &T4] R, set[&T0] S)``
 
-
 #### Synopsis
 
 List relation excluding certain domain values.
@@ -263,8 +247,7 @@ List relation `R` excluding tuples with first element in `S`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>domainX([<1,10>, <2,20>, <3,30>], {3, 1});
@@ -275,15 +258,13 @@ lrel[int,int]: [<2,20>]
 
 * ``list[list[&U]] groupDomainByRange(lrel[&U dom, &T ran] input)``
 
-
 #### Synopsis
 
 Make sets of elements in the domain that relate to the same element in the range.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>legs = [<"bird", 2>, <"dog", 4>, <"human", 2>, <"spider", 8>, <"millepede", 1000>, <"crab", 8>, <"cat", 4>];
@@ -309,15 +290,13 @@ list[list[str]]: [
 
 * ``list[list[&T]] groupRangeByDomain(lrel[&U dom, &T ran] input)``
 
-
 #### Synopsis
 
 Make sets of elements in the range that relate to the same element in the domain.
 
 #### Description
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>skins = [<"bird", "feather">, <"dog", "fur">, <"tortoise", "shell">, <"human", "skin">, <"fish", "scale">, <"lizard", "scale">, <"crab", "shell">, <"cat", "fur">];
@@ -345,7 +324,6 @@ list[list[str]]: [
 
 * ``lrel[&T, &T] ident (list[&T] S)``
 
-
 #### Synopsis
 
 The identity list relation.
@@ -356,8 +334,7 @@ The identity list relation for set `S`.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>ident(["mon", "tue", "wed"]);
@@ -375,15 +352,13 @@ lrel[str,str]: [
 * ``lrel[    &T3,&T2,&T1,&T0] invert (lrel[&T0,&T1,&T2,&T3    ] R)``
 * ``lrel[&T4,&T3,&T2,&T1,&T0] invert (lrel[&T0,&T1,&T2,&T3,&T4] R)``
 
-
 #### Synopsis
 
 Invert the tuples in a list relation.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>invert([<1,10>, <2,20>]);
@@ -400,7 +375,6 @@ lrel[int,int]: [
 * ``lrel[&T1,&T2,&T3]     range (lrel[&T0,&T1,&T2,&T3]     R)``
 * ``lrel[&T1,&T2,&T3,&T4] range (lrel[&T0,&T1,&T2,&T3,&T4] R)``
 
-
 #### Synopsis
 
 The range is composed of all but the first element of each tuple of a list relation, uniquely.
@@ -413,8 +387,7 @@ but all occurences after the first occurrence of an element have been removed.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>range([<1,10>, <2,20>]);
@@ -428,7 +401,6 @@ list[int]: [1,2]
 * ``lrel[&T0,&T1] rangeR (lrel[&T0,&T1] R, set[&T1] S)``
 * ``lrel[&T0,&T1] rangeR (lrel[&T0,&T1] R, list[&T1] L)``
 
-
 #### Synopsis
 
 List relation restricted to certain range values.
@@ -439,8 +411,7 @@ Restriction of binary list relation `R` to tuples with second element in set `S`
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>rangeR([<1,10>, <2,20>, <3,30>], {30, 10});
@@ -455,7 +426,6 @@ lrel[int,int]: [
 * ``lrel[&T0,&T1] rangeX (lrel[&T0,&T1] R, set[&T1] S)``
 * ``lrel[&T0,&T1] rangeX (lrel[&T0,&T1] R, list[&T1] S)``
 
- 
 #### Synopsis
 
 List relation excluding certain range values.
@@ -466,8 +436,7 @@ Restriction of binary list relation `R` to tuples with second element not in set
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>rangeX([<1,10>, <2,20>, <3,30>], {30, 10});
@@ -477,7 +446,6 @@ lrel[int,int]: [<2,20>]
 ## function index {#ListRelation-index}
 
 * ``map[&K, set[&V]] index(lrel[&K, &V] R)``
-
 
 #### Synopsis
 
@@ -489,8 +457,7 @@ Converts a binary list relation to a map of the domain to a set of the range.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import ListRelation;
 ok
 rascal>index([<1,10>, <2,20>, <3,30>, <30,10>]);

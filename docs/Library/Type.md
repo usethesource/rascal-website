@@ -6,7 +6,6 @@ title: "module Type"
 
 `import Type;`
 
-
 #### Synopsis
 
 Rascal's type system, implemented in Rascal itself.
@@ -27,8 +26,7 @@ The `#` operator will always produce a value of `type[&T]`, where `&T` is bound 
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Type;
 ok
 rascal>#int
@@ -97,7 +95,6 @@ type[value]: type(
     
 The following functions are provided on types:
 
-
 ## data Symbol {#Type-Symbol}
 
 ```rascal
@@ -115,7 +112,6 @@ data Symbol
      | \datetime()
      ;
 ```
-
 
 #### Synopsis
 
@@ -181,7 +177,6 @@ data Production
      ;
 ```
 
-
 #### Synopsis
 
 A production in a grammar or constructor in a data type.
@@ -206,7 +201,6 @@ data Attr
      ;
 ```
 
-
 #### Synopsis
 
 Attributes register additional semantics annotations of a definition. 
@@ -215,7 +209,6 @@ Attributes register additional semantics annotations of a definition.
 
 * ``Symbol \var-func(Symbol ret, list[Symbol] parameters, Symbol varArg)``
 
-
 #### Synopsis
 
 Transform a function with varargs (`...`) to a normal function with a list argument.
@@ -223,7 +216,6 @@ Transform a function with varargs (`...`) to a normal function with a list argum
 ## function choice {#Type-choice}
 
 * ``Production choice(Symbol s, set[Production] choices)``
-
 
 #### Synopsis
 
@@ -270,7 +262,6 @@ Nested choice is flattened.
 * ``bool subtype(list[Symbol] l, list[Symbol] r)``
 * ``default bool subtype(list[Symbol] l, list[Symbol] r)``
 
-
 #### Synopsis
 
 Subtype on types.
@@ -281,7 +272,6 @@ Functions with variable argument lists are normalized to normal functions
 
 * ``bool comparable(Symbol s, Symbol t)``
 
-
 #### Synopsis
 
 Check if two types are comparable, i.e., have a common supertype.
@@ -290,7 +280,6 @@ Check if two types are comparable, i.e., have a common supertype.
 
 * ``bool equivalent(Symbol s, Symbol t)``
 
-
 #### Synopsis
 
 Check if two types are equivalent.
@@ -298,7 +287,6 @@ Check if two types are equivalent.
 ## function eq {#Type-eq}
 
 * ``bool eq(value x, value y)``
-
 
 #### Synopsis
 
@@ -311,8 +299,7 @@ int, real and rat.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Type;
 ok
 rascal>1 == 1.0
@@ -381,7 +368,6 @@ bool: false
 * ``Symbol lub(Symbol::\cons(Symbol _, _, list[Symbol] _), Symbol::\node())``
 * ``Symbol lub(Symbol::\alias(str _, list[Symbol] _, Symbol aliased), Symbol r)``
 * ``Symbol lub(Symbol l, \alias(str _, list[Symbol] _, Symbol aliased))``
-
 
 #### Synopsis
 
@@ -503,7 +489,6 @@ This function documents and implements the lub operation in Rascal's type system
 * ``list[Symbol] glb(list[Symbol] l, list[Symbol] r)``
 * ``default list[Symbol] glb(list[Symbol] l, list[Symbol] r)``
 
-
 #### Synopsis
 
 The greatest lower bound (glb) between two types.
@@ -529,7 +514,6 @@ data Exception
 * ``&T make(type[&T] typ, str name, list[value] args)``
 * ``&T make(type[&T] typ, str name, list[value] args, map[str,value] keywordArgs)``
 
-
 #### Synopsis
 
 Instantiate an ADT constructor of a given type with the given children and optional keyword arguments.
@@ -542,7 +526,6 @@ This function will build a constructor if the definition exists and throw an exc
 
 * ``Symbol typeOf(value v)``
 
-
 #### Synopsis
 
 Returns the dynamic type of a value as a reified type.
@@ -552,11 +535,9 @@ Returns the dynamic type of a value as a reified type.
 As opposed to the # operator, which produces the type of a value statically, this
 function produces the dynamic type of a value, represented by a symbol.
 
-
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import Type;
 ok
 rascal>value x = 1;
@@ -568,7 +549,7 @@ Symbol: int()
 #### Pitfalls
 
 *  Note that the `typeOf` function does not produce definitions, like the 
-   [reify](../Rascal/Expressions/Values/ReifiedTypes) operator `#` does, 
+   [reify](../Rascal/Expressions/Values/ReifiedTypes/) operator `#` does, 
    since values may escape the scope in which they've been constructed leaving their contents possibly undefined.
 
 ## function isIntType {#Type-isIntType}
@@ -578,7 +559,6 @@ Symbol: int()
 * ``bool isIntType(Symbol::\label(_,Symbol lt))``
 * ``bool isIntType(Symbol::\int())``
 * ``default bool isIntType(Symbol _)``
-
 
 #### Synopsis
 
@@ -592,7 +572,6 @@ Determine if the given type is an int.
 * ``bool isBoolType(Symbol::\bool())``
 * ``default bool isBoolType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a bool.
@@ -604,7 +583,6 @@ Determine if the given type is a bool.
 * ``bool isRealType(Symbol::\label(_,Symbol lt))``
 * ``bool isRealType(Symbol::\real())``
 * ``default bool isRealType(Symbol _)``
-
 
 #### Synopsis
 
@@ -618,7 +596,6 @@ Determine if the given type is a real.
 * ``bool isRatType(Symbol::\rat())``
 * ``default bool isRatType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a rational.
@@ -631,7 +608,6 @@ Determine if the given type is a rational.
 * ``bool isStrType(Symbol::\str())``
 * ``default bool isStrType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a string.
@@ -643,7 +619,6 @@ Determine if the given type is a string.
 * ``bool isNumType(Symbol::\label(_,Symbol lt))``
 * ``bool isNumType(Symbol::\num())``
 * ``default bool isNumType(Symbol _)``
-
 
 #### Synopsis
 
@@ -658,7 +633,6 @@ Determine if the given type is a num.
 * ``bool isNodeType(Symbol::\adt(_,_))``
 * ``default bool isNodeType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a node.
@@ -670,7 +644,6 @@ Determine if the given type is a node.
 * ``bool isVoidType(Symbol::\label(_,Symbol lt))``
 * ``bool isVoidType(Symbol::\void())``
 * ``default bool isVoidType(Symbol _)``
-
 
 #### Synopsis
 
@@ -684,7 +657,6 @@ Determine if the given type is a void.
 * ``bool isValueType(Symbol::\value())``
 * ``default bool isValueType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a value.
@@ -697,7 +669,6 @@ Determine if the given type is a value.
 * ``bool isLocType(Symbol::\loc())``
 * ``default bool isLocType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a loc.
@@ -709,7 +680,6 @@ Determine if the given type is a loc.
 * ``bool isDateTimeType(Symbol::\label(_,Symbol lt))``
 * ``bool isDateTimeType(Symbol::\datetime())``
 * ``default bool isDateTimeType(Symbol _)``
-
 
 #### Synopsis
 
@@ -724,7 +694,6 @@ Determine if the given type is a `datetime`.
 * ``bool isSetType(Symbol::\rel(_))``
 * ``default bool isSetType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a set.
@@ -737,7 +706,6 @@ Determine if the given type is a set.
 * ``bool isRelType(Symbol::\rel(_))``
 * ``bool isRelType(Symbol::\set(Symbol tp))``
 * ``default bool isRelType(Symbol _)``
-
 
 #### Synopsis
 
@@ -752,7 +720,6 @@ Determine if the given type is a relation.
 * ``bool isListRelType(Symbol::\list(Symbol tp))``
 * ``default bool isListRelType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a list relation.
@@ -764,7 +731,6 @@ Determine if the given type is a list relation.
 * ``bool isTupleType(Symbol::\label(_,Symbol lt))``
 * ``bool isTupleType(Symbol::\tuple(_))``
 * ``default bool isTupleType(Symbol _)``
-
 
 #### Synopsis
 
@@ -779,7 +745,6 @@ Determine if the given type is a tuple.
 * ``bool isListType(Symbol::\lrel(_))``
 * ``default bool isListType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a list.
@@ -791,7 +756,6 @@ Determine if the given type is a list.
 * ``bool isListRelType(Symbol::\label(_,Symbol lt))``
 * ``bool isListRelType(Symbol::\lrel(_))``
 * ``default bool isListRelType(Symbol _)``
-
 
 #### Synopsis
 
@@ -805,7 +769,6 @@ Determine if the given type is a list relation.
 * ``bool isMapType(Symbol::\map(_,_))``
 * ``default bool isMapType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a map.
@@ -817,7 +780,6 @@ Determine if the given type is a map.
 * ``bool isBagType(Symbol::\label(_,Symbol lt))``
 * ``bool isBagType(Symbol::\bag(_))``
 * ``default bool isBagType(Symbol _)``
-
 
 #### Synopsis
 
@@ -832,7 +794,6 @@ Determine if the given type is a bag (bags are not yet implemented).
 * ``bool isADTType(Symbol::\reified(_))``
 * ``default bool isADTType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is an Abstract Data Type (ADT).
@@ -845,7 +806,6 @@ Determine if the given type is an Abstract Data Type (ADT).
 * ``bool isConstructorType(Symbol::\cons(Symbol _,str _,list[Symbol] _))``
 * ``default bool isConstructorType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a constructor.
@@ -856,7 +816,6 @@ Determine if the given type is a constructor.
 * ``bool isAliasType(Symbol::\parameter(_,Symbol tvb))``
 * ``bool isAliasType(Symbol::\label(_,Symbol lt))``
 * ``default bool isAliasType(Symbol _)``
-
 
 #### Synopsis
 
@@ -870,7 +829,6 @@ Determine if the given type is an alias.
 * ``bool isFunctionType(Symbol::\func(_,_,_))``
 * ``default bool isFunctionType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a function.
@@ -883,7 +841,6 @@ Determine if the given type is a function.
 * ``bool isReifiedType(Symbol::\reified(_))``
 * ``default bool isReifiedType(Symbol _)``
 
-
 #### Synopsis
 
 Determine if the given type is a reified type.
@@ -894,7 +851,6 @@ Determine if the given type is a reified type.
 * ``bool isTypeVar(Symbol::\alias(_,_,Symbol at))``
 * ``bool isTypeVar(Symbol::\label(_,Symbol lt))``
 * ``default bool isTypeVar(Symbol _)``
-
 
 #### Synopsis
 

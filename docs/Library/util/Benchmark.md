@@ -6,7 +6,6 @@ title: "module util::Benchmark"
 
 `import util::Benchmark;`
 
-
 #### Synopsis
 
 Functions for time measurement and benchmarking.
@@ -33,7 +32,6 @@ The `Benchmark` library provides the following functions:
 * [userTimeNow](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow)
 * [userTimeOf](../../Library/util/Benchmark.md#util::Benchmark-userTimeOf)
 
-
 ## function heapDump {#util-Benchmark-heapDump}
 
 * ``void heapDump(loc file, bool live=true)``
@@ -43,7 +41,6 @@ The `Benchmark` library provides the following functions:
 Write a JVM heap dump to a file.
 
 #### Description
-
 
 * The file parameter has to be of the `file` scheme.
 * The live parameter restricts the dump to only live objects.
@@ -58,7 +55,6 @@ Returns the free memory of the current JVM
 
 #### Description
 
-
 This returns the number of bytes that can be allocated
 still against the current result of [get total memory](../../Library/util/Benchmark.md#util::Benchmark-getTotalMemory).
 
@@ -71,7 +67,6 @@ still against the current result of [get total memory](../../Library/util/Benchm
 Returns the current total memory allocated by the current JVM
 
 #### Description
-
 
 This returns the number of bytes currently allocated for use by the JVM.
 The number can change over time but it's never higher than [get max memory](../../Library/util/Benchmark.md#util::Benchmark-getMaxMemory)`
@@ -110,16 +105,14 @@ CPU time in nanoseconds (10^-9^ sec)
 
 #### Description
 
-
 * Current cpu time in __nanoseconds__ (10^-9^ sec) since the start of the thread that runs the code that calls this function.
 * This number has nanoseconds resolution, but not necessarily nanosecond accuracy.
 
 #### Examples
 
+We use the `fac` function described in [Factorial](../../Recipes/Basic/Factorial/) as example:
 
-We use the `fac` function described in [Factorial](../../Recipes/Basic/Factorial) as example:
-
-```rascal-shell
+```rascal-shell 
 rascal>import util::Benchmark;
 ok
 rascal>import demo::basic::Factorial;
@@ -127,19 +120,26 @@ ok
 ```
 Here we measure time by using separate calls to `cpuTime` before and after a call to `fac`.
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>before = cpuTimeNow();
+<<<<<<< HEAD
 int: 204234375000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>cpuTimeNow() - before;
 int: 15625000
+=======
+int: 4919785466000
+rascal>fac1(50);
+int: 30414093201713378043612608166064768844377641568960512000000000000
+rascal>cpuTimeNow() - before;
+int: 4009000
+>>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 See also [cpu time of](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf) for a more convenient way of measuring the time spent during a block of code.
 
 #### Pitfalls
-
 
 * The timings shown above may be significantly influenced by the documentation compilation process
 
@@ -153,11 +153,9 @@ Returns wall clock time in _milliseconds_ since the Unix epoch
 
 #### Description
 
-
 Returns the difference, measured in milliseconds, between the current time and midnight, January 1, 1970 UTC
 
 #### Pitfalls
-
 
    * The actual accuracy of the time may be not as good as a millisecond. This depends on OS and hardware specifics.
    * Note that the resolution is _milliseconds_ here, while [cpu time now](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeNow) produces nanosecond resolution.
@@ -171,7 +169,6 @@ Returns the difference, measured in milliseconds, between the current time and m
 Return nanoseconds clock time of the JVM's high resolution clock.
 
 #### Description
-
 
    See `System.nanoTime` Java documentation. An excerpt:
 
@@ -214,21 +211,18 @@ System time in nanoseconds (10^-9^ sec).
 
 #### Description
 
-
 Returns the CPU time that the current thread has executed in system mode in nanoseconds.
 
 * Current system time in nanoseconds (10^-9^ sec) since the start of the thread that runs the code that calls this function.
 * The returned value is of nanoseconds precision but not necessarily nanoseconds accuracy.
 * CPU time is the number of CPU cycles times the OS-registered clock speed.
-* The other [CPU time](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeNow), next to [System time](../../Library/util/Benchmark.md#util::Benchmark-systemTimeNow) is spent in [User time](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow).
+* The other [CPU time](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeNow/), next to [System time](../../Library/util/Benchmark.md#util::Benchmark-systemTimeNow/) is spent in [User time](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow/).
 
 #### Examples
 
+We use the `fac` function described in [Factorial](../../Recipes/Basic/Factorial/) as example:
 
-We use the `fac` function described in [Factorial](../../Recipes/Basic/Factorial) as example:
-
-
-```rascal-shell
+```rascal-shell 
 rascal>import util::Benchmark;
 ok
 rascal>import demo::basic::Factorial;
@@ -237,14 +231,21 @@ ok
 
 Here we measure time by using separate calls to `sytemTime` before and after a call to `fac`.
 
-
-```rascal-shell
+```rascal-shell ,continue
 rascal>before = systemTimeNow();
+<<<<<<< HEAD
 int: 14781250000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>systemTimeNow() - before;
 int: 0
+=======
+int: 215236240000
+rascal>fac1(50);
+int: 30414093201713378043612608166064768844377641568960512000000000000
+rascal>systemTimeNow() - before;
+int: 86000
+>>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 ## function systemTimeOf {#util-Benchmark-systemTimeOf}
@@ -257,9 +258,7 @@ Measure the exact running time of a block of code, using [system time now](../..
 
 #### Examples
 
-
-
-```rascal-shell
+```rascal-shell 
 rascal>import util::Benchmark;
 ok
 rascal>import demo::basic::Factorial;
@@ -269,7 +268,11 @@ rascal>systemTimeOf(
 >>>>>>>      fac1(50); 
 >>>>>>>   } 
 >>>>>>>);
+<<<<<<< HEAD
 int: 0
+=======
+int: 16000
+>>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 ## function userTimeNow {#util-Benchmark-userTimeNow}
@@ -282,21 +285,18 @@ User time in nanoseconds (10^-9^ sec)
 
 #### Description
 
-
 Returns the CPU time that the current thread has executed in user mode in nanoseconds.
 
 * The returned value is of nanoseconds precision but not necessarily nanoseconds accuracy.
 * As distinguished from [now](../../Library/DateTime.md#DateTime-now) which returns the wall clock time since the Unix epoch.
 * CPU time is the number of CPU cycles times the OS-registered clock speed.
-* The other [CPU time](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeNow), next to [user time](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow) is spent in [system time](../../Library/util/Benchmark.md#util::Benchmark-systemTimeNow).
+* The other [CPU time](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeNow/), next to [user time](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow/) is spent in [system time](../../Library/util/Benchmark.md#util::Benchmark-systemTimeNow/).
 
 #### Examples
 
+We use the `fac` function described in [Factorial](../../Recipes/Basic/Factorial/) as example:
 
-We use the `fac` function described in [Factorial](../../Recipes/Basic/Factorial) as example:
-
-
-```rascal-shell
+```rascal-shell 
 rascal>import util::Benchmark;
 ok
 rascal>import demo::basic::Factorial;
@@ -304,13 +304,21 @@ ok
 ```
 Here we measure time by using separate calls to `userTime` before and after a call to `fac`.
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>before = userTimeNow();
+<<<<<<< HEAD
 int: 189828125000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>userTimeNow() - before;
 int: 15625000
+=======
+int: 4704740055000
+rascal>fac1(50);
+int: 30414093201713378043612608166064768844377641568960512000000000000
+rascal>userTimeNow() - before;
+int: 3906000
+>>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 ## function userTimeOf {#util-Benchmark-userTimeOf}
@@ -331,7 +339,6 @@ Measure the exact running time of a block of code in milliseconds, doc included 
 
 #### Pitfalls
 
-
 * watch out this is measured in milliseconds, not nanoseconds
 
 ## function benchmark {#util-Benchmark-benchmark}
@@ -345,17 +352,14 @@ Utility to measure and compare the execution time a set of code blocks
 
 #### Description
 
-
-
 Given is a map that maps strings (used as label to identify each case) to void-closures that execute the code to be benchmarked.
 An optional `duration` argument can be used to specify the function to perform the actual measurement. By default the function [real time of](../../Library/util/Benchmark.md#util::Benchmark-realTimeOf) is used. A map of labels and durations is returned.
 
 #### Examples
 
+We use the `fac` function described in [Factorial](../../Recipes/Basic/Factorial/) as example:
 
-We use the `fac` function described in [Factorial](../../Recipes/Basic/Factorial) as example:
-
-```rascal-shell
+```rascal-shell 
 rascal>import util::Benchmark;
 ok
 rascal>import demo::basic::Factorial;
@@ -365,7 +369,7 @@ ok
 We measure two calls to the factorial function with arguments `100`, respectively, `200` 
 (using by default [real time now](../../Library/util/Benchmark.md#util::Benchmark-realTimeNow) that returns milliseconds):
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>benchmark(
 >>>>>>>   ("fac100" : void() {
 >>>>>>>                  fac1(100);
@@ -374,12 +378,16 @@ rascal>benchmark(
 >>>>>>>                  fac1(200);
 >>>>>>>               }) 
 >>>>>>>   );
+<<<<<<< HEAD
 map[str, num]: ("fac100":7,"fac200":3)
+=======
+map[str, num]: ("fac100":3,"fac200":6)
+>>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 We can do the same using [user time now](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow) that returns nanoseconds:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>benchmark( 
 >>>>>>>   ("fac100" : void() {
 >>>>>>>                  fac1(100);
@@ -388,7 +396,11 @@ rascal>benchmark(
 >>>>>>>                  fac1(200);
 >>>>>>>            })
 >>>>>>>   , userTimeOf);
+<<<<<<< HEAD
 map[str, num]: ("fac100":0,"fac200":0)
+=======
+map[str, num]: ("fac100":2697000,"fac200":5182000)
+>>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 ## function gc {#util-Benchmark-gc}
@@ -397,19 +409,16 @@ map[str, num]: ("fac100":0,"fac200":0)
 
 #### Description
 
-
 This function tries to trigger a garbage collection. It may be useful to call this function
 just before measuring the efficiency of a code block, in order to factor out previous effects
 on the heap.
 
 #### Benefits
 
-
 * This helps avoiding to restart the JVM, and optionally warming it up, for each individual measurement.
 * Long running terminal [REPL](../../RascalShell/REPL)s can be rejuvenated on demand by a call to [gc](../../Library/util/Benchmark.md#util::Benchmark-gc).
 
 #### Pitfalls
-
 
 * Although a GC cycle is triggered by this function, it guarantees nothing about the effect of this cycle in terms of completeness or precision in removing garbage from the heap.
 * GC only works for real garbage. So if there is an unrelated accidental memory leak somewhere, it may better to start a fresh JVM to measure the current functionality under scrutiny.

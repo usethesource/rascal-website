@@ -12,7 +12,7 @@ There are several ways of defining [Disambiguation](../../../../Rascal/Declarati
 There are generally three ways of removing ambiguity from parse forests that are produced by parsers generated from [Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition)s.
 
 *  The first way is to add disambiguation declarations to the [Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition). You can choose from:
-   **  [Priorities](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority)s, which can be used to define the relative priority in expression languages
+   **  [Priorities](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority/)s, which can be used to define the relative priority in expression languages
    **  [./Associativity](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Associativity)s, which can be used to define relative associativity between operators of 
        expression languages
    **  [Follow](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Follow) constraints, which can be used to implement longest match using lookahead
@@ -23,5 +23,4 @@ There are generally three ways of removing ambiguity from parse forests that are
    using any information necessary.
 *  The third way is use the [Visit](../../../../Rascal/Statements/Visit) statement on a parse tree and implement your own filter post-parsing time, 
    or any other kind of program that processes [Parse Trees](../../../../Rascal/Declarations/SyntaxDefinition/ParseTrees).
-
 

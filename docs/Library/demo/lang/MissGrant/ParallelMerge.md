@@ -6,7 +6,6 @@ title: "module demo::lang::MissGrant::ParallelMerge"
 
 `import demo::lang::MissGrant::ParallelMerge;`
 
-
 ## function parMerge {#demo-lang-MissGrant-ParallelMerge-parMerge}
 
 * ``Controller parMerge(Controller ctl1, Controller ctl2)``

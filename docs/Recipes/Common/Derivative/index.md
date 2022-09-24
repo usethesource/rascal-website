@@ -18,17 +18,13 @@ We present here rules for determining the derivative `dE/dX` of simple expressio
 *  `d(E1 + E2) /dX = dE1 / dX + d E2 /dX`.
 *  `d(E1 * E2) / dX =  (d E1 / dX  * E2) + (E1 * d E2 /dX)`.
 
-
 #### Examples
 
 Here is our solution followed by a list of explanations:
 
-
-```rascal
+```rascal 
 
 module demo::common::Derivative
-
-
 
 data Exp = con(int n) // <1>
          | var(str name)
@@ -73,10 +69,9 @@ test bool tstSimplity2() = simplify(dd(E, var("x"))) == con(5);
 <6> Define the actual simplication function `simplify` that performs a bottom up traversal of the expression, application simplification
 rules on the up.
 
-                
 Let's differentiate the example expression `E`:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::common::Derivative;
 ok
 rascal>dd(E, var("x"));
@@ -99,7 +94,7 @@ Exp: add(
 As you can see, we managed to compute a derivative, but the result is far more complex than we would like.
 This is where simplification comes in. First try a simple case:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>simplify(mul(var("x"), add(con(3), con(5))));
 Exp: mul(
   var("x"),
@@ -107,9 +102,8 @@ Exp: mul(
 ```
 Now apply simplification to the result of differentiation:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>simplify(dd(E, var("x")));
 Exp: con(5)
 ```
-
 

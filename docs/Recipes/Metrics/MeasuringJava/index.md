@@ -8,19 +8,16 @@ A few steps using the M3 model to compute basic metrics for a Java project in Ec
 
 #### Description
 
-
 This is a recipe for computing basic or more advanced metrics from a Java project in Eclipse. We assume:
 
 *  You have Rascal installed in an Eclipse instance.
 *  You have a Java project in your Eclipse workspace that compiles without errors. Let's call it `HelloWorld`.
 
-
-Now we will follow the [EASY](../../../WhyRascal/EASY) paradigm:
+Now we will follow the [EASY](../../../WhyRascal/EASY/) paradigm:
 
 *  a library will be used to _parse_ the Java code generating [Rascalopedia:AbstractSyntaxTree]
 *  the same library will generate a [Rascal:Values/Relation]al model to represent interesting facts between Java source code artifacts
 *  then we can write queries over the generated trees and relations using [Rascal:Expressions].
-
 
 These are a number of recipes for measuring different things about Java:
 
@@ -29,14 +26,11 @@ These are a number of recipes for measuring different things about Java:
 
 #### Examples
 
-
 First we import the basic data types for representing Java. The model is called _M3_, and its definition is split acros a generic
 language independent module called [Rascal:analysis/m3/Core] and a Java specific part called [Rascal:lang/java/m3/Core]. Have a look at the documentation 
 of these modules later. For now we will go through using them in a few examples.
 
-
-
-```rascal-shell
+```rascal-shell 
 rascal>import lang::java::m3::Core;
 ok
 rascal>import lang::java::m3::AST;
@@ -45,7 +39,7 @@ ok
 
 "Snakes and Ladders" is an example Java project of which we have stored the source code in `|tmp:///snakes-and-ladders/src|`
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>|tmp:///snakes-and-ladders/src/snakes/|.ls
 list[loc]: [
   |tmp:///snakes-and-ladders/src/snakes/Die.java|,
@@ -64,7 +58,7 @@ list[loc]: [
 
 Now we can extract our overview model, using the classpath we derived:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>myModel = createM3FromDirectory(|tmp:///snakes-and-ladders/src|);
 M3: m3(
   |tmp:///snakes-and-ladders/src|,
@@ -120,8 +114,7 @@ M3: m3(
 Some projects have extensive classpaths which the M3 extractor requires for accurate Java analysis.
 You can use this code to extract a classpath if the project is a Maven project:
 
-
-```rascal-shell
+```rascal-shell ,continue
 rascal>import util::Reflective;
 ok
 rascal>cp = getProjectPathConfig(|tmp:///snakes-and-ladders|).javaCompilerPath;
@@ -162,7 +155,7 @@ list[loc]: [
 
 and then pass it into the M3 extractor (this project does not have dependencies)
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>myModel = createM3FromDirectory(|tmp:///snakes-and-ladders/src|, classPath=cp);
 M3: m3(
   |tmp:///snakes-and-ladders/src|,

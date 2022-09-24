@@ -6,4 +6,3 @@ title: "module lang::dot::\\syntax::Dot"
 
 `import lang::dot::\syntax::Dot;`
 
-

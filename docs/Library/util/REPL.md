@@ -6,7 +6,6 @@ title: "module util::REPL"
 
 `import util::REPL;`
 
-
 ## alias Completion {#util-REPL-Completion}
 
 * `tuple[int offset, list[str] suggestions]`

@@ -9,13 +9,12 @@ A Rascal module could not be imported.
 #### Description
 
 Rascal programs are split up in modules.
-An [import](../../Rascal/Declarations/Import) declaration is used to include one module in another.
+An [import](../../Rascal/Declarations/Import/) declaration is used to include one module in another.
 This error indicates that a module import failed.
 This can be caused by 
 
 *  A misspelled name in the import statement.
 *  Starting a Rascal console from the wrong directory.
-
 
 Remedies:
 
@@ -29,15 +28,14 @@ right click on it and then select `Run as Rascal Application`.
 
 Here is a correct import of the library module `List`:
 
-```rascal-shell
+```rascal-shell 
 rascal>import List;
 ok
 ```
 Here is the effect of a misspelled module name (assuming that you do not have a module `Lis`):
 
-```rascal-shell
+```rascal-shell ,error
 rascal>import Lis;
 ok
 ```
-
 

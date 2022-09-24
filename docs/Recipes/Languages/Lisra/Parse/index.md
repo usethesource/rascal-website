@@ -11,9 +11,7 @@ Parsing a Lisp expression.
 Given the Lisp [Syntax](../../../../Recipes/Languages/Lisra/Syntax), we can now apply it to parse textual Lisp expressions
 and convert them to the runtime representation `Lval`.
 
-
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Lisra::Parse
 
 import Prelude;
@@ -21,8 +19,6 @@ import demo::lang::Lisra::Syntax;
 import demo::lang::Lisra::Runtime;
 
 Lval parse(str txt) = build(parse(#LispExp, txt)); // <1>
-
-// Build Abstract Synax Tree: Transform a LispExp to an Lval
 
 Lval build((LispExp)`<IntegerLiteral il>`) = Integer(toInt("<il>"));      // <2>
 Lval build((LispExp)`<AtomExp at>`)        = Atom("<at>");                // <3>
@@ -38,7 +34,6 @@ test bool parse5() = parse("(123 abc)") == List([Integer(123), Atom("abc")]);
 
 ```
 
-                
 <1> First we define the actual `parse` function: it takes a string as argument and returns an `Lval`.
    It proceeds in two steps:
    **  First the text is parsed using `parse(#LispExp, txt)`. The result is parse tree.
@@ -46,7 +41,7 @@ test bool parse5() = parse("(123 abc)") == List([Integer(123), Atom("abc")]);
 
 <2> Function `build` is defined in cases, to handle the various parse tree forms.
     Fortunately, we do not have to spell out the details of the parse tree, but we can use concrete
-    patterns instead (see [concrete patterns](../../../../Rascal/Patterns/Concrete), below).
+    patterns instead (see [concrete patterns](../../../../Rascal/Patterns/Concrete/), below).
  
    The right-hand sides deserve some attention. Here the argument `il` is a _parse tree_ (!!) that represents an integer literal.
    We first convert it to a string using string interpolation (`"<il>"`) and then convert it to an integer.
@@ -76,8 +71,7 @@ that precedes it (`LispExp` in this example). This is illustrated by the list ca
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Lisra::Parse;
 ok
 rascal>import demo::lang::Lisra::Runtime;
@@ -93,5 +87,4 @@ Lval: List([
     Integer(7)
   ])
 ```
-
 

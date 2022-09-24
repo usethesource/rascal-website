@@ -6,7 +6,6 @@ title: Invalid Use Of Time
 
 Invalid use of a time value at runtime
 
-
 #### Types
 
 `data RuntimeException = InvalidUseOfTime(str message);`
@@ -24,7 +23,7 @@ try to update unavailable information.
 
 Setting the `year` field on a time value throws an exception:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>NOW = $T20:11:01.463+00:00$;
 ok
 rascal>NOW.year = 2020;

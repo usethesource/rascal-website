@@ -25,7 +25,6 @@ There are two variants as listed above:
 
 *  When the subject matches Pat, the Statement is executed. More statements can be executed by including them in a [Block](../../../../Rascal/Statements/Block).
 
-
 In [Switch](../../../../Rascal/Statements/Switch) statements, only the form `Pattern : Statement` is allowed. 
 When the subject matches _Pattern_, the _Statement_ is executed and the execution of the switch statement is complete. 
 However, when a fail statement is executed in _Statement_  further alternatives of
@@ -55,5 +54,4 @@ The action may also be a [Block](../../../../Rascal/Statements/Block):
 ```rascal
 case red(_,_): { c = c + 1; println("c = <c>"); }
 ```
-
 

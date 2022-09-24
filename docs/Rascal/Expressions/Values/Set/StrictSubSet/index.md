@@ -11,24 +11,21 @@ Strict subset operator on set values.
 
 #### Syntax
 
-`Exp<sub>1</sub> < Exp<sub>2</sub>`
+`Exp~1~ < Exp~2~`
 
 #### Types
 
-
-| `Exp<sub>1</sub>`    |  `Exp<sub>2</sub>`    | `Exp<sub>1</sub> < Exp<sub>2</sub>`  |
+| `Exp~1~`    |  `Exp~2~`    | `Exp~1~ < Exp~2~`  |
 | --- | --- | --- |
-| `set[T<sub>1</sub>]` |  `set[T<sub>2</sub>]` | `bool`               |
-
+| `set[T~1~]` |  `set[T~2~]` | `bool`               |
 
 #### Description
 
-Yields `true` if the value of Exp<sub>1</sub> is a strict subset of the value of Exp<sub>2</sub>,  and `false` otherwise.
+Yields `true` if the value of Exp~1~ is a strict subset of the value of Exp~2~,  and `false` otherwise.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>{1, 2, 3} < {1, 2, 3, 4};
 bool: true
 rascal>{1, 2, 3} < {1, 3, 4};
@@ -36,5 +33,4 @@ bool: false
 rascal>{1, 2, 3} < {1, 2, 3};
 bool: false
 ```
-
 

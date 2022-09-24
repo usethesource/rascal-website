@@ -6,4 +6,3 @@ title: "module demo::vis::VisADT"
 
 `import demo::vis::VisADT;`
 
-

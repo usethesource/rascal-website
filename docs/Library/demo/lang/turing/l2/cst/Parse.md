@@ -6,7 +6,6 @@ title: "module demo::lang::turing::l2::cst::Parse"
 
 `import demo::lang::turing::l2::cst::Parse;`
 
-
 ## function parse {#demo-lang-turing-l2-cst-Parse-parse}
 
 * ``start[Program] parse(str inp)``

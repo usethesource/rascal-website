@@ -6,7 +6,6 @@ title: "module lang::html::IO"
 
 `import lang::html::IO;`
 
-
 ## function readHTMLFile {#lang-html-IO-readHTMLFile}
 
 * ``node readHTMLFile(loc file)``

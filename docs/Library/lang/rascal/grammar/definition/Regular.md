@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::definition::Regular"
 
 `import lang::rascal::grammar::definition::Regular;`
 
-
 ## function expandRegularSymbols {#lang-rascal-grammar-definition-Regular-expandRegularSymbols}
 
 * ``Grammar expandRegularSymbols(Grammar G)``

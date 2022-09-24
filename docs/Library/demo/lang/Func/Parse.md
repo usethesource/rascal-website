@@ -6,7 +6,6 @@ title: "module demo::lang::Func::Parse"
 
 `import demo::lang::Func::Parse;`
 
-
 ## function parse {#demo-lang-Func-Parse-parse}
 
 * ``Prog parse(loc l)``

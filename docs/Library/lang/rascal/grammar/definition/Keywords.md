@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::definition::Keywords"
 
 `import lang::rascal::grammar::definition::Keywords;`
 
-
 ## function expandKeywords {#lang-rascal-grammar-definition-Keywords-expandKeywords}
 
 * ``Grammar expandKeywords(Grammar g)``

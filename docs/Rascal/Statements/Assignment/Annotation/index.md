@@ -21,4 +21,3 @@ See [Annotation](../../../../Rascal/Declarations/Annotation).
 
 Examples have been removed since this feature is deprecated.
 
-

@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::tests::Compare"
 
 `import lang::rascal::grammar::tests::Compare;`
 
-
 ## function main {#lang-rascal-grammar-tests-Compare-main}
 
 * ``value main()``

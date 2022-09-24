@@ -6,7 +6,6 @@ title: "module analysis::m3::TypeSymbol"
 
 `import analysis::m3::TypeSymbol;`
 
-
 #### Synopsis
 
 a symbolic representation for types that occur in programming languages.
@@ -25,8 +24,6 @@ We cater for languages to have a subtype relation to be defined, and a least upp
 
 You will find an interesting examples in [lang::java::m3::TypeSymbol].
 
-
-
 #### Benefits
 
 *  symbolic types can be analyzed and manipulated symbolically, i.e. to instatiate parametrized types.
@@ -36,7 +33,6 @@ You will find an interesting examples in [lang::java::m3::TypeSymbol].
 
 *  If you import extensions to this M3 model for two different languages, ambiguity and other confusion may arise 
 because the subtype and lub functions of the two languages will merge.
-
 
 ## data TypeSymbol {#analysis-m3-TypeSymbol-TypeSymbol}
 

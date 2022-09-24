@@ -6,7 +6,6 @@ title: "module demo::lang::Func::AST"
 
 `import demo::lang::Func::AST;`
 
-
 ## data Prog {#demo-lang-Func-AST-Prog}
 
 ```rascal

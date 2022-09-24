@@ -10,7 +10,6 @@ title: "module lang::rascal::tutor::conversions::ADtoMD"
 
 Temporary utility conversions for evolving the tutor syntax from AsciiDoc to Docusaurus Markdown
 
-
 ## function ad2md {#lang-rascal-tutor-conversions-ADtoMD-ad2md}
 
 * ``void ad2md()``

@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::concrete::ParameterizedNonTerminals"
 
 `import lang::rascal::tests::concrete::ParameterizedNonTerminals;`
 
-
 ## function PA1 {#lang-rascal-tests-concrete-ParameterizedNonTerminals-PA1}
 
 * ``test bool PA1()``

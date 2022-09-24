@@ -6,7 +6,6 @@ title: No Parent
 
 Parent directory is missing in source location.
 
-
 #### Types
 
 `data RuntimeException = NoParent(loc noparentloc);`
@@ -14,5 +13,4 @@ Parent directory is missing in source location.
 #### Usage
 
 `import Exception;` (only needed when `NoParent` is used in `catch`)
-
 

@@ -19,7 +19,6 @@ checker is currently under development.
 * [ambiguous function reference](../CompileTimeErrors/AmbiguousFunctionReference)
 * [argument mismatch](../CompileTimeErrors/ArgumentMismatch)
 * [Arity](../CompileTimeErrors/Arity)
-* [compile time errors](../CompileTimeErrors/)
 * [date time syntax](../CompileTimeErrors/DateTimeSyntax)
 * [illegal qualified declaration](../CompileTimeErrors/IllegalQualifiedDeclaration)
 * [invalid date time comparison](../CompileTimeErrors/InvalidDateTimeComparison)

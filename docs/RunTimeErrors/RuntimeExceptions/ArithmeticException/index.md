@@ -22,19 +22,19 @@ a numeric function  is called with an out-of-range argument.
 Remedies:
 
 *  Check the validity of the argument before you call the function or apply the operator.
-*  Catch the `ArithmeticException` yourself, see [try catch](../../../Rascal/Statements/TryCatch) statement.
+*  Catch the `ArithmeticException` yourself, see [try catch](../../../Rascal/Statements/TryCatch/) statement.
 
 #### Examples
 
 Division by 0 gives an error:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>3/0;
 ok
 ```
 Giving an out-of-range argument to a mathematical function also gives an error:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>import util::Math;
 ok
 rascal>tan(-550000000000000000000000);
@@ -46,7 +46,7 @@ ok
 We can also catch the `ArithmeticException` error. First import the Rascal exceptions (which are also included in `Prelude`)
 and `IO`:
 
-```rascal-shell
+```rascal-shell ,error
 rascal>import Exception;
 ok
 rascal>import IO;
@@ -56,5 +56,4 @@ try println(3/0); catch ArithmeticException(msg): println("The message is: <msg>
 The message is: / by zero
 ok
 ```
-
 

@@ -18,4 +18,3 @@ Tag declarations explain which type the expected value of a tag should have.
 
 *  Not yet implemented, so basically tags are not checked
 
-

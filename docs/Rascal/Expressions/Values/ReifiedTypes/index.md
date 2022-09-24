@@ -27,13 +27,13 @@ A type literal wraps a `Symbol` and a map of `Production`s.
 
 First import the module `Type`:
 
-```rascal-shell
+```rascal-shell 
 rascal>import Type;
 ok
 ```
 Builtin types can be constructed without definitions, so the reified type representation is simple:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>#int
 type[int]: type(
   int(),
@@ -56,13 +56,13 @@ type[rel[int from,int to]]: type(
 ```
 to get the symbol from the reified type:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>#int.symbol
 Symbol: int()
 ```
 or we can use some definitions and reify the defined type to see a different behavior:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>data Nat = zero() | succ(Nat prev) | add(Nat l, Nat r) | mul(Nat l, Nat r);
 ok
 rascal>#Nat
@@ -143,7 +143,7 @@ type[Nat]: type(
 ```
 and we can get an abstract definition of the constructors of the [AlgebraicDataType]:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import Type;
 ok
 rascal>#Nat.definitions[adt("Nat",[])]
@@ -218,7 +218,7 @@ Production: choice(
 ```
 we could go the other way around and construct a type literal dynamically:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>type(\int(),())
 type[value]: type(
   int(),
@@ -228,7 +228,7 @@ bool: true
 ```
 we use type literals often in IO to express an expected type:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import ValueIO;
 ok
 rascal>int testInt = readTextValueString(#int, "1");
@@ -237,10 +237,7 @@ rascal>tuple[int,int] testTuple = readTextValueString(#tuple[int,int], "\<1,2\>"
 tuple[int,int]: <1,2>
 ```
 
-
-
 #### Pitfalls
 
 *  Note that the type reify operator always produces constant values, because type literals are always constants.
-
 

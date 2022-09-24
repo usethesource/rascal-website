@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::Call"
 
 `import lang::rascal::tests::functionality::Call;`
 
-
 ## function voidFun {#lang-rascal-tests-functionality-Call-voidFun}
 
 * ``test bool voidFun()``

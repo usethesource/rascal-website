@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::Switch"
 
 `import lang::rascal::tests::functionality::Switch;`
 
-
 ## function testSwitch1a {#lang-rascal-tests-functionality-Switch-testSwitch1a}
 
 * ``test bool testSwitch1a()``

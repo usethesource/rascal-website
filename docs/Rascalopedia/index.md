@@ -29,7 +29,6 @@ These are the currently covered topics:
 * [parse tree](../Rascalopedia/ParseTree)
 * [Parser](../Rascalopedia/Parser)
 * [Prettyprinter](../Rascalopedia/Prettyprinter)
-* [Rascalopedia](../Rascalopedia/)
 * [Refactoring](../Rascalopedia/Refactoring)
 * [Relation](../Rascalopedia/Relation)
 * [Scope](../Rascalopedia/Scope)
@@ -43,5 +42,4 @@ These are the currently covered topics:
 * [Tuple](../Rascalopedia/Tuple)
 * [Typechecker](../Rascalopedia/Typechecker)
 * [Visualization](../Rascalopedia/Visualization)
-
 

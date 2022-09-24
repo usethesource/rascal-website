@@ -15,11 +15,9 @@ Transitive closure on binary list relation values.
 
 #### Types
 
-
 |`Exp`               | `Exp +`            |
 | --- | --- |
-| `lrel[T<sub>1</sub>, T<sub>2</sub>]` | `lrel[T<sub>1</sub>, T<sub>2</sub>]`  |
-
+| `lrel[T~1~, T~2~]` | `lrel[T~1~, T~2~]`  |
 
 #### Description
 
@@ -27,21 +25,18 @@ Returns the transitive closure of a binary listrelation.
 Transitive closure is defined by repeated composition of a relation.
 If we define for a given relation R:
 
-*  `R<sub>1</sub> = R`
-*  `R<sub>2</sub> = R o R`
-*  `R<sub>3</sub> = R o R<sub>2</sub>`
+*  `R~1~ = R`
+*  `R~2~ = R o R`
+*  `R~3~ = R o R~2~`
 *  `...`
-
 
 then the transitive closure R+ can be defined as
 
-*  `R+ = R<sub>1</sub> + R<sub>2</sub> + R<sub>3</sub> + ...`
-
+*  `R+ = R~1~ + R~2~ + R~3~ + ...`
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>[<1,2>, <2,3>, <3,4>]+;
 lrel[int,int]: [
   <1,2>,
@@ -52,5 +47,4 @@ lrel[int,int]: [
   <1,4>
 ]
 ```
-
 

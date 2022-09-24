@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::Booleans"
 
 `import lang::rascal::tests::basic::Booleans;`
 
-
 ## function sanity {#lang-rascal-tests-basic-Booleans-sanity}
 
 * ``test bool sanity()``

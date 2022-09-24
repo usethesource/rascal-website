@@ -29,4 +29,3 @@ See [Number](../../../../Rascal/Expressions/Values/Number) for all operations an
 *  `0`
 *  `-123456789`
 
-

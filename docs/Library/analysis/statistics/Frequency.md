@@ -6,7 +6,6 @@ title: "module analysis::statistics::Frequency"
 
 `import analysis::statistics::Frequency;`
 
-
 #### Synopsis
 
 Frequency distributions.
@@ -21,7 +20,6 @@ This module helps by providing commonly used functions for the purpose of counti
 The output of these functions can be used to draw (cumulative) histograms, or they can
 directly be used for further statistical processing and visualisation. 
 
-
 ## function distribution {#analysis-statistics-Frequency-distribution}
 
 * ``map[&T, int] distribution(rel[&U event, &T bucket] input)``
@@ -29,15 +27,13 @@ directly be used for further statistical processing and visualisation.
 * ``map[&T, int] distribution(map[&U event, &T bucket] input)``
 * ``map[&T <: num, int] distribution(map[&U event, &T <: num bucket] input, &T <: num bucketSize)``
 
-
 #### Synopsis
 
 Compute a distribution: count how many times events are mapped to which bucket.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import analysis::statistics::Frequency;
 ok
 rascal>distribution({<"chicken","animal">,<"bear","animal">,<"oak","plant">,<"tulip","plant">});
@@ -51,7 +47,6 @@ map[int, int]: (5:2,0:1)
 * ``int cumFreq(list[value] values, num n)``
 * ``int cumFreq(list[value] values, str s)``
 
-
 #### Synopsis
 
 Cumulative frequency of values less than or equal to a given value.
@@ -63,8 +58,7 @@ Returns 0 if the value is not comparable to the values set.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import analysis::statistics::Frequency;
 ok
 rascal>D = [1, 2, 1, 1, 3, 5];
@@ -82,7 +76,6 @@ int: 6
 * ``num cumPct(list[value] values, num n)``
 * ``num cumPct(list[value] values, str s)``
 
-
 #### Synopsis
 
 Cumulative percentage of values less than or equal to a given value.
@@ -91,8 +84,7 @@ Cumulative percentage of values less than or equal to a given value.
 
 Returns the cumulative percentage of values less than or equal to v (as a proportion between 0 and 1).
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import analysis::statistics::Frequency;
 ok
 rascal>D = [1, 2, 1, 1, 3, 5];
@@ -110,7 +102,6 @@ num: 1.0
 * ``num pct(list[value] values, num n)``
 * ``num pct(list[value] values, str s)``
 
-
 #### Synopsis
 
 Percentage of values that are equal to a given value.
@@ -120,8 +111,7 @@ Percentage of values that are equal to a given value.
 Returns the percentage of values that are equal to v (as a proportion between 0 and 1).
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import analysis::statistics::Frequency;
 ok
 rascal>D = [1, 2, 1, 1, 3, 5];

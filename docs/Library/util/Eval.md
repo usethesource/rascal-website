@@ -6,7 +6,6 @@ title: "module util::Eval"
 
 `import util::Eval;`
 
-
 ## data Result {#util-Eval-Result}
 
 ```rascal
@@ -35,7 +34,6 @@ data Exception
 * ``Result[&T] eval(type[&T] typ, list[str] commands, int duration) throws Timeout, StaticError, ParseError``
 * ``Result[value] eval(list[str] commands, int duration)``
 
-
 #### Synopsis
 
 Evaluate a (list of) Rascal commands and return the value of the last command.
@@ -52,7 +50,6 @@ Note that a command can be one of:
 *  Extend
 *  SyntaxDefinition
    
-
 The notable exclusion are [Expressions](../../Rascal/Expressions). An Expression is not allowed as a command to the eval function. You can easily make
 a Statement from an Expression by adding a semi-colon.
  
@@ -61,8 +58,7 @@ An optional `duration` argument may be present to limit the time
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import util::Eval;
 ok
 rascal>eval("2 * 3;");
@@ -78,7 +74,6 @@ Result[value]: result(11)
 * ``str evalType(str command, int duration) throws Timeout, StaticError, ParseError``
 * ``str evalType(list[str] commands, int duration) throws Timeout, StaticError, ParseError``
 
-
 #### Synopsis
 
 Evaluate a (list of) Rascal commands and return the type of the last command.
@@ -91,8 +86,7 @@ An optional `duration` argument may be present to limit the time
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import util::Eval;
 ok
 rascal>evalType("2 * 3;");

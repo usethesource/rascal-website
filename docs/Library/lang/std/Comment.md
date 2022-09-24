@@ -6,4 +6,3 @@ title: "module lang::std::Comment"
 
 `import lang::std::Comment;`
 
-

@@ -6,10 +6,8 @@ title: "module lang::rascal::\\syntax::tests::SolvedIssues"
 
 `import lang::rascal::\syntax::tests::SolvedIssues;`
 
-
 In this test module we collect test cases that are associated with bugs from the past.
 This is just to make sure the bugs are not re-introduced accidentally.
-
 
 ## function notAmb {#lang-rascal-\syntax-tests-SolvedIssues-notAmb}
 

@@ -21,9 +21,9 @@ Import is _non-transitive_, i.e., the visible entities from an imported module a
 
 #### Examples
 
-Here, is how to import the [IO](../../../Library/IO.md) library:
+Here, is how to import the [IO](../../../Library/IO.md/) library:
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>println("IO library was imported.");
@@ -31,5 +31,4 @@ println("IO library was imported.");
 IO library was imported.
 ok
 ```
-
 

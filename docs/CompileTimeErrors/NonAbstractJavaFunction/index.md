@@ -15,7 +15,6 @@ This requires these elements:
 *  The keyword `java` should be part of the function header.
 *  The function declaration is annotated (uing `javaClass`) with the name of the Java class that implements this function.
 
-
 This error is generated when the function does have a body.
 
 Remedies:
@@ -25,15 +24,12 @@ Remedies:
 **  Ask a question at [Rascal Ask site](http://ask.rascal-mpl.org/questions/).
 **  Read the currently open issues at the Rascal's [issue tracker](https://github.com/cwi-swat/rascal/issues?state=open). If your problem has not yet been reported by someone else, please report it here.
 
-
 If you are an expert developer, please check the body of the offending function first.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>java int incr(int x) {}
 ok
 ```
-
 

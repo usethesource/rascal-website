@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::Backtracking"
 
 `import lang::rascal::tests::functionality::Backtracking;`
 
-
 ## function testSimple1 {#lang-rascal-tests-functionality-Backtracking-testSimple1}
 
 * ``test bool testSimple1()``

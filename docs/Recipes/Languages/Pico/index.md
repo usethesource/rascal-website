@@ -25,10 +25,8 @@ Pico has a single purpose in life: being so simple that specifications of every 
 
 *  Tests in if-then-else statement and while-statement should be of type natural.
 
-
 The following aspects of the Pico language will be discussed:
 
-* [Pico](../../../Recipes/Languages/Pico)
 * [Abstract](../../../Recipes/Languages/Pico/Abstract)
 * [Assembly](../../../Recipes/Languages/Pico/Assembly)
 * [Compile](../../../Recipes/Languages/Pico/Compile)
@@ -45,7 +43,6 @@ The following aspects of the Pico language will be discussed:
 #### Examples
 
 Here is a -- not so simple -- Pico program that computes the factorial function:
-
 
 ```rascal
 begin declare input : natural, // <1>
@@ -70,7 +67,4 @@ Notes:
 	
 <1> Pico programs do not have input/output statements, so we use variables for that purpose.
 <2> Pico has no multiplication operator so we have to simulate it with repeated addition (yes, simplicity comes at a price!).
-
-
-
 

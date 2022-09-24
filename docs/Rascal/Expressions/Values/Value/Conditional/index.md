@@ -12,29 +12,25 @@ Conditional expression on values.
 
 #### Syntax
 
-`Exp<sub>1</sub> ? Exp<sub>2</sub> : Exp<sub>3</sub>`
+`Exp~1~ ? Exp~2~ : Exp~3~`
 
 #### Types
 
-
-| `Exp<sub>1</sub>`  | `Exp<sub>2</sub>` | `Exp<sub>3</sub>` | `Exp<sub>1</sub> ? Exp<sub>2</sub> : Exp<sub>3</sub>`  |
+| `Exp~1~`  | `Exp~2~` | `Exp~3~` | `Exp~1~ ? Exp~2~ : Exp~3~`  |
 | --- | --- | --- | --- |
-|   `bool`   | `T<sub>2</sub>`   | `T<sub>3</sub>`   | `lub(T<sub>2</sub>,T<sub>3</sub>)`             |
-
+|   `bool`   | `T~2~`   | `T~3~`   | `lub(T~2~,T~3~)`             |
 
 #### Description
 
-Yields the value of _Exp_<sub>2</sub> if the value of _Exp_<sub>1</sub> is `true` and the value of _Exp_<sub>3</sub> otherwise.
-The result type is the _least upper bound_ (also known as `lub`, see [StaticTyping](../../../../../Rascal/Declarations/StaticTyping)) of the types of _Exp_<sub>2</sub> and _Exp_<sub>3</sub>.
+Yields the value of _Exp_~2~ if the value of _Exp_~1~ is `true` and the value of _Exp_~3~ otherwise.
+The result type is the _least upper bound_ (also known as `lub`, see [StaticTyping](../../../../../Rascal/Declarations/StaticTyping)) of the types of _Exp_~2~ and _Exp_~3~.
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>( 3 > 2 ) ? 30 : 40;
 int: 30
 rascal>( 3 < 2 ) ? "abc" : {3, 4};
 set[int]: {3,4}
 ```
-
 

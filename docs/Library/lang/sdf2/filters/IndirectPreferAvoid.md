@@ -6,7 +6,6 @@ title: "module lang::sdf2::filters::IndirectPreferAvoid"
 
 `import lang::sdf2::filters::IndirectPreferAvoid;`
 
-
 ## function isPreferred {#lang-sdf2-filters-IndirectPreferAvoid-isPreferred}
 
 * ``default bool isPreferred(Tree _)``
@@ -22,7 +21,6 @@ title: "module lang::sdf2::filters::IndirectPreferAvoid"
 ## function indirectPreferAvoidFilter {#lang-sdf2-filters-IndirectPreferAvoid-indirectPreferAvoidFilter}
 
 * ``&T <:Tree indirectPreferAvoidFilter(amb(set[&T <:Tree] alternatives))``
-
 
 Import his module if you want prefer/avoid filtering enabled for your grammar. Use @prefer and @avoid to
 label alternatives.

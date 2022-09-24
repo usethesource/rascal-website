@@ -6,7 +6,6 @@ title: "module analysis::statistics::Descriptive"
 
 `import analysis::statistics::Descriptive;`
 
-
 #### Synopsis
 
 Descriptive Statistics.
@@ -34,8 +33,7 @@ Provides the following univariate (single variable) statistics functions:
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import analysis::statistics::Descriptive;
 ok
 rascal>D = [67, 88, 55, 92.5, 102, 51];
@@ -66,11 +64,9 @@ rascal>percentile(D,75);
 num: 92.5
 ```
 
-
 ## function geometricMean {#analysis-statistics-Descriptive-geometricMean}
 
 * ``real geometricMean([num hd, *num tl])``
-
 
 #### Synopsis
 
@@ -83,7 +79,6 @@ Computes the http://en.wikipedia.org/wiki/Geometric_mean[geometric mean] of the 
 ## function kurtosis {#analysis-statistics-Descriptive-kurtosis}
 
 * ``real kurtosis(list[num] values:[_, *_])``
-
 
 #### Synopsis
 
@@ -98,7 +93,6 @@ Kurtosis is a measure of the "peakedness" of a distribution.
 
 * ``real kurtosisExcess(list[num] values)``
 
-
 #### Synopsis
 
 Kurtosis excess of data values.
@@ -112,7 +106,6 @@ Kurtosis excess is a measure of the "peakedness" of a distribution corrected suc
 
 * ``(&T <: num) max([(&T <: num) h, *(&T <: num) t])``
 
-
 #### Synopsis
 
 Largest data value.
@@ -120,7 +113,6 @@ Largest data value.
 ## function mean {#analysis-statistics-Descriptive-mean}
 
 * ``real mean(list[num] nums:[_, *_])``
-
 
 #### Synopsis
 
@@ -134,7 +126,6 @@ Computes the http://en.wikipedia.org/wiki/Arithmetic_mean[arithmetic mean] of th
 
 * ``default real median(list[num] nums:[_, *_])``
 
-
 #### Synopsis
 
 Median of data values.
@@ -146,8 +137,7 @@ This is the same as the 50th [percentile](../../../Library/analysis/statistics/D
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import analysis::statistics::Descriptive;
 ok
 rascal>median([1,2,5,7,8]);
@@ -164,7 +154,6 @@ real: 4.
 
 * ``(&T <: num) min([(&T <: num) h, *(&T <: num) t])``
 
-
 #### Synopsis
 
 Smallest data value.
@@ -172,7 +161,6 @@ Smallest data value.
 ## function percentile {#analysis-statistics-Descriptive-percentile}
 
 * ``&T <: num percentile(list[&T <: num] nums, num p)``
-
 
 #### Synopsis
 
@@ -187,7 +175,6 @@ Returns the `p`th http://en.wikipedia.org/wiki/Percentile[percentile] of the dat
 
 * ``num variance([num hd, *num tl])``
 
-
 #### Synopsis
 
 Variance of data values.
@@ -201,7 +188,6 @@ It measures how far a set of numbers is spread out.
 
 * ``real skewness(list[num] values:[_, *_])``
 
-
 #### Synopsis
 
 Skewness of data values.
@@ -213,7 +199,6 @@ Returns the http://en.wikipedia.org/wiki/Skewness[skewness] of the available val
 ## function standardDeviation {#analysis-statistics-Descriptive-standardDeviation}
 
 * ``real standardDeviation(list[num] values)``
-
 
 #### Synopsis
 
@@ -228,7 +213,6 @@ of the data values. It shows how much variation exists from the average (mean, o
 
 * ``(&T <:num) sum([(&T <: num) hd, *(&T <: num) tl])``
 
-
 #### Synopsis
 
 Sum of data values.
@@ -236,7 +220,6 @@ Sum of data values.
 ## function sumsq {#analysis-statistics-Descriptive-sumsq}
 
 * ``(&T <:num) sumsq(list[&T <:num] values)``
-
 
 #### Synopsis
 
@@ -246,13 +229,11 @@ Sum of the squares of data values.
 
 * ``real centralMoment(list[num] nums:[_, *_], int order = 1)``
 
-
 	Calculate the k-th central moment
 
 ## function moment {#analysis-statistics-Descriptive-moment}
 
 * ``real moment(list[num] nums:[_, *_], int order = 1)``
-
 
 	Calculate the k-th moment
 

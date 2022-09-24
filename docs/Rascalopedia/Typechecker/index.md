@@ -18,7 +18,6 @@ per type system, but two extremes exist:
 *  _Dynamic type checking_: all checking is done during execution of the program.
 *  _Hybrid type checking_: when possible checks are done before execution, the remaining checks are done during execution. 
 
-
 These different styles of type checking have different trade offs:
 
 *  Static typechecking:
@@ -31,12 +30,9 @@ These different styles of type checking have different trade offs:
 **  Pro: a reasonable compromise.
 **  Con not be as safe as full static typechecking.
 
-
-
 #### Examples
 
 *  If in Java a variable has been declared as `bool` it cannot be added to an integer.
 *  If in Java a method has three formal parameters, it cannot be called with four actual parameters.
 *  In Python, a variable can first get a string value assigned and later on an integer value.
-
 

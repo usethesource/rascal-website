@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::functionality::Subscription"
 
 `import lang::rascal::tests::functionality::Subscription;`
 
-
 ## data NODE {#lang-rascal-tests-functionality-Subscription-NODE}
 
 ```rascal

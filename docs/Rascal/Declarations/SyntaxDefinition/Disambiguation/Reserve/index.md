@@ -12,7 +12,5 @@ Reserve is a conditional [./Symbol](../../../../../Rascal/Declarations/SyntaxDef
 
 *  `Symbol \ constraint`
 
-
 where a _constraint_ is any character class, a literal or a keyword non-terminal [./Symbol](../../../../../Rascal/Declarations/SyntaxDefinition/Symbol).
-
 

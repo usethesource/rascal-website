@@ -6,10 +6,8 @@ title: Values
 
 The different types of values.
 
-
 #### Description
 
-* [Values](../../../Rascal/Expressions/Values)
 * [Boolean](../../../Rascal/Expressions/Values/Boolean)
 * [Constructor](../../../Rascal/Expressions/Values/Constructor)
 * [DateTime](../../../Rascal/Expressions/Values/DateTime)

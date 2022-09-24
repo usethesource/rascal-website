@@ -6,7 +6,6 @@ title: "module demo::lang::MissGrant::ToRelation"
 
 `import demo::lang::MissGrant::ToRelation;`
 
-
 ## alias TransRel {#demo-lang-MissGrant-ToRelation-TransRel}
 
 * `rel[str state, str eventToken,  str toState]`

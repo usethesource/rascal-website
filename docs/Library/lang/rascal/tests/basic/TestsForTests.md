@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::basic::TestsForTests"
 
 `import lang::rascal::tests::basic::TestsForTests;`
 
-
 ## function testExpected {#lang-rascal-tests-basic-TestsForTests-testExpected}
 
 * ``test bool testExpected()``

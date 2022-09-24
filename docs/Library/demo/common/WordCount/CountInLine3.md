@@ -10,7 +10,6 @@ title: "module demo::common::WordCount::CountInLine3"
 
 Count words in a string
 
-
 ## function countInLine3 {#demo-common-WordCount-CountInLine3-countInLine3}
 
 * ``int countInLine3(str s)``

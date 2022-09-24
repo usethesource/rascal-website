@@ -19,4 +19,3 @@ and consists of the following phases:
   This can be seen as a form of [Refactoring](../../Rascalopedia/Refactoring).
 *  Code generation: generate the final code, this can be asembly language or directly executable code.
 
-

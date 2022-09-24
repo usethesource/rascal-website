@@ -6,7 +6,6 @@ title: "module lang::rascal::grammar::tests::RascalGrammar"
 
 `import lang::rascal::grammar::tests::RascalGrammar;`
 
-
 ## function generateRascalParser {#lang-rascal-grammar-tests-RascalGrammar-generateRascalParser}
 
 * ``str generateRascalParser()``

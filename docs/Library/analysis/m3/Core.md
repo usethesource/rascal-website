@@ -6,7 +6,6 @@ title: "module analysis::m3::Core"
 
 `import analysis::m3::Core;`
 
-
 #### Synopsis
 
 M3 common source code model represent facts extracted from source code for use in downstream metrics or other analyses.
@@ -21,7 +20,7 @@ The M3 [Core](../../../Library/analysis/m3/Core.md) defines basic concepts such 
 *  uses: where declared artifacts are used
 *  types: which artifacts has which types
 
-From this [Core](../../../Library/analysis/m3/Core.md) is supposed to be extended with features specific for a programming language. See for example [Java M3](../../../Library/lang/java/m3/Core.md).
+From this [Core](../../../Library/analysis/m3/Core.md) is supposed to be extended with features specific for a programming language. See for example [Java M3](../../../Library/lang/java/m3/Core.md/).
 
 #### Benefits
 
@@ -34,7 +33,6 @@ From this [Core](../../../Library/analysis/m3/Core.md) is supposed to be extende
 
 *  Even though different languages may map to the same M3 model, this does not mean that the semantics is the same. Downstream
 metrics or other analysis tools should still take semantic differences between programming languages into account.
-
 
 ## data M3 {#analysis-m3-Core-M3}
 
@@ -53,7 +51,6 @@ data M3 (
 	loc id)
      ;
 ```
-
 
 #### Synopsis
 
@@ -78,20 +75,17 @@ data Language (str version = "")
 
 * ``M3 emptyM3(loc id)``
 
-
 	Create an empty m3 term with empty annotations
 
 ## function composeM3 {#analysis-m3-Core-composeM3}
 
 * ``M3 composeM3(loc id, set[M3] models)``
 
-
 	Generic function to compose the annotations of a set of M3s.
 
 ## function diffM3 {#analysis-m3-Core-diffM3}
 
 * ``M3 diffM3(loc id, list[M3] models)``
-
 
 	Generic function to apply a difference over the annotations of a list of M3s.
 
@@ -107,7 +101,6 @@ data Language (str version = "")
 
 * ``set[FileSystem] relToFileSystem(rel[loc parent, loc child] r)``
 
-
 #### Synopsis
 
 constructs a recursive FileSystem from a binary [Location] relation.
@@ -121,7 +114,6 @@ constructs a recursive FileSystem from a binary [Location] relation.
 ## function containmentToFileSystem {#analysis-m3-Core-containmentToFileSystem}
 
 * ``set[FileSystem] containmentToFileSystem(M3 model)``
-
 
 #### Synopsis
 

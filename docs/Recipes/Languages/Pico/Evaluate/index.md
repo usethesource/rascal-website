@@ -10,8 +10,7 @@ Evaluate a Pico program.
 
 A complete evaluator (interpreter) for Pico is defined below.
 
-```rascal
-// tag::module[]
+```rascal 
 module demo::lang::Pico::Eval
 
 import demo::lang::Pico::Abstract;
@@ -93,12 +92,9 @@ public VENV evalProgram(PROGRAM P){
 }
 
 public VENV evalProgram(str txt) = evalProgram(load(txt));
-// end::module[]
     
-
 ```
 
-                
 Notes:
 
 <1> First we introduce a data type `PicoValue` that wraps all possible values that can occur at run-time.
@@ -107,10 +103,9 @@ Notes:
     They are written in a similar style as the typechecker.
 *  `evalProgram` evaluates a given Pico program.
 
-
 Here is how to evaluate a Pico program:
 
-```rascal-shell
+```rascal-shell 
 rascal>import demo::lang::Pico::Eval;
 ok
 rascal>evalProgram("begin declare x : natural, y : natural; x := 1; y := x + 5 end");
@@ -119,5 +114,4 @@ map[str, PicoValue]: (
   "y":natval(6)
 )
 ```
-
 

@@ -6,7 +6,6 @@ title: "module analysis::statistics::Inference"
 
 `import analysis::statistics::Inference;`
 
-
 #### Synopsis
 
 Statistical inference methods.
@@ -22,11 +21,9 @@ The following functions are provided:
 * [gini](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-gini)
 * [tTest](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-tTest)
 
-
 ## function chiSquare {#analysis-statistics-Inference-chiSquare}
 
 * ``num chiSquare(lrel[num expected, int observed] values)``
-
 
 #### Synopsis
 
@@ -41,8 +38,7 @@ Compute the http://en.wikipedia.org/wiki/Chi-square_statistic[ChiSquare statisti
 Consider an example from the web page mentioned above.
 To test the hypothesis that a random sample of 100 people has been drawn from a population in which men and women are equal in frequency, the observed number of men and women would be compared to the theoretical frequencies of 50 men and 50 women. If there were 44 men in the sample and 56 women, then we have the following:
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import analysis::statistics::Inference;
 ok
 rascal>chiSquare([<50, 44>, <50, 56>])
@@ -53,7 +49,6 @@ num: 1.44
 
 * ``num chiSquareTest(lrel[num expected, int observed] values)``
 * ``bool chiSquareTest(lrel[num expected, int observed] values, real alpha)``
-
 
 #### Synopsis
 
@@ -75,7 +70,6 @@ can be rejected with confidence 1 - `alpha`.
 * ``num tTest(list[num] sample1, list[num] sample2)``
 * ``bool tTest(list[num] sample1, list[num] sample2, num alpha)``
 * ``bool tTest(num mu, list[num] sample, num alpha)``
-
 
 #### Synopsis
 
@@ -109,7 +103,7 @@ Returns true iff the null hypothesis can be rejected with confidence 1 - `alpha`
 We use the data from the following http://web.mst.edu/~psyworld/texample.htm#1[example] to illustrate the t-test.
 First, we compute the t-statistic using the formula given above.
 
-```rascal-shell
+```rascal-shell 
 rascal>import util::Math;
 ok
 rascal>import analysis::statistics::Descriptive;
@@ -126,7 +120,7 @@ real: 0.84731854581
 This is the same result as obtained in the cited example.
 We can also compute it directly using the `tTest` functions:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>import analysis::statistics::Inference;
 ok
 rascal>tTest(s1, s2);
@@ -136,7 +130,7 @@ Observe that this is a smaller value than comes out directly of the formula.
 Recall that: _The number returned is the smallest significance level at which one can reject the null hypothesis that the two means are equal in favor of the two-sided alternative that they are different._
 Finally, we perform the test around the significance level we just obtained:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>tTest(s1,s2,0.40);
 bool: false
 rascal>tTest(s1,s2,0.50);
@@ -146,7 +140,6 @@ bool: true
 ## function anovaFValue {#analysis-statistics-Inference-anovaFValue}
 
 * ``num anovaFValue(list[list[num]] categoryData)``
-
 
 #### Synopsis
 
@@ -164,13 +157,11 @@ where
 *  `msbg` = between group mean square.
 *  `mswg` = within group mean square.
 
-
 are as defined http://faculty.vassar.edu/lowry/ch13pt1.html[here].
 
 ## function anovaPValue {#analysis-statistics-Inference-anovaPValue}
 
 * ``num anovaPValue(list[list[num]] categoryData)``
-
 
 #### Synopsis
 
@@ -187,7 +178,6 @@ where `F` is the [anova f value](../../../Library/analysis/statistics/Inference.
 ## function anovaTest {#analysis-statistics-Inference-anovaTest}
 
 * ``bool anovaTest(list[list[num]] categoryData, num alpha)``
-
 
 #### Synopsis
 
@@ -207,7 +197,6 @@ where `F` is the [anova f value](../../../Library/analysis/statistics/Inference.
 
 * ``real gini(lrel[num observation,int frequency] values)``
 
-
 #### Synopsis
 
 Gini coefficient.
@@ -223,20 +212,19 @@ value between 0 (completely equal distribution) and
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import analysis::statistics::Inference;
 ok
 ```
 A completely equal distribution:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>gini([<10000, 1>, <10000, 1>, <10000, 1>]);
 real: 0.0
 ```
 A rather unequal distribution:
 
-```rascal-shell
+```rascal-shell ,continue
 rascal>gini([<998000, 1>, <20000, 3>, <117500, 1>, <70000, 2>, <23500, 5>, <45200,1>]);
 real: 0.8530758129256304
 ```

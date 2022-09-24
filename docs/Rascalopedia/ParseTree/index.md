@@ -18,5 +18,3 @@ A parse tree for the sentence
 
 ![][tree.png](/assets/Rascalopedia/ParseTree/parse-tree.png)
 
-
-

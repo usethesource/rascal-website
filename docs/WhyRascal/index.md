@@ -19,5 +19,5 @@ We give various answers to these questions:
   and describe some application domains.
 * [EASY](../WhyRascal/EASY) can be used in many Rascal applications.
 * We have also collected [Solution Strategies](../WhyRascal/SolutionStrategies) for a wide range of problems.
-* Last but not least we give a quick [comparison with other paradigms](../WhyRascal/CompareWithOtherParadigms).
+* Last but not least we give a quick [comparison with other paradigms](../WhyRascal/CompareWithOtherParadigms/).
 

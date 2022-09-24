@@ -22,8 +22,6 @@ Examples of static semantic properties include:
 *  The proper use of types.
 *  The proper use of names.
 
-
 Language with substantial static semantics: Java, Haskell, Rascal.
 Languages with only dynamic semantics: Python, Ruby.
-
 

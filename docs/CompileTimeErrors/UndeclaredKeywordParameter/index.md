@@ -17,22 +17,20 @@ Remedies:
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>int incr(int n, int delta=1) = n + delta;
 int (int, int delta = ...): function(|prompt:///|(0,41,<1,0>,<1,41>))
 ```
 Calling `incr` with a wrong keyword parameter gives an error:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>incr(3, diff=5);
 int: 4
 ```
 This can be fixed by using the correct name for the keyword parameter:
 
-```rascal-shell
+```rascal-shell ,continue,error
 rascal>incr(3, delta=5);
 int: 8
 ```
-
 

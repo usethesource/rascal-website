@@ -6,4 +6,3 @@ title: "module demo::lang::Lisra::Syntax"
 
 `import demo::lang::Lisra::Syntax;`
 
-

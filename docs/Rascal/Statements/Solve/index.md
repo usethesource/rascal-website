@@ -11,7 +11,7 @@ Solve a set of equalities by fixed-point iteration.
 
 #### Syntax
 
-`solve(Var<sub>1</sub>, Var<sub>2</sub>, ..., Var~n~; Exp) Statement;`
+`solve(Var~1~, Var~2~, ..., Var~n~; Exp) Statement;`
 
 #### Description
 
@@ -37,7 +37,7 @@ R+ = R + (R o R) + (R o R o R) + ...
 In other words, it is the union of successive [Composition](../../../Rascal/Expressions/Values/Relation/Composition)s of `R` with itself. 
 For a given relation `R` this can be expressed as follows:
 
-```rascal-shell
+```rascal-shell 
 rascal>rel[int,int] R = {<1,2>, <2,3>, <3,4>};
 rel[int,int]: {
   <1,2>,
@@ -62,5 +62,4 @@ rel[int,int]: {
   <2,4>
 }
 ```
-
 

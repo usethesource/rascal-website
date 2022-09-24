@@ -6,7 +6,6 @@ title: "module analysis::statistics::Correlation"
 
 `import analysis::statistics::Correlation;`
 
-
 #### Synopsis
 
 Correlation between data values.
@@ -23,11 +22,9 @@ The following functions are provided:
 * [SpearmansCorrelation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-SpearmansCorrelation)
 * [covariance](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-covariance)
 
-
 ## function PearsonsCorrelation {#analysis-statistics-Correlation-PearsonsCorrelation}
 
 * ``num PearsonsCorrelation(lrel[num x,num y] values)``
-
 
 #### Synopsis
 
@@ -46,7 +43,6 @@ Use [spearmans correlation](../../../Library/analysis/statistics/Correlation.md#
 
 * ``list[real] PearsonsCorrelationStandardErrors(lrel[num x,num y] values)``
 
-
 #### Synopsis
 
 Standard errors associated with Pearson correlation. 
@@ -55,7 +51,6 @@ Standard errors associated with Pearson correlation.
 
 * ``list[real] PearsonsCorrelationPValues(lrel[num x,num y] values)``
 
-
 #### Synopsis
 
 P-values (significance) associated with Pearson correlation.
@@ -63,7 +58,6 @@ P-values (significance) associated with Pearson correlation.
 ## function SpearmansCorrelation {#analysis-statistics-Correlation-SpearmansCorrelation}
 
 * ``num SpearmansCorrelation(lrel[num x,num y] values)``
-
 
 #### Synopsis
 
@@ -83,7 +77,6 @@ Use [pearsons correlation](../../../Library/analysis/statistics/Correlation.md#a
 
 * ``num covariance(lrel[num x,num y] values)``
 
-
 #### Synopsis
 
 Covariance of data values.
@@ -94,8 +87,7 @@ Computes the http://en.wikipedia.org/wiki/Covariance[covariance] between the `x`
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell 
 rascal>import analysis::statistics::Correlation;
 ok
 rascal>covariance([<1,12>,<3,12>,<3,11>,<5,7>]);

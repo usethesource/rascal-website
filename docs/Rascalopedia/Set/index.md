@@ -15,11 +15,10 @@ A set is a collection of values with the following properties:
 *  A value can only occur once.
 *  The set has a size that is equal to the number of values in the set.
 
-
 In Rascal, sets are surrounded by braces `{` and `}` and the elements are separated by commas.
 Each set has a type of the form `set[T]`, where _T_ is the smallest common type of all set elements.
-Read the description of [sets and their operators](../../Rascal/Expressions/Values/Set)
-and of [library functions on sets](../../Library/Set.md).
+Read the description of [sets and their operators](../../Rascal/Expressions/Values/Set/)
+and of [library functions on sets](../../Library/Set.md/).
 
 ## Sets in Daily Life
 
@@ -42,5 +41,4 @@ and of [library functions on sets](../../Library/Set.md).
 *  The empty set: `{}`. Its type is `set[void]`.
 *  A set of integers: `{3, 1, 4}`. Its type is `set[int]`.
 *  A set of mixed-type values: `{3, "a", 4}`. Its type is `set[value]`.
-
 

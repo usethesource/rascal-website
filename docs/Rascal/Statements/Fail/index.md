@@ -22,7 +22,6 @@ A `fail` statement is only allowed in statements that are controlled by the outc
 *  The test (expressions) of a [For](../../../Rascal/Statements/For) statement control the statements in the body part.
 *  The formal parameter declaration of a [Function](../../../Rascal/Declarations/Function).
 
-
 The `fail` statement is associated with the innermost pattern match by which it is controlled.
 
 When `fail` is executed:
@@ -36,11 +35,11 @@ When `fail` is executed:
 
 #### Examples
 
-Here is an example taken from [Bubble](../../../Recipes/Basic/Bubble). 
+Here is an example taken from [Bubble](../../../Recipes/Basic/Bubble/). 
 It uses a `fail` for the case that no unsorted element can be found in the list of numbers.
 As a result, the whole case fails and the default case is used.
 
-```rascal-shell
+```rascal-shell 
 rascal>import IO;
 ok
 rascal>public list[int] sort(list[int] numbers){
@@ -58,5 +57,4 @@ list[int] (list[int]): function(|prompt:///|(0,252,<1,0>,<11,1>))
 rascal>sort([10, 1, 5, 3]);
 list[int]: [1,3,5,10]
 ```
-
 

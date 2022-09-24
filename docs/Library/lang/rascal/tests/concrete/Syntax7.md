@@ -6,7 +6,6 @@ title: "module lang::rascal::tests::concrete::Syntax7"
 
 `import lang::rascal::tests::concrete::Syntax7;`
 
-
 ## function expectParseError {#lang-rascal-tests-concrete-Syntax7-expectParseError}
 
 * ``bool expectParseError(type[Tree] grammar, str input)``

@@ -6,7 +6,6 @@ title: "module demo::lang::MissGrant::Parse"
 
 `import demo::lang::MissGrant::Parse;`
 
-
 ## function parse {#demo-lang-MissGrant-Parse-parse}
 
 * ``Controller parse(str src, loc origin)``

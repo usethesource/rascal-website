@@ -6,7 +6,6 @@ title: "module demo::lang::Lisra::Pretty"
 
 `import demo::lang::Lisra::Pretty;`
 
-
 ## function pretty {#demo-lang-Lisra-Pretty-pretty}
 
 * ``str pretty(Integer(n))``

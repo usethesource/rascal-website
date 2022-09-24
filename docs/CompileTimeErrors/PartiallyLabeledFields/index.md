@@ -14,14 +14,11 @@ There are only two legal situations:
 *  All fields have a label.
 *  No field has a label.
 
-
 This error signals the case that thei fields are partially labelled.
-
 
 #### Examples
 
-
-```rascal-shell
+```rascal-shell ,error
 rascal>tuple[int n, str] T;
 ok
 rascal>rel[str name, int] R;

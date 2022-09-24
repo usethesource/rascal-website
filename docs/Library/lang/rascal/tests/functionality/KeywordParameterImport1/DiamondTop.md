@@ -6,4 +6,3 @@ title: "module lang::rascal::tests::functionality::KeywordParameterImport1::Diam
 
 `import lang::rascal::tests::functionality::KeywordParameterImport1::DiamondTop;`
 
-

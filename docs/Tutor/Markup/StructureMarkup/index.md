@@ -11,4 +11,3 @@ Markup for structured text entities.
 The follwing structured markup is supported:
 loctoc::[]
 
-

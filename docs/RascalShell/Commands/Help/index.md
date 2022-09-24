@@ -12,8 +12,7 @@ Get a reminder of the shell commands.
 
 #### Description
 
-
-```rascal-shell
+```rascal-shell 
 rascal>:help
 :help
 Welcome to the Rascal command shell.

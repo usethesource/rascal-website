@@ -6,4 +6,3 @@ title: "module demo::lang::Exp::Concrete::WithLayout::Syntax"
 
 `import demo::lang::Exp::Concrete::WithLayout::Syntax;`
 
-
