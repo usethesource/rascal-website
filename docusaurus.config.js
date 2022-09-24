@@ -63,7 +63,7 @@ const config = {
     //           id: 'Rascal',
     //           aliases: ['rascal', 'rascal-shell'],
     //           scopeName: 'source.rascal',
-    //           path: path.resolve( 'src/util/Rascal.tmLanguage')
+    //           path: path.resolve( 'src/util/Rascal.tmLanguage.plist')
              
     //         }
     //        ]
