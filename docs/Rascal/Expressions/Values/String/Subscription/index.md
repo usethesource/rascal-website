@@ -15,9 +15,11 @@ Retrieve a substring via its index.
 
 #### Types
 
+
 | `Exp~1~`     | `Exp~2~` | `Exp~1~ [ Exp~2~ ]`  |
 | --- | --- | --- |
 | `str`         | `int`     | `str`                  |
+
 
 #### Description
 
@@ -43,4 +45,6 @@ rascal>S[5];
 	at $shell$(|prompt:///|(0,5,<1,0>,<1,5>))
 ok
 ```
+
+       
 

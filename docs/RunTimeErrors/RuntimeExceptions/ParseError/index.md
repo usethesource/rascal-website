@@ -6,6 +6,7 @@ title: Parse Error
 
 Parse of a syntactically incorrect string.
 
+
 #### Types
 
 `data RuntimeException = ParseError(loc parseloc) | ParseError(loc parseloc, str nt, str s);`
@@ -13,6 +14,7 @@ Parse of a syntactically incorrect string.
 #### Usage
 
 `import Exception;` (only needed when `ParseError` is used in `catch`)
+
 
 #### Description
 
@@ -24,6 +26,7 @@ Remedies:
 *  Correct the input sentence.
 *  Adapt the grammar so that it accepts the input sentence.
 *  Catch the ParseError yourself, see [try catch](../../../Rascal/Statements/TryCatch/).
+
 
 #### Examples
 
@@ -68,4 +71,6 @@ rascal>try
 Your input cannot be parsed: |unknown:///|(4,1,<1,4>,<1,5>)
 ok
 ```
+
+
 

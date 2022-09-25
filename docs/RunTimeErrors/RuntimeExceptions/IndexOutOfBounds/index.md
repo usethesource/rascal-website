@@ -30,6 +30,7 @@ Remedies:
   ** Use a [list slice](../../../Rascal/Expressions/Values/List/Slice/) to automate part of the index computation.
 *  Catch the `IndexOutOfBounds` yourself, see [try catch](../../../Rascal/Statements/TryCatch/).
 
+
 #### Examples
 
 Initialize a list `L`:
@@ -62,4 +63,6 @@ rascal>try
 The message is: 5
 ok
 ```
+
+
 

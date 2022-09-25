@@ -10,13 +10,14 @@ Solutions for some common tasks.
 
 We discuss the following tasks:
 
-* [AdHocDataExploration](../../Recipes/Common/AdHocDataExploration)
-* [CallAnalysis](../../Recipes/Common/CallAnalysis)
-* [CallLifting](../../Recipes/Common/CallLifting)
-* [ColoredTrees](../../Recipes/Common/ColoredTrees)
-* [CountConstructors](../../Recipes/Common/CountConstructors)
-* [Derivative](../../Recipes/Common/Derivative)
-* [StringTemplate](../../Recipes/Common/StringTemplate)
-* [WordCount](../../Recipes/Common/WordCount)
-* [WordReplacement](../../Recipes/Common/WordReplacement)
+* [AdHocDataExploration](../../Recipes/Common/AdHocDataExploration/)
+* [CallAnalysis](../../Recipes/Common/CallAnalysis/)
+* [CallLifting](../../Recipes/Common/CallLifting/)
+* [ColoredTrees](../../Recipes/Common/ColoredTrees/)
+* [CountConstructors](../../Recipes/Common/CountConstructors/)
+* [Derivative](../../Recipes/Common/Derivative/)
+* [StringTemplate](../../Recipes/Common/StringTemplate/)
+* [WordCount](../../Recipes/Common/WordCount/)
+* [WordReplacement](../../Recipes/Common/WordReplacement/)
+
 

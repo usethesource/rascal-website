@@ -6,6 +6,7 @@ title: "module lang::rascal::tutor::apidoc::GenerateMarkdown"
 
 `import lang::rascal::tutor::apidoc::GenerateMarkdown;`
 
+
 ## function generateAPIMarkdown {#lang-rascal-tutor-apidoc-GenerateMarkdown-generateAPIMarkdown}
 
 * ``list[Output] generateAPIMarkdown(str parent, loc moduleLoc, PathConfig pcfg, CommandExecutor exec, Index ind)``
@@ -15,6 +16,7 @@ title: "module lang::rascal::tutor::apidoc::GenerateMarkdown"
 Generate markdown documentation from the declarations extracted from a Rascal module.
 
 #### Description
+
 
     This function takes Rascal files as input, first extracts all declarations including their
     embedded (markdown) documentation tags, and then generates on-the-fly the output markdown

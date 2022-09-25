@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::PatternList2"
 
 `import lang::rascal::tests::functionality::PatternList2;`
 
+
 ## data DATA {#lang-rascal-tests-functionality-PatternList2-DATA}
 
 ```rascal

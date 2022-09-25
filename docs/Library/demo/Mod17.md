@@ -6,6 +6,7 @@ title: "module demo::Mod17"
 
 `import demo::Mod17;`
 
+
 ## data Bool {#demo-Mod17-Bool}
 
 ```rascal

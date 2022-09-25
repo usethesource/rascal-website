@@ -6,9 +6,11 @@ title: "module lang::rascal::grammar::definition::Characters"
 
 `import lang::rascal::grammar::definition::Characters;`
 
+
   In this module character classes are normalized.
   
   It also provides a number of convenience functions on character classes.
+
 
 ## data CharRange {#lang-rascal-grammar-definition-Characters-CharRange}
 

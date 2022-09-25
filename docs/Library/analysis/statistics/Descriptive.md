@@ -6,6 +6,7 @@ title: "module analysis::statistics::Descriptive"
 
 `import analysis::statistics::Descriptive;`
 
+
 #### Synopsis
 
 Descriptive Statistics.
@@ -14,24 +15,25 @@ Descriptive Statistics.
 
 Provides the following univariate (single variable) statistics functions:
 
-* [centralMoment](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-centralMoment)
-* [geometricMean](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-geometricMean)
-* [kurtosis](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-kurtosis)
-* [kurtosisExcess](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-kurtosisExcess)
-* [max](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-max)
-* [mean](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-mean)
-* [median](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-median)
-* [middle](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-middle)
-* [min](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-min)
-* [moment](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-moment)
-* [percentile](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-percentile)
-* [skewness](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-skewness)
-* [standardDeviation](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-standardDeviation)
-* [sum](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-sum)
-* [sumsq](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-sumsq)
-* [variance](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-variance)
+* [centralMoment](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-centralMoment/)
+* [geometricMean](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-geometricMean/)
+* [kurtosis](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-kurtosis/)
+* [kurtosisExcess](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-kurtosisExcess/)
+* [max](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-max/)
+* [mean](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-mean/)
+* [median](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-median/)
+* [middle](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-middle/)
+* [min](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-min/)
+* [moment](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-moment/)
+* [percentile](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-percentile/)
+* [skewness](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-skewness/)
+* [standardDeviation](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-standardDeviation/)
+* [sum](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-sum/)
+* [sumsq](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-sumsq/)
+* [variance](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-variance/)
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import analysis::statistics::Descriptive;
@@ -64,9 +66,11 @@ rascal>percentile(D,75);
 num: 92.5
 ```
 
+
 ## function geometricMean {#analysis-statistics-Descriptive-geometricMean}
 
 * ``real geometricMean([num hd, *num tl])``
+
 
 #### Synopsis
 
@@ -79,6 +83,7 @@ Computes the http://en.wikipedia.org/wiki/Geometric_mean[geometric mean] of the 
 ## function kurtosis {#analysis-statistics-Descriptive-kurtosis}
 
 * ``real kurtosis(list[num] values:[_, *_])``
+
 
 #### Synopsis
 
@@ -93,6 +98,7 @@ Kurtosis is a measure of the "peakedness" of a distribution.
 
 * ``real kurtosisExcess(list[num] values)``
 
+
 #### Synopsis
 
 Kurtosis excess of data values.
@@ -106,6 +112,7 @@ Kurtosis excess is a measure of the "peakedness" of a distribution corrected suc
 
 * ``(&T <: num) max([(&T <: num) h, *(&T <: num) t])``
 
+
 #### Synopsis
 
 Largest data value.
@@ -113,6 +120,7 @@ Largest data value.
 ## function mean {#analysis-statistics-Descriptive-mean}
 
 * ``real mean(list[num] nums:[_, *_])``
+
 
 #### Synopsis
 
@@ -126,6 +134,7 @@ Computes the http://en.wikipedia.org/wiki/Arithmetic_mean[arithmetic mean] of th
 
 * ``default real median(list[num] nums:[_, *_])``
 
+
 #### Synopsis
 
 Median of data values.
@@ -133,9 +142,10 @@ Median of data values.
 #### Description
 
 Returns the http://en.wikipedia.org/wiki/Median[median] of the available values.
-This is the same as the 50th [percentile](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-percentile).
+This is the same as the 50th [percentile](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-percentile/).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import analysis::statistics::Descriptive;
@@ -154,6 +164,7 @@ real: 4.
 
 * ``(&T <: num) min([(&T <: num) h, *(&T <: num) t])``
 
+
 #### Synopsis
 
 Smallest data value.
@@ -161,6 +172,7 @@ Smallest data value.
 ## function percentile {#analysis-statistics-Descriptive-percentile}
 
 * ``&T <: num percentile(list[&T <: num] nums, num p)``
+
 
 #### Synopsis
 
@@ -175,6 +187,7 @@ Returns the `p`th http://en.wikipedia.org/wiki/Percentile[percentile] of the dat
 
 * ``num variance([num hd, *num tl])``
 
+
 #### Synopsis
 
 Variance of data values.
@@ -188,6 +201,7 @@ It measures how far a set of numbers is spread out.
 
 * ``real skewness(list[num] values:[_, *_])``
 
+
 #### Synopsis
 
 Skewness of data values.
@@ -199,6 +213,7 @@ Returns the http://en.wikipedia.org/wiki/Skewness[skewness] of the available val
 ## function standardDeviation {#analysis-statistics-Descriptive-standardDeviation}
 
 * ``real standardDeviation(list[num] values)``
+
 
 #### Synopsis
 
@@ -213,6 +228,7 @@ of the data values. It shows how much variation exists from the average (mean, o
 
 * ``(&T <:num) sum([(&T <: num) hd, *(&T <: num) tl])``
 
+
 #### Synopsis
 
 Sum of data values.
@@ -220,6 +236,7 @@ Sum of data values.
 ## function sumsq {#analysis-statistics-Descriptive-sumsq}
 
 * ``(&T <:num) sumsq(list[&T <:num] values)``
+
 
 #### Synopsis
 
@@ -229,11 +246,13 @@ Sum of the squares of data values.
 
 * ``real centralMoment(list[num] nums:[_, *_], int order = 1)``
 
+
 	Calculate the k-th central moment
 
 ## function moment {#analysis-statistics-Descriptive-moment}
 
 * ``real moment(list[num] nums:[_, *_], int order = 1)``
+
 
 	Calculate the k-th moment
 

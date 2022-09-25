@@ -24,3 +24,4 @@ Examples of software metrics are:
 * http://en.wikipedia.org/wiki/Coupling_(computer_science)[Coupling] measures the coupling between software components.
   High coupling indicates problems in the structure of a system.
 
+

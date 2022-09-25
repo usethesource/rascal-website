@@ -6,9 +6,11 @@ title: "module Exception"
 
 `import Exception;`
 
+
 #### Synopsis
 
 Exceptions thrown by the Rascal run-time.
+
 
 ## data RuntimeException {#Exception-RuntimeException}
 
@@ -62,6 +64,7 @@ data RuntimeException
      | UnavailableInformation()
      ;
 ```
+
 
 #### Synopsis
 

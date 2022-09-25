@@ -14,7 +14,9 @@ msg
 (((TODO:WARNING: The visualization library is being reimplemented and reorganized; the information provided here maybe inaccurate or even incorrect.)))
 :::
 
+
 #### Examples
+
 
 ```rascal 
 
@@ -29,6 +31,7 @@ msg
     *  creates all Figure nodes,
     *  returns a Figure graph.
 
+
 Let's now apply this:
 ```rascal-figure,width=,height=,file=cfg1.png
                 import demo::lang::Pico::ControlFlow;
@@ -39,5 +42,7 @@ render(visCFG(CFG.graph));
 
 The resulting visualization looks like this: 
 
+
 ![][cfg1.png](/assets/Recipes/Languages/Pico/Visualize/cfg1.png)
+
 

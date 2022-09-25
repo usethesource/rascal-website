@@ -15,17 +15,20 @@ Retrieve a slice of a node's argument list.
 *  `Exp~1~ [ Exp~2~ .. Exp~4~]`
 *  `Exp~1~ [ Exp~2~ , Exp3 .. Exp~4~]`
 
+
 where _Exp_~2~ and _Exp_~4~ are optional.
 
 #### Types
+
 
 | `Exp~1~`     | `Exp~2~` |  `Exp~3~`  | `Exp~4~` | `Exp~1~ [ Exp~2~ .. Exp~4~ ]`   or  `Exp~1~ [ Exp~2~ , Exp~3~ .. Exp~4~]`  |
 | --- | --- | --- | --- | --- |
 | `node` | `int`     | `int`       | `int`     |  `list[value]`                                                                 |
 
+
 #### Description
 
-A Node slice is similar to a list [Slice](../../../../../Rascal/Expressions/Values/List/Slice) and uses the integer values of _Exp_~2~ and _Exp_~4~ to determine the `begin` (*inclusive*) and `end` (*exclusive*)
+A Node slice is similar to a list [Slice](../../../../../Rascal/Expressions/Values/List/Slice/) and uses the integer values of _Exp_~2~ and _Exp_~4~ to determine the `begin` (*inclusive*) and `end` (*exclusive*)
 of a slice from the children of the node value _ND_ of _Exp_~1~. Negative indices count from the end of the list of children backwards.
 Using the second form, an extra index _Exp_~3~ is given that determines the
 index of the second element in the slice and establishes the `step` between
@@ -47,6 +50,7 @@ The slice parameters `begin`, `end`, and `step` are determined as follows:
 **  If _Exp~3~_ is absent, then if `begin < end` then `step = 1` else `step = -1`.
 **  Otherwise, if `begin < end`, then `step = N~3~ - begin` else `step = begin - N~3~`.
 
+
 Now, the constraints `0 <= begin < Len` and `0 < end < Len` should hold,
 otherwise the exception `IndexOutOfBounds` is thrown.
 
@@ -59,12 +63,16 @@ Consider the list `ND = "f"(0, "abc", 20, false, 40, [3,4,5], 60, {"a", "b"}, 80
 
 Here is a view on the children of _ND_ that will help to correlate positive and negative indices:
 
+
 |`i`        | 0 |     1 |  2 |     3 |  4 |       5 |  6 |          7 |  8  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |`ND[i]`    |`0`|`"abc"`|`20`|`false`|`40`|`[3,4,5]`|`60`|`{"a", "b"}`|`80` |
 |`-i`       | -9|     -8|  -7|     -6|  -5|       -4|  -3|          -2|  -1 |
 
+    
+
 Some common use cases (with `begin` <= `end`):
+
 
 | Slice            | Means:                                                                  |
 | --- | --- |
@@ -76,7 +84,10 @@ Some common use cases (with `begin` <= `end`):
 | `ND[-2..]`       | the last two children of the list of children                           |
 | `ND[..-2]`       | all children except the last two.                                       |
 
+
+
 Let's put this into practice now.
+
 
 ```rascal-shell ,error
 rascal>ND = "f"(0, "abc", 20, false, 40, [3,4,5], 60, {"a", "b"}, 80);

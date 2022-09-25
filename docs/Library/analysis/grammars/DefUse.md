@@ -6,6 +6,7 @@ title: "module analysis::grammars::DefUse"
 
 `import analysis::grammars::DefUse;`
 
+
 ## function definable {#analysis-grammars-DefUse-definable}
 
 * ``bool definable(Symbol s)``

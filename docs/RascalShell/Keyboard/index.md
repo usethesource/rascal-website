@@ -13,6 +13,7 @@ https://en.wikipedia.org/wiki/GNU_Readline[GNU Readline]
 
 Some convenient shortcuts are:
 
+
 | `Ctrl+a`  | Move cursor to begin of line. |
 | --- | --- |
 | `Ctrl+d`  | EOF marker, closes the current RascalShell (equivalent to the |
@@ -20,4 +21,6 @@ Some convenient shortcuts are:
 | `Ctrl+e`  | Move cursor to end of line. |
 | `Ctrl+k`  | Kill remainder of line after cursor. |
 | `Ctrl+l`  | Clear screen. |
+
+ 
 

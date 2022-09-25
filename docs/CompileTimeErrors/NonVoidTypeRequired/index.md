@@ -33,6 +33,7 @@ ok
 ```
 A solution could be:
 
+
 ```rascal-shell 
 rascal>int dummy() { return 17; }
 int (): function(|prompt:///|(0,26,<1,0>,<1,26>))
@@ -41,4 +42,5 @@ list[int]: [1,17,2]
 rascal>{1, *dummy(), 2}
 set[int]: {1,2,17}
 ```
+
 

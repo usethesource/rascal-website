@@ -15,9 +15,11 @@ Transitive closure on binary relation values.
 
 #### Types
 
+
 |`Exp`              | `Exp +`            |
 | --- | --- |
 | `rel[T~1~, T~2~]` | `rel[T~1~, T~2~]`  |
+
 
 #### Description
 
@@ -30,11 +32,14 @@ If we define for a given relation R:
 *  `R~3~ = R o R~2~` 
 *  `...`
 
+
 then the transitive closure R+ can be defined as
 
 *  `R+ = R~1~ + R~2~ + R~3~ + ...`
 
+
 #### Examples
+
 
 ```rascal-shell 
 rascal>{<1,2>, <2,3>, <3,4>}+;
@@ -70,4 +75,5 @@ rel[int,int]: {
   <2,4>
 }
 ```
+
 

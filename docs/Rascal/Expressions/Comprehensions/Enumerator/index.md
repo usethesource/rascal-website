@@ -59,6 +59,7 @@ Here are some examples of enumerators:
 
 *  `int N <- 17`, will only generate the value `17`.
 
+
 Here are examples of enumerators in action:
 
 ```rascal-shell 
@@ -71,4 +72,5 @@ rel[int,str]: {
   <30,"c">
 }
 ```
+
 

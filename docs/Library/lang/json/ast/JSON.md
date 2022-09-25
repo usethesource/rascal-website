@@ -6,6 +6,7 @@ title: "module lang::json::ast::JSON"
 
 `import lang::json::ast::JSON;`
 
+
 ## data JSON {#lang-json-ast-JSON-JSON}
 
 ```rascal

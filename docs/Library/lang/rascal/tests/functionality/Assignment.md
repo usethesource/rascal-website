@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::Assignment"
 
 `import lang::rascal::tests::functionality::Assignment;`
 
+
 ## function testSimple1 {#lang-rascal-tests-functionality-Assignment-testSimple1}
 
 * ``test bool testSimple1()``

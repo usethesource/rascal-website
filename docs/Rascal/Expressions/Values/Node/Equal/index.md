@@ -19,6 +19,7 @@ Equal operator on node values.
 | --- | --- | --- |
 | `node`     |  `node`    | `bool`                |
 
+
 #### Description
 
 Yields `true` if the node names of the values of _Exp_~1~ and _Exp_~2~ are equal and
@@ -26,10 +27,12 @@ the children of each node are pairwise equal, otherwise `false`.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>"f"(1, "abc", true) == "f"(1, "abc", true);
 bool: true
 rascal>"f"(1, "abc", true) == "f"(1, "def", true);
 bool: false
 ```
+
 

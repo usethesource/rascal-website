@@ -6,9 +6,11 @@ title: "module lang::java::m3::AST"
 
 `import lang::java::m3::AST;`
 
+
 #### Synopsis
 
 defines AST node types for Java
+
 
 ## data Declaration {#lang-java-m3-AST-Declaration}
 
@@ -181,6 +183,7 @@ data Modifier
 
 * ``Declaration createAstFromFile(loc file, bool collectBindings, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")``
 
+
 #### Synopsis
 
 Creates AST from a file
@@ -191,6 +194,7 @@ Creates AST from a file
 
 * ``set[Declaration] createAstsFromFiles(set[loc] file, bool collectBindings, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")``
 
+
 #### Synopsis
 
 Creates AST from a file
@@ -200,6 +204,7 @@ Creates AST from a file
 ## function createAstFromString {#lang-java-m3-AST-createAstFromString}
 
 * ``Declaration createAstFromString(loc fileName, str source, bool collectBinding, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")``
+
 
   Creates ASTs from an input string
 

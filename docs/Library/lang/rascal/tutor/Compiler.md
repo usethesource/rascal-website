@@ -12,6 +12,7 @@ compiles .rsc and .md files to markdown by executing Rascal-specific code and in
 
 #### Description
 
+
   This compiler collects .rsc files and .md files from a PathConfig's srcs folders.
   
   Every .rsc file is compiled to a .md file with an outline of the declarations contained
@@ -27,6 +28,7 @@ compiles .rsc and .md files to markdown by executing Rascal-specific code and in
   For (nested) folders in the srcs folders, which do not contain an `index.md` file, or
   a `<name>.md` file where the name is equal to the name of the current folder, a fresh index.md
   file is generated.
+
 
 ## function defaultCompile {#lang-rascal-tutor-Compiler-defaultCompile}
 
@@ -100,7 +102,7 @@ This uses another nested directory listing to construct information for the TOC 
 
 #### Synopsis
 
-make sure to tag all section headers with the right fragment id for concept linking
+Make sure to tag all section headers with the right fragment id for concept linking
 
 ## function compileRascalShell {#lang-rascal-tutor-Compiler-compileRascalShell}
 

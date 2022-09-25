@@ -6,9 +6,11 @@ title: "module lang::xforms::v20::DOM"
 
 `import lang::xforms::v20::DOM;`
 
+
 #### Synopsis
 
 AST model for XForms v 2.0. 
+
 
 ## function nameSpacePrefix {#lang-xforms-v20-DOM-nameSpacePrefix}
 

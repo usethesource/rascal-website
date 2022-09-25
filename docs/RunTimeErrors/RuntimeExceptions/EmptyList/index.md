@@ -26,6 +26,7 @@ Remedies:
   take alternative action in that case.
 * Catch the `EmptyList` yourself, see [try catch](../../../Rascal/Statements/TryCatch/).
 
+
 #### Examples
 
 Import the `List` library and introduce `L` with an empty list as value:
@@ -70,4 +71,5 @@ rascal>try
 Cannot take head of empty list
 ok
 ```
+
 

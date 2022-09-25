@@ -21,6 +21,8 @@ The difference between two lists.
 | `list[T~1~]` |  `list[T~2~]` | `list[lub(T~1~,T~2~)]`   |
 | `list[T~1~]` |  `T~2~`       | `list[lub(T~1~,T~2~)]`   |
 
+
+
 #### Description
 
 If both _Exp_~1~ and _Exp_~2~ have a list as value, the result is the difference of these two list values. 
@@ -29,6 +31,7 @@ The difference is computed by taking the successive elements of the second list 
 removing the first occurrence of that element in the first list. 
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>[1, 2, 3, 4] - [1, 2, 3];
@@ -44,4 +47,5 @@ list[int]: [2,3,1,2,3]
 rascal>[1, 2, 3, 1, 2, 3] - [1, 2];
 list[int]: [3,1,2,3]
 ```
+
 

@@ -6,6 +6,7 @@ title: "module lang::rascal::grammar::analyze::DefUse"
 
 `import lang::rascal::grammar::analyze::DefUse;`
 
+
 ## function definable {#lang-rascal-grammar-analyze-DefUse-definable}
 
 * ``bool definable(Symbol s)``

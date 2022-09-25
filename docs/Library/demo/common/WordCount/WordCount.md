@@ -12,9 +12,11 @@ demonstrates different ways of counting words in a string
 
 #### Description
 
+
 This not only demonstrates counting words using regular expressions and pattern matching with backtracking,
 but also highlights the use of functions as parameters to other functions (higher-order functions)
-and the concept of [Reducer](../../../../Rascal/Expressions/Reducer)s.
+and the concept of [Reducer](../../../../Rascal/Expressions/Reducer/)s.
+
 
 ## function wordCount {#demo-common-WordCount-WordCount-wordCount}
 
@@ -25,6 +27,7 @@ and the concept of [Reducer](../../../../Rascal/Expressions/Reducer)s.
 Count the total amount of words in a list of strings
 
 #### Description
+
 
 wordCount takes a list of strings and a `countInLine` function
 that is applied to each line. The total number of words is returned
@@ -39,9 +42,10 @@ Count the total amount of words in a list of strings
 
 #### Description
 
+
 wordCountReduce takes a list of strings and a `countInLine` function
 that is applied to each line. The total number of words is returned.
-It uses a [Reducer](../../../../Rascal/Expressions/Reducer) instead of a for loop for brevity.
+It uses a [Reducer](../../../../Rascal/Expressions/Reducer/) instead of a for loop for brevity.
 
 ## function wordCountMapSum {#demo-common-WordCount-WordCount-wordCountMapSum}
 
@@ -53,9 +57,10 @@ Count the total amount of words in a list of strings
 
 #### Description
 
+
 wordCountMapSum takes a list of strings and a `countInLine` function
 that is applied to each line. The total number of words is returned.
-It uses a traditional -in functional programming- `map` ((List::mapper) and [sum](../../../../Library/List.md#List-sum) functions from the [Library](../../../../Library/).
+It uses a traditional -in functional programming- `map` ((List::mapper) and [sum](../../../../Library/List.md#List-sum/) functions from the [Library](../../../../Library/).
 
 ## function tstWordCount1 {#demo-common-WordCount-WordCount-tstWordCount1}
 

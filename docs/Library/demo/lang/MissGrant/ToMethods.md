@@ -6,6 +6,7 @@ title: "module demo::lang::MissGrant::ToMethods"
 
 `import demo::lang::MissGrant::ToMethods;`
 
+
 ## function controller2methods {#demo-lang-MissGrant-ToMethods-controller2methods}
 
 * ``str controller2methods(str name, Controller ctl)``

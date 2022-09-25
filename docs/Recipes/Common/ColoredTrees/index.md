@@ -26,6 +26,8 @@ module demo::common::ColoredTrees
 
 // Define ColoredTrees with red and black nodes and integer leaves
 
+
+
 data ColoredTree = leaf(int N) // <1>
                  | red(ColoredTree left, ColoredTree right) 
                  | black(ColoredTree left, ColoredTree right);
@@ -132,4 +134,5 @@ programming languages.
 #### Pitfalls
 
 The visit statement is based on a new paradigm one has to learn.
+
 

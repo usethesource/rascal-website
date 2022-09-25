@@ -6,13 +6,16 @@ title: "module util::Monitor"
 
 `import util::Monitor;`
 
+
 #### Synopsis
 
 Monitor the progress of a task/job.
 
+
 ## function jobStart {#util-Monitor-jobStart}
 
 * ``void jobStart(str label, int work=1, int totalWork=100)``
+
 
 #### Synopsis
 
@@ -26,6 +29,7 @@ steps todo and how much work it contributes (when it ends) to its parent job (if
 ## function jobStep {#util-Monitor-jobStep}
 
 * ``void jobStep(str label, str message, int work = 1)``
+
 
   Log to the user that a certain event has happened under
   the currently registered Job.

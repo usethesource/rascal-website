@@ -6,6 +6,7 @@ title: "module analysis::text::search::StandardAnalyzers"
 
 `import analysis::text::search::StandardAnalyzers;`
 
+
 ## function arabic {#analysis-text-search-StandardAnalyzers-arabic}
 
 * ``Analyzer arabic()``

@@ -20,9 +20,10 @@ Comprehensions provide a concise notation to conditionally generate new values.
 
 Comprehensions are defined for the following types:
 
-*  `list`, see [Comprehension](../../../Rascal/Expressions/Values/List/Comprehension),
-*  `set`, see [Comprehension](../../../Rascal/Expressions/Values/Set/Comprehension),
-*  `map`, see [Comprehension](../../../Rascal/Expressions/Values/Map/Comprehension).
+*  `list`, see [Comprehension](../../../Rascal/Expressions/Values/List/Comprehension/),
+*  `set`, see [Comprehension](../../../Rascal/Expressions/Values/Set/Comprehension/),
+*  `map`, see [Comprehension](../../../Rascal/Expressions/Values/Map/Comprehension/).
+
 
 The syntax varies slightly for each type, but comprehensions have the following common elements:
 
@@ -31,6 +32,7 @@ The syntax varies slightly for each type, but comprehensions have the following 
 **  a _filter_ that performs an arbitrary test on previously generated values.
 
 *  One or more _contributing expressions_ that are added to the list, set or map that is being constructed.
+
 
 The contributing expressions are evaluated for all possible values of the enumerators that are not
 excluded by a test. When a filter fails, execution continues with the preceding enumerator (if any).
@@ -88,5 +90,6 @@ rascal>(fruit : fruits[fruit] | fruit <- fruits, fruits[fruit] > 10);
 map[str, int]: ("orange":35,"berry":25)
 ```
 
-See [Comprehension](../../../Rascal/Expressions/Values/List/Comprehension), [Comprehension](../../../Rascal/Expressions/Values/Set/Comprehension), or [Comprehension](../../../Rascal/Expressions/Values/Map/Comprehension) for more examples.
+See [Comprehension](../../../Rascal/Expressions/Values/List/Comprehension/), [Comprehension](../../../Rascal/Expressions/Values/Set/Comprehension/), or [Comprehension](../../../Rascal/Expressions/Values/Map/Comprehension/) for more examples.
+
 

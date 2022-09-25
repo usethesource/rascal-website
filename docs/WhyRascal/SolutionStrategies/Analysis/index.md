@@ -22,7 +22,7 @@ The analysis workflow is shown in the figure below and consists of two steps:
 
   **  Combining enriched, extracted, facts to create new facts.
 
-![Analysis,Workflow](/assets/WhyRascal/SolutionStrategies/Analysis/define-analysis.png/)
+![Analysis,Workflow](/assets/WhyRascal/SolutionStrategies/Analysis/define-analysis.png)
 
 As before, validate, validate and validate the results of analysis. Essentially the same approach can be used as for validating the facts. Manual checking of answers on random samples of the SUI may be mandatory. It also happens frequently that answers inspire new queries that lead to new answers, and so on.
 
@@ -39,4 +39,5 @@ The Rascal features that are frequently used for analysis are:
 *  The solve statement for constraint solving.
 
 *  Rewrite rules to simplify results and to enforce constraints.
+
 

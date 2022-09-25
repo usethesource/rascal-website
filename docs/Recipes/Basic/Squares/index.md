@@ -16,11 +16,13 @@ module demo::basic::Squares
 
 import IO;
 
+
 void squares(int n) {
   println("Table of squares from 1 to <n>\n"); // <2>
   for (int I <- [1 .. n + 1])
       println("<I> squared = <I * I>");        // <3>
 }
+
 
 str squaresTemplate(int N) // <4>
   = "Table of squares from 1 to <N>
@@ -88,4 +90,6 @@ Table of squares from 1 to 9
   9 squared = 81
 ok
 ```
+
+
 

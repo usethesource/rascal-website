@@ -19,6 +19,7 @@ The result is a new value _V_' that is assigned to the _Assignable_.
 
 #### Examples
 
+
 ```rascal-shell 
 ```
 Assignable has a list value:
@@ -54,4 +55,5 @@ rascal>T[1] = "def";
 tuple[int,str,bool]: <1,"def",true>
 ```
 NOTE: See https://github.com/usethesource/rascal/issues/948
+
 

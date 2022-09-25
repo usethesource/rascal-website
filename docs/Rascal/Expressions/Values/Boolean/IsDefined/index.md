@@ -21,12 +21,14 @@ Test whether the value of an expression is defined.
 | --- | --- |
 |  `T`   |   `bool`      |
 
+
 #### Description
 
 If no exception is generated during the evaluation of _Exp_, 
 the result is `true`. Otherwise, it is `false`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>T = ("a" : 1, "b" : 2);
@@ -42,4 +44,5 @@ bool: true
 rascal>L[5]?
 bool: false
 ```
+
 

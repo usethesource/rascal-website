@@ -6,9 +6,11 @@ title: "module lang::rascal::scrap::Patch"
 
 `import lang::rascal::scrap::Patch;`
 
+
 ## function commands2patch {#lang-rascal-scrap-Patch-commands2patch}
 
 * ``lrel[loc, str] commands2patch(start[Commands] pt)``
+
 
 Convert a sequence of commands to a textual patch value to be applied to the editor
 containing the commands. The patch is based on the results of evaluating the commands

@@ -6,9 +6,11 @@ title: "module util::IDEServices"
 
 `import util::IDEServices;`
 
+
 ## function browse {#util-IDEServices-browse}
 
 * ``void browse(loc uri)``
+
 
 #### Synopsis
 
@@ -18,6 +20,7 @@ Open a browser for a given location.
 
 * ``void edit(loc uri)``
 
+
 #### Synopsis
 
 Open an editor for file at a given location.
@@ -25,6 +28,7 @@ Open an editor for file at a given location.
 ## function applyDocumentsEdits {#util-IDEServices-applyDocumentsEdits}
 
 * ``void applyDocumentsEdits(list[DocumentEdit] edits)``
+
 
 #### Synopsis
 
@@ -44,6 +48,7 @@ of refactoring and quick-fix features of the language service protocol.
 ## function showInteractiveContent {#util-IDEServices-showInteractiveContent}
 
 * ``void showInteractiveContent(Content content)``
+
 
 #### Synopsis
 

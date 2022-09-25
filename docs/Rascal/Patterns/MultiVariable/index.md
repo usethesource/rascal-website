@@ -22,6 +22,7 @@ Optionally the *element type* of the multi-variable may be specified.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import IO;
 ok
@@ -66,4 +67,5 @@ ok
 #### Pitfalls
 
 In older versions of Rascal the type of a multi-variable had to be a list or set type.
+
 

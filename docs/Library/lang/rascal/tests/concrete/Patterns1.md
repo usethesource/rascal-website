@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::concrete::Patterns1"
 
 `import lang::rascal::tests::concrete::Patterns1;`
 
+
 ## function concreteMatchA1 {#lang-rascal-tests-concrete-Patterns1-concreteMatchA1}
 
 * ``test bool concreteMatchA1()``

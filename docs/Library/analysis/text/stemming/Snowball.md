@@ -6,6 +6,7 @@ title: "module analysis::text::stemming::Snowball"
 
 `import analysis::text::stemming::Snowball;`
 
+
 #### Synopsis
 
 Provides the library of stemmers written in the Snowball languages, and compiled to Java, which are
@@ -17,12 +18,14 @@ See http://snowball.tartarus.org[the Snowball homepage] for more informations
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import analysis::text::stemming::Snowball;
 ok
 rascal>stem("bikes")
 str: "bike"
 ```
+
 
 ## data Language {#analysis-text-stemming-Snowball-Language}
 
@@ -56,6 +59,7 @@ data Language
 
 * ``str stem(str word, Language lang=english())``
 
+
 #### Synopsis
 
 Stemming algorithms from the Tartarus Snowball (http://snowball.tartarus.org[the Snowball homepage] for different languages. 
@@ -70,6 +74,7 @@ Romanian, Russian, Spanish, Swedish and Turkish.
 
 * ``str kraaijPohlmannStemmer(str word)``
 
+
 #### Synopsis
 
 Kraaij-Pohlmann is a well-known stemmer for the Dutch language. 
@@ -82,6 +87,7 @@ See http://snowball.tartarus.org/algorithms/kraaij_pohlmann/stemmer.html
 
 * ``str porterStemmer(str word)``
 
+
 #### Synopsis
 
 Porter stemming is a "standard" stemming algorithm for English of sorts.
@@ -93,6 +99,7 @@ See http://snowball.tartarus.org/algorithms/porter/stemmer.html for more informa
 ## function lovinsStemmer {#analysis-text-stemming-Snowball-lovinsStemmer}
 
 * ``str lovinsStemmer(str word)``
+
 
 #### Synopsis
 

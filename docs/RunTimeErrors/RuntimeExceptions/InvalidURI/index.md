@@ -21,6 +21,7 @@ lead to an invalid URI part of a source location value.
 
 #### Examples
 
+
 ```rascal-shell ,error
 rascal>someLoc = |home:///abc.txt|;
 loc: |home:///abc.txt|

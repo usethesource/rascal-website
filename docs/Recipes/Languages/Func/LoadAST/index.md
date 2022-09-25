@@ -12,14 +12,15 @@ To simplify later processing, Func programs are converted to an abstract syntax 
 
 #### Examples
 
-The concrete syntax for Func is described in [ConcreteSyntax](../../../../Recipes/Languages/Func/ConcreteSyntax) and its
-abstract syntax in [AbstractSyntax](../../../../Recipes/Languages/Func/AbstractSyntax).
+The concrete syntax for Func is described in [ConcreteSyntax](../../../../Recipes/Languages/Func/ConcreteSyntax/) and its
+abstract syntax in [AbstractSyntax](../../../../Recipes/Languages/Func/AbstractSyntax/).
 Rather than manually writing conversion rules from Func parse trees to Func abstract syntax trees
 we use our secret weapon: [implode](../../../../Library/ParseTree.md#ParseTree-implode/) that performs the mapping for us.
 As you see when you compare the concrete and abstract syntax, the ground work has already been done
 by appropriately labelling concrete rules with constructor names of the abstract syntax.
 
 Here is the code for the `load` funcion:
+
 
 ```rascal 
 module demo::lang::Func::Load
@@ -38,6 +39,7 @@ demo::lang::Func::AST::Prog load(str s) = implode(parse(s));
 
 ```
 
+                
 This looks simple but also slightly intimidating due to the many qualified names.
 The issue is that the names in the concrete and abstract syntax are (on purpose) overloaded.
 A name like `Prog` can be the one from the concrete syntax(i.e., `demo::lang::Func::Func::Prog`)
@@ -54,6 +56,8 @@ fact(n) = if n <= 1 then
              n * fact(n-1)
           end
 ```
+
+                
 
 ```rascal-shell 
 rascal>import demo::lang::Func::Load;
@@ -111,7 +115,7 @@ Prog: prog(
   comments=())
 ```
 We get the original program and its __abstract syntax tree__ of type `Prog` back.
-In case of doubt, compare this with the result in [Parse](../../../../Recipes/Languages/Func/Parse) where we did obtain a parse tree.
+In case of doubt, compare this with the result in [Parse](../../../../Recipes/Languages/Func/Parse/) where we did obtain a parse tree.
 Next, we try the same from a file:
 
 ```rascal-shell ,continue
@@ -165,4 +169,5 @@ Prog: prog(
   location=|std:///demo/lang/Func/programs/F0.func|(0,97,<1,0>,<5,13>),
   comments=())
 ```
+
 

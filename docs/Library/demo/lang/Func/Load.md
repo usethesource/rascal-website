@@ -6,6 +6,7 @@ title: "module demo::lang::Func::Load"
 
 `import demo::lang::Func::Load;`
 
+
 ## function implode {#demo-lang-Func-Load-implode}
 
 * ``demo::lang::Func::AST::Prog implode(demo::lang::Func::Func::Prog p)``

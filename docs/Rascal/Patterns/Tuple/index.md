@@ -16,6 +16,7 @@ A tuple pattern matches a tuple value, provided that _Pat_~1~, _Pat_~2~, ..., _P
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import IO;
 ok
@@ -25,4 +26,5 @@ rascal>if(<A, B, C> := <13, false, "abc">)
 A = 13, B = false, C = abc
 ok
 ```
+
 

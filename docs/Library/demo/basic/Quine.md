@@ -10,6 +10,7 @@ title: "module demo::basic::Quine"
 
 A Quine is a program that prints itself
 
+
 ## function quine {#demo-basic-Quine-quine}
 
 * ``void quine()``

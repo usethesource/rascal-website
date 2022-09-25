@@ -21,6 +21,7 @@ public PROGRAM  load(str txt) = implode(#PROGRAM, parse(#Program, txt));
 
 ```
 
+                
 Notes:
 
 *  The function `load` takes a string as argument (supposedly the source code of a Pico program) and returns a value of type `PROGRAM`,
@@ -32,6 +33,7 @@ see [reified types](../../../../Rascal/Expressions/Values/ReifiedTypes/).
 The `parse` function returns a parse tree of the input program.
 
 *  `implode(#PROGRAM, parse(#Program, txt))`: transform the parse returned by `parse` into an abstract syntax tree of type `PROGRAM`. The [$Rascal:implode] function performs the automatic mapping between elements in the parse tree and their counterpart in the abstract syntax.
+
 
 The function `load` can be used as follows:
 
@@ -60,4 +62,5 @@ PROGRAM: program(
 ```
 
 Observe how the various parts of the abstract syntax tree are annotated with location attributes.
+
 

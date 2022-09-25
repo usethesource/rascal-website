@@ -6,8 +6,10 @@ title: "module lang::rascal::tests::basic::SolvedIssues"
 
 `import lang::rascal::tests::basic::SolvedIssues;`
 
+
 In this test module we collect test cases that are associated with bugs from the past.
 This is just to make sure the bugs are not re-introduced accidentally.
+
 
 ## function emptySetEquals1 {#lang-rascal-tests-basic-SolvedIssues-emptySetEquals1}
 

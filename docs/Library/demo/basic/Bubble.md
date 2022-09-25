@@ -12,6 +12,7 @@ Variations on Bubble Sort
 
 #### Description
 
+
 Rascal allows for very different programming styles, ranging 
 from classical procedural style with structured programming 
 constructor to pure function programming and algebraic specification.
@@ -19,6 +20,7 @@ constructor to pure function programming and algebraic specification.
 In this demo we show how the "Bubble Sort" algorithm can 
 be implemented in Rascal in different ways. None is a priori
 "better" than the other. Just different. Pick your poison!
+
 
 ## function sort1 {#demo-basic-Bubble-sort1}
 

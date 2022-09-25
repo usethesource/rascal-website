@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::concrete::Syntax6"
 
 `import lang::rascal::tests::concrete::Syntax6;`
 
+
 ## function expIsAmbiguous {#lang-rascal-tests-concrete-Syntax6-expIsAmbiguous}
 
 * ``test bool expIsAmbiguous()``

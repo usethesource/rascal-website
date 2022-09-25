@@ -15,12 +15,15 @@ The greater than operator on location values.
 
 #### Types
 
+
 | `Exp~1~` | `Exp~2~` | `Exp~1~ > Exp~2~`  |
 | --- | --- | --- |
 | `loc`     |  `loc`    | `bool`                |
+
 
 #### Description
 
 Yields `true` if the location value of _Exp_~1~ strictly textually encloses
 the location value of _Exp_~2~, and `false` otherwise.
+
 

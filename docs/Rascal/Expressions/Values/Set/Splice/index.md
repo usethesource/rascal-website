@@ -10,9 +10,11 @@ Splice the elements of a set in an enclosing set.
 
 #### Types
 
+
 |`Exp` | `Exp~1~`|  `Exp~n~` | `{Exp~1~, ..., Exp, ..., Exp~n~}`  |
 | --- | --- | --- | --- |
 |`T`   | `T~1~`  |  `T~n~`   | `set[lub(T~1~, ..., T, ...,T~n~)]`     |
+
 
 #### Description
 
@@ -40,4 +42,5 @@ set[int]: {10,20,30}
 rascal>{1, 2, *S, 3, 4};
 set[int]: {10,1,3,20,2,4,30}
 ```
+
 

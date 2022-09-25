@@ -8,6 +8,7 @@ title: "module lang::rascal::tests::concrete::PrefixMatching"
 
 tests regression of issue #1594
 
+
 ## function prefixAssignStatement {#lang-rascal-tests-concrete-PrefixMatching-prefixAssignStatement}
 
 * ``test bool prefixAssignStatement()``

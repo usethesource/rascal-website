@@ -8,6 +8,7 @@ title: "module lang::rascal::\\syntax::tests::ImplodeTests"
 
 Tests the potential clashes among value constructors of different adts, plus, the identified clash with: bool eq(value, value);
 
+
 ## data Num {#lang-rascal-\syntax-tests-ImplodeTests-Num}
 
 ```rascal

@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::Interpolation"
 
 `import lang::rascal::tests::functionality::Interpolation;`
 
+
 ## function interpolateWhile {#lang-rascal-tests-functionality-Interpolation-interpolateWhile}
 
 * ``test bool interpolateWhile()``

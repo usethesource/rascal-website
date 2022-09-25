@@ -23,6 +23,7 @@ Syntax Definitions allow the definition of parsers for programming languages, do
 *  `layout Nonterminal = Alternatives;`
 *  `keyword Nonterminal = Alternatives;`
 
+
 where _Start_ is either `start` or nothing, and _Alternatives_ are one of:
 
 *  `Tags Associativity Symbols`
@@ -31,17 +32,18 @@ where _Start_ is either `start` or nothing, and _Alternatives_ are one of:
 *  `Alternatives~1~ | Alternatives~2~`  
 *  `Alternatives~1~ > Alternatives~2~`  
 
+
 where _Associativity_ is nothing, or one of `assoc`, `left`, `right` or `non-assoc`, and _Tags_ are a possibly empty list of tags.
 
 #### Description
 
 Rascal supports full context-free grammars for syntax definition. It generates scannerless parsers from these definitions. 
-These parsers produce [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees) that can be further processed by Rascal using [./Concrete Syntax](../../../Rascal/Expressions/ConcreteSyntax) fragments
- in [Patterns](../../../Rascal/Patterns) and [Expressions](../../../Rascal/Expressions), or they can be _imploded_ to [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType)s.
+These parsers produce [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees/) that can be further processed by Rascal using [./Concrete Syntax](../../../Rascal/Expressions/ConcreteSyntax/) fragments
+ in [Patterns](../../../Rascal/Patterns/) and [Expressions](../../../Rascal/Expressions/), or they can be _imploded_ to [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/)s.
 
 There are four kinds of non-terminals that can be defined with slightly different characteristics.
 
-*  _Syntax_ non-terminals are general context-free non-terminals. This mean left-recursion, right-recursion, any of the regular expression [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol)s and all kinds of [Disambiguation](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation) can be used to define it.
+*  _Syntax_ non-terminals are general context-free non-terminals. This mean left-recursion, right-recursion, any of the regular expression [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol/)s and all kinds of [Disambiguation](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/) can be used to define it.
    It is important to note that in between the _Symbols_ that define a syntax non-terminal the locally defined layout non-terminal will be interleaved. 
    For example, if you define `layout ML = [\ ]*;` and `syntax A = "a" "a"`, Rascal will modify the definition of A to `syntax A = "a" ML "a";` before generating a parser.
 
@@ -53,32 +55,35 @@ There are four kinds of non-terminals that can be defined with slightly differen
 *  _Layout_ non-terminals are just like _syntax_ non-terminals as well. However, they are used to preprocess all _syntax_ definitions in the same module scope (see above).
 
 *  _Keyword_ non-terminals are _not_ like _syntax_ non-terminals. These only allow definition of enumeration of literal 
-   symbols and single character classes. Keyword non-terminals play an important role in the semantics of [Disambiguation](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation)
+   symbols and single character classes. Keyword non-terminals play an important role in the semantics of [Disambiguation](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/)
    where some disambiguation constructs require finite, non-empty enumeration of strings. 
    The prime example is the definition of reserved keywords.
 
-Each alternative of a syntax definition is defined by a list of [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol)s. Each of the [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol)s can be labeled or not.
+
+Each alternative of a syntax definition is defined by a list of [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol/)s. Each of the [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol/)s can be labeled or not.
 The alternative of a defined syntax type may be labeled or not as well. With the label additional operations are activated on the corresponding parse trees:
 
-*  The `is` operator is defined for labeled alternatives (see [Operators](../../../Rascal/Expressions/Operators)).
-*  The `has` operator is defined for labeled [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol)s in the right-hand side (see [Operators](../../../Rascal/Expressions/Operators)).
-*  [Action](../../../Rascal/Declarations/SyntaxDefinition/Action) functions can be written to override the construction of a parse tree, using the label of an alternative as the function name
-*  [implode] uses labeled alternatives to map to an [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType)
+*  The `is` operator is defined for labeled alternatives (see [Operators](../../../Rascal/Expressions/Operators/)).
+*  The `has` operator is defined for labeled [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol/)s in the right-hand side (see [Operators](../../../Rascal/Expressions/Operators/)).
+*  [Action](../../../Rascal/Declarations/SyntaxDefinition/Action/) functions can be written to override the construction of a parse tree, using the label of an alternative as the function name
+*  [implode] uses labeled alternatives to map to an [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/)
 
-Alternatives can be combined in a single [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition) using the `|`, `>` and associativity combinators.
-The latter two represent [Disambiguation](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation) constructs that you should read more about. The `|` is a short-hand for not having to repeat `syntax A =` for every alternative of `A`.
+
+Alternatives can be combined in a single [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/) using the `|`, `>` and associativity combinators.
+The latter two represent [Disambiguation](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/) constructs that you should read more about. The `|` is a short-hand for not having to repeat `syntax A =` for every alternative of `A`.
 
 Alternatives can be named or not. The names are essential only if:
 
-*  you need to [implode](../../../Library/ParseTree.md#ParseTree-implode/) [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees)
+*  you need to [implode](../../../Library/ParseTree.md#ParseTree-implode/) [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees/)
 *  you need to use the `is` expression, as in `myStatement is ifThenElse` instead of using concrete pattern matching.
-*  you want to write [Action](../../../Rascal/Declarations/SyntaxDefinition/Action)s that triggers on the construction of the alternative.
+*  you want to write [Action](../../../Rascal/Declarations/SyntaxDefinition/Action/)s that triggers on the construction of the alternative.
+
 
 However, it is generally a good idea to name your rules even if you do not need them. 
 Note that a name may be reused for different alternatives for a single non-terminal, 
 provided that the lists of symbols for these "overloaded" alternatives use _different non-terminal symbols_. 
 This implies that alternatives for lexicals generally do not use overloaded names because they are often 
-defined only by regular expressions over terminal [Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol)s (literals and character classes).
+defined only by regular expressions over terminal [Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol/)s (literals and character classes).
 
 The _start_ modifier identifies the start of a grammar. 
 The effect of a start modifier is that Rascal will generate an extra syntax definition before generating a parser
@@ -88,12 +93,13 @@ For example:
 layout L = [\ ]*; start Program = Statement*;`
 ```
 will produce `syntax start[Program] = L Program top L;`. 
-Note that the `start[Program]` type is now available in your program, and [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees) assigned to variable of that 
+Note that the `start[Program]` type is now available in your program, and [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees/) assigned to variable of that 
 type will allow access to the _top_ field.
+
 
 #### Examples
 
-The following example makes use of practically all of the [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition) features, except parse actions.
+The following example makes use of practically all of the [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/) features, except parse actions.
 ```rascal
 // layout is lists of whitespace characters
 layout MyLayout = [\t\n\ \r\f]*;
@@ -128,10 +134,11 @@ syntax Expression
 *  Powerful disambiguation constructs for common programming language disambiguation patterns.
 *  Data-dependent (context-sensitive) disambiguation via arbitrary functions.
 *  Embedding of concrete syntax fragments in Rascal programs
-*  [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition)s follow the syntax and semantics of [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType)s quite closely.
+*  [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/)s follow the syntax and semantics of [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/)s quite closely.
 
 #### Pitfalls
 
-*  Grammars may be ambiguous, so read about [Disambiguation](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation), [Ambiguity Detection](../../../Rascal/Declarations/SyntaxDefinition/AmbiguityDetection) and [Ambiguity Diagnosis](../../../Rascal/Declarations/SyntaxDefinition/AmbiguityDiagnosis).
+*  Grammars may be ambiguous, so read about [Disambiguation](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/), [Ambiguity Detection](../../../Rascal/Declarations/SyntaxDefinition/AmbiguityDetection/) and [Ambiguity Diagnosis](../../../Rascal/Declarations/SyntaxDefinition/AmbiguityDiagnosis/).
 *  Static grammar checker is not implemented yet.
+
 

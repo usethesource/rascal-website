@@ -14,14 +14,15 @@ First the value of _Exp_~1~ is determined and if that is defined it is assigned 
 Otherwise, the value of _Exp_~2~ is assigned to _Assignable_.
 
 Values which can be undefined are:
-* in [Map](../../../../Rascal/Expressions/Values/Map)s where the key is _not_ set
-* values of [Annotation](../../../../Rascal/Declarations/Annotation) which are not present.
-* values of [Function](../../../../Rascal/Declarations/Function)'s keyword parameters which have not been provided, but are set to default.
-* values of [Constructor](../../../../Rascal/Expressions/Values/Constructor)'s keyword parameters which have not been provided, but are computed by defaults.
+* in [Map](../../../../Rascal/Expressions/Values/Map/)s where the key is _not_ set
+* values of [Annotation](../../../../Rascal/Declarations/Annotation/) which are not present.
+* values of [Function](../../../../Rascal/Declarations/Function/)'s keyword parameters which have not been provided, but are set to default.
+* values of [Constructor](../../../../Rascal/Expressions/Values/Constructor/)'s keyword parameters which have not been provided, but are computed by defaults.
 
 No other values can be used in an undefined state, so the ? operator does not make sense on undefined or uninitialized variables for example.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>M = ("Andy": 1, "Brian" : 2);
@@ -47,4 +48,5 @@ int: 2
 #### Benefits
 
 * short notation that inline initialization of map values, keyword fields or annotations without having to write a lot of boilerplate if-then-else statements. 
+
 

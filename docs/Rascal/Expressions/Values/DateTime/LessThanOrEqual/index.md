@@ -21,6 +21,7 @@ Less than or equal operator on datetime values.
 | --- | --- | --- |
 | `datetime`     |  `datetime`    | `bool`                |
 
+
 #### Description
 
 Yields `true` if the `datetime` value of Exp~1~ is earlier in time than the `datetime` value
@@ -28,10 +29,12 @@ of _Exp_~2~ or if the values of _Exp_~1~ and _Exp_~2~ are equal, and `false` oth
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>$2010-07-15$ <= $2010-07-15$;
 bool: true
 rascal>$2011-07-15$ <= $2010-07-14$;
 bool: false
 ```
+
 

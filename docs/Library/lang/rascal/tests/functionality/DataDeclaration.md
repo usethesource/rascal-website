@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::DataDeclaration"
 
 `import lang::rascal::tests::functionality::DataDeclaration;`
 
+
 ## data Bool {#lang-rascal-tests-functionality-DataDeclaration-Bool}
 
 ```rascal

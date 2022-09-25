@@ -18,7 +18,7 @@ Declare the priority of operators.
 
 #### Description
 
-Priority declarations define a partial ordering between the productions _within a single non-terminal_. The feature is specifically designed to fit with the semantics of expression sub-languages embedded in programming languages. There exist other mechanisms for [Disambiguation](../../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation), if [Priority](../../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority) does not work for you.
+Priority declarations define a partial ordering between the productions _within a single non-terminal_. The feature is specifically designed to fit with the semantics of expression sub-languages embedded in programming languages. There exist other mechanisms for [Disambiguation](../../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/), if [Priority](../../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority/) does not work for you.
 
 The semantics of a priority relation `A > B` is that B will not be nested under A in the left-most or right-most position.
 Any other position of A will allow B fine. Note that the priority relation you define is transitively closed, so if A > B and B > C then A > C.
@@ -32,9 +32,10 @@ A finer point is that Rascal restricts the filtering of priority such that it is
 | __Child Right-most:__ `E = "+" E`| No filter        | Filter under left            | No filter                     | Filter under left       |
 | __Child Both:__ `E = E "+" E`    | No filter        | Filter under left            | Filter under right            | Filter under left and right  |
 
+
 #### Examples
 
-The following snippet uses all [Priority](../../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority) features:
+The following snippet uses all [Priority](../../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority/) features:
 ```rascal
 syntax Exp 
   = A: Id
@@ -52,6 +53,7 @@ A short explanation:
 *  Similarly A and B share a group; yet they are not recursive and so do not play any role in the priority ordering.
 *  C and D both have higher priority then E and F, which means that E and F may not be directly nested under C or D.
 *  However: E and F will be allowed under the second argument of C because it is not an outermost position. That's fine because `1 [2 + 3]` is not ambiguous. 
+
 
 Here a number of strings for this language, with brackets to show how they will be parsed: 
 
@@ -72,4 +74,5 @@ Here a number of strings for this language, with brackets to show how they will 
 *  When a priority does not have a filtering effect, such as in `E = E "+" > E "*"` it is usually better to use normal alternative composition: `E = E "+" | E "*"`. There is no difference in the semantics of parsing, but the latter expression is more intentional.
 *  You should not hide right or left recursion behind a nullable non-terminal, since the system will not filter the ambiguity then. Example: 
 E = left "a"? E "*" E > E "+" E will remain ambiguous. This should be written as: E = left ("a" E "*" E | E "*" E ) > E "+" E; (unfolding the optional such that E becomes explicitly left-most).
+
 

@@ -6,9 +6,11 @@ title: "module util::Progress"
 
 `import util::Progress;`
 
+
 ## function progressBar {#util-Progress-progressBar}
 
 * ``tuple[void(str) report, void() finished] progressBar(int total, str prefix = "Progress:", int length = 50, int limit = total, str fill = "\u2588", str unfill = "-", str printEnd = "\r")``
+
 
   .Synopsis
   This progressbar can be used in terminal applications to show the progress of some process in the terminal.
@@ -45,13 +47,13 @@ rascal>  for (i <- [0..total]) {
 list[void]: []
 rascal>  pb.finished();  
   pb.finished();  
-
 ok
 ```
 
 ## function spinner {#util-Progress-spinner}
 
 * ``void (str) spinner(str prefix = " ", str printEnd = "\r")``
+
 
   .Synopsis
   Simple spinner to display progress for some terminal process for which the total number of steps is not known.
@@ -75,11 +77,7 @@ rascal>  while (n := arbInt(100), n != 1) {
 >>>>>>>    sp("<n>");
 >>>>>>>  }
   }
-<<<<<<< HEAD
- \ 16  | 90  / 61  - 57  \ 99  | 54  / 83  - 99  \ 42  | 48  / 59  - 48  \ 42  | 26  / 69  - 75  \ 50  | 22  / 69  - 76  \ 49  | 13  / 0  - 28  \ 55  | 7  / 18  - 53  \ 2  | 68  / 95  - 5  \ 69  | 35  / 4  - 9  \ 12  | 42  / 89  - 3  \ 83  | 67  / 24  - 97  \ 58  | 38  / 17  - 52  \ 50  | 44  / 93  - 72  \ 32  | 44  / 90  - 49  \ 11  | 28  / 73  - 72  \ 52  | 31  / 39  - 18  \ 4  | 14  / 34  - 66  \ 2  | 77  / 63 
-=======
- \ 7  | 48  / 4  - 9  \ 69  | 28  / 71  - 87  \ 18  | 74  / 37  - 69  \ 30  | 67  / 38  - 14  \ 72  | 32  / 67  - 49  \ 80  | 93  / 93  - 85  \ 77  | 18  / 52  - 98  \ 0  | 39  / 97  - 52  \ 54  | 0  / 37  - 66  \ 66  | 10  / 11  - 57  \ 59  | 58  / 13  - 92  \ 37  | 67  / 58  - 29  \ 44  | 46  / 55  - 66  \ 27  | 30  / 88  - 90  \ 59  | 34  / 68  - 59  \ 39  | 85  / 25  - 13  \ 12  | 61  / 54  - 32  \ 17  | 24  / 98  - 59  \ 36  | 87  / 77  - 12  \ 9  | 0  / 79  - 41  \ 17  | 79  / 53  - 54  \ 55  | 13  / 41  - 97  \ 43  | 90  / 58  - 20  \ 72  | 18  / 68  - 88  \ 64  | 34  / 18  - 7  \ 47  | 61  / 49  - 48  \ 72  | 78  / 46  - 75  \ 56  | 61  / 9  - 21  \ 25  | 70  / 41  - 41  \ 76  | 33  / 16  - 41  \ 52  | 17  / 59  - 92  \ 18  | 72  / 6  - 82  \ 26 
->>>>>>> 2a7f585b (all links end with a slash now..)
+ \ 21  | 30  / 48  - 71  \ 90  | 2  / 2  - 9  \ 71  | 86  / 91  - 59  \ 95  | 14  / 11  - 48  \ 95  | 50  / 18  - 79  \ 67  | 40  / 60  - 97  \ 65  | 65  / 88  - 37  \ 9  | 72  / 99  - 59  \ 40  | 43  / 6  - 63  \ 87  | 28  / 98  - 61  \ 96  | 11  / 97  - 20  \ 43  | 7  / 57  - 28  \ 54  | 66  / 47  - 13  \ 15  | 91  / 30  - 22  \ 47  | 27  / 94  - 18  \ 16  | 80  / 12  - 18  \ 77  | 3  / 66  - 36  \ 14  | 20  / 37  - 32  \ 83  | 92  / 19  - 73  \ 86  | 71  / 80  - 47  \ 21  | 48  / 16  - 89  \ 22  | 62  / 78  - 35  \ 17  | 45  / 81 
 list[void]: []
 ```
 

@@ -21,11 +21,13 @@ Negated [Boolean Match] operator.
 | --- | --- | --- |
 | [Patterns]  | `value` | `bool`           |
 
+
 #### Description
 
-See [Pattern Matching](../../../../../RascalConcepts/PatternMatching) for an introduction to pattern matching and [Patterns](../../../../../Rascal/Patterns) for a complete description.
+See [Pattern Matching](../../../../../RascalConcepts/PatternMatching/) for an introduction to pattern matching and [Patterns](../../../../../Rascal/Patterns/) for a complete description.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>123 !:= 456;
@@ -35,4 +37,5 @@ bool: true
 rascal>{10, *n, 50} !:= {40, 30, 30, 10};
 bool: true
 ```
+
 

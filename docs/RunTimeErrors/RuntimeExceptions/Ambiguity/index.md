@@ -40,6 +40,7 @@ E: (E) `a+a`
 
 The following example triggers the predicted ambiguity indeed:
 
+
 ```rascal-shell ,continue,errors
 rascal>parse(#E, "a+a+a");
 |TODO:///|: Ambiguity(
@@ -52,6 +53,7 @@ The conclusion is that there are two parses here: `a+(a+a)` and `(a+a)+a`,
 because we did forget to define the associativity of the `+` operator.
 
 Let's fix this:
+
 
 ```rascal-shell ,errors
 rascal>syntax A = "a";
@@ -66,6 +68,7 @@ E: (E) `a+a+a`
 
 However, one can also deal with ambiguity differently. For example we could have the parser build a tree
 for all ambiguous interpretations and inspect the resulting data-structure:
+
 
 ```rascal-shell ,errors
 rascal>syntax A = "a";
@@ -102,7 +105,8 @@ alternative 2: prod(sort("E"),[sort("E"),layouts("$default$"),lit("*"),layouts("
 ok
 ```
 
-Or, one could catch the ambiguity and report it like a [ParseError](../../../RunTimeErrors/RuntimeExceptions/ParseError):
+Or, one could catch the ambiguity and report it like a [ParseError](../../../RunTimeErrors/RuntimeExceptions/ParseError/):
+
 
 ```rascal-shell ,continue
 rascal>import IO;

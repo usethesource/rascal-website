@@ -28,3 +28,4 @@ Some well-known refactorings are:
 *  [Encapsulate Field](http://martinfowler.com/refactoring/catalog/encapsulateField.html)
 *  [Extract Methods](http://martinfowler.com/refactoring/catalog/extractMethod.html)
 
+

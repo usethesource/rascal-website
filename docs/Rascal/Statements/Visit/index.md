@@ -7,17 +7,18 @@ keywords:
 
 #### Synopsis
 
-The [Visit](../../../Rascal/Expressions/Visit) expression can also be used directly as a statement
+The [Visit](../../../Rascal/Expressions/Visit/) expression can also be used directly as a statement
 
 #### Syntax
 
-See [Visit](../../../Rascal/Expressions/Visit).
+See [Visit](../../../Rascal/Expressions/Visit/).
 
 #### Description
 
-See [Visit](../../../Rascal/Expressions/Visit) for the details.
+See [Visit](../../../Rascal/Expressions/Visit/) for the details.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>x = [[1],[2],[3]];
@@ -40,4 +41,5 @@ list[list[int]]: [
   [4]
 ]
 ```
+
 

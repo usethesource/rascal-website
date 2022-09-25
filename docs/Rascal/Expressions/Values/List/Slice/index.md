@@ -16,15 +16,18 @@ Retrieve a slice of a list.
 *  `Exp~1~ [ Exp~2~ .. Exp~4~]`
 *  `Exp~1~ [ Exp~2~ , Exp~3~ .. Exp~4~]`
 
+
 where _Exp_~2~ and _Exp_~4~ are optional.
 
 #### Types
 
 //
 
+
 | `Exp~1~`     | `Exp~2~` |  `Exp~3~`  | `Exp~4~` | `Exp~1~ [ Exp~2~ .. Exp~4~ ]`   or  `Exp~1~ [ Exp~2~ , Exp~3~ .. Exp~4~]`  |
 | --- | --- | --- | --- | --- |
 | `list[T~1~]` | `int`     | `int`       | `int`     |  `list[T~1~]`                                                                 |
+
 
 #### Description
 
@@ -50,6 +53,7 @@ The slice parameters `begin`, `end`, and `step` are determined as follows:
 **  If _Exp~3~_ is absent, then if `begin < end` then `step = 1` else `step = -1`.
 **  Otherwise, if `begin < end`, then `step = N~3~ - begin` else `step = begin - N~3~`.
 
+
 Now, the constraints `0 <= begin < Len` and `0 < end < Len` should hold,
 otherwise the exception `IndexOutOfBounds` is thrown.
 
@@ -62,12 +66,17 @@ Consider the list `L = [0, 10, 20, 30, 40, 50, 60, 70, 80];` as running example.
 
 Here is a view on _L_ that will help to correlate positive and negative indices:
 
+
 |`i`        | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |`L[i]`     | 0 | 10| 20| 30| 40| 50| 60| 70|80  |
 |`-i`       | -9| -8| -7| -6| -5| -4| -3| -2| -1 |
 
+
+
+
 Some common use cases (with `begin` <= `end`):
+
 
 | Slice           | Means:                                                      |
 | --- | --- |
@@ -79,7 +88,10 @@ Some common use cases (with `begin` <= `end`):
 | `L[-2..]`       | the last two elements of the list                           |
 | `L[..-2]`       | all elements except the last two.                           |
 
+
+
 Let's put this into practice now.
+
 
 ```rascal-shell ,error
 rascal>L = [0, 10, 20, 30, 40, 50, 60, 70, 80];
@@ -133,4 +145,8 @@ list[int]: [0,10,20,30,40,50,60,70,80]
 rascal>L[1..20];
 list[int]: [10,20,30,40,50,60,70,80]
 ```
+
+
+
+       
 

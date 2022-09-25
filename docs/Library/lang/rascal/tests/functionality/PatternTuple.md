@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::PatternTuple"
 
 `import lang::rascal::tests::functionality::PatternTuple;`
 
+
 ## function matchTuple1a {#lang-rascal-tests-functionality-PatternTuple-matchTuple1a}
 
 * ``test bool matchTuple1a()``

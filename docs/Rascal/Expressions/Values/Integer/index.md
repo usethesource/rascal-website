@@ -21,11 +21,12 @@ sequence of digits of arbitrary length.
 
 The integer values are represented by the type `int` and are written as usual. They can be _arbitrarily large_.
 
-See [Number](../../../../Rascal/Expressions/Values/Number) for all operations and functions on integers, reals and numbers.
+See [Number](../../../../Rascal/Expressions/Values/Number/) for all operations and functions on integers, reals and numbers.
 
 #### Examples
 
 *  `12`
 *  `0`
 *  `-123456789`
+
 

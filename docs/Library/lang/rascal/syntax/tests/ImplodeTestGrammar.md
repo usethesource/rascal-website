@@ -8,6 +8,7 @@ title: "module lang::rascal::\\syntax::tests::ImplodeTestGrammar"
 
 Tests the potential clashes among value constructors of different adts, plus, the identified clash with: bool eq(value, value);
 
+
 ## function parseExp {#lang-rascal-\syntax-tests-ImplodeTestGrammar-parseExp}
 
 * ``Exp parseExp(str s)``

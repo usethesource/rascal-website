@@ -15,11 +15,13 @@ Union of two set values.
 | --- | --- | --- |
 | `set[T~1~]` |  `set[T~2~]` | `set[lub(T~1~,T~2~)]`   |
 
+
 #### Description
 
-The `+` operator computes set union if both operands are sets. If one of the operands is not a set, it acts as [Insert](../../../../../Rascal/Expressions/Values/Set/Insert) instead.
+The `+` operator computes set union if both operands are sets. If one of the operands is not a set, it acts as [Insert](../../../../../Rascal/Expressions/Values/Set/Insert/) instead.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>{1, 2, 3} + {4, 5, 6};
@@ -31,4 +33,5 @@ set[int]: {1,3,2}
 rascal>{2} + { 2, 3, 4};
 set[int]: {3,2,4}
 ```
+
 

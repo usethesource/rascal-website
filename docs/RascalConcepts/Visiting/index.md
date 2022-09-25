@@ -29,3 +29,4 @@ The traversal order in a visit expressions can be explicitly defined by the prog
 Examples of visiting are, for instance, given in the Recipes 
 [ColoredTrees](../../Recipes/Common/ColoredTrees/) and [Derivative](../../Recipes/Common/Derivative/).
 
+

@@ -6,13 +6,16 @@ title: "module Content"
 
 `import Content;`
 
+
 #### Synopsis
 
 Content provides access to the content server of the Rascal terminal for viewing interactive HTML output.
 
+
 ## function html {#Content-html}
 
 * ``Content html(str html)``
+
 
 #### Synopsis
 
@@ -22,6 +25,7 @@ Directly serve a static html page
 
 * ``Content file(loc src)``
 
+
 #### Synopsis
 
 Directly serve the contents of a file
@@ -29,6 +33,7 @@ Directly serve the contents of a file
 ## function text {#Content-text}
 
 * ``Content text(str text)``
+
 
 #### Synopsis
 
@@ -49,6 +54,7 @@ data Request (map[str, str] headers = (), map[str, str] parameters = (), map[str
      | head(str path)
      ;
 ```
+
 
 #### Synopsis
 
@@ -74,6 +80,7 @@ data Response
      ;
 ```
 
+
 #### Synopsis
 
 A response encodes what is send back from the server to the browser client.
@@ -89,6 +96,7 @@ which involves a handy, automatic, encoding of Rascal values into json values.
 * ``Response response(str content)``
 * ``Response response(Status status, str explanation)``
 
+
 #### Synopsis
 
 Utility to quickly render a string as HTML content
@@ -96,6 +104,7 @@ Utility to quickly render a string as HTML content
 ## function plain {#Content-plain}
 
 * ``Response plain(str text)``
+
 
 #### Synopsis
 
@@ -105,6 +114,7 @@ Utility to quickly make a plaintext response.
 
 * ``Response response(loc f)``
 * ``default  Response response(value val, map[str,str] header = ())``
+
 
 #### Synopsis
 
@@ -129,6 +139,7 @@ data Status
      | internalError()
      ;
 ```
+
 
 #### Synopsis
 

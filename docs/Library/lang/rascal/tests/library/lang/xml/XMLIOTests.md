@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::library::lang::xml::XMLIOTests"
 
 `import lang::rascal::tests::library::lang::xml::XMLIOTests;`
 
+
 ## function checkXMLResult {#lang-rascal-tests-library-lang-xml-XMLIOTests-checkXMLResult}
 
 * ``bool checkXMLResult(str input, node expected, bool fullyQualify = false)``

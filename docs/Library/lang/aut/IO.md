@@ -6,6 +6,7 @@ title: "module lang::aut::IO"
 
 `import lang::aut::IO;`
 
+
 ## function readAUT {#lang-aut-IO-readAUT}
 
 * ``rel[int, str, int] readAUT(str nameAUTFile)``
@@ -15,6 +16,8 @@ title: "module lang::aut::IO"
 Read relations from an AUT file.
 
 #### Description
+
+
 
 An AUT file contains tuples of ternary relation as lines with the following format:
 * `(<int>,<str>,<int>)`

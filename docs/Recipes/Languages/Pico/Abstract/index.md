@@ -10,10 +10,12 @@ Abstract syntax for Pico.
 
 Here is the complete abstract syntax for Pico:
 
+
 ```rascal 
 module demo::lang::Pico::Abstract
 
 // highlight-next-line
+
 
 public data TYPE = natural() | string(); 
 	  
@@ -53,6 +55,7 @@ public alias Occurrence = tuple[loc location, PicoId name, STATEMENT stat]; // <
 
 ```
 
+                
 Notes:
 
 <1> The types that may occur in a Pico program are either natural or string.
@@ -61,4 +64,5 @@ Notes:
 <4> Define an annotation with name `location` and of type `loc` (source code location) for all AST types. This will be used when imploding
     a parse tree into an abstract syntax tree.
 <5> Introduce `Occurrence` as a genereic way of describing the location of various items in the AST.
+
 

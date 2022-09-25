@@ -8,7 +8,7 @@ Generic function that can count constructors in a value of any algebraic data ty
 
 #### Description
 
-In [colored trees](../../../Recipes/Common/ColoredTrees), we have seen a function that can count the number of red nodes in a `ColoredTree`.
+In [colored trees](../../../Recipes/Common/ColoredTrees/), we have seen a function that can count the number of red nodes in a `ColoredTree`.
 Is it possible to define a function that can count constructors in a value of any algerbaic data type?
 
 We exploit the subtype relation (see [Static Typing](../../../RascalConcepts/StaticTyping/)) 
@@ -18,6 +18,7 @@ and the type [node](../../../Rascal/Expressions/Values/Node/) to achieve this.
 In real applications this becomes relevant when counting, for instance, statement types in programs.
 
 #### Examples
+
 
 ```rascal 
 module demo::common::CountConstructors
@@ -60,6 +61,7 @@ test bool tstCountRelevant() = countRelevant(CT, {"leaf"}) == ("leaf" : 5);
 
 ```
 
+                
 Two data types are introduced `ColoredTree` and `Hand` together
 with an example value of each (`CT`, respectively, `H`).
 
@@ -75,6 +77,7 @@ with an example value of each (`CT`, respectively, `H`).
 <6> Defines a variant `countRelevant`; it gets is an extra argument of relevant constructors
 names that is used to filter the map that is returned by `count` using [domainR](../../../Library/Map.md#Map-domainR/).
 
+
 ```rascal-shell 
 rascal>import demo::common::CountConstructors;
 ok
@@ -85,4 +88,5 @@ map[str, int]: ("six":1,"ace":1,"two":1,"hearts":2,"spades":1,"hand":1,"diamonds
 rascal>countRelevant(H, {"hearts", "spades"});
 map[str, int]: ("hearts":2,"spades":1)
 ```
+
 

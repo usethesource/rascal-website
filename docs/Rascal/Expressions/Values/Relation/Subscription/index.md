@@ -21,11 +21,14 @@ Indexing of a relation via tuple values.
 | `_Exp~0~`                         | `Exp~1~` | `Exp~2~` | ... | `Exp0_ [ Exp~1~, Exp~2~, ... ]`  |
 | `rel[T~1~, T~2~, ... T~m~]`    | `int`     |  `int`    | ... | `rel[T~n~, _T~n+1~_, ... T~m~]`  |
 
+
 ##### Set of Values Variant 
 
 | `Exp~0~`                         | `Exp~1~`     | `Exp~0~ [ Exp~1~ ]`             |
 | --- | --- | --- |
 | `rel[T~1~, T~2~, ... T~m~]`    | `set[T~1~]`  | `rel[T~2~, T~2~, ... T~m~]`    |
+
+
 
 #### Description
 
@@ -46,6 +49,7 @@ The result is a relation with all tuples that have these index values as first e
 with the index values removed from the tuple. 
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>R = {<1,10>, <2,20>, <1,11>, <3,30>, <2,21>};
@@ -110,4 +114,6 @@ or rather for the indices `"Japan"` and `2008`:
 rascal>GDP["Japan", 2008];
 set[int]: {4923761}
 ```
+
+
 

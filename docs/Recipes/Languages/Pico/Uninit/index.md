@@ -41,6 +41,7 @@ public set[Occurrence] uninitProgram(str txt) = uninitProgram(load(txt)); // <5>
 
 ```
 
+                
 <1> First, we determine the variable definitions of the program,
 <2> and its control flow graph.
 <3> Next we ask for every use of a variable the question: can it be reached from the entries
@@ -53,6 +54,7 @@ public set[Occurrence] uninitProgram(str txt) = uninitProgram(load(txt)); // <5>
     *  `any(CFNode N <- reachX( ... ), N has location && occ.location \<= N.location)` yields true if there is such a reachable node
         that covers the location of the current variable.
 <4> The complete comprehension returns the set of occurrences of uninitialized variables.
+
 
 The function `uninitProgram` performs this analysis on the source text of a Pico program.
 
@@ -78,4 +80,6 @@ rel[loc location,str name,STATEMENT stat]: {<|unknown:///|(71,1,<1,71>,<1,72>),"
     location=|unknown:///|(62,10,<1,62>,<1,72>),
     comments=())>}
 ```
+
+
 

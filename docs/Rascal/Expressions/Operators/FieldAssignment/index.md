@@ -25,6 +25,7 @@ _Name_ stands for itself and is not evaluated.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>tuple[int key, str val] T = <1, "abc">;
 tuple[int key,str val]: <1,"abc">
@@ -35,4 +36,5 @@ tuple[int key,str val]: <1,"abc">
 ```
 
 Observe that field assignment creates a new value with an updated field. The old value remains unchanged as can be seen from the unchanged value of T in the above example.
+
 

@@ -37,3 +37,4 @@ But using a wrong annotation name generates an error:
 rascal>piece @ qual;
 ```
 
+

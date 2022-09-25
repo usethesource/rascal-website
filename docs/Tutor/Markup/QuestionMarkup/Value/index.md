@@ -18,7 +18,7 @@ A value question presents a Rascal expression and poses a question about its val
 _OptName_ is an optional name of the question (enclosed between `[` and `]`).
 If _OptName_ is missing, the question gets a unique number as name.
 
-The desired type of the expression is given by a [type descriptor](../../../../Tutor/Markup/QuestionMarkup/TypeDescriptor).
+The desired type of the expression is given by a [type descriptor](../../../../Tutor/Markup/QuestionMarkup/TypeDescriptor/).
 
 The first form presents the value generated for the _TypeDescriptor_ and asks about its value.
 
@@ -96,4 +96,5 @@ public list[str] find(list[str] text){
 }
 test: find(text) == ["moi", "Mousa", "polutropon"];
 ```
+
 

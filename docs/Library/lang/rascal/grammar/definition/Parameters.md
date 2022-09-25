@@ -6,7 +6,9 @@ title: "module lang::rascal::grammar::definition::Parameters"
 
 `import lang::rascal::grammar::definition::Parameters;`
 
+
   This module implements the support for parameterized syntax definitions
+
 
 ## function expandParameterizedSymbols {#lang-rascal-grammar-definition-Parameters-expandParameterizedSymbols}
 

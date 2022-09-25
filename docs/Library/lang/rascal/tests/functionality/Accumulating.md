@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::Accumulating"
 
 `import lang::rascal::tests::functionality::Accumulating;`
 
+
 ## function testForWithNoAppend {#lang-rascal-tests-functionality-Accumulating-testForWithNoAppend}
 
 * ``test bool testForWithNoAppend()``

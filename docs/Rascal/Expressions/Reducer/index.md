@@ -40,6 +40,7 @@ and is executed as follows:
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>L = [1, 3, 5, 7];
 list[int]: [1,3,5,7]
@@ -48,4 +49,5 @@ int: 16
 rascal>(1 | it * e | int e <- L);
 int: 105
 ```
+
 

@@ -6,6 +6,7 @@ title: "module demo::lang::Pico::Compile"
 
 `import demo::lang::Pico::Compile;`
 
+
 ## alias Instrs {#demo-lang-Pico-Compile-Instrs}
 
 * `list[Instr]`

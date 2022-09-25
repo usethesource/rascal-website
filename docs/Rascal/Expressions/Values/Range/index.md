@@ -22,10 +22,11 @@ _Exp_~1~ up to (exclusive) _Exp_~3~ with increments of 1.
 When _Exp_~2~ is present it is taken as the second element of the list
 and _Exp_~2~ - _Exp_~1~ is used as increment for the subsequent list elements.
 
-A range with integer expressions is identical to a list [Slice](../../../../Rascal/Expressions/Values/List/Slice).
+A range with integer expressions is identical to a list [Slice](../../../../Rascal/Expressions/Values/List/Slice/).
 However, a range may also contain numeric expressions that are not integers.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>[1 .. 10];
@@ -50,4 +51,5 @@ In some cases ranges are empty where one could have expected at least one elemen
 rascal>[1, 3 .. -10];
 list[int]: []
 ```
+
 

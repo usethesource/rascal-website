@@ -10,6 +10,7 @@ A complete Func interpreter including support for the address and dereference op
 
 Interpreter Eval3 supports the following features of Func: 
 
+
 | Feature              | Eval3 |
 | --- | --- |
 | function declaration | y |
@@ -25,9 +26,13 @@ Interpreter Eval3 supports the following features of Func:
 | __address operator__ | y |
 | __dereference operator__ | y |
 
+
+
+
 The main additions are the address and dereference operators.
 
 #### Examples
+
 
 ```rascal 
 module demo::lang::Func::Eval3
@@ -79,6 +84,7 @@ tuple[Mem, Env] bind(list[str] fs, list[int] args, Mem mem) {
 Result3 eval3(nat(int nat), Env env, PEnv penv, Mem mem) = <mem, nat>;
  
 Result3 eval3(var(str name), Env env, PEnv penv, Mem mem) = <mem, mem[env[name]]>;
+       
        
 Result3 eval3(mul(Exp lhs, Exp rhs), Env env, PEnv penv, Mem mem) {
   <mem, x> = eval3(lhs, env, penv, mem);
@@ -183,6 +189,8 @@ Result3 eval3(assign(deref(Exp lvalue), Exp e), Env env, PEnv penv, Mem mem) {
 
 ```
 
+                
+
 We apply `eval3` to example `F3`:
 ```rascal
 swap(a, b) =
@@ -207,6 +215,7 @@ fact(n) = let
 	      end
 ```
 
+                
 Let's try this.
 
 ```rascal-shell 
@@ -219,4 +228,7 @@ ok
 rascal>eval3("fact", [10], load(F3));
 tuple[list[int],int]: <[10],3628800>
 ```
+
+
+
 

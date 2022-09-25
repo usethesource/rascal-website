@@ -6,6 +6,7 @@ title: "module lang::rascal::tutor::apidoc::ExtractInfo"
 
 `import lang::rascal::tutor::apidoc::ExtractInfo;`
 
+
 ## function extractInfo {#lang-rascal-tutor-apidoc-ExtractInfo-extractInfo}
 
 * ``list[DeclarationInfo] extractInfo(loc moduleLoc)``

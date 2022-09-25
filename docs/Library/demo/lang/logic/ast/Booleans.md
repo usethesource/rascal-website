@@ -6,6 +6,7 @@ title: "module demo::lang::logic::ast::Booleans"
 
 `import demo::lang::logic::ast::Booleans;`
 
+
 ## data Formula {#demo-lang-logic-ast-Booleans-Formula}
 
 ```rascal

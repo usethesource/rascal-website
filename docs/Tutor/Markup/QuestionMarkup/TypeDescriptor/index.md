@@ -57,9 +57,11 @@ extensions that are helpfull when generating values:
 | `list[int]`         | A list of integers |
 | `set[int[0,10]]`    | A set of integers between 0 and 10  |
 
+
 #### Pitfalls
 
 *  There is currently an arbitrary built-in limit that restricts generated lists, sets,
    maps and relations to at most 5 elements.
 *  There is no support for labeled tuples.
+
 

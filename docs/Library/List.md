@@ -6,6 +6,7 @@ title: "module List"
 
 `import List;`
 
+
 #### Synopsis
 
 Library functions for lists.
@@ -15,71 +16,74 @@ Library functions for lists.
 For operators on lists see [List](../Rascal/Expressions/Values/List/) in the Rascal Language Reference.
 
 The following functions are available for lists:
-* [concat](../Library/List.md#List-concat)
-* [delete](../Library/List.md#List-delete)
-* [distribution](../Library/List.md#List-distribution)
-* [drop](../Library/List.md#List-drop)
-* [dup](../Library/List.md#List-dup)
-* [elementAt](../Library/List.md#List-elementAt)
-* [getFirstFrom](../Library/List.md#List-getFirstFrom)
-* [getOneFrom](../Library/List.md#List-getOneFrom)
-* [head](../Library/List.md#List-head)
-* [headTail](../Library/List.md#List-headTail)
-* [index](../Library/List.md#List-index)
-* [indexOf](../Library/List.md#List-indexOf)
-* [insertAt](../Library/List.md#List-insertAt)
-* [intercalate](../Library/List.md#List-intercalate)
-* [intersperse](../Library/List.md#List-intersperse)
-* [isEmpty](../Library/List.md#List-isEmpty)
-* [isSorted](../Library/List.md#List-isSorted)
-* [itoString](../Library/List.md#List-itoString)
-* [last](../Library/List.md#List-last)
-* [lastIndexOf](../Library/List.md#List-lastIndexOf)
-* [mapper](../Library/List.md#List-mapper)
-* [max](../Library/List.md#List-max)
-* [merge](../Library/List.md#List-merge)
-* [min](../Library/List.md#List-min)
-* [mix](../Library/List.md#List-mix)
-* [permutations](../Library/List.md#List-permutations)
-* [permutationsBag](../Library/List.md#List-permutationsBag)
-* [pop](../Library/List.md#List-pop)
-* [prefix](../Library/List.md#List-prefix)
-* [push](../Library/List.md#List-push)
-* [reducer](../Library/List.md#List-reducer)
-* [remove](../Library/List.md#List-remove)
-* [removeFromBag](../Library/List.md#List-removeFromBag)
-* [reverse](../Library/List.md#List-reverse)
-* [shuffle](../Library/List.md#List-shuffle)
-* [size](../Library/List.md#List-size)
-* [slice](../Library/List.md#List-slice)
-* [sort](../Library/List.md#List-sort)
-* [split](../Library/List.md#List-split)
-* [sum](../Library/List.md#List-sum)
-* [tail](../Library/List.md#List-tail)
-* [take](../Library/List.md#List-take)
-* [takeOneFrom](../Library/List.md#List-takeOneFrom)
-* [takeWhile](../Library/List.md#List-takeWhile)
-* [toMap](../Library/List.md#List-toMap)
-* [toMapUnique](../Library/List.md#List-toMapUnique)
-* [toRel](../Library/List.md#List-toRel)
-* [toSet](../Library/List.md#List-toSet)
-* [toString](../Library/List.md#List-toString)
-* [top](../Library/List.md#List-top)
-* [unzip2](../Library/List.md#List-unzip2)
-* [unzip3](../Library/List.md#List-unzip3)
-* [upTill](../Library/List.md#List-upTill)
-* [zip2](../Library/List.md#List-zip2)
-* [zip3](../Library/List.md#List-zip3)
+* [concat](../Library/List.md#List-concat/)
+* [delete](../Library/List.md#List-delete/)
+* [distribution](../Library/List.md#List-distribution/)
+* [drop](../Library/List.md#List-drop/)
+* [dup](../Library/List.md#List-dup/)
+* [elementAt](../Library/List.md#List-elementAt/)
+* [getFirstFrom](../Library/List.md#List-getFirstFrom/)
+* [getOneFrom](../Library/List.md#List-getOneFrom/)
+* [head](../Library/List.md#List-head/)
+* [headTail](../Library/List.md#List-headTail/)
+* [index](../Library/List.md#List-index/)
+* [indexOf](../Library/List.md#List-indexOf/)
+* [insertAt](../Library/List.md#List-insertAt/)
+* [intercalate](../Library/List.md#List-intercalate/)
+* [intersperse](../Library/List.md#List-intersperse/)
+* [isEmpty](../Library/List.md#List-isEmpty/)
+* [isSorted](../Library/List.md#List-isSorted/)
+* [itoString](../Library/List.md#List-itoString/)
+* [last](../Library/List.md#List-last/)
+* [lastIndexOf](../Library/List.md#List-lastIndexOf/)
+* [mapper](../Library/List.md#List-mapper/)
+* [max](../Library/List.md#List-max/)
+* [merge](../Library/List.md#List-merge/)
+* [min](../Library/List.md#List-min/)
+* [mix](../Library/List.md#List-mix/)
+* [permutations](../Library/List.md#List-permutations/)
+* [permutationsBag](../Library/List.md#List-permutationsBag/)
+* [pop](../Library/List.md#List-pop/)
+* [prefix](../Library/List.md#List-prefix/)
+* [push](../Library/List.md#List-push/)
+* [reducer](../Library/List.md#List-reducer/)
+* [remove](../Library/List.md#List-remove/)
+* [removeFromBag](../Library/List.md#List-removeFromBag/)
+* [reverse](../Library/List.md#List-reverse/)
+* [shuffle](../Library/List.md#List-shuffle/)
+* [size](../Library/List.md#List-size/)
+* [slice](../Library/List.md#List-slice/)
+* [sort](../Library/List.md#List-sort/)
+* [split](../Library/List.md#List-split/)
+* [sum](../Library/List.md#List-sum/)
+* [tail](../Library/List.md#List-tail/)
+* [take](../Library/List.md#List-take/)
+* [takeOneFrom](../Library/List.md#List-takeOneFrom/)
+* [takeWhile](../Library/List.md#List-takeWhile/)
+* [toMap](../Library/List.md#List-toMap/)
+* [toMapUnique](../Library/List.md#List-toMapUnique/)
+* [toRel](../Library/List.md#List-toRel/)
+* [toSet](../Library/List.md#List-toSet/)
+* [toString](../Library/List.md#List-toString/)
+* [top](../Library/List.md#List-top/)
+* [unzip2](../Library/List.md#List-unzip2/)
+* [unzip3](../Library/List.md#List-unzip3/)
+* [upTill](../Library/List.md#List-upTill/)
+* [zip2](../Library/List.md#List-zip2/)
+* [zip3](../Library/List.md#List-zip3/)
+
 
 ## function concat {#List-concat}
 
 * ``list[&T] concat(list[list[&T]] xxs)``
+
 
 #### Synopsis
 
 Concatenate a list of lists.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -100,6 +104,7 @@ list[int]: [1,2,3,4,5]
 
 * ``list[&T] delete(list[&T] lst, int n)``
 
+
 #### Synopsis
 
 Delete an element from a list.
@@ -110,6 +115,7 @@ Delete the `n`-th element from a list. A new list without the `n`-th element is 
 The `IndexOutOfBounds` exception is thrown when n is not a valid index.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -124,12 +130,14 @@ list[str]: ["zebra","elephant","owl"]
 
 * ``map[&T element, int occurs] distribution(list[&T] lst)``
 
+
 #### Synopsis
 
 Get the distribution of the elements of the list. That
 is how often does each element occur in the list? 
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -142,6 +150,7 @@ map[int element, int occurs]: (1:3,3:2,2:1,4:4)
 
 * ``list[&T] drop(int n, list[&T] lst)``
 
+
 #### Synopsis
 
 Drop elements from the head of a list.
@@ -149,9 +158,10 @@ Drop elements from the head of a list.
 #### Description
 
 Drop `n` elements (or `size(lst)` elements if `size(lst) < n`) from the head of `lst`.
-See [take](../Library/List.md#List-take) to get elements from the head of a list].
+See [take](../Library/List.md#List-take/) to get elements from the head of a list].
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -174,6 +184,8 @@ Remove multiple occurrences of elements in a list. The first occurrence remains.
 
 #### Examples
 
+
+
 ```rascal-shell 
 rascal>import List;
 ok
@@ -189,15 +201,17 @@ list[int]: [3,1,5,7,2]
 
 * ``&T getOneFrom(list[&T] lst)``
 
+
 #### Synopsis
 
 Pick a random element from a list.
 
 #### Description
 
-Get an arbitrary element from a list. See [takeOneFrom](../Library/List.md#List-takeOneFrom) for a function that also removes the selected element.
+Get an arbitrary element from a list. See [takeOneFrom](../Library/List.md#List-takeOneFrom/) for a function that also removes the selected element.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -207,7 +221,7 @@ str: "zebra"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "zebra"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "elephant"
+str: "owl"
 ```
 
 ## function getFirstFrom {#List-getFirstFrom}
@@ -215,19 +229,21 @@ str: "elephant"
 * ``&T getFirstFrom([&T f, *&T _])``
 * ``&T getFirstFrom(list[&T] _ :[])``
 
+
 #### Synopsis
 
 Pick first element from a list.
 
 #### Description
 
-Get the first element from a list. As opposed to [getOneFrom](../Library/List.md#List-getOneFrom) this function always returns the same (first) list element.
+Get the first element from a list. As opposed to [getOneFrom](../Library/List.md#List-getOneFrom/) this function always returns the same (first) list element.
 
 ## function head {#List-head}
 
 * ``&T head([&T h, *&T _])``
 * ``&T head(list[&T] _:[])``
 * ``list[&T] head(list[&T] lst, int n) throws IndexOutOfBounds``
+
 
 #### Synopsis
 
@@ -236,11 +252,12 @@ Get the first element(s) from a list.
 #### Description
 
 * Returns the first element of a list or throws `EmptyList` when the list is empty. 
-  This is identical to [top](../Library/List.md#List-top).
+  This is identical to [top](../Library/List.md#List-top/).
 * Returns the first `n` elements of a list or throws `IndexOutOfBounds` when the list is too short. 
-  This is similar to [take](../Library/List.md#List-take).
+  This is similar to [take](../Library/List.md#List-take/).
 
 #### Examples
+
 
 ```rascal-shell ,error
 rascal>import List;
@@ -286,15 +303,17 @@ ok
 * ``tuple[&T, list[&T]] headTail([&T h, *&T t])``
 * ``tuple[&T, list[&T]] headTail(list[&T] _:[])``
 
+
 #### Synopsis
 
 Split a list in a head and a tail.
 
 #### Description
 
-This function is identical to [pop](../Library/List.md#List-pop).
+This function is identical to [pop](../Library/List.md#List-pop/).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -311,6 +330,7 @@ tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 
 * ``list[int] index(list[&T] lst)``
 
+
 #### Synopsis
 
 A list of legal index values of a list.
@@ -320,6 +340,7 @@ A list of legal index values of a list.
 Returns a list of all legal index values for a given list `lst`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -338,6 +359,7 @@ This function is useful in [for](../Rascal/Statements/For/) loops over lists.
 
 * ``int indexOf(list[&T] lst, &T elt)``
 
+
 #### Synopsis
 
 Index of first occurrence of an element in a list.
@@ -345,9 +367,10 @@ Index of first occurrence of an element in a list.
 #### Description
 
 Return index of first occurrence of `elt` in `lst`, or `-1` if `elt` is not found.
-Also see [lastIndexOf](../Library/List.md#List-lastIndexOf).
+Also see [lastIndexOf](../Library/List.md#List-lastIndexOf/).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -366,6 +389,7 @@ int: -1
 
 * ``list[&T] insertAt(list[&T] lst, int n, &T elm) throws IndexOutOfBounds``
 
+
 #### Synopsis
 
 Insert an element at a specific position in a list.
@@ -375,6 +399,7 @@ Insert an element at a specific position in a list.
 Returns a new list with the value of `elm` inserted at index position `n` of the old list.
 
 #### Examples
+
 
 ```rascal-shell ,error
 rascal>import List;
@@ -398,11 +423,13 @@ ok
 
 * ``str intercalate(str sep, list[value] l)``
 
+
 #### Synopsis
 
 Join a list of values into a string separated by a separator.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -421,11 +448,13 @@ str: "zebra, elephant, snake, owl"
 
 * ``list[&T] intersperse(&T sep, list[&T] xs)``
 
+
 #### Synopsis
 
 Intersperses a list of values with a separator.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -444,6 +473,7 @@ list[value]: [1]
 
 * ``bool isEmpty(list[&T] lst)``
 
+
 #### Synopsis
 
 Test whether a list is empty.
@@ -453,6 +483,7 @@ Test whether a list is empty.
 Returns `true` when a list is empty and `false` otherwise.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -468,15 +499,17 @@ bool: false
 * ``&T last([*&T _, &T l])``
 * ``&T last(list[&T] _:[])``
 
+
 #### Synopsis
 
 Return the last element of a list, if any.
 
 #### Description
 
-Also see [tail](../Library/List.md#List-tail) that returns a list of one or more of the last elements of a list.
+Also see [tail](../Library/List.md#List-tail/) that returns a list of one or more of the last elements of a list.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -495,15 +528,17 @@ list[int]: [1,4,5]
 
 * ``int lastIndexOf(list[&T] lst, &T elt)``
 
+
 #### Synopsis
 
 Return index of last occurrence of elt in lst, or -1 if elt is not found.
 
 #### Description
 
-Also see [indexOf](../Library/List.md#List-indexOf).
+Also see [indexOf](../Library/List.md#List-indexOf/).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -520,6 +555,7 @@ int: 4
 
 * ``list[&U] mapper(list[&T] lst, &U (&T) fn)``
 
+
 #### Synopsis
 
 Apply a function to all list elements and return list of results.
@@ -529,6 +565,7 @@ Apply a function to all list elements and return list of results.
 Apply a function `fn` to each element of `lst` and return the list of results.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -544,11 +581,13 @@ list[int]: [2,3,4,5]
 * ``&T max([&T h, *&T t])``
 * ``&T max(list[&T] _:[])``
 
+
 #### Synopsis
 
 Determine the largest element in a list.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -564,6 +603,7 @@ str: "zebra"
 * ``list[&T] merge(list[&T] left, list[&T] right)``
 * ``list[&T] merge(list[&T] left, list[&T] right, bool (&T a, &T b) lessOrEqual)``
 
+
 #### Synopsis
 
 Merge the elements of two sorted lists into one list.
@@ -573,7 +613,9 @@ Merge the elements of two sorted lists into one list.
 Merge the elements of two sorted lists into one list using the built-in ordering between values.
 Optional, a comparison function `lessOrEqual` may be given for a user-defined ordering between values.
 
+
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -597,11 +639,13 @@ list[str]: ["ape","owl","snale","zebra","apple","berry","orange","elephant","pin
 * ``&T min([&T h, *&T t])``
 * ``&T min(list[&T] _: [])``
 
+
 #### Synopsis
 
 Determine the smallest element in a list.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -616,6 +660,7 @@ str: "elephant"
 
 * ``list[&T] mix(list[&T] l, list[&T] r)``
 
+
 #### Synopsis
 
 Mix the elements of two lists.
@@ -627,6 +672,7 @@ Let n be the minimum of the length of the two lists `l` and `r`.
 followed by the remaining elements of the longest list.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -643,11 +689,13 @@ list[value]: [3,"elephant",1,"snake",7]
 
 * ``set[list[&T]] permutations(list[&T] lst)``
 
+
 #### Synopsis
 
 Compute all permutations of a list.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -671,15 +719,17 @@ set[list[int]]: {
 
 * ``tuple[&T, list[&T]] pop(list[&T] lst)``
 
+
 #### Synopsis
 
 Pop top element from list, return a tuple.
 #### Description
 
-This function is identical to [head tail](../Library/List.md#List-headTail).
-Also see [push](../Library/List.md#List-push) and [top](../Library/List.md#List-top).
+This function is identical to [head tail](../Library/List.md#List-headTail/).
+Also see [push](../Library/List.md#List-push/) and [top](../Library/List.md#List-top/).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -696,11 +746,13 @@ tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 
 * ``list[&T] prefix(list[&T] lst)``
 
+
 #### Synopsis
 
 Return all but the last element of a list.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -717,15 +769,17 @@ list[str]: ["zebra","elephant","snake"]
 
 * ``list[&T] push(&T elem, list[&T] lst)``
 
+
 #### Synopsis
 
 Push an element in front of a list.
 
 #### Description
 
-Also see [pop](../Library/List.md#List-pop) and [top](../Library/List.md#List-top).
+Also see [pop](../Library/List.md#List-pop/) and [top](../Library/List.md#List-top/).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -740,6 +794,7 @@ list[str]: ["eagle","zebra","elephant","snake","owl"]
 
 * ``&T reducer(list[&T] lst, &T (&T, &T) fn, &T unit)``
 
+
 #### Synopsis
 
 Apply a function to successive elements of list and combine the results (__deprecated__).
@@ -749,6 +804,7 @@ Apply a function to successive elements of list and combine the results (__depre
 Apply the function `fn` to successive elements of list `lst` starting with `unit`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -777,6 +833,7 @@ This function is *deprecated*, use a [reducer](../Rascal/Expressions/Reducer/) i
 
 * ``list[&T] reverse(list[&T] lst)``
 
+
 #### Synopsis
 
 Reverse a list.
@@ -786,6 +843,7 @@ Reverse a list.
 Returns a list with the elements of `lst` in reverse order.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -800,11 +858,13 @@ list[str]: ["owl","snake","elephant","zebra"]
 
 * ``int size(list[&T] lst)``
 
+
 #### Synopsis
 
 Determine the number of elements in a list.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -819,6 +879,7 @@ int: 4
 
 * ``list[&T] slice(list[&T] lst, int begin, int len)``
 
+
 #### Synopsis
 
 Compute a sublist of a list.
@@ -831,6 +892,7 @@ NOTE: In most cases it is better to use the built-in [slice](../Rascal/Expressio
 see the example below.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -855,6 +917,7 @@ WARNING: In the slice notation the upper bound is exclusive.
 * ``list[&T] sort(list[&T] lst)``
 * ``list[&T] sort(list[&T] l, bool (&T a, &T b) less)``
 
+
 #### Synopsis
 
 Sort the elements of a list.
@@ -867,6 +930,7 @@ Sort the elements of a list:
 *  Give an additional `lessThan` function that will be used to compare elements.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -887,6 +951,7 @@ list[str]: ["strawberry","pineapple","banana","grape","mango","kiwi","pear"]
 
 * ``bool isSorted(list[&T] l, bool (&T a, &T b) less = bool (&T a, &T b) { return a < b; })``
 
+
 #### Synopsis
 
 Check whether a list is sorted or not.
@@ -903,6 +968,7 @@ between the two parameters.
 * ``list[&T] shuffle(list[&T] l)``
 * ``list[&T] shuffle(list[&T] l, int seed)``
 
+
 #### Synopsis
 
 Shuffle a list.
@@ -913,30 +979,27 @@ Returns a random (unbiased) shuffled list.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-<<<<<<< HEAD
-list[int]: [1,4,3,2]
+list[int]: [3,2,4,1]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["owl","elephant","zebra","snake"]
-=======
-list[int]: [3,1,4,2]
-rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["owl","elephant","snake","zebra"]
->>>>>>> 2a7f585b (all links end with a slash now..)
+list[str]: ["elephant","zebra","snake","owl"]
 ```
 
 ## function split {#List-split}
 
 * ``tuple[list[&T],list[&T]] split(list[&T] l)``
 
+
 #### Synopsis
 
 Split a list into two halves.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -952,11 +1015,13 @@ tuple[list[str],list[str]]: <["zebra","elephant"],["snake","owl"]>
 * ``(&T <:num) sum([(&T <: num) hd, *(&T <: num) tl])``
 * ``(&T <:num) sum(list[&T] _: [])``
 
+
 #### Synopsis
 
 Sum the elements of a list.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -973,6 +1038,7 @@ num: 13.5
 * ``list[&T] tail(list[&T] _:[])``
 * ``list[&T] tail(list[&T] lst, int len) throws IndexOutOfBounds``
 
+
 #### Synopsis
 
 Get the tail element(s) from a list.
@@ -983,6 +1049,7 @@ Get the tail element(s) from a list.
 *  Return a list consisting of the last `n` elements of `lst`.
 
 #### Examples
+
 
 ```rascal-shell ,error
 ```
@@ -1023,6 +1090,7 @@ ok
 
 * ``list[&T] take(int n, list[&T] lst)``
 
+
 #### Synopsis
 
 Get number of elements from the head of a list.
@@ -1030,9 +1098,10 @@ Get number of elements from the head of a list.
 #### Description
 
 Get `n` elements (or `size(lst)` elements if `size(lst) < n`) from the head of the list.
-See [drop](../Library/List.md#List-drop) to remove elements from the head of a list.
+See [drop](../Library/List.md#List-drop/) to remove elements from the head of a list.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -1049,6 +1118,7 @@ list[str]: ["zebra","elephant"]
 
 * ``tuple[&T, list[&T]] takeOneFrom(list[&T] lst)``
 
+
 #### Synopsis
 
 Remove an arbitrary element from a list, returns the element and the modified list.
@@ -1060,43 +1130,40 @@ Select an arbitrary element from `lst`, and return a tuple consisting of:
 *  the selected element, and 
 *  a new list consisting of all elements of `lst` except the selected element.
 
-See [getOneFrom](../Library/List.md#List-getOneFrom) to only selected an element from a list.
+
+See [getOneFrom](../Library/List.md#List-getOneFrom/) to only selected an element from a list.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
 ok
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <10,[20,30,40,50]>
+tuple[int,list[int]]: <40,[10,20,30,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
-<<<<<<< HEAD
-tuple[int,list[int]]: <50,[10,20,30,40]>
-=======
-tuple[int,list[int]]: <10,[20,30,40,50]>
->>>>>>> 2a7f585b (all links end with a slash now..)
+tuple[int,list[int]]: <30,[10,20,40,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <20,[10,30,40,50]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
+tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
+rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-<<<<<<< HEAD
-tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
-rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-=======
->>>>>>> 2a7f585b (all links end with a slash now..)
-tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
+tuple[str,list[str]]: <"snake",["zebra","elephant","owl"]>
 ```
 
 ## function takeWhile {#List-takeWhile}
 
 * ``list[&T] takeWhile(list[&T] lst, bool (&T a) take)``
 
+
 #### Synopsis
 
 Take elements from the front of the list as long as a predicate is true.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -1111,6 +1178,7 @@ list[int]: [2,4,6,8]
 
 * ``map[&A,list[&B]] toMap(list[tuple[&A, &B]] lst) throws MultipleKey``
 
+
 #### Synopsis
 
 Convert a list of pairs to a map; first elements are associated with a set of second elements.
@@ -1121,6 +1189,7 @@ Convert a list of tuples to a map in which the first element of each tuple is
 associated with the set of second elements from all tuples with the same first element. Keys should be unique.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -1143,6 +1212,7 @@ but imposes the constraint that those keys are unique.
 
 * ``map[&A,&B] toMapUnique(list[tuple[&A, &B]] lst) throws MultipleKey``
 
+
 #### Synopsis
 
 Convert a list of tuples to a map; result must be a map.
@@ -1152,6 +1222,7 @@ Convert a list of tuples to a map; result must be a map.
 Convert a list of tuples to a map; result must be a map.
 
 #### Examples
+
 
 ```rascal-shell ,error
 rascal>import List;
@@ -1178,15 +1249,17 @@ The keys in a map are unique by definition.
 
 * ``&T top([&T t, *&T _])``
 
+
 #### Synopsis
 
 Take the top element of a list.
 #### Description
 
-This function is identical to [head](../Library/List.md#List-head).
-Also see [pop](../Library/List.md#List-pop) and [push](../Library/List.md#List-push).
+This function is identical to [head](../Library/List.md#List-head/).
+Also see [pop](../Library/List.md#List-pop/) and [push](../Library/List.md#List-push/).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -1201,6 +1274,7 @@ str: "zebra"
 
 * ``rel[&T,&T] toRel(list[&T] lst)``
 
+
 #### Synopsis
 
 Convert a list to a relation.
@@ -1210,6 +1284,7 @@ Convert a list to a relation.
   This function will return an empty relation for empty lists and for singleton lists.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -1232,6 +1307,7 @@ rel[str,str]: {
 
 * ``set[&T] toSet(list[&T] lst)``
 
+
 #### Synopsis
 
 Convert a list to a set.
@@ -1241,6 +1317,7 @@ Convert a list to a set.
 Convert `lst` to a set.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -1263,6 +1340,7 @@ set[int]: {10,40,20,30}
 
 * ``str toString(list[&T] lst)``
 
+
 #### Synopsis
 
 Convert a list to a string.
@@ -1272,6 +1350,7 @@ Convert a list to a string.
 Convert `lst` to a string.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -1286,6 +1365,7 @@ str: "[\"zebra\",\"elephant\",\"snake\",\"owl\"]"
 
 * ``str itoString(list[&T] lst)``
 
+
 #### Synopsis
 
 Convert a list to an indented string.
@@ -1295,6 +1375,7 @@ Convert a list to an indented string.
 Convert `lst` to a indented string.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -1309,15 +1390,17 @@ str: "[\"zebra\",\"elephant\",\"snake\",\"owl\"]"
 
 * ``tuple[list[&T],list[&U]] unzip2(list[tuple[&T,&U]] lst)``
 
+
 #### Synopsis
 
 Make a pair (triple) of lists from a list of pairs (triples).
 
 #### Description
 
-Also see [unzip3](../Library/List.md#List-unzip3);
+Also see [unzip3](../Library/List.md#List-unzip3/);
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -1336,6 +1419,7 @@ tuple[list[int],list[str],list[int]]: <[3,1,4],["thirty","ten","forty"],[300,100
 
 * ``list[int] upTill(int n)``
 
+
 #### Synopsis
 
 Returns the list 0,1..n-1.
@@ -1344,6 +1428,7 @@ Returns the list 0,1..n-1.
 Returns the list `0`, `1`, .., `n-1`, this is slightly faster than `[0..n]`, since the returned values are shared.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;
@@ -1356,15 +1441,17 @@ list[int]: [0,1,2,3,4,5,6,7,8,9]
 
 * ``list[tuple[&T first, &U second]] zip2(list[&T] a, list[&U] b)``
 
+
 #### Synopsis
 
 Make a list of pairs from two (three) lists of the same length.
 
 #### Description
 
-Also see [unzip3](../Library/List.md#List-unzip3).
+Also see [unzip3](../Library/List.md#List-unzip3/).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import List;

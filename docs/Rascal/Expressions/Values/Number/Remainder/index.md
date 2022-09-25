@@ -15,15 +15,18 @@ Remainder of two integer values.
 
 #### Types
 
+
 | `Exp~1~`  |  `Exp~2~` | `Exp~1~ % Exp~2~`  |
 | --- | --- | --- |
 | `int`      |  `int`     | `int`                |
+
 
 #### Description
 
 Yields the remainder when dividing the of _Exp_~1~ by the value of _Exp_~2~.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>12 % 5
@@ -40,4 +43,5 @@ Remainder is only defined on integers:
 rascal>13.5 % 6
 ok
 ```
+
 

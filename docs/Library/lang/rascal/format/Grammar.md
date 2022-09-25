@@ -6,8 +6,10 @@ title: "module lang::rascal::format::Grammar"
 
 `import lang::rascal::format::Grammar;`
 
+
   Convert the Rascal internal grammar representation format (Grammar) to 
   a syntax definition in Rascal source code.
+
 
 ## function definition2disk {#lang-rascal-format-Grammar-definition2disk}
 

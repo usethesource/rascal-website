@@ -6,6 +6,7 @@ title: "module lang::rascal::tutor::repl::TutorCommandExecutor"
 
 `import lang::rascal::tutor::repl::TutorCommandExecutor;`
 
+
 ## data CommandExecutor {#lang-rascal-tutor-repl-TutorCommandExecutor-CommandExecutor}
 
 ```rascal
@@ -25,8 +26,9 @@ A closure-based object wrapper for Rascal REPL
 
 #### Description
 
+
 Using an instance of CommandExecutor you can simulate the exact interactions
-between a Rascal [REPL](../../../../../RascalShell/REPL) user and the REPL. 
+between a Rascal [REPL](../../../../../RascalShell/REPL/) user and the REPL. 
 
 This was created to implement documentation pages with example REPL runs.
 
@@ -36,9 +38,10 @@ This was created to implement documentation pages with example REPL runs.
 
 #### Synopsis
 
-Instantiates a [command executor](../../../../../Library/lang/rascal/tutor/repl/TutorCommandExecutor.md#lang::rascal::tutor::repl::TutorCommandExecutor-CommandExecutor) to simulate a REPL
+Instantiates a [command executor](../../../../../Library/lang/rascal/tutor/repl/TutorCommandExecutor.md#lang::rascal::tutor::repl::TutorCommandExecutor-CommandExecutor/) to simulate a REPL
 
 #### Examples
+
 
 It's funny that the current example is also executed by a CommandExecutor of the tutor compiler.
 Here we use to show how it works:

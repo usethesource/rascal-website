@@ -6,6 +6,7 @@ title: "module Boolean"
 
 `import Boolean;`
 
+
 #### Synopsis
 
 Library functions for Booleans.
@@ -15,15 +16,17 @@ Library functions for Booleans.
 For operators on Boolean values see [Boolean](../Rascal/Expressions/Values/Boolean/) in the Rascal Language Reference.
 
 The following functions are defined for Booleans:
-* [arbBool](../Library/Boolean.md#Boolean-arbBool)
-* [fromString](../Library/Boolean.md#Boolean-fromString)
-* [toInt](../Library/Boolean.md#Boolean-toInt)
-* [toReal](../Library/Boolean.md#Boolean-toReal)
-* [toString](../Library/Boolean.md#Boolean-toString)
+* [arbBool](../Library/Boolean.md#Boolean-arbBool/)
+* [fromString](../Library/Boolean.md#Boolean-fromString/)
+* [toInt](../Library/Boolean.md#Boolean-toInt/)
+* [toReal](../Library/Boolean.md#Boolean-toReal/)
+* [toString](../Library/Boolean.md#Boolean-toString/)
+
 
 ## function arbBool {#Boolean-arbBool}
 
 * ``bool arbBool()``
+
 
 #### Synopsis
 
@@ -31,22 +34,16 @@ Return an arbitrary Boolean value.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import Boolean;
 ok
 rascal>arbBool();
-<<<<<<< HEAD
-=======
+bool: true
+rascal>arbBool();
 bool: false
 rascal>arbBool();
-bool: true
-rascal>arbBool();
->>>>>>> 2a7f585b (all links end with a slash now..)
 bool: false
-rascal>arbBool();
-bool: true
-rascal>arbBool();
-bool: true
 ```
 
 #### Benefits
@@ -57,6 +54,7 @@ bool: true
 
 * ``bool fromString(str s)``
 
+
 #### Synopsis
 
 Convert the strings "true" or "false" to a bool.
@@ -64,6 +62,7 @@ Convert the strings "true" or "false" to a bool.
 ## function toInt {#Boolean-toInt}
 
 * ``int toInt(bool b)``
+
 
 #### Synopsis
 
@@ -74,6 +73,7 @@ Convert a Boolean value to integer.
 Maps `true` to `1` and `false` to `0`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Boolean;
@@ -88,6 +88,7 @@ int: 0
 
 * ``real toReal(bool b)``
 
+
 #### Synopsis
 
 Convert Boolean value to real.
@@ -97,6 +98,7 @@ Convert Boolean value to real.
 Maps `true` to `1.0` and `false` to `0.0`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Boolean;
@@ -111,6 +113,7 @@ real: 0.0
 
 * ``str toString(bool b)``
 
+
 #### Synopsis
 
 Convert Boolean value to string.
@@ -120,6 +123,7 @@ Convert Boolean value to string.
 Maps `true` to `"true"` and `false` to `"false"`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Boolean;

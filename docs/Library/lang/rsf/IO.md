@@ -6,6 +6,7 @@ title: "module lang::rsf::IO"
 
 `import lang::rsf::IO;`
 
+
 ## function readRSF {#lang-rsf-IO-readRSF}
 
 * ``map[str, rel[str,str]] readRSF(loc nameRSFFile)``
@@ -29,6 +30,7 @@ where each field is separated by a tabulation character (\t). One file may conta
 ## function generate {#lang-rsf-IO-generate}
 
 * ``str generate(str moduleName, loc uri)``
+
 
   The RSF schema should be given as:
     rsf+rascal-file-uri

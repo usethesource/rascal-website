@@ -6,6 +6,7 @@ title: "module analysis::graphs::Graph"
 
 `import analysis::graphs::Graph;`
 
+
 #### Synopsis
 
 A `Graph` datatype with associated functions.
@@ -21,18 +22,19 @@ on [relations](../../../Rascal/Expressions/Values/Relation/) are also defined on
 
 The `Graph` library provides the following functions:
 * ((Library:alias:analysis::graphs::Graph::Graph[&T]))
-* [bottom](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-bottom)
-* [connectedComponents](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-connectedComponents)
-* [order](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-order)
-* [predecessors](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-predecessors)
-* [reach](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-reach)
-* [reachR](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-reachR)
-* [reachX](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-reachX)
-* [shortestPathPair](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-shortestPathPair)
-* [stronglyConnectedComponents](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-stronglyConnectedComponents)
-* [stronglyConnectedComponentsAndTopSort](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-stronglyConnectedComponentsAndTopSort)
-* [successors](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-successors)
-* [top](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-top)
+* [bottom](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-bottom/)
+* [connectedComponents](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-connectedComponents/)
+* [order](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-order/)
+* [predecessors](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-predecessors/)
+* [reach](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-reach/)
+* [reachR](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-reachR/)
+* [reachX](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-reachX/)
+* [shortestPathPair](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-shortestPathPair/)
+* [stronglyConnectedComponents](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-stronglyConnectedComponents/)
+* [stronglyConnectedComponentsAndTopSort](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-stronglyConnectedComponentsAndTopSort/)
+* [successors](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-successors/)
+* [top](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-top/)
+
 
 ## alias Graph[&T] {#analysis-graphs-Graph-Graph[&T]}
 
@@ -42,11 +44,13 @@ The `Graph` library provides the following functions:
 
 * ``list[&T] order(Graph[&T] g)``
 
+
 #### Synopsis
 
 Compute topological order of the nodes in a graph.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import  analysis::graphs::Graph;
@@ -59,11 +63,13 @@ list[int]: [1,2,3,4]
 
 * ``set[set[&T]] stronglyConnectedComponents(Graph[&T] g)``
 
+
 #### Synopsis
 
 Compute strongly connected components in a graph.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import  analysis::graphs::Graph;
@@ -83,6 +89,7 @@ set[set[int]]: {
 
 * ``set[&T] bottom(Graph[&T] G)``
 
+
 #### Synopsis
 
 Determine the bottom nodes (leaves) of a graph.
@@ -92,6 +99,7 @@ Determine the bottom nodes (leaves) of a graph.
 Returns the bottom nodes of Graph `G`, i.e., the leaf nodes that don't have any descendants.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import analysis::graphs::Graph;
@@ -104,6 +112,7 @@ set[int]: {4}
 
 * ``set[&T] predecessors(Graph[&T] G, &T From)``
 
+
 #### Synopsis
 
 Determine the direct predecessors of a graph node.
@@ -113,6 +122,7 @@ Determine the direct predecessors of a graph node.
 Returns the direct predecessors of node `From` in Graph `G`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import analysis::graphs::Graph;
@@ -124,6 +134,7 @@ set[int]: {3,2}
 ## function reach {#analysis-graphs-Graph-reach}
 
 * ``set[&T] reach(Graph[&T] G, set[&T] Start)``
+
 
 #### Synopsis
 
@@ -138,6 +149,7 @@ in the set `Start`.
 
 * ``set[&T] reachR(Graph[&T] G, set[&T] Start, set[&T] Restr)``
 
+
 #### Synopsis
 
 Determine the graph nodes reachable from a set of nodes using a restricted set of intermediate nodes.
@@ -148,6 +160,7 @@ Returns the set of nodes in Graph `G` that are reachable from any of the nodes
 in set `Start` using path that only use nodes in the set `Restr`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import analysis::graphs::Graph;
@@ -160,6 +173,7 @@ set[int]: {3,2}
 
 * ``set[&T] reachX(Graph[&T] G, set[&T] Start, set[&T] Excl)``
 
+
 #### Synopsis
 
 Determine the graph nodes reachable from a set of nodes excluding certain intermediate nodes.
@@ -171,6 +185,7 @@ in `Start` via path that exclude nodes in `Excl`.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import analysis::graphs::Graph;
 ok
@@ -181,6 +196,7 @@ set[int]: {3,4}
 ## function shortestPathPair {#analysis-graphs-Graph-shortestPathPair}
 
 * ``list[&T] shortestPathPair(Graph[&T] G, &T From, &T To)``
+
 
 #### Synopsis
 
@@ -194,6 +210,7 @@ Returns the shortest path between nodes `From` and `To` in Graph `G`.
 
 * ``set[&T] successors(Graph[&T] G, &T From)``
 
+
 #### Synopsis
 
 Determine the direct successors of a graph node.
@@ -203,6 +220,7 @@ Determine the direct successors of a graph node.
 Returns the direct successors of node `From` in Graph `G`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import analysis::graphs::Graph;
@@ -215,6 +233,7 @@ set[int]: {3,2}
 
 * ``set[&T] top(Graph[&T] G)``
 
+
 #### Synopsis
 
 Determine the set of top nodes (roots) of a graph.
@@ -224,6 +243,7 @@ Determine the set of top nodes (roots) of a graph.
 Returns the top nodes of Graph `G`, i.e., the root nodes that do not have any predecessors.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import analysis::graphs::Graph;
@@ -236,6 +256,7 @@ set[int]: {1}
 
 * ``set[set[&T]] connectedComponents(Graph[&T] G)``
 
+
 #### Synopsis
 
 Determine the connected components of a graph.
@@ -245,6 +266,7 @@ Determine the connected components of a graph.
 Returns the http://en.wikipedia.org/wiki/Connected_component_(graph_theory)[connected components] of Graph `G`, as sets of nodes. All nodes within one component are all reachable from one another, there are no paths between two nodes from different components. The graph is assumed to be undirected.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import analysis::graphs::Graph;

@@ -6,6 +6,7 @@ title: "module lang::std::tests::Id"
 
 `import lang::std::tests::Id;`
 
+
 ## function id1 {#lang-std-tests-Id-id1}
 
 * ``test bool id1()``

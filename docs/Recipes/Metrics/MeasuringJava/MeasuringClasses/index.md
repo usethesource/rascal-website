@@ -8,9 +8,12 @@ A typical example of how to use M3 to analyze Java classes.
 
 #### Examples
 
+
 First we import the basic data types for representing Java. The model is called _M3_, and its definition is split acros a generic
 language independent module called [Rascal:analysis/m3/Core] and a Java specific part called [Rascal:lang/java/m3/Core]. Have a look at the documentation 
 of these modules later. For now we will go through using them in a few examples.
+
+
 
 ```rascal-shell 
 rascal>import lang::java::m3::Core;
@@ -25,15 +28,15 @@ ok
 rascal>|tmp:///snakes-and-ladders/src/snakes/|.ls
 list[loc]: [
   |tmp:///snakes-and-ladders/src/snakes/Die.java|,
-  |tmp:///snakes-and-ladders/src/snakes/DieTest.java|,
+  |tmp:///snakes-and-ladders/src/snakes/SimpleGameTest.java|,
+  |tmp:///snakes-and-ladders/src/snakes/LastSquare.java|,
+  |tmp:///snakes-and-ladders/src/snakes/Snake.java|,
+  |tmp:///snakes-and-ladders/src/snakes/Ladder.java|,
   |tmp:///snakes-and-ladders/src/snakes/FirstSquare.java|,
+  |tmp:///snakes-and-ladders/src/snakes/DieTest.java|,
+  |tmp:///snakes-and-ladders/src/snakes/Player.java|,
   |tmp:///snakes-and-ladders/src/snakes/Game.java|,
   |tmp:///snakes-and-ladders/src/snakes/ISquare.java|,
-  |tmp:///snakes-and-ladders/src/snakes/Ladder.java|,
-  |tmp:///snakes-and-ladders/src/snakes/LastSquare.java|,
-  |tmp:///snakes-and-ladders/src/snakes/Player.java|,
-  |tmp:///snakes-and-ladders/src/snakes/SimpleGameTest.java|,
-  |tmp:///snakes-and-ladders/src/snakes/Snake.java|,
   |tmp:///snakes-and-ladders/src/snakes/Square.java|
 ]
 ```
@@ -282,12 +285,12 @@ for (r <- sort(getKeywordParameters(myModel)<0>)) println("  <r>");
 list[void]: []
 ```
 
-See [Core](../../../../Library/analysis/m3/Core.md) for the definition of the language-independent relations and [Core](../../../../Library/lang/java/m3/Core.md) for the Java-specific extensions.
+See [Core](../../../../Library/analysis/m3/Core.md/) for the definition of the language-independent relations and [Core](../../../../Library/lang/java/m3/Core.md/) for the Java-specific extensions.
 
 #### Benefits
 
 * Rascal values, such as M3 models, are fully text-based. That means what you see on screen is what is in memory, and vice versa. Nothing is hidden or implicit. No magic!
-* Using relational calculus operators like [Intersection](../../../../Rascal/Expressions/Values/Set/Intersection), [Union](../../../../Rascal/Expressions/Values/Set/Union), [Composition](../../../../Rascal/Expressions/Values/Relation/Composition), [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension) you can query M3 models in many different ways.
+* Using relational calculus operators like [Intersection](../../../../Rascal/Expressions/Values/Set/Intersection/), [Union](../../../../Rascal/Expressions/Values/Set/Union/), [Composition](../../../../Rascal/Expressions/Values/Relation/Composition/), [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension/) you can query M3 models in many different ways.
 * M3 models encapsulate *everything* there is to know about the structure of a Java project. Using the knowledge of the Eclipse JDT compiler we derive types and names, semantic relations that can be queried at will.
 * M3 models are *composable*; you could extract them for different projects that depend on each-other and combine them before running an analysis on the whole
 * There are other M3 models for other languages, with similar ideas and design. You can transfer your analysis skills to those lanaguges, but also make analyses that cross the boundaries of programming languages (consider javascript and java, or java and C via JNI, etc.)

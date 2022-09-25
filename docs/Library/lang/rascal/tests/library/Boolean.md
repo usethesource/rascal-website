@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::library::Boolean"
 
 `import lang::rascal::tests::library::Boolean;`
 
+
 ## function arb1 {#lang-rascal-tests-library-Boolean-arb1}
 
 * ``test bool arb1()``

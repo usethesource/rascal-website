@@ -15,9 +15,11 @@ Intersection of two maps.
 
 #### Types
 
+
 | `Exp~1~`    |  `Exp~2~`      | `Exp~1~ & Exp~2~`      |
 | --- | --- | --- |
 | `map[T~1~1, T12]` |  `set[T~2~]`   | `set[lub(T~1~,T~2~)]`  |
+
 
 #### Description
 
@@ -26,10 +28,12 @@ occur in both maps.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>("apple": 1, "pear": 2) & ("banana": 3, "apple": 1);
 map[str, int]: ("apple":1)
 rascal>("apple": 1, "pear": 2) & ("banana": 3, "apple": 4);
 map[str, int]: ()
 ```
+
 

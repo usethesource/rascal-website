@@ -21,12 +21,14 @@ Locations can be concatenated with strings to add segments to the path component
 | --- | --- | --- |
 | `loc`     | `str`     | `loc`                |
 
+
 #### Description
 
 Adds a segment to the path component of a location.
 This concatenation introduces a path separator (`/`) automatically.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>|tmp:///myDir| + "myFile";

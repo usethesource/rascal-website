@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::basic::Integers"
 
 `import lang::rascal::tests::basic::Integers;`
 
+
 ## function divByZero {#lang-rascal-tests-basic-Integers-divByZero}
 
 * ``test bool divByZero(num x)``

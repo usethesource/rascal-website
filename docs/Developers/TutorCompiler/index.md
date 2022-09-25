@@ -27,9 +27,11 @@ The tutor compiler is located here: [src/org/rascalmpl/library/lang/rascal/tutor
    2. use Eclipse to "Run as Java Program", also `RascalShell`
    4. use `java -jar target/rascal-<version>-SNAPSHOT.jar`
 
+ 
 Note that it's indeed best to run the rascal REPL as described above, otherwise you might miss fixes in the Java-implemented part of the tutor, or other related changes in the interpreter that needed fixing to build the tutor.
 
 So start a Rascal REPL first. At least you need these three modules loaded:
+
 
 ```rascal-shell 
 rascal>import IO;
@@ -41,6 +43,7 @@ ok
 ```
 
 Then we create the configuration for running the compiler, using the `PathConfig` data-type from `util::Reflective`:
+
 
 ```rascal-shell ,continue
 rascal>pcfg = pathConfig(srcs=[|project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test|] , bin=|tmp:///rascal-tmp/doc|);
@@ -55,10 +58,12 @@ Another way to link between courses is via `PathConfig.libs`. The jars in that l
 
 Now we run the compiler:
 
+
 ```rascal-shell ,continue
 rascal>compile(pcfg);
 compile(pcfg);
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Test.md|
+compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/t1.png|
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/CallAnalysis|
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/CallAnalysis/CallAnalysis.md|
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/CallAnalysis/calls.png|
@@ -68,11 +73,7 @@ compile(pcfg);
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Libraries/Libraries.md|
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Libraries/Boolean|
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Questions|
-compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/t1.png|
-list[Message]: [error(
-    "Ambiguous concept link: CallAnalysis resolves to all of these: /Recipes/Common/CallAnalysis /Test/CallAnalysis /Library/lang/rascal/tutor/examples/Test/CallAnalysis /Test/CallAnalysis/index.md ",
-    |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Test.md|(523,1,<25,0>,<25,1>),
-    cause="Please choose from the following options to disambiguate: \n    lang-rascal-tutor-examples-Test-CallAnalysis resolves to /Library/lang/rascal/tutor/examples/Test/CallAnalysis\n    Test:Test-CallAnalysis resolves to /Test/CallAnalysis\n    Recipes:CallAnalysis resolves to /Recipes/Common/CallAnalysis\n    Test:package:CallAnalysis resolves to /Test/CallAnalysis/index.md\n    Library:CallAnalysis resolves to /Library/lang/rascal/tutor/examples/Test/CallAnalysis\n    Common-CallAnalysis resolves to /Recipes/Common/CallAnalysis")]
+list[Message]: []
 ```
 
 Afterwards you will find all the generated files in `./target/classes/doc/` including an `index.value` file for later reference, and you can use a mark-down editor or compiler to further process the .md files. Note that these markdown files are _generated_, so they should be processed downstream automatically rather than by hand. Nevertheless while debugging it can be useful to explore what has been generated manually using a markdown editor.

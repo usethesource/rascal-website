@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::library::Type"
 
 `import lang::rascal::tests::library::Type;`
 
+
 ## data D {#lang-rascal-tests-library-Type-D}
 
 ```rascal

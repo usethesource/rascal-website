@@ -6,6 +6,7 @@ title: "module util::Highlight"
 
 `import util::Highlight;`
 
+
 ## function highlight2html {#util-Highlight-highlight2html}
 
 * ``str highlight2html(Tree t)``

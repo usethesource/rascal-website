@@ -17,10 +17,11 @@ Let the current alternative of a pattern match fail.
 
 A `fail` statement is only allowed in statements that are controlled by the outcome of a pattern match:
 
-*  The [Patterns](../../../Rascal/Patterns) in a [Pattern with Action](../../../Rascal/Expressions/Visit/PatternWithAction) in [Switch](../../../Rascal/Statements/Switch) or [Visit](../../../Rascal/Statements/Visit) statement controls the statements in the action part.
-*  The test (expression) of a [While](../../../Rascal/Statements/While) or [Do](../../../Rascal/Statements/Do) statement controls the statements in the body part.
-*  The test (expressions) of a [For](../../../Rascal/Statements/For) statement control the statements in the body part.
-*  The formal parameter declaration of a [Function](../../../Rascal/Declarations/Function).
+*  The [Patterns](../../../Rascal/Patterns/) in a [Pattern with Action](../../../Rascal/Expressions/Visit/PatternWithAction/) in [Switch](../../../Rascal/Statements/Switch/) or [Visit](../../../Rascal/Statements/Visit/) statement controls the statements in the action part.
+*  The test (expression) of a [While](../../../Rascal/Statements/While/) or [Do](../../../Rascal/Statements/Do/) statement controls the statements in the body part.
+*  The test (expressions) of a [For](../../../Rascal/Statements/For/) statement control the statements in the body part.
+*  The formal parameter declaration of a [Function](../../../Rascal/Declarations/Function/).
+
 
 The `fail` statement is associated with the innermost pattern match by which it is controlled.
 
@@ -57,4 +58,5 @@ list[int] (list[int]): function(|prompt:///|(0,252,<1,0>,<11,1>))
 rascal>sort([10, 1, 5, 3]);
 list[int]: [1,3,5,10]
 ```
+
 

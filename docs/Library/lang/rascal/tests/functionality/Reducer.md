@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::Reducer"
 
 `import lang::rascal::tests::functionality::Reducer;`
 
+
 ## function testCount {#lang-rascal-tests-functionality-Reducer-testCount}
 
 * ``test bool testCount()``

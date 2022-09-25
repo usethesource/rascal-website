@@ -57,6 +57,7 @@ _MarkedText_
 _MarkedText_
 ```
 
+
 ```
 .Pitfalls
 _MarkedText_
@@ -76,16 +77,17 @@ Each section starts with a keyword that should appear at the begin of a line.
 The first two sections (Name and Synopsis) are mandatory,
 
 Here is a brief summary of the sections of a concept:
-* [Name](../../Tutor/Concept/Name)
-* [Synopsis](../../Tutor/Concept/Synopsis)
-* [./Syntax](../../Tutor/Concept/Syntax)
-* [Types](../../Tutor/Concept/Types)
-* [./Function](../../Tutor/Concept/Function)
-* [Details](../../Tutor/Concept/Details)
-* [Description](../../Tutor/Concept/Description)
-* [Examples](../../Tutor/Concept/Examples)
-* [Benefits](../../Tutor/Concept/Benefits)
-* [Pitfalls](../../Tutor/Concept/Pitfalls)
+* [Name](../../Tutor/Concept/Name/)
+* [Synopsis](../../Tutor/Concept/Synopsis/)
+* [./Syntax](../../Tutor/Concept/Syntax/)
+* [Types](../../Tutor/Concept/Types/)
+* [./Function](../../Tutor/Concept/Function/)
+* [Details](../../Tutor/Concept/Details/)
+* [Description](../../Tutor/Concept/Description/)
+* [Examples](../../Tutor/Concept/Examples/)
+* [Benefits](../../Tutor/Concept/Benefits/)
+* [Pitfalls](../../Tutor/Concept/Pitfalls/)
+
 
 .Examples
 
@@ -95,4 +97,5 @@ Here is a brief summary of the sections of a concept:
 
 * Note that all section names start with a period, e.g., `.Examples`.
 * No space is allowed before the section name.
+
 

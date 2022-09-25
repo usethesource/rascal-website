@@ -15,9 +15,11 @@ Set values.
 
 #### Types
 
+
 |  `Exp~1~` |  `Exp~2~` |  ...  |  `{ Exp~1~, Exp~2~, ... }`    |
 | --- | --- | --- | --- |
 | _T~1~_    | _T~2~_    |  ...  |  set[ lub(_T~1~_, _T~2~_, ... ) ]  |
+
 
 #### Description
 
@@ -28,6 +30,7 @@ A set is an unordered sequence of values and has the following properties:
 *  A set contains an element only once. In other words, duplicate elements are eliminated and no 
   matter how many times an element is added to a set, it will occur in it only once.
 
+
 The type of a set has the form `set[T]`,
 where `T` is an arbitrary type.
 
@@ -36,24 +39,25 @@ To achieve splicing of these elements, i.e., the insertion of the elements of th
 it has to be prefixed by the splice operator `*`.
 
 The following operators are provided on sets:
-* [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension)
-* [Difference](../../../../Rascal/Expressions/Values/Set/Difference)
-* [Equal](../../../../Rascal/Expressions/Values/Set/Equal)
-* [Insert](../../../../Rascal/Expressions/Values/Set/Insert)
-* [Intersection](../../../../Rascal/Expressions/Values/Set/Intersection)
-* [NotEqual](../../../../Rascal/Expressions/Values/Set/NotEqual)
-* [Product](../../../../Rascal/Expressions/Values/Set/Product)
-* [Splice](../../../../Rascal/Expressions/Values/Set/Splice)
-* [StrictSubSet](../../../../Rascal/Expressions/Values/Set/StrictSubSet)
-* [StrictSuperSet](../../../../Rascal/Expressions/Values/Set/StrictSuperSet)
-* [SubSet](../../../../Rascal/Expressions/Values/Set/SubSet)
-* [SuperSet](../../../../Rascal/Expressions/Values/Set/SuperSet)
-* [Union](../../../../Rascal/Expressions/Values/Set/Union)
-* [in](../../../../Rascal/Expressions/Values/Set/in)
-* [notin](../../../../Rascal/Expressions/Values/Set/notin)
+* [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension/)
+* [Difference](../../../../Rascal/Expressions/Values/Set/Difference/)
+* [Equal](../../../../Rascal/Expressions/Values/Set/Equal/)
+* [Insert](../../../../Rascal/Expressions/Values/Set/Insert/)
+* [Intersection](../../../../Rascal/Expressions/Values/Set/Intersection/)
+* [NotEqual](../../../../Rascal/Expressions/Values/Set/NotEqual/)
+* [Product](../../../../Rascal/Expressions/Values/Set/Product/)
+* [Splice](../../../../Rascal/Expressions/Values/Set/Splice/)
+* [StrictSubSet](../../../../Rascal/Expressions/Values/Set/StrictSubSet/)
+* [StrictSuperSet](../../../../Rascal/Expressions/Values/Set/StrictSuperSet/)
+* [SubSet](../../../../Rascal/Expressions/Values/Set/SubSet/)
+* [SuperSet](../../../../Rascal/Expressions/Values/Set/SuperSet/)
+* [Union](../../../../Rascal/Expressions/Values/Set/Union/)
+* [in](../../../../Rascal/Expressions/Values/Set/in/)
+* [notin](../../../../Rascal/Expressions/Values/Set/notin/)
 
 There are also [library functions](../../../../Library/Set.md/) available for Sets.
 ##  Set types 
+
 
 ```rascal-shell 
 rascal>{1, 2, 3};
@@ -83,6 +87,8 @@ Note that
 *  `{1, 2, 3}` and `{3, 2, 1}` are identical sets (since order is not relevant).
 *  `{1, 2, 3}` and `{1, 2, 3, 1}` are also identical sets (since duplication is not relevant).
 
+
+
 ##  Set splicing 
 
 Introduce a set variable `S`
@@ -103,4 +109,5 @@ or how its elements are added as elements to the other set:
 rascal>{10, *S, 20};
 set[int]: {10,1,3,20,2}
 ```
+
 

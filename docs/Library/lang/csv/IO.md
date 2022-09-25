@@ -6,6 +6,7 @@ title: "module lang::csv::IO"
 
 `import lang::csv::IO;`
 
+
 #### Synopsis
 
 Functions for reading and writing Comma-Separated Values (CSV) files.
@@ -20,12 +21,12 @@ information between spreadsheets and databases. A CSV file has the following str
 
 The following functions are provided:
 
-* [generate](../../../Library/lang/csv/IO.md#lang::csv::IO-generate)
-* [getCSVType](../../../Library/lang/csv/IO.md#lang::csv::IO-getCSVType)
-* [loadCSV](../../../Library/lang/csv/IO.md#lang::csv::IO-loadCSV)
-* [loadNormalizedCSV](../../../Library/lang/csv/IO.md#lang::csv::IO-loadNormalizedCSV)
-* [readCSV](../../../Library/lang/csv/IO.md#lang::csv::IO-readCSV)
-* [writeCSV](../../../Library/lang/csv/IO.md#lang::csv::IO-writeCSV)
+* [generate](../../../Library/lang/csv/IO.md#lang::csv::IO-generate/)
+* [getCSVType](../../../Library/lang/csv/IO.md#lang::csv::IO-getCSVType/)
+* [loadCSV](../../../Library/lang/csv/IO.md#lang::csv::IO-loadCSV/)
+* [loadNormalizedCSV](../../../Library/lang/csv/IO.md#lang::csv::IO-loadNormalizedCSV/)
+* [readCSV](../../../Library/lang/csv/IO.md#lang::csv::IO-readCSV/)
+* [writeCSV](../../../Library/lang/csv/IO.md#lang::csv::IO-writeCSV/)
 
 #### Examples
 
@@ -36,11 +37,13 @@ aaa,bbb,ccc
 zzz,yyy,xxx 
 ```
 
+
 ## function readCSV {#lang-csv-IO-readCSV}
 
 * ``value readCSV(loc location, bool header = true, str separator = ",", str encoding = "UTF8")``
 * ``value readCSV(loc location, map[str,str] options)``
 * ``&T readCSV(type[&T] result, loc location, bool header = true, str separator = ",", str encoding = "UTF8")``
+
 
 #### Synopsis
 
@@ -95,6 +98,7 @@ position;artist;title;year
 
 We can read it in various ways:
 
+
 ```rascal-shell 
 rascal>import lang::csv::IO;
 ok
@@ -107,11 +111,13 @@ rel[int position,str artist,str title,int year]: {
 ```
 Now we can, for instance, select one of the fields of `R1`:
 
+
 ```rascal-shell ,continue
 rascal>R1.artist;
 set[str]: {"Queen","Boudewijn de Groot","Eagles"}
 ```
 It is also possible to infer the type:
+
 
 ```rascal-shell ,continue
 rascal>R1 = readCSV(|project://rascal/src/org/rascalmpl/library/lang/csv/examples/ex1.csv|, separator = ";");
@@ -130,6 +136,7 @@ rel[int position,str artist,str title,int year]: {
 
 * ``void writeCSV(type[&T] schema, &T relation, loc location, bool header = true, str separator = ",", str encoding = "UTF8")``
 
+
 #### Synopsis
 
 Write a relation to a CSV (Comma Separated Values) file.
@@ -143,6 +150,7 @@ The options influence the way the actrual CSV file is written:
 *  `separator`: defines the separator character between fields (default is `,`).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import lang::csv::IO;

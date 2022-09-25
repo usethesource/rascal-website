@@ -24,6 +24,7 @@ Describes an image to be included:
 * _Height_ is the rewuired height of the image in pixels.
 * When `link` is present, it turns the image in a link to the given _URI_.
 
+    
 :::caution
 There is a "TODO" in the documentation source:
 msg
@@ -58,4 +59,5 @@ produces a clickable image that links back to the source of the image.
 ![][dandelion.jpg](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
 
 Try it!
+
 

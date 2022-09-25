@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::library::lang::java::m3::BasicM3Tests"
 
 `import lang::rascal::tests::library::lang::java::m3::BasicM3Tests;`
 
+
 ## function getSnakesAndLaddersPath {#lang-rascal-tests-library-lang-java-m3-BasicM3Tests-getSnakesAndLaddersPath}
 
 * ``loc getSnakesAndLaddersPath()``

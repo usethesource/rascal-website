@@ -6,6 +6,7 @@ title: "module lang::rascal::meta::ModuleInfoTests"
 
 `import lang::rascal::meta::ModuleInfoTests;`
 
+
 ## function tstGetImports1 {#lang-rascal-meta-ModuleInfoTests-tstGetImports1}
 
 * ``test bool tstGetImports1()``

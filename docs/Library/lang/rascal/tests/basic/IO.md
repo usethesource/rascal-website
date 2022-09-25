@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::basic::IO"
 
 `import lang::rascal::tests::basic::IO;`
 
+
 ## function writeReadFile {#lang-rascal-tests-basic-IO-writeReadFile}
 
 * ``test bool writeReadFile(str content)``

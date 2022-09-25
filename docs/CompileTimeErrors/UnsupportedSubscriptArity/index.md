@@ -22,6 +22,7 @@ Remedies: correct the number of indices used in the subscription.
 
 #### Examples
 
+
 ```rascal-shell ,error
 rascal>[1,2,3][2,1];
 ok
@@ -34,4 +35,5 @@ rascal><1, 2, 3>[5,6];
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UnsupportedSubscriptArity/UnsupportedSubscriptArity.html|
 ok
 ```
+
 

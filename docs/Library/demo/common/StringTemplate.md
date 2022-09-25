@@ -6,6 +6,7 @@ title: "module demo::common::StringTemplate"
 
 `import demo::common::StringTemplate;`
 
+
 ## function capitalize {#demo-common-StringTemplate-capitalize}
 
 * ``str capitalize(str s)``

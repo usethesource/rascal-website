@@ -15,9 +15,11 @@ Negated membership test on set values.
 
 #### Types
 
+
 | `Exp~1~`           |  `Exp~2~`    | `Exp~1~ notin Exp~2~`  |
 | --- | --- | --- |
 | `T~1~`  <: `T~2~` |  `set[T~2~]` | `bool`                   |
+
 
 #### Description
 
@@ -25,10 +27,12 @@ Yields `true` if the value of Exp~1~ does not occur as element in the value of E
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>4 notin {1, 2, 3};
 bool: true
 rascal>4 notin {1, 2, 3, 4};
 bool: false
 ```
+
 

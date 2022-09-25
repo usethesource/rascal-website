@@ -6,6 +6,7 @@ title: "module lang::rascal::tutor::Names"
 
 `import lang::rascal::tutor::Names;`
 
+
 ## data PathConfig {#lang-rascal-tutor-Names-PathConfig}
 
 ```rascal

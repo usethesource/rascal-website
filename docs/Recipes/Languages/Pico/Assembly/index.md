@@ -8,7 +8,7 @@ Assembly language for Pico.
 
 #### Examples
 
-The [Compile](../../../../Recipes/Languages/Pico/Compile)r will translate Pico programs into the following assembly language.
+The [Compile](../../../../Recipes/Languages/Pico/Compile/)r will translate Pico programs into the following assembly language.
 
 ```rascal 
 module demo::lang::Pico::Assembly
@@ -33,4 +33,6 @@ public data Instr
      ;
 
 ```
+
+                
 

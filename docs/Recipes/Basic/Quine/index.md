@@ -17,12 +17,14 @@ quines in many different programming languages.
 
 Learning about quines, is about learning how to quote and escape symbols in strings.
 
+
 #### Examples
 
 ```rascal
 demo::basic::Quine
 ```
 
+                
 <1> A remarkable point in the code: the string variable `program` has as value
    the text of the module `Quine` upto here. 
 <2> The definition of `program` ends here.
@@ -103,4 +105,5 @@ ok
 ```
 If you follow this output line-by-line you will see that it
 is identical to the original source code of module `Quine`.
+
 

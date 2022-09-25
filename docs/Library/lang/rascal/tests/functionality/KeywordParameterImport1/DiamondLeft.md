@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::KeywordParameterImport1::Diam
 
 `import lang::rascal::tests::functionality::KeywordParameterImport1::DiamondLeft;`
 
+
 ## data X {#lang-rascal-tests-functionality-KeywordParameterImport1-DiamondLeft-X}
 
 ```rascal

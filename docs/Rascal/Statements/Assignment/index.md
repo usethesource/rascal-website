@@ -54,15 +54,19 @@ The other assignment operators can be expressed as abbreviations for the standar
 | `Assignable &= Exp`         | `Assignable = Assignable & Exp`   |
 | `Assignable ?= Exp`         | `Assignable = Assignable ? Exp`   |
 
+
+
+
 An assignable is either a single variable, (the base variable), optionally followed by subscriptions, slices or field selections.
 The assignment statement always results in assigning a completely new value to the base variable. 
 We distinguish the following forms of assignment:
-* [Annotation](../../../Rascal/Statements/Assignment/Annotation)
-* [Constructor](../../../Rascal/Statements/Assignment/Constructor)
-* [Field](../../../Rascal/Statements/Assignment/Field)
-* [IsDefined](../../../Rascal/Statements/Assignment/IsDefined)
-* [Multiple](../../../Rascal/Statements/Assignment/Multiple)
-* [Slice](../../../Rascal/Statements/Assignment/Slice)
-* [Subscription](../../../Rascal/Statements/Assignment/Subscription)
-* [Variable](../../../Rascal/Statements/Assignment/Variable)
+* [Annotation](../../../Rascal/Statements/Assignment/Annotation/)
+* [Constructor](../../../Rascal/Statements/Assignment/Constructor/)
+* [Field](../../../Rascal/Statements/Assignment/Field/)
+* [IsDefined](../../../Rascal/Statements/Assignment/IsDefined/)
+* [Multiple](../../../Rascal/Statements/Assignment/Multiple/)
+* [Slice](../../../Rascal/Statements/Assignment/Slice/)
+* [Subscription](../../../Rascal/Statements/Assignment/Subscription/)
+* [Variable](../../../Rascal/Statements/Assignment/Variable/)
+
 

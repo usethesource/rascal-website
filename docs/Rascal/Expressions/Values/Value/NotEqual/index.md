@@ -15,9 +15,11 @@ Not equal operator on values.
 
 #### Types
 
+
 | `Exp~1~`   | `Exp~2~` | `Exp~1~ != Exp~2~`  |
 | --- | --- | --- |
 | `value`     |  `value`  | `bool`                |
+
 
 #### Description
 
@@ -47,4 +49,5 @@ and `X` and `Z`:
 rascal>X != Z;
 bool: true
 ```
+
 

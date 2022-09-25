@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::concrete::Terms"
 
 `import lang::rascal::tests::concrete::Terms;`
 
+
 ## function concreteTerm1 {#lang-rascal-tests-concrete-Terms-concreteTerm1}
 
 * ``test bool concreteTerm1()``

@@ -19,7 +19,9 @@ The not equal operator on location values.
 | --- | --- | --- |
 | `loc`     |  `loc`    | `bool`                |
 
+
 #### Description
 
 Yields `true` if both arguments are not identical and `false` otherwise.
+
 

@@ -13,6 +13,7 @@ It is an error to use it outside a function body.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>int triple(int n) { return 3 * n; }
 int (int): function(|prompt:///|(0,35,<1,0>,<1,35>))

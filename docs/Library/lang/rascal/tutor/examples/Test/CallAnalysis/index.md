@@ -18,7 +18,9 @@ Let's see how these questions can be answered using Rascal.
 Examples:
 Consider the following call graph (a box represents a procedure and an arrow represents a call from one procedure to another procedure):
 
-![calls](/assets/Library/lang/rascal/tutor/examples/Test/CallAnalysis/calls.png/)
+![calls](/assets/Library/lang/rascal/tutor/examples/Test/CallAnalysis/calls.png)
+
+
 
 Rascal supports basic data types like integers and strings which are sufficient to formulate and answer the questions at hand. However, we
 can gain readability by introducing separately named types for the items we are describing. 

@@ -6,6 +6,7 @@ title: Invalid Use Of Time
 
 Invalid use of a time value at runtime
 
+
 #### Types
 
 `data RuntimeException = InvalidUseOfTime(str message);`

@@ -16,6 +16,7 @@ Next the assignments `Assignable~i~ = V~i~` are performed for 1 \<= i \<= n.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>data FREQ = wf(str word, int freq);
 ok
@@ -28,4 +29,5 @@ str: "rascal"
 rascal>I;
 int: 1000
 ```
+
 

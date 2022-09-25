@@ -15,9 +15,11 @@ Concatenate two tuple values.
 
 #### Types
 
+
 | `Exp~1~`                      |  `Exp2_`                      | `Exp~1~ > Exp2_`                                 |
 | --- | --- | --- |
 | `tuple[ T~11~, T~12~, ... ]` |  `tuple[ T~21~, T~22~, ... ]` | `tuple[ T~11~, T~12~, ..., T~21~, T~22~, ... ]` |
+
 
 #### Description
 
@@ -25,8 +27,10 @@ Returns a tuple consisting of the concatenation of the tuple elements of _Exp_~1
 
 #### Examples
 
+
 ```rascal-shell 
 rascal><"abc", 1, 2.5> + <true, "def">;
 tuple[str,int,real,bool,str]: <"abc",1,2.5,true,"def">
 ```
+
 

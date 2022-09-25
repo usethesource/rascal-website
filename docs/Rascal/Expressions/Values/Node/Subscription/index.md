@@ -15,9 +15,11 @@ Retrieve an argument of a node via its index.
 
 #### Types
 
+
 | `Exp~1~`     | `Exp~2~` | `Exp~1~ [ Exp~2~ ]`  |
 | --- | --- | --- |
 | `node`        | `int`     | `value`                 |
+
 
 #### Description
 
@@ -26,6 +28,7 @@ The value of _Exp_~2~ should be greater or equal 0 and less than the number of a
 If this is not the case, the exception `IndexOutOfBounds` is thrown.
 
 #### Examples
+
 
 ```rascal-shell ,error
 ```
@@ -49,4 +52,6 @@ rascal>F[3];
 	at $shell$(|prompt:///|(0,5,<1,0>,<1,5>))
 ok
 ```
+
+       
 

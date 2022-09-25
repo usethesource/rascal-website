@@ -10,6 +10,7 @@ The textual syntax of Lisp.
 
 The first step in defining Lisp's textual format, we define a grammar for it:
 
+
 ```rascal 
 module demo::lang::Lisra::Syntax
 
@@ -25,6 +26,7 @@ start syntax LispExp            // TODO: remove constructor names (needed for co
 
 ```
 
+                
 `Whitespace` defines the characters that can be ignored between tokens.
 
 `IntegerLiteral` defines integer constants. In a first approximation `[0-9]` is enough.
@@ -38,5 +40,6 @@ of `LispExp`s surrouned by parentheses.
 
 #### Examples
 
-This grammar is demonstrated in [Parse](../../../../Recipes/Languages/Lisra/Parse).
+This grammar is demonstrated in [Parse](../../../../Recipes/Languages/Lisra/Parse/).
+
 

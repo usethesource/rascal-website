@@ -6,6 +6,7 @@ title: "module lang::sdf2::util::Importer"
 
 `import lang::sdf2::util::Importer;`
 
+
 ## function generate {#lang-sdf2-util-Importer-generate}
 
 * ``str generate(str name, loc at, PathConfig pcfg)``
@@ -16,6 +17,7 @@ Converts an SDF2 module to a Rascal module
 
 #### Description
 
+ 
 The `sdf` uri scheme works like this:
 `sdf:///<modulename>`
 

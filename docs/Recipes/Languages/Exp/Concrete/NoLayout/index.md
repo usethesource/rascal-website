@@ -10,6 +10,7 @@ A version of Exp based on concrete syntax.
 
 We describe howto write a grammar for Exp and how to use it to implement an evaluator.
 
+
 #### Examples
 
 Here is the grammar for Exp:
@@ -39,6 +40,7 @@ Notes:
     The keyword `left` marks this as a left-associative rule.
 <6> Defines alternative #4: addition. The `>` says again that the previous rule has a higher priority than the current one.
     The keyword `left` marks this as a left-associative rule.
+
 
 Now that the grammar is in place we want to use it to build an evaluator. Here is how:
 
@@ -78,6 +80,7 @@ Notes:
 <5> Handle the addition case.
 <6> Handles the case of parentheses.
 
+
 What remains, is to check that `eval` works as expected.
 
 ```rascal-shell 
@@ -105,4 +108,6 @@ int: 14
 rascal>eval("(2+3)*4");
 int: 20
 ```
+
+
 

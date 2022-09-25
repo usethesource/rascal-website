@@ -14,9 +14,11 @@ Intersection of two sets.
 
 #### Types
 
+
 | `Exp~1~`    |  `Exp~2~`      | `Exp~1~ & Exp~2~`      |
 | --- | --- | --- |
 | `set[T~1~]` |  `set[T~2~]`   | `set[lub(T~1~,T~2~)]`  |
+
 
 #### Description
 
@@ -25,8 +27,10 @@ The intersection consists of the common elements of both sets.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>{1, 2, 3, 4, 5} & {4, 5, 6};
 set[int]: {5,4}
 ```
+
 

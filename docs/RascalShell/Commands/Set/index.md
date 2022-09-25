@@ -59,6 +59,7 @@ int: 120
 
 Turn trace off and execute the same function:
 
+
 ```rascal-shell ,continue
 rascal>:set tracing false
 ok

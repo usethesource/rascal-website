@@ -15,9 +15,11 @@ Equal operator on set values.
 
 #### Types
 
+
 | `Exp~1~`    |  `Exp~2~`    | `Exp~1~ == Exp~2~`  |
 | --- | --- | --- |
 | `set[T~1~]` |  `set[T~2~]` | `bool`                |
+
 
 #### Description
 
@@ -25,10 +27,12 @@ Yields `true` if both arguments are equal sets and `false` otherwise.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>{1, 2, 3} == {3, 2, 1};
 bool: true
 rascal>{1, 2, 3} == {1, 2};
 bool: false
 ```
+
 

@@ -18,6 +18,7 @@ of creating software and encompasses:
 *  _Software Deployment_: distribute software to its users.
 *  _Software Maintenance_: maintain software after it has been deployed.
 
+
 There are various models to organize the above activities. The classical [waterfall model](http://en.wikipedia.org/wiki/Waterfall_model)
 organizes them sequentially. Variations are more iterative and allow to go back to earlier phases.
 Waterfall-based methods follow solid engineering practices but may lead to much bureacracy and an inflexible process that
@@ -27,4 +28,5 @@ Other approaches promote [agile development](http://en.wikipedia.org/wiki/Agile_
 and are characterized by very short iterations that include all the above activities.
 Agile methods aim to produce prototypes as early as possible and this makes it easier for future users
 to assess the prototype and suggest changes.
+
 

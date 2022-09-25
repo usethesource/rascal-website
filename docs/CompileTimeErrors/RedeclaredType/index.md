@@ -16,6 +16,7 @@ Remedy: rename one of the type names.
 
 #### Examples
 
+
 ```rascal-shell ,error
 rascal>data D = d(int x);
 ok
@@ -25,6 +26,7 @@ Advice: |http://tutor.rascal-mpl.org/Errors/Static/RedeclaredType/RedeclaredType
 ok
 ```
 
+
 ```rascal-shell ,error
 rascal>alias D = int;
 ok
@@ -33,4 +35,5 @@ rascal>alias D = str;
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/RedeclaredType/RedeclaredType.html|
 ok
 ```
+
 

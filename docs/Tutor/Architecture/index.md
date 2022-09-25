@@ -57,3 +57,4 @@ Another way to use a compiled course is directly from the REPL.
 * Courses are compiled on a per-course basis. 
   Support for incremental courses compilation is not yet available.
 
+

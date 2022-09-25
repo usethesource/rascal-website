@@ -25,6 +25,7 @@ on [Lispy](http://norvig.com/lispy.html), a Lisp interpreter written in Python.
 The Lisp variant to be implemented is the following subset of the http://en.wikipedia.org/wiki/Scheme_(programming_language)[Scheme]
  language:
 
+
 | Form | Syntax | Semantics and Example |
 | --- | --- | --- |
 | [variable reference](http://www.schemers.org/Documents/Standards/R5RS/HTML/r5rs-Z-H-7.html#%_sec_4.1.1) |
@@ -74,6 +75,7 @@ The Lisp variant to be implemented is the following subset of the http://en.wiki
    of expressions as arguments.  |
    Example: <`(square 12) => 144 |
 
+
 In this table, _var_ must be a symbol--an identifier such as x or square--and number must be an integer number, 
 while the other italicized words can be any expression. The notation _exp_... means zero or more repetitions of _exp_.
 
@@ -84,12 +86,14 @@ A Lisp interpreter consists of the following parts:
 *  A _pretty printer_ that converts the outcome in internal representation back to text.
 *  Finally, an interactive  _console_ is needed that interact with the user.
 
+
 We discuss all these aspects:
 
-* [Syntax](../../../Recipes/Languages/Lisra/Syntax)
-* [Runtime](../../../Recipes/Languages/Lisra/Runtime)
-* [Parse](../../../Recipes/Languages/Lisra/Parse)
-* [Pretty](../../../Recipes/Languages/Lisra/Pretty)
-* [Eval](../../../Recipes/Languages/Lisra/Eval)
-* [./Test](../../../Recipes/Languages/Lisra/Test)
+* [Syntax](../../../Recipes/Languages/Lisra/Syntax/)
+* [Runtime](../../../Recipes/Languages/Lisra/Runtime/)
+* [Parse](../../../Recipes/Languages/Lisra/Parse/)
+* [Pretty](../../../Recipes/Languages/Lisra/Pretty/)
+* [Eval](../../../Recipes/Languages/Lisra/Eval/)
+* [./Test](../../../Recipes/Languages/Lisra/Test/)
+
 

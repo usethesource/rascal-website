@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::extends1::COMPILER"
 
 `import lang::rascal::tests::extends1::COMPILER;`
 
+
 ## function CMcomparable1 {#lang-rascal-tests-extends1-COMPILER-CMcomparable1}
 
 * ``test bool CMcomparable1()``

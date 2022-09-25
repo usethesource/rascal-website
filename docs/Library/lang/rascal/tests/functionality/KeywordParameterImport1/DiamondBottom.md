@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::KeywordParameterImport1::Diam
 
 `import lang::rascal::tests::functionality::KeywordParameterImport1::DiamondBottom;`
 
+
 ## function Bottom_ly_left1 {#lang-rascal-tests-functionality-KeywordParameterImport1-DiamondBottom-Bottom_ly_left1}
 
 * ``test bool Bottom_ly_left1()``

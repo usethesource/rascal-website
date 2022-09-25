@@ -6,6 +6,7 @@ title: "module lang::rascal::tutor::apidoc::DeclarationInfo"
 
 `import lang::rascal::tutor::apidoc::DeclarationInfo;`
 
+
 ## data DeclarationInfo {#lang-rascal-tutor-apidoc-DeclarationInfo-DeclarationInfo}
 
 ```rascal

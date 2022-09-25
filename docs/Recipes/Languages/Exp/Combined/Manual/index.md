@@ -10,6 +10,7 @@ An Exp evaluator that uses a manually written conversion from parse tree to abst
 
 First we define a `parse` function for Exp:
 
+
 ```rascal 
 module demo::lang::Exp::Combined::Manual::Parse
 import demo::lang::Exp::Concrete::WithLayout::Syntax;
@@ -62,6 +63,7 @@ Some comments:
     explicitly use `demo::lang::Exp::Abstract::Syntax::Exp` in these
     rules to distinguish from `demo::lang::Exp::Concrete::WithLayout::Syntax::Exp`.
 
+
 Let's try it:
 
 ```rascal-shell 
@@ -72,6 +74,7 @@ Exp: add(
   con(2),
   con(3))
 ```
+
 
 What remains is to write the interpreter using the above components:
 
@@ -88,6 +91,7 @@ test bool tstEval4() = eval("3+4*5") == 23;
 
 ```
 
+                
 Here is how it works:
 
 ```rascal-shell 
@@ -96,4 +100,5 @@ ok
 rascal>eval("2+3");
 int: 5
 ```
+
 

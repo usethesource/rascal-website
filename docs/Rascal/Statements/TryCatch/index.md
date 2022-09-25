@@ -29,9 +29,10 @@ A try catch statement has as purpose to catch any [Exceptions](../../../Library/
 during the execution of _Statement_~1~.
 These exceptions may caused by:
 
-*  The execution of an explicit [Throw](../../../Rascal/Statements/Throw) statement.
+*  The execution of an explicit [Throw](../../../Rascal/Statements/Throw/) statement.
 
 *  The Rascal system that discovers an abnormal condition, e.g., an out of bounds error when accessing a list element.
+
 
 Note that all elements of the try catch statement are optional but that at least one has to be present. 
 Their meaning is as follows:
@@ -68,4 +69,6 @@ int (list[int]): function(|prompt:///|(0,73,<1,0>,<1,73>))
 rascal>hd2([]);
 int: 0
 ```
+
+
 

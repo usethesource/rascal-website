@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::concrete::Syntax3"
 
 `import lang::rascal::tests::concrete::Syntax3;`
 
+
 ## function ambFilter {#lang-rascal-tests-concrete-Syntax3-ambFilter}
 
 * ``&T <:Tree ambFilter(amb(set[&T <:Tree] alternatives))``

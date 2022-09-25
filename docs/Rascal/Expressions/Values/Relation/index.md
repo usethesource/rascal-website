@@ -16,15 +16,18 @@ Relation values.
 
 #### Types
 
+
 | `Exp~11~` |  `Exp~12~` |  ...  | `{ < Exp~11~, Exp~12~, ... > , ... }`   |
 | --- | --- | --- | --- |
 | `T~1~`    |    `T~2~`  |  ...  |  `rel[T~1~, T~2~, ... ]`               |
+
 
 #### Description
 
 A relation is a set of elements with the following property:
 
 *  All elements have the same static tuple type.
+
 
 Relations are thus nothing more than sets of tuples, but since they are used so often we provide a shorthand notation for them.
 Relations are represented by the type `rel[T~1~ L~1~, T~2~ L~2~, ... ]`, where _T_~1~, _T_~2~, ... are arbitrary types and
@@ -34,21 +37,23 @@ An n-ary relations with m tuples is denoted by
  `{< E~11~, E~12~, ..., E~1n~ >,< E~21~, E~22~, ..., E~2n~ >, ..., < E~m1~, E~m2~, ..., E~mn~ >}`, 
 where the _E_~ij~ are expressions that yield the desired element type _T_~i~.
 
-Since relations are a form of set all operations (see [Set](../../../../Rascal/Expressions/Values/Set)) and functions
-(see [Set](../../../../Library/Set.md)) are also applicable to relations.
+Since relations are a form of set all operations (see [Set](../../../../Rascal/Expressions/Values/Set/)) and functions
+(see [Set](../../../../Library/Set.md/)) are also applicable to relations.
 
 The following additional operators are provided for relations:
-* [CartesianProduct](../../../../Rascal/Expressions/Values/Relation/CartesianProduct)
-* [Composition](../../../../Rascal/Expressions/Values/Relation/Composition)
-* [FieldSelection](../../../../Rascal/Expressions/Values/Relation/FieldSelection)
-* [Join](../../../../Rascal/Expressions/Values/Relation/Join)
-* [ReflexiveTransitiveClosure](../../../../Rascal/Expressions/Values/Relation/ReflexiveTransitiveClosure)
-* [Subscription](../../../../Rascal/Expressions/Values/Relation/Subscription)
-* [TransitiveClosure](../../../../Rascal/Expressions/Values/Relation/TransitiveClosure)
+* [CartesianProduct](../../../../Rascal/Expressions/Values/Relation/CartesianProduct/)
+* [Composition](../../../../Rascal/Expressions/Values/Relation/Composition/)
+* [FieldSelection](../../../../Rascal/Expressions/Values/Relation/FieldSelection/)
+* [Join](../../../../Rascal/Expressions/Values/Relation/Join/)
+* [ReflexiveTransitiveClosure](../../../../Rascal/Expressions/Values/Relation/ReflexiveTransitiveClosure/)
+* [Subscription](../../../../Rascal/Expressions/Values/Relation/Subscription/)
+* [TransitiveClosure](../../../../Rascal/Expressions/Values/Relation/TransitiveClosure/)
 
 There are also [library functions](../../../../Library/Relation.md/) available for Relations.
 
+
 #### Examples
+
 
 ```rascal-shell 
 rascal>{<1,10>, <2,20>, <3,30>}
@@ -74,4 +79,5 @@ rel[str,int,str]: {
   <"a",1,"b">
 }
 ```
+
 

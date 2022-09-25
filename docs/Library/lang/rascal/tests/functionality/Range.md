@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::Range"
 
 `import lang::rascal::tests::functionality::Range;`
 
+
 ## function rangeInt1 {#lang-rascal-tests-functionality-Range-rangeInt1}
 
 * ``test bool rangeInt1()``

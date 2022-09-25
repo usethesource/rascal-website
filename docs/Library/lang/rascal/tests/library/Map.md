@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::library::Map"
 
 `import lang::rascal::tests::library::Map;`
 
+
 ## function delete1 {#lang-rascal-tests-library-Map-delete1}
 
 * ``test bool delete1(&K k)``

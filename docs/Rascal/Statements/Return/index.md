@@ -28,9 +28,11 @@ The following rules apply:
 *  In each function with a return type that is not void, every possible execution path through the body of 
   the function should end in a return statement.
 
+
 In each function with a return type that is void, a return statement is implicitly assumed at the end of each execution path through the function body.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>int twice(int n) { return 2 * n; }
@@ -46,4 +48,5 @@ int (int): function(|prompt:///|(0,26,<1,0>,<1,26>))
 rascal>twiceb(5);
 int: 10
 ```
+
 

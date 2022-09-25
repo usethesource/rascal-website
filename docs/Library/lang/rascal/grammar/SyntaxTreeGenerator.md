@@ -6,6 +6,7 @@ title: "module lang::rascal::grammar::SyntaxTreeGenerator"
 
 `import lang::rascal::grammar::SyntaxTreeGenerator;`
 
+
 ## data AST {#lang-rascal-grammar-SyntaxTreeGenerator-AST}
 
 ```rascal

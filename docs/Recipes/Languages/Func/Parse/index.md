@@ -27,6 +27,7 @@ Prog parse(str s) = parse(#Prog, s);
 
 ```
 
+                
 Let's try this on example `F0.func`:
 ```rascal
 fact(n) = if n <= 1 then
@@ -62,4 +63,5 @@ Prog: (Prog) `fact(n) = if n <= 1 then
              n * fact(n-1)
           end`
 ```
+
 

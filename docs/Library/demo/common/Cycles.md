@@ -6,6 +6,7 @@ title: "module demo::common::Cycles"
 
 `import demo::common::Cycles;`
 
+
 ## function cycles {#demo-common-Cycles-cycles}
 
 * ``rel[int, set[int]] cycles(rel[int,int] graph)``

@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::FunctionComposition"
 
 `import lang::rascal::tests::functionality::FunctionComposition;`
 
+
 ## function twice {#lang-rascal-tests-functionality-FunctionComposition-twice}
 
 * ``int twice (int n)``

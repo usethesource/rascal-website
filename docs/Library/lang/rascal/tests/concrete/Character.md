@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::concrete::Character"
 
 `import lang::rascal::tests::concrete::Character;`
 
+
 ## function fieldsFromLexicals {#lang-rascal-tests-concrete-Character-fieldsFromLexicals}
 
 * ``test bool fieldsFromLexicals()``

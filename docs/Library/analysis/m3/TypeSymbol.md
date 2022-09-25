@@ -6,6 +6,7 @@ title: "module analysis::m3::TypeSymbol"
 
 `import analysis::m3::TypeSymbol;`
 
+
 #### Synopsis
 
 a symbolic representation for types that occur in programming languages.
@@ -17,12 +18,14 @@ M3 provides a general mechanism to associate types, symbolically, with source co
 The `TypeSymbol` type is a general concept which needs to be extended for specific programming languages. One language will 
 class and interface definitions which coincide with types, another may have higher order function types etc.
 
-As a basic principle, the symbols for declared types always link to their definition in the source code using a [Location](../../../Rascal/Expressions/Values/Location),
+As a basic principle, the symbols for declared types always link to their definition in the source code using a [Location](../../../Rascal/Expressions/Values/Location/),
 while other implicit types do not have such a link (i.e. `int` and `void`).
 
 We cater for languages to have a subtype relation to be defined, and a least upper bound computation. 
 
 You will find an interesting examples in [lang::java::m3::TypeSymbol].
+
+
 
 #### Benefits
 
@@ -33,6 +36,7 @@ You will find an interesting examples in [lang::java::m3::TypeSymbol].
 
 *  If you import extensions to this M3 model for two different languages, ambiguity and other confusion may arise 
 because the subtype and lub functions of the two languages will merge.
+
 
 ## data TypeSymbol {#analysis-m3-TypeSymbol-TypeSymbol}
 
