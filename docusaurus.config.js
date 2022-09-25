@@ -12,6 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  trailingSlash: true,
   favicon: 'images/favicon.ico',
   organizationName: 'usethesource', // Usually your GitHub org/user name.
   projectName: 'rascal-website', // Usually your repo name.
