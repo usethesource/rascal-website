@@ -6,6 +6,7 @@ title: "module util::Math"
 
 `import util::Math;`
 
+
 #### Synopsis
 
 Mathematical functions.
@@ -14,49 +15,51 @@ Mathematical functions.
 
 The `Math` library provides the following functions:
 
-* [E](../../Library/util/Math.md#util::Math-E)
-* [PI](../../Library/util/Math.md#util::Math-PI)
-* [abs](../../Library/util/Math.md#util::Math-abs)
-* [arbInt](../../Library/util/Math.md#util::Math-arbInt)
-* [arbPrime](../../Library/util/Math.md#util::Math-arbPrime)
-* [arbRat](../../Library/util/Math.md#util::Math-arbRat)
-* [arbReal](../../Library/util/Math.md#util::Math-arbReal)
-* [arbSeed](../../Library/util/Math.md#util::Math-arbSeed)
-* [ceil](../../Library/util/Math.md#util::Math-ceil)
-* [cos](../../Library/util/Math.md#util::Math-cos)
-* [denominator](../../Library/util/Math.md#util::Math-denominator)
-* [exp](../../Library/util/Math.md#util::Math-exp)
-* [fitDouble](../../Library/util/Math.md#util::Math-fitDouble)
-* [fitFloat](../../Library/util/Math.md#util::Math-fitFloat)
-* [floor](../../Library/util/Math.md#util::Math-floor)
-* [ln](../../Library/util/Math.md#util::Math-ln)
-* [log](../../Library/util/Math.md#util::Math-log)
-* [log10](../../Library/util/Math.md#util::Math-log10)
-* [log2](../../Library/util/Math.md#util::Math-log2)
-* [max](../../Library/util/Math.md#util::Math-max)
-* [min](../../Library/util/Math.md#util::Math-min)
-* [nroot](../../Library/util/Math.md#util::Math-nroot)
-* [numerator](../../Library/util/Math.md#util::Math-numerator)
-* [percent](../../Library/util/Math.md#util::Math-percent)
-* [pow](../../Library/util/Math.md#util::Math-pow)
-* [precision](../../Library/util/Math.md#util::Math-precision)
-* [primes](../../Library/util/Math.md#util::Math-primes)
-* [remainder](../../Library/util/Math.md#util::Math-remainder)
-* [round](../../Library/util/Math.md#util::Math-round)
-* [scale](../../Library/util/Math.md#util::Math-scale)
-* [setPrecision](../../Library/util/Math.md#util::Math-setPrecision)
-* [sin](../../Library/util/Math.md#util::Math-sin)
-* [sqrt](../../Library/util/Math.md#util::Math-sqrt)
-* [tan](../../Library/util/Math.md#util::Math-tan)
-* [toInt](../../Library/util/Math.md#util::Math-toInt)
-* [toRat](../../Library/util/Math.md#util::Math-toRat)
-* [toReal](../../Library/util/Math.md#util::Math-toReal)
-* [toString](../../Library/util/Math.md#util::Math-toString)
-* [unscaled](../../Library/util/Math.md#util::Math-unscaled)
+* [E](../../Library/util/Math.md#util::Math-E/)
+* [PI](../../Library/util/Math.md#util::Math-PI/)
+* [abs](../../Library/util/Math.md#util::Math-abs/)
+* [arbInt](../../Library/util/Math.md#util::Math-arbInt/)
+* [arbPrime](../../Library/util/Math.md#util::Math-arbPrime/)
+* [arbRat](../../Library/util/Math.md#util::Math-arbRat/)
+* [arbReal](../../Library/util/Math.md#util::Math-arbReal/)
+* [arbSeed](../../Library/util/Math.md#util::Math-arbSeed/)
+* [ceil](../../Library/util/Math.md#util::Math-ceil/)
+* [cos](../../Library/util/Math.md#util::Math-cos/)
+* [denominator](../../Library/util/Math.md#util::Math-denominator/)
+* [exp](../../Library/util/Math.md#util::Math-exp/)
+* [fitDouble](../../Library/util/Math.md#util::Math-fitDouble/)
+* [fitFloat](../../Library/util/Math.md#util::Math-fitFloat/)
+* [floor](../../Library/util/Math.md#util::Math-floor/)
+* [ln](../../Library/util/Math.md#util::Math-ln/)
+* [log](../../Library/util/Math.md#util::Math-log/)
+* [log10](../../Library/util/Math.md#util::Math-log10/)
+* [log2](../../Library/util/Math.md#util::Math-log2/)
+* [max](../../Library/util/Math.md#util::Math-max/)
+* [min](../../Library/util/Math.md#util::Math-min/)
+* [nroot](../../Library/util/Math.md#util::Math-nroot/)
+* [numerator](../../Library/util/Math.md#util::Math-numerator/)
+* [percent](../../Library/util/Math.md#util::Math-percent/)
+* [pow](../../Library/util/Math.md#util::Math-pow/)
+* [precision](../../Library/util/Math.md#util::Math-precision/)
+* [primes](../../Library/util/Math.md#util::Math-primes/)
+* [remainder](../../Library/util/Math.md#util::Math-remainder/)
+* [round](../../Library/util/Math.md#util::Math-round/)
+* [scale](../../Library/util/Math.md#util::Math-scale/)
+* [setPrecision](../../Library/util/Math.md#util::Math-setPrecision/)
+* [sin](../../Library/util/Math.md#util::Math-sin/)
+* [sqrt](../../Library/util/Math.md#util::Math-sqrt/)
+* [tan](../../Library/util/Math.md#util::Math-tan/)
+* [toInt](../../Library/util/Math.md#util::Math-toInt/)
+* [toRat](../../Library/util/Math.md#util::Math-toRat/)
+* [toReal](../../Library/util/Math.md#util::Math-toReal/)
+* [toString](../../Library/util/Math.md#util::Math-toString/)
+* [unscaled](../../Library/util/Math.md#util::Math-unscaled/)
+
 
 ## function abs {#util-Math-abs}
 
 * ``&T <: num abs(&T <: num N)``
+
 
 #### Synopsis
 
@@ -67,6 +70,7 @@ Absolute value of a number.
 Absolute value of the number `n`. The result type is equal to the type of the argument `n`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -86,6 +90,7 @@ real: 3.14
 * ``int arbInt()``
 * ``int arbInt(int limit)``
 
+
 #### Synopsis
 
 Generate a random integer value.
@@ -97,19 +102,20 @@ i.e., the limit is exclusive.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import util::Math;
 ok
 rascal>arbInt();
-int: 263317521
+int: -29178664
 rascal>arbInt();
-int: 271341964
+int: 2052361205
 rascal>arbInt();
-int: -1991202667
+int: 1815530777
 rascal>arbInt(10);
-int: 4
+int: 2
 rascal>arbInt(10);
-int: 3
+int: 9
 rascal>arbInt(10);
 int: 6
 ```
@@ -122,6 +128,7 @@ int: 6
 
 * ``real arbReal()``
 
+
 #### Synopsis
 
 Generate a random real value in the interval [0.0,1.0).
@@ -132,20 +139,22 @@ Generates an arbitrary real value in the interval [0.0, 1.0].
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import util::Math;
 ok
 rascal>arbReal();
-real: 0.797664733305724
+real: 0.010137531380397857
 rascal>arbReal();
-real: 0.4448588580195312
+real: 0.44338999978267446
 rascal>arbReal();
-real: 0.94210384018564
+real: 0.713763082213504
 ```
 
 ## function arbSeed {#util-Math-arbSeed}
 
 * ``void arbSeed(int seed)``
+
 
 #### Synopsis
 
@@ -153,8 +162,8 @@ Define the seed for the generation of arbitrary values.
 
 #### Description
 
-Define the seed for the generation of arbitrary values such as [arb bool](../../Library/Boolean.md#Boolean-arbBool), [arb int](../../Library/util/Math.md#util::Math-arbInt), [arb real](../../Library/util/Math.md#util::Math-arbReal),
-[arb rat](../../Library/util/Math.md#util::Math-arbRat), [getOneFrom](../../Library/List.md#List-getOneFrom),[getOneFrom](../../Library/Set.md#Set-getOneFrom), [takeOneFrom](../../Library/List.md#List-takeOneFrom) and [takeOneFrom](../../Library/Set.md#Set-takeOneFrom). [arb seed](../../Library/util/Math.md#util::Math-arbSeed) resets the random number generator that
+Define the seed for the generation of arbitrary values such as [arb bool](../../Library/Boolean.md#Boolean-arbBool/), [arb int](../../Library/util/Math.md#util::Math-arbInt/), [arb real](../../Library/util/Math.md#util::Math-arbReal/),
+[arb rat](../../Library/util/Math.md#util::Math-arbRat/), [getOneFrom](../../Library/List.md#List-getOneFrom/),[getOneFrom](../../Library/Set.md#Set-getOneFrom/), [takeOneFrom](../../Library/List.md#List-takeOneFrom/) and [takeOneFrom](../../Library/Set.md#Set-takeOneFrom/). [arb seed](../../Library/util/Math.md#util::Math-arbSeed/) resets the random number generator that
 is used to choose arbitrary values. This can be used to generate a reproducible series of choices.
 
 ## function arbRat {#util-Math-arbRat}
@@ -162,32 +171,35 @@ is used to choose arbitrary values. This can be used to generate a reproducible 
 * ``rat arbRat()``
 * ``rat arbRat(int limit1, int limit2)``
 
+
 #### Synopsis
 
 Generate an arbitrary rational value.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import util::Math;
 ok
 rascal>arbRat();
-rat: -143466852r131483807
+rat: -530440804r464864617
 rascal>arbRat();
-rat: 2042762733r750546286
+rat: -116515202r112495099
 rascal>arbRat();
-rat: 1658169595r1611763181
+rat: 1082953168r1435216581
 rascal>arbRat(10,100);
-rat: 7r67
+rat: 2r3
 rascal>arbRat(10,100);
-rat: 0r
+rat: 1r53
 rascal>arbRat(10,100);
-rat: 3r14
+rat: 1r10
 ```
 
 ## function ceil {#util-Math-ceil}
 
 * ``int ceil(num x)``
+
 
 #### Synopsis
 
@@ -196,9 +208,10 @@ Compute the smallest integer that is larger than a given number.
 #### Description
 
 Computes the _ceiling_ of a given number.
-Also see [floor](../../Library/util/Math.md#util::Math-floor).
+Also see [floor](../../Library/util/Math.md#util::Math-floor/).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -213,6 +226,7 @@ int: -3
 
 * ``real cos(num x)``
 
+
 #### Synopsis
 
 Calculate the cosine of a numeric value.
@@ -222,6 +236,7 @@ Calculate the cosine of a numeric value.
 The cosine of the number `x`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -236,6 +251,7 @@ real: 0.50000000000
 
 * ``int denominator(rat n)``
 
+
 #### Synopsis
 
 Return the denominator of a rational value.
@@ -244,11 +260,13 @@ Return the denominator of a rational value.
 
 * ``real E()``
 
+
 #### Synopsis
 
 The constant E.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -261,6 +279,7 @@ real: 2.7182818285
 
 * ``real exp(num x)``
 
+
 #### Synopsis
 
 Compute exp(x).
@@ -272,6 +291,7 @@ Calculate `e`<sup>`x`</sup>.
 
 * ``int floor(num x)``
 
+
 #### Synopsis
 
 Compute the largest integer that is smaller than a given number.
@@ -279,9 +299,10 @@ Compute the largest integer that is smaller than a given number.
 #### Description
 
 Computes the _floor_ of a given number.
-Also see [ceil](../../Library/util/Math.md#util::Math-ceil).
+Also see [ceil](../../Library/util/Math.md#util::Math-ceil/).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -296,6 +317,7 @@ int: -4
 
 * ``real ln(num x)``
 
+
 #### Synopsis
 
 Calculate the natural log of a numeric value.
@@ -305,6 +327,7 @@ Calculate the natural log of a numeric value.
 Calculate natural log of `x`. 
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -319,6 +342,7 @@ real: 3.7376696183
 
 * ``real log(num x, num base)``
 
+
 #### Synopsis
 
 Calculate the log<sub>base</sub> of a numeric value.
@@ -328,6 +352,7 @@ Calculate the log<sub>base</sub> of a numeric value.
 Calculate log<sub>base</sub> of `x`. 
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -344,6 +369,7 @@ real: 7.99999999999
 
 * ``real log10(num x)``
 
+
 #### Synopsis
 
 Compute the 10 based log(x).
@@ -352,6 +378,7 @@ Compute the 10 based log(x).
 
 * ``real log2(num x)``
 
+
 #### Synopsis
 
 Compute the 2 based log(x).
@@ -359,6 +386,7 @@ Compute the 2 based log(x).
 ## function max {#util-Math-max}
 
 * ``&T <: num max(&T <: num N, &T <: num M)``
+
 
 #### Synopsis
 
@@ -369,6 +397,7 @@ Determine the largest of two numeric values.
 The largest of two numbers. The type of the result is the same as the type of the largest argument.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -385,6 +414,7 @@ num: 12
 
 * ``&T <: num min(&T <: num N, &T <: num M)``
 
+
 #### Synopsis
 
 Determine the smallest of two numeric values.
@@ -394,6 +424,7 @@ Determine the smallest of two numeric values.
 The smallest of two numbers. The type of the result is the same as the type of the smallest argument.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -410,6 +441,7 @@ num: 3.14
 
 * ``int numerator(rat n)``
 
+
 #### Synopsis
 
 Return the numerator of a rational value.
@@ -417,6 +449,7 @@ Return the numerator of a rational value.
 ## function nroot {#util-Math-nroot}
 
 * ``real nroot(num x, int n)``
+
 
 #### Synopsis
 
@@ -427,6 +460,7 @@ Calculate the n<sup>th</sup> root of a numeric value.
 Calculate <sup>n</sup>&radic;`x` where `n` can only be a integer.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -443,11 +477,13 @@ real: 2.4038930938
 
 * ``real PI()``
 
+
 #### Synopsis
 
 The constant pi.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -461,6 +497,7 @@ real: 3.1415926536
 * ``real pow(num x, int y)``
 * ``real pow(num x, real y)``
 
+
 #### Synopsis
 
 Calculate an arbitrary power of a numeric value.
@@ -470,6 +507,7 @@ Calculate an arbitrary power of a numeric value.
 The calculate `x`<sup>`y`</sup> where `y` can only be a integer.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -485,6 +523,7 @@ real: 32732351986217662973008206757471664343946230054018512222096183251128880571
 * ``int precision(num x)``
 * ``real precision(num x, int p)``
 
+
 #### Synopsis
 
 Return the precision of a real number.
@@ -492,6 +531,7 @@ Return the precision of a real number.
 ## function setPrecision {#util-Math-setPrecision}
 
 * ``int setPrecision(int p)``
+
 
 #### Synopsis
 
@@ -501,6 +541,7 @@ Define the precision for numeric calculations; returns the previous precision.
 
 * ``int scale(num x)``
 
+
 #### Synopsis
 
 Return the scale of a real number.
@@ -509,6 +550,7 @@ Return the scale of a real number.
 
 * ``int unscaled(real x)``
 
+
 #### Synopsis
 
 Return the unscaled integer of a real.
@@ -516,6 +558,7 @@ Return the unscaled integer of a real.
 ## function remainder {#util-Math-remainder}
 
 * ``int remainder(rat n)``
+
 
 #### Synopsis
 
@@ -526,11 +569,13 @@ Return the remainder of dividing the numerator by the denominator.
 * ``int round(num d)``
 * ``(&T <: num) round(&T <: num r, &T <: num nearest)``
 
+
 #### Synopsis
 
 Round a number to the nearest multiple of a given number (default 1).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -559,6 +604,7 @@ rat: 3r2
 
 * ``real fitFloat(real r) throws ArithmeticException``
 
+
 .Synopsis push real value into a float using coercion and return the value represented by that float as a real
 
 #### Description
@@ -576,9 +622,11 @@ go through coercion in a Java library, like so:
 * If the real is smaller than the minimum float value or larger than the maximum float
 value, this function will throw an ArithmeticException.
  
+
 ## function fitDouble {#util-Math-fitDouble}
 
 * ``real fitDouble(real r) throws ArithmeticException``
+
 
 .Synopsis push real value into a JVM double using coercion and return the value represented by that float as a real
 
@@ -601,11 +649,13 @@ value, this function will throw an ArithmeticException.
 
 * ``int percent(num part, num whole)``
 
+
 #### Synopsis
 
 Compute the ratio between two numbers as a percentage.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -622,6 +672,7 @@ int: 50
 
 * ``real sin(num x)``
 
+
 #### Synopsis
 
 Calculate the sine of a numeric value.
@@ -631,6 +682,7 @@ Calculate the sine of a numeric value.
 The sine of the number `x`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -645,6 +697,7 @@ real: 1.00000000000
 
 * ``real sqrt(num x)``
 
+
 #### Synopsis
 
 Calculate the square root of a numeric value.
@@ -654,6 +707,7 @@ Calculate the square root of a numeric value.
 Calculate &radic;`x`. 
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -668,6 +722,7 @@ real: 12345678901234567890.5000000000
 
 * ``real tan(num x)``
 
+
 #### Synopsis
 
 Calculate the tangent of a numeric value.
@@ -677,6 +732,7 @@ Calculate the tangent of a numeric value.
 The tangent of the number `x`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -689,6 +745,7 @@ real: 1.0000000000
 
 * ``int toInt(num N)``
 
+
 #### Synopsis
 
 Convert a numeric value to an integer.
@@ -698,6 +755,7 @@ Convert a numeric value to an integer.
 Convert a number to an integer. If `n` is an integer, this is the identity. If `n` is a real value (implemented as BigDecimal) to an integer (implemented as BigInteger). This conversion is analogous to a narrowing primitive conversion from double to long as defined in the Java Language Specification: any fractional part of this BigDecimal will be discarded. Note that this conversion can loose information about the precision of the BigDecimal value.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -712,6 +770,7 @@ int: 13
 
 * ``rat toRat(int numerator, int denominator)``
 
+
 #### Synopsis
 
 Convert two numbers to a rational value (not supported on reals).
@@ -720,11 +779,13 @@ Convert two numbers to a rational value (not supported on reals).
 
 * ``real toReal(num N)``
 
+
 #### Synopsis
 
 Convert a numeric value to a real.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -739,11 +800,13 @@ real: 3.14
 
 * ``str toString(num N)``
 
+
 #### Synopsis
 
 Convert a numeric value to a string.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Math;
@@ -758,6 +821,7 @@ str: "3.14"
 
 * ``list[int] primes(int upTo)``
 
+ 
 #### Synopsis
 
 generate prime numbers up to a maximum

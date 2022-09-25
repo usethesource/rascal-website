@@ -19,6 +19,7 @@ Field of an abstract data type value cannot be found at runtime.
 Selecting a field from an abstract datatype depends on the actual constructor 
 being used at run time. This exception is thrown when a non-existent field is accessed.
 
+
 #### Examples
 
 Consider this highly simplified view on persons:
@@ -31,6 +32,7 @@ Person: woman("jane",false)
 ```
 The field `beard` is evidently only applicable to a `man` but not to a woman
 (didn't we say "simplified", above):
+
 
 ```rascal-shell ,continue,error
 rascal>jane.beard;

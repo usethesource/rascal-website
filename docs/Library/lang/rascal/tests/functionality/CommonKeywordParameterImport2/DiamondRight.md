@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::CommonKeywordParameterImport2
 
 `import lang::rascal::tests::functionality::CommonKeywordParameterImport2::DiamondRight;`
 
+
 ## data X {#lang-rascal-tests-functionality-CommonKeywordParameterImport2-DiamondRight-X}
 
 ```rascal

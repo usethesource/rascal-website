@@ -6,6 +6,7 @@ title: "module lang::rascal::grammar::Lookahead"
 
 `import lang::rascal::grammar::Lookahead;`
 
+
 ## data Production {#lang-rascal-grammar-Lookahead-Production}
 
 ```rascal
@@ -34,6 +35,7 @@ data Grammar
 
 * ``Grammar computeLookaheads(Grammar G, rel[Symbol,Symbol] extra)``
 
+
   This function wraps productions with their single character lookahead sets for 
   parser generation.
   
@@ -42,6 +44,7 @@ data Grammar
 ## function compileLookaheads {#lang-rascal-grammar-Lookahead-compileLookaheads}
 
 * ``Grammar compileLookaheads(Grammar G)``
+
 
   This function evaluates lookahead sets to obtain an optimal production selection automaton
   As a side-effect it also needs to replace priority ordering and associativity by the simple choice operator!  

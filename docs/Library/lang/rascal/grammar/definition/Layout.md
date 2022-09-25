@@ -6,6 +6,7 @@ title: "module lang::rascal::grammar::definition::Layout"
 
 `import lang::rascal::grammar::definition::Layout;`
 
+
 ## function \layouts {#lang-rascal-grammar-definition-Layout-\layouts}
 
 * ``GrammarDefinition \layouts(GrammarDefinition def)``

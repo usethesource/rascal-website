@@ -19,6 +19,7 @@ Remedies:
 
 #### Examples
 
+
 ```rascal-shell ,error
 rascal>L = [1,2,3];
 list[int]: [1,2,3]
@@ -55,4 +56,5 @@ rascal>17(3, "abc");
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UnsupportedOperation/UnsupportedOperation.html|
 ok
 ```
+
 

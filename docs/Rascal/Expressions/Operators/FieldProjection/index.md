@@ -53,3 +53,4 @@ rel[int length,str day]: {
 ```
 Field projection thus selects parts from a larger value that has a fixed number of parts. The selection is based on position and not on value and can be used to completely reorder or remove the parts of a larger value.
 
+

@@ -6,10 +6,12 @@ title: "module analysis::grammars::Dependency"
 
 `import analysis::grammars::Dependency;`
 
+
 ## function symbolDependencies {#analysis-grammars-Dependency-symbolDependencies}
 
 * ``Graph[Symbol] symbolDependencies(Grammar g)``
 * ``Graph[Symbol] symbolDependencies(GrammarDefinition d)``
+
 
   Compute the symbol dependency graph. This graph does not report intermediate nodes
   for regular expressions.

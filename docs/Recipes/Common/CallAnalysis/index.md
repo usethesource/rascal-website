@@ -18,13 +18,17 @@ Suppose a mystery box ends up on your desk. When you open it, it contains a huge
 *  Which procedures are called directly or indirectly from each entry point?
 *  Which procedures are called from all entry points?
 
+
 Let's see how these questions can be answered using Rascal.
 
 #### Examples
 
 Consider the following call graph (a box represents a procedure and an arrow represents a call from one procedure to another procedure):
 
+
 ![][calls.png](/assets/Recipes/Common/CallAnalysis/calls.png)
+
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -178,4 +182,6 @@ Such a visual inspection does _not_ scale very well to large graphs and this mak
 *  We discuss call analysis in a, intentionally, simplistic fashion that does not take into account how the call relation
   is extracted from actual source code.
   The above principles are, however, applicable to real cases as well.
+
+
 

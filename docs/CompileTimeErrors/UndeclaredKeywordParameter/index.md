@@ -17,6 +17,7 @@ Remedies:
 
 #### Examples
 
+
 ```rascal-shell ,error
 rascal>int incr(int n, int delta=1) = n + delta;
 int (int, int delta = ...): function(|prompt:///|(0,41,<1,0>,<1,41>))
@@ -33,4 +34,5 @@ This can be fixed by using the correct name for the keyword parameter:
 rascal>incr(3, delta=5);
 int: 8
 ```
+
 

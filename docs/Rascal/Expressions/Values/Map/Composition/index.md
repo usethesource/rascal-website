@@ -19,11 +19,13 @@ Composition of two map values.
 | --- | --- | --- |
 | `map[T~1~, T~2~]` | `map[T~2~, T~3~]` | `map[T~1~, T~3~]`  |
 
+
 #### Description
 
 Returns the composition of two maps.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Map;

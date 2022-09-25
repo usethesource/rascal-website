@@ -6,6 +6,7 @@ title: "module lang::rascal::grammar::ParserGenerator"
 
 `import lang::rascal::grammar::ParserGenerator;`
 
+
 ## alias Items {#lang-rascal-grammar-ParserGenerator-Items}
 
 * `map[Symbol,map[Item item, tuple[str new, int itemId] new]]`

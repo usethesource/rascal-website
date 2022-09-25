@@ -17,6 +17,7 @@ Remedy: modify the expression in the enumerator to return a value that supports 
 
 #### Examples
 
+
 ```rascal-shell ,error
 rascal>int x <- 17
 ok
@@ -25,4 +26,5 @@ rascal>b <- true
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/NotEnumerable/NotEnumerable.html|
 ok
 ```
+
 

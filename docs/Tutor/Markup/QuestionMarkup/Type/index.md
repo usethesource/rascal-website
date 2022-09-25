@@ -18,7 +18,7 @@ A type question presents a Rascal expressions and poses a question about its typ
 _OptName_ is an optional name of the question (enclosed between `[` and `]`).
 If _OptName_ is missing, the question gets a unique number as name.
 
-The desired type is given by a [type descriptor](../../../../Tutor/Markup/QuestionMarkup/TypeDescriptor).
+The desired type is given by a [type descriptor](../../../../Tutor/Markup/QuestionMarkup/TypeDescriptor/).
 
 The first form presents the value generated for the _TypeDescriptor_ and asks about its type.
 
@@ -37,8 +37,10 @@ QType: <A:set[int]>
 
 ##  Question 2 
 
+
 The following question can be paraphrased as: _I give you an addition of a set of integers, strings or reals and another set of the same type; what is the type of the result?_
 ```rascal
 QType: <A:set[arb[int,str,real]]> + <B:same[A]>
 ```
+
 

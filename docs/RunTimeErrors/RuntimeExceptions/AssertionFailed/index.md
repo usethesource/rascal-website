@@ -10,6 +10,7 @@ An assertion in the Rascal code is false.
 
 `data RuntimeException = AssertionFailed(str label);`
 
+       
 #### Description
 
 An [Assert](../../../Rascal/Statements/Assert/) statement can be used to check assumptions during the execution of a Rascal program.
@@ -20,6 +21,7 @@ Remedies:
 *  Modify your code to make the assertion true.
 *  Modify your assertion to reflect the current behaviour of your code.
 *  Catch the `AssertionFailed` yourself, see [try catch](../../../Rascal/Statements/TryCatch/).
+
 
 #### Examples
 
@@ -70,4 +72,5 @@ ok
 * Asserts are actually executed when the compiler option 
   `enableAsserts` is set to true (by default set to `false`).
 * In the RascalShell, `enableAsserts` is always true.
+
 

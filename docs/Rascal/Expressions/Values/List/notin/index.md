@@ -21,6 +21,7 @@ Negated membership test on lists.
 | --- | --- | --- |
 | `T~1~`  <: `T~2~` |  `list[T~2~]`  | `bool`                   |
 
+
 #### Description
 
 Yields `true` if the value of Exp~1~ does not occur as element in the value of Exp~2~ and `false` otherwise. 
@@ -28,10 +29,12 @@ The type of _Exp_~1~ should be compatible with the element type of _Exp_~2~.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>4 notin [1, 2, 3];
 bool: true
 rascal>2 notin [1, 2, 3];
 bool: false
 ```
+
 

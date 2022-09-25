@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::concrete::Syntax4"
 
 `import lang::rascal::tests::concrete::Syntax4;`
 
+
 ## function lexicalMatch1 {#lang-rascal-tests-concrete-Syntax4-lexicalMatch1}
 
 * ``test bool lexicalMatch1()``

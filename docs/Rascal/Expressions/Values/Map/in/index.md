@@ -19,6 +19,7 @@ Membership test on the keys of a map.
 | --- | --- | --- |
 | `T~1~`  <: `TK`  |  `map[TK, TV]` | `bool`                |
 
+
 #### Description
 
 Yields `true` if the value of Exp~1~ occurs as key in the map value of Exp~2~ and `false` otherwise. 
@@ -26,10 +27,12 @@ The type of _Exp_~1~ should be compatible with the key type _TK_ of _Exp_~2~.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>"pear" in ("apple": 1, "pear": 2);
 bool: true
 rascal>"pineapple" in ("apple": 1, "pear": 2);
 bool: false
 ```
+
 

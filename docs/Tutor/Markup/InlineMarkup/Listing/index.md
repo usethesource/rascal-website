@@ -45,6 +45,7 @@ x = 1 + 1;
 
 Would produce:
 
+
 ```rascal-shell 
 rascal>x = 1 + 1;
 int: 2
@@ -60,6 +61,7 @@ x + 1
 
 Which results in:
 
+
 ```rascal-shell ,continue
 rascal>x + 1
 int: 3
@@ -72,6 +74,7 @@ int x = 1;
 y + y;
 ```
 ``````
+
 
 ```rascal-shell 
 rascal>int x = 1;
@@ -94,6 +97,7 @@ int x = 1;
 ```
 ``````
 
+
 Nothing is shown; the `prepare` block is executed but hidden from view. Then use the context it created later. This is nice for generating example data in files or modules to import
 without bothering the reader with the details. Watch out: it is not smart to
 hide essential notions from the user. This feature is only for preparing a lesson, not to destroy it...
@@ -103,6 +107,7 @@ hide essential notions from the user. This feature is only for preparing a lesso
 y + y
 ```
 ``````
+
 
 ```rascal-shell ,continue
 rascal>x + x
@@ -187,4 +192,5 @@ int fac(int n) {
     }
 }
 ```
+
 

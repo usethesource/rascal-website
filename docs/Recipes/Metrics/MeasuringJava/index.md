@@ -8,10 +8,12 @@ A few steps using the M3 model to compute basic metrics for a Java project in Ec
 
 #### Description
 
+
 This is a recipe for computing basic or more advanced metrics from a Java project in Eclipse. We assume:
 
 *  You have Rascal installed in an Eclipse instance.
 *  You have a Java project in your Eclipse workspace that compiles without errors. Let's call it `HelloWorld`.
+
 
 Now we will follow the [EASY](../../../WhyRascal/EASY/) paradigm:
 
@@ -19,16 +21,20 @@ Now we will follow the [EASY](../../../WhyRascal/EASY/) paradigm:
 *  the same library will generate a [Rascal:Values/Relation]al model to represent interesting facts between Java source code artifacts
 *  then we can write queries over the generated trees and relations using [Rascal:Expressions].
 
+
 These are a number of recipes for measuring different things about Java:
 
-*  [measuring classes](../../../Recipes/Metrics/MeasuringJava/MeasuringClasses)
-*  [measuring methods](../../../Recipes/Metrics/MeasuringJava/MeasuringMethods)
+*  [measuring classes](../../../Recipes/Metrics/MeasuringJava/MeasuringClasses/)
+*  [measuring methods](../../../Recipes/Metrics/MeasuringJava/MeasuringMethods/)
 
 #### Examples
+
 
 First we import the basic data types for representing Java. The model is called _M3_, and its definition is split acros a generic
 language independent module called [Rascal:analysis/m3/Core] and a Java specific part called [Rascal:lang/java/m3/Core]. Have a look at the documentation 
 of these modules later. For now we will go through using them in a few examples.
+
+
 
 ```rascal-shell 
 rascal>import lang::java::m3::Core;
@@ -113,6 +119,7 @@ M3: m3(
 
 Some projects have extensive classpaths which the M3 extractor requires for accurate Java analysis.
 You can use this code to extract a classpath if the project is a Maven project:
+
 
 ```rascal-shell ,continue
 rascal>import util::Reflective;
@@ -209,11 +216,11 @@ M3: m3(
 
 #### Benefits
 
-*  Notice that _all_ these [Location](../../../Rascal/Expressions/Values/Location) literals are hyperlinks and you can click on them to go the source code that they point to. Try it!
+*  Notice that _all_ these [Location](../../../Rascal/Expressions/Values/Location/) literals are hyperlinks and you can click on them to go the source code that they point to. Try it!
 * M3 models are great for metrics, but also they are the basis for many other static analyses
-* See [measuring classes](../../../Recipes/Metrics/MeasuringJava/MeasuringClasses) and [measuring methods](../../../Recipes/Metrics/MeasuringJava/MeasuringMethods) for more benefits
+* See [measuring classes](../../../Recipes/Metrics/MeasuringJava/MeasuringClasses/) and [measuring methods](../../../Recipes/Metrics/MeasuringJava/MeasuringMethods/) for more benefits
 
 #### Pitfalls
 
-* See [measuring classes](../../../Recipes/Metrics/MeasuringJava/MeasuringClasses) and [measuring methods](../../../Recipes/Metrics/MeasuringJava/MeasuringMethods) for more pitfalls
+* See [measuring classes](../../../Recipes/Metrics/MeasuringJava/MeasuringClasses/) and [measuring methods](../../../Recipes/Metrics/MeasuringJava/MeasuringMethods/) for more pitfalls
 

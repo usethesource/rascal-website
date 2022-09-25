@@ -6,9 +6,11 @@ title: "module lang::html5::DOM"
 
 `import lang::html5::DOM;`
 
+
 #### Synopsis
 
 AST model for HTML5 including pretty printer
+
 
 ## data HTML5Node {#lang-html5-DOM-HTML5Node}
 

@@ -12,6 +12,7 @@ Simple interface to the Lucene text analysis library
 
 #### Description
 
+
 This module wraps the Apache Lucene framework for text analysis. 
 
 * It integrates deeply by
@@ -21,6 +22,7 @@ providing the interfaces for the analysis extension points of Lucene via Rascal 
 programmable weights for fields and the definition of similarity functions per document field. Also Query expressions are not yet exposed.
 * This wrapper provides full abstraction over source locations. Both the directory of the index
 as well as the locations of input documents are expressed using any existing rascal `loc`. 
+
 
 ## data Document {#analysis-text-search-Lucene-Document}
 
@@ -35,6 +37,7 @@ data Document
 A Lucene document has a src and an open set of keyword fields which are also indexed
 
 #### Description
+
 
 A lucene document has a `src` origin and an open set of keyword fields. 
 Add as many keyword fields to a document as you want. They will be added to the Lucene document as "Fields".
@@ -64,6 +67,7 @@ data Analyzer
 A fieldsAnalyzer declares using keyword fields which Analyzers to use for which Document field.
 
 #### Description
+
 
 The `src` parameter of `fieldsAnalyzer` aligns with the `src` parameter of a Document: this analyzer is used
 to analyze the `src` field. Any other keyword fields, of type `Analyzer` are applied to the contents of a

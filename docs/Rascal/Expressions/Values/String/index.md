@@ -44,6 +44,7 @@ where `_StringChar~i~_ may be one of the following:
 **  `\U hexDigit~1~ hexDigit~2~ hexDigit~3~ hexDigit~4~ hexDigit~5~ hexDigit~6~` : hexadecimal escapes with six digit indexes into UNICODE.
 **  `\ ahexDigit~1~ hexDigit~2~`:  hexadecimal escapes with 2 digit indexes into ASCII (0x0 ... 0x7F).
 
+
 *  __String Interpolation__: 
 
 | Form      | Description |
@@ -55,12 +56,15 @@ where `_StringChar~i~_ may be one of the following:
 | `<while(Exp){> ... StringChars ... <}>` | Iterative splicing of _StringChars_ into the result, where _StringChars_ may use variables introduced in _Exp_. |
 | `<do {>... StringChars ... <} while (Exp)>` | Iterative splicing of _StringChars_ into the result, where _StringChars_ may use variables introduced in _Exp_. |
 
+
 *  __Multiline__:
 
 | Form | Description  |
 | --- | --- |
 | `StringChars~1~\n StringChars~2~ `   | Strings can be multi-line without an escape or continuation marker  |
 | `StringChars~2~\n '  StringChars~2~` | A margin character `'` indicates where the next line starts  |
+
+
 
 #### Types
 
@@ -83,19 +87,20 @@ In the interpolation variant of these statements the block or blocks that are pa
 _Auto-indent_: Expressions that get interpolated in a string will be auto-indented. This means that each line that results from the evaluation of the expression is prefixed with the indentation level of the position of the expression in the current string.
 
 The following operators are defined for Strings:
-* [Concatenation](../../../../Rascal/Expressions/Values/String/Concatenation)
-* [Equal](../../../../Rascal/Expressions/Values/String/Equal)
-* [GreaterThan](../../../../Rascal/Expressions/Values/String/GreaterThan)
-* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/String/GreaterThanOrEqual)
-* [LessThan](../../../../Rascal/Expressions/Values/String/LessThan)
-* [LessThanOrEqual](../../../../Rascal/Expressions/Values/String/LessThanOrEqual)
-* [NotEqual](../../../../Rascal/Expressions/Values/String/NotEqual)
-* [Slice](../../../../Rascal/Expressions/Values/String/Slice)
-* [Subscription](../../../../Rascal/Expressions/Values/String/Subscription)
+* [Concatenation](../../../../Rascal/Expressions/Values/String/Concatenation/)
+* [Equal](../../../../Rascal/Expressions/Values/String/Equal/)
+* [GreaterThan](../../../../Rascal/Expressions/Values/String/GreaterThan/)
+* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/String/GreaterThanOrEqual/)
+* [LessThan](../../../../Rascal/Expressions/Values/String/LessThan/)
+* [LessThanOrEqual](../../../../Rascal/Expressions/Values/String/LessThanOrEqual/)
+* [NotEqual](../../../../Rascal/Expressions/Values/String/NotEqual/)
+* [Slice](../../../../Rascal/Expressions/Values/String/Slice/)
+* [Subscription](../../../../Rascal/Expressions/Values/String/Subscription/)
 
 There are also [library functions](../../../../Library/String.md/) available for Strings.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>N = 13;
@@ -173,8 +178,10 @@ class myClass {
 ok
 ```
 
+
 #### Benefits
 
 String interpolation enables very flexible template-based text generation as used in generators for
 source code, markup and the like.
+
 

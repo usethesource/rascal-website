@@ -15,9 +15,11 @@ The reflexive transitive closure of a binary relation.
 
 #### Types
 
+
 |`Exp`              | `Exp *`            |
 | --- | --- |
 | `rel[T~1~, T~2~]` | `rel[T~1~, T~2~]`  |
+
 
 #### Description
 
@@ -31,12 +33,14 @@ If we define for a given relation R:
 *  `...`
 
 then the reflexive transitive closure R* can be defined in two ways:
-(also see [TransitiveClosure](../../../../../Rascal/Expressions/Values/Relation/TransitiveClosure)):
+(also see [TransitiveClosure](../../../../../Rascal/Expressions/Values/Relation/TransitiveClosure/)):
 
 *  `R* = R~0~ + R~1~ + R~2~ + R~3~ + ...`
 *  `R* = R~0~ + R+`
 
+
 #### Examples
+
 
 ```rascal-shell 
 rascal>{<1,2>, <2,3>, <3,4>}*;
@@ -53,4 +57,5 @@ rel[int,int]: {
   <2,4>
 }
 ```
+
 

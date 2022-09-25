@@ -21,11 +21,13 @@ Not equal operator on lists.
 | --- | --- | --- |
 | `list[T~1~]` |  `list[T~2~]` | `bool`                |
 
+
 #### Description
 
 Yields `true` if both arguments are unequal lists and `false` otherwise.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>[1, 2, 3] != [3, 2, 1];
@@ -33,4 +35,5 @@ bool: true
 rascal>[1, 2, 3] != [1, 2, 3];
 bool: false
 ```
+
 

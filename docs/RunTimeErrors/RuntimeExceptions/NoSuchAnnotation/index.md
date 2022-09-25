@@ -14,6 +14,7 @@ Annotation without a value.
 
 `import Exception;` (only needed when `NoSuchAnnotation` is used in `catch`)
 
+
 #### Description
 
 An [annotation](../../../Rascal/Declarations/Annotation/) can be associated with any node value
@@ -32,6 +33,7 @@ Remedies:
 #### Examples
 
 INFO: Eliminate the double [red]##Error: Error:##
+
 
 ```rascal-shell ,error
 rascal>data Fruit = apple(int n) | orange(int n);
@@ -82,4 +84,5 @@ str: "excellent"
 #### Pitfalls
 
 WARNING: Using white space around the `@` confuses the Rascal parser
+
 

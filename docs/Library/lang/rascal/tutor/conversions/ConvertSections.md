@@ -6,6 +6,7 @@ title: "module lang::rascal::tutor::conversions::ConvertSections"
 
 `import lang::rascal::tutor::conversions::ConvertSections;`
 
+
 ## function convertAllSections {#lang-rascal-tutor-conversions-ConvertSections-convertAllSections}
 
 * ``void convertAllSections(loc dir)``

@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::basic::Maps"
 
 `import lang::rascal::tests::basic::Maps;`
 
+
 ## function emptyMap {#lang-rascal-tests-basic-Maps-emptyMap}
 
 * ``map[&K,&V] emptyMap(type[map[&K,&V]] _)``

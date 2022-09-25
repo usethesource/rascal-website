@@ -15,15 +15,17 @@ List in abstract pattern.
 A list pattern matches a list value (the subject), provided that _Pat_~1~, _Pat_~2~, ..., _Pat_~n~ match the elements of that list in order. 
 Special cases exist when one of the patterns _Pat_~i~ is
 
-*  a [Variable](../../../Rascal/Patterns/Variable) with a type that is identical to the element type of the subject list: the variable is matched with the value at the corresponding position in the subject list.
+*  a [Variable](../../../Rascal/Patterns/Variable/) with a type that is identical to the element type of the subject list: the variable is matched with the value at the corresponding position in the subject list.
 
-*  a [MultiVariable](../../../Rascal/Patterns/MultiVariable), with an optional element type that is identical to the element type of the subject list: list matching is applied and the variable can match an arbitrary number of elements of the subject list.
+*  a [MultiVariable](../../../Rascal/Patterns/MultiVariable/), with an optional element type that is identical to the element type of the subject list: list matching is applied and the variable can match an arbitrary number of elements of the subject list.
 
-*  a [Variable](../../../Rascal/Patterns/Variable), where the variable has been declared with a list type, but not initialized, outside the pattern: list matching is applied and the variable can match an arbitrary number of elements of the subject list.
+*  a [Variable](../../../Rascal/Patterns/Variable/), where the variable has been declared with a list type, but not initialized, outside the pattern: list matching is applied and the variable can match an arbitrary number of elements of the subject list.
 
-*  a [Variable](../../../Rascal/Patterns/Variable), where the variable has been declared with a type equal to the element type of the subject, but not initialized, outside the pattern: the variable is matched with the value at the corresponding position in the subject list.
+*  a [Variable](../../../Rascal/Patterns/Variable/), where the variable has been declared with a type equal to the element type of the subject, but not initialized, outside the pattern: the variable is matched with the value at the corresponding position in the subject list.
+
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import IO;
@@ -119,4 +121,5 @@ rascal>if([10, N, 30, 40, 50] := [10, 20, 30, 40, 50])
 Match succeeded, N = 20
 ok
 ```
+
 

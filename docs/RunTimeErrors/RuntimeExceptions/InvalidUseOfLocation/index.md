@@ -21,6 +21,7 @@ lead to an inconsistent or incomplete location value.
 
 #### Examples
 
+
 ```rascal-shell ,error
 rascal>someLoc = |home:///abc.txt|;
 loc: |home:///abc.txt|

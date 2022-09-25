@@ -8,7 +8,7 @@ Literal in abstract pattern.
 
 #### Description
 
-A literal of one of the basic types [Boolean](../../../Rascal/Expressions/Values/Boolean), [Integer](../../../Rascal/Expressions/Values/Integer), [Real](../../../Rascal/Expressions/Values/Real), [Number](../../../Rascal/Expressions/Values/Number), [String](../../../Rascal/Expressions/Values/String), [Location](../../../Rascal/Expressions/Values/Location), or [DateTime](../../../Rascal/Expressions/Values/DateTime)
+A literal of one of the basic types [Boolean](../../../Rascal/Expressions/Values/Boolean/), [Integer](../../../Rascal/Expressions/Values/Integer/), [Real](../../../Rascal/Expressions/Values/Real/), [Number](../../../Rascal/Expressions/Values/Number/), [String](../../../Rascal/Expressions/Values/String/), [Location](../../../Rascal/Expressions/Values/Location/), or [DateTime](../../../Rascal/Expressions/Values/DateTime/)
 can be used as abstract pattern.
 A literal pattern matches with a value that is identical to the literal.
 
@@ -49,4 +49,6 @@ value: 123
 rascal>123 := x;
 bool: true
 ```
+
+
 

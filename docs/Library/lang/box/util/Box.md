@@ -6,6 +6,7 @@ title: "module lang::box::util::Box"
 
 `import lang::box::util::Box;`
 
+
 ## data Box {#lang-box-util-Box-Box}
 
 ```rascal

@@ -10,6 +10,7 @@ title: "module demo::basic::FizzBuzz"
 
 Typical code example: FizzBuzz
 
+
 ## function fizzbuzz1 {#demo-basic-FizzBuzz-fizzbuzz1}
 
 * ``void fizzbuzz1()``

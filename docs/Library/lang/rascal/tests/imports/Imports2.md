@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::imports::Imports2"
 
 `import lang::rascal::tests::imports::Imports2;`
 
+
 ## function Test21 {#lang-rascal-tests-imports-Imports2-Test21}
 
 * ``test bool Test21()``

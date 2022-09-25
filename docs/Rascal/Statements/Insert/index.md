@@ -7,7 +7,7 @@ keywords:
 
 #### Synopsis
 
-Insert a value in a tree during a [Visit](../../../Rascal/Statements/Visit).
+Insert a value in a tree during a [Visit](../../../Rascal/Statements/Visit/).
 
 #### Syntax
 
@@ -15,8 +15,8 @@ Insert a value in a tree during a [Visit](../../../Rascal/Statements/Visit).
 
 #### Description
 
-An insert statement may only occur in the action part of a [Pattern With Action](../../../Rascal/Expressions/Visit/PatternWithAction), more precisely in
-a case in a [Visit](../../../Rascal/Expressions/Visit) expression. The value matched by the pattern of this case is replaced by the value of _Exp_.
+An insert statement may only occur in the action part of a [Pattern With Action](../../../Rascal/Expressions/Visit/PatternWithAction/), more precisely in
+a case in a [Visit](../../../Rascal/Expressions/Visit/) expression. The value matched by the pattern of this case is replaced by the value of _Exp_.
 
 The following rule applies:
 
@@ -77,4 +77,5 @@ CTree: red(
 
 There is a glitch in the Rascal syntax that _requires_ a semicolon after a case (as in the first example),
 but refuses it in the abbreviated version using `=>` (the second example).
+
 

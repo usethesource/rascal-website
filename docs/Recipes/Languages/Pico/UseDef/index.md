@@ -42,7 +42,8 @@ public set[Occurrence] defs(PROGRAM p) =  // <4>
 
 ```
 
-Recall that `Occurrence` was introduced in [Abstract](../../../../Recipes/Languages/Pico/Abstract); it is a parameterized container to associate
+                
+Recall that `Occurrence` was introduced in [Abstract](../../../../Recipes/Languages/Pico/Abstract/); it is a parameterized container to associate
 program entities with their location.
 
 <1> The function `usesExp` computes a set of occurrences (uses) of Pico identifiers in a given statement:
@@ -63,4 +64,5 @@ program entities with their location.
     *  ` ... \<- P. stats` enumerates all statements in the program.
     *  `/asgStat(PicoId Id, EXP Exp) \<- P.stats` uses again a descendant match to find all assignment statements.
     *  For each assignment statement a (location, identifier) pair is added to the result.
+
 

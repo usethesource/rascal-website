@@ -16,10 +16,15 @@ Here is the Rascal version:
 
 module demo::basic::Factorial
 
+
+
+
 int fac1(int n) = n <= 0 ? 1 : n * fac1(n - 1); //<1>
+
 
 int fac2(0) = 1;  //<2>
 default int fac2(int n) = n * fac2(n - 1); //<3>
+
 
 int fac3(int n)  { //<4>
   if (n == 0) 
@@ -40,6 +45,7 @@ test bool tfac47() = fac3(47) == 25862324151116818064296435515361197996919763238
 
 Here is how to use `fac`:
 
+
 ```rascal-shell 
 rascal>import demo::basic::Factorial;
 ok
@@ -55,4 +61,5 @@ Here is an example of `fac2`:
 rascal>fac2(47);
 int: 258623241511168180642964355153611979969197632389120000000000
 ```
+
 

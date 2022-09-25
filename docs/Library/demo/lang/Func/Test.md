@@ -6,6 +6,7 @@ title: "module demo::lang::Func::Test"
 
 `import demo::lang::Func::Test;`
 
+
 ## function evalFact0 {#demo-lang-Func-Test-evalFact0}
 
 * ``test bool evalFact0()``

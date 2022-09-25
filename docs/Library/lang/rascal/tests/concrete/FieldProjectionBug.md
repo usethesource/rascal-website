@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::concrete::FieldProjectionBug"
 
 `import lang::rascal::tests::concrete::FieldProjectionBug;`
 
+
 ## function prodFieldProjectionOnAnAlternative {#lang-rascal-tests-concrete-FieldProjectionBug-prodFieldProjectionOnAnAlternative}
 
 * ``test bool prodFieldProjectionOnAnAlternative()``

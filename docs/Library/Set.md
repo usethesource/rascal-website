@@ -6,6 +6,7 @@ title: "module Set"
 
 `import Set;`
 
+
 #### Synopsis
 
 Library functions for sets.
@@ -15,35 +16,37 @@ Library functions for sets.
 For operators on sets see [Set](../Rascal/Expressions/Values/Set/) in the Rascal Language Reference.
 
 The following functions are defined for sets:
-* [classify](../Library/Set.md#Set-classify)
-* [getFirstFrom](../Library/Set.md#Set-getFirstFrom)
-* [getOneFrom](../Library/Set.md#Set-getOneFrom)
-* [group](../Library/Set.md#Set-group)
-* [index](../Library/Set.md#Set-index)
-* [isEmpty](../Library/Set.md#Set-isEmpty)
-* [itoString](../Library/Set.md#Set-itoString)
-* [jaccard](../Library/Set.md#Set-jaccard)
-* [mapper](../Library/Set.md#Set-mapper)
-* [max](../Library/Set.md#Set-max)
-* [min](../Library/Set.md#Set-min)
-* [power](../Library/Set.md#Set-power)
-* [power1](../Library/Set.md#Set-power1)
-* [reducer](../Library/Set.md#Set-reducer)
-* [size](../Library/Set.md#Set-size)
-* [sort](../Library/Set.md#Set-sort)
-* [sum](../Library/Set.md#Set-sum)
-* [takeFirstFrom](../Library/Set.md#Set-takeFirstFrom)
-* [takeOneFrom](../Library/Set.md#Set-takeOneFrom)
-* [toList](../Library/Set.md#Set-toList)
-* [toMap](../Library/Set.md#Set-toMap)
-* [toMapUnique](../Library/Set.md#Set-toMapUnique)
-* [toString](../Library/Set.md#Set-toString)
-* [top](../Library/Set.md#Set-top)
-* [union](../Library/Set.md#Set-union)
+* [classify](../Library/Set.md#Set-classify/)
+* [getFirstFrom](../Library/Set.md#Set-getFirstFrom/)
+* [getOneFrom](../Library/Set.md#Set-getOneFrom/)
+* [group](../Library/Set.md#Set-group/)
+* [index](../Library/Set.md#Set-index/)
+* [isEmpty](../Library/Set.md#Set-isEmpty/)
+* [itoString](../Library/Set.md#Set-itoString/)
+* [jaccard](../Library/Set.md#Set-jaccard/)
+* [mapper](../Library/Set.md#Set-mapper/)
+* [max](../Library/Set.md#Set-max/)
+* [min](../Library/Set.md#Set-min/)
+* [power](../Library/Set.md#Set-power/)
+* [power1](../Library/Set.md#Set-power1/)
+* [reducer](../Library/Set.md#Set-reducer/)
+* [size](../Library/Set.md#Set-size/)
+* [sort](../Library/Set.md#Set-sort/)
+* [sum](../Library/Set.md#Set-sum/)
+* [takeFirstFrom](../Library/Set.md#Set-takeFirstFrom/)
+* [takeOneFrom](../Library/Set.md#Set-takeOneFrom/)
+* [toList](../Library/Set.md#Set-toList/)
+* [toMap](../Library/Set.md#Set-toMap/)
+* [toMapUnique](../Library/Set.md#Set-toMapUnique/)
+* [toString](../Library/Set.md#Set-toString/)
+* [top](../Library/Set.md#Set-top/)
+* [union](../Library/Set.md#Set-union/)
+
 
 ## function classify {#Set-classify}
 
 * ``map[&K,set[&V]] classify(set[&V] input, &K (&V) getClass)``
+
 
 #### Synopsis
 
@@ -87,6 +90,7 @@ map[int, set[str]]: (
 ## function group {#Set-group}
 
 * ``set[set[&T]] group(set[&T] input, bool (&T a, &T b) similar)``
+
 
 #### Synopsis
 
@@ -137,11 +141,13 @@ WARNING: check compiler.
 
 * ``map[&T,int] index(set[&T] s)``
 
+
 #### Synopsis
 
 Map set elements to a fixed index.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -154,6 +160,7 @@ map[str, int]: ("snake":0,"zebra":1,"elephant":2)
 
 * ``bool isEmpty(set[&T] st)``
 
+
 #### Synopsis
 
 Test whether a set is empty.
@@ -163,6 +170,7 @@ Test whether a set is empty.
 Yields `true` if `s` is empty, and `false` otherwise.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -177,6 +185,7 @@ bool: true
 
 * ``set[&U] mapper(set[&T] st, &U (&T) fn)``
 
+
 #### Synopsis
 
 Apply a function to all set elements and return set of results.
@@ -186,6 +195,7 @@ Apply a function to all set elements and return set of results.
 Return a set obtained by applying function `fn` to all elements of set `s`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -200,11 +210,13 @@ set[int]: {5,3,2,4}
 
 * ``&T max(set[&T] st)``
 
+
 #### Synopsis
 
 Determine the largest element of a set.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -219,11 +231,13 @@ str: "zebra"
 
 * ``&T min(set[&T] st)``
 
+
 #### Synopsis
 
 Determine the smallest element of a set.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -232,11 +246,13 @@ rascal>min({1, 3, 5, 4, 2});
 int: 1
 ```
 
+
 #### Synopsis
 
 Smallest element of a set.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -251,6 +267,7 @@ str: "elephant"
 
 * ``set[set[&T]] power(set[&T] st)``
 
+
 #### Synopsis
 
 Determine the powerset of a set.
@@ -260,6 +277,7 @@ Determine the powerset of a set.
 Returns a set with all subsets of `s`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -289,6 +307,7 @@ set[set[int]]: {
 
 * ``set[set[&T]] power1(set[&T] st)``
 
+
 #### Synopsis
 
 The powerset (excluding the empty set) of a set value.
@@ -298,6 +317,7 @@ The powerset (excluding the empty set) of a set value.
 Returns all subsets (excluding the empty set) of `s`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -327,6 +347,7 @@ set[set[int]]: {
 * ``&T reducer(set[&T] st, &T (&T,&T) fn, &T unit)``
 * ``&T reducer(set[&T] _:{})``
 
+
 #### Synopsis
 
 Apply a function to successive elements of a set and combine the results (__deprecated__).
@@ -336,6 +357,7 @@ Apply a function to successive elements of a set and combine the results (__depr
 Apply the function `fn` to successive elements of set `s` starting with `unit`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -354,11 +376,13 @@ WARNING: This function is *deprecated*, use a [reducer](../Rascal/Expressions/Re
 
 * ``int size(set[&T] st)``
 
+
 #### Synopsis
 
 Determine the number of elements in a set.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -380,29 +404,32 @@ int: 0
 
 * ``&T getOneFrom(set[&T] st)``
 
+
 #### Synopsis
 
 Pick an arbitrary element from a set.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import Set;
 ok
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "elephant"
-rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "elephant"
-rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "zebra"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "elephant"
+str: "snake"
+rascal>getOneFrom({"elephant", "zebra", "snake"});
+str: "snake"
+rascal>getOneFrom({"elephant", "zebra", "snake"});
+str: "zebra"
 ```
 
 ## function getFirstFrom {#Set-getFirstFrom}
 
 * ``&T getFirstFrom({&T f, *&T _})``
 * ``&T getFirstFrom(set[&T] _:{})``
+
 
 #### Synopsis
 
@@ -422,6 +449,7 @@ This function helps to make set-based code more deterministic, for instance, for
 
 * ``tuple[&T, set[&T]] takeOneFrom(set[&T] st)``
 
+
 #### Synopsis
 
 Remove an arbitrary element from a set, returns the element and a set without that element.
@@ -429,9 +457,10 @@ Remove an arbitrary element from a set, returns the element and a set without th
 #### Description
 
 Remove an arbitrary element from set `s` and return a tuple consisting of the element and a set without that element.
- Also see [getOneFrom](../Library/Set.md#Set-getOneFrom).
+ Also see [getOneFrom](../Library/Set.md#Set-getOneFrom/).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -439,15 +468,16 @@ ok
 rascal>takeOneFrom({1, 2, 3, 4});
 tuple[int,set[int]]: <2,{1,3,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <2,{1,3,4}>
+tuple[int,set[int]]: <4,{1,3,2}>
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <3,{1,2,4}>
+tuple[int,set[int]]: <1,{3,2,4}>
 ```
 
 ## function takeFirstFrom {#Set-takeFirstFrom}
 
 * ``tuple[&T, set[&T]] takeFirstFrom({&T f, *&T r})``
 * ``tuple[&T, set[&T]] takeFirstFrom(set[&T] _:{})``
+
 
 #### Synopsis
 
@@ -461,11 +491,13 @@ element of a set.
 
 * ``list[&T] toList(set[&T] st)``
 
+
 #### Synopsis
 
 Convert a set to a list.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -492,6 +524,7 @@ Recall that the elements of a set are unordered and that there is no guarantee i
 
 * ``map[&A,set[&B]] toMap(rel[&A, &B] st)``
 
+
 #### Synopsis
 
 Convert a set of tuples to a map; each key is associated with a set of values.
@@ -502,6 +535,7 @@ Convert a set of tuples to a map in which the first element of each tuple
 is associated with the set of second elements of all tuples with the same first element.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -517,6 +551,7 @@ map[str, set[int]]: (
 
 * ``map[&A,&B] toMapUnique(rel[&A, &B] st) throws MultipleKey``
 
+
 #### Synopsis
 
 Convert a set of tuples to a map (provided that there are no multiple keys).
@@ -526,6 +561,7 @@ Convert a set of tuples to a map (provided that there are no multiple keys).
 Convert a set of tuples to a map. The result should be a legal map (i.e., without multiple keys).
 
 #### Examples
+
 
 ```rascal-shell ,error
 rascal>import Set;
@@ -547,11 +583,13 @@ ok
 
 * ``str toString(set[&T] st)``
 
+
 #### Synopsis
 
 Convert a set to a string.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -570,11 +608,13 @@ Recall that the elements of a set are unordered and that there is no guarantee i
 
 * ``str itoString(set[&T] st)``
 
+
 #### Synopsis
 
 Convert a set to an indented string.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -594,6 +634,7 @@ Recall that the elements of a set are unordered and that there is no guarantee i
 * ``list[&T] sort(set[&T] s)``
 * ``list[&T] sort(set[&T] l, bool (&T a, &T b) less)``
 
+ 
 #### Synopsis
 
 Sort the elements of a set.
@@ -610,6 +651,7 @@ This function `lessThan` (<) function should implement a strict partial order, m
 *  is transitive, i.e. if `a < b` and `b < c` then `a < c`.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Set;
@@ -631,6 +673,7 @@ list[str]: ["strawberry","pineapple","banana","mango","grape","kiwi","pear"]
 * ``list[&T] top(int k, set[&T] l, bool (&T a, &T b) less)``
 * ``list[&T] top(int k, set[&T] l)``
 
+
 .Synopsis Produce the smallest `k` elements of a set as sorted by the `less` function
 
 #### Description
@@ -647,6 +690,7 @@ If `k` is a negative number, `top` will return the largest `abs(k)` elements of 
 
 * ``set[&T] union(set[set[&T]] sets)``
 
+
 #### Synopsis
 
 Flatten a set of sets into a single set.  
@@ -654,6 +698,7 @@ Flatten a set of sets into a single set.
 ## function jaccard {#Set-jaccard}
 
 * ``real jaccard(set[value] x, set[value] y)``
+
 
 #### Synopsis
 

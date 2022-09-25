@@ -15,9 +15,11 @@ Compute the product of two lists.
 
 #### Types
 
+
 | `Exp~1~`     |  `Exp~2~`     | `Exp~1~ * Exp~2~`          |
 | --- | --- | --- |
 | `list[T~1~]` |  `list[T~2~]` | `list[tuple[T~1~,T~2~]]`   |
+
 
 #### Description
 
@@ -25,6 +27,7 @@ Yields a list of tuples resulting from the product of the values of _Exp_~1~ and
 It contains a tuple for each combination of values from both arguments.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>[1, 2, 3] * [4, 5, 6];
@@ -95,4 +98,5 @@ lrel[str,int]: [
   <"spades",12>
 ]
 ```
+
 

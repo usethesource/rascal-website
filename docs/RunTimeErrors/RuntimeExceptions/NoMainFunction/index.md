@@ -6,6 +6,7 @@ title: No Main Function
 
 Rascal program does not provide a `main` function.
 
+
 #### Types
 
 `data RuntimeException = NoMainFunction(str message);`

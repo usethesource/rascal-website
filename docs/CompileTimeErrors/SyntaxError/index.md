@@ -17,6 +17,7 @@ Remedy: Correct your text and check for the following:
 *  All semi-colons are present.
 *  All tests in `if`, `for`, `while` statement are surrounded by `(...)`.
 
+
 When you are completely desparate and cannot find the syntax error, the following _binary search_ strategy may help:
 
 *  Surround all text in the module (except the module header) with `/*` and `*/`. Now your module should parse. If not the syntax error is in the module header.
@@ -25,4 +26,5 @@ When you are completely desparate and cannot find the syntax error, the followin
       Move the `/*` marker to the middle of the bottom part and repeat.
    ** The module does not parse. The syntax error is in the top part.
       Move the `/*` marker to the middle of the top part and repeat.
+
 

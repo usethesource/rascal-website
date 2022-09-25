@@ -26,6 +26,7 @@ See [Comprehensions](../../Rascal/Expressions/Comprehensions/),
 
 A standard example is
 
+
 ```rascal-shell 
 rascal>{ x * x | int x <- [1 .. 10], x % 3 == 0 }
 set[int]: {9,81,36}
@@ -39,4 +40,5 @@ are divisible by 3. A more intriguing example (that we do not give in full detai
 which traverses program `P` (using the _descendant match_ operator `/`, see [Patterns](../../Rascal/Patterns/Node/)) 
 and constructs a set of all identifiers that occur on the left hand 
 side of assignment statements in `P`.
+
 

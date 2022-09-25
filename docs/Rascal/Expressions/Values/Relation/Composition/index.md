@@ -15,15 +15,18 @@ Composition of two relation values.
 
 #### Types
 
+
 |`Exp~1~`            | `Exp~2~`           | `Exp~1~ o Exp~2~`  |
 | --- | --- | --- |
 | `rel[T~1~, T~2~]` | `rel[T~2~, T~3~]` | `rel[T~1~, T~3~]`  |
+
 
 #### Description
 
 Returns the composition of two binary relations.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import Relation;
@@ -38,4 +41,5 @@ rel[int,int]: {
 #### Pitfalls
 
 We use the letter `o` as operator and this may conflict other defined names.
+
 

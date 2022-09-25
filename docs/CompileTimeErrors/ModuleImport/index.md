@@ -16,6 +16,7 @@ This can be caused by
 *  A misspelled name in the import statement.
 *  Starting a Rascal console from the wrong directory.
 
+
 Remedies:
 
 *  Correct the mispelled name.
@@ -38,4 +39,5 @@ Here is the effect of a misspelled module name (assuming that you do not have a 
 rascal>import Lis;
 ok
 ```
+
 

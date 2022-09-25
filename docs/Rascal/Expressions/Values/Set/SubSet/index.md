@@ -15,9 +15,11 @@ Subset operator on set values.
 
 #### Types
 
+
 | `Exp~1~`    |  `Exp~2~`    | `Exp~1~ <= Exp~2~`   |
 | --- | --- | --- |
 | `set[T~1~]` |  `set[T~2~]` | `bool`                 |
+
 
 #### Description
 
@@ -25,10 +27,12 @@ Yields `true` if the value of SetExp~1~ is a subset of the value of SetExp~2~, a
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>{1, 2, 3} <= {1, 2, 3, 4};
 bool: true
 rascal>{1, 2, 3} <= {1, 2, 3};
 bool: true
 ```
+
 

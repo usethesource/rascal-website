@@ -5,6 +5,7 @@ keywords:
 
 ---
 
+
 #### Synopsis
 
 Define a user-defined type (Algebraic Data Type).
@@ -16,7 +17,7 @@ named, values and to provide access to the elements of such a collection through
 
 In Rascal, algebraic data types provide this facility. They have to be declared, and
 then values can be declared using calls to the declared constructor functions,
-see [Constructor](../../../Rascal/Expressions/Values/Constructor).
+see [Constructor](../../../Rascal/Expressions/Values/Constructor/).
 
 #### Examples
 
@@ -35,4 +36,5 @@ Bool: conj(
   tt(),
   ff())
 ```
+
 

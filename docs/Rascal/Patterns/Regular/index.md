@@ -56,7 +56,9 @@ When this option is set they also match any begin or end of line that is embedde
 
 ** _unix lines_: `(?d)` or modifier `d`. Usually newlines (`\n`), carriage return (`\r`) and new line carriage return (`\n\r`) sequences are all considered line terminators. When this option is set, only newline is considered to be a line terminator.
 
+
 For convenience, we summarize the most frequently used constructs in regular expressions in the following table.
+
 
 .Frequently used elements of Regular Expression Syntax
 
@@ -92,6 +94,7 @@ For convenience, we summarize the most frequently used constructs in regular exp
 | `\b`      | Word boundary: position between a word and a non-word character |
 | `\B`      | Non-word boundary: position that is a not a word boundary |
 
+
 #### Examples
 
 Here are some examples of regular expression patterns.
@@ -103,6 +106,7 @@ does a case-insensitive match (`i`) of the word `rascal` between word boundaries
 /^.*?<word:\w+><rest:.*$>/m
 ```
 does a multi-line match (`m`), matches the first consecutive word characters (`\w`) and assigns them to the variable `word`. The remainder of the string is assigned to the variable `rest`. 
+
 
 A variable reference used to make a non-linear pattern:
 ```rascal
@@ -136,6 +140,7 @@ Taking this example one step further, we can even write
 ```
 in other words, we introduce variable `x` and its defining regular expression contains a 
 reference to a context variable.
+
 
 Multi-line matching:
 
@@ -180,4 +185,5 @@ bool: true
 rascal>/a\+b/ := "a+b";
 bool: true
 ```
+
 

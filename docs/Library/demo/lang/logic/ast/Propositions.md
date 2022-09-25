@@ -6,6 +6,7 @@ title: "module demo::lang::logic::ast::Propositions"
 
 `import demo::lang::logic::ast::Propositions;`
 
+
 ## data Formula {#demo-lang-logic-ast-Propositions-Formula}
 
 ```rascal

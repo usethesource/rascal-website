@@ -6,6 +6,7 @@ title: "module lang::rascal::grammar::definition::Attributes"
 
 `import lang::rascal::grammar::definition::Attributes;`
 
+
 ## function attribute {#lang-rascal-grammar-definition-Attributes-attribute}
 
 * ``Production attribute(Production p, Attr a)``

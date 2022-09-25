@@ -22,6 +22,9 @@ In [database theory](http://en.wikipedia.org/wiki/Relational_algebra), a relatio
 | _V~31~_        | _V~32~_        | ... | _V~3n~_         |
 | ...            | ...            | ... |                
 
+
+
+
 In Rascal, a relation is a set of tuples and is characterized by the type:
 `rel[D~1~ Name~1~, D~2~ Name~2~, ..., D~n~ Name~n~]` 
 See [Relation Values](../../Rascal/Expressions/Values/Relation/) and  for a description of relations and their operators
@@ -29,6 +32,7 @@ See [Relation Values](../../Rascal/Expressions/Values/Relation/) and  for a desc
 and [functions on relations](../../Library/Relation.md/)
 (and here again, since relations are sets all set operators also apply to them, 
 see [functions on sets](../../Library/Set.md/)).
+
 
 ## Relations in Daily Life
 
@@ -40,10 +44,12 @@ see [functions on sets](../../Library/Set.md/)).
    ![][2010.jpg](/assets/Rascalopedia/Relation/top2000-2010.jpg)
    [credit](http://top2011.radio2.nl/lijst/2010)
 
+
 ## Relations in computer science
 
 *  A relational data base.
 *  Login information including user name, password, home directory, etc.
+
 
 ## Relations in Rascal
 
@@ -66,4 +72,5 @@ rel[int position, str artist, str title, int year] Top2000 = {
 ...
 };
 ```
+
 

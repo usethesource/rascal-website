@@ -13,9 +13,11 @@ Splice the elements of a list in an enclosing list.
 
 //
 
+
 |`Exp` | `Exp~1~`|  `Exp~n~` | `[Exp~1~, ..., Exp, ..., Exp~n~]`  |
 | --- | --- | --- | --- |
 |`T`   | `T~1~`  |  `T~n~`   | `list[lub(T~1~, ..., T, ...,T~n~)]`     |
+
 
 #### Description
 
@@ -53,4 +55,5 @@ list[int]: [1,2,10,20,30,3,4]
 #### Benefits
 
 in which nested lists are handled.
+
 

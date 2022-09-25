@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::basic::Exceptions"
 
 `import lang::rascal::tests::basic::Exceptions;`
 
+
 ## function exceptionHandling1 {#lang-rascal-tests-basic-Exceptions-exceptionHandling1}
 
 * ``test bool exceptionHandling1()``

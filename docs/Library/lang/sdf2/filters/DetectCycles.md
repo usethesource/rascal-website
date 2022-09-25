@@ -6,6 +6,7 @@ title: "module lang::sdf2::filters::DetectCycles"
 
 `import lang::sdf2::filters::DetectCycles;`
 
+
 ## function cycleDetectionFilter {#lang-sdf2-filters-DetectCycles-cycleDetectionFilter}
 
 * ``&T<:Tree cycleDetectionFilter(amb(set[&T<:Tree] alts))``

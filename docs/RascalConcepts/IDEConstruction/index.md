@@ -27,3 +27,5 @@ To instantiate an IDE for a language implemented using Rascal, use the following
 
 You find more information on these topics in the [Rascal Eclipse](http://github.com/usethesource/rascal-eclipse) and [Rascal Language Servers](http://github.com/usethesource/rascal-language-servers) documentation.
 
+
+

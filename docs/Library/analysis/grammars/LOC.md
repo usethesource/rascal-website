@@ -6,6 +6,7 @@ title: "module analysis::grammars::LOC"
 
 `import analysis::grammars::LOC;`
 
+
 ## alias Stats {#analysis-grammars-LOC-Stats}
 
 * `tuple[int total, map[loc file, int sloc] dist]`

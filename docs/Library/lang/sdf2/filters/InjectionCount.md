@@ -6,6 +6,7 @@ title: "module lang::sdf2::filters::InjectionCount"
 
 `import lang::sdf2::filters::InjectionCount;`
 
+
 ## function count {#lang-sdf2-filters-InjectionCount-count}
 
 * ``default int count(Tree _)``

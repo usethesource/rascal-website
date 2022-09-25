@@ -14,11 +14,13 @@ Also see [sort](../../../Library/List.md#List-sort/) for a more efficient librar
 
 #### Examples
 
+
 ```rascal 
 
 module demo::basic::Bubble
 
 import List;
+
 
 list[int] sort1(list[int] numbers) { 
   if (size(numbers) > 0) {
@@ -33,6 +35,7 @@ list[int] sort1(list[int] numbers) {
   return numbers;
 }
 
+
 list[int] sort2(list[int] numbers) {
   switch(numbers){
     case [*int nums1, int p, int q, *int nums2]:
@@ -45,11 +48,13 @@ list[int] sort2(list[int] numbers) {
    }
 }
 
+
 list[int] sort3(list[int] numbers) {
   while ([*int nums1, int p, *int nums2, int q, *int nums3] := numbers && p > q)
         numbers = nums1 + [q] + nums2 + [p] + nums3;
   return numbers;
 }
+
 
 list[int] sort4(list[int] numbers) {
   solve (numbers) {
@@ -58,6 +63,7 @@ list[int] sort4(list[int] numbers) {
   }
   return numbers;
 }
+
 
 list[int] sort5([*int nums1, int p, *int nums2, int q, *int nums3]) {
   if (p > q) 
@@ -68,11 +74,13 @@ list[int] sort5([*int nums1, int p, *int nums2, int q, *int nums3]) {
 
 default list[int] sort5(list[int] x) = x;
 
+
 list[int] sort6([*int nums1, int p, *int nums2, int q, *int nums3]) 
   = sort5([*nums1, q, *nums2, p, *nums3])
   when p > q; 
 
 default list[int] sort6(list[int] x) = x;
+
 
 bool isSorted(list[int] lst) = !any(int i <- index(lst), int j <- index(lst), (i < j) && (lst[i] > lst[j]));
 test bool sorted1b() = isSorted([10]);
@@ -96,6 +104,7 @@ when a not-yet-sorted pair is encountered, the elements are exchanged, and `sort
 *  a case matching a list with two consecutive elements that are unsorted. Observe that when the pattern of a case matches,
    the case as a whole can still fail.
 *  a default case.
+
 
 `sort3` also uses list matching but in a more declarative style: as long as there are unsorted elements in the list (possibly with intervening elements), exchange them.
 
@@ -122,4 +131,6 @@ list[int]: [1,2,3,4,5,6,7,8,9]
 rascal>sort5(L);
 list[int]: [1,2,3,4,5,6,7,8,9]
 ```
+
+
 

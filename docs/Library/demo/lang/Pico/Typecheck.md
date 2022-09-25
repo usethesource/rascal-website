@@ -6,6 +6,7 @@ title: "module demo::lang::Pico::Typecheck"
 
 `import demo::lang::Pico::Typecheck;`
 
+
 ## alias TENV {#demo-lang-Pico-Typecheck-TENV}
 
 * `tuple[ map[PicoId, TYPE] symbols, list[tuple[loc l, str msg]] errors]`

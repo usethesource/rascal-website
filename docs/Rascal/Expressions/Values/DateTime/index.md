@@ -41,8 +41,9 @@ The following fields provide access to information about the value, but cannot b
 * `justDate`: returns the time component of a time or datetime value.
 * `century`: returns the century component of a year for date or datetime values.
 
+
 The following fields provide access to the individual components of date, time and datetime values,
-and can be accessed using [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection) and be assigned using [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection):
+and can be accessed using [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection/) and be assigned using [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection/):
 
 *  `year`
 *  `month`
@@ -53,6 +54,7 @@ and can be accessed using [FieldSelection](../../../../Rascal/Expressions/Values
 *  `millisecond`
 *  `timezoneOffsetHours`
 *  `timezoneOffsetMinutes`
+
 
 Not all fields are available on all values as indicated by the following table:
 
@@ -68,17 +70,18 @@ Not all fields are available on all values as indicated by the following table:
 | `timezoneOffsetHours`   |        |  x         | x       |
 | `timezoneOffsetMinutes` |        |  x         | x       |
 
+
 The `isDate`, `isTime`, and `isDateTime` fields can be checked in advance to determine what
 kind of value is stored in a variable of type `datetime`.
 
 The following operators are defined for DateTime:
-* [Equal](../../../../Rascal/Expressions/Values/DateTime/Equal)
-* [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection)
-* [GreaterThan](../../../../Rascal/Expressions/Values/DateTime/GreaterThan)
-* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/DateTime/GreaterThanOrEqual)
-* [LessThan](../../../../Rascal/Expressions/Values/DateTime/LessThan)
-* [LessThanOrEqual](../../../../Rascal/Expressions/Values/DateTime/LessThanOrEqual)
-* [NotEqual](../../../../Rascal/Expressions/Values/DateTime/NotEqual)
+* [Equal](../../../../Rascal/Expressions/Values/DateTime/Equal/)
+* [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection/)
+* [GreaterThan](../../../../Rascal/Expressions/Values/DateTime/GreaterThan/)
+* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/DateTime/GreaterThanOrEqual/)
+* [LessThan](../../../../Rascal/Expressions/Values/DateTime/LessThan/)
+* [LessThanOrEqual](../../../../Rascal/Expressions/Values/DateTime/LessThanOrEqual/)
+* [NotEqual](../../../../Rascal/Expressions/Values/DateTime/NotEqual/)
 
 The following functions are defined for DateTime:
 loctoc::[Rascal/Libraries/Prelude/DateTime,1]
@@ -118,4 +121,5 @@ int: 20
 
 * In normal parlance, the year 2010 is in the 21th century. The `century` field, however, just returns the century component of a given year, e.g., for 2010 this is 20.
 * `DT.justTime` prints a time literal that currently can not be parsed back into a value to due to issue #1443.
+
 

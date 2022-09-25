@@ -16,6 +16,9 @@ and `count` is incremented.
 
 module demo::common::WordCount::CountInLine1
 
+
+
+
 int countInLine1(str s) {
   int count = 0;
   for (/[a-zA-Z0-9_]+/ := s) {
@@ -27,6 +30,7 @@ test bool tstCountInLine1b() = countInLine1("Jabberwocky by Lewis Carroll") == 4
 
 ```
 
+                
 Let's try it:
 
 ```rascal-shell 
@@ -35,4 +39,5 @@ ok
 rascal>countInLine1("Jabberwocky by Lewis Carroll");
 int: 4
 ```
+
 

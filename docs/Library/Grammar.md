@@ -6,9 +6,11 @@ title: "module Grammar"
 
 `import Grammar;`
 
+
 #### Synopsis
 
 A simple but effective internal format for the representation of context-free grammars.
+
 
 ## data GrammarModule {#Grammar-GrammarModule}
 
@@ -39,6 +41,7 @@ data Item
      ;
 ```
 
+
 #### Synopsis
 
 An item is an index into the symbol list of a production rule.
@@ -46,6 +49,7 @@ An item is an index into the symbol list of a production rule.
 ## function compose {#Grammar-compose}
 
 * ``Grammar compose(Grammar g1, Grammar g2)``
+
 
 #### Synopsis
 

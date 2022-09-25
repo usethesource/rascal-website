@@ -47,3 +47,4 @@ rascal>triple([1,2,3]);
 list[int]: [3,6,9]
 ```
 
+

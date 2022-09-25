@@ -16,9 +16,11 @@ Tuple values.
 
 #### Types
 
+
 | `Exp~1~`  | `Exp~2~`  |  ...  | `< Exp~1~, Exp~2~, ... >`  |
 | --- | --- | --- | --- |
 | `T~1~`    |  T~2~     | ...   | `tuple[T~1~, T~2~, ... ]`  |
+
 
 #### Description
 
@@ -30,21 +32,23 @@ A tuple is a sequence of elements with the following properties:
 
 *  Each tuple is fixed-width, i.e., has the same number of elements.
 
+
 Tuples are represented by the type `tuple[T~1~ L~1~, T~2~ L~2~, ...]`, 
 where _T_~1~, _T_~2~, ... are arbitrary types and _L_~1~, _L_~2~, ... are optional labels. 
 
 The following operators are provided for tuples:
-* [Concatenation](../../../../Rascal/Expressions/Values/Tuple/Concatenation)
-* [Equal](../../../../Rascal/Expressions/Values/Tuple/Equal)
-* [FieldSelection](../../../../Rascal/Expressions/Values/Tuple/FieldSelection)
-* [GreaterThan](../../../../Rascal/Expressions/Values/Tuple/GreaterThan)
-* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/Tuple/GreaterThanOrEqual)
-* [LessThan](../../../../Rascal/Expressions/Values/Tuple/LessThan)
-* [LessThanOrEqual](../../../../Rascal/Expressions/Values/Tuple/LessThanOrEqual)
-* [NotEqual](../../../../Rascal/Expressions/Values/Tuple/NotEqual)
-* [Subscription](../../../../Rascal/Expressions/Values/Tuple/Subscription)
+* [Concatenation](../../../../Rascal/Expressions/Values/Tuple/Concatenation/)
+* [Equal](../../../../Rascal/Expressions/Values/Tuple/Equal/)
+* [FieldSelection](../../../../Rascal/Expressions/Values/Tuple/FieldSelection/)
+* [GreaterThan](../../../../Rascal/Expressions/Values/Tuple/GreaterThan/)
+* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/Tuple/GreaterThanOrEqual/)
+* [LessThan](../../../../Rascal/Expressions/Values/Tuple/LessThan/)
+* [LessThanOrEqual](../../../../Rascal/Expressions/Values/Tuple/LessThanOrEqual/)
+* [NotEqual](../../../../Rascal/Expressions/Values/Tuple/NotEqual/)
+* [Subscription](../../../../Rascal/Expressions/Values/Tuple/Subscription/)
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>tuple[str first, str last, int age] P = <"Jo","Jones",35>;
@@ -54,4 +58,5 @@ str: "Jo"
 rascal>P.first = "Bo";
 tuple[str first,str last,int age]: <"Bo","Jones",35>
 ```
+
 

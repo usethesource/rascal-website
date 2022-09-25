@@ -14,10 +14,13 @@ The difference between two sets.
 
 #### Types
 
+
 | `Exp~1~`    |  `Exp~2~`     | `Exp~1~ - Exp~2~`        |
 | --- | --- | --- |
 | `set[T~1~]` |  `set[T~2~]`  | `set[lub(T~1~,T~2~)]`    |
 | `set[T~1~]` |  `T~2~`       | `set[lub(T~1~,T~2~)]`    |
+
+
 
 #### Description
 
@@ -26,6 +29,7 @@ If _Exp_~2~ does not have a set as value, it is first converted to a set before 
 The difference is computed by removing all elements of the second set from the first set.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>{1, 2, 3, 4} - {1, 2, 3};
@@ -37,4 +41,5 @@ set[int]: {1,2,4}
 rascal>{1, 2, 3, 4} - {5, 6, 7};
 set[int]: {1,3,2,4}
 ```
+
 

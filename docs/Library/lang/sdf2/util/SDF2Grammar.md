@@ -6,6 +6,7 @@ title: "module lang::sdf2::util::SDF2Grammar"
 
 `import lang::sdf2::util::SDF2Grammar;`
 
+
 ## function label {#lang-sdf2-util-SDF2Grammar-label}
 
 * ``Symbol label(str s, conditional(Symbol t, set[Condition] cs))``

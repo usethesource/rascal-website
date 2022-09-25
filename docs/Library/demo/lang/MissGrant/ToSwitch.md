@@ -6,6 +6,7 @@ title: "module demo::lang::MissGrant::ToSwitch"
 
 `import demo::lang::MissGrant::ToSwitch;`
 
+
 ## function controller2switch {#demo-lang-MissGrant-ToSwitch-controller2switch}
 
 * ``str controller2switch(str name, Controller ctl)``

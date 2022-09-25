@@ -14,16 +14,19 @@ Negate a numeric value.
 
 #### Types
 
+
 | `Exp`  |  `- Exp`  |
 | --- | --- |
 | `int`    |  `int`      |
 | `real`   |  `real`     |
+
 
 #### Description
 
 Yields the negated values of _Exp_.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>-12
@@ -33,4 +36,5 @@ real: -13.5
 rascal>- -12
 int: 12
 ```
+
 

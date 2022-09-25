@@ -6,6 +6,7 @@ title: "module analysis::statistics::Inference"
 
 `import analysis::statistics::Inference;`
 
+
 #### Synopsis
 
 Statistical inference methods.
@@ -13,17 +14,19 @@ Statistical inference methods.
 #### Description
 
 The following functions are provided:
-* [anovaFValue](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaFValue)
-* [anovaPValue](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaPValue)
-* [anovaTest](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaTest)
-* [chiSquare](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-chiSquare)
-* [chiSquareTest](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-chiSquareTest)
-* [gini](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-gini)
-* [tTest](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-tTest)
+* [anovaFValue](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaFValue/)
+* [anovaPValue](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaPValue/)
+* [anovaTest](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaTest/)
+* [chiSquare](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-chiSquare/)
+* [chiSquareTest](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-chiSquareTest/)
+* [gini](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-gini/)
+* [tTest](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-tTest/)
+
 
 ## function chiSquare {#analysis-statistics-Inference-chiSquare}
 
 * ``num chiSquare(lrel[num expected, int observed] values)``
+
 
 #### Synopsis
 
@@ -38,6 +41,7 @@ Compute the http://en.wikipedia.org/wiki/Chi-square_statistic[ChiSquare statisti
 Consider an example from the web page mentioned above.
 To test the hypothesis that a random sample of 100 people has been drawn from a population in which men and women are equal in frequency, the observed number of men and women would be compared to the theoretical frequencies of 50 men and 50 women. If there were 44 men in the sample and 56 women, then we have the following:
 
+
 ```rascal-shell 
 rascal>import analysis::statistics::Inference;
 ok
@@ -49,6 +53,7 @@ num: 1.44
 
 * ``num chiSquareTest(lrel[num expected, int observed] values)``
 * ``bool chiSquareTest(lrel[num expected, int observed] values, real alpha)``
+
 
 #### Synopsis
 
@@ -70,6 +75,7 @@ can be rejected with confidence 1 - `alpha`.
 * ``num tTest(list[num] sample1, list[num] sample2)``
 * ``bool tTest(list[num] sample1, list[num] sample2, num alpha)``
 * ``bool tTest(num mu, list[num] sample, num alpha)``
+
 
 #### Synopsis
 
@@ -141,6 +147,7 @@ bool: true
 
 * ``num anovaFValue(list[list[num]] categoryData)``
 
+
 #### Synopsis
 
 Analysis of Variance (ANOVA) f-value.
@@ -157,11 +164,13 @@ where
 *  `msbg` = between group mean square.
 *  `mswg` = within group mean square.
 
+
 are as defined http://faculty.vassar.edu/lowry/ch13pt1.html[here].
 
 ## function anovaPValue {#analysis-statistics-Inference-anovaPValue}
 
 * ``num anovaPValue(list[list[num]] categoryData)``
+
 
 #### Synopsis
 
@@ -173,11 +182,12 @@ Perform http://en.wikipedia.org/wiki/Analysis_of_variance[Analysis of Variance t
 also described http://www.statsoft.com/textbook/anova-manova/[here].
 
 Computes the exact p-value using the formula `p = 1 - cumulativeProbability(F)`
-where `F` is the [anova f value](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaFValue).
+where `F` is the [anova f value](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaFValue/).
 
 ## function anovaTest {#analysis-statistics-Inference-anovaTest}
 
 * ``bool anovaTest(list[list[num]] categoryData, num alpha)``
+
 
 #### Synopsis
 
@@ -191,11 +201,12 @@ also described http://www.statsoft.com/textbook/anova-manova/[here].
 Returns true iff the estimated p-value is less than `alpha` (0 < `alpha` <= 0.5).
 
 The exact p-value is computed using the formula `p = 1 - cumulativeProbability(F)`
-where `F` is the [anova f value](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaFValue).
+where `F` is the [anova f value](../../../Library/analysis/statistics/Inference.md#analysis::statistics::Inference-anovaFValue/).
 
 ## function gini {#analysis-statistics-Inference-gini}
 
 * ``real gini(lrel[num observation,int frequency] values)``
+
 
 #### Synopsis
 
@@ -211,6 +222,7 @@ value between 0 (completely equal distribution) and
 1 (completely unequal distribution).
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import analysis::statistics::Inference;

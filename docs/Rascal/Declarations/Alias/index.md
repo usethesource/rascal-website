@@ -23,6 +23,7 @@ Both types are thus structurally equivalent.
 
 #### Examples
 
+
 ```rascal-shell 
 ```
 Introduce two aliases `ModuleId` and `Frequency` for the type str.
@@ -40,5 +41,6 @@ alias Graph[&T] = rel[&T, &T];
 ```
 In other words the standard graph datatype can be parameterized with any element type.
 
-See [Type Parameters](../../../Rascal/Declarations/StaticTyping/TypeParameters) for other examples parameterized alias declarations.
+See [Type Parameters](../../../Rascal/Declarations/StaticTyping/TypeParameters/) for other examples parameterized alias declarations.
+
 

@@ -14,15 +14,18 @@ The product of two set values.
 
 #### Types
 
+
 | `Exp~1~`    |  `Exp~2~`    | `Exp~1~ * Exp~2~`  |
 | --- | --- | --- |
 | `set[T~1~]` |  `set[T~2~]` | `rel[T~1~,T~2~]`   |
+
 
 #### Description
 
 Yields a relation resulting from the product of the values of _Exp_~1~ and _Exp_~2~. It contains a tuple for each combination of values from both arguments.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>{1, 2, 3} * {4, 5, 6};
@@ -97,4 +100,5 @@ rel[str,int]: {
   <"diamonds",8>
 }
 ```
+
 

@@ -15,6 +15,7 @@ A labelled pattern matches the same values as _Pat_, but has as side-effect that
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import IO;
 ok
@@ -42,4 +43,5 @@ Match black(leaf(5),leaf(4))
 list[void]: []
 ```
 We use an *anonymous variable* `_` at a position where we don't care about the actual value that is matched.
+
 

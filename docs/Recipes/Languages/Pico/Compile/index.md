@@ -8,7 +8,8 @@ Compile a Pico program to assembly language.
 
 #### Examples
 
-The Pico compiler translates Pico programs to [Assembly](../../../../Recipes/Languages/Pico/Assembly) language programs.
+The Pico compiler translates Pico programs to [Assembly](../../../../Recipes/Languages/Pico/Assembly/) language programs.
+
 
 ```rascal 
 module demo::lang::Pico::Compile
@@ -19,6 +20,7 @@ import demo::lang::Pico::Assembly;
 import demo::lang::Pico::Load;
 
 alias Instrs = list[Instr]; // <1>
+
 
 Instrs compileExp(natCon(int N)) = [pushNat(N)]; // <2>
 
@@ -101,6 +103,7 @@ public Instrs compileProgram(str txt) = compileProgram(load(txt));
 
 ```
 
+                
 Notes:
 
 <1> We introduce `Instrs` as an alias for a list of assembly language instructions.
@@ -123,6 +126,7 @@ Notes:
 <7>  Compiling declarations allocates memory locations of the appropriate type for each declared variable.
 
 <8>  `compileProgram` compiles a gives Pico program to assembly language.
+
 
 Here is an example:
 
@@ -204,4 +208,5 @@ list[Instr]: [
   label("L2")
 ]
 ```
+
 

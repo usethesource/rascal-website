@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::basic::Nodes"
 
 `import lang::rascal::tests::basic::Nodes;`
 
+
 ## function visitNode {#lang-rascal-tests-basic-Nodes-visitNode}
 
 * ``test bool visitNode()``

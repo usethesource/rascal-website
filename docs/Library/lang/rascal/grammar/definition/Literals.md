@@ -6,6 +6,7 @@ title: "module lang::rascal::grammar::definition::Literals"
 
 `import lang::rascal::grammar::definition::Literals;`
 
+
 ## function literals {#lang-rascal-grammar-definition-Literals-literals}
 
 * ``Grammar literals(Grammar g)``

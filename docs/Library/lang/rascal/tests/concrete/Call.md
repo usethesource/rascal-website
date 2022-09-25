@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::concrete::Call"
 
 `import lang::rascal::tests::concrete::Call;`
 
+
 ## function dispatchTestLexical {#lang-rascal-tests-concrete-Call-dispatchTestLexical}
 
 * ``test bool  dispatchTestLexical()``

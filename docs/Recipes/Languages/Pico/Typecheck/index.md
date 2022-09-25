@@ -22,7 +22,9 @@ Recall the following properties of Pico that are relevant for type checking:
 
 *  Tests in if-then-else statement and while-statement should be of type natural.
 
+
 The type checker is going to check these rules and will produce an error message when they are violated.
+
 
 ```rascal 
 module demo::lang::Pico::Typecheck
@@ -64,6 +66,7 @@ TENV checkExp(exp:sub(EXP E1, EXP E2), TYPE req, TENV env) = // <7>
 TENV checkExp(exp:conc(EXP E1, EXP E2), TYPE req, TENV env) = // <8>  
   string() := req ? checkExp(E1, string(), checkExp(E2, string(), env))
                    : addError(env, exp@location, required(req, "string"));
+
 
 // check a statement
 
@@ -113,8 +116,10 @@ public TENV checkProgram(program(list[DECL] Decls, list[STATEMENT] Series)) { //
                                                          // <14>
 public list[tuple[loc l, str msg]] checkProgram(str txt) = checkProgram(load(txt)).errors;
     
+
 ```
 
+                
 Notes:
 
 <1>  We will use `TENV` (short for type environment, as an alias for a tuple that contains all relevant type information:
@@ -126,6 +131,7 @@ Notes:
      **  the program fragment (an abstract syntax tree) to be checked.
      **  the required type of that fragment.
      **  the type environment.
+     
      
      `checkExp` checks expressions. For instance, checking a natural constant (`natCon`) is ok when type `natural` is expected but will give an error message when a `string` is expected. Observe how all the arguments of the check functions have a labeled pattern as first argument, here `exp:natCon(int N)`. The benefit is that the whole argument is available inside the function (as value of variable `exp`) and this can be used to retrieve the location information from it (`exp@location`) when an error has to be created.
 
@@ -149,6 +155,7 @@ Notes:
 
 <14>  `checkProgram` defines how to check the source code of a given Pico program.
 
+
 Checking an erroneous program goes like this:
 
 ```rascal-shell 
@@ -159,4 +166,5 @@ lrel[loc l,str msg]: [<|unknown:///|(33,5,<1,33>,<1,38>),"Required natural, got 
 ```
 
 The error location will be use later to give specific messages in the IDE.
+
 

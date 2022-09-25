@@ -6,6 +6,7 @@ title: "module lang::rascal::grammar::definition::Priorities"
 
 `import lang::rascal::grammar::definition::Priorities;`
 
+
 ## data Associativity {#lang-rascal-grammar-definition-Priorities-Associativity}
 
 ```rascal
@@ -25,6 +26,7 @@ data Associativity
 ## function doNotNest {#lang-rascal-grammar-definition-Priorities-doNotNest}
 
 * ``DoNotNest doNotNest(Grammar g)``
+
 
 #### Synopsis
 
@@ -63,6 +65,7 @@ the associativity groups and the ! restriction operator.
 ## function except {#lang-rascal-grammar-definition-Priorities-except}
 
 * ``DoNotNest except(Production p:prod(Symbol _, list[Symbol] lhs, set[Attr] _), Grammar g)``
+
 
 This one-liner searches a given production for "except restrictions". 
 For every position in the production that is restricted, and for every restriction it finds 

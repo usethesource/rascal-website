@@ -14,9 +14,11 @@ Not equal operator on node values.
 
 #### Types
 
+
 | `Exp~1~`  |  `Exp~2~` | `Exp~1~ != Exp~2~`  |
 | --- | --- | --- |
 | `node`     |  `node`    | `bool`                |
+
 
 #### Description
 
@@ -25,10 +27,12 @@ any of the children of each node is pairwise unequal, otherwise `true`.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>"f"(1, "abc", true) != "g"(1, "abc", true);
 bool: true
 rascal>"f"(1, "abc", true) != "f"(1, "abc", true);
 bool: false
 ```
+
 

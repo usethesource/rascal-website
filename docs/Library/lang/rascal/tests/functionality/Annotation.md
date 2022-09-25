@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::Annotation"
 
 `import lang::rascal::tests::functionality::Annotation;`
 
+
 ## data F {#lang-rascal-tests-functionality-Annotation-F}
 
 ```rascal

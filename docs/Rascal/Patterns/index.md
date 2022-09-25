@@ -9,13 +9,13 @@ and then to bind variables to parts of the matched value.
 
 #### Syntax
 
-For most of the [Values](../../Rascal/Expressions/Values), there is a corresponding pattern matching operator. Then there are
+For most of the [Values](../../Rascal/Expressions/Values/), there is a corresponding pattern matching operator. Then there are
 some "higher-order" matching operators which make complex patterns out of simpler ones. 
 This is the complete list:
  
 | Pattern              | Syntax                                                                       |
 | --- | --- |
-| Literal              | [Boolean](../../Rascal/Expressions/Values/Boolean), [Integer](../../Rascal/Expressions/Values/Integer), [Real](../../Rascal/Expressions/Values/Real), [Number](../../Rascal/Expressions/Values/Number), [String](../../Rascal/Expressions/Values/String), [Location](../../Rascal/Expressions/Values/Location), or [DateTime](../../Rascal/Expressions/Values/DateTime) |
+| Literal              | [Boolean](../../Rascal/Expressions/Values/Boolean/), [Integer](../../Rascal/Expressions/Values/Integer/), [Real](../../Rascal/Expressions/Values/Real/), [Number](../../Rascal/Expressions/Values/Number/), [String](../../Rascal/Expressions/Values/String/), [Location](../../Rascal/Expressions/Values/Location/), or [DateTime](../../Rascal/Expressions/Values/DateTime/) |
 | Regular Expression   | `/<Regular Expression>/` |
 | Variable declaration | `Type Var`                                                               |
 | Multi-variable       | `*Var`, `*Type Var`                                                    |
@@ -30,34 +30,35 @@ This is the complete list:
 | TypeConstrained      |  `[Type] Pat` |
 | Concrete             | (Symbol) ` Token~1~ Token~2~ ... Token~n~ `                                                          |
 
+
 #### Description
 
 Patterns are used to *dispatch* functions and conditional control flow, to *extract* information 
 from values and to conditionally *filter* values. The pattern following pattern kinds can be arbitrarily nested, following
 the above syntax:
 
-* [Concrete](../../Rascal/Patterns/Concrete)
-* [Descendant](../../Rascal/Patterns/Descendant)
-* [Labelled](../../Rascal/Patterns/Labelled)
-* [List](../../Rascal/Patterns/List)
-* [Literal](../../Rascal/Patterns/Literal)
-* [MultiVariable](../../Rascal/Patterns/MultiVariable)
-* [Node](../../Rascal/Patterns/Node)
-* [Regular](../../Rascal/Patterns/Regular)
-* [Set](../../Rascal/Patterns/Set)
-* [Tuple](../../Rascal/Patterns/Tuple)
-* [TypeConstrained](../../Rascal/Patterns/TypeConstrained)
-* [TypedLabelled](../../Rascal/Patterns/TypedLabelled)
-* [Variable](../../Rascal/Patterns/Variable)
-* [VariableDeclaration](../../Rascal/Patterns/VariableDeclaration)
+* [Concrete](../../Rascal/Patterns/Concrete/)
+* [Descendant](../../Rascal/Patterns/Descendant/)
+* [Labelled](../../Rascal/Patterns/Labelled/)
+* [List](../../Rascal/Patterns/List/)
+* [Literal](../../Rascal/Patterns/Literal/)
+* [MultiVariable](../../Rascal/Patterns/MultiVariable/)
+* [Node](../../Rascal/Patterns/Node/)
+* [Regular](../../Rascal/Patterns/Regular/)
+* [Set](../../Rascal/Patterns/Set/)
+* [Tuple](../../Rascal/Patterns/Tuple/)
+* [TypeConstrained](../../Rascal/Patterns/TypeConstrained/)
+* [TypedLabelled](../../Rascal/Patterns/TypedLabelled/)
+* [Variable](../../Rascal/Patterns/Variable/)
+* [VariableDeclaration](../../Rascal/Patterns/VariableDeclaration/)
 
 All these patterns may be used in:
 
-*  cases of a [Switch](../../Rascal/Statements/Switch) or [visit statements](../../Rascal/Statements/Visit/) or [visit expressions](../../Rascal/Expressions/Visit/), 
-*  on the left of the [Match](../../Rascal/Expressions/Values/Boolean/Match) operator (`:=`),
-*  on the left of the [Enumerator](../../Rascal/Expressions/Comprehensions/Enumerator) operator (`<-`), and
-*  as formal parameters of [Function](../../Rascal/Declarations/Function)s. 
-*  [try catch](../../Rascal/Statements/TryCatch) statements to match thrown exceptions.
+*  cases of a [Switch](../../Rascal/Statements/Switch/) or [visit statements](../../Rascal/Statements/Visit/) or [visit expressions](../../Rascal/Expressions/Visit/), 
+*  on the left of the [Match](../../Rascal/Expressions/Values/Boolean/Match/) operator (`:=`),
+*  on the left of the [Enumerator](../../Rascal/Expressions/Comprehensions/Enumerator/) operator (`<-`), and
+*  as formal parameters of [Function](../../Rascal/Declarations/Function/)s. 
+*  [try catch](../../Rascal/Statements/TryCatch/) statements to match thrown exceptions.
 
 Each pattern binds variables in a conditional scope:
 
@@ -72,4 +73,5 @@ Each pattern binds variables in a conditional scope:
 which `<Throw>`s an exception with the value which is not matched can be used to find out why this is happening.
 * If a variable is bound in the scope of a pattern, then it acts as an `==` test, so make sure to use fresh variables
 to avoid such accidental collisions. 
+
 

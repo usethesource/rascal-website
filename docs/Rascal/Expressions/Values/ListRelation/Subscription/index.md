@@ -18,9 +18,11 @@ Indexing of a list relation via tuple values.
 
 ## Variant 1
 
+
 | `Exp~0~`                          | `Exp~1~` | `Exp~2~` | ... | `Exp~0~ [ Exp~1~, Exp~2~, ... ]`  |
 | --- | --- | --- | --- | --- |
 | `lrel[T~1~, T~2~, ... T~m~]`    | `int`     |  `int`    | ... | `lrel[T~n~, _T~n+1~_, ... T~m~]`    |
+
 
 ## Variant 2
 
@@ -28,6 +30,7 @@ Indexing of a list relation via tuple values.
 | --- | --- | --- |
 |
 | `lrel[T~1~, T~2~, ... T~m~]`    | `list[T~1~]` | `lrel[T~2~, T~3~, ... T~m~]`   |
+
 
 #### Description
 
@@ -48,6 +51,7 @@ The result is a ListRelation with all tuples that have these index values as fir
 with the index values removed from the tuple. 
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>R = [<1,10>, <2,20>, <1,11>, <3,30>, <2,21>];
@@ -109,4 +113,5 @@ or rather for the indices `"Japan"` and `2008`:
 rascal>GDP["Japan", 2008];
 list[int]: [4923761]
 ```
+
 

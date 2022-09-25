@@ -34,6 +34,7 @@ Results are synthesized as shown in the Figure above. This consists of the follo
 
 *  Finally, write functions and rewrite rules that generate the desired results.
 
+
 The Rascal features that are frequently used for synthesis are:
 
 *  Syntax definitions or data declarations to define output formats.
@@ -43,4 +44,5 @@ The Rascal features that are frequently used for synthesis are:
 *  Visits of datastructures and on-the-fly code generation.
 
 *  Rewrite rules.
+
 

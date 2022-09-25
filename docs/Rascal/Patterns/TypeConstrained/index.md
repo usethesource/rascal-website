@@ -18,6 +18,7 @@ Warning: This does not seem to work properly. There is a bug.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import IO;
 ok
@@ -74,4 +75,5 @@ Exp: add(
     val(1),
     val(2)))
 ```
+
 

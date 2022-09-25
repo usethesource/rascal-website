@@ -6,6 +6,7 @@ title: "module lang::rascal::grammar::tests::LookaheadTests"
 
 `import lang::rascal::grammar::tests::LookaheadTests;`
 
+
 ## function testEmpty1 {#lang-rascal-grammar-tests-LookaheadTests-testEmpty1}
 
 * ``test bool testEmpty1()``

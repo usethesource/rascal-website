@@ -14,17 +14,20 @@ Subtract two numeric values.
 
 #### Types
 
+
 | `Exp~1~` |  `Exp~2~` | `Exp~1~ - Exp~2~`  |
 | --- | --- | --- |
 | `int`     |  `int`     | `int`                |
 | `int`     |  `real`    | `real`               |
 | `real`    |  `real`    | `real`               |
 
+
 #### Description
 
 Yields the numerical result of subtracting the value of _Exp_~2~ from the value of _Exp_~1~.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>13 - 12
@@ -36,4 +39,5 @@ int: -1
 rascal>12 - 13.5
 real: -1.5
 ```
+
 

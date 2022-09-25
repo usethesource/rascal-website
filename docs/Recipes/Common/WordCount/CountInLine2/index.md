@@ -14,6 +14,9 @@ A slighly more involved manner of using regular matching in a loop.
 
 module demo::common::WordCount::CountInLine2
 
+
+
+
 int countInLine2(str S){
   int count = 0;
   
@@ -30,12 +33,14 @@ test bool tstCountInLine2b() = countInLine2("Jabberwocky by Lewis Carroll") == 4
 
 ```
 
+                
 The pattern `/^\W*\w+<rest:.*$>/` can be understood as follows:
 
 *  The `^` makes it anchored, only matches at the begin of the substring `S`.
 *  `\W*` matches zero or more non-word characters.
 *  `\w+` matches one or more word characters.
 *  `<rest:.*$>` matches the remaining part of `S` and assigns the result to the variable `rest`.
+
 
 Inside the loop `count` is incremented and the new value of `S` becomes
 the remainder of the current match. To summarize: each iteration
@@ -49,4 +54,5 @@ ok
 rascal>countInLine2("Jabberwocky by Lewis Carroll");
 int: 4
 ```
+
 

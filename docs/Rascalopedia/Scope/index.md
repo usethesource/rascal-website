@@ -6,3 +6,4 @@ title: Scope
 
 The visibility and accessibility of names in a program.
 
+

@@ -21,11 +21,13 @@ Composition of two list relation values.
 | --- | --- | --- |
 | `lrel[T~1~, T~2~]` | `lrel[T~2~, T~3~]` | `lrel[T~1~, T~3~]` |
 
+
 #### Description
 
 Returns the composition of two binary list relations.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>[<1,10>, <2,20>, <3,15>] o [<10,100>, <20,200>];
@@ -38,4 +40,5 @@ lrel[int,int]: [
 #### Pitfalls
 
 We use the letter `o` as operator and this may conflict other defined names.
+
 

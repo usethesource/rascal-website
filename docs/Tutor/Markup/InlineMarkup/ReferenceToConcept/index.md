@@ -25,14 +25,15 @@ The remaining two forms create a link to a concept in another course.
 
 The first creates a link to a complete course, the second to a specific concept in an external course.
 
+
 #### Examples
 
 The concept name of this concept is `ReferenceToConcept` while its display name is `Reference to Concept` (note the spaces).
 
 We can create a reference to the `InlineMarkup` concept in the current course in the following ways:
 
-* `\[Inline Markup](../../../../Tutor/Markup/InlineMarkup)` (using the display name) gives [Inline Markup](../../../../Tutor/Markup/InlineMarkup).
-* `\[InlineMarkup](../../../../Tutor/Markup/InlineMarkup)` (using its parent concept name and concept name) gives [InlineMarkup](../../../../Tutor/Markup/InlineMarkup).
+* `\[Inline Markup](../../../../Tutor/Markup/InlineMarkup/)` (using the display name) gives [Inline Markup](../../../../Tutor/Markup/InlineMarkup/).
+* `\[InlineMarkup](../../../../Tutor/Markup/InlineMarkup/)` (using its parent concept name and concept name) gives [InlineMarkup](../../../../Tutor/Markup/InlineMarkup/).
 * `\[see inline markup](../../../../Tutor/Markup/InlineMarkup/)` gives [see inline markup](../../../../Tutor/Markup/InlineMarkup/)
 
 Here is a reference to another course:
@@ -42,4 +43,5 @@ Here is a reference to another course:
 #### Pitfalls
 
 Note the `/` before the course name in refernces to another course.
+
 

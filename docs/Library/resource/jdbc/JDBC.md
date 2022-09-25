@@ -6,6 +6,7 @@ title: "module resource::jdbc::JDBC"
 
 `import resource::jdbc::JDBC;`
 
+
 ## function registerJDBCClass {#resource-jdbc-JDBC-registerJDBCClass}
 
 * ``void registerJDBCClass(str className)``
@@ -223,6 +224,7 @@ Load the contents of a table. This maintains order and duplicates, but does not 
 ## function allTableSchemas {#resource-jdbc-JDBC-allTableSchemas}
 
 * ``str allTableSchemas(str moduleName, loc uri)``
+
 
   The JDBC tables schema should be given as:
     jdbctables+connect-string

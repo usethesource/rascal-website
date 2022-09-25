@@ -75,6 +75,7 @@ public CFGraph cflowProgram(str txt) = cflowProgram(load(txt)); // <8>
 
 ```
 
+                
 Notes:
 
 <1> First we define a data type `CFNODE` that represents the various elements of a control flow graph:
@@ -257,5 +258,6 @@ tuple[set[CFNode] entry,Graph[CFNode] graph,set[CFNode] exit]: <{entry(|unknown:
 },{exit()}>
 ```
 
-Is the above not very motivating to move on to [Visualize](../../../../Recipes/Languages/Pico/Visualize)?
+Is the above not very motivating to move on to [Visualize](../../../../Recipes/Languages/Pico/Visualize/)?
+
 

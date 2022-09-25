@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::extends2::COLLECTOR"
 
 `import lang::rascal::tests::extends2::COLLECTOR;`
 
+
 ## function collect {#lang-rascal-tests-extends2-COLLECTOR-collect}
 
 * ``default str collect(value _)``

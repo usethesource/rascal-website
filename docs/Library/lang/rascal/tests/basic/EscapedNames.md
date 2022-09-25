@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::basic::EscapedNames"
 
 `import lang::rascal::tests::basic::EscapedNames;`
 
+
 ## function escapedGlobal {#lang-rascal-tests-basic-EscapedNames-escapedGlobal}
 
 * ``test bool escapedGlobal()``

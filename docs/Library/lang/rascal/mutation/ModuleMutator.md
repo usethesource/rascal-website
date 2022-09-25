@@ -6,6 +6,7 @@ title: "module lang::rascal::mutation::ModuleMutator"
 
 `import lang::rascal::mutation::ModuleMutator;`
 
+
 #### Synopsis
 
 Mutant Generator for Rascal modules
@@ -21,6 +22,7 @@ Examples
 import lang::rascal::mutation::ModuleMutator;
 mutate(|project://rascal/src/org/rascalmpl/library/lang/rascal/format/Grammar.rsc|, mutations=5)
 ```
+
 
 ## function mutate {#lang-rascal-mutation-ModuleMutator-mutate}
 

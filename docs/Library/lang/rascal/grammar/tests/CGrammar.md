@@ -6,6 +6,7 @@ title: "module lang::rascal::grammar::tests::CGrammar"
 
 `import lang::rascal::grammar::tests::CGrammar;`
 
+
 ## function generateCParser {#lang-rascal-grammar-tests-CGrammar-generateCParser}
 
 * ``str generateCParser()``

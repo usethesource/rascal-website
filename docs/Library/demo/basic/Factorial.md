@@ -10,6 +10,7 @@ title: "module demo::basic::Factorial"
 
 demonstrating factorial in Rascal
 
+
 ## function fac1 {#demo-basic-Factorial-fac1}
 
 * ``int fac1(int n)``

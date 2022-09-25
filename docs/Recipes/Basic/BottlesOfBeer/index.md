@@ -36,6 +36,7 @@ void sing() { // <3>
 
 ```
 
+                
 <1> We use an auxiliary function `bottles` that returns the word "bottle" adjusted for the actual number of bottles that is available.
 Observe how we use the patterns `0`, `1` and `int n` in the definition of three variants of this function.
 
@@ -46,6 +47,7 @@ general case is labeled with `default` to indicate that if the case for 0 and 1 
 and prints appropriate lyrics. Observe how the value  of the `bottles` function is interpolated several times in the string.
 
 Here is the result:
+
 
 ```rascal-shell 
 rascal>import demo::basic::Bottles;
@@ -353,4 +355,6 @@ No more bottles of beer on the wall, no more bottles of beer.
 Go to the store and buy some more, 99 bottles of beer on the wall.
 ok
 ```
+
+
 

@@ -15,11 +15,13 @@ Addition on numeric values.
 
 #### Types
 
+
 | `Exp~1~`  |  `Exp~2~` | `Exp~1~ + Exp~2~`  |
 | --- | --- | --- |
 | `int`      |  `int`     | `int`                 |
 | `int`      |  `real`    | `real`                |
 | `real`     |  `real`    | `real`                |
+
 
 #### Description
 
@@ -27,10 +29,12 @@ Yields the numerical sum of the values of _Exp_~1~ and _Exp_~2~.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>12 + 13
 int: 25
 rascal>12 + 13.5
 real: 25.5
 ```
+
 

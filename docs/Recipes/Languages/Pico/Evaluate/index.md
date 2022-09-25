@@ -93,8 +93,10 @@ public VENV evalProgram(PROGRAM P){
 
 public VENV evalProgram(str txt) = evalProgram(load(txt));
     
+
 ```
 
+                
 Notes:
 
 <1> First we introduce a data type `PicoValue` that wraps all possible values that can occur at run-time.
@@ -102,6 +104,7 @@ Notes:
 *   The actual evaluator consists of the functions `evalExp`, `evalStat`, `evalStats`, `evalDecls` and `evalProgram`.
     They are written in a similar style as the typechecker.
 *  `evalProgram` evaluates a given Pico program.
+
 
 Here is how to evaluate a Pico program:
 
@@ -114,4 +117,5 @@ map[str, PicoValue]: (
   "y":natval(6)
 )
 ```
+
 

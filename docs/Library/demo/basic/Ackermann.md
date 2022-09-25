@@ -11,6 +11,7 @@ title: "module demo::basic::Ackermann"
 Ackermann's function: a standard example of a double recursive function.
 See <http://en.wikipedia.org/wiki/Ackermann_function>
 
+
 ## function ack {#demo-basic-Ackermann-ack}
 
 * ``int ack(int m, int n)``

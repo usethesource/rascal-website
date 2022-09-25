@@ -6,6 +6,7 @@ title: Unavailable Information
 
 Requested information is unavailable at runtime
 
+
 #### Types
 
 `data RuntimeException = UnavailableInformation(str message);`
@@ -25,6 +26,7 @@ Several datetypes may contain optional information that is not always available:
 This exception is thrown when optional information is not available.
 
 #### Examples
+
 
 ```rascal-shell ,error
 rascal>$2016-09-14$.hour;

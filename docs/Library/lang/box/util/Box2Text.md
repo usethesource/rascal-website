@@ -6,10 +6,12 @@ title: "module lang::box::util::Box2Text"
 
 `import lang::box::util::Box2Text;`
 
+
 This is an implementation of "From Box to Tex:An algebraic approach to the construction of documentation tools" by Mark van den Brand and Eelco Visser (June 30, 1994)
 
 The main function `format` maps a box tree (which describes 2-dimensional layout constraints for a linear text) to a string
 which satisfies these constraints.
+
 
 ## alias options {#lang-box-util-Box2Text-options}
 

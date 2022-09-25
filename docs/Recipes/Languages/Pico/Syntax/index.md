@@ -8,6 +8,7 @@ Concrete syntax for Pico.
 
 #### Examples
 
+
 ```rascal 
 module demo::lang::Pico::Syntax
 
@@ -65,6 +66,7 @@ public start[Program] program(str s, loc l) {
 
 ```
 
+                
 Notes:
 
 *  `Id`, `Natural` and `String` are the basic lexical tokens of the Pico language.
@@ -73,4 +75,5 @@ Notes:
 *  The start symbol of the Pico grammar is called `Program`.
 *  The rules for `Expression` describe the priority and associativity of the operators: all operators are left-associative and `||` has a higher priority then `+` and `-`.
 *  Two auxiliary functions `program` are defined that parse a given string or a given location as Pico program.
+
 

@@ -45,3 +45,4 @@ rascal>someLoc.offset = -1;
 ok
 ```
 
+

@@ -15,9 +15,11 @@ Greater than operator on node values.
 
 #### Types
 
+
 | `Exp~1~` |  `Exp~2~` | `Exp~1~ > Exp~2~`  |
 | --- | --- | --- |
 | `node`    |  `node`    | `bool`               |
+
 
 #### Description
 
@@ -28,10 +30,12 @@ Comparison on nodes is defined by a lexicographic ordering. Node `N = F(N~1~, ..
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>"g"(3) > "f"(10, "abc");
 bool: true
 rascal>"f"(10, "abc") > "f"(10);
 bool: true
 ```
+
 

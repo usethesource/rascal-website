@@ -19,6 +19,7 @@ Less than or equal operator on node values.
 | --- | --- | --- |
 | `node`    |  `node`    | `bool`                |
 
+
 #### Description
 
 Comparison on nodes is defined by a lexicographic ordering. Node `N = F(N~1~, ..., N~n~)` is less than or equal node 
@@ -28,10 +29,12 @@ Comparison on nodes is defined by a lexicographic ordering. Node `N = F(N~1~, ..
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>"f"(10, "abc") <= "f"(10, "abc");
 bool: true
 rascal>"f"(10) <= "f"(10, "abc");
 bool: true
 ```
+
 

@@ -13,6 +13,8 @@ Here is the abstract syntax for Func:
 ```rascal 
 module demo::lang::Func::AST
 
+
+
 data Prog = prog(list[Func] funcs);
 data Func = func(str name, list[str] formals, Exp body);
 
@@ -43,6 +45,8 @@ data Binding = binding(str var, Exp exp);
 
 ```
 
-Observe that the abstract syntax follows the structure of the [ConcreteSyntax](../../../../Recipes/Languages/Func/ConcreteSyntax) but
+                
+Observe that the abstract syntax follows the structure of the [ConcreteSyntax](../../../../Recipes/Languages/Func/ConcreteSyntax/) but
 omits details such as operator priorities, parentheses, and the like.
+
 

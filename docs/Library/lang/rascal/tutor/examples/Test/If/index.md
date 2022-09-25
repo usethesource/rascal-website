@@ -13,9 +13,12 @@ Conditional statement.
 | --- | --- |
 | `bool`  |  `void`                     |
 
+
 | `Exp` | Statement~1~ | Statement~2~ | `if ( Exp ) Statement~1~ else Statement~2~;` |
 | --- | --- | --- | --- |
 | `bool`  |  T~1~        | T~2~         | `lub(T~1~, T~2~)` |
+
+
 
 #### Description
 
@@ -25,6 +28,7 @@ The value of an if-then statement is equal to _Statement_ when its test is true.
 The value of an if-then-else statement is the value of the statement that was executed.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>if( 3 > 2 ) 30; else 40;

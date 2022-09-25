@@ -15,15 +15,18 @@ Equal operator on values.
 
 #### Types
 
+
 | `Exp~1~`   | `Exp~2~` | `Exp~1~ == Exp~2~`  |
 | --- | --- | --- |
 | `value`     |  `value`  | `bool`                |
+
 
 #### Description
 
 Yields `true` if both arguments are identical and `false` otherwise.
 
 #### Examples
+
 
 ```rascal-shell 
 ```
@@ -49,4 +52,5 @@ and `X` and `Z`:
 rascal>X == Z;
 bool: false
 ```
+
 

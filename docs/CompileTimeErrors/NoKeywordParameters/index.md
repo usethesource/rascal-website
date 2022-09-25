@@ -18,6 +18,7 @@ Remedies:
 
 #### Examples
 
+
 ```rascal-shell ,error
 rascal>int incr(int x) = x + 1;
 int (int): function(|prompt:///|(0,24,<1,0>,<1,24>))
@@ -32,4 +33,5 @@ int (int, int delta = ...): function(|prompt:///|(0,41,<1,0>,<1,41>))
 rascal>incr(3, delta=5);
 int: 8
 ```
+
 

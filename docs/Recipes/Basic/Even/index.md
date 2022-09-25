@@ -11,6 +11,7 @@ Produce a list of even numbers.
 Let's write a function that generates all the even numbers in a list up to a certain maximum. We will do it in a few alternative 
 ways: from very imperative to very declarative and some steps in between.
 
+
 ```rascal-shell 
 rascal>list[int] even0(int max) {
 >>>>>>>  list[int] result = [];
@@ -109,4 +110,5 @@ set[int]: {10,16,8,14,20,2,4,6,24,12,22,18,0}
 #### Pitfalls
 
 *  Trainwreck alert: if you start putting too many conditions in a single for loop or comprehension the code may become unreadable.
+
 

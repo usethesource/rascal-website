@@ -28,12 +28,14 @@ module demo::basic::FizzBuzz
 
 import IO;
 
+
 void fizzbuzz1() {
    for (int n <- [1 .. 101]){
       fb = ((n % 3 == 0) ? "Fizz" : "") + ((n % 5 == 0) ? "Buzz" : "");
       println((fb == "") ?"<n>" : fb);
    }
 }
+
 
 void fizzbuzz2() {
   for (n <- [1..101]) 
@@ -44,6 +46,7 @@ void fizzbuzz2() {
       default: println(n);
     }
 }
+ 
  
 void fizzbuzz3() {
   for (n <- [1..101]) {
@@ -60,6 +63,7 @@ void fizzbuzz3() {
 }
 
 ```
+
 
 ```rascal-shell 
 rascal>import demo::basic::FizzBuzz;
@@ -168,4 +172,5 @@ Fizz
 Buzz
 ok
 ```
+
 

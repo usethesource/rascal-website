@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::functionality::DataType"
 
 `import lang::rascal::tests::functionality::DataType;`
 
+
 ## function testBool1 {#lang-rascal-tests-functionality-DataType-testBool1}
 
 * ``test bool testBool1()``

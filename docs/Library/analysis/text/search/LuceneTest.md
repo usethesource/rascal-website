@@ -6,6 +6,7 @@ title: "module analysis::text::search::LuceneTest"
 
 `import analysis::text::search::LuceneTest;`
 
+
 ## data Document {#analysis-text-search-LuceneTest-Document}
 
 ```rascal

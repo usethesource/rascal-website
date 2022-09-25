@@ -6,6 +6,7 @@ title: "module demo::McCabe"
 
 `import demo::McCabe;`
 
+
 ## function cyclomaticComplexity {#demo-McCabe-cyclomaticComplexity}
 
 * ``int cyclomaticComplexity(Graph[&T] CFG)``

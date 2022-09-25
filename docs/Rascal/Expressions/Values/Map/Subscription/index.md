@@ -20,12 +20,14 @@ Retrieve a value by its key in map.
 | --- | --- | --- |
 | `map[T~1~, T~2~]` | `T~1~`   | `T~2~`                |
 
+
 #### Description
 
 Map subscription uses the value of _Exp_~2~ as key in the map value of _Exp_~1~ and returns the associated value.
 If this key does not occur in the map, the exception `NoSuchKey` is thrown.
 
 #### Examples
+
 
 ```rascal-shell ,error
 ```
@@ -50,4 +52,5 @@ rascal>colors["square"];
 	at $shell$(|prompt:///|(0,17,<1,0>,<1,17>))
 ok
 ```
+
 

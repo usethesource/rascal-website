@@ -50,6 +50,7 @@ list[int]: [1,2,3]
 In pointer-based languages and in object-oriented languages the change to the original value of `L` would also be visible
 via `M`.
 
+
 String values are, like all other values, also immutable. Let's experiment with the [replaceAll](../../Library/String.md#String-replaceAll/) function:
 
 ```rascal-shell 
@@ -75,6 +76,7 @@ str: "abracadabra"
 
 To summarize: all values are immutable and variables can during their lifetime be associated with different immutable values.
 
+
 #### Benefits
 
 *  Immutable values contribute to referential transparence.
@@ -82,4 +84,5 @@ To summarize: all values are immutable and variables can during their lifetime b
 #### Pitfalls
 
 *  Immutable values maybe less efficient than mutable ones.
+
 

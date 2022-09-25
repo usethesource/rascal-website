@@ -8,7 +8,8 @@ title: "module lang::java::m3::Core"
 
 #### Synopsis
 
-Extends the M3 [Core](../../../../Library/analysis/m3/Core.md) with Java specific concepts such as inheritance and overriding.
+Extends the M3 [Core](../../../../Library/analysis/m3/Core.md/) with Java specific concepts such as inheritance and overriding.
+
 
 ## data M3 {#lang-java-m3-Core-M3}
 
@@ -75,6 +76,7 @@ data Language (str version="")
 ## function createM3FromDirectory {#lang-java-m3-Core-createM3FromDirectory}
 
 * ``M3 createM3FromDirectory(loc project, bool errorRecovery = false, str javaVersion = "1.7", list[loc] classPath = [])``
+
 
 #### Synopsis
 

@@ -8,8 +8,9 @@ Parsing a Lisp expression.
 
 #### Description
 
-Given the Lisp [Syntax](../../../../Recipes/Languages/Lisra/Syntax), we can now apply it to parse textual Lisp expressions
+Given the Lisp [Syntax](../../../../Recipes/Languages/Lisra/Syntax/), we can now apply it to parse textual Lisp expressions
 and convert them to the runtime representation `Lval`.
+
 
 ```rascal 
 module demo::lang::Lisra::Parse
@@ -19,6 +20,7 @@ import demo::lang::Lisra::Syntax;
 import demo::lang::Lisra::Runtime;
 
 Lval parse(str txt) = build(parse(#LispExp, txt)); // <1>
+
 
 Lval build((LispExp)`<IntegerLiteral il>`) = Integer(toInt("<il>"));      // <2>
 Lval build((LispExp)`<AtomExp at>`)        = Atom("<at>");                // <3>
@@ -34,6 +36,7 @@ test bool parse5() = parse("(123 abc)") == List([Integer(123), Atom("abc")]);
 
 ```
 
+                
 <1> First we define the actual `parse` function: it takes a string as argument and returns an `Lval`.
    It proceeds in two steps:
    **  First the text is parsed using `parse(#LispExp, txt)`. The result is parse tree.
@@ -71,6 +74,7 @@ that precedes it (`LispExp` in this example). This is illustrated by the list ca
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import demo::lang::Lisra::Parse;
 ok
@@ -87,4 +91,5 @@ Lval: List([
     Integer(7)
   ])
 ```
+
 

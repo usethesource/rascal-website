@@ -16,9 +16,11 @@ An executable assertion.
 
 #### Types
 
+
 | `Exp~1~` | `Exp~2~`  |
 | --- | --- |
 | `bool`    | `str`      |
+
 
 #### Description
 
@@ -30,6 +32,7 @@ that serves as a identifying message for this assertion.
 When _Exp_~1~ evaluates to `false`, an `AssertionFailed` exception is thrown.
 
 #### Examples
+
 
 ```rascal-shell ,error
 rascal>assert 1==2 : "is never true";
@@ -45,4 +48,5 @@ rascal>div(4,0);
 	at $shell$(|prompt:///|(0,9,<1,0>,<1,9>))
 ok
 ```
+
 

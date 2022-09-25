@@ -35,3 +35,4 @@ for(/asgStat(Id name, _) <- P, size(name) > 10){
 ```
 This statement prints all identifiers in assignment statements (`asgStat`) that consist of more than 10 characters.
 
+

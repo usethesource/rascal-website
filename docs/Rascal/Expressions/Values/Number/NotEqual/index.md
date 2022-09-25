@@ -21,11 +21,13 @@ Not equal operator on numeric values.
 | `int`      |  `real`    | `bool`                 |
 | `real`     |  `real`    | `bool`                 |
 
+
 #### Description
 
 Yields `true` if the value of both arguments is numerically unequal, and `false` otherwise.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>12 != 13
@@ -41,4 +43,5 @@ bool: true
 rascal>3.14 != 3.14
 bool: false
 ```
+
 

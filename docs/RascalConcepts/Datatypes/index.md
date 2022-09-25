@@ -28,6 +28,7 @@ Rascal provides a rich set of datatypes:
   A special case are syntax trees that are the result of parsing source files are represented 
   as datatypes (`Tree`).
 
+
 There is a wealth of built-in operators and library functions available on the standard datatypes. 
 
 These built-in datatypes are closely related to each other:
@@ -59,6 +60,7 @@ Here are some examples of the built-in data types:
 | `rel[_T~1~,...,T~n~]`   | `{<1,2>,<2,3>,<1,3>}`, `{<1,10,100>, <2,20,200>}` |
 | `map[T, U]`           | `()`, `(1:true, 2:false)`, `("a":1, "b":2)` |
 | `node`                    | `f()`, `add(x,y)`, `g("abc", [2,3,4])` |
+
 
 A fragment of the datatype that defines the abstract syntax for statements (assignment, if, while) in a programming language would look as follows:
 
@@ -102,4 +104,6 @@ map[str, int]: ("oranges":150,"bananas":75,"apples":100)
 rascal>"abc"(1, 2, 3);
 node: "abc"(1,2,3)
 ```
+
+
 

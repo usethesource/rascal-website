@@ -8,6 +8,7 @@ The concrete syntax of Func.
 
 #### Examples
 
+
 ```rascal 
 module demo::lang::Func::Func
 
@@ -57,6 +58,7 @@ syntax Binding = binding: Ident "=" Exp;
 
 ```
 
+                
 The concrete syntax of Func uses many features of Rascal's syntax definitions. Some notes:
 
 *   The definition of lexical syntax follows the pattern:
@@ -68,4 +70,5 @@ The concrete syntax of Func uses many features of Rascal's syntax definitions. S
 **  One non-terminal is designated as start symbol (`Prog`).
 **  Each alternative has a label, this is for the benefit of converting parse trees to abstract syntaxt trees.
 **  Each alternative spells out its priority and associativity.
+
 

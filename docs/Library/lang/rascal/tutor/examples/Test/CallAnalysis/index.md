@@ -20,6 +20,8 @@ Consider the following call graph (a box represents a procedure and an arrow rep
 
 ![calls](/assets/Library/lang/rascal/tutor/examples/Test/CallAnalysis/calls.png)
 
+
+
 Rascal supports basic data types like integers and strings which are sufficient to formulate and answer the questions at hand. However, we
 can gain readability by introducing separately named types for the items we are describing. 
 First, we introduce therefore a new type `Proc` (an alias for strings) to denote procedures:

@@ -15,6 +15,7 @@ This requires these elements:
 *  The keyword `java` should be part of the function header.
 *  The function declaration is annotated (uing `javaClass`) with the name of the Java class that implements this function.
 
+
 This error is generated when the Java implementation cannot be found. Most likely, this is a missing or misspelled Java class name.
 It is also generated when the function declaration _does_ have a body.
 
@@ -22,6 +23,7 @@ Remedy: Contact the Rascal developers:
 
 *  Ask a question on StackOverflow using the [Rascal Stackoverflow Tag](http://stackoverflow.com/questions/tagged/rascal).
 *  Read the currently open issues at the Rascal's https://github.com/usethesource/rascal/issues?state=open[Issue Tracker on Github]. If your problem has not yet been reported by someone else, please report it here.
+
 
 If you are an expert developer and have implemented your own extension in Java, please check your own extension code first.
 
@@ -47,8 +49,8 @@ org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.librar
 org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.library.Preludexxx because: class not found
 	at org.rascalmpl.interpreter.utils.JavaBridge.getJavaClassInstance(JavaBridge.java:431)
 	at org.rascalmpl.interpreter.result.JavaMethod.<init>(JavaMethod.java:95)
-	at org.rascalmpl.interpreter.result.JavaMethod.<init>(JavaMethod.java:52)
-	at org.rascalmpl.semantics.dynamic.FunctionDeclaration$Abstract.interpret(FunctionDeclaration.java:61)
+	at org.rascalmpl.interpreter.result.JavaMethod.<init>(JavaMethod.java:60)
+	at org.rascalmpl.semantics.dynamic.FunctionDeclaration$Abstract.interpret(FunctionDeclaration.java:60)
 	at org.rascalmpl.semantics.dynamic.Declaration$Function.interpret(Declaration.java:117)
 	at org.rascalmpl.semantics.dynamic.Command$Declaration.interpret(Command.java:38)
 	at org.rascalmpl.interpreter.Evaluator.eval(Evaluator.java:1094)
@@ -57,7 +59,7 @@ org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.librar
 	at org.rascalmpl.repl.RascalInterpreterREPL.evalStatement(RascalInterpreterREPL.java:132)
 	at org.rascalmpl.repl.BaseRascalREPL.handleInput(BaseRascalREPL.java:119)
 	at org.rascalmpl.library.lang.rascal.tutor.repl.TutorCommandExecutor.eval(TutorCommandExecutor.java:95)
-	at org.rascalmpl.library.lang.rascal.tutor.repl.TutorCommandExecutorCreator.lambda$eval$2(TutorCommandExecutorCreator.java:82)
+	at org.rascalmpl.library.lang.rascal.tutor.repl.TutorCommandExecutorCreator.lambda$2(TutorCommandExecutorCreator.java:82)
 	at org.rascalmpl.values.RascalFunctionValueFactory$RascalFunctionValue.call(RascalFunctionValueFactory.java:176)
 	at org.rascalmpl.interpreter.result.FunctionResultFacade.call(FunctionResultFacade.java:54)
 	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
@@ -466,4 +468,7 @@ rascal>@javaClass{org.rascalmpl.library.Preludexxx}
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/NonAbstractJavaFunction/NonAbstractJavaFunction.html|
 ok
 ```
+
+
+
 

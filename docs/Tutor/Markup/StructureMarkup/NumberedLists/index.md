@@ -23,7 +23,7 @@ A list item ends with:
 *  the start of a new list item.
 *  an empty line.
 
-[bullet lists](../../../../Tutor/Markup/StructureMarkup/BulletLists) and [numbered lists](../../../../Tutor/Markup/StructureMarkup/NumberedLists) can be mixed.
+[bullet lists](../../../../Tutor/Markup/StructureMarkup/BulletLists/) and [numbered lists](../../../../Tutor/Markup/StructureMarkup/NumberedLists/) can be mixed.
 
 #### Examples
 
@@ -58,4 +58,5 @@ will produce:
 #### Pitfalls
 
 * An empty line is required _after_ a NumberedList
+
 

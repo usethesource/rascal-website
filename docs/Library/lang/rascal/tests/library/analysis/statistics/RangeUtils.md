@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::library::analysis::statistics::RangeUtils"
 
 `import lang::rascal::tests::library::analysis::statistics::RangeUtils;`
 
+
 ## function abs {#lang-rascal-tests-library-analysis-statistics-RangeUtils-abs}
 
 * ``list[&T <: num] abs(list[&T <: num] nums)``

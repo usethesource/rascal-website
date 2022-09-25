@@ -32,11 +32,13 @@ Note the use of an anonymous variable at the `EXP` position in the pattern.
 
 Let's practice some of these examples.
 
+
 ```rascal-shell 
 rascal>int x <- {};
 bool: false
 ```
 The enumerator does not produce any value and returns `false`.
+
 
 ```rascal-shell ,error
 rascal>int x <- {1, 3, 5, 7, 11 };
@@ -87,4 +89,5 @@ list[void]: []
 #### Pitfalls
 
 The variables that are bound by an enumerator are local to the statement in which the enumerator is used.
+
 

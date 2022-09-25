@@ -12,6 +12,7 @@ Warning: How to generate this error?
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>data D = d(int x);
 ok
@@ -22,4 +23,5 @@ int: 3
 rascal>d("a").x
 str: "a"
 ```
+
 

@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::concrete::Patterns4"
 
 `import lang::rascal::tests::concrete::Patterns4;`
 
+
 ## function optionalNotPresentIsFalse {#lang-rascal-tests-concrete-Patterns4-optionalNotPresentIsFalse}
 
 * ``test bool optionalNotPresentIsFalse()``

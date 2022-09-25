@@ -6,6 +6,7 @@ title: "module demo::lang::Exp::Combined::Automatic::Load"
 
 `import demo::lang::Exp::Combined::Automatic::Load;`
 
+
 ## function load {#demo-lang-Exp-Combined-Automatic-Load-load}
 
 * ``Exp load(str txt)``

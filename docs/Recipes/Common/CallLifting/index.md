@@ -14,7 +14,9 @@ A frequently occurring problem is that we know the call relation of a system but
 
 Consider the following figure:
 
+
 ![][parts.png](/assets/Recipes/Common/CallLifting/parts.png)
+
 
 (a) Shows the calls between procedures;
 (b) shows how procedures are part of a system component.
@@ -25,6 +27,7 @@ The situation can be characterized by:
 *  A call relation between procedures
 *  A partOf relation between procedures and components
 
+
 The problem is now to lift the call relation using the information in the partOf relation.
 In other words: a call between two procedures will be lifted to
 a call between the components to which each procedure belongs.
@@ -34,6 +37,8 @@ Here is a solution:
 ```rascal 
 
 module demo::common::Lift
+
+
 
 alias proc = str;
 alias comp = str;
@@ -56,6 +61,7 @@ rel[comp,comp] ComponentCalls = lift(Calls, PartOf);
 ```
 
 And we can use it as follows:
+
 
 ```rascal-shell 
 rascal>import demo::common::Lift;
@@ -97,4 +103,5 @@ Please verify that this corresponds exactly to (c) in the figure above.
 
 ```rascal-shell ,continue
 ```
+
 

@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::concrete::Patterns3"
 
 `import lang::rascal::tests::concrete::Patterns3;`
 
+
 ## function extractPatternTree1 {#lang-rascal-tests-concrete-Patterns3-extractPatternTree1}
 
 * ``rel[Sym, Name] extractPatternTree1(Concrete concrete)``

@@ -21,6 +21,7 @@ All argument expressions are true.
 | --- | --- | --- | --- |
 |`bool`     | `bool`    | ... | `bool`                           |
 
+
 #### Description
 
 Yields `true` when all combinations of values of _Exp_~i~ are true.

@@ -15,17 +15,20 @@ Equality operator on numeric values.
 
 #### Types
 
+
 | `Exp~1~`  |  `Exp~2~` | `Exp~1~ == Exp~2~`   |
 | --- | --- | --- |
 | `int`      |  `int`     | `bool`                 |
 | `int`      |  `real`    | `bool`                 |
 | `real`     |  `real`    | `bool`                 |
 
+
 #### Description
 
 Yields `true` if the value of both arguments is numerically equal, and `false` otherwise.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>12 == 12
@@ -41,4 +44,5 @@ bool: true
 rascal>3.14 == 3
 bool: false
 ```
+
 

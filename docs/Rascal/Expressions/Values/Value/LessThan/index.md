@@ -15,9 +15,11 @@ Less than operator on values.
 
 #### Types
 
+
 | `Exp~1~` | `Exp~2~` | `Exp~1~ < Exp~2~`  |
 | --- | --- | --- |
 | `value`   |  `value`  | `bool`                |
+
 
 #### Description
 
@@ -26,6 +28,7 @@ By brute force, a total less than operator between two values _V_~1~ and _V_~2~ 
 *  If the types _T~1~_ and _T~2~_ can be compared then _V~1~_ less than _V~2~_ is used.
 
 *  Otherwise values are ordered according their type name, for instance, `int` is smaller than `list`, and `map` is smaller than `rel`.
+
 
 Less than yields `true` if the value of _Exp_~1~ is strictly less
 than (according to the ordering defined above) the value of _Exp_~2~, and `false` otherwise.
@@ -54,4 +57,5 @@ and `X` and `Z`:
 rascal>X < Z;
 bool: false
 ```
+
 

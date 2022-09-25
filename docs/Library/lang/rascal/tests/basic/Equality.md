@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::basic::Equality"
 
 `import lang::rascal::tests::basic::Equality;`
 
+
 ## function canonicalTypes {#lang-rascal-tests-basic-Equality-canonicalTypes}
 
 * ``test bool canonicalTypes(&T x, &Y y)``

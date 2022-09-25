@@ -6,6 +6,7 @@ title: "module demo::common::Lift"
 
 `import demo::common::Lift;`
 
+
 ## alias proc {#demo-common-Lift-proc}
 
 * `str`

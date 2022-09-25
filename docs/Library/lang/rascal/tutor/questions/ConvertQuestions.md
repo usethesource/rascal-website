@@ -6,6 +6,7 @@ title: "module lang::rascal::tutor::questions::ConvertQuestions"
 
 `import lang::rascal::tutor::questions::ConvertQuestions;`
 
+
 ## function getAnchor {#lang-rascal-tutor-questions-ConvertQuestions-getAnchor}
 
 * ``str getAnchor(loc src)``

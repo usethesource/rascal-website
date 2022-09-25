@@ -6,6 +6,7 @@ title: "module lang::rascal::tests::basic::Strings1"
 
 `import lang::rascal::tests::basic::Strings1;`
 
+
 ## function subscription {#lang-rascal-tests-basic-Strings1-subscription}
 
 * ``test bool subscription(str S)``

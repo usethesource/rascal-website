@@ -18,6 +18,7 @@ Next the assignments `Assignable~i~ = V~i~` are performed for 1 \<= i \<= n.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal><A, B, C> = <"abc", 2.5, [1,2,3]>;
 tuple[str,real,list[int]]: <"abc",2.5,[1,2,3]>
@@ -28,4 +29,5 @@ real: 2.5
 rascal>C;
 list[int]: [1,2,3]
 ```
+
 

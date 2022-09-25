@@ -6,9 +6,11 @@ title: Eval2
 
 Like Eval1 but with support for sequences and assignments.
 
+
 #### Description
 
 Interpreter Eval2 supports the following features of Func: 
+
 
 | Feature              | Eval2 |
 | --- | --- |
@@ -25,9 +27,13 @@ Interpreter Eval2 supports the following features of Func:
 | address operator     |
 | dereference operator |
 
+
+
+
 The main additions are local side effects and the sequence operator.
 
 #### Examples
+
 
 ```rascal 
 module demo::lang::Func::Eval2
@@ -137,6 +143,7 @@ Result2 eval2(seq(Exp lhs, Exp rhs), Env env, PEnv penv)  {  // <4>
 
 ```
 
+                
 <1> The alias `Result` is introduced: a pair of an environment and an integer value.
     All evaluator functions are changed from returning an integer (the result of evaluation) to
    `Result` (the result of evaluation _and_ the local side effects).
@@ -148,6 +155,7 @@ Result2 eval2(seq(Exp lhs, Exp rhs), Env env, PEnv penv)  {  // <4>
 <4>  Sequencing is implemented. Observe that that the value of the left operand is ignored and that
   the value of the right operand is returned.
 
+
 We apply `eval2` to example `F2`:
 ```rascal
 fact(n) = if n <= 1 then 
@@ -158,6 +166,7 @@ fact(n) = if n <= 1 then
 	      n
 ```
 
+                
 Let's try this.
 
 ```rascal-shell 
@@ -170,4 +179,5 @@ ok
 rascal>eval2("fact", [10], load(F2));
 tuple[map[str, int],int]: <("n":3628800),3628800>
 ```
+
 

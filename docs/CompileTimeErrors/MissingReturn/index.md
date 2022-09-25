@@ -49,3 +49,4 @@ rascal>triple(5)
 int: 15
 ```
 
+

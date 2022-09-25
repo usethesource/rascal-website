@@ -15,6 +15,7 @@ It takes two arguments:
   A reified type, is a type that is wrapped in such a way that it can be passed as an argument to a function.)
 *  The parse tree to be converted.
 
+
 `implode` is smart in trying to find a mapping, but it needs some guidance.
 A necessary step is therefore to label the rules in the grammar with the name of the 
 constructor to which it has to be mapped.
@@ -49,6 +50,7 @@ It is good practice to introduce separate modules for parsing and for the conver
 *  A `Load` module defines a load function that first calls the above `parse` function and then applies `implode` to it.
   This is the only module that imports both concrete and abstract syntax at the same time and is therefore the only place to be
   concerned about name clashes. (If I mention `Exp`, do you know which one I mean?).
+
 
 Here is the `Parse` module for Exp ...
 
@@ -233,6 +235,7 @@ Notes:
 <2> We also need the abstract syntax as already defined earlier in [Exp/Abstract].
 <3> We need [Rascal:ParseTree] since it provides the [Rascal:implode] function.
 
+
 Let's try it:
 
 ```rascal-shell 
@@ -274,6 +277,7 @@ test bool tstEval4() = eval("3+4*5") == 23;
 
 ```
 
+                
 Here is the end result:
 
 ```rascal-shell 
@@ -282,4 +286,5 @@ ok
 rascal>eval("2+3*4");
 int: 14
 ```
+
 

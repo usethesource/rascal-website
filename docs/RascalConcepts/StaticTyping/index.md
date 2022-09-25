@@ -55,6 +55,7 @@ Advice: |http://tutor.rascal-mpl.org/Errors/Static/UnexpectedType/UnexpectedType
 ok
 ```
 
+
 ```rascal-shell 
 rascal>num N = 3;
 num: 3
@@ -117,4 +118,5 @@ node: red(3)
 
 One example of the actual application of subtypes can be found in 
 [Count Constructors](../../Recipes/Common/CountConstructors/).
+
 

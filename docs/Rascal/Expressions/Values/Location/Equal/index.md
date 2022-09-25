@@ -21,7 +21,9 @@ Equality operator on locations.
 | --- | --- | --- |
 | `loc`     |  `loc`    | `bool`                |
 
+
 #### Description
 
 Yields `true` if both arguments are identical and `false` otherwise.
+
 

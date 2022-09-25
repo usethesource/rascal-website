@@ -15,9 +15,11 @@ Membership test on set values.
 
 #### Types
 
+
 | `Exp~1~`           |  `Exp~2~`     | `Exp~1~ in Exp~2~`  |
 | --- | --- | --- |
 | `T~1~`  <: `T~2~` |  `set[T~2~]`  | `bool`                |
+
 
 #### Description
 
@@ -25,10 +27,12 @@ Yields `true` if the value of Exp~1~ occurs as element in the value of Exp~2~ an
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>2 in {1, 2, 3};
 bool: true
 rascal>4 in {1, 2, 3};
 bool: false
 ```
+
 

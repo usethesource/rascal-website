@@ -21,6 +21,7 @@ Intersection of two lists.
 | --- | --- | --- |
 | `list[T~1~]` |  `list[T~2~]`  | `list[lub(T~1~,T~2~)]`  |
 
+
 #### Description
 
 Returns the intersection of the two list values of  _Exp_~1~ and _Exp_~2~, i.e.,
@@ -28,8 +29,10 @@ the list value of _Exp_~1~ with all elements removed that do not occur in the li
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>[1, 2, 3, 4, 5] & [4, 5, 6];
 list[int]: [4,5]
 ```
+
 

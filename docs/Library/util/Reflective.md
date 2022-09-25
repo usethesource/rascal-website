@@ -6,6 +6,7 @@ title: "module util::Reflective"
 
 `import util::Reflective;`
 
+
 ## function getLineSeparator {#util-Reflective-getLineSeparator}
 
 * ``str getLineSeparator()``
@@ -94,6 +95,7 @@ data JavaBundleManifest
 
 * ``PathConfig applyManifests(PathConfig cfg)``
 
+
   Converts a PathConfig and replaces all references to roots of projects or bundles
   by the folders which are nested under these roots as configured in their respective
   META-INF/RASCAL.MF files.
@@ -122,6 +124,7 @@ data JavaBundleManifest
 
 * ``tuple[bool, loc] getDerivedReadLoc(str qualifiedModuleName, str extension, PathConfig pcfg, set[str] srcExtensions = {"rsc", "mu"}, str rootDir = "")``
 
+   
 #### Synopsis
 
 Derive a location from a given module name for reading
@@ -137,6 +140,7 @@ then the pair <true, F> is returned. Otherwise <false, some error location> is r
 For a source extension (typically "rsc" or "mu" but this can be configured) srcs is searched, otherwise binPath + libs.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import util::Reflective;
@@ -158,6 +162,7 @@ from locations in different, configurable, directories.
 
 * ``loc getDerivedWriteLoc(str qualifiedModuleName, str extension, PathConfig pcfg, set[str] srcExtensions = {"rsc", "mu"}, str rootDir = "")``
 
+   
 #### Synopsis
 
 Derive a location from a given module name for writing
@@ -172,6 +177,7 @@ For other modules, a location for this path in bin will be returned.
 
 #### Examples
 
+
 ```rascal-shell 
 rascal>import util::Reflective;
 ok
@@ -180,6 +186,7 @@ loc: |home:///bin/List.rvm|
 rascal>getDerivedWriteLoc("experiments::Compiler::Compile", "rvm", pathConfig());
 loc: |home:///bin/experiments/Compiler/Compile.rvm|
 ```
+
 
 ```rascal-shell ,error
 rascal>getDerivedWriteLoc("experiments::Compiler::muRascal2RVM::Library", "rsc", pathConfig());

@@ -6,6 +6,7 @@ title: "module lang::sdf2::filters::Reject"
 
 `import lang::sdf2::filters::Reject;`
 
+
 ## function rejectFilter {#lang-sdf2-filters-Reject-rejectFilter}
 
 * ``&T <: Tree rejectFilter(amb(set[&T <: Tree] alts))``

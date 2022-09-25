@@ -17,12 +17,13 @@ Assign to a slice of a list or string.
 *   `Assignable [ Exp~1~ .. Exp3_ ] = Exp~4~`
 *   `Assignable [ Exp~1~, Exp~2~ .. Exp~3~ ] = Exp~4~`
 
+
 `Exp~1~` and `Exp~3~` are optional
 #### Description
 
-A slice assignment is defined for [List](../../../../Rascal/Expressions/Values/List), [String](../../../../Rascal/Expressions/Values/String) and [Node](../../../../Rascal/Expressions/Values/Node) 
+A slice assignment is defined for [List](../../../../Rascal/Expressions/Values/List/), [String](../../../../Rascal/Expressions/Values/String/) and [Node](../../../../Rascal/Expressions/Values/Node/) 
 and aims to replace a slice from the old value of the assignable by a new value. 
-See [Slice](../../../../Rascal/Expressions/Values/List/Slice), [Slice](../../../../Rascal/Expressions/Values/String/Slice) or [Slice](../../../../Rascal/Expressions/Values/Node/Slice) for a more detailed explanation of slicing.
+See [Slice](../../../../Rascal/Expressions/Values/List/Slice/), [Slice](../../../../Rascal/Expressions/Values/String/Slice/) or [Slice](../../../../Rascal/Expressions/Values/Node/Slice/) for a more detailed explanation of slicing.
 
 Let _V_ be the current value of _Assignable_.
 
@@ -174,4 +175,5 @@ node: "f"(
   8,
   {999,9,99})
 ```
+
 

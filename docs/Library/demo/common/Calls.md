@@ -6,6 +6,7 @@ title: "module demo::common::Calls"
 
 `import demo::common::Calls;`
 
+
 ## alias Proc {#demo-common-Calls-Proc}
 
 * `str`

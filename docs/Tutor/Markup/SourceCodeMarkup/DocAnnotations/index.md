@@ -12,6 +12,7 @@ All Rascal declarations can be preceeded by an annotation of the form `@doc{ ...
 provided that `{` and `}` characters are balanced and that unbalanced braces are escaped like `\{` or `\}`. 
 This text is expanded to a full concept definition when the concept is processed. 
 
+
 The Tutor supports and expands inline concept descriptions for the following declarations types.
 
 ## Module Declaration
@@ -87,12 +88,13 @@ Consider the source code of the now function in the `DateTime` library.
 rascal>  import DateTime;
 ok
 rascal>  now();
-datetime: $2022-09-25T07:31:15.343+00:00$
+datetime: $2022-09-25T13:50:37.370+00:00$
 ```
   }
   @javaClass{org.rascalmpl.library.DateTime}
   public java datetime now();
 ```
+  
   
 This will be expanded to
 
@@ -112,7 +114,7 @@ This will be expanded to
 rascal>  import DateTime;
 ok
 rascal>  now();
-datetime: $2022-09-25T07:31:15.408+00:00$
+datetime: $2022-09-25T13:50:37.419+00:00$
 ```
 ```
 

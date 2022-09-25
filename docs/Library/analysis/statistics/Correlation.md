@@ -6,6 +6,7 @@ title: "module analysis::statistics::Correlation"
 
 `import analysis::statistics::Correlation;`
 
+
 #### Synopsis
 
 Correlation between data values.
@@ -16,15 +17,17 @@ Compute the http://en.wikipedia.org/wiki/Correlation[correlation] between pairs 
 Correlation measures the statistical relationship between two sets of data.
 
 The following functions are provided:
-* [PearsonsCorrelation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelation)
-* [PearsonsCorrelationPValues](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelationPValues)
-* [PearsonsCorrelationStandardErrors](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelationStandardErrors)
-* [SpearmansCorrelation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-SpearmansCorrelation)
-* [covariance](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-covariance)
+* [PearsonsCorrelation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelation/)
+* [PearsonsCorrelationPValues](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelationPValues/)
+* [PearsonsCorrelationStandardErrors](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelationStandardErrors/)
+* [SpearmansCorrelation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-SpearmansCorrelation/)
+* [covariance](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-covariance/)
+
 
 ## function PearsonsCorrelation {#analysis-statistics-Correlation-PearsonsCorrelation}
 
 * ``num PearsonsCorrelation(lrel[num x,num y] values)``
+
 
 #### Synopsis
 
@@ -37,11 +40,12 @@ It is a measure of the strength of the linear dependence between two variables.
 
 #### Pitfalls
 
-Use [spearmans correlation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-SpearmansCorrelation) when there is a *monotonous dependence* between the two variables.
+Use [spearmans correlation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-SpearmansCorrelation/) when there is a *monotonous dependence* between the two variables.
 
 ## function PearsonsCorrelationStandardErrors {#analysis-statistics-Correlation-PearsonsCorrelationStandardErrors}
 
 * ``list[real] PearsonsCorrelationStandardErrors(lrel[num x,num y] values)``
+
 
 #### Synopsis
 
@@ -51,6 +55,7 @@ Standard errors associated with Pearson correlation.
 
 * ``list[real] PearsonsCorrelationPValues(lrel[num x,num y] values)``
 
+
 #### Synopsis
 
 P-values (significance) associated with Pearson correlation.
@@ -58,6 +63,7 @@ P-values (significance) associated with Pearson correlation.
 ## function SpearmansCorrelation {#analysis-statistics-Correlation-SpearmansCorrelation}
 
 * ``num SpearmansCorrelation(lrel[num x,num y] values)``
+
 
 #### Synopsis
 
@@ -67,15 +73,16 @@ Spearman's rank correlation coefficient.
 
 Compute http://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient[Spearman's rank correlation coefficient].
 The correlation between the data values is computed by first performing a rank transformation
-on the data values using a natural ranking and then computing [pearsons correlation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelation).
+on the data values using a natural ranking and then computing [pearsons correlation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelation/).
 
 #### Pitfalls
 
-Use [pearsons correlation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelation) when there is a *linear dependence* between the variables.
+Use [pearsons correlation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelation/) when there is a *linear dependence* between the variables.
 
 ## function covariance {#analysis-statistics-Correlation-covariance}
 
 * ``num covariance(lrel[num x,num y] values)``
+
 
 #### Synopsis
 
@@ -86,6 +93,7 @@ Covariance of data values.
 Computes the http://en.wikipedia.org/wiki/Covariance[covariance] between the `x` and `y` values.
 
 #### Examples
+
 
 ```rascal-shell 
 rascal>import analysis::statistics::Correlation;

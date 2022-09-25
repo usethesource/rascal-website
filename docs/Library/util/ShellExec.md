@@ -6,14 +6,17 @@ title: "module util::ShellExec"
 
 `import util::ShellExec;`
 
+
 #### Synopsis
 
 Execute and manage external processes.
+
 
 ## function createProcess {#util-ShellExec-createProcess}
 
 * ``PID createProcess(str processCommand, loc workingDir=|cwd:///|, list[str] args = [], map[str,str] envVars = ())``
 * ``PID createProcess(loc processCommand, loc workingDir=|cwd:///|, list[value] args = [], map[str, value] envVars = ())``
+
 
 #### Synopsis
 
@@ -23,6 +26,7 @@ Start a new external process.
 
 * ``str exec(str processCommand, loc workingDir=|cwd:///|, list[str] args = [], map[str, str] env = ())``
 * ``str exec(loc processCommand, loc workingDir=|cwd:///|, list[value] args = [], map[str, value] env = ())``
+
 
 #### Synopsis
 
@@ -37,6 +41,7 @@ start, run and kill an external process returning its output as a string.
 
 * ``int killProcess(PID processId, bool force=false)``
 
+
 #### Synopsis
 
 Kill a running process, or a zombie process (a process which is not alive yet not killed)
@@ -44,6 +49,7 @@ Kill a running process, or a zombie process (a process which is not alive yet no
 ## function isAlive {#util-ShellExec-isAlive}
 
 * ``bool isAlive(PID processId)``
+
 
 #### Synopsis
 
@@ -53,6 +59,7 @@ Check whether a process is still alive
 
 * ``bool isZombie(PID processId)``
 
+
 #### Synopsis
 
 Check whether a process is still registered but not actually running anymore. A zombie process may be cleaned up using killProcess.
@@ -60,6 +67,7 @@ Check whether a process is still registered but not actually running anymore. A 
 ## function exitCode {#util-ShellExec-exitCode}
 
 * ``int exitCode(PID processId)``
+
 
 #### Synopsis
 
@@ -69,6 +77,7 @@ Waits for the process to exit and then returns its return code. This is a blocki
 
 * ``str readFrom(PID processId)``
 
+
 #### Synopsis
 
 Read from an existing process's output stream. This is non-blocking.
@@ -76,6 +85,7 @@ Read from an existing process's output stream. This is non-blocking.
 ## function readWithWait {#util-ShellExec-readWithWait}
 
 * ``str readWithWait(PID processId, int wait)``
+
 
 #### Synopsis
 
@@ -85,6 +95,7 @@ Read from an existing process's output stream with a given wait timeout. Some pr
 
 * ``str readFromErr(PID processId)``
 
+
 #### Synopsis
 
 Read from an existing process's error output stream. This is non-blocking.
@@ -92,6 +103,7 @@ Read from an existing process's error output stream. This is non-blocking.
 ## function readLineFromErr {#util-ShellExec-readLineFromErr}
 
 * ``str readLineFromErr(PID processId, int wait=200, int maxTries=5)``
+
 
 #### Synopsis
 
@@ -102,6 +114,7 @@ waits for one second maximally for this line to appear.
 
 * ``str readEntireStream(PID processId)``
 
+
 #### Synopsis
 
 Read the entire stream from an existing process's output stream. This is blocking.
@@ -109,6 +122,7 @@ Read the entire stream from an existing process's output stream. This is blockin
 ## function readEntireErrStream {#util-ShellExec-readEntireErrStream}
 
 * ``str readEntireErrStream(PID processId)``
+
 
 #### Synopsis
 
@@ -118,6 +132,7 @@ Read the entire error stream from an existing process's output stream. This is b
 
 * ``void writeTo(PID processId, str msg)``
 
+
 #### Synopsis
 
 Write to an existing process's input stream.
@@ -126,11 +141,12 @@ Write to an existing process's input stream.
 
 * `int`
 
+
 #### Synopsis
 
 Process Identifiers (PID).
 
 #### Description
 
-A PID is returned by [create process](../../Library/util/ShellExec.md#util::ShellExec-createProcess) and is required for any further interaction with the created process.
+A PID is returned by [create process](../../Library/util/ShellExec.md#util::ShellExec-createProcess/) and is required for any further interaction with the created process.
 

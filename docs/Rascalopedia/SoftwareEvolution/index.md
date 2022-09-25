@@ -16,11 +16,13 @@ about software evolution. Here are three examples of his laws (slightly paraphra
 *  _Increasing Complexity_: When a program evolves, its complexity increases unless work is done to maintain or reduce it.
 *  _Continuing Growth_: The functional content of programs must be continually increased to maintain user satisfaction over their lifetime.
 
-_Software evolution_ is a specialisation in [Software Engineering](../../Rascalopedia/SoftwareEngineering) that address the following:
+
+_Software evolution_ is a specialisation in [Software Engineering](../../Rascalopedia/SoftwareEngineering/) that address the following:
 
 *  Understanding the reasons for software evolution.
 *  Understanding the impact of software evolution on the structure and quality of source code.
-*  Developing [Software Metric](../../Rascalopedia/SoftwareMetric)s and tools to measure the impact of software evolution.
+*  Developing [Software Metric](../../Rascalopedia/SoftwareMetric/)s and tools to measure the impact of software evolution.
 *  Developing methods and tools for the better understanding of source code.
-*  Developing [Refactoring](../../Rascalopedia/Refactoring) tools to counter the effects of software evolution.
+*  Developing [Refactoring](../../Rascalopedia/Refactoring/) tools to counter the effects of software evolution.
+
 

@@ -6,6 +6,7 @@ title: "module analysis::flow::ControlFlow"
 
 `import analysis::flow::ControlFlow;`
 
+
 #### Synopsis
 
 Intermediate notation for control flow graphs
@@ -14,10 +15,11 @@ Intermediate notation for control flow graphs
 
 Control flow graphs are a unifying concept for units of executable
 code in programming languages. This module defines a common
-intermediate representation which is designed to be produced from [Core-M3](../../../Library/analysis/m3/Core.md#analysis::m3::Core-M3)
-models and [AST](../../../Library/analysis/m3/AST.md) for real programming languages. If (and only if) the translation
+intermediate representation which is designed to be produced from [Core-M3](../../../Library/analysis/m3/Core.md#analysis::m3::Core-M3/)
+models and [AST](../../../Library/analysis/m3/AST.md/) for real programming languages. If (and only if) the translation
 is faithful to the semantics of the respective programming language,
 then downstream analyses and visualizations are accurate.
+
 
 ## data ControlNode {#analysis-flow-ControlFlow-ControlNode}
 
@@ -28,6 +30,7 @@ data ControlNode
      | \exit(loc id)
      ;
 ```
+
 
 #### Synopsis
 
@@ -52,6 +55,7 @@ data ControlEdge
      ;
 ```
 
+
 #### Synopsis
 
 identify control edges
@@ -69,7 +73,7 @@ a location which should resolve to the identifying source code. For
 `choice` this would be the code of the conditional, for `case` the label
 of the code to jump to and for `jump` the code of the jump instruction. Note that
 edge identification is redundant information, making it easier to index
-back into [M3](../../../Library/analysis/m3/Core.md#analysis::m3::Core-M3/) models or M3 [AST](../../../Library/analysis/m3/AST.md) models.
+back into [M3](../../../Library/analysis/m3/Core.md#analysis::m3::Core-M3/) models or M3 [AST](../../../Library/analysis/m3/AST.md/) models.
 
 ## alias ControlFlow {#analysis-flow-ControlFlow-ControlFlow}
 

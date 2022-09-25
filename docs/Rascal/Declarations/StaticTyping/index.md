@@ -13,9 +13,11 @@ the program is executed.
 
 ## The Type Lattice
 
+
 The types are ordered in a so-called _type lattice_ shown in the following figure.
 
 ![][lattice.png](/assets/RascalConcepts/StaticTyping/type-lattice.png)
+
 
 The arrows describe a _subtype-of_ relation between types. The type `void` is the _smallest_ type and 
 is included in all other types and the type `value` is the _largest_ type that includes all other types. 
@@ -26,6 +28,7 @@ Syntax trees for specific languages are all subtypes of `Tree`. As a result, syn
 *  in a generic fashion as `Tree` and,
 *  in a specific fashion as a more precisely typed syntax tree. 
 Finally, each `alias` is structurally equivalent to one or more specific other types.
+
 
 The fact that the types are ordered in a lattice makes it possible to define a *Least Upper Bound* (lub) on types.
 Given two types _T_~1~ and _T_~2~, `lub(T~1~, T~2~)` is defined as the nearest common super type of _T_~1~ and _T_~2~
@@ -39,7 +42,7 @@ The Rascal type system has various advanced features that are described separate
 *  Declarations of [Function]s and [AlgebraicDataType]s may be parameterized and [Type Constraints] can be used to define
    constraints on the actual type to be used.
 *  The formal arguments of functions are bound to _values_ but in exceptional cases
-  a function may need a type as argument value, [ReifiedTypes](../../../Rascal/Expressions/Values/ReifiedTypes) make this possible.
+  a function may need a type as argument value, [ReifiedTypes](../../../Rascal/Expressions/Values/ReifiedTypes/) make this possible.
 
 #### Examples
 
@@ -77,4 +80,5 @@ value: "abc"
 rascal>v = [1, 2, 3];
 value: [1,2,3]
 ```
+
 

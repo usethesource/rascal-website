@@ -6,6 +6,7 @@ title: "module demo::lang::Exp::Combined::Automatic::Eval"
 
 `import demo::lang::Exp::Combined::Automatic::Eval;`
 
+
 ## function eval {#demo-lang-Exp-Combined-Automatic-Eval-eval}
 
 * ``int eval(str txt)``

@@ -45,15 +45,17 @@ There are three frequently occurring scenarios:
 
 *  Accumulating Transformer: traverse the tree, collect information and also transform the tree.
 
+
 The visit expression in Rascal can accommodate all these (and more) use cases.
 
 Given a subject term (the current value of _Exp_) and a list of cases 
-(consisting of a sequence of [Pattern with Action](../../../Rascal/Expressions/Visit/PatternWithAction)s, it traverses the term. 
+(consisting of a sequence of [Pattern with Action](../../../Rascal/Expressions/Visit/PatternWithAction/)s, it traverses the term. 
 Depending on the precise actions it may perform replacement (mimicking a transformer), 
 update local variables (mimicking an accumulator) or a combination of these two (accumulating transformer). 
-If *any* of the actions contains an [Insert](../../../Rascal/Statements/Insert) statement, 
+If *any* of the actions contains an [Insert](../../../Rascal/Statements/Insert/) statement, 
 the value of the visit expression is a new value that is obtained by successive insertions in the subject 
 term by executing one or more cases. Otherwise, the original value of the subject term is returned.
+
 
 The visit expression is optionally preceded by one of the following strategy indications that 
 determine the traversal order of the subject:
@@ -69,6 +71,7 @@ determine the traversal order of the subject:
 *  `innermost`: repeat a bottom-up traversal as long as a case matches.
 
 *  `outermost`: repeat a top-down traversal as long as a case matches.
+
 
 The execution of the cases has the following effect:
 
@@ -88,9 +91,9 @@ The execution of the cases has the following effect:
 
       *** `Pattern => Exp` is equivalent to `Pattern : insert Exp;`.
 
-   ** Execution of a [Fail](../../../Rascal/Statements/Fail) statement: the next case is tried.
+   ** Execution of a [Fail](../../../Rascal/Statements/Fail/) statement: the next case is tried.
 
-   ** Execution of a [Return](../../../Rascal/Statements/Return) statement that returns a value from the enclosing function.
+   ** Execution of a [Return](../../../Rascal/Statements/Return/) statement that returns a value from the enclosing function.
 
 The precise behaviour of the visit expression depends on the type of the subject:
 
@@ -126,4 +129,5 @@ bottom-up visit(e){
 More examples can, for instance, be found in Recipes, see [ColoredTrees](../../../Recipes/Common/ColoredTrees/), 
 [WordReplacement](../../../Recipes/Common/WordReplacement/), [CountConstructors](../../../Recipes/Common/CountConstructors/), 
 and [Derivative](../../../Recipes/Common/Derivative/).
+
 

@@ -18,6 +18,7 @@ There are two main approaches to this:
    in the form of a syntax tree. Rascal can directly manipulate the parse trees, but it also enables user-defined
    mappings from parse tree to abstract syntax tree.
 
+
 Using [Syntax Definitions](../../Rascal/Declarations/SyntaxDefinition/) you can define the syntax of any (programming) language. Then Rascal:
 
 *  will generate the parser, and
@@ -43,7 +44,9 @@ Here are some examples:
 *  `2+3*4`
 *  `(2+3)*4`
 
+
 The EXP language can be defined as follows:
+
 
 ```rascal 
 module demo::lang::Exp::Concrete::WithLayout::Syntax
@@ -61,6 +64,7 @@ start syntax Exp
 
 ```
 
+                
 Now you may parse and manipulate programs in the EXP language. Let's demonstrate parsing an expression:
 
 ```rascal-shell 
@@ -82,7 +86,8 @@ The points we want to make are:
 *  Parser generation is completely implicit.
 *  Given a syntax definition, it can be used immediately for parsing.
 
-See [Recipes](../../Recipes//) for a more extensive presentation of the 
+
+See [Recipes](../../Recipes/) for a more extensive presentation of the 
 [EXP](../../Recipes/Languages/Exp/)
 language and [Languages](../../Recipes/Languages/) for other language examples.
 
