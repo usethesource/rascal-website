@@ -17,10 +17,10 @@ Let the current alternative of a pattern match fail.
 
 A `fail` statement is only allowed in statements that are controlled by the outcome of a pattern match:
 
-*  The [Patterns](../../../Rascal/Patterns/) in a [Pattern with Action](../../../Rascal/Expressions/Visit/PatternWithAction/) in [Switch](../../../Rascal/Statements/Switch/) or [Visit](../../../Rascal/Statements/Visit/) statement controls the statements in the action part.
-*  The test (expression) of a [While](../../../Rascal/Statements/While/) or [Do](../../../Rascal/Statements/Do/) statement controls the statements in the body part.
-*  The test (expressions) of a [For](../../../Rascal/Statements/For/) statement control the statements in the body part.
-*  The formal parameter declaration of a [Function](../../../Rascal/Declarations/Function/).
+*  The [Patterns](../../../Rascal/Patterns/index.md) in a [Pattern with Action](../../../Rascal/Expressions/Visit/PatternWithAction/index.md) in [Switch](../../../Rascal/Statements/Switch/index.md) or [Visit](../../../Rascal/Statements/Visit/index.md) statement controls the statements in the action part.
+*  The test (expression) of a [While](../../../Rascal/Statements/While/index.md) or [Do](../../../Rascal/Statements/Do/index.md) statement controls the statements in the body part.
+*  The test (expressions) of a [For](../../../Rascal/Statements/For/index.md) statement control the statements in the body part.
+*  The formal parameter declaration of a [Function](../../../Rascal/Declarations/Function/index.md).
 
 
 The `fail` statement is associated with the innermost pattern match by which it is controlled.
@@ -36,7 +36,7 @@ When `fail` is executed:
 
 #### Examples
 
-Here is an example taken from [Bubble](../../../Recipes/Basic/Bubble/). 
+Here is an example taken from [Bubble](../../../Recipes/Basic/Bubble/index.md). 
 It uses a `fail` for the case that no unsorted element can be found in the list of numbers.
 As a result, the whole case fails and the default case is used.
 

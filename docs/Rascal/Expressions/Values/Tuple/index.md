@@ -37,15 +37,15 @@ Tuples are represented by the type `tuple[T~1~ L~1~, T~2~ L~2~, ...]`,
 where _T_~1~, _T_~2~, ... are arbitrary types and _L_~1~, _L_~2~, ... are optional labels. 
 
 The following operators are provided for tuples:
-* [Concatenation](../../../../Rascal/Expressions/Values/Tuple/Concatenation/)
-* [Equal](../../../../Rascal/Expressions/Values/Tuple/Equal/)
-* [FieldSelection](../../../../Rascal/Expressions/Values/Tuple/FieldSelection/)
-* [GreaterThan](../../../../Rascal/Expressions/Values/Tuple/GreaterThan/)
-* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/Tuple/GreaterThanOrEqual/)
-* [LessThan](../../../../Rascal/Expressions/Values/Tuple/LessThan/)
-* [LessThanOrEqual](../../../../Rascal/Expressions/Values/Tuple/LessThanOrEqual/)
-* [NotEqual](../../../../Rascal/Expressions/Values/Tuple/NotEqual/)
-* [Subscription](../../../../Rascal/Expressions/Values/Tuple/Subscription/)
+* [Concatenation](../../../../Rascal/Expressions/Values/Tuple/Concatenation/index.md)
+* [Equal](../../../../Rascal/Expressions/Values/Tuple/Equal/index.md)
+* [FieldSelection](../../../../Rascal/Expressions/Values/Tuple/FieldSelection/index.md)
+* [GreaterThan](../../../../Rascal/Expressions/Values/Tuple/GreaterThan/index.md)
+* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/Tuple/GreaterThanOrEqual/index.md)
+* [LessThan](../../../../Rascal/Expressions/Values/Tuple/LessThan/index.md)
+* [LessThanOrEqual](../../../../Rascal/Expressions/Values/Tuple/LessThanOrEqual/index.md)
+* [NotEqual](../../../../Rascal/Expressions/Values/Tuple/NotEqual/index.md)
+* [Subscription](../../../../Rascal/Expressions/Values/Tuple/Subscription/index.md)
 
 #### Examples
 

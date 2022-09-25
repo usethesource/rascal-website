@@ -21,6 +21,8 @@ Referring to the non-existing module `M` gives errors:
 
 ```rascal-shell ,error
 rascal>M::x = 3;
+|prompt:///|(0,4,<1,0>,<1,4>): Undeclared module: M
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredModule/UndeclaredModule.html|
 ok
 rascal>M::f(3);
 |prompt:///|(0,4,<1,0>,<1,4>): Undeclared module: M

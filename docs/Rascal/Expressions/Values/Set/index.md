@@ -39,23 +39,23 @@ To achieve splicing of these elements, i.e., the insertion of the elements of th
 it has to be prefixed by the splice operator `*`.
 
 The following operators are provided on sets:
-* [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension/)
-* [Difference](../../../../Rascal/Expressions/Values/Set/Difference/)
-* [Equal](../../../../Rascal/Expressions/Values/Set/Equal/)
-* [Insert](../../../../Rascal/Expressions/Values/Set/Insert/)
-* [Intersection](../../../../Rascal/Expressions/Values/Set/Intersection/)
-* [NotEqual](../../../../Rascal/Expressions/Values/Set/NotEqual/)
-* [Product](../../../../Rascal/Expressions/Values/Set/Product/)
-* [Splice](../../../../Rascal/Expressions/Values/Set/Splice/)
-* [StrictSubSet](../../../../Rascal/Expressions/Values/Set/StrictSubSet/)
-* [StrictSuperSet](../../../../Rascal/Expressions/Values/Set/StrictSuperSet/)
-* [SubSet](../../../../Rascal/Expressions/Values/Set/SubSet/)
-* [SuperSet](../../../../Rascal/Expressions/Values/Set/SuperSet/)
-* [Union](../../../../Rascal/Expressions/Values/Set/Union/)
-* [in](../../../../Rascal/Expressions/Values/Set/in/)
-* [notin](../../../../Rascal/Expressions/Values/Set/notin/)
+* [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension/index.md)
+* [Difference](../../../../Rascal/Expressions/Values/Set/Difference/index.md)
+* [Equal](../../../../Rascal/Expressions/Values/Set/Equal/index.md)
+* [Insert](../../../../Rascal/Expressions/Values/Set/Insert/index.md)
+* [Intersection](../../../../Rascal/Expressions/Values/Set/Intersection/index.md)
+* [NotEqual](../../../../Rascal/Expressions/Values/Set/NotEqual/index.md)
+* [Product](../../../../Rascal/Expressions/Values/Set/Product/index.md)
+* [Splice](../../../../Rascal/Expressions/Values/Set/Splice/index.md)
+* [StrictSubSet](../../../../Rascal/Expressions/Values/Set/StrictSubSet/index.md)
+* [StrictSuperSet](../../../../Rascal/Expressions/Values/Set/StrictSuperSet/index.md)
+* [SubSet](../../../../Rascal/Expressions/Values/Set/SubSet/index.md)
+* [SuperSet](../../../../Rascal/Expressions/Values/Set/SuperSet/index.md)
+* [Union](../../../../Rascal/Expressions/Values/Set/Union/index.md)
+* [in](../../../../Rascal/Expressions/Values/Set/in/index.md)
+* [notin](../../../../Rascal/Expressions/Values/Set/notin/index.md)
 
-There are also [library functions](../../../../Library/Set.md/) available for Sets.
+There are also [library functions](../../../../Library/Set.md) available for Sets.
 ##  Set types 
 
 

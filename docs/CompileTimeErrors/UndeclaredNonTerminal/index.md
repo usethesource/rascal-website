@@ -8,7 +8,7 @@ A syntax rule uses an undeclared non-terminal.
 
 #### Description
 
-All non-terminals that occur in a [syntax definition](../../Rascal/Declarations/SyntaxDefinition/)
+All non-terminals that occur in a [syntax definition](../../Rascal/Declarations/SyntaxDefinition/index.md)
 should be declared in some rule.
 This error is generated when this is not the case.
 

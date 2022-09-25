@@ -25,6 +25,10 @@ The following regular expression `/+/` is incorrect (maybe `/a+/` was meant?):
 
 ```rascal-shell ,error
 rascal>/+/ := "aaaa";
+|prompt:///|(7,6,<1,7>,<1,13>): Syntax error: Dangling meta character '+' near index 0
++
+^
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/SyntaxError/SyntaxError.html|
 ok
 ```
 

@@ -10,8 +10,8 @@ How to maintain a course.
 
 The following topics are discussed:
 
-* [Adding](../../Tutor/Maintenance/Adding/)
-* [Removing](../../Tutor/Maintenance/Removing/)
-* [Renaming](../../Tutor/Maintenance/Renaming/)
+* [Adding](../../Tutor/Maintenance/Adding/index.md)
+* [Removing](../../Tutor/Maintenance/Removing/index.md)
+* [Renaming](../../Tutor/Maintenance/Renaming/index.md)
 
 

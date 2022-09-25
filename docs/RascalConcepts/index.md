@@ -26,7 +26,7 @@ Gentle introduction to the main concepts of the Rascal language.
 #### Description
 
 Rascal is based on a dozen concepts and having a global understanding of them will help to grasp the language more quickly.
-Here we will informally explain and illustrate these concepts and often we will refer to the [Rascal Language Reference](../Rascal/) for further details. In other words, we are providing here a friendly front-end for the actual language description.
+Here we will informally explain and illustrate these concepts and often we will refer to the [Rascal Language Reference](../Rascal/index.md) for further details. In other words, we are providing here a friendly front-end for the actual language description.
 
 Most language concepts are described separately but some features we just mention here:
 
@@ -37,20 +37,20 @@ Most language concepts are described separately but some features we just mentio
 *  There is an extensive library for built-in datatypes, input/output, fact extraction from Java source code, visualization, and more.
 
 Here are the concepts to be discussed:
-* [StaticTyping](../RascalConcepts/StaticTyping/)
-* [Datatypes](../RascalConcepts/Datatypes/)
-* [immutable values](../RascalConcepts/ImmutableValues/)
-* [Enumerating](../RascalConcepts/Enumerating/)
-* [Comprehensions](../RascalConcepts/Comprehensions/)
-* [pattern matching](../RascalConcepts/PatternMatching/)
-* [control structures](../RascalConcepts/ControlStructures/)
-* [case distinction](../RascalConcepts/CaseDistinction/)
-* [Visiting](../RascalConcepts/Visiting/)
-* [Functions](../RascalConcepts/Functions/)
-* [syntax definition and parsing](../RascalConcepts/SyntaxDefinitionAndParsing/)
-* [Rewriting](../RascalConcepts/Rewriting/)
-* [IDEConstruction](../RascalConcepts/IDEConstruction/)
-* [code models](../RascalConcepts/CodeModels/)
-* [equation solving](../RascalConcepts/EquationSolving/)
+* [StaticTyping](../RascalConcepts/StaticTyping/index.md)
+* [Datatypes](../RascalConcepts/Datatypes/index.md)
+* [immutable values](../RascalConcepts/ImmutableValues/index.md)
+* [Enumerating](../RascalConcepts/Enumerating/index.md)
+* [Comprehensions](../RascalConcepts/Comprehensions/index.md)
+* [pattern matching](../RascalConcepts/PatternMatching/index.md)
+* [control structures](../RascalConcepts/ControlStructures/index.md)
+* [case distinction](../RascalConcepts/CaseDistinction/index.md)
+* [Visiting](../RascalConcepts/Visiting/index.md)
+* [Functions](../RascalConcepts/Functions/index.md)
+* [syntax definition and parsing](../RascalConcepts/SyntaxDefinitionAndParsing/index.md)
+* [Rewriting](../RascalConcepts/Rewriting/index.md)
+* [IDEConstruction](../RascalConcepts/IDEConstruction/index.md)
+* [code models](../RascalConcepts/CodeModels/index.md)
+* [equation solving](../RascalConcepts/EquationSolving/index.md)
 
 

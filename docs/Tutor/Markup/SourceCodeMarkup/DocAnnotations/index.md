@@ -52,7 +52,7 @@ are collected.
 The header of the concept definition is automatically generated and consists of:
 
 ```
-## _Data declaration name_ {/Markup/SourceCodeMarkup/DocAnnotations}
+# _Data declaration name_
 .Type
 _Data declarations_
 .Usage
@@ -65,7 +65,7 @@ The signature of this annotation declaration is collected.
 The header of the concept definition is automatically generated and consists of:
 
 ```
-## _Annotation declaration name_ {/Markup/SourceCodeMarkup/DocAnnotations}
+# _Annotation declaration name_
 .Type
 _Annotation declarations_
 .Usage
@@ -88,7 +88,7 @@ Consider the source code of the now function in the `DateTime` library.
 rascal>  import DateTime;
 ok
 rascal>  now();
-datetime: $2022-09-25T13:50:37.370+00:00$
+datetime: $2022-09-25T18:42:27.029+00:00$
 ```
   }
   @javaClass{org.rascalmpl.library.DateTime}
@@ -99,7 +99,7 @@ datetime: $2022-09-25T13:50:37.370+00:00$
 This will be expanded to
 
 ```
-## now {/Markup/SourceCodeMarkup/DocAnnotations}
+  # now
   .Function
   `datetime now()`
   .Usage
@@ -114,7 +114,7 @@ This will be expanded to
 rascal>  import DateTime;
 ok
 rascal>  now();
-datetime: $2022-09-25T13:50:37.419+00:00$
+datetime: $2022-09-25T18:42:27.080+00:00$
 ```
 ```
 
@@ -126,5 +126,8 @@ The information about the name of a function, data or annotation declaration, or
 
 .Pitfalls 
 * This approach requires that functions with the same name are grouped together in the source file.
+* We do not (yet) provide direct editing of `@doc{ ... }` in Rascal source files. We should!
+
+ped together in the source file.
 * We do not (yet) provide direct editing of `@doc{ ... }` in Rascal source files. We should!
 

@@ -58,7 +58,7 @@ org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.librar
 	at org.rascalmpl.interpreter.Evaluator.eval(Evaluator.java:908)
 	at org.rascalmpl.repl.RascalInterpreterREPL.evalStatement(RascalInterpreterREPL.java:132)
 	at org.rascalmpl.repl.BaseRascalREPL.handleInput(BaseRascalREPL.java:119)
-	at org.rascalmpl.library.lang.rascal.tutor.repl.TutorCommandExecutor.eval(TutorCommandExecutor.java:95)
+	at org.rascalmpl.library.lang.rascal.tutor.repl.TutorCommandExecutor.eval(TutorCommandExecutor.java:97)
 	at org.rascalmpl.library.lang.rascal.tutor.repl.TutorCommandExecutorCreator.lambda$2(TutorCommandExecutorCreator.java:82)
 	at org.rascalmpl.values.RascalFunctionValueFactory$RascalFunctionValue.call(RascalFunctionValueFactory.java:176)
 	at org.rascalmpl.interpreter.result.FunctionResultFacade.call(FunctionResultFacade.java:54)

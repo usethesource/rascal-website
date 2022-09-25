@@ -33,6 +33,8 @@ If you are an expert developer, please check the body of the offending function 
 
 ```rascal-shell ,error
 rascal>java int incr(int x) {}
+|prompt:///|(0,23,<1,0>,<1,23>): Java function has a body
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/NonAbstractJavaFunction/NonAbstractJavaFunction.html|
 ok
 ```
 

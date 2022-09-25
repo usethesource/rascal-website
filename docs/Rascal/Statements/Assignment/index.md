@@ -60,13 +60,13 @@ The other assignment operators can be expressed as abbreviations for the standar
 An assignable is either a single variable, (the base variable), optionally followed by subscriptions, slices or field selections.
 The assignment statement always results in assigning a completely new value to the base variable. 
 We distinguish the following forms of assignment:
-* [Annotation](../../../Rascal/Statements/Assignment/Annotation/)
-* [Constructor](../../../Rascal/Statements/Assignment/Constructor/)
-* [Field](../../../Rascal/Statements/Assignment/Field/)
-* [IsDefined](../../../Rascal/Statements/Assignment/IsDefined/)
-* [Multiple](../../../Rascal/Statements/Assignment/Multiple/)
-* [Slice](../../../Rascal/Statements/Assignment/Slice/)
-* [Subscription](../../../Rascal/Statements/Assignment/Subscription/)
-* [Variable](../../../Rascal/Statements/Assignment/Variable/)
+* [Annotation](../../../Rascal/Statements/Assignment/Annotation/index.md)
+* [Constructor](../../../Rascal/Statements/Assignment/Constructor/index.md)
+* [Field](../../../Rascal/Statements/Assignment/Field/index.md)
+* [IsDefined](../../../Rascal/Statements/Assignment/IsDefined/index.md)
+* [Multiple](../../../Rascal/Statements/Assignment/Multiple/index.md)
+* [Slice](../../../Rascal/Statements/Assignment/Slice/index.md)
+* [Subscription](../../../Rascal/Statements/Assignment/Subscription/index.md)
+* [Variable](../../../Rascal/Statements/Assignment/Variable/index.md)
 
 

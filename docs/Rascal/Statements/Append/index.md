@@ -15,7 +15,7 @@ Append an element to the list value produced by various loop statements.
 
 #### Description
 
-An append statement may only occur in the body of a [While](../../../Rascal/Statements/While/), [Do](../../../Rascal/Statements/Do/) or [For](../../../Rascal/Statements/For/) statement. 
+An append statement may only occur in the body of a [While](../../../Rascal/Statements/While/index.md), [Do](../../../Rascal/Statements/Do/index.md) or [For](../../../Rascal/Statements/For/index.md) statement. 
 It appends the value of _Exp_ to the resulting list value of the loop construct in which it occurs.
 
 #### Examples

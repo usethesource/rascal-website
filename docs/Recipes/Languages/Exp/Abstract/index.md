@@ -8,7 +8,7 @@ A version of Exp based on abstract syntax.
 
 #### Description
 
-The [abstract syntax](../../../../Rascalopedia/AbstractSyntaxTree/) for a language is a
+The [abstract syntax](../../../../Rascalopedia/AbstractSyntaxTree/index.md) for a language is a
 data type that is used to represent programs in the language in an _abstract_ form.
 Abstract syntax has the following properties:
 
@@ -57,7 +57,7 @@ test bool tstEval4() = eval(add(con(3), mul(con(4), con(5)))) == 23;
 ```
 
            
-Here we see Rascal's _pattern-directed invocation_ in action (see [Function Declaration](../../../../Rascal/Declarations/Function/)).
+Here we see Rascal's _pattern-directed invocation_ in action (see [Function Declaration](../../../../Rascal/Declarations/Function/index.md)).
 The essence is this: in other languages the formal parameters in a function declaration
 are just that: formal parameters, i.e., single names that can be used inside the function and
 that are bound when the function is called.

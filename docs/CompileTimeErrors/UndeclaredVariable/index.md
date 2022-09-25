@@ -26,6 +26,8 @@ Here is an example where an undeclared variables occurs in list splicing:
 
 ```rascal-shell ,error
 rascal>[1, *x, 3]
+|prompt:///|(5,1,<1,5>,<1,6>): Undeclared variable: x
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
 ok
 ```
 

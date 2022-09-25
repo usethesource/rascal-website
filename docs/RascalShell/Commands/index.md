@@ -10,10 +10,10 @@ RascalShell commands
 
 The RascalShell provides several built-in commands:
 
-* [Clear](../../RascalShell/Commands/Clear/)
-* [Edit](../../RascalShell/Commands/Edit/)
-* [Help](../../RascalShell/Commands/Help/)
-* [Quit](../../RascalShell/Commands/Quit/)
-* [Set](../../RascalShell/Commands/Set/)
-* [Test](../../RascalShell/Commands/Test/)
+* [Clear](../../RascalShell/Commands/Clear/index.md)
+* [Edit](../../RascalShell/Commands/Edit/index.md)
+* [Help](../../RascalShell/Commands/Help/index.md)
+* [Quit](../../RascalShell/Commands/Quit/index.md)
+* [Set](../../RascalShell/Commands/Set/index.md)
+* [Test](../../RascalShell/Commands/Test/index.md)
 

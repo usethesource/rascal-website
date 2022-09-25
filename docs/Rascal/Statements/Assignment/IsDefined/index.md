@@ -14,10 +14,10 @@ First the value of _Exp_~1~ is determined and if that is defined it is assigned 
 Otherwise, the value of _Exp_~2~ is assigned to _Assignable_.
 
 Values which can be undefined are:
-* in [Map](../../../../Rascal/Expressions/Values/Map/)s where the key is _not_ set
-* values of [Annotation](../../../../Rascal/Declarations/Annotation/) which are not present.
-* values of [Function](../../../../Rascal/Declarations/Function/)'s keyword parameters which have not been provided, but are set to default.
-* values of [Constructor](../../../../Rascal/Expressions/Values/Constructor/)'s keyword parameters which have not been provided, but are computed by defaults.
+* in [Map](../../../../Rascal/Expressions/Values/Map/index.md)s where the key is _not_ set
+* values of [Annotation](../../../../Rascal/Declarations/Annotation/index.md) which are not present.
+* values of [Function](../../../../Rascal/Declarations/Function/index.md)'s keyword parameters which have not been provided, but are set to default.
+* values of [Constructor](../../../../Rascal/Expressions/Values/Constructor/index.md)'s keyword parameters which have not been provided, but are computed by defaults.
 
 No other values can be used in an undefined state, so the ? operator does not make sense on undefined or uninitialized variables for example.
 

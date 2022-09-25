@@ -28,18 +28,18 @@ Pico has a single purpose in life: being so simple that specifications of every 
 
 The following aspects of the Pico language will be discussed:
 
-* [Abstract](../../../Recipes/Languages/Pico/Abstract/)
-* [Assembly](../../../Recipes/Languages/Pico/Assembly/)
-* [Compile](../../../Recipes/Languages/Pico/Compile/)
-* [ControlFlow](../../../Recipes/Languages/Pico/ControlFlow/)
-* [Evaluate](../../../Recipes/Languages/Pico/Evaluate/)
-* [IDE](../../../Recipes/Languages/Pico/IDE/)
-* [Load](../../../Recipes/Languages/Pico/Load/)
-* [Syntax](../../../Recipes/Languages/Pico/Syntax/)
-* [Typecheck](../../../Recipes/Languages/Pico/Typecheck/)
-* [Uninit](../../../Recipes/Languages/Pico/Uninit/)
-* [UseDef](../../../Recipes/Languages/Pico/UseDef/)
-* [Visualize](../../../Recipes/Languages/Pico/Visualize/)
+* [Abstract](../../../Recipes/Languages/Pico/Abstract/index.md)
+* [Assembly](../../../Recipes/Languages/Pico/Assembly/index.md)
+* [Compile](../../../Recipes/Languages/Pico/Compile/index.md)
+* [ControlFlow](../../../Recipes/Languages/Pico/ControlFlow/index.md)
+* [Evaluate](../../../Recipes/Languages/Pico/Evaluate/index.md)
+* [IDE](../../../Recipes/Languages/Pico/IDE/index.md)
+* [Load](../../../Recipes/Languages/Pico/Load/index.md)
+* [Syntax](../../../Recipes/Languages/Pico/Syntax/index.md)
+* [Typecheck](../../../Recipes/Languages/Pico/Typecheck/index.md)
+* [Uninit](../../../Recipes/Languages/Pico/Uninit/index.md)
+* [UseDef](../../../Recipes/Languages/Pico/UseDef/index.md)
+* [Visualize](../../../Recipes/Languages/Pico/Visualize/index.md)
 
 #### Examples
 

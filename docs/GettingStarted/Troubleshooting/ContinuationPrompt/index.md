@@ -12,7 +12,7 @@ What is the continuation prompt `>>>>>>`?
 
 #### Description
 
-When Rascal can not recognize a complete [command](../../../RascalShell/Commands/) yet, it will 
+When Rascal can not recognize a complete [command](../../../RascalShell/Commands/index.md) yet, it will 
 prompt with this `>>>>>>`:
 
 
@@ -20,7 +20,7 @@ prompt with this `>>>>>>`:
 rascal>x = 1
 ```
 
-The reason is that it expects a `;` after every [Assignment](../../../Rascal/Statements/Assignment/).
+The reason is that it expects a `;` after every [Assignment](../../../Rascal/Statements/Assignment/index.md).
 To cancel the entire command, simply provide an empty line:
 
 
@@ -63,7 +63,7 @@ Counting 10
 list[void]: []
 ```
 
-As you can see the entire [For](../../../Rascal/Statements/For/) loop only starts when the prompt recognizes the entire command.
+As you can see the entire [For](../../../Rascal/Statements/For/index.md) loop only starts when the prompt recognizes the entire command.
 
 #### Pitfalls
 

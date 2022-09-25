@@ -9,9 +9,9 @@ Ambiguity diagnosis suggests changes to syntax definitions to make them non-ambi
 #### Description
 
 The `Ambiguity` library, a.k.a. DrAmbiguity, contains a diagnosis tool that can help you find the causes of ambiguous 
-parse trees and possible [Disambiguation](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/)s to solve them in a [Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition/).
-DrAmbiguity is a library that processes any parse forest produced by a parser generated from Rascal's [Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition/)s.
-Please read [Disambiguation](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/) first.
+parse trees and possible [Disambiguation](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/index.md)s to solve them in a [Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition/index.md).
+DrAmbiguity is a library that processes any parse forest produced by a parser generated from Rascal's [Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition/index.md)s.
+Please read [Disambiguation](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/index.md) first.
 
 #### Examples
 
@@ -22,7 +22,7 @@ diagnose(t); // for any t of which you know it contains an ambiguity
 
 #### Benefits
 
-*  DrAmbiguity automatically proposes [Disambiguation](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/)s that will work 
+*  DrAmbiguity automatically proposes [Disambiguation](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/index.md)s that will work 
 
 #### Pitfalls
 

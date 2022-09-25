@@ -9,7 +9,7 @@ A Rascal module could not be imported.
 #### Description
 
 Rascal programs are split up in modules.
-An [import](../../Rascal/Declarations/Import/) declaration is used to include one module in another.
+An [import](../../Rascal/Declarations/Import/index.md) declaration is used to include one module in another.
 This error indicates that a module import failed.
 This can be caused by 
 
@@ -37,6 +37,8 @@ Here is the effect of a misspelled module name (assuming that you do not have a 
 
 ```rascal-shell ,error
 rascal>import Lis;
+|prompt:///|(0,11,<1,0>,<1,11>): Could not import module Lis: can not find in search path
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/ModuleImport/ModuleImport.html|
 ok
 ```
 

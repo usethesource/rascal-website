@@ -38,7 +38,7 @@ test bool tfac47() = fac3(47) == 25862324151116818064296435515361197996919763238
 ```
           
 <1> `fac1` is defined using a conditional expression to distinguish cases.
-<2> `fac2` distinguishes cases using pattern-based dispatch ([Rascal Functions](../../../Rascal/Declarations/Function/)).
+<2> `fac2` distinguishes cases using pattern-based dispatch ([Rascal Functions](../../../Rascal/Declarations/Function/index.md)).
     Here the case for `0` is defined.
 <3> Here all other cases for `fac2` are defined (as indicated by the `default` keyword).
 <4> `fac3` shows a more imperative implementation of factorial.

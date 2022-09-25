@@ -30,14 +30,14 @@ Values of type `node` represent untyped trees and are constructed as follows:
 * optionally, unordered named fields can be added as well.
 
 The following are provided for nodes:
-* [Equal](../../../../Rascal/Expressions/Values/Node/Equal/)
-* [GreaterThan](../../../../Rascal/Expressions/Values/Node/GreaterThan/)
-* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/Node/GreaterThanOrEqual/)
-* [LessThan](../../../../Rascal/Expressions/Values/Node/LessThan/)
-* [LessThanOrEqual](../../../../Rascal/Expressions/Values/Node/LessThanOrEqual/)
-* [NotEqual](../../../../Rascal/Expressions/Values/Node/NotEqual/)
-* [Slice](../../../../Rascal/Expressions/Values/Node/Slice/)
-* [Subscription](../../../../Rascal/Expressions/Values/Node/Subscription/)
+* [Equal](../../../../Rascal/Expressions/Values/Node/Equal/index.md)
+* [GreaterThan](../../../../Rascal/Expressions/Values/Node/GreaterThan/index.md)
+* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/Node/GreaterThanOrEqual/index.md)
+* [LessThan](../../../../Rascal/Expressions/Values/Node/LessThan/index.md)
+* [LessThanOrEqual](../../../../Rascal/Expressions/Values/Node/LessThanOrEqual/index.md)
+* [NotEqual](../../../../Rascal/Expressions/Values/Node/NotEqual/index.md)
+* [Slice](../../../../Rascal/Expressions/Values/Node/Slice/index.md)
+* [Subscription](../../../../Rascal/Expressions/Values/Node/Subscription/index.md)
 
 #### Examples
 

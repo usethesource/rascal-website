@@ -60,10 +60,10 @@ will produce:
 
 #### Benefits
 
-* [bullet lists](../../../../Tutor/Markup/StructureMarkup/BulletLists/) and [numbered lists](../../../../Tutor/Markup/StructureMarkup/NumberedLists/) can be nested under eachother.
+* [bullet lists](../../../../Tutor/Markup/StructureMarkup/BulletLists/index.md) and [numbered lists](../../../../Tutor/Markup/StructureMarkup/NumberedLists/index.md) can be nested under eachother.
 
 #### Pitfalls
 
-* An empty line is required _after_ [bullet lists](../../../../Tutor/Markup/StructureMarkup/BulletLists/).
+* An empty line is required _after_ [bullet lists](../../../../Tutor/Markup/StructureMarkup/BulletLists/index.md).
 
 

@@ -17,15 +17,15 @@ A map does not contain a requested key.
 #### Description
 
 Rascal provides many operations and functions on maps, 
-see [map values](../../../Rascal/Expressions/Values/Map/) and [map functions](../../../Library/Map.md/).
+see [map values](../../../Rascal/Expressions/Values/Map/index.md) and [map functions](../../../Library/Map.md).
 This error is generated when a function or operation cannot find a requested key value in a map.
 
 Remedies: 
 
 *  Use the 
-   [isDefined](../../../Rascal/Expressions/Values/Boolean/IsDefined/) and 
-   [ifDefinedElse](../../../Rascal/Expressions/Values/Boolean/IfDefinedElse/) operator to guard a lookup in a map.
-*  Catch the `NoSuchKey` yourself, see [try catch](../../../Rascal/Statements/TryCatch/).
+   [isDefined](../../../Rascal/Expressions/Values/Boolean/IsDefined/index.md) and 
+   [ifDefinedElse](../../../Rascal/Expressions/Values/Boolean/IfDefinedElse/index.md) operator to guard a lookup in a map.
+*  Catch the `NoSuchKey` yourself, see [try catch](../../../Rascal/Statements/TryCatch/index.md).
 
 #### Examples
 

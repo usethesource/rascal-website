@@ -9,12 +9,12 @@ keywords:
 
 #### Core Rascal
 
-1. To get how-to recipes for common meta-programming tasks in Rascal, we refer to the [Rascal recipes](../../Recipes/)
-1. To learn how to use the [rascal shell](../../RascalShell/), go [here](../../RascalShell/)
+1. To get how-to recipes for common meta-programming tasks in Rascal, we refer to the [Rascal recipes](../../Recipes/index.md)
+1. To learn how to use the [rascal shell](../../RascalShell/index.md), go [here](../../RascalShell/index.md)
 1. To understand the terminology used in Rascal and by Rascal programmers, [[RascalConcepts]] is a dictionary and [[Rascalopedia]] is a focused encyclopedia of meta programming.
-1. To understand error messages produced by Rascal, there is information on all [run time errors](../../RunTimeErrors/) and [compile time errors](../../CompileTimeErrors/).
-1. To know everything about every detail of Rascal syntax and semantics, the [Rascal reference manual](../../Rascal/) applies.
-1. The full standard [Library](../../Library/) is documented [here](../../Library/).
+1. To understand error messages produced by Rascal, there is information on all [run time errors](../../RunTimeErrors/index.md) and [compile time errors](../../CompileTimeErrors/index.md).
+1. To know everything about every detail of Rascal syntax and semantics, the [Rascal reference manual](../../Rascal/index.md) applies.
+1. The full standard [Library](../../Library/index.md) is documented [here](../../Library/index.md).
 
 #### Libraries
 

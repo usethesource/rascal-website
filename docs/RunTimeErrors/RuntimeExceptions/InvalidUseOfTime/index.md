@@ -26,6 +26,8 @@ Setting the `year` field on a time value throws an exception:
 
 ```rascal-shell ,error
 rascal>NOW = $T20:11:01.463+00:00$;
+|prompt:///|(6,21,<1,6>,<1,27>): Invalid datetime input: Error reading time, expected ':', found: 49
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/DateTimeSyntax/DateTimeSyntax.html|
 ok
 rascal>NOW.year = 2020;
 |prompt:///|(0,3,<1,0>,<1,3>): Undeclared variable: NOW

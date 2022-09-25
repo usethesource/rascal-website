@@ -43,7 +43,7 @@ The following fields provide access to information about the value, but cannot b
 
 
 The following fields provide access to the individual components of date, time and datetime values,
-and can be accessed using [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection/) and be assigned using [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection/):
+and can be accessed using [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection/index.md) and be assigned using [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection/index.md):
 
 *  `year`
 *  `month`
@@ -75,18 +75,18 @@ The `isDate`, `isTime`, and `isDateTime` fields can be checked in advance to det
 kind of value is stored in a variable of type `datetime`.
 
 The following operators are defined for DateTime:
-* [Equal](../../../../Rascal/Expressions/Values/DateTime/Equal/)
-* [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection/)
-* [GreaterThan](../../../../Rascal/Expressions/Values/DateTime/GreaterThan/)
-* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/DateTime/GreaterThanOrEqual/)
-* [LessThan](../../../../Rascal/Expressions/Values/DateTime/LessThan/)
-* [LessThanOrEqual](../../../../Rascal/Expressions/Values/DateTime/LessThanOrEqual/)
-* [NotEqual](../../../../Rascal/Expressions/Values/DateTime/NotEqual/)
+* [Equal](../../../../Rascal/Expressions/Values/DateTime/Equal/index.md)
+* [FieldSelection](../../../../Rascal/Expressions/Values/DateTime/FieldSelection/index.md)
+* [GreaterThan](../../../../Rascal/Expressions/Values/DateTime/GreaterThan/index.md)
+* [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/DateTime/GreaterThanOrEqual/index.md)
+* [LessThan](../../../../Rascal/Expressions/Values/DateTime/LessThan/index.md)
+* [LessThanOrEqual](../../../../Rascal/Expressions/Values/DateTime/LessThanOrEqual/index.md)
+* [NotEqual](../../../../Rascal/Expressions/Values/DateTime/NotEqual/index.md)
 
 The following functions are defined for DateTime:
 loctoc::[Rascal/Libraries/Prelude/DateTime,1]
 
-There are also [library functions](../../../../Library/DateTime.md/) available for DateTime.
+There are also [library functions](../../../../Library/DateTime.md) available for DateTime.
 
 #### Examples
 

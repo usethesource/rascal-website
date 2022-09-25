@@ -11,6 +11,10 @@ title: "module lang::rascal::tutor::Indexer"
 
 * `rel[str reference, str url]`
 
+## function readConceptIndex {#lang-rascal-tutor-Indexer-readConceptIndex}
+
+* ``Index readConceptIndex(PathConfig pcfg)``
+
 ## function createConceptIndex {#lang-rascal-tutor-Indexer-createConceptIndex}
 
 * ``Index createConceptIndex(PathConfig pcfg)``

@@ -11,6 +11,6 @@ Rascal compared with the imperative, object-oriented and algebraic paradigms.
 Rascal provides both familiar and unfamiliar features. These will be appreciated differently by programmers
 that are expert in other language paradigms. We provide the following comparisons:
 
-* [ASFPlusSDF](../../WhyRascal/CompareWithOtherParadigms/ASFPlusSDF/)
-* [OO](../../WhyRascal/CompareWithOtherParadigms/OO/)
+* [ASFPlusSDF](../../WhyRascal/CompareWithOtherParadigms/ASFPlusSDF/index.md)
+* [OO](../../WhyRascal/CompareWithOtherParadigms/OO/index.md)
 

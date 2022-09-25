@@ -13,7 +13,7 @@ Demonstrates a file-system crawler
 #### Description
 
 
-Note that this functionality also resides in [FileSystem](../../../Library/util/FileSystem.md/).
+Note that this functionality also resides in [FileSystem](../../../Library/util/FileSystem.md).
 This demo use different styles including a for-loop that produces a list value.
 
 
@@ -40,4 +40,5 @@ structured programming with a for loop that constructs a list value
 #### Synopsis
 
 functional programming with a ternary, a list splice and recursion.
+
 

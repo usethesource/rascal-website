@@ -41,11 +41,11 @@ With these examples in mind, we can study the overall problem solving workflow a
 in the figure above.
 It consists of three optional phases:
 
-*  Is extraction needed to solve the problem, then define the extraction phase, see [Extraction](../../WhyRascal/SolutionStrategies/Extraction/).
+*  Is extraction needed to solve the problem, then define the extraction phase, see [Extraction](../../WhyRascal/SolutionStrategies/Extraction/index.md).
 
-*  Is analysis needed, then define the analysis phase, see [Analysis](../../WhyRascal/SolutionStrategies/Analysis/). 
+*  Is analysis needed, then define the analysis phase, see [Analysis](../../WhyRascal/SolutionStrategies/Analysis/index.md). 
 
-*  Is synthesis needed, then define the synthesis phase, see [Synthesis](../../WhyRascal/SolutionStrategies/Synthesis/).
+*  Is synthesis needed, then define the synthesis phase, see [Synthesis](../../WhyRascal/SolutionStrategies/Synthesis/index.md).
 
 [[Validation-Workflow]]
 ![Validation Workflow](/assets/WhyRascal/SolutionStrategies/validation.png)
@@ -79,8 +79,8 @@ When these requirements have been established, it becomes much easier to actuall
 of the first figure above.
 
 We will discuss:
-* [Extraction](../../WhyRascal/SolutionStrategies/Extraction/)
-* [Analysis](../../WhyRascal/SolutionStrategies/Analysis/)
-* [Synthesis](../../WhyRascal/SolutionStrategies/Synthesis/)
+* [Extraction](../../WhyRascal/SolutionStrategies/Extraction/index.md)
+* [Analysis](../../WhyRascal/SolutionStrategies/Analysis/index.md)
+* [Synthesis](../../WhyRascal/SolutionStrategies/Synthesis/index.md)
 
 

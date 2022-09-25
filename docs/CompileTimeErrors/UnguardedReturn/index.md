@@ -8,7 +8,7 @@ A return statement occurs outside a function body.
 
 #### Description
 
-A [return](../../Rascal/Statements/Return/) statement is used to return a value from a function.
+A [return](../../Rascal/Statements/Return/index.md) statement is used to return a value from a function.
 It is an error to use it outside a function body.
 
 #### Examples
@@ -24,6 +24,8 @@ Using return outside a function body gives an error:
 
 ```rascal-shell ,error
 rascal>return 3;
+|prompt:///|(0,9,<1,0>,<1,9>): Return statement outside of function scope
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UnguardedReturn/UnguardedReturn.html|
 ok
 ```
 

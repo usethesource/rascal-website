@@ -23,6 +23,8 @@ This error signals the case that thei fields are partially labelled.
 
 ```rascal-shell ,error
 rascal>tuple[int n, str] T;
+|prompt:///|(6,5,<1,6>,<1,11>): either all fields must be labeled, or none.
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/PartiallyLabeledFields/PartiallyLabeledFields.html|
 ok
 rascal>rel[str name, int] R;
 |prompt:///|(4,8,<1,4>,<1,12>): either all fields must be labeled, or none.

@@ -46,7 +46,7 @@ data Binding = binding(str var, Exp exp);
 ```
 
                 
-Observe that the abstract syntax follows the structure of the [ConcreteSyntax](../../../../Recipes/Languages/Func/ConcreteSyntax/) but
+Observe that the abstract syntax follows the structure of the [ConcreteSyntax](../../../../Recipes/Languages/Func/ConcreteSyntax/index.md) but
 omits details such as operator priorities, parentheses, and the like.
 
 

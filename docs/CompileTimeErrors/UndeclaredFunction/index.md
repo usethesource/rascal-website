@@ -27,6 +27,8 @@ Calling the undeclared function `triple` gives an error:
 
 ```rascal-shell ,error
 rascal>triple(5)
+|prompt:///|(0,6,<1,0>,<1,6>): Undeclared variable: triple
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
 ok
 ```
 We can remedy this by declaring the function:
@@ -42,6 +44,8 @@ Calling the library function `size` gives an error if the proper library (in thi
 
 ```rascal-shell ,error
 rascal>size([20, 1, 77]);
+|prompt:///|(0,4,<1,0>,<1,4>): Undeclared variable: size
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
 ok
 ```
 The solution is:
@@ -65,6 +69,8 @@ Using an undeclared variable gives an error:
 
 ```rascal-shell ,error
 rascal>n + 1;
+|prompt:///|(0,1,<1,0>,<1,1>): Undeclared variable: n
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
 ok
 ```
 A variable is introduced by just assigning to it (with or without its expected type):

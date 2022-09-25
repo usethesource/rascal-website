@@ -7,15 +7,15 @@ keywords:
 
 #### Synopsis
 
-The [Visit](../../../Rascal/Expressions/Visit/) expression can also be used directly as a statement
+The [Visit](../../../Rascal/Expressions/Visit/index.md) expression can also be used directly as a statement
 
 #### Syntax
 
-See [Visit](../../../Rascal/Expressions/Visit/).
+See [Visit](../../../Rascal/Expressions/Visit/index.md).
 
 #### Description
 
-See [Visit](../../../Rascal/Expressions/Visit/) for the details.
+See [Visit](../../../Rascal/Expressions/Visit/index.md) for the details.
 
 #### Examples
 

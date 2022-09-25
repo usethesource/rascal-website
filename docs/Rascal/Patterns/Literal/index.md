@@ -8,7 +8,7 @@ Literal in abstract pattern.
 
 #### Description
 
-A literal of one of the basic types [Boolean](../../../Rascal/Expressions/Values/Boolean/), [Integer](../../../Rascal/Expressions/Values/Integer/), [Real](../../../Rascal/Expressions/Values/Real/), [Number](../../../Rascal/Expressions/Values/Number/), [String](../../../Rascal/Expressions/Values/String/), [Location](../../../Rascal/Expressions/Values/Location/), or [DateTime](../../../Rascal/Expressions/Values/DateTime/)
+A literal of one of the basic types [Boolean](../../../Rascal/Expressions/Values/Boolean/index.md), [Integer](../../../Rascal/Expressions/Values/Integer/index.md), [Real](../../../Rascal/Expressions/Values/Real/index.md), [Number](../../../Rascal/Expressions/Values/Number/index.md), [String](../../../Rascal/Expressions/Values/String/index.md), [Location](../../../Rascal/Expressions/Values/Location/index.md), or [DateTime](../../../Rascal/Expressions/Values/DateTime/index.md)
 can be used as abstract pattern.
 A literal pattern matches with a value that is identical to the literal.
 
@@ -35,6 +35,8 @@ to announce that the match is guaranteed to fail:
 
 ```rascal-shell ,error
 rascal>123 := "abc";
+|prompt:///|(7,5,<1,7>,<1,12>): Expected int, but got str
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UnexpectedType/UnexpectedType.html|
 ok
 ```
 However, a literal pattern can be used to filter among other values:

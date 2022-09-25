@@ -89,11 +89,11 @@ A Lisp interpreter consists of the following parts:
 
 We discuss all these aspects:
 
-* [Syntax](../../../Recipes/Languages/Lisra/Syntax/)
-* [Runtime](../../../Recipes/Languages/Lisra/Runtime/)
-* [Parse](../../../Recipes/Languages/Lisra/Parse/)
-* [Pretty](../../../Recipes/Languages/Lisra/Pretty/)
-* [Eval](../../../Recipes/Languages/Lisra/Eval/)
-* [./Test](../../../Recipes/Languages/Lisra/Test/)
+* [Syntax](../../../Recipes/Languages/Lisra/Syntax/index.md)
+* [Runtime](../../../Recipes/Languages/Lisra/Runtime/index.md)
+* [Parse](../../../Recipes/Languages/Lisra/Parse/index.md)
+* [Pretty](../../../Recipes/Languages/Lisra/Pretty/index.md)
+* [Eval](../../../Recipes/Languages/Lisra/Eval/index.md)
+* [./Test](../../../Recipes/Languages/Lisra/Test/index.md)
 
 

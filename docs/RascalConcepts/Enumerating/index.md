@@ -13,7 +13,7 @@ or all the nodes in a tree.
 Each value that is enumerated is first matched against a pattern before it can possibly contribute to the result of 
 the enumerator. An enumerator yields `true` as long as it has generated a new value, and `false` otherwise.
 
-See [Enumerator](../../Rascal/Expressions/Comprehensions/Enumerator/) for details.
+See [Enumerator](../../Rascal/Expressions/Comprehensions/Enumerator/index.md) for details.
 
 #### Examples
 
@@ -55,6 +55,8 @@ Another example that results in an error:
 
 ```rascal-shell ,error
 rascal>str x <- {1, 3, 5, 7, 11 };
+|prompt:///|(22,2,<1,22>,<1,24>): Expected int, but got str
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UnexpectedType/UnexpectedType.html|
 ok
 ```
 Here, the enumerator produces its first integer value, an attempt is made to assign this to variable `x` that is declared as string,
@@ -66,8 +68,8 @@ A more satisfying use is as follows:
 rascal>{ x * x | int x <- {1, 3, 5, 7, 11 }};
 set[int]: {121,1,9,49,25}
 ```
-When used inside [Comprehensions](../../Rascal/Expressions/Comprehensions/), 
-or [For](../../Rascal/Statements/For/), [Do](../../Rascal/Statements/Do/), or [While](../../Rascal/Statements/While/) 
+When used inside [Comprehensions](../../Rascal/Expressions/Comprehensions/index.md), 
+or [For](../../Rascal/Statements/For/index.md), [Do](../../Rascal/Statements/Do/index.md), or [While](../../Rascal/Statements/While/index.md) 
 statement, all values of the generator will be produced and used.
 The variables that are introduced by a enumerator are local to the construct in which the enumerator is used.
 Here is a similar example:

@@ -19,12 +19,12 @@ Match a pattern against an expression.
 
 | `Pat`      | `Exp` |`Pat := Exp` |
 | --- | --- | --- |
-| [Patterns](../../../../../Rascal/Patterns/) | `value` | `bool`         |
+| [Patterns](../../../../../Rascal/Patterns/index.md) | `value` | `bool`         |
 
 
 #### Description
 
-See [Pattern Matching](../../../../../RascalConcepts/PatternMatching/) for an introduction to pattern matching and [Patterns](../../../../../Rascal/Patterns/) for a complete description.
+See [Pattern Matching](../../../../../RascalConcepts/PatternMatching/index.md) for an introduction to pattern matching and [Patterns](../../../../../Rascal/Patterns/index.md) for a complete description.
 
 #### Examples
 

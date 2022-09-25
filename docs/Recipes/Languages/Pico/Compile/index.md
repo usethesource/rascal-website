@@ -8,7 +8,7 @@ Compile a Pico program to assembly language.
 
 #### Examples
 
-The Pico compiler translates Pico programs to [Assembly](../../../../Recipes/Languages/Pico/Assembly/) language programs.
+The Pico compiler translates Pico programs to [Assembly](../../../../Recipes/Languages/Pico/Assembly/index.md) language programs.
 
 
 ```rascal 

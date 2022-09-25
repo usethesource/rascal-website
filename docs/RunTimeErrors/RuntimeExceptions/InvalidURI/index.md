@@ -16,7 +16,7 @@ An invalid URI is created at runtime.
 
 #### Description
 
-Thrown by operations on [source locations](../../../Rascal/Expressions/Values/Location/) that would 
+Thrown by operations on [source locations](../../../Rascal/Expressions/Values/Location/index.md) that would 
 lead to an invalid URI part of a source location value.
 
 #### Examples

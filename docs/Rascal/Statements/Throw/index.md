@@ -16,14 +16,14 @@ Throw any value as an exception up the call stack.
 #### Description
 
 A throw statement causes the immediate abortion of the execution of the current function with _Exp_ \'s value as exception value.
-The exception can be caught by a [Try Catch](../../../Rascal/Statements/TryCatch/) statement in the current function or in one of its callers.
+The exception can be caught by a [Try Catch](../../../Rascal/Statements/TryCatch/index.md) statement in the current function or in one of its callers.
 If the exception is not caught, the execution of the Rascal program is terminated. The following rules apply:
 
-* Although it is not necessary, it is a coding standard to use the [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/) `RuntimeException`, see [RuntimeException](../../../Library/Exception.md#Exception-RuntimeException/) to throw as _Exp_.
-* Use new [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/) data declarations that extend the type `RuntimeException` to create your own exception kinds.
+* Although it is not necessary, it is a coding standard to use the [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md) `RuntimeException`, see [RuntimeException](../../../Library/Exception.md#Exception-RuntimeException) to throw as _Exp_.
+* Use new [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md) data declarations that extend the type `RuntimeException` to create your own exception kinds.
 * In general _Exp_ can be any value. 
 
-See [try catch](../../../Rascal/Statements/TryCatch/) for handling thrown values.
+See [try catch](../../../Rascal/Statements/TryCatch/index.md) for handling thrown values.
 
 #### Examples
 
@@ -60,7 +60,7 @@ rascal>if (size(aList) == 3) {
 ok
 ```
 
-Here we throw a constructor of [RuntimeException](../../../Library/Exception.md#Exception-RuntimeException/):
+Here we throw a constructor of [RuntimeException](../../../Library/Exception.md#Exception-RuntimeException):
 
 ```rascal-shell ,error
 rascal>import Exception;

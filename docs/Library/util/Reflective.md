@@ -190,6 +190,8 @@ loc: |home:///bin/experiments/Compiler/Compile.rvm|
 
 ```rascal-shell ,error
 rascal>getDerivedWriteLoc("experiments::Compiler::muRascal2RVM::Library", "rsc", pathConfig());
+|prompt:///|(0,18,<1,0>,<1,18>): Undeclared variable: getDerivedWriteLoc
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
 ok
 ```
 

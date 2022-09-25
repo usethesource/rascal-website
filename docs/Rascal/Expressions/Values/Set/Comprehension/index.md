@@ -25,7 +25,7 @@ A set comprehension generates a set value.
 #### Description
 
 A set comprehension consists of a number of contributing expressions _Exp_~1~, _Exp_~2~, ... and a number of
-generators _Gen_~1~, _Gen_~2~, _Gen_~3~, ... that are evaluated as described in [Comprehensions](../../../../../Rascal/Expressions/Comprehensions/).
+generators _Gen_~1~, _Gen_~2~, _Gen_~3~, ... that are evaluated as described in [Comprehensions](../../../../../Rascal/Expressions/Comprehensions/index.md).
 
 #### Examples
 

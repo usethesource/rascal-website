@@ -42,16 +42,16 @@ The value returned by the function is used as value of the function call.
 For the keyword parameters a similar evaluation produces values for each expression and those values
 are bound to the respective names. 
 * The order of keyword parameters is irrelevant in the call syntax, as opposed to the order of the positional parameters. 
-* Notably, values are _also_ bound for the keyword parameters which are _not listed_ in the call site. For those values, _default_ expressions are evaluation which are retrieved from the [Function](../../../Rascal/Declarations/Function/) signature. 
-* For [Function](../../../Rascal/Declarations/Function/)s those default parameters are computed and bound at the time of calling the function
-* For [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/) constructors, the missing default parameters are computed, lazily, at the moment of [field projection](../../../Rascal/Expressions/Operators/FieldProjection/).
+* Notably, values are _also_ bound for the keyword parameters which are _not listed_ in the call site. For those values, _default_ expressions are evaluation which are retrieved from the [Function](../../../Rascal/Declarations/Function/index.md) signature. 
+* For [Function](../../../Rascal/Declarations/Function/index.md)s those default parameters are computed and bound at the time of calling the function
+* For [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md) constructors, the missing default parameters are computed, lazily, at the moment of [field projection](../../../Rascal/Expressions/Operators/FieldProjection/index.md).
 
 For more information:
-* see [Function](../../../Rascal/Declarations/Function/) for more details about function declarations.
-* see [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/) for more details about constructor declarations.
+* see [Function](../../../Rascal/Declarations/Function/index.md) for more details about function declarations.
+* see [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md) for more details about constructor declarations.
 
-In case of [function overloading](../../../Rascal/Declarations/Function/), where there a more definitions of the same function (the same name and argument arity), there is a selection process called "dynamic dispatch". The functions are tried in arbitrary order,
-and if their signature [matches](../../../RascalConcepts/PatternMatching/), and their body does not [Fail](../../../Rascal/Statements/Fail/), then the return value of that function is used. Otherwise, the next function alternative is tried until a succesful alternative is found. 
+In case of [function overloading](../../../Rascal/Declarations/Function/index.md), where there a more definitions of the same function (the same name and argument arity), there is a selection process called "dynamic dispatch". The functions are tried in arbitrary order,
+and if their signature [matches](../../../RascalConcepts/PatternMatching/index.md), and their body does not [Fail](../../../Rascal/Statements/Fail/index.md), then the return value of that function is used. Otherwise, the next function alternative is tried until a succesful alternative is found. 
 If the match of the signature is non-unitary, it involves backtracking, then a single function
 may be tried many times.
 

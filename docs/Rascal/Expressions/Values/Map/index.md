@@ -36,20 +36,20 @@ Maps resemble functions rather than relations in the sense that only a single va
 
 The following functions are provided for maps:
 
-* [Composition](../../../../Rascal/Expressions/Values/Map/Composition/)
-* [Comprehension](../../../../Rascal/Expressions/Values/Map/Comprehension/)
-* [Difference](../../../../Rascal/Expressions/Values/Map/Difference/)
-* [Equal](../../../../Rascal/Expressions/Values/Map/Equal/)
-* [Intersection](../../../../Rascal/Expressions/Values/Map/Intersection/)
-* [NotEqual](../../../../Rascal/Expressions/Values/Map/NotEqual/)
-* [StrictSubMap](../../../../Rascal/Expressions/Values/Map/StrictSubMap/)
-* [StrictSuperMap](../../../../Rascal/Expressions/Values/Map/StrictSuperMap/)
-* [SubMap](../../../../Rascal/Expressions/Values/Map/SubMap/)
-* [Subscription](../../../../Rascal/Expressions/Values/Map/Subscription/)
-* [SuperMap](../../../../Rascal/Expressions/Values/Map/SuperMap/)
-* [Union](../../../../Rascal/Expressions/Values/Map/Union/)
-* [in](../../../../Rascal/Expressions/Values/Map/in/)
-* [notin](../../../../Rascal/Expressions/Values/Map/notin/)
+* [Composition](../../../../Rascal/Expressions/Values/Map/Composition/index.md)
+* [Comprehension](../../../../Rascal/Expressions/Values/Map/Comprehension/index.md)
+* [Difference](../../../../Rascal/Expressions/Values/Map/Difference/index.md)
+* [Equal](../../../../Rascal/Expressions/Values/Map/Equal/index.md)
+* [Intersection](../../../../Rascal/Expressions/Values/Map/Intersection/index.md)
+* [NotEqual](../../../../Rascal/Expressions/Values/Map/NotEqual/index.md)
+* [StrictSubMap](../../../../Rascal/Expressions/Values/Map/StrictSubMap/index.md)
+* [StrictSuperMap](../../../../Rascal/Expressions/Values/Map/StrictSuperMap/index.md)
+* [SubMap](../../../../Rascal/Expressions/Values/Map/SubMap/index.md)
+* [Subscription](../../../../Rascal/Expressions/Values/Map/Subscription/index.md)
+* [SuperMap](../../../../Rascal/Expressions/Values/Map/SuperMap/index.md)
+* [Union](../../../../Rascal/Expressions/Values/Map/Union/index.md)
+* [in](../../../../Rascal/Expressions/Values/Map/in/index.md)
+* [notin](../../../../Rascal/Expressions/Values/Map/notin/index.md)
 
 #### Examples
 

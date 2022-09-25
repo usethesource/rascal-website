@@ -19,7 +19,7 @@ representation for object flow. We may translate for example
 Java to this intermediate language and then analyze object flow
 based on the simpler language.
   
-The implementation in this file is intended to work with [Core-M3](../../../Library/analysis/m3/Core.md#analysis::m3::Core-M3/) models
+The implementation in this file is intended to work with [Core-M3](../../../Library/analysis/m3/Core.md#analysis::m3::Core-M3) models
 
 
 ## data FlowProgram {#analysis-flow-ObjectFlow-FlowProgram}
@@ -69,4 +69,5 @@ Figure 2.2
 * ``rel[loc,&T] propagate(OFG g, rel[loc,&T] gen, rel[loc,&T] kill, bool back)``
 
 Section 2.4
+
 

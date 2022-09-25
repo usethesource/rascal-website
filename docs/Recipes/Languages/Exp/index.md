@@ -21,13 +21,13 @@ Our sample language Exp contains the following elements:
 We demonstrate _three different designs_ for implementing this language. Each alternative
 has its benefits and pitfalls. You can compare them to learn about the trade-offs.
 
-* [Abstract](../../../Recipes/Languages/Exp/Abstract/)
-* [Concrete](../../../Recipes/Languages/Exp/Concrete/)
-* [Combined](../../../Recipes/Languages/Exp/Combined/)
+* [./Abstract](../../../Recipes/Languages/Exp/Abstract/index.md)
+* [./Concrete](../../../Recipes/Languages/Exp/Concrete/index.md)
+* [./Combined](../../../Recipes/Languages/Exp/Combined/index.md)
 
 #### Examples
 
-These are example sentences that are part of the [./Exp](../../../Recipes/Languages/Exp/) language:
+These are example sentences that are part of the [./Exp](../../../Recipes/Languages/Exp/index.md) language:
 *  `123`
 *  `2+3+4`
 *  `2+3*4`

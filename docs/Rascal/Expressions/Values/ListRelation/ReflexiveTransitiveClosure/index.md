@@ -34,7 +34,7 @@ If we define for a given list relation R:
 
 
 then the reflexive transitive closure R* can be defined in two ways:
-(also see [TransitiveClosure](../../../../../Rascal/Expressions/Values/ListRelation/TransitiveClosure/)):
+(also see [TransitiveClosure](../../../../../Rascal/Expressions/Values/ListRelation/TransitiveClosure/index.md)):
 
 *  `R* = R~0~ + R~1~ + R~2~ + R~3~ + ...`
 *  `R* = R~0~ + R+`

@@ -22,6 +22,8 @@ Remedy: correct the type.
 
 ```rascal-shell ,error
 rascal>bool[int] x;
+|prompt:///|(0,4,<1,0>,<1,4>): Non-well-formed type: bool cannot have type arguments.
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/NonWellformedType/NonWellformedType.html|
 ok
 rascal>list[int,str] l;
 |prompt:///|(0,4,<1,0>,<1,4>): Non-well-formed type: list should have exactly one type argument, like list[value]

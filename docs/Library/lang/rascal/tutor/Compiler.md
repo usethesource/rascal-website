@@ -34,6 +34,10 @@ compiles .rsc and .md files to markdown by executing Rascal-specific code and in
 
 * ``void defaultCompile()``
 
+## function compileOne {#lang-rascal-tutor-Compiler-compileOne}
+
+* ``void compileOne(loc root, loc src, PathConfig pcfg)``
+
 ## function onlyAPICompile {#lang-rascal-tutor-Compiler-onlyAPICompile}
 
 * ``void onlyAPICompile()``
@@ -84,7 +88,6 @@ This uses another nested directory listing to construct information for the TOC 
 
 ## function compileMarkdown {#lang-rascal-tutor-Compiler-compileMarkdown}
 
-* ``list[Output] compileMarkdown([str first:/^\s*#\s*<title:[^#].*>$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls)``
 * ``list[Output] compileMarkdown([str first:/^\s*``````/, *block, str second:/^``````/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls)``
 * ``list[Output] compileMarkdown([str first:/^\s*```rascal-include<rest1:.*>$/, *str components, /^\s*```/, *str rest2], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls)``
 * ``list[Output] compileMarkdown([str first:/^\s*```rascal-shell<rest1:.*>$/, *block, /^\s*```/, *str rest2], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls)``
@@ -102,7 +105,7 @@ This uses another nested directory listing to construct information for the TOC 
 
 #### Synopsis
 
-Make sure to tag all section headers with the right fragment id for concept linking
+Skip double quoted blocks
 
 ## function compileRascalShell {#lang-rascal-tutor-Compiler-compileRascalShell}
 
@@ -126,6 +129,15 @@ Prepare blocks run the REPL but show no input or output
 * ``str filterErrors(str errorStream)``
 * ``list[str] filterErrors([/^warning, ambiguity/, *str rest])``
 * ``list[str] filterErrors([/^Generating parser/, *str rest])``
+* ``default list[str] filterErrors([str head, *str tail])``
+* ``list[str] filterErrors([])``
+
+## function length {#lang-rascal-tutor-Compiler-length}
+
+* ``int length(list[str] lines)``
+* ``int length(str line)``
+
+r/, *str rest])``
 * ``default list[str] filterErrors([str head, *str tail])``
 * ``list[str] filterErrors([])``
 

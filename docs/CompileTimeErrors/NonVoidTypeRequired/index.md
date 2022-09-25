@@ -11,7 +11,7 @@ A type other than `void` is needed.
 This error is generated when a value is needed, so an expression of any type but the `void` type.
 
 The most prominent examples are splicing for 
-[list](../../Rascal/Expressions/Values/List/Splice/) and [set](../../Rascal/Expressions/Values/Set/Splice/).
+[list](../../Rascal/Expressions/Values/List/Splice/index.md) and [set](../../Rascal/Expressions/Values/Set/Splice/index.md).
 
 Remedy: replace the expression of type `void` by an expression that computes a value.
 

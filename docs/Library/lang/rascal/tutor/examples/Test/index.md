@@ -1,10 +1,10 @@
-## Synopsis {/Lang/rascal/tutor/examples/Test}
+# Synopsis
 This is a test synopsis.
  
-## Description {/Lang/rascal/tutor/examples/Test}
+# Description
 See examples below!!!
 
-## Examples  {/Lang/rascal/tutor/examples/Test}
+# Examples 
  
 
 ```rascal-shell 
@@ -12,11 +12,11 @@ rascal>import Content;
 ok
 rascal>html("this is some \<strong\>HTML\</strong\> output")
 <div class="rascal-html-output">
-  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9084/"></iframe>
+  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9082/"></iframe>
 </div>
 rascal>file(|https://www.rascal-mpl.org/assets/ico/favicon.png|)
 <div class="rascal-html-output">
-  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9084/"></iframe>
+  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9082/"></iframe>
 </div>
 rascal>1 + 1 == 2
 bool: true
@@ -24,7 +24,7 @@ rascal>int count = 1;
 int: 1
 rascal>content("counter", Response (Request _) { count += 1; return response("count: <count>"); })
 <div class="rascal-html-output">
-  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9085/"></iframe>
+  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9083/"></iframe>
 </div>
 rascal>count;
 int: 1
@@ -32,7 +32,7 @@ rascal>count = 66;
 int: 66
 rascal>content("counter", Response (Request _) { count += 1; return response("count: <count>"); })
 <div class="rascal-html-output">
-  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9085/"></iframe>
+  <iframe class="rascal-content-frame" style="display: block; width: 100%; height: 100%; resize: both" src="http://localhost:9083/"></iframe>
 </div>
 rascal>count;
 int: 66
@@ -41,7 +41,7 @@ int: 66
 * _emphasis_
 * *bold*
 * [Rascal Web site](http:///rascal-mpl.org)
-* [./call analysis](../../../../../../Library/lang/rascal/tutor/examples/Test/CallAnalysis/) 
+* [./call analysis](../../../../../../Library/lang/rascal/tutor/examples/Test/CallAnalysis/index.md) 
 * Table:
 
   | Module | LOC |
@@ -62,10 +62,14 @@ Horizontal rule:
 * `code`
 * `in code: italics`
 
-* [CallAnalysis](../../../../../../Library/lang/rascal/tutor/examples/Test/CallAnalysis/)
-* [If](../../../../../../Library/lang/rascal/tutor/examples/Test/If/)
-* [Libraries](../../../../../../Library/lang/rascal/tutor/examples/Test/Libraries/)
-* [Questions](../../../../../../Library/lang/rascal/tutor/examples/Test/Questions/)
+* [CallAnalysis](../../../../../../Library/lang/rascal/tutor/examples/Test/CallAnalysis/index.md)
+* [If](../../../../../../Library/lang/rascal/tutor/examples/Test/If/index.md)
+* [Libraries](../../../../../../Library/lang/rascal/tutor/examples/Test/Libraries/index.md)
+* _Library:package:lang-rascal-tutor-examples-Test-Questions (broken link)_
+
+# Pitfalls
+
+(../../../../../../Library/lang/rascal/tutor/examples/Test/Questions/)
 
 ## Benefits {/Lang/rascal/tutor/examples/Test}
 

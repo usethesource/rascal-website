@@ -18,37 +18,37 @@ Functions for reading and writing XML files to and from a "DOM" representation.
 
 The Document Object Model [DOM](http://en.wikipedia.org/wiki/Document_Object_Model) is a cross-platform and language-independent
 way of representing and manipulating HTML, XHTML and XML documents. In this module we represent the DOM as a 
-Rascal [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/) using [keyword parameters](../../../Rascal/Declarations/Function/) for the optional attributes.
+Rascal [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md) using [keyword parameters](../../../Rascal/Declarations/Function/index.md) for the optional attributes.
 
-In [IO](../../../Library/lang/xml/IO.md/) a different approach is taken, where each XML document is mapped to an instance of 
+In [IO](../../../Library/lang/xml/IO.md) a different approach is taken, where each XML document is mapped to an instance of 
 the `node` class, which gives a more direct one-to-ony mapping as opposed to the DOM encoding here.
 If you are studying XML documents in general, then the current module is the place to be. If you
-are reading in specific data which is only accidentally encoded as XML, then have a look at [IO](../../../Library/lang/xml/IO.md/).
+are reading in specific data which is only accidentally encoded as XML, then have a look at [IO](../../../Library/lang/xml/IO.md).
 
 The following functions are provided:
 
-* [attribute](../../../Library/lang/xml/DOM.md#lang::xml::DOM-attribute/)
-* [cdata](../../../Library/lang/xml/DOM.md#lang::xml::DOM-cdata/)
-* [charData](../../../Library/lang/xml/DOM.md#lang::xml::DOM-charData/)
-* [charRef](../../../Library/lang/xml/DOM.md#lang::xml::DOM-charRef/)
-* [comment](../../../Library/lang/xml/DOM.md#lang::xml::DOM-comment/)
-* [document](../../../Library/lang/xml/DOM.md#lang::xml::DOM-document/)
-* [element](../../../Library/lang/xml/DOM.md#lang::xml::DOM-element/)
-* [entityRef](../../../Library/lang/xml/DOM.md#lang::xml::DOM-entityRef/)
-* [namespace](../../../Library/lang/xml/DOM.md#lang::xml::DOM-namespace/)
-* [none](../../../Library/lang/xml/DOM.md#lang::xml::DOM-none/)
-* [pi](../../../Library/lang/xml/DOM.md#lang::xml::DOM-pi/)
-* [Namespace](../../../Library/lang/xml/DOM.md#lang::xml::DOM-Namespace/)
-* [Node](../../../Library/lang/xml/DOM.md#lang::xml::DOM-Node/)
-* [attribute](../../../Library/lang/xml/DOM.md#lang::xml::DOM-attribute/)
-* [element](../../../Library/lang/xml/DOM.md#lang::xml::DOM-element/)
-* [implode](../../../Library/lang/xml/DOM.md#lang::xml::DOM-implode/)
-* [parseXMLDOM](../../../Library/lang/xml/DOM.md#lang::xml::DOM-parseXMLDOM/)
-* [parseXMLDOMTrim](../../../Library/lang/xml/DOM.md#lang::xml::DOM-parseXMLDOMTrim/)
-* [toXML](../../../Library/lang/xml/DOM.md#lang::xml::DOM-toXML/)
-* [xmlCompact](../../../Library/lang/xml/DOM.md#lang::xml::DOM-xmlCompact/)
-* [xmlPretty](../../../Library/lang/xml/DOM.md#lang::xml::DOM-xmlPretty/)
-* [xmlRaw](../../../Library/lang/xml/DOM.md#lang::xml::DOM-xmlRaw/)
+* [attribute](../../../Library/lang/xml/DOM.md#lang::xml::DOM-attribute)
+* [cdata](../../../Library/lang/xml/DOM.md#lang::xml::DOM-cdata)
+* [charData](../../../Library/lang/xml/DOM.md#lang::xml::DOM-charData)
+* [charRef](../../../Library/lang/xml/DOM.md#lang::xml::DOM-charRef)
+* [comment](../../../Library/lang/xml/DOM.md#lang::xml::DOM-comment)
+* [document](../../../Library/lang/xml/DOM.md#lang::xml::DOM-document)
+* [element](../../../Library/lang/xml/DOM.md#lang::xml::DOM-element)
+* [entityRef](../../../Library/lang/xml/DOM.md#lang::xml::DOM-entityRef)
+* [namespace](../../../Library/lang/xml/DOM.md#lang::xml::DOM-namespace)
+* [none](../../../Library/lang/xml/DOM.md#lang::xml::DOM-none)
+* [pi](../../../Library/lang/xml/DOM.md#lang::xml::DOM-pi)
+* [Namespace](../../../Library/lang/xml/DOM.md#lang::xml::DOM-Namespace)
+* [Node](../../../Library/lang/xml/DOM.md#lang::xml::DOM-Node)
+* [attribute](../../../Library/lang/xml/DOM.md#lang::xml::DOM-attribute)
+* [element](../../../Library/lang/xml/DOM.md#lang::xml::DOM-element)
+* [implode](../../../Library/lang/xml/DOM.md#lang::xml::DOM-implode)
+* [parseXMLDOM](../../../Library/lang/xml/DOM.md#lang::xml::DOM-parseXMLDOM)
+* [parseXMLDOMTrim](../../../Library/lang/xml/DOM.md#lang::xml::DOM-parseXMLDOMTrim)
+* [toXML](../../../Library/lang/xml/DOM.md#lang::xml::DOM-toXML)
+* [xmlCompact](../../../Library/lang/xml/DOM.md#lang::xml::DOM-xmlCompact)
+* [xmlPretty](../../../Library/lang/xml/DOM.md#lang::xml::DOM-xmlPretty)
+* [xmlRaw](../../../Library/lang/xml/DOM.md#lang::xml::DOM-xmlRaw)
 
 
 ## data Node {#lang-xml-DOM-Node}
@@ -179,7 +179,7 @@ Node: document(element(
 
 The DOM instance contains every single character (including spaces and newlines)
 as they appear in the source file.
-As expected, the result is of type [Node](../../../Library/lang/xml/DOM.md#lang::xml::DOM-Node/).
+As expected, the result is of type [Node](../../../Library/lang/xml/DOM.md#lang::xml::DOM-Node).
 
 ## function parseXMLDOMTrim {#lang-xml-DOM-parseXMLDOMTrim}
 
@@ -239,7 +239,7 @@ Node: document(element(
     ]))
 ```
 All whitespace characters have been removed and do not occur in the trimmed DOM instance.
-Compare this with the output of [parse x m l d oM](../../../Library/lang/xml/DOM.md#lang::xml::DOM-parseXMLDOM/).
+Compare this with the output of [parse x m l d oM](../../../Library/lang/xml/DOM.md#lang::xml::DOM-parseXMLDOM).
 
 ## function xmlRaw {#lang-xml-DOM-xmlRaw}
 
@@ -379,4 +379,6 @@ ok
 ```
 The output `S` of `xmlPretty` is a pretty printed version of the original source file `F`.
 Observe that the elements inside `<note> ... </note>` are indented.
+
+ndented.
 

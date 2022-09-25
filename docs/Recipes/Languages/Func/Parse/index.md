@@ -9,8 +9,8 @@ Parse a Func program from a string or a file.
 #### Description
 
 Parsing uses the syntax rules for a given start non-terminnal to parse a string and turn it into a parse tree.
-The work horse is the [parse](../../../../Library/ParseTree.md#ParseTree-parse/) function that is available in the 
-[ParseTree](../../../../Library/ParseTree.md/) library.
+The work horse is the [parse](../../../../Library/ParseTree.md#ParseTree-parse) function that is available in the 
+[ParseTree](../../../../Library/ParseTree.md) library.
 
 #### Examples
 
@@ -63,5 +63,7 @@ Prog: (Prog) `fact(n) = if n <= 1 then
              n * fact(n-1)
           end`
 ```
+
+
 
 

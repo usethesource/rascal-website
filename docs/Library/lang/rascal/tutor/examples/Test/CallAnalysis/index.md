@@ -1,7 +1,7 @@
-## Synopsis {/Lang/rascal/tutor/examples/Test/CallAnalysis}
+# Synopsis
 Analyzing the call structure of an application.
 
-## Description {/Lang/rascal/tutor/examples/Test/CallAnalysis}
+# Description
 
 Suppose a mystery box ends up on your desk. When you open it, it contains a huge software system with several questions attached to it:
 
@@ -158,12 +158,18 @@ The reducer is initialized with  all procedures (`carrier(Calls)`) and iterates 
 At each iteration the current value of the reducer (`it`) is intersected (`&`) with the procedures called directly or indirectly
 from that entry point (`(Calls+)[p]`).
 
-## Benefits {/Lang/rascal/tutor/examples/Test/CallAnalysis}
+# Benefits
 * In small examples, the above results can be easily obtained by a visual inspection of the call graph.
 Such a visual inspection does _not_ scale very well to large graphs and this makes the above form of analysis particularly suited for studying large systems.
 
-## Pitfalls {/Lang/rascal/tutor/examples/Test/CallAnalysis}
+# Pitfalls
 * We discuss call analysis in a, intentionally, simplistic fashion that does not take into account how the call relation
+  is extracted from actual source code.
+  The above principles are, however, applicable to real cases as well.
+
+ # Questions
+
+plistic fashion that does not take into account how the call relation
   is extracted from actual source code.
   The above principles are, however, applicable to real cases as well.
 

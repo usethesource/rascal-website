@@ -9,13 +9,13 @@ and then to bind variables to parts of the matched value.
 
 #### Syntax
 
-For most of the [Values](../../Rascal/Expressions/Values/), there is a corresponding pattern matching operator. Then there are
+For most of the [Values](../../Rascal/Expressions/Values/index.md), there is a corresponding pattern matching operator. Then there are
 some "higher-order" matching operators which make complex patterns out of simpler ones. 
 This is the complete list:
  
 | Pattern              | Syntax                                                                       |
 | --- | --- |
-| Literal              | [Boolean](../../Rascal/Expressions/Values/Boolean/), [Integer](../../Rascal/Expressions/Values/Integer/), [Real](../../Rascal/Expressions/Values/Real/), [Number](../../Rascal/Expressions/Values/Number/), [String](../../Rascal/Expressions/Values/String/), [Location](../../Rascal/Expressions/Values/Location/), or [DateTime](../../Rascal/Expressions/Values/DateTime/) |
+| Literal              | [Boolean](../../Rascal/Expressions/Values/Boolean/index.md), [Integer](../../Rascal/Expressions/Values/Integer/index.md), [Real](../../Rascal/Expressions/Values/Real/index.md), [Number](../../Rascal/Expressions/Values/Number/index.md), [String](../../Rascal/Expressions/Values/String/index.md), [Location](../../Rascal/Expressions/Values/Location/index.md), or [DateTime](../../Rascal/Expressions/Values/DateTime/index.md) |
 | Regular Expression   | `/<Regular Expression>/` |
 | Variable declaration | `Type Var`                                                               |
 | Multi-variable       | `*Var`, `*Type Var`                                                    |
@@ -37,28 +37,28 @@ Patterns are used to *dispatch* functions and conditional control flow, to *extr
 from values and to conditionally *filter* values. The pattern following pattern kinds can be arbitrarily nested, following
 the above syntax:
 
-* [Concrete](../../Rascal/Patterns/Concrete/)
-* [Descendant](../../Rascal/Patterns/Descendant/)
-* [Labelled](../../Rascal/Patterns/Labelled/)
-* [List](../../Rascal/Patterns/List/)
-* [Literal](../../Rascal/Patterns/Literal/)
-* [MultiVariable](../../Rascal/Patterns/MultiVariable/)
-* [Node](../../Rascal/Patterns/Node/)
-* [Regular](../../Rascal/Patterns/Regular/)
-* [Set](../../Rascal/Patterns/Set/)
-* [Tuple](../../Rascal/Patterns/Tuple/)
-* [TypeConstrained](../../Rascal/Patterns/TypeConstrained/)
-* [TypedLabelled](../../Rascal/Patterns/TypedLabelled/)
-* [Variable](../../Rascal/Patterns/Variable/)
-* [VariableDeclaration](../../Rascal/Patterns/VariableDeclaration/)
+* [Concrete](../../Rascal/Patterns/Concrete/index.md)
+* [Descendant](../../Rascal/Patterns/Descendant/index.md)
+* [Labelled](../../Rascal/Patterns/Labelled/index.md)
+* [List](../../Rascal/Patterns/List/index.md)
+* [Literal](../../Rascal/Patterns/Literal/index.md)
+* [MultiVariable](../../Rascal/Patterns/MultiVariable/index.md)
+* [Node](../../Rascal/Patterns/Node/index.md)
+* [Regular](../../Rascal/Patterns/Regular/index.md)
+* [Set](../../Rascal/Patterns/Set/index.md)
+* [Tuple](../../Rascal/Patterns/Tuple/index.md)
+* [TypeConstrained](../../Rascal/Patterns/TypeConstrained/index.md)
+* [TypedLabelled](../../Rascal/Patterns/TypedLabelled/index.md)
+* [Variable](../../Rascal/Patterns/Variable/index.md)
+* [VariableDeclaration](../../Rascal/Patterns/VariableDeclaration/index.md)
 
 All these patterns may be used in:
 
-*  cases of a [Switch](../../Rascal/Statements/Switch/) or [visit statements](../../Rascal/Statements/Visit/) or [visit expressions](../../Rascal/Expressions/Visit/), 
-*  on the left of the [Match](../../Rascal/Expressions/Values/Boolean/Match/) operator (`:=`),
-*  on the left of the [Enumerator](../../Rascal/Expressions/Comprehensions/Enumerator/) operator (`<-`), and
-*  as formal parameters of [Function](../../Rascal/Declarations/Function/)s. 
-*  [try catch](../../Rascal/Statements/TryCatch/) statements to match thrown exceptions.
+*  cases of a [Switch](../../Rascal/Statements/Switch/index.md) or [visit statements](../../Rascal/Statements/Visit/index.md) or [visit expressions](../../Rascal/Expressions/Visit/index.md), 
+*  on the left of the [Match](../../Rascal/Expressions/Values/Boolean/Match/index.md) operator (`:=`),
+*  on the left of the [Enumerator](../../Rascal/Expressions/Comprehensions/Enumerator/index.md) operator (`<-`), and
+*  as formal parameters of [Function](../../Rascal/Declarations/Function/index.md)s. 
+*  [try catch](../../Rascal/Statements/TryCatch/index.md) statements to match thrown exceptions.
 
 Each pattern binds variables in a conditional scope:
 

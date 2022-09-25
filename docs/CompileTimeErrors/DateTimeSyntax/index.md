@@ -8,7 +8,7 @@ A datetime value is syntactically incorrect.
 
 #### Description
 
-Datetime values have a rather complex format as described in [datetime](../../Rascal/Expressions/Values/DateTime/).
+Datetime values have a rather complex format as described in [datetime](../../Rascal/Expressions/Values/DateTime/index.md).
 Some errors in the format are treated as syntax errors, others generate the `DateTimeSyntax` error.
 
 Remedy: Fix the datetime value notation.
@@ -25,6 +25,7 @@ Certain errors, like a wrong day number (here: 40) lead to a parse error:
 
 ```rascal-shell ,error
 rascal>$2013-07-40T09:15:23.123+03:00$;
+                 ^ Parse error here
 ok
 ```
 

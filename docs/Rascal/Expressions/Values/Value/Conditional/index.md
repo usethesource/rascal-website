@@ -25,7 +25,7 @@ Conditional expression on values.
 #### Description
 
 Yields the value of _Exp_~2~ if the value of _Exp_~1~ is `true` and the value of _Exp_~3~ otherwise.
-The result type is the _least upper bound_ (also known as `lub`, see [StaticTyping](../../../../../Rascal/Declarations/StaticTyping/)) of the types of _Exp_~2~ and _Exp_~3~.
+The result type is the _least upper bound_ (also known as `lub`, see [StaticTyping](../../../../../Rascal/Declarations/StaticTyping/index.md)) of the types of _Exp_~2~ and _Exp_~3~.
 
 #### Examples
 

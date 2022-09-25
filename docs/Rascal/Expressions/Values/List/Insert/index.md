@@ -20,7 +20,7 @@ add an element in front of a list
 
 #### Description
 
-The `+` operator can insert an element in front of a list. Note that `+` is one of the [Operators](../../../../../Rascal/Expressions/Operators/) that is overloaded, it is also [Concatenation](../../../../../Rascal/Expressions/Values/List/Concatenation/) and [Append](../../../../../Rascal/Expressions/Values/List/Append/) for example.
+The `+` operator can insert an element in front of a list. Note that `+` is one of the [Operators](../../../../../Rascal/Expressions/Operators/index.md) that is overloaded, it is also [Concatenation](../../../../../Rascal/Expressions/Values/List/Concatenation/index.md) and [Append](../../../../../Rascal/Expressions/Values/List/Append/index.md) for example.
 
 #### Examples
 
@@ -36,7 +36,7 @@ list[int]: [1,2,3]
 
 #### Pitfalls
 
-*  If the first operand before the `+` is a list, `+` acts as [Concatenation](../../../../../Rascal/Expressions/Values/List/Concatenation/) and not as [Insert](../../../../../Rascal/Expressions/Values/List/Insert/)
+*  If the first operand before the `+` is a list, `+` acts as [Concatenation](../../../../../Rascal/Expressions/Values/List/Concatenation/index.md) and not as [Insert](../../../../../Rascal/Expressions/Values/List/Insert/index.md)
 
 This is concatenation:
 

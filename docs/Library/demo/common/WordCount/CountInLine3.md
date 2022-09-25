@@ -17,7 +17,7 @@ Count words in a string
 
 #### Synopsis
 
-Use a [Reducer](../../../../Rascal/Expressions/Reducer/) to flip through all the possible matches and count them.
+Use a [Reducer](../../../../Rascal/Expressions/Reducer/index.md) to flip through all the possible matches and count them.
 
 ## function tstCountInLine3a {#demo-common-WordCount-CountInLine3-tstCountInLine3a}
 

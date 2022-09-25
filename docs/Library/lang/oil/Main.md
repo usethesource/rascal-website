@@ -18,15 +18,15 @@ a small sub-set of the Java language. It allows one to build objects
 using fully qualified class names (which should be on the run-time
 classpath somehow). 
 
-A call to the [interpret](../../../Library/lang/oil/Main.md#lang::oil::Main-interpret/) function will load an OIL expression and 
+A call to the [interpret](../../../Library/lang/oil/Main.md#lang::oil::Main-interpret) function will load an OIL expression and 
 generate the object in memory and then call the toString() method
 on it, returning the resulting string.
 
 OIL works best in combination with writing one or two `java` functions
 for example to be able to influence the classpath and or to further process
 the constructed object (if necessary). In this case we call the interpret
-function directly from Java. The [interpret](../../../Library/lang/oil/Main.md#lang::oil::Main-interpret/) function is used to debug
-an OIL expression and eventually we use the [interpret](../../../Library/lang/oil/Main.md#lang::oil::Main-interpret/) method directly
+function directly from Java. The [interpret](../../../Library/lang/oil/Main.md#lang::oil::Main-interpret) function is used to debug
+an OIL expression and eventually we use the [interpret](../../../Library/lang/oil/Main.md#lang::oil::Main-interpret) method directly
 from Java.
 
 #### Benefits
@@ -82,4 +82,6 @@ the objects referred to by the field name;
 *  `new` calls the constructor of a class with the provided argument list. The `methods` argument is ignored for now.
 *  `call` calls a method on the receiving object and returns the result. (this seems to be broken).
 *  `with` is unimplemented, intented to avoid having to fully qualify class names all the time. 
+
+ 
 

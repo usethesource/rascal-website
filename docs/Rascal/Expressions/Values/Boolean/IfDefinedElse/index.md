@@ -27,7 +27,7 @@ Test whether expression has a defined value, otherwise provide alternative.
 If no exception is generated during the evaluation of _Exp_~1~, the result of `Exp~1~ ? Exp~2~` is the value of _Exp_~1~.
 Otherwise, it is the value of _Exp_~2~.
 
-Also see [IsDefined](../../../../../Rascal/Expressions/Values/Boolean/IsDefined/) and [Assignment](../../../../../Rascal/Statements/Assignment/).
+Also see [IsDefined](../../../../../Rascal/Expressions/Values/Boolean/IsDefined/index.md) and [Assignment](../../../../../Rascal/Statements/Assignment/index.md).
 
 #### Examples
 

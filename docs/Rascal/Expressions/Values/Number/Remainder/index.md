@@ -41,6 +41,8 @@ Remainder is only defined on integers:
 
 ```rascal-shell ,error
 rascal>13.5 % 6
+|prompt:///|(7,1,<1,7>,<1,8>): remainder not supported on real and int
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UnsupportedOperation/UnsupportedOperation.html|
 ok
 ```
 

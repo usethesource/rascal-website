@@ -23,6 +23,8 @@ Using the undeclared type `myint` gives an error:
 
 ```rascal-shell ,error
 rascal>myint incr(myint n) = n + 1;
+|prompt:///|(0,5,<1,0>,<1,5>): Undeclared type: myint
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredType/UndeclaredType.html|
 ok
 ```
 The solkution is to first declares `myint` (here as an alias for `int`):

@@ -10,14 +10,14 @@ Solutions for some common tasks.
 
 We discuss the following tasks:
 
-* [AdHocDataExploration](../../Recipes/Common/AdHocDataExploration/)
-* [CallAnalysis](../../Recipes/Common/CallAnalysis/)
-* [CallLifting](../../Recipes/Common/CallLifting/)
-* [ColoredTrees](../../Recipes/Common/ColoredTrees/)
-* [CountConstructors](../../Recipes/Common/CountConstructors/)
-* [Derivative](../../Recipes/Common/Derivative/)
-* [StringTemplate](../../Recipes/Common/StringTemplate/)
-* [WordCount](../../Recipes/Common/WordCount/)
-* [WordReplacement](../../Recipes/Common/WordReplacement/)
+* [AdHocDataExploration](../../Recipes/Common/AdHocDataExploration/index.md)
+* [CallAnalysis](../../Recipes/Common/CallAnalysis/index.md)
+* [CallLifting](../../Recipes/Common/CallLifting/index.md)
+* [ColoredTrees](../../Recipes/Common/ColoredTrees/index.md)
+* [CountConstructors](../../Recipes/Common/CountConstructors/index.md)
+* [Derivative](../../Recipes/Common/Derivative/index.md)
+* [StringTemplate](../../Recipes/Common/StringTemplate/index.md)
+* [WordCount](../../Recipes/Common/WordCount/index.md)
+* [WordReplacement](../../Recipes/Common/WordReplacement/index.md)
 
 

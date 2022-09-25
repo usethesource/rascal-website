@@ -38,19 +38,19 @@ An n-ary list relation with m tuples is denoted by
  `[< E~11~, E~12~, ..., E~1n~>,< E~21~, E~22~, ..., E~2n~>, ..., < E~m1~, E~m2~, ..., E~mn~>]`, 
 where the _E_~ij~ are expressions that yield the desired element type _T_~i~.
 
-Since list relations are a form of list all operations (see [List](../../../../Rascal/Expressions/Values/List/)) and functions
-(see [List](../../../../Library/List.md/)) are also applicable to relations.
+Since list relations are a form of list all operations (see [List](../../../../Rascal/Expressions/Values/List/index.md)) and functions
+(see [List](../../../../Library/List.md)) are also applicable to relations.
 
 The following additional operators are provided for list relations:
-* [CartesianProduct](../../../../Rascal/Expressions/Values/ListRelation/CartesianProduct/)
-* [Composition](../../../../Rascal/Expressions/Values/ListRelation/Composition/)
-* [FieldSelection](../../../../Rascal/Expressions/Values/ListRelation/FieldSelection/)
-* [Join](../../../../Rascal/Expressions/Values/ListRelation/Join/)
-* [ReflexiveTransitiveClosure](../../../../Rascal/Expressions/Values/ListRelation/ReflexiveTransitiveClosure/)
-* [Subscription](../../../../Rascal/Expressions/Values/ListRelation/Subscription/)
-* [TransitiveClosure](../../../../Rascal/Expressions/Values/ListRelation/TransitiveClosure/)
+* [CartesianProduct](../../../../Rascal/Expressions/Values/ListRelation/CartesianProduct/index.md)
+* [Composition](../../../../Rascal/Expressions/Values/ListRelation/Composition/index.md)
+* [FieldSelection](../../../../Rascal/Expressions/Values/ListRelation/FieldSelection/index.md)
+* [Join](../../../../Rascal/Expressions/Values/ListRelation/Join/index.md)
+* [ReflexiveTransitiveClosure](../../../../Rascal/Expressions/Values/ListRelation/ReflexiveTransitiveClosure/index.md)
+* [Subscription](../../../../Rascal/Expressions/Values/ListRelation/Subscription/index.md)
+* [TransitiveClosure](../../../../Rascal/Expressions/Values/ListRelation/TransitiveClosure/index.md)
 
-There are also [library functions](../../../../Library/ListRelation.md/) available for list relations.
+There are also [library functions](../../../../Library/ListRelation.md) available for list relations.
 
 
 #### Examples

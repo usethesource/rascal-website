@@ -19,7 +19,7 @@ A _concept_ is the basic building block of a course.
 .Syntax
 
 ```
-## _ConceptName_ {/Concept}
+# _ConceptName_
 ```
 
 ```
@@ -77,16 +77,16 @@ Each section starts with a keyword that should appear at the begin of a line.
 The first two sections (Name and Synopsis) are mandatory,
 
 Here is a brief summary of the sections of a concept:
-* [Name](../../Tutor/Concept/Name/)
-* [Synopsis](../../Tutor/Concept/Synopsis/)
-* [./Syntax](../../Tutor/Concept/Syntax/)
-* [Types](../../Tutor/Concept/Types/)
-* [./Function](../../Tutor/Concept/Function/)
-* [Details](../../Tutor/Concept/Details/)
-* [Description](../../Tutor/Concept/Description/)
-* [Examples](../../Tutor/Concept/Examples/)
-* [Benefits](../../Tutor/Concept/Benefits/)
-* [Pitfalls](../../Tutor/Concept/Pitfalls/)
+* [Name](../../Tutor/Concept/Name/index.md)
+* [Synopsis](../../Tutor/Concept/Synopsis/index.md)
+* [./Syntax](../../Tutor/Concept/Syntax/index.md)
+* [Types](../../Tutor/Concept/Types/index.md)
+* [./Function](../../Tutor/Concept/Function/index.md)
+* [Details](../../Tutor/Concept/Details/index.md)
+* [Description](../../Tutor/Concept/Description/index.md)
+* [Examples](../../Tutor/Concept/Examples/index.md)
+* [Benefits](../../Tutor/Concept/Benefits/index.md)
+* [Pitfalls](../../Tutor/Concept/Pitfalls/index.md)
 
 
 .Examples

@@ -18,22 +18,22 @@ A `Graph` datatype with associated functions.
 #### Description
 
 The Graph data type is a binary relation and all operators and functions defined
-on [relations](../../../Rascal/Expressions/Values/Relation/) are also defined on Graphs.
+on [relations](../../../Rascal/Expressions/Values/Relation/index.md) are also defined on Graphs.
 
 The `Graph` library provides the following functions:
 * ((Library:alias:analysis::graphs::Graph::Graph[&T]))
-* [bottom](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-bottom/)
-* [connectedComponents](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-connectedComponents/)
-* [order](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-order/)
-* [predecessors](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-predecessors/)
-* [reach](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-reach/)
-* [reachR](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-reachR/)
-* [reachX](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-reachX/)
-* [shortestPathPair](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-shortestPathPair/)
-* [stronglyConnectedComponents](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-stronglyConnectedComponents/)
-* [stronglyConnectedComponentsAndTopSort](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-stronglyConnectedComponentsAndTopSort/)
-* [successors](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-successors/)
-* [top](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-top/)
+* [bottom](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-bottom)
+* [connectedComponents](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-connectedComponents)
+* [order](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-order)
+* [predecessors](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-predecessors)
+* [reach](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-reach)
+* [reachR](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-reachR)
+* [reachX](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-reachX)
+* [shortestPathPair](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-shortestPathPair)
+* [stronglyConnectedComponents](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-stronglyConnectedComponents)
+* [stronglyConnectedComponentsAndTopSort](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-stronglyConnectedComponentsAndTopSort)
+* [successors](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-successors)
+* [top](../../../Library/analysis/graphs/Graph.md#analysis::graphs::Graph-top)
 
 
 ## alias Graph[&T] {#analysis-graphs-Graph-Graph[&T]}
@@ -277,4 +277,6 @@ set[set[int]]: {
   {1,3,2}
 }
 ```
+
+``
 

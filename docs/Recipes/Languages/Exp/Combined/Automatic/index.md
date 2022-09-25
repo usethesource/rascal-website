@@ -8,7 +8,7 @@ Use implode to translate an Exp parse tree to an abstract syntax tree.
 
 #### Description
 
-[implode](../../../../../Library/ParseTree.md#ParseTree-implode/) is a function that automates the mapping between parse trees and abstract syntax trees.
+[implode](../../../../../Library/ParseTree.md#ParseTree-implode) is a function that automates the mapping between parse trees and abstract syntax trees.
 It takes two arguments:
 
 *  The _reified_ type of the desired abstract syntax. (In Rascal, types can not be used freely as values.
@@ -286,5 +286,6 @@ ok
 rascal>eval("2+3*4");
 int: 14
 ```
+
 
 

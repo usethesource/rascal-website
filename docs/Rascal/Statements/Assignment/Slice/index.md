@@ -21,9 +21,9 @@ Assign to a slice of a list or string.
 `Exp~1~` and `Exp~3~` are optional
 #### Description
 
-A slice assignment is defined for [List](../../../../Rascal/Expressions/Values/List/), [String](../../../../Rascal/Expressions/Values/String/) and [Node](../../../../Rascal/Expressions/Values/Node/) 
+A slice assignment is defined for [List](../../../../Rascal/Expressions/Values/List/index.md), [String](../../../../Rascal/Expressions/Values/String/index.md) and [Node](../../../../Rascal/Expressions/Values/Node/index.md) 
 and aims to replace a slice from the old value of the assignable by a new value. 
-See [Slice](../../../../Rascal/Expressions/Values/List/Slice/), [Slice](../../../../Rascal/Expressions/Values/String/Slice/) or [Slice](../../../../Rascal/Expressions/Values/Node/Slice/) for a more detailed explanation of slicing.
+See [Slice](../../../../Rascal/Expressions/Values/List/Slice/index.md), [Slice](../../../../Rascal/Expressions/Values/String/Slice/index.md) or [Slice](../../../../Rascal/Expressions/Values/Node/Slice/index.md) for a more detailed explanation of slicing.
 
 Let _V_ be the current value of _Assignable_.
 

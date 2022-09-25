@@ -20,7 +20,7 @@ Append an element at the end of a list
 
 #### Description
 
-The operator `+` appends an element at the end of a list. The `+` is one of those [Operators](../../../../../Rascal/Expressions/Operators/) which are overloaded. It can also mean [Insert](../../../../../Rascal/Expressions/Values/List/Insert/) or [Concatenation](../../../../../Rascal/Expressions/Values/List/Concatenation/) for example.
+The operator `+` appends an element at the end of a list. The `+` is one of those [Operators](../../../../../Rascal/Expressions/Operators/index.md) which are overloaded. It can also mean [Insert](../../../../../Rascal/Expressions/Values/List/Insert/index.md) or [Concatenation](../../../../../Rascal/Expressions/Values/List/Concatenation/index.md) for example.
 
 #### Examples
 
@@ -36,7 +36,7 @@ list[int]: [1,2]
 
 .Pitfalls:
 
-* If both operands of `+` are a list, then it acts as [Concatenation](../../../../../Rascal/Expressions/Values/List/Concatenation/) 
+* If both operands of `+` are a list, then it acts as [Concatenation](../../../../../Rascal/Expressions/Values/List/Concatenation/index.md) 
 
 This is concatenation:
 

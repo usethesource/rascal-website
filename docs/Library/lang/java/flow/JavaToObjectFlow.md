@@ -13,7 +13,7 @@ mapping all of Java to the object flow language
 
 #### Description
 
-More information can be found in [ObjectFlow](../../../../Library/analysis/flow/ObjectFlow.md/).
+More information can be found in [ObjectFlow](../../../../Library/analysis/flow/ObjectFlow.md).
 
 
 ## function createOFG {#lang-java-flow-JavaToObjectFlow-createOFG}
@@ -125,4 +125,5 @@ More information can be found in [ObjectFlow](../../../../Library/analysis/flow/
 ## function translate {#lang-java-flow-JavaToObjectFlow-translate}
 
 * ``default set[FlowStm] translate(loc base, loc target, Expression e)``
+
 

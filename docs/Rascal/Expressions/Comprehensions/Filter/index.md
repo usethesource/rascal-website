@@ -4,7 +4,7 @@ title: Filter
 
 #### Synopsis
 
-Filter values in a [Comprehension](../../../../Rascal/Expressions/Values/List/Comprehension/)], [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension/) or [Comprehension](../../../../Rascal/Expressions/Values/Map/Comprehension/).
+Filter values in a [Comprehension](../../../../Rascal/Expressions/Values/List/Comprehension/index.md)], [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension/index.md) or [Comprehension](../../../../Rascal/Expressions/Values/Map/Comprehension/index.md).
 
 #### Syntax
 

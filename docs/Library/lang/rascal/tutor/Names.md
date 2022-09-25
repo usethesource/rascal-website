@@ -19,27 +19,15 @@ data PathConfig (loc currentRoot = |unknown:///|, loc currentFile = |unknown:///
 data Message (str cause="")
 ```
 
-## function localLink {#lang-rascal-tutor-Names-localLink}
-
-* ``str localLink(loc root, loc concept)``
-
-## function localDirLink {#lang-rascal-tutor-Names-localDirLink}
-
-* ``str localDirLink(loc root, loc dir)``
-
 ## function fragment {#lang-rascal-tutor-Names-fragment}
 
-* ``str fragment(loc concept)``
+* ``default str fragment(loc root, loc concept)``
+* ``str fragment(loc root, loc concept)``
 * ``str fragment(loc root, loc concept)``
 
 ## function moduleFragment {#lang-rascal-tutor-Names-moduleFragment}
 
 * ``str moduleFragment(str moduleName)``
-
-## function stripDoubleEnd {#lang-rascal-tutor-Names-stripDoubleEnd}
-
-* ``str stripDoubleEnd(/<prefix:.*>\/<a:[^\/]+>\/<b:[^\-]+>$/)``
-* ``default str stripDoubleEnd(str x)``
 
 ## function removeSpaces {#lang-rascal-tutor-Names-removeSpaces}
 
@@ -51,6 +39,18 @@ data Message (str cause="")
 * ``str addSpaces(/^<prefix:[^:]+>:<postfix:[^:].*>$/)``
 * ``str addSpaces(/^<prefix:.+>::<name:[^:]+>$/)``
 * ``str addSpaces(/^<prefix:[A-Za-z0-9\ ]+[a-z0-9]><postfix:[A-Z].+>/)``
+* ``default str addSpaces(str s)``
+
+## function pathToRoot {#lang-rascal-tutor-Names-pathToRoot}
+
+* ``str pathToRoot(loc root, loc src)``
+* ``str pathToRoot(loc root, loc src)``
+
+#### Synopsis
+
+produces `"../../.."` for pathToRoot(|aap:///a/b|, |aap:///a/b/c/d|)  
+
+dSpaces(/^<prefix:[A-Za-z0-9\ ]+[a-z0-9]><postfix:[A-Z].+>/)``
 * ``default str addSpaces(str s)``
 
 ## function pathToRoot {#lang-rascal-tutor-Names-pathToRoot}

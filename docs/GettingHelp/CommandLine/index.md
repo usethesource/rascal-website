@@ -9,7 +9,7 @@ keywords:
 
 #### Synopsis
 
-Get help when using Rascal at the command line (CLI, REPL, [rascal shell](../../RascalShell/))
+Get help when using Rascal at the command line (CLI, REPL, [rascal shell](../../RascalShell/index.md))
 
 #### Description
 

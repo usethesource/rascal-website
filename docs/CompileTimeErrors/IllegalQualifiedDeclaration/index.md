@@ -19,6 +19,8 @@ Using a qualified name gives an error:
 
 ```rascal-shell ,error
 rascal>data M::D = d();
+|prompt:///|(5,4,<1,5>,<1,9>): Declaration of qualified names is not allowed
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/IllegalQualifiedDeclaration/IllegalQualifiedDeclaration.html|
 ok
 ```
 Without the qualification, this is correct:

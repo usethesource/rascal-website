@@ -16,7 +16,7 @@ Invalid use of a source location at runtime.
 
 #### Description
 
-Thrown by operations on [source locations](../../../Rascal/Expressions/Values/Location/) that would 
+Thrown by operations on [source locations](../../../Rascal/Expressions/Values/Location/index.md) that would 
 lead to an inconsistent or incomplete location value.
 
 #### Examples

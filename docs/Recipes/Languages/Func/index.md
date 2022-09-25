@@ -27,7 +27,7 @@ Func is a functional language with the following features:
 
 
 Some features add more complexity to an interpreter, therefore
-we present four interpreters [Eval0](../../../Recipes/Languages/Func/Eval0/), [Eval1](../../../Recipes/Languages/Func/Eval1/), [Eval2](../../../Recipes/Languages/Func/Eval2/) and [Eval2](../../../Recipes/Languages/Func/Eval2/)
+we present four interpreters [Eval0](../../../Recipes/Languages/Func/Eval0/index.md), [Eval1](../../../Recipes/Languages/Func/Eval1/index.md), [Eval2](../../../Recipes/Languages/Func/Eval2/index.md) and [Eval2](../../../Recipes/Languages/Func/Eval2/index.md)
 that implement increasingly complex features:
 
 

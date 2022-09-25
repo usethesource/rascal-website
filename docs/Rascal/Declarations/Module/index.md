@@ -40,17 +40,17 @@ The constituents of a module are shown in the figure below.
 ![][parts.png](/assets/Rascal/Declarations/Module/module-parts.png)
 
 
-An [Import](../../../Rascal/Declarations/Import/) declares other modules that are used by the current module.
-Following imports, a module may contain declarations (in arbitrary order, but a [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/) can
+An [Import](../../../Rascal/Declarations/Import/index.md) declares other modules that are used by the current module.
+Following imports, a module may contain declarations (in arbitrary order, but a [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md) can
 occur directly following the imports) for:
 
-*  [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/)
-*  [Variable](../../../Rascal/Declarations/Variable/)
-*  [Function](../../../Rascal/Declarations/Function/)
-*  [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/)
-*  [Alias](../../../Rascal/Declarations/Alias/)
-*  [Annotation](../../../Rascal/Declarations/Annotation/)
-*  [Tag](../../../Rascal/Declarations/Tag/)
+*  [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md)
+*  [Variable](../../../Rascal/Declarations/Variable/index.md)
+*  [Function](../../../Rascal/Declarations/Function/index.md)
+*  [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)
+*  [Alias](../../../Rascal/Declarations/Alias/index.md)
+*  [Annotation](../../../Rascal/Declarations/Annotation/index.md)
+*  [Tag](../../../Rascal/Declarations/Tag/index.md)
 
 
 Each declaration may contain a `private` or `public` keyword that determines 
@@ -89,11 +89,11 @@ void hello() {
 ```
 
                 
-It defines a module with the name `demo::basic::Hello` and imports the [IO](../../../Library/IO.md/) library.
+It defines a module with the name `demo::basic::Hello` and imports the [IO](../../../Library/IO.md) library.
 Finally, it declares the `hello` function.
 
 The actual source of this module can be found in `library/demo/basic/Hello.rsc` in the Rascal sources.
 
-More ways to write this example are discussed in the [Hello](../../../Recipes/Basic/Hello/) example in [Recipes](../../../Recipes/).
+More ways to write this example are discussed in the [Hello](../../../Recipes/Basic/Hello/index.md) example in [Recipes](../../../Recipes/index.md).
 
 

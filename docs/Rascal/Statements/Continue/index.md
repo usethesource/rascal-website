@@ -11,12 +11,12 @@ Continue with the next iteration of while, do or for loop.
 
 #### Description
 
-A continue statement is only allowed inside the body of a [While](../../../Rascal/Statements/While/), [Do](../../../Rascal/Statements/Do/) or [For](../../../Rascal/Statements/For/) statement
+A continue statement is only allowed inside the body of a [While](../../../Rascal/Statements/While/index.md), [Do](../../../Rascal/Statements/Do/index.md) or [For](../../../Rascal/Statements/For/index.md) statement
 and is associated with the innermost loop statement in which it is contained.
 Its effect is to end the execution of the block for the current iteration of the loop
 and to continue with the next iteration of the loop.
 
-Also see [Break](../../../Rascal/Statements/Break/) and [Fail](../../../Rascal/Statements/Fail/).
+Also see [Break](../../../Rascal/Statements/Break/index.md) and [Fail](../../../Rascal/Statements/Fail/index.md).
 
 #### Examples
 

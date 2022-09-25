@@ -8,7 +8,7 @@ title: "module lang::java::m3::Core"
 
 #### Synopsis
 
-Extends the M3 [Core](../../../../Library/analysis/m3/Core.md/) with Java specific concepts such as inheritance and overriding.
+Extends the M3 [Core](../../../../Library/analysis/m3/Core.md) with Java specific concepts such as inheritance and overriding.
 
 
 ## data M3 {#lang-java-m3-Core-M3}
@@ -221,4 +221,5 @@ globs for jars, class files and java files in a directory and tries to compile a
 ## function nestedClasses {#lang-java-m3-Core-nestedClasses}
 
 * ``set[loc] nestedClasses(M3 m, loc class)``
+
 

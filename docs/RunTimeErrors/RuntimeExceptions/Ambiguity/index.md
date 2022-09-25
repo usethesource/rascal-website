@@ -105,7 +105,7 @@ alternative 2: prod(sort("E"),[sort("E"),layouts("$default$"),lit("*"),layouts("
 ok
 ```
 
-Or, one could catch the ambiguity and report it like a [ParseError](../../../RunTimeErrors/RuntimeExceptions/ParseError/):
+Or, one could catch the ambiguity and report it like a [ParseError](../../../RunTimeErrors/RuntimeExceptions/ParseError/index.md):
 
 
 ```rascal-shell ,continue
@@ -122,6 +122,6 @@ ok
 
 Here are some pointers for further disambiguation help:
 
-* [Syntax Definitions](../../../Rascal/Declarations/SyntaxDefinition/).
-* [Disambiguation features](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/).
+* [Syntax Definitions](../../../Rascal/Declarations/SyntaxDefinition/index.md).
+* [Disambiguation features](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/index.md).
 

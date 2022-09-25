@@ -8,9 +8,9 @@ A field name is used that has not been declared.
 
 #### Description
 
-Fields of [tuple](../../Rascal/Expressions/Values/Tuple/) (hence also of [relation](../../Rascal/Expressions/Values/Relation/)
- and [listrelation](../../Rascal/Expressions/Values/ListRelation/))
-and constructors of [algebraic data types](../../Rascal/Declarations/AlgebraicDataType/) may have names.
+Fields of [tuple](../../Rascal/Expressions/Values/Tuple/index.md) (hence also of [relation](../../Rascal/Expressions/Values/Relation/index.md)
+ and [listrelation](../../Rascal/Expressions/Values/ListRelation/index.md))
+and constructors of [algebraic data types](../../Rascal/Declarations/AlgebraicDataType/index.md) may have names.
 This error is generated when a reference is made to an undeclared field.
 
 Remedies:

@@ -37,19 +37,19 @@ An n-ary relations with m tuples is denoted by
  `{< E~11~, E~12~, ..., E~1n~ >,< E~21~, E~22~, ..., E~2n~ >, ..., < E~m1~, E~m2~, ..., E~mn~ >}`, 
 where the _E_~ij~ are expressions that yield the desired element type _T_~i~.
 
-Since relations are a form of set all operations (see [Set](../../../../Rascal/Expressions/Values/Set/)) and functions
-(see [Set](../../../../Library/Set.md/)) are also applicable to relations.
+Since relations are a form of set all operations (see [Set](../../../../Rascal/Expressions/Values/Set/index.md)) and functions
+(see [Set](../../../../Library/Set.md)) are also applicable to relations.
 
 The following additional operators are provided for relations:
-* [CartesianProduct](../../../../Rascal/Expressions/Values/Relation/CartesianProduct/)
-* [Composition](../../../../Rascal/Expressions/Values/Relation/Composition/)
-* [FieldSelection](../../../../Rascal/Expressions/Values/Relation/FieldSelection/)
-* [Join](../../../../Rascal/Expressions/Values/Relation/Join/)
-* [ReflexiveTransitiveClosure](../../../../Rascal/Expressions/Values/Relation/ReflexiveTransitiveClosure/)
-* [Subscription](../../../../Rascal/Expressions/Values/Relation/Subscription/)
-* [TransitiveClosure](../../../../Rascal/Expressions/Values/Relation/TransitiveClosure/)
+* [CartesianProduct](../../../../Rascal/Expressions/Values/Relation/CartesianProduct/index.md)
+* [Composition](../../../../Rascal/Expressions/Values/Relation/Composition/index.md)
+* [FieldSelection](../../../../Rascal/Expressions/Values/Relation/FieldSelection/index.md)
+* [Join](../../../../Rascal/Expressions/Values/Relation/Join/index.md)
+* [ReflexiveTransitiveClosure](../../../../Rascal/Expressions/Values/Relation/ReflexiveTransitiveClosure/index.md)
+* [Subscription](../../../../Rascal/Expressions/Values/Relation/Subscription/index.md)
+* [TransitiveClosure](../../../../Rascal/Expressions/Values/Relation/TransitiveClosure/index.md)
 
-There are also [library functions](../../../../Library/Relation.md/) available for Relations.
+There are also [library functions](../../../../Library/Relation.md) available for Relations.
 
 
 #### Examples

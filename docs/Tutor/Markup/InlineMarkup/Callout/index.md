@@ -14,7 +14,7 @@ Create a numeric callout for the digits 1--9.
 
 #### Description
 
-Callouts are used to attach numeric labels to a source code [Listing](../../../../Tutor/Markup/InlineMarkup/Listing/) for later discussion in the text.
+Callouts are used to attach numeric labels to a source code [Listing](../../../../Tutor/Markup/InlineMarkup/Listing/index.md) for later discussion in the text.
 
 #### Examples
 

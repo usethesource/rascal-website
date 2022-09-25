@@ -36,6 +36,8 @@ When _Exp_~1~ evaluates to `false`, an `AssertionFailed` exception is thrown.
 
 ```rascal-shell ,error
 rascal>assert 1==2 : "is never true";
+|prompt:///|(14,15,<1,14>,<1,29>): AssertionFailed("is never true")
+	at $shell$(|main://$shell$|)
 ok
 rascal>int div(int x, int y) {
 >>>>>>>  assert y != 0 : "y must be non-zero";

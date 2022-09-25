@@ -22,7 +22,7 @@ a numeric function  is called with an out-of-range argument.
 Remedies:
 
 *  Check the validity of the argument before you call the function or apply the operator.
-*  Catch the `ArithmeticException` yourself, see [try catch](../../../Rascal/Statements/TryCatch/) statement.
+*  Catch the `ArithmeticException` yourself, see [try catch](../../../Rascal/Statements/TryCatch/index.md) statement.
 
 #### Examples
 
@@ -30,6 +30,7 @@ Division by 0 gives an error:
 
 ```rascal-shell ,error
 rascal>3/0;
+|prompt:///|(2,1,<1,2>,<1,3>): ArithmeticException("/ by zero")
 ok
 ```
 Giving an out-of-range argument to a mathematical function also gives an error:

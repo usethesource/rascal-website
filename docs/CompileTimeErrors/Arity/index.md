@@ -8,9 +8,9 @@ The number of arguments of an operator differ from what is required.
 
 #### Description
 
-Various operators like [composition](../../Rascal/Expressions/Values/Relation/Composition/), 
-[transitive closure](../../Rascal/Expressions/Values/Relation/TransitiveClosure/) and 
-[reflexive transitive closure](../../Rascal/Expressions/Values/Relation/ReflexiveTransitiveClosure/) 
+Various operators like [composition](../../Rascal/Expressions/Values/Relation/Composition/index.md), 
+[transitive closure](../../Rascal/Expressions/Values/Relation/TransitiveClosure/index.md) and 
+[reflexive transitive closure](../../Rascal/Expressions/Values/Relation/ReflexiveTransitiveClosure/index.md) 
 expect binary relations or tuples as arguments.
 
 #### Examples
@@ -28,6 +28,8 @@ This is not, since the first argument has arity 3:
 
 ```rascal-shell ,error
 rascal>{<1,5,10>, <2,6,20>} o {<10,100>, <20, 200>};
+|prompt:///|(39,3,<1,39>,<1,42>): Expected arity : 2, unequal to 3
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/Arity/Arity.html|
 ok
 ```
 
@@ -58,6 +60,8 @@ But these are incorrect:
 
 ```rascal-shell ,error
 rascal>{<1,2,3>, <2,3,4>,<4,5,6>}+
+|prompt:///|(23,1,<1,23>,<1,24>): Expected arity : 2, unequal to 3
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/Arity/Arity.html|
 ok
 rascal>{<1,2,3>, <2,3,4>,<4,5,6>}*
 |prompt:///|(23,1,<1,23>,<1,24>): Expected arity : 2, unequal to 3

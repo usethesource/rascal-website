@@ -18,16 +18,16 @@ characters (`char`), which have an integer index in the UTF8 table.
 alternative `Tree` nodes.
 
 
-The `Production` and `Symbol` types are an abstract notation for rules in [Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition/)s, while the `Tree` type is the actual notation
+The `Production` and `Symbol` types are an abstract notation for rules in [Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition/index.md)s, while the `Tree` type is the actual notation
 for parse trees. 
 
 Parse trees are called parse forests when they contain `amb` nodes.
 
 You can analyze and manipulate parse trees in three ways:
 
-*  Directly on the `Tree` level, just like any other [Algebraic Data Type](../../../../Rascal/Declarations/AlgebraicDataType/)
-*  Using [./Concrete Syntax](../../../../Rascal/Expressions/ConcreteSyntax/)
-*  Using [Action](../../../../Rascal/Declarations/SyntaxDefinition/Action/)s
+*  Directly on the `Tree` level, just like any other [Algebraic Data Type](../../../../Rascal/Declarations/AlgebraicDataType/index.md)
+*  Using [./Concrete Syntax](../../../../Rascal/Expressions/ConcreteSyntax/index.md)
+*  Using [Action](../../../../Rascal/Declarations/SyntaxDefinition/Action/index.md)s
 
 
 The type of a parse tree is the symbol that it's production produces, i.e. `appl(prod(sort("A"),[],{}),[])` has type `A`. Ambiguity nodes 
