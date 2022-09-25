@@ -3,6 +3,6 @@ title: demo::vis
 ---
 
 
-* [Higher](../../../Library/demo/vis/Higher.md)
 * [Logo](../../../Library/demo/vis/Logo.md)
+* [Higher](../../../Library/demo/vis/Higher.md)
 * [VisADT](../../../Library/demo/vis/VisADT.md)

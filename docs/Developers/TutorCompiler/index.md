@@ -59,6 +59,7 @@ Now we run the compiler:
 rascal>compile(pcfg);
 compile(pcfg);
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Test.md|
+compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/t1.png|
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/CallAnalysis|
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/CallAnalysis/CallAnalysis.md|
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/CallAnalysis/calls.png|
@@ -68,7 +69,6 @@ compile(pcfg);
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Libraries/Libraries.md|
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Libraries/Boolean|
 compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Questions|
-compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/t1.png|
 list[Message]: [error(
     "Ambiguous concept link: CallAnalysis resolves to all of these: /Recipes/Common/CallAnalysis /Test/CallAnalysis /Library/lang/rascal/tutor/examples/Test/CallAnalysis /Test/CallAnalysis/index.md ",
     |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Test.md|(523,1,<25,0>,<25,1>),

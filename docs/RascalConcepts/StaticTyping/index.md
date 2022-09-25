@@ -8,7 +8,7 @@ Static type checking.
 
 #### Description
 
-![Type Lattice](/assets/RascalConcepts/StaticTyping/type-lattice.png/)
+![Type Lattice](/assets/RascalConcepts/StaticTyping/type-lattice.png)
 
 Rascal has a static and a dynamic type system, which interact with eachother. The static type system is used by a type checker (not yet released) to predict errors and give warnings where possibly slipups have been made. The dynamic type system ensures well-formedness of data structures and plays an important role while pattern matching, since many algorithms dispatch on the types of values.
 

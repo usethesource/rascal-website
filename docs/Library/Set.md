@@ -390,17 +390,11 @@ Pick an arbitrary element from a set.
 rascal>import Set;
 ok
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-<<<<<<< HEAD
-str: "snake"
+str: "elephant"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "elephant"
-=======
-str: "zebra"
->>>>>>> 2a7f585b (all links end with a slash now..)
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "zebra"
-rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "snake"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "elephant"
 ```
@@ -443,19 +437,11 @@ Remove an arbitrary element from set `s` and return a tuple consisting of the el
 rascal>import Set;
 ok
 rascal>takeOneFrom({1, 2, 3, 4});
-<<<<<<< HEAD
-tuple[int,set[int]]: <3,{1,2,4}>
+tuple[int,set[int]]: <2,{1,3,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <4,{1,3,2}>
-rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <1,{3,2,4}>
-=======
-tuple[int,set[int]]: <4,{1,3,2}>
-rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <4,{1,3,2}>
+tuple[int,set[int]]: <2,{1,3,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
 tuple[int,set[int]]: <3,{1,2,4}>
->>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 ## function takeFirstFrom {#Set-takeFirstFrom}

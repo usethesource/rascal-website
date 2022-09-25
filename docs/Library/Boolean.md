@@ -35,14 +35,7 @@ Return an arbitrary Boolean value.
 rascal>import Boolean;
 ok
 rascal>arbBool();
-<<<<<<< HEAD
-=======
-bool: false
-rascal>arbBool();
 bool: true
-rascal>arbBool();
->>>>>>> 2a7f585b (all links end with a slash now..)
-bool: false
 rascal>arbBool();
 bool: true
 rascal>arbBool();

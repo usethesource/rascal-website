@@ -122,19 +122,11 @@ Here we measure time by using separate calls to `cpuTime` before and after a cal
 
 ```rascal-shell ,continue
 rascal>before = cpuTimeNow();
-<<<<<<< HEAD
-int: 204234375000
+int: 5044426878000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>cpuTimeNow() - before;
-int: 15625000
-=======
-int: 4919785466000
-rascal>fac1(50);
-int: 30414093201713378043612608166064768844377641568960512000000000000
-rascal>cpuTimeNow() - before;
-int: 4009000
->>>>>>> 2a7f585b (all links end with a slash now..)
+int: 4223000
 ```
 
 See also [cpu time of](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf) for a more convenient way of measuring the time spent during a block of code.
@@ -233,19 +225,11 @@ Here we measure time by using separate calls to `sytemTime` before and after a c
 
 ```rascal-shell ,continue
 rascal>before = systemTimeNow();
-<<<<<<< HEAD
-int: 14781250000
+int: 221582657000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>systemTimeNow() - before;
-int: 0
-=======
-int: 215236240000
-rascal>fac1(50);
-int: 30414093201713378043612608166064768844377641568960512000000000000
-rascal>systemTimeNow() - before;
-int: 86000
->>>>>>> 2a7f585b (all links end with a slash now..)
+int: 108000
 ```
 
 ## function systemTimeOf {#util-Benchmark-systemTimeOf}
@@ -268,11 +252,7 @@ rascal>systemTimeOf(
 >>>>>>>      fac1(50); 
 >>>>>>>   } 
 >>>>>>>);
-<<<<<<< HEAD
-int: 0
-=======
-int: 16000
->>>>>>> 2a7f585b (all links end with a slash now..)
+int: 19000
 ```
 
 ## function userTimeNow {#util-Benchmark-userTimeNow}
@@ -306,19 +286,11 @@ Here we measure time by using separate calls to `userTime` before and after a ca
 
 ```rascal-shell ,continue
 rascal>before = userTimeNow();
-<<<<<<< HEAD
-int: 189828125000
+int: 4823047693000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>userTimeNow() - before;
-int: 15625000
-=======
-int: 4704740055000
-rascal>fac1(50);
-int: 30414093201713378043612608166064768844377641568960512000000000000
-rascal>userTimeNow() - before;
-int: 3906000
->>>>>>> 2a7f585b (all links end with a slash now..)
+int: 4025000
 ```
 
 ## function userTimeOf {#util-Benchmark-userTimeOf}
@@ -378,11 +350,7 @@ rascal>benchmark(
 >>>>>>>                  fac1(200);
 >>>>>>>               }) 
 >>>>>>>   );
-<<<<<<< HEAD
-map[str, num]: ("fac100":7,"fac200":3)
-=======
 map[str, num]: ("fac100":3,"fac200":6)
->>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 We can do the same using [user time now](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow) that returns nanoseconds:
@@ -396,11 +364,7 @@ rascal>benchmark(
 >>>>>>>                  fac1(200);
 >>>>>>>            })
 >>>>>>>   , userTimeOf);
-<<<<<<< HEAD
-map[str, num]: ("fac100":0,"fac200":0)
-=======
-map[str, num]: ("fac100":2697000,"fac200":5182000)
->>>>>>> 2a7f585b (all links end with a slash now..)
+map[str, num]: ("fac100":2850000,"fac200":5536000)
 ```
 
 ## function gc {#util-Benchmark-gc}

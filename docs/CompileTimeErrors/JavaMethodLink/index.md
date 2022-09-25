@@ -47,8 +47,8 @@ org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.librar
 org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.library.Preludexxx because: class not found
 	at org.rascalmpl.interpreter.utils.JavaBridge.getJavaClassInstance(JavaBridge.java:431)
 	at org.rascalmpl.interpreter.result.JavaMethod.<init>(JavaMethod.java:95)
-	at org.rascalmpl.interpreter.result.JavaMethod.<init>(JavaMethod.java:60)
-	at org.rascalmpl.semantics.dynamic.FunctionDeclaration$Abstract.interpret(FunctionDeclaration.java:60)
+	at org.rascalmpl.interpreter.result.JavaMethod.<init>(JavaMethod.java:52)
+	at org.rascalmpl.semantics.dynamic.FunctionDeclaration$Abstract.interpret(FunctionDeclaration.java:61)
 	at org.rascalmpl.semantics.dynamic.Declaration$Function.interpret(Declaration.java:117)
 	at org.rascalmpl.semantics.dynamic.Command$Declaration.interpret(Command.java:38)
 	at org.rascalmpl.interpreter.Evaluator.eval(Evaluator.java:1094)
@@ -57,7 +57,7 @@ org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.librar
 	at org.rascalmpl.repl.RascalInterpreterREPL.evalStatement(RascalInterpreterREPL.java:132)
 	at org.rascalmpl.repl.BaseRascalREPL.handleInput(BaseRascalREPL.java:119)
 	at org.rascalmpl.library.lang.rascal.tutor.repl.TutorCommandExecutor.eval(TutorCommandExecutor.java:95)
-	at org.rascalmpl.library.lang.rascal.tutor.repl.TutorCommandExecutorCreator.lambda$2(TutorCommandExecutorCreator.java:82)
+	at org.rascalmpl.library.lang.rascal.tutor.repl.TutorCommandExecutorCreator.lambda$eval$2(TutorCommandExecutorCreator.java:82)
 	at org.rascalmpl.values.RascalFunctionValueFactory$RascalFunctionValue.call(RascalFunctionValueFactory.java:176)
 	at org.rascalmpl.interpreter.result.FunctionResultFacade.call(FunctionResultFacade.java:54)
 	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
@@ -453,7 +453,6 @@ org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.librar
 	at org.rascalmpl.repl.BaseREPL.run(BaseREPL.java:347)
 	at org.rascalmpl.shell.REPLRunner.run(REPLRunner.java:96)
 	at org.rascalmpl.shell.RascalShell.main(RascalShell.java:69)
-
 ok
 ```
 The same error message is generated if the function declaration contains a body:

@@ -135,19 +135,11 @@ Returns an arbitrary key of map `M`.
 rascal>import Map;
 ok
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-<<<<<<< HEAD
-str: "pineapple"
-rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "pear"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "pineapple"
-=======
-str: "apple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "pear"
-rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "pear"
->>>>>>> 2a7f585b (all links end with a slash now..)
+str: "pineapple"
 ```
 
 ## function invert {#Map-invert}

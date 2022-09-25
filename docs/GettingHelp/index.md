@@ -24,7 +24,7 @@ details:
 * To quit the [rascal shell](../RascalShell/) prompt type `:quit`
 * To get initial help using the [rascal shell](../RascalShell/) prompt type `:help` 
 * In case you ran into other troubles, please refer to:
-   1. The _Troubleshooting (broken link)_ information for download, install and first runs.
+   1. The [Troubleshooting](../GettingStarted/Troubleshooting) information for download, install and first runs.
    2. The questions asked and answered on [StackOverflow](http://stackoverflow.com/questions/tagged/rascal)
    3. The (open) issues registered with [Github Issues](http://github.com/usethesource/rascal/issues)
 * Directly in the Rascal IDE there is help available:

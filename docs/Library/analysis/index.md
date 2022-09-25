@@ -3,13 +3,13 @@ title: analysis
 ---
 
 
+* [statistics](../../Library/analysis/statistics)
 * [clustering](../../Library/analysis/clustering)
 * [diff](../../Library/analysis/diff)
-* [flow](../../Library/analysis/flow)
-* [formalconcepts](../../Library/analysis/formalconcepts)
 * [grammars](../../Library/analysis/grammars)
-* [graphs](../../Library/analysis/graphs)
-* [linearprogramming](../../Library/analysis/linearprogramming)
+* [formalconcepts](../../Library/analysis/formalconcepts)
 * [m3](../../Library/analysis/m3)
-* [statistics](../../Library/analysis/statistics)
+* [graphs](../../Library/analysis/graphs)
 * [text](../../Library/analysis/text)
+* [linearprogramming](../../Library/analysis/linearprogramming)
+* [flow](../../Library/analysis/flow)

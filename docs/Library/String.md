@@ -335,15 +335,9 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-<<<<<<< HEAD
+str: "㵶㬖탦푫"
+rascal>arbString(10);
 str: ""
-rascal>arbString(10);
-str: " \t\t\t\t\n"
-=======
-str: "톒"
-rascal>arbString(10);
-str: "mFhBgj0"
->>>>>>> 2a7f585b (all links end with a slash now..)
 ```
 
 ## function left {#String-left}
