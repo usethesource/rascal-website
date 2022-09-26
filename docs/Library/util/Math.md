@@ -107,15 +107,15 @@ i.e., the limit is exclusive.
 rascal>import util::Math;
 ok
 rascal>arbInt();
-int: -1139490906
+int: -1993241654
 rascal>arbInt();
-int: 1363749053
+int: -788755190
 rascal>arbInt();
-int: 2081940364
+int: -1773591276
 rascal>arbInt(10);
-int: 2
+int: 4
 rascal>arbInt(10);
-int: 9
+int: 8
 rascal>arbInt(10);
 int: 6
 ```
@@ -144,11 +144,11 @@ Generates an arbitrary real value in the interval [0.0, 1.0].
 rascal>import util::Math;
 ok
 rascal>arbReal();
-real: 0.4068302650018659
+real: 0.4550663238209638
 rascal>arbReal();
-real: 0.24948589963773926
+real: 0.7767000083822778
 rascal>arbReal();
-real: 0.5555719291694867
+real: 0.26284961484547653
 ```
 
 ## function arbSeed {#util-Math-arbSeed}
@@ -183,17 +183,17 @@ Generate an arbitrary rational value.
 rascal>import util::Math;
 ok
 rascal>arbRat();
-rat: -1311667877r807742141
+rat: -1785365749r1610460184
 rascal>arbRat();
-rat: -590404962r76567235
+rat: -771198527r1063317657
 rascal>arbRat();
-rat: -1300044667r88585466
+rat: 409053987r2066320712
 rascal>arbRat(10,100);
-rat: 1r83
+rat: 4r61
 rascal>arbRat(10,100);
-rat: 4r55
+rat: 1r46
 rascal>arbRat(10,100);
-rat: 1r3
+rat: 7r30
 ```
 
 ## function ceil {#util-Math-ceil}
@@ -829,6 +829,4 @@ generate prime numbers up to a maximum
 ## function arbPrime {#util-Math-arbPrime}
 
 * ``int arbPrime(int upTo)``
-
-`
 
