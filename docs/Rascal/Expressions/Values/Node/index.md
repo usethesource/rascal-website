@@ -11,7 +11,7 @@ Node values.
 
 #### Syntax
 
-`Exp₀ ( Exp₁, Exp₂, ..., FieldName₁ = Expr~1, FieldName₂ = Expr₂, ... )`
+`Exp₀ ( Exp₁, Exp₂, ..., FieldName₁ = Expr₁, FieldName₂ = Expr₂, ... )`
 
 #### Types
 

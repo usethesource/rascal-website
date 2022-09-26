@@ -75,6 +75,7 @@ rascal>import IO;
 ok
 rascal>for (int i <- [0..11]) {
 >>>>>>>
+rascal>
 ```
 
 

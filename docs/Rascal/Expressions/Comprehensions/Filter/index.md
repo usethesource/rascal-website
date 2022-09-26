@@ -4,15 +4,13 @@ title: Filter
 
 #### Synopsis
 
-Filter values in a [Comprehension](../../../../Rascal/Expressions/Values/List/Comprehension/index.md)], [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension/index.md) or [Comprehension](../../../../Rascal/Expressions/Values/Map/Comprehension/index.md).
+Filter values in a [list comprehension](../../../../Rascal/Expressions/Values/List/Comprehension/index.md), [set comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension/index.md) or [map comprehension](../../../../Rascal/Expressions/Values/Map/Comprehension/index.md).
 
 #### Syntax
 
 `Exp`
 
 #### Types
-
-//
 
 | `Exp`  |
 | --- |

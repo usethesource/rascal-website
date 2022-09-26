@@ -15,11 +15,10 @@ Functions and constructors can be called or invoked in a uniform style.
 * function call with positional parameters `Name ( Exp₁, Exp₂, ... )`
 * function call with keyword parameters `Name (Name₁ = Exp₁, Name₂ = Exp₂, ...)`
 * function call with both positional and keyword parameters `Name (Exp₁, Exp₂, ..., Name₁ = Exp₁, Name₂ = Exp₂, ...)`
-* function calls with computed functions `Exp ( Exp₁, Exp₂, ..., Name₁ = Exp₁, Name₂ = Exp₂, ...) 
+* function calls with computed functions `Exp ( Exp₁, Exp₂, ..., Name₁ = Exp₁, Name₂ = Exp₂, ...)` 
 
 #### Types
 
-//
 
 | `Exp₁`  | `Exp₂` | ... | `Name ( Exp₁, Exp₂, ... )`  |
 | --- | --- | --- | --- |
@@ -86,5 +85,7 @@ int: 144
 * calls with positional parameters are the classical way of function invocation in Mathematics and Computer Science
 * calls with keyword parameters provide readability at the call site and we do not have to remember the invocation order
 * calls with keyword parameters are always bound by defaults, so there is never a `null` reference
+
+
 
 

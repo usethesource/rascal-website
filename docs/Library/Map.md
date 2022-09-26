@@ -149,7 +149,7 @@ ok
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "apple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "pineapple"
+str: "pear"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "apple"
 ```
@@ -448,4 +448,8 @@ ok
 rascal>itoString(("apple": 1, "pear": 2, "orange": 3));
 str: "(\"pear\":2,\"orange\":3,\"apple\":1)"
 ```
+
+
+`
+
 

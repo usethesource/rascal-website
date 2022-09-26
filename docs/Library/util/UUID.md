@@ -34,7 +34,7 @@ The uuid() function generates a location with the authority showing the literal 
 
 ```rascal-shell ,continue
 rascal>uuid()
-loc: |uuid://ee0ad9b3-2fc9-4f47-8f48-34920144560d|
+loc: |uuid://a60bb3d5-2483-4164-8559-b53df58268a3|
 ```
 
 Use it to relate identies to data objects, as in this example which adds a field to a relation:
@@ -56,29 +56,29 @@ rel[int,int]: {
 }
 rascal>rel[int n, int square, loc id] myUniqueData = { <i,j,uuid()> | <i,j> <- myData };
 rel[int n,int square,loc id]: {
-  <9,81,|uuid://9bfa9bdf-9078-4867-82c6-b05976d7ee93|>,
-  <6,36,|uuid://bdf001a4-afc9-4be0-a804-8e7276ffde4b|>,
-  <3,9,|uuid://e1b63e8b-d0bb-4903-8815-8146a35c684d|>,
-  <8,64,|uuid://f5550536-1b8f-42d9-b710-415325a0cc6a|>,
-  <1,1,|uuid://e18814ba-332a-4c7c-8a27-fcbcb54b9724|>,
-  <4,16,|uuid://cc58adf1-697e-457b-9c5a-970c8aee9c4a|>,
-  <10,100,|uuid://d96ef65a-ae72-434a-b8e1-d06fff71b553|>,
-  <5,25,|uuid://44851529-bb57-4159-afda-b4476e4f610d|>,
-  <2,4,|uuid://bb64a1e0-8466-40d0-80d7-fbb07fcd7a01|>,
-  <7,49,|uuid://e08e8eb6-d6ea-4292-a740-000473c2ac5b|>
+  <10,100,|uuid://ea3c46a5-cdf7-4d58-805e-d5c5886cce20|>,
+  <2,4,|uuid://b6f07694-c9a6-446b-85de-21da00c64791|>,
+  <3,9,|uuid://51f8e51b-89d5-41d0-9d1e-8be0ecc70e5b|>,
+  <8,64,|uuid://d82d0f04-6dff-4477-93ee-bfd0ac718816|>,
+  <4,16,|uuid://7fd6dc5e-704d-4833-8ddc-dfef7609e714|>,
+  <7,49,|uuid://7390579c-802b-462b-b0d9-4681b666af32|>,
+  <5,25,|uuid://75e3707a-6b47-4f70-a48f-003a3db3bda4|>,
+  <9,81,|uuid://0b7c1ee6-811d-4bcf-bc2c-7d315b107994|>,
+  <1,1,|uuid://4b48bc47-262e-4cec-9686-c7b83bb9c104|>,
+  <6,36,|uuid://67dcb1a6-03b5-43a9-9b5b-4a4942621eb7|>
 }
 rascal>map[tuple[int i, int j] t, loc id] myUniqueMap = (<i,j>:uuid() | <i,j> <- myData );
 map[tuple[int i,int j] t, loc id]: (
-  <6,36>:|uuid://047d43c3-4650-48b4-9059-18aeec0efb7b|,
-  <2,4>:|uuid://dd0c5899-9788-4202-aa0c-70ac5928cce5|,
-  <7,49>:|uuid://2580005c-7995-4f39-939a-bd89ad4e6348|,
-  <9,81>:|uuid://98149424-1dbe-4339-965c-4f7c7ec91981|,
-  <8,64>:|uuid://128b26c5-4d40-40df-b4c1-7643ea05d7df|,
-  <5,25>:|uuid://459efdd8-71b7-4f01-ba16-35084febb3fa|,
-  <4,16>:|uuid://42ccfde0-909a-4cd6-9503-a7f77480e27e|,
-  <1,1>:|uuid://909218e7-0d28-4245-8436-3c8234ab5b6b|,
-  <10,100>:|uuid://9ffa1d83-d72a-4f6f-93fb-97ee78a2f5df|,
-  <3,9>:|uuid://308f6859-567e-481e-86a6-97eb07f6af80|
+  <6,36>:|uuid://dc8b5f10-7472-40ea-982f-c5248b0b0f58|,
+  <2,4>:|uuid://bc5a9d45-4a39-49ff-b5fc-e02bda847123|,
+  <7,49>:|uuid://d784bd40-433e-4980-9432-6d777c5f96d7|,
+  <9,81>:|uuid://0f34b267-8b12-450d-909a-99aec4be1493|,
+  <8,64>:|uuid://5cc3b7f6-36e5-46f2-83da-9f9d5a68eee4|,
+  <5,25>:|uuid://ab984c0b-5d25-493c-99fb-0683cbdbb0ee|,
+  <4,16>:|uuid://ce9bc90a-4ba5-493d-aa9b-6079e996ee81|,
+  <1,1>:|uuid://958c678a-0620-4136-a762-f430c3ae42f5|,
+  <10,100>:|uuid://f7b77396-c746-4455-8f59-94f24e566001|,
+  <3,9>:|uuid://eabb8e92-7ee1-42eb-8262-10a11a8604d7|
 )
 ```
 Note how uuid() should always generate a fresh value:

@@ -16,7 +16,7 @@ A language definition defines all relevant aspects of a programming language or 
 *  Rules that describe the [Static Semantics](../../Rascalopedia/StaticSemantics/index.md) of a language.
   These rules are sufficient to generate a [Typechecker](../../Rascalopedia/Typechecker/index.md).
 *  Rules that describe the [Dynamic Semantics](../../Rascalopedia/DynamicSemantics/index.md) of a language. 
-  These rules are sufficient to generate an [Interpreter](../../Rascalopedia/Interpreter/index.md) for it.
+  These rules are sufficient to generate an [./Interpreter](../../Rascalopedia/Interpreter/index.md) for it.
 *  Rules how to generate code.
 
 
