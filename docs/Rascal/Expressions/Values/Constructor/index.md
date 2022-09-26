@@ -8,15 +8,15 @@ Constructors create values for user-defined datatypes (Algebraic Datatypes).
 
 #### Syntax
 
-`Name ( Exp~1~, Exp~2~, ... )`
+`Name ( Exp₁, Exp₂, ... )`
 
 #### Types
 
 //
 
-| `Exp~1~` | `Exp~2~` | ... |  `Name ( Exp~1~, Exp~2~, ... )`  |
+| `Exp₁` | `Exp₂` | ... |  `Name ( Exp₁, Exp₂, ... )`  |
 | --- | --- | --- | --- |
-| `T~1~`   | `T~2~`   | ... | Depends on ADT declaration           |
+| `T₁`   | `T₂`   | ... | Depends on ADT declaration           |
 
 
 #### Description
@@ -29,9 +29,9 @@ then values can be created using calls to the declared constructor functions.
 The constructor _Name_ should correspond (regarding name, arity and argument types) to one of the alternatives
 in the ADT declaration.
 
-First, the actual parameter expressions _Exp_~i~ are evaluated resulting in values _V_~i~.
+First, the actual parameter expressions _Exp_ᵢ are evaluated resulting in values _V_ᵢ.
 Next, a data value is constructed in accordance with the declared data type
-using the values _V_~i~ as arguments for the constructor. This data value is used as value of the constructor. 
+using the values _V_ᵢ as arguments for the constructor. This data value is used as value of the constructor. 
 Constructors are functions that can be used in all contexts where functions can be used.
 
 Observe that the syntax of a constructor is identical to the syntax of an function [Call](../../../../Rascal/Expressions/Call/index.md).

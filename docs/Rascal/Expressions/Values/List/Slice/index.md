@@ -13,45 +13,45 @@ Retrieve a slice of a list.
 
 #### Syntax
 
-*  `Exp~1~ [ Exp~2~ .. Exp~4~]`
-*  `Exp~1~ [ Exp~2~ , Exp~3~ .. Exp~4~]`
+*  `Exp₁ [ Exp₂ .. Exp₄]`
+*  `Exp₁ [ Exp₂ , Exp₃ .. Exp₄]`
 
 
-where _Exp_~2~ and _Exp_~4~ are optional.
+where _Exp_₂ and _Exp_₄ are optional.
 
 #### Types
 
 //
 
 
-| `Exp~1~`     | `Exp~2~` |  `Exp~3~`  | `Exp~4~` | `Exp~1~ [ Exp~2~ .. Exp~4~ ]`   or  `Exp~1~ [ Exp~2~ , Exp~3~ .. Exp~4~]`  |
+| `Exp₁`     | `Exp₂` |  `Exp₃`  | `Exp₄` | `Exp₁ [ Exp₂ .. Exp₄ ]`   or  `Exp₁ [ Exp₂ , Exp₃ .. Exp₄]`  |
 | --- | --- | --- | --- | --- |
-| `list[T~1~]` | `int`     | `int`       | `int`     |  `list[T~1~]`                                                                 |
+| `list[T₁]` | `int`     | `int`       | `int`     |  `list[T₁]`                                                                 |
 
 
 #### Description
 
-List slicing uses the integer values of _Exp_~2~ and _Exp_~4~ to determine the `begin` (*inclusive*) and `end` (*exclusive*)
-of a slice from the list value _L_ of _Exp_~1~. Negative indices count from the end of the list backwards.
-Using the second form, an extra index _Exp_~3~ is given that determines the
+List slicing uses the integer values of _Exp_₂ and _Exp_₄ to determine the `begin` (*inclusive*) and `end` (*exclusive*)
+of a slice from the list value _L_ of _Exp_₁. Negative indices count from the end of the list backwards.
+Using the second form, an extra index _Exp_₃ is given that determines the
 index of the second element in the slice and establishes the `step` between
 successive elements in the slice. The default `step` is 1.
 If `end` is smaller than `begin`, the slice is constructed backwards.
 
-Let `Len` be the length of _L_ and let _N_~2~, _N_~3~ and _N_~4~ be the respective values of the expressions
- _Exp_~2~, _Exp_~2~ and _Exp_~2~ when they are present.
+Let `Len` be the length of _L_ and let _N_₂, _N_₃ and _N_₄ be the respective values of the expressions
+ _Exp_₂, _Exp_₂ and _Exp_₂ when they are present.
 
 The slice parameters `begin`, `end`, and `step` are determined as follows:
 
-*  _Exp~2~_:
-**  If _Exp~2~_ is absent, then `begin = 0`.
-**  Otherwise, if _N~2~_ >= 0 then `begin = N~2~` else `begin = N~2~ + Len`. 
-*  _Exp~4~_:
-**  If _Exp~4~_ is absent, then `end = Len`.
-**  Otherwise, if _N~4~_ >= 0, then `end = N~4~` else `end = N~4~ + Len`.
-*  _Exp~3~_:
-**  If _Exp~3~_ is absent, then if `begin < end` then `step = 1` else `step = -1`.
-**  Otherwise, if `begin < end`, then `step = N~3~ - begin` else `step = begin - N~3~`.
+*  _Exp₂_:
+**  If _Exp₂_ is absent, then `begin = 0`.
+**  Otherwise, if _N₂_ >= 0 then `begin = N₂` else `begin = N₂ + Len`. 
+*  _Exp₄_:
+**  If _Exp₄_ is absent, then `end = Len`.
+**  Otherwise, if _N₄_ >= 0, then `end = N₄` else `end = N₄ + Len`.
+*  _Exp₃_:
+**  If _Exp₃_ is absent, then if `begin < end` then `step = 1` else `step = -1`.
+**  Otherwise, if `begin < end`, then `step = N₃ - begin` else `step = begin - N₃`.
 
 
 Now, the constraints `0 <= begin < Len` and `0 < end < Len` should hold,

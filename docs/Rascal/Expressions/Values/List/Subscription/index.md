@@ -12,21 +12,21 @@ Retrieve a list element via its index.
 
 #### Syntax
 
-`Exp~1~ [ Exp~2~ ]`
+`Exp₁ [ Exp₂ ]`
 
 #### Types
 
 //
 
-| `Exp~1~`     | `Exp~2~` | `Exp~1~ [ Exp~2~ ]` |
+| `Exp₁`     | `Exp₂` | `Exp₁ [ Exp₂ ]` |
 | --- | --- | --- |
-| `list[T~1~]` | `int`     | `T~1~`              |
+| `list[T₁]` | `int`     | `T₁`              |
 
 
 #### Description
 
-List subscription uses the integer value of _Exp_~2~ as index in the list value of _Exp_~1~.
-The value of _Exp_~2~ should be greater or equal 0 and less than the number of elements in the list.
+List subscription uses the integer value of _Exp_₂ as index in the list value of _Exp_₁.
+The value of _Exp_₂ should be greater or equal 0 and less than the number of elements in the list.
 If this is not the case, the exception `IndexOutOfBounds` is thrown.
 
 #### Examples

@@ -11,15 +11,15 @@ Concatenate two lists.
 
 #### Syntax
 
-`Exp~1~ + Exp~2~`
+`Exp₁ + Exp₂`
 
 #### Types
 
 //
 
-| `Exp~1~`     |  `Exp~2~`     | `Exp~1~ + Exp~2~`       |
+| `Exp₁`     |  `Exp₂`     | `Exp₁ + Exp₂`       |
 | --- | --- | --- |
-| `list[T~1~]` |  `list[T~2~]` | `list[lub(T~1~,T~2~)]`  |
+| `list[T₁]` |  `list[T₂]` | `list[lub(T₁,T₂)]`  |
 
 
 

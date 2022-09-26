@@ -13,8 +13,8 @@ Assign a single element of a structured value.
 
 #### Description
 
-Let _V_ be the current value of _Assignable_. The value of _Exp_~1~ is used as index in _V_ and 
-the value of _Exp_~2~ replaces the original value at that index position. 
+Let _V_ be the current value of _Assignable_. The value of _Exp_₁ is used as index in _V_ and 
+the value of _Exp_₂ replaces the original value at that index position. 
 The result is a new value _V_' that is assigned to the _Assignable_.
 
 #### Examples

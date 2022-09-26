@@ -29,8 +29,8 @@ String values.
 
 #### Syntax
 
-`"StringChar~1~StringChar~2~..."`
-where `_StringChar~i~_ may be one of the following:
+`"StringChar₁StringChar₂..."`
+where `_StringCharᵢ_ may be one of the following:
 
 *  __Ordinary character__: Any character except `<`, `>`, `"`, `'` or `\`.
 *  __Escaped character__: Backslash `\` followed by any of  `<`, `>`, `"`, `'` or `\` represents the escaped character itself.
@@ -40,9 +40,9 @@ where `_StringChar~i~_ may be one of the following:
 **  `\r`: carriage return
 **  `\b`: backspace
 **  `\f`: vertical feed
-**  `\u hexDigit~1~ hexDigit~2~ hexDigit~3~ hexDigit~4~` : hexadecimal escapes with four digit indexes into UNICODE.
-**  `\U hexDigit~1~ hexDigit~2~ hexDigit~3~ hexDigit~4~ hexDigit~5~ hexDigit~6~` : hexadecimal escapes with six digit indexes into UNICODE.
-**  `\ ahexDigit~1~ hexDigit~2~`:  hexadecimal escapes with 2 digit indexes into ASCII (0x0 ... 0x7F).
+**  `\u hexDigit₁ hexDigit₂ hexDigit₃ hexDigit₄` : hexadecimal escapes with four digit indexes into UNICODE.
+**  `\U hexDigit₁ hexDigit₂ hexDigit₃ hexDigit₄ hexDigit₅ hexDigit₆` : hexadecimal escapes with six digit indexes into UNICODE.
+**  `\ ahexDigit₁ hexDigit₂`:  hexadecimal escapes with 2 digit indexes into ASCII (0x0 ... 0x7F).
 
 
 *  __String Interpolation__: 
@@ -51,7 +51,7 @@ where `_StringChar~i~_ may be one of the following:
 | --- | --- |
 | `<Exp>` | Interpolate the value of the expression as a string |
 | `<if(Exp){> ... StringChars ... <}>` | Conditional inclusion of _Text_, where _StringChars_ may use variables introduced in _Exp_ |
-| `<if(Exp){> ... StringChars~1~ ... <} else {>  ... StringChars~2~ ... <}>` | Conditional inclusion of either _StringChars~1~_ or _StringChars~2~_ |
+| `<if(Exp){> ... StringChars₁ ... <} else {>  ... StringChars₂ ... <}>` | Conditional inclusion of either _StringChars₁_ or _StringChars₂_ |
 | `<for(Exp){>... StringChars ... <}>` | Iterative splicing of _StringChars_ into the result, where _StringChars_ may use variables introduced in _Exp_. |
 | `<while(Exp){> ... StringChars ... <}>` | Iterative splicing of _StringChars_ into the result, where _StringChars_ may use variables introduced in _Exp_. |
 | `<do {>... StringChars ... <} while (Exp)>` | Iterative splicing of _StringChars_ into the result, where _StringChars_ may use variables introduced in _Exp_. |
@@ -61,8 +61,8 @@ where `_StringChar~i~_ may be one of the following:
 
 | Form | Description  |
 | --- | --- |
-| `StringChars~1~\n StringChars~2~ `   | Strings can be multi-line without an escape or continuation marker  |
-| `StringChars~2~\n '  StringChars~2~` | A margin character `'` indicates where the next line starts  |
+| `StringChars₁\n StringChars₂ `   | Strings can be multi-line without an escape or continuation marker  |
+| `StringChars₂\n '  StringChars₂` | A margin character `'` indicates where the next line starts  |
 
 
 

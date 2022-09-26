@@ -11,11 +11,11 @@ For loop.
 
 #### Syntax
 
-`for ( Exp~1~ , Exp~2~ , ... , Exp~n~ ) Statement;`
+`for ( Exp₁ , Exp₂ , ... , Expₙ ) Statement;`
 
 #### Description
 
-The for-statement executes _Statement_ for all possible combinations of values generated, and filtered, by the expressions _Exp_~i~.
+The for-statement executes _Statement_ for all possible combinations of values generated, and filtered, by the expressions _Exp_ᵢ.
 
 Some of the expressions can generate bindings ([Enumerator](../../../Rascal/Expressions/Comprehensions/Enumerator/index.md), <<Values,Boolean,Match>>), and some can filter them ([Values](../../../Rascal/Expressions/Values/index.md)). 
 The for loop will iterate over the cartesian product of all the generating expressions, and filter the combinations which fail the conditional expressions. 

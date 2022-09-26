@@ -16,16 +16,16 @@ Declare a function.
 
 #### Syntax
 
-*  `Modifiers Type Name( Type~1~ Var~1~, ..., Type~n~ Var~n~ ) Body`
-*  `Modifiers Type Name( Type~1~ Var~1~, ..., Type~n~ Var~n~ Type~0~ Name~0~... ) Body`
-*  `Modifiers Type Name( Pattern~1~, ..., Pattern~n~) Body`
-*  `Modifiers Type Name( Pattern~1~, ..., Pattern~n~, Type~0~ Name~0~...) Body`
+*  `Modifiers Type Name( Type₁ Var₁, ..., Typeₙ Varₙ ) Body`
+*  `Modifiers Type Name( Type₁ Var₁, ..., Typeₙ Varₙ Type₀ Name₀... ) Body`
+*  `Modifiers Type Name( Pattern₁, ..., Patternₙ) Body`
+*  `Modifiers Type Name( Pattern₁, ..., Patternₙ, Type₀ Name₀...) Body`
 
 
 where `Body` is one of:
 
 *  `{ Statements }`
-*  `throws Exception~1~, Exception~2~, ... { Statements }`
+*  `throws Exception₁, Exception₂, ... { Statements }`
 *  `= Expression;`
 
 
@@ -35,7 +35,7 @@ and where `Modifiers` may be:
 
 ##  Variant 1 
 
-A function declaration introduces a new function with name _name_, typed formal parameters `Type~1~ Var~1~`, a return type _Type_
+A function declaration introduces a new function with name _name_, typed formal parameters `Type₁ Var₁`, a return type _Type_
 and a _Statement_ that forms the function body.
 The type of _Statement_ should be equal to _Type_.
 
@@ -47,7 +47,7 @@ A function may have a variable list of arguments, this has as syntax variant 2 g
 
 The last parameter of a function may be followed by `...` and this has as effect that all remaining actual parameters
 that occur in a call to this function are collected as list value of the last formal parameter. 
-Inside the function body, the type of this parameter will therefore be `list[Type~0~]`.
+Inside the function body, the type of this parameter will therefore be `list[Type₀]`.
 
 ##  Variant 3 and 4 
 

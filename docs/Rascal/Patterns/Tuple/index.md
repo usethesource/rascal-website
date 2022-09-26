@@ -12,7 +12,7 @@ Tuple in abstract pattern.
 
 #### Description
 
-A tuple pattern matches a tuple value, provided that _Pat_~1~, _Pat_~2~, ..., _Pat_~n~  match the elements of that tuple in order.
+A tuple pattern matches a tuple value, provided that _Pat_₁, _Pat_₂, ..., _Pat_ₙ  match the elements of that tuple in order.
 
 #### Examples
 

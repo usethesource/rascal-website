@@ -14,9 +14,9 @@ Define associativity of operators
 
 #### Syntax
 
-*  `syntax Exp = Assoc Label Symbol~1~ Symbol~2~ ...`
-*  `syntax Exp = Assoc ( Alt~1~ | Alt~2~ | ... )`
-*  `syntax Exp = Assoc Symbol~1~ Symbol~2~ ...`
+*  `syntax Exp = Assoc Label Symbol₁ Symbol₂ ...`
+*  `syntax Exp = Assoc ( Alt₁ | Alt₂ | ... )`
+*  `syntax Exp = Assoc Symbol₁ Symbol₂ ...`
  
 
 Here _Assoc_ is one of: `left`, `right`, `assoc` or `non-assoc`. See [Syntax Definition](../../../../../Rascal/Declarations/SyntaxDefinition/index.md)s on how to define alternatives and [Symbol](../../../../../Rascal/Declarations/SyntaxDefinition/Symbol/index.md)s.
@@ -31,7 +31,7 @@ The semantics are that an associativity modifier will instruct the parser to dis
 *  `right` will disallow productions to directly nest in their _left-most_ position.
 *  `non-assoc` will disallow productions to directly nest in either their left-most or their right-most position.
 
-When associativity is declared for a group of productions, e.g. `left ( Alt~1~ | _Alt ~2~_ | Alt~3~)`, then each alternative will be mutually associative to each other alternative _and itself_. If an alternative of a group defines its own local associativity, as in `left ( right Alt~1~ | Alt~2~ | Alt~3~)`, then _Alt_~1~ is right associative with respect to itself and left associative with respect to all others in the group. 
+When associativity is declared for a group of productions, e.g. `left ( Alt₁ | _Alt ₂_ | Alt₃)`, then each alternative will be mutually associative to each other alternative _and itself_. If an alternative of a group defines its own local associativity, as in `left ( right Alt₁ | Alt₂ | Alt₃)`, then _Alt_₁ is right associative with respect to itself and left associative with respect to all others in the group. 
 
 A finer point is that associativity has no effect on any other position than the left-most and right-most position (see also [Priority](../../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority/index.md)). This is to guarantee that associativity does not introduce parse errors. The following tables explain when an associativity declaration filters, given two productions `father` and `child` that share an associativity group.
 | If `left (Parent | Child)`      | Parent None: `E = "[" E "]"` | Parent Left-most: `E = E "*"` |Parent  Right-most: `E = "*" E` | Parent Both: `E = E "*" E`   |

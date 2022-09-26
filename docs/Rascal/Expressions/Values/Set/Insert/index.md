@@ -11,15 +11,15 @@ Add an element to a set.
 
 #### Syntax
 
-`Exp~1~ + Exp~2~`
+`Exp₁ + Exp₂`
 
 #### Types
 
 
-| `Exp~1~`    |  `Exp~2~`    | `Exp~1~ + Exp~2~`       |
+| `Exp₁`    |  `Exp₂`    | `Exp₁ + Exp₂`       |
 | --- | --- | --- |
-| `set[T~1~]` |  `T~2~`      | `set[lub(T~1~,T~2~)]`   |
-| `T~1~`      |  `set[T~2~]` | `set[lub(T~1~,T~2~)]`   |
+| `set[T₁]` |  `T₂`      | `set[lub(T₁,T₂)]`   |
+| `T₁`      |  `set[T₂]` | `set[lub(T₁,T₂)]`   |
 
 
 #### Description

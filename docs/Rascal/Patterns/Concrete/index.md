@@ -16,7 +16,7 @@ Concrete patterns.
 #### Syntax
 
 ```rascal
-Concrete pattern with expected symbol type: (_Symbol_) ` Token~1~ Token~2~ ... Token~n~ `
+Concrete pattern with expected symbol type: (_Symbol_) ` Token₁ Token₂ ... Tokenₙ `
 ```
 ```rascal
 Typed variable inside a concrete pattern: <_Type_ _Var_>

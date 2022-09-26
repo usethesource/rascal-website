@@ -12,33 +12,33 @@ Indexing of a list relation via tuple values.
 
 #### Syntax
 
-*  `Exp~0~ [ Exp~1~, Exp~2~, ... Exp~n~]`
+*  `Exp₀ [ Exp₁, Exp₂, ... Expₙ]`
 
-*  `Exp~0~ [ Exp~1~]`
+*  `Exp₀ [ Exp₁]`
 
 ## Variant 1
 
 
-| `Exp~0~`                          | `Exp~1~` | `Exp~2~` | ... | `Exp~0~ [ Exp~1~, Exp~2~, ... ]`  |
+| `Exp₀`                          | `Exp₁` | `Exp₂` | ... | `Exp₀ [ Exp₁, Exp₂, ... ]`  |
 | --- | --- | --- | --- | --- |
-| `lrel[T~1~, T~2~, ... T~m~]`    | `int`     |  `int`    | ... | `lrel[T~n~, _T~n+1~_, ... T~m~]`    |
+| `lrel[T₁, T₂, ... Tₘ]`    | `int`     |  `int`    | ... | `lrel[Tₙ, _Tₙ₊₁_, ... Tₘ]`    |
 
 
 ## Variant 2
 
-| `Exp~0~`                          | `Exp~1~`     | `Exp~0~ [ Exp~1~ ]`             |
+| `Exp₀`                          | `Exp₁`     | `Exp₀ [ Exp₁ ]`             |
 | --- | --- | --- |
 |
-| `lrel[T~1~, T~2~, ... T~m~]`    | `list[T~1~]` | `lrel[T~2~, T~3~, ... T~m~]`   |
+| `lrel[T₁, T₂, ... Tₘ]`    | `list[T₁]` | `lrel[T₂, T₃, ... Tₘ]`   |
 
 
 #### Description
 
-ListRelation resulting from subscription of a ListRelation _Exp_~0~.
+ListRelation resulting from subscription of a ListRelation _Exp_₀.
 
 ## Variant 1
 
-Subscription with the index values of _Exp_~1~, _Exp_~2~, .... 
+Subscription with the index values of _Exp_₁, _Exp_₂, .... 
 The result is a ListRelation with all tuples that have these index values as first elements 
 with the index values removed from the tuple. 
 If the resulting tuple has only a single element, a list is returned instead of a relation. 
@@ -46,7 +46,7 @@ A wildcard `_` as index value matches all possible values at that index position
 
 ## Variant 2
 
-Subscription with a set of the index values of _Exp_~1~.
+Subscription with a set of the index values of _Exp_₁.
 The result is a ListRelation with all tuples that have these index values as first element
 with the index values removed from the tuple. 
 

@@ -30,7 +30,7 @@ The following steps are defined:
 *  `expr: Var = Exp`: evaluate the Rascal expression _Exp_ and assign its value to the new variable _Var_.
 *  `list: Lines`: lines that will be displayed as a listing. The listing may contain a placeholder in the form of `<?>` and
   ends where a new step begins.
-*  `test: Exp~1~ == Exp~2~`: the equality is evaluated as Rascal expression. The outcome determines the success or failure to answer this question.
+*  `test: Exp₁ == Exp₂`: the equality is evaluated as Rascal expression. The outcome determines the success or failure to answer this question.
 *  `hint: Text`: a hint that will be shown when the user enters a wrong answer.
 
 The following restrictions apply:

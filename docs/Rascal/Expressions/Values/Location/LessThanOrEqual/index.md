@@ -11,19 +11,19 @@ The less than or equal operator on location values.
 
 #### Syntax
 
-`Exp~1~ <= Exp~2~`
+`Exp₁ <= Exp₂`
 
 #### Types
 
 
-| `Exp~1~` | `Exp~2~` | `Exp~1~ <= Exp~2~`  |
+| `Exp₁` | `Exp₂` | `Exp₁ <= Exp₂`  |
 | --- | --- | --- |
 | `loc`     |  `loc`    | `bool`                |
 
 
 #### Description
 
-Yields `true` if the location value of _Exp_~1~ is textually contained
-in the location value of _Exp_~2~, and `false` otherwise.
+Yields `true` if the location value of _Exp_₁ is textually contained
+in the location value of _Exp_₂, and `false` otherwise.
 
 

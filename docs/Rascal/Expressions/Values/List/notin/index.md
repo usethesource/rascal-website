@@ -11,21 +11,21 @@ Negated membership test on lists.
 
 #### Syntax
 
-`Exp~1~ notin Exp~2~`
+`Exp₁ notin Exp₂`
 
 #### Types
 
 //
 
-| `Exp~1~`           |  `Exp~2~`      | `Exp~1~ notin Exp~2~`  |
+| `Exp₁`           |  `Exp₂`      | `Exp₁ notin Exp₂`  |
 | --- | --- | --- |
-| `T~1~`  <: `T~2~` |  `list[T~2~]`  | `bool`                   |
+| `T₁`  <: `T₂` |  `list[T₂]`  | `bool`                   |
 
 
 #### Description
 
-Yields `true` if the value of Exp~1~ does not occur as element in the value of Exp~2~ and `false` otherwise. 
-The type of _Exp_~1~ should be compatible with the element type of _Exp_~2~.
+Yields `true` if the value of Exp₁ does not occur as element in the value of Exp₂ and `false` otherwise. 
+The type of _Exp_₁ should be compatible with the element type of _Exp_₂.
 
 #### Examples
 

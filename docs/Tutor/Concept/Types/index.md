@@ -33,9 +33,9 @@ Here is a type description of an if-then-else statement:
 
 
 
-| `Exp` | `Statement~1~` | `Statement~2~` | `if ( Exp ) Statement~1~ else Statement~2~;`  |
+| `Exp` | `Statement₁` | `Statement₂` | `if ( Exp ) Statement₁ else Statement₂;`  |
 | --- | --- | --- | --- |
-| `bool`  |  T~1~        | T~2~         | `lub(T~1~, T~2~)`                               |
+| `bool`  |  T₁        | T₂         | `lub(T₁, T₂)`                               |
 
 ----
 
@@ -49,9 +49,9 @@ The result will be displayed as:
 
 
 
-| `Exp` | `Statement~1~` | `Statement~2~` | `if ( Exp ) Statement~1~ else Statement~2~;`  |
+| `Exp` | `Statement₁` | `Statement₂` | `if ( Exp ) Statement₁ else Statement₂;`  |
 | --- | --- | --- | --- |
-| `bool`  |  T~1~        | T~2~         | `lub(T~1~, T~2~)`                               |
+| `bool`  |  T₁        | T₂         | `lub(T₁, T₂)`                               |
 
 
 #### Benefits

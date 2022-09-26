@@ -12,20 +12,20 @@ Conditional expression on values.
 
 #### Syntax
 
-`Exp~1~ ? Exp~2~ : Exp~3~`
+`Exp₁ ? Exp₂ : Exp₃`
 
 #### Types
 
 
-| `Exp~1~`  | `Exp~2~` | `Exp~3~` | `Exp~1~ ? Exp~2~ : Exp~3~`  |
+| `Exp₁`  | `Exp₂` | `Exp₃` | `Exp₁ ? Exp₂ : Exp₃`  |
 | --- | --- | --- | --- |
-|   `bool`   | `T~2~`   | `T~3~`   | `lub(T~2~,T~3~)`             |
+|   `bool`   | `T₂`   | `T₃`   | `lub(T₂,T₃)`             |
 
 
 #### Description
 
-Yields the value of _Exp_~2~ if the value of _Exp_~1~ is `true` and the value of _Exp_~3~ otherwise.
-The result type is the _least upper bound_ (also known as `lub`, see [StaticTyping](../../../../../Rascal/Declarations/StaticTyping/index.md)) of the types of _Exp_~2~ and _Exp_~3~.
+Yields the value of _Exp_₂ if the value of _Exp_₁ is `true` and the value of _Exp_₃ otherwise.
+The result type is the _least upper bound_ (also known as `lub`, see [StaticTyping](../../../../../Rascal/Declarations/StaticTyping/index.md)) of the types of _Exp_₂ and _Exp_₃.
 
 #### Examples
 

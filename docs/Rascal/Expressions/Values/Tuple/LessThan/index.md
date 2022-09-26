@@ -11,14 +11,14 @@ Less than operator on tuple values.
 
 #### Syntax
 
-`Exp~1~ < Exp~2~`
+`Exp₁ < Exp₂`
 
 #### Types
 
 
-| `Exp~1~`                      |  `Exp~2~`                      | `Exp~1~ < Exp~2~`  |
+| `Exp₁`                      |  `Exp₂`                      | `Exp₁ < Exp₂`  |
 | --- | --- | --- |
-| `tuple[ T~11~, T~12~, ... ]` |  `tuple[ T~21~, T~22~, ... ]` | `bool`                |
+| `tuple[ T₁₁, T₁₂, ... ]` |  `tuple[ T₂₁, T₂₂, ... ]` | `bool`                |
 
 
 #### Description
@@ -26,8 +26,8 @@ Less than operator on tuple values.
 Yields `true` if 
 
 *  both tuples are not equal, and
-*  the left-most element in the tuple value of _Exp~1~_ that differs from the corresponding element in the tuple 
-value of _Exp_~2~ is less than that element in _Exp_~2~.
+*  the left-most element in the tuple value of _Exp₁_ that differs from the corresponding element in the tuple 
+value of _Exp_₂ is less than that element in _Exp_₂.
 
 
 Otherwise the result if `false`.

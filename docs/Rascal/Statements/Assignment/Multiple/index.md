@@ -13,8 +13,8 @@ Assign to multiple assignables.
 
 #### Description
 
-First the value _Exp_ is determined and should be a tuple of the form `< V~1~, V~2~, ..., V~n~ >`.
-Next the assignments `Assignable~i~ = V~i~` are performed for 1 \<= i \<= n.
+First the value _Exp_ is determined and should be a tuple of the form `< V₁, V₂, ..., Vₙ >`.
+Next the assignments `Assignableᵢ = Vᵢ` are performed for 1 \<= i \<= n.
 
 #### Examples
 

@@ -11,20 +11,20 @@ All argument expressions are true.
 
 #### Syntax
 
-`all ( Exp~1~, Exp~2~, ... )`
+`all ( Exp₁, Exp₂, ... )`
 
 #### Types
 
 //
 
-| `Exp~1~` | `Exp~2~` | ... | `all ( Exp~1~, Exp~2~, ... )` |
+| `Exp₁` | `Exp₂` | ... | `all ( Exp₁, Exp₂, ... )` |
 | --- | --- | --- | --- |
 |`bool`     | `bool`    | ... | `bool`                           |
 
 
 #### Description
 
-Yields `true` when all combinations of values of _Exp_~i~ are true.
+Yields `true` when all combinations of values of _Exp_ᵢ are true.
 
 #### Examples
 
@@ -41,7 +41,7 @@ rascal>all(int n <- [0, 2 .. 10], n % 2 == 0);
 bool: true
 ```
 
-When one of the _Exp_~i~ enumerates the elements of an empty list, `all` always returns `true`:
+When one of the _Exp_ᵢ enumerates the elements of an empty list, `all` always returns `true`:
 
 ```rascal-shell 
 rascal>all(int n <- [], n > 0);

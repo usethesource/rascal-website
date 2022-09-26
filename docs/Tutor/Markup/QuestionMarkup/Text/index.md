@@ -10,8 +10,8 @@ A text question with a free-format answer.
 
 ```
 QText _OptName_: _Text_
-a: _Answer_~1~
-a: _Answer_~2~
+a: _Answer_₁
+a: _Answer_₂
 ...
 ```
 
@@ -21,7 +21,7 @@ Presents a text questions consisting of _Text_.
 _OptName_ is an optional name of the question (enclosed between `[` and `]`).
 If _OptName_ is missing, the question gets a unique number as name.
 
-The user can give a free format answer, and that is accepted if it contains one of the given answers _answer_~1~, _Answer_~2~ as substring.
+The user can give a free format answer, and that is accepted if it contains one of the given answers _answer_₁, _Answer_₂ as substring.
 
 #### Examples
 

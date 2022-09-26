@@ -11,14 +11,14 @@ Cartesian product of two relation values.
 
 #### Syntax
 
-`Exp~1~ * Exp~2~`
+`Exp₁ * Exp₂`
 
 #### Types
 
 
-|`Exp~1~`      | `Exp~2~`     | `Exp~1~ * Exp~2~`   |
+|`Exp₁`      | `Exp₂`     | `Exp₁ * Exp₂`   |
 | --- | --- | --- |
-| `set[T~1~]`  | `set[T~2~]`  | `rel[T~1~, T~2~]`   |
+| `set[T₁]`  | `set[T₂]`  | `rel[T₁, T₂]`   |
 
 
 #### Description

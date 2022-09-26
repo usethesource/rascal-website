@@ -26,13 +26,13 @@ A _TypeDescriptor_ is one of
 *  `list[TypeDescriptor]`
 *  `set[TypeDescriptor]`
 *  `map[TypeDescriptor,TypeDescriptor]`
-*  `tuple[TypeDescriptor~1~, TypeDescriptor~2~, ...]`
+*  `tuple[TypeDescriptor₁, TypeDescriptor₂, ...]`
 *  `void`
 *  `value`
 *  `arb`
 *  `arb[Int]`
-*  `arb[Int, TypeDescriptor~1~, TypeDescriptor~2~]`
-*  `arb[TypeDescriptor~1~, TypeDescriptor~2~]`
+*  `arb[Int, TypeDescriptor₁, TypeDescriptor₂]`
+*  `arb[TypeDescriptor₁, TypeDescriptor₂]`
 *  `same[TypeName]`
 
 #### Description

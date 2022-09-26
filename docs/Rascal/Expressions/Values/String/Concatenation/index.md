@@ -11,19 +11,19 @@ Concatenate two strings.
 
 #### Syntax
 
-`Exp~1~ + Exp~2~`
+`Exp₁ + Exp₂`
 
 #### Types
 
 
-| `Exp~1~` | `Exp~2~` | `Exp~1~ + Exp~2~`  |
+| `Exp₁` | `Exp₂` | `Exp₁ + Exp₂`  |
 | --- | --- | --- |
 | `str`     | `str`     | `str`                |
 
 
 #### Description
 
-Concatenates the string values of _Exp_~1~ and _Exp_~2~.
+Concatenates the string values of _Exp_₁ and _Exp_₂.
 
 Note that to concatenate other types of values into a string, you can use [String](../../../../../Rascal/Expressions/Values/String/index.md) interpolation.
 

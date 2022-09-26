@@ -21,8 +21,8 @@ Visit the elements in a tree or value.
 
 ```rascal
 Strategy visit ( _Exp_ ) {
-case _PatternWithAction~1~_;
-case _PatternWithAction~2~_;
+case _PatternWithAction₁_;
+case _PatternWithAction₂_;
 ...
 default: ...
 }
@@ -82,8 +82,8 @@ The execution of the cases has the following effect:
 
 *  A PatternWithAction of the form `Pattern : Statement` executes `Statement` and this should lead to one of the following:
 
-   ** Execution of an Insert statement of the form `insert Exp~2~`.
-      The value of _Exp_~2~ replaces the subtree of the subject that is currently being visited. 
+   ** Execution of an Insert statement of the form `insert Exp₂`.
+      The value of _Exp_₂ replaces the subtree of the subject that is currently being visited. 
       Once again, this modification takes place in a copy of the original subject (see above).
       Note that:
 

@@ -10,14 +10,14 @@ Not equal operator on tuple values.
 
 #### Syntax
 
-`Exp~1~ != Exp~2~`
+`Exp₁ != Exp₂`
 
 #### Types
 
 
-| `Exp~1~`                      |  `Exp~2~`                      | `Exp~1~ != Exp~2~`  |
+| `Exp₁`                      |  `Exp₂`                      | `Exp₁ != Exp₂`  |
 | --- | --- | --- |
-| `tuple[ T~11~, T~12~, ... ]` |  `tuple[ T~21~, T~22~, ... ]` | `bool`                |
+| `tuple[ T₁₁, T₁₂, ... ]` |  `tuple[ T₂₁, T₂₂, ... ]` | `bool`                |
 
 
 #### Description

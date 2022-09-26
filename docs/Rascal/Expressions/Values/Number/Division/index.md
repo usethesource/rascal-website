@@ -11,12 +11,12 @@ Division on numeric values.
 
 #### Syntax
 
-`Exp~1~ / Exp~2~`
+`Exp₁ / Exp₂`
 
 #### Types
 
 
-| `Exp~1~`  |  `Exp~2~` | `Exp~1~ / Exp~2~`   |
+| `Exp₁`  |  `Exp₂` | `Exp₁ / Exp₂`   |
 | --- | --- | --- |
 | `int`      |  `int`     | `int`                 |
 | `int`      |  `real`    | `real`                |
@@ -25,7 +25,7 @@ Division on numeric values.
 
 #### Description
 
-Yields the result of dividing the value of _Exp~1~_ by the value of _Exp~2~_.
+Yields the result of dividing the value of _Exp₁_ by the value of _Exp₂_.
 
 #### Examples
 

@@ -11,15 +11,15 @@ Equality on lists.
 
 #### Syntax
 
-`Exp~1~ == Exp~2~`
+`Exp₁ == Exp₂`
 
 #### Types
 
 //
 
-| `Exp~1~`     |  `Exp~2~`     | `Exp~1~ == Exp~2~`  |
+| `Exp₁`     |  `Exp₂`     | `Exp₁ == Exp₂`  |
 | --- | --- | --- |
-| `list[T~1~]` |  `list[T~2~]` | `bool`                |
+| `list[T₁]` |  `list[T₂]` | `bool`                |
 
 
 #### Description

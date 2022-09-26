@@ -11,21 +11,21 @@ Intersection of two lists.
 
 #### Syntax
 
-`Exp~1~ & Exp~2~`
+`Exp₁ & Exp₂`
 
 #### Types
 
 //
 
-| `Exp~1~`     |  `Exp~2~`      | `Exp~1~ & Exp~2~`       |
+| `Exp₁`     |  `Exp₂`      | `Exp₁ & Exp₂`       |
 | --- | --- | --- |
-| `list[T~1~]` |  `list[T~2~]`  | `list[lub(T~1~,T~2~)]`  |
+| `list[T₁]` |  `list[T₂]`  | `list[lub(T₁,T₂)]`  |
 
 
 #### Description
 
-Returns the intersection of the two list values of  _Exp_~1~ and _Exp_~2~, i.e.,
-the list value of _Exp_~1~ with all elements removed that do not occur in the list value of _Exp_~2~.
+Returns the intersection of the two list values of  _Exp_₁ and _Exp_₂, i.e.,
+the list value of _Exp_₁ with all elements removed that do not occur in the list value of _Exp_₂.
 
 #### Examples
 

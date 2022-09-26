@@ -20,15 +20,15 @@ This is the complete list:
 | Variable declaration | `Type Var`                                                               |
 | Multi-variable       | `*Var`, `*Type Var`                                                    |
 | Variable             | `Var`                                                                      |
-| List                 | `[ Pat~1~, Pat~2~, ..., Pat~n~ ]`                                         |
-| Set                  | `{ Pat~1~, Pat~2~, ..., Pat~n~ }`                                         |
-| Tuple                | `< Pat~1~, Pat~2~, ..., Pat~n~ >`                                         |
-| Node                 | `Name ( Pat~1~, Pat~2~, ..., Pat~n~ )`                                  |
+| List                 | `[ Pat₁, Pat₂, ..., Patₙ ]`                                         |
+| Set                  | `{ Pat₁, Pat₂, ..., Patₙ }`                                         |
+| Tuple                | `< Pat₁, Pat₂, ..., Patₙ >`                                         |
+| Node                 | `Name ( Pat₁, Pat₂, ..., Patₙ )`                                  |
 | Descendant           | `/ Pat`                                                                    |
 | Labelled             | `Var : Pat`                                                               |
 | TypedLabelled        | `Type Var : Pat`                                                       |
 | TypeConstrained      |  `[Type] Pat` |
-| Concrete             | (Symbol) ` Token~1~ Token~2~ ... Token~n~ `                                                          |
+| Concrete             | (Symbol) ` Token₁ Token₂ ... Tokenₙ `                                                          |
 
 
 #### Description

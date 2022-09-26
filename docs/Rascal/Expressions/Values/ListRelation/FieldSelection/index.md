@@ -19,12 +19,12 @@ Select a field (column) from a list relation value.
 |`Exp`                                 | `Exp . Name`  |
 | --- | --- |
 |
-| `lrel[T~1~ L~1~, T~2~ L~2~, ... ]` | `list[T~i~]`     |
+| `lrel[T₁ L₁, T₂ L₂, ... ]` | `list[Tᵢ]`     |
 
 
 #### Description
 
-_Exp_ should evaluate to a list relation that has an _i_-th field label _L_~i~ that is identical to _Name_.
+_Exp_ should evaluate to a list relation that has an _i_-th field label _L_ᵢ that is identical to _Name_.
 Return a list with all values of that field.
 _Name_ stands for itself and is not evaluated.
 

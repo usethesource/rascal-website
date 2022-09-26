@@ -10,22 +10,22 @@ The difference between two sets.
 
 #### Syntax
 
-`Exp~1~ - Exp~2~`
+`Exp₁ - Exp₂`
 
 #### Types
 
 
-| `Exp~1~`    |  `Exp~2~`     | `Exp~1~ - Exp~2~`        |
+| `Exp₁`    |  `Exp₂`     | `Exp₁ - Exp₂`        |
 | --- | --- | --- |
-| `set[T~1~]` |  `set[T~2~]`  | `set[lub(T~1~,T~2~)]`    |
-| `set[T~1~]` |  `T~2~`       | `set[lub(T~1~,T~2~)]`    |
+| `set[T₁]` |  `set[T₂]`  | `set[lub(T₁,T₂)]`    |
+| `set[T₁]` |  `T₂`       | `set[lub(T₁,T₂)]`    |
 
 
 
 #### Description
 
-If both _Exp_~1~ and _Exp_~2~ have a set as value, the result is the difference of these two set values. 
-If _Exp_~2~ does not have a set as value, it is first converted to a set before the difference is computed.
+If both _Exp_₁ and _Exp_₂ have a set as value, the result is the difference of these two set values. 
+If _Exp_₂ does not have a set as value, it is first converted to a set before the difference is computed.
 The difference is computed by removing all elements of the second set from the first set.
 
 #### Examples

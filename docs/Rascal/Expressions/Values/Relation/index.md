@@ -12,14 +12,14 @@ Relation values.
 
 #### Syntax
 
-`{ < Exp~11~, Exp~12~, ... > , < Exp~21~, Exp~22~, ... > , ... }`
+`{ < Exp₁₁, Exp₁₂, ... > , < Exp₂₁, Exp₂₂, ... > , ... }`
 
 #### Types
 
 
-| `Exp~11~` |  `Exp~12~` |  ...  | `{ < Exp~11~, Exp~12~, ... > , ... }`   |
+| `Exp₁₁` |  `Exp₁₂` |  ...  | `{ < Exp₁₁, Exp₁₂, ... > , ... }`   |
 | --- | --- | --- | --- |
-| `T~1~`    |    `T~2~`  |  ...  |  `rel[T~1~, T~2~, ... ]`               |
+| `T₁`    |    `T₂`  |  ...  |  `rel[T₁, T₂, ... ]`               |
 
 
 #### Description
@@ -30,12 +30,12 @@ A relation is a set of elements with the following property:
 
 
 Relations are thus nothing more than sets of tuples, but since they are used so often we provide a shorthand notation for them.
-Relations are represented by the type `rel[T~1~ L~1~, T~2~ L~2~, ... ]`, where _T_~1~, _T_~2~, ... are arbitrary types and
-_L_~1~, _L_~2~, ... are optional labels. It is a shorthand for `set[tuple[T~1~ L~1~, T~2~ L~2~, ... ]]`.
+Relations are represented by the type `rel[T₁ L₁, T₂ L₂, ... ]`, where _T_₁, _T_₂, ... are arbitrary types and
+_L_₁, _L_₂, ... are optional labels. It is a shorthand for `set[tuple[T₁ L₁, T₂ L₂, ... ]]`.
 
 An n-ary relations with m tuples is denoted by
- `{< E~11~, E~12~, ..., E~1n~ >,< E~21~, E~22~, ..., E~2n~ >, ..., < E~m1~, E~m2~, ..., E~mn~ >}`, 
-where the _E_~ij~ are expressions that yield the desired element type _T_~i~.
+ `{< E₁₁, E₁₂, ..., E₁ₙ >,< E₂₁, E₂₂, ..., E₂ₙ >, ..., < Eₘ₁, Eₘ₂, ..., Eₘₙ >}`, 
+where the _E_ᵢⱼ are expressions that yield the desired element type _T_ᵢ.
 
 Since relations are a form of set all operations (see [Set](../../../../Rascal/Expressions/Values/Set/index.md)) and functions
 (see [Set](../../../../Library/Set.md)) are also applicable to relations.

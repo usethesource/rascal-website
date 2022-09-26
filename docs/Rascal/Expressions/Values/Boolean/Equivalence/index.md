@@ -11,13 +11,13 @@ The _equivalence_ operator on Boolean values.
 
 #### Syntax
 
-`Exp~1~ <==> Exp~2~`
+`Exp₁ <==> Exp₂`
 
 #### Types
 
 //
 
-| `Exp~1~` | `Exp~2~`  | `Exp~1~ <==> Exp~2~`  |
+| `Exp₁` | `Exp₂`  | `Exp₁ <==> Exp₂`  |
 | --- | --- | --- |
 | `bool`       | `bool`         | `bool`  |
 
@@ -26,7 +26,7 @@ The _equivalence_ operator on Boolean values.
 
 The _equivalence_ operator on Boolean values defined as follows:
 
-| `Exp~1~` | `Exp~2~`  | `Exp~1~ <==> Exp~2~`  |
+| `Exp₁` | `Exp₂`  | `Exp₁ <==> Exp₂`  |
 | --- | --- | --- |
 | `true`       | `true`         | `true`  |
 | `true`       | `false`         | `false`  |

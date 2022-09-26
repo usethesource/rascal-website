@@ -18,7 +18,7 @@ Select a field from a tuple by its field name.
 
 | `Exp`                                 | `Name` | `Exp . Name` |
 | --- | --- | --- |
-|`tuple[ T~1~ L~1~, T~2~ L~2~, ... ]` |  `L~i~` | `T~i~`         |
+|`tuple[ T₁ L₁, T₂ L₂, ... ]` |  `Lᵢ` | `Tᵢ`         |
 
 
 #### Description

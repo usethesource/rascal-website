@@ -11,9 +11,9 @@ Union of two set values.
 
 #### Types
 
-| `Exp~1~`    |  `Exp~2~`    | `Exp~1~ + Exp~2~`       |
+| `Exp₁`    |  `Exp₂`    | `Exp₁ + Exp₂`       |
 | --- | --- | --- |
-| `set[T~1~]` |  `set[T~2~]` | `set[lub(T~1~,T~2~)]`   |
+| `set[T₁]` |  `set[T₂]` | `set[lub(T₁,T₂)]`   |
 
 
 #### Description

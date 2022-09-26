@@ -10,20 +10,20 @@ The difference between two maps.
 
 #### Syntax
 
-`Exp~1~ - Exp~2~`
+`Exp₁ - Exp₂`
 
 #### Types
 
 
-| `Exp~1~`             |  `Exp~2~`             | `Exp~1~ - Exp~2~`                             |
+| `Exp₁`             |  `Exp₂`             | `Exp₁ - Exp₂`                             |
 | --- | --- | --- |
-| `map[TK~1~, TV~1~]` |  `map[TK~2~, TV~2~]` | `map[lub(TK~1~,TK~2~),lub(TK~1~,TK~2~)]`   |
+| `map[TK₁, TV₁]` |  `map[TK₂, TV₂]` | `map[lub(TK₁,TK₂),lub(TK₁,TK₂)]`   |
 
 
 #### Description
 
-The result is the difference of the two map values of _Exp_~1~ and _Exp_~2~,
-i.e. a map with all pairs in _Exp_~1~ that do have a key that does not occur in _Exp_~2~.
+The result is the difference of the two map values of _Exp_₁ and _Exp_₂,
+i.e. a map with all pairs in _Exp_₁ that do have a key that does not occur in _Exp_₂.
 
 #### Examples
 

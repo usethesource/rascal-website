@@ -11,19 +11,19 @@ Compute the product of two lists.
 
 #### Syntax
 
-`Exp~1~ * Exp~2~`
+`Exp₁ * Exp₂`
 
 #### Types
 
 
-| `Exp~1~`     |  `Exp~2~`     | `Exp~1~ * Exp~2~`          |
+| `Exp₁`     |  `Exp₂`     | `Exp₁ * Exp₂`          |
 | --- | --- | --- |
-| `list[T~1~]` |  `list[T~2~]` | `list[tuple[T~1~,T~2~]]`   |
+| `list[T₁]` |  `list[T₂]` | `list[tuple[T₁,T₂]]`   |
 
 
 #### Description
 
-Yields a list of tuples resulting from the product of the values of _Exp_~1~ and _Exp_~2~. 
+Yields a list of tuples resulting from the product of the values of _Exp_₁ and _Exp_₂. 
 It contains a tuple for each combination of values from both arguments.
 
 #### Examples

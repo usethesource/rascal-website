@@ -11,21 +11,21 @@ Test whether expression has a defined value, otherwise provide alternative.
 
 #### Syntax
 
-`Exp~1~ ? Exp~2~`
+`Exp₁ ? Exp₂`
 
 #### Types
 
 //
 
-| `Exp~1~` | `Exp~2~` | `Exp~1~ ? Exp~2~` |
+| `Exp₁` | `Exp₂` | `Exp₁ ? Exp₂` |
 | --- | --- | --- |
-| `T~1~`   | `T~2~`   |  `T~2~ <: T~1~`  |
+| `T₁`   | `T₂`   |  `T₂ <: T₁`  |
 
 
 #### Description
 
-If no exception is generated during the evaluation of _Exp_~1~, the result of `Exp~1~ ? Exp~2~` is the value of _Exp_~1~.
-Otherwise, it is the value of _Exp_~2~.
+If no exception is generated during the evaluation of _Exp_₁, the result of `Exp₁ ? Exp₂` is the value of _Exp_₁.
+Otherwise, it is the value of _Exp_₂.
 
 Also see [IsDefined](../../../../../Rascal/Expressions/Values/Boolean/IsDefined/index.md) and [Assignment](../../../../../Rascal/Statements/Assignment/index.md).
 

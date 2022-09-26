@@ -11,21 +11,21 @@ Less than or equal operator on datetime values.
 
 #### Syntax
 
-`Exp~1~ <= Exp~2~`
+`Exp₁ <= Exp₂`
 
 #### Types
 
 //
 
-| `Exp~1~`      | `Exp~2~`      | `Exp~1~ <= Exp~2~`  |
+| `Exp₁`      | `Exp₂`      | `Exp₁ <= Exp₂`  |
 | --- | --- | --- |
 | `datetime`     |  `datetime`    | `bool`                |
 
 
 #### Description
 
-Yields `true` if the `datetime` value of Exp~1~ is earlier in time than the `datetime` value
-of _Exp_~2~ or if the values of _Exp_~1~ and _Exp_~2~ are equal, and `false` otherwise.
+Yields `true` if the `datetime` value of Exp₁ is earlier in time than the `datetime` value
+of _Exp_₂ or if the values of _Exp_₁ and _Exp_₂ are equal, and `false` otherwise.
 
 #### Examples
 

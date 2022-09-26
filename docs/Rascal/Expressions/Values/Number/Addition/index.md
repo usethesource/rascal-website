@@ -11,12 +11,12 @@ Addition on numeric values.
 
 #### Syntax
 
-`Exp~1~ + Exp~2~`
+`Exp₁ + Exp₂`
 
 #### Types
 
 
-| `Exp~1~`  |  `Exp~2~` | `Exp~1~ + Exp~2~`  |
+| `Exp₁`  |  `Exp₂` | `Exp₁ + Exp₂`  |
 | --- | --- | --- |
 | `int`      |  `int`     | `int`                 |
 | `int`      |  `real`    | `real`                |
@@ -25,7 +25,7 @@ Addition on numeric values.
 
 #### Description
 
-Yields the numerical sum of the values of _Exp_~1~ and _Exp_~2~.
+Yields the numerical sum of the values of _Exp_₁ and _Exp_₂.
 
 #### Examples
 

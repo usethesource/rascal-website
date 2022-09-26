@@ -11,13 +11,13 @@ Not equal operator on map values.
 
 #### Syntax
 
-`Exp~1~ != Exp~2~`
+`Exp₁ != Exp₂`
 
 #### Types
 
-| `Exp~1~`            |  `Exp~2~`             | `Exp~1~ != Exp~2~`  |
+| `Exp₁`            |  `Exp₂`             | `Exp₁ != Exp₂`  |
 | --- | --- | --- |
-| `map[TK~1~,TV~2~]` |  `map[TK~2~, TV~2~]` | `bool`                |
+| `map[TK₁,TV₂]` |  `map[TK₂, TV₂]` | `bool`                |
 
 
 #### Description

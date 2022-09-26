@@ -13,21 +13,21 @@ A map comprehension generates a map value.
 
 #### Syntax
 
-`( Exp~1~ : Exp~2~ | Gen~1~, Gen~2~, ... )`
+`( Exp₁ : Exp₂ | Gen₁, Gen₂, ... )`
 
 #### Types
 
 
-| `Exp~1~` | `Exp~2~` | `( Exp~1~ : Exp~2~ \| Gen~1~, Gen~2~, ... )`  |
+| `Exp₁` | `Exp₂` | `( Exp₁ : Exp₂ \| Gen₁, Gen₂, ... )`  |
 | --- | --- | --- | --- |
-| `T~1~`   | `T~2~`   | `map[T~1~, T~2~]`                               |
+| `T₁`   | `T₂`   | `map[T₁, T₂]`                               |
 
 
 #### Description
 
-A map comprehension consists of a number of two contributing expressions _Exp_~1~ (for key values), 
-and _Exp_~2~ (the values associated with those key values) and a number of
-generators _Gen_~1~, _Gen_~2~, _Gen_~3~, ... that are evaluated as described in [Comprehensions](../../../../../Rascal/Expressions/Comprehensions/index.md).
+A map comprehension consists of a number of two contributing expressions _Exp_₁ (for key values), 
+and _Exp_₂ (the values associated with those key values) and a number of
+generators _Gen_₁, _Gen_₂, _Gen_₃, ... that are evaluated as described in [Comprehensions](../../../../../Rascal/Expressions/Comprehensions/index.md).
 
 #### Examples
 

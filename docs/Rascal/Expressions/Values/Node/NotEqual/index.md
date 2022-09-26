@@ -10,19 +10,19 @@ Not equal operator on node values.
 
 #### Syntax
 
-`Exp~1~ != Exp~2~`
+`Exp₁ != Exp₂`
 
 #### Types
 
 
-| `Exp~1~`  |  `Exp~2~` | `Exp~1~ != Exp~2~`  |
+| `Exp₁`  |  `Exp₂` | `Exp₁ != Exp₂`  |
 | --- | --- | --- |
 | `node`     |  `node`    | `bool`                |
 
 
 #### Description
 
-Yields `true` if the node names of the values of _Exp_~1~ and _Exp_~2~ are unequal or
+Yields `true` if the node names of the values of _Exp_₁ and _Exp_₂ are unequal or
 any of the children of each node is pairwise unequal, otherwise `true`.
 
 #### Examples

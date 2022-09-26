@@ -11,12 +11,12 @@ Equality operator on numeric values.
 
 #### Syntax
 
-`Exp~1~ == Exp~2~`
+`Exp₁ == Exp₂`
 
 #### Types
 
 
-| `Exp~1~`  |  `Exp~2~` | `Exp~1~ == Exp~2~`   |
+| `Exp₁`  |  `Exp₂` | `Exp₁ == Exp₂`   |
 | --- | --- | --- |
 | `int`      |  `int`     | `bool`                 |
 | `int`      |  `real`    | `bool`                 |

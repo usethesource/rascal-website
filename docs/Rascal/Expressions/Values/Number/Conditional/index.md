@@ -12,12 +12,12 @@ Conditional expression for numeric values.
 
 #### Syntax
 
-`Exp~1~ ? Exp~2~ : Exp~3~`
+`Exp₁ ? Exp₂ : Exp₃`
 
 #### Types
 
 
-| `Exp~1~`   | `Exp~2~`  |  `Exp~3~` | `Exp~1~ ? Exp~2~ : Exp~3~`   |
+| `Exp₁`   | `Exp₂`  |  `Exp₃` | `Exp₁ ? Exp₂ : Exp₃`   |
 | --- | --- | --- | --- |
 |  `bool`     | `int`      |  `int`     | `int`                           |
 |  `bool`     | `int`      |  `real`    | `real`                          |
@@ -26,7 +26,7 @@ Conditional expression for numeric values.
 
 #### Description
 
-If the value of _Exp_ is `true` then the value of _Exp_~1~ else the value of _Exp_~2~.
+If the value of _Exp_ is `true` then the value of _Exp_₁ else the value of _Exp_₂.
 
 #### Examples
 

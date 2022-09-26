@@ -8,25 +8,25 @@ An unordered set of tuples.
 
 #### Description
 
-In mathematics, given sets _D_~1~, _D_~2~, ... _D_~n~, a
-_n_-ary relation _R_ is characterized by _R_ &subseteq;  _D_~1~ &times; _D_~2~ &times; ... &times; _D_~n~.
-In other words, _R_ consists of a set of tuples < _V~1~_, ..., _V~n~_ > where each _V_~i~ is an element of
-the set _D_~i~. When _n_ = 2, we call the relation a http://en.wikipedia.org/wiki/Relation_(mathematics)[binary relation].
+In mathematics, given sets _D_₁, _D_₂, ... _D_ₙ, a
+_n_-ary relation _R_ is characterized by _R_ &subseteq;  _D_₁ &times; _D_₂ &times; ... &times; _D_ₙ.
+In other words, _R_ consists of a set of tuples < _V₁_, ..., _Vₙ_ > where each _V_ᵢ is an element of
+the set _D_ᵢ. When _n_ = 2, we call the relation a http://en.wikipedia.org/wiki/Relation_(mathematics)[binary relation].
 
 In [database theory](http://en.wikipedia.org/wiki/Relational_algebra), a relation is a table with a heading and an unordered set of tuples:
 
-| _D~1~ Name~1~_ | _D~2~ Name~2~_ | ... | _D~n~ Name~n~_ |
+| _D₁ Name₁_ | _D₂ Name₂_ | ... | _Dₙ Nameₙ_ |
 | --- | --- | --- | --- |
-| _V~11~_        | _V~12~_        | ... | _V~1n~_        |
-| _V~21~_        | _V~22~_        | ... | _V~2n~_         |
-| _V~31~_        | _V~32~_        | ... | _V~3n~_         |
+| _V₁₁_        | _V₁₂_        | ... | _V₁ₙ_        |
+| _V₂₁_        | _V₂₂_        | ... | _V₂ₙ_         |
+| _V₃₁_        | _V₃₂_        | ... | _V₃ₙ_         |
 | ...            | ...            | ... |                
 
 
 
 
 In Rascal, a relation is a set of tuples and is characterized by the type:
-`rel[D~1~ Name~1~, D~2~ Name~2~, ..., D~n~ Name~n~]` 
+`rel[D₁ Name₁, D₂ Name₂, ..., Dₙ Nameₙ]` 
 See [Relation Values](../../Rascal/Expressions/Values/Relation/index.md) and  for a description of relations and their operators
 (since relations are sets all set operators also apply to them, see [Set Values](../../Rascal/Expressions/Values/Set/index.md))
 and [functions on relations](../../Library/Relation.md)

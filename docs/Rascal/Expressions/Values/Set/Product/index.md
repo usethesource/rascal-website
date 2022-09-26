@@ -10,19 +10,19 @@ The product of two set values.
 
 #### Syntax
 
-`Exp~1~ * Exp~2~`
+`Exp₁ * Exp₂`
 
 #### Types
 
 
-| `Exp~1~`    |  `Exp~2~`    | `Exp~1~ * Exp~2~`  |
+| `Exp₁`    |  `Exp₂`    | `Exp₁ * Exp₂`  |
 | --- | --- | --- |
-| `set[T~1~]` |  `set[T~2~]` | `rel[T~1~,T~2~]`   |
+| `set[T₁]` |  `set[T₂]` | `rel[T₁,T₂]`   |
 
 
 #### Description
 
-Yields a relation resulting from the product of the values of _Exp_~1~ and _Exp_~2~. It contains a tuple for each combination of values from both arguments.
+Yields a relation resulting from the product of the values of _Exp_₁ and _Exp_₂. It contains a tuple for each combination of values from both arguments.
 
 #### Examples
 

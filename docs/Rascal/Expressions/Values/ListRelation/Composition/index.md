@@ -11,15 +11,15 @@ Composition of two list relation values.
 
 #### Syntax
 
-`Exp~1~ o Exp~2~`
+`Exp₁ o Exp₂`
 
 #### Types
 
 //
 
-|`Exp~1~`             | `Exp~2~`            | `Exp~1~ o Exp~2~`  |
+|`Exp₁`             | `Exp₂`            | `Exp₁ o Exp₂`  |
 | --- | --- | --- |
-| `lrel[T~1~, T~2~]` | `lrel[T~2~, T~3~]` | `lrel[T~1~, T~3~]` |
+| `lrel[T₁, T₂]` | `lrel[T₂, T₃]` | `lrel[T₁, T₃]` |
 
 
 #### Description

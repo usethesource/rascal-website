@@ -13,7 +13,7 @@ Group statements into a block.
 
 #### Syntax
 
-`{ Statement~1~; ... ; Statement~n~ }`
+`{ Statement₁; ... ; Statementₙ }`
 
 #### Description
 

@@ -10,23 +10,23 @@ The difference between two lists.
 
 #### Syntax
 
-`Exp~1~ - Exp~2~`
+`Exp₁ - Exp₂`
 
 #### Types
 
 //
 
-| `Exp~1~`     |  `Exp~2~`     | `Exp~1~ - Exp~2~`        |
+| `Exp₁`     |  `Exp₂`     | `Exp₁ - Exp₂`        |
 | --- | --- | --- |
-| `list[T~1~]` |  `list[T~2~]` | `list[lub(T~1~,T~2~)]`   |
-| `list[T~1~]` |  `T~2~`       | `list[lub(T~1~,T~2~)]`   |
+| `list[T₁]` |  `list[T₂]` | `list[lub(T₁,T₂)]`   |
+| `list[T₁]` |  `T₂`       | `list[lub(T₁,T₂)]`   |
 
 
 
 #### Description
 
-If both _Exp_~1~ and _Exp_~2~ have a list as value, the result is the difference of these two list values. 
-If _Exp_~2~ does not have a list as value, it is first converted to a list before the difference is computed.
+If both _Exp_₁ and _Exp_₂ have a list as value, the result is the difference of these two list values. 
+If _Exp_₂ does not have a list as value, it is first converted to a list before the difference is computed.
 The difference is computed by taking the successive elements of the second list and
 removing the first occurrence of that element in the first list. 
 

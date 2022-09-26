@@ -11,19 +11,19 @@ Membership test on the keys of a map.
 
 #### Syntax
 
-`Exp~1~ in Exp~2~`
+`Exp₁ in Exp₂`
 
 #### Types
 
-| `Exp~1~`           |  `Exp~2~`         | `Exp~1~ in Exp~2~`  |
+| `Exp₁`           |  `Exp₂`         | `Exp₁ in Exp₂`  |
 | --- | --- | --- |
-| `T~1~`  <: `TK`  |  `map[TK, TV]` | `bool`                |
+| `T₁`  <: `TK`  |  `map[TK, TV]` | `bool`                |
 
 
 #### Description
 
-Yields `true` if the value of Exp~1~ occurs as key in the map value of Exp~2~ and `false` otherwise. 
-The type of _Exp_~1~ should be compatible with the key type _TK_ of _Exp_~2~.
+Yields `true` if the value of Exp₁ occurs as key in the map value of Exp₂ and `false` otherwise. 
+The type of _Exp_₁ should be compatible with the key type _TK_ of _Exp_₂.
 
 #### Examples
 

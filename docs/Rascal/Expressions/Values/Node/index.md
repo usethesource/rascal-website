@@ -11,12 +11,12 @@ Node values.
 
 #### Syntax
 
-`Exp~0~ ( Exp~1~, Exp~2~, ..., FieldName~1~ = Expr~1, _FieldName~2~ = Expr~2, ... )`
+`Exp₀ ( Exp₁, Exp₂, ..., FieldName₁ = Expr~1, FieldName₂ = Expr₂, ... )`
 
 #### Types
 
 
-|`Exp~0~`  | `Exp~1~` | `Exp~2~` | ... | `Exp~0~ ( Exp~1~, Exp~2~, ... )`  |
+|`Exp₀`  | `Exp₁` | `Exp₂` | ... | `Exp₀ ( Exp₁, Exp₂, ... )`  |
 | --- | --- | --- | --- | --- |
 | `str`      | `value`    | `value`    | ... | `node`                               |
 
@@ -25,7 +25,7 @@ Node values.
 
 Values of type `node` represent untyped trees and are constructed as follows:
 
-* the string value of _Exp~0~_ is the node name;
+* the string value of _Exp₀_ is the node name;
 * zero or more expressions of type `value` are the node\'s children.
 * optionally, unordered named fields can be added as well.
 

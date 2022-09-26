@@ -12,8 +12,8 @@ List in abstract pattern.
 
 #### Description
 
-A list pattern matches a list value (the subject), provided that _Pat_~1~, _Pat_~2~, ..., _Pat_~n~ match the elements of that list in order. 
-Special cases exist when one of the patterns _Pat_~i~ is
+A list pattern matches a list value (the subject), provided that _Pat_₁, _Pat_₂, ..., _Pat_ₙ match the elements of that list in order. 
+Special cases exist when one of the patterns _Pat_ᵢ is
 
 *  a [Variable](../../../Rascal/Patterns/Variable/index.md) with a type that is identical to the element type of the subject list: the variable is matched with the value at the corresponding position in the subject list.
 

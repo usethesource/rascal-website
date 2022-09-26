@@ -14,11 +14,11 @@ Assign to a slice of a list or string.
 
 #### Syntax
 
-*   `Assignable [ Exp~1~ .. Exp3_ ] = Exp~4~`
-*   `Assignable [ Exp~1~, Exp~2~ .. Exp~3~ ] = Exp~4~`
+*   `Assignable [ Exp₁ .. Exp3_ ] = Exp₄`
+*   `Assignable [ Exp₁, Exp₂ .. Exp₃ ] = Exp₄`
 
 
-`Exp~1~` and `Exp~3~` are optional
+`Exp₁` and `Exp₃` are optional
 #### Description
 
 A slice assignment is defined for [List](../../../../Rascal/Expressions/Values/List/index.md), [String](../../../../Rascal/Expressions/Values/String/index.md) and [Node](../../../../Rascal/Expressions/Values/Node/index.md) 
@@ -27,22 +27,22 @@ See [Slice](../../../../Rascal/Expressions/Values/List/Slice/index.md), [Slice](
 
 Let _V_ be the current value of _Assignable_.
 
-*  `Assignable [ Exp~1~ .. Exp~3~ ] = Exp~4~`:
-   The slice `[ Exp~1~ .. Exp~3~ ]` determines two indices `begin` (inclusive) and `end`   
+*  `Assignable [ Exp₁ .. Exp₃ ] = Exp₄`:
+   The slice `[ Exp₁ .. Exp₃ ]` determines two indices `begin` (inclusive) and `end`   
   (exclusive) in _V_.
-  A new value _V_' is computed that is a copy of _V_ but with all the elements in _V_ with `begin <= index < end` replaced by the elements of the value of _Exp_~4~.
+  A new value _V_' is computed that is a copy of _V_ but with all the elements in _V_ with `begin <= index < end` replaced by the elements of the value of _Exp_₄.
   Note that the size of _V_ and _V_' may differ.
   _V_' is assigned to the _Assignable_. 
 
-*  `Assignable [ Exp~1~, Exp~2~ .. Exp~3~ ] = Exp~4~`:
-  The slice `[ Exp~1~, Exp~2~ .. _Exp~3~ ]` determines two indices `begin` (inclusive) and `end` (exclusive)
+*  `Assignable [ Exp₁, Exp₂ .. Exp₃ ] = Exp₄`:
+  The slice `[ Exp₁, Exp₂ .. _Exp₃ ]` determines two indices `begin` (inclusive) and `end` (exclusive)
   and a `step` between indices in _V_.
   A new value _V_' is computed that is a copy of _V_ but with all the elements in _V_ with indices 
-  `begin`, `begin+step`. ... `end-step` <= `index < end` replaced by the successive elements of the value of _Exp_~4~.
+  `begin`, `begin+step`. ... `end-step` <= `index < end` replaced by the successive elements of the value of _Exp_₄.
   Note that the size of _V_ and _V_' may differ.  _V_' is assigned to the _Assignable_. 
-  If the number of indices in the slice and the number of elements in the value of _Exp_~4~ is not equal the following is done:
-  **  If the number of elements in the slice is larger: the elements of _Exp~4~_ are used in a circular manner.
-  **  If the number of elements in the slice is smaller: the remaining elements of _Exp~4~_ is inserted after the last index in the slice.
+  If the number of indices in the slice and the number of elements in the value of _Exp_₄ is not equal the following is done:
+  **  If the number of elements in the slice is larger: the elements of _Exp₄_ are used in a circular manner.
+  **  If the number of elements in the slice is smaller: the remaining elements of _Exp₄_ is inserted after the last index in the slice.
 
 #### Examples
 

@@ -5,7 +5,7 @@ Conditional statement.
 #### Syntax
 
 * `if ( Exp ) Statement;`
-* `if ( Exp ) Statement~1~ else Statement~2~;`
+* `if ( Exp ) Statement₁ else Statement₂;`
 
 #### Types
 
@@ -14,16 +14,16 @@ Conditional statement.
 | `bool`  |  `void`                     |
 
 
-| `Exp` | Statement~1~ | Statement~2~ | `if ( Exp ) Statement~1~ else Statement~2~;` |
+| `Exp` | Statement₁ | Statement₂ | `if ( Exp ) Statement₁ else Statement₂;` |
 | --- | --- | --- | --- |
-| `bool`  |  T~1~        | T~2~         | `lub(T~1~, T~2~)` |
+| `bool`  |  T₁        | T₂         | `lub(T₁, T₂)` |
 
 
 
 #### Description
 
 The test _Exp_ is evaluated and its outcome determines the statement to be executed: 
-_Statement~1~_ if _Exp_ yields `true` and _Statement~2~_ otherwise. 
+_Statement₁_ if _Exp_ yields `true` and _Statement₂_ otherwise. 
 The value of an if-then statement is equal to _Statement_ when its test is true. Otherwise it is void.
 The value of an if-then-else statement is the value of the statement that was executed.
 

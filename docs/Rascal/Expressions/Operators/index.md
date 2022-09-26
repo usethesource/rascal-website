@@ -23,10 +23,10 @@ to lowest precedence. In other words, operators listed earlier in the table bind
   [FieldSelection](../../../Rascal/Expressions/Values/Tuple/FieldSelection/index.md), |
   [FieldSelection](../../../Rascal/Expressions/Values/Relation/FieldSelection/index.md), |
 | Select named field from structured value |
-| `Exp~1~ [ Name = Exp~2~ ]` |
+| `Exp₁ [ Name = Exp₂ ]` |
 | [field assignment](../../../Rascal/Expressions/Operators/FieldAssignment/index.md) |
 | Change value of named field of structured value |
-| `Exp < field~1~, ... >` |
+| `Exp < field₁, ... >` |
 | [field projection](../../../Rascal/Expressions/Operators/FieldProjection/index.md) |
 | Select fields from relation or structured value |
 | `Exp is Name` |
@@ -39,13 +39,13 @@ to lowest precedence. In other words, operators listed earlier in the table bind
   [ConcreteSyntax](../../../Rascal/Expressions/ConcreteSyntax/index.md), |
   [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md) |
 | Returns true if and only if the constructor (node or parse tree) of the value produced by _Exp_ has any field labeled _Name_ |
-| `Exp~1~ [ Exp~2~ , Exp~3~, .... ]` |
+| `Exp₁ [ Exp₂ , Exp₃, .... ]` |
 | [Subscription](../../../Rascal/Expressions/Values/List/Subscription/index.md), |
   [Subscription](../../../Rascal/Expressions/Values/Map/Subscription/index.md), |
   [Subscription](../../../Rascal/Expressions/Values/Tuple/Subscription/index.md), |
   [Subscription](../../../Rascal/Expressions/Values/Relation/Subscription/index.md) |
 | Retrieve values for given index/key from list, map, tuple or relation. |
-| `Exp~1~ [ Exp~2~ , Exp~3~ .. Exp~4~ ]` |
+| `Exp₁ [ Exp₂ , Exp₃ .. Exp₄ ]` |
 | [Slice](../../../Rascal/Expressions/Values/List/Slice/index.md), |
   [Slice](../../../Rascal/Expressions/Values/String/Slice/index.md), |
   [Slice](../../../Rascal/Expressions/Values/Node/Slice/index.md) |
@@ -70,31 +70,31 @@ to lowest precedence. In other words, operators listed earlier in the table bind
 | `Exp @ Name` |
 | [Annotation](../../../Rascal/Declarations/Annotation/index.md) |
 | Value of annotation _Name_ of _Exp_'s value |
-| `Exp~1~ [@ Name = Exp~2~]` |
+| `Exp₁ [@ Name = Exp₂]` |
 | [Annotation](../../../Rascal/Declarations/Annotation/index.md) |
-| Assign value of _Exp_~2~ to annotation _Name_ of _Exp_~1~'s value |
-| `Exp~1~ o Exp~2~` |
+| Assign value of _Exp_₂ to annotation _Name_ of _Exp_₁'s value |
+| `Exp₁ o Exp₂` |
 | [Composition](../../../Rascal/Expressions/Values/Relation/Composition/index.md), |
   [Composition](../../../Rascal/Expressions/Values/Map/Composition/index.md) |
-| _Exp_~1~ and _Exp_~2~ should evaluate to a relation or map; return their composition. Note: the letter "o" is thus a keyword |
-| `Exp~1~ / Exp~2~` |
+| _Exp_₁ and _Exp_₂ should evaluate to a relation or map; return their composition. Note: the letter "o" is thus a keyword |
+| `Exp₁ / Exp₂` |
 | [Division](../../../Rascal/Expressions/Values/Number/Division/index.md) |
 | Divide two numbers |
-| `Exp~1~ % Exp~2~` |
+| `Exp₁ % Exp₂` |
 | [Remainder](../../../Rascal/Expressions/Values/Number/Remainder/index.md) |
 | Remainder on numbers |
-| `Exp~1~ * Exp~2~` |
+| `Exp₁ * Exp₂` |
 | [Multiplication](../../../Rascal/Expressions/Values/Number/Multiplication/index.md), |
   [Product](../../../Rascal/Expressions/Values/List/Product/index.md), |
   [Product](../../../Rascal/Expressions/Values/Set/Product/index.md), |
   [CartesianProduct](../../../Rascal/Expressions/Values/Relation/CartesianProduct/index.md) |
 | Multiply numbers; product of list, set, or relation |
-| `Exp~1~ & Exp~2~` |
+| `Exp₁ & Exp₂` |
 | [Intersection](../../../Rascal/Expressions/Values/List/Intersection/index.md), |
   [Intersection](../../../Rascal/Expressions/Values/Set/Intersection/index.md), |
   [Intersection](../../../Rascal/Expressions/Values/Map/Intersection/index.md) |
 | Intersection of list, set (including relation), or map |
-| `Exp~1~ + Exp~2~` |
+| `Exp₁ + Exp₂` |
 | [Addition](../../../Rascal/Expressions/Values/Number/Addition/index.md), |
   [Concatenation](../../../Rascal/Expressions/Values/String/Concatenation/index.md), |
   [Concatenation](../../../Rascal/Expressions/Values/List/Concatenation/index.md), |
@@ -106,26 +106,26 @@ to lowest precedence. In other words, operators listed earlier in the table bind
 | Add numbers; concatenate string, list or tuple;  |
   union on set (including relation), or map; |
   concatenate location and string |
-| `Exp~1~ - Exp~2~` |
+| `Exp₁ - Exp₂` |
 | [Subtraction](../../../Rascal/Expressions/Values/Number/Subtraction/index.md), |
   [Difference](../../../Rascal/Expressions/Values/List/Difference/index.md), |
   [Difference](../../../Rascal/Expressions/Values/Set/Difference/index.md), |
   [Difference](../../../Rascal/Expressions/Values/Map/Difference/index.md) |
 | Subtract numbers; difference of list, set (including relation), or map |
-| `Exp~1~ join Exp~2~` |
+| `Exp₁ join Exp₂` |
 | [Join](../../../Rascal/Expressions/Values/Relation/Join/index.md) |
 | Join on relation |
-| `Exp~1~ in Exp~2~` |
+| `Exp₁ in Exp₂` |
 | [in](../../../Rascal/Expressions/Values/List/in/index.md),  |
   [in](../../../Rascal/Expressions/Values/Set/in/index.md), |
   [in](../../../Rascal/Expressions/Values/Map/in/index.md) |
 | Membership test for element in list, map, set (including relation) |
-| `Exp~1~ notin Exp~2~` |
+| `Exp₁ notin Exp₂` |
 | [notin](../../../Rascal/Expressions/Values/List/notin/index.md), |
   [notin](../../../Rascal/Expressions/Values/Set/notin/index.md), |
   [notin](../../../Rascal/Expressions/Values/Map/notin/index.md) |
 | Negated membership test for element in  list, map, set (including relation) |
-| `Exp~1~ <= Exp~2~` |
+| `Exp₁ <= Exp₂` |
 | [LessThanOrEqual](../../../Rascal/Expressions/Values/Number/LessThanOrEqual/index.md), |
   [LessThanOrEqual](../../../Rascal/Expressions/Values/String/LessThanOrEqual/index.md), |
   [LessThanOrEqual](../../../Rascal/Expressions/Values/Location/LessThanOrEqual/index.md), |
@@ -134,7 +134,7 @@ to lowest precedence. In other words, operators listed earlier in the table bind
   [SubSet](../../../Rascal/Expressions/Values/Set/SubSet/index.md), |
   [SubMap](../../../Rascal/Expressions/Values/Map/SubMap/index.md) |
 | Less than or equal on all values |
-| `Exp~1~ < Exp~2~` |
+| `Exp₁ < Exp₂` |
 | [LessThan](../../../Rascal/Expressions/Values/Number/LessThan/index.md), |
   [LessThan](../../../Rascal/Expressions/Values/String/LessThan/index.md), |
   [LessThan](../../../Rascal/Expressions/Values/Location/LessThan/index.md), |
@@ -143,7 +143,7 @@ to lowest precedence. In other words, operators listed earlier in the table bind
   [StrictSubSet](../../../Rascal/Expressions/Values/Set/StrictSubSet/index.md), |
   [StrictSubMap](../../../Rascal/Expressions/Values/Map/StrictSubMap/index.md) |
 | Less than on all values |
-| `Exp~1~ >= Exp~2~` |
+| `Exp₁ >= Exp₂` |
 | [GreaterThanOrEqual](../../../Rascal/Expressions/Values/Number/GreaterThanOrEqual/index.md), |
   [GreaterThanOrEqual](../../../Rascal/Expressions/Values/String/GreaterThanOrEqual/index.md), |
   [GreaterThanOrEqual](../../../Rascal/Expressions/Values/Location/GreaterThanOrEqual/index.md), |
@@ -152,7 +152,7 @@ to lowest precedence. In other words, operators listed earlier in the table bind
   [SuperSet](../../../Rascal/Expressions/Values/Set/SuperSet/index.md), |
   [SuperMap](../../../Rascal/Expressions/Values/Map/SuperMap/index.md) |
 | Greater than or equal on all values |
-| `Exp~1~ > Exp~2~` |
+| `Exp₁ > Exp₂` |
 | [GreaterThan](../../../Rascal/Expressions/Values/Number/GreaterThan/index.md), |
   [GreaterThan](../../../Rascal/Expressions/Values/String/GreaterThan/index.md), |
   [GreaterThan](../../../Rascal/Expressions/Values/Location/GreaterThan/index.md), |
@@ -167,7 +167,7 @@ to lowest precedence. In other words, operators listed earlier in the table bind
 |  `Pat !:= Exp` |
 | [NoMatch](../../../Rascal/Expressions/Values/Boolean/NoMatch/index.md) |
 | Pattern does not match value of expression |
-| `Exp~1~ == Exp~2~` |
+| `Exp₁ == Exp₂` |
 | [Equal](../../../Rascal/Expressions/Values/Number/Equal/index.md), |
   [Equal](../../../Rascal/Expressions/Values/String/Equal/index.md), |
   [Equal](../../../Rascal/Expressions/Values/Location/Equal/index.md), |
@@ -176,7 +176,7 @@ to lowest precedence. In other words, operators listed earlier in the table bind
   [Equal](../../../Rascal/Expressions/Values/Set/Equal/index.md), |
   [Equal](../../../Rascal/Expressions/Values/Map/Equal/index.md) |
 | Equality on all values |
-| `Exp~1~ != Exp~2~` |
+| `Exp₁ != Exp₂` |
 | [NotEqual](../../../Rascal/Expressions/Values/Number/NotEqual/index.md), |
   [NotEqual](../../../Rascal/Expressions/Values/String/NotEqual/index.md), |
   [NotEqual](../../../Rascal/Expressions/Values/Location/NotEqual/index.md), |
@@ -185,22 +185,22 @@ to lowest precedence. In other words, operators listed earlier in the table bind
   [NotEqual](../../../Rascal/Expressions/Values/Set/NotEqual/index.md), |
   [NotEqual](../../../Rascal/Expressions/Values/Map/NotEqual/index.md) |
 | Inequality on all values |
-| `Exp~1~ ? Exp~2~` |
+| `Exp₁ ? Exp₂` |
 | [IfDefinedElse](../../../Rascal/Expressions/Values/Boolean/IfDefinedElse/index.md) |
 | Value of expression when it is defined, otherwise alternative value |
-| `Exp~1~ ? Exp~2~ : Exp~3~` |
+| `Exp₁ ? Exp₂ : Exp₃` |
 | [Conditional](../../../Rascal/Expressions/Values/Value/Conditional/index.md) |
 | Conditional expression for all types |
-| `Exp~1~ ==> Exp~2~` |
+| `Exp₁ ==> Exp₂` |
 | [Implication](../../../Rascal/Expressions/Values/Boolean/Implication/index.md) |
 | Implication on Boolean values |
-| `Exp~1~ <==> Exp~2~` |
+| `Exp₁ <==> Exp₂` |
 | [Equivalence](../../../Rascal/Expressions/Values/Boolean/Equivalence/index.md) |
 | Equivalence on Boolean values |
-| `Exp~1~ && Exp~2~` |
+| `Exp₁ && Exp₂` |
 | [And](../../../Rascal/Expressions/Values/Boolean/And/index.md) |
 | And on Boolean values |
-| `Exp~1~ \|\| Exp~2~` |
+| `Exp₁ \|\| Exp₂` |
 | [Or](../../../Rascal/Expressions/Values/Boolean/Or/index.md) |
 | Or on Boolean values |
 

@@ -11,19 +11,19 @@ Concatenate two tuple values.
 
 #### Syntax
 
-`Exp~1~ + Exp~2~`
+`Exp₁ + Exp₂`
 
 #### Types
 
 
-| `Exp~1~`                      |  `Exp2_`                      | `Exp~1~ > Exp2_`                                 |
+| `Exp₁`                      |  `Exp2_`                      | `Exp₁ > Exp2_`                                 |
 | --- | --- | --- |
-| `tuple[ T~11~, T~12~, ... ]` |  `tuple[ T~21~, T~22~, ... ]` | `tuple[ T~11~, T~12~, ..., T~21~, T~22~, ... ]` |
+| `tuple[ T₁₁, T₁₂, ... ]` |  `tuple[ T₂₁, T₂₂, ... ]` | `tuple[ T₁₁, T₁₂, ..., T₂₁, T₂₂, ... ]` |
 
 
 #### Description
 
-Returns a tuple consisting of the concatenation of the tuple elements of _Exp_~1~ and _Exp_~2~.
+Returns a tuple consisting of the concatenation of the tuple elements of _Exp_₁ and _Exp_₂.
 
 #### Examples
 

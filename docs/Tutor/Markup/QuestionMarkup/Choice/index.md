@@ -10,8 +10,8 @@ Multiple-choice question.
 
 ```
 QChoice _OptName_: _MarkedText_ 
-_GoodOrBad_~1~: _Choice_~1~
-_GoodOrBad_~2~: _Choice_~2~
+_GoodOrBad_₁: _Choice_₁
+_GoodOrBad_₂: _Choice_₂
 ...
 ```
 

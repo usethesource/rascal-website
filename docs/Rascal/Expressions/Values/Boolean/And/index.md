@@ -11,13 +11,13 @@ Boolean _and_ operator.
 
 #### Syntax
 
-`Exp~1~ && Exp~2~`
+`Exp₁ && Exp₂`
 
 #### Types
 
 //
 
-| `Exp~1~` | `Exp~2~`  | `Exp~1~ && Exp~2~`  |
+| `Exp₁` | `Exp₂`  | `Exp₁ && Exp₂`  |
 | --- | --- | --- |
 | `bool`       | `bool`         | `bool`  |
 
@@ -26,7 +26,7 @@ Boolean _and_ operator.
 
 The _and_ operator on Boolean values defined as follows:
 
-| `Exp~1~` | `Exp~2~`  | `Exp~1~ && Exp~2~`  |
+| `Exp₁` | `Exp₂`  | `Exp₁ && Exp₂`  |
 | --- | --- | --- |
 | `true`       | `true`         | `true`  |
 | `true`       | `false`         | `false`  |
@@ -34,7 +34,7 @@ The _and_ operator on Boolean values defined as follows:
 | `false`       | `false`         | `false`  |
 
 
-Boolean operators have _short circuit_ semantics:  only those operands are evaluated that are needed to compute the result. In the case of the `&&` operator, the result is `false` if `Exp~1~` evaluates to `false`, otherwise `Exp~2~` is evaluated to determine the result.
+Boolean operators have _short circuit_ semantics:  only those operands are evaluated that are needed to compute the result. In the case of the `&&` operator, the result is `false` if `Exp₁` evaluates to `false`, otherwise `Exp₂` is evaluated to determine the result.
 
 Note that `&&` backtracks over its argument expressions until it can find an evaluation that yields `true` unless there is none. This may happen if the left or right expression is a non-deterministic pattern match or a value generator.
 

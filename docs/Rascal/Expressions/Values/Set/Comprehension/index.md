@@ -12,20 +12,20 @@ A set comprehension generates a set value.
 
 #### Syntax
 
-`{ Exp~1~, Exp~2~, ... | Gen~1~, Gen~2~, ... }`
+`{ Exp₁, Exp₂, ... | Gen₁, Gen₂, ... }`
 
 #### Types
 
 
-| `Exp~1~` | `Exp~2~` | ... | `{ Exp~1~, Exp~2~, ... \| Gen~1~, Gen~2~, ... }`  |
+| `Exp₁` | `Exp₂` | ... | `{ Exp₁, Exp₂, ... \| Gen₁, Gen₂, ... }`  |
 | --- | --- | --- | --- | --- |
-| `T~1~`   | `T~2~`   | ... | `set[ lub( T~1~, T~2~, ... ) ]`                    |
+| `T₁`   | `T₂`   | ... | `set[ lub( T₁, T₂, ... ) ]`                    |
 
 
 #### Description
 
-A set comprehension consists of a number of contributing expressions _Exp_~1~, _Exp_~2~, ... and a number of
-generators _Gen_~1~, _Gen_~2~, _Gen_~3~, ... that are evaluated as described in [Comprehensions](../../../../../Rascal/Expressions/Comprehensions/index.md).
+A set comprehension consists of a number of contributing expressions _Exp_₁, _Exp_₂, ... and a number of
+generators _Gen_₁, _Gen_₂, _Gen_₃, ... that are evaluated as described in [Comprehensions](../../../../../Rascal/Expressions/Comprehensions/index.md).
 
 #### Examples
 

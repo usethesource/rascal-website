@@ -12,18 +12,18 @@ Retrieve a value by its key in map.
 
 #### Syntax
 
-`Exp~1~ [ Exp~2~ ]`
+`Exp₁ [ Exp₂ ]`
 
 #### Types
 
-| `Exp~1~`           | `Exp~2~` | `Exp~1~ [ Exp~2~ ]`  |
+| `Exp₁`           | `Exp₂` | `Exp₁ [ Exp₂ ]`  |
 | --- | --- | --- |
-| `map[T~1~, T~2~]` | `T~1~`   | `T~2~`                |
+| `map[T₁, T₂]` | `T₁`   | `T₂`                |
 
 
 #### Description
 
-Map subscription uses the value of _Exp_~2~ as key in the map value of _Exp_~1~ and returns the associated value.
+Map subscription uses the value of _Exp_₂ as key in the map value of _Exp_₁ and returns the associated value.
 If this key does not occur in the map, the exception `NoSuchKey` is thrown.
 
 #### Examples

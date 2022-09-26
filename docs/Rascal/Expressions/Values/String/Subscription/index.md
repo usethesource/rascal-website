@@ -11,20 +11,20 @@ Retrieve a substring via its index.
 
 #### Syntax
 
-`Exp~1~ [ Exp~2~ ]`
+`Exp₁ [ Exp₂ ]`
 
 #### Types
 
 
-| `Exp~1~`     | `Exp~2~` | `Exp~1~ [ Exp~2~ ]`  |
+| `Exp₁`     | `Exp₂` | `Exp₁ [ Exp₂ ]`  |
 | --- | --- | --- |
 | `str`         | `int`     | `str`                  |
 
 
 #### Description
 
-String subscription uses the integer value of _Exp_~2~ as index in the string value of _Exp_~1~.
-The value of _Exp_~2~ should be greater or equal 0 and less than the number of characters in the string.
+String subscription uses the integer value of _Exp_₂ as index in the string value of _Exp_₁.
+The value of _Exp_₂ should be greater or equal 0 and less than the number of characters in the string.
 If this is not the case, the exception `IndexOutOfBounds` is thrown.
 
 #### Examples

@@ -11,13 +11,13 @@ The _implication_ operator on Boolean values.
 
 #### Syntax
 
-`Exp~1~ ==> Exp~2~`
+`Exp₁ ==> Exp₂`
 
 #### Types
 
 //
 
-| `Exp~1~` | `Exp~2~`  | `Exp~1~ ==> Exp~2~`  |
+| `Exp₁` | `Exp₂`  | `Exp₁ ==> Exp₂`  |
 | --- | --- | --- |
 | `bool`       | `bool`         | `bool`  |
 
@@ -26,7 +26,7 @@ The _implication_ operator on Boolean values.
 
 The _implication_ operator on Boolean values defined as follows:
 
-| `Exp~1~` | `Exp~2~`  | `Exp~1~ ==> Exp~2~`  |
+| `Exp₁` | `Exp₂`  | `Exp₁ ==> Exp₂`  |
 | --- | --- | --- |
 | `true`       | `true`         | `true`  |
 | `true`       | `false`         | `false`  |
@@ -34,7 +34,7 @@ The _implication_ operator on Boolean values defined as follows:
 | `false`       | `false`         | `true`  |
 
 
-Boolean operators have _short circuit_ semantics:  only those operands are evaluated that are needed to compute the result. In the case of the `==>` operator, the result is `true` if `Exp~1~` evaluates to `false`, otherwise `Exp~2~` is evaluated to determine the result.
+Boolean operators have _short circuit_ semantics:  only those operands are evaluated that are needed to compute the result. In the case of the `==>` operator, the result is `true` if `Exp₁` evaluates to `false`, otherwise `Exp₂` is evaluated to determine the result.
 
 #### Examples
 

@@ -11,18 +11,18 @@ Equal operator on node values.
 
 #### Syntax
 
-`Exp~1~ == Exp~2~`
+`Exp₁ == Exp₂`
 
 #### Types
 
-| `Exp~1~`  |  `Exp~2~` | `Exp~1~ == Exp~2~`  |
+| `Exp₁`  |  `Exp₂` | `Exp₁ == Exp₂`  |
 | --- | --- | --- |
 | `node`     |  `node`    | `bool`                |
 
 
 #### Description
 
-Yields `true` if the node names of the values of _Exp_~1~ and _Exp_~2~ are equal and
+Yields `true` if the node names of the values of _Exp_₁ and _Exp_₂ are equal and
 the children of each node are pairwise equal, otherwise `false`.
 
 #### Examples

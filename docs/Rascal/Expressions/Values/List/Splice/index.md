@@ -14,9 +14,9 @@ Splice the elements of a list in an enclosing list.
 //
 
 
-|`Exp` | `Exp~1~`|  `Exp~n~` | `[Exp~1~, ..., Exp, ..., Exp~n~]`  |
+|`Exp` | `Exp₁`|  `Expₙ` | `[Exp₁, ..., Exp, ..., Expₙ]`  |
 | --- | --- | --- | --- |
-|`T`   | `T~1~`  |  `T~n~`   | `list[lub(T~1~, ..., T, ...,T~n~)]`     |
+|`T`   | `T₁`  |  `Tₙ`   | `list[lub(T₁, ..., T, ...,Tₙ)]`     |
 
 
 #### Description

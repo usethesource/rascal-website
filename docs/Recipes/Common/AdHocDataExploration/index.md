@@ -238,7 +238,7 @@ So here's the solution:
 
 Let N be a positive integer.  
 
-Let k = floor (log~5~ N)
+Let k = floor (log₅ N)
 
 Start a counter at zero, call it nz
 

@@ -12,14 +12,14 @@ Tuple values.
 
 #### Syntax
 
-`< Exp~1~, Exp~2~, ... >`
+`< Exp₁, Exp₂, ... >`
 
 #### Types
 
 
-| `Exp~1~`  | `Exp~2~`  |  ...  | `< Exp~1~, Exp~2~, ... >`  |
+| `Exp₁`  | `Exp₂`  |  ...  | `< Exp₁, Exp₂, ... >`  |
 | --- | --- | --- | --- |
-| `T~1~`    |  T~2~     | ...   | `tuple[T~1~, T~2~, ... ]`  |
+| `T₁`    |  T₂     | ...   | `tuple[T₁, T₂, ... ]`  |
 
 
 #### Description
@@ -33,8 +33,8 @@ A tuple is a sequence of elements with the following properties:
 *  Each tuple is fixed-width, i.e., has the same number of elements.
 
 
-Tuples are represented by the type `tuple[T~1~ L~1~, T~2~ L~2~, ...]`, 
-where _T_~1~, _T_~2~, ... are arbitrary types and _L_~1~, _L_~2~, ... are optional labels. 
+Tuples are represented by the type `tuple[T₁ L₁, T₂ L₂, ...]`, 
+where _T_₁, _T_₂, ... are arbitrary types and _L_₁, _L_₂, ... are optional labels. 
 
 The following operators are provided for tuples:
 * [Concatenation](../../../../Rascal/Expressions/Values/Tuple/Concatenation/index.md)

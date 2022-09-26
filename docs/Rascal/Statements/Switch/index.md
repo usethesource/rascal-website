@@ -17,8 +17,8 @@ against a number of `case` patterns.
 
 ```rascal
 switch ( _Exp_ ) {
-case _PatternWithAction~1~_;
-case _PatternWithAction~2~_;
+case _PatternWithAction₁_;
+case _PatternWithAction₂_;
 ...
 default: ...
 }

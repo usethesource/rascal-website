@@ -11,13 +11,13 @@ Composition of two map values.
 
 #### Syntax
 
-`Exp~1~ o Exp~2~`
+`Exp₁ o Exp₂`
 
 #### Types
 
-|`Exp~1~`            | `Exp~2~`           | `Exp~1~ o Exp~2~`  |
+|`Exp₁`            | `Exp₂`           | `Exp₁ o Exp₂`  |
 | --- | --- | --- |
-| `map[T~1~, T~2~]` | `map[T~2~, T~3~]` | `map[T~1~, T~3~]`  |
+| `map[T₁, T₂]` | `map[T₂, T₃]` | `map[T₁, T₃]`  |
 
 
 #### Description

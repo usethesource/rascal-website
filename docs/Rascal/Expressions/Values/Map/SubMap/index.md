@@ -11,19 +11,19 @@ Submap operator on map values.
 
 #### Syntax
 
-`Exp~1~ <= Exp~2~`
+`Exp₁ <= Exp₂`
 
 #### Types
 
-| `Exp~1~`            |  `Exp~2~`             | `Exp~1~ <= Exp~2~`  |
+| `Exp₁`            |  `Exp₂`             | `Exp₁ <= Exp₂`  |
 | --- | --- | --- |
-| `map[TK~1~,TV~2~]` |  `map[TK~2~, TV~2~]` | `bool`                |
+| `map[TK₁,TV₂]` |  `map[TK₂, TV₂]` | `bool`                |
 
 
 #### Description
 
-Yields `true` if all key/value pairs in the map value of _Exp_~1~ occur in the map value _Exp_~2~
-or the values of _Exp_~1~ and _Exp_~2~ are equal, and `false` otherwise.
+Yields `true` if all key/value pairs in the map value of _Exp_₁ occur in the map value _Exp_₂
+or the values of _Exp_₁ and _Exp_₂ are equal, and `false` otherwise.
 
 #### Examples
 

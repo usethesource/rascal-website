@@ -14,13 +14,13 @@ List relations are lists of tuples with relational calculus operators defined on
 
 #### Syntax
 
-`[ < Exp~11~, Exp~12~, ... > , < Exp~21~, Exp~22~, ... > , ... ]`
+`[ < Exp₁₁, Exp₁₂, ... > , < Exp₂₁, Exp₂₂, ... > , ... ]`
 
 #### Types
 
-| `Exp~11~` |  `Exp~12~` |  ...  | `{ < Exp~11~, Exp~12~, ... > , ... }`   |
+| `Exp₁₁` |  `Exp₁₂` |  ...  | `{ < Exp₁₁, Exp₁₂, ... > , ... }`   |
 | --- | --- | --- | --- |
-| `T~1~`    |    `T~2~`  |  ...  |  `lrel[T~1~, T~2~, ... ]`               |
+| `T₁`    |    `T₂`  |  ...  |  `lrel[T₁, T₂, ... ]`               |
 
 
 #### Description
@@ -31,12 +31,12 @@ A list relation is a list of elements with the following property:
 
 
 ListRelations are thus nothing more than lists of tuples, but since they are used so often we provide a shorthand notation for them.
-ListRelations are represented by the type `lrel[T~1~ L~1~, T~2~ L~2~, ... ]`, where _T_~1~, _T_~2~, ... are arbitrary types and
-_L_~1~, _L_~2~, ... are optional labels. It is a shorthand for `list[tuple[T~1~ L~1~, T~2~ L~2~, ... ]]`.
+ListRelations are represented by the type `lrel[T₁ L₁, T₂ L₂, ... ]`, where _T_₁, _T_₂, ... are arbitrary types and
+_L_₁, _L_₂, ... are optional labels. It is a shorthand for `list[tuple[T₁ L₁, T₂ L₂, ... ]]`.
 
 An n-ary list relation with m tuples is denoted by
- `[< E~11~, E~12~, ..., E~1n~>,< E~21~, E~22~, ..., E~2n~>, ..., < E~m1~, E~m2~, ..., E~mn~>]`, 
-where the _E_~ij~ are expressions that yield the desired element type _T_~i~.
+ `[< E₁₁, E₁₂, ..., E₁ₙ>,< E₂₁, E₂₂, ..., E₂ₙ>, ..., < Eₘ₁, Eₘ₂, ..., Eₘₙ>]`, 
+where the _E_ᵢⱼ are expressions that yield the desired element type _T_ᵢ.
 
 Since list relations are a form of list all operations (see [List](../../../../Rascal/Expressions/Values/List/index.md)) and functions
 (see [List](../../../../Library/List.md)) are also applicable to relations.

@@ -11,13 +11,13 @@ An executable assertion.
 
 #### Syntax
 
-*  `assert Exp~1~`
-*  `assert Exp~1~ : Exp~2~`
+*  `assert Exp₁`
+*  `assert Exp₁ : Exp₂`
 
 #### Types
 
 
-| `Exp~1~` | `Exp~2~`  |
+| `Exp₁` | `Exp₂`  |
 | --- | --- |
 | `bool`    | `str`      |
 
@@ -26,10 +26,10 @@ An executable assertion.
 
 An assert statement may occur everywhere where a declaration is allowed. It has two forms:
 
-An assert statement consists of a Boolean expression _Exp_~1~ and an optional string expression _Exp_~2~
+An assert statement consists of a Boolean expression _Exp_₁ and an optional string expression _Exp_₂
 that serves as a identifying message for this assertion. 
 
-When _Exp_~1~ evaluates to `false`, an `AssertionFailed` exception is thrown.
+When _Exp_₁ evaluates to `false`, an `AssertionFailed` exception is thrown.
 
 #### Examples
 

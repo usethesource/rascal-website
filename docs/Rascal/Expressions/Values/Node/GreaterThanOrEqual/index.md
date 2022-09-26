@@ -10,19 +10,19 @@ Greater than or equal operator on node values.
 
 #### Syntax
 
-`Exp~1~ >= Exp~2~`
+`Exp₁ >= Exp₂`
 
 #### Types
 
-| `Exp~1~` |  `Exp~2~` | `Exp~1~ >= Exp~2~`  |
+| `Exp₁` |  `Exp₂` | `Exp₁ >= Exp₂`  |
 | --- | --- | --- |
 | `node`    |  `node`    | `bool`                |
 
 
 #### Description
 
-Comparison on nodes is defined by a lexicographic ordering. Node `N = F(N~1~, ..., N~n~)` is greater than or equal node 
-`N = G(M~1~, ..., M~m~)` when:
+Comparison on nodes is defined by a lexicographic ordering. Node `N = F(N₁, ..., Nₙ)` is greater than or equal node 
+`N = G(M₁, ..., Mₘ)` when:
 *  _N_ is equal to _M_, or
 *  _F_ is lexicographically greater than _G_, or _F_ is equal to _G_ and `n > m`.
 

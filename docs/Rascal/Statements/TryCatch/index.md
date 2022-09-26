@@ -15,18 +15,18 @@ Try to execute a statement and catch resulting exceptions.
 
 ```rascal
 try
-   _Statement~1~_;
-catch _PatternWithAction~1~_;
-catch _PatternWithAction~2~_;
+   _Statement₁_;
+catch _PatternWithAction₁_;
+catch _PatternWithAction₂_;
 ...
-catch: _Statement~2~_;
-finally: _Statement~3~_;
+catch: _Statement₂_;
+finally: _Statement₃_;
 ```
 
 #### Description
 
 A try catch statement has as purpose to catch any [Exceptions](../../../Library/Exception.md) that are raised 
-during the execution of _Statement_~1~.
+during the execution of _Statement_₁.
 These exceptions may caused by:
 
 *  The execution of an explicit [Throw](../../../Rascal/Statements/Throw/index.md) statement.
@@ -37,11 +37,11 @@ These exceptions may caused by:
 Note that all elements of the try catch statement are optional but that at least one has to be present. 
 Their meaning is as follows:
 
-*  If a pattern of some _PatternWithAction~i~_ matches, the corresponding action is executed.
+*  If a pattern of some _PatternWithActionᵢ_ matches, the corresponding action is executed.
 
-*  Otherwise, _Statement~2~_ is executed (when present).
+*  Otherwise, _Statement₂_ is executed (when present).
 
-*  Before leaving the try catch statement _Statement~3~_ is always executed (when present).
+*  Before leaving the try catch statement _Statement₃_ is always executed (when present).
 
 #### Examples
 

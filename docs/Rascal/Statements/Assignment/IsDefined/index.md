@@ -10,8 +10,8 @@ Assign but replace if value is not defined.
 
 #### Description
 
-First the value of _Exp_~1~ is determined and if that is defined it is assigned to _Assignable_. 
-Otherwise, the value of _Exp_~2~ is assigned to _Assignable_.
+First the value of _Exp_₁ is determined and if that is defined it is assigned to _Assignable_. 
+Otherwise, the value of _Exp_₂ is assigned to _Assignable_.
 
 Values which can be undefined are:
 * in [Map](../../../../Rascal/Expressions/Values/Map/index.md)s where the key is _not_ set

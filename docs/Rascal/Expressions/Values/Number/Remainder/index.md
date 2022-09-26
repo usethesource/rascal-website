@@ -11,19 +11,19 @@ Remainder of two integer values.
 
 #### Syntax
 
-`Exp~1~ % Exp~2~`
+`Exp₁ % Exp₂`
 
 #### Types
 
 
-| `Exp~1~`  |  `Exp~2~` | `Exp~1~ % Exp~2~`  |
+| `Exp₁`  |  `Exp₂` | `Exp₁ % Exp₂`  |
 | --- | --- | --- |
 | `int`      |  `int`     | `int`                |
 
 
 #### Description
 
-Yields the remainder when dividing the of _Exp_~1~ by the value of _Exp_~2~.
+Yields the remainder when dividing the of _Exp_₁ by the value of _Exp_₂.
 
 #### Examples
 

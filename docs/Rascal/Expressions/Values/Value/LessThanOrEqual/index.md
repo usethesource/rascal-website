@@ -11,27 +11,27 @@ Less than or equal operator on values.
 
 #### Syntax
 
-`Exp~1~ <= Exp~2~`
+`Exp₁ <= Exp₂`
 
 #### Types
 
 
-| `Exp~1~` | `Exp~2~` | `Exp~1~ <= Exp~2~`  |
+| `Exp₁` | `Exp₂` | `Exp₁ <= Exp₂`  |
 | --- | --- | --- |
 | `value`   |  `value`  | `bool`                |
 
 
 #### Description
 
-By brute force, a total less than operator between two values _V_~1~ and _V_~2~ of arbitrary types _T_~1~ and _T_~2~ is defined:
+By brute force, a total less than operator between two values _V_₁ and _V_₂ of arbitrary types _T_₁ and _T_₂ is defined:
 
-*  If the types _T~1~_ and _T~2~_ can be compared then _V~1~_ less than _V~2~_ is used.
+*  If the types _T₁_ and _T₂_ can be compared then _V₁_ less than _V₂_ is used.
 
 *  Otherwise values are ordered according their type name, for instance, `int` is smaller than `list`, and `map` is smaller than `rel`.
 
 
-Less than or equal yields `true` if the value of _Exp_~1~ is strictly less
-than (according to the ordering defined above) the value of _Exp_~2~ or if both values are equal, and `false` otherwise.
+Less than or equal yields `true` if the value of _Exp_₁ is strictly less
+than (according to the ordering defined above) the value of _Exp_₂ or if both values are equal, and `false` otherwise.
 
 #### Examples
 

@@ -11,20 +11,20 @@ The strict super list operator on lists.
 
 #### Syntax
 
-`Exp~1~ > Exp~2~`
+`Exp₁ > Exp₂`
 
 #### Types
 
 //
 
-| `Exp~1~`     |  `Exp~2~`     | `Exp~1~ > Exp~2~`  |
+| `Exp₁`     |  `Exp₂`     | `Exp₁ > Exp₂`  |
 | --- | --- | --- |
-| `list[T~1~]` |  `list[T~2~]` | `bool`               |
+| `list[T₁]` |  `list[T₂]` | `bool`               |
 
 
 #### Description
 
-Yields `true` if the value of Exp~2~ is a strict sublist of the value of Exp~1~,  and `false` otherwise.
+Yields `true` if the value of Exp₂ is a strict sublist of the value of Exp₁,  and `false` otherwise.
 
 #### Examples
 

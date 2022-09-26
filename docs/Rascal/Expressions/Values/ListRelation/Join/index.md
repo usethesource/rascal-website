@@ -11,16 +11,16 @@ Join two list relation values.
 
 #### Syntax
 
-`Exp~1~ join Exp~2~`
+`Exp₁ join Exp₂`
 
 #### Types
 
 //
 
 
-| `Exp~1~`                               |  `Exp~2~`                               | `Exp~1~ join Exp~2~`                                              |
+| `Exp₁`                               |  `Exp₂`                               | `Exp₁ join Exp₂`                                              |
 | --- | --- | --- |
-| `lrel[ T~11~, T~12~, T~13~, ... ]` |  `lrel[ T~21~, T~22~, T~23~, ... ]` | `lrel[ T~11~, T~12~, T~13~, ..., T~21~, T~22~, T~23~, ... ]`  |
+| `lrel[ T₁₁, T₁₂, T₁₃, ... ]` |  `lrel[ T₂₁, T₂₂, T₂₃, ... ]` | `lrel[ T₁₁, T₁₂, T₁₃, ..., T₂₁, T₂₂, T₂₃, ... ]`  |
 
 
 #### Description

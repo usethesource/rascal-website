@@ -11,19 +11,19 @@ Intersection of two maps.
 
 #### Syntax
 
-`Exp~1~ & Exp~2~`
+`Exp₁ & Exp₂`
 
 #### Types
 
 
-| `Exp~1~`    |  `Exp~2~`      | `Exp~1~ & Exp~2~`      |
+| `Exp₁`    |  `Exp₂`      | `Exp₁ & Exp₂`      |
 | --- | --- | --- |
-| `map[T~1~1, T12]` |  `set[T~2~]`   | `set[lub(T~1~,T~2~)]`  |
+| `map[T₁1, T12]` |  `set[T₂]`   | `set[lub(T₁,T₂)]`  |
 
 
 #### Description
 
-Returns the intersection of the two map values of _Exp_~1~ and _Exp_~2~, i.e., a map that contains the key/value pairs that
+Returns the intersection of the two map values of _Exp_₁ and _Exp_₂, i.e., a map that contains the key/value pairs that
 occur in both maps.
 
 #### Examples

@@ -13,9 +13,9 @@ Append an element at the end of a list
 
 //
 
-| `Exp~1~`     |  `Exp~2~`     | `Exp~1~ + Exp~2~`       |
+| `Exp₁`     |  `Exp₂`     | `Exp₁ + Exp₂`       |
 | --- | --- | --- |
-| `list[T~1~]` |  `T~2~`       | `list[lub(T~1~,T~2~)]`  |
+| `list[T₁]` |  `T₂`       | `list[lub(T₁,T₂)]`  |
 
 
 #### Description

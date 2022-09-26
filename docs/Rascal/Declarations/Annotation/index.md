@@ -34,8 +34,8 @@ The following constructs are provided for handling annotations:
 
 *  `Val @ Anno`: is an expression that retrieves the value of annotation _Anno_ of value _Val_ (may be undefined!). 
 
-*  `Val~1~[@Anno = Val~2~]`: is an expression that sets the value of annotation _Anno_ of the value _Val~1~_ to _Val~2~_
-   and returns _Val~1~_ with the new annotation value as result. 
+*  `Val₁[@Anno = Val₂]`: is an expression that sets the value of annotation _Anno_ of the value _Val₁_ to _Val₂_
+   and returns _Val₁_ with the new annotation value as result. 
 
 *  `Var @ Anno = Val`: is an assignment statement that sets the value of annotation _Anno_ of the value of variable _Var_ to _Val_.
 

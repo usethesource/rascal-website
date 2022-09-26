@@ -418,11 +418,11 @@ ok
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "snake"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "elephant"
-rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "zebra"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "elephant"
+rascal>getOneFrom({"elephant", "zebra", "snake"});
+str: "zebra"
 ```
 
 ## function getFirstFrom {#Set-getFirstFrom}
@@ -468,9 +468,9 @@ ok
 rascal>takeOneFrom({1, 2, 3, 4});
 tuple[int,set[int]]: <4,{1,3,2}>
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <2,{1,3,4}>
+tuple[int,set[int]]: <4,{1,3,2}>
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <1,{3,2,4}>
+tuple[int,set[int]]: <3,{1,2,4}>
 ```
 
 ## function takeFirstFrom {#Set-takeFirstFrom}

@@ -11,13 +11,13 @@ Equality operator on locations.
 
 #### Syntax
 
-`Exp~1~ == Exp~2~`
+`Exp₁ == Exp₂`
 
 #### Types
 
 //
 
-| `Exp~1~` | `Exp~2~` | `Exp~1~ == Exp~2~`  |
+| `Exp₁` | `Exp₂` | `Exp₁ == Exp₂`  |
 | --- | --- | --- |
 | `loc`     |  `loc`    | `bool`                |
 

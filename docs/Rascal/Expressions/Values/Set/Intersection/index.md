@@ -10,19 +10,19 @@ Intersection of two sets.
 
 #### Syntax
 
-`Exp~1~ & Exp~2~`
+`Exp₁ & Exp₂`
 
 #### Types
 
 
-| `Exp~1~`    |  `Exp~2~`      | `Exp~1~ & Exp~2~`      |
+| `Exp₁`    |  `Exp₂`      | `Exp₁ & Exp₂`      |
 | --- | --- | --- |
-| `set[T~1~]` |  `set[T~2~]`   | `set[lub(T~1~,T~2~)]`  |
+| `set[T₁]` |  `set[T₂]`   | `set[lub(T₁,T₂)]`  |
 
 
 #### Description
 
-Returns the intersection of the two set values of _Exp_~1~ and _Exp_~2~.
+Returns the intersection of the two set values of _Exp_₁ and _Exp_₂.
 The intersection consists of the common elements of both sets.
 
 #### Examples

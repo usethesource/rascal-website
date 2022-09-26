@@ -29,8 +29,8 @@ where _Start_ is either `start` or nothing, and _Alternatives_ are one of:
 *  `Tags Associativity Symbols`
 *  `Tags Associativity Name : Symbols`
 *  `Associativity ( Alternatives )`
-*  `Alternatives~1~ | Alternatives~2~`  
-*  `Alternatives~1~ > Alternatives~2~`  
+*  `Alternatives₁ | Alternatives₂`  
+*  `Alternatives₁ > Alternatives₂`  
 
 
 where _Associativity_ is nothing, or one of `assoc`, `left`, `right` or `non-assoc`, and _Tags_ are a possibly empty list of tags.

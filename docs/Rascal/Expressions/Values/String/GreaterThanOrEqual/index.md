@@ -11,20 +11,20 @@ Greater than or equal operator on string values.
 
 #### Syntax
 
-`Exp~1~ >= Exp~2~`
+`Exp₁ >= Exp₂`
 
 #### Types
 
 
-| `Exp~1~` | `Exp~2~` | `Exp~1~ >= Exp~2~`  |
+| `Exp₁` | `Exp₂` | `Exp₁ >= Exp₂`  |
 | --- | --- | --- |
 | `str`     |  `str`    | `bool`                |
 
 
 #### Description
 
-Yields `true` if the string value of _Exp_~1~ is lexicographically greater
-than the string value of _Exp_~2~ or if both strings are equal, and `false` otherwise.
+Yields `true` if the string value of _Exp_₁ is lexicographically greater
+than the string value of _Exp_₂ or if both strings are equal, and `false` otherwise.
 
 #### Examples
 

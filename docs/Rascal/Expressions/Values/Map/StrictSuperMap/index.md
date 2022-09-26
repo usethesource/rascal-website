@@ -11,19 +11,19 @@ Strict supermap operator on map values.
 
 #### Syntax
 
-`Exp~1~ > Exp~2~`
+`Exp₁ > Exp₂`
 
 #### Types
 
-| `Exp~1~`            |  `Exp~2~`             | `Exp~1~ > Exp~2~`  |
+| `Exp₁`            |  `Exp₂`             | `Exp₁ > Exp₂`  |
 | --- | --- | --- |
-| `map[TK~1~,TV~2~]` |  `map[TK~2~, TV~2~]` | `bool`                |
+| `map[TK₁,TV₂]` |  `map[TK₂, TV₂]` | `bool`                |
 
 
 #### Description
 
-Yields `true` if all key/value pairs in the map value of _Exp_~2~ occur in the map value _Exp_~1~
-and the values of _Exp_~1~ and _EXp_~2~ are not equal, and `false` otherwise.
+Yields `true` if all key/value pairs in the map value of _Exp_₂ occur in the map value _Exp_₁
+and the values of _Exp_₁ and _EXp_₂ are not equal, and `false` otherwise.
 
 #### Examples
 

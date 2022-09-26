@@ -12,11 +12,11 @@ Retrieve a tuple field by its index position.
 
 #### Syntax
 
-`Exp~1~ [ Exp~2~ ]`
+`Exp₁ [ Exp₂ ]`
 
 #### Description
 
-Subscription retrieves the tuple element with index _Exp_~2~ from the tuple value of _Exp_~1~.
+Subscription retrieves the tuple element with index _Exp_₂ from the tuple value of _Exp_₁.
 
 #### Examples
 

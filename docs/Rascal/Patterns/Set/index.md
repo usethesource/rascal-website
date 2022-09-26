@@ -12,9 +12,9 @@ Set in abstract pattern.
 
 #### Description
 
-A set pattern matches a set value (the subject), provided that _Pat_~1~, _Pat_~2~, ..., _Pat_~n~ match the elements of that set in *any* order
+A set pattern matches a set value (the subject), provided that _Pat_₁, _Pat_₂, ..., _Pat_ₙ match the elements of that set in *any* order
 (recall that the elements of a set are unordered and do not contain duplicates).
-Completely analogous to list patterns, there are special cases when one of the patterns _Pat_~i~ is
+Completely analogous to list patterns, there are special cases when one of the patterns _Pat_ᵢ is
 
 *  a [VariableDeclaration](../../../Rascal/Patterns/VariableDeclaration/index.md) with a type that is identical to the element type of the subject set: the variable is matched with one value  in the subject set.
 

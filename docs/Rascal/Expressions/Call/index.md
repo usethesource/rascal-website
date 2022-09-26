@@ -12,18 +12,18 @@ Functions and constructors can be called or invoked in a uniform style.
 
 #### Syntax
 
-* function call with positional parameters `Name ( Exp~1~, Exp~2~, ... )`
-* function call with keyword parameters `Name (Name~1~ = Exp~1~, Name~2~ = Exp~2~, ...)`
-* function call with both positional and keyword parameters `Name (Exp~1~, Exp~2~, ..., Name~1~ = Exp~1~, Name~2~ = Exp~2~, ...)`
-* function calls with computed functions `Exp ( Exp~1~, Exp~2~, ..., Name~1~ = Exp~1~, Name~2~ = Exp~2~, ...) 
+* function call with positional parameters `Name ( Exp₁, Exp₂, ... )`
+* function call with keyword parameters `Name (Name₁ = Exp₁, Name₂ = Exp₂, ...)`
+* function call with both positional and keyword parameters `Name (Exp₁, Exp₂, ..., Name₁ = Exp₁, Name₂ = Exp₂, ...)`
+* function calls with computed functions `Exp ( Exp₁, Exp₂, ..., Name₁ = Exp₁, Name₂ = Exp₂, ...) 
 
 #### Types
 
 //
 
-| `Exp~1~`  | `Exp~2~` | ... | `Name ( Exp~1~, Exp~2~, ... )`  |
+| `Exp₁`  | `Exp₂` | ... | `Name ( Exp₁, Exp₂, ... )`  |
 | --- | --- | --- | --- |
-| `T~1~`    | `T~2~`   | ... | Determined by _Name_, _T~i~_ and function declarations  |
+| `T₁`    | `T₂`   | ... | Determined by _Name_, _Tᵢ_ and function declarations  |
 
 
 #### Description
@@ -32,10 +32,10 @@ For the purpose of calling a function or a constructor, we make no distinction b
 A constructor is a function that constructs an application of an algebraic data-type constructor definition,
 so it has no body, but it is a function which can be called.
 
-First, the actual parameter expressions _Exp_~i~ are evaluated resulting in values _V_~i~.
-Based on _Name_ and the argument types _T_~i~, the identity of the function to be called is determined.
+First, the actual parameter expressions _Exp_ᵢ are evaluated resulting in values _V_ᵢ.
+Based on _Name_ and the argument types _T_ᵢ, the identity of the function to be called is determined.
 
-The values _V_~i~ are bound to the formal parameter names of the 
+The values _V_ᵢ are bound to the formal parameter names of the 
 declared functions and the function body is executed.
 The value returned by the function is used as value of the function call.
 

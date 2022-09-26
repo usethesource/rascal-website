@@ -13,14 +13,14 @@ Map values.
 
 #### Syntax
 
-`( KeyExp~1~ : ValExp~1~, KeyExp~2~ : ValExp~2~, ... )`
+`( KeyExp₁ : ValExp₁, KeyExp₂ : ValExp₂, ... )`
 
 #### Types
 
 
-| `KeyExp~1~` | `ValExp~1~` | `KeyExp~2~` | `ValExp~2~` | ... | `( KeyExp~1~ : ValExp~1~, KeyExp~2~ : ValExp~2~, ... )`   |
+| `KeyExp₁` | `ValExp₁` | `KeyExp₂` | `ValExp₂` | ... | `( KeyExp₁ : ValExp₁, KeyExp₂ : ValExp₂, ... )`   |
 | --- | --- | --- | --- | --- | --- |
-| `TK~1~`     |  `TV~1~`    |  `TK~2~`    | `TV~2~`     | ... | `map[lub(TK~1~, TK~2~, ... ) , lub(TV~1~, TV~2~, ... )]`  |
+| `TK₁`     |  `TV₁`    |  `TK₂`    | `TV₂`     | ... | `map[lub(TK₁, TK₂, ... ) , lub(TV₁, TV₂, ... )]`  |
 
 
 #### Description

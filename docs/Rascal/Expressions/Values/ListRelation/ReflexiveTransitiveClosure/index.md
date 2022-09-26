@@ -18,7 +18,7 @@ The reflexive transitive closure of a binary list relation.
 
 |`Exp`               | `Exp *`             |
 | --- | --- |
-| `lrel[T~1~, T~2~]` | `lrel[T~1~, T~2~]`  |
+| `lrel[T₁, T₂]` | `lrel[T₁, T₂]`  |
 
 
 #### Description
@@ -26,18 +26,18 @@ The reflexive transitive closure of a binary list relation.
 Reflexive transitive closure is defined by repeated composition of a list relation.
 If we define for a given list relation R:
 
-*  `R~0~ = `[<a, a>, <b, b> | <a, b> <- R];`
-*  `R~1~ = R`
-*  `R~2~ = R o R`
-*  `R~3~ = R o R~2~`
+*  `R₀ = `[<a, a>, <b, b> | <a, b> <- R];`
+*  `R₁ = R`
+*  `R₂ = R o R`
+*  `R₃ = R o R₂`
 *  `...`
 
 
 then the reflexive transitive closure R* can be defined in two ways:
 (also see [TransitiveClosure](../../../../../Rascal/Expressions/Values/ListRelation/TransitiveClosure/index.md)):
 
-*  `R* = R~0~ + R~1~ + R~2~ + R~3~ + ...`
-*  `R* = R~0~ + R+`
+*  `R* = R₀ + R₁ + R₂ + R₃ + ...`
+*  `R* = R₀ + R+`
 
 
 #### Examples

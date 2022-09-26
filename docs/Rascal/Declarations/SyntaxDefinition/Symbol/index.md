@@ -49,7 +49,7 @@ The following literal symbols and character classes are defined:
 | --- | --- |
 |`"stringliteral"`            | Literal string |
 |`'stringliteral'`            | Case-insensitive literal string |
-|`[range~1~ range~2~ ... ]` | Character class |
+|`[range₁ range₂ ... ]` | Character class |
 
 
 
@@ -60,9 +60,9 @@ The following operations on character classes can be composed arbitrarily:
 | Class                        | Description  |
 | --- | --- |
 |`!Class`                    | Complement of `Class` with respect to the UTF8 universe of characters |
-| `Class~1~ - Class~2~`    | Difference of character classes `Class~1~` and `Class~2~`              |
-| `Class~1~ \|\| Class~2~` | Union of character classes `Class~1~` and `Class~2~`                   |
-| `Class~1~ && Class~2~`   | Intersection of character classes `Class~1~` and `Class~2~`            |
+| `Class₁ - Class₂`    | Difference of character classes `Class₁` and `Class₂`              |
+| `Class₁ \|\| Class₂` | Union of character classes `Class₁` and `Class₂`                   |
+| `Class₁ && Class₂`   | Intersection of character classes `Class₁` and `Class₂`            |
 | `(Class)`                  | Brackets for defining application order of class operators               |
 
 
@@ -76,10 +76,10 @@ The following regular expressions can be constructed over [Symbol](../../../../R
 | `Symbol?`                            | Optional _Symbol_                                                    |
 | `Symbol+`                            | Non-empty list of _Symbol_s                                          |
 | `Symbol*`                            | Possibly empty list of _Symbol_s.                                    |
-| `{Symbol~1~ Symbol~2~}+`           | Non-empty list of _Symbol~1~_ separated by _Symbol~2~_                 |
-| `{Symbol~1~ Symbol~2~}*`           | Possibly empty list of _Symbol~1~_ separated by _Symbol~2~_.           |
-| `(Symbol~1~ Symbol~2~ ... )`       | Embedded sequence of symbols                                         |
-| `(Symbol~1~ \| Symbol~2~ \| ... )` | Embedded choice of alternative symbols                               |
+| `{Symbol₁ Symbol₂}+`           | Non-empty list of _Symbol₁_ separated by _Symbol₂_                 |
+| `{Symbol₁ Symbol₂}*`           | Possibly empty list of _Symbol₁_ separated by _Symbol₂_.           |
+| `(Symbol₁ Symbol₂ ... )`       | Embedded sequence of symbols                                         |
+| `(Symbol₁ \| Symbol₂ \| ... )` | Embedded choice of alternative symbols                               |
 | `()`                                   | The anonymous non-terminal for the language with the empty string   |
 
 
@@ -93,11 +93,11 @@ Inline conditions ([Disambiguation](../../../../Rascal/Declarations/SyntaxDefini
 | `Symbol _`                 | _Symbol_ ends at end of line or end of file                     |
 | `^Symbol`                  | _Symbol_ starts at begin of line                                |
 | `Symbol @ ColumnIndex`   | _Symbol_ starts at certain column index.                        |
-| `Symbol~1~ >> Symbol~2~`   | _Symbol~1~_ must be (directly) followed by _Symbol~2~_            |
-| `Symbol~1~ !>> Symbol~2~`  | _Symbol~1~_ must _not_ be (directly) followed by _Symbol~2~_      |
-| `Symbol~1~ << Symbol~2~`   | _Symbol~2~_ must be (directly) preceded by _Symbol~1~_            |
-| `Symbol~1~ !<< Symbol~2~`  | _Symbol~2~_ must _not_ be (directly) preceded by _Symbol~1~_      |
-| `Symbol~1~ \ Symbol~2~`   | _Symbol~1~_ must not be in the language defined by _Symbol~2~_    |
+| `Symbol₁ >> Symbol₂`   | _Symbol₁_ must be (directly) followed by _Symbol₂_            |
+| `Symbol₁ !>> Symbol₂`  | _Symbol₁_ must _not_ be (directly) followed by _Symbol₂_      |
+| `Symbol₁ << Symbol₂`   | _Symbol₂_ must be (directly) preceded by _Symbol₁_            |
+| `Symbol₁ !<< Symbol₂`  | _Symbol₂_ must _not_ be (directly) preceded by _Symbol₁_      |
+| `Symbol₁ \ Symbol₂`   | _Symbol₁_ must not be in the language defined by _Symbol₂_    |
 
 
 

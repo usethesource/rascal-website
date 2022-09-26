@@ -43,7 +43,7 @@ Given that the listing is optional, this template represents 5 different questio
    _Expr_ may contain references to previously introduced variables using `<`Var`>`.
 * `type: TypeDescriptor`
 * `hint: Text`: a hint to be given to the student in response to a wrong answer. _Text_ may contain references to previously introduced variables.
-* `test: Expr~1~ == Expr~2~`: the equality that should hold. The expressions may contain references to variables. One side may contain a hole (`<?>`).
+* `test: Expr₁ == Expr₂`: the equality that should hold. The expressions may contain references to variables. One side may contain a hole (`<?>`).
 * `list: Text`: a listing that runs until the next question or the end of the concept. It may contain a hole.
 
 #### Examples

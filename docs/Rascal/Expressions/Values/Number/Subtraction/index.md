@@ -10,12 +10,12 @@ Subtract two numeric values.
 
 #### Syntax
 
-`Exp~1~ - Exp~2~`
+`Exp₁ - Exp₂`
 
 #### Types
 
 
-| `Exp~1~` |  `Exp~2~` | `Exp~1~ - Exp~2~`  |
+| `Exp₁` |  `Exp₂` | `Exp₁ - Exp₂`  |
 | --- | --- | --- |
 | `int`     |  `int`     | `int`                |
 | `int`     |  `real`    | `real`               |
@@ -24,7 +24,7 @@ Subtract two numeric values.
 
 #### Description
 
-Yields the numerical result of subtracting the value of _Exp_~2~ from the value of _Exp_~1~.
+Yields the numerical result of subtracting the value of _Exp_₂ from the value of _Exp_₁.
 
 #### Examples
 

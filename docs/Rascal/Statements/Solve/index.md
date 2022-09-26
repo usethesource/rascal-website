@@ -11,7 +11,7 @@ Solve a set of equalities by fixed-point iteration.
 
 #### Syntax
 
-`solve(Var~1~, Var~2~, ..., Var~n~; Exp) Statement;`
+`solve(Var₁, Var₂, ..., Varₙ; Exp) Statement;`
 
 #### Description
 
@@ -21,8 +21,8 @@ linear equations but has much wider applicability.
 The solve statement consists of the variables for which a fixed point will be computed and a statement. 
 Optionally, an expression _Exp_ directly following the list of variables gives an upper bound on the number of iterations.
 
-Statement can use and modify the listed variables _Var_~i~. 
-The statement is executed, assigning new values to the variables _Var_~i~, and this is repeated as long as the value 
+Statement can use and modify the listed variables _Var_ᵢ. 
+The statement is executed, assigning new values to the variables _Var_ᵢ, and this is repeated as long as the value 
 of any of the variables was changed compared to the previous repetition. 
 Note that this computation will only terminate if the variables range over a so-called _bounded monotonic lattice_,
 in which values can only become larger until a fixed upper bound or become smaller until a fixed lower bound.

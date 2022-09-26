@@ -12,16 +12,16 @@ List values.
 
 #### Syntax
 
-`[ Exp~1~, Exp~2~, ... ]`
+`[ Exp₁, Exp₂, ... ]`
 
 #### Types
 
 //
 
 
-|  `Exp~1~` |  `Exp~2~` |  ...  |  `[ Exp~1~, Exp~2~, ... ]`    |
+|  `Exp₁` |  `Exp₂` |  ...  |  `[ Exp₁, Exp₂, ... ]`    |
 | --- | --- | --- | --- |
-| `T~1~`    | `T~2~`    |  ...  |  `list[lub(T~1~, T~2~, ... )]`  |
+| `T₁`    | `T₂`    |  ...  |  `list[lub(T₁, T₂, ... )]`  |
 
 
 #### Description

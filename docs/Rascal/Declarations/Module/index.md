@@ -14,9 +14,9 @@ Declare a module.
 ```rascal
 module _Name_
 _Imports_;
-_Declaration~1~_;
+_Declaration₁_;
 ...
-_Declaration~n~_;
+_Declarationₙ_;
 ```
 
 #### Description
@@ -31,7 +31,7 @@ A module declaration consists of:
 The module name _Name_ will be used when the current module is imported in another module. 
 A module name is in general a qualified name of the form:
 ```rascal
-_Name~1~_::_Name~2~_:: ... ::_Name~n~_
+_Name₁_::_Name₂_:: ... ::_Nameₙ_
 ```
 which corresponds to a path relative to the root of the current workspace.
 

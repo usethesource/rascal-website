@@ -11,12 +11,12 @@ Multiply two numeric values.
 
 #### Syntax
 
-`Exp~1~ * Exp~2~`
+`Exp₁ * Exp₂`
 
 #### Types
 
 
-| `Exp~1~` |  `Exp~2~` | `Exp~1~ * Exp~2~`  |
+| `Exp₁` |  `Exp₂` | `Exp₁ * Exp₂`  |
 | --- | --- | --- |
 | `int`     |  `int`     | `int`                |
 | `int`     |  `real`    | `real`               |
@@ -25,7 +25,7 @@ Multiply two numeric values.
 
 #### Description
 
-Yields the result of multiplying the values of _Exp~1~_ and _Exp~2~_.
+Yields the result of multiplying the values of _Exp₁_ and _Exp₂_.
 
 #### Examples
 

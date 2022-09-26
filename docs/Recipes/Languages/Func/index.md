@@ -109,10 +109,10 @@ fact(n) = let
 ```
 
                 
-For convenience, we use two versions of these examples for each _F_~i~:
+For convenience, we use two versions of these examples for each _F_ᵢ:
 
-*  A file _F~i~_`.func` that contains the code as shown above.
-*  A file _F~i~_`.rsc` a Rascal file that declares a string variable _F~i~_ with the same content.
+*  A file _Fᵢ_`.func` that contains the code as shown above.
+*  A file _Fᵢ_`.rsc` a Rascal file that declares a string variable _Fᵢ_ with the same content.
 
 
 For instance, `F0.rsc` looks like this 

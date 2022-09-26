@@ -12,9 +12,9 @@ Declare the priority of operators.
 
 #### Syntax
 
-*  `syntax Exp = alt~1~ > alt~2~ > alt~3~` is the basic syntax for priorities.
-*  `syntax Exp = alt~1~ | alt~2~ > alt~3~ | alt~4~`, where the `|` signifies groups of equal priority
-*  `syntax Exp = associativity ( _alt~1~ | ... ) > _alt~2~`, where an associativity group denotes a group of equal priority
+*  `syntax Exp = alt₁ > alt₂ > alt₃` is the basic syntax for priorities.
+*  `syntax Exp = alt₁ | alt₂ > alt₃ | alt₄`, where the `|` signifies groups of equal priority
+*  `syntax Exp = associativity ( _alt₁ | ... ) > _alt₂`, where an associativity group denotes a group of equal priority
 
 #### Description
 

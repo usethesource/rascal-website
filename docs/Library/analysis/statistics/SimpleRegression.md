@@ -186,7 +186,7 @@ Returns the http://www.xycoon.com/standarderrorb0.htm[standard error of the slop
 Sum of cross products of observations.
 #### Description
 
-Returns the sum of crossproducts, x__~i~*y__~i~.
+Returns the sum of crossproducts, x__ᵢ*y__ᵢ.
 
 ## function sumSquaredErrors {#analysis-statistics-SimpleRegression-sumSquaredErrors}
 

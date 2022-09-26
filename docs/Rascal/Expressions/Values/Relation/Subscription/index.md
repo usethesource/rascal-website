@@ -7,8 +7,8 @@ keywords:
 
 #### Syntax
 
-* `Exp~0~ [Exp~1~, Exp~2~, ..., Exp~n~]`
-* `Exp~0~ [Exp~1~]`
+* `Exp₀ [Exp₁, Exp₂, ..., Expₙ]`
+* `Exp₀ [Exp₁]`
 
 #### Synopsis
 
@@ -18,25 +18,25 @@ Indexing of a relation via tuple values.
 
 |     |     |     |     |     |
 | --- | --- | --- | --- | --- |
-| `_Exp~0~`                         | `Exp~1~` | `Exp~2~` | ... | `Exp0_ [ Exp~1~, Exp~2~, ... ]`  |
-| `rel[T~1~, T~2~, ... T~m~]`    | `int`     |  `int`    | ... | `rel[T~n~, _T~n+1~_, ... T~m~]`  |
+| `_Exp₀`                         | `Exp₁` | `Exp₂` | ... | `Exp0_ [ Exp₁, Exp₂, ... ]`  |
+| `rel[T₁, T₂, ... Tₘ]`    | `int`     |  `int`    | ... | `rel[Tₙ, _Tₙ₊₁_, ... Tₘ]`  |
 
 
 ##### Set of Values Variant 
 
-| `Exp~0~`                         | `Exp~1~`     | `Exp~0~ [ Exp~1~ ]`             |
+| `Exp₀`                         | `Exp₁`     | `Exp₀ [ Exp₁ ]`             |
 | --- | --- | --- |
-| `rel[T~1~, T~2~, ... T~m~]`    | `set[T~1~]`  | `rel[T~2~, T~2~, ... T~m~]`    |
+| `rel[T₁, T₂, ... Tₘ]`    | `set[T₁]`  | `rel[T₂, T₂, ... Tₘ]`    |
 
 
 
 #### Description
 
-Relation resulting from subscription of a relation _Exp_~0~.
+Relation resulting from subscription of a relation _Exp_₀.
 
 ##### Single Value Variant
 
-Subscription with the index values of _Exp_~1~, _Exp_~2~, .... 
+Subscription with the index values of _Exp_₁, _Exp_₂, .... 
 The result is a relation with all tuples that have these index values as first elements 
 with the index values removed from the tuple. 
 If the resulting tuple has only a single element, a set is returned instead of a relation. 
@@ -44,7 +44,7 @@ A wildcard `_` as index value matches all possible values at that index position
 
 ##### Set of Values Variant 
 
-Subscription with a set of the index values of _Exp_~1~.
+Subscription with a set of the index values of _Exp_₁.
 The result is a relation with all tuples that have these index values as first element
 with the index values removed from the tuple. 
 
