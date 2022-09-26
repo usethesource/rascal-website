@@ -38,6 +38,7 @@ talk about _`l` 's text_ instead of _the text `l` refers to_.
 ## function relativize {#Location-relativize}
 
 * ``loc relativize(loc outside, loc inside)``
+* ``loc relativize(list[loc] haystack, loc needle)``
 
 
 #### Synopsis
@@ -208,6 +209,4 @@ Compute a location that textually covers the text of a list of locations.
 
 Create a new location that refers to the smallest text area that overlaps with the text of the given locations.
 The given locations should all refer to the same file but they may be overlapping or be contained in each other.
-
-her.
 

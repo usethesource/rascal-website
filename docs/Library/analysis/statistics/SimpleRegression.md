@@ -247,5 +247,3 @@ Returns the "predicted" `y` value associated with the supplied `x` value, based 
 
 `predict(x) = intercept + slope * x`
 
-t + slope * x`
-

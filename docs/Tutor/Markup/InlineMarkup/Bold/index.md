@@ -8,12 +8,12 @@ Create *bold* text.
 
 #### Syntax
 
-```
-\*_Text_*
-```
+``````
+*Text*
+``````
 
 #### Examples
 
-`\*bold*` gives *bold*.
+`*bold*` gives *bold*.
 
 

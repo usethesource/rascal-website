@@ -137,12 +137,3 @@ Prepare blocks run the REPL but show no input or output
 * ``int length(list[str] lines)``
 * ``int length(str line)``
 
-r/, *str rest])``
-* ``default list[str] filterErrors([str head, *str tail])``
-* ``list[str] filterErrors([])``
-
-## function length {#lang-rascal-tutor-Compiler-length}
-
-* ``int length(list[str] lines)``
-* ``int length(str line)``
-

@@ -54,4 +54,12 @@ The result will be displayed as:
 | `bool`  |  T~1~        | T~2~         | `lub(T~1~, T~2~)`                               |
 
 
+#### Benefits
+
+* The reader gets an immediate overview of how to use an expression or a function
+
+#### Pitfalls
+
+* There may be many different ways of using an operator, combinatorially many, which can not be explored visually in a list or a table.
+* These type signatures are written manually and not generated from source (yet)
 

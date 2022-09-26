@@ -33,13 +33,11 @@ The following aspects of the Pico language will be discussed:
 * [Compile](../../../Recipes/Languages/Pico/Compile/index.md)
 * [ControlFlow](../../../Recipes/Languages/Pico/ControlFlow/index.md)
 * [Evaluate](../../../Recipes/Languages/Pico/Evaluate/index.md)
-* [IDE](../../../Recipes/Languages/Pico/IDE/index.md)
 * [Load](../../../Recipes/Languages/Pico/Load/index.md)
 * [Syntax](../../../Recipes/Languages/Pico/Syntax/index.md)
 * [Typecheck](../../../Recipes/Languages/Pico/Typecheck/index.md)
 * [Uninit](../../../Recipes/Languages/Pico/Uninit/index.md)
 * [UseDef](../../../Recipes/Languages/Pico/UseDef/index.md)
-* [Visualize](../../../Recipes/Languages/Pico/Visualize/index.md)
 
 #### Examples
 

@@ -109,5 +109,3 @@ data PriorityQueue
 
 * ``PriorityQueue mergeQueue(PriorityQueue p, PriorityQueue q)``
 
-tyQueue q)``
-

@@ -65,5 +65,3 @@ Prog: (Prog) `fact(n) = if n <= 1 then
 ```
 
 
-
-

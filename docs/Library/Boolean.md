@@ -43,7 +43,7 @@ bool: false
 rascal>arbBool();
 bool: false
 rascal>arbBool();
-bool: false
+bool: true
 ```
 
 #### Benefits

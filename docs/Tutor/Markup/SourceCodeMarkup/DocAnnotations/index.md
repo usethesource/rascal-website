@@ -88,7 +88,7 @@ Consider the source code of the now function in the `DateTime` library.
 rascal>  import DateTime;
 ok
 rascal>  now();
-datetime: $2022-09-25T18:42:27.029+00:00$
+datetime: $2022-09-26T09:24:29.716+00:00$
 ```
   }
   @javaClass{org.rascalmpl.library.DateTime}
@@ -114,7 +114,7 @@ This will be expanded to
 rascal>  import DateTime;
 ok
 rascal>  now();
-datetime: $2022-09-25T18:42:27.080+00:00$
+datetime: $2022-09-26T09:24:29.765+00:00$
 ```
 ```
 
@@ -126,8 +126,5 @@ The information about the name of a function, data or annotation declaration, or
 
 .Pitfalls 
 * This approach requires that functions with the same name are grouped together in the source file.
-* We do not (yet) provide direct editing of `@doc{ ... }` in Rascal source files. We should!
-
-ped together in the source file.
 * We do not (yet) provide direct editing of `@doc{ ... }` in Rascal source files. We should!
 

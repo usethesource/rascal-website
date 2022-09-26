@@ -118,6 +118,7 @@ SortedList[str]: sorted(["tac","tic","toe"])
 More direct usage of overloaded constructors and functions is "normalizing rewrite rules". 
 Here we use an axiomatic definition of `conj` and `disj` to rewrite all applications of `conj` to `tt` or `ff`:
 
+
 ```rascal-shell ,continue
 rascal>Bool conj(ff(), Bool _) = ff();
 Bool (Bool, Bool): function(|prompt:///|(0,31,<1,0>,<1,31>))
@@ -134,13 +135,6 @@ Now let's try it out:
 ```rascal-shell ,continue
 rascal>disj(conj(tt(),tt()), ff())
 Bool: tt()
-```
-
-
-j(
-    tt(),
-    tt()),
-  ff())
 ```
 
 

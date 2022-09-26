@@ -169,9 +169,3 @@ Such a visual inspection does _not_ scale very well to large graphs and this mak
 
  # Questions
 
-plistic fashion that does not take into account how the call relation
-  is extracted from actual source code.
-  The above principles are, however, applicable to real cases as well.
-
-## Questions {/Lang/rascal/tutor/examples/Test/CallAnalysis}
-

@@ -4,7 +4,7 @@ title: Listing
 
 #### Synopsis
 
-Include some source code in the document
+Include some executing source code examples in the document
 
 #### Syntax
 
@@ -69,22 +69,17 @@ int: 3
 
 With `error` you can show an error message without the build failing:
 ``````
-```rascal-shell error
+```rascal-shell,error
 int x = 1;
 y + y;
 ```
 ``````
 
 
-```rascal-shell 
+```rascal-shell ,error
 rascal>int x = 1;
 int: 1
 rascal>y + y;
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
 |prompt:///|(0,1,<1,0>,<1,1>): Undeclared variable: y
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
 ok
@@ -110,15 +105,8 @@ y + y
 
 
 ```rascal-shell ,continue
-rascal>x + x
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(0,1,<1,0>,<1,1>): Undeclared variable: x
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+rascal>y + y
+int: 2
 ```
 
 Simply using `rascal` as a language does not have all these effects:
@@ -192,5 +180,9 @@ int fac(int n) {
     }
 }
 ```
+
+#### Benefits
+
+* Code examples that run at documentation compile-time are "always" tested and correct when deployed.
 
 

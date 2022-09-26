@@ -380,5 +380,3 @@ ok
 The output `S` of `xmlPretty` is a pretty printed version of the original source file `F`.
 Observe that the elements inside `<note> ... </note>` are indented.
 
-ndented.
-

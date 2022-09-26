@@ -16,11 +16,4 @@ keywords:
 1. To know everything about every detail of Rascal syntax and semantics, the [Rascal reference manual](../../Rascal/index.md) applies.
 1. The full standard [Library](../../Library/index.md) is documented [here](../../Library/index.md).
 
-#### Libraries
-
-:::caution
-There is a "TODO" in the documentation source:
-msg
-(((TODO)))
-:::
 

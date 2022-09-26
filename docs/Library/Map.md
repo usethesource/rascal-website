@@ -147,11 +147,11 @@ Returns an arbitrary key of map `M`.
 rascal>import Map;
 ok
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "pear"
-rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "pear"
+str: "apple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "pineapple"
+rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
+str: "pear"
 ```
 
 ## function invert {#Map-invert}
@@ -447,9 +447,5 @@ rascal>import Map;
 ok
 rascal>itoString(("apple": 1, "pear": 2, "orange": 3));
 str: "(\"pear\":2,\"orange\":3,\"apple\":1)"
-```
-
-
-\":1)"
 ```
 

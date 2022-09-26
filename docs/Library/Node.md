@@ -259,6 +259,3 @@ rascal>itoString(F);
 str: "\"f\"(10,\"abc\",\n  size=\"large\",\n  color=\"red\")"
 ```
 
-)"
-```
-

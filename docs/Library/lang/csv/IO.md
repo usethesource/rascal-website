@@ -211,5 +211,3 @@ position,artist,title,year
 
 Generator for CSV resources
 
-rces
-

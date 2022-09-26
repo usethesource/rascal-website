@@ -256,5 +256,3 @@ Sum of the squares of data values.
 
 	Calculate the k-th moment
 
-the k-th moment
-

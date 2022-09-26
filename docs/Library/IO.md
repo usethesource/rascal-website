@@ -493,7 +493,7 @@ Determine the last modification date of the Rascal standard library:
 
 ```rascal-shell ,continue
 rascal>lastModified(|std:///IO.rsc|);
-datetime: $2022-09-24T13:53:54.027+00:00$
+datetime: $2022-09-25T23:44:21.280+00:00$
 ```
 
 ## function created {#IO-created}
@@ -520,7 +520,7 @@ Determine the last modification date of the Rascal standard library:
 
 ```rascal-shell ,continue
 rascal>created(|std:///IO.rsc|);
-datetime: $2022-09-24T13:53:54.027+00:00$
+datetime: $2022-09-25T23:44:21.280+00:00$
 ```
 
 ## function touch {#IO-touch}
@@ -1023,6 +1023,4 @@ data LocationType
 ## function unwatch {#IO-unwatch}
 
 * ``void unwatch(loc src, bool recursive, void (LocationChangeEvent event) watcher)``
-
-d unwatch(loc src, bool recursive, void (LocationChangeEvent event) watcher)``
 

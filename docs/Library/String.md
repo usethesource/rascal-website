@@ -360,9 +360,9 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-str: ""
+str: "97\<\'\>"
 rascal>arbString(10);
-str: ""
+str: "\u2028\u205f\u00a0"
 ```
 
 ## function left {#String-left}
@@ -911,14 +911,6 @@ Substitute substrings in a string based on a substitution map from location to s
 rascal>import String;
 ok
 rascal>substitute("abc", (|stdin:///|(1,1): "d"))
-str: "adc"
-```
-
-: "d"))
-str: "adc"
-```
-
-cal>substitute("abc", (|stdin:///|(1,1): "d"))
 str: "adc"
 ```
 

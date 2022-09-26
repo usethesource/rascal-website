@@ -8,10 +8,8 @@ Mark up for interactive questions.
 
 #### Description
 
-:::caution
-There is a "TODO" in the documentation source:
-msg
-(((TODO The specification of questions is being redesigned; The information provided here is outdated.)))
+:::danger
+The specification of questions is being redesigned; The information provided here is outdated.
 :::
 
 The following types of questions are supported:

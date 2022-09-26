@@ -30,4 +30,12 @@ The syntax section for an if-then statement can be written as:
 `if ( Exp ) Statement;`
 ```
 
+#### Benefits
+
+* Syntax elements are usually "by example" such that you can immediately read what to write.
+
+#### Pitfalls
+
+* Syntax elements are not yet generated from actual syntax definitions
+
 

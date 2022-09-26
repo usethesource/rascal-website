@@ -28,4 +28,7 @@ They may be followed by one or more subscripts (enclosed by `~` and `~`) or supe
 
 * `\Var\^1^\~2~` gives _Var_^1^~2~.
 
+#### Pitfalls
+
+* This feature is broken currently. The italics do not work in code fragments and subscripts are broken as well.
 

@@ -44,6 +44,6 @@ The content of the header paragraphs is either directly derived from source code
 
 #### Pitfalls 
 
-* This approach requires that functions with the same name are grouped together in the source file. (_to-TODO-want (broken link)_)
+* This approach requires that functions with the same name are grouped together in the source file. 
 * You need to run the tutor compiler before errors in the documentation tags are detected.
 

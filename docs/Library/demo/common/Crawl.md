@@ -41,4 +41,3 @@ structured programming with a for loop that constructs a list value
 
 functional programming with a ternary, a list splice and recursion.
 
-

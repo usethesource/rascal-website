@@ -8,56 +8,51 @@ Include an image.
 
 #### Syntax
 
-:::caution
-There is a "TODO" in the documentation source:
-msg
-(((TODO-image syntax has changed)))
-:::
+This is the general Markdown syntax:
+``````
+![alt text](url)
+``````
+
+With the double brackets you can search for an image in the tutor index:
+``````
+![alt text]((Link))
+``````
+
+Or, if you need more configurability, like dimensions:
+``````
+<img src="url" width="200px"/>
+``````
+
+
 
 #### Description
 
-Describes an image to be included:
+Tutor offers the simple Markdown image syntax plus referencing images in a course. 
+If you need more flexibility, simply use the HTML `<img>` tag.
 
-* _File_ is the name of the image file.
-* _AlternateName_ is the alternate name of the image.
-* _Width_ is the required width (in pixels) of the image.
-* _Height_ is the rewuired height of the image in pixels.
-* When `link` is present, it turns the image in a link to the given _URI_.
+#### Examples
 
-    
-:::caution
-There is a "TODO" in the documentation source:
-msg
-(((TODO:For further styling of images, see http://asciidoctor.org/docs/user-manual/#images.)))
-:::
+``````
+![alt]((dandelion.jpg))
+``````
 
-##  Example 1 
-```
-![][dandelion.jpg](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
-```
 will produce:
 
-![][dandelion.jpg](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
+![alt](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
 
-##  Example 2 
-```
-![][dandelion.jpg](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
-```
+or we could use an `img` tag with a full path to the file in the assets folder:
+``````
+<img src="/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg" width="100px">
+``````
 
-![][dandelion.jpg](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
+which produces this:
 
-produces a reduced image floating at the right.
+<img src="/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg" width="100px"/>
 
-##  Example 3 
+Finally, have a look at the [Content](../../../../Library/Content.md) library module and the listing feature to generate
+images using Rascal code at Tutor compile time.
 
-And, finally,
-```
-![][dandelion.jpg](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
-```
-produces a clickable image that links back to the source of the image.
+#### Pitfalls
 
-![][dandelion.jpg](/assets/Tutor/Markup/InlineMarkup/Image/dandelion.jpg)
-
-Try it!
-
+* Don't forget a sensible alt text. It makes the documentation much more accessible.
 

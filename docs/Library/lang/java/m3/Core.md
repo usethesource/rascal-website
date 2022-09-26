@@ -222,4 +222,3 @@ globs for jars, class files and java files in a directory and tries to compile a
 
 * ``set[loc] nestedClasses(M3 m, loc class)``
 
-

@@ -50,15 +50,3 @@ data Message (str cause="")
 
 produces `"../../.."` for pathToRoot(|aap:///a/b|, |aap:///a/b/c/d|)  
 
-dSpaces(/^<prefix:[A-Za-z0-9\ ]+[a-z0-9]><postfix:[A-Z].+>/)``
-* ``default str addSpaces(str s)``
-
-## function pathToRoot {#lang-rascal-tutor-Names-pathToRoot}
-
-* ``str pathToRoot(loc root, loc src)``
-* ``str pathToRoot(loc root, loc src)``
-
-#### Synopsis
-
-produces `"../../.."` for pathToRoot(|aap:///a/b|, |aap:///a/b/c/d|)  
-
