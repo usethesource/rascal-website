@@ -217,11 +217,11 @@ Get an arbitrary element from a list. See [takeOneFrom](../Library/List.md#List-
 rascal>import List;
 ok
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "elephant"
+str: "owl"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "snake"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "zebra"
+str: "snake"
 ```
 
 ## function getFirstFrom {#List-getFirstFrom}
@@ -944,7 +944,7 @@ list[str]: ["mango","strawberry","pear","pineapple","banana","grape","kiwi"]
 rascal>sort(fruits);
 list[str]: ["banana","grape","kiwi","mango","pear","pineapple","strawberry"]
 rascal>sort(fruits, bool(str a, str b){ return size(a) > size(b); });
-list[str]: ["strawberry","pineapple","banana","grape","mango","kiwi","pear"]
+list[str]: ["strawberry","pineapple","banana","mango","grape","pear","kiwi"]
 ```
 
 ## function isSorted {#List-isSorted}
@@ -984,9 +984,9 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [2,1,4,3]
+list[int]: [3,1,4,2]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["zebra","elephant","snake","owl"]
+list[str]: ["elephant","snake","zebra","owl"]
 ```
 
 ## function split {#List-split}
@@ -1142,11 +1142,11 @@ ok
 rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <30,[10,20,40,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <30,[10,20,40,50]>
-rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <10,[20,30,40,50]>
+rascal>takeOneFrom([10,20,30,40,50]);
+tuple[int,list[int]]: <40,[10,20,30,50]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
+tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
@@ -1473,4 +1473,8 @@ lrel[int first,str second,int third]: [
 ## function zip3 {#List-zip3}
 
 * ``list[tuple[&T first, &U second, &V third]] zip3(list[&T] a, list[&U] b, list[&V] c)``
+
+`
+
+
 
