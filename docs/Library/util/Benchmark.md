@@ -129,11 +129,11 @@ Here we measure time by using separate calls to `cpuTime` before and after a cal
 
 ```rascal-shell ,continue
 rascal>before = cpuTimeNow();
-int: 1433474441000
+int: 1531665389000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>cpuTimeNow() - before;
-int: 3565000
+int: 3546000
 ```
 
 See also [cpu time of](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf) for a more convenient way of measuring the time spent during a block of code.
@@ -240,11 +240,11 @@ Here we measure time by using separate calls to `sytemTime` before and after a c
 
 ```rascal-shell ,continue
 rascal>before = systemTimeNow();
-int: 65506312000
+int: 70580446000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>systemTimeNow() - before;
-int: 70000
+int: 87000
 ```
 
 ## function systemTimeOf {#util-Benchmark-systemTimeOf}
@@ -269,7 +269,7 @@ rascal>systemTimeOf(
 >>>>>>>      fac1(50); 
 >>>>>>>   } 
 >>>>>>>);
-int: 12000
+int: 36000
 ```
 
 ## function userTimeNow {#util-Benchmark-userTimeNow}
@@ -306,11 +306,11 @@ Here we measure time by using separate calls to `userTime` before and after a ca
 
 ```rascal-shell ,continue
 rascal>before = userTimeNow();
-int: 1368125320000
+int: 1461248429000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>userTimeNow() - before;
-int: 3659000
+int: 3473000
 ```
 
 ## function userTimeOf {#util-Benchmark-userTimeOf}
@@ -374,7 +374,7 @@ rascal>benchmark(
 >>>>>>>                  fac1(200);
 >>>>>>>               }) 
 >>>>>>>   );
-map[str, num]: ("fac100":2,"fac200":4)
+map[str, num]: ("fac100":2,"fac200":5)
 ```
 
 We can do the same using [user time now](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow) that returns nanoseconds:
@@ -388,7 +388,7 @@ rascal>benchmark(
 >>>>>>>                  fac1(200);
 >>>>>>>            })
 >>>>>>>   , userTimeOf);
-map[str, num]: ("fac100":2186000,"fac200":3985000)
+map[str, num]: ("fac100":2182000,"fac200":4163000)
 ```
 
 ## function gc {#util-Benchmark-gc}

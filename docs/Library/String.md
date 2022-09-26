@@ -360,7 +360,7 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-str: "zg`"
+str: "피ǣƒ헡핁"
 rascal>arbString(10);
 str: ""
 ```
@@ -912,9 +912,6 @@ rascal>import String;
 ok
 rascal>substitute("abc", (|stdin:///|(1,1): "d"))
 str: "adc"
-```
-
-adc"
 ```
 
 "
