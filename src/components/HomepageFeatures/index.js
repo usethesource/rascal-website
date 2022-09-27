@@ -53,7 +53,7 @@ const FeatureList = [
     Svg: require('@site/static/images/java.svg').default,
     description: (
       <ul>
-        <li>Runs on the JVM (8+)</li>
+        <li>Runs on the JVM (11)</li>
         <li>Java methods callable</li>
         <li>Maven plugin</li>
       </ul>
