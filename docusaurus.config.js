@@ -72,7 +72,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'WhyRascal/index',
+            docId: 'GettingStarted/index',
             position: 'left',
             label: 'Docs',
           },
