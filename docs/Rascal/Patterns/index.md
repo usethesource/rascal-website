@@ -1,5 +1,6 @@
 ---
 title: Patterns
+sidebar_position: 1
 ---
 
 #### Synopsis

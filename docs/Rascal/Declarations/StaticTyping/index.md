@@ -1,5 +1,6 @@
 ---
 title: StaticTyping
+sidebar_position: 3
 ---
 
 #### Synopsis

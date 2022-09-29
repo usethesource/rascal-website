@@ -5,6 +5,7 @@ details:
   - Analysis
   - Synthesis
 
+sidebar_position: 2
 ---
 
 #### Synopsis

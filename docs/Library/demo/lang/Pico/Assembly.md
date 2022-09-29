@@ -22,9 +22,10 @@ data Instr
      | sub2()
      | conc2()
      | label(str label)
-     | go(str  label)
+     | go(str label)
      | gotrue(str label)
      | gofalse(str label)
      ;
 ```
+
 

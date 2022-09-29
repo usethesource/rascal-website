@@ -1,5 +1,6 @@
 ---
 title: Command History
+sidebar_position: 2
 ---
 
 #### Synopsis

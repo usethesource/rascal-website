@@ -14,8 +14,10 @@ module demo::lang::Pico::Syntax
 
 import ParseTree;
 
-lexical Id  = [a-z][a-z0-9]* !>> [a-z0-9];
+lexical Id = [a-z][a-z0-9]* !>> [a-z0-9];
+
 lexical Natural = [0-9]+ ;
+
 lexical String = "\"" ![\"]*  "\"";
 
 layout Layout = WhitespaceAndComment* !>> [\ \t\n\r%];
@@ -56,11 +58,11 @@ syntax Expression
           )
   ;
 
-public start[Program] program(str s) {
+start[Program] program(str s) {
   return parse(#start[Program], s);
 }
 
-public start[Program] program(str s, loc l) {
+start[Program] program(str s, loc l) {
   return parse(#start[Program], s, l);
 } 
 
@@ -75,5 +77,8 @@ Notes:
 *  The start symbol of the Pico grammar is called `Program`.
 *  The rules for `Expression` describe the priority and associativity of the operators: all operators are left-associative and `||` has a higher priority then `+` and `-`.
 *  Two auxiliary functions `program` are defined that parse a given string or a given location as Pico program.
+
+
+o program.
 
 

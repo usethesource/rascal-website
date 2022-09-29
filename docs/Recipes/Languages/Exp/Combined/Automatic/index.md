@@ -245,20 +245,20 @@ rascal>load("2+3*4");
 Exp: add(
   con(
     2,
-    location=|unknown:///|(0,1,<1,0>,<1,1>),
+    src=|unknown:///|(0,1,<1,0>,<1,1>),
     comments=()),
   mul(
     con(
       3,
-      location=|unknown:///|(2,1,<1,2>,<1,3>),
+      src=|unknown:///|(2,1,<1,2>,<1,3>),
       comments=()),
     con(
       4,
-      location=|unknown:///|(4,1,<1,4>,<1,5>),
+      src=|unknown:///|(4,1,<1,4>,<1,5>),
       comments=()),
-    location=|unknown:///|(2,3,<1,2>,<1,5>),
+    src=|unknown:///|(2,3,<1,2>,<1,5>),
     comments=()),
-  location=|unknown:///|(0,5,<1,0>,<1,5>),
+  src=|unknown:///|(0,5,<1,0>,<1,5>),
   comments=())
 ```
 
@@ -284,6 +284,11 @@ Here is the end result:
 rascal>import demo::lang::Exp::Combined::Automatic::Eval;
 ok
 rascal>eval("2+3*4");
+int: 14
+```
+
+
+("2+3*4");
 int: 14
 ```
 

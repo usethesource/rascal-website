@@ -1,5 +1,6 @@
 ---
 title: Hello
+sidebar_position: 0
 ---
 
 #### Synopsis

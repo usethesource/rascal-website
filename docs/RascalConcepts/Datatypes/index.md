@@ -1,5 +1,6 @@
 ---
 title: Datatypes
+sidebar_position: 1
 ---
 
 #### Synopsis

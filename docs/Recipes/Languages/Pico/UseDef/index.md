@@ -18,8 +18,8 @@ module demo::lang::Pico::UseDef
 import demo::lang::Pico::Abstract;
 
 set[Occurrence] usesExp(EXP e, STATEMENT s) =  // <1>
-  u:id(PicoId Id1) := e ? {< u@location, Id1, s>}
-                        : {< u@location, Id2, s> | /u:id(PicoId Id2) <- e };
+  u:id(PicoId Id1) := e ? {< u.src, Id1, s>}
+                        : {< u.src, Id2, s> | /u:id(PicoId Id2) <- e };
      
 set[Occurrence] usesStat(s:asgStat(PicoId Id, EXP e)) = usesExp(e, s); // <2>
 
@@ -38,7 +38,7 @@ set[Occurrence] usesStats(list[STATEMENT] stats) =
 public set[Occurrence] uses(PROGRAM p) = usesStats(p.stats);  //<3>
 
 public set[Occurrence] defs(PROGRAM p) =  // <4>
-   { < stat@location, v, stat > | /stat:asgStat(PicoId v, EXP _) <- p.stats};
+   { < stat.src, v, stat > | /stat:asgStat(PicoId v, EXP _) <- p.stats};
 
 ```
 
@@ -46,7 +46,7 @@ public set[Occurrence] defs(PROGRAM p) =  // <4>
 Recall that `Occurrence` was introduced in [Abstract](../../../../Recipes/Languages/Pico/Abstract/index.md); it is a parameterized container to associate
 program entities with their location.
 
-<1> The function `usesExp` computes a set of occurrences (uses) of Pico identifiers in a given statement:
+* The function `usesExp` computes a set of occurrences (uses) of Pico identifiers in a given statement:
     * If the expression is itself an identifier, then a singleton set containing that identifier and the statement is returned.
     * If the expression is composite, all its containing identifiers are collected using a descendant (deep) match 
        (`/`, see [Rascal:Descendant]))  in `/u:id(PicoId Id) \<- e`. 
@@ -54,15 +54,18 @@ program entities with their location.
        so that we can access the whole expression that was matched and retrieve its 
        location information (`u@location`) when we are adding a <location, identifier> pair to the set of occurrences.
        
-<2> `useStat` extracts uses from all statement variants.
+* `useStat` extracts uses from all statement variants.
 
-<3> The function `uses` simply applies `usesStats` to the statement part of its program argument.
+* The function `uses` simply applies `usesStats` to the statement part of its program argument.
 
-<4> The function `defs`  has a Pico program as argument and returns a set of occurrences (definitions) of Pico identifiers.
+* The function `defs`  has a Pico program as argument and returns a set of occurrences (definitions) of Pico identifiers.
     The definition consists of a single set comprehension that consists of the following parts:
 
     *  ` ... \<- P. stats` enumerates all statements in the program.
     *  `/asgStat(PicoId Id, EXP Exp) \<- P.stats` uses again a descendant match to find all assignment statements.
     *  For each assignment statement a (location, identifier) pair is added to the result.
+
+
+added to the result.
 
 

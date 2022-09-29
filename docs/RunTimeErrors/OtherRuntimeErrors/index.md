@@ -1,5 +1,6 @@
 ---
 title: Other Runtime Errors
+sidebar_position: 1
 ---
 
 #### Synopsis

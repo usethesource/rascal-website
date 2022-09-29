@@ -1,5 +1,6 @@
 ---
 title: Syntax Definition and Parsing
+sidebar_position: 10
 ---
 
 #### Synopsis

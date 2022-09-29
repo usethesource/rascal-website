@@ -1,5 +1,6 @@
 ---
 title: Comparison with other paradigms
+sidebar_position: 3
 ---
 
 #### Synopsis

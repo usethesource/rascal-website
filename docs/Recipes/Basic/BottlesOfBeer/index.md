@@ -1,5 +1,6 @@
 ---
 title: Bottles Of Beer
+sidebar_position: 5
 ---
 
 #### Synopsis

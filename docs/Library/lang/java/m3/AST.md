@@ -6,10 +6,9 @@ title: "module lang::java::m3::AST"
 
 `import lang::java::m3::AST;`
 
-
 #### Synopsis
 
-defines AST node types for Java
+AST node declarations for Java
 
 
 ## data Declaration {#lang-java-m3-AST-Declaration}
@@ -194,23 +193,33 @@ Creates AST from a file
 
 * ``set[Declaration] createAstsFromFiles(set[loc] file, bool collectBindings, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")``
 
-
 #### Synopsis
 
-Creates AST from a file
-
-#### Description
+Creates AST from a file using Eclipse JDT compiler
 
 ## function createAstFromString {#lang-java-m3-AST-createAstFromString}
 
 * ``Declaration createAstFromString(loc fileName, str source, bool collectBinding, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")``
 
+#### Synopsis
 
-  Creates ASTs from an input string
+Creates AST from a string using Eclipse JDT compiler
 
 ## function createAstsFromDirectory {#lang-java-m3-AST-createAstsFromDirectory}
 
 * ``set[Declaration] createAstsFromDirectory(loc project, bool collectBindings, bool errorRecovery = false, str javaVersion = "1.7" )``
 
-Creates ASTs from a project
+Creates a set ASTs for all Java source files in a project using Eclipse's JDT compiler
+
+## function createAstsFromMavenProject {#lang-java-m3-AST-createAstsFromMavenProject}
+
+* ``set[Declaration] createAstsFromMavenProject(loc project, bool collectBindings, bool errorRecovery = false, str javaVersion = "1.7" )``
+
+Creates a set ASTs for all Java source files in a Maven project using Eclipse's JDT compiler
+
+#### Description
+
+
+This function uses [Reflective-getProjectPathConfig](../../../../Library/util/Reflective.md#util::Reflective-getProjectPathConfig), which inspects a `pom.xml` to 
+compute the dependencies and concrete locations of jar files that a Maven project depends on.
 

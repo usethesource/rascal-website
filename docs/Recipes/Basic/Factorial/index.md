@@ -1,5 +1,6 @@
 ---
 title: Factorial
+sidebar_position: 1
 ---
 
 #### Synopsis

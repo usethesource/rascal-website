@@ -1,5 +1,6 @@
 ---
 title: The Extract-Analyze-SYnthesize (EASY) paradigm
+sidebar_position: 1
 ---
 
 #### Synopsis

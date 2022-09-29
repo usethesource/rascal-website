@@ -1,5 +1,6 @@
 ---
 title: Equation Solving
+sidebar_position: 14
 ---
 
 #### Synopsis

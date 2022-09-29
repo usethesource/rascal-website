@@ -1,5 +1,6 @@
 ---
 title: Details
+sidebar_position: 6
 ---
 
 #### Synopsis
@@ -16,6 +17,7 @@ details:
   - Detail~1~
   - Detail~2~
   - ...
+sidebar_position: 6
 ---
 ```
 

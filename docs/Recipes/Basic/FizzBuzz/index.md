@@ -1,5 +1,6 @@
 ---
 title: FizzBuzz
+sidebar_position: 6
 ---
 
 #### Synopsis

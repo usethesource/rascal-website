@@ -73,45 +73,45 @@ Prog: prog(
         leq(
           var(
             "n",
-            location=|unknown:///|(13,1,<1,13>,<1,14>),
+            src=|unknown:///|(13,1,<1,13>,<1,14>),
             comments=()),
           nat(
             1,
-            location=|unknown:///|(18,1,<1,18>,<1,19>),
+            src=|unknown:///|(18,1,<1,18>,<1,19>),
             comments=()),
-          location=|unknown:///|(13,6,<1,13>,<1,19>),
+          src=|unknown:///|(13,6,<1,13>,<1,19>),
           comments=()),
         nat(
           1,
-          location=|unknown:///|(38,1,<2,13>,<2,14>),
+          src=|unknown:///|(38,1,<2,13>,<2,14>),
           comments=()),
         mul(
           var(
             "n",
-            location=|unknown:///|(70,1,<4,13>,<4,14>),
+            src=|unknown:///|(70,1,<4,13>,<4,14>),
             comments=()),
           call(
             "fact",
             [sub(
                 var(
                   "n",
-                  location=|unknown:///|(79,1,<4,22>,<4,23>),
+                  src=|unknown:///|(79,1,<4,22>,<4,23>),
                   comments=()),
                 nat(
                   1,
-                  location=|unknown:///|(81,1,<4,24>,<4,25>),
+                  src=|unknown:///|(81,1,<4,24>,<4,25>),
                   comments=()),
-                location=|unknown:///|(79,3,<4,22>,<4,25>),
+                src=|unknown:///|(79,3,<4,22>,<4,25>),
                 comments=())],
-            location=|unknown:///|(74,9,<4,17>,<4,26>),
+            src=|unknown:///|(74,9,<4,17>,<4,26>),
             comments=()),
-          location=|unknown:///|(70,13,<4,13>,<4,26>),
+          src=|unknown:///|(70,13,<4,13>,<4,26>),
           comments=()),
-        location=|unknown:///|(10,87,<1,10>,<5,13>),
+        src=|unknown:///|(10,87,<1,10>,<5,13>),
         comments=()),
-      location=|unknown:///|(0,97,<1,0>,<5,13>),
+      src=|unknown:///|(0,97,<1,0>,<5,13>),
       comments=())],
-  location=|unknown:///|(0,97,<1,0>,<5,13>),
+  src=|unknown:///|(0,97,<1,0>,<5,13>),
   comments=())
 ```
 We get the original program and its __abstract syntax tree__ of type `Prog` back.
@@ -128,43 +128,50 @@ Prog: prog(
         leq(
           var(
             "n",
-            location=|std:///demo/lang/Func/programs/F0.func|(13,1,<1,13>,<1,14>),
+            src=|std:///demo/lang/Func/programs/F0.func|(13,1,<1,13>,<1,14>),
             comments=()),
           nat(
             1,
-            location=|std:///demo/lang/Func/programs/F0.func|(18,1,<1,18>,<1,19>),
+            src=|std:///demo/lang/Func/programs/F0.func|(18,1,<1,18>,<1,19>),
             comments=()),
-          location=|std:///demo/lang/Func/programs/F0.func|(13,6,<1,13>,<1,19>),
+          src=|std:///demo/lang/Func/programs/F0.func|(13,6,<1,13>,<1,19>),
           comments=()),
         nat(
           1,
-          location=|std:///demo/lang/Func/programs/F0.func|(38,1,<2,13>,<2,14>),
+          src=|std:///demo/lang/Func/programs/F0.func|(38,1,<2,13>,<2,14>),
           comments=()),
         mul(
           var(
             "n",
-            location=|std:///demo/lang/Func/programs/F0.func|(70,1,<4,13>,<4,14>),
+            src=|std:///demo/lang/Func/programs/F0.func|(70,1,<4,13>,<4,14>),
             comments=()),
           call(
             "fact",
             [sub(
                 var(
                   "n",
-                  location=|std:///demo/lang/Func/programs/F0.func|(79,1,<4,22>,<4,23>),
+                  src=|std:///demo/lang/Func/programs/F0.func|(79,1,<4,22>,<4,23>),
                   comments=()),
                 nat(
                   1,
-                  location=|std:///demo/lang/Func/programs/F0.func|(81,1,<4,24>,<4,25>),
+                  src=|std:///demo/lang/Func/programs/F0.func|(81,1,<4,24>,<4,25>),
                   comments=()),
-                location=|std:///demo/lang/Func/programs/F0.func|(79,3,<4,22>,<4,25>),
+                src=|std:///demo/lang/Func/programs/F0.func|(79,3,<4,22>,<4,25>),
                 comments=())],
-            location=|std:///demo/lang/Func/programs/F0.func|(74,9,<4,17>,<4,26>),
+            src=|std:///demo/lang/Func/programs/F0.func|(74,9,<4,17>,<4,26>),
             comments=()),
-          location=|std:///demo/lang/Func/programs/F0.func|(70,13,<4,13>,<4,26>),
+          src=|std:///demo/lang/Func/programs/F0.func|(70,13,<4,13>,<4,26>),
           comments=()),
-        location=|std:///demo/lang/Func/programs/F0.func|(10,87,<1,10>,<5,13>),
+        src=|std:///demo/lang/Func/programs/F0.func|(10,87,<1,10>,<5,13>),
         comments=()),
-      location=|std:///demo/lang/Func/programs/F0.func|(0,97,<1,0>,<5,13>),
+      src=|std:///demo/lang/Func/programs/F0.func|(0,97,<1,0>,<5,13>),
+      comments=())],
+  src=|std:///demo/lang/Func/programs/F0.func|(0,97,<1,0>,<5,13>),
+  comments=())
+```
+
+
+,<1,0>,<5,13>),
       comments=())],
   location=|std:///demo/lang/Func/programs/F0.func|(0,97,<1,0>,<5,13>),
   comments=())

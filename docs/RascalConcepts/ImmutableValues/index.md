@@ -1,5 +1,6 @@
 ---
 title: Immutable Values
+sidebar_position: 2
 ---
 
 #### Synopsis

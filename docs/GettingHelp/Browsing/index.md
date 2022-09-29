@@ -2,6 +2,7 @@
 title: Browsing Documentation
 keywords:
   - help
+sidebar_position: 2
 ---
 
 #### Synopsis

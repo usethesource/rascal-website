@@ -416,13 +416,13 @@ Pick an arbitrary element from a set.
 rascal>import Set;
 ok
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "elephant"
-rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "elephant"
-rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "elephant"
+str: "snake"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "snake"
+rascal>getOneFrom({"elephant", "zebra", "snake"});
+str: "zebra"
+rascal>getOneFrom({"elephant", "zebra", "snake"});
+str: "zebra"
 ```
 
 ## function getFirstFrom {#Set-getFirstFrom}
@@ -703,4 +703,6 @@ Flatten a set of sets into a single set.
 #### Synopsis
 
 Compute the Jaccard similarity between two sets.
+
+o sets.
 

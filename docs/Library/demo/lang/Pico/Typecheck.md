@@ -29,22 +29,42 @@ title: "module demo::lang::Pico::Typecheck"
 * ``TENV checkExp(exp:sub(EXP E1, EXP E2), TYPE req, TENV env)``
 * ``TENV checkExp(exp:conc(EXP E1, EXP E2), TYPE req, TENV env)``
 
+#### Synopsis
+
+Checking Expressions
+
 ## function checkStat {#demo-lang-Pico-Typecheck-checkStat}
 
 * ``TENV checkStat(stat:asgStat(PicoId Id, EXP Exp), TENV env)``
 * ``TENV checkStat(stat:ifElseStat(EXP Exp, // <10>                               list[STATEMENT] Stats1,                               list[STATEMENT] Stats2),                TENV env)``
 * ``TENV checkStat(stat:whileStat(EXP Exp,                               list[STATEMENT] Stats1),                  TENV env)``
 
+#### Synopsis
+
+Check a statement
+
 ## function checkStats {#demo-lang-Pico-Typecheck-checkStats}
 
 * ``TENV checkStats(list[STATEMENT] Stats1, TENV env)``
+
+#### Synopsis
+
+Check a list of statements
 
 ## function checkDecls {#demo-lang-Pico-Typecheck-checkDecls}
 
 * ``TENV checkDecls(list[DECL] Decls)``
 
+#### Synopsis
+
+Check declarations
+
 ## function checkProgram {#demo-lang-Pico-Typecheck-checkProgram}
 
 * ``TENV checkProgram(program(list[DECL] Decls, list[STATEMENT] Series))``
 * ``list[tuple[loc l, str msg]] checkProgram(str txt)``
+
+#### Synopsis
+
+Check a Pico program
 

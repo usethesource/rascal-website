@@ -1,5 +1,6 @@
 ---
 title: Quine
+sidebar_position: 7
 ---
 
 #### Synopsis
@@ -8,7 +9,7 @@ A self-reproducing program.
 
 #### Description
 
-A http://en.wikipedia.org/wiki/Quine_(computing)[quine]
+A [Quine](http://en.wikipedia.org/wiki/Quine_(computing))
 is a computer program that takes no input and produces a copy of its own source code.
 A quine is also called a _self-replicating_ or _self-reproducing_ program.
 

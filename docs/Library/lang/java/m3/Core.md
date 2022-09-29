@@ -75,12 +75,19 @@ data Language (str version="")
 
 ## function createM3FromDirectory {#lang-java-m3-Core-createM3FromDirectory}
 
-* ``M3 createM3FromDirectory(loc project, bool errorRecovery = false, str javaVersion = "1.7", list[loc] classPath = [])``
-
+* ``M3 createM3FromDirectory(loc project, bool errorRecovery = false, bool includedJarModels=false, str javaVersion = "1.7", list[loc] classPath = [])``
 
 #### Synopsis
 
-globs for jars, class files and java files in a directory and tries to compile all source files into an [$analysis/m3] model
+Globs for jars, class files and java files in a directory and tries to compile all source files into an M3 model
+
+## function createM3FromMavenProject {#lang-java-m3-Core-createM3FromMavenProject}
+
+* ``M3 createM3FromMavenProject(loc project, bool errorRecovery = false, bool includedJarModels=false, str javaVersion = "1.7", list[loc] classPath = [])``
+
+#### Synopsis
+
+Globs for jars, class files and java files in a directory and tries to compile all source files into an M3 model
 
 ## function createM3FromJar {#lang-java-m3-Core-createM3FromJar}
 

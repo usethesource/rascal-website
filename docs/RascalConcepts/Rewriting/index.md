@@ -1,5 +1,6 @@
 ---
 title: Rewriting
+sidebar_position: 11
 ---
 
 #### Synopsis

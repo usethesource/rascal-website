@@ -1,5 +1,6 @@
 ---
 title: Pattern Matching
+sidebar_position: 5
 ---
 
 #### Synopsis

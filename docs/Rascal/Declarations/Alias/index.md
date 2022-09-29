@@ -3,6 +3,7 @@ title: Alias Declaration
 keywords:
   - alias
   - type
+sidebar_position: 8
 ---
 
 #### Synopsis

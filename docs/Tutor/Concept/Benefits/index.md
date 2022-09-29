@@ -1,5 +1,6 @@
 ---
 title: Benefits
+sidebar_position: 9
 ---
 
 #### Synopsis

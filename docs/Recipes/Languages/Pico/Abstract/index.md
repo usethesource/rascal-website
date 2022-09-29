@@ -17,52 +17,52 @@ module demo::lang::Pico::Abstract
 // highlight-next-line
 
 
-public data TYPE = natural() | string(); 
+data TYPE(loc src=|unknown:///|) 
+    = natural() 
+    | string()
+    ; 
 	  
 // highlight-next-line
-public alias PicoId = str; 
+alias PicoId = str; 
 	  
-public data PROGRAM  
+data PROGRAM(loc src=|unknown:///|)
 // highlight-next-line
     = program(list[DECL] decls, list[STATEMENT] stats);
 
-public data DECL 
+data DECL(loc src=|unknown:///|) 
     = decl(PicoId name, TYPE tp);
 
-public data EXP 
-     = id(PicoId name)
-     | natCon(int iVal)
-     | strCon(str sVal)
-     | add(EXP left, EXP right)
-     | sub(EXP left, EXP right)
-     | conc(EXP left, EXP right)
-     ;
+data EXP(loc src=|unknown:///|) 
+    = id(PicoId name)
+    | natCon(int iVal)
+    | strCon(str sVal)
+    | add(EXP left, EXP right)
+    | sub(EXP left, EXP right)
+    | conc(EXP left, EXP right)
+    ;
     
-public data STATEMENT 
-     = asgStat(PicoId name, EXP exp)
-     | ifElseStat(EXP exp, list[STATEMENT] thenpart, list[STATEMENT] elsepart)
-     | whileStat(EXP exp, list[STATEMENT] body)
-     ;
+data STATEMENT(loc src=|unknown:///|)
+    = asgStat(PicoId name, EXP exp)
+    | ifElseStat(EXP exp, list[STATEMENT] thenpart, list[STATEMENT] elsepart)
+    | whileStat(EXP exp, list[STATEMENT] body)
+    ;
 
 // highlight-next-line
-anno loc TYPE@location;
-anno loc PROGRAM@location;
-anno loc DECL@location;
-anno loc EXP@location;
-anno loc STATEMENT@location;
-
-public alias Occurrence = tuple[loc location, PicoId name, STATEMENT stat]; // <5>
+alias Occurrence = tuple[loc src, PicoId name, STATEMENT stat]; 
 
 ```
 
-                
+An abstract syntax specification is not necessary for implementing a programming language 
+in Rascal. However, sometimes it comes in handy and for this reason we demonstrate an
+AST for Pico here. One reason could be that you are using an external parser for a language,
+another is that your DSL is only an intermediate format in a longer pipeline.
+
 Notes:
 
-<1> The types that may occur in a Pico program are either natural or string.
-<2> Introduce `PicoId` as an alias for Rascal's `str` datatype.
-<3> Define the various data types that constitute an AST for Pico. Observe that the constructor names match the names used in the concrete syntax, e.g., `strCon`, `add`, `ifElseStat`.
-<4> Define an annotation with name `location` and of type `loc` (source code location) for all AST types. This will be used when imploding
-    a parse tree into an abstract syntax tree.
-<5> Introduce `Occurrence` as a genereic way of describing the location of various items in the AST.
+* The types that may occur in a Pico program are either `natural` or `string`.
+* Introduce `PicoId` as an alias for Rascal's `str` datatype.
+* Define the various data types that constitute an AST for Pico. Observe that the constructor names match the names used in the concrete syntax, e.g., `strCon`, `add`, `ifElseStat`.
+* Define an annotation with name `location` and of type `loc` (source code location) for all AST types. This will be used when transforming a parse tree into an abstract syntax tree [implode](../../../../Library/ParseTree.md#ParseTree-implode).
+* Introduce `Occurrence` as a generic way of describing the location of various items in the AST.
 
 

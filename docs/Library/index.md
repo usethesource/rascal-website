@@ -63,7 +63,6 @@ list[loc]: [
   |std:///List.rsc|,
   |std:///resource|,
   |std:///Content.rsc|,
-  |std:///Traversal.rsc|,
   |std:///Grammar.rsc|,
   |std:///Prelude.rsc|,
   |std:///Prelude$Backtrack.class|,
@@ -92,7 +91,6 @@ These are the entry points to the entire library:
 * [Relation](../Library/Relation.md)
 * [Set](../Library/Set.md)
 * [String](../Library/String.md)
-* [Traversal](../Library/Traversal.md)
 * [Type](../Library/Type.md)
 * [value iO](../Library/ValueIO.md)
 * [analysis](../Library/analysis/index.md)
@@ -111,4 +109,6 @@ These are the entry points to the entire library:
 
 * [Prelude](../Library/Prelude.md) is a rather big collection of functions to have imported. It is sometimes better to cherry-pick the modules you need.
 * Some languages in [lang](../Library/lang/index.md) are not 100% tested and up-to-date. We are extracting these one-by-one to experimental library packages.
+
+e extracting these one-by-one to experimental library packages.
 

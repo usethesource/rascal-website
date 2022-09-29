@@ -1,5 +1,6 @@
 ---
 title: Pitfalls
+sidebar_position: 10
 ---
 
 #### Synopsis

@@ -1,5 +1,6 @@
 ---
 title: Synthesis
+sidebar_position: 2
 ---
 
 #### Synopsis

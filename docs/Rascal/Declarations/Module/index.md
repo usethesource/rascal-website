@@ -3,6 +3,7 @@ title: Module Declaration
 keywords:
   - module
 
+sidebar_position: 0
 ---
 
 #### Synopsis

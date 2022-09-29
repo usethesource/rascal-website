@@ -17,7 +17,8 @@ import Prelude;
 import demo::lang::Pico::Syntax;
 import demo::lang::Pico::Abstract;
 
-public PROGRAM  load(str txt) = implode(#PROGRAM, parse(#Program, txt));
+public PROGRAM load(str txt) 
+    = implode(#PROGRAM, parse(#Program, txt));
 
 ```
 
@@ -45,22 +46,25 @@ PROGRAM: program(
   [decl(
       "x",
       natural(
-        location=|unknown:///|(18,7,<1,18>,<1,25>),
+        src=|unknown:///|(18,7,<1,18>,<1,25>),
         comments=()),
-      location=|unknown:///|(14,11,<1,14>,<1,25>),
+      src=|unknown:///|(14,11,<1,14>,<1,25>),
       comments=())],
   [asgStat(
       "x",
       natCon(
         3,
-        location=|unknown:///|(32,1,<1,32>,<1,33>),
+        src=|unknown:///|(32,1,<1,32>,<1,33>),
         comments=()),
-      location=|unknown:///|(27,6,<1,27>,<1,33>),
+      src=|unknown:///|(27,6,<1,27>,<1,33>),
       comments=())],
-  location=|unknown:///|(0,37,<1,0>,<1,37>),
+  src=|unknown:///|(0,37,<1,0>,<1,37>),
   comments=())
 ```
 
 Observe how the various parts of the abstract syntax tree are annotated with location attributes.
+
+
+cation attributes.
 
 

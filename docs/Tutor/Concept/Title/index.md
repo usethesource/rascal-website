@@ -1,5 +1,6 @@
 ---
 title: Title
+sidebar_position: 0
 ---
 
 #### Synopsis
@@ -11,6 +12,7 @@ The display (presentation) name of a concept.
 ```
 ---
 title: _ConceptName_
+sidebar_position: 0
 ---
 ```
 

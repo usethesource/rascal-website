@@ -1,5 +1,6 @@
 ---
 title: Case Distinction
+sidebar_position: 7
 ---
 
 #### Synopsis

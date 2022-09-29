@@ -1,5 +1,6 @@
 ---
 title: Functions
+sidebar_position: 9
 ---
 
 #### Synopsis

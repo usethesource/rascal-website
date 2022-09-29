@@ -1,5 +1,6 @@
 ---
 title: Runtime Exceptions
+sidebar_position: 0
 ---
 
 #### Synopsis

@@ -1,5 +1,6 @@
 ---
 title: Keyboard Shortcuts
+sidebar_position: 4
 ---
 
 #### Synopsis

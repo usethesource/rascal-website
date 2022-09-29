@@ -1,5 +1,6 @@
 ---
 title: Types
+sidebar_position: 4
 ---
 
 #### Synopsis

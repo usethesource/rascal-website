@@ -1,5 +1,6 @@
 ---
 title: IDE Construction
+sidebar_position: 12
 ---
 
 #### Synopsis

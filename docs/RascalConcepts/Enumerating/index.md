@@ -1,5 +1,6 @@
 ---
 title: Enumerating
+sidebar_position: 3
 ---
 
 #### Synopsis

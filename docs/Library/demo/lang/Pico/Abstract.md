@@ -10,7 +10,7 @@ title: "module demo::lang::Pico::Abstract"
 ## data TYPE {#demo-lang-Pico-Abstract-TYPE}
 
 ```rascal
-data TYPE  
+data TYPE (loc src=|unknown:///|) 
      = natural()
      | string()
      ;
@@ -23,7 +23,7 @@ data TYPE
 ## data PROGRAM {#demo-lang-Pico-Abstract-PROGRAM}
 
 ```rascal
-data PROGRAM  
+data PROGRAM (loc src=|unknown:///|) 
      = program(list[DECL] decls, list[STATEMENT] stats)
      ;
 ```
@@ -31,7 +31,7 @@ data PROGRAM
 ## data DECL {#demo-lang-Pico-Abstract-DECL}
 
 ```rascal
-data DECL  
+data DECL (loc src=|unknown:///|) 
      = decl(PicoId name, TYPE tp)
      ;
 ```
@@ -39,7 +39,7 @@ data DECL
 ## data EXP {#demo-lang-Pico-Abstract-EXP}
 
 ```rascal
-data EXP  
+data EXP (loc src=|unknown:///|) 
      = id(PicoId name)
      | natCon(int iVal)
      | strCon(str sVal)
@@ -52,7 +52,7 @@ data EXP
 ## data STATEMENT {#demo-lang-Pico-Abstract-STATEMENT}
 
 ```rascal
-data STATEMENT  
+data STATEMENT (loc src=|unknown:///|) 
      = asgStat(PicoId name, EXP exp)
      | ifElseStat(EXP exp, list[STATEMENT] thenpart, list[STATEMENT] elsepart)
      | whileStat(EXP exp, list[STATEMENT] body)
@@ -61,5 +61,5 @@ data STATEMENT
 
 ## alias Occurrence {#demo-lang-Pico-Abstract-Occurrence}
 
-* `tuple[loc location, PicoId name, STATEMENT stat]`
+* `tuple[loc src, PicoId name, STATEMENT stat]`
 

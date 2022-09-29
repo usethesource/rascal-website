@@ -1,5 +1,6 @@
 ---
 title: Tag Declaration
+sidebar_position: 10
 ---
 
 #### Synopsis

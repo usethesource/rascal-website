@@ -25,35 +25,35 @@ import demo::lang::Pico::ControlFlow;
 
 import analysis::graphs::Graph;
 
-public set[CFNode] defNodes(PicoId Id, set[Occurrence] Defs) =
-   {statement(occ.stat@location, occ.stat) | Occurrence occ <- Defs, occ.name == Id};
+set[CFNode] defNodes(PicoId Id, set[Occurrence] Defs) =
+   {statement(occ.stat.src, occ.stat) | Occurrence occ <- Defs, occ.name == Id};
 
-public set[Occurrence] uninitProgram(PROGRAM P) {
-   D = defs(P); // <1>
-   CFG = cflowProgram(P); // <2>
-   return { occ | occ <- uses(P), // <3>
+set[Occurrence] uninitProgram(PROGRAM P) {
+   // highlight-start
+   D = defs(P); 
+   CFG = cflowProgram(P); 
+   return { occ | occ <- uses(P), 
                   any(CFNode N <- reachX(CFG.graph, CFG.entry, defNodes(occ.name, D)),
-                      N has location && occ.location <= N.location) 
-          }; // <4>
+                      N has location && occ.src <= N.location) 
+          }; 
+   // highlight-end
 }
 
-public set[Occurrence] uninitProgram(str txt) = uninitProgram(load(txt)); // <5>
+set[Occurrence] uninitProgram(str txt) = uninitProgram(load(txt)); 
 
 ```
 
                 
-<1> First, we determine the variable definitions of the program,
-<2> and its control flow graph.
-<3> Next we ask for every use of a variable the question: can it be reached from the entries
+* First, we determine the variable definitions of the program, and its control flow graph.
+* Next we ask for every use of a variable the question: can it be reached from the entries
     of the program without encountering a definition? This determined as follows:
-
     *  `rangeR(D, {occ.item})` is the set of definition for the variable were are looking at. See [Rascal:Relation/rangeR].
     *  `reachX` determines the reachability in a graph while excluding certain nodes, see [Rascal:Graph/reachX]. Here
         `reachX(CFG.graph, CFG.entry, rangeR(D, {occ.item}))` determines the nodes in the graph that can be reached from the
          entry point of the program without passing a definition of the current variable.
     *  `any(CFNode N <- reachX( ... ), N has location && occ.location \<= N.location)` yields true if there is such a reachable node
         that covers the location of the current variable.
-<4> The complete comprehension returns the set of occurrences of uninitialized variables.
+* The complete comprehension returns the set of occurrences of uninitialized variables.
 
 
 The function `uninitProgram` performs this analysis on the source text of a Pico program.
@@ -64,20 +64,26 @@ Here is a simple example, where variable `p` is used without intialization:
 rascal>import demo::lang::Pico::Uninit;
 ok
 rascal>uninitProgram("begin declare n : natural, m : natural, p : natural; n := 10; m := n + p end");
-rel[loc location,str name,STATEMENT stat]: {<|unknown:///|(71,1,<1,71>,<1,72>),"p",asgStat(
+rel[loc src,str name,STATEMENT stat]: {<|unknown:///|(71,1,<1,71>,<1,72>),"p",asgStat(
     "m",
     add(
       id(
         "n",
-        location=|unknown:///|(67,1,<1,67>,<1,68>),
+        src=|unknown:///|(67,1,<1,67>,<1,68>),
         comments=()),
       id(
         "p",
-        location=|unknown:///|(71,1,<1,71>,<1,72>),
+        src=|unknown:///|(71,1,<1,71>,<1,72>),
         comments=()),
-      location=|unknown:///|(67,5,<1,67>,<1,72>),
+      src=|unknown:///|(67,5,<1,67>,<1,72>),
       comments=()),
-    location=|unknown:///|(62,10,<1,62>,<1,72>),
+    src=|unknown:///|(62,10,<1,62>,<1,72>),
+    comments=())>}
+```
+
+
+
+n:///|(62,10,<1,62>,<1,72>),
     comments=())>}
 ```
 
