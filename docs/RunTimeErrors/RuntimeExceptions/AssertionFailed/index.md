@@ -63,7 +63,6 @@ ok
 rascal>import IO;
 ok
 rascal>try println(incrPositive(-3)); catch AssertionFailed(msg): println("incrPositive: <msg>");
-try println(incrPositive(-3)); catch AssertionFailed(msg): println("incrPositive: <msg>");
 incrPositive: n should be greater than 0
 ok
 ```

@@ -99,7 +99,6 @@ Which rules are at the top of the alternatives?
 rascal>if (/amb({a1, a2}) := t) 
 >>>>>>>  println("alternative 1: <a1.prod>
 >>>>>>>          'alternative 2: <a2.prod>");
-          'alternative 2: <a2.prod>");
 alternative 1: prod(sort("E"),[sort("E"),layouts("$default$"),lit("+"),layouts("$default$"),sort("E")],{assoc(left())})
 alternative 2: prod(sort("E"),[sort("E"),layouts("$default$"),lit("*"),layouts("$default$"),sort("E")],{assoc(left())})
 ok
@@ -115,7 +114,6 @@ rascal>try
 >>>>>>>  parse(#E, "a+a*a");
 >>>>>>>catch Ambiguity(loc l, str s, _): 
 >>>>>>>  println("the input is ambiguous for <s> on line <l.begin.line>");
-  println("the input is ambiguous for <s> on line <l.begin.line>");
 the input is ambiguous for E on line 1
 ok
 ```

@@ -38,7 +38,6 @@ to show this:
 rascal>import IO;
 ok
 rascal>println("Hello World!")
-println("Hello World!")
 Hello World!
 ok
 ```

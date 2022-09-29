@@ -67,7 +67,6 @@ rascal>try
 >>>>>>>  parse(#As, "aaaabaaa"); 
 >>>>>>>catch ParseError(e): 
 >>>>>>>  println("Your input cannot be parsed: <e>");
-  println("Your input cannot be parsed: <e>");
 Your input cannot be parsed: |unknown:///|(4,1,<1,4>,<1,5>)
 ok
 ```

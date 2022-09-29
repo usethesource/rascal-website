@@ -126,7 +126,6 @@ You could read a webpage:
 rascal>import IO;
 ok
 rascal>println(readFile(|http://www.example.org|))
-println(readFile(|http://www.example.org|))
 <!doctype html>
 <html>
 <head>

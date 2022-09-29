@@ -45,7 +45,6 @@ ok
 rascal>str greeting = "\"Good Morning, Dr. Watson\", said Holmes";
 str: "\"Good Morning, Dr. Watson\", said Holmes"
 rascal>println("\"" + greeting + "\"");
-println("\"" + greeting + "\"");
 ""Good Morning, Dr. Watson", said Holmes"
 ok
 ```
@@ -60,7 +59,6 @@ we have to say: escape `"\""` and replace it by `"\\\""`. The effect is as follo
 rascal>import String;
 ok
 rascal>println("\"" + escape(greeting, ("\"": "\\\"")) + "\"");
-println("\"" + escape(greeting, ("\"": "\\\"")) + "\"");
 "\"Good Morning, Dr. Watson\", said Holmes"
 ok
 ```
@@ -79,7 +77,6 @@ Now let's put `quine` to the test.
 rascal>import demo::basic::Quine;
 ok
 rascal>quine();
-quine();
 module demo::basic::Quine
 
 import IO;

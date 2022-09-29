@@ -126,7 +126,6 @@ rascal>fields = (
 >>>>>>>  );
 map[str, str]: ("name":"String","address":"String","age":"Integer")
 rascal>println(genClass("Person", fields));
-println(genClass("Person", fields));
 public class Person {
   
   private String address;

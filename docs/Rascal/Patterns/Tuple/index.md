@@ -22,7 +22,6 @@ rascal>import IO;
 ok
 rascal>if(<A, B, C> := <13, false, "abc">)
 >>>>>>>   println("A = <A>, B = <B>, C = <C>");
-   println("A = <A>, B = <B>, C = <C>");
 A = 13, B = false, C = abc
 ok
 ```

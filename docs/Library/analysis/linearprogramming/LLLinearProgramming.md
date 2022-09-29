@@ -6,6 +6,10 @@ title: "module analysis::linearprogramming::LLLinearProgramming"
 
 `import analysis::linearprogramming::LLLinearProgramming;`
 
+#### Synopsis
+
+Low level linear programming interface
+
 
 ## alias LLCoefficients {#analysis-linearprogramming-LLLinearProgramming-LLCoefficients}
 

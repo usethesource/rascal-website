@@ -30,7 +30,6 @@ rascal>for(int i <- [1 .. 10]){
 >>>>>>>       break;
 >>>>>>>    }
 >>>>>>>}
-}
 i = 3 is divisible by 3
 list[void]: []
 ```

@@ -43,7 +43,6 @@ Here we constrain the match to find only Exps:
 rascal>visit (ex) {
 >>>>>>>  case [Exp] str name(_,_) : println("node name is <name>");
 >>>>>>>}
-}
 node name is hello
 node name is add
 node name is sub
@@ -62,7 +61,6 @@ Here we do not constrain the same pattern:
 rascal>visit (ex) {
 >>>>>>>  case str name(_,_) : println("node name is <name>");
 >>>>>>>}
-}
 node name is hello
 node name is add
 node name is sub

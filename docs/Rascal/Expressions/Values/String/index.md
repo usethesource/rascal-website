@@ -133,7 +133,6 @@ rascal>println("hello
 >>>>>>>this
 >>>>>>>  is
 >>>>>>>    new")
-    new")
 hello
 this
   is
@@ -149,7 +148,6 @@ rascal>if (true)
 >>>>>>>          '  margins
 >>>>>>>          'are good for
 >>>>>>>          ");
-          ");
 this is
 what
   margins
@@ -169,7 +167,6 @@ rascal>str genClass() = "class myClass {
 >>>>>>>                 '}";
 str (): function(|prompt:///|(0,99,<1,0>,<3,21>))
 rascal>println(genClass());
-println(genClass());
 class myClass {
   int myMethod() {
     return 0;

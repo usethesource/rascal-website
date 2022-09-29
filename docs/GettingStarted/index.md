@@ -44,7 +44,6 @@ list[int]: [2,4,6,8,10]
 rascal>import Prelude;
 ok
 rascal>println("Hello <myList> is <size(myList)> long");
-println("Hello <myList> is <size(myList)> long");
 Hello [2,4,6,8,10] is 5 long
 ok
 ```

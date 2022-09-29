@@ -42,7 +42,6 @@ rascal>visit (ex) {
 >>>>>>>  case Lang l:add(_,_) : println("I found a Lang <l>");
 >>>>>>>  case Exp e:add(_,_)  : println("And I found an Exp <e>");
 >>>>>>>}
-}
 I found a Lang add(number(1),number(2))
 And I found an Exp add(id("y"),otherLang(add(number(1),number(2))))
 And I found an Exp add(id("x"),add(id("y"),otherLang(add(number(1),number(2)))))

@@ -220,7 +220,6 @@ str: "AAbrAACAAdAAbrAA"
 rascal>L = escape("\"Good Morning\", he said", ("\"": "\\\""));
 str: "\\\"Good Morning\\\", he said"
 rascal>println(L);
-println(L);
 \"Good Morning\", he said
 ok
 ```
@@ -360,7 +359,7 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-str: "䖣"
+str: "\n\n\n \tO"
 rascal>arbString(10);
 str: ""
 ```
@@ -912,13 +911,5 @@ rascal>import String;
 ok
 rascal>substitute("abc", (|stdin:///|(1,1): "d"))
 str: "adc"
-```
-
-: "adc"
-```
-
-``
-
-"adc"
 ```
 

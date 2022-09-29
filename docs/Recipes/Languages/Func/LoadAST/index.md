@@ -171,10 +171,3 @@ Prog: prog(
 ```
 
 
-,<1,0>,<5,13>),
-      comments=())],
-  location=|std:///demo/lang/Func/programs/F0.func|(0,97,<1,0>,<5,13>),
-  comments=())
-```
-
-

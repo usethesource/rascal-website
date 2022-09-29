@@ -102,7 +102,6 @@ rascal>import IO;
 ok
 rascal>for ([1, *int L, 2, *int M] := [1,2,3,2,4])
 >>>>>>>  println("L: <L>, M: <M>");
-  println("L: <L>, M: <M>");
 L: [], M: [3,2,4]
 L: [2,3], M: [4]
 list[void]: []
@@ -138,7 +137,6 @@ for prints them all:
 ```rascal-shell ,continue
 rascal>for ([1, *int L, 2, *int M] := [1,2,3,2,4] && size(L) > 0)
 >>>>>>>  println("L: <L>, M: <M>");
-  println("L: <L>, M: <M>");
 L: [2,3], M: [4]
 list[void]: []
 ```
@@ -147,7 +145,6 @@ if prints the first
 ```rascal-shell ,continue
 rascal>if ([1, *int L, 2, *int M] := [1,2,3,2,4] && size(L) > 0)
 >>>>>>>  println("L: <L>, M: <M>");
-  println("L: <L>, M: <M>");
 L: [2,3], M: [4]
 ok
 ```

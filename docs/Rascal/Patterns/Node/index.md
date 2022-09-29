@@ -23,7 +23,6 @@ rascal>import IO;
 ok
 rascal>if("f"(A,13,B) := "f"("abc", 13, false))
 >>>>>>>   println("A = <A>, B = <B>");
-   println("A = <A>, B = <B>");
 A = abc, B = false
 ok
 ```
@@ -34,7 +33,6 @@ rascal>data Color = red(int N) | black(int N);
 ok
 rascal>if(red(K) := red(13))
 >>>>>>>   println("K = <K>");
-   println("K = <K>");
 K = 13
 ok
 ```

@@ -65,6 +65,3 @@ PROGRAM: program(
 Observe how the various parts of the abstract syntax tree are annotated with location attributes.
 
 
-cation attributes.
-
-

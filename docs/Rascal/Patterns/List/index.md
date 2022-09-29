@@ -37,7 +37,6 @@ ok
 ```rascal-shell ,continue
 rascal>if([10, int N, 30, 40, 50] := [10, 20, 30, 40, 50])
 >>>>>>>   println("Match succeeded, N = <N>");
-   println("Match succeeded, N = <N>");
 Match succeeded, N = 20
 ok
 ```
@@ -47,7 +46,6 @@ ok
 ```rascal-shell ,continue
 rascal>if([10, *L, 50] := [10, 20, 30, 40, 50])
 >>>>>>>   println("Match succeeded, L = <L>");
-   println("Match succeeded, L = <L>");
 Match succeeded, L = [20,30,40]
 ok
 ```
@@ -57,7 +55,6 @@ ok
 ```rascal-shell ,continue
 rascal>if([10, *int L, 50] := [10, 20, 30, 40, 50])
 >>>>>>>   println("Match succeeded, L = <L>");
-   println("Match succeeded, L = <L>");
 Match succeeded, L = [20,30,40]
 ok
 ```
@@ -68,7 +65,6 @@ A list pattern may also be __non-linear__, i.e., it may contain uses of variable
 ```rascal-shell ,continue
 rascal>if([10, *L, 40, *L, 50] := [10, 20, 30, 40, 20, 30, 50])
 >>>>>>>   println("Match succeeded, L = <L>");
-   println("Match succeeded, L = <L>");
 Match succeeded, L = [20,30]
 ok
 ```
@@ -77,7 +73,6 @@ Here we see an example, where all pairs of equal elements in a list are printed:
 ```rascal-shell ,continue
 rascal>for([*L1, int N, *L2, N, *L3] := [ 5, 10, 20, 30, 40, 30, 15, 20, 10])
 >>>>>>>    println("N = <N>");
-    println("N = <N>");
 N = 10
 N = 20
 N = 30
@@ -88,7 +83,6 @@ Here we print all ways in which a given list can be partitioned in two lists:
 ```rascal-shell ,continue
 rascal>for([*L1, *L2] := [10, 20, 30, 40, 50]) 
 >>>>>>>    println("<L1> and <L2>");
-    println("<L1> and <L2>");
 [] and [10,20,30,40,50]
 [10] and [20,30,40,50]
 [10,20] and [30,40,50]
@@ -105,7 +99,6 @@ rascal>list[int] L;
 ok
 rascal>if([10, L, 50] := [10, 20, 30, 40, 50])
 >>>>>>>   println("Match succeeded, L = <L>");
-   println("Match succeeded, L = <L>");
 Match succeeded, L = [20,30,40]
 ok
 ```
@@ -117,7 +110,6 @@ rascal>int N;
 ok
 rascal>if([10, N, 30, 40, 50] := [10, 20, 30, 40, 50])
 >>>>>>>   println("Match succeeded, N = <N>");
-   println("Match succeeded, N = <N>");
 Match succeeded, N = 20
 ok
 ```

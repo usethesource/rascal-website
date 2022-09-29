@@ -47,7 +47,6 @@ rascal>switch(S){
 >>>>>>>  case /rum/:   println("The topic is Drunken man");
 >>>>>>>  case /punch/: println("The topic is Kick Boxing");
 >>>>>>>}
-}
 The topic is Star Wars
 ok
 ```

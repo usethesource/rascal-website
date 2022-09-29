@@ -67,7 +67,6 @@ rascal>try
 >>>>>>>  println(head(L)); 
 >>>>>>>catch EmptyList(): 
 >>>>>>>  println("Cannot take head of empty list");
-  println("Cannot take head of empty list");
 Cannot take head of empty list
 ok
 ```

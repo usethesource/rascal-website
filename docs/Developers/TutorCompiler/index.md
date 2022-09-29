@@ -65,14 +65,13 @@ Now we run the compiler:
 
 ```rascal-shell ,continue
 rascal>compile(pcfg);
-compile(pcfg);
-compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/t1.png| at position -1
-compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/CallAnalysis| at position -1
-compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/CallAnalysis/calls.png| at position -1
-compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/If| at position -1
-compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Libraries| at position -1
-compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Libraries/Boolean| at position -1
-compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Questions| at position -1
+compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/t1.png|
+compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/CallAnalysis|
+compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/CallAnalysis/calls.png|
+compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/If|
+compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Libraries|
+compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Libraries/Boolean|
+compiling |project://rascal/src/org/rascalmpl/library/lang/rascal/tutor/examples/Test/Questions|
 list[Message]: []
 ```
 
@@ -81,6 +80,4 @@ Afterwards you will find all the generated files in `./target/classes/doc/` incl
 #### Pitfalls
 
 * In `src/org/rascalmpl/library/lang/rascal/tutor` you will find "throwaway" scripts for translating asciidoctor markdown notation to docusaurus markdown notation. Sometimes it requires running the same script twice or three times to see the desired effects. This is because some rules generate the input for other rules to be transformed again.
-
-you will find "throwaway" scripts for translating asciidoctor markdown notation to docusaurus markdown notation. Sometimes it requires running the same script twice or three times to see the desired effects. This is because some rules generate the input for other rules to be transformed again.
 

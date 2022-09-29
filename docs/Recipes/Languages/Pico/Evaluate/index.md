@@ -121,11 +121,3 @@ map[str, PicoValue]: (
 ```
 
 
-lare x : natural, y : natural; x := 1; y := x + 5 end");
-map[str, PicoValue]: (
-  "x":natval(1),
-  "y":natval(6)
-)
-```
-
-

@@ -146,7 +146,3 @@ to lowest precedence. In other words, operators listed earlier in the table bind
 
 
 
-ssions/Values/Boolean/Or/index.md) | Or on Boolean values |
-
-
-

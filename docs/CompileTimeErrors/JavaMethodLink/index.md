@@ -390,7 +390,7 @@ org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.librar
 	at org.rascalmpl.semantics.dynamic.LocalVariableDeclaration$Default.interpret(LocalVariableDeclaration.java:36)
 	at org.rascalmpl.semantics.dynamic.Statement$VariableDeclaration.interpret(Statement.java:1003)
 	at org.rascalmpl.semantics.dynamic.Statement$NonEmptyBlock.interpret(Statement.java:759)
-	at org.rascalmpl.semantics.dynamic.Statement$IfThen.interpret(Statement.java:604)
+	at org.rascalmpl.semantics.dynamic.Statement$IfThenElse.interpret(Statement.java:679)
 	at org.rascalmpl.interpreter.result.RascalFunction.runBody(RascalFunction.java:385)
 	at org.rascalmpl.interpreter.result.RascalFunction.call(RascalFunction.java:326)
 	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
@@ -439,30 +439,6 @@ org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.librar
 	at org.rascalmpl.interpreter.Evaluator.eval(Evaluator.java:955)
 	at org.rascalmpl.interpreter.Evaluator.eval(Evaluator.java:908)
 	at org.rascalmpl.repl.RascalInterpreterREPL.evalStatement(RascalInterpreterREPL.java:132)
-	at org.rascalmpl.repl.BaseRascalREPL.handleInput(BaseRascalREPL.java:106)
-	at org.rascalmpl.shell.REPLRunner$1.handleInput(REPLRunner.java:61)
-	at org.rascalmpl.repl.BaseREPL.handleInput(BaseREPL.java:180)
-	at org.rascalmpl.repl.BaseREPL.run(BaseREPL.java:347)
-	at org.rascalmpl.shell.REPLRunner.run(REPLRunner.java:96)
-	at org.rascalmpl.shell.RascalShell.main(RascalShell.java:69)
-ok
-```
-The same error message is generated if the function declaration contains a body:
-
-```rascal-shell ,error
-rascal>@javaClass{org.rascalmpl.library.Preludexxx}
->>>>>>>public java int size(list[&T] lst){
->>>>>>>  return 0;
->>>>>>>}
-|prompt:///|(0,94,<1,0>,<4,1>): Java function has a body
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/NonAbstractJavaFunction/NonAbstractJavaFunction.html|
-ok
-```
-
-
-
-
-repl.RascalInterpreterREPL.evalStatement(RascalInterpreterREPL.java:132)
 	at org.rascalmpl.repl.BaseRascalREPL.handleInput(BaseRascalREPL.java:106)
 	at org.rascalmpl.shell.REPLRunner$1.handleInput(REPLRunner.java:61)
 	at org.rascalmpl.repl.BaseREPL.handleInput(BaseREPL.java:180)

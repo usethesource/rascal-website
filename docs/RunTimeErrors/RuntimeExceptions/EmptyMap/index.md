@@ -57,7 +57,6 @@ rascal>try
 >>>>>>>  println(getOneFrom(M)); 
 >>>>>>>catch EmptyMap(): 
 >>>>>>>  println("Cannot use getOneFrom on empty map");
-  println("Cannot use getOneFrom on empty map");
 Cannot use getOneFrom on empty map
 ok
 ```

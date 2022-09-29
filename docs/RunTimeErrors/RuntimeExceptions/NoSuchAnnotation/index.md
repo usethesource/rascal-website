@@ -68,7 +68,6 @@ ok
 rascal>import IO;
 ok
 rascal>try piece@quality; catch NoSuchAnnotation(l): println("No such annotation: <l>");
-try piece@quality; catch NoSuchAnnotation(l): println("No such annotation: <l>");
 No such annotation: quality
 ok
 ```

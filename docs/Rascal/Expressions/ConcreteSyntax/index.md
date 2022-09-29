@@ -34,10 +34,3 @@ For any non-terminal defined in a [Syntax Definition](../../../Rascal/Declaratio
 * Source-to-source transformations are easy with concrete syntax patterns.
 
 
-y lead to surprises.
-*  The disambiguation of embedded concrete syntax fragments may change in the near future.
-
-
-re.
-
-

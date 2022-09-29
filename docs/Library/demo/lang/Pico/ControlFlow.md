@@ -37,5 +37,3 @@ data CFNode
 * ``CFGraph cflowProgram(PROGRAM P:program(list[DECL] _, list[STATEMENT] Series))``
 * ``CFGraph cflowProgram(str txt)``
 
-t)``
-

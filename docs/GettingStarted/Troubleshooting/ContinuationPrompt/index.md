@@ -48,7 +48,6 @@ ok
 rascal>for (int i <- [0..11]) {
 >>>>>>>    println("Counting <i>");
 >>>>>>>}
-}
 Counting 0
 Counting 1
 Counting 2

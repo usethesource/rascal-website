@@ -52,7 +52,6 @@ rascal>(i <- [1,2,3,4] && i % 2 == 0) || false
 bool: true
 rascal>for ((i <- [1,2,3,4] && i % 2 == 0) || false) 
 >>>>>>>  println("true for <i>");
-  println("true for <i>");
 true for 2
 true for 4
 list[void]: []

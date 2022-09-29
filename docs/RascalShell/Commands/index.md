@@ -35,7 +35,6 @@ ok
 rascal>f(2) * f(2) // expression
 int: 16
 rascal>:help // builtin command
-:help // builtin command
 Welcome to the Rascal command shell.
 
 Shell commands:

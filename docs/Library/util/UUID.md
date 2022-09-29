@@ -18,7 +18,7 @@ generates a unique identifier shaped as a `loc`
 
 #### Description
 
-This function generates a UUID, see http://en.wikipedia.org/wiki/Universally_unique_identifier.
+This function generates a UUID, see <http://en.wikipedia.org/wiki/Universally_unique_identifier>.
 Since UUIDs are useful to assign an opaque and unique identity to data, the function returns
 a [Location](../../Rascal/Expressions/Values/Location/index.md) (which is the preferred representation for encoding identities in Rascal)
 
@@ -34,7 +34,7 @@ The uuid() function generates a location with the authority showing the literal 
 
 ```rascal-shell ,continue
 rascal>uuid()
-loc: |uuid://125a763f-2eed-42e9-93c3-8a972394aa2a|
+loc: |uuid://0cb76ddf-e88a-41e5-a25e-0b5b29f564af|
 ```
 
 Use it to relate identies to data objects, as in this example which adds a field to a relation:
@@ -56,29 +56,29 @@ rel[int,int]: {
 }
 rascal>rel[int n, int square, loc id] myUniqueData = { <i,j,uuid()> | <i,j> <- myData };
 rel[int n,int square,loc id]: {
-  <5,25,|uuid://31287733-143d-4b53-bc35-0a01ca12dea0|>,
-  <1,1,|uuid://6d6fa54d-2249-4771-8be2-36e65815d19c|>,
-  <6,36,|uuid://e83783d6-36db-43c7-8385-f61ff8e7f9b4|>,
-  <7,49,|uuid://6a2bd4f6-0a46-4d7d-a8aa-935dde784685|>,
-  <4,16,|uuid://79e377a9-5744-40a1-81db-061e9cdac456|>,
-  <2,4,|uuid://d21e8236-45d4-47f2-9668-2760c35976ed|>,
-  <3,9,|uuid://ceed6d20-80db-490f-9a94-f7baf60c0b93|>,
-  <9,81,|uuid://d5fc8f14-e8ed-4549-950d-4f97be946135|>,
-  <8,64,|uuid://3fde18d4-4e5e-4071-b9ef-1d062b2c39be|>,
-  <10,100,|uuid://263e06ac-32ba-463e-84f4-801899d9023f|>
+  <6,36,|uuid://1f3f7fd8-becb-4650-a2ae-00ef38e409a4|>,
+  <5,25,|uuid://a5e84f1b-e7f8-4b27-be4d-68e098be08f5|>,
+  <3,9,|uuid://f6c30c58-49f1-4898-b05f-fa9e7fe91aa5|>,
+  <7,49,|uuid://1a509251-ac9d-44ad-b392-6503f2bdce18|>,
+  <8,64,|uuid://43cc11a3-2c5a-4810-89ec-d8c5ee5102d8|>,
+  <4,16,|uuid://fb38731d-c175-493a-b6e5-6cb2c10c67e7|>,
+  <1,1,|uuid://6d4a4a0c-69c9-4ee4-8f7e-361fe466417e|>,
+  <2,4,|uuid://127d0ba3-7950-4c74-92c0-137450118883|>,
+  <9,81,|uuid://393eb8ad-821a-4242-8b7f-a102b670fd55|>,
+  <10,100,|uuid://f69b46a0-b3c8-4f2f-8997-7bd8807d5a5a|>
 }
 rascal>map[tuple[int i, int j] t, loc id] myUniqueMap = (<i,j>:uuid() | <i,j> <- myData );
 map[tuple[int i,int j] t, loc id]: (
-  <6,36>:|uuid://30d124cd-2272-4d0d-a5d3-c51455645264|,
-  <2,4>:|uuid://2fc5af36-bfc8-433d-9f6a-ee4f436aa536|,
-  <7,49>:|uuid://66fa3666-059e-4055-a85d-d754e4deec16|,
-  <9,81>:|uuid://d67f2516-dc61-4dc9-a8fc-453c2a45977f|,
-  <8,64>:|uuid://ac9b8093-c4ec-4337-94dc-537c2a74d86e|,
-  <5,25>:|uuid://fa4d1979-b3a2-4e57-8d57-3b749c5a7d03|,
-  <4,16>:|uuid://e8540d9d-c9e0-4d87-9765-244a69aa2ae3|,
-  <1,1>:|uuid://e338ed7b-570e-496e-ad28-d296907170b7|,
-  <10,100>:|uuid://5e76f1ee-81d4-4133-964f-fb7ecd9f6997|,
-  <3,9>:|uuid://59b2feac-789f-42d4-927c-755aa289a6b2|
+  <6,36>:|uuid://d5756949-9e67-435d-9eb9-274a62e77bba|,
+  <2,4>:|uuid://95d3505c-39a4-4206-89df-2b7bfec1ef3a|,
+  <7,49>:|uuid://f02d5d89-babe-4567-a817-2c0747a05392|,
+  <9,81>:|uuid://70e114db-081f-4807-bd79-79f5d1b5a907|,
+  <8,64>:|uuid://4c96f5db-b747-4afe-abe3-efe63d58cc7a|,
+  <5,25>:|uuid://29aa7722-7fb2-4ab8-9059-0ff81cd153e1|,
+  <4,16>:|uuid://2c4aab76-b434-46c6-b008-dcb9c5fdcfd2|,
+  <1,1>:|uuid://b95d9a71-c651-4cc3-92a4-8d4a43855c0b|,
+  <10,100>:|uuid://28e9d321-1d1b-44ee-bd1d-87e4972a1d45|,
+  <3,9>:|uuid://2c436915-a0e9-441d-b772-56241d745901|
 )
 ```
 Note how uuid() should always generate a fresh value:

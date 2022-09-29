@@ -54,7 +54,6 @@ Here is the result:
 rascal>import demo::basic::Bottles;
 ok
 rascal>sing();
-sing();
 99 bottles of beer on the wall, 99 bottles of beer.
 Take one down, pass it around, 98 bottles of beer on the wall.
 

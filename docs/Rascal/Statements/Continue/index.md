@@ -30,7 +30,6 @@ rascal>for(int i <- [1 .. 10]){
 >>>>>>>       continue;
 >>>>>>>    println("i = <i>");
 >>>>>>>}
-}
 i = 1
 i = 2
 i = 4

@@ -79,6 +79,3 @@ Notes:
 *  Two auxiliary functions `program` are defined that parse a given string or a given location as Pico program.
 
 
-o program.
-
-

@@ -9,7 +9,7 @@ title: "module lang::yaml::Model"
 
 #### Synopsis
 
-AST model for YAML (loosely based on the serialization model of http://www.yaml.org/spec/1.2/spec.html)
+AST model for YAML (loosely based on the serialization model of <http://www.yaml.org/spec/1.2/spec.html>)
 
 
 ## data Node {#lang-yaml-Model-Node}

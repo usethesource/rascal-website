@@ -20,9 +20,10 @@ Comprehensions provide a concise notation to conditionally generate new values.
 
 Comprehensions are defined for the following types:
 
-*  `list`, see [Comprehension](../../../Rascal/Expressions/Values/List/Comprehension/index.md),
-*  `set`, see [Comprehension](../../../Rascal/Expressions/Values/Set/Comprehension/index.md),
-*  `map`, see [Comprehension](../../../Rascal/Expressions/Values/Map/Comprehension/index.md).
+*  `list`, see [list comprehension](../../../Rascal/Expressions/Values/List/Comprehension/index.md),
+*  `set`, see [set comprehension](../../../Rascal/Expressions/Values/Set/Comprehension/index.md),
+*  `map`, see [map comprehension](../../../Rascal/Expressions/Values/Map/Comprehension/index.md)
+*  for reducing to any value, see [Reducer](../../../Rascal/Expressions/Reducer/index.md) expressions.
 
 
 The syntax varies slightly for each type, but comprehensions have the following common elements:
@@ -90,6 +91,6 @@ rascal>(fruit : fruits[fruit] | fruit <- fruits, fruits[fruit] > 10);
 map[str, int]: ("orange":35,"berry":25)
 ```
 
-See [Comprehension](../../../Rascal/Expressions/Values/List/Comprehension/index.md), [Comprehension](../../../Rascal/Expressions/Values/Set/Comprehension/index.md), or [Comprehension](../../../Rascal/Expressions/Values/Map/Comprehension/index.md) for more examples.
+See [Comprehension](../../../Rascal/Expressions/Values/List/Comprehension/index.md), [Comprehension](../../../Rascal/Expressions/Values/Set/Comprehension/index.md), [Comprehension](../../../Rascal/Expressions/Values/Map/Comprehension/index.md), or [Reducer](../../../Rascal/Expressions/Reducer/index.md) for more examples.
 
 

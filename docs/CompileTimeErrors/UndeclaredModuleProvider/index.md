@@ -22,8 +22,8 @@ Misspelling the scheme for Rascal's standard library (which is `std`) gives an e
 rascal>import IO;
 ok
 rascal>readFileLines(|standard:///demo/basic/Hello.rsc|);
-|std:///IO.rsc|(15532,773,<663,0>,<685,24>): IO("Unsupported scheme \'standard\'")
-	at *** somewhere ***(|std:///IO.rsc|(15532,773,<663,0>,<685,24>))
+|std:///IO.rsc|(15533,773,<663,0>,<685,24>): IO("Unsupported scheme \'standard\'")
+	at *** somewhere ***(|std:///IO.rsc|(15533,773,<663,0>,<685,24>))
 	at readFileLines(|prompt:///|(14,34,<1,14>,<1,48>))
 ok
 ```

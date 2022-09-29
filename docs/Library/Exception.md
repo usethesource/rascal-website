@@ -109,7 +109,6 @@ rascal>try {
 >>>>>>>  N = 100;
 ok
 rascal>println(N);
-println(N);
 100
 ok
 ```

@@ -28,7 +28,6 @@ Here, is how to import the [IO](../../../Library/IO.md) library:
 rascal>import IO;
 ok
 rascal>println("IO library was imported.");
-println("IO library was imported.");
 IO library was imported.
 ok
 ```

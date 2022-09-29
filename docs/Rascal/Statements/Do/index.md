@@ -32,7 +32,6 @@ ok
 rascal>int n = 3;
 int: 3
 rascal>do { println("n = <n>"); n -= 1; } while (n > 0);
-do { println("n = <n>"); n -= 1; } while (n > 0);
 n = 3
 n = 2
 n = 1

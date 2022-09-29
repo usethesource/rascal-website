@@ -41,7 +41,6 @@ ok
 rascal>:set tracing true
 ok
 rascal>fac1(5)
-fac1(5)
 call  >Factorial::fac1(5)
 call  >>Factorial::fac1(4)
 call  >>>Factorial::fac1(3)

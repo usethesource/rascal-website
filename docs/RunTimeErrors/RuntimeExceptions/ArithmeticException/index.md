@@ -53,7 +53,6 @@ ok
 rascal>import IO;
 ok
 rascal>try println(3/0); catch ArithmeticException(msg): println("The message is: <msg>");
-try println(3/0); catch ArithmeticException(msg): println("The message is: <msg>");
 The message is: / by zero
 ok
 ```

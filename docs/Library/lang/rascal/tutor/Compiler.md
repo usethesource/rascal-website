@@ -64,7 +64,7 @@ compiles each pcfg.srcs folder as a course root
 
 ## function generateIndexFile {#lang-rascal-tutor-Compiler-generateIndexFile}
 
-* ``list[Message] generateIndexFile(loc d, PathConfig pcfg)``
+* ``list[Message] generateIndexFile(loc d, PathConfig pcfg, int sidebar_position=-1)``
 
 ## function compileRascalFile {#lang-rascal-tutor-Compiler-compileRascalFile}
 

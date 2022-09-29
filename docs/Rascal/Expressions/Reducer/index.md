@@ -18,10 +18,10 @@ Reduce generated values to a single value.
 
 #### Description
 
-A reducer resembles the http://en.wikipedia.org/wiki/Fold_(higher-order_function)[fold] function
-found in most functional languages.
+Reducers are comprehesions (see [list comprehension](../../../Rascal/Expressions/Values/List/Comprehension/index.md), [set comprehension](../../../Rascal/Expressions/Values/Set/Comprehension/index.md)) that construct any
+type of value by an iterating rather than just a list or a set.
 
-A reducer is equivalent to the following code:
+Every reducer (as above)  is equivalent to the following code:
 ```rascal,subs="verbatim,quotes"
 it = _InitExp_; // <1>
 for(_Gen₁_, _Gen₂_, ... ) // <2>
@@ -30,13 +30,13 @@ it; // <4>
 ```
 and is executed as follows:
 
-<1> A fresh variable `it` is initialized with _InitExp_. 
+1. A fresh variable, always named `it`, is initialized with _InitExp_. 
     We call the variable `it` since we use `it` to initialize the reducer, to make changes to `it`,
     and to return `it` as result.
-<2> A for loop iterates over all values produced by the generators `Gen₁`, `Gen₂`, ... .
-<3> In the body of the loop, variable `it` is updated to reflect a new reduced value.
+2. A for loop iterates over all values produced by the generators `Gen₁`, `Gen₂`, ... .
+3. In the body of the loop, variable `it` is updated to reflect a new reduced value.
     Note that `it` itself and variables introduced in _Gen_₁, _Gen_₂, ... may occur in _RedExp_.
-<4> The value of `it` is the result of the reducer.
+4. The final value of `it` is the result of the reducer.
 
 #### Examples
 
@@ -49,5 +49,10 @@ int: 16
 rascal>(1 | it * e | int e <- L);
 int: 105
 ```
+
+#### Benefits
+
+* A reducer resembles the [fold](http://en.wikipedia.org/wiki/Fold_(higher-order_function)) function
+found in most functional languages.
 
 

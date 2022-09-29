@@ -51,7 +51,6 @@ Use the postfix isDefined operator `?` to test whether the value is defined:
 
 ```rascal-shell ,continue,error
 rascal>if(M["c"]?) println("defined"); else println("not defined");
-if(M["c"]?) println("defined"); else println("not defined");
 not defined
 ok
 ```
@@ -69,7 +68,6 @@ First we import the Rascal exceptions (which are also included in `Prelude`):
 rascal>import Exception;
 ok
 rascal>try println(M["c"]); catch NoSuchKey(k): println("Key <k> does not exist");
-try println(M["c"]); catch NoSuchKey(k): println("Key <k> does not exist");
 Key c does not exist
 ok
 ```

@@ -66,6 +66,3 @@ program entities with their location.
     *  For each assignment statement a (location, identifier) pair is added to the result.
 
 
-added to the result.
-
-

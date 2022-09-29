@@ -37,7 +37,6 @@ ColoredTree: red(
     leaf(4)))
 rascal>for(/M:black(_,leaf(4)) := T)
 >>>>>>>    println("Match <M>");
-    println("Match <M>");
 Match black(leaf(3),leaf(4))
 Match black(leaf(5),leaf(4))
 list[void]: []

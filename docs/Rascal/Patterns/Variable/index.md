@@ -43,7 +43,6 @@ rascal>import IO;
 ok
 rascal>if(M := 10)
 >>>>>>>   println("Match succeeded, M == <M>");
-   println("Match succeeded, M == <M>");
 Match succeeded, M == 10
 ok
 ```

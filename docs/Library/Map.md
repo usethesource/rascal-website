@@ -149,9 +149,9 @@ ok
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "pineapple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "pear"
+str: "pineapple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "pear"
+str: "apple"
 ```
 
 ## function invert {#Map-invert}
@@ -448,7 +448,4 @@ ok
 rascal>itoString(("apple": 1, "pear": 2, "orange": 3));
 str: "(\"pear\":2,\"orange\":3,\"apple\":1)"
 ```
-
-```
-
 

@@ -262,7 +262,6 @@ ok
 rascal>F = readFile(|project://rascal/src/org/rascalmpl/library/lang/xml/examples/note.xml|);
 str: "\<note\>\n\<to\>Jurgen\</to\>\n\<to\>Tijs\</to\>\n\<from\>Paul\</from\>\n\<date\>2012-04-01\</date\>\n\<heading font=\"bold\"\>Reminder\</heading\>\n\<body\>Don\'t forget to run the Rascal tests!\</body\>\n\</note\>"
 rascal>println(F);
-println(F);
 <note>
 <to>Jurgen</to>
 <to>Tijs</to>
@@ -275,7 +274,6 @@ ok
 rascal>S = xmlRaw(parseXMLDOM(F));
 str: "\<?xml version=\"1.0\" encoding=\"UTF-8\"?\>\r\n\<note\>\r\n\<to\>Jurgen\</to\>\r\n\<to\>Tijs\</to\>\r\n\<from\>Paul\</from\>\r\n\<date\>2012-04-01\</date\>\r\n\<heading font=\"bold\"\>Reminder\</heading\>\r\n\<body\>Don\'t forget to run the Rascal tests!\</body\>\r\n\</note\>\r\n"
 rascal>println(S);
-println(S);
 <?xml version="1.0" encoding="UTF-8"?>
 <note>
 <to>Jurgen</to>
@@ -310,7 +308,6 @@ ok
 rascal>F = readFile(|project://rascal/src/org/rascalmpl/library/lang/xml/examples/note.xml|);
 str: "\<note\>\n\<to\>Jurgen\</to\>\n\<to\>Tijs\</to\>\n\<from\>Paul\</from\>\n\<date\>2012-04-01\</date\>\n\<heading font=\"bold\"\>Reminder\</heading\>\n\<body\>Don\'t forget to run the Rascal tests!\</body\>\n\</note\>"
 rascal>println(F);
-println(F);
 <note>
 <to>Jurgen</to>
 <to>Tijs</to>
@@ -323,7 +320,6 @@ ok
 rascal>S = xmlCompact(parseXMLDOM(F));
 str: "\<?xml version=\"1.0\" encoding=\"UTF-8\"?\>\r\n\<note\>\<to\>Jurgen\</to\>\<to\>Tijs\</to\>\<from\>Paul\</from\>\<date\>2012-04-01\</date\>\<heading font=\"bold\"\>Reminder\</heading\>\<body\>Don\'t forget to run the Rascal tests!\</body\>\</note\>\r\n"
 rascal>println(S);
-println(S);
 <?xml version="1.0" encoding="UTF-8"?>
 <note><to>Jurgen</to><to>Tijs</to><from>Paul</from><date>2012-04-01</date><heading font="bold">Reminder</heading><body>Don't forget to run the Rascal tests!</body></note>
 ok
@@ -352,7 +348,6 @@ ok
 rascal>F = readFile(|project://rascal/src/org/rascalmpl/library/lang/xml/examples/note.xml|);
 str: "\<note\>\n\<to\>Jurgen\</to\>\n\<to\>Tijs\</to\>\n\<from\>Paul\</from\>\n\<date\>2012-04-01\</date\>\n\<heading font=\"bold\"\>Reminder\</heading\>\n\<body\>Don\'t forget to run the Rascal tests!\</body\>\n\</note\>"
 rascal>println(F);
-println(F);
 <note>
 <to>Jurgen</to>
 <to>Tijs</to>
@@ -365,7 +360,6 @@ ok
 rascal>S = xmlPretty(parseXMLDOM(F));
 str: "\<?xml version=\"1.0\" encoding=\"UTF-8\"?\>\r\n\<note\>\r\n  \<to\>Jurgen\</to\>\r\n  \<to\>Tijs\</to\>\r\n  \<from\>Paul\</from\>\r\n  \<date\>2012-04-01\</date\>\r\n  \<heading font=\"bold\"\>Reminder\</heading\>\r\n  \<body\>Don\'t forget to run the Rascal tests!\</body\>\r\n\</note\>\r\n"
 rascal>println(S);
-println(S);
 <?xml version="1.0" encoding="UTF-8"?>
 <note>
   <to>Jurgen</to>

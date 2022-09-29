@@ -11,7 +11,7 @@ An unordered set of tuples.
 In mathematics, given sets _D_₁, _D_₂, ... _D_ₙ, a
 _n_-ary relation _R_ is characterized by _R_ &subseteq;  _D_₁ &times; _D_₂ &times; ... &times; _D_ₙ.
 In other words, _R_ consists of a set of tuples < _V₁_, ..., _Vₙ_ > where each _V_ᵢ is an element of
-the set _D_ᵢ. When _n_ = 2, we call the relation a http://en.wikipedia.org/wiki/Relation_(mathematics)[binary relation].
+the set _D_ᵢ. When _n_ = 2, we call the relation a [binary relation](http://en.wikipedia.org/wiki/Relation_(mathematics))
 
 In [database theory](http://en.wikipedia.org/wiki/Relational_algebra), a relation is a table with a heading and an unordered set of tuples:
 

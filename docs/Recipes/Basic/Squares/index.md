@@ -48,7 +48,6 @@ Here is how `square` can be used:
 rascal>import demo::basic::Squares;
 ok
 rascal>squares(9);
-squares(9);
 Table of squares from 1 to 9
 
 1 squared = 1
@@ -77,7 +76,6 @@ and print the value of `squaresTemplate`:
 rascal>import IO;
 ok
 rascal>println(squaresTemplate(9));
-println(squaresTemplate(9));
 Table of squares from 1 to 9
 
   1 squared = 1

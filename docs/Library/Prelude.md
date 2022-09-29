@@ -40,7 +40,6 @@ Prelude combines the following modules:
 rascal>import Prelude;
 ok
 rascal>println("Hello World"); // from IO
-println("Hello World"); // from IO
 Hello World
 ok
 rascal>size([1,2,3])           // from List

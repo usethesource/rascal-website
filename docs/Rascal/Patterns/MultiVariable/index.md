@@ -32,7 +32,6 @@ Using lists:
 ```rascal-shell ,continue
 rascal>if([10, *N, 50] := [10, 20, 30, 40, 50])
 >>>>>>>   println("Match succeeds, N == <N>");
-   println("Match succeeds, N == <N>");
 Match succeeds, N == [20,30,40]
 ok
 ```
@@ -41,7 +40,6 @@ the above is equivalent with:
 ```rascal-shell ,continue
 rascal>if([10, *int N, 50] := [10, 20, 30, 40, 50])
 >>>>>>>   println("Match succeeds, N == <N>");
-   println("Match succeeds, N == <N>");
 Match succeeds, N == [20,30,40]
 ok
 ```
@@ -50,7 +48,6 @@ Using sets:
 ```rascal-shell ,continue
 rascal>if({10, *S, 50} := {50, 40, 30, 30, 10})
 >>>>>>>   println("Match succeeds, S == <S>");
-   println("Match succeeds, S == <S>");
 Match succeeds, S == {40,30}
 ok
 ```
@@ -59,7 +56,6 @@ the above is equivalent with:
 ```rascal-shell ,continue
 rascal>if({10, *int S, 50} := {50, 40, 30, 30, 10})
 >>>>>>>   println("Match succeeds, S == <S>");
-   println("Match succeeds, S == <S>");
 Match succeeds, S == {40,30}
 ok
 ```

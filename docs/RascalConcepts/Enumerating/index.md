@@ -80,7 +80,6 @@ rascal>import IO;
 ok
 rascal>for(int x <- {1, 3, 5, 7, 11 })
 >>>>>>>    println("x = <x>");
-    println("x = <x>");
 x = 5
 x = 7
 x = 1

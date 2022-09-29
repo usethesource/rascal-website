@@ -6,6 +6,20 @@ title: "module analysis::grammars::LOC"
 
 `import analysis::grammars::LOC;`
 
+#### Description
+
+
+We use this definition to separate lines from: <http://en.wikipedia.org/wiki/Newline>:
+ 
+* LF:    Line Feed, U+000A
+* VT:    Vertical Tab, U+000B
+* FF:    Form Feed, U+000C
+* CR:    Carriage Return, U+000D
+* CR+LF: CR (U+000D) followed by LF (U+000A)
+* NEL:   Next Line, U+0085
+* LS:    Line Separator, U+2028
+* PS:    Paragraph Separator, U+2029
+
 
 ## alias Stats {#analysis-grammars-LOC-Stats}
 

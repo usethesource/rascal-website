@@ -40,7 +40,6 @@ ok
 ```rascal-shell ,continue
 rascal>if({10, 30, 40, 50, int N} := {10, 20, 30, 40, 50})
 >>>>>>>   println("Match succeeded, N = <N>");
-   println("Match succeeded, N = <N>");
 Match succeeded, N = 20
 ok
 ```
@@ -50,7 +49,6 @@ ok
 ```rascal-shell ,continue
 rascal>if({10, *S, 50} := {50, 40, 30, 20, 10})
 >>>>>>>   println("Match succeeded, S = <S>");
-   println("Match succeeded, S = <S>");
 Match succeeded, S = {40,20,30}
 ok
 ```
@@ -60,7 +58,6 @@ ok
 ```rascal-shell ,continue
 rascal>if({10, *int S, 50} := {50, 40, 30, 20, 10})
 >>>>>>>   println("Match succeeded, S = <S>");
-   println("Match succeeded, S = <S>");
 Match succeeded, S = {40,20,30}
 ok
 ```
@@ -69,7 +66,6 @@ Here we see an example, where all possible splits of a set in two subsets are pr
 ```rascal-shell ,continue
 rascal>for({*S1, *S2} :={30, 20, 10})
 >>>>>>>    println("<S1> and <S2>");
-    println("<S1> and <S2>");
 {10,20,30} and {}
 {10,20} and {30}
 {10,30} and {20}
@@ -88,7 +84,6 @@ rascal>set[int] S;
 ok
 rascal>if({10, *S, 50} := {10, 20, 30, 40, 50})
 >>>>>>>   println("Match succeeded, S = <S>");
-   println("Match succeeded, S = <S>");
 Match succeeded, S = {40,20,30}
 ok
 ```
@@ -100,7 +95,6 @@ rascal>int N;
 ok
 rascal>if({10, N, 30, 40, 50} := {50, 40, 30, 20, 10})
 >>>>>>>   println("Match succeeded, N = <N>");
-   println("Match succeeded, N = <N>");
 Match succeeded, N = 20
 ok
 ```

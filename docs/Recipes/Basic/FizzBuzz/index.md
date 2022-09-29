@@ -70,7 +70,6 @@ void fizzbuzz3() {
 rascal>import demo::basic::FizzBuzz;
 ok
 rascal>fizzbuzz1();
-fizzbuzz1();
 1
 2
 Fizz

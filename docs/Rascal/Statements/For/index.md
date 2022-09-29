@@ -30,7 +30,6 @@ the value of a for statement consists of all values contributed by [Append](../.
 rascal>import IO;
 ok
 rascal>for(int n <- [1 .. 5]) println("n = <n>");
-for(int n <- [1 .. 5]) println("n = <n>");
 n = 1
 n = 2
 n = 3

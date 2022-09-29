@@ -59,7 +59,6 @@ rascal>try
 >>>>>>>  L[5]; 
 >>>>>>>catch IndexOutOfBounds(msg):
 >>>>>>>  println("The message is: <msg>");
-  println("The message is: <msg>");
 The message is: 5
 ok
 ```

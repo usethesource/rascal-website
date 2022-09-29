@@ -219,9 +219,9 @@ ok
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "zebra"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "snake"
+str: "elephant"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "owl"
+str: "zebra"
 ```
 
 ## function getFirstFrom {#List-getFirstFrom}
@@ -944,7 +944,7 @@ list[str]: ["mango","strawberry","pear","pineapple","banana","grape","kiwi"]
 rascal>sort(fruits);
 list[str]: ["banana","grape","kiwi","mango","pear","pineapple","strawberry"]
 rascal>sort(fruits, bool(str a, str b){ return size(a) > size(b); });
-list[str]: ["strawberry","pineapple","banana","grape","mango","pear","kiwi"]
+list[str]: ["strawberry","pineapple","banana","mango","grape","pear","kiwi"]
 ```
 
 ## function isSorted {#List-isSorted}
@@ -984,9 +984,9 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [4,1,2,3]
+list[int]: [4,2,3,1]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["elephant","zebra","owl","snake"]
+list[str]: ["elephant","snake","zebra","owl"]
 ```
 
 ## function split {#List-split}
@@ -1140,17 +1140,17 @@ See [getOneFrom](../Library/List.md#List-getOneFrom) to only selected an element
 rascal>import List;
 ok
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <20,[10,30,40,50]>
+tuple[int,list[int]]: <30,[10,20,40,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <40,[10,20,30,50]>
+tuple[int,list[int]]: <20,[10,30,40,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <30,[10,20,40,50]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
+tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"snake",["zebra","elephant","owl"]>
+tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
 ```
 
 ## function takeWhile {#List-takeWhile}
@@ -1473,8 +1473,4 @@ lrel[int first,str second,int third]: [
 ## function zip3 {#List-zip3}
 
 * ``list[tuple[&T first, &U second, &V third]] zip3(list[&T] a, list[&U] b, list[&V] c)``
-
-`
-
-
 

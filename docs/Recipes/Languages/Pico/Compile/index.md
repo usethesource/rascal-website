@@ -211,11 +211,3 @@ list[Instr]: [
 ```
 
 
- sub2(),
-  assign(),
-  go("L1"),
-  label("L2")
-]
-```
-
-

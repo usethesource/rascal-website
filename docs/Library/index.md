@@ -19,7 +19,6 @@ root of the library. To include them all in one go, use the [Prelude](../Library
 rascal>import Prelude;
 ok
 rascal>println("Hello Rascal!");
-println("Hello Rascal!");
 Hello Rascal!
 ok
 ```
@@ -109,6 +108,4 @@ These are the entry points to the entire library:
 
 * [Prelude](../Library/Prelude.md) is a rather big collection of functions to have imported. It is sometimes better to cherry-pick the modules you need.
 * Some languages in [lang](../Library/lang/index.md) are not 100% tested and up-to-date. We are extracting these one-by-one to experimental library packages.
-
-e extracting these one-by-one to experimental library packages.
 

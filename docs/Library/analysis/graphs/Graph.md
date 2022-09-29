@@ -85,6 +85,19 @@ set[set[int]]: {
 
 * ``tuple[set[set[&T]], list[&T]]  stronglyConnectedComponentsAndTopSort(Graph[&T] ag)``
 
+#### Synopsis
+
+Compute the strongly connected components in a graph and return also the topologically sorted elements
+
+#### Description
+
+
+Tarjan's algorithm for computing strongly connected components in a graph
+Returns :
+* a set of strongly connected components (sets of vertices)
+* the topological sort of vertices even for cyclic graphs)
+* See <https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm>
+
 ## function bottom {#analysis-graphs-Graph-bottom}
 
 * ``set[&T] bottom(Graph[&T] G)``
@@ -263,7 +276,7 @@ Determine the connected components of a graph.
 
 #### Description
 
-Returns the http://en.wikipedia.org/wiki/Connected_component_(graph_theory)[connected components] of Graph `G`, as sets of nodes. All nodes within one component are all reachable from one another, there are no paths between two nodes from different components. The graph is assumed to be undirected.
+Returns the [connected components](http://en.wikipedia.org/wiki/Connected_component_(graph_theory) of Graph `G`, as sets of nodes. All nodes within one component are all reachable from one another, there are no paths between two nodes from different components. The graph is assumed to be undirected.
 
 #### Examples
 

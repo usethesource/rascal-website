@@ -57,7 +57,6 @@ rascal>try
 >>>>>>>  println(getOneFrom(S)); 
 >>>>>>>catch EmptySet(): 
 >>>>>>>  println("Cannot apply getOneFrom to empty set");
-  println("Cannot apply getOneFrom to empty set");
 Cannot apply getOneFrom to empty set
 ok
 ```

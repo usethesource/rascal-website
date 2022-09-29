@@ -215,7 +215,6 @@ The only difference between this function and [println](../Library/IO.md#IO-prin
 rascal>import IO;
 ok
 rascal>bprintln("Hello World");
-bprintln("Hello World");
 Hello World
 bool: true
 ```
@@ -305,7 +304,6 @@ and [iprintToFile](../Library/IO.md#IO-iprintToFile) for a version that prints t
 rascal>import IO;
 ok
 rascal>iprint(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
-iprint(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
 [
   "fruits",
   ("snake":0,"spider":8),
@@ -363,7 +361,6 @@ See [iprintlnExp](../Library/IO.md#IO-iprintlnExp) for a version that adds a new
 rascal>import IO;
 ok
 rascal>iprintExp(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
-iprintExp(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
 [
   "fruits",
   ("snake":0,"spider":8),
@@ -396,7 +393,6 @@ See [iprintExp](../Library/IO.md#IO-iprintExp) for a version that does not add a
 rascal>import IO;
 ok
 rascal>iprintlnExp(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
-iprintlnExp(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
 [
   "fruits",
   ("snake":0,"spider":8),
@@ -433,7 +429,6 @@ use [writeTextValueFile](../Library/ValueIO.md#ValueIO-writeTextValueFile) or ch
 rascal>import IO;
 ok
 rascal>iprintln(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
-iprintln(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
 [
   "fruits",
   ("snake":0,"spider":8),
@@ -441,7 +436,6 @@ iprintln(["fruits", ("spider" : 8, "snake" : 0), [10, 20, 30]]);
 ]
 ok
 rascal>iprintln([ {"hi"} | i <- [0..1000]], lineLimit = 10);
-iprintln([ {"hi"} | i <- [0..1000]], lineLimit = 10);
 [
   {"hi"},
   {"hi"},
@@ -493,7 +487,7 @@ Determine the last modification date of the Rascal standard library:
 
 ```rascal-shell ,continue
 rascal>lastModified(|std:///IO.rsc|);
-datetime: $2022-09-26T11:05:24.396+00:00$
+datetime: $2022-09-29T15:24:28.800+00:00$
 ```
 
 ## function created {#IO-created}
@@ -520,7 +514,7 @@ Determine the last modification date of the Rascal standard library:
 
 ```rascal-shell ,continue
 rascal>created(|std:///IO.rsc|);
-datetime: $2022-09-26T11:05:24.396+00:00$
+datetime: $2022-09-29T15:24:28.800+00:00$
 ```
 
 ## function touch {#IO-touch}
@@ -607,7 +601,6 @@ Note that the only difference with [println](../Library/IO.md#IO-println) is tha
 rascal>import IO;
 ok
 rascal>print("Hello World");
-print("Hello World");
 Hello World
 ok
 ```
@@ -632,11 +625,9 @@ Print a value and return it as result.
 rascal>import IO;
 ok
 rascal>printExp(3.14);
-printExp(3.14);
 3.14
 real: 3.14
 rascal>printExp("The value of PI is approximately ", 3.14);
-printExp("The value of PI is approximately ", 3.14);
 The value of PI is approximately 3.14
 real: 3.14
 ```
@@ -664,7 +655,6 @@ and [printlnExp](../Library/IO.md#IO-printlnExp) for a version that returns its 
 rascal>import IO;
 ok
 rascal>println("Hello World");
-println("Hello World");
 Hello World
 ok
 ```
@@ -674,7 +664,6 @@ Introduce variable S and print it:
 rascal>S = "Hello World";
 str: "Hello World"
 rascal>println(S);
-println(S);
 Hello World
 ok
 ```
@@ -684,7 +673,6 @@ Introduce variable L and print it:
 rascal>L = ["a", "b", "c"];
 list[str]: ["a","b","c"]
 rascal>println(L);
-println(L);
 ["a","b","c"]
 ok
 ```
@@ -692,7 +680,6 @@ Use a string template to print several values:
 
 ```rascal-shell ,continue
 rascal>println("<S>: <L>");
-println("<S>: <L>");
 Hello World: ["a","b","c"]
 ok
 ```
@@ -700,7 +687,6 @@ Just print a newline
 
 ```rascal-shell ,continue
 rascal>println();
-println();
 ok
 ```
 
@@ -721,11 +707,9 @@ Print a value followed by a newline and return it as result.
 rascal>import IO;
 ok
 rascal>printlnExp(3.14);
-printlnExp(3.14);
 3.14
 real: 3.14
 rascal>printlnExp("The value of PI is approximately ", 3.14);
-printlnExp("The value of PI is approximately ", 3.14);
 The value of PI is approximately 3.14
 real: 3.14
 ```
@@ -780,7 +764,7 @@ If you do not know, we try to detect this. This detection is explained below:
 
 *  If the implementation of the used scheme in the [location](../Rascal/Expressions/Values/Location/index.md) 
    (e.g.,`|project:///|`) defines the charset of the file then this is used.
-*  Otherwise if the file contains a UTF8/16/32 http://en.wikipedia.org/wiki/Byte_order_mark[BOM], 
+*  Otherwise if the file contains a UTF8/16/32 [BOM](http://en.wikipedia.org/wiki/Byte_order_mark),
    then this is used.
 *  As a last resort the IO library uses heuristics to determine if UTF-8 or UTF-32 could work:
    **  Are the first 32 bytes valid UTF-8? Then use UTF-8.
@@ -1023,6 +1007,4 @@ data LocationType
 ## function unwatch {#IO-unwatch}
 
 * ``void unwatch(loc src, bool recursive, void (LocationChangeEvent event) watcher)``
-
-nt) watcher)``
 

@@ -52,12 +52,10 @@ rascal>import IO;
 ok
 rascal>if (i <- [1,2,3] && (i % 2 == 0))
 >>>>>>>  println("<i> % 2 == 0");
-  println("<i> % 2 == 0");
 2 % 2 == 0
 ok
 rascal>for (i <- [1,2,3,4] && (i % 2 == 0)) 
 >>>>>>>  println("<i> % 2 == 0");
-  println("<i> % 2 == 0");
 2 % 2 == 0
 4 % 2 == 0
 list[void]: []
@@ -81,7 +79,6 @@ rascal>bool incr() { i += 1; return true; }
 bool (): function(|prompt:///|(0,36,<1,0>,<1,36>))
 rascal>for (int j <- [1,2,3] && incr() && (i % 2 == 0)) 
 >>>>>>>  println("once true for <j>");
-  println("once true for <j>");
 once true for 2
 list[void]: []
 rascal>i;

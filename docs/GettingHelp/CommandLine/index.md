@@ -19,7 +19,6 @@ While using the command line interface you can get help like so:
 
 ```rascal-shell 
 rascal>:help
-:help
 Welcome to the Rascal command shell.
 
 Shell commands:

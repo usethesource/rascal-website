@@ -24,7 +24,7 @@ ok
 rascal>syntax X = "a" Y;
 ok
 rascal>parse(#X, "ab");
-|std:///ParseTree.rsc|(18984,5,<500,140>,<500,145>): Undeclared non-terminal: Y in module $GENERATED_PARSER$37351774
+|std:///ParseTree.rsc|(18986,5,<500,140>,<500,145>): Undeclared non-terminal: Y in module $GENERATED_PARSER$37351774
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredNonTerminal/UndeclaredNonTerminal.html|
 ok
 ```

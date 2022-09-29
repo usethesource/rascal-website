@@ -43,7 +43,6 @@ Now we match for `black` nodes with `leaf(4)` as second argument:
 ```rascal-shell ,continue
 rascal>for(/black(_,leaf(4)) := T)
 >>>>>>>    println("Match!");
-    println("Match!");
 Match!
 Match!
 list[void]: []
@@ -56,7 +55,6 @@ Here we match all leaves that occur as second argument of `black`:
 ```rascal-shell ,continue
 rascal>for(/black(_,leaf(int N)) := T)
 >>>>>>>    println("Match <N>");
-    println("Match <N>");
 Match 2
 Match 4
 Match 4
@@ -67,7 +65,6 @@ Here we list all integers that occur in any leaf:
 ```rascal-shell ,continue
 rascal>for(/int N := T)
 >>>>>>>    println("Match <N>");
-    println("Match <N>");
 Match 1
 Match 2
 Match 3

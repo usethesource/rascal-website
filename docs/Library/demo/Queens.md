@@ -6,6 +6,17 @@ title: "module demo::Queens"
 
 `import demo::Queens;`
 
+#### Synopsis
+
+Experiments with the 8-queens puzzle in Rascal
+
+#### Description
+
+
+See: 
+* <http://en.wikipedia.org/wiki/Eight_queens_puzzle>
+* <http://en.wikipedia.org/wiki/Eight_queens_puzzle_solutions>
+
 
 ## alias Pos {#demo-Queens-Pos}
 

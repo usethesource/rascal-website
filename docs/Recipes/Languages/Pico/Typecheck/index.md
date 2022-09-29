@@ -170,9 +170,3 @@ lrel[loc l,str msg]: [<|unknown:///|(33,5,<1,33>,<1,38>),"Required natural, but 
 The error location will be use later to give specific messages in the IDE.
 
 
-el[loc l,str msg]: [<|unknown:///|(33,5,<1,33>,<1,38>),"Required natural, got string">]
-```
-
-The error location will be use later to give specific messages in the IDE.
-
-

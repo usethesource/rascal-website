@@ -44,7 +44,6 @@ rascal>import IO;
 ok
 rascal>if(str S := "abc")
 >>>>>>>   println("Match succeeds, S == \"<S>\"");
-   println("Match succeeds, S == \"<S>\"");
 Match succeeds, S == "abc"
 ok
 ```

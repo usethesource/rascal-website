@@ -47,7 +47,6 @@ rascal>switch (CT){
 >>>>>>>case black(_, _):
 >>>>>>>     println("A black root node");
 >>>>>>>}
-}
 A red root node
 ok
 ```
