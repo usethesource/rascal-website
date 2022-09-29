@@ -418,9 +418,9 @@ ok
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "zebra"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "zebra"
-rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "snake"
+rascal>getOneFrom({"elephant", "zebra", "snake"});
+str: "elephant"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "zebra"
 ```
@@ -466,11 +466,11 @@ Remove an arbitrary element from set `s` and return a tuple consisting of the el
 rascal>import Set;
 ok
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <3,{1,2,4}>
-rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <3,{1,2,4}>
+tuple[int,set[int]]: <2,{1,3,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
 tuple[int,set[int]]: <2,{1,3,4}>
+rascal>takeOneFrom({1, 2, 3, 4});
+tuple[int,set[int]]: <4,{1,3,2}>
 ```
 
 ## function takeFirstFrom {#Set-takeFirstFrom}
@@ -704,5 +704,5 @@ Flatten a set of sets into a single set.
 
 Compute the Jaccard similarity between two sets.
 
-ets.
+.
 

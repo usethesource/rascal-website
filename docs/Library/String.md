@@ -359,9 +359,9 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-str: "\n\n\n \tO"
-rascal>arbString(10);
 str: ""
+rascal>arbString(10);
+str: "bpaR72Xo"
 ```
 
 ## function left {#String-left}
@@ -912,4 +912,6 @@ ok
 rascal>substitute("abc", (|stdin:///|(1,1): "d"))
 str: "adc"
 ```
+
+
 

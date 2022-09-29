@@ -83,9 +83,6 @@ The following operators are defined for DateTime:
 * [LessThanOrEqual](../../../../Rascal/Expressions/Values/DateTime/LessThanOrEqual/index.md)
 * [NotEqual](../../../../Rascal/Expressions/Values/DateTime/NotEqual/index.md)
 
-The following functions are defined for DateTime:
-loctoc::[Rascal/Libraries/Prelude/DateTime,1]
-
 There are also [library functions](../../../../Library/DateTime.md) available for DateTime.
 
 #### Examples
@@ -121,5 +118,8 @@ int: 20
 
 * In normal parlance, the year 2010 is in the 21th century. The `century` field, however, just returns the century component of a given year, e.g., for 2010 this is 20.
 * `DT.justTime` prints a time literal that currently can not be parsed back into a value to due to issue #1443.
+
+
+rints a time literal that currently can not be parsed back into a value to due to issue #1443.
 
 

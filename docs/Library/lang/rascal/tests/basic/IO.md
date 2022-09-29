@@ -116,3 +116,11 @@ data Compression
 
 * ``test bool writeFileOffsetStart(Encoding enc, str a, str b)``
 
+## function md5ValueTest {#lang-rascal-tests-basic-IO-md5ValueTest}
+
+* ``test bool md5ValueTest()``
+
+## function md5FileTest {#lang-rascal-tests-basic-IO-md5FileTest}
+
+* ``test bool md5FileTest()``
+

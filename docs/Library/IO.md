@@ -487,7 +487,7 @@ Determine the last modification date of the Rascal standard library:
 
 ```rascal-shell ,continue
 rascal>lastModified(|std:///IO.rsc|);
-datetime: $2022-09-29T15:24:28.800+00:00$
+datetime: $2022-09-29T16:25:25.867+00:00$
 ```
 
 ## function created {#IO-created}
@@ -514,7 +514,7 @@ Determine the last modification date of the Rascal standard library:
 
 ```rascal-shell ,continue
 rascal>created(|std:///IO.rsc|);
-datetime: $2022-09-29T15:24:28.800+00:00$
+datetime: $2022-09-29T16:25:25.867+00:00$
 ```
 
 ## function touch {#IO-touch}

@@ -134,3 +134,4 @@ rascal>toString(false);
 str: "false"
 ```
 
+
