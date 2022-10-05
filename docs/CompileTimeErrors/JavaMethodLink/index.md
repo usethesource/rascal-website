@@ -386,9 +386,8 @@ org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.librar
 	at org.rascalmpl.interpreter.result.OverloadedFunction.callWith(OverloadedFunction.java:409)
 	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:369)
 	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
-	at org.rascalmpl.semantics.dynamic.Declarator$Default.interpret(Declarator.java:52)
-	at org.rascalmpl.semantics.dynamic.LocalVariableDeclaration$Default.interpret(LocalVariableDeclaration.java:36)
-	at org.rascalmpl.semantics.dynamic.Statement$VariableDeclaration.interpret(Statement.java:1003)
+	at org.rascalmpl.semantics.dynamic.Statement$Expression.interpret(Statement.java:365)
+	at org.rascalmpl.semantics.dynamic.Statement$Assignment.interpret(Statement.java:205)
 	at org.rascalmpl.semantics.dynamic.Statement$NonEmptyBlock.interpret(Statement.java:759)
 	at org.rascalmpl.semantics.dynamic.Statement$IfThenElse.interpret(Statement.java:679)
 	at org.rascalmpl.interpreter.result.RascalFunction.runBody(RascalFunction.java:385)
@@ -455,6 +454,14 @@ rascal>@javaClass{org.rascalmpl.library.Preludexxx}
 >>>>>>>  return 0;
 >>>>>>>}
 |prompt:///|(0,94,<1,0>,<4,1>): Java function has a body
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/NonAbstractJavaFunction/NonAbstractJavaFunction.html|
+ok
+```
+
+
+
+
+body
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/NonAbstractJavaFunction/NonAbstractJavaFunction.html|
 ok
 ```

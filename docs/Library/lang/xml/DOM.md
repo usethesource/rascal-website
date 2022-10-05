@@ -18,7 +18,7 @@ Functions for reading and writing XML files to and from a "DOM" representation.
 
 The Document Object Model [DOM](http://en.wikipedia.org/wiki/Document_Object_Model) is a cross-platform and language-independent
 way of representing and manipulating HTML, XHTML and XML documents. In this module we represent the DOM as a 
-Rascal [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md) using [keyword parameters](../../../Rascal/Declarations/Function/index.md) for the optional attributes.
+Rascal [AlgebraicDataType](../../../Rascal/Declarations/AlgebraicDataType/index.md) using [keyword parameters](../../../Rascal/Declarations/Function/index.md) for the optional attributes.
 
 In [IO](../../../Library/lang/xml/IO.md) a different approach is taken, where each XML document is mapped to an instance of 
 the `node` class, which gives a more direct one-to-ony mapping as opposed to the DOM encoding here.
@@ -373,4 +373,6 @@ ok
 ```
 The output `S` of `xmlPretty` is a pretty printed version of the original source file `F`.
 Observe that the elements inside `<note> ... </note>` are indented.
+
+
 

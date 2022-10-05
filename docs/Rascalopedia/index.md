@@ -18,6 +18,7 @@ These are the currently covered topics:
 
 * [abstract data type](../Rascalopedia/AbstractDataType/index.md)
 * [abstract syntax tree](../Rascalopedia/AbstractSyntaxTree/index.md)
+* [algebraic data type](../Rascalopedia/AlgebraicDataType/index.md)
 * [Compiler](../Rascalopedia/Compiler/index.md)
 * [domain specific language](../Rascalopedia/DomainSpecificLanguage/index.md)
 * [dynamic semantics](../Rascalopedia/DynamicSemantics/index.md)

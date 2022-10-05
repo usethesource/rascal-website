@@ -27,11 +27,11 @@ to lowest precedence. In other words, operators listed earlier in the table bind
 | `Exp is Name` |                        | Check if `Exp` has name `Name` |
 |               | [parse tree](../../../Library/ParseTree.md), |
 |               | [ConcreteSyntax](../../../Rascal/Expressions/ConcreteSyntax/index.md), |
-|               | [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md) |
+|               | [./Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md) |
 | `Exp has Name`  |   | Check if a field with `Name` is present on `Exp`
 |                 | [parse tree](../../../Library/ParseTree.md) | | 
 |                 | [ConcreteSyntax](../../../Rascal/Expressions/ConcreteSyntax/index.md) | | 
-|                 | [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md) | |
+|                 | [./Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md) | |
 | `Exp₁ [ Exp₂ , Exp₃, .... ]` |  | Project values for given key from list, map, tuple or relation. |
 |  | [list](../../../Rascal/Expressions/Values/List/Subscription/index.md)  | | 
 |  | [map](../../../Rascal/Expressions/Values/Map/Subscription/index.md)  | |

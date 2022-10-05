@@ -46,7 +46,7 @@ Here is an example from the [Node](../../../../Rascal/Expressions/Values/Node/in
 ```
 (we don't give the body of this function since it has been implemented in Java).
 `setAnnotations` takes a value of any type that is at most `node` and adds annotations to it.
-This makes it possible to set annotations on any [Algebraic Data Type](../../../../Rascal/Declarations/AlgebraicDataType/index.md).
+This makes it possible to set annotations on any [./Algebraic Data Type](../../../../Rascal/Declarations/AlgebraicDataType/index.md).
 
 
 ```rascal-shell 

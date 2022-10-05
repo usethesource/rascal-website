@@ -78,14 +78,14 @@ In this way functions can be defined for arbitrary types. The type variable is b
 
  
 Function definitions may be overloaded, i.e. a function with the same name may be defined twice and 
-a function may redefine a constructor of an [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md) or a [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md).
+a function may redefine a constructor of an [./Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md) or a [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md).
 
 There are some restrictions however:
 
 *  Overloaded alternatives for the same function name but with different patterns must return the same type.
 *  Overloaded alternatives for the same function name must have mutually exclusive patterns, unless one alternative is labeled `default` and the other is not. The patterns of formal parameters are mutually exclusive if for at least one parameter position:
 **  They range over incomparable types, as in `int f(int a)` and `int f(real a)`, or
-**  They range over different alternatives of an [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md), as in `int f(and(Bool a, Bool b))` and `int f(or(Bool a, Bool b))`
+**  They range over different alternatives of an [./Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md), as in `int f(and(Bool a, Bool b))` and `int f(or(Bool a, Bool b))`
 **  They range over different alternatives of a [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md)
 **  And note that deep matches using the `/` alternative are considered to be of type `value` and therefore overlap with all other patterns.
 *  Overlapping patterns are allowed if the one alternative has the `default` modified while the other does not.
@@ -106,7 +106,7 @@ The _Modifiers_ affect _visibility_ and _special behaviour_ of functions:
         It can be called as any other function. However, it can also be called automatically
         by the unit test framework, by typing `:test` at the command line, see [Help](../../../RascalShell/Commands/Help/index.md).
    **  `default` declares an alternative for an overloaded function that will only be tried after 
-        all non-default alternatives have been tried. Note that [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)s and [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md)s 
+        all non-default alternatives have been tried. Note that [./Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)s and [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md)s 
         _implicitly_ define `default` functions that may be overloaded by normal [Function](../../../Rascal/Declarations/Function/index.md)s.
 
 
@@ -193,7 +193,7 @@ rascal>f(2);
 int: 2
 ```
 
-In combination with an [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md), which defines `default` functions implicitly for every alternative, 
+In combination with an [./Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md), which defines `default` functions implicitly for every alternative, 
 we can define canonicalization functions. The same holds for [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md)s, see [Action](../../../Rascal/Declarations/SyntaxDefinition/Action/index.md)s.
 
 This definition implies a default function for t(), f() and neg(B):
@@ -219,7 +219,7 @@ B: f()
 #### Benefits
 
 * Overloaded functions can be extended by other modules that extend the current module, and even be "fused" by modules that extend different modules that define the same overloaded signature. In this way you can write language processors **modularly**. The open extensibility of overloaded functions in Rascal is a way to circumvent the classes ["Expression Problem".](https://en.wikipedia.org/wiki/Expression_problem)
-* Overloaded functions including complex pattern matching at the parameter positions are as powerful as term rewriting systems; they _are_ a kind of term rewriting system. Together with the [syntax definition](../../../Rascal/Declarations/SyntaxDefinition/index.md) and [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md) features (serving as many-sorted algebraic signatures), the overloaded functions allow for "algebraic specification" as a style of programming in Rascal. 
+* Overloaded functions including complex pattern matching at the parameter positions are as powerful as term rewriting systems; they _are_ a kind of term rewriting system. Together with the [syntax definition](../../../Rascal/Declarations/SyntaxDefinition/index.md) and [./algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md) features (serving as many-sorted algebraic signatures), the overloaded functions allow for "algebraic specification" as a style of programming in Rascal. 
 
 #### Pitfalls
 

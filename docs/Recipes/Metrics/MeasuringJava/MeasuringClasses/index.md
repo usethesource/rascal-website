@@ -45,28 +45,94 @@ Now we can extract our overview model, using the classpath we derived:
 
 ```rascal-shell ,continue
 rascal>myModel = createM3FromDirectory(|tmp:///snakes-and-ladders/src|);
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|std:///lang/java/m3/Core.rsc|(5265,16,<118,8>,<118,24>): Undeclared variable: includeJarModels
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+M3: m3(
+  |tmp:///snakes-and-ladders/src|,
+  annotations={
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/Snake/squareLabel()|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/Ladder/landHereOrGoHome()|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/SimpleGameTest/newGame()|,|java+class:///Test|>,
+    <|java+method:///snakes/SimpleGameTest/move8jillWins(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/FirstSquare/isFirstSquare()|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/Ladder/squareLabel()|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/FirstSquare/isOccupied()|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/SimpleGameTest/initialStrings(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/SimpleGameTest/move4jillSnake(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/DieTest/testInRange()|,|java+class:///Test|>,
+    <|java+method:///snakes/DieTest/testMinReached()|,|java+class:///Test|>,
+    <|java+class:///snakes/SimpleGameTest|,|java+class:///RunWith|>,
+    <|java+method:///snakes/SimpleGameTest/move2jackBackwards(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/DieTest/testMaxReached()|,|java+class:///Test|>,
+    <|java+method:///snakes/SimpleGameTest/move5jackLadder(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/SimpleGameTest/move6jill(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/FirstSquare/enter(snakes.Player)|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/LastSquare/isLastSquare()|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/FirstSquare/leave(snakes.Player)|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/SimpleGameTest/move3jackMeetsJill(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/SimpleGameTest/move2jillLadder(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/SimpleGameTest/move7jackBouncesBackToJill(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/SimpleGameTest/move1jack(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/FirstSquare/player()|,|java+interface:///java/lang/Override|>
+  },
+  typeDependency={
+    <|java+method:///snakes/Game/winner()|,|java+class:///snakes/Game|>,
+    <|java+method:///snakes/Game/winner()|,|java+class:///snakes/Player|>,
+    <|java+parameter:///snakes/Player/joinGame(snakes.Game)/scope(game)/scope(0)/game|,|java+class:///snakes/Game|>,
+    <|java+field:///snakes/Game/winner|,|java+class:///snakes/Player|>,
+    <|java+method:///snakes/Square/nextSquare()|,|java+interface:///snakes/ISquare|>,
+    <|java+method:///snakes/Square/nextSquare()|,|java+class:///snakes/Game|>,
+    <|java+method:///snakes/Square/nextSquare()|,|java+primitiveType:///int|>,
+    <|java+method:///snakes/Square/nextSquare()|,|java+class:///snakes/Square|>,
+    <|java+method:///snakes/Square/moveAndLand(int)|,|java+interface:///snakes/ISquare|>,
+    <|java+method:///snakes/Square/moveAndLand(int)|,|java+class:///snakes/Game|>,
+    <|java+method:///snakes/Square/moveAndLand(int)|,|java+primitiveType:///int|>,
+    <|java+method:///snakes/Square/moveAndLand(int)|,|java+class:///snakes/Square|>,
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///java/lang/String|>,
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+interface:///snakes/ISquare|>,
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///snakes/Game|>,
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///java/lang/Object|>,
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/Game/initSquare(int,snakes.ISquare)|,|java+interface:///snakes/ISquare|>,
+    ...
 ```
 
 Next, let's focus on the _containment_ relation. This defines what parts of the source code are parts of which other parts:
 
 ```rascal-shell ,continue
 rascal>myModel.containment
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(0,7,<1,0>,<1,7>): Undeclared variable: myModel
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+rel[loc from,loc to]: {
+  <|java+method:///snakes/Game/isValidPosition(int)|,|java+parameter:///snakes/Game/isValidPosition(int)/scope(position)/scope(0)/position|>,
+  <|java+compilationUnit:///snakes-and-ladders/src/snakes/SimpleGameTest.java|,|java+class:///snakes/SimpleGameTest|>,
+  <|java+method:///snakes/Square/enter(snakes.Player)|,|java+parameter:///snakes/Square/enter(snakes.Player)/scope(player)/scope(0)/player|>,
+  <|java+method:///snakes/FirstSquare/leave(snakes.Player)|,|java+parameter:///snakes/FirstSquare/leave(snakes.Player)/scope(player)/scope(0)/player|>,
+  <|java+method:///snakes/Game/findSquare(int,int)|,|java+variable:///snakes/Game/findSquare(int,int)/target|>,
+  <|java+method:///snakes/Game/findSquare(int,int)|,|java+parameter:///snakes/Game/findSquare(int,int)/scope(position)/scope(0)/position|>,
+  <|java+method:///snakes/Game/findSquare(int,int)|,|java+parameter:///snakes/Game/findSquare(int,int)/scope(moves)/scope(0)/moves|>,
+  <|java+constructor:///snakes/Snake/Snake(int,snakes.Game,int)|,|java+parameter:///snakes/Snake/Snake(int,snakes.Game,int)/scope(transport)/scope(0)/transport|>,
+  <|java+constructor:///snakes/Snake/Snake(int,snakes.Game,int)|,|java+parameter:///snakes/Snake/Snake(int,snakes.Game,int)/scope(position)/scope(0)/position|>,
+  <|java+constructor:///snakes/Snake/Snake(int,snakes.Game,int)|,|java+parameter:///snakes/Snake/Snake(int,snakes.Game,int)/scope(game)/scope(0)/game|>,
+  <|java+method:///snakes/Game/addPlayers(snakes.Player%5B%5D)|,|java+variable:///snakes/Game/addPlayers(snakes.Player%5B%5D)/scope(0)/player|>,
+  <|java+method:///snakes/Game/addPlayers(snakes.Player%5B%5D)|,|java+parameter:///snakes/Game/addPlayers(snakes.Player%5B%5D)/scope(initPlayers)/scope(0)/initPlayers|>,
+  <|java+compilationUnit:///snakes-and-ladders/src/snakes/Snake.java|,|java+class:///snakes/Snake|>,
+  <|java+compilationUnit:///snakes-and-ladders/src/snakes/Die.java|,|java+class:///snakes/Die|>,
+  <|java+method:///snakes/Square/moveAndLand(int)|,|java+parameter:///snakes/Square/moveAndLand(int)/scope(moves)/scope(0)/moves|>,
+  <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+parameter:///snakes/SimpleGameTest/move1strings(snakes.Game)/scope(game)/scope(0)/game|>,
+  <|java+method:///snakes/Game/initSquare(int,snakes.ISquare)|,|java+parameter:///snakes/Game/initSquare(int,snakes.ISquare)/scope(square)/scope(0)/square|>,
+  <|java+method:///snakes/Game/initSquare(int,snakes.ISquare)|,|java+parameter:///snakes/Game/initSquare(int,snakes.ISquare)/scope(position)/scope(0)/position|>,
+  <|java+class:///snakes/Die|,|java+method:///snakes/Die/roll()|>,
+  <|java+class:///snakes/Die|,|java+field:///snakes/Die/FACES|>,
+  <|java+class:///snakes/Snake|,|java+method:///snakes/Snake/squareLabel()|>,
+  <|java+class:///snakes/Snake|,|java+constructor:///snakes/Snake/Snake(int,snakes.Game,int)|>,
+  <|java+method:///snakes/Die/roll()|,|java+variable:///snakes/Die/roll()/result|>,
+  <|java+method:///snakes/SimpleGameTest/initialStrings(snakes.Game)|,|java+parameter:///snakes/SimpleGameTest/initialStrings(snakes.Game)/scope(game)/scope(0)/game|>,
+  <|java+method:///snakes/SimpleGameTest/move4jillSnake(snakes.Game)|,|java+parameter:///snakes/SimpleGameTest/move4jillSnake(snakes.Game)/scope(game)/scope(0)/game|>,
+  <|java+method:///snakes/DieTest/reached(int)|,|java+variable:///snakes/DieTest/reached(int)/scope(0)/i|>,
+  <|java+method:///snakes/DieTest/reached(int)|,|java+variable:///snakes/DieTest/reached(int)/die|>,
+  <|java+method:///snakes/DieTest/reached(int)|,|java+parameter:///snakes/DieTest/reached(int)/scope(value)/scope(0)/value|>,
+  <|java+method:///snakes/Game/addSquares(int)|,|java+variable:///snakes/Game/addSquares(int)/scope(0)/scope(0)/square|>,
+  <|java+method:///snakes/Game/addSquares(int)|,|java+parameter:///snakes/Game/addSquares(int)/scope(size)/scope(0)/size|>,
+  <|java+method:///snakes/Game/addSquares(int)|,|java+variable:///snakes/Game/addSquares(int)/scope(0)/i|>,
+  <|java+method:///snakes/DieTest/testInRange()...
 ```
 
 You are looking at a binary relation of type `rel[loc from,loc to]`, where `from` is the container and `to` is the contained item. Each tuple, or row if you will, maps a container to a contained item.
@@ -91,27 +157,16 @@ public class Snake extends Ladder {
 }
 ok
 rascal>myModel.containment[|java+class:///snakes/Snake|]
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(0,7,<1,0>,<1,7>): Undeclared variable: myModel
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+set[loc]: {
+  |java+method:///snakes/Snake/squareLabel()|,
+  |java+constructor:///snakes/Snake/Snake(int,snakes.Game,int)|
+}
 ```
 Let's filter the methods:
 
 ```rascal-shell ,continue
 rascal>snakeMethods = [ e | e <- myModel.containment[|java+class:///snakes/Snake|], e.scheme == "java+method"];
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(26,7,<1,26>,<1,33>): Undeclared variable: myModel
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+list[loc]: [|java+method:///snakes/Snake/squareLabel()|]
 ```
 And we are ready to compute our first metric. How many methods does this class contain?
 
@@ -119,14 +174,7 @@ And we are ready to compute our first metric. How many methods does this class c
 rascal>import List;
 ok
 rascal>size(snakeMethods)
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(5,12,<1,5>,<1,17>): Undeclared variable: snakeMethods
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+int: 1
 ```
 No magic applied! It is just a little query on a model that knows everything about the code. 
 
@@ -139,37 +187,38 @@ Let's generalize and compute the number of methods for all classes in one big ex
 rascal>int numberOfMethods(loc cl, M3 model) = size([ m | m <- model.containment[cl], isMethod(m)]);
 int (loc, M3): function(|prompt:///|(0,93,<1,0>,<1,93>))
 rascal>numberOfMethods(|java+class:///snakes/Snake|, myModel)
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(46,7,<1,46>,<1,53>): Undeclared variable: myModel
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+int: 2
 ```
 
 Then we apply this new function to give us a map from classes to integers:
 
 ```rascal-shell ,continue
 rascal>classes(myModel)
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(8,7,<1,8>,<1,15>): Undeclared variable: myModel
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+set[loc]: {
+  |java+class:///snakes/Game|,
+  |java+class:///snakes/SimpleGameTest|,
+  |java+class:///snakes/DieTest|,
+  |java+class:///snakes/Square|,
+  |java+class:///snakes/Player|,
+  |java+class:///snakes/Ladder|,
+  |java+class:///snakes/Die|,
+  |java+class:///snakes/Snake|,
+  |java+class:///snakes/LastSquare|,
+  |java+class:///snakes/FirstSquare|
+}
 rascal>map[loc class, int methodCount] numberOfMethodsPerClass = (cl:numberOfMethods(cl, myModel) | cl <- classes(myModel));
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(107,7,<1,107>,<1,114>): Undeclared variable: myModel
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+map[loc class, int methodCount]: (
+  |java+class:///snakes/Game|:20,
+  |java+class:///snakes/SimpleGameTest|:12,
+  |java+class:///snakes/DieTest|:4,
+  |java+class:///snakes/Square|:15,
+  |java+class:///snakes/Player|:8,
+  |java+class:///snakes/Ladder|:6,
+  |java+class:///snakes/Die|:1,
+  |java+class:///snakes/Snake|:2,
+  |java+class:///snakes/LastSquare|:2,
+  |java+class:///snakes/FirstSquare|:7
+)
 ```
 How about the number of fields?
 
@@ -177,27 +226,35 @@ How about the number of fields?
 rascal>int numberOfFields(loc cl, M3 model) = size([ m | m <- model.containment[cl], isField(m)]);
 int (loc, M3): function(|prompt:///|(0,91,<1,0>,<1,91>))
 rascal>map[loc class, int fieldCount] numberOfFieldsPerClass = (cl:numberOfFields(cl, myModel) | cl <- classes(myModel));
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(104,7,<1,104>,<1,111>): Undeclared variable: myModel
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+map[loc class, int fieldCount]: (
+  |java+class:///snakes/Game|:4,
+  |java+class:///snakes/SimpleGameTest|:2,
+  |java+class:///snakes/DieTest|:1,
+  |java+class:///snakes/Square|:3,
+  |java+class:///snakes/Player|:2,
+  |java+class:///snakes/Ladder|:1,
+  |java+class:///snakes/Die|:1,
+  |java+class:///snakes/Snake|:0,
+  |java+class:///snakes/LastSquare|:0,
+  |java+class:///snakes/FirstSquare|:1
+)
 ```
 What is the ratio between fields and methods for each class?
 
 ```rascal-shell ,continue
 rascal>(cl : (numberOfFieldsPerClass[cl] * 1.0) / (numberOfMethodsPerClass[cl] * 1.0) | cl <- classes(myModel))
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(95,7,<1,95>,<1,102>): Undeclared variable: myModel
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+map[loc, real]: (
+  |java+class:///snakes/Game|:0.2,
+  |java+class:///snakes/SimpleGameTest|:0.1666666667,
+  |java+class:///snakes/DieTest|:0.25,
+  |java+class:///snakes/Square|:0.2,
+  |java+class:///snakes/Player|:0.25,
+  |java+class:///snakes/Ladder|:0.1666666667,
+  |java+class:///snakes/Die|:1.,
+  |java+class:///snakes/Snake|:0.,
+  |java+class:///snakes/LastSquare|:0.,
+  |java+class:///snakes/FirstSquare|:0.1428571429
+)
 ```
 
 There is a lot more to discover in M3 models. These are the currently available relations in an M3 model:
@@ -208,14 +265,22 @@ ok
 rascal>import Set;
 ok
 rascal>for (r <- sort(getKeywordParameters(myModel)<0>)) println("  <r>");
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(36,7,<1,36>,<1,43>): Undeclared variable: myModel
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+  annotations
+  containment
+  declarations
+  documentation
+  extends
+  fieldAccess
+  implements
+  messages
+  methodInvocation
+  methodOverrides
+  modifiers
+  names
+  typeDependency
+  types
+  uses
+list[void]: []
 ```
 
 See [Core](../../../../Library/analysis/m3/Core.md) for the definition of the language-independent relations and [Core](../../../../Library/lang/java/m3/Core.md) for the Java-specific extensions.

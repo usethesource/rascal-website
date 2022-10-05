@@ -361,7 +361,7 @@ ok
 rascal>arbString(3);
 str: ""
 rascal>arbString(10);
-str: "bpaR72Xo"
+str: ""
 ```
 
 ## function left {#String-left}
@@ -911,6 +911,9 @@ rascal>import String;
 ok
 rascal>substitute("abc", (|stdin:///|(1,1): "d"))
 str: "adc"
+```
+
+c"
 ```
 
 

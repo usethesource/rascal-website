@@ -40,7 +40,7 @@ where _Associativity_ is nothing, or one of `assoc`, `left`, `right` or `non-ass
 
 Rascal supports full context-free grammars for syntax definition. It generates scannerless parsers from these definitions. 
 These parsers produce [Parse Trees](../../../Rascal/Declarations/SyntaxDefinition/ParseTrees/index.md) that can be further processed by Rascal using [./Concrete Syntax](../../../Rascal/Expressions/ConcreteSyntax/index.md) fragments
- in [Patterns](../../../Rascal/Patterns/index.md) and [Expressions](../../../Rascal/Expressions/index.md), or they can be _imploded_ to [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)s.
+ in [Patterns](../../../Rascal/Patterns/index.md) and [Expressions](../../../Rascal/Expressions/index.md), or they can be _imploded_ to [./Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)s.
 
 There are four kinds of non-terminals that can be defined with slightly different characteristics.
 
@@ -67,7 +67,7 @@ The alternative of a defined syntax type may be labeled or not as well. With the
 *  The `is` operator is defined for labeled alternatives (see [Operators](../../../Rascal/Expressions/Operators/index.md)).
 *  The `has` operator is defined for labeled [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol/index.md)s in the right-hand side (see [Operators](../../../Rascal/Expressions/Operators/index.md)).
 *  [Action](../../../Rascal/Declarations/SyntaxDefinition/Action/index.md) functions can be written to override the construction of a parse tree, using the label of an alternative as the function name
-*  [implode] uses labeled alternatives to map to an [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)
+*  [implode] uses labeled alternatives to map to an [./Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)
 
 
 Alternatives can be combined in a single [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md) using the `|`, `>` and associativity combinators.
@@ -135,7 +135,7 @@ syntax Expression
 *  Powerful disambiguation constructs for common programming language disambiguation patterns.
 *  Data-dependent (context-sensitive) disambiguation via arbitrary functions.
 *  Embedding of concrete syntax fragments in Rascal programs
-*  [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md)s follow the syntax and semantics of [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)s quite closely.
+*  [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md)s follow the syntax and semantics of [./Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)s quite closely.
 
 #### Pitfalls
 

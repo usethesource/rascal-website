@@ -21,27 +21,136 @@ Now we can extract our overview model, using the classpath we derived:
 
 ```rascal-shell ,continue
 rascal>myModel = createM3FromDirectory(|tmp:///snakes-and-ladders/src|);
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|std:///lang/java/m3/Core.rsc|(5265,16,<118,8>,<118,24>): Undeclared variable: includeJarModels
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+M3: m3(
+  |tmp:///snakes-and-ladders/src|,
+  annotations={
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/Snake/squareLabel()|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/Ladder/landHereOrGoHome()|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/SimpleGameTest/newGame()|,|java+class:///Test|>,
+    <|java+method:///snakes/SimpleGameTest/move8jillWins(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/FirstSquare/isFirstSquare()|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/Ladder/squareLabel()|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/FirstSquare/isOccupied()|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/SimpleGameTest/initialStrings(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/SimpleGameTest/move4jillSnake(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/DieTest/testInRange()|,|java+class:///Test|>,
+    <|java+method:///snakes/DieTest/testMinReached()|,|java+class:///Test|>,
+    <|java+class:///snakes/SimpleGameTest|,|java+class:///RunWith|>,
+    <|java+method:///snakes/SimpleGameTest/move2jackBackwards(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/DieTest/testMaxReached()|,|java+class:///Test|>,
+    <|java+method:///snakes/SimpleGameTest/move5jackLadder(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/SimpleGameTest/move6jill(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/FirstSquare/enter(snakes.Player)|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/LastSquare/isLastSquare()|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/FirstSquare/leave(snakes.Player)|,|java+interface:///java/lang/Override|>,
+    <|java+method:///snakes/SimpleGameTest/move3jackMeetsJill(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/SimpleGameTest/move2jillLadder(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/SimpleGameTest/move7jackBouncesBackToJill(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/SimpleGameTest/move1jack(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/FirstSquare/player()|,|java+interface:///java/lang/Override|>
+  },
+  typeDependency={
+    <|java+method:///snakes/Game/winner()|,|java+class:///snakes/Game|>,
+    <|java+method:///snakes/Game/winner()|,|java+class:///snakes/Player|>,
+    <|java+parameter:///snakes/Player/joinGame(snakes.Game)/scope(game)/scope(0)/game|,|java+class:///snakes/Game|>,
+    <|java+field:///snakes/Game/winner|,|java+class:///snakes/Player|>,
+    <|java+method:///snakes/Square/nextSquare()|,|java+interface:///snakes/ISquare|>,
+    <|java+method:///snakes/Square/nextSquare()|,|java+class:///snakes/Game|>,
+    <|java+method:///snakes/Square/nextSquare()|,|java+primitiveType:///int|>,
+    <|java+method:///snakes/Square/nextSquare()|,|java+class:///snakes/Square|>,
+    <|java+method:///snakes/Square/moveAndLand(int)|,|java+interface:///snakes/ISquare|>,
+    <|java+method:///snakes/Square/moveAndLand(int)|,|java+class:///snakes/Game|>,
+    <|java+method:///snakes/Square/moveAndLand(int)|,|java+primitiveType:///int|>,
+    <|java+method:///snakes/Square/moveAndLand(int)|,|java+class:///snakes/Square|>,
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///java/lang/String|>,
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+interface:///snakes/ISquare|>,
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///snakes/Game|>,
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///java/lang/Object|>,
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/Game/initSquare(int,snakes.ISquare)|,|java+interface:///snakes/ISquare|>,
+    ...
 ```
 Now let's focus on the methods:
 
 ```rascal-shell ,continue
 rascal>myMethods = methods(myModel);
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(20,7,<1,20>,<1,27>): Undeclared variable: myModel
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+set[loc]: {
+  |java+method:///snakes/Game/isValidPosition(int)|,
+  |java+method:///snakes/Game/firstSquare()|,
+  |java+method:///snakes/Square/enter(snakes.Player)|,
+  |java+constructor:///snakes/Player/Player(java.lang.String)|,
+  |java+method:///snakes/Game/setSquareToSnake(int,int)|,
+  |java+constructor:///snakes/FirstSquare/FirstSquare(snakes.Game,int)|,
+  |java+method:///snakes/Game/winner()|,
+  |java+method:///snakes/Square/nextSquare()|,
+  |java+method:///snakes/Square/moveAndLand(int)|,
+  |java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,
+  |java+method:///snakes/Game/initSquare(int,snakes.ISquare)|,
+  |java+method:///snakes/Ladder/squareLabel()|,
+  |java+method:///snakes/FirstSquare/isOccupied()|,
+  |java+method:///snakes/Game/notOver()|,
+  |java+method:///snakes/Game/findSquare(int,int)|,
+  |java+method:///snakes/Player/wins()|,
+  |java+method:///snakes/DieTest/reached(int)|,
+  |java+method:///snakes/Square/previousSquare()|,
+  |java+method:///snakes/Die/roll()|,
+  |java+method:///snakes/SimpleGameTest/initialStrings(snakes.Game)|,
+  |java+method:///snakes/SimpleGameTest/move4jillSnake(snakes.Game)|,
+  |java+method:///snakes/Square/invariant()|,
+  |java+method:///snakes/ISquare/landHereOrGoHome()|,
+  |java+method:///snakes/Snake/squareLabel()|,
+  |java+method:///snakes/Game/addSquares(int)|,
+  |java+method:///snakes/DieTest/testInRange()|,
+  |java+method:///snakes/DieTest/testMinReached()|,
+  |java+method:///snakes/Game/toString()|,
+  |java+method:///snakes/Game/getSquare(int)|,
+  |java+method:///snakes/Square/isFirstSquare()|,
+  |java+method:///snakes/ISquare/isOccupied()|,
+  |java+method:///snakes/Player/square()|,
+  |java+method:///snakes/Game/play(snakes.Die)|,
+  |java+method:///snakes/Player/invariant()|,
+  |java+method:///snakes/ISquare/position()|,
+  |java+method:///snakes/Game/movePlayer(int)|,
+  |java+method:///snakes/Ladder/invariant()|,
+  |java+constructor:///snakes/Snake/Snake(int,snakes.Game,int)|,
+  |java+method:///snakes/Game/main(java.lang.String%5B%5D)|,
+  |java+method:///snakes/Square/leave(snakes.Player)|,
+  |java+constructor:///snakes/Ladder/Ladder(int,snakes.Game,int)|,
+  |java+method:///snakes/Square/isLastSquare()|,
+  |java+constructor:///snakes/Square/Square(snakes.Game,int)|,
+  |java+method:///snakes/Ladder/landHereOrGoHome()|,
+  |java+constructor:///snakes/LastSquare/LastSquare(snakes.Game,int)|,
+  |java+method:///snakes/ISquare/moveAndLand(int)|,
+  |java+method:///snakes/Player/joinGame(snakes.Game)|,
+  |java+method:///snakes/SimpleGameTest/newGame()|,
+  |java+method:///snakes/Square/player()|,
+  |java+method:///snakes/Game/setSquare(int,snakes.ISquare)|,
+  |java+method:///snakes/SimpleGameTest/move2jackBackwards(snakes.Game)|,
+  |java+method:///snakes/Game/currentPlayer()|,
+  |java+method:///snakes/Square/landHereOrGoHome()|,
+  |java+method:///snakes/Ladder/isValidTransport(int)|,
+  |java+method:///snakes/Player/position()|,
+  |java+method:///snakes/DieTest/testMaxReached()|,
+  |java+method:///snakes/SimpleGameTest/move5jackLadder(snakes.Game)|,
+  |java+method:///snakes/SimpleGameTest/move6jill(snakes.Game)|,
+  |java+method:///snakes/FirstSquare/enter(snakes.Player)|,
+  |java+method:///snakes/LastSquare/isLastSquare()|,
+  |java+method:///snakes/FirstSquare/leave(snakes.Player)|,
+  |java+method:///snakes/ISquare/isFirstSquare()|,
+  |java+method:///snakes/SimpleGameTest/move3jackMeetsJill(snakes.Game)|,
+  |java+method:///snakes/Square/isOccupied()|,
+  |java+method:///snakes/SimpleGameTest/move2jillLadder(snakes.Game)|,
+  |java+method:///snakes/Player/toString()|,
+  |java+method:///snakes/Game/isOver()|,
+  |java+method:///snakes/Ladder/destination()|,
+  |java+method:///snakes/Square/position()|,
+  |java+method:///snakes/Player/moveForward(int)|,
+  |java+method:///snakes/Game/invariant()|,
+  |java+method:///snakes/SimpleGameTest/move7jackBouncesBackToJill(snakes.Game)|,
+  |java+method:///snakes/SimpleGameTest/move1jack(snakes.Game)|,
+  |java+method:///snakes/FirstSquare/player()|,
+  |java+method:///snakes/Game/addPlayers(snakes.Player%5B%5D)...
 ```
 What is the source code for any given method?
 
@@ -70,14 +179,7 @@ But now, let's get its AST
 
 ```rascal-shell ,continue
 rascal>methodFiles = myModel.declarations[|java+method:///snakes/Square/landHereOrGoHome()|];
-```
-:::danger
-Rascal code execution failed (unexpectedly) during compilation of this documentation.
-:::
-```rascal-shell
-|prompt:///|(14,7,<1,14>,<1,21>): Undeclared variable: myModel
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredVariable/UndeclaredVariable.html|
-ok
+set[loc]: {|tmp:///snakes-and-ladders/src/snakes/Square.java|(678,94,<37,1>,<39,2>)}
 ```
 Now we know what file to look in, parse it:
 ```rascal-shell

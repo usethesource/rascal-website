@@ -36,7 +36,7 @@ data _Type_(_KeywordType1_ _KeywordType1_ = _KeywordDefaultExp1_, ...);
 
 #### Description
 
-The user-defined types in Rascal are either concrete [syntax definition](../../../Rascal/Declarations/SyntaxDefinition/index.md)s, [Alias](../../../Rascal/Declarations/Alias/index.md)es, or [algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md)s ("ADTs"). We use ADTs to define the shapes of structured, hierarchical data, that can also be recursive. Many think of ADTs as tree-like data-structures, others think of them as many-sorted algebraic signatures, and then again the concept of a "case class" from object-oriented programming also comes very close.
+The user-defined types in Rascal are either concrete [syntax definition](../../../Rascal/Declarations/SyntaxDefinition/index.md)s, [Alias](../../../Rascal/Declarations/Alias/index.md)es, or [./algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md)s ("ADTs"). We use ADTs to define the shapes of structured, hierarchical data, that can also be recursive. Many think of ADTs as tree-like data-structures, others think of them as many-sorted algebraic signatures, and then again the concept of a "case class" from object-oriented programming also comes very close.
 
 In Rascal, algebraic data types have to be declared first by listing for each type a number of [Constructor](../../../Rascal/Expressions/Values/Constructor/index.md)s, and then values can be constructed using [Call](../../../Rascal/Expressions/Call/index.md) to the declared constructor functions.
 

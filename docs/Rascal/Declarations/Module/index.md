@@ -48,7 +48,7 @@ occur directly following the imports) for:
 *  [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md)
 *  [Variable](../../../Rascal/Declarations/Variable/index.md)
 *  [Function](../../../Rascal/Declarations/Function/index.md)
-*  [Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)
+*  [./Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)
 *  [Alias](../../../Rascal/Declarations/Alias/index.md)
 *  [Annotation](../../../Rascal/Declarations/Annotation/index.md)
 *  [Tag](../../../Rascal/Declarations/Tag/index.md)

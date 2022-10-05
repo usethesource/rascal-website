@@ -15,7 +15,7 @@ The type reify expression operator has two functions in one go:
 *  it transforms type literals into values that represent them (an isomorphic relation)
 *  it reifies the declarations necessary to build values of the types as well
 
-As a result a reified type can be used to reconstruct a type and the abstract ([Algebraic Data Type](../../../../Rascal/Declarations/AlgebraicDataType/index.md)) or concrete ([Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition/index.md)) grammar that produced it. 
+As a result a reified type can be used to reconstruct a type and the abstract ([./Algebraic Data Type](../../../../Rascal/Declarations/AlgebraicDataType/index.md)) or concrete ([Syntax Definition](../../../../Rascal/Declarations/SyntaxDefinition/index.md)) grammar that produced it. 
 
 Type literals have a nice interaction with [Type Parameters](../../../../Rascal/Declarations/StaticTyping/TypeParameters/index.md), since they can be used to bind a type parameter without having to provide a value of the type. An example is the [parse](../../../../Library/ParseTree.md#ParseTree-parse) function in [parse tree](../../../../Library/ParseTree.md) (see below for an example usage).
 

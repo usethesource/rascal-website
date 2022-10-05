@@ -75,7 +75,7 @@ data Language (str version="")
 
 ## function createM3FromDirectory {#lang-java-m3-Core-createM3FromDirectory}
 
-* ``M3 createM3FromDirectory(loc project, bool errorRecovery = false, bool includedJarModels=false, str javaVersion = "1.7", list[loc] classPath = [])``
+* ``M3 createM3FromDirectory(loc project, bool errorRecovery = false, bool includeJarModels=false, str javaVersion = "1.7", list[loc] classPath = [])``
 
 #### Synopsis
 
@@ -83,7 +83,7 @@ Globs for jars, class files and java files in a directory and tries to compile a
 
 ## function createM3FromMavenProject {#lang-java-m3-Core-createM3FromMavenProject}
 
-* ``M3 createM3FromMavenProject(loc project, bool errorRecovery = false, bool includedJarModels=false, str javaVersion = "1.7", list[loc] classPath = [])``
+* ``M3 createM3FromMavenProject(loc project, bool errorRecovery = false, bool includeJarModels=false, str javaVersion = "1.7", list[loc] classPath = [])``
 
 #### Synopsis
 
@@ -92,6 +92,21 @@ Globs for jars, class files and java files in a directory and tries to compile a
 ## function createM3FromJar {#lang-java-m3-Core-createM3FromJar}
 
 * ``M3 createM3FromJar(loc jarFile, list[loc] classPath = [])``
+
+#### Synopsis
+
+Extract an M3 model from all the class files in a jar
+
+#### Description
+
+
+We use [create m3 from jar](../../../../Library/lang/java/m3/Core.md#lang::java::m3::Core-createM3FromJar) to extract an initial M3 model and 
+then a number of steps enrich the M3 towards a model that could
+have come from the original source. 
+
+In particular:
+* `typeDependency` is enriched by adding `extends` and `implements`
+* `methodOverrides` is recovered from `extends` and `implements`, but restricted to the actual overriden methods.
 
 ## function unregisterJavaProject {#lang-java-m3-Core-unregisterJavaProject}
 

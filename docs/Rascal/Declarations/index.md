@@ -27,7 +27,7 @@ The following concepts are relevant for declarations:
 * [Import](../../Rascal/Declarations/Import/index.md)
 * [./Program](../../Rascal/Declarations/Program/index.md)
 * [./static typing](../../Rascal/Declarations/StaticTyping/index.md)
-* [algebraic data type](../../Rascal/Declarations/AlgebraicDataType/index.md)
+* [./algebraic data type](../../Rascal/Declarations/AlgebraicDataType/index.md)
 * [Variable](../../Rascal/Declarations/Variable/index.md)
 * [./Function](../../Rascal/Declarations/Function/index.md)
 * [syntax definition](../../Rascal/Declarations/SyntaxDefinition/index.md)

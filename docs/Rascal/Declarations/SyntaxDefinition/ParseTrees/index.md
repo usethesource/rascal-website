@@ -25,7 +25,7 @@ Parse trees are called parse forests when they contain `amb` nodes.
 
 You can analyze and manipulate parse trees in three ways:
 
-*  Directly on the `Tree` level, just like any other [Algebraic Data Type](../../../../Rascal/Declarations/AlgebraicDataType/index.md)
+*  Directly on the `Tree` level, just like any other [./Algebraic Data Type](../../../../Rascal/Declarations/AlgebraicDataType/index.md)
 *  Using [./Concrete Syntax](../../../../Rascal/Expressions/ConcreteSyntax/index.md)
 *  Using [Action](../../../../Rascal/Declarations/SyntaxDefinition/Action/index.md)s
 

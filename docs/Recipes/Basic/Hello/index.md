@@ -27,7 +27,7 @@ ok
 ##  `hello` as function 
 
 As the command above, a piece of code is not _reusable_. To be able to use some code again and 
-again, the best way is to wrap it in a _Declaration-Function (broken link)_, and then call it:d call it:
+again, the best way is to wrap it in a [Function](../../../Rascal/Declarations/Function/index.md), and then call it:d call it:
 
 ```rascal-shell 
 rascal>import IO;
