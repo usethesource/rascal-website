@@ -15,38 +15,42 @@ The _range of programs_ to which meta-programming can be applied is large: from 
 
 The _range of kinds of meta programs_ that can be applied is also large. There are simple meta programs that generate boilerplate code from a list of items. There are complex meta programs that reverse engineer and statically analyse a big software system before visualizing the results. When writing all these kinds of meta programs one needs similar operations and similar data-types. 
 
-The _point of Rascal_ is to provide an easy-to-use and easy-to=-combine set of primitives to build and manipulate program representations. The point is _not_ to be or provide a unified representation of programs to let generic algorithms operate on. In meta programming the devil is often in the details. Rascal makes sure to not a priori abstract from the important details programming language syntax and semantics. Instead we make sure it is easy
-to address every important detail.
+The _point of Rascal_ is to provide an easy-to-use and easy-to=-combine set of primitives to build and manipulate program representations. The point is _not_ to be or provide a unified representation of programs to let generic algorithms operate on. In meta programming the devil is often in the details. Rascal makes sure to not a priori abstract from the important details programming language syntax and semantics. Instead we make sure it is easy to address every important detail.
 
 _Rascal is a domain specific programming language_. We emphasize programming here because Rascal is intended as an engineering tool for programmers that need to construct meta programs. Rascal programs allow running, inspecting, debugging, tracing, profiling, etc. just as normal programs do. The skills of any good programmer are enough to easily write good Rascal programs.
 
 The unique selling point of Rascal is _linguistic integration_ of all the tools you need to make meta-programming effective:
 * higher-order type-parameterized functions and algebraic data-types
 * immutable (builtin) data collections: lists, sets, maps, relations, trees.
-* structured programming with exceptions: if, for, while, break, continue, throw, try-catch.
+* extensive pattern matching and subsitution primitives for every data-type.
+* source locations for provenance of code artefacts and other data sources.
+* structured programming with exceptions: `if`, `for`, `while`, `break`, `continue`, `throw`, `try-catch`.
+* structured fixed-point programming: `solve`
+* lexically scoped backtracking for data generators and non-unitary pattern matching.
 * syntax definition and parser generation
 * abstract syntax definition and reading in ASTs from external sources
-* extensive pattern matching and subsitution primitives
 * generic recursive traversal primitives
-* relational calculus, list, set and map comprehensions, and reducers
-* fixed point computations
-* lexically scoped backtracking
+* relational calculus, list, set and map comprehensions, and reducers, including transitive closures and comprehensions for lists, sets, relations, list relations and maps.
 * modular extensibility of syntax, data and functions (!) (no expression problem)
 
 #### Examples
 
 Typical applications of Rascal are:
 
-*  Refactoring of Java source code.
-*  Analyzing PHP code.
-*  Searching for buffer overflows in C code.
-*  Analyzing the version history of a large software project.
-*  Implementing a _domain-specific language_ (DSL) for describing games or business processes.
+*  Empirical methods in Software Engineering research: metrics, statistics, impact analysis
+*  Design and Implementing of _domain-specific languages_ (DSLs);
+*  Design and Implementing of Programming Languages;
 *  Writing compilers.
+*  Construction of Software Refactorings, ad-hoc or reusable;
+*  Analyzing Legacy Software: Reverse-engineering
+*  Renovating Legacy Software: Re-engineering
+*  Software Verification
+*  Model Driven Engineering: model-to-code, code-to-model, model verification, test code generation
+*  Debugging
 
 All these cases involve a form of meta-programming: software programs (in a wide sense) are the objects-of-interest 
-that are being analyzed, transformed or generated. 
-Rascal can be applied in domains ranging from compiler construction and implementing domain-specific languages to constraint solving and software renovation.
+that are being analyzed, transformed or generated. More often than not, other sources of information (other than source code) are applied in metaprogramming.
+Rascal is very generic: it can be applied in domains ranging from compiler construction and implementing domain-specific languages to constraint solving and software renovation.
 
 Since representation of information is central to the approach, Rascal provides a rich set of built-in data types. 
 To support extraction and analysis, parsing and advanced pattern matching are provided. 

@@ -60,6 +60,7 @@ list[loc]: [
   |std:///Prelude$1.class|,
   |std:///ListRelation.rsc|,
   |std:///List.rsc|,
+  |std:///Prelude$4.class|,
   |std:///resource|,
   |std:///Content.rsc|,
   |std:///Grammar.rsc|,

@@ -17,8 +17,6 @@ title: <moduleName>
 ---
 
 // for each declaration (function, data, syntax, alias, import, extend)
-## <declarationName> {#fully-qualified-declaration-name}
-
 #### Synopsis
 
 ...

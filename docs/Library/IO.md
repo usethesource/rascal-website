@@ -487,7 +487,7 @@ Determine the last modification date of the Rascal standard library:
 
 ```rascal-shell ,continue
 rascal>lastModified(|std:///IO.rsc|);
-datetime: $2022-10-04T17:23:33.593+00:00$
+datetime: $2022-10-05T07:50:02.067+00:00$
 ```
 
 ## function created {#IO-created}
@@ -514,7 +514,7 @@ Determine the last modification date of the Rascal standard library:
 
 ```rascal-shell ,continue
 rascal>created(|std:///IO.rsc|);
-datetime: $2022-10-04T17:23:33.593+00:00$
+datetime: $2022-10-05T07:50:02.067+00:00$
 ```
 
 ## function touch {#IO-touch}
@@ -561,7 +561,7 @@ List all entries in the standard library:
 
 ```rascal-shell ,continue,error
 rascal>listEntries(|std:///|);
-list[str]: ["String.rsc","Location.rsc","demo","Prelude$Less.class","Prelude$ReleasableCallback.class","analysis","Set.rsc","util","Node.rsc","Exception.rsc","Type.class","Message.rsc","Prelude$ByteBufferBackedInputStream.class","Prelude$Sorting.class","Prelude.class","ValueIO.rsc","Prelude$NodeComparator.class","lang","Type.rsc","index.md","Prelude$3.class","Relation.rsc","Prelude$Distance.class","DateTime.rsc","Boolean.rsc","Prelude$1.class","ListRelation.rsc","List.rsc","resource","Content.rsc","Grammar.rsc","Prelude.rsc","Prelude$Backtrack.class","ParseTree.rsc","Prelude$2.class","IO.rsc","Map.rsc"]
+list[str]: ["String.rsc","Location.rsc","demo","Prelude$Less.class","Prelude$ReleasableCallback.class","analysis","Set.rsc","util","Node.rsc","Exception.rsc","Type.class","Message.rsc","Prelude$ByteBufferBackedInputStream.class","Prelude$Sorting.class","Prelude.class","ValueIO.rsc","Prelude$NodeComparator.class","lang","Type.rsc","index.md","Prelude$3.class","Relation.rsc","Prelude$Distance.class","DateTime.rsc","Boolean.rsc","Prelude$1.class","ListRelation.rsc","List.rsc","Prelude$4.class","resource","Content.rsc","Grammar.rsc","Prelude.rsc","Prelude$Backtrack.class","ParseTree.rsc","Prelude$2.class","IO.rsc","Map.rsc"]
 ```
 
 ## function mkDirectory {#IO-mkDirectory}

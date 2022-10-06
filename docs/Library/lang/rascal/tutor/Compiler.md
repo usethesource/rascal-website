@@ -34,14 +34,6 @@ compiles .rsc and .md files to markdown by executing Rascal-specific code and in
 
 * ``void defaultCompile()``
 
-## function compileOne {#lang-rascal-tutor-Compiler-compileOne}
-
-* ``void compileOne(loc root, loc src, PathConfig pcfg)``
-
-## function onlyAPICompile {#lang-rascal-tutor-Compiler-onlyAPICompile}
-
-* ``void onlyAPICompile()``
-
 ## function compile {#lang-rascal-tutor-Compiler-compile}
 
 * ``list[Message] compile(PathConfig pcfg, CommandExecutor exec = createExecutor(pcfg))``
@@ -49,6 +41,10 @@ compiles .rsc and .md files to markdown by executing Rascal-specific code and in
 #### Synopsis
 
 compiles each pcfg.srcs folder as a course root
+
+## function dropSlash {#lang-rascal-tutor-Compiler-dropSlash}
+
+* ``loc dropSlash(loc src)``
 
 ## function compileCourse {#lang-rascal-tutor-Compiler-compileCourse}
 
@@ -102,6 +98,7 @@ This uses another nested directory listing to construct information for the TOC 
 * ``default list[Output] compileMarkdown([/^<prefix:.*>\(\(<link:[A-Za-z0-9\-\ \t\.\:]+>\)\)<postfix:.*>$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls, int sidebar_position=-1)``
 * ``list[Output] compileMarkdown([a:/^\-\-\-\s*$/, *str header, b:/^\-\-\-\s*$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls, int sidebar_position=-1)``
 * ``list[Output] compileMarkdown([str first:/^\s*#+\s+<title:.*>$/, *str emptySection, nextSection:/^\s*#+\s+.*$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls, int sidebar_position=-1)``
+* ``list[Output] compileMarkdown([str first:/^\s*#+\s+<title:.*>$/, *str body, nextSection:/^\s*#+\s+.*$/, *str rest], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls, int sidebar_position=-1)``
 * ``list[Output] compileMarkdown([str first:/^\s*#+\s+<title:.*>$/, *str emptySection, /^\s*$/], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls, int sidebar_position=-1)``
 * ``list[Output] compileMarkdown([], int _/*line*/, int _/*offset*/, PathConfig _, CommandExecutor _, Index _, list[str] _)``
 * ``default list[Output] compileMarkdown([str head, *str tail], int line, int offset, PathConfig pcfg, CommandExecutor exec, Index ind, list[str] dtls, int sidebar_position=-1)``

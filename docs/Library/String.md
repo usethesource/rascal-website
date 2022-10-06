@@ -361,7 +361,7 @@ ok
 rascal>arbString(3);
 str: ""
 rascal>arbString(10);
-str: ""
+str: " \u3000"
 ```
 
 ## function left {#String-left}
@@ -912,9 +912,4 @@ ok
 rascal>substitute("abc", (|stdin:///|(1,1): "d"))
 str: "adc"
 ```
-
-c"
-```
-
-
 

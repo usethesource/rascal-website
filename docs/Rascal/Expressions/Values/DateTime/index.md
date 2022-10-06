@@ -120,6 +120,3 @@ int: 20
 * `DT.justTime` prints a time literal that currently can not be parsed back into a value to due to issue #1443.
 
 
-rints a time literal that currently can not be parsed back into a value to due to issue #1443.
-
-
