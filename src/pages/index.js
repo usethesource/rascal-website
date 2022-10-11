@@ -29,9 +29,6 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
-        <p className='text--center'>
-          <a href='/docs/GettingStarted'>Feature comparisons between frontends (Eclipse, VSCode, CLI, Maven)</a>
-        </p>
       </main>
     </Layout>
   );

@@ -25,7 +25,8 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/usethesource/rascal/tree/main/src/org/rascalmpl/courses/',
+          // editUrl: ({docPath}) =>
+          // `https://github.com/usethesource/rascal/tree/main/src/org/rascalmpl/courses/${docPath.substring(4)}`,
         },
         blog: {
           showReadingTime: true,
@@ -107,14 +108,13 @@ const config = {
             title: 'Community',
             items: [
               {
+                label: 'Community',
+                to: '/team/#usethesource-community',
+              },
+              {
                 label: 'Stack Overflow',
                 href: 'https://stackoverflow.com/questions/tagged/rascal',
-              }
-              // ,
-              // {
-              //   label: 'Discord',
-              //   href: 'https://discordapp.com/invite/docusaurus',
-              // },
+              },
               // {
               //   label: 'Twitter',
               //   href: 'https://twitter.com/docusaurus',
