@@ -71,7 +71,7 @@ Prism.languages['rascal'] = {
         /\bstart\b/,
         /\bdatetime\b/
     ],
-    'bold': /^rascal\>/,
+    'prompt': /rascal\>/,
     'url': /\|.*?\|/,
     'callout': /[⓿❶-❾]+/,
 }

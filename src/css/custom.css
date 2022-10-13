@@ -28,3 +28,7 @@
 .callout {
   font-size: 2em;
 }
+
+.prompt {
+  font-weight: bold;
+}
