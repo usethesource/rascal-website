@@ -18,7 +18,7 @@ A variable pattern can act in two roles:
 
 *  If _Var_ has not been defined before (or it has been declared but not initialized) then it matches any value. 
     That value is assigned to _Var_. The scope of this variable is the outermost expression in which the pattern occurs
-or the enclosing [./If](../../../Rascal/Statements/If/index.md), [While](../../../Rascal/Statements/While/index.md), or [Do](../../../Rascal/Statements/Do/index.md) if the pattern occurs in the test expression of those statements.
+or the enclosing [If](../../../Rascal/Statements/If/index.md), [While](../../../Rascal/Statements/While/index.md), or [Do](../../../Rascal/Statements/Do/index.md) if the pattern occurs in the test expression of those statements.
 
 #### Examples
 

@@ -40,8 +40,8 @@ Trying to get an arbitrary value from it gives an error:
 
 ```rascal-shell ,continue,error
 rascal>getOneFrom(M);
-|std:///Map.rsc|(2033,403,<103,0>,<122,41>): EmptyMap()
-	at *** somewhere ***(|std:///Map.rsc|(2033,403,<103,0>,<122,41>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/Map.rsc|(2033,403,<103,0>,<122,41>): EmptyMap()
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/Map.rsc|(2033,403,<103,0>,<122,41>))
 	at getOneFrom(|prompt:///|(11,1,<1,11>,<1,12>))
 ok
 ```

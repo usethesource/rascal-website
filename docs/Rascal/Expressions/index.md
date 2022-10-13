@@ -38,6 +38,6 @@ The expression is the basic unit of evaluation and may consist of the ingredient
 
 *  An [All](../../Rascal/Expressions/Values/Boolean/All/index.md) expression.
 
-*  Some statements like [./If](../../Rascal/Statements/If/index.md), [For](../../Rascal/Statements/For/index.md), [While](../../Rascal/Statements/While/index.md) and [Do](../../Rascal/Statements/Do/index.md) can also be used in expressions, see [Statement as Expression](../../Rascal/Expressions/StatementAsExpression/index.md).
+*  Some statements like [If](../../Rascal/Statements/If/index.md), [For](../../Rascal/Statements/For/index.md), [While](../../Rascal/Statements/While/index.md) and [Do](../../Rascal/Statements/Do/index.md) can also be used in expressions, see [Statement as Expression](../../Rascal/Expressions/StatementAsExpression/index.md).
 
 

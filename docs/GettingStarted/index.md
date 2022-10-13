@@ -16,11 +16,11 @@ Rascal is deployed as one of four easy-to-use packages:
 3. An **Eclipse plugin**, for which the update site is <https://update.rascal-mpl.org/stable/>.
 4. A set of **Maven MOJOs**, for which the plugin repository is <https://releases.usethesource.io/maven/>
 
-For developers on Rascal itself or experimental libraries, who want to work with on continuously integrated and tests releases please have a look at the [Developers](../Developers/index.md) course.
+For developers on Rascal itself or experimental libraries, who want to work with on continuously integrated and tests releases please have a look at the [Developers](../../../../../../../../../../Developers/index.md) course.
 
 #### Running Rascal: starting a terminal with a read-eval-print-loop
 
-1. On the Unix or Windows commandline, simply start a [rascal shell](../RascalShell/index.md) by: `java -jar rascal-<version>.jar`
+1. On the Unix or Windows commandline, simply start a [rascal shell](../../../../../../../../../../RascalShell/index.md) by: `java -jar rascal-<version>.jar`
 2. In VScode, in the command palette type `Rascal` and select `Create Rascal Terminal`
 3. In Eclipse, from the button bar select the button with the Rascal logo.
 4. With Maven, create a pom.xml which includes the above plugin and type: `mvn rascal:console`
@@ -33,7 +33,7 @@ Here we show how to quit the terminal:
 ```
 
 Similarly you could type `CTRL+D` which indicates end-of-file to terminate the process. More information 
-about the features of the shell can be found [here](../RascalShell/index.md). At the prompt you can type [Expressions](../Rascal/Expressions/index.md), [Statements](../Rascal/Statements/index.md) and [Declarations](../Rascal/Declarations/index.md).
+about the features of the shell can be found [here](../../../../../../../../../../RascalShell/index.md). At the prompt you can type [Expressions](../../../../../../../../../../Rascal/Expressions/index.md), [Statements](../../../../../../../../../../Rascal/Statements/index.md) and [Declarations](../../../../../../../../../../Rascal/Declarations/index.md).
 
 
 ```rascal-shell 
@@ -50,9 +50,9 @@ ok
 
 #### Troubleshooting
 
-In case of trouble, there is no need to panic. [Help](../GettingHelp/index.md) is nearby.
+In case of trouble, there is no need to panic. [Help](../../../../../../../../../../GettingHelp/index.md) is nearby.
 
-* Common troubles with installation and first runs are documented [here](../GettingStarted/Troubleshooting/index.md)
+* Common troubles with installation and first runs are documented [here](../../../../../../../../../../GettingStarted/Troubleshooting/index.md)
 * If you have a question that probably has Rascal _source code_ as an answer, go to [StackOverflow](http://stackoverflow.com/questions/tagged/rascal). Either find your answer directly, or you are welcome to post a new question using the tag `[rascal]`.
 * If you think you've run into a bug, we are very happy to receive your report on [Github](http://github.com/usethesource/rascal/issues). 
 * If any documentation is unclear, incomplete or ambiguous you are also invited to submit a report there, but you may also use the `edit` button below to propose a fix.

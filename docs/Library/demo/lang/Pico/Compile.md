@@ -35,7 +35,7 @@ Unique label generation
 ## function compileStat {#demo-lang-Pico-Compile-compileStat}
 
 * ``Instrs compileStat(asgStat(PicoId Id, EXP Exp))``
-* ``Instrs compileStat(ifElseStat(EXP Exp,                                list[STATEMENT] Stats1,                               list[STATEMENT] Stats2))``
+* ``Instrs compileStat(ifElseStat(EXP Exp,                   // <5>                               list[STATEMENT] Stats1,                               list[STATEMENT] Stats2))``
 * ``Instrs compileStat(whileStat(EXP Exp,                               list[STATEMENT] Stats1))``
 
 #### Synopsis

@@ -47,7 +47,7 @@ import List;
 alias Env = map[str, int];
 alias PEnv = map[str, Func];
 
-alias Result2 = tuple[Env, int];  // <1>
+alias Result2 = tuple[Env, int];       ❶  
 
 Result2 eval2(str main, list[int] args, Prog prog) {
   penv = ( f.name: f | f <- prog.funcs );
@@ -60,7 +60,7 @@ Result2 eval2(nat(int nat), Env env, PEnv penv) = <env, nat>;
  
 Result2 eval2(var(str name), Env env, PEnv penv) = <env, env[name]>;       
        
-Result2 eval2(mul(Exp lhs, Exp rhs), Env env, PEnv penv) {  // <2>
+Result2 eval2(mul(Exp lhs, Exp rhs), Env env, PEnv penv) {       ❷  
   <env, x> = eval2(lhs, env, penv);
   <env, y> = eval2(rhs, env, penv);
   return <env, x * y>;
@@ -130,13 +130,13 @@ Result2 eval2(let(list[Binding] bindings, Exp exp), Env env, PEnv penv)  {
    return eval2(exp, env, penv);
 } 
     
-Result2 eval2(assign(var(str name), Exp exp), Env env, PEnv penv)  { // <3>
+Result2 eval2(assign(var(str name), Exp exp), Env env, PEnv penv)  {      ❸  
   <env, v> = eval2(exp, env, penv);
   env[name] = v;
   return <env, v>;
 }
 
-Result2 eval2(seq(Exp lhs, Exp rhs), Env env, PEnv penv)  {  // <4>
+Result2 eval2(seq(Exp lhs, Exp rhs), Env env, PEnv penv)  {       ❹  
   <env, _> = eval2(lhs, env, penv);
   return eval2(rhs, env, penv);
 }
@@ -144,15 +144,15 @@ Result2 eval2(seq(Exp lhs, Exp rhs), Env env, PEnv penv)  {  // <4>
 ```
 
                 
-<1> The alias `Result` is introduced: a pair of an environment and an integer value.
+* ❶  The alias `Result` is introduced: a pair of an environment and an integer value.
     All evaluator functions are changed from returning an integer (the result of evaluation) to
    `Result` (the result of evaluation _and_ the local side effects).
-<2> The effect of this change can be seen in all functions. For instance, when evaluating
+* ❷  The effect of this change can be seen in all functions. For instance, when evaluating
     multiplication, the environment produced by the left operand ahs to be passed as 
     argument to the right operand of the multiplication. This is needed, to propagate any side effects
     caused by the left operand to propagate to the right one.
-<3> Assignment is implemented.
-<4>  Sequencing is implemented. Observe that that the value of the left operand is ignored and that
+* ❸  Assignment is implemented.
+* ❹   Sequencing is implemented. Observe that that the value of the left operand is ignored and that
   the value of the right operand is returned.
 
 

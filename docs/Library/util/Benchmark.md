@@ -15,22 +15,22 @@ Functions for time measurement and benchmarking.
 
 The `Benchmark` library provides the following functions:
 * [benchmark](../../Library/util/Benchmark.md#util::Benchmark-benchmark)
-* [cpuTimeNow](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeNow)
+* [cpuTime](../../Library/util/Benchmark.md#util::Benchmark-cpuTime)
 * [cpuTimeOf](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf)
 * [gc](../../Library/util/Benchmark.md#util::Benchmark-gc)
 * [getFreeMemory](../../Library/util/Benchmark.md#util::Benchmark-getFreeMemory)
 * [getMaxFreeMemory](../../Library/util/Benchmark.md#util::Benchmark-getMaxFreeMemory)
 * [getMaxMemory](../../Library/util/Benchmark.md#util::Benchmark-getMaxMemory)
-* [getMilliTimeNow](../../Library/util/Benchmark.md#util::Benchmark-getMilliTimeNow)
-* [getNanoTimeNow](../../Library/util/Benchmark.md#util::Benchmark-getNanoTimeNow)
+* [getMilliTime](../../Library/util/Benchmark.md#util::Benchmark-getMilliTime)
+* [getNanoTime](../../Library/util/Benchmark.md#util::Benchmark-getNanoTime)
 * [getTotalMemory](../../Library/util/Benchmark.md#util::Benchmark-getTotalMemory)
 * [getUsedMemory](../../Library/util/Benchmark.md#util::Benchmark-getUsedMemory)
 * [heapDump](../../Library/util/Benchmark.md#util::Benchmark-heapDump)
-* [realTimeNow](../../Library/util/Benchmark.md#util::Benchmark-realTimeNow)
+* [realTime](../../Library/util/Benchmark.md#util::Benchmark-realTime)
 * [realTimeOf](../../Library/util/Benchmark.md#util::Benchmark-realTimeOf)
-* [systemTimeNow](../../Library/util/Benchmark.md#util::Benchmark-systemTimeNow)
+* [systemTime](../../Library/util/Benchmark.md#util::Benchmark-systemTime)
 * [systemTimeOf](../../Library/util/Benchmark.md#util::Benchmark-systemTimeOf)
-* [userTimeNow](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow)
+* [userTime](../../Library/util/Benchmark.md#util::Benchmark-userTime)
 * [userTimeOf](../../Library/util/Benchmark.md#util::Benchmark-userTimeOf)
 
 
@@ -100,9 +100,9 @@ Returns the amount of memory that is currently in use by the programs running on
 
 Returns the amount of memory that is yet available, in principle, on the current JVM
 
-## function cpuTimeNow {#util-Benchmark-cpuTimeNow}
+## function cpuTime {#util-Benchmark-cpuTime}
 
-* ``int cpuTimeNow()``
+* ``int cpuTime()``
 
 #### Synopsis
 
@@ -128,12 +128,12 @@ ok
 Here we measure time by using separate calls to `cpuTime` before and after a call to `fac`.
 
 ```rascal-shell ,continue
-rascal>before = cpuTimeNow();
-int: 999153889000
+rascal>before = cpuTime();
+int: 79448242000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
-rascal>cpuTimeNow() - before;
-int: 3779000
+rascal>cpuTime() - before;
+int: 2464000
 ```
 
 See also [cpu time of](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf) for a more convenient way of measuring the time spent during a block of code.
@@ -143,9 +143,9 @@ See also [cpu time of](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf
 
 * The timings shown above may be significantly influenced by the documentation compilation process
 
-## function realTimeNow {#util-Benchmark-realTimeNow}
+## function realTime {#util-Benchmark-realTime}
 
-* ``int realTimeNow()``
+* ``int realTime()``
 
 #### Synopsis
 
@@ -160,11 +160,11 @@ Returns the difference, measured in milliseconds, between the current time and m
 
 
    * The actual accuracy of the time may be not as good as a millisecond. This depends on OS and hardware specifics.
-   * Note that the resolution is _milliseconds_ here, while [cpu time now](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeNow) produces nanosecond resolution.
+   * Note that the resolution is _milliseconds_ here, while [cpu time](../../Library/util/Benchmark.md#util::Benchmark-cpuTime) produces nanosecond resolution.
 
-## function getNanoTimeNow {#util-Benchmark-getNanoTimeNow}
+## function getNanoTime {#util-Benchmark-getNanoTime}
 
-* ``int getNanoTimeNow()``
+* ``int getNanoTime()``
 
 #### Synopsis
 
@@ -188,13 +188,13 @@ Return nanoseconds clock time of the JVM's high resolution clock.
 > This method provides nanosecond precision, but not necessarily
 > nanosecond resolution (that is, how frequently the value changes).
 
-## function getMilliTimeNow {#util-Benchmark-getMilliTimeNow}
+## function getMilliTime {#util-Benchmark-getMilliTime}
 
-* ``int getMilliTimeNow()``
+* ``int getMilliTime()``
 
 #### Synopsis
 
-Synonym for [real time now](../../Library/util/Benchmark.md#util::Benchmark-realTimeNow)
+Synonym for [real time](../../Library/util/Benchmark.md#util::Benchmark-realTime)
 
 ## function cpuTimeOf {#util-Benchmark-cpuTimeOf}
 
@@ -202,11 +202,11 @@ Synonym for [real time now](../../Library/util/Benchmark.md#util::Benchmark-real
 
 #### Synopsis
 
-Measure the exact running time of a block of code, using [cpu time now](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeNow).
+Measure the exact running time of a block of code, using [cpu time](../../Library/util/Benchmark.md#util::Benchmark-cpuTime).
 
-## function systemTimeNow {#util-Benchmark-systemTimeNow}
+## function systemTime {#util-Benchmark-systemTime}
 
-* ``int systemTimeNow()``
+* ``int systemTime()``
 
 #### Synopsis
 
@@ -220,7 +220,7 @@ Returns the CPU time that the current thread has executed in system mode in nano
 * Current system time in nanoseconds (10^-9^ sec) since the start of the thread that runs the code that calls this function.
 * The returned value is of nanoseconds precision but not necessarily nanoseconds accuracy.
 * CPU time is the number of CPU cycles times the OS-registered clock speed.
-* The other [CPU time](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeNow), next to [System time](../../Library/util/Benchmark.md#util::Benchmark-systemTimeNow) is spent in [User time](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow).
+* The other [CPU time](../../Library/util/Benchmark.md#util::Benchmark-cpuTime), next to [System time](../../Library/util/Benchmark.md#util::Benchmark-systemTime) is spent in [User time](../../Library/util/Benchmark.md#util::Benchmark-userTime).
 
 #### Examples
 
@@ -239,12 +239,12 @@ Here we measure time by using separate calls to `sytemTime` before and after a c
 
 
 ```rascal-shell ,continue
-rascal>before = systemTimeNow();
-int: 53823415000
+rascal>before = systemTime();
+int: 3566732000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
-rascal>systemTimeNow() - before;
-int: 137000
+rascal>systemTime() - before;
+int: 224000
 ```
 
 ## function systemTimeOf {#util-Benchmark-systemTimeOf}
@@ -253,7 +253,7 @@ int: 137000
 
 #### Synopsis
 
-Measure the exact running time of a block of code, using [system time now](../../Library/util/Benchmark.md#util::Benchmark-systemTimeNow).
+Measure the exact running time of a block of code, using [system time](../../Library/util/Benchmark.md#util::Benchmark-systemTime).
 
 #### Examples
 
@@ -269,12 +269,12 @@ rascal>systemTimeOf(
 >>>>>>>      fac1(50); 
 >>>>>>>   } 
 >>>>>>>);
-int: 40000
+int: 17000
 ```
 
-## function userTimeNow {#util-Benchmark-userTimeNow}
+## function userTime {#util-Benchmark-userTime}
 
-* ``int userTimeNow()``
+* ``int userTime()``
 
 #### Synopsis
 
@@ -288,7 +288,7 @@ Returns the CPU time that the current thread has executed in user mode in nanose
 * The returned value is of nanoseconds precision but not necessarily nanoseconds accuracy.
 * As distinguished from [now](../../Library/DateTime.md#DateTime-now) which returns the wall clock time since the Unix epoch.
 * CPU time is the number of CPU cycles times the OS-registered clock speed.
-* The other [CPU time](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeNow), next to [user time](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow) is spent in [system time](../../Library/util/Benchmark.md#util::Benchmark-systemTimeNow).
+* The other [CPU time](../../Library/util/Benchmark.md#util::Benchmark-cpuTime), next to [user time](../../Library/util/Benchmark.md#util::Benchmark-userTime) is spent in [system time](../../Library/util/Benchmark.md#util::Benchmark-systemTime).
 
 #### Examples
 
@@ -305,12 +305,12 @@ ok
 Here we measure time by using separate calls to `userTime` before and after a call to `fac`.
 
 ```rascal-shell ,continue
-rascal>before = userTimeNow();
-int: 945510063000
+rascal>before = userTime();
+int: 76034944000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
-rascal>userTimeNow() - before;
-int: 3104000
+rascal>userTime() - before;
+int: 2258000
 ```
 
 ## function userTimeOf {#util-Benchmark-userTimeOf}
@@ -363,7 +363,7 @@ ok
 ```
 
 We measure two calls to the factorial function with arguments `100`, respectively, `200` 
-(using by default [real time now](../../Library/util/Benchmark.md#util::Benchmark-realTimeNow) that returns milliseconds):
+(using by default [real time](../../Library/util/Benchmark.md#util::Benchmark-realTime) that returns milliseconds):
 
 ```rascal-shell ,continue
 rascal>benchmark(
@@ -374,10 +374,10 @@ rascal>benchmark(
 >>>>>>>                  fac1(200);
 >>>>>>>               }) 
 >>>>>>>   );
-map[str, num]: ("fac100":3,"fac200":14)
+map[str, num]: ("fac100":0,"fac200":1)
 ```
 
-We can do the same using [user time now](../../Library/util/Benchmark.md#util::Benchmark-userTimeNow) that returns nanoseconds:
+We can do the same using [user time](../../Library/util/Benchmark.md#util::Benchmark-userTime) that returns nanoseconds:
 
 ```rascal-shell ,continue
 rascal>benchmark( 
@@ -388,7 +388,7 @@ rascal>benchmark(
 >>>>>>>                  fac1(200);
 >>>>>>>            })
 >>>>>>>   , userTimeOf);
-map[str, num]: ("fac100":2287000,"fac200":4479000)
+map[str, num]: ("fac100":351000,"fac200":629000)
 ```
 
 ## function gc {#util-Benchmark-gc}

@@ -22,7 +22,7 @@ The following example extends the grammar for `Exp` in [./No Layout](../../../..
 ```rascal 
 module demo::lang::Exp::Concrete::WithLayout::Syntax
 
-layout Whitespace = [\t-\n\r\ ]*; // <1>
+layout Whitespace = [\t-\n\r\ ]*;      ❶  
     
 lexical IntegerLiteral = [0-9]+;           
 
@@ -35,7 +35,7 @@ start syntax Exp
 
 ```
 
-<1> Using the `layout` definition, we define that the `Whitespace` non-terminal is used _in between every symbol_ of the `syntax` productions in the current module.
+* ❶  Using the `layout` definition, we define that the `Whitespace` non-terminal is used _in between every symbol_ of the `syntax` productions in the current module.
 
 And now we can use spaces in our definition of the eval function as well:
 

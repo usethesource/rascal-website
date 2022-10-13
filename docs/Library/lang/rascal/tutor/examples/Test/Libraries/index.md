@@ -1,3 +1,0 @@
-## Synopsis
-Library functions
-

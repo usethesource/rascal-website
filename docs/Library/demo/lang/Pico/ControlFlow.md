@@ -25,7 +25,7 @@ data CFNode
 ## function cflowStat {#demo-lang-Pico-ControlFlow-cflowStat}
 
 * ``CFGraph cflowStat(s:asgStat(PicoId Id, EXP Exp))``
-* ``CFGraph cflowStat(ifElseStat(EXP Exp,                                                 list[STATEMENT] Stats1,                               list[STATEMENT] Stats2))``
+* ``CFGraph cflowStat(ifElseStat(EXP Exp,                   // <4>                                            list[STATEMENT] Stats1,                               list[STATEMENT] Stats2))``
 * ``CFGraph cflowStat(whileStat(EXP Exp, list[STATEMENT] Stats))``
 
 ## function cflowStats {#demo-lang-Pico-ControlFlow-cflowStats}

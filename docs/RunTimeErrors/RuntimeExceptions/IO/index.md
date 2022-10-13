@@ -41,8 +41,8 @@ Import the `IO` library and attempt to use a non-existing scheme:
 rascal>import IO;
 ok
 rascal>readFile(|myScheme:///example.rsc|);
-|std:///IO.rsc|(12843,1655,<586,0>,<623,24>): IO("Unsupported scheme \'myScheme\'")
-	at *** somewhere ***(|std:///IO.rsc|(12843,1655,<586,0>,<623,24>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/IO.rsc|(12843,1655,<586,0>,<623,24>): IO("Unsupported scheme \'myScheme\'")
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/IO.rsc|(12843,1655,<586,0>,<623,24>))
 	at readFile(|prompt:///|(9,25,<1,9>,<1,34>))
 ok
 ```

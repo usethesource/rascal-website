@@ -380,3 +380,11 @@ title: "module lang::rascal::tests::basic::Locations"
 
 * ``test bool isCover3(int f, int t)``
 
+## function trailingSlashFile1 {#lang-rascal-tests-basic-Locations-trailingSlashFile1}
+
+* ``test bool trailingSlashFile1()``
+
+## function trailingSlashFile2 {#lang-rascal-tests-basic-Locations-trailingSlashFile2}
+
+* ``test bool trailingSlashFile2()``
+

@@ -35,14 +35,14 @@ Next, we define a `load` function:
 ```rascal 
 module demo::lang::Exp::Combined::Manual::Load
 
-import demo::lang::Exp::Concrete::WithLayout::Syntax; // <1>
-import demo::lang::Exp::Abstract::Syntax; // <2>
-import demo::lang::Exp::Combined::Manual::Parse; // <3>
+import demo::lang::Exp::Concrete::WithLayout::Syntax;      ❶  
+import demo::lang::Exp::Abstract::Syntax;      ❷  
+import demo::lang::Exp::Combined::Manual::Parse;      ❸  
 import String;
 
-demo::lang::Exp::Abstract::Syntax::Exp loadExp(str txt) = load(parseExp(txt)); // <4>
+demo::lang::Exp::Abstract::Syntax::Exp loadExp(str txt) = load(parseExp(txt));      ❹  
      
-demo::lang::Exp::Abstract::Syntax::Exp load((Exp)`<IntegerLiteral l>`) // <5>
+demo::lang::Exp::Abstract::Syntax::Exp load((Exp)`<IntegerLiteral l>`)      ❺  
        = con(toInt("<l>"));       
 demo::lang::Exp::Abstract::Syntax::Exp load((Exp)`<Exp e1> * <Exp e2>`) 
        = mul(load(e1), load(e2));  
@@ -55,11 +55,11 @@ demo::lang::Exp::Abstract::Syntax::Exp load((Exp)`( <Exp e> )`)
 
 Some comments:
 
-<1> We reuse the previously defined concrete syntax with layout.
-<2> We also reuse the previously defined abstract syntax.
-<3> Import the `Parse` module defined above.
-<4> The top level `load` function that converts a string to an abstract syntax tree.
-<5> The conversion from parse tree to abstract syntax tree start here. Note that we
+* ❶  We reuse the previously defined concrete syntax with layout.
+* ❷  We also reuse the previously defined abstract syntax.
+* ❸  Import the `Parse` module defined above.
+* ❹  The top level `load` function that converts a string to an abstract syntax tree.
+* ❺  The conversion from parse tree to abstract syntax tree start here. Note that we
     explicitly use `demo::lang::Exp::Abstract::Syntax::Exp` in these
     rules to distinguish from `demo::lang::Exp::Concrete::WithLayout::Syntax::Exp`.
 

@@ -18,7 +18,7 @@ to the syntax rules of language _L_. There are two possible answers:
 This is shown below:
 
 
-![][parser.png](/assets/Rascalopedia/Parser/parser.png)
+![parser.png](/assets/Rascalopedia/Parser/parser.png)
 
 
 

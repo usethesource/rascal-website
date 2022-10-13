@@ -23,7 +23,7 @@ import demo::lang::Pico::Abstract;
 import demo::lang::Pico::Load;
 import List;
 
-data CFNode 
+data CFNode      ❶  
     = entry(loc location)
     | exit()
     | choice(loc location, EXP exp)
@@ -31,16 +31,16 @@ data CFNode
     ;
 
 // highlight-next-line
-alias CFGraph = tuple[set[CFNode] entry, Graph[CFNode] graph, set[CFNode] exit]; 
+alias CFGraph = tuple[set[CFNode] entry, Graph[CFNode] graph, set[CFNode] exit];      ❷  
 
 // highlight-next-line
-CFGraph cflowStat(s:asgStat(PicoId Id, EXP Exp)) { 
+CFGraph cflowStat(s:asgStat(PicoId Id, EXP Exp)) {      ❸   
    S = statement(s.src, s);
    return <{S}, {}, {S}>;
 }
 
 // highlight-next-line
-CFGraph cflowStat(ifElseStat(EXP Exp,                  
+CFGraph cflowStat(ifElseStat(EXP Exp,                        ❹               
                               list[STATEMENT] Stats1,
                               list[STATEMENT] Stats2)) {
    CF1 = cflowStats(Stats1); 
@@ -50,14 +50,14 @@ CFGraph cflowStat(ifElseStat(EXP Exp,
 }
 
 // highlight-next-line
-CFGraph cflowStat(whileStat(EXP Exp, list[STATEMENT] Stats)) { 
+CFGraph cflowStat(whileStat(EXP Exp, list[STATEMENT] Stats)) {       ❺  
    CF = cflowStats(Stats); 
    E = {choice(Exp.src, Exp)}; 
    return < E, (E * CF.entry) + CF.graph + (CF.exit * E), E >;
 }
 
 // highlight-next-line
-CFGraph cflowStats(list[STATEMENT] Stats) { 
+CFGraph cflowStats(list[STATEMENT] Stats) {      ❻  
   if(size(Stats) == 1) {
      return cflowStat(Stats[0]);
   }
@@ -69,7 +69,7 @@ CFGraph cflowStats(list[STATEMENT] Stats) {
 }
 
 // highlight-next-line
-CFGraph cflowProgram(PROGRAM P:program(list[DECL] _, list[STATEMENT] Series)) { 
+CFGraph cflowProgram(PROGRAM P:program(list[DECL] _, list[STATEMENT] Series)) {      ❼  
    CF = cflowStats(Series);
    Entry = entry(P.src);
    Exit  = exit();
@@ -78,20 +78,20 @@ CFGraph cflowProgram(PROGRAM P:program(list[DECL] _, list[STATEMENT] Series)) {
 }
 
 // highlight-next-line
-CFGraph cflowProgram(str txt) = cflowProgram(load(txt)); 
+CFGraph cflowProgram(str txt) = cflowProgram(load(txt));      ❽  
 
 ```
 
                 
 Notes:
 
-* First we define a data type `CFNODE` that represents the various elements of a control flow graph:
+* ❶  First we define a data type `CFNODE` that represents the various elements of a control flow graph:
     *  `entry`: the entry point of the program.
     *  `exit` the exit point of the program.
     *  `choice`: a decision point in the control flow.
     *  `statement`: a statement in the control flow.
 
-* Next we define `CFGRAPH` , an alias for a tuple consisting of the following three elements:
+* ❷  Next we define `CFGRAPH` , an alias for a tuple consisting of the following three elements:
     *  `entry`: the set of entry nodes of the graph.
     *  `graph`: the actual graph of `CFNODE`s.
     *  `exit`: the set of exit nodes.
@@ -99,11 +99,11 @@ Notes:
    The computation of the control flow graph is defined by the functions 
   `cflowStat`, `cflowStats`, `cflowDecls` and `cflowProgram`.
 
-* The control flow of an assignment statement is computed by wrapping
+* ❸  The control flow of an assignment statement is computed by wrapping
     the assignment statement as a `CFNODE` and return a `CFGRAPH` with the assignment
     statement as entry and exit node, and no internal connections.
 
-* The control flow of an if-then-else statement is computed as follows:
+* ❹  The control flow of an if-then-else statement is computed as follows:
     *  First the control flows of the then part and the else part are computed,
         yielding `CF1` and `CF2`.
     *  Next a set `E` is created that consist of a the test of the if-then-else statement
@@ -115,18 +115,18 @@ Notes:
              (`CF1.graph + CF2.graph`).
         *  The union of exit nodes of both branches (`CF1.exit + CF2.exit`).
 
-* The control flow of  while-statement is computed in a similar fashion,
+* ❺  The control flow of  while-statement is computed in a similar fashion,
     except that the exit of the loop body has to be connected with the entry
     of the while loop.
 
-* The control flow graph for a series of statements is obtained by connecting
+* ❻  The control flow graph for a series of statements is obtained by connecting
     the exits and entries of consecutive statements.
 
-* The control flow graph of a complete program is obtained by
+* ❼  The control flow graph of a complete program is obtained by
     creating an entry and an exit node and connecting them to the graph of
     the statements of the program.
 
-* Shows the steps from text to control flow graph.
+* ❽  Shows the steps from text to control flow graph.
 
 We can now create a CFG for a small Pico program:
 

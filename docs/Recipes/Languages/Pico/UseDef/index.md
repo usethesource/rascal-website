@@ -17,11 +17,11 @@ module demo::lang::Pico::UseDef
 
 import demo::lang::Pico::Abstract;
 
-set[Occurrence] usesExp(EXP e, STATEMENT s) =  // <1>
+set[Occurrence] usesExp(EXP e, STATEMENT s) =       ❶  
   u:id(PicoId Id1) := e ? {< u.src, Id1, s>}
                         : {< u.src, Id2, s> | /u:id(PicoId Id2) <- e };
      
-set[Occurrence] usesStat(s:asgStat(PicoId Id, EXP e)) = usesExp(e, s); // <2>
+set[Occurrence] usesStat(s:asgStat(PicoId Id, EXP e)) = usesExp(e, s);      ❷  
 
 set[Occurrence] usesStat(s: ifElseStat(EXP e,
                               list[STATEMENT] s1,
@@ -35,30 +35,34 @@ set[Occurrence] usesStat(s: whileStat(EXP e,
 set[Occurrence] usesStats(list[STATEMENT] stats) =  
    {*usesStat(s) | s <- stats};
 
-public set[Occurrence] uses(PROGRAM p) = usesStats(p.stats);  //<3>
+public set[Occurrence] uses(PROGRAM p) = usesStats(p.stats);      ❸  
 
-public set[Occurrence] defs(PROGRAM p) =  // <4>
+public set[Occurrence] defs(PROGRAM p) =       ❹  
    { < stat.src, v, stat > | /stat:asgStat(PicoId v, EXP _) <- p.stats};
 
 ```
 
-                
-Recall that `Occurrence` was introduced in [Abstract](../../../../Recipes/Languages/Pico/Abstract/index.md); it is a parameterized container to associate
-program entities with their location.
+:::caution
+There is a "TODO" in the documentation source:
+	: should we not use locations more directly in our examples?
+(((TODO: should we not use locations more directly in our examples?)))
+:::
 
-* The function `usesExp` computes a set of occurrences (uses) of Pico identifiers in a given statement:
+Recall that `Occurrence` was introduced in [Abstract](../../../../Recipes/Languages/Pico/Abstract/index.md); it is a parameterized container to associate program entities with their location.
+
+* ❶  The function `usesExp` computes a set of occurrences (uses) of Pico identifiers in a given statement:
     * If the expression is itself an identifier, then a singleton set containing that identifier and the statement is returned.
     * If the expression is composite, all its containing identifiers are collected using a descendant (deep) match 
-       (`/`, see [Rascal:Descendant]))  in `/u:id(PicoId Id) \<- e`. 
+       (`/`, see [Descendant](../../../../Rascal/Patterns/Descendant/index.md) )   in `/u:id(PicoId Id) \<- e`. 
         Note that we use a labeled pattern `u:id(PicoId Id)`,
        so that we can access the whole expression that was matched and retrieve its 
        location information (`u@location`) when we are adding a <location, identifier> pair to the set of occurrences.
        
-* `useStat` extracts uses from all statement variants.
+* ❷  `useStat` extracts uses from all statement variants.
 
-* The function `uses` simply applies `usesStats` to the statement part of its program argument.
+* ❸  The function `uses` simply applies `usesStats` to the statement part of its program argument.
 
-* The function `defs`  has a Pico program as argument and returns a set of occurrences (definitions) of Pico identifiers.
+* ❹  The function `defs`  has a Pico program as argument and returns a set of occurrences (definitions) of Pico identifiers.
     The definition consists of a single set comprehension that consists of the following parts:
 
     *  ` ... \<- P. stats` enumerates all statements in the program.

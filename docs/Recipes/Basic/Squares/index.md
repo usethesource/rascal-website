@@ -19,27 +19,27 @@ import IO;
 
 
 void squares(int n) {
-  println("Table of squares from 1 to <n>\n"); // <2>
+  println("Table of squares from 1 to <n>\n");      ❷  
   for (int I <- [1 .. n + 1])
-      println("<I> squared = <I * I>");        // <3>
+      println("<I> squared = <I * I>");             ❸  
 }
 
 
-str squaresTemplate(int N) // <4>
+str squaresTemplate(int N)      ❹  
   = "Table of squares from 1 to <N>
     '<for (int I <- [1 .. N + 1]) {>
     '  <I> squared = <I * I><}>";
 
 ```
            
-<1> The [IO](../../../Library/IO.md) module is imported since we want to print things using `println`.
+* ❶  The [IO](../../../Library/IO.md) module is imported since we want to print things using `println`.
 
-<2> [String](../../../Rascal/Expressions/Values/String/index.md) interpolation is used several times.
+* ❷  [String](../../../Rascal/Expressions/Values/String/index.md) interpolation is used several times.
     Here the value of `N` is inserted in the header message.
 
-<3> The values of `I` and `I * I` are inserted in each line that is printed.
+* ❸  The values of `I` and `I * I` are inserted in each line that is printed.
 
-<4> Define an alternative implementation `squareTemplate` that is based on string templates 
+* ❹  Define an alternative implementation `squareTemplate` that is based on string templates 
     and returns a string value instead of printing the results itself.
 
 Here is how `square` can be used:
