@@ -47,7 +47,7 @@ private str genGetter(map[str,str] fields, str x) {
 }
 
 
-str genClass(str name, map[str,str] fields) { // <2>
+str genClass(str name, map[str,str] fields) {      ❷  
   return 
     "public class <name> {
     '  <for (x <- sort([f | f <- fields])) {>
@@ -93,9 +93,9 @@ str cperson =
 ```
 
                 
-<1> An auxiliary function `capitalize` is defined to capitalize the first character of a string.
+* ❶  An auxiliary function `capitalize` is defined to capitalize the first character of a string.
 
-<2> Here is the heavy lifting done: `genClass` is defined that takes as arguments:
+* ❷  Here is the heavy lifting done: `genClass` is defined that takes as arguments:
 
 *  the `name` of the class, and
 *  a map `fields` that associates field names with their type (both string values).

@@ -34,10 +34,10 @@ layout LAYOUTLIST = LAYOUT*  !>> [\t-\n\r\ ] ;
 lexical IntegerLiteral = [0-9]+;           
 
 start syntax Exp 
-    = con: IntegerLiteral   // <1>
+    = con: IntegerLiteral        ❶  
     | bracket "(" Exp ")"     
-    > left mul: Exp "*" Exp // <2>  
-    > left add: Exp "+" Exp // <3>   
+    > left mul: Exp "*" Exp      ❷    
+    > left add: Exp "+" Exp      ❸     
     ;
 
 ```
@@ -221,8 +221,8 @@ We can use `parse` to define `load`:
 ```rascal 
 module demo::lang::Exp::Combined::Automatic::Load
 
-import demo::lang::Exp::Combined::Automatic::Parse; // <1>
-import demo::lang::Exp::Abstract::Syntax; // <2>
+import demo::lang::Exp::Combined::Automatic::Parse;      ❶  
+import demo::lang::Exp::Abstract::Syntax;      ❷  
 import ParseTree;
 
 Exp load(str txt) = implode(#Exp, parseExp(txt)); 
@@ -231,9 +231,9 @@ Exp load(str txt) = implode(#Exp, parseExp(txt));
 
 Notes:
 
-<1> We also need the `parse` function, as defined above.
-<2> We also need the abstract syntax as already defined earlier in [Exp/Abstract].
-<3> We need [Rascal:ParseTree] since it provides the [Rascal:implode] function.
+* ❶  We also need the `parse` function, as defined above.
+* ❷  We also need the abstract syntax as already defined earlier in [Exp/Abstract].
+* ❸  We need [Rascal:ParseTree] since it provides the [Rascal:implode] function.
 
 
 Let's try it:

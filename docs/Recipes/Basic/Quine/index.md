@@ -26,13 +26,13 @@ demo::basic::Quine
 ```
 
                 
-<1> A remarkable point in the code: the string variable `program` has as value
+* ❶  A remarkable point in the code: the string variable `program` has as value
    the text of the module `Quine` upto here. 
-<2> The definition of `program` ends here.
+* ❷  The definition of `program` ends here.
     This string has a mesmerizing amount of escapes to which we will come back in a moment.
 
-<3> The function `quine` prints the string `program` twice, here as is and this produces the program upto icon:callout[1] above.
-<4> Here the value of `program` is printed as a string (surrounded with string quotes) in order to reproduce the string value 
+* ❸  The function `quine` prints the string `program` twice, here as is and this produces the program upto icon:callout[1] above.
+* ❹  Here the value of `program` is printed as a string (surrounded with string quotes) in order to reproduce the string value 
     of `program` followed by a semi-colon (`;`).
   
 Now here is the catch: we have to be very carefull in handling special characters like quote (`"`) and backslash (`\`) in strings.

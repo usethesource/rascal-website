@@ -52,7 +52,7 @@ The EXP language can be defined as follows:
 ```rascal 
 module demo::lang::Exp::Concrete::WithLayout::Syntax
 
-layout Whitespace = [\t-\n\r\ ]*; // <1>
+layout Whitespace = [\t-\n\r\ ]*;      ❶  
     
 lexical IntegerLiteral = [0-9]+;           
 

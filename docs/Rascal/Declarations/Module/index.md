@@ -38,7 +38,7 @@ which corresponds to a path relative to the root of the current workspace.
 
 The constituents of a module are shown in the figure below.
 
-![][parts.png](/assets/Rascal/Declarations/Module/module-parts.png)
+![module-parts.png](/assets/Rascal/Declarations/Module/module-parts.png)
 
 
 An [Import](../../../Rascal/Declarations/Import/index.md) declares other modules that are used by the current module.

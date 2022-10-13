@@ -13,26 +13,26 @@ Library functions for maps.
 
 #### Description
 
-For operators on maps see [Map](../Rascal/Expressions/Values/Map/index.md) in the Rascal Language Reference.
+For operators on maps see [Map](../../../../../../../../../Rascal/Expressions/Values/Map/index.md) in the Rascal Language Reference.
 
 The following functions are defined for maps:
-* [delete](../Library/Map.md#Map-delete)
-* [domain](../Library/Map.md#Map-domain)
-* [domainR](../Library/Map.md#Map-domainR)
-* [domainX](../Library/Map.md#Map-domainX)
-* [getOneFrom](../Library/Map.md#Map-getOneFrom)
-* [invert](../Library/Map.md#Map-invert)
-* [invertUnique](../Library/Map.md#Map-invertUnique)
-* [isEmpty](../Library/Map.md#Map-isEmpty)
-* [itoString](../Library/Map.md#Map-itoString)
-* [mapper](../Library/Map.md#Map-mapper)
-* [range](../Library/Map.md#Map-range)
-* [rangeR](../Library/Map.md#Map-rangeR)
-* [rangeX](../Library/Map.md#Map-rangeX)
-* [size](../Library/Map.md#Map-size)
-* [toList](../Library/Map.md#Map-toList)
-* [toRel](../Library/Map.md#Map-toRel)
-* [toString](../Library/Map.md#Map-toString)
+* [delete](../../../../../../../../../Library/Map.md#Map-delete)
+* [domain](../../../../../../../../../Library/Map.md#Map-domain)
+* [domainR](../../../../../../../../../Library/Map.md#Map-domainR)
+* [domainX](../../../../../../../../../Library/Map.md#Map-domainX)
+* [getOneFrom](../../../../../../../../../Library/Map.md#Map-getOneFrom)
+* [invert](../../../../../../../../../Library/Map.md#Map-invert)
+* [invertUnique](../../../../../../../../../Library/Map.md#Map-invertUnique)
+* [isEmpty](../../../../../../../../../Library/Map.md#Map-isEmpty)
+* [itoString](../../../../../../../../../Library/Map.md#Map-itoString)
+* [mapper](../../../../../../../../../Library/Map.md#Map-mapper)
+* [range](../../../../../../../../../Library/Map.md#Map-range)
+* [rangeR](../../../../../../../../../Library/Map.md#Map-rangeR)
+* [rangeX](../../../../../../../../../Library/Map.md#Map-rangeX)
+* [size](../../../../../../../../../Library/Map.md#Map-size)
+* [toList](../../../../../../../../../Library/Map.md#Map-toList)
+* [toRel](../../../../../../../../../Library/Map.md#Map-toRel)
+* [toString](../../../../../../../../../Library/Map.md#Map-toString)
 
 
 ## function delete {#Map-delete}
@@ -147,11 +147,11 @@ Returns an arbitrary key of map `M`.
 rascal>import Map;
 ok
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "apple"
+str: "pineapple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "pineapple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "pear"
+str: "apple"
 ```
 
 ## function invert {#Map-invert}
@@ -166,7 +166,7 @@ Invert the (key,value) pairs in a map.
 #### Description
 
 Returns inverted map in which each value in the old map `M` is associated with a set of key values from the old map.
-Also see [invert unique](../Library/Map.md#Map-invertUnique).
+Also see [invert unique](../../../../../../../../../Library/Map.md#Map-invertUnique).
 
 #### Examples
 
@@ -198,7 +198,7 @@ the `MultipleKey` exception is raised since
 an attempt is made to create a map where more than one 
 value would be associated with the same key.
 
-Also see [invert](../Library/Map.md#Map-invert) and [Exception](../Library/Exception.md).
+Also see [invert](../../../../../../../../../Library/Map.md#Map-invert) and [Exception](../../../../../../../../../Library/Exception.md).
 
 #### Examples
 
@@ -213,8 +213,8 @@ Here is an examples that generates an exception:
 
 ```rascal-shell ,continue,error
 rascal>invertUnique(("apple": 1, "pear": 2, "orange": 1));
-|std:///Map.rsc|(2854,732,<144,0>,<171,54>): MultipleKey(1,"apple","orange")
-	at *** somewhere ***(|std:///Map.rsc|(2854,732,<144,0>,<171,54>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/Map.rsc|(2854,732,<144,0>,<171,54>): MultipleKey(1,"apple","orange")
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/Map.rsc|(2854,732,<144,0>,<171,54>))
 	at invertUnique(|prompt:///|(47,1,<1,47>,<1,48>))
 ok
 ```

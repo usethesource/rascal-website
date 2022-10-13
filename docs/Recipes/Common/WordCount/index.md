@@ -43,8 +43,8 @@ import List;
 int wordCount(list[str] input, int (str s) countInLine)
 {
   count = 0;
-  for (str line <- input){ // <1>
-     count += countInLine(line); // <2>
+  for (str line <- input){      ❶  
+     count += countInLine(line);      ❷  
   }
   return count;
 }
@@ -79,8 +79,8 @@ test bool tstWordCount6(str txt) {
 ```
 
                 
-<1> An [enumerator](../../../Rascal/Expressions/Comprehensions/Enumerator/index.md) is used to generated all the lines in the list of lines.
-<2> The argument function `countInLine` is applied to count the number of words in each line.
+* ❶  An [enumerator](../../../Rascal/Expressions/Comprehensions/Enumerator/index.md) is used to generated all the lines in the list of lines.
+* ❷  The argument function `countInLine` is applied to count the number of words in each line.
 
 Let's now do some experiments using the [Jabberwocky](../../../Recipes/Common/WordCount/Jabberwocky/index.md) poem by Lewis Carrol as input.
 

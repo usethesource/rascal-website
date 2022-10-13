@@ -46,14 +46,14 @@ public Hand H = hand([two(hearts()), jack(diamonds()), six(hearts()), ace(spades
 
 // Count frequencies of constructors
 
-map[str,int] count(node N){ // <1>
-  freq = (); // <2>
-  visit(N){  // <3>
-    case node M: { name = getName(M); // <4>
+map[str,int] count(node N){      ❶  
+  freq = ();      ❷  
+  visit(N){       ❸  
+    case node M: { name = getName(M);      ❹  
                    freq[name] ? 0 += 1; 
                  }
   }
-  return freq; // <5>
+  return freq;      ❺  
 }
 
 map[str,int] countRelevant(node N, set[str] relevant) = domainR(count(N), relevant);
@@ -65,16 +65,16 @@ test bool tstCountRelevant() = countRelevant(CT, {"leaf"}) == ("leaf" : 5);
 Two data types are introduced `ColoredTree` and `Hand` together
 with an example value of each (`CT`, respectively, `H`).
 
-<1> The function `count` is defined.
+* ❶  The function `count` is defined.
 
-<2> Introduces an empty map to maintain the frequencies.
-<3> Defines a visit of argument `N`; it traverses the complete value of `N`.
-<4> Defines the case that we encounter a node and we update its frequency count.
+* ❷  Introduces an empty map to maintain the frequencies.
+* ❸  Defines a visit of argument `N`; it traverses the complete value of `N`.
+* ❹  Defines the case that we encounter a node and we update its frequency count.
   First the name of the constructor is retrieved (using [getName](../../../Library/Node.md#Node-getName)) and then the
   frequency is updated. The [isDefined](../../../Rascal/Statements/Assignment/IsDefined/index.md) operator is used to provide a default value of 0 when
   the name was not yet in the map.
-<5> The map `freq` is returned as result.
-<6> Defines a variant `countRelevant`; it gets is an extra argument of relevant constructors
+* ❺  The map `freq` is returned as result.
+* ❻  Defines a variant `countRelevant`; it gets is an extra argument of relevant constructors
 names that is used to filter the map that is returned by `count` using [domainR](../../../Library/Map.md#Map-domainR).
 
 

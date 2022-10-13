@@ -37,28 +37,28 @@ Result eval(str exp) = eval(parse(exp),  [()]);
 Lval eval(Lval x) = eval(x, [()]).val;
 
 
-Result eval(Integer(int x), Env e) = <Integer(x), e>; // <1>
+Result eval(Integer(int x), Env e) = <Integer(x), e>;      ❶  
 
-Result eval(var:Atom(str name), Env e) { // <2>
+Result eval(var:Atom(str name), Env e) {      ❷  
   n = find(var, e);
   return <(n < 0) ? var : e[n][var], e>;
 }
 
-Result eval(List([Atom("quote"), *Lval exps]), Env e) = // <3>
+Result eval(List([Atom("quote"), *Lval exps]), Env e) =      ❸  
   <size(exps) == 1 ? exps[0] : List(exps), e>;
 
-Result eval(List([Atom("set!"), var, exp]), Env e) { // <4>
+Result eval(List([Atom("set!"), var, exp]), Env e) {      ❹  
   val = eval(exp, e).val;
   n = find(var, e);
   if(n < 0) e[0][var] = val; else e[n][var] = val;
   return <val, e>;
 }
                                                             
-Result eval(List([Atom("if"), Lval tst, Lval conseq, Lval alt]), Env e) = // <5>
+Result eval(List([Atom("if"), Lval tst, Lval conseq, Lval alt]), Env e) =      ❺  
   eval(tst, e).val != FALSE ? eval(conseq, e) : eval(alt, e);
        
                                                            
-Result eval(List([Atom("begin"), *Lval exps]) , Env e) { // <6>
+Result eval(List([Atom("begin"), *Lval exps]) , Env e) {      ❻  
   val = FALSE;
   for(Lval exp <- exps){
       <val, e> = eval(exp, e);
@@ -66,18 +66,18 @@ Result eval(List([Atom("begin"), *Lval exps]) , Env e) { // <6>
   return <val, e>;
 }
                                                            
-Result eval(List([Atom("define"), var, exp]), Env e){ // <7>
+Result eval(List([Atom("define"), var, exp]), Env e){      ❼  
    e[0][var] = eval(exp, e).val;
    return <FALSE, e>;
 }
                                                             
-Result eval(List([Atom("lambda"), List(list[Lval] vars), exp]), Env defEnv) = // <8>
+Result eval(List([Atom("lambda"), List(list[Lval] vars), exp]), Env defEnv) =      ❽  
   <Closure(Result(list[Lval] args, Env callEnv) { 
                  return eval(exp, makeEnv(vars, args, tail(callEnv, size(defEnv))));
            }),
    defEnv>;
 
-default Result eval(List([ *Lval exps ]), Env e) { // <9>
+default Result eval(List([ *Lval exps ]), Env e) {      ❾  
   if(isEmpty(exps))
      return <List([]), e>;
   vals = [ eval(exp, e).val | exp <- exps ];
@@ -117,29 +117,29 @@ default Result apply(Lval a,     list[Lval] b, Env e) { // <12>
                 
 We now explain the different cases in more detail:
 
-<1> An integer constant evaluates to itself. Note how `Integer(int x)` is used as first
+* ❶  An integer constant evaluates to itself. Note how `Integer(int x)` is used as first
     argument of this `eval` function. It is a pattern that describes that the constructor `Integer`
     with an `int` argument `x` is to be matched.
-<2> An atom evaluates to the value to which it is bound or to itself. `find` (see [Runtime]) is used
+* ❷  An atom evaluates to the value to which it is bound or to itself. `find` (see [Runtime]) is used
     to search for the atom in question. The first argument is `var:Atom(str name)`, a pattern that matches
     an `Atom`. The `var:` prefix binds the complete atom to a variable `var` to be used in the body of the function.
-<3> A quoted list evaluates to itself. The pattern `List([Atom("quote"), exp*])` matches a `List` constructor
+* ❸  A quoted list evaluates to itself. The pattern `List([Atom("quote"), exp*])` matches a `List` constructor
     whose first element is `Atom("quote")`. `exp*` means that the remaining list elements are assignment to `exp`.
     There are two cases: if the argument list has size 1, its first element is used, otherwise a list with all elements of `exp`
     vare returned. This ensures that `List([Atom("quote"), Integer(17)])` evaluates to  `Integer(17)` and not to `List([ Integer(17)]`.
-<4> Evaluates a `set!` expression that assigns the value of `exp` to variable `var`.
+* ❹  Evaluates a `set!` expression that assigns the value of `exp` to variable `var`.
 
-<5> Evaluates the `if` expression. The test `tst` is evaluated and is not false, the value of `conseq` is returned and otherwise
+* ❺  Evaluates the `if` expression. The test `tst` is evaluated and is not false, the value of `conseq` is returned and otherwise
     that of `alt`.
 
-<6> Evaluates a `block` expression. The list of expressions `exps` is evaluated one by one. Observe that in the for loop
+* ❻  Evaluates a `block` expression. The list of expressions `exps` is evaluated one by one. Observe that in the for loop
     `<val, e> = eval(exp, e);` captures both the value and the environment that results from executing one expression. That new environment is
     is used to evaluate the next expression(s) in the list. The value of the last expression and a possible modied environment are returned.
 
-<7> Evaluate a `define` expression that binds the value of `exp` to variable `var`.
+* ❼  Evaluate a `define` expression that binds the value of `exp` to variable `var`.
     The value of the expression is bound `var` in the local scope.
 
-<8> Evaluate a lambda expression. Essentially we return a `Closure` value that contains the expression in the lambda expression
+* ❽  Evaluate a lambda expression. Essentially we return a `Closure` value that contains the expression in the lambda expression
     properly wrapped to do variable binding and environment management. 
     A Closure contains a function that return type `Results` and has two arguments:
    `list[lval] args` the actual parameter values when the closure is applied, and
@@ -151,7 +151,7 @@ We now explain the different cases in more detail:
     created it cannot be changed. Using the above trick, we ensure that the called function has access to the most recent version of
     its environment.
 
-<9> Evaluates an arbitrary list. As a special case, the empty list is returned as false.
+* ❾  Evaluates an arbitrary list. As a special case, the empty list is returned as false.
     Otherwise, all elements are evaluated and the auxiliary function ` apply` is used to apply the value of the first element to the values of   
     the remaining elements.
 

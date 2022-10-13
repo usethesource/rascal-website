@@ -10,7 +10,6 @@ title: lang::rascal
 * [tests](../../../Library/lang/rascal/tests)
 * [meta](../../../Library/lang/rascal/meta)
 * [scrap](../../../Library/lang/rascal/scrap)
-* [tutor](../../../Library/lang/rascal/tutor)
 * [format](../../../Library/lang/rascal/format)
 * [doc](../../../Library/lang/rascal/doc)
 * [scaffold](../../../Library/lang/rascal/scaffold)

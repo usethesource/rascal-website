@@ -39,8 +39,8 @@ Giving an out-of-range argument to a mathematical function also gives an error:
 rascal>import util::Math;
 ok
 rascal>tan(-550000000000000000000000);
-|std:///util/Math.rsc|(10935,264,<622,0>,<640,28>): ArithmeticException("x should be between -(pi/2) and (pi/2)")
-	at *** somewhere ***(|std:///util/Math.rsc|(10935,264,<622,0>,<640,28>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/util/Math.rsc|(10935,264,<622,0>,<640,28>): ArithmeticException("x should be between -(pi/2) and (pi/2)")
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/util/Math.rsc|(10935,264,<622,0>,<640,28>))
 	at tan(|prompt:///|(5,24,<1,5>,<1,29>))
 ok
 ```

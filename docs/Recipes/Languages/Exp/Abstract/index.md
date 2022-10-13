@@ -27,9 +27,9 @@ module demo::lang::Exp::Abstract::Syntax
 
 
 data Exp 
-    = con(int n)          // <1>
-    | mul(Exp e1, Exp e2) // <2>
-    | add(Exp e1, Exp e2) // <3>
+    = con(int n)               ❶  
+    | mul(Exp e1, Exp e2)      ❷  
+    | add(Exp e1, Exp e2)      ❸  
     ;
 
 ```
@@ -47,8 +47,8 @@ and produces `int` as output:
 module demo::lang::Exp::Abstract::Eval
 import demo::lang::Exp::Abstract::Syntax;
 
-int eval(con(int n)) = n;                            // <1>
-int eval(mul(Exp e1, Exp e2)) = eval(e1) * eval(e2); // <2>
+int eval(con(int n)) = n;                                 ❶  
+int eval(mul(Exp e1, Exp e2)) = eval(e1) * eval(e2);      ❷  
 int eval(add(Exp e1, Exp e2)) = eval(e1) + eval(e2);
 test bool tstEval2() = eval(mul(con(7), con(3))) == 21;
 test bool tstEval3() = eval(add(con(7), con(3))) == 10;
@@ -73,10 +73,10 @@ The big advantage of pattern-directed invocation is modularity and extensibility
 
 In this example we use this mechanism to define separate functions for each case in the abstract syntax.
 
-<1> Defines the case for evaluating integer constants: they evaluate to themselves.
-<2> Defines the case for evaluating multiplication: first evaluate the arguments `e1` and `e2`
+* ❶  Defines the case for evaluating integer constants: they evaluate to themselves.
+* ❷  Defines the case for evaluating multiplication: first evaluate the arguments `e1` and `e2`
     and return the multiplication of their values.
-<3> Defines the case for evaluating addition: first evaluate the arguments `e1` and `e2`
+* ❸  Defines the case for evaluating addition: first evaluate the arguments `e1` and `e2`
     and return the addition of their values.
 
 

@@ -45,7 +45,7 @@ import demo::lang::Func::AST;
 
 import List;
 
-alias Env = map[str, int];  // <1>
+alias Env = map[str, int];       ❶  
 alias PEnv = map[str, Func];
 
 int eval1(str main, list[int] args, Prog prog) {
@@ -58,7 +58,7 @@ int eval1(str main, list[int] args, Prog prog) {
 
 int eval1(nat(int nat), Env env, PEnv penv)  = nat;
 
-int eval1(var(str n), Env env, PEnv penv)  = env[n]; // <2>
+int eval1(var(str n), Env env, PEnv penv)  = env[n];      ❷  
 
 int eval1(mul(Exp lhs, Exp rhs), Env env, PEnv penv) = 
     eval1(lhs, env, penv) * eval1(rhs, env, penv);
@@ -93,7 +93,7 @@ int eval1(call(str name, list[Exp] args), Env env, PEnv penv) {
    return eval1(f.body, env, penv);
 }
          
-int eval1(let(list[Binding] bindings, Exp exp), Env env, PEnv penv) { // <3>
+int eval1(let(list[Binding] bindings, Exp exp), Env env, PEnv penv) {      ❸  
    env += ( b.var : eval1(b.exp, env, penv) | b <- bindings );  
    return eval1(exp, env, penv);  
 }
@@ -101,10 +101,10 @@ int eval1(let(list[Binding] bindings, Exp exp), Env env, PEnv penv) { // <3>
 ```
 
                 
-<1> The alias `Env` is introduced that maps strings to integers.
+* ❶  The alias `Env` is introduced that maps strings to integers.
     All evaluation functions get an extra Env argument.
-<2> The environment is used to retrieve a variable's value.
-<3> The environment is extended with new bindings.
+* ❷  The environment is used to retrieve a variable's value.
+* ❸  The environment is extended with new bindings.
 
 
 Let's try this with F1:

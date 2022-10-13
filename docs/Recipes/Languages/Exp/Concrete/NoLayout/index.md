@@ -18,27 +18,27 @@ Here is the grammar for Exp:
 ```rascal 
 module demo::lang::Exp::Concrete::NoLayout::Syntax
     
-lexical IntegerLiteral = [0-9]+; // <1>
+lexical IntegerLiteral = [0-9]+;      ❶  
 
-start syntax Exp        // <2>
-  = IntegerLiteral      // <3>
-  | bracket "(" Exp ")" // <4>
-  > left Exp "*" Exp    // <5>
-  > left Exp "+" Exp    // <6>
+start syntax Exp             ❷  
+  = IntegerLiteral           ❸  
+  | bracket "(" Exp ")"      ❹  
+  > left Exp "*" Exp         ❺  
+  > left Exp "+" Exp         ❻  
   ;
 
 ```
 
 Notes:
 
-<1> Defines a lexical syntax rule for IntegerLiterals; they consist of one or more digits.
-<2> Defines the alternatives for Exp. The keyword `start` means that this is a start symbol of the grammar.
-<3> Defines alternative #1: an `IntegerLiteral`.
-<4> Defines alternative #2: parentheses. The `|` says that this alternative has the same priority as the previous one.
+* ❶  Defines a lexical syntax rule for IntegerLiterals; they consist of one or more digits.
+* ❷  Defines the alternatives for Exp. The keyword `start` means that this is a start symbol of the grammar.
+* ❸  Defines alternative #1: an `IntegerLiteral`.
+* ❹  Defines alternative #2: parentheses. The `|` says that this alternative has the same priority as the previous one.
     The keyword `bracket` marks this as an alternative that defines parentheses.
-<5> Defines alternative #3: multiplication. The `>` says that the previous rule has a higher priority than the current one.
+* ❺  Defines alternative #3: multiplication. The `>` says that the previous rule has a higher priority than the current one.
     The keyword `left` marks this as a left-associative rule.
-<6> Defines alternative #4: addition. The `>` says again that the previous rule has a higher priority than the current one.
+* ❻  Defines alternative #4: addition. The `>` says again that the previous rule has a higher priority than the current one.
     The keyword `left` marks this as a left-associative rule.
 
 
@@ -51,11 +51,11 @@ import demo::lang::Exp::Concrete::NoLayout::Syntax;
 import String;
 import ParseTree;
 
-int eval(str txt) = eval(parse(#Exp, txt)); // <2>
+int eval(str txt) = eval(parse(#Exp, txt));      ❷  
 
-int eval((Exp)`<IntegerLiteral l>`) = toInt("<l>");       // <3>
-int eval((Exp)`<Exp e1>*<Exp e2>`) = eval(e1) * eval(e2); // <4>
-int eval((Exp)`<Exp e1>+<Exp e2>`) = eval(e1) + eval(e2); // <5>
+int eval((Exp)`<IntegerLiteral l>`) = toInt("<l>");            ❸  
+int eval((Exp)`<Exp e1>*<Exp e2>`) = eval(e1) * eval(e2);      ❹  
+int eval((Exp)`<Exp e1>+<Exp e2>`) = eval(e1) + eval(e2);      ❺  
 int eval((Exp)`(<Exp e>)`) = eval(e);
 test bool tstEval2() = eval("7*3") == 21;
 test bool tstEval3() = eval("7+3") == 10;
@@ -65,20 +65,20 @@ test bool tstEval4() = eval("3+4*5") == 23;
 
 Notes:
 
-<1> We import [Rascal:ParseTree] because we will need the `parse` function below.
-<2> The main function `eval` that evaluates an expression as string to an integer. It proceeds in two steps:
+* ❶  We import [Rascal:ParseTree] because we will need the `parse` function below.
+* ❷  The main function `eval` that evaluates an expression as string to an integer. It proceeds in two steps:
     *  `parse(#Exp, txt)` parses the given `txt` according to non-terminal `Exp` as defined by the grammar.
         The result is a parse tree.
     *  This parse tree is given to another eval function that will reduce the tree to an integer.
-<3> Converts an IntegerLiteral to an integer. Let's dissect this further:
+* ❸  Converts an IntegerLiteral to an integer. Let's dissect this further:
     *  The `Exp` preceding the concrete pattern, unambiguously defines the type of the pattern.
         This is good practice to avoid ambiguities.
     *  `<IntegerLiteral l>` matches an IntegerLiteral and binds it (a parse tree fragment) to variable `l`.
     *  In the function body, `toInt("<l>")`, the parse tree fragment is inserted in a string -- effectively unparsing it --
         and that string is converted to an integer.
-<4> Handle the multiplication case.
-<5> Handle the addition case.
-<6> Handles the case of parentheses.
+* ❹  Handle the multiplication case.
+* ❺  Handle the addition case.
+* ❻  Handles the case of parentheses.
 
 
 What remains, is to check that `eval` works as expected.

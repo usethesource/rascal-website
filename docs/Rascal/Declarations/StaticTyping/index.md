@@ -17,7 +17,7 @@ the program is executed.
 
 The types are ordered in a so-called _type lattice_ shown in the following figure.
 
-![][lattice.png](/assets/RascalConcepts/StaticTyping/type-lattice.png)
+![type-lattice.png](/assets/RascalConcepts/StaticTyping/type-lattice.png)
 
 
 The arrows describe a _subtype-of_ relation between types. The type `void` is the _smallest_ type and 

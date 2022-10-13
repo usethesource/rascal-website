@@ -23,55 +23,55 @@ module demo::lang::Lisra::Runtime
 
 import Prelude;
 
-data Lval // <1>
+data Lval      ❶  
      = Integer(int n)   
      | Atom(str name)
      | List(list[Lval] elms)
      | Closure(Result(list[Lval] args, Env env))
      ;
          
-alias Scope  = map[Lval,Lval]; // <2>
+alias Scope  = map[Lval,Lval];      ❷  
 alias Env    = list[Scope];
 
 public Env emptyEnv = [()];
 
-Env makeEnv(list[Lval] vars, list[Lval] values, Env outer) = // <3>
+Env makeEnv(list[Lval] vars, list[Lval] values, Env outer) =      ❸  
    [(vars[i] : values[i] | i <- index(vars))] + outer;
 
-int find(Lval sym, Env e){ // <4>
+int find(Lval sym, Env e){      ❹  
    for(n <- index(e))
        if(e[n][sym]?)
           return n;
    return -1;
 }
 
-public Lval TRUE  = Atom("#t"); // <5>
+public Lval TRUE  = Atom("#t");      ❺  
 public Lval FALSE = Atom("#f");
 
-alias Result = tuple[Lval val, Env env]; // <6>
+alias Result = tuple[Lval val, Env env];      ❻  
 
 ```
 
                 
-<1> The data type `Lval` takes care of the representation of Lisp values.
+* ❶  The data type `Lval` takes care of the representation of Lisp values.
     It covers integers, atoms, lists and closures (the representation of a functions and
     the context in which it will be executed).
 
-<2> A `Scope` describes the binding of several related variables to their value.
+* ❷  A `Scope` describes the binding of several related variables to their value.
     Since scopes may be nested, an environment (`Env`) consisted of a list of scope.
    The most inner scope is at the start of the list and the most global one at the end.
 
-<3> Creating a new scope is done by `makeEnv` which takes a list of variables
+* ❸  Creating a new scope is done by `makeEnv` which takes a list of variables
     (represented by `Lval`s, in most cases this will be an atom like `Atom("X")`),
     a list of values and creates a new scope in front of the current environment.
 
-<4> The function `find` tries to locate the scope in which a name was previously defined.
+* ❹  The function `find` tries to locate the scope in which a name was previously defined.
     It searches the nested scopes inside-out and returns the _index_ in the given environment
    of the scope in which the name is defined, or `-1` if it is not found.
 
-<5> We define useful constants for true and false (the atoms `#t` and `#f`, respectively).
+* ❺  We define useful constants for true and false (the atoms `#t` and `#f`, respectively).
 
-<6> Finally, we define `Result` as a tuple of an `Lval` and an `Env`.
+* ❻  Finally, we define `Result` as a tuple of an `Lval` and an `Env`.
     Each step during interpretation will thus return the value it computed and
     a possibly modified environment.
 

@@ -26,7 +26,7 @@ In a package for symbolic differentiation it is desirable to keep expressions in
 to avoid intermediate results like `add(product(con(1), x), mul(con(0), y))` that can be simplified to `x`. 
 The following definitions achieve this:
 ```rascal
-Exp simp(add(con(n), con(m))) = con(n + m);   //<1>
+Exp simp(add(con(n), con(m))) = con(n + m);       ❶  
 Exp simp(mul(con(n), con(m))) = con(n * m);
 
 Exp simp(mul(con(1), Exp e))  = e;
@@ -37,22 +37,22 @@ Exp simp(mul(Exp e, con(0)))  = con(0);
 Exp simp(add(con(0), Exp e))  = e;
 Exp simp(add(Exp e, con(0)))  = e;
 
-default Exp simp(Exp e)       = e;            // <2>
+default Exp simp(Exp e)       = e;                 ❷  
 
-Exp simplify(Exp e){                          // <3>
+Exp simplify(Exp e){                               ❸  
   return bottom-up visit(e){
            case Exp e1 => simp(e1)
          }
 }
 ```
 
-<1> Definitions of the function `simp` are given with different patterns as formal argument.
+* ❶  Definitions of the function `simp` are given with different patterns as formal argument.
     Each definition is responsible for one particular simplification 
     (here is where the similarity with rewrite rules surfaces).
 
-<2> A default for `simp` is given: if no other definition applies, the default one is used.
+* ❷  A default for `simp` is given: if no other definition applies, the default one is used.
 
-<3> The actual `simplify` function: it performs a bottom up visit of the expression, replacing each subexpression by
+* ❸  The actual `simplify` function: it performs a bottom up visit of the expression, replacing each subexpression by
 a simplified version.
 
 See [Derivative](../../Recipes/Common/Derivative/index.md) for a full explanation of this example.

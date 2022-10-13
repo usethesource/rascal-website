@@ -15,7 +15,7 @@ A frequently occurring problem is that we know the call relation of a system but
 Consider the following figure:
 
 
-![][parts.png](/assets/Recipes/Common/CallLifting/parts.png)
+![parts.png](/assets/Recipes/Common/CallLifting/parts.png)
 
 
 (a) Shows the calls between procedures;

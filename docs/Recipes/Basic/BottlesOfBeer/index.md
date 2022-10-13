@@ -22,11 +22,11 @@ module demo::basic::Bottles
 
 import IO;
 
-str bottles(0) = "no more bottles"; // <1>
+str bottles(0) = "no more bottles";      ❶  
 str bottles(1) = "1 bottle";
-default str bottles(int n) = "<n> bottles"; // <2>
+default str bottles(int n) = "<n> bottles";      ❷  
 
-void sing() { // <3>
+void sing() {      ❸  
   for (n <- [99 .. 0]) {
        println("<bottles(n)> of beer on the wall, <bottles(n)> of beer.");
        println("Take one down, pass it around, <bottles(n-1)> of beer on the wall.\n");
@@ -38,13 +38,13 @@ void sing() { // <3>
 ```
 
                 
-<1> We use an auxiliary function `bottles` that returns the word "bottle" adjusted for the actual number of bottles that is available.
+* ❶  We use an auxiliary function `bottles` that returns the word "bottle" adjusted for the actual number of bottles that is available.
 Observe how we use the patterns `0`, `1` and `int n` in the definition of three variants of this function.
 
-<2> _Pattern-directed invocation_ (see [function declaration](../../../Rascal/Declarations/Function/index.md)) will determine at the call site which function will be called. The
+* ❷  _Pattern-directed invocation_ (see [function declaration](../../../Rascal/Declarations/Function/index.md)) will determine at the call site which function will be called. The
 general case is labeled with `default` to indicate that if the case for 0 and 1 do not match, this alternative should handle the other cases. 
 
-<3> The main function is `sing` that iterates over the numbers 99 down to 1 (as described by the range `[99 .. 0]`)
+* ❸  The main function is `sing` that iterates over the numbers 99 down to 1 (as described by the range `[99 .. 0]`)
 and prints appropriate lyrics. Observe how the value  of the `bottles` function is interpolated several times in the string.
 
 Here is the result:

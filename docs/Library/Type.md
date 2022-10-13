@@ -16,7 +16,7 @@ Rascal's type system, implemented in Rascal itself.
 The goal of this module is to provide:
 
 *  reflection capabilities that are useful for deserialization and validation of data, and 
-*  to provide the basic building blocks for syntax trees (see [parse tree](../Library/ParseTree.md))
+*  to provide the basic building blocks for syntax trees (see [parse tree](../../../../../../../../../Library/ParseTree.md))
 
 The following definition is built into Rascal:
 ```rascal
@@ -126,12 +126,12 @@ A Symbol represents a Rascal Type.
 Symbols are values that represent Rascal's types. These are the atomic types.
 We define here:
 
-<1>  Atomic types.
-<2> Labels that are used to give names to symbols, such as field names, constructor names, etc.
-<3>  Composite types.
-<4>  Parameters that represent a type variable.
+* ❶   Atomic types.
+* ❷  Labels that are used to give names to symbols, such as field names, constructor names, etc.
+* ❸   Composite types.
+* ❹   Parameters that represent a type variable.
 
-In [parse tree](../Library/ParseTree.md), see [Symbol](../Library/ParseTree.md#ParseTree-Symbol), 
+In [parse tree](../../../../../../../../../Library/ParseTree.md), see [Symbol](../../../../../../../../../Library/ParseTree.md#ParseTree-Symbol), 
 Symbols will be further extended with the symbols that may occur in a parse tree.
 
 ## data Symbol {#Type-Symbol}
@@ -195,7 +195,7 @@ Productions represent abstract (recursive) definitions of abstract data type con
 * `choice`: the choice between various alternatives.
 * `composition`: composition of two productions.
 
-In ParseTree, see [Production](../Library/ParseTree.md#ParseTree-Production), 
+In ParseTree, see [Production](../../../../../../../../../Library/ParseTree.md#ParseTree-Production), 
 Productions will be further extended and will be used to represent productions in syntax rules.
 
 ## data Attr {#Type-Attr}
@@ -568,7 +568,7 @@ Symbol: int()
 #### Pitfalls
 
 *  Note that the `typeOf` function does not produce definitions, like the 
-   [reify](../Rascal/Expressions/Values/ReifiedTypes/index.md) operator `#` does, 
+   [reify](../../../../../../../../../Rascal/Expressions/Values/ReifiedTypes/index.md) operator `#` does, 
    since values may escape the scope in which they've been constructed leaving their contents possibly undefined.
 
 ## function isIntType {#Type-isIntType}

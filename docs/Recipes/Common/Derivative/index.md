@@ -30,20 +30,20 @@ module demo::common::Derivative
 
 
 
-data Exp = con(int n) // <1>
+data Exp = con(int n)      ❶  
          | var(str name)
          | mul(Exp e1, Exp e2)
          | add(Exp e1, Exp e2)
          ;
          
-public Exp E = add(mul(con(3), var("y")), mul(con(5), var("x"))); // <2>
+public Exp E = add(mul(con(3), var("y")), mul(con(5), var("x")));      ❷  
 
-Exp dd(con(n), var(V))              = con(0); // <3>
+Exp dd(con(n), var(V))              = con(0);      ❸  
 Exp dd(var(V1), var(V2))            = con((V1 == V2) ? 1 : 0);
 Exp dd(add(Exp e1, Exp e2), var(V)) = add(dd(e1, var(V)), dd(e2, var(V)));
 Exp dd(mul(Exp e1, Exp e2), var(V)) = add(mul(dd(e1, var(V)), e2), mul(e1, dd(e2, var(V))));
  
-Exp simp(add(con(n), con(m))) = con(n + m); // <4>
+Exp simp(add(con(n), con(m))) = con(n + m);      ❹  
 Exp simp(mul(con(n), con(m))) = con(n * m);
 
 Exp simp(mul(con(1), Exp e))  = e;
@@ -54,9 +54,9 @@ Exp simp(mul(Exp e, con(0)))  = con(0);
 Exp simp(add(con(0), Exp e))  = e;
 Exp simp(add(Exp e, con(0)))  = e;
 
-default Exp simp(Exp e)       = e; // <5>
+default Exp simp(Exp e)       = e;      ❺  
 
-Exp simplify(Exp e){ // <6>
+Exp simplify(Exp e){      ❻  
   return bottom-up visit(e){
            case Exp e1 => simp(e1)
          }
@@ -65,12 +65,12 @@ test bool tstSimplity2() = simplify(dd(E, var("x"))) == con(5);
 
 ```
 
-<1> Define a data type `Exp` to represent expressions.
-<2> Introduce an example expression `E` for later use.
-<3> Define the actual differentiation function `dd`. Observe that this definition depends on the use of patterns in function declarations, see [Rascal:Function].
-<4> Define simplification rules. 
-<5> A default rule is give for the case that no simplification applies.
-<6> Define the actual simplication function `simplify` that performs a bottom up traversal of the expression, application simplification
+* ❶  Define a data type `Exp` to represent expressions.
+* ❷  Introduce an example expression `E` for later use.
+* ❸  Define the actual differentiation function `dd`. Observe that this definition depends on the use of patterns in function declarations, see [Rascal:Function].
+* ❹  Define simplification rules. 
+* ❺  A default rule is give for the case that no simplification applies.
+* ❻  Define the actual simplication function `simplify` that performs a bottom up traversal of the expression, application simplification
 rules on the up.
 
                 

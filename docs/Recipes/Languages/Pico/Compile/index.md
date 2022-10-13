@@ -19,18 +19,18 @@ import demo::lang::Pico::Abstract;
 import demo::lang::Pico::Assembly;
 import demo::lang::Pico::Load;
 
-alias Instrs = list[Instr]; 
+alias Instrs = list[Instr];      ❶  
 
 
 // highlight-next-line
-Instrs compileExp(natCon(int N)) = [pushNat(N)]; 
+Instrs compileExp(natCon(int N)) = [pushNat(N)];      ❷  
 
 Instrs compileExp(strCon(str S)) = [pushStr(substring(S,1,size(S)-1))];
 
 Instrs compileExp(id(PicoId Id)) = [rvalue(Id)];
 
 // highlight-next-line
-Instrs compileExp(add(EXP E1, EXP E2)) 
+Instrs compileExp(add(EXP E1, EXP E2))      ❸  
   = [*compileExp(E1), *compileExp(E2), add2()];
 
 Instrs compileExp(sub(EXP E1, EXP E2)) 
@@ -40,7 +40,7 @@ Instrs compileExp(conc(EXP E1, EXP E2))
   = [*compileExp(E1), *compileExp(E2), conc2()];
   
 // highlight-next-line
-private int nLabel = 0; 
+private int nLabel = 0;      ❹  
 
 
 private str nextLabel() {
@@ -53,7 +53,7 @@ Instrs compileStat(asgStat(PicoId Id, EXP Exp))
   = [lvalue(Id), *compileExp(Exp), assign()];
 	
 // highlight-next-line
-Instrs compileStat(ifElseStat(EXP Exp, 
+Instrs compileStat(ifElseStat(EXP Exp,                        ❺  
                               list[STATEMENT] Stats1,
                               list[STATEMENT] Stats2)){
   
@@ -83,18 +83,18 @@ Instrs compileStat(whileStat(EXP Exp,
 
 Instrs compileStats(list[STATEMENT] Stats1) 
 // highlight-next-line
-  = [ *compileStat(S) | S <- Stats1 ];
+  = [ *compileStat(S) | S <- Stats1 ];      ❻  
   
 
 Instrs compileDecls(list[DECL] Decls) =
 // highlight-next-line
-  [ ((tp == natural()) ? dclNat(Id) : dclStr(Id)) |      
+  [ ((tp == natural()) ? dclNat(Id) : dclStr(Id)) |       ❼  
     decl(PicoId Id, TYPE tp) <- Decls
   ];
 
 
 // highlight-next-line
-Instrs compileProgram(PROGRAM P){ 
+Instrs compileProgram(PROGRAM P){       ❽  
   nLabel = 0;
   if (program(list[DECL] Decls, list[STATEMENT] Series) := P) {
      return [*compileDecls(Decls), *compileStats(Series)];
@@ -107,16 +107,15 @@ Instrs compileProgram(str txt) = compileProgram(load(txt));
 
 ```
 
-                
 Notes:
 
-* We introduce `Instrs` as an alias for a list of assembly language instructions.
-* The compiler consists of the functions `compileExp`, `compileStat`, `compileStats`, `compileDecls` and `compileProgram`.
+* ❶  We introduce `Instrs` as an alias for a list of assembly language instructions.
+* ❷  The compiler consists of the functions `compileExp`, `compileStat`, `compileStats`, `compileDecls` and `compileProgram`.
     They all have a program fragment as argument and return the corresponding list of instructions.
-* When compiling expressions, note how _list splicing_ (see [Rascal:Values/List]) is used to insert the instructions that are generated for the operands of an operator into the list of instructions for the whole expression.
-* In order to conveniently write code generators for statements, we introduce a unique label generator. The global variable `nLabel` contains
+* ❸  When compiling expressions, note how _list splicing_ (see [Rascal:Values/List]) is used to insert the instructions that are generated for the operands of an operator into the list of instructions for the whole expression.
+* ❹  In order to conveniently write code generators for statements, we introduce a unique label generator. The global variable `nLabel` contains
     the index of the last generated label and `nextLabel` uses this to generate a new, unique label.
-* Consider code generation for an if-the-else statement:
+* ❺  Consider code generation for an if-the-else statement:
     *  Two fresh labels mark the start of the code for the else part (`elseLab`) and the end of the whole statement (`endLab`).
     *  The code that is generated consists of the following:
         *  Code for the test.
@@ -124,9 +123,9 @@ Notes:
         *  Code for the then-part and a jump to the end of the statement.
         *  Code for the else-part that starts with the label `elsePart`.
         *  The label `endLab` that marks the end of the code for the if-then-else statement.
-*  Compiling a list of statements conveniently uses a list comprehension and list splicing.
-*  Compiling declarations allocates memory locations of the appropriate type for each declared variable.
-*   `compileProgram` compiles a gives Pico program to assembly language.
+* ❻   Compiling a list of statements conveniently uses a list comprehension and list splicing.
+* ❼   Compiling declarations allocates memory locations of the appropriate type for each declared variable.
+* ❽    `compileProgram` compiles a gives Pico program to assembly language.
 
 Here is an example:
 

@@ -23,10 +23,10 @@ type of value by an iterating rather than just a list or a set.
 
 Every reducer (as above)  is equivalent to the following code:
 ```rascal,subs="verbatim,quotes"
-it = _InitExp_; // <1>
-for(_Gen₁_, _Gen₂_, ... ) // <2>
-    it = _RedExp_; // <3>
-it; // <4>
+it = _InitExp_;      ❶  
+for(_Gen₁_, _Gen₂_, ... )      ❷  
+    it = _RedExp_;      ❸  
+it;      ❹  
 ```
 and is executed as follows:
 

@@ -31,7 +31,7 @@ The following statements are available:
 * [While](../../Rascal/Statements/While/index.md)
 
 
-![][parts.png](/assets/Rascal/Statements/statement-parts.png)
+![Statements-statement-parts.png](/assets/Rascal/Statements/statement-parts.png)
 
 
 
