@@ -29,6 +29,3 @@ only in the shell:
 * [Commands](../RascalShell/Commands/index.md)
 * [Keyboard](../RascalShell/Keyboard/index.md)
 
-./../../../../../../../../../RascalShell/Commands/index.md)
-* [Keyboard](../../../../../../../../../../RascalShell/Keyboard/index.md)
-

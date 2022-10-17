@@ -259,29 +259,3 @@ rascal>itoString(F);
 str: "\"f\"(10,\"abc\",\n  size=\"large\",\n  color=\"red\")"
 ```
 
-ze=\"large\",color=\"red\")"
-```
-
-## function itoString {#Node-itoString}
-
-* ``str itoString(node T)``
-
-
-#### Synopsis
-
-Convert a node to an indented string.
-
-#### Examples
-
-
-```rascal-shell 
-rascal>import Node;
-ok
-rascal>F = "f"(10, "abc", color="red", size="large");
-node: "f"(10,"abc",
-  size="large",
-  color="red")
-rascal>itoString(F);
-str: "\"f\"(10,\"abc\",\n  size=\"large\",\n  color=\"red\")"
-```
-

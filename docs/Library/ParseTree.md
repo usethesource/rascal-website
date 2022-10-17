@@ -797,21 +797,3 @@ Select the innermost Tree of a given type which is enclosed by a given location.
 
 Determine if the given type is a non-terminal type.
 
-ult bool sameType(Symbol s, Symbol t)``
-
-## function isNonTerminalType {#ParseTree-isNonTerminalType}
-
-* ``bool isNonTerminalType(Symbol::\sort(str _))``
-* ``bool isNonTerminalType(Symbol::\lex(str _))``
-* ``bool isNonTerminalType(Symbol::\layouts(str _))``
-* ``bool isNonTerminalType(Symbol::\keywords(str _))``
-* ``bool isNonTerminalType(Symbol::\parameterized-sort(str _, list[Symbol] _))``
-* ``bool isNonTerminalType(Symbol::\parameterized-lex(str _, list[Symbol] _))``
-* ``bool isNonTerminalType(Symbol::\start(Symbol s))``
-* ``default bool isNonTerminalType(Symbol s)``
-
-
-#### Synopsis
-
-Determine if the given type is a non-terminal type.
-

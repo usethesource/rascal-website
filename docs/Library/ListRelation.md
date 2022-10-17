@@ -502,31 +502,3 @@ map[int, set[int]]: (
 )
 ```
 
-}
-
-* ``map[&K, set[&V]] index(lrel[&K, &V] R)``
-
-
-#### Synopsis
-
-Listes a binary list relation as a map
-
-#### Description
-
-Converts a binary list relation to a map of the domain to a set of the range.
-
-#### Examples
-
-
-```rascal-shell 
-rascal>import ListRelation;
-ok
-rascal>index([<1,10>, <2,20>, <3,30>, <30,10>]);
-map[int, set[int]]: (
-  1:{10},
-  3:{30},
-  2:{20},
-  30:{10}
-)
-```
-

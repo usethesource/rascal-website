@@ -35,7 +35,3 @@ list[str]: ["@license{","  Copyright (c) 2009-2015 CWI","  All rights reserved. 
 ```
 
 
-rogram!\");","}"]
-```
-
-

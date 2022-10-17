@@ -55,10 +55,3 @@ Here are the concepts to be discussed:
 * [equation solving](../RascalConcepts/EquationSolving/index.md)
 
 
-ng](../../../../../../../../../../RascalConcepts/SyntaxDefinitionAndParsing/index.md)
-* [Rewriting](../../../../../../../../../../RascalConcepts/Rewriting/index.md)
-* [IDEConstruction](../../../../../../../../../../RascalConcepts/IDEConstruction/index.md)
-* [code models](../../../../../../../../../../RascalConcepts/CodeModels/index.md)
-* [equation solving](../../../../../../../../../../RascalConcepts/EquationSolving/index.md)
-
-

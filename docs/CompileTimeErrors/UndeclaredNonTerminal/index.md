@@ -34,6 +34,3 @@ ok
 The source location of the non-terminal is not yet available, so the error message mentions the module in which this occurs.
 
 
-message mentions the module in which this occurs.
-
-

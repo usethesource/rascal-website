@@ -45,6 +45,3 @@ We give various answers to these questions:
 * *False friends*: Rascal has some [false friends](https://en.wikipedia.org/wiki/False_friend) with other programming languages. This means that it behaves just a little different than expected if you are completely used to that other language. In particular "immutable data" gives a different meaning to the assignment operator. Most of Rascal is totally unsurprising after that.
 
 
- gives a different meaning to the assignment operator. Most of Rascal is totally unsurprising after that.
-
-

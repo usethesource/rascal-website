@@ -110,11 +110,3 @@ These are the entry points to the entire library:
 * [Prelude](../Library/Prelude.md) is a rather big collection of functions to have imported. It is sometimes better to cherry-pick the modules you need.
 * Some languages in [lang](../Library/lang/index.md) are not 100% tested and up-to-date. We are extracting these one-by-one to experimental library packages.
 
-/../../Library/List.md) module of the library. For [Set](../../../../../../../../../Rascal/Expressions/Values/Set/index.md) look in [Set](../../../../../../../../../Library/Set.md), etc.
-* To process [CSV](../../../../../../../../../Library/lang/csv/index.md), [XML](../../../../../../../../../Library/lang/xml/index.md), [JSON](../../../../../../../../../Library/lang/json/index.md), [YAML](../../../../../../../../../Library/lang/yaml/index.md) you will find utilities here, even support to access [SQL](../../../../../../../../../Library/resource/jdbc/JDBC.md) databases via JDBC.
-
-#### Pitfalls
-
-* [Prelude](../../../../../../../../../Library/Prelude.md) is a rather big collection of functions to have imported. It is sometimes better to cherry-pick the modules you need.
-* Some languages in [lang](../../../../../../../../../Library/lang/index.md) are not 100% tested and up-to-date. We are extracting these one-by-one to experimental library packages.
-

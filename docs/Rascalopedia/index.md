@@ -46,15 +46,3 @@ These are the currently covered topics:
 * [Visualization](../Rascalopedia/Visualization/index.md)
 
 
-.md)
-* [software engineering](../../../../../../../../../../Rascalopedia/SoftwareEngineering/index.md)
-* [software evolution](../../../../../../../../../../Rascalopedia/SoftwareEvolution/index.md)
-* [software metric](../../../../../../../../../../Rascalopedia/SoftwareMetric/index.md)
-* [static semantics](../../../../../../../../../../Rascalopedia/StaticSemantics/index.md)
-* [Syntax](../../../../../../../../../../Rascalopedia/Syntax/index.md)
-* [Testing](../../../../../../../../../../Rascalopedia/Testing/index.md)
-* [Tuple](../../../../../../../../../../Rascalopedia/Tuple/index.md)
-* [Typechecker](../../../../../../../../../../Rascalopedia/Typechecker/index.md)
-* [Visualization](../../../../../../../../../../Rascalopedia/Visualization/index.md)
-
-

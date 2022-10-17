@@ -58,7 +58,3 @@ In case of trouble, there is no need to panic. [Help](../GettingHelp/index.md) i
 * If any documentation is unclear, incomplete or ambiguous you are also invited to submit a report there, but you may also use the `edit` button below to propose a fix.
 
 
-p://github.com/usethesource/rascal/issues). 
-* If any documentation is unclear, incomplete or ambiguous you are also invited to submit a report there, but you may also use the `edit` button below to propose a fix.
-
-

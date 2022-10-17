@@ -25,5 +25,3 @@ Rascal can generate various kinds of exceptions and errors during execution (run
 so actual exceptions may differ from what is presented here.
 * Since the type checker is not available yet, the interpreter throws more run-time exceptions than necessary.
 
-eter throws more run-time exceptions than necessary.
-

@@ -704,33 +704,3 @@ Flatten a set of sets into a single set.
 
 Compute the Jaccard similarity between two sets.
 
-ess` function
-
-#### Description
-
-This function is fast if `k` is relatively small, say 10 out of a 1000 elements.
-It operates in O(n*k) time where n is the size of the set.
- 
-If `k` is a larger value, say `k > 10`, then it's perhaps better to just sort the entire set 
-using the asympotically faster (n*log^2(n)) sort function and take the first `k` elements of the resulting list.
-
-If `k` is a negative number, `top` will return the largest `abs(k)` elements of the set instead of the smallest.
-
-## function union {#Set-union}
-
-* ``set[&T] union(set[set[&T]] sets)``
-
-
-#### Synopsis
-
-Flatten a set of sets into a single set.  
-
-## function jaccard {#Set-jaccard}
-
-* ``real jaccard(set[value] x, set[value] y)``
-
-
-#### Synopsis
-
-Compute the Jaccard similarity between two sets.
-

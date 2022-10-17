@@ -59,14 +59,3 @@ int: 2
 * Prelude combines many many function names and so the namespace of modules that import it is a bit crowded.
 
 
-s
-
-
-* Prelude uses the [module extend](../../../../../../../../../Rascal/Declarations/Module/index.md) mechanism to make all the feature of the extended modules transitively available to an importing module.
-
-#### Pitfalls
-
-
-* Prelude combines many many function names and so the namespace of modules that import it is a bit crowded.
-
-

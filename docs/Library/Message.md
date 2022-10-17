@@ -35,8 +35,3 @@ A very common example is to annotate parse trees with messages.
 .Pitfalls
 
 
-# Benefits
-
-.Pitfalls
-
-

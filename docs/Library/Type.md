@@ -900,11 +900,3 @@ Determine if the given type is a reified type.
 
 Determine if the given type is an type variable (parameter).
 
-`
-* ``default bool isTypeVar(Symbol _)``
-
-
-#### Synopsis
-
-Determine if the given type is an type variable (parameter).
-

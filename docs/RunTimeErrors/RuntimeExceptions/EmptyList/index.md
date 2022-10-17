@@ -72,16 +72,3 @@ ok
 ```
 
 
-rascal>import Exception;
-ok
-rascal>import IO;
-ok
-rascal>try 
->>>>>>>  println(head(L)); 
->>>>>>>catch EmptyList(): 
->>>>>>>  println("Cannot take head of empty list");
-Cannot take head of empty list
-ok
-```
-
-

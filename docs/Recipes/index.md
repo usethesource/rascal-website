@@ -31,11 +31,3 @@ The following features are covered:
 *  Visualization.
 
 
-yntax definition.
-*  Parsing.
-*  Transformation.
-*  Code generation.
-*  IDE extensions.
-*  Visualization.
-
-

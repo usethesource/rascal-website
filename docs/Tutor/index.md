@@ -69,6 +69,3 @@ The following topics will be described here:
 * Downstream tools, such as Docusaurus, may detect issues that the tutor compiler does not detect. For example broken links that are not [Concept](../Tutor/Concept/index.md) links will not be detected early. This means you may have to go back and fix the documentation, release it in a `jar` and then try the downstream tool again.
 * The interactive [question markup](../Tutor/Markup/QuestionMarkup/index.md) part of the compiler is currently under maintenance and therefore unavailable.
 
-ndex.md) links will not be detected early. This means you may have to go back and fix the documentation, release it in a `jar` and then try the downstream tool again.
-* The interactive [question markup](../../../../../../../../../../Tutor/Markup/QuestionMarkup/index.md) part of the compiler is currently under maintenance and therefore unavailable.
-

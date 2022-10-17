@@ -21,5 +21,3 @@ This manual is not complete, but it contains the following topics to help you un
 
 * [tutor compiler](../Developers/TutorCompiler/index.md)
 
-s/TutorCompiler/index.md)
-

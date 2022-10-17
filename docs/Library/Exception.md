@@ -113,10 +113,3 @@ rascal>println(N);
 ok
 ```
 
->>>  N = 100;
-ok
-rascal>println(N);
-100
-ok
-```
-

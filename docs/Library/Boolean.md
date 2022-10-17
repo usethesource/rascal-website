@@ -134,17 +134,3 @@ rascal>toString(false);
 str: "false"
 ```
 
-lse"`.
-
-#### Examples
-
-
-```rascal-shell 
-rascal>import Boolean;
-ok
-rascal>toString(true);
-str: "true"
-rascal>toString(false);
-str: "false"
-```
-

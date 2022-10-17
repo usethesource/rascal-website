@@ -36,7 +36,3 @@ details:
 * There is a lot of documentation on Rascal and its libraries. Read the [Browsing](../GettingHelp/Browsing/index.md) page on how to navigate it.
 
 
-ing/index.md).
-* There is a lot of documentation on Rascal and its libraries. Read the [Browsing](../../../../../../../../../../GettingHelp/Browsing/index.md) page on how to navigate it.
-
-

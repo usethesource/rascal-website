@@ -48,11 +48,3 @@ You can find more (accessible) information about programming in Rascal here:
 *  Rascal allows you to write highly imperative code, but it has declarative constructs that lead to shorter and more readable code.
 
 
-(../../../../../../../../../../WhyRascal/index.md).
-
-#### Pitfalls
-
-*  Rascal is a procedural/functional language with immutable data. Do not confuse this with object-oriented programming.
-*  Rascal allows you to write highly imperative code, but it has declarative constructs that lead to shorter and more readable code.
-
-

@@ -63,17 +63,3 @@ checker is currently under development.
 * [unsupported subscript](../CompileTimeErrors/UnsupportedSubscript/index.md)
 * [unsupported subscript arity](../CompileTimeErrors/UnsupportedSubscriptArity/index.md)
 
-e/index.md)
-* [unexpected type](../../../../../../../../../../CompileTimeErrors/UnexpectedType/index.md)
-* [unguarded append](../../../../../../../../../../CompileTimeErrors/UnguardedAppend/index.md)
-* [unguarded fail](../../../../../../../../../../CompileTimeErrors/UnguardedFail/index.md)
-* [unguarded insert](../../../../../../../../../../CompileTimeErrors/UnguardedInsert/index.md)
-* [unguarded it](../../../../../../../../../../CompileTimeErrors/UnguardedIt/index.md)
-* [unguarded return](../../../../../../../../../../CompileTimeErrors/UnguardedReturn/index.md)
-* [uninitialized pattern match](../../../../../../../../../../CompileTimeErrors/UninitializedPatternMatch/index.md)
-* [unitialized variable](../../../../../../../../../../CompileTimeErrors/UnitializedVariable/index.md)
-* [unsupported operation](../../../../../../../../../../CompileTimeErrors/UnsupportedOperation/index.md)
-* [unsupported pattern](../../../../../../../../../../CompileTimeErrors/UnsupportedPattern/index.md)
-* [unsupported subscript](../../../../../../../../../../CompileTimeErrors/UnsupportedSubscript/index.md)
-* [unsupported subscript arity](../../../../../../../../../../CompileTimeErrors/UnsupportedSubscriptArity/index.md)
-

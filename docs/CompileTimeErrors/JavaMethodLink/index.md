@@ -287,31 +287,3 @@ ok
 
 
 
-va:960)
-	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:293)
-	at org.apache.maven.cli.MavenCli.main(MavenCli.java:196)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
-ok
-```
-The same error message is generated if the function declaration contains a body:
-
-```rascal-shell ,error
-rascal>@javaClass{org.rascalmpl.library.Preludexxx}
->>>>>>>public java int size(list[&T] lst){
->>>>>>>  return 0;
->>>>>>>}
-|prompt:///|(0,94,<1,0>,<4,1>): Java function has a body
-Advice: |http://tutor.rascal-mpl.org/Errors/Static/NonAbstractJavaFunction/NonAbstractJavaFunction.html|
-ok
-```
-
-
-
-

@@ -496,31 +496,3 @@ map[int, set[int]]: (
 )
 ```
 
-Relation-index}
-
-* ``map[&K, set[&V]] index(rel[&K, &V] R)``
-
-
-#### Synopsis
-
-Indexes a binary relation as a map
-
-#### Description
-
-Converts a binary relation to a map of the domain to a set of the range.
-
-#### Examples
-
-
-```rascal-shell 
-rascal>import Relation;
-ok
-rascal>index({<1,10>, <2,20>, <3,30>, <30,10>});
-map[int, set[int]]: (
-  1:{10},
-  3:{30},
-  2:{20},
-  30:{10}
-)
-```
-

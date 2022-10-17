@@ -210,15 +210,3 @@ Compute a location that textually covers the text of a list of locations.
 Create a new location that refers to the smallest text area that overlaps with the text of the given locations.
 The given locations should all refer to the same file but they may be overlapping or be contained in each other.
 
-cover(list[loc] locs)``
-
-
-#### Synopsis
-
-Compute a location that textually covers the text of a list of locations.
-
-#### Description
-
-Create a new location that refers to the smallest text area that overlaps with the text of the given locations.
-The given locations should all refer to the same file but they may be overlapping or be contained in each other.
-

@@ -62,9 +62,3 @@ ok
 ```
 
 
->>>>>>>  println("Cannot apply getOneFrom to empty set");
-Cannot apply getOneFrom to empty set
-ok
-```
-
-

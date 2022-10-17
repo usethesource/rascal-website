@@ -62,10 +62,3 @@ ok
 ```
 
 
-): 
->>>>>>>  println("Cannot use getOneFrom on empty map");
-Cannot use getOneFrom on empty map
-ok
-```
-
-
