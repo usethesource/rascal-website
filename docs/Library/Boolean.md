@@ -13,14 +13,14 @@ Library functions for Booleans.
 
 #### Description
 
-For operators on Boolean values see [Boolean](../../../../../../../../../Rascal/Expressions/Values/Boolean/index.md) in the Rascal Language Reference.
+For operators on Boolean values see [Boolean](../Rascal/Expressions/Values/Boolean/index.md) in the Rascal Language Reference.
 
 The following functions are defined for Booleans:
-* [arbBool](../../../../../../../../../Library/Boolean.md#Boolean-arbBool)
-* [fromString](../../../../../../../../../Library/Boolean.md#Boolean-fromString)
-* [toInt](../../../../../../../../../Library/Boolean.md#Boolean-toInt)
-* [toReal](../../../../../../../../../Library/Boolean.md#Boolean-toReal)
-* [toString](../../../../../../../../../Library/Boolean.md#Boolean-toString)
+* [arbBool](../Library/Boolean.md#Boolean-arbBool)
+* [fromString](../Library/Boolean.md#Boolean-fromString)
+* [toInt](../Library/Boolean.md#Boolean-toInt)
+* [toReal](../Library/Boolean.md#Boolean-toReal)
+* [toString](../Library/Boolean.md#Boolean-toString)
 
 
 ## function arbBool {#Boolean-arbBool}
@@ -39,11 +39,11 @@ Return an arbitrary Boolean value.
 rascal>import Boolean;
 ok
 rascal>arbBool();
-bool: false
-rascal>arbBool();
-bool: false
-rascal>arbBool();
 bool: true
+rascal>arbBool();
+bool: false
+rascal>arbBool();
+bool: false
 ```
 
 #### Benefits
@@ -121,6 +121,20 @@ Convert Boolean value to string.
 #### Description
 
 Maps `true` to `"true"` and `false` to `"false"`.
+
+#### Examples
+
+
+```rascal-shell 
+rascal>import Boolean;
+ok
+rascal>toString(true);
+str: "true"
+rascal>toString(false);
+str: "false"
+```
+
+lse"`.
 
 #### Examples
 

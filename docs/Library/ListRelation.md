@@ -13,24 +13,24 @@ Library functions for list relations.
 
 #### Description
 
-For operators on listrelations see [ListRelation](../../../../../../../../../Rascal/Expressions/Values/ListRelation/index.md) in the Rascal Language Reference.
+For operators on listrelations see [ListRelation](../Rascal/Expressions/Values/ListRelation/index.md) in the Rascal Language Reference.
 
 The following functions are defined for list relations :
-* [carrier](../../../../../../../../../Library/ListRelation.md#ListRelation-carrier)
-* [carrierR](../../../../../../../../../Library/ListRelation.md#ListRelation-carrierR)
-* [carrierX](../../../../../../../../../Library/ListRelation.md#ListRelation-carrierX)
-* [complement](../../../../../../../../../Library/ListRelation.md#ListRelation-complement)
-* [domain](../../../../../../../../../Library/ListRelation.md#ListRelation-domain)
-* [domainR](../../../../../../../../../Library/ListRelation.md#ListRelation-domainR)
-* [domainX](../../../../../../../../../Library/ListRelation.md#ListRelation-domainX)
-* [groupDomainByRange](../../../../../../../../../Library/ListRelation.md#ListRelation-groupDomainByRange)
-* [groupRangeByDomain](../../../../../../../../../Library/ListRelation.md#ListRelation-groupRangeByDomain)
-* [ident](../../../../../../../../../Library/ListRelation.md#ListRelation-ident)
-* [index](../../../../../../../../../Library/ListRelation.md#ListRelation-index)
-* [invert](../../../../../../../../../Library/ListRelation.md#ListRelation-invert)
-* [range](../../../../../../../../../Library/ListRelation.md#ListRelation-range)
-* [rangeR](../../../../../../../../../Library/ListRelation.md#ListRelation-rangeR)
-* [rangeX](../../../../../../../../../Library/ListRelation.md#ListRelation-rangeX)
+* [carrier](../Library/ListRelation.md#ListRelation-carrier)
+* [carrierR](../Library/ListRelation.md#ListRelation-carrierR)
+* [carrierX](../Library/ListRelation.md#ListRelation-carrierX)
+* [complement](../Library/ListRelation.md#ListRelation-complement)
+* [domain](../Library/ListRelation.md#ListRelation-domain)
+* [domainR](../Library/ListRelation.md#ListRelation-domainR)
+* [domainX](../Library/ListRelation.md#ListRelation-domainX)
+* [groupDomainByRange](../Library/ListRelation.md#ListRelation-groupDomainByRange)
+* [groupRangeByDomain](../Library/ListRelation.md#ListRelation-groupRangeByDomain)
+* [ident](../Library/ListRelation.md#ListRelation-ident)
+* [index](../Library/ListRelation.md#ListRelation-index)
+* [invert](../Library/ListRelation.md#ListRelation-invert)
+* [range](../Library/ListRelation.md#ListRelation-range)
+* [rangeR](../Library/ListRelation.md#ListRelation-rangeR)
+* [rangeX](../Library/ListRelation.md#ListRelation-rangeX)
 
 
 ## function carrier {#ListRelation-carrier}
@@ -475,6 +475,34 @@ lrel[int,int]: [<2,20>]
 ```
 
 ## function index {#ListRelation-index}
+
+* ``map[&K, set[&V]] index(lrel[&K, &V] R)``
+
+
+#### Synopsis
+
+Listes a binary list relation as a map
+
+#### Description
+
+Converts a binary list relation to a map of the domain to a set of the range.
+
+#### Examples
+
+
+```rascal-shell 
+rascal>import ListRelation;
+ok
+rascal>index([<1,10>, <2,20>, <3,30>, <30,10>]);
+map[int, set[int]]: (
+  1:{10},
+  3:{30},
+  2:{20},
+  30:{10}
+)
+```
+
+}
 
 * ``map[&K, set[&V]] index(lrel[&K, &V] R)``
 

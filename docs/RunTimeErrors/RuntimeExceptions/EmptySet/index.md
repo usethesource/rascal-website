@@ -40,8 +40,8 @@ Taking an element from an empty set gives an error:
 
 ```rascal-shell ,continue,error
 rascal>getOneFrom(S);
-|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/Set.rsc|(6597,382,<329,0>,<346,38>): EmptySet()
-	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/Set.rsc|(6597,382,<329,0>,<346,38>))
+|std:///Set.rsc|(6597,382,<329,0>,<346,38>): EmptySet()
+	at *** somewhere ***(|std:///Set.rsc|(6597,382,<329,0>,<346,38>))
 	at getOneFrom(|prompt:///|(11,1,<1,11>,<1,12>))
 ok
 ```
@@ -56,6 +56,12 @@ ok
 rascal>try 
 >>>>>>>  println(getOneFrom(S)); 
 >>>>>>>catch EmptySet(): 
+>>>>>>>  println("Cannot apply getOneFrom to empty set");
+Cannot apply getOneFrom to empty set
+ok
+```
+
+
 >>>>>>>  println("Cannot apply getOneFrom to empty set");
 Cannot apply getOneFrom to empty set
 ok

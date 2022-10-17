@@ -88,11 +88,11 @@ default Result eval(List([ *Lval exps ]), Env e) {      ❾
 
                                                             
 // Apply an Lval to a list of arguments and return a Result
-Result apply(Closure(Result(list[Lval] args, Env env) fn), list[Lval] args, Env e) { // <10>
+Result apply(Closure(Result(list[Lval] args, Env env) fn), list[Lval] args, Env e) {      ❶⓿  
   return <fn(args, e).val, e>;
 }
 
-// <11>
+     ❶❶  
 
 Result apply(Atom("+"),      [Integer(x), Integer(y)],      Env e) = <Integer(x + y), e>;
 Result apply(Atom("-"),      [Integer(x), Integer(y)],      Env e) = <Integer(x - y), e>;
@@ -107,7 +107,7 @@ Result apply(Atom("car"),    [List(list[Lval] x)],          Env e) = <head(x), e
 Result apply(Atom("cdr"),    [List(list[Lval] x)],          Env e) = <List(tail(x)), e>;
 Result apply(Atom("list"),   list[Lval] x,                  Env e) = <List(x), e>;
 
-default Result apply(Lval a,     list[Lval] b, Env e) { // <12>
+default Result apply(Lval a,     list[Lval] b, Env e) {      ❶❷  
   println("Cannot apply <a> to <b> using <e>");
   return <FALSE, e>;
 }
@@ -155,12 +155,12 @@ We now explain the different cases in more detail:
     Otherwise, all elements are evaluated and the auxiliary function ` apply` is used to apply the value of the first element to the values of   
     the remaining elements.
 
-<10> Apply an `Lval` to a list of arguments and return a `Result`. The first case handles a `Closure`; it amounts
+* ❶⓿  Apply an `Lval` to a list of arguments and return a `Result`. The first case handles a `Closure`; it amounts
      to calling the function in the closure (environment handling and parameter binding are done in the closure as discussed above.
 
-<11> Definition of all built-in functions.
+* ❶❶  Definition of all built-in functions.
 
-<12> A default function that prints an error message when an undefined function is called.
+* ❶❷  A default function that prints an error message when an undefined function is called.
 
 #### Examples
 

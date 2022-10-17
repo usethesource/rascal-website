@@ -59,7 +59,7 @@ org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.librar
 	at org.rascalmpl.repl.RascalInterpreterREPL.evalStatement(RascalInterpreterREPL.java:132)
 	at org.rascalmpl.repl.BaseRascalREPL.handleInput(BaseRascalREPL.java:119)
 	at lang.rascal.tutor.repl.TutorCommandExecutor.eval(TutorCommandExecutor.java:97)
-	at lang.rascal.tutor.repl.TutorCommandExecutorCreator.lambda$eval$2(TutorCommandExecutorCreator.java:82)
+	at lang.rascal.tutor.repl.TutorCommandExecutorCreator.lambda$eval$2(TutorCommandExecutorCreator.java:111)
 	at org.rascalmpl.values.RascalFunctionValueFactory$RascalFunctionValue.call(RascalFunctionValueFactory.java:176)
 	at org.rascalmpl.interpreter.result.FunctionResultFacade.call(FunctionResultFacade.java:54)
 	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
@@ -254,26 +254,40 @@ org.rascalmpl.exceptions.JavaMethodLink: Cannot link method org.rascalmpl.librar
 	at org.rascalmpl.interpreter.result.RascalFunction.call(RascalFunction.java:326)
 	at org.rascalmpl.interpreter.result.OverloadedFunction.callWith(OverloadedFunction.java:409)
 	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:369)
-	at org.rascalmpl.interpreter.result.OverloadedFunction.call(OverloadedFunction.java:360)
-	at org.rascalmpl.interpreter.Evaluator.call(Evaluator.java:743)
-	at org.rascalmpl.interpreter.Evaluator.call(Evaluator.java:726)
-	at org.rascalmpl.interpreter.Evaluator.call(Evaluator.java:532)
-	at org.rascalmpl.interpreter.Evaluator.call(Evaluator.java:489)
-	at org.rascalmpl.maven.CompileRascalDocumentation.runCompiler(CompileRascalDocumentation.java:166)
-	at org.rascalmpl.maven.CompileRascalDocumentation.execute(CompileRascalDocumentation.java:120)
-	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:301)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:211)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:165)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:157)
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:121)
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
-	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
-	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:127)
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:294)
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
-	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
-	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:960)
+	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
+	at org.rascalmpl.semantics.dynamic.Statement$Expression.interpret(Statement.java:365)
+	at org.rascalmpl.semantics.dynamic.Statement$Assignment.interpret(Statement.java:205)
+	at org.rascalmpl.interpreter.result.RascalFunction.runBody(RascalFunction.java:385)
+	at org.rascalmpl.interpreter.result.RascalFunction.call(RascalFunction.java:294)
+	at org.rascalmpl.semantics.dynamic.Expression$CallOrTree.interpret(Expression.java:539)
+	at org.rascalmpl.semantics.dynamic.Command$Expression.interpret(Command.java:61)
+	at org.rascalmpl.interpreter.Evaluator.eval(Evaluator.java:1094)
+	at org.rascalmpl.interpreter.Evaluator.eval(Evaluator.java:955)
+	at org.rascalmpl.interpreter.Evaluator.eval(Evaluator.java:908)
+	at org.rascalmpl.repl.RascalInterpreterREPL.evalStatement(RascalInterpreterREPL.java:132)
+	at org.rascalmpl.repl.BaseRascalREPL.handleInput(BaseRascalREPL.java:106)
+	at org.rascalmpl.vscode.lsp.terminal.LSPTerminalREPL$1.handleInput(LSPTerminalREPL.java:191)
+	at org.rascalmpl.repl.BaseREPL.handleInput(BaseREPL.java:180)
+	at org.rascalmpl.repl.BaseREPL.run(BaseREPL.java:347)
+	at org.rascalmpl.vscode.lsp.terminal.LSPTerminalREPL.main(LSPTerminalREPL.java:268)
+ok
+```
+The same error message is generated if the function declaration contains a body:
+
+```rascal-shell ,error
+rascal>@javaClass{org.rascalmpl.library.Preludexxx}
+>>>>>>>public java int size(list[&T] lst){
+>>>>>>>  return 0;
+>>>>>>>}
+|prompt:///|(0,94,<1,0>,<4,1>): Java function has a body
+Advice: |http://tutor.rascal-mpl.org/Errors/Static/NonAbstractJavaFunction/NonAbstractJavaFunction.html|
+ok
+```
+
+
+
+
+va:960)
 	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:293)
 	at org.apache.maven.cli.MavenCli.main(MavenCli.java:196)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

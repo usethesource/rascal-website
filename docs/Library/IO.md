@@ -14,70 +14,70 @@ Library functions for input/output.
 #### Description
 
 The following input/output functions are defined:
-* [changeEvent](../../../../../../../../../Library/IO.md#IO-changeEvent)
-* [created](../../../../../../../../../Library/IO.md#IO-created)
-* [deleted](../../../../../../../../../Library/IO.md#IO-deleted)
-* [directory](../../../../../../../../../Library/IO.md#IO-directory)
-* [file](../../../../../../../../../Library/IO.md#IO-file)
-* [modified](../../../../../../../../../Library/IO.md#IO-modified)
-* [LocationChangeEvent](../../../../../../../../../Library/IO.md#IO-LocationChangeEvent)
-* [LocationChangeType](../../../../../../../../../Library/IO.md#IO-LocationChangeType)
-* [LocationType](../../../../../../../../../Library/IO.md#IO-LocationType)
-* [appendToFile](../../../../../../../../../Library/IO.md#IO-appendToFile)
-* [appendToFileEnc](../../../../../../../../../Library/IO.md#IO-appendToFileEnc)
-* [arbLoc](../../../../../../../../../Library/IO.md#IO-arbLoc)
-* [bprintln](../../../../../../../../../Library/IO.md#IO-bprintln)
-* [canEncode](../../../../../../../../../Library/IO.md#IO-canEncode)
-* [charsets](../../../../../../../../../Library/IO.md#IO-charsets)
-* [copy](../../../../../../../../../Library/IO.md#IO-copy)
-* [copyDirectory](../../../../../../../../../Library/IO.md#IO-copyDirectory)
-* [copyFile](../../../../../../../../../Library/IO.md#IO-copyFile)
-* [createLink](../../../../../../../../../Library/IO.md#IO-createLink)
-* [created](../../../../../../../../../Library/IO.md#IO-created)
-* [exists](../../../../../../../../../Library/IO.md#IO-exists)
-* [find](../../../../../../../../../Library/IO.md#IO-find)
-* [iprint](../../../../../../../../../Library/IO.md#IO-iprint)
-* [iprintExp](../../../../../../../../../Library/IO.md#IO-iprintExp)
-* [iprintToFile](../../../../../../../../../Library/IO.md#IO-iprintToFile)
-* [iprintToString](../../../../../../../../../Library/IO.md#IO-iprintToString)
-* [iprintln](../../../../../../../../../Library/IO.md#IO-iprintln)
-* [iprintlnExp](../../../../../../../../../Library/IO.md#IO-iprintlnExp)
-* [isDirectory](../../../../../../../../../Library/IO.md#IO-isDirectory)
-* [isFile](../../../../../../../../../Library/IO.md#IO-isFile)
-* [lastModified](../../../../../../../../../Library/IO.md#IO-lastModified)
-* [listEntries](../../../../../../../../../Library/IO.md#IO-listEntries)
-* [md5Hash](../../../../../../../../../Library/IO.md#IO-md5Hash)
-* [md5HashFile](../../../../../../../../../Library/IO.md#IO-md5HashFile)
-* [mkDirectory](../../../../../../../../../Library/IO.md#IO-mkDirectory)
-* [move](../../../../../../../../../Library/IO.md#IO-move)
-* [print](../../../../../../../../../Library/IO.md#IO-print)
-* [printExp](../../../../../../../../../Library/IO.md#IO-printExp)
-* [println](../../../../../../../../../Library/IO.md#IO-println)
-* [printlnExp](../../../../../../../../../Library/IO.md#IO-printlnExp)
-* [readBase64](../../../../../../../../../Library/IO.md#IO-readBase64)
-* [readFile](../../../../../../../../../Library/IO.md#IO-readFile)
-* [readFileBytes](../../../../../../../../../Library/IO.md#IO-readFileBytes)
-* [readFileEnc](../../../../../../../../../Library/IO.md#IO-readFileEnc)
-* [readFileLines](../../../../../../../../../Library/IO.md#IO-readFileLines)
-* [readFileLinesEnc](../../../../../../../../../Library/IO.md#IO-readFileLinesEnc)
-* [registerLocations](../../../../../../../../../Library/IO.md#IO-registerLocations)
-* [remove](../../../../../../../../../Library/IO.md#IO-remove)
-* [resolveLocation](../../../../../../../../../Library/IO.md#IO-resolveLocation)
-* [rprint](../../../../../../../../../Library/IO.md#IO-rprint)
-* [rprintln](../../../../../../../../../Library/IO.md#IO-rprintln)
-* [setLastModified](../../../../../../../../../Library/IO.md#IO-setLastModified)
-* [toBase64](../../../../../../../../../Library/IO.md#IO-toBase64)
-* [touch](../../../../../../../../../Library/IO.md#IO-touch)
-* [unregisterLocations](../../../../../../../../../Library/IO.md#IO-unregisterLocations)
-* [unwatch](../../../../../../../../../Library/IO.md#IO-unwatch)
-* [uudecode](../../../../../../../../../Library/IO.md#IO-uudecode)
-* [uuencode](../../../../../../../../../Library/IO.md#IO-uuencode)
-* [watch](../../../../../../../../../Library/IO.md#IO-watch)
-* [writeBase64](../../../../../../../../../Library/IO.md#IO-writeBase64)
-* [writeFile](../../../../../../../../../Library/IO.md#IO-writeFile)
-* [writeFileBytes](../../../../../../../../../Library/IO.md#IO-writeFileBytes)
-* [writeFileEnc](../../../../../../../../../Library/IO.md#IO-writeFileEnc)
-* [writeFileLines](../../../../../../../../../Library/IO.md#IO-writeFileLines)
+* [changeEvent](../Library/IO.md#IO-changeEvent)
+* [created](../Library/IO.md#IO-created)
+* [deleted](../Library/IO.md#IO-deleted)
+* [directory](../Library/IO.md#IO-directory)
+* [file](../Library/IO.md#IO-file)
+* [modified](../Library/IO.md#IO-modified)
+* [LocationChangeEvent](../Library/IO.md#IO-LocationChangeEvent)
+* [LocationChangeType](../Library/IO.md#IO-LocationChangeType)
+* [LocationType](../Library/IO.md#IO-LocationType)
+* [appendToFile](../Library/IO.md#IO-appendToFile)
+* [appendToFileEnc](../Library/IO.md#IO-appendToFileEnc)
+* [arbLoc](../Library/IO.md#IO-arbLoc)
+* [bprintln](../Library/IO.md#IO-bprintln)
+* [canEncode](../Library/IO.md#IO-canEncode)
+* [charsets](../Library/IO.md#IO-charsets)
+* [copy](../Library/IO.md#IO-copy)
+* [copyDirectory](../Library/IO.md#IO-copyDirectory)
+* [copyFile](../Library/IO.md#IO-copyFile)
+* [createLink](../Library/IO.md#IO-createLink)
+* [created](../Library/IO.md#IO-created)
+* [exists](../Library/IO.md#IO-exists)
+* [find](../Library/IO.md#IO-find)
+* [iprint](../Library/IO.md#IO-iprint)
+* [iprintExp](../Library/IO.md#IO-iprintExp)
+* [iprintToFile](../Library/IO.md#IO-iprintToFile)
+* [iprintToString](../Library/IO.md#IO-iprintToString)
+* [iprintln](../Library/IO.md#IO-iprintln)
+* [iprintlnExp](../Library/IO.md#IO-iprintlnExp)
+* [isDirectory](../Library/IO.md#IO-isDirectory)
+* [isFile](../Library/IO.md#IO-isFile)
+* [lastModified](../Library/IO.md#IO-lastModified)
+* [listEntries](../Library/IO.md#IO-listEntries)
+* [md5Hash](../Library/IO.md#IO-md5Hash)
+* [md5HashFile](../Library/IO.md#IO-md5HashFile)
+* [mkDirectory](../Library/IO.md#IO-mkDirectory)
+* [move](../Library/IO.md#IO-move)
+* [print](../Library/IO.md#IO-print)
+* [printExp](../Library/IO.md#IO-printExp)
+* [println](../Library/IO.md#IO-println)
+* [printlnExp](../Library/IO.md#IO-printlnExp)
+* [readBase64](../Library/IO.md#IO-readBase64)
+* [readFile](../Library/IO.md#IO-readFile)
+* [readFileBytes](../Library/IO.md#IO-readFileBytes)
+* [readFileEnc](../Library/IO.md#IO-readFileEnc)
+* [readFileLines](../Library/IO.md#IO-readFileLines)
+* [readFileLinesEnc](../Library/IO.md#IO-readFileLinesEnc)
+* [registerLocations](../Library/IO.md#IO-registerLocations)
+* [remove](../Library/IO.md#IO-remove)
+* [resolveLocation](../Library/IO.md#IO-resolveLocation)
+* [rprint](../Library/IO.md#IO-rprint)
+* [rprintln](../Library/IO.md#IO-rprintln)
+* [setLastModified](../Library/IO.md#IO-setLastModified)
+* [toBase64](../Library/IO.md#IO-toBase64)
+* [touch](../Library/IO.md#IO-touch)
+* [unregisterLocations](../Library/IO.md#IO-unregisterLocations)
+* [unwatch](../Library/IO.md#IO-unwatch)
+* [uudecode](../Library/IO.md#IO-uudecode)
+* [uuencode](../Library/IO.md#IO-uuencode)
+* [watch](../Library/IO.md#IO-watch)
+* [writeBase64](../Library/IO.md#IO-writeBase64)
+* [writeFile](../Library/IO.md#IO-writeFile)
+* [writeFileBytes](../Library/IO.md#IO-writeFileBytes)
+* [writeFileEnc](../Library/IO.md#IO-writeFileEnc)
+* [writeFileLines](../Library/IO.md#IO-writeFileLines)
 
 
 ## function registerLocations {#IO-registerLocations}
@@ -149,12 +149,12 @@ Append a textual representation of some values to an existing or a newly created
 
 #### Encoding
 
-The existing file can be stored using any character set possible, if you know the character set, please use [append to file enc](../../../../../../../../../Library/IO.md#IO-appendToFileEnc).
-Else the same method of deciding the character set is used as in [read file](../../../../../../../../../Library/IO.md#IO-readFile).
+The existing file can be stored using any character set possible, if you know the character set, please use [append to file enc](../Library/IO.md#IO-appendToFileEnc).
+Else the same method of deciding the character set is used as in [read file](../Library/IO.md#IO-readFile).
 
 #### Pitfalls
 
-*  The same encoding pitfalls as the [read file](../../../../../../../../../Library/IO.md#IO-readFile) function.
+*  The same encoding pitfalls as the [read file](../Library/IO.md#IO-readFile) function.
 
 ## function appendToFileEnc {#IO-appendToFileEnc}
 
@@ -192,7 +192,7 @@ Returns all available character sets.
 
 #### Synopsis
 
-Returns whether this charset can be used for encoding (use with [write file](../../../../../../../../../Library/IO.md#IO-writeFile))
+Returns whether this charset can be used for encoding (use with [write file](../Library/IO.md#IO-writeFile))
 
 ## function bprintln {#IO-bprintln}
 
@@ -206,7 +206,7 @@ Print a value and return true.
 #### Description
 
 Print a value and return `true`. This is useful for debugging complex Boolean expressions or comprehensions.
-The only difference between this function and [println](../../../../../../../../../Library/IO.md#IO-println) is that its return type is `bool` rather than `void`.
+The only difference between this function and [println](../Library/IO.md#IO-println) is that its return type is `bool` rather than `void`.
 
 #### Examples
 
@@ -293,9 +293,9 @@ Print an indented representation of a value.
 
 #### Description
 
-See [iprintExp](../../../../../../../../../Library/IO.md#IO-iprintExp) for a version that returns its argument as result
-and [iprintln](../../../../../../../../../Library/IO.md#IO-iprintln) for a version that adds a newline
-and [iprintToFile](../../../../../../../../../Library/IO.md#IO-iprintToFile) for a version that prints to a file.
+See [iprintExp](../Library/IO.md#IO-iprintExp) for a version that returns its argument as result
+and [iprintln](../Library/IO.md#IO-iprintln) for a version that adds a newline
+and [iprintToFile](../Library/IO.md#IO-iprintToFile) for a version that prints to a file.
 
 #### Examples
 
@@ -323,9 +323,9 @@ Print an indented representation of a value to the specified location.
 
 #### Description
 
-See [iprint](../../../../../../../../../Library/IO.md#IO-iprint) for a version that displays the result on the console
-and [iprintExp](../../../../../../../../../Library/IO.md#IO-iprintExp) for a version that returns its argument as result
-and [iprintln](../../../../../../../../../Library/IO.md#IO-iprintln) for a version that adds a newline.
+See [iprint](../Library/IO.md#IO-iprint) for a version that displays the result on the console
+and [iprintExp](../Library/IO.md#IO-iprintExp) for a version that returns its argument as result
+and [iprintln](../Library/IO.md#IO-iprintln) for a version that adds a newline.
 
 #### Examples
 
@@ -352,7 +352,7 @@ Print an indented representation of a value and returns the value as result.
 
 #### Description
 
-See [iprintlnExp](../../../../../../../../../Library/IO.md#IO-iprintlnExp) for a version that adds a newline.
+See [iprintlnExp](../Library/IO.md#IO-iprintlnExp) for a version that adds a newline.
 
 #### Examples
 
@@ -384,7 +384,7 @@ Print an indented representation of a value followed by a newline and returns th
 
 #### Description
 
-See [iprintExp](../../../../../../../../../Library/IO.md#IO-iprintExp) for a version that does not add a newline.
+See [iprintExp](../Library/IO.md#IO-iprintExp) for a version that does not add a newline.
 
 #### Examples
 
@@ -416,11 +416,11 @@ Print a indented representation of a value and add a newline at the end.
 
 #### Description
 
-See [iprintlnExp](../../../../../../../../../Library/IO.md#IO-iprintlnExp) for a version that returns its argument as result
-and [iprint](../../../../../../../../../Library/IO.md#IO-iprint) for a version that does not add a newline.
+See [iprintlnExp](../Library/IO.md#IO-iprintlnExp) for a version that returns its argument as result
+and [iprint](../Library/IO.md#IO-iprint) for a version that does not add a newline.
 
 By default we only print the first 1000 lines, if you want to print larger values, either 
-use [writeTextValueFile](../../../../../../../../../Library/ValueIO.md#ValueIO-writeTextValueFile) or change the limit with the lineLimit parameter.
+use [writeTextValueFile](../Library/ValueIO.md#ValueIO-writeTextValueFile) or change the limit with the lineLimit parameter.
 
 #### Examples
 
@@ -589,13 +589,13 @@ Print a value without subsequent newline.
 #### Description
 
 Print a value on the output stream.
-See [println](../../../../../../../../../Library/IO.md#IO-println) for a version that adds a newline
-and [printExp](../../../../../../../../../Library/IO.md#IO-printExp) for a version that returns its argument as value.
+See [println](../Library/IO.md#IO-println) for a version that adds a newline
+and [printExp](../Library/IO.md#IO-printExp) for a version that returns its argument as value.
 
 
 #### Examples
 
-Note that the only difference with [println](../../../../../../../../../Library/IO.md#IO-println) is that no newline is added after the value is printed
+Note that the only difference with [println](../Library/IO.md#IO-println) is that no newline is added after the value is printed
 
 ```rascal-shell 
 rascal>import IO;
@@ -645,8 +645,8 @@ Print a value to the output stream and add a newline.
 #### Description
 
 Print a value on the output stream followed by a newline.
-See [print](../../../../../../../../../Library/IO.md#IO-print) for a version that does not add a newline
-and [printlnExp](../../../../../../../../../Library/IO.md#IO-printlnExp) for a version that returns its argument as value.
+See [print](../Library/IO.md#IO-print) for a version that does not add a newline
+and [printlnExp](../Library/IO.md#IO-printlnExp) for a version that returns its argument as value.
 
 #### Examples
 
@@ -754,15 +754,15 @@ Read the contents of a location and return it as string value.
 #### Description
 
 Return the contents of a file location as a single string.
-Also see [read file lines](../../../../../../../../../Library/IO.md#IO-readFileLines).
+Also see [read file lines](../Library/IO.md#IO-readFileLines).
 
 #### Encoding
 
 A text file can be encoded in many different character sets, most common are UTF8, ISO-8859-1, and ASCII.
-If you know the encoding of the file, please use the [read file enc](../../../../../../../../../Library/IO.md#IO-readFileEnc) and [read file lines enc](../../../../../../../../../Library/IO.md#IO-readFileLinesEnc) overloads.
+If you know the encoding of the file, please use the [read file enc](../Library/IO.md#IO-readFileEnc) and [read file lines enc](../Library/IO.md#IO-readFileLinesEnc) overloads.
 If you do not know, we try to detect this. This detection is explained below:
 
-*  If the implementation of the used scheme in the [location](../../../../../../../../../Rascal/Expressions/Values/Location/index.md) 
+*  If the implementation of the used scheme in the [location](../Rascal/Expressions/Values/Location/index.md) 
    (e.g.,`|project:///|`) defines the charset of the file then this is used.
 *  Otherwise if the file contains a UTF8/16/32 [BOM](http://en.wikipedia.org/wiki/Byte_order_mark),
    then this is used.
@@ -771,7 +771,7 @@ If you do not know, we try to detect this. This detection is explained below:
    **  Are the first 32 bytes valid UTF-32? Then use UTF-32.
 *  Finally, we fall back to the system default (as given by the Java Runtime Environment).
 
-*To summarize*, we use UTF-8 by default, except if the [location](../../../../../../../../../Rascal/Expressions/Values/Location/index.md) has available meta-data, the file contains a BOM, or
+*To summarize*, we use UTF-8 by default, except if the [location](../Rascal/Expressions/Values/Location/index.md) has available meta-data, the file contains a BOM, or
 the first 32 bytes of the file are not valid UTF-8.
 
 #### Pitfalls
@@ -792,7 +792,7 @@ Read the contents of a location and return it as string value.
 #### Description
 
 Return the contents (decoded using the Character set supplied) of a file location as a single string.
-Also see [read file lines enc](../../../../../../../../../Library/IO.md#IO-readFileLinesEnc).
+Also see [read file lines enc](../Library/IO.md#IO-readFileLinesEnc).
 
 ## function readBase64 {#IO-readBase64}
 
@@ -831,17 +831,17 @@ Read the contents of a file location and return it as a list of strings.
 #### Description
 
 Return the contents of a file location as a list of lines.
-Also see [read file](../../../../../../../../../Library/IO.md#IO-readFile).
+Also see [read file](../Library/IO.md#IO-readFile).
 
 #### Encoding
 
-Look at [read file](../../../../../../../../../Library/IO.md#IO-readFile) to understand how this function chooses the character set. If you know the character set used, please use [read file lines enc](../../../../../../../../../Library/IO.md#IO-readFileLinesEnc).
+Look at [read file](../Library/IO.md#IO-readFile) to understand how this function chooses the character set. If you know the character set used, please use [read file lines enc](../Library/IO.md#IO-readFileLinesEnc).
 
 #### Pitfalls
 
 *  In case encoding is not known, we try to estimate as best as we can (see [readFile]).
 *  We default to UTF-8, if the file was not encoded in UTF-8 but the first characters were valid UTF-8, 
-  you might get an decoding error or just strange looking characters (see [read file](../../../../../../../../../Library/IO.md#IO-readFile)).
+  you might get an decoding error or just strange looking characters (see [read file](../Library/IO.md#IO-readFile)).
 
 ## function writeFileLines {#IO-writeFileLines}
 
@@ -854,7 +854,7 @@ Writes a list of strings to a file, where each separate string is ended with a n
 #### Benefits
 
 
-  * mirrors [read file lines](../../../../../../../../../Library/IO.md#IO-readFileLines) in its functionality
+  * mirrors [read file lines](../Library/IO.md#IO-readFileLines) in its functionality
 
 #### Pitfalls
 
@@ -873,7 +873,7 @@ Read the contents of a file location and return it as a list of strings.
 #### Description
 
 Return the contents (decoded using the Character set supplied) of a file location as a list of lines.
-Also see [read file lines](../../../../../../../../../Library/IO.md#IO-readFileLines).
+Also see [read file lines](../Library/IO.md#IO-readFileLines).
 
 ## function remove {#IO-remove}
 
@@ -897,9 +897,118 @@ Write a textual representation of some values to a file:
 *  All other values are printed as-is.
 *  Each value is terminated by a newline character.
 
-Files are encoded in UTF-8, in case this is not desired, use [write file enc](../../../../../../../../../Library/IO.md#IO-writeFileEnc).
+Files are encoded in UTF-8, in case this is not desired, use [write file enc](../Library/IO.md#IO-writeFileEnc).
 
 ## function writeFileBytes {#IO-writeFileBytes}
+
+* ``void writeFileBytes(loc file, list[int] bytes) throws PathNotFound, IO``
+
+
+#### Synopsis
+
+Write a list of bytes to a file.
+
+## function writeFileEnc {#IO-writeFileEnc}
+
+* ``void writeFileEnc(loc file, str charset, value V...) throws PathNotFound, IO``
+
+
+#### Synopsis
+
+Write values to a file.
+
+#### Description
+
+Write a textual representation of some values to a file:
+
+*  If a value is a simple string, the quotes are removed and the contents are de-escaped.
+*  If a value has a non-terminal type, the parse tree is unparsed to produce a value.
+*  All other values are printed as-is.
+*  Each value is terminated by a newline character.
+
+Files are encoded using the charset provided.
+
+## function md5HashFile {#IO-md5HashFile}
+
+* ``str md5HashFile(loc file) throws PathNotFound, IO``
+
+
+#### Synopsis
+
+Read the contents of a location and return its MD5 hash.
+
+#### Description
+
+MD5 hash the contents of a file location.
+
+## function md5Hash {#IO-md5Hash}
+
+* ``str md5Hash(value v)``
+
+## function createLink {#IO-createLink}
+
+* ``str createLink(str title, str target)``
+
+## function toBase64 {#IO-toBase64}
+
+* ``str toBase64(loc file) throws PathNotFound, IO``
+
+## function copy {#IO-copy}
+
+* ``void copy(loc source, loc target, bool recursive=false, bool overwrite=true) throws IO``
+
+## function copyFile {#IO-copyFile}
+
+* ``void copyFile(loc source, loc target)``
+
+## function copyDirectory {#IO-copyDirectory}
+
+* ``void copyDirectory(loc source, loc target)``
+
+## function move {#IO-move}
+
+* ``void move(loc source, loc target, bool overwrite=true) throws IO``
+
+## function arbLoc {#IO-arbLoc}
+
+* ``loc arbLoc()``
+
+## data LocationChangeEvent {#IO-LocationChangeEvent}
+
+```rascal
+data LocationChangeEvent  
+     = changeEvent(loc src, LocationChangeType changeType, LocationType \type)
+     ;
+```
+
+## data LocationChangeType {#IO-LocationChangeType}
+
+```rascal
+data LocationChangeType  
+     = created()
+     | deleted()
+     | modified()
+     ;
+```
+
+## data LocationType {#IO-LocationType}
+
+```rascal
+data LocationType  
+     = file()
+     | directory()
+     ;
+```
+
+## function watch {#IO-watch}
+
+* ``void watch(loc src, bool recursive, void (LocationChangeEvent event) watcher)``
+
+## function unwatch {#IO-unwatch}
+
+* ``void unwatch(loc src, bool recursive, void (LocationChangeEvent event) watcher)``
+
+tion writeFileBytes {#IO-writeFileBytes}
 
 * ``void writeFileBytes(loc file, list[int] bytes) throws PathNotFound, IO``
 

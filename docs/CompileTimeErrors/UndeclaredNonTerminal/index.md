@@ -24,7 +24,7 @@ ok
 rascal>syntax X = "a" Y;
 ok
 rascal>parse(#X, "ab");
-|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/ParseTree.rsc|(18986,5,<500,140>,<500,145>): Undeclared non-terminal: Y in module $GENERATED_PARSER$37351774
+|std:///ParseTree.rsc|(18986,5,<500,140>,<500,145>): Undeclared non-terminal: Y in module $GENERATED_PARSER$37351774
 Advice: |http://tutor.rascal-mpl.org/Errors/Static/UndeclaredNonTerminal/UndeclaredNonTerminal.html|
 ok
 ```
@@ -32,5 +32,8 @@ ok
 #### Pitfalls
 
 The source location of the non-terminal is not yet available, so the error message mentions the module in which this occurs.
+
+
+message mentions the module in which this occurs.
 
 

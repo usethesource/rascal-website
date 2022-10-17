@@ -38,7 +38,7 @@ ok
 rascal>  int total = 10; 
 int: 10
 rascal>  pb = progressBar(total, length = 15, limit = 100);
-tuple[void (str) report,void () finished]: <function(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/util/Progress.rsc|(2277,340,<52,12>,<60,5>)),function(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/util/Progress.rsc|(2619,22,<60,7>,<60,29>))>
+tuple[void (str) report,void () finished]: <function(|std:///util/Progress.rsc|(2277,340,<52,12>,<60,5>)),function(|std:///util/Progress.rsc|(2619,22,<60,7>,<60,29>))>
 rascal>  for (i <- [0..total]) {
 >>>>>>>    pb.report(" : <i+1> of <total>");
 >>>>>>>  }
@@ -70,10 +70,15 @@ ok
 rascal>  import util::Math;
 ok
 rascal>  sp = spinner();
-void (str): function(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/util/Progress.rsc|(3317,305,<86,9>,<95,3>))
+void (str): function(|std:///util/Progress.rsc|(3317,305,<86,9>,<95,3>))
 rascal>  while (n := arbInt(100), n != 1) {
 >>>>>>>    sp("<n>");
 >>>>>>>  }
+ \ 27  | 41  / 97  - 78  \ 66  | 88  / 77  - 75  \ 89  | 26  / 10  - 76  \ 28  | 42  / 64  - 79 
+list[void]: []
+```
+
+>>>  }
  \ 86  | 85  / 90  - 26  \ 91  | 61  / 86  - 14  \ 29  | 68  / 29  - 70  \ 44  | 52  / 47  - 42  \ 92  | 58  / 52  - 51  \ 6  | 35  / 42  - 20  \ 66  | 72  / 23  - 76  \ 95  | 53  / 67  - 91  \ 91  | 59  / 19  - 17  \ 79  | 31  / 91  - 54  \ 27  | 75  / 87  - 82  \ 6  | 34  / 36  - 80  \ 16  | 99  / 23  - 61  \ 89  | 6  / 7  - 92  \ 26  | 81  / 16  - 66  \ 72  | 48  / 64  - 78  \ 74  | 4  / 53  - 5  \ 45 
 list[void]: []
 ```

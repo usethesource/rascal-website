@@ -24,11 +24,11 @@ What is the motivation for Rascal and which problems can you solve with it?
 
 We give various answers to these questions:
 
-* In [Motivation](../../../../../../../../../../WhyRascal/Motivation/index.md) we summarize the distinguishing features of Rascal 
+* In [Motivation](../WhyRascal/Motivation/index.md) we summarize the distinguishing features of Rascal 
   and describe some application domains.
-* [EASY](../../../../../../../../../../WhyRascal/EASY/index.md) can be used in many Rascal applications.
-* We have also collected [Solution Strategies](../../../../../../../../../../WhyRascal/SolutionStrategies/index.md) for a wide range of problems.
-* Last but not least we give a quick [comparison with other paradigms](../../../../../../../../../../WhyRascal/CompareWithOtherParadigms/index.md).
+* [EASY](../WhyRascal/EASY/index.md) can be used in many Rascal applications.
+* We have also collected [Solution Strategies](../WhyRascal/SolutionStrategies/index.md) for a wide range of problems.
+* Last but not least we give a quick [comparison with other paradigms](../WhyRascal/CompareWithOtherParadigms/index.md).
 
 #### Benefits
 
@@ -43,5 +43,8 @@ We give various answers to these questions:
 
 * *Advanced constructs*: Rascal integrates some advanced programming tools, like pattern matching, lexically scoped backtracking and generic traversal that may require some learning to get the hang of. Idiomatic use of the language can save up to a factor 20 lines of code, while the uninitiated may spend many lines writing unnecessary for-loops and if-then-elses.
 * *False friends*: Rascal has some [false friends](https://en.wikipedia.org/wiki/False_friend) with other programming languages. This means that it behaves just a little different than expected if you are completely used to that other language. In particular "immutable data" gives a different meaning to the assignment operator. Most of Rascal is totally unsurprising after that.
+
+
+ gives a different meaning to the assignment operator. Most of Rascal is totally unsurprising after that.
 
 

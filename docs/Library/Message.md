@@ -26,11 +26,16 @@ data Message = error(str msg, loc at)
 Messages can be used to communicate information about source texts.
 They can be interpreted by IDEs to display type errors and warnings, etc.
 `Message` s are, for instance, used as annotations of
-[algebraic data type](../../../../../../../../../Rascal/Declarations/AlgebraicDataType/index.md).
+[algebraic data type](../Rascal/Declarations/AlgebraicDataType/index.md).
 A very common example is to annotate parse trees with messages.
 
 
 #### Benefits
+
+.Pitfalls
+
+
+# Benefits
 
 .Pitfalls
 

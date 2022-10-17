@@ -77,7 +77,7 @@ TENV checkStat(stat:asgStat(PicoId Id, EXP Exp), TENV env) {      ❾
   return checkExp(Exp, tpid, env);
 }
 	
-TENV checkStat(stat:ifElseStat(EXP Exp, // <10>
+TENV checkStat(stat:ifElseStat(EXP Exp,      ❶⓿  
                               list[STATEMENT] Stats1,
                               list[STATEMENT] Stats2),
                TENV env){
@@ -97,7 +97,7 @@ TENV checkStat(stat:whileStat(EXP Exp,
 
 
 // highlight-next-line
-TENV checkStats(list[STATEMENT] Stats1, TENV env) { // <11>
+TENV checkStats(list[STATEMENT] Stats1, TENV env) {      ❶❶  
   for(S <- Stats1){
       env = checkStat(S, env);
   }
@@ -106,17 +106,17 @@ TENV checkStats(list[STATEMENT] Stats1, TENV env) { // <11>
   
 
 // highlight-next-line
-TENV checkDecls(list[DECL] Decls) = // <12>
+TENV checkDecls(list[DECL] Decls) =      ❶❷  
     <( Id : tp | decl(PicoId Id, TYPE tp) <- Decls), []>;
 
 
 // highlight-next-line
-TENV checkProgram(program(list[DECL] Decls, list[STATEMENT] Series)) {  // <13>
+TENV checkProgram(program(list[DECL] Decls, list[STATEMENT] Series)) {       ❶❸  
     return checkStats(Series, checkDecls(Decls));
 }
 
 // highlight-next-line
-list[tuple[loc l, str msg]] checkProgram(str txt) = checkProgram(load(txt)).errors; // <14>
+list[tuple[loc l, str msg]] checkProgram(str txt) = checkProgram(load(txt)).errors;      ❶❹  
     
 
 ```
@@ -142,11 +142,11 @@ Notes:
 * ❼   Check `sub`.
 * ❽  Check `conc`.
 * ❾   An assignment statement is checked: the identifier on the left-hand side should have been declared and should be type compatible with the expression on the right-hand side.
-<10>  Checking if- and while-statements amounts to checking the embedded statements and ensuring that the type of the test is natural.
-<11>  Checking a list of statements amounts to checking each statement in the list.
-<12>  Checking declarations amounts to extracting each (id, type) pair form the declarations and using a map comprehension to build a type environment.
-<13>  Checking a complete Pico program is achieved by first checking the declarations of the program and using the resulting type environment to check its body.
-<14>  `checkProgram` defines how to check the source code of a given Pico program.
+* ❶⓿   Checking if- and while-statements amounts to checking the embedded statements and ensuring that the type of the test is natural.
+* ❶❶   Checking a list of statements amounts to checking each statement in the list.
+* ❶❷   Checking declarations amounts to extracting each (id, type) pair form the declarations and using a map comprehension to build a type environment.
+* ❶❸   Checking a complete Pico program is achieved by first checking the declarations of the program and using the resulting type environment to check its body.
+* ❶❹   `checkProgram` defines how to check the source code of a given Pico program.
 
 
 Checking an erroneous program goes like this:

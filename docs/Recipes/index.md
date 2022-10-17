@@ -12,10 +12,10 @@ Recipes for writing Rascal programs.
 These _Rascal Recipes_ are a work-in-progress but will gradually evolve into a collection of basic Rascal language examples and use cases.
 It consists of the following parts:
 
-* [Basic](../../../../../../../../../../Recipes/Basic/index.md)
-* [Common](../../../../../../../../../../Recipes/Common/index.md)
-* [Languages](../../../../../../../../../../Recipes/Languages/index.md)
-* [Metrics](../../../../../../../../../../Recipes/Metrics/index.md)
+* [Basic](../Recipes/Basic/index.md)
+* [Common](../Recipes/Common/index.md)
+* [Languages](../Recipes/Languages/index.md)
+* [Metrics](../Recipes/Metrics/index.md)
 
 The following features are covered:
 
@@ -24,6 +24,14 @@ The following features are covered:
 *  Fact extraction.
 *  Language definition.
 *  Syntax definition.
+*  Parsing.
+*  Transformation.
+*  Code generation.
+*  IDE extensions.
+*  Visualization.
+
+
+yntax definition.
 *  Parsing.
 *  Transformation.
 *  Code generation.

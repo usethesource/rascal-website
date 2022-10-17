@@ -24,28 +24,28 @@ while the leaf nodes are labeled by terminals (characters) of the grammar.
 
 `Tree` is the universal parse tree data type in Rascal and can be used to represent parse trees for any language.
 
-*  `Tree` is a subtype of the type [node](../../../../../../../../../Rascal/Expressions/Values/Node/index.md).
-*  All types (non-terminals) declared in [syntax definitions](../../../../../../../../../Rascal/Declarations/SyntaxDefinition/index.md) are sub-types of `Tree`.
-*  All [concrete syntax expressions](../../../../../../../../../Rascal/Expressions/ConcreteSyntax/index.md) produce parse trees with a type corresponding to a non-terminals.
-*  Trees can be annotated in various ways, see features for [IDE construction](../../../../../../../../../RascalConcepts/IDEConstruction/index.md).
+*  `Tree` is a subtype of the type [node](../Rascal/Expressions/Values/Node/index.md).
+*  All types (non-terminals) declared in [syntax definitions](../Rascal/Declarations/SyntaxDefinition/index.md) are sub-types of `Tree`.
+*  All [concrete syntax expressions](../Rascal/Expressions/ConcreteSyntax/index.md) produce parse trees with a type corresponding to a non-terminals.
+*  Trees can be annotated in various ways, see features for [IDE construction](../RascalConcepts/IDEConstruction/index.md).
    Most importantly the `\loc` annotation always points to the source location of any (sub) parse tree.
 
 
 Parse trees are usually analyzed and constructed using 
-[concrete syntax expressions](../../../../../../../../../Rascal/Expressions/ConcreteSyntax/index.md)
-and [concrete syntax patterns](../../../../../../../../../Rascal/Patterns/Concrete/index.md).
+[concrete syntax expressions](../Rascal/Expressions/ConcreteSyntax/index.md)
+and [concrete syntax patterns](../Rascal/Patterns/Concrete/index.md).
  
 _Advanced users_ may want to create tools that analyze any parse tree, regardless of the 
-[syntax definition](../../../../../../../../../Rascal/Declarations/SyntaxDefinition/index.md) that generated it, you can manipulate them on the abstract level.
+[syntax definition](../Rascal/Declarations/SyntaxDefinition/index.md) that generated it, you can manipulate them on the abstract level.
 
-A parse tree is of type [Tree](../../../../../../../../../Library/ParseTree.md#ParseTree-Tree) using the auxiliary types 
-[Production](../../../../../../../../../Library/ParseTree.md#ParseTree-Production), [Symbol](../../../../../../../../../Library/ParseTree.md#ParseTree-Symbol), [Condition](../../../../../../../../../Library/ParseTree.md#ParseTree-Condition),
-[Attr](../../../../../../../../../Library/ParseTree.md#ParseTree-Attr), [Associativity](../../../../../../../../../Library/ParseTree.md#ParseTree-Associativity), [CharRange](../../../../../../../../../Library/ParseTree.md#ParseTree-CharRange).
+A parse tree is of type [Tree](../Library/ParseTree.md#ParseTree-Tree) using the auxiliary types 
+[Production](../Library/ParseTree.md#ParseTree-Production), [Symbol](../Library/ParseTree.md#ParseTree-Symbol), [Condition](../Library/ParseTree.md#ParseTree-Condition),
+[Attr](../Library/ParseTree.md#ParseTree-Attr), [Associativity](../Library/ParseTree.md#ParseTree-Associativity), [CharRange](../Library/ParseTree.md#ParseTree-CharRange).
 Effectively, a parse tree is a nested tree structure of type `Tree`. 
 
 *  Most internal nodes are applications (`appl`) of a `Production` to a list of children `Tree` nodes. 
    `Production` is the abstract representation of a rule in a
-   [syntax definition](../../../../../../../../../Rascal/Declarations/SyntaxDefinition/index.md), 
+   [syntax definition](../Rascal/Declarations/SyntaxDefinition/index.md), 
    which consists of a definition of an alternative for a `Symbol` by a list of `Symbols`.
 *  The leaves of a parse tree are always
 characters (`char`), which have an integer index in the UTF8 table. 
@@ -55,17 +55,17 @@ alternative `Tree` nodes.
 
 
 The `Production` and `Symbol` types are an abstract notation for rules in 
-[syntax definitions](../../../../../../../../../Rascal/Declarations/SyntaxDefinition/index.md),
+[syntax definitions](../Rascal/Declarations/SyntaxDefinition/index.md),
 while the `Tree` type is the actual notation for parse trees. 
 
 Parse trees are called parse forests when they contain `amb` nodes.
 
 You can analyze and manipulate parse trees in three ways:
 
-*  Directly on the `Tree` level, just like any other [algebraic data type](../../../../../../../../../Rascal/Declarations/AlgebraicDataType/index.md).
-*  Using [concrete syntax expressions](../../../../../../../../../Rascal/Expressions/ConcreteSyntax/index.md)
-and [concrete syntax patterns](../../../../../../../../../Rascal/Patterns/Concrete/index.md).
-*  Using [actions](../../../../../../../../../Rascal/Declarations/SyntaxDefinition/Action/index.md).
+*  Directly on the `Tree` level, just like any other [algebraic data type](../Rascal/Declarations/AlgebraicDataType/index.md).
+*  Using [concrete syntax expressions](../Rascal/Expressions/ConcreteSyntax/index.md)
+and [concrete syntax patterns](../Rascal/Patterns/Concrete/index.md).
+*  Using [actions](../Rascal/Declarations/SyntaxDefinition/Action/index.md).
 
 
 The type of a parse tree is the symbol that it's production produces, i.e. `appl(prod(sort("A"),[],{}),[])` has type `A`. Ambiguity nodes 
@@ -153,7 +153,7 @@ labels in the list of children of a `prod`.
 #### Pitfalls
 
 For historical reasons the name of the annotation is "loc" and this interferes with the Rascal keyword `loc`
-for the type of [source locations](../../../../../../../../../Rascal/Expressions/Values/Location/index.md).
+for the type of [source locations](../Rascal/Expressions/Values/Location/index.md).
 Therefore the annotation name has to be escaped as `\loc` when it is declared or used.
 
 The following functions and data types are declared for ParseTrees:
@@ -200,7 +200,7 @@ Production in ParseTrees
 
 #### Description
 
-The type `Production` is introduced in [Type](../../../../../../../../../Library/Type.md), see [Production](../../../../../../../../../Library/Type.md#Type-Production). Here we extend it with the symbols
+The type `Production` is introduced in [Type](../Library/Type.md), see [Production](../Library/Type.md#Type-Production). Here we extend it with the symbols
 that can occur in a ParseTree. We also extend productions with basic combinators allowing to
 construct ordered and un-ordered compositions, and associativity groups.
 
@@ -300,7 +300,7 @@ Symbols that can occur in a ParseTree
 
 #### Description
 
-The type `Symbol` is introduced in [Type](../../../../../../../../../Library/Type.md), see [Symbol](../../../../../../../../../Library/Type.md#Type-Symbol), to represent the basic Rascal types,
+The type `Symbol` is introduced in [Type](../Library/Type.md), see [Symbol](../Library/Type.md#Type-Symbol), to represent the basic Rascal types,
 e.g., `int`, `list`, and `rel`. Here we extend it with the symbols that may occur in a ParseTree.
 
 * ❶   The `start` symbol wraps any symbol to indicate that it is a start symbol of the grammar and
@@ -313,16 +313,16 @@ e.g., `int`, `list`, and `rel`. Here we extend it with the symbols that may occu
 * ❼  Parameterized lexical non-terminal
 * ❽   Terminal.
 * ❾   Case-insensitive terminal.
-<10> Character class
-<11> Empty symbol
-<12> Optional symbol
-<13> List of one or more symbols without separators
-<14> List of zero or more symbols without separators
-<15> List of one or more symbols with separators
-<16> List of zero or more symbols with separators
-<17> Alternative of symbols
-<18> Sequence of symbols
-<19> Conditional occurrence of a symbol.
+* ❶⓿  Character class
+* ❶❶  Empty symbol
+* ❶❷  Optional symbol
+* ❶❸  List of one or more symbols without separators
+* ❶❹  List of zero or more symbols without separators
+* ❶❺  List of one or more symbols with separators
+* ❶❻  List of zero or more symbols with separators
+* ❶❼  Alternative of symbols
+* ❶❽  Sequence of symbols
+* ❶❾  Conditional occurrence of a symbol.
 
 ## data Symbol {#ParseTree-Symbol}
 
@@ -425,9 +425,9 @@ Normalization of associativity.
 
 #### Description
 
-* The [choice](../../../../../../../../../Library/Type.md#Type-choice) constructor under associativity is flattened.
+* The [choice](../Library/Type.md#Type-choice) constructor under associativity is flattened.
 * Nested (equal) associativity is flattened.
-* [priority](../../../../../../../../../Library/ParseTree.md#ParseTree-priority) under an associativity group defaults to choice.
+* [priority](../Library/ParseTree.md#ParseTree-priority) under an associativity group defaults to choice.
 
 ## function parse {#ParseTree-parse}
 
@@ -580,7 +580,7 @@ Yield the string of characters that form the leafs of the given parse tree.
 
 #### Description
 
-`unparse` is the inverse function of [parse](../../../../../../../../../Library/ParseTree.md#ParseTree-parse), i.e., for every syntactically correct string _TXT_ of
+`unparse` is the inverse function of [parse](../Library/ParseTree.md#ParseTree-parse), i.e., for every syntactically correct string _TXT_ of
 type `S`, the following holds:
 ```rascal
 unparse(parse(#S, _TXT_)) == _TXT_
@@ -758,7 +758,7 @@ data TreeSearchResult[&T<:Tree]
 
 #### Synopsis
 
-Tree search result type for [tree at](../../../../../../../../../Library/ParseTree.md#ParseTree-treeAt).
+Tree search result type for [tree at](../Library/ParseTree.md#ParseTree-treeAt).
 
 ## function treeAt {#ParseTree-treeAt}
 
@@ -780,6 +780,24 @@ Select the innermost Tree of a given type which is enclosed by a given location.
 * ``bool sameType(conditional(Symbol s,_), Symbol t)``
 * ``bool sameType(Symbol s, s)``
 * ``default bool sameType(Symbol s, Symbol t)``
+
+## function isNonTerminalType {#ParseTree-isNonTerminalType}
+
+* ``bool isNonTerminalType(Symbol::\sort(str _))``
+* ``bool isNonTerminalType(Symbol::\lex(str _))``
+* ``bool isNonTerminalType(Symbol::\layouts(str _))``
+* ``bool isNonTerminalType(Symbol::\keywords(str _))``
+* ``bool isNonTerminalType(Symbol::\parameterized-sort(str _, list[Symbol] _))``
+* ``bool isNonTerminalType(Symbol::\parameterized-lex(str _, list[Symbol] _))``
+* ``bool isNonTerminalType(Symbol::\start(Symbol s))``
+* ``default bool isNonTerminalType(Symbol s)``
+
+
+#### Synopsis
+
+Determine if the given type is a non-terminal type.
+
+ult bool sameType(Symbol s, Symbol t)``
 
 ## function isNonTerminalType {#ParseTree-isNonTerminalType}
 

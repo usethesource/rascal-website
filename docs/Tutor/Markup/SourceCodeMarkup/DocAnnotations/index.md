@@ -88,7 +88,7 @@ Consider the source code of the now function in the `DateTime` library.
 rascal>  import DateTime;
 ok
 rascal>  now();
-datetime: $2022-10-13T08:52:19.905+00:00$
+datetime: $2022-10-17T10:23:17.807+00:00$
 ```
   }
   @javaClass{org.rascalmpl.library.DateTime}
@@ -114,7 +114,7 @@ This will be expanded to
 rascal>  import DateTime;
 ok
 rascal>  now();
-datetime: $2022-10-13T08:52:19.963+00:00$
+datetime: $2022-10-17T10:23:17.895+00:00$
 ```
 ```
 
