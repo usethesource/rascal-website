@@ -20,6 +20,6 @@ Inside the _MarkedText_, other markup can be used.
 #### Examples
 
 * `` `if` ``  gives `if`.
-* to escape backquotes simply surround by more: ``` `` `if` `` ```
+* to escape backquotes surround by more: ``` `` `if` `` ```
 
 

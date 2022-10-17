@@ -62,7 +62,7 @@ start[Program] program(str s) {
   return parse(#start[Program], s);
 }
 
-/*<6>*/ start[Program] program(str s, loc l) {
+    ❻     start[Program] program(str s, loc l) {
   return parse(#start[Program], s, l);
 } 
 

@@ -19,4 +19,5 @@ title: lang::rascal::tests::library
 * [Boolean](../../../../../Library/lang/rascal/tests/library/Boolean.md)
 * [ListRelation](../../../../../Library/lang/rascal/tests/library/ListRelation.md)
 * [List](../../../../../Library/lang/rascal/tests/library/List.md)
+* [IO](../../../../../Library/lang/rascal/tests/library/IO.md)
 * [Map](../../../../../Library/lang/rascal/tests/library/Map.md)

@@ -18,7 +18,7 @@ import demo::lang::Pico::Syntax;
 import demo::lang::Pico::Abstract;
 
 public PROGRAM load(str txt)      ❶  
-    = /*<3>*/ implode(#PROGRAM, /*<2>*/ parse(#start[Program], txt).top);
+    =     ❸     implode(#PROGRAM,     ❷     parse(#start[Program], txt).top);
 
 ```
 

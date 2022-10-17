@@ -52,7 +52,7 @@ rel[int,int]: {
   <2,4>
 }
 ```
-We can also simply (but not necessarily efficiently) define transitive closure ourselves:
+We can also define transitive closure ourselves (this is not faster):
 
 ```rascal-shell ,continue
 rascal>rel[int,int] tclosure(rel[int,int] R) {

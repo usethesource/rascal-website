@@ -21,7 +21,7 @@ rascal>x = 1
 ```
 
 The reason is that it expects a `;` after every [Assignment](../../../Rascal/Statements/Assignment/index.md).
-To cancel the entire command, simply provide an empty line:
+To cancel the entire command, provide an empty line:
 
 
 ```rascal-shell ,continue

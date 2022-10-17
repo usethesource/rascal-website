@@ -60,7 +60,7 @@ Recall that `Occurrence` was introduced in [Abstract](../../../../Recipes/Langua
        
 * ❷  `useStat` extracts uses from all statement variants.
 
-* ❸  The function `uses` simply applies `usesStats` to the statement part of its program argument.
+* ❸  The function `uses` applies `usesStats` to the statement part of its program argument.
 
 * ❹  The function `defs`  has a Pico program as argument and returns a set of occurrences (definitions) of Pico identifiers.
     The definition consists of a single set comprehension that consists of the following parts:
