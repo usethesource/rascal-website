@@ -125,11 +125,7 @@ You can use this code to extract a classpath if the project is a Maven project:
 rascal>import util::Reflective;
 ok
 rascal>cp = getProjectPathConfig(|tmp:///snakes-and-ladders|).javaCompilerPath;
-list[loc]: [
-  |file:///Users/jurgenv/.vscode/extensions/usethesource.rascalmpl-0.6.1-head/assets/jars/rascal-lsp.jar|,
-  |file:///Users/jurgenv/.vscode/extensions/usethesource.rascalmpl-0.6.1-head/assets/jars/rascal.jar|,
-  |file:///Users/jurgenv/.m2/repository/org/rascalmpl/rascal/0.26.1/rascal-0.26.1.jar|
-]
+list[loc]: [|file:///usr/local/Cellar/maven/3.8.5/libexec/boot/plexus-classworlds-2.6.0.jar|]
 ```
 
 and then pass it into the M3 extractor (this project does not have dependencies)
@@ -142,18 +138,18 @@ M3: m3(
     <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///Given|>,
     <|java+method:///snakes/Snake/squareLabel()|,|java+interface:///java/lang/Override|>,
     <|java+method:///snakes/Ladder/landHereOrGoHome()|,|java+interface:///java/lang/Override|>,
-    <|java+method:///snakes/SimpleGameTest/newGame()|,|java+interface:///org/junit/Test|>,
+    <|java+method:///snakes/SimpleGameTest/newGame()|,|java+class:///Test|>,
     <|java+method:///snakes/SimpleGameTest/move8jillWins(snakes.Game)|,|java+class:///Given|>,
     <|java+method:///snakes/FirstSquare/isFirstSquare()|,|java+interface:///java/lang/Override|>,
     <|java+method:///snakes/Ladder/squareLabel()|,|java+interface:///java/lang/Override|>,
     <|java+method:///snakes/FirstSquare/isOccupied()|,|java+interface:///java/lang/Override|>,
     <|java+method:///snakes/SimpleGameTest/initialStrings(snakes.Game)|,|java+class:///Given|>,
     <|java+method:///snakes/SimpleGameTest/move4jillSnake(snakes.Game)|,|java+class:///Given|>,
-    <|java+method:///snakes/DieTest/testInRange()|,|java+interface:///org/junit/Test|>,
-    <|java+method:///snakes/DieTest/testMinReached()|,|java+interface:///org/junit/Test|>,
-    <|java+class:///snakes/SimpleGameTest|,|java+interface:///org/junit/runner/RunWith|>,
+    <|java+method:///snakes/DieTest/testInRange()|,|java+class:///Test|>,
+    <|java+method:///snakes/DieTest/testMinReached()|,|java+class:///Test|>,
+    <|java+class:///snakes/SimpleGameTest|,|java+class:///RunWith|>,
     <|java+method:///snakes/SimpleGameTest/move2jackBackwards(snakes.Game)|,|java+class:///Given|>,
-    <|java+method:///snakes/DieTest/testMaxReached()|,|java+interface:///org/junit/Test|>,
+    <|java+method:///snakes/DieTest/testMaxReached()|,|java+class:///Test|>,
     <|java+method:///snakes/SimpleGameTest/move5jackLadder(snakes.Game)|,|java+class:///Given|>,
     <|java+method:///snakes/SimpleGameTest/move6jill(snakes.Game)|,|java+class:///Given|>,
     <|java+method:///snakes/FirstSquare/enter(snakes.Player)|,|java+interface:///java/lang/Override|>,
@@ -181,9 +177,10 @@ M3: m3(
     <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///java/lang/String|>,
     <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+interface:///snakes/ISquare|>,
     <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///snakes/Game|>,
-    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///org/junit/Assert|>,
     <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///java/lang/Object|>,
-    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)...
+    <|java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,|java+class:///Given|>,
+    <|java+method:///snakes/Game/initSquare(int,snakes.ISquare)|,|java+interface:///snakes/ISquare|>,
+    ...
 ```
 
 #### Benefits

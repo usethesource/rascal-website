@@ -41,8 +41,8 @@ Taking the head of an empty list gives an error:
 
 ```rascal-shell ,continue,error
 rascal>head(L);
-|std:///List.rsc|(4522,9,<195,38>,<195,47>): EmptyList()
-	at head(|std:///List.rsc|(4484,52,<195,0>,<195,52>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(4522,9,<195,38>,<195,47>): EmptyList()
+	at head(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(4484,52,<195,0>,<195,52>))
 	at $shell$(|prompt:///|(0,8,<1,0>,<1,8>))
 ok
 ```
@@ -50,8 +50,8 @@ This is the case when taking the tail as well:
 
 ```rascal-shell ,continue,error
 rascal>tail(L);
-|std:///List.rsc|(18315,9,<841,44>,<841,53>): EmptyList()
-	at tail(|std:///List.rsc|(18271,58,<841,0>,<841,58>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(18315,9,<841,44>,<841,53>): EmptyList()
+	at tail(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(18271,58,<841,0>,<841,58>))
 	at $shell$(|prompt:///|(0,8,<1,0>,<1,8>))
 ok
 ```

@@ -13,24 +13,24 @@ Library functions for relations.
 
 #### Description
 
-For operators on relations see [Relation](../Rascal/Expressions/Values/Relation/index.md) in the Rascal Language Reference.
+For operators on relations see [Relation](../../../../../../../../../Rascal/Expressions/Values/Relation/index.md) in the Rascal Language Reference.
 
 The following functions are defined for relations:
-* [carrier](../Library/Relation.md#Relation-carrier)
-* [carrierR](../Library/Relation.md#Relation-carrierR)
-* [carrierX](../Library/Relation.md#Relation-carrierX)
-* [complement](../Library/Relation.md#Relation-complement)
-* [domain](../Library/Relation.md#Relation-domain)
-* [domainR](../Library/Relation.md#Relation-domainR)
-* [domainX](../Library/Relation.md#Relation-domainX)
-* [groupDomainByRange](../Library/Relation.md#Relation-groupDomainByRange)
-* [groupRangeByDomain](../Library/Relation.md#Relation-groupRangeByDomain)
-* [ident](../Library/Relation.md#Relation-ident)
-* [index](../Library/Relation.md#Relation-index)
-* [invert](../Library/Relation.md#Relation-invert)
-* [range](../Library/Relation.md#Relation-range)
-* [rangeR](../Library/Relation.md#Relation-rangeR)
-* [rangeX](../Library/Relation.md#Relation-rangeX)
+* [carrier](../../../../../../../../../Library/Relation.md#Relation-carrier)
+* [carrierR](../../../../../../../../../Library/Relation.md#Relation-carrierR)
+* [carrierX](../../../../../../../../../Library/Relation.md#Relation-carrierX)
+* [complement](../../../../../../../../../Library/Relation.md#Relation-complement)
+* [domain](../../../../../../../../../Library/Relation.md#Relation-domain)
+* [domainR](../../../../../../../../../Library/Relation.md#Relation-domainR)
+* [domainX](../../../../../../../../../Library/Relation.md#Relation-domainX)
+* [groupDomainByRange](../../../../../../../../../Library/Relation.md#Relation-groupDomainByRange)
+* [groupRangeByDomain](../../../../../../../../../Library/Relation.md#Relation-groupRangeByDomain)
+* [ident](../../../../../../../../../Library/Relation.md#Relation-ident)
+* [index](../../../../../../../../../Library/Relation.md#Relation-index)
+* [invert](../../../../../../../../../Library/Relation.md#Relation-invert)
+* [range](../../../../../../../../../Library/Relation.md#Relation-range)
+* [rangeR](../../../../../../../../../Library/Relation.md#Relation-rangeR)
+* [rangeX](../../../../../../../../../Library/Relation.md#Relation-rangeX)
 
 
 ## function carrier {#Relation-carrier}
@@ -93,7 +93,11 @@ rel[int,int]: {<1,10>}
 
 #### Synopsis
 
-A relation excluding tuples that contain certain element values.
+A relation excluded tuples containing certain values.
+
+#### Description
+
+Returns relation `R` excluding tuples with some element in `S`.
 
 #### Examples
 
@@ -108,11 +112,7 @@ rel[int,int]: {<3,30>}
 
 #### Synopsis
 
-A relation excluded tuples containing certain values.
-
-#### Description
-
-Returns relation `R` excluding tuples with some element in `S`.
+A relation excluding tuples that contain certain element values.
 
 #### Examples
 

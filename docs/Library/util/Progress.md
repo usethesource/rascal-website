@@ -38,7 +38,7 @@ ok
 rascal>  int total = 10; 
 int: 10
 rascal>  pb = progressBar(total, length = 15, limit = 100);
-tuple[void (str) report,void () finished]: <function(|std:///util/Progress.rsc|(2277,340,<52,12>,<60,5>)),function(|std:///util/Progress.rsc|(2619,22,<60,7>,<60,29>))>
+tuple[void (str) report,void () finished]: <function(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/util/Progress.rsc|(2277,340,<52,12>,<60,5>)),function(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/util/Progress.rsc|(2619,22,<60,7>,<60,29>))>
 rascal>  for (i <- [0..total]) {
 >>>>>>>    pb.report(" : <i+1> of <total>");
 >>>>>>>  }
@@ -70,11 +70,11 @@ ok
 rascal>  import util::Math;
 ok
 rascal>  sp = spinner();
-void (str): function(|std:///util/Progress.rsc|(3317,305,<86,9>,<95,3>))
+void (str): function(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/util/Progress.rsc|(3317,305,<86,9>,<95,3>))
 rascal>  while (n := arbInt(100), n != 1) {
 >>>>>>>    sp("<n>");
 >>>>>>>  }
- \ 87  | 35  / 56  - 89  \ 70  | 75  / 8  - 82  \ 9  | 16  / 71  - 57  \ 58  | 84  / 61  - 46  \ 27  | 57  / 74  - 81  \ 31  | 42  / 98  - 8  \ 26  | 9  / 41  - 93  \ 71  | 7  / 91  - 51  \ 93  | 96  / 16  - 10  \ 3  | 51  / 42  - 35  \ 14  | 93  / 24  - 82  \ 52  | 42  / 84  - 59  \ 82  | 96  / 81  - 96  \ 89  | 28  / 59  - 40  \ 83  | 81  / 15  - 37  \ 10  | 52  / 74  - 49  \ 27  | 26  / 75  - 43  \ 25  | 20  / 10  - 73  \ 79  | 96  / 45  - 38  \ 56  | 47  / 45  - 50  \ 22  | 15  / 33  - 25  \ 3  | 47  / 55  - 49  \ 97  | 65  / 71  - 5  \ 28  | 50  / 35  - 58  \ 43  | 94  / 85  - 50  \ 43  | 24  / 16  - 72  \ 20  | 90  / 73  - 43  \ 54  | 98  / 81  - 59  \ 83  | 53  / 81  - 5  \ 64  | 17  / 87  - 68  \ 97  | 62  / 69  - 64  \ 75  | 21  / 87  - 12 
+ \ 76  | 72  / 72  - 49  \ 66  | 23  / 66  - 71  \ 64  | 64  / 2  - 17  \ 9  | 96  / 2  - 3  \ 15  | 83  / 21  - 90  \ 63  | 41  / 74  - 94  \ 81  | 78  / 49  - 49  \ 51  | 99  / 58  - 10  \ 83  | 6  / 94  - 34  \ 13  | 19  / 86  - 91  \ 92  | 21  / 47  - 99  \ 10  | 86  / 45  - 4  \ 54  | 18  / 64  - 6  \ 97  | 27  / 0  - 41  \ 41  | 66  / 85 
 list[void]: []
 ```
 

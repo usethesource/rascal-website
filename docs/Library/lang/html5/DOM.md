@@ -6,10 +6,9 @@ title: "module lang::html5::DOM"
 
 `import lang::html5::DOM;`
 
-
 #### Synopsis
 
-AST model for HTML5 including pretty printer
+DOM-based AST model for HTML5 including pretty printer
 
 
 ## data HTML5Node {#lang-html5-DOM-HTML5Node}
@@ -1350,4 +1349,16 @@ data HTML5Attr
 ## function toString {#lang-html5-DOM-toString}
 
 * ``str toString(HTML5Node x)``
+
+#### Synopsis
+
+pretty print HTML5Node DOM to a string
+
+## function serve {#lang-html5-DOM-serve}
+
+* ``Content serve(HTML5Node x)``
+
+#### Synopsis
+
+convenience function to render the HTML5Node dom tree in the browser
 
