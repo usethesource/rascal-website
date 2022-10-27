@@ -1,11 +1,9 @@
-name: Test deployment
+name: PR builder (sanity check, no deploy)
 
 on:
   pull_request:
     branches:
       - website-v2
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
   website-pr:
