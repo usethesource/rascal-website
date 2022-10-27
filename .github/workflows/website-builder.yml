@@ -15,11 +15,31 @@ jobs:
       - name: Clone
         uses: actions/checkout@v3
 
-      - name: Setup toolchain
-        uses: ./.github/workflows/_setup.yml
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+          cache: 'maven'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: yarn
+      - uses: browser-actions/setup-geckodriver@latest
+      - run: geckodriver --version
+      - run: which geckodriver
 
+      - name: Copy from Maven dependencies
+        run: echo mvn dependency:unpack
+
+      - name: Run docs through shell
+        run: echo mvn rascal:tutor -Dwebdriver.gecko.driver=geckodriver
+      - name: Copy assets
+        run: echo mvn rascal:tutor-assets
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
       - name: Build website
-        uses: ./.github/workflows/_build.yml
+        run: yarn build
 
       - name: Netlify Deploy
         uses: jsmrcaga/action-netlify-deploy@v1.8.0
