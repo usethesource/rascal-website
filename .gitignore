@@ -9,6 +9,7 @@
 .cache-loader
 .jekyll-cache/
 _site/
+target/
 
 # Misc
 .DS_Store

@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.rascalmpl</groupId>
+    <artifactId>website</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <configuration>
+                    <artifactItems>
+
+                        <artifactItem>
+                            <groupId>org.rascalmpl</groupId>
+                            <artifactId>rascal-tutor</artifactId>
+                            <version>0.3.2</version>
+                            <outputDirectory>./docs/Projects/Tutor</outputDirectory>
+                            <includes>docs\/**\/*.md, docs\/**\/*.png</includes>
+                        </artifactItem>
+
+                        <artifactItem>
+                            <groupId>org.rascalmpl</groupId>
+                            <artifactId>rascal-lsp</artifactId>
+                            <version>2.9.0</version>
+                            <outputDirectory>./docs/Projects/LSP</outputDirectory>
+                            <includes>docs\/**\/*.md, docs\/**\/*.png</includes>
+                        </artifactItem>
+
+                    </artifactItems>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>usethesource</id>
+            <url>https://releases.usethesource.io/maven/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>usethesource</id>
+            <url>https://releases.usethesource.io/maven/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>

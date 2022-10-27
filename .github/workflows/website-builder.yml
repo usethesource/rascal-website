@@ -1,0 +1,29 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - website-v2
+    # Review gh actions docs if you want to further define triggers, paths, etc
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+
+jobs:
+  website:
+    name: Build the Rascal website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone
+        uses: actions/checkout@v3
+
+      - name: Setup toolchain
+        uses: ./.github/workflows/_setup.yml
+
+      - name: Build website
+        uses: ./.github/workflows/_build.yml
+
+      - name: Netlify Deploy
+        uses: jsmrcaga/action-netlify-deploy@v1.8.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_API_KEY }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_DEPLOY_TO_PROD: true

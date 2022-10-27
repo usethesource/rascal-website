@@ -1,0 +1,21 @@
+name: Build the website
+
+on:
+  workflow_call:
+
+jobs:
+  build_website:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copy from Maven dependencies
+        run: echo mvn dependency:unpack
+
+      - name: Run docs through shell
+        run: echo mvn rascal:tutor -Dwebdriver.gecko.driver=geckodriver
+      - name: Copy assets
+        run: echo mvn rascal:tutor-assets
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build website
+        run: yarn build
