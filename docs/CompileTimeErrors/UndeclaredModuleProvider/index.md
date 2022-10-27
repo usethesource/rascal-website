@@ -22,9 +22,9 @@ Misspelling the scheme for Rascal's standard library (which is `std`) gives an e
 rascal>import IO;
 ok
 rascal>readFileLines(|standard:///demo/basic/Hello.rsc|);
-|std:///IO.rsc|(15533,773,<663,0>,<685,24>): IO("1: Unavailable (FileSystemError): No file system provider found for resource \'standard:/demo/basic/Hello.rsc\'")
-	at *** somewhere ***(|std:///IO.rsc|(15533,773,<663,0>,<685,24>))
-	at readFileLines(|prompt:///|(14,34,<1,14>,<1,48>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/IO.rsc|(15787,802,<587,0>,<609,24>): IO("Unsupported scheme \'standard\'")
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/IO.rsc|(15787,802,<587,0>,<609,24>))
+	at readFileLines(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/IO.rsc|(16548,15,<608,58>,<608,73>))
 ok
 ```
 This is fixed by using the proper scheme name:

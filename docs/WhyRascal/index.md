@@ -24,6 +24,7 @@ What is the motivation for Rascal and which problems can you solve with it?
 
 We give various answers to these questions:
 
+* [use cases](../WhyRascal/UseCases/index.md) describe different concrete reasons and goals for using Rascal
 * In [Motivation](../WhyRascal/Motivation/index.md) we summarize the distinguishing features of Rascal 
   and describe some application domains.
 * [EASY](../WhyRascal/EASY/index.md) can be used in many Rascal applications.

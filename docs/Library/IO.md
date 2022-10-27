@@ -6,12 +6,12 @@ title: "module IO"
 
 `import IO;`
 
-
 #### Synopsis
 
 Library functions for input/output.
 
 #### Description
+
 
 The following input/output functions are defined:
 * [changeEvent](../Library/IO.md#IO-changeEvent)
@@ -84,12 +84,12 @@ The following input/output functions are defined:
 
 * ``void registerLocations(str scheme, str authority, map[loc logical, loc physical] m)``
 
-
 #### Synopsis
 
-register a logical file scheme including the resolution method via a table.
+Register a logical file scheme including the resolution method via a table.
 
 #### Description
+
 
 Logical source location schemes, such as `|java+interface://JRE/java/util/List|` are used for
 precise qualified names of artifacts while abstracting from their physical location in a specific part
@@ -99,29 +99,28 @@ Using this function you can create your own schemes. The authority field is used
 names you wish to resolve to certain projects. This way one name can resolve to different locations 
 in different projects.
 
-
 #### Benefits
+
 
 *  Logical source locations are supported by IDE features such as hyperlinks
 *  Logical source locations are supported by all IO functions as well
 
 #### Pitfalls
 
-*  repeated calls to registerLocations for the same `scheme` and `authority` will overwrite the `m` map.
-*  the registry is an intentional memory leak; so make sure you use it wisely.
-*  when the files references by the physical locations are being written to (edited, removed), then you
+
+* Repeated calls to registerLocations for the same `scheme` and `authority` will overwrite the `m` map.
+* The registry is an intentional memory leak; so make sure you use it wisely. See also [unregister locations](../Library/IO.md#IO-unregisterLocations).
+* When the files references by the physical locations are being written to (edited, removed), then you
 may expect problems. The registry is not automatically invalidated.
 
 ## function unregisterLocations {#IO-unregisterLocations}
 
 * ``void unregisterLocations(str scheme, str authority)``
 
-
-#### Synopsis
-
-undo the effect of [registerLocations]
+Undo the effect of [register locations](../Library/IO.md#IO-registerLocations)
 
 #### Description
+
 
 For debugging or for memory management you may wish to remove a lookup table.
 
@@ -131,14 +130,14 @@ For debugging or for memory management you may wish to remove a lookup table.
 
 ## function appendToFile {#IO-appendToFile}
 
-* ``void appendToFile(loc file, value V...) throws PathNotFound, IO``
-
+* ``void appendToFile(loc file, value V..., str charset=DEFAULT_CHARSET, bool inferCharset=!(charset?)) throws PathNotFound, IO``
 
 #### Synopsis
 
 Append a value to a file.
 
 #### Description
+
 
 Append a textual representation of some values to an existing or a newly created file:
 
@@ -147,12 +146,11 @@ Append a textual representation of some values to an existing or a newly created
 *  All other values are printed as-is.
 *  Each value is terminated by a newline character.
 
-#### Encoding
-
 The existing file can be stored using any character set possible, if you know the character set, please use [append to file enc](../Library/IO.md#IO-appendToFileEnc).
 Else the same method of deciding the character set is used as in [read file](../Library/IO.md#IO-readFile).
 
 #### Pitfalls
+
 
 *  The same encoding pitfalls as the [read file](../Library/IO.md#IO-readFile) function.
 
@@ -160,12 +158,12 @@ Else the same method of deciding the character set is used as in [read file](../
 
 * ``void appendToFileEnc(loc file, str charset, value V...) throws PathNotFound, IO``
 
-
 #### Synopsis
 
 Append a value to a file.
 
 #### Description
+
 
 Append a textual representation of some values to an existing or a newly created file:
 
@@ -180,7 +178,6 @@ Files are encoded using the charset provided.
 
 * ``set[str] charsets()``
 
-
 #### Synopsis
 
 Returns all available character sets.
@@ -188,7 +185,6 @@ Returns all available character sets.
 ## function canEncode {#IO-canEncode}
 
 * ``set[str] canEncode(str charset)``
-
 
 #### Synopsis
 
@@ -198,17 +194,18 @@ Returns whether this charset can be used for encoding (use with [write file](../
 
 * ``bool bprintln(value arg)``
 
-
 #### Synopsis
 
 Print a value and return true.
 
 #### Description
 
+
 Print a value and return `true`. This is useful for debugging complex Boolean expressions or comprehensions.
 The only difference between this function and [println](../Library/IO.md#IO-println) is that its return type is `bool` rather than `void`.
 
 #### Examples
+
 
 
 ```rascal-shell 
@@ -223,7 +220,6 @@ bool: true
 
 * ``bool exists(loc file)``
 
-
 #### Synopsis
 
 Check whether a given location exists.
@@ -235,10 +231,13 @@ Check whether a certain location exists, i.e., whether an actual file is associa
 #### Examples
 
 
+
+
 ```rascal-shell 
 rascal>import IO;
 ok
 ```
+
 Does the library file `IO.rsc` exist?
 
 ```rascal-shell ,continue
@@ -250,12 +249,12 @@ bool: true
 
 * ``loc find(str name, list[loc] path) throws PathNotFound``
 
-
 #### Synopsis
 
 Find a named file in a list of locations.
 
 #### Examples
+
 
 
 ```rascal-shell 
@@ -273,12 +272,12 @@ loc: |std:///IO.rsc|
 
 * ``bool isDirectory(loc file)``
 
-
 #### Synopsis
 
 Check whether a given location is a directory.
 
 #### Description
+
 
 Check whether the location `file` is a directory.
 
@@ -286,18 +285,19 @@ Check whether the location `file` is a directory.
 
 * ``void iprint(value arg, int lineLimit = 1000)``
 
-
 #### Synopsis
 
 Print an indented representation of a value.
 
 #### Description
 
+
 See [iprintExp](../Library/IO.md#IO-iprintExp) for a version that returns its argument as result
 and [iprintln](../Library/IO.md#IO-iprintln) for a version that adds a newline
 and [iprintToFile](../Library/IO.md#IO-iprintToFile) for a version that prints to a file.
 
 #### Examples
+
 
 
 ```rascal-shell 
@@ -314,8 +314,7 @@ ok
 
 ## function iprintToFile {#IO-iprintToFile}
 
-* ``void iprintToFile(loc file, value arg)``
-
+* ``void iprintToFile(loc file, value arg, str charset=DEFAULT_CHARSET)``
 
 #### Synopsis
 
@@ -323,11 +322,13 @@ Print an indented representation of a value to the specified location.
 
 #### Description
 
+
 See [iprint](../Library/IO.md#IO-iprint) for a version that displays the result on the console
 and [iprintExp](../Library/IO.md#IO-iprintExp) for a version that returns its argument as result
 and [iprintln](../Library/IO.md#IO-iprintln) for a version that adds a newline.
 
 #### Examples
+
 
 
 ```rascal-shell 
@@ -487,7 +488,7 @@ Determine the last modification date of the Rascal standard library:
 
 ```rascal-shell ,continue
 rascal>lastModified(|std:///IO.rsc|);
-datetime: $2022-10-09T09:52:56.000+00:00$
+datetime: $2022-10-27T10:50:44.000+00:00$
 ```
 
 ## function created {#IO-created}
@@ -514,7 +515,7 @@ Determine the last modification date of the Rascal standard library:
 
 ```rascal-shell ,continue
 rascal>created(|std:///IO.rsc|);
-datetime: $2022-10-09T09:52:56.000+00:00$
+datetime: $2022-10-27T10:50:44.000+00:00$
 ```
 
 ## function touch {#IO-touch}
@@ -561,7 +562,7 @@ List all entries in the standard library:
 
 ```rascal-shell ,continue,error
 rascal>listEntries(|std:///|);
-list[str]: ["Boolean.rsc","Content.rsc","DateTime.rsc","Exception.rsc","Grammar.rsc","IO.rsc","List.rsc","ListRelation.rsc","Location.rsc","Map.rsc","Message.rsc","Node.rsc","ParseTree.rsc","Prelude$1.class","Prelude$2.class","Prelude$3.class","Prelude$4.class","Prelude$Backtrack.class","Prelude$ByteBufferBackedInputStream.class","Prelude$Distance.class","Prelude$Less.class","Prelude$NodeComparator.class","Prelude$ReleasableCallback.class","Prelude$Sorting.class","Prelude.class","Prelude.rsc","Relation.rsc","Set.rsc","String.rsc","Type.class","Type.rsc","ValueIO.rsc","analysis","demo","index.md","lang","resource","util"]
+list[str]: ["Boolean.rsc","Content.rsc","DateTime.rsc","Exception.rsc","Grammar.rsc","IO.rsc","List.rsc","ListRelation.rsc","Location.rsc","Map.rsc","Message.rsc","Node.rsc","ParseTree.rsc","Prelude$1.class","Prelude$2.class","Prelude$3.class","Prelude$4.class","Prelude$Backtrack.class","Prelude$ByteBufferBackedInputStream.class","Prelude$Distance.class","Prelude$Less.class","Prelude$NodeComparator.class","Prelude$ReleasableCallback.class","Prelude$Sorting.class","Prelude.class","Prelude.rsc","Relation.rsc","Set.rsc","String.rsc","Type.class","Type.rsc","ValueIO.rsc","analysis","demo","index.md","lang","resource","util","vis"]
 ```
 
 ## function mkDirectory {#IO-mkDirectory}
@@ -744,7 +745,7 @@ This function is only available for internal use in the Rascal development team.
 
 ## function readFile {#IO-readFile}
 
-* ``str readFile(loc file) throws PathNotFound, IO``
+* ``str readFile(loc file, str charset=DEFAULT_CHARSET, bool inferCharset=!(charset?)) throws PathNotFound, IO``
 
 
 #### Synopsis
@@ -784,12 +785,12 @@ the first 32 bytes of the file are not valid UTF-8.
 
 * ``str readFileEnc(loc file, str charset) throws PathNotFound, IO``
 
-
 #### Synopsis
 
 Read the contents of a location and return it as string value.
 
 #### Description
+
 
 Return the contents (decoded using the Character set supplied) of a file location as a single string.
 Also see [read file lines enc](../Library/IO.md#IO-readFileLinesEnc).
@@ -821,7 +822,7 @@ Read the contents of a file and return it as a list of bytes.
 
 ## function readFileLines {#IO-readFileLines}
 
-* ``list[str] readFileLines(loc file) throws PathNotFound, IO``
+* ``list[str] readFileLines(loc file, str charset=DEFAULT_CHARSET) throws PathNotFound, IO``
 
 
 #### Synopsis
@@ -845,7 +846,7 @@ Look at [read file](../Library/IO.md#IO-readFile) to understand how this functio
 
 ## function writeFileLines {#IO-writeFileLines}
 
-* ``void writeFileLines(loc file, list[str] lines)``
+* ``void writeFileLines(loc file, list[str] lines, str charset=DEFAULT_CHARSET)``
 
 #### Synopsis
 
@@ -865,12 +866,12 @@ Writes a list of strings to a file, where each separate string is ended with a n
 
 * ``list[str] readFileLinesEnc(loc file, str charset) throws PathNotFound, IO``
 
-
 #### Synopsis
 
 Read the contents of a file location and return it as a list of strings.
 
 #### Description
+
 
 Return the contents (decoded using the Character set supplied) of a file location as a list of lines.
 Also see [read file lines](../Library/IO.md#IO-readFileLines).
@@ -881,7 +882,7 @@ Also see [read file lines](../Library/IO.md#IO-readFileLines).
 
 ## function writeFile {#IO-writeFile}
 
-* ``void writeFile(loc file, value V...) throws PathNotFound, IO``
+* ``void writeFile(loc file, value V..., str charset=DEFAULT_CHARSET) throws PathNotFound, IO``
 
 
 #### Synopsis
@@ -902,7 +903,6 @@ Files are encoded in UTF-8, in case this is not desired, use [write file enc](..
 ## function writeFileBytes {#IO-writeFileBytes}
 
 * ``void writeFileBytes(loc file, list[int] bytes) throws PathNotFound, IO``
-
 
 #### Synopsis
 

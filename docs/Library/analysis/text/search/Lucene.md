@@ -105,7 +105,7 @@ data Filter
 
 ## function createIndex {#analysis-text-search-Lucene-createIndex}
 
-* ``void createIndex(loc index, set[Document] documents, Analyzer analyzer = standardAnalyzer())``
+* ``void createIndex(loc index, set[Document] documents, Analyzer analyzer = standardAnalyzer(), str charset="UTF-8", bool inferCharset=!(charset?))``
 
 #### Synopsis
 
@@ -121,7 +121,7 @@ Searches a Lucene index indicated by the indexFolder by analyzing a query with a
 
 ## function searchDocument {#analysis-text-search-Lucene-searchDocument}
 
-* ``list[loc] searchDocument(loc doc, str query, Analyzer analyzer = standardAnalyzer(), int max = 10)``
+* ``list[loc] searchDocument(loc doc, str query, Analyzer analyzer = standardAnalyzer(), int max = 10, str charset="UTF-8", bool inferCharset=!(charset?))``
 
 #### Synopsis
 

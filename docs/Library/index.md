@@ -69,7 +69,8 @@ list[loc]: [
   |std:///index.md|,
   |std:///lang|,
   |std:///resource|,
-  |std:///util|
+  |std:///util|,
+  |std:///vis|
 ]
 ```
 
@@ -98,6 +99,7 @@ These are the entry points to the entire library:
 * [lang](../Library/lang/index.md)
 * [resource](../Library/resource/index.md)
 * [util](../Library/util/index.md)
+* [vis](../Library/vis/index.md)
 
 #### Benefits
 

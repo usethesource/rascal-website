@@ -71,7 +71,7 @@ data Language (str version="")
 
 ## function createM3FromJarFile {#lang-java-m3-Core-createM3FromJarFile}
 
-* ``M3 createM3FromJarFile(loc jarLoc, list[loc] classPath = [|system:///|])``
+* ``M3 createM3FromJarFile(loc jarLoc, list[loc] classPath = [])``
 
 ## function createM3FromDirectory {#lang-java-m3-Core-createM3FromDirectory}
 

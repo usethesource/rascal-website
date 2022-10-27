@@ -93,7 +93,11 @@ rel[int,int]: {<1,10>}
 
 #### Synopsis
 
-A relation excluding tuples that contain certain element values.
+A relation excluded tuples containing certain values.
+
+#### Description
+
+Returns relation `R` excluding tuples with some element in `S`.
 
 #### Examples
 
@@ -108,11 +112,7 @@ rel[int,int]: {<3,30>}
 
 #### Synopsis
 
-A relation excluded tuples containing certain values.
-
-#### Description
-
-Returns relation `R` excluding tuples with some element in `S`.
+A relation excluding tuples that contain certain element values.
 
 #### Examples
 

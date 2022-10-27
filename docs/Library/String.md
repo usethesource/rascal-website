@@ -359,9 +359,9 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-str: "팣횻䀒혘ǒ"
+str: "les"
 rascal>arbString(10);
-str: ""
+str: "1"
 ```
 
 ## function left {#String-left}
@@ -518,7 +518,12 @@ str: "cba"
 
 #### Synopsis
 
-Right align s in string of length n using space.
+Right alignment of a string value in a given space.
+
+#### Description
+
+*  Right align string `s` in string of length `n` using spaces.
+*  Right align string `s` in string of length `n` using `pad` as pad character.
 
 #### Examples
 
@@ -535,12 +540,7 @@ str: "xxxxxxxabc"
 
 #### Synopsis
 
-Right alignment of a string value in a given space.
-
-#### Description
-
-*  Right align string `s` in string of length `n` using spaces.
-*  Right align string `s` in string of length `n` using `pad` as pad character.
+Right align s in string of length n using space.
 
 #### Examples
 
@@ -689,8 +689,8 @@ Now try an erroneous argument:
 
 ```rascal-shell ,continue,error
 rascal>toInt("abc");
-|std:///String.rsc|(11107,480,<549,0>,<575,52>): IllegalArgument("abc","For input string: \"abc\"")
-	at *** somewhere ***(|std:///String.rsc|(11107,480,<549,0>,<575,52>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/String.rsc|(11107,480,<549,0>,<575,52>): IllegalArgument("abc","For input string: \"abc\"")
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/String.rsc|(11107,480,<549,0>,<575,52>))
 	at toInt(|prompt:///|(6,5,<1,6>,<1,11>))
 ok
 ```
@@ -742,8 +742,8 @@ real: 0.0025
 rascal>toReal("123");
 real: 123.
 rascal>toReal("abc");
-|std:///String.rsc|(12024,338,<600,0>,<619,31>): IllegalArgument()
-	at *** somewhere ***(|std:///String.rsc|(12024,338,<600,0>,<619,31>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/String.rsc|(12024,338,<600,0>,<619,31>): IllegalArgument()
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/String.rsc|(12024,338,<600,0>,<619,31>))
 	at toReal(|prompt:///|(7,5,<1,7>,<1,12>))
 ok
 ```

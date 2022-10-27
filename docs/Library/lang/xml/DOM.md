@@ -54,7 +54,7 @@ The following functions are provided:
 ## data Node {#lang-xml-DOM-Node}
 
 ```rascal
-data Node  
+data Node (map[str key, str val] attrs = ()) 
      = document(Node root)
      | attribute(Namespace namespace, str name, str text)
      | element(Namespace namespace, str name, list[Node] children)

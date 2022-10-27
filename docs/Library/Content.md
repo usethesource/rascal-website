@@ -30,9 +30,9 @@ Directly serve a static html page
 
 Directly serve the contents of a file
 
-## function text {#Content-text}
+## function plainText {#Content-plainText}
 
-* ``Content text(str text)``
+* ``Content plainText(str text)``
 
 
 #### Synopsis
@@ -93,8 +93,8 @@ which involves a handy, automatic, encoding of Rascal values into json values.
 
 ## function response {#Content-response}
 
-* ``Response response(str content)``
-* ``Response response(Status status, str explanation)``
+* ``Response response(str content, map[str,str] header = ())``
+* ``Response response(Status status, str explanation, map[str,str] header = ())``
 
 
 #### Synopsis
@@ -112,7 +112,7 @@ Utility to quickly make a plaintext response.
 
 ## function response {#Content-response}
 
-* ``Response response(loc f)``
+* ``Response response(loc f, map[str,str] header = ())``
 * ``default  Response response(value val, map[str,str] header = ())``
 
 

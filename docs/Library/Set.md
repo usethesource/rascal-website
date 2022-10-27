@@ -416,13 +416,13 @@ Pick an arbitrary element from a set.
 rascal>import Set;
 ok
 rascal>getOneFrom({"elephant", "zebra", "snake"});
+str: "elephant"
+rascal>getOneFrom({"elephant", "zebra", "snake"});
+str: "zebra"
+rascal>getOneFrom({"elephant", "zebra", "snake"});
+str: "elephant"
+rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "snake"
-rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "zebra"
-rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "zebra"
-rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "zebra"
 ```
 
 ## function getFirstFrom {#Set-getFirstFrom}
@@ -466,9 +466,9 @@ Remove an arbitrary element from set `s` and return a tuple consisting of the el
 rascal>import Set;
 ok
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <3,{1,2,4}>
-rascal>takeOneFrom({1, 2, 3, 4});
 tuple[int,set[int]]: <2,{1,3,4}>
+rascal>takeOneFrom({1, 2, 3, 4});
+tuple[int,set[int]]: <4,{1,3,2}>
 rascal>takeOneFrom({1, 2, 3, 4});
 tuple[int,set[int]]: <1,{3,2,4}>
 ```
@@ -573,8 +573,8 @@ Now explore an erroneous example:
 
 ```rascal-shell ,continue,error
 rascal>toMapUnique({<"a", 1>, <"b", 2>, <"a", 10>});
-|std:///Set.rsc|(9297,543,<442,0>,<462,70>): MultipleKey("a",10,1)
-	at *** somewhere ***(|std:///Set.rsc|(9297,543,<442,0>,<462,70>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/Set.rsc|(9297,543,<442,0>,<462,70>): MultipleKey("a",10,1)
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/Set.rsc|(9297,543,<442,0>,<462,70>))
 	at toMapUnique(|prompt:///|(39,2,<1,39>,<1,41>))
 ok
 ```

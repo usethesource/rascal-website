@@ -10,18 +10,18 @@ title: "module demo::lang::MissGrant::AST"
 ## data Controller {#demo-lang-MissGrant-AST-Controller}
 
 ```rascal
-data Controller  
+data Controller (loc location=|unknown:///|) 
      = controller(list[Event] events, 
-					  list[str] resets, 
-					  list[Command] commands,
-					  list[State] states)
+				list[str] resets, 
+				list[Command] commands,
+				list[State] states)
      ;
 ```
 
 ## data State {#demo-lang-MissGrant-AST-State}
 
 ```rascal
-data State  
+data State (loc location=|unknown:///|) 
      = state(str name, list[str] actions, list[Transition] transitions)
      ;
 ```
@@ -29,7 +29,7 @@ data State
 ## data Command {#demo-lang-MissGrant-AST-Command}
 
 ```rascal
-data Command  
+data Command (loc location=|unknown:///|) 
      = command(str name, str token)
      ;
 ```
@@ -37,7 +37,7 @@ data Command
 ## data Event {#demo-lang-MissGrant-AST-Event}
 
 ```rascal
-data Event  
+data Event (loc location=|unknown:///|) 
      = event(str name, str token)
      ;
 ```
@@ -45,7 +45,7 @@ data Event
 ## data Transition {#demo-lang-MissGrant-AST-Transition}
 
 ```rascal
-data Transition  
+data Transition (loc location=|unknown:///|) 
      = transition(str event, str state)
      ;
 ```

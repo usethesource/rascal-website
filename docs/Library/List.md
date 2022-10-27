@@ -217,11 +217,11 @@ Get an arbitrary element from a list. See [takeOneFrom](../Library/List.md#List-
 rascal>import List;
 ok
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "zebra"
-rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "elephant"
+str: "snake"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "owl"
+rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
+str: "snake"
 ```
 
 ## function getFirstFrom {#List-getFirstFrom}
@@ -275,8 +275,8 @@ An exception is thrown when taking the head of an empty list:
 
 ```rascal-shell ,continue,error
 rascal>head([]);
-|std:///List.rsc|(4522,9,<195,38>,<195,47>): EmptyList()
-	at head(|std:///List.rsc|(4484,52,<195,0>,<195,52>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(4522,9,<195,38>,<195,47>): EmptyList()
+	at head(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(4484,52,<195,0>,<195,52>))
 	at $shell$(|prompt:///|(0,9,<1,0>,<1,9>))
 ok
 ```
@@ -292,8 +292,8 @@ An exception is thrown when the second argument exceeds the length of the list:
 
 ```rascal-shell ,continue,error
 rascal>head([1, 2, 3, 5], 5);
-|std:///List.rsc|(4576,113,<198,0>,<199,71>): IndexOutOfBounds(4)
-	at *** somewhere ***(|std:///List.rsc|(4576,113,<198,0>,<199,71>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(4576,113,<198,0>,<199,71>): IndexOutOfBounds(4)
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(4576,113,<198,0>,<199,71>))
 	at head(|prompt:///|(19,1,<1,19>,<1,20>))
 ok
 ```
@@ -413,8 +413,8 @@ An exception is thrown when the index position is outside the list:
 
 ```rascal-shell ,continue,error
 rascal>insertAt([1,2,3], 10, 5);
-|std:///List.rsc|(6047,579,<273,0>,<294,83>): IndexOutOfBounds(10)
-	at *** somewhere ***(|std:///List.rsc|(6047,579,<273,0>,<294,83>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(6047,579,<273,0>,<294,83>): IndexOutOfBounds(10)
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(6047,579,<273,0>,<294,83>))
 	at insertAt(|prompt:///|(22,1,<1,22>,<1,23>))
 ok
 ```
@@ -984,9 +984,9 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [4,2,1,3]
+list[int]: [3,2,4,1]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["elephant","snake","owl","zebra"]
+list[str]: ["owl","zebra","snake","elephant"]
 ```
 
 ## function split {#List-split}
@@ -1065,8 +1065,8 @@ Try an error case:
 
 ```rascal-shell ,continue,error
 rascal>tail([]);
-|std:///List.rsc|(18315,9,<841,44>,<841,53>): EmptyList()
-	at tail(|std:///List.rsc|(18271,58,<841,0>,<841,58>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(18315,9,<841,44>,<841,53>): EmptyList()
+	at tail(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(18271,58,<841,0>,<841,58>))
 	at $shell$(|prompt:///|(0,9,<1,0>,<1,9>))
 ok
 ```
@@ -1080,8 +1080,8 @@ Try an error case:
 
 ```rascal-shell ,continue,error
 rascal>tail([10, 20, 30, 40, 50, 60], 10);
-|std:///List.rsc|(18332,115,<843,0>,<844,73>): IndexOutOfBounds(4)
-	at *** somewhere ***(|std:///List.rsc|(18332,115,<843,0>,<844,73>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(18332,115,<843,0>,<844,73>): IndexOutOfBounds(4)
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(18332,115,<843,0>,<844,73>))
 	at tail(|prompt:///|(31,2,<1,31>,<1,33>))
 ok
 ```
@@ -1140,17 +1140,17 @@ See [getOneFrom](../Library/List.md#List-getOneFrom) to only selected an element
 rascal>import List;
 ok
 rascal>takeOneFrom([10,20,30,40,50]);
+tuple[int,list[int]]: <10,[20,30,40,50]>
+rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <50,[10,20,30,40]>
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <30,[10,20,40,50]>
-rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <20,[10,30,40,50]>
-rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
+tuple[int,list[int]]: <40,[10,20,30,50]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
+tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
+rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
+tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 ```
 
 ## function takeWhile {#List-takeWhile}
@@ -1234,8 +1234,8 @@ Let's explore an error case:
 
 ```rascal-shell ,continue,error
 rascal>toMapUnique([<1,10>, <1, 11>, <2, 20>, <3, 30>]);
-|std:///List.rsc|(20860,663,<941,0>,<966,79>): MultipleKey(1,10,11)
-	at *** somewhere ***(|std:///List.rsc|(20860,663,<941,0>,<966,79>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(20860,663,<941,0>,<966,79>): MultipleKey(1,10,11)
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/List.rsc|(20860,663,<941,0>,<966,79>))
 	at toMapUnique(|prompt:///|(43,2,<1,43>,<1,45>))
 ok
 ```

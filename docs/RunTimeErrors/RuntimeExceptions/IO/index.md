@@ -41,9 +41,9 @@ Import the `IO` library and attempt to use a non-existing scheme:
 rascal>import IO;
 ok
 rascal>readFile(|myScheme:///example.rsc|);
-|std:///IO.rsc|(12843,1655,<586,0>,<623,24>): IO("1: Unavailable (FileSystemError): No file system provider found for resource \'myScheme:/example.rsc\'")
-	at *** somewhere ***(|std:///IO.rsc|(12843,1655,<586,0>,<623,24>))
-	at readFile(|prompt:///|(9,25,<1,9>,<1,34>))
+|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/IO.rsc|(12955,1715,<515,0>,<552,24>): IO("Unsupported scheme \'myScheme\'")
+	at *** somewhere ***(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/IO.rsc|(12955,1715,<515,0>,<552,24>))
+	at readFile(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library/IO.rsc|(14635,8,<551,84>,<551,92>))
 ok
 ```
 We can catch this `IO` error. First import the Rascal exceptions (which are also included in `Prelude`):
@@ -55,7 +55,7 @@ rascal>try
 >>>>>>>  readFileLines(|myScheme:///example.rsc|); 
 >>>>>>>catch IO(msg): 
 >>>>>>>  println("This did not work: <msg>");
-This did not work: 1: Unavailable (FileSystemError): No file system provider found for resource 'myScheme:/example.rsc'
+This did not work: Unsupported scheme 'myScheme'
 ok
 ```
 
