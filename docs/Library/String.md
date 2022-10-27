@@ -13,49 +13,49 @@ Library functions for strings.
 
 #### Description
 
-For operators on strings see [String](../../../../../../../../../Rascal/Expressions/Values/String/index.md) in the Rascal Language Reference.
+For operators on strings see [String](../Rascal/Expressions/Values/String/index.md) in the Rascal Language Reference.
 
 The following functions are defined for strings:
-* [arbString](../../../../../../../../../Library/String.md#String-arbString)
-* [capitalize](../../../../../../../../../Library/String.md#String-capitalize)
-* [center](../../../../../../../../../Library/String.md#String-center)
-* [charAt](../../../../../../../../../Library/String.md#String-charAt)
-* [chars](../../../../../../../../../Library/String.md#String-chars)
-* [contains](../../../../../../../../../Library/String.md#String-contains)
-* [deescape](../../../../../../../../../Library/String.md#String-deescape)
-* [endsWith](../../../../../../../../../Library/String.md#String-endsWith)
-* [escape](../../../../../../../../../Library/String.md#String-escape)
-* [findAll](../../../../../../../../../Library/String.md#String-findAll)
-* [findFirst](../../../../../../../../../Library/String.md#String-findFirst)
-* [findLast](../../../../../../../../../Library/String.md#String-findLast)
-* [format](../../../../../../../../../Library/String.md#String-format)
-* [fromBase64](../../../../../../../../../Library/String.md#String-fromBase64)
-* [isEmpty](../../../../../../../../../Library/String.md#String-isEmpty)
-* [isValidCharacter](../../../../../../../../../Library/String.md#String-isValidCharacter)
-* [left](../../../../../../../../../Library/String.md#String-left)
-* [replaceAll](../../../../../../../../../Library/String.md#String-replaceAll)
-* [replaceFirst](../../../../../../../../../Library/String.md#String-replaceFirst)
-* [replaceLast](../../../../../../../../../Library/String.md#String-replaceLast)
-* [reverse](../../../../../../../../../Library/String.md#String-reverse)
-* [rexpMatch](../../../../../../../../../Library/String.md#String-rexpMatch)
-* [right](../../../../../../../../../Library/String.md#String-right)
-* [size](../../../../../../../../../Library/String.md#String-size)
-* [split](../../../../../../../../../Library/String.md#String-split)
-* [squeeze](../../../../../../../../../Library/String.md#String-squeeze)
-* [startsWith](../../../../../../../../../Library/String.md#String-startsWith)
-* [stringChar](../../../../../../../../../Library/String.md#String-stringChar)
-* [stringChars](../../../../../../../../../Library/String.md#String-stringChars)
-* [substitute](../../../../../../../../../Library/String.md#String-substitute)
-* [substring](../../../../../../../../../Library/String.md#String-substring)
-* [toBase64](../../../../../../../../../Library/String.md#String-toBase64)
-* [toInt](../../../../../../../../../Library/String.md#String-toInt)
-* [toLocation](../../../../../../../../../Library/String.md#String-toLocation)
-* [toLowerCase](../../../../../../../../../Library/String.md#String-toLowerCase)
-* [toReal](../../../../../../../../../Library/String.md#String-toReal)
-* [toUpperCase](../../../../../../../../../Library/String.md#String-toUpperCase)
-* [trim](../../../../../../../../../Library/String.md#String-trim)
-* [uncapitalize](../../../../../../../../../Library/String.md#String-uncapitalize)
-* [wrap](../../../../../../../../../Library/String.md#String-wrap)
+* [arbString](../Library/String.md#String-arbString)
+* [capitalize](../Library/String.md#String-capitalize)
+* [center](../Library/String.md#String-center)
+* [charAt](../Library/String.md#String-charAt)
+* [chars](../Library/String.md#String-chars)
+* [contains](../Library/String.md#String-contains)
+* [deescape](../Library/String.md#String-deescape)
+* [endsWith](../Library/String.md#String-endsWith)
+* [escape](../Library/String.md#String-escape)
+* [findAll](../Library/String.md#String-findAll)
+* [findFirst](../Library/String.md#String-findFirst)
+* [findLast](../Library/String.md#String-findLast)
+* [format](../Library/String.md#String-format)
+* [fromBase64](../Library/String.md#String-fromBase64)
+* [isEmpty](../Library/String.md#String-isEmpty)
+* [isValidCharacter](../Library/String.md#String-isValidCharacter)
+* [left](../Library/String.md#String-left)
+* [replaceAll](../Library/String.md#String-replaceAll)
+* [replaceFirst](../Library/String.md#String-replaceFirst)
+* [replaceLast](../Library/String.md#String-replaceLast)
+* [reverse](../Library/String.md#String-reverse)
+* [rexpMatch](../Library/String.md#String-rexpMatch)
+* [right](../Library/String.md#String-right)
+* [size](../Library/String.md#String-size)
+* [split](../Library/String.md#String-split)
+* [squeeze](../Library/String.md#String-squeeze)
+* [startsWith](../Library/String.md#String-startsWith)
+* [stringChar](../Library/String.md#String-stringChar)
+* [stringChars](../Library/String.md#String-stringChars)
+* [substitute](../Library/String.md#String-substitute)
+* [substring](../Library/String.md#String-substring)
+* [toBase64](../Library/String.md#String-toBase64)
+* [toInt](../Library/String.md#String-toInt)
+* [toLocation](../Library/String.md#String-toLocation)
+* [toLowerCase](../Library/String.md#String-toLowerCase)
+* [toReal](../Library/String.md#String-toReal)
+* [toUpperCase](../Library/String.md#String-toUpperCase)
+* [trim](../Library/String.md#String-trim)
+* [uncapitalize](../Library/String.md#String-uncapitalize)
+* [wrap](../Library/String.md#String-wrap)
 
 
 ## function center {#String-center}
@@ -97,7 +97,7 @@ Return character in a string by its index position.
 #### Description
 
 Return the character at position `i` in string `s` as integer character code.
-Also see [stringChar](../../../../../../../../../Library/String.md#String-stringChar) that converts character codes back to string.
+Also see [stringChar](../Library/String.md#String-stringChar) that converts character codes back to string.
 
 #### Examples
 
@@ -122,7 +122,7 @@ Return characters of a string.
 #### Description
 
 Return a list of the characters of `s` as integer character codes.
-Also see [stringChars](../../../../../../../../../Library/String.md#String-stringChars) that converts character codes back to string.
+Also see [stringChars](../Library/String.md#String-stringChars) that converts character codes back to string.
 
 #### Examples
 
@@ -238,7 +238,7 @@ Find all occurrences of a string in another string.
 Find all occurrences of string `find` in string `subject`.
 The result is a (possible empty) list of positions where `find` matches.
 
-See also [find first](../../../../../../../../../Library/String.md#String-findFirst) and [find last](../../../../../../../../../Library/String.md#String-findLast).
+See also [find first](../Library/String.md#String-findFirst) and [find last](../Library/String.md#String-findLast).
 
 #### Examples
 
@@ -268,7 +268,7 @@ Find the first occurrence of a string in another string.
 Find the first occurrence of string `find` in string `subject`.
 The result is either a position in `subject` or `-1` when `find` is not found.
 
-Also see [find all](../../../../../../../../../Library/String.md#String-findAll) and [find last](../../../../../../../../../Library/String.md#String-findLast).
+Also see [find all](../Library/String.md#String-findAll) and [find last](../Library/String.md#String-findLast).
 
 #### Examples
 
@@ -298,7 +298,7 @@ Find the last occurrence of a string in another string.
 Find the last occurrence of string `find` in string `subject`.
 The result is either a position in `subject` or `-1` when `find` is not found.
 
-Also see [find all](../../../../../../../../../Library/String.md#String-findAll) and [find first](../../../../../../../../../Library/String.md#String-findFirst).
+Also see [find all](../Library/String.md#String-findAll) and [find first](../Library/String.md#String-findFirst).
 
 #### Examples
 
@@ -359,9 +359,9 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-str: ""
+str: "les"
 rascal>arbString(10);
-str: ""
+str: "1"
 ```
 
 ## function left {#String-left}
@@ -403,7 +403,7 @@ Replace all occurrences of a string in another string.
 #### Description
 
 Return a copy of `subject` in which all occurrences of `find` (if any) have been replaced by `replacement`.
-Also see [replace first](../../../../../../../../../Library/String.md#String-replaceFirst) and [replace last](../../../../../../../../../Library/String.md#String-replaceLast).
+Also see [replace first](../Library/String.md#String-replaceFirst) and [replace last](../Library/String.md#String-replaceLast).
 
 #### Examples
 
@@ -435,7 +435,7 @@ Replace the first occurrence of a string in another string.
 #### Description
 
 Return a copy of `subject` in which the first occurrence of `find` (if it exists) has been replaced by `replacement`.
-Also see [replace all](../../../../../../../../../Library/String.md#String-replaceAll) and [replace last](../../../../../../../../../Library/String.md#String-replaceLast).
+Also see [replace all](../Library/String.md#String-replaceAll) and [replace last](../Library/String.md#String-replaceLast).
 
 #### Examples
 
@@ -467,7 +467,7 @@ Replace the last occurrence of a string in another string.
 #### Description
 
 Return a copy of `subject` in which the last occurrence of `find` (if it exists) has been replaced by `replacement`.
-Also see [replace first](../../../../../../../../../Library/String.md#String-replaceFirst) and [replace last](../../../../../../../../../Library/String.md#String-replaceLast).
+Also see [replace first](../Library/String.md#String-replaceFirst) and [replace last](../Library/String.md#String-replaceLast).
 
 #### Examples
 
@@ -706,7 +706,7 @@ Convert the characters in a string value to lower case.
 
 #### Description
 
-Convert all characters in string `s` to lowercase. Also see [to upper case](../../../../../../../../../Library/String.md#String-toUpperCase).
+Convert all characters in string `s` to lowercase. Also see [to upper case](../Library/String.md#String-toUpperCase).
 
 #### Examples
 
@@ -761,7 +761,7 @@ Convert the characters in a string value to upper case.
 
 Converts all characters in string `s` to upper case.
 
-Also see [to lower case](../../../../../../../../../Library/String.md#String-toLowerCase).
+Also see [to lower case](../Library/String.md#String-toLowerCase).
 
 #### Examples
 

@@ -13,24 +13,24 @@ Library functions for list relations.
 
 #### Description
 
-For operators on listrelations see [ListRelation](../../../../../../../../../Rascal/Expressions/Values/ListRelation/index.md) in the Rascal Language Reference.
+For operators on listrelations see [ListRelation](../Rascal/Expressions/Values/ListRelation/index.md) in the Rascal Language Reference.
 
 The following functions are defined for list relations :
-* [carrier](../../../../../../../../../Library/ListRelation.md#ListRelation-carrier)
-* [carrierR](../../../../../../../../../Library/ListRelation.md#ListRelation-carrierR)
-* [carrierX](../../../../../../../../../Library/ListRelation.md#ListRelation-carrierX)
-* [complement](../../../../../../../../../Library/ListRelation.md#ListRelation-complement)
-* [domain](../../../../../../../../../Library/ListRelation.md#ListRelation-domain)
-* [domainR](../../../../../../../../../Library/ListRelation.md#ListRelation-domainR)
-* [domainX](../../../../../../../../../Library/ListRelation.md#ListRelation-domainX)
-* [groupDomainByRange](../../../../../../../../../Library/ListRelation.md#ListRelation-groupDomainByRange)
-* [groupRangeByDomain](../../../../../../../../../Library/ListRelation.md#ListRelation-groupRangeByDomain)
-* [ident](../../../../../../../../../Library/ListRelation.md#ListRelation-ident)
-* [index](../../../../../../../../../Library/ListRelation.md#ListRelation-index)
-* [invert](../../../../../../../../../Library/ListRelation.md#ListRelation-invert)
-* [range](../../../../../../../../../Library/ListRelation.md#ListRelation-range)
-* [rangeR](../../../../../../../../../Library/ListRelation.md#ListRelation-rangeR)
-* [rangeX](../../../../../../../../../Library/ListRelation.md#ListRelation-rangeX)
+* [carrier](../Library/ListRelation.md#ListRelation-carrier)
+* [carrierR](../Library/ListRelation.md#ListRelation-carrierR)
+* [carrierX](../Library/ListRelation.md#ListRelation-carrierX)
+* [complement](../Library/ListRelation.md#ListRelation-complement)
+* [domain](../Library/ListRelation.md#ListRelation-domain)
+* [domainR](../Library/ListRelation.md#ListRelation-domainR)
+* [domainX](../Library/ListRelation.md#ListRelation-domainX)
+* [groupDomainByRange](../Library/ListRelation.md#ListRelation-groupDomainByRange)
+* [groupRangeByDomain](../Library/ListRelation.md#ListRelation-groupRangeByDomain)
+* [ident](../Library/ListRelation.md#ListRelation-ident)
+* [index](../Library/ListRelation.md#ListRelation-index)
+* [invert](../Library/ListRelation.md#ListRelation-invert)
+* [range](../Library/ListRelation.md#ListRelation-range)
+* [rangeR](../Library/ListRelation.md#ListRelation-rangeR)
+* [rangeX](../Library/ListRelation.md#ListRelation-rangeX)
 
 
 ## function carrier {#ListRelation-carrier}

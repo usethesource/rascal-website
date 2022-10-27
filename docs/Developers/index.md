@@ -19,5 +19,5 @@ Capsule is a library for immutable collections based on the CHAMP datastructure.
 
 This manual is not complete, but it contains the following topics to help you underway to contribute bugfixes or features to Rascal:
 
-* [tutor compiler](../../../../../../../../../../Developers/TutorCompiler/index.md)
+* [tutor compiler](../Developers/TutorCompiler/index.md)
 

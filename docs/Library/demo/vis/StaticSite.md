@@ -48,7 +48,7 @@ rascal>characters = {"Sneezy", "Sleepy", "Dopey", "Doc", "Happy", "Bashful", "Gr
 set[str]: {"Happy","Sleepy","Bashful","Grumpy","Doc","Dopey","Sneezy"}
 rascal>serve(table(characters * characters));
 ```
-![image](../../../assets/Library/demo/vis/StaticSite_screenshot_22.png)
+![image](/assets/Library/demo/vis/StaticSite_screenshot_22.png)
 ```rascal-shell
 ```
 

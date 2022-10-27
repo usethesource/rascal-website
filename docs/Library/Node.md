@@ -13,25 +13,25 @@ Library functions for nodes.
 
 #### Description
 
-For operators on nodes see [Node](../../../../../../../../../Rascal/Expressions/Values/Node/index.md) in the Rascal Language Reference.
+For operators on nodes see [Node](../Rascal/Expressions/Values/Node/index.md) in the Rascal Language Reference.
 
 The following functions are defined for nodes:
-* [arbNode](../../../../../../../../../Library/Node.md#Node-arbNode)
-* [arity](../../../../../../../../../Library/Node.md#Node-arity)
-* [delAnnotation](../../../../../../../../../Library/Node.md#Node-delAnnotation)
-* [delAnnotations](../../../../../../../../../Library/Node.md#Node-delAnnotations)
-* [delAnnotationsRec](../../../../../../../../../Library/Node.md#Node-delAnnotationsRec)
-* [getAnnotations](../../../../../../../../../Library/Node.md#Node-getAnnotations)
-* [getChildren](../../../../../../../../../Library/Node.md#Node-getChildren)
-* [getKeywordParameters](../../../../../../../../../Library/Node.md#Node-getKeywordParameters)
-* [getName](../../../../../../../../../Library/Node.md#Node-getName)
-* [itoString](../../../../../../../../../Library/Node.md#Node-itoString)
-* [makeNode](../../../../../../../../../Library/Node.md#Node-makeNode)
-* [setAnnotations](../../../../../../../../../Library/Node.md#Node-setAnnotations)
-* [setKeywordParameters](../../../../../../../../../Library/Node.md#Node-setKeywordParameters)
-* [toString](../../../../../../../../../Library/Node.md#Node-toString)
-* [unset](../../../../../../../../../Library/Node.md#Node-unset)
-* [unsetRec](../../../../../../../../../Library/Node.md#Node-unsetRec)
+* [arbNode](../Library/Node.md#Node-arbNode)
+* [arity](../Library/Node.md#Node-arity)
+* [delAnnotation](../Library/Node.md#Node-delAnnotation)
+* [delAnnotations](../Library/Node.md#Node-delAnnotations)
+* [delAnnotationsRec](../Library/Node.md#Node-delAnnotationsRec)
+* [getAnnotations](../Library/Node.md#Node-getAnnotations)
+* [getChildren](../Library/Node.md#Node-getChildren)
+* [getKeywordParameters](../Library/Node.md#Node-getKeywordParameters)
+* [getName](../Library/Node.md#Node-getName)
+* [itoString](../Library/Node.md#Node-itoString)
+* [makeNode](../Library/Node.md#Node-makeNode)
+* [setAnnotations](../Library/Node.md#Node-setAnnotations)
+* [setKeywordParameters](../Library/Node.md#Node-setKeywordParameters)
+* [toString](../Library/Node.md#Node-toString)
+* [unset](../Library/Node.md#Node-unset)
+* [unsetRec](../Library/Node.md#Node-unsetRec)
 
 
 ## function arity {#Node-arity}

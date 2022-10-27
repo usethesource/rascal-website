@@ -13,23 +13,23 @@ Library functions for source locations.
 
 #### Description
 
-For a description of source locations see [Location](../../../../../../../../../Rascal/Expressions/Values/Location/index.md) in the Rascal Language Reference.
+For a description of source locations see [Location](../Rascal/Expressions/Values/Location/index.md) in the Rascal Language Reference.
 
 The following functions are defined for source locations:
-* [beginsAfter](../../../../../../../../../Library/Location.md#Location-beginsAfter)
-* [beginsBefore](../../../../../../../../../Library/Location.md#Location-beginsBefore)
-* [cover](../../../../../../../../../Library/Location.md#Location-cover)
-* [getContent](../../../../../../../../../Library/Location.md#Location-getContent)
-* [isAfter](../../../../../../../../../Library/Location.md#Location-isAfter)
-* [isBefore](../../../../../../../../../Library/Location.md#Location-isBefore)
-* [isContainedIn](../../../../../../../../../Library/Location.md#Location-isContainedIn)
-* [isImmediatelyAfter](../../../../../../../../../Library/Location.md#Location-isImmediatelyAfter)
-* [isImmediatelyBefore](../../../../../../../../../Library/Location.md#Location-isImmediatelyBefore)
-* [isLexicallyLess](../../../../../../../../../Library/Location.md#Location-isLexicallyLess)
-* [isOverlapping](../../../../../../../../../Library/Location.md#Location-isOverlapping)
-* [isSameFile](../../../../../../../../../Library/Location.md#Location-isSameFile)
-* [isStrictlyContainedIn](../../../../../../../../../Library/Location.md#Location-isStrictlyContainedIn)
-* [relativize](../../../../../../../../../Library/Location.md#Location-relativize)
+* [beginsAfter](../Library/Location.md#Location-beginsAfter)
+* [beginsBefore](../Library/Location.md#Location-beginsBefore)
+* [cover](../Library/Location.md#Location-cover)
+* [getContent](../Library/Location.md#Location-getContent)
+* [isAfter](../Library/Location.md#Location-isAfter)
+* [isBefore](../Library/Location.md#Location-isBefore)
+* [isContainedIn](../Library/Location.md#Location-isContainedIn)
+* [isImmediatelyAfter](../Library/Location.md#Location-isImmediatelyAfter)
+* [isImmediatelyBefore](../Library/Location.md#Location-isImmediatelyBefore)
+* [isLexicallyLess](../Library/Location.md#Location-isLexicallyLess)
+* [isOverlapping](../Library/Location.md#Location-isOverlapping)
+* [isSameFile](../Library/Location.md#Location-isSameFile)
+* [isStrictlyContainedIn](../Library/Location.md#Location-isStrictlyContainedIn)
+* [relativize](../Library/Location.md#Location-relativize)
 
 A source location `l` refers to a text fragment in another file or resource. To ease the description we will
 talk about _`l` 's text_ instead of _the text `l` refers to_.

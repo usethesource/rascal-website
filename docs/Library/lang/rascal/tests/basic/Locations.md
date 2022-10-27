@@ -388,3 +388,71 @@ title: "module lang::rascal::tests::basic::Locations"
 
 * ``test bool trailingSlashFile2()``
 
+## function testRelativize {#lang-rascal-tests-basic-Locations-testRelativize}
+
+* ``test bool testRelativize()``
+
+## function testFailedRelativize {#lang-rascal-tests-basic-Locations-testFailedRelativize}
+
+* ``test bool testFailedRelativize()``
+
+## function trailingSlashRelativize1 {#lang-rascal-tests-basic-Locations-trailingSlashRelativize1}
+
+* ``test bool trailingSlashRelativize1()``
+
+## function trailingSlashRelativize2 {#lang-rascal-tests-basic-Locations-trailingSlashRelativize2}
+
+* ``test bool trailingSlashRelativize2()``
+
+## function extensionSetWithMoreDots1 {#lang-rascal-tests-basic-Locations-extensionSetWithMoreDots1}
+
+* ``test bool extensionSetWithMoreDots1()``
+
+## function extensionSetWithMoreDots2 {#lang-rascal-tests-basic-Locations-extensionSetWithMoreDots2}
+
+* ``test bool extensionSetWithMoreDots2()``
+
+## function extensionSetWithSlash {#lang-rascal-tests-basic-Locations-extensionSetWithSlash}
+
+* ``test bool extensionSetWithSlash()``
+
+## function extensionSetWithSlashAndMoreDots {#lang-rascal-tests-basic-Locations-extensionSetWithSlashAndMoreDots}
+
+* ``test bool extensionSetWithSlashAndMoreDots()``
+
+## function extensionGetWithMoreDot1 {#lang-rascal-tests-basic-Locations-extensionGetWithMoreDot1}
+
+* ``test bool extensionGetWithMoreDot1()``
+
+## function extensionGetWithMoreDots2 {#lang-rascal-tests-basic-Locations-extensionGetWithMoreDots2}
+
+* ``test bool extensionGetWithMoreDots2()``
+
+## function extensionGetWithSlash {#lang-rascal-tests-basic-Locations-extensionGetWithSlash}
+
+* ``test bool extensionGetWithSlash()``
+
+## function extensionGetSimple {#lang-rascal-tests-basic-Locations-extensionGetSimple}
+
+* ``test bool extensionGetSimple()``
+
+## function extensionGetRoot {#lang-rascal-tests-basic-Locations-extensionGetRoot}
+
+* ``test bool extensionGetRoot()``
+
+## function extensionGetNoRoot {#lang-rascal-tests-basic-Locations-extensionGetNoRoot}
+
+* ``test bool extensionGetNoRoot()``
+
+## function extensionNoPath {#lang-rascal-tests-basic-Locations-extensionNoPath}
+
+* ``test bool extensionNoPath()``
+
+## function extensionSetRoot {#lang-rascal-tests-basic-Locations-extensionSetRoot}
+
+* ``test bool extensionSetRoot()``
+
+## function extensionSetSimple {#lang-rascal-tests-basic-Locations-extensionSetSimple}
+
+* ``test bool extensionSetSimple()``
+
