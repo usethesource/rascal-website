@@ -3,73 +3,49 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 
 const FeatureList = [
-  {
-    title: 'Domain Specific Languages, Parsers & Compilers',
-    Svg: require('@site/static/images/DSLs.svg').default,
-    description: (
-      <ul>
-        <li>Context Free Grammars</li>
-        <li>Concrete Syntax Fragments</li>
-        <li>Algebraic Data Types</li>
-        <li>(DSL) IDE support in Eclipse and VS Code</li>
-        <li>Lexically Scoped Backtracking</li>
-        <li>Disambiguation Actions</li>
-      </ul>
-    ),
-  },
-  {
-    title: 'Source Code Analysis',
-    Svg: require('@site/static/images/analysis.svg').default,
-    description: (
-      <ul>
-        <li>Formal Concept Analysis</li>
-        <li>Graphs</li>
-        <li>M3 Language meta model</li>
-        <li>Statistic tests</li>
-      </ul>
-    ),
-  },
-  {
-    title: 'Source Code Transformation',
-    Svg: require('@site/static/images/transformation.svg').default,
-    description: (
-      <ul>
-        <li>Pattern Matching</li>
-        <li>Generic Type-safe Traversal</li>
-      </ul>
-    ),
-  },
-  {
-    title: 'Source code Generation',
-    Svg: require('@site/static/images/generation.svg').default,
-    description: (
-      <ul>
-        <li>String Templates</li>
-      </ul>
-    ),
-  },
-  {
-    title: 'Java Interop',
-    Svg: require('@site/static/images/java.svg').default,
-    description: (
-      <ul>
-        <li>Runs on the JVM (8+)</li>
-        <li>Java methods callable</li>
-        <li>Maven plugin</li>
-      </ul>
-    ),
-  },
-  {
-    title: 'Visualization',
-    Svg: require('@site/static/images/visualization.svg').default,
-    description: (
-      <ul>
-        <li>Draws figures :-)</li>
-        <li>Salix web components</li>
-        <li>Reverse Engineering</li>
-      </ul>
-    ),
-  },
+    {
+        title: 'Design and Implementation of Domain Specific Languages',
+        link: '/docs/WhyRascal/UseCases/DomainSpecificLanguages',
+        Svg: require('@site/static/images/DSLs.svg').default,
+        description: (
+            <ul>
+                <li>Context Free Grammars</li>
+                <li>Concrete Syntax Fragments</li>
+                <li>Static Analysis</li>
+                <li>Eclipse Plugins</li>
+                <li>VScode extensions</li>
+                <li>Language Server Protocol</li>
+            </ul>
+        ),
+    },
+    {
+        title: 'Source Code = Data',
+        link: '/docs/WhyRascal/UseCases/CodeAsData',
+        Svg: require('@site/static/images/analysis.svg').default,
+        description: (
+            <ul>
+                <li>Java, C++, Python, Ada, ...</li>
+                <li>Metrics</li>
+                <li>Static Analysis</li>
+                <li>Debugging</li>
+                <li>Reverse Engineering</li>
+            </ul>
+        ),
+    },
+    {
+        title: 'Source-to-Source',
+        link: '/docs/WhyRascal/UseCases/SourceToSource',
+        Svg: require('@site/static/images/transformation.svg').default,
+        description: (
+            <ul>
+                <li>Pattern Matching</li>
+                <li>Concrete Syntax Fragments</li>
+                <li>Generic Type-safe Traversal</li>
+                <li>Transpilers</li>
+                <li>Compilers</li>
+            </ul>
+        ),
+    },
 ];
 
 function Feature({Svg, title, description}) {
