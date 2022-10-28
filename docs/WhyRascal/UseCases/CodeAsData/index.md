@@ -367,34 +367,48 @@ rel[loc from,loc to]: {
 ```
 so let's find out which method definitions are never invoked
 ```rascal-shell
-rascal>myModel.methodInvocation<1> - allMethods;
+rascal>allMethods - myModel.methodInvocation<1>
 set[loc]: {
-  |java+method:///java/lang/Object/toString()|,
-  |java+method:///java/io/PrintStream/println(java.lang.String)|,
-  |java+constructor:///snakes/SimpleGameTest/SimpleGameTest()|,
-  |java+constructor:///snakes/Die/Die()|,
-  |java+method:///java/util/List/add(E)|,
-  |java+method:///java/util/List/get(int)|,
-  |java+method:///java/util/List/contains(java.lang.Object)|,
-  |java+method:///java/lang/StringBuffer/append(java.lang.String)|,
-  |java+method:///java/util/Queue/remove()|,
-  |java+method:///java/util/Queue/add(E)|,
-  |java+constructor:///java/util/ArrayList/ArrayList()|,
-  |java+method:///java/util/List/isEmpty()|,
-  |java+method:///java/lang/Integer/toString(int)|,
-  |java+method:///java/util/List/size()|,
-  |java+method:///java/util/Collection/size()|,
-  |java+method:///java/lang/Math/random()|,
-  |java+method:///java/lang/StringBuffer/toString()|,
-  |java+constructor:///java/util/LinkedList/LinkedList()|,
-  |java+method:///java/util/Queue/peek()|,
-  |java+method:///java/util/List/set(int,E)|,
-  |java+method:///java/util/List/remove(java.lang.Object)|,
-  |java+constructor:///java/lang/StringBuffer/StringBuffer()|
+  |java+method:///snakes/Snake/squareLabel()|,
+  |java+method:///snakes/Square/enter(snakes.Player)|,
+  |java+method:///snakes/Ladder/landHereOrGoHome()|,
+  |java+method:///snakes/SimpleGameTest/move2jackBackwards(snakes.Game)|,
+  |java+method:///snakes/Square/position()|,
+  |java+method:///snakes/Square/toString()|,
+  |java+method:///snakes/SimpleGameTest/move8jillWins(snakes.Game)|,
+  |java+method:///snakes/Square/nextSquare()|,
+  |java+method:///snakes/Square/moveAndLand(int)|,
+  |java+method:///snakes/SimpleGameTest/move1strings(snakes.Game)|,
+  |java+method:///snakes/Ladder/squareLabel()|,
+  |java+method:///snakes/FirstSquare/isOccupied()|,
+  |java+method:///snakes/Square/previousSquare()|,
+  |java+method:///snakes/SimpleGameTest/initialStrings(snakes.Game)|,
+  |java+method:///snakes/SimpleGameTest/move4jillSnake(snakes.Game)|,
+  |java+method:///snakes/DieTest/testInRange()|,
+  |java+method:///snakes/DieTest/testMinReached()|,
+  |java+method:///snakes/Square/isFirstSquare()|,
+  |java+method:///snakes/Player/square()|,
+  |java+method:///snakes/Game/main(java.lang.String%5B%5D)|,
+  |java+method:///snakes/Square/leave(snakes.Player)|,
+  |java+method:///snakes/Square/isLastSquare()|,
+  |java+method:///snakes/Square/landHereOrGoHome()|,
+  |java+method:///snakes/DieTest/testMaxReached()|,
+  |java+method:///snakes/SimpleGameTest/move5jackLadder(snakes.Game)|,
+  |java+method:///snakes/SimpleGameTest/move6jill(snakes.Game)|,
+  |java+method:///snakes/FirstSquare/enter(snakes.Player)|,
+  |java+method:///snakes/LastSquare/isLastSquare()|,
+  |java+method:///snakes/FirstSquare/leave(snakes.Player)|,
+  |java+method:///snakes/SimpleGameTest/move3jackMeetsJill(snakes.Game)|,
+  |java+method:///snakes/SimpleGameTest/move2jillLadder(snakes.Game)|,
+  |java+method:///snakes/SimpleGameTest/move7jackBouncesBackToJill(snakes.Game)|,
+  |java+method:///snakes/SimpleGameTest/move1jack(snakes.Game)|,
+  |java+method:///snakes/FirstSquare/player()|,
+  |java+method:///snakes/FirstSquare/landHereOrGoHome()|,
+  |java+method:///snakes/FirstSquare/isFirstSquare()|
 }
 ```
 
-Mmmm... we've made a mistake. The Java language offers "virtual methods", while
+Mmmm... that's a lot! We've made a mistake. The Java language offers "virtual methods", while
 we have listed many method definitions that override virtual methods they are never
 explicitly called.
 
@@ -558,6 +572,22 @@ The results are:
 The two unused methods are:
 * `|java+method:///snakes/Square/nextSquare()|`
 * `|java+method:///snakes/Player/square()|`
+
+In an interactive environment like Eclipse or VScode we would click on these links to jump to their source code. Here we will print the bodies:
+
+
+```rascal-shell ,continue
+rascal>println(readFile(|java+method:///snakes/Player/square()|))
+public ISquare square() {
+		return square;
+	}
+ok
+rascal>println(readFile(|java+method:///snakes/Square/nextSquare()|))
+protected ISquare nextSquare() {
+		return game.getSquare(position+1);
+	}
+ok
+```
 
 Note that this analysis is reasonably precise, but not 100% exact:
 * all name analysis and type analysis is done and used to disambiguate identifier names. There can be no confusion between overloaded methods for example and therefore overriding/implementing analysis is exact.
