@@ -1,6 +1,6 @@
 ---
 title: Comparison with other paradigms
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 #### Synopsis

@@ -1,5 +1,6 @@
 ---
 title: Motivating Use Cases
+sidebar_position: 1
 ---
 
 * [CodeAsData](../../WhyRascal/UseCases/CodeAsData/index.md)

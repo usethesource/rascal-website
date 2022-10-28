@@ -54,7 +54,7 @@ Here are some examples of the built-in data types:
 | `int`                     | `11, 101, 1-11, 1123456789` |
 | `real`                    | `1.01, 11.0232e201, 1-25.5` |
 | `str`                     | `"abc"`, `"first\nnext"`, `"result: <X>"` |
-| `loc`                     | <code>&vert;file:///etc/passwd&vert;</code> |
+| `loc`                     | `\|file:///etc/passwd\|` |
 | `dateTime`                | `$2101-09-05T07:16:19.714+0200$` |
 | `tuple[_T₁,...,Tₙ]`	| `<1,2>`, `<"john", 43, true>` |
 | `list[T]`               | `[]`, `[1]`, `[1,2,3]`, `[true, 2, "abc"]` |

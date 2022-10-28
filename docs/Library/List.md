@@ -984,9 +984,9 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [3,2,4,1]
+list[int]: [1,2,4,3]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["owl","zebra","snake","elephant"]
+list[str]: ["snake","owl","zebra","elephant"]
 ```
 
 ## function split {#List-split}
@@ -1140,17 +1140,17 @@ See [getOneFrom](../Library/List.md#List-getOneFrom) to only selected an element
 rascal>import List;
 ok
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <10,[20,30,40,50]>
+tuple[int,list[int]]: <40,[10,20,30,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <50,[10,20,30,40]>
+tuple[int,list[int]]: <30,[10,20,40,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <40,[10,20,30,50]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
+tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
+tuple[str,list[str]]: <"snake",["zebra","elephant","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
+tuple[str,list[str]]: <"snake",["zebra","elephant","owl"]>
 ```
 
 ## function takeWhile {#List-takeWhile}
