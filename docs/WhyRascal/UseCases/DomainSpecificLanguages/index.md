@@ -23,9 +23,9 @@ module Syntax
 extend lang::std::Layout;
 extend lang::std::Id;
 
-start syntax Machine = machine: State+ states;      ❶  
-syntax State = @Foldable state: "state" Id name Trans* out;      ❶  
-syntax Trans = trans: Id event ":" Id to;      ❷  
+start syntax Machine = machine: State+ states;         ❶  
+syntax State = state: "state" Id name Trans* out;      ❶  
+syntax Trans = trans: Id event ":" Id to;              ❷  
 ```
 
 
