@@ -129,11 +129,11 @@ Here we measure time by using separate calls to `cpuTime` before and after a cal
 
 ```rascal-shell ,continue
 rascal>before = cpuTime();
-int: 93990675000
+int: 94678312000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>cpuTime() - before;
-int: 3062000
+int: 2797000
 ```
 
 See also [cpu time of](../../Library/util/Benchmark.md#util::Benchmark-cpuTimeOf) for a more convenient way of measuring the time spent during a block of code.
@@ -240,11 +240,11 @@ Here we measure time by using separate calls to `sytemTime` before and after a c
 
 ```rascal-shell ,continue
 rascal>before = systemTime();
-int: 4595132000
+int: 4227032000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>systemTime() - before;
-int: 281000
+int: 229000
 ```
 
 ## function systemTimeOf {#util-Benchmark-systemTimeOf}
@@ -306,11 +306,11 @@ Here we measure time by using separate calls to `userTime` before and after a ca
 
 ```rascal-shell ,continue
 rascal>before = userTime();
-int: 89566515000
+int: 90621966000
 rascal>fac1(50);
 int: 30414093201713378043612608166064768844377641568960512000000000000
 rascal>userTime() - before;
-int: 3115000
+int: 2486000
 ```
 
 ## function userTimeOf {#util-Benchmark-userTimeOf}
@@ -388,7 +388,7 @@ rascal>benchmark(
 >>>>>>>                  fac1(200);
 >>>>>>>            })
 >>>>>>>   , userTimeOf);
-map[str, num]: ("fac100":388000,"fac200":638000)
+map[str, num]: ("fac100":360000,"fac200":627000)
 ```
 
 ## function gc {#util-Benchmark-gc}
