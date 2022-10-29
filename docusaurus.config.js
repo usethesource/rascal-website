@@ -14,7 +14,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   trailingSlash: true,
-  favicon: 'images/favicon.ico',
+  favicon: 'images/favicon.png',
   organizationName: 'usethesource', // Usually your GitHub org/user name.
   projectName: 'rascal-website', // Usually your repo name.
   deploymentBranch: 'gh-pages-v2',
