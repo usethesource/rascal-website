@@ -14,3 +14,7 @@
   list-style-type: none;
   margin-left: -1em;
 }
+
+.features a {
+  color: var(--ifm-font-color-base);
+}
