@@ -44,21 +44,13 @@ const config = {
   ],
   plugins: [
     [
-      '@docusaurus/plugin-content-blog',
+      '@docusaurus/plugin-content-docs',
       {
-        /**
-         * Required for any multi-instance plugin
-         */
         id: 'release-notes',
-        /**
-         * URL route for the blog section of your site.
-         * *DO NOT* include a trailing slash.
-         */
+        path: 'release-notes',
         routeBasePath: 'release-notes',
-        /**
-         * Path to data on filesystem relative to site dir.
-         */
-        path: './release-notes',
+        sidebarPath: require.resolve('./sidebars.js'),
+        // ... other options
       },
     ],
   ],

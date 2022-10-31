@@ -1,6 +1,7 @@
 ---
 authors: [jvinju]
 title: "Rascal 0.23.x release notes"
+sidebar_position: 2
 ---
 
 In this post we report on the Rascal release 0.23.x, which includes all changes since the 0.17.x releases. 

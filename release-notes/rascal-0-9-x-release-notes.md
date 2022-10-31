@@ -1,6 +1,7 @@
 ---
 authors: [jvinju]
 title: "Rascal 0.9.x release notes"
+sidebar_position: 4
 ---
 
 In this post we report on the Rascal release 0.9.0, which includes all changes since the 0.7.x releases. We have not written release notes for the 0.8.x series (the details are included here). We expect a number of patch releases for 0.9.x, which we report on by updating this post (at its end) when necessary until we move on to 0.10.x. 

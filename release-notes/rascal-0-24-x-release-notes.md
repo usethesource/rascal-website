@@ -1,6 +1,7 @@
 ---
 authors: [jvinju]
 title: "Rascal 0.24.x release notes"
+sidebar_position: 1
 ---
 
 In this post we report on the Rascal release 0.24.x
@@ -9,7 +10,7 @@ In this post we report on the Rascal release 0.24.x
 
 ## Release 0.24.0 - June 21, 2022
 
-Release 24.x is a maintenance release. A lot of changes happened between 0.17.0 and 0.23.x, so if you have not looked here for a while, go to the [release notes for 0.23.x](https://usethesource.io/rascal-0-23-x-release-notes)
+Release 24.x is a maintenance release. A lot of changes happened between 0.17.0 and 0.23.x, so if you have not looked here for a while, go to the [release notes for 0.23.x](/release-notes/rascal-0-23-x-release-notes)
 
 * ParseTree::parser and ParseTree::parsers now generate parsing closures that do not need a JVM lock to synchronize on the Evaluator anymore. 
 * Also both functions now capture the generated Class<?> instance instead of a handle to the grammar, for efficiency's sake
