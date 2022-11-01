@@ -62,6 +62,6 @@ UseTheSource is a collection of open-source projects related to [metaprogramming
 - Nick Lodewijks
 - Omar Duhaiby
 - Tianyu Liu
-
+- Ahmad Salim Al-Sibahi
 
 For the full list, please visit the [Github Org page](https://github.com/orgs/usethesource/people) and the Github Contributor pages, e.g. [Rascal Contributors](https://github.com/usethesource/rascal/graphs/contributors).
