@@ -18,7 +18,7 @@ List in abstract pattern.
 
 #### Description
 
-A list pattern matches a list value (the subject), provided that _Pat_₁, _Pat_₂, ..., _Pat_ₙ match the elements of that list in order. We've made Pat₃ a _Pattern-MultiVariable (broken link)_ to illustrate that those are to be expected often in list patterns.
+A list pattern matches a list value (the subject), provided that _Pat_₁, _Pat_₂, ..., _Pat_ₙ match the elements of that list in order. We've made Pat₃ a [MultiVariable](../../../Rascal/Patterns/MultiVariable/index.md) to illustrate that those are to be expected often in list patterns.
 
 Special cases exist when one of the patterns _Pat_ᵢ is
 

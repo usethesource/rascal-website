@@ -32,7 +32,7 @@ Label: for (Exp₁ , Exp₂, ..., Expₙ) {
 
 The for-statement executes _Statement_ for all possible combinations of values generated, and filtered, by the expressions _Exp_ᵢ.
 
-Some of the expressions can generate bindings ([Enumerator](../../../Rascal/Expressions/Comprehensions/Enumerator/index.md), <<Values,Boolean,Match>>), and some can filter them ([Values](../../../Rascal/Expressions/Values/index.md)). 
+Some of the expressions can generate bindings ([Enumerator](../../../Rascal/Expressions/Values/Boolean/Enumerator/index.md), <<Values,Boolean,Match>>), and some can filter them ([Values](../../../Rascal/Expressions/Values/index.md)). 
 The for loop will iterate over the cartesian product of all the generating expressions, and filter the combinations which fail the conditional expressions. 
 
 By default, the value of a for statement is the empty list. In general, 

@@ -20,7 +20,9 @@ Name ( Pat₁₂, ..., Pat₁ₙ, KeywordLabel₁ = Pat₂₂, ..., KeywordLabel
 
 #### Description
 
-A node pattern matches a node value or a datatype value, provided that _Name_ matches with the constructor symbol of that value and _Pat_₂, _Pat_₂, ..., _Pat_ₙ  match the children of that value in order. Any variables bound by nested patterns are available from left to right.
+A node pattern matches a [Node](../../../Rascal/Expressions/Values/Node/index.md) value or a [Constructor](../../../Rascal/Expressions/Values/Constructor/index.md) value, provided that _Name_ matches with the constructor symbol of that value and _Pat_₂, _Pat_₂, ..., _Pat_ₙ  match the children of that value in order. Any variables bound by nested patterns are available from left to right. 
+
+If _Name_ identifies a [Constructor](../../../Rascal/Expressions/Values/Constructor/index.md) of an [./algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md) then not only the name must match but also the arity and the declared types of the children of the constructor and its keyword parameters.
 
 The label of a node can also be a Pattern itself (Pat₁), in which case it must be of type `str`
 

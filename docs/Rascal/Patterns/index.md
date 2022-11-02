@@ -57,7 +57,7 @@ All these patterns may be used in:
 
 *  cases of a [Switch](../../Rascal/Statements/Switch/index.md) or [visit statements](../../Rascal/Statements/Visit/index.md) or [visit expressions](../../Rascal/Expressions/Visit/index.md), 
 *  on the left of the [Match](../../Rascal/Expressions/Values/Boolean/Match/index.md) operator (`:=`),
-*  on the left of the [Enumerator](../../Rascal/Expressions/Comprehensions/Enumerator/index.md) operator (`<-`), and
+*  on the left of the [Enumerator](../../Rascal/Expressions/Values/Boolean/Enumerator/index.md) operator (`<-`), and
 *  as formal parameters of [Function](../../Rascal/Declarations/Function/index.md)s. 
 *  [try catch](../../Rascal/Statements/TryCatch/index.md) statements to match thrown exceptions.
 

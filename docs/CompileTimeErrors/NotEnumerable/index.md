@@ -8,7 +8,7 @@ A value that cannot be enumerated is used in an enumerator.
 
 #### Description
 
-An [enumerator](../../Rascal/Expressions/Comprehensions/Enumerator/index.md) like `int n <- V` is used in 
+An [enumerator](../../Rascal/Expressions/Values/Boolean/Enumerator/index.md) like `int n <- V` is used in 
 [comprehensions](../../Rascal/Expressions/Comprehensions/index.md) to enumerate the values in `V`.
 This error is produced when `V` is a value that does not support enumeration.
 This is typically the case for atomic values like numbers, Booleans and Strings,

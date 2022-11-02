@@ -12,8 +12,10 @@ Declare an alias for a type.
 
 #### Syntax
 
-* `alias Name  = Type;`
-* `alias Name[&T1, ...] = Type;`
+```rascal
+alias Name  = Type;
+alias Name[&T1, ...] = Type
+```
 
 #### Description
 

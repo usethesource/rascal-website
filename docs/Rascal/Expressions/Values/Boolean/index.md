@@ -58,7 +58,7 @@ This behaviour is applicable in the context of all Rascal constructs where a pat
 
 *  Tests in [Any](../../../../Rascal/Expressions/Values/Boolean/Any/index.md) and [All](../../../../Rascal/Expressions/Values/Boolean/All/index.md) expressions.
 
-*  Tests and [Enumerator](../../../../Rascal/Expressions/Comprehensions/Enumerator/index.md)s in comprehensions.
+*  Tests and [Enumerator](../../../../Rascal/Expressions/Values/Boolean/Enumerator/index.md)s in comprehensions.
 
 *  Pattern matches in cases of a [Visit](../../../../Rascal/Expressions/Visit/index.md).
 
@@ -69,7 +69,9 @@ The following operators are provided for Boolean:
 * [All](../../../../Rascal/Expressions/Values/Boolean/All/index.md)
 * [And](../../../../Rascal/Expressions/Values/Boolean/And/index.md)
 * [Any](../../../../Rascal/Expressions/Values/Boolean/Any/index.md)
+* [Enumerator](../../../../Rascal/Expressions/Values/Boolean/Enumerator/index.md)
 * [Equivalence](../../../../Rascal/Expressions/Values/Boolean/Equivalence/index.md)
+* [Filter](../../../../Rascal/Expressions/Values/Boolean/Filter/index.md)
 * [IfDefinedElse](../../../../Rascal/Expressions/Values/Boolean/IfDefinedElse/index.md)
 * [Implication](../../../../Rascal/Expressions/Values/Boolean/Implication/index.md)
 * [IsDefined](../../../../Rascal/Expressions/Values/Boolean/IsDefined/index.md)

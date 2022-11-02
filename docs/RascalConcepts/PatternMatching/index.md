@@ -16,7 +16,7 @@ Pattern matching is _the_ mechanism for case distinction
 ([Switch](../../Rascal/Statements/Switch/index.md) statement) and search ([Visit](../../Rascal/Expressions/Visit/index.md) statement) in Rascal. 
 Patterns can also be used in an explicit match operator `:=` and can then be part of larger boolean expressions. 
 Since a pattern match may have more than one solution, local backtracking over the alternatives of a match is provided. 
-Patterns can also be used in [Enumerators](../../Rascal/Expressions/Comprehensions/Enumerator/index.md)s and control structures like 
+Patterns can also be used in [Enumerators](../../Rascal/Expressions/Values/Boolean/Enumerator/index.md)s and control structures like 
 [For](../../Rascal/Statements/For/index.md) and [While](../../Rascal/Statements/While/index.md) statement.
 
 A very rich pattern language is provided that includes string matching based on regular expressions, 

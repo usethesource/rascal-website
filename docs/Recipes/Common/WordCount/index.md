@@ -79,7 +79,7 @@ test bool tstWordCount6(str txt) {
 ```
 
                 
-* ❶  An [enumerator](../../../Rascal/Expressions/Comprehensions/Enumerator/index.md) is used to generated all the lines in the list of lines.
+* ❶  An [enumerator](../../../Rascal/Expressions/Values/Boolean/Enumerator/index.md) is used to generated all the lines in the list of lines.
 * ❷  The argument function `countInLine` is applied to count the number of words in each line.
 
 Let's now do some experiments using the [Jabberwocky](../../../Recipes/Common/WordCount/Jabberwocky/index.md) poem by Lewis Carrol as input.

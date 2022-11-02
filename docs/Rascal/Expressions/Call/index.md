@@ -1,9 +1,13 @@
 ---
 title: Call
 keywords:
+  - call
+  - call function
+  - constructor
+  - invoke
+  - invoke function
   - "("
   - ")"
-
 ---
 
 #### Synopsis
@@ -12,10 +16,20 @@ Functions and constructors can be called or invoked in a uniform style.
 
 #### Syntax
 
-* function call with positional parameters `Name ( Exp₁, Exp₂, ... )`
-* function call with keyword parameters `Name (Name₁ = Exp₁, Name₂ = Exp₂, ...)`
-* function call with both positional and keyword parameters `Name (Exp₁, Exp₂, ..., Name₁ = Exp₁, Name₂ = Exp₂, ...)`
-* function calls with computed functions `Exp ( Exp₁, Exp₂, ..., Name₁ = Exp₁, Name₂ = Exp₂, ...)` 
+Call with positional parameters:
+```rascal
+Name ( Exp₁, Exp₂, ... )
+```
+
+Call with keyword parameters:
+```rascal
+Name (Name₁ = Exp₁, Name₂ = Exp₂, ...)
+```
+
+Call with both positional and keyword parameters:
+```rascal
+Name (Exp₁, Exp₂, ..., Name₁ = Exp₁, Name₂ = Exp₂, ...)
+```
 
 #### Types
 
