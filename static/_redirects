@@ -6,3 +6,9 @@ http://www.rascal-mpl.org/help/ https://www.rascal-mpl.org/docs/GettingHelp/ 302
 
 https://www.rascal-mpl.org/start/ https://www.rascal-mpl.org/docs/GettingStarted/ 302!
 https://www.rascal-mpl.org/help/ https://www.rascal-mpl.org/docs/GettingHelp/ 302!
+
+# some rewrites for the different kinds of urls
+https://rascal-mpl.org/* https://www.rascal-mpl.org/:splat 301!
+https://rascalmpl.org/* https://www.rascal-mpl.org/:splat 301!
+https://www.rascalmpl.org/* https://www.rascal-mpl.org/:splat 301!
+https://new.rascal-mpl.org/* https://www.rascal-mpl.org/:splat 301!
