@@ -12,8 +12,26 @@ Conditional statement.
 
 #### Syntax
 
-*  `if ( Exp ) Statement;`
-*  `if ( Exp ) Statement₁ else Statement₂;`
+```rascal
+if (Exp)
+  Statement
+
+if (Exp) {
+  Statements
+}
+
+if (Exp) 
+  Statement₁ 
+else 
+  Statement₂
+
+if (Exp) {
+  Statements₁
+}
+else {
+  Statements₂
+}
+```
 
 #### Types
 
@@ -39,19 +57,51 @@ The value of an if-then-else statement is the value of the statement that was ex
 
 
 ```rascal-shell 
-rascal>if( 3 > 2 ) 30; else 40;
+rascal>if (3 > 2) {
+>>>>>>>  30; 
+>>>>>>>} else {
+>>>>>>>  40;
+>>>>>>>}
 int: 30
-rascal>x = if( 3 > 2 ) 30; else 40;
+rascal>x = if (3 > 2) {
+>>>>>>>  30; 
+>>>>>>>} else {
+>>>>>>>  40;
+>>>>>>>}
 int: 30
-rascal>if( 3 > 2 ) 30;
+rascal>if (3 > 2) 
+>>>>>>>  30;
 int: 30
 ```
 An if-then statement yields `void`  when its test is false
 (demonstrated by the __ok__ that is printed by the Rascal system):
 
 ```rascal-shell ,continue
-rascal>if( 2 > 3 ) 30;
+rascal>if( 2 > 3 ) 
+>>>>>>>  30;
 ok
 ```
 
+Here we use [Fail](../../../Rascal/Statements/Fail/index.md) to backtrack over the possible matches of the `if`:
+
+```rascal-shell 
+rascal>import IO;
+ok
+rascal>Label: if ([*_, 1, *_] := [1,2,1]) {
+>>>>>>>  println("yep"); 
+>>>>>>>  fail Label;
+>>>>>>>}
+yep
+yep
+ok
+```
+
+#### Benefits
+
+* backtracking is a powerful and easy way to search for solutions
+* nested if-then-else's are often not necessary with the `,` notation
+
+#### Pitfalls
+
+* backtracking does not _undo_ side-effects like `println`
 

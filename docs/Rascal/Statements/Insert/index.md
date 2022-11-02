@@ -11,7 +11,9 @@ Insert a value in a tree during a [Visit](../../../Rascal/Statements/Visit/index
 
 #### Syntax
 
-`insert Exp;`
+```rascal
+insert Exp;
+```
 
 #### Description
 

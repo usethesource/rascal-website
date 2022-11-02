@@ -102,6 +102,34 @@ str program =";
 ok
 ```
 If you follow this output line-by-line you will see that it
-is identical to the original source code of module `Quine`.
+is identical to the original source code of module `Quine`:
+
+
+```rascal 
+
+module demo::basic::Quine
+
+import IO;
+import String;
+
+void quine(){
+  println(program);      ❸  
+  println("\"" + escape(program, ("\"" : "\\\"", "\\" : "\\\\")) + "\";");      ❹  
+}
+
+str program =      ❶  
+"module demo::basic::Quine
+
+import IO;
+import String;
+
+void quine(){
+  println(program);
+  println(\"\\\"\" + escape(program, (\"\\\"\" : \"\\\\\\\"\", \"\\\\\" : \"\\\\\\\\\")) + \"\\\";\");
+}
+
+str program =";      ❷  
+
+```
 
 

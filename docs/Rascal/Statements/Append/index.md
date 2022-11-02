@@ -11,7 +11,11 @@ Append an element to the list value produced by various loop statements.
 
 #### Syntax
 
-`append Exp`
+```rascal
+append Exp
+
+append Label: Exp
+```
 
 #### Description
 
@@ -22,10 +26,34 @@ It appends the value of _Exp_ to the resulting list value of the loop construct 
 
 
 ```rascal-shell 
-rascal>for(int i <- [1..5]) append i*i;
+rascal>for(int i <- [1..5]) 
+>>>>>>>  append i*i;
 list[int]: [1,4,9,16]
-rascal>L = for(int i <- [1..5]) append i*i;
+rascal>L = for(int i <- [1..5]) 
+>>>>>>>  append i*i;
 list[int]: [1,4,9,16]
+rascal>
+rascal>OUTER:for (int i <-[1..5])
+>>>>>>>  for (int j <- [1..5])
+>>>>>>>    append OUTER: <i,j>;
+lrel[int,int]: [
+  <1,1>,
+  <1,2>,
+  <1,3>,
+  <1,4>,
+  <2,1>,
+  <2,2>,
+  <2,3>,
+  <2,4>,
+  <3,1>,
+  <3,2>,
+  <3,3>,
+  <3,4>,
+  <4,1>,
+  <4,2>,
+  <4,3>,
+  <4,4>
+]
 ```
 
 

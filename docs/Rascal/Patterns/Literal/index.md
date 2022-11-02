@@ -6,6 +6,15 @@ title: Literal Pattern
 
 Literal in abstract pattern.
 
+#### Syntax
+
+```rascal
+"string"
+123
+1.0
+|http://www.rascal-mpl.org|
+```
+
 #### Description
 
 A literal of one of the basic types [Boolean](../../../Rascal/Expressions/Values/Boolean/index.md), [Integer](../../../Rascal/Expressions/Values/Integer/index.md), [Real](../../../Rascal/Expressions/Values/Real/index.md), [Number](../../../Rascal/Expressions/Values/Number/index.md), [String](../../../Rascal/Expressions/Values/String/index.md), [Location](../../../Rascal/Expressions/Values/Location/index.md), or [DateTime](../../../Rascal/Expressions/Values/DateTime/index.md)

@@ -6,15 +6,16 @@ title: Variable Declaration Pattern
 
 Variable declaration in abstract pattern.
 
+#### Syntax
+
+```rascal
+Type Var
+```
+
 #### Description
 
-A variable declaration
-```rascal
-_Type_ _Var_
-```
-can be used as abstract pattern.
-A variable declaration introduces a new variable _Var_ that matches any value of the given type _Type_.
-That value is assigned to _Var_ when the whole match succeeds.
+A variable declaration can be used as abstract pattern.
+A variable declaration introduces a new variable _Var_ that matches any value of the given type _Type_ and nothing else. That value is assigned to _Var_ when the match succeeds.
 
 The scope of this variable is the outermost expression in which the pattern occurs
 or the enclosing [If](../../../Rascal/Statements/If/index.md), [While](../../../Rascal/Statements/While/index.md), or [Do](../../../Rascal/Statements/Do/index.md) if the pattern occurs in the test expression of those statements.
@@ -42,7 +43,7 @@ Let's explore how bindings work in an if statement:
 ```rascal-shell 
 rascal>import IO;
 ok
-rascal>if(str S := "abc")
+rascal>if (str S := "abc")
 >>>>>>>   println("Match succeeds, S == \"<S>\"");
 Match succeeds, S == "abc"
 ok

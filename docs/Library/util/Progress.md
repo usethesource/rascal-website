@@ -74,7 +74,7 @@ void (str): function(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library
 rascal>  while (n := arbInt(100), n != 1) {
 >>>>>>>    sp("<n>");
 >>>>>>>  }
- \ 13  | 23  / 61  - 72  \ 69  | 78  / 77  - 9  \ 38  | 60  / 77  - 96  \ 80  | 29  / 5  - 89  \ 2  | 8 
+ \ 84  | 16  / 83  - 84  \ 97  | 84  / 18  - 52  \ 5 
 list[void]: []
 ```
 

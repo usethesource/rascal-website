@@ -9,9 +9,15 @@ keywords:
 
 Typed, labelled, abstract pattern.
 
+#### Syntax
+
+```rascal
+Type Var : Pattern
+```
+
 #### Description
 
-A typed, labelled, pattern matches when the subject value has type _Type_ and _Pat_ matches. 
+A typed, labelled, pattern matches when the subject value has type _Type_ and _Pattern_ matches. 
 The matched value is assigned to _Var_.
 
 This construct is used for:

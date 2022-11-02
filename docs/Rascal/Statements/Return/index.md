@@ -11,12 +11,15 @@ Return a value as result of a [Function].
 
 #### Syntax
 
-*  `return;`
-*  `return Exp`
+```rascal
+return;
+
+return Exp;
+```
 
 #### Description
 
-A return statement comes in two variants: without and with an expression,
+A return statement comes in four variants: without and with an expression,
 both variants end the execution of the current function. 
 The first variant applies to functions with `void` as return type. 
 The second variants applies to non-void functions and returns the value of _Exp_ as result of the function invocation.
@@ -35,11 +38,14 @@ In each function with a return type that is void, a return statement is implicit
 
 
 ```rascal-shell 
-rascal>int twice(int n) { return 2 * n; }
-int (int): function(|prompt:///|(0,34,<1,0>,<1,34>))
+rascal>int twice(int n) { 
+>>>>>>>  return 2 * n; 
+>>>>>>>}
+int (int): function(|prompt:///|(0,38,<1,0>,<3,1>))
 rascal>twice(5);
 int: 10
 ```
+
 Functions that only return a value can be abbreviated (and the return is implicit):
 
 ```rascal-shell ,continue
@@ -47,6 +53,26 @@ rascal>int twiceb(int n) = 2 * n;
 int (int): function(|prompt:///|(0,26,<1,0>,<1,26>))
 rascal>twiceb(5);
 int: 10
+```
+
+Sometimes we return the result of a for loop or a visit:
+
+```rascal-shell 
+rascal>list[int] even1(int n) {
+>>>>>>>  return for (i <- [0..n + 1], i % 2 == 0) {
+>>>>>>>    append i;
+>>>>>>>  };
+>>>>>>>}
+list[int] (int): function(|prompt:///|(0,90,<1,0>,<5,1>))
+rascal>even1(10)
+list[int]: [0,2,4,6,8,10]
+```
+although that could be written easier using a comprehension
+```rascal-shell
+rascal>list[int] even2(int n) = [i | i <- [0..n+1], i %2 == 0];
+list[int] (int): function(|prompt:///|(0,56,<1,0>,<1,56>))
+rascal>even2(10);
+list[int]: [0,2,4,6,8,10]
 ```
 
 

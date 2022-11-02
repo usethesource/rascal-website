@@ -2,7 +2,9 @@
 title: MultiVariable Pattern
 keywords:
   - "*"
-
+  - multivariable
+  - multi-variable
+  - splice
 ---
 
 #### Synopsis
@@ -11,14 +13,16 @@ Multi-variable (also known as Splice-variable) in abstract pattern.
 
 #### Syntax
 
-*  `*Var`
-*  `*Type Var`
+```rascal
+* Var
+
+* Type Var
+```
 
 #### Description
 
-A multi-variable is an abbreviation for a variable declaration pattern.
-It can occur in a list pattern or set pattern and can match zero or more list or set elements.
-Optionally the *element type* of the multi-variable may be specified.
+A multi-variable as nested in a [List](../../../Rascal/Patterns/List/index.md) or [Set](../../../Rascal/Patterns/Set/index.md) pattern matches zero
+or more elements of said container. Optionally the *element type* of the multi-variable may be specified, in that case only elements that match the specific type are bound to the variable.
 
 #### Examples
 

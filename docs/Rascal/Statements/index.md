@@ -24,7 +24,6 @@ The following statements are available:
 * [Return](../../Rascal/Statements/Return/index.md)
 * [Solve](../../Rascal/Statements/Solve/index.md)
 * [Switch](../../Rascal/Statements/Switch/index.md)
-* [Test](../../Rascal/Statements/Test/index.md)
 * [Throw](../../Rascal/Statements/Throw/index.md)
 * [TryCatch](../../Rascal/Statements/TryCatch/index.md)
 * [Visit](../../Rascal/Statements/Visit/index.md)

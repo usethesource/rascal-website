@@ -9,11 +9,22 @@ keywords:
 
 End the execution of a while, do or for loop.
 
+#### Syntax
+
+```rascal
+break;
+
+break Label;
+```
+
 #### Description
 
 A `break` statement is only allowed inside the body of a [While](../../../Rascal/Statements/While/index.md), [Do](../../../Rascal/Statements/Do/index.md) or [For](../../../Rascal/Statements/For/index.md) statement
 and is associated with the innermost loop statement in which it is contained.
 Its effect is to end the execution of the loop.
+
+In case of nested loops, break can also fail to an outer loop if the loop is labeled with `Label`
+and the break as well.
 
 Also see [Continue](../../../Rascal/Statements/Continue/index.md) and [Fail](../../../Rascal/Statements/Fail/index.md).
 

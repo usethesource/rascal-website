@@ -107,17 +107,17 @@ i.e., the limit is exclusive.
 rascal>import util::Math;
 ok
 rascal>arbInt();
-int: 1967184432
+int: -297004541
 rascal>arbInt();
-int: -391499873
+int: -1488436435
 rascal>arbInt();
-int: -124490342
+int: -641211593
 rascal>arbInt(10);
-int: 2
+int: 7
 rascal>arbInt(10);
-int: 1
+int: 6
 rascal>arbInt(10);
-int: 8
+int: 0
 ```
 
 #### Benefits
@@ -144,11 +144,11 @@ Generates an arbitrary real value in the interval [0.0, 1.0].
 rascal>import util::Math;
 ok
 rascal>arbReal();
-real: 0.8717713373126553
+real: 0.5048304174251007
 rascal>arbReal();
-real: 0.6697065763370345
+real: 0.5764634939782373
 rascal>arbReal();
-real: 0.3700667978304658
+real: 0.07364332902706505
 ```
 
 ## function arbSeed {#util-Math-arbSeed}
@@ -183,17 +183,17 @@ Generate an arbitrary rational value.
 rascal>import util::Math;
 ok
 rascal>arbRat();
-rat: 483786468r1817033231
+rat: 291741632r43436179
 rascal>arbRat();
-rat: -74148079r26569069
+rat: -1506588021r631081853
 rascal>arbRat();
-rat: -51908989r980333419
+rat: 1027917917r2082745052
 rascal>arbRat(10,100);
-rat: 4r67
+rat: 4r9
 rascal>arbRat(10,100);
-rat: 7r78
+rat: 0r
 rascal>arbRat(10,100);
-rat: 1r47
+rat: 5r21
 ```
 
 ## function ceil {#util-Math-ceil}

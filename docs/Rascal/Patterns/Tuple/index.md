@@ -10,9 +10,15 @@ keywords:
 
 Tuple in abstract pattern.
 
+#### Syntax
+
+```rascal
+<Pat₁, ..., Patₙ>
+```
+
 #### Description
 
-A tuple pattern matches a tuple value, provided that _Pat_₁, _Pat_₂, ..., _Pat_ₙ  match the elements of that tuple in order.
+A tuple pattern matches a tuple value, provided that _Pat_₁, _Pat_₂, ..., _Pat_ₙ  match the elements of that tuple in order. Any variables bound by nested patterns are available from left to right.
 
 #### Examples
 

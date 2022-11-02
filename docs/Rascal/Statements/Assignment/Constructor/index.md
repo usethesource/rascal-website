@@ -7,7 +7,13 @@ keywords:
 
 #### Synopsis
 
-Assign to constructor.
+Assignment to a constructor shape is a destructuring bind.
+
+#### Syntax
+
+```rascal
+_Name_(_V_₁, _V_₂, ..., _V_ₙ) = _Exp_;
+```
 
 #### Description
 
@@ -30,4 +36,11 @@ rascal>I;
 int: 1000
 ```
 
+#### Benefits
+
+* Easy destructuring bind
+
+#### Pitfalls
+ 
+* If the expression does not match the constructor an exception is thrown
 

@@ -5,15 +5,20 @@ keywords:
 
 ---
 
-
-
 #### Synopsis
 
 While loop.
 
 #### Syntax
 
-`while ( Exp ) Statement;`
+```rascal
+while (Exp)
+  Statement
+
+while (Exp) {
+  Statements
+}
+```
 
 #### Description
 
@@ -34,7 +39,9 @@ rascal>import IO;
 ok
 rascal>int n = 3;
 int: 3
-rascal>while( n > 0 ) { println("n = <n>"); n -= 1; }
+rascal>while( n > 0 ) { 
+>>>>>>>  println("n = <n>"); n -= 1; 
+>>>>>>>}
 n = 3
 n = 2
 n = 1
@@ -45,15 +52,17 @@ Now build a list result using the `append` statement:
 ```rascal-shell ,continue
 rascal>n = 3;
 int: 3
-rascal>while (n > 0) { append n * n; n -= 1; }
+rascal>while (n > 0) { 
+>>>>>>>  append n * n; n -= 1; 
+>>>>>>>}
 list[int]: [9,4,1]
 ```
 
 Just to be sure, a [Comprehension](../../../Rascal/Expressions/Values/List/Comprehension/index.md) is the superior way to write this:
 
 ```rascal-shell 
-rascal>[n * n | n <- [3 .. 1]];
-list[int]: [9,4]
+rascal>[n * n | n <- [3 .. 0]];
+list[int]: [9,4,1]
 ```
 
 

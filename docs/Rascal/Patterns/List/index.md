@@ -10,18 +10,21 @@ keywords:
 
 List in abstract pattern.
 
+#### Syntax
+
+```rascal
+[Pat₁, Pat₂, * Pat₃, ..., Patₙ]
+```
+
 #### Description
 
-A list pattern matches a list value (the subject), provided that _Pat_₁, _Pat_₂, ..., _Pat_ₙ match the elements of that list in order. 
+A list pattern matches a list value (the subject), provided that _Pat_₁, _Pat_₂, ..., _Pat_ₙ match the elements of that list in order. We've made Pat₃ a _Pattern-MultiVariable (broken link)_ to illustrate that those are to be expected often in list patterns.
+
 Special cases exist when one of the patterns _Pat_ᵢ is
 
-*  a [Variable](../../../Rascal/Patterns/Variable/index.md) with a type that is identical to the element type of the subject list: the variable is matched with the value at the corresponding position in the subject list.
+*  a [MultiVariable](../../../Rascal/Patterns/MultiVariable/index.md), with an optional element type that is an arbitrary sub-type of the element type of the subject list: list matching is applied and the variable can match an arbitrary number of elements of the subject list.
 
-*  a [MultiVariable](../../../Rascal/Patterns/MultiVariable/index.md), with an optional element type that is identical to the element type of the subject list: list matching is applied and the variable can match an arbitrary number of elements of the subject list.
-
-*  a [Variable](../../../Rascal/Patterns/Variable/index.md), where the variable has been declared with a list type, but not initialized, outside the pattern: list matching is applied and the variable can match an arbitrary number of elements of the subject list.
-
-*  a [Variable](../../../Rascal/Patterns/Variable/index.md), where the variable has been declared with a type equal to the element type of the subject, but not initialized, outside the pattern: the variable is matched with the value at the corresponding position in the subject list.
+*  a [Variable](../../../Rascal/Patterns/Variable/index.md), where the variable has been declared with a subtype of the element type of the subject, but not initialized, outside the pattern: the variable is matched with the value at the corresponding position in the subject list. And the type of the element is checked to match the declared type of the variable.
 
 
 #### Examples

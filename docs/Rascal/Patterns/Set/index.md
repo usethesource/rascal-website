@@ -10,21 +10,22 @@ keywords:
 
 Set in abstract pattern.
 
+#### Syntax
+
+```rascal
+{Pat₁, Pat₂, * Pat₃, ..., Patₙ}
+```
+
 #### Description
 
 A set pattern matches a set value (the subject), provided that _Pat_₁, _Pat_₂, ..., _Pat_ₙ match the elements of that set in *any* order
 (recall that the elements of a set are unordered and do not contain duplicates).
+
 Completely analogous to list patterns, there are special cases when one of the patterns _Pat_ᵢ is
 
-*  a [VariableDeclaration](../../../Rascal/Patterns/VariableDeclaration/index.md) with a type that is identical to the element type of the subject set: the variable is matched with one value  in the subject set.
+*  a [MultiVariable](../../../Rascal/Patterns/MultiVariable/index.md), with an optional element type that is an arbitrary sub-type of the element type of the subject set: set matching is applied and the variable can match an arbitrary number of elements of the subject set.
 
-*  a [MultiVariable](../../../Rascal/Patterns/MultiVariable/index.md), with an optional element type that is identical to the element type of the subject set: set matching is applied and the variable can match an arbitrary number (in arbitrary order) of elements of the subject set.
-
-*  a [Variable](../../../Rascal/Patterns/Variable/index.md), where the variable has been declared with a set type, but not initialized, outside the pattern: set matching is applied and the variable can match an arbitrary number (in arbitrary order) of elements of the subject set.
-
-*  a [Variable](../../../Rascal/Patterns/Variable/index.md), where the variable has been declared with a type equal to the element type of the subject, but not initialized, outside the pattern: the variable is matched with one value in the subject set.
-
-
+*  a [Variable](../../../Rascal/Patterns/Variable/index.md), where the variable has been declared with a subtype of the element type of the subject, but not initialized, outside the pattern: the variable is matched with the value at the corresponding element in the subject set. And the type of the element is checked to match the declared type of the variable.
 
 
 #### Examples
