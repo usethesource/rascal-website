@@ -359,9 +359,9 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-str: ""
+str: "y"
 rascal>arbString(10);
-str: "8827238136562"
+str: ""
 ```
 
 ## function left {#String-left}

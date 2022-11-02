@@ -47,7 +47,9 @@ ok
 rascal>characters = {"Sneezy", "Sleepy", "Dopey", "Doc", "Happy", "Bashful", "Grumpy"};
 set[str]: {"Happy","Sleepy","Bashful","Grumpy","Doc","Dopey","Sneezy"}
 rascal>serve(table(characters * characters));
-Serving '*static content*' at |http://localhost:9050/|
+```
+![image](/assets/Library/demo/vis/StaticSite_screenshot_22.png)
+```rascal-shell
 ```
 
 To get this effect we used the following library modules:
