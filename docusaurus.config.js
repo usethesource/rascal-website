@@ -9,7 +9,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 const config = {
   title: 'The Rascal Meta Programming Language',
   tagline: 'The one-stop shop for metaprogramming',
-  url: 'https://rascal-mpl.org',
+  url: 'https://www.rascal-mpl.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -57,6 +57,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {name: 'description', content: 'The Rascal Meta Programming Language - The one-stop shop for metaprogramming'},
+        {name: 'keywords', content: 'rascal, metaprogramming, programming, dsl, compiler, code analysis'}
+      ],
       navbar: {
         title: 'The Rascal Meta Programming Language',
         logo: {
@@ -143,21 +147,21 @@ const config = {
 
       algolia: {
         // The application ID provided by Algolia
-        appId: 'FKSZQR9CR0',
+        appId: '7K16S5598L',
   
         // Public API key: it is safe to commit it
-        apiKey: '1f28a823d399f1a470a0f8bb027528ac',
+        apiKey: '01ef0adfc1b9c3598a0c9153042d63e5',
   
-        indexName: 'rascal_web',
+        indexName: 'rascal',
   
         // Optional: see doc section below
         contextualSearch: true,
   
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: 'external\\.com|domain\\.com',
+        // externalUrlRegex: 'external\\.com|domain\\.com',
   
         // Optional: Algolia search parameters
-        searchParameters: {},
+        // searchParameters: {},
   
         // Optional: path for search page that enabled by default (`false` to disable it)
         searchPagePath: 'search',
