@@ -6,6 +6,17 @@ title: Operators
 
 The Rascal operators.
 
+#### Syntax
+
+Some example operators:
+
+```rascal
+Exp + Exp
+Exp [ Exp ]
+! Exp
+Exp in Exp
+```
+
 #### Description
 
 An _operator expression_ consists of an operator and one or more operands. The evaluation order of the operands depends on the operator. 
@@ -22,8 +33,8 @@ to lowest precedence. In other words, operators listed earlier in the table bind
 |              | [DateTime fields](../../../Rascal/Expressions/Values/DateTime/FieldSelection/index.md) |
 |              | [Tuple fields](../../../Rascal/Expressions/Values/Tuple/FieldSelection/index.md)  |
 |              | [Relation columns](../../../Rascal/Expressions/Values/Relation/FieldSelection/index.md) |
-| `Exp₁ [ Name = Exp₂ ]` |  [field assignment](../../../Rascal/Expressions/Operators/FieldAssignment/index.md)   |  Change value of named field of structured value |
-| `Exp < field₁, ... >` | [field projection](../../../Rascal/Expressions/Operators/FieldProjection/index.md) |  Select fields from relation or structured value |
+| `Exp₁ [ Name = Exp₂ ]` |  [FieldAssignment](../../../Rascal/Expressions/Values/Node/FieldAssignment/index.md) [FieldAssignment](../../../Rascal/Expressions/Values/Constructor/FieldAssignment/index.md) [FieldAssignment](../../../Rascal/Expressions/Values/Tuple/FieldAssignment/index.md)  |  Change value of named field of structured value |
+| `Exp < field₁, ... >` | [FieldProjection](../../../Rascal/Expressions/Values/Relation/FieldProjection/index.md), [FieldProjection](../../../Rascal/Expressions/Values/Tuple/FieldProjection/index.md) |  Select fields from relation or structured value |
 | `Exp is Name` |                        | Check if `Exp` has name `Name` |
 |               | [parse tree](../../../Library/ParseTree.md), |
 |               | [ConcreteSyntax](../../../Rascal/Expressions/ConcreteSyntax/index.md), |

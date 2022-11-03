@@ -39,6 +39,8 @@ where _T_₁, _T_₂, ... are arbitrary types and _L_₁, _L_₂, ... are option
 The following operators are provided for tuples:
 * [Concatenation](../../../../Rascal/Expressions/Values/Tuple/Concatenation/index.md)
 * [Equal](../../../../Rascal/Expressions/Values/Tuple/Equal/index.md)
+* [FieldAssignment](../../../../Rascal/Expressions/Values/Tuple/FieldAssignment/index.md)
+* [FieldProjection](../../../../Rascal/Expressions/Values/Tuple/FieldProjection/index.md)
 * [FieldSelection](../../../../Rascal/Expressions/Values/Tuple/FieldSelection/index.md)
 * [GreaterThan](../../../../Rascal/Expressions/Values/Tuple/GreaterThan/index.md)
 * [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/Tuple/GreaterThanOrEqual/index.md)

@@ -43,6 +43,7 @@ Since relations are a form of set all operations (see [Set](../../../../Rascal/E
 The following additional operators are provided for relations:
 * [CartesianProduct](../../../../Rascal/Expressions/Values/Relation/CartesianProduct/index.md)
 * [Composition](../../../../Rascal/Expressions/Values/Relation/Composition/index.md)
+* [FieldProjection](../../../../Rascal/Expressions/Values/Relation/FieldProjection/index.md)
 * [FieldSelection](../../../../Rascal/Expressions/Values/Relation/FieldSelection/index.md)
 * [Join](../../../../Rascal/Expressions/Values/Relation/Join/index.md)
 * [ReflexiveTransitiveClosure](../../../../Rascal/Expressions/Values/Relation/ReflexiveTransitiveClosure/index.md)

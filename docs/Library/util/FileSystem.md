@@ -33,8 +33,3 @@ data FileSystem
 
 * ``set[loc] visibleFiles(loc l)``
 
-
-#### Synopsis
-
-lists all files recursively ignored files and directories starting with a dot.
-

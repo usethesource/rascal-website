@@ -13,21 +13,33 @@ Declare a module.
 #### Syntax
 
 ```rascal
-module _Name_
-_Imports_;
-_Declaration₁_;
+module Package::Name      ❶  
+
+Import₁      ❷  
+Extend₁ 
 ...
-_Declarationₙ_;
+Importₙ
+Extendₙ
+
+SyntaxDefinition₁      ❸  
+...
+SyntaxDefinition₂
+
+Declaration₁      ❹  
+...
+Declarationₙ
 ```
 
 #### Description
 
 A module declaration consists of:
 
-*  A module name.
-*  Zero or more imports;
-*  Zero or more declarations.
+* ❶   A module name consisting of `::`-separated package names followed by `::Name`
+* ❷  Zero or more [Import](../../../Rascal/Declarations/Import/index.md)s or [Extend](../../../Rascal/Declarations/Extend/index.md)s
+* ❸  Zero or more [syntax definition](../../../Rascal/Declarations/SyntaxDefinition/index.md)s
+* ❹  Zero or more declarations of [Variable](../../../Rascal/Declarations/Variable/index.md)s, [./Function](../../../Rascal/Declarations/Function/index.md)s or [./algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md)s
 
+The [Import](../../../Rascal/Declarations/Import/index.md), [Extend](../../../Rascal/Declarations/Extend/index.md) and [syntax definition](../../../Rascal/Declarations/SyntaxDefinition/index.md) are positioned at the top of the module because they are used internally to generate parsers for the [./concrete syntax](../../../Rascal/Expressions/ConcreteSyntax/index.md), [Patterns](../../../Rascal/Patterns/index.md) and [Expressions](../../../Rascal/Expressions/index.md) used in [Variable](../../../Rascal/Declarations/Variable/index.md)s, [./Function](../../../Rascal/Declarations/Function/index.md)s and [./algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md)s.
 
 The module name _Name_ will be used when the current module is imported in another module. 
 A module name is in general a qualified name of the form:

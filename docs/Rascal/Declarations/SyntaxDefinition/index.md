@@ -9,7 +9,10 @@ keywords:
   - left
   - right
   - non-assoc
-
+  - grammar
+  - context-free grammar
+  - scanner
+  - regular expressions
 sidebar_position: 7
 ---
 
@@ -19,22 +22,42 @@ Syntax Definitions allow the definition of parsers for programming languages, do
 
 #### Syntax
 
-*  `Start syntax Nonterminal = Alternatives;`
-*  `lexical Nonterminal = Alternatives;`
-*  `layout Nonterminal = Alternatives;`
-*  `keyword Nonterminal = Alternatives;`
+```rascal
+start syntax Nonterminal = Alternatives;
 
+lexical Nonterminal = Alternatives;
+
+layout Nonterminal = Alternatives;
+
+keyword Nonterminal = Alternatives;
+```
 
 where _Start_ is either `start` or nothing, and _Alternatives_ are one of:
 
-*  `Tags Associativity Symbols`
-*  `Tags Associativity Name : Symbols`
-*  `Associativity ( Alternatives )`
-*  `Alternatives₁ | Alternatives₂`  
-*  `Alternatives₁ > Alternatives₂`  
+```rascal
+Tags           Symbols         
+Tags left      Symbols               ❶  
+Tags right     Symbols               ❶  
+Tags non-assoc Symbols               ❶  
+Tags left      Name : Symbols        ❷  
+Tags right     Name : Symbols        ❷  
+Tags non-assoc Name : Symbols        ❷  
+left      ( Alternatives )           ❸  
+right     ( Alternatives )           ❸  
+non-assoc ( Alternatives )           ❸  
 
+Alternatives₁ | Alternatives₂        ❹  
 
-where _Associativity_ is nothing, or one of `assoc`, `left`, `right` or `non-assoc`, and _Tags_ are a possibly empty list of tags.
+Alternatives₁ > Alternatives₂        ❺  
+```
+
+Here _Associativity_ is nothing, or one of `assoc`, `left`, `right` or `non-assoc`, and _Tags_ are a possibly empty list of [Tag](../../../Rascal/Declarations/Tag/index.md)s.
+
+* ❶  for binary recursive expression operators, [./Associativity](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Associativity/index.md) disambiguates and chooses binding to the `left`, `right`, or `non-assoc` (demanding brackets)
+* ❷  a `Name` provides the algebraic constructor name for an abstract syntax definition derived from this grammar
+* ❸  an [./Associativity](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Associativity/index.md) group is not only a short-hand, but also derives the cross product associativity rule between all members of the group.
+* ❹  this is the normal BNF-like rule alternative combinator
+* ❺  this defines a transitively closed [Priority](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority/index.md) relation for all left- or right-recursive binary or unary expression operators (see [Priority](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/Priority/index.md) )
 
 #### Description
 

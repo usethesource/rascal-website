@@ -31,6 +31,8 @@ Values of type `node` represent untyped trees and are constructed as follows:
 
 The following are provided for nodes:
 * [Equal](../../../../Rascal/Expressions/Values/Node/Equal/index.md)
+* [FieldAssignment](../../../../Rascal/Expressions/Values/Node/FieldAssignment/index.md)
+* [FieldSelection](../../../../Rascal/Expressions/Values/Node/FieldSelection/index.md)
 * [GreaterThan](../../../../Rascal/Expressions/Values/Node/GreaterThan/index.md)
 * [GreaterThanOrEqual](../../../../Rascal/Expressions/Values/Node/GreaterThanOrEqual/index.md)
 * [LessThan](../../../../Rascal/Expressions/Values/Node/LessThan/index.md)
