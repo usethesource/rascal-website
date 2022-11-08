@@ -10,7 +10,7 @@ In this post we report on the Rascal release 0.26.x
 
 ## Release 0.26.5 - November 8, 2022
 
-* the documentation compiler, a.k.a. course compiler, a.k.a. tutor, was separated into its own top-level project called [rascal-tutor](github.com/usethesource/rascal-tutor) 
+* the documentation compiler, a.k.a. course compiler, a.k.a. tutor, was separated into its own top-level project called [rascal-tutor](https://www.github.com/usethesource/rascal-tutor) 
 * 80% of the documentation was reviewed and fixed
    * ported from asciidoctor to Docusaurus markdown 
    * using new features of the new tutor compiler 
