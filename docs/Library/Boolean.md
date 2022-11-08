@@ -42,11 +42,11 @@ Return an arbitrary Boolean value.
 rascal>import Boolean;
 ok
 rascal>arbBool();
-bool: true
-rascal>arbBool();
 bool: false
 rascal>arbBool();
 bool: true
+rascal>arbBool();
+bool: false
 ```
 
 #### Benefits

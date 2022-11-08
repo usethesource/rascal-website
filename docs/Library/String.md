@@ -396,7 +396,7 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-str: "6561"
+str: ""
 rascal>arbString(10);
 str: ""
 ```

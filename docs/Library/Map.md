@@ -166,7 +166,7 @@ str: "pineapple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "pear"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "pineapple"
+str: "pear"
 ```
 
 ## function invert {#Map-invert}
