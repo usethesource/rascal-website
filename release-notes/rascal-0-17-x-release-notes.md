@@ -1,7 +1,7 @@
 ---
 authors: [jvinju, pklint]
 title: "Rascal 0.17.x release notes"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 In this post we report on the Rascal release 0.17.x, which includes all changes since the 0.16.x releases. 
