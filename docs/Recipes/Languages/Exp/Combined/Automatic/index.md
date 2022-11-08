@@ -232,8 +232,8 @@ Exp load(str txt) = implode(#Exp, parseExp(txt));
 Notes:
 
 * ❶  We also need the `parse` function, as defined above.
-* ❷  We also need the abstract syntax as already defined earlier in [Exp/Abstract].
-* ❸  We need [Rascal:ParseTree] since it provides the [Rascal:implode] function.
+* ❷  We also need the abstract syntax as already defined earlier in [./Abstract](../../../../../Recipes/Languages/Exp/Abstract/index.md).
+* ❸  We need [parse tree](../../../../../Library/ParseTree.md) since it provides the [implode](../../../../../Library/ParseTree.md#ParseTree-implode) function.
 
 
 Let's try it:

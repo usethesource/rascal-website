@@ -39,8 +39,8 @@ in the type lattice.
 
 The Rascal type system has various advanced features that are described separately:
 
-*  Types may be be _parameterized_ resulting in very general and reusable types, see [Type Parameters].
-*  Declarations of [Function]s and [AlgebraicDataType]s may be parameterized and [Type Constraints] can be used to define
+*  Types may be be _parameterized_ resulting in very general and reusable types, see [Type Parameters](../../../Rascal/Declarations/StaticTyping/TypeParameters/index.md).
+*  Declarations of [./Function](../../../Rascal/Declarations/Function/index.md)s and [./algebraic data type](../../../Rascal/Declarations/AlgebraicDataType/index.md)s may be parameterized and [Type Constraints](../../../Rascal/Declarations/StaticTyping/TypeConstraints/index.md) can be used to define
    constraints on the actual type to be used.
 *  The formal arguments of functions are bound to _values_ but in exceptional cases
   a function may need a type as argument value, [ReifiedTypes](../../../Rascal/Expressions/Values/ReifiedTypes/index.md) make this possible.

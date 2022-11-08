@@ -17,7 +17,7 @@ Index is out of bounds.
 #### Description
 
 Subscription is possible on various ordered types, including [list](../../../Rascal/Expressions/Values/List/Subscription/index.md),
-link:{RascaLangl}#Tuple-Subscription[tuple], and
+[tuple](../../../Rascal/Expressions/Values/Tuple/Subscription/index.md), and
 [node](../../../Rascal/Expressions/Values/Node/Subscription/index.md).
 This error is generated when a subscript is out of bounds for the value that is being subscripted.
 

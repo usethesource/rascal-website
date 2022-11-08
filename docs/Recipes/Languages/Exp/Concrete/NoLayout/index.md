@@ -65,7 +65,7 @@ test bool tstEval4() = eval("3+4*5") == 23;
 
 Notes:
 
-* ❶  We import [Rascal:ParseTree] because we will need the `parse` function below.
+* ❶  We import [parse tree](../../../../../Library/ParseTree.md) because we will need the `parse` function below.
 * ❷  The main function `eval` that evaluates an expression as string to an integer. It proceeds in two steps:
     *  `parse(#Exp, txt)` parses the given `txt` according to non-terminal `Exp` as defined by the grammar.
         The result is a parse tree.

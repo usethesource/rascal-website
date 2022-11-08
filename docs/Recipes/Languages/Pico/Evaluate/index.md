@@ -102,7 +102,7 @@ alias VENV = map[PicoId, PicoValue];      ❷
 Notes:
 
 * ❶  First we introduce a data type `PicoValue` that wraps all possible values that can occur at run-time.
-* ❷  Compared to [Pico/Typecheck], we use `VENV`, a value environment (a map from Pico identifiers to Pico values).
+* ❷  Compared to [Typecheck](../../../../Recipes/Languages/Pico/Typecheck/index.md), we use `VENV`, a value environment (a map from Pico identifiers to Pico values).
 * ❸    The actual evaluator consists of the functions `evalExp`, `evalStat`, `evalStats`, `evalDecls` and `evalProgram`.
     They are written in a similar style as the typechecker.
 * ❹   `evalProgram` evaluates a given Pico program.

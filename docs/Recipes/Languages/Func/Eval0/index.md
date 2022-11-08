@@ -85,7 +85,7 @@ Some points to note:
 
 * ❶  `PEnv` is used as an alias for a map from names to functions. Such maps are used to represent the function definitions in the program.
 * ❷  Here the top level interpreter `eval0` is defined. It takes the name of the main function, a list of actual parameters, and the complete Func program. Binding of variables is done by substitution.
-* ❸  The substitution function is defined. It takes an expression, a list of variables, and a list of integer values to be substituted for them. Note how a [Rascal:Visit] is used to find all the variables in the expression and to replace them.
+* ❸  The substitution function is defined. It takes an expression, a list of variables, and a list of integer values to be substituted for them. Note how a [Visit](../../../../Rascal/Statements/Visit/index.md) is used to find all the variables in the expression and to replace them.
 * ❹  The versions of `eval0` for each implemented construct. They all have a `PEnv` argument that is needed
     to resolve calls.
 * ❺  The if expression is defined: the then-branch is taken when the test evaluates to a non-zero integer.

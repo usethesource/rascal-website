@@ -217,11 +217,11 @@ Get an arbitrary element from a list. See [takeOneFrom](../Library/List.md#List-
 rascal>import List;
 ok
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "owl"
-rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "snake"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "owl"
+str: "zebra"
+rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
+str: "snake"
 ```
 
 ## function getFirstFrom {#List-getFirstFrom}
@@ -944,7 +944,7 @@ list[str]: ["mango","strawberry","pear","pineapple","banana","grape","kiwi"]
 rascal>sort(fruits);
 list[str]: ["banana","grape","kiwi","mango","pear","pineapple","strawberry"]
 rascal>sort(fruits, bool(str a, str b){ return size(a) > size(b); });
-list[str]: ["strawberry","pineapple","banana","mango","grape","pear","kiwi"]
+list[str]: ["strawberry","pineapple","banana","mango","grape","kiwi","pear"]
 ```
 
 ## function isSorted {#List-isSorted}
@@ -984,9 +984,9 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [4,3,1,2]
+list[int]: [1,3,2,4]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["owl","elephant","snake","zebra"]
+list[str]: ["snake","owl","zebra","elephant"]
 ```
 
 ## function split {#List-split}
@@ -1140,11 +1140,11 @@ See [getOneFrom](../Library/List.md#List-getOneFrom) to only selected an element
 rascal>import List;
 ok
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <20,[10,30,40,50]>
-rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <40,[10,20,30,50]>
+tuple[int,list[int]]: <30,[10,20,40,50]>
 rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <20,[10,30,40,50]>
+rascal>takeOneFrom([10,20,30,40,50]);
+tuple[int,list[int]]: <50,[10,20,30,40]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);

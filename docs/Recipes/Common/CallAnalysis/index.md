@@ -47,7 +47,7 @@ rascal>alias Proc = str;
 ok
 ```
 Next, we have to represent the call relation as a Rascal datatype, and the relation is the most appropriate for it.
-As preparation, we also import the libraries [$Rascal:Prelude/Set], [$Rascal:Prelude/Relation] and [$Rascal:Libraries/analysis/graphs/Graph] that will come in handy.
+As preparation, we also import the libraries [Set](../../../Library/Set.md), [Relation](../../../Library/Relation.md) and [Graph](../../../Library/analysis/graphs/Graph.md) that will come in handy.
 
 ```rascal-shell ,continue
 rascal>rel[Proc, Proc] Calls = {<"a", "b">, <"b", "c">, <"b", "d">, <"d", "c">, 
@@ -66,7 +66,7 @@ rel[str,str]: {
 Now we are in a good position to start asking some questions.
 
 __How many calls occur in this system?__
-We use the function [Rascal:Set/size] to determine the number of elements in a set or relation.
+We use the function [size](../../../Library/Set.md#Set-size) to determine the number of elements in a set or relation.
 Since each tuple in the `Calls` relation represents a call between procedures, the number of tuples is equal
 to the number of calls.
 
@@ -76,7 +76,7 @@ int: 8
 ```
 __How many procedures occur in this system?__ This question is more subtle, since a procedure may call (or be called) by
 several others and the number of tuples is therefore not indicative. What we need are the set of procedures that
-occur (as first or second element) in _any_ tuple. This is precisely what the function [$Rascal:Libraries/Prelude/Relation/carrier] gives us:
+occur (as first or second element) in _any_ tuple. This is precisely what the function [carrier](../../../Library/Relation.md#Relation-carrier) gives us:
 
 ```rascal-shell ,continue
 rascal>carrier(Calls);
@@ -88,7 +88,7 @@ and computing the number of procedures is now easy:
 rascal>size(carrier(Calls));
 int: 7
 ```
-As an aside, functions [$Rascal:Prelude/Relation/domain] and [$Rascal:Prelude/Relation/range] do the same for the first, respectively, second element of the pairs in a relation:
+As an aside, functions [domain](../../../Library/Relation.md#Relation-domain) and [range](../../../Library/Relation.md#Relation-range) do the same for the first, respectively, second element of the pairs in a relation:
 
 ```rascal-shell ,continue
 rascal>domain(Calls);
@@ -102,7 +102,7 @@ The next step in the analysis is to determine which entry points this applicatio
 not called themselves. Entry points are useful since they define the external interface of a system and may also be used as guidance to
 split a system in parts. The top of a relation contains those left-hand sides of tuples in a relation that do not occur in any 
 right-hand side. When a relation is viewed as a graph, its top corresponds to the root nodes of that graph. Similarly, the bottom of a 
-relation corresponds to the leaf nodes of the graph. See the section called  [$Rascal:Libraries/analysis/graphs/Graph] for more details. Using this knowledge, the entry
+relation corresponds to the leaf nodes of the graph. See the module called  [Graph](../../../Library/analysis/graphs/Graph.md) for more details. Using this knowledge, the entry
 points can be computed by determining the top of the Calls relation:
 
 ```rascal-shell ,continue
@@ -161,7 +161,7 @@ Finally, we can determine which procedures are called from both entry points by 
 rascal>calledFromA & calledFromF;
 set[str]: {"e"}
 ```
-or if your prefer to write all of the above as a one-liner using a [$Rascal:Expressions/Reducer] expression:
+or if your prefer to write all of the above as a one-liner using a [Reducer](../../../Rascal/Expressions/Reducer/index.md) expression:
 
 ```rascal-shell ,continue
 rascal>(carrier(Calls) | it & (Calls+)[p] | p <- top(Calls));

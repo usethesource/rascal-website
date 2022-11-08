@@ -112,7 +112,7 @@ Notes:
 * ❶  We introduce `Instrs` as an alias for a list of assembly language instructions.
 * ❷  The compiler consists of the functions `compileExp`, `compileStat`, `compileStats`, `compileDecls` and `compileProgram`.
     They all have a program fragment as argument and return the corresponding list of instructions.
-* ❸  When compiling expressions, note how _list splicing_ (see [Rascal:Values/List]) is used to insert the instructions that are generated for the operands of an operator into the list of instructions for the whole expression.
+* ❸  When compiling expressions, note how _list splicing_ (see [List](../../../../Rascal/Expressions/Values/List/index.md)) is used to insert the instructions that are generated for the operands of an operator into the list of instructions for the whole expression.
 * ❹  In order to conveniently write code generators for statements, we introduce a unique label generator. The global variable `nLabel` contains
     the index of the last generated label and `nextLabel` uses this to generate a new, unique label.
 * ❺  Consider code generation for an if-the-else statement:

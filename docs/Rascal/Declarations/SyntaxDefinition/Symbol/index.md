@@ -119,7 +119,7 @@ When you use a literal such as `"begin"`, Rascal will produce a definition for i
 
 Character classes have the same escaping conventions as characters in a [String](../../../../Rascal/Expressions/Values/String/index.md) literal, but spaces and newlines are meaningless and have to be escaped and the `[` and `]` brackets as well as the dash `-` need escaping. For example, one writes `[\[ \] \ \n\-]` for a class that includes the open and close square brackets and a space, a newline and a dash. Character classes support ranges as in `[a-zA-Z0-9]`. Please note about character classes that:
 
-*  the operations on character classes are executed before parser generation time. You will not find explicit representation of these operations in [ParseTrees], but rather their net effect as resulting character classes. 
+*  the operations on character classes are executed before parser generation time. You will not find explicit representation of these operations in [parse tree](../../../../Library/ParseTree.md), but rather their net effect as resulting character classes. 
 *  Character classes are also ordered by Rascal and overlapping ranges are merged before parsers are generated. Equality between character classes is checked after this canonicalization.
 *  Although all [./Symbol](../../../../Rascal/Declarations/SyntaxDefinition/Symbol/index.md)s are type constructors, the character class operators are not allowed in types.
 
@@ -190,6 +190,6 @@ syntax Declaration = ("public" | "private" | "static" | "final")* Type Id "(" {(
 
 *  By nesting too many symbols definitions can be become hard to understand. 
 *  By nesting too many symbols pattern matching and term construction becomes more complex. Extra non-terminals and rules with meaningful names can make a language specification more manageable. 
-*  The lack of automatic longest match and prefer keyword heuristics (you have to define it yourself), sometimes leads to unexpected ambiguity. See [Disambiguation].
+*  The lack of automatic longest match and prefer keyword heuristics (you have to define it yourself), sometimes leads to unexpected ambiguity. See [Disambiguation](../../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/index.md).
 
 

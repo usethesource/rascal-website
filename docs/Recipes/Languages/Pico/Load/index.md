@@ -34,7 +34,7 @@ see [RuntimeException](../../../../Library/Exception.md).
    * We use `#start[Program]` instead of directly `#Program` because the automatic `start` rule accepts whitespace before and after the program. See [reified types](../../../../Rascal/Expressions/Values/ReifiedTypes/index.md) for more information about reifying types and grammars.
    & The `parse` function returns a [parse tree](../../../../Rascalopedia/ParseTree/index.md) of the input program.
 
-* ❸   `implode(#PROGRAM, parse(#Program, txt))`: transform the parse returned by `parse` into an abstract syntax tree of type `PROGRAM`. The [$Rascal:implode] function performs the automatic mapping between elements in the parse tree and their counterpart in the abstract syntax.
+* ❸   `implode(#PROGRAM, parse(#Program, txt))`: transform the parse returned by `parse` into an abstract syntax tree of type `PROGRAM`. The [implode](../../../../Library/ParseTree.md#ParseTree-implode) function performs the automatic mapping between elements in the parse tree and their counterpart in the abstract syntax.
 
 
 The function `load` can be used as follows:

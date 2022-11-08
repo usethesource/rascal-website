@@ -16,7 +16,7 @@ We consistently use [Locations](../../Rascal/Expressions/Values/Location/index.m
 either physically (`|file:///tmp/HelloWorld.java|`) or logically (`|java+class://java/lang/Object|`).
 
 Specifically we have standardized a set of models to represent source code which are ready 
-for computing metrics: #/Libraries#analysis-m3[M3]. This M3 model consists of: 
+for computing metrics: [M3](../../Library/analysis/m3/index.md). This M3 model consists of: 
 
 *  an open (extensible) set of [Relations](../../Rascal/Expressions/Values/Relation/index.md) between source code artifacts.
 *  a number of extensible [Algebraic Data Types](../../Rascal/Declarations/AlgebraicDataType/index.md)

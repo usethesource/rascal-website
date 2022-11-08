@@ -14,8 +14,8 @@ This error is generated when `fail` is used outside a conditional context.
 Remedies:
 
 *  Surround the `fail` statement by a conditional conditional statement.
-*  Replace the `fail` statement by a [Rascal:Throw] statement.
-*  replace the `fail` statement by a [Rascal:Return] statement.
+*  Replace the `fail` statement by a [Throw](../../Rascal/Statements/Throw/index.md) statement.
+*  replace the `fail` statement by a [Return](../../Rascal/Statements/Return/index.md) statement.
 
 #### Examples
 

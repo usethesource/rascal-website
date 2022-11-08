@@ -90,7 +90,7 @@ The alternative of a defined syntax type may be labeled or not as well. With the
 *  The `is` operator is defined for labeled alternatives (see [Operators](../../../Rascal/Expressions/Operators/index.md)).
 *  The `has` operator is defined for labeled [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol/index.md)s in the right-hand side (see [Operators](../../../Rascal/Expressions/Operators/index.md)).
 *  [Action](../../../Rascal/Declarations/SyntaxDefinition/Action/index.md) functions can be written to override the construction of a parse tree, using the label of an alternative as the function name
-*  [implode] uses labeled alternatives to map to an [./Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)
+*  [implode](../../../Library/ParseTree.md#ParseTree-implode) uses labeled alternatives to map to an [./Algebraic Data Type](../../../Rascal/Declarations/AlgebraicDataType/index.md)
 
 
 Alternatives can be combined in a single [Syntax Definition](../../../Rascal/Declarations/SyntaxDefinition/index.md) using the `|`, `>` and associativity combinators.

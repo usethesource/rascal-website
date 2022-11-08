@@ -48,7 +48,6 @@ It consists of three optional phases:
 
 *  Is synthesis needed, then define the synthesis phase, see [Synthesis](../../WhyRascal/SolutionStrategies/Synthesis/index.md).
 
-[[Validation-Workflow]]
 ![Validation Workflow](/assets/WhyRascal/SolutionStrategies/validation.png)
 
 Each phase is subject to a validation and improvement workflow as shown in the second figure. 
@@ -56,7 +55,6 @@ Each individual phase as well as the combination of phases may introduce errors 
 In combination with the detailed strategies for each phase, this forms a complete approach for problem solving and validation 
 using Rascal.
 
-[[Requirements-Workflow]]
 ![Requirements Workflow](/assets/WhyRascal/SolutionStrategies/requirements.png)
 
 A major question in every problem solving situation is how to determine the requirements for each phase of the solution. 

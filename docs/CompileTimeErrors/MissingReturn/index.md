@@ -14,7 +14,7 @@ This error is generated when a function body does not return a value.
 Remedies:
 
 *  Add a [Rascal:Return] statement to the function body.
-*  Rewrite the function so that the function body becomes a single expression and you can use the abbreviated function format, see [$Rascal:Declarations/Function].
+*  Rewrite the function so that the function body becomes a single expression and you can use the abbreviated function format, see [Function](../../Rascal/Declarations/Function/index.md)
 
 #### Examples
 
