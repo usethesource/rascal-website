@@ -68,57 +68,99 @@ data ControllerState
 
 ## alias StateEnv {#demo-lang-MissGrant-AST-StateEnv}
 
-* `map[str, State]`
+```rascal
+map[str, State]
+
+```
 
 ## function initial {#demo-lang-MissGrant-AST-initial}
 
-* ``State initial(Controller ctl)``
+```rascal
+State initial(Controller ctl)
+
+```
 
 ## function final {#demo-lang-MissGrant-AST-final}
 
-* ``State final(Controller ctl)``
+```rascal
+State final(Controller ctl)
+
+```
 
 ## function consumes {#demo-lang-MissGrant-AST-consumes}
 
-* ``list[str] consumes(State s)``
+```rascal
+list[str] consumes(State s)
+
+```
 
 ## function stateGraph {#demo-lang-MissGrant-AST-stateGraph}
 
-* ``Graph[str] stateGraph(Controller ctl)``
+```rascal
+Graph[str] stateGraph(Controller ctl)
+
+```
 
 ## function stateEnv {#demo-lang-MissGrant-AST-stateEnv}
 
-* ``StateEnv stateEnv(Controller ctl)``
+```rascal
+StateEnv stateEnv(Controller ctl)
+
+```
 
 ## function eventEnv {#demo-lang-MissGrant-AST-eventEnv}
 
-* ``map[str,str] eventEnv(Controller ctl)``
+```rascal
+map[str,str] eventEnv(Controller ctl)
+
+```
 
 ## function commandEnv {#demo-lang-MissGrant-AST-commandEnv}
 
-* ``map[str,str] commandEnv(Controller ctl)``
+```rascal
+map[str,str] commandEnv(Controller ctl)
+
+```
 
 ## function usedEvents {#demo-lang-MissGrant-AST-usedEvents}
 
-* ``set[str] usedEvents(Controller ctl)``
+```rascal
+set[str] usedEvents(Controller ctl)
+
+```
 
 ## function usedActions {#demo-lang-MissGrant-AST-usedActions}
 
-* ``set[str] usedActions(Controller ctl)``
+```rascal
+set[str] usedActions(Controller ctl)
+
+```
 
 ## function definedCommands {#demo-lang-MissGrant-AST-definedCommands}
 
-* ``set[str] definedCommands(Controller ctl)``
+```rascal
+set[str] definedCommands(Controller ctl)
+
+```
 
 ## function definedEvents {#demo-lang-MissGrant-AST-definedEvents}
 
-* ``set[str] definedEvents(Controller ctl)``
+```rascal
+set[str] definedEvents(Controller ctl)
+
+```
 
 ## function definedStates {#demo-lang-MissGrant-AST-definedStates}
 
-* ``set[str] definedStates(Controller ctl)``
+```rascal
+set[str] definedStates(Controller ctl)
+
+```
 
 ## function initialControllerState {#demo-lang-MissGrant-AST-initialControllerState}
 
-* ``ControllerState initialControllerState(Controller ctl)``
+```rascal
+ControllerState initialControllerState(Controller ctl)
+
+```
 

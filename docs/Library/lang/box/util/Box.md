@@ -35,5 +35,8 @@ data Box
 
 ## alias text {#lang-box-util-Box-text}
 
-* `list[str]`
+```rascal
+list[str]
+
+```
 

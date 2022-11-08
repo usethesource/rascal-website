@@ -9,7 +9,10 @@ title: "module util::Progress"
 
 ## function progressBar {#util-Progress-progressBar}
 
-* ``tuple[void(str) report, void() finished] progressBar(int total, str prefix = "Progress:", int length = 50, int limit = total, str fill = "\u2588", str unfill = "-", str printEnd = "\r")``
+```rascal
+tuple[void(str) report, void() finished] progressBar(int total, str prefix = "Progress:", int length = 50, int limit = total, str fill = "\u2588", str unfill = "-", str printEnd = "\r")
+
+```
 
 
   .Synopsis
@@ -50,7 +53,10 @@ ok
 
 ## function spinner {#util-Progress-spinner}
 
-* ``void (str) spinner(str prefix = " ", str printEnd = "\r")``
+```rascal
+void (str) spinner(str prefix = " ", str printEnd = "\r")
+
+```
 
 
   .Synopsis
@@ -74,7 +80,7 @@ void (str): function(|file:///Users/jurgenv/git/rascal/src/org/rascalmpl/library
 rascal>  while (n := arbInt(100), n != 1) {
 >>>>>>>    sp("<n>");
 >>>>>>>  }
- \ 83  | 89  / 96  - 45  \ 22  | 34  / 80  - 12  \ 74  | 2  / 33  - 51  \ 42  | 67  / 43  - 33  \ 72  | 42  / 16  - 37  \ 32  | 46  / 58  - 95  \ 52  | 33  / 51  - 12  \ 64  | 66  / 93  - 48  \ 53  | 98  / 64  - 49  \ 55  | 3  / 73  - 91  \ 94  | 36  / 20  - 39 
+ \ 32  | 87  / 57  - 40  \ 29  | 63  / 89  - 41  \ 24  | 3  / 55  - 11  \ 96  | 94  / 50  - 9  \ 6  | 67  / 9  - 33  \ 13  | 32  / 17  - 72  \ 93  | 57  / 35  - 84  \ 90  | 94  / 7  - 69  \ 19  | 79  / 36  - 26  \ 29  | 58  / 51  - 41  \ 42  | 60  / 92  - 38  \ 73 
 list[void]: []
 ```
 

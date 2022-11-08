@@ -18,18 +18,31 @@ data FileSystem
 
 ## function crawl {#util-FileSystem-crawl}
 
-* ``FileSystem crawl(loc l)``
+```rascal
+FileSystem crawl(loc l)
+
+```
 
 ## function files {#util-FileSystem-files}
 
-* ``set[loc] files(loc l)``
+```rascal
+set[loc] files(loc l)
+
+```
 
 ## function find {#util-FileSystem-find}
 
-* ``set[loc] find(loc f, bool (loc) filt)``
-* ``set[loc] find(loc f, str ext)``
+```rascal
+set[loc] find(loc f, bool (loc) filt)
+
+set[loc] find(loc f, str ext)
+
+```
 
 ## function visibleFiles {#util-FileSystem-visibleFiles}
 
-* ``set[loc] visibleFiles(loc l)``
+```rascal
+set[loc] visibleFiles(loc l)
+
+```
 

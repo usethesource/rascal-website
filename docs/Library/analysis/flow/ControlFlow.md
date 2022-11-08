@@ -77,7 +77,10 @@ back into [M3](../../../Library/analysis/m3/Core.md#analysis::m3::Core-M3) model
 
 ## alias ControlFlow {#analysis-flow-ControlFlow-ControlFlow}
 
-* `rel[ControlNode from, ControlEdge edge, ControlNode to]`
+```rascal
+rel[ControlNode from, ControlEdge edge, ControlNode to]
+
+```
 
 ## data CFG {#analysis-flow-ControlFlow-CFG}
 

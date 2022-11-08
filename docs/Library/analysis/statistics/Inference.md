@@ -25,7 +25,10 @@ The following functions are provided:
 
 ## function chiSquare {#analysis-statistics-Inference-chiSquare}
 
-* ``num chiSquare(lrel[num expected, int observed] values)``
+```rascal
+num chiSquare(lrel[num expected, int observed] values)
+
+```
 
 
 #### Synopsis
@@ -51,8 +54,12 @@ num: 1.44
 
 ## function chiSquareTest {#analysis-statistics-Inference-chiSquareTest}
 
-* ``num chiSquareTest(lrel[num expected, int observed] values)``
-* ``bool chiSquareTest(lrel[num expected, int observed] values, real alpha)``
+```rascal
+num chiSquareTest(lrel[num expected, int observed] values)
+
+bool chiSquareTest(lrel[num expected, int observed] values, real alpha)
+
+```
 
 
 #### Synopsis
@@ -72,9 +79,14 @@ can be rejected with confidence 1 - `alpha`.
 
 ## function tTest {#analysis-statistics-Inference-tTest}
 
-* ``num tTest(list[num] sample1, list[num] sample2)``
-* ``bool tTest(list[num] sample1, list[num] sample2, num alpha)``
-* ``bool tTest(num mu, list[num] sample, num alpha)``
+```rascal
+num tTest(list[num] sample1, list[num] sample2)
+
+bool tTest(list[num] sample1, list[num] sample2, num alpha)
+
+bool tTest(num mu, list[num] sample, num alpha)
+
+```
 
 
 #### Synopsis
@@ -145,7 +157,10 @@ bool: true
 
 ## function anovaFValue {#analysis-statistics-Inference-anovaFValue}
 
-* ``num anovaFValue(list[list[num]] categoryData)``
+```rascal
+num anovaFValue(list[list[num]] categoryData)
+
+```
 
 
 #### Synopsis
@@ -169,7 +184,10 @@ are as defined [here](http://faculty.vassar.edu/lowry/ch13pt1.html)
 
 ## function anovaPValue {#analysis-statistics-Inference-anovaPValue}
 
-* ``num anovaPValue(list[list[num]] categoryData)``
+```rascal
+num anovaPValue(list[list[num]] categoryData)
+
+```
 
 
 #### Synopsis
@@ -186,7 +204,10 @@ where `F` is the [anova f value](../../../Library/analysis/statistics/Inference.
 
 ## function anovaTest {#analysis-statistics-Inference-anovaTest}
 
-* ``bool anovaTest(list[list[num]] categoryData, num alpha)``
+```rascal
+bool anovaTest(list[list[num]] categoryData, num alpha)
+
+```
 
 
 #### Synopsis
@@ -205,7 +226,10 @@ where `F` is the [anova f value](../../../Library/analysis/statistics/Inference.
 
 ## function gini {#analysis-statistics-Inference-gini}
 
-* ``real gini(lrel[num observation,int frequency] values)``
+```rascal
+real gini(lrel[num observation,int frequency] values)
+
+```
 
 
 #### Synopsis

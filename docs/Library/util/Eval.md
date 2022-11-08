@@ -26,14 +26,24 @@ data Exception
 
 ## function eval {#util-Eval-eval}
 
-* ``Result[&T] eval(type[&T] typ, str command) throws Timeout, StaticError, ParseError``
-* ``Result[value] eval(str command)``
-* ``Result[&T] eval(type[&T] typ, list[str] commands) throws Timeout, StaticError, ParseError``
-* ``Result[value] eval(list[str] commands)``
-* ``Result[&T] eval(type[&T] typ, str command, int duration) throws Timeout, StaticError, ParseError``
-* ``Result[value] eval(str command, int duration)``
-* ``Result[&T] eval(type[&T] typ, list[str] commands, int duration) throws Timeout, StaticError, ParseError``
-* ``Result[value] eval(list[str] commands, int duration)``
+```rascal
+Result[&T] eval(type[&T] typ, str command) throws Timeout, StaticError, ParseError
+
+Result[value] eval(str command)
+
+Result[&T] eval(type[&T] typ, list[str] commands) throws Timeout, StaticError, ParseError
+
+Result[value] eval(list[str] commands)
+
+Result[&T] eval(type[&T] typ, str command, int duration) throws Timeout, StaticError, ParseError
+
+Result[value] eval(str command, int duration)
+
+Result[&T] eval(type[&T] typ, list[str] commands, int duration) throws Timeout, StaticError, ParseError
+
+Result[value] eval(list[str] commands, int duration)
+
+```
 
 
 #### Synopsis
@@ -73,10 +83,16 @@ Result[value]: result(11)
 
 ## function evalType {#util-Eval-evalType}
 
-* ``str evalType(str command) throws Timeout, StaticError, ParseError``
-* ``str evalType(list[str] commands) throws Timeout, StaticError, ParseError``
-* ``str evalType(str command, int duration) throws Timeout, StaticError, ParseError``
-* ``str evalType(list[str] commands, int duration) throws Timeout, StaticError, ParseError``
+```rascal
+str evalType(str command) throws Timeout, StaticError, ParseError
+
+str evalType(list[str] commands) throws Timeout, StaticError, ParseError
+
+str evalType(str command, int duration) throws Timeout, StaticError, ParseError
+
+str evalType(list[str] commands, int duration) throws Timeout, StaticError, ParseError
+
+```
 
 
 #### Synopsis

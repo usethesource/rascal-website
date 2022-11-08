@@ -19,19 +19,31 @@ data ColoredTree
 
 ## function cntRed {#demo-common-ColoredTrees-cntRed}
 
-* ``int cntRed(ColoredTree t)``
+```rascal
+int cntRed(ColoredTree t)
+
+```
 
 ## function tstCntRed {#demo-common-ColoredTrees-tstCntRed}
 
-* ``test bool tstCntRed()``
+```rascal
+test bool tstCntRed()
+
+```
 
 ## function addLeaves {#demo-common-ColoredTrees-addLeaves}
 
-* ``int addLeaves(ColoredTree t)``
+```rascal
+int addLeaves(ColoredTree t)
+
+```
 
 ## function tstAddLeaves {#demo-common-ColoredTrees-tstAddLeaves}
 
-* ``test bool tstAddLeaves()``
+```rascal
+test bool tstAddLeaves()
+
+```
 
 ## data ColoredTree {#demo-common-ColoredTrees-ColoredTree}
 
@@ -43,9 +55,15 @@ data ColoredTree
 
 ## function makeGreen {#demo-common-ColoredTrees-makeGreen}
 
-* ``ColoredTree makeGreen(ColoredTree t)``
+```rascal
+ColoredTree makeGreen(ColoredTree t)
+
+```
 
 ## function tstMakeGreen {#demo-common-ColoredTrees-tstMakeGreen}
 
-* ``test bool tstMakeGreen()``
+```rascal
+test bool tstMakeGreen()
+
+```
 

@@ -9,9 +9,15 @@ title: "module lang::rascal::tests::concrete::Syntax6"
 
 ## function expIsAmbiguous {#lang-rascal-tests-concrete-Syntax6-expIsAmbiguous}
 
-* ``test bool expIsAmbiguous()``
+```rascal
+test bool expIsAmbiguous()
+
+```
 
 ## function visitAndDeepMatchGoThroughAmb {#lang-rascal-tests-concrete-Syntax6-visitAndDeepMatchGoThroughAmb}
 
-* ``test bool visitAndDeepMatchGoThroughAmb()``
+```rascal
+test bool visitAndDeepMatchGoThroughAmb()
+
+```
 

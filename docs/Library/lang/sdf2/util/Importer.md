@@ -9,7 +9,10 @@ title: "module lang::sdf2::util::Importer"
 
 ## function generate {#lang-sdf2-util-Importer-generate}
 
-* ``str generate(str name, loc at, PathConfig pcfg)``
+```rascal
+str generate(str name, loc at, PathConfig pcfg)
+
+```
 
 #### Synopsis
 

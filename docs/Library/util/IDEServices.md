@@ -9,7 +9,10 @@ title: "module util::IDEServices"
 
 ## function browse {#util-IDEServices-browse}
 
-* ``void browse(loc uri)``
+```rascal
+void browse(loc uri)
+
+```
 
 
 #### Synopsis
@@ -18,7 +21,10 @@ Open a browser for a given location.
 
 ## function edit {#util-IDEServices-edit}
 
-* ``void edit(loc uri)``
+```rascal
+void edit(loc uri)
+
+```
 
 
 #### Synopsis
@@ -27,7 +33,10 @@ Open an editor for file at a given location.
 
 ## function applyDocumentsEdits {#util-IDEServices-applyDocumentsEdits}
 
-* ``void applyDocumentsEdits(list[DocumentEdit] edits)``
+```rascal
+void applyDocumentsEdits(list[DocumentEdit] edits)
+
+```
 
 
 #### Synopsis
@@ -47,7 +56,10 @@ of refactoring and quick-fix features of the language service protocol.
 
 ## function showInteractiveContent {#util-IDEServices-showInteractiveContent}
 
-* ``void showInteractiveContent(Content content)``
+```rascal
+void showInteractiveContent(Content content)
+
+```
 
 
 #### Synopsis
@@ -56,17 +68,29 @@ Asks the IDE to show a "browser window" with the given interactive Content.
 
 ## function showMessage {#util-IDEServices-showMessage}
 
-* ``void showMessage(Message message)``
+```rascal
+void showMessage(Message message)
+
+```
 
 ## function logMessage {#util-IDEServices-logMessage}
 
-* ``void logMessage(Message message)``
+```rascal
+void logMessage(Message message)
+
+```
 
 ## function registerDiagnostics {#util-IDEServices-registerDiagnostics}
 
-* ``void registerDiagnostics(list[Message] messages)``
+```rascal
+void registerDiagnostics(list[Message] messages)
+
+```
 
 ## function unregisterDiagnostics {#util-IDEServices-unregisterDiagnostics}
 
-* ``void unregisterDiagnostics(list[loc] resources)``
+```rascal
+void unregisterDiagnostics(list[loc] resources)
+
+```
 

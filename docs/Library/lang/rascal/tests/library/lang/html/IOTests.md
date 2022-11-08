@@ -9,13 +9,22 @@ title: "module lang::rascal::tests::library::lang::html::IOTests"
 
 ## function simpleParseTest {#lang-rascal-tests-library-lang-html-IOTests-simpleParseTest}
 
-* ``test bool simpleParseTest()``
+```rascal
+test bool simpleParseTest()
+
+```
 
 ## function partialDocumentsAreCompletedOnRead {#lang-rascal-tests-library-lang-html-IOTests-partialDocumentsAreCompletedOnRead}
 
-* ``test bool partialDocumentsAreCompletedOnRead()``
+```rascal
+test bool partialDocumentsAreCompletedOnRead()
+
+```
 
 ## function partialDocumentsAreCompletedOnWrite {#lang-rascal-tests-library-lang-html-IOTests-partialDocumentsAreCompletedOnWrite}
 
-* ``test bool partialDocumentsAreCompletedOnWrite()``
+```rascal
+test bool partialDocumentsAreCompletedOnWrite()
+
+```
 

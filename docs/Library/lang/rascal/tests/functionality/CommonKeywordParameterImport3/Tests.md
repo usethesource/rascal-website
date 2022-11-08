@@ -9,5 +9,8 @@ title: "module lang::rascal::tests::functionality::CommonKeywordParameterImport3
 
 ## function keywordParametersLost933 {#lang-rascal-tests-functionality-CommonKeywordParameterImport3-Tests-keywordParametersLost933}
 
-* ``test bool keywordParametersLost933()``
+```rascal
+test bool keywordParametersLost933()
+
+```
 

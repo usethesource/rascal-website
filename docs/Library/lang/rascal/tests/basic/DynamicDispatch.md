@@ -17,10 +17,17 @@ data D
 
 ## function foo {#lang-rascal-tests-basic-DynamicDispatch-foo}
 
-* ``bool foo(d())``
-* ``default bool foo(value n)``
+```rascal
+bool foo(d())
+
+default bool foo(value n)
+
+```
 
 ## function dispatchOnRuntimeType {#lang-rascal-tests-basic-DynamicDispatch-dispatchOnRuntimeType}
 
-* ``test bool dispatchOnRuntimeType()``
+```rascal
+test bool dispatchOnRuntimeType()
+
+```
 

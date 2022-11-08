@@ -13,8 +13,12 @@ title: "module lang::manifest::IO"
 
 ## function readManifest {#lang-manifest-IO-readManifest}
 
-* ``map[str key, str val] readManifest(loc input)``
-* ``(&T <: node) readManifest(type[&T<:node] t, loc input)``
+```rascal
+map[str key, str val] readManifest(loc input)
+
+(&T <: node) readManifest(type[&T<:node] t, loc input)
+
+```
 
 reads a manifest file and returns its main attributes as a map
 

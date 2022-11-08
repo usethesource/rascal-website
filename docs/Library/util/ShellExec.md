@@ -13,8 +13,12 @@ Execute and manage external processes.
 
 ## function createProcess {#util-ShellExec-createProcess}
 
-* ``PID createProcess(str processCommand, loc workingDir=|cwd:///|, list[str] args = [], map[str,str] envVars = ())``
-* ``PID createProcess(loc processCommand, loc workingDir=|cwd:///|, list[value] args = [], map[str, value] envVars = ())``
+```rascal
+PID createProcess(str processCommand, loc workingDir=|cwd:///|, list[str] args = [], map[str,str] envVars = ())
+
+PID createProcess(loc processCommand, loc workingDir=|cwd:///|, list[value] args = [], map[str, value] envVars = ())
+
+```
 
 #### Synopsis
 
@@ -22,17 +26,28 @@ Start a new external process.
 
 ## function exec {#util-ShellExec-exec}
 
-* ``str exec(str processCommand, loc workingDir=|cwd:///|, list[str] args = [], map[str, str] env = ())``
-* ``str exec(loc processCommand, loc workingDir=|cwd:///|, list[value] args = [], map[str, value] env = ())``
+```rascal
+str exec(str processCommand, loc workingDir=|cwd:///|, list[str] args = [], map[str, str] env = ())
+
+str exec(loc processCommand, loc workingDir=|cwd:///|, list[value] args = [], map[str, value] env = ())
+
+```
 
 ## function execWithCode {#util-ShellExec-execWithCode}
 
-* ``tuple[str output, int exitCode] execWithCode(str processCommand, loc workingDir=|cwd:///|, list[str] args = [], map[str, str] env = ())``
-* ``tuple[str output, int exitCode] execWithCode(loc processCommand, loc workingDir=|cwd:///|, list[value] args = [], map[str, value] env = ())``
+```rascal
+tuple[str output, int exitCode] execWithCode(str processCommand, loc workingDir=|cwd:///|, list[str] args = [], map[str, str] env = ())
+
+tuple[str output, int exitCode] execWithCode(loc processCommand, loc workingDir=|cwd:///|, list[value] args = [], map[str, value] env = ())
+
+```
 
 ## function killProcess {#util-ShellExec-killProcess}
 
-* ``int killProcess(PID processId, bool force=false)``
+```rascal
+int killProcess(PID processId, bool force=false)
+
+```
 
 #### Synopsis
 
@@ -40,7 +55,10 @@ Kill a running process, or a zombie process (a process which is not alive yet no
 
 ## function isAlive {#util-ShellExec-isAlive}
 
-* ``bool isAlive(PID processId)``
+```rascal
+bool isAlive(PID processId)
+
+```
 
 #### Synopsis
 
@@ -48,7 +66,10 @@ Check whether a process is still alive
 
 ## function isZombie {#util-ShellExec-isZombie}
 
-* ``bool isZombie(PID processId)``
+```rascal
+bool isZombie(PID processId)
+
+```
 
 #### Synopsis
 
@@ -56,7 +77,10 @@ Check whether a process is still registered but not actually running anymore. A 
 
 ## function exitCode {#util-ShellExec-exitCode}
 
-* ``int exitCode(PID processId)``
+```rascal
+int exitCode(PID processId)
+
+```
 
 #### Synopsis
 
@@ -64,7 +88,10 @@ Waits for the process to exit and then returns its return code. This is a blocki
 
 ## function readFrom {#util-ShellExec-readFrom}
 
-* ``str readFrom(PID processId)``
+```rascal
+str readFrom(PID processId)
+
+```
 
 #### Synopsis
 
@@ -72,7 +99,10 @@ Read from an existing process's output stream. This is non-blocking.
 
 ## function readWithWait {#util-ShellExec-readWithWait}
 
-* ``str readWithWait(PID processId, int wait)``
+```rascal
+str readWithWait(PID processId, int wait)
+
+```
 
 #### Synopsis
 
@@ -80,7 +110,10 @@ Read from an existing process's output stream with a given wait timeout. Some pr
 
 ## function readFromErr {#util-ShellExec-readFromErr}
 
-* ``str readFromErr(PID processId)``
+```rascal
+str readFromErr(PID processId)
+
+```
 
 #### Synopsis
 
@@ -88,7 +121,10 @@ Read from an existing process's error output stream. This is non-blocking.
 
 ## function readLineFromErr {#util-ShellExec-readLineFromErr}
 
-* ``str readLineFromErr(PID processId, int wait=200, int maxTries=5)``
+```rascal
+str readLineFromErr(PID processId, int wait=200, int maxTries=5)
+
+```
 
 #### Synopsis
 
@@ -96,7 +132,10 @@ Read from an existing process's error output stream. This blocks until a full li
 
 ## function readEntireStream {#util-ShellExec-readEntireStream}
 
-* ``str readEntireStream(PID processId)``
+```rascal
+str readEntireStream(PID processId)
+
+```
 
 #### Synopsis
 
@@ -104,7 +143,10 @@ Read the entire stream from an existing process's output stream. This is blockin
 
 ## function readEntireErrStream {#util-ShellExec-readEntireErrStream}
 
-* ``str readEntireErrStream(PID processId)``
+```rascal
+str readEntireErrStream(PID processId)
+
+```
 
 #### Synopsis
 
@@ -112,7 +154,10 @@ Read the entire error stream from an existing process's output stream. This is b
 
 ## function writeTo {#util-ShellExec-writeTo}
 
-* ``void writeTo(PID processId, str msg)``
+```rascal
+void writeTo(PID processId, str msg)
+
+```
 
 #### Synopsis
 
@@ -120,7 +165,10 @@ Write to an existing process's input stream.
 
 ## alias PID {#util-ShellExec-PID}
 
-* `int`
+```rascal
+int
+
+```
 
 #### Synopsis
 

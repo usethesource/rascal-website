@@ -52,5 +52,8 @@ data Raw
 
 ## function parseSExp {#lang-sexp-SExp-parseSExp}
 
-* ``SExp parseSExp(str src, loc l)``
+```rascal
+SExp parseSExp(str src, loc l)
+
+```
 

@@ -9,5 +9,8 @@ title: "module lang::rascal::tests::basic::FunctionAssignment"
 
 ## function triggerAssignmentBug {#lang-rascal-tests-basic-FunctionAssignment-triggerAssignmentBug}
 
-* ``test bool triggerAssignmentBug()``
+```rascal
+test bool triggerAssignmentBug()
+
+```
 

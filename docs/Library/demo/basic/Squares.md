@@ -13,7 +13,10 @@ Demo of printing a table of squares
 
 ## function squares {#demo-basic-Squares-squares}
 
-* ``void squares(int n)``
+```rascal
+void squares(int n)
+
+```
 
 #### Synopsis
 
@@ -21,7 +24,10 @@ Print a table of squares using a for loop and single line string templates
 
 ## function squaresTemplate {#demo-basic-Squares-squaresTemplate}
 
-* ``str squaresTemplate(int N)``
+```rascal
+str squaresTemplate(int N)
+
+```
 
 #### Synopsis
 

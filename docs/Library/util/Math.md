@@ -58,7 +58,10 @@ The `Math` library provides the following functions:
 
 ## function abs {#util-Math-abs}
 
-* ``&T <: num abs(&T <: num N)``
+```rascal
+&T <: num abs(&T <: num N)
+
+```
 
 
 #### Synopsis
@@ -87,8 +90,12 @@ real: 3.14
 
 ## function arbInt {#util-Math-arbInt}
 
-* ``int arbInt()``
-* ``int arbInt(int limit)``
+```rascal
+int arbInt()
+
+int arbInt(int limit)
+
+```
 
 
 #### Synopsis
@@ -107,17 +114,17 @@ i.e., the limit is exclusive.
 rascal>import util::Math;
 ok
 rascal>arbInt();
-int: -906092022
+int: -1530788839
 rascal>arbInt();
-int: -281313805
+int: -1039265956
 rascal>arbInt();
-int: 1781454005
-rascal>arbInt(10);
-int: 8
-rascal>arbInt(10);
-int: 3
+int: -390790953
 rascal>arbInt(10);
 int: 1
+rascal>arbInt(10);
+int: 4
+rascal>arbInt(10);
+int: 3
 ```
 
 #### Benefits
@@ -126,7 +133,10 @@ int: 1
 
 ## function arbReal {#util-Math-arbReal}
 
-* ``real arbReal()``
+```rascal
+real arbReal()
+
+```
 
 
 #### Synopsis
@@ -144,16 +154,19 @@ Generates an arbitrary real value in the interval [0.0, 1.0].
 rascal>import util::Math;
 ok
 rascal>arbReal();
-real: 0.5052497532175324
+real: 0.6892019066029306
 rascal>arbReal();
-real: 0.5060651239979763
+real: 0.3257042749184461
 rascal>arbReal();
-real: 0.31661543727419716
+real: 0.27405296282995417
 ```
 
 ## function arbSeed {#util-Math-arbSeed}
 
-* ``void arbSeed(int seed)``
+```rascal
+void arbSeed(int seed)
+
+```
 
 
 #### Synopsis
@@ -168,8 +181,12 @@ is used to choose arbitrary values. This can be used to generate a reproducible 
 
 ## function arbRat {#util-Math-arbRat}
 
-* ``rat arbRat()``
-* ``rat arbRat(int limit1, int limit2)``
+```rascal
+rat arbRat()
+
+rat arbRat(int limit1, int limit2)
+
+```
 
 
 #### Synopsis
@@ -183,22 +200,25 @@ Generate an arbitrary rational value.
 rascal>import util::Math;
 ok
 rascal>arbRat();
-rat: 1275919947r75219176
+rat: -1989536946r201247279
 rascal>arbRat();
-rat: 1916737022r1443539721
+rat: 1177120370r1073975053
 rascal>arbRat();
-rat: -29854338r23630647
+rat: -865601157r1379810939
 rascal>arbRat(10,100);
-rat: 3r31
+rat: 3r40
 rascal>arbRat(10,100);
-rat: 3r35
+rat: 1r46
 rascal>arbRat(10,100);
-rat: 1r32
+rat: 1r2
 ```
 
 ## function ceil {#util-Math-ceil}
 
-* ``int ceil(num x)``
+```rascal
+int ceil(num x)
+
+```
 
 
 #### Synopsis
@@ -224,7 +244,10 @@ int: -3
 
 ## function cos {#util-Math-cos}
 
-* ``real cos(num x)``
+```rascal
+real cos(num x)
+
+```
 
 
 #### Synopsis
@@ -249,7 +272,10 @@ real: 0.50000000000
 
 ## function denominator {#util-Math-denominator}
 
-* ``int denominator(rat n)``
+```rascal
+int denominator(rat n)
+
+```
 
 
 #### Synopsis
@@ -258,7 +284,10 @@ Return the denominator of a rational value.
 
 ## function E {#util-Math-E}
 
-* ``real E()``
+```rascal
+real E()
+
+```
 
 
 #### Synopsis
@@ -277,7 +306,10 @@ real: 2.7182818285
 
 ## function exp {#util-Math-exp}
 
-* ``real exp(num x)``
+```rascal
+real exp(num x)
+
+```
 
 
 #### Synopsis
@@ -289,7 +321,10 @@ Calculate `e`<sup>`x`</sup>.
 
 ## function floor {#util-Math-floor}
 
-* ``int floor(num x)``
+```rascal
+int floor(num x)
+
+```
 
 
 #### Synopsis
@@ -315,7 +350,10 @@ int: -4
 
 ## function ln {#util-Math-ln}
 
-* ``real ln(num x)``
+```rascal
+real ln(num x)
+
+```
 
 
 #### Synopsis
@@ -340,7 +378,10 @@ real: 3.7376696183
 
 ## function log {#util-Math-log}
 
-* ``real log(num x, num base)``
+```rascal
+real log(num x, num base)
+
+```
 
 
 #### Synopsis
@@ -367,7 +408,10 @@ real: 7.99999999999
 
 ## function log10 {#util-Math-log10}
 
-* ``real log10(num x)``
+```rascal
+real log10(num x)
+
+```
 
 
 #### Synopsis
@@ -376,7 +420,10 @@ Compute the 10 based log(x).
 
 ## function log2 {#util-Math-log2}
 
-* ``real log2(num x)``
+```rascal
+real log2(num x)
+
+```
 
 
 #### Synopsis
@@ -385,7 +432,10 @@ Compute the 2 based log(x).
 
 ## function max {#util-Math-max}
 
-* ``&T <: num max(&T <: num N, &T <: num M)``
+```rascal
+&T <: num max(&T <: num N, &T <: num M)
+
+```
 
 
 #### Synopsis
@@ -412,7 +462,10 @@ num: 12
 
 ## function min {#util-Math-min}
 
-* ``&T <: num min(&T <: num N, &T <: num M)``
+```rascal
+&T <: num min(&T <: num N, &T <: num M)
+
+```
 
 
 #### Synopsis
@@ -439,7 +492,10 @@ num: 3.14
 
 ## function numerator {#util-Math-numerator}
 
-* ``int numerator(rat n)``
+```rascal
+int numerator(rat n)
+
+```
 
 
 #### Synopsis
@@ -448,7 +504,10 @@ Return the numerator of a rational value.
 
 ## function nroot {#util-Math-nroot}
 
-* ``real nroot(num x, int n)``
+```rascal
+real nroot(num x, int n)
+
+```
 
 
 #### Synopsis
@@ -475,7 +534,10 @@ real: 2.4038930938
 
 ## function PI {#util-Math-PI}
 
-* ``real PI()``
+```rascal
+real PI()
+
+```
 
 
 #### Synopsis
@@ -494,8 +556,12 @@ real: 3.1415926536
 
 ## function pow {#util-Math-pow}
 
-* ``real pow(num x, int y)``
-* ``real pow(num x, real y)``
+```rascal
+real pow(num x, int y)
+
+real pow(num x, real y)
+
+```
 
 
 #### Synopsis
@@ -520,8 +586,12 @@ real: 32732351986217662973008206757471664343946230054018512222096183251128880571
 
 ## function precision {#util-Math-precision}
 
-* ``int precision(num x)``
-* ``real precision(num x, int p)``
+```rascal
+int precision(num x)
+
+real precision(num x, int p)
+
+```
 
 
 #### Synopsis
@@ -530,7 +600,10 @@ Return the precision of a real number.
 
 ## function setPrecision {#util-Math-setPrecision}
 
-* ``int setPrecision(int p)``
+```rascal
+int setPrecision(int p)
+
+```
 
 
 #### Synopsis
@@ -539,7 +612,10 @@ Define the precision for numeric calculations; returns the previous precision.
 
 ## function scale {#util-Math-scale}
 
-* ``int scale(num x)``
+```rascal
+int scale(num x)
+
+```
 
 
 #### Synopsis
@@ -548,7 +624,10 @@ Return the scale of a real number.
 
 ## function unscaled {#util-Math-unscaled}
 
-* ``int unscaled(real x)``
+```rascal
+int unscaled(real x)
+
+```
 
 
 #### Synopsis
@@ -557,7 +636,10 @@ Return the unscaled integer of a real.
 
 ## function remainder {#util-Math-remainder}
 
-* ``int remainder(rat n)``
+```rascal
+int remainder(rat n)
+
+```
 
 
 #### Synopsis
@@ -566,8 +648,12 @@ Return the remainder of dividing the numerator by the denominator.
 
 ## function round {#util-Math-round}
 
-* ``int round(num d)``
-* ``(&T <: num) round(&T <: num r, &T <: num nearest)``
+```rascal
+int round(num d)
+
+(&T <: num) round(&T <: num r, &T <: num nearest)
+
+```
 
 
 #### Synopsis
@@ -602,7 +688,10 @@ rat: 3r2
 
 ## function fitFloat {#util-Math-fitFloat}
 
-* ``real fitFloat(real r) throws ArithmeticException``
+```rascal
+real fitFloat(real r) throws ArithmeticException
+
+```
 
 
 .Synopsis push real value into a float using coercion and return the value represented by that float as a real
@@ -625,7 +714,10 @@ value, this function will throw an ArithmeticException.
 
 ## function fitDouble {#util-Math-fitDouble}
 
-* ``real fitDouble(real r) throws ArithmeticException``
+```rascal
+real fitDouble(real r) throws ArithmeticException
+
+```
 
 
 .Synopsis push real value into a JVM double using coercion and return the value represented by that float as a real
@@ -647,7 +739,10 @@ value, this function will throw an ArithmeticException.
 
 ## function percent {#util-Math-percent}
 
-* ``int percent(num part, num whole)``
+```rascal
+int percent(num part, num whole)
+
+```
 
 
 #### Synopsis
@@ -670,7 +765,10 @@ int: 50
 
 ## function sin {#util-Math-sin}
 
-* ``real sin(num x)``
+```rascal
+real sin(num x)
+
+```
 
 
 #### Synopsis
@@ -695,7 +793,10 @@ real: 1.00000000000
 
 ## function sqrt {#util-Math-sqrt}
 
-* ``real sqrt(num x)``
+```rascal
+real sqrt(num x)
+
+```
 
 
 #### Synopsis
@@ -720,7 +821,10 @@ real: 12345678901234567890.5000000000
 
 ## function tan {#util-Math-tan}
 
-* ``real tan(num x)``
+```rascal
+real tan(num x)
+
+```
 
 
 #### Synopsis
@@ -743,7 +847,10 @@ real: 1.0000000000
 
 ## function toInt {#util-Math-toInt}
 
-* ``int toInt(num N)``
+```rascal
+int toInt(num N)
+
+```
 
 
 #### Synopsis
@@ -768,7 +875,10 @@ int: 13
 
 ## function toRat {#util-Math-toRat}
 
-* ``rat toRat(int numerator, int denominator)``
+```rascal
+rat toRat(int numerator, int denominator)
+
+```
 
 
 #### Synopsis
@@ -777,7 +887,10 @@ Convert two numbers to a rational value (not supported on reals).
 
 ## function toReal {#util-Math-toReal}
 
-* ``real toReal(num N)``
+```rascal
+real toReal(num N)
+
+```
 
 
 #### Synopsis
@@ -798,7 +911,10 @@ real: 3.14
 
 ## function toString {#util-Math-toString}
 
-* ``str toString(num N)``
+```rascal
+str toString(num N)
+
+```
 
 
 #### Synopsis
@@ -819,7 +935,10 @@ str: "3.14"
 
 ## function primes {#util-Math-primes}
 
-* ``list[int] primes(int upTo)``
+```rascal
+list[int] primes(int upTo)
+
+```
 
  
 #### Synopsis
@@ -828,5 +947,8 @@ generate prime numbers up to a maximum
 
 ## function arbPrime {#util-Math-arbPrime}
 
-* ``int arbPrime(int upTo)``
+```rascal
+int arbPrime(int upTo)
+
+```
 

@@ -26,7 +26,10 @@ The following functions are provided:
 
 ## function PearsonsCorrelation {#analysis-statistics-Correlation-PearsonsCorrelation}
 
-* ``num PearsonsCorrelation(lrel[num x,num y] values)``
+```rascal
+num PearsonsCorrelation(lrel[num x,num y] values)
+
+```
 
 
 #### Synopsis
@@ -44,7 +47,10 @@ Use [spearmans correlation](../../../Library/analysis/statistics/Correlation.md#
 
 ## function PearsonsCorrelationStandardErrors {#analysis-statistics-Correlation-PearsonsCorrelationStandardErrors}
 
-* ``list[real] PearsonsCorrelationStandardErrors(lrel[num x,num y] values)``
+```rascal
+list[real] PearsonsCorrelationStandardErrors(lrel[num x,num y] values)
+
+```
 
 
 #### Synopsis
@@ -53,7 +59,10 @@ Standard errors associated with Pearson correlation.
 
 ## function PearsonsCorrelationPValues {#analysis-statistics-Correlation-PearsonsCorrelationPValues}
 
-* ``list[real] PearsonsCorrelationPValues(lrel[num x,num y] values)``
+```rascal
+list[real] PearsonsCorrelationPValues(lrel[num x,num y] values)
+
+```
 
 
 #### Synopsis
@@ -62,7 +71,10 @@ P-values (significance) associated with Pearson correlation.
 
 ## function SpearmansCorrelation {#analysis-statistics-Correlation-SpearmansCorrelation}
 
-* ``num SpearmansCorrelation(lrel[num x,num y] values)``
+```rascal
+num SpearmansCorrelation(lrel[num x,num y] values)
+
+```
 
 
 #### Synopsis
@@ -81,7 +93,10 @@ Use [pearsons correlation](../../../Library/analysis/statistics/Correlation.md#a
 
 ## function covariance {#analysis-statistics-Correlation-covariance}
 
-* ``num covariance(lrel[num x,num y] values)``
+```rascal
+num covariance(lrel[num x,num y] values)
+
+```
 
 
 #### Synopsis

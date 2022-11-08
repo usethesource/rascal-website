@@ -83,20 +83,34 @@ data Namespace
 
 ## function implode {#lang-xml-DOM-implode}
 
-* ``value implode(document(Node root))``
-* ``value implode(element(Namespace _, str name, list[Node] kids))``
-* ``value implode(charData(str t))``
-* ``value implode(cdata(str t))``
-* ``default value implode(Node x)``
+```rascal
+value implode(document(Node root))
+
+value implode(element(Namespace _, str name, list[Node] kids))
+
+value implode(charData(str t))
+
+value implode(cdata(str t))
+
+default value implode(Node x)
+
+```
 
 ## function toXML {#lang-xml-DOM-toXML}
 
-* ``Node toXML(node x)``
-* ``default Node toXML(value x)``
+```rascal
+Node toXML(node x)
+
+default Node toXML(value x)
+
+```
 
 ## function attribute {#lang-xml-DOM-attribute}
 
-* ``Node attribute(str name, str text)``
+```rascal
+Node attribute(str name, str text)
+
+```
 
 
 #### Synopsis
@@ -105,7 +119,10 @@ Auxiliary constructor for XML attribute without namespace.
 
 ## function element {#lang-xml-DOM-element}
 
-* ``Node element(str name, list[Node] kids)``
+```rascal
+Node element(str name, list[Node] kids)
+
+```
 
 
 #### Synopsis
@@ -114,7 +131,10 @@ Auxiliary constructor for XML element without namespace.
 
 ## function parseXMLDOM {#lang-xml-DOM-parseXMLDOM}
 
-* ``Node parseXMLDOM(str src)``
+```rascal
+Node parseXMLDOM(str src)
+
+```
 
 
 #### Synopsis
@@ -183,7 +203,10 @@ As expected, the result is of type [Node](../../../Library/lang/xml/DOM.md#lang:
 
 ## function parseXMLDOMTrim {#lang-xml-DOM-parseXMLDOMTrim}
 
-* ``Node parseXMLDOMTrim(str src)``
+```rascal
+Node parseXMLDOMTrim(str src)
+
+```
 
 
 #### Synopsis
@@ -243,7 +266,10 @@ Compare this with the output of [parse x m l d oM](../../../Library/lang/xml/DOM
 
 ## function xmlRaw {#lang-xml-DOM-xmlRaw}
 
-* ``str xmlRaw(Node x)``
+```rascal
+str xmlRaw(Node x)
+
+```
 
 
 #### Synopsis
@@ -289,7 +315,10 @@ Apart from an extra XML header, the original source file `F` and the output `S` 
 
 ## function xmlCompact {#lang-xml-DOM-xmlCompact}
 
-* ``str xmlCompact(Node x)``
+```rascal
+str xmlCompact(Node x)
+
+```
 
 
 #### Synopsis
@@ -328,7 +357,10 @@ The output `S` of `xmlCompact` is a version of the original source file `F` with
 
 ## function xmlPretty {#lang-xml-DOM-xmlPretty}
 
-* ``str xmlPretty(Node x)``
+```rascal
+str xmlPretty(Node x)
+
+```
 
 
 #### Synopsis

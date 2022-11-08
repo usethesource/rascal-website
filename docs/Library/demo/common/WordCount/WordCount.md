@@ -20,7 +20,10 @@ and the concept of [Reducer](../../../../Rascal/Expressions/Reducer/index.md)s.
 
 ## function wordCount {#demo-common-WordCount-WordCount-wordCount}
 
-* ``int wordCount(list[str] input, int (str s) countInLine)``
+```rascal
+int wordCount(list[str] input, int (str s) countInLine)
+
+```
 
 #### Synopsis
 
@@ -34,7 +37,10 @@ that is applied to each line. The total number of words is returned
 
 ## function wordCountReduce {#demo-common-WordCount-WordCount-wordCountReduce}
 
-* ``int wordCountReduce(list[str] input, int (str s) countInline)``
+```rascal
+int wordCountReduce(list[str] input, int (str s) countInline)
+
+```
 
 #### Synopsis
 
@@ -49,7 +55,10 @@ It uses a [Reducer](../../../../Rascal/Expressions/Reducer/index.md) instead of 
 
 ## function wordCountMapSum {#demo-common-WordCount-WordCount-wordCountMapSum}
 
-* ``int wordCountMapSum(list[str] input, int (str s) countInLine)``
+```rascal
+int wordCountMapSum(list[str] input, int (str s) countInLine)
+
+```
 
 #### Synopsis
 
@@ -64,25 +73,43 @@ It uses a traditional -in functional programming- `map` ((List::mapper) and [sum
 
 ## function tstWordCount1 {#demo-common-WordCount-WordCount-tstWordCount1}
 
-* ``test bool tstWordCount1()``
+```rascal
+test bool tstWordCount1()
+
+```
 
 ## function tstWordCount2 {#demo-common-WordCount-WordCount-tstWordCount2}
 
-* ``test bool tstWordCount2()``
+```rascal
+test bool tstWordCount2()
+
+```
 
 ## function tstWordCount3 {#demo-common-WordCount-WordCount-tstWordCount3}
 
-* ``test bool tstWordCount3()``
+```rascal
+test bool tstWordCount3()
+
+```
 
 ## function tstWordCount4 {#demo-common-WordCount-WordCount-tstWordCount4}
 
-* ``test bool tstWordCount4(str txt)``
+```rascal
+test bool tstWordCount4(str txt)
+
+```
 
 ## function tstWordCount5 {#demo-common-WordCount-WordCount-tstWordCount5}
 
-* ``test bool tstWordCount5(str txt)``
+```rascal
+test bool tstWordCount5(str txt)
+
+```
 
 ## function tstWordCount6 {#demo-common-WordCount-WordCount-tstWordCount6}
 
-* ``test bool tstWordCount6(str txt)``
+```rascal
+test bool tstWordCount6(str txt)
+
+```
 

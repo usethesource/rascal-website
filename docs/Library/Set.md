@@ -45,7 +45,10 @@ The following functions are defined for sets:
 
 ## function classify {#Set-classify}
 
-* ``map[&K,set[&V]] classify(set[&V] input, &K (&V) getClass)``
+```rascal
+map[&K,set[&V]] classify(set[&V] input, &K (&V) getClass)
+
+```
 
 
 #### Synopsis
@@ -89,7 +92,10 @@ map[int, set[str]]: (
 
 ## function group {#Set-group}
 
-* ``set[set[&T]] group(set[&T] input, bool (&T a, &T b) similar)``
+```rascal
+set[set[&T]] group(set[&T] input, bool (&T a, &T b) similar)
+
+```
 
 
 #### Synopsis
@@ -139,7 +145,10 @@ WARNING: check compiler.
 
 ## function index {#Set-index}
 
-* ``map[&T,int] index(set[&T] s)``
+```rascal
+map[&T,int] index(set[&T] s)
+
+```
 
 
 #### Synopsis
@@ -158,7 +167,10 @@ map[str, int]: ("snake":0,"zebra":1,"elephant":2)
 
 ## function isEmpty {#Set-isEmpty}
 
-* ``bool isEmpty(set[&T] st)``
+```rascal
+bool isEmpty(set[&T] st)
+
+```
 
 
 #### Synopsis
@@ -183,7 +195,10 @@ bool: true
 
 ## function mapper {#Set-mapper}
 
-* ``set[&U] mapper(set[&T] st, &U (&T) fn)``
+```rascal
+set[&U] mapper(set[&T] st, &U (&T) fn)
+
+```
 
 
 #### Synopsis
@@ -208,7 +223,10 @@ set[int]: {5,3,2,4}
 
 ## function max {#Set-max}
 
-* ``&T max(set[&T] st)``
+```rascal
+&T max(set[&T] st)
+
+```
 
 
 #### Synopsis
@@ -229,7 +247,10 @@ str: "zebra"
 
 ## function min {#Set-min}
 
-* ``&T min(set[&T] st)``
+```rascal
+&T min(set[&T] st)
+
+```
 
 
 #### Synopsis
@@ -265,7 +286,10 @@ int: 1
 
 ## function power {#Set-power}
 
-* ``set[set[&T]] power(set[&T] st)``
+```rascal
+set[set[&T]] power(set[&T] st)
+
+```
 
 
 #### Synopsis
@@ -305,7 +329,10 @@ set[set[int]]: {
 
 ## function power1 {#Set-power1}
 
-* ``set[set[&T]] power1(set[&T] st)``
+```rascal
+set[set[&T]] power1(set[&T] st)
+
+```
 
 
 #### Synopsis
@@ -344,8 +371,12 @@ set[set[int]]: {
 
 ## function reducer {#Set-reducer}
 
-* ``&T reducer(set[&T] st, &T (&T,&T) fn, &T unit)``
-* ``&T reducer(set[&T] _:{})``
+```rascal
+&T reducer(set[&T] st, &T (&T,&T) fn, &T unit)
+
+&T reducer(set[&T] _:{})
+
+```
 
 
 #### Synopsis
@@ -374,7 +405,10 @@ WARNING: This function is *deprecated*, use a [reducer](../Rascal/Expressions/Re
 
 ## function size {#Set-size}
 
-* ``int size(set[&T] st)``
+```rascal
+int size(set[&T] st)
+
+```
 
 
 #### Synopsis
@@ -397,12 +431,19 @@ int: 0
 
 ## function sum {#Set-sum}
 
-* ``(&T <:num) sum(set[(&T <:num)] _:{})``
-* ``default (&T <:num) sum({(&T <: num) e, *(&T <: num) r})``
+```rascal
+(&T <:num) sum(set[(&T <:num)] _:{})
+
+default (&T <:num) sum({(&T <: num) e, *(&T <: num) r})
+
+```
 
 ## function getOneFrom {#Set-getOneFrom}
 
-* ``&T getOneFrom(set[&T] st)``
+```rascal
+&T getOneFrom(set[&T] st)
+
+```
 
 
 #### Synopsis
@@ -418,17 +459,21 @@ ok
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "zebra"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "zebra"
+str: "elephant"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
-str: "snake"
+str: "elephant"
 rascal>getOneFrom({"elephant", "zebra", "snake"});
 str: "zebra"
 ```
 
 ## function getFirstFrom {#Set-getFirstFrom}
 
-* ``&T getFirstFrom({&T f, *&T _})``
-* ``&T getFirstFrom(set[&T] _:{})``
+```rascal
+&T getFirstFrom({&T f, *&T _})
+
+&T getFirstFrom(set[&T] _:{})
+
+```
 
 
 #### Synopsis
@@ -447,7 +492,10 @@ This function helps to make set-based code more deterministic, for instance, for
 
 ## function takeOneFrom {#Set-takeOneFrom}
 
-* ``tuple[&T, set[&T]] takeOneFrom(set[&T] st)``
+```rascal
+tuple[&T, set[&T]] takeOneFrom(set[&T] st)
+
+```
 
 
 #### Synopsis
@@ -466,17 +514,21 @@ Remove an arbitrary element from set `s` and return a tuple consisting of the el
 rascal>import Set;
 ok
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <4,{1,3,2}>
+tuple[int,set[int]]: <1,{3,2,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
 tuple[int,set[int]]: <1,{3,2,4}>
 rascal>takeOneFrom({1, 2, 3, 4});
-tuple[int,set[int]]: <3,{1,2,4}>
+tuple[int,set[int]]: <2,{1,3,4}>
 ```
 
 ## function takeFirstFrom {#Set-takeFirstFrom}
 
-* ``tuple[&T, set[&T]] takeFirstFrom({&T f, *&T r})``
-* ``tuple[&T, set[&T]] takeFirstFrom(set[&T] _:{})``
+```rascal
+tuple[&T, set[&T]] takeFirstFrom({&T f, *&T r})
+
+tuple[&T, set[&T]] takeFirstFrom(set[&T] _:{})
+
+```
 
 
 #### Synopsis
@@ -489,7 +541,10 @@ element of a set.
 
 ## function toList {#Set-toList}
 
-* ``list[&T] toList(set[&T] st)``
+```rascal
+list[&T] toList(set[&T] st)
+
+```
 
 
 #### Synopsis
@@ -522,7 +577,10 @@ Recall that the elements of a set are unordered and that there is no guarantee i
 
 ## function toMap {#Set-toMap}
 
-* ``map[&A,set[&B]] toMap(rel[&A, &B] st)``
+```rascal
+map[&A,set[&B]] toMap(rel[&A, &B] st)
+
+```
 
 
 #### Synopsis
@@ -549,7 +607,10 @@ map[str, set[int]]: (
 
 ## function toMapUnique {#Set-toMapUnique}
 
-* ``map[&A,&B] toMapUnique(rel[&A, &B] st) throws MultipleKey``
+```rascal
+map[&A,&B] toMapUnique(rel[&A, &B] st) throws MultipleKey
+
+```
 
 
 #### Synopsis
@@ -581,7 +642,10 @@ ok
 
 ## function toString {#Set-toString}
 
-* ``str toString(set[&T] st)``
+```rascal
+str toString(set[&T] st)
+
+```
 
 
 #### Synopsis
@@ -606,7 +670,10 @@ Recall that the elements of a set are unordered and that there is no guarantee i
 
 ## function itoString {#Set-itoString}
 
-* ``str itoString(set[&T] st)``
+```rascal
+str itoString(set[&T] st)
+
+```
 
 
 #### Synopsis
@@ -631,8 +698,12 @@ Recall that the elements of a set are unordered and that there is no guarantee i
 
 ## function sort {#Set-sort}
 
-* ``list[&T] sort(set[&T] s)``
-* ``list[&T] sort(set[&T] l, bool (&T a, &T b) less)``
+```rascal
+list[&T] sort(set[&T] s)
+
+list[&T] sort(set[&T] l, bool (&T a, &T b) less)
+
+```
 
  
 #### Synopsis
@@ -670,8 +741,12 @@ list[str]: ["strawberry","pineapple","banana","mango","grape","kiwi","pear"]
 
 ## function top {#Set-top}
 
-* ``list[&T] top(int k, set[&T] l, bool (&T a, &T b) less)``
-* ``list[&T] top(int k, set[&T] l)``
+```rascal
+list[&T] top(int k, set[&T] l, bool (&T a, &T b) less)
+
+list[&T] top(int k, set[&T] l)
+
+```
 
 
 .Synopsis Produce the smallest `k` elements of a set as sorted by the `less` function
@@ -688,7 +763,10 @@ If `k` is a negative number, `top` will return the largest `abs(k)` elements of 
 
 ## function union {#Set-union}
 
-* ``set[&T] union(set[set[&T]] sets)``
+```rascal
+set[&T] union(set[set[&T]] sets)
+
+```
 
 
 #### Synopsis
@@ -697,7 +775,10 @@ Flatten a set of sets into a single set.
 
 ## function jaccard {#Set-jaccard}
 
-* ``real jaccard(set[value] x, set[value] y)``
+```rascal
+real jaccard(set[value] x, set[value] y)
+
+```
 
 
 #### Synopsis

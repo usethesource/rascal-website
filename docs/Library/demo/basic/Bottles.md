@@ -9,11 +9,19 @@ title: "module demo::basic::Bottles"
 
 ## function bottles {#demo-basic-Bottles-bottles}
 
-* ``str bottles(0)``
-* ``str bottles(1)``
-* ``default str bottles(int n)``
+```rascal
+str bottles(0)
+
+str bottles(1)
+
+default str bottles(int n)
+
+```
 
 ## function sing {#demo-basic-Bottles-sing}
 
-* ``void sing()``
+```rascal
+void sing()
+
+```
 

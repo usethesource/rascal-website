@@ -9,14 +9,21 @@ title: "module lang::aterm::IO"
 
 ## function readTextATermFile {#lang-aterm-IO-readTextATermFile}
 
-* ``&T readTextATermFile(type[&T] begin, loc location)``
-* ``value readTextATermFile(loc location)``
+```rascal
+&T readTextATermFile(type[&T] begin, loc location)
+
+value readTextATermFile(loc location)
+
+```
 
 read an ATerm from a text file
 
 ## function readATermFromFile {#lang-aterm-IO-readATermFromFile}
 
-* ``value readATermFromFile(str fileName)``
+```rascal
+value readATermFromFile(str fileName)
+
+```
 
 
 #### Synopsis
@@ -25,7 +32,10 @@ Read an ATerm from a named file.
 
 ## function writeTextATermFile {#lang-aterm-IO-writeTextATermFile}
 
-* ``void writeTextATermFile(loc location, value v)``
+```rascal
+void writeTextATermFile(loc location, value v)
+
+```
 
 write an ATerm to a text file
 

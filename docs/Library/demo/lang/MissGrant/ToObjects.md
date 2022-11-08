@@ -9,5 +9,8 @@ title: "module demo::lang::MissGrant::ToObjects"
 
 ## function instantiateController {#demo-lang-MissGrant-ToObjects-instantiateController}
 
-* ``str instantiateController(Controller ctl)``
+```rascal
+str instantiateController(Controller ctl)
+
+```
 

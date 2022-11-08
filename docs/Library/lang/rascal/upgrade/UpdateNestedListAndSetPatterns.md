@@ -9,17 +9,29 @@ title: "module lang::rascal::upgrade::UpdateNestedListAndSetPatterns"
 
 ## function report {#lang-rascal-upgrade-UpdateNestedListAndSetPatterns-report}
 
-* ``list[Message] report(loc root)``
+```rascal
+list[Message] report(loc root)
+
+```
 
 ## function update {#lang-rascal-upgrade-UpdateNestedListAndSetPatterns-update}
 
-* ``void update(loc root)``
+```rascal
+void update(loc root)
+
+```
 
 ## function report {#lang-rascal-upgrade-UpdateNestedListAndSetPatterns-report}
 
-* ``list[Message] report(Tree m)``
+```rascal
+list[Message] report(Tree m)
+
+```
 
 ## function updateTree {#lang-rascal-upgrade-UpdateNestedListAndSetPatterns-updateTree}
 
-* ``Tree updateTree(Tree m)``
+```rascal
+Tree updateTree(Tree m)
+
+```
 

@@ -24,10 +24,16 @@ directly be used for further statistical processing and visualisation.
 
 ## function distribution {#analysis-statistics-Frequency-distribution}
 
-* ``map[&T, int] distribution(rel[&U event, &T bucket] input)``
-* ``map[&T <: num, int] distribution(rel[&U event, &T <: num bucket] input, &T <: num bucketSize)``
-* ``map[&T, int] distribution(map[&U event, &T bucket] input)``
-* ``map[&T <: num, int] distribution(map[&U event, &T <: num bucket] input, &T <: num bucketSize)``
+```rascal
+map[&T, int] distribution(rel[&U event, &T bucket] input)
+
+map[&T <: num, int] distribution(rel[&U event, &T <: num bucket] input, &T <: num bucketSize)
+
+map[&T, int] distribution(map[&U event, &T bucket] input)
+
+map[&T <: num, int] distribution(map[&U event, &T <: num bucket] input, &T <: num bucketSize)
+
+```
 
 
 #### Synopsis
@@ -48,8 +54,12 @@ map[int, int]: (5:2,0:1)
 
 ## function cumFreq {#analysis-statistics-Frequency-cumFreq}
 
-* ``int cumFreq(list[value] values, num n)``
-* ``int cumFreq(list[value] values, str s)``
+```rascal
+int cumFreq(list[value] values, num n)
+
+int cumFreq(list[value] values, str s)
+
+```
 
 
 #### Synopsis
@@ -79,8 +89,12 @@ int: 6
 
 ## function cumPct {#analysis-statistics-Frequency-cumPct}
 
-* ``num cumPct(list[value] values, num n)``
-* ``num cumPct(list[value] values, str s)``
+```rascal
+num cumPct(list[value] values, num n)
+
+num cumPct(list[value] values, str s)
+
+```
 
 
 #### Synopsis
@@ -107,8 +121,12 @@ num: 1.0
 
 ## function pct {#analysis-statistics-Frequency-pct}
 
-* ``num pct(list[value] values, num n)``
-* ``num pct(list[value] values, str s)``
+```rascal
+num pct(list[value] values, num n)
+
+num pct(list[value] values, str s)
+
+```
 
 
 #### Synopsis

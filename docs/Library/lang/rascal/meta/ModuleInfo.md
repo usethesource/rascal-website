@@ -17,5 +17,8 @@ data ImportsInfo
 
 ## function getImports {#lang-rascal-meta-ModuleInfo-getImports}
 
-* ``ImportsInfo getImports((Module)`<Header h> <Body _>`)``
+```rascal
+ImportsInfo getImports((Module)`<Header h> <Body _>`)
+
+```
 

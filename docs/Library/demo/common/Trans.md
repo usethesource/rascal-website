@@ -9,7 +9,10 @@ title: "module demo::common::Trans"
 
 ## function trans {#demo-common-Trans-trans}
 
-* ``rel[int,int] trans(rel[int,int] R)``
+```rascal
+rel[int,int] trans(rel[int,int] R)
+
+```
 
 #### Synopsis
 
@@ -23,9 +26,15 @@ Compute transitive closure: R+ = R + (R o R) + (R o R o R) + ...
 
 ## function t1 {#demo-common-Trans-t1}
 
-* ``test bool t1()``
+```rascal
+test bool t1()
+
+```
 
 ## function t2 {#demo-common-Trans-t2}
 
-* ``test bool t2()``
+```rascal
+test bool t2()
+
+```
 

@@ -30,8 +30,12 @@ data GrammarDefinition
 
 ## function grammar {#Grammar-grammar}
 
-* ``Grammar grammar(set[Symbol] starts, set[Production] prods)``
-* ``Grammar grammar(type[&T <: Tree] sym)``
+```rascal
+Grammar grammar(set[Symbol] starts, set[Production] prods)
+
+Grammar grammar(type[&T <: Tree] sym)
+
+```
 
 ## data Item {#Grammar-Item}
 
@@ -48,7 +52,10 @@ An item is an index into the symbol list of a production rule.
 
 ## function compose {#Grammar-compose}
 
-* ``Grammar compose(Grammar g1, Grammar g2)``
+```rascal
+Grammar compose(Grammar g1, Grammar g2)
+
+```
 
 
 #### Synopsis
@@ -62,9 +69,15 @@ The start symbols of g1 will be the start symbols of the resulting grammar.
 
 ## function extends {#Grammar-extends}
 
-* ``rel[str, str] extends(GrammarDefinition def)``
+```rascal
+rel[str, str] extends(GrammarDefinition def)
+
+```
 
 ## function imports {#Grammar-imports}
 
-* ``rel[str,str] imports(GrammarDefinition def)``
+```rascal
+rel[str,str] imports(GrammarDefinition def)
+
+```
 

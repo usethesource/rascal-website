@@ -9,8 +9,12 @@ title: "module lang::rsf::IO"
 
 ## function readRSF {#lang-rsf-IO-readRSF}
 
-* ``map[str, rel[str,str]] readRSF(loc nameRSFFile)``
-* ``map[str, rel[str,str]] readRSF(loc nameRSFFile)``
+```rascal
+map[str, rel[str,str]] readRSF(loc nameRSFFile)
+
+map[str, rel[str,str]] readRSF(loc nameRSFFile)
+
+```
 
 Read an RSF file.
 
@@ -21,15 +25,24 @@ where each field is separated by a tabulation character (\t). One file may conta
 
 ## function getRSFTypes {#lang-rsf-IO-getRSFTypes}
 
-* ``map[str, type[value]] getRSFTypes(loc location)``
+```rascal
+map[str, type[value]] getRSFTypes(loc location)
+
+```
 
 ## function readRSFRelation {#lang-rsf-IO-readRSFRelation}
 
-* ``&T readRSFRelation(type[&T] result, str name, loc location)``
+```rascal
+&T readRSFRelation(type[&T] result, str name, loc location)
+
+```
 
 ## function generate {#lang-rsf-IO-generate}
 
-* ``str generate(str moduleName, loc uri)``
+```rascal
+str generate(str moduleName, loc uri)
+
+```
 
 
   The RSF schema should be given as:

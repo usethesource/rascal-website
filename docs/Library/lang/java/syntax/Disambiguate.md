@@ -26,39 +26,72 @@ title: "module lang::java::\\syntax::Disambiguate"
 
 ## function isNumeric {#lang-java-\syntax-Disambiguate-isNumeric}
 
-* ``bool isNumeric((RefType)`Byte`)``
-* ``bool isNumeric((RefType)`java.lang.Byte`)``
-* ``bool isNumeric((RefType)`Character`)``
-* ``bool isNumeric((RefType)`java.lang.Character`)``
-* ``bool isNumeric((RefType)`Short`)``
-* ``bool isNumeric((RefType)`java.lang.Short`)``
-* ``bool isNumeric((RefType)`Integer`)``
-* ``bool isNumeric((RefType)`java.lang.Integer`)``
-* ``bool isNumeric((RefType)`Long`)``
-* ``bool isNumeric((RefType)`java.lang.Long`)``
-* ``bool isNumeric((RefType)`Float`)``
-* ``bool isNumeric((RefType)`java.lang.Float`)``
-* ``bool isNumeric((RefType)`Double`)``
-* ``bool isNumeric((RefType)`java.lang.Double`)``
-* ``default bool isNumeric(RefType r)``
+```rascal
+bool isNumeric((RefType)`Byte`)
+
+bool isNumeric((RefType)`java.lang.Byte`)
+
+bool isNumeric((RefType)`Character`)
+
+bool isNumeric((RefType)`java.lang.Character`)
+
+bool isNumeric((RefType)`Short`)
+
+bool isNumeric((RefType)`java.lang.Short`)
+
+bool isNumeric((RefType)`Integer`)
+
+bool isNumeric((RefType)`java.lang.Integer`)
+
+bool isNumeric((RefType)`Long`)
+
+bool isNumeric((RefType)`java.lang.Long`)
+
+bool isNumeric((RefType)`Float`)
+
+bool isNumeric((RefType)`java.lang.Float`)
+
+bool isNumeric((RefType)`Double`)
+
+bool isNumeric((RefType)`java.lang.Double`)
+
+default bool isNumeric(RefType r)
+
+```
 
 ## function isPrefix {#lang-java-\syntax-Disambiguate-isPrefix}
 
-* ``bool isPrefix((Expr)`+ <Expr _>`)``
-* ``bool isPrefix((Expr)`++ <Expr _>`)``
-* ``bool isPrefix((Expr)`- <Expr _>`)``
-* ``bool isPrefix((Expr)`-- <Expr _>`)``
-* ``default bool isPrefix(Expr x)``
+```rascal
+bool isPrefix((Expr)`+ <Expr _>`)
+
+bool isPrefix((Expr)`++ <Expr _>`)
+
+bool isPrefix((Expr)`- <Expr _>`)
+
+bool isPrefix((Expr)`-- <Expr _>`)
+
+default bool isPrefix(Expr x)
+
+```
 
 ## function amb {#lang-java-\syntax-Disambiguate-amb}
 
-* ``Tree amb(set[Tree] alts)``
+```rascal
+Tree amb(set[Tree] alts)
+
+```
 
 ## function containsPrefixExpressions {#lang-java-\syntax-Disambiguate-containsPrefixExpressions}
 
-* ``bool containsPrefixExpressions(set[Tree] trees)``
+```rascal
+bool containsPrefixExpressions(set[Tree] trees)
+
+```
 
 ## function containsPrefixExpression {#lang-java-\syntax-Disambiguate-containsPrefixExpression}
 
-* ``bool containsPrefixExpression(Tree t)``
+```rascal
+bool containsPrefixExpression(Tree t)
+
+```
 

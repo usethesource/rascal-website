@@ -9,5 +9,8 @@ title: "module lang::rascal::tests::concrete::OtherSyntax"
 
 ## function getRemoteGrammar {#lang-rascal-tests-concrete-OtherSyntax-getRemoteGrammar}
 
-* ``type[Remote] getRemoteGrammar()``
+```rascal
+type[Remote] getRemoteGrammar()
+
+```
 

@@ -60,8 +60,12 @@ The following functions are defined for strings:
 
 ## function center {#String-center}
 
-* ``str center(str s, int n)``
-* ``str center(str s, int n, str pad)``
+```rascal
+str center(str s, int n)
+
+str center(str s, int n, str pad)
+
+```
 
 
 #### Synopsis
@@ -87,7 +91,10 @@ str: "xxxabcxxxx"
 
 ## function charAt {#String-charAt}
 
-* ``int charAt(str s, int i) throws IndexOutOfBounds``
+```rascal
+int charAt(str s, int i) throws IndexOutOfBounds
+
+```
 
 
 #### Synopsis
@@ -113,7 +120,10 @@ str: "a"
 
 ## function chars {#String-chars}
 
-* ``list[int] chars(str s)``
+```rascal
+list[int] chars(str s)
+
+```
 
 
 #### Synopsis
@@ -138,7 +148,10 @@ bool: true
 
 ## function contains {#String-contains}
 
-* ``bool contains(str input, str find)``
+```rascal
+bool contains(str input, str find)
+
+```
 
 
 #### Synopsis
@@ -163,7 +176,10 @@ bool: false
 
 ## function deescape {#String-deescape}
 
-* ``str deescape(str s)``
+```rascal
+str deescape(str s)
+
+```
 
 
 #### Synopsis
@@ -172,7 +188,10 @@ Replace escaped characters by the escaped character itself (using Rascal escape 
 
 ## function endsWith {#String-endsWith}
 
-* ``bool endsWith(str subject, str suffix)``
+```rascal
+bool endsWith(str subject, str suffix)
+
+```
 
 
 #### Synopsis
@@ -195,7 +214,10 @@ bool: true
 
 ## function escape {#String-escape}
 
-* ``str escape(str subject, map[str,str] mapping)``
+```rascal
+str escape(str subject, map[str,str] mapping)
+
+```
 
 
 #### Synopsis
@@ -226,7 +248,10 @@ ok
 
 ## function findAll {#String-findAll}
 
-* ``list[int] findAll(str subject, str find)``
+```rascal
+list[int] findAll(str subject, str find)
+
+```
 
 
 #### Synopsis
@@ -256,7 +281,10 @@ list[int]: []
 
 ## function findFirst {#String-findFirst}
 
-* ``int findFirst(str subject, str find)``
+```rascal
+int findFirst(str subject, str find)
+
+```
 
 
 #### Synopsis
@@ -286,7 +314,10 @@ int: -1
 
 ## function findLast {#String-findLast}
 
-* ``int findLast(str subject, str find)``
+```rascal
+int findLast(str subject, str find)
+
+```
 
 
 #### Synopsis
@@ -316,7 +347,10 @@ int: -1
 
 ## function isEmpty {#String-isEmpty}
 
-* ``bool isEmpty(str s)``
+```rascal
+bool isEmpty(str s)
+
+```
 
 
 #### Synopsis
@@ -341,7 +375,10 @@ bool: false
 
 ## function arbString {#String-arbString}
 
-* ``str arbString(int n)``
+```rascal
+str arbString(int n)
+
+```
 
 
 #### Synopsis
@@ -359,15 +396,19 @@ Returns a string of maximum `n` length, with arbitrary characters.
 rascal>import String;
 ok
 rascal>arbString(3);
-str: ""
+str: "6561"
 rascal>arbString(10);
-str: "㫶ĚǋŬ픨턌䧙퉭Ľ䧘𠡧"
+str: ""
 ```
 
 ## function left {#String-left}
 
-* ``str left(str s, int n)``
-* ``str left(str s, int n, str pad)``
+```rascal
+str left(str s, int n)
+
+str left(str s, int n, str pad)
+
+```
 
 
 #### Synopsis
@@ -393,7 +434,10 @@ str: "abcxxxxxxx"
 
 ## function replaceAll {#String-replaceAll}
 
-* ``str replaceAll(str subject, str find, str replacement)``
+```rascal
+str replaceAll(str subject, str find, str replacement)
+
+```
 
 
 #### Synopsis
@@ -425,7 +469,10 @@ Note that `find` is a string (as opposed to, for instance, a regular expression 
 
 ## function replaceFirst {#String-replaceFirst}
 
-* ``str replaceFirst(str subject, str find, str replacement)``
+```rascal
+str replaceFirst(str subject, str find, str replacement)
+
+```
 
 
 #### Synopsis
@@ -457,7 +504,10 @@ Note that `find` is a string (as opposed to, for instance, a regular expression 
 
 ## function replaceLast {#String-replaceLast}
 
-* ``str replaceLast(str subject, str find, str replacement)``
+```rascal
+str replaceLast(str subject, str find, str replacement)
+
+```
 
 
 #### Synopsis
@@ -489,7 +539,10 @@ Note that `find` is a string (as opposed to, for instance, a regular expression 
 
 ## function reverse {#String-reverse}
 
-* ``str reverse(str s)``
+```rascal
+str reverse(str s)
+
+```
 
 
 #### Synopsis
@@ -512,8 +565,12 @@ str: "cba"
 
 ## function right {#String-right}
 
-* ``str right(str s, int n)``
-* ``str right(str s, int n, str pad)``
+```rascal
+str right(str s, int n)
+
+str right(str s, int n, str pad)
+
+```
 
 
 #### Synopsis
@@ -556,7 +613,10 @@ str: "xxxxxxxabc"
 
 ## function size {#String-size}
 
-* ``int size(str s)``
+```rascal
+int size(str s)
+
+```
 
 
 #### Synopsis
@@ -581,7 +641,10 @@ int: 0
 
 ## function startsWith {#String-startsWith}
 
-* ``bool startsWith(str subject, str prefix)``
+```rascal
+bool startsWith(str subject, str prefix)
+
+```
 
 
 #### Synopsis
@@ -604,7 +667,10 @@ bool: true
 
 ## function stringChar {#String-stringChar}
 
-* ``str stringChar(int char) throws IllegalArgument``
+```rascal
+str stringChar(int char) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -613,7 +679,10 @@ Convert a character code into a string.
 
 ## function stringChars {#String-stringChars}
 
-* ``str stringChars(list[int] chars) throws IllegalArgument``
+```rascal
+str stringChars(list[int] chars) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -622,7 +691,10 @@ Convert a list of character codes into a string.
 
 ## function isValidCharacter {#String-isValidCharacter}
 
-* ``bool isValidCharacter(int ch)``
+```rascal
+bool isValidCharacter(int ch)
+
+```
 
 
 #### Synopsis
@@ -631,8 +703,12 @@ Check that a given integer value is a valid Unicode code point.
 
 ## function substring {#String-substring}
 
-* ``str substring(str s, int begin)``
-* ``str substring(str s, int begin, int end)``
+```rascal
+str substring(str s, int begin)
+
+str substring(str s, int begin, int end)
+
+```
 
 
 #### Synopsis
@@ -658,8 +734,12 @@ str: "cd"
 
 ## function toInt {#String-toInt}
 
-* ``int toInt(str s) throws IllegalArgument``
-* ``int toInt(str s, int r) throws IllegalArgument``
+```rascal
+int toInt(str s) throws IllegalArgument
+
+int toInt(str s, int r) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -697,7 +777,10 @@ ok
 
 ## function toLowerCase {#String-toLowerCase}
 
-* ``str toLowerCase(str s)``
+```rascal
+str toLowerCase(str s)
+
+```
 
 
 #### Synopsis
@@ -720,7 +803,10 @@ str: "aabbcc123"
 
 ## function toReal {#String-toReal}
 
-* ``real toReal(str s)``
+```rascal
+real toReal(str s)
+
+```
 
 
 #### Synopsis
@@ -750,7 +836,10 @@ ok
 
 ## function toUpperCase {#String-toUpperCase}
 
-* ``str toUpperCase(str s)``
+```rascal
+str toUpperCase(str s)
+
+```
 
 
 #### Synopsis
@@ -775,7 +864,10 @@ str: "AABBCC123"
 
 ## function trim {#String-trim}
 
-* ``str trim(str s)``
+```rascal
+str trim(str s)
+
+```
 
 
 #### Synopsis
@@ -795,7 +887,10 @@ str: "jelly\nbeans"
 
 ## function squeeze {#String-squeeze}
 
-* ``str squeeze(str src, str charSet)``
+```rascal
+str squeeze(str src, str charSet)
+
+```
 
 
 #### Synopsis
@@ -819,7 +914,10 @@ str: "helo"
 
 ## function split {#String-split}
 
-* ``list[str] split(str sep, str src)``
+```rascal
+list[str] split(str sep, str src)
+
+```
 
 
 #### Synopsis
@@ -828,23 +926,38 @@ Split a string into a list of strings based on a literal separator.
 
 ## function capitalize {#String-capitalize}
 
-* ``str capitalize(str src)``
+```rascal
+str capitalize(str src)
+
+```
 
 ## function uncapitalize {#String-uncapitalize}
 
-* ``str uncapitalize(str src)``
+```rascal
+str uncapitalize(str src)
+
+```
 
 ## function toBase64 {#String-toBase64}
 
-* ``str toBase64(str src)``
+```rascal
+str toBase64(str src)
+
+```
 
 ## function fromBase64 {#String-fromBase64}
 
-* ``str fromBase64(str src)``
+```rascal
+str fromBase64(str src)
+
+```
 
 ## function wrap {#String-wrap}
 
-* ``str wrap(str src, int wrapLength)``
+```rascal
+str wrap(str src, int wrapLength)
+
+```
 
 
 #### Synopsis
@@ -857,11 +970,17 @@ Inserts newlines in a string in order to fit the string in a certain width. It o
 
 ## function format {#String-format}
 
-* ``str format(str s, str dir, int n, str pad)``
+```rascal
+str format(str s, str dir, int n, str pad)
+
+```
 
 ## function rexpMatch {#String-rexpMatch}
 
-* ``bool rexpMatch(str s, str re)``
+```rascal
+bool rexpMatch(str s, str re)
+
+```
 
 
 #### Synopsis
@@ -870,7 +989,10 @@ Determine if a string matches the given (Java-syntax) regular expression.
 
 ## function toLocation {#String-toLocation}
 
-* ``loc toLocation(str s)``
+```rascal
+loc toLocation(str s)
+
+```
 
 
 #### Synopsis
@@ -896,7 +1018,10 @@ loc: |cwd:///document.xml|
 
 ## function substitute {#String-substitute}
 
-* ``str substitute(str src, map[loc,str] s)``
+```rascal
+str substitute(str src, map[loc,str] s)
+
+```
 
 
 #### Synopsis

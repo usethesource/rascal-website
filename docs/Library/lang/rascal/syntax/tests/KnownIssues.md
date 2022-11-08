@@ -14,13 +14,22 @@ end up in SolvedIssues
 
 ## function isAmb {#lang-rascal-\syntax-tests-KnownIssues-isAmb}
 
-* ``bool isAmb(Tree t)``
+```rascal
+bool isAmb(Tree t)
+
+```
 
 ## function literalAmb {#lang-rascal-\syntax-tests-KnownIssues-literalAmb}
 
-* ``test bool literalAmb()``
+```rascal
+test bool literalAmb()
+
+```
 
 ## function basicAmb {#lang-rascal-\syntax-tests-KnownIssues-basicAmb}
 
-* ``test bool basicAmb()``
+```rascal
+test bool basicAmb()
+
+```
 

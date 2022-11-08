@@ -9,7 +9,10 @@ title: "module lang::rascal::scrap::Patch"
 
 ## function commands2patch {#lang-rascal-scrap-Patch-commands2patch}
 
-* ``lrel[loc, str] commands2patch(start[Commands] pt)``
+```rascal
+lrel[loc, str] commands2patch(start[Commands] pt)
+
+```
 
 
 Convert a sequence of commands to a textual patch value to be applied to the editor
@@ -22,5 +25,8 @@ A loc with length=0 to x represents insertion of x.
 
 ## function resultSource {#lang-rascal-scrap-Patch-resultSource}
 
-* ``tuple[bool, str] resultSource(tuple[str val, str out, str err] output)``
+```rascal
+tuple[bool, str] resultSource(tuple[str val, str out, str err] output)
+
+```
 

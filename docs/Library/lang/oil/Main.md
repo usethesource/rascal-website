@@ -56,8 +56,12 @@ data Exp
 
 ## function interpret {#lang-oil-Main-interpret}
 
-* ``str interpret(list[Exp] e)``
-* ``str interpret(Exp e)``
+```rascal
+str interpret(list[Exp] e)
+
+str interpret(Exp e)
+
+```
 
 
 #### Synopsis

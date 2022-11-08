@@ -15,5 +15,8 @@ title: "module lang::rascal::grammar::definition::References"
 
 ## function references {#lang-rascal-grammar-definition-References-references}
 
-* ``Grammar references(Grammar g)``
+```rascal
+Grammar references(Grammar g)
+
+```
 

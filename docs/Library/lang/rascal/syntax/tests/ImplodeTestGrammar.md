@@ -11,25 +11,43 @@ Tests the potential clashes among value constructors of different adts, plus, th
 
 ## function parseExp {#lang-rascal-\syntax-tests-ImplodeTestGrammar-parseExp}
 
-* ``Exp parseExp(str s)``
+```rascal
+Exp parseExp(str s)
+
+```
 
 ## function expLit1 {#lang-rascal-\syntax-tests-ImplodeTestGrammar-expLit1}
 
-* ``Exp expLit1()``
+```rascal
+Exp expLit1()
+
+```
 
 ## function expLit2 {#lang-rascal-\syntax-tests-ImplodeTestGrammar-expLit2}
 
-* ``Exp expLit2()``
+```rascal
+Exp expLit2()
+
+```
 
 ## function parseExpr {#lang-rascal-\syntax-tests-ImplodeTestGrammar-parseExpr}
 
-* ``Expr parseExpr(str s)``
+```rascal
+Expr parseExpr(str s)
+
+```
 
 ## function exprLit1 {#lang-rascal-\syntax-tests-ImplodeTestGrammar-exprLit1}
 
-* ``Expr exprLit1()``
+```rascal
+Expr exprLit1()
+
+```
 
 ## function exprLit2 {#lang-rascal-\syntax-tests-ImplodeTestGrammar-exprLit2}
 
-* ``Expr exprLit2()``
+```rascal
+Expr exprLit2()
+
+```
 

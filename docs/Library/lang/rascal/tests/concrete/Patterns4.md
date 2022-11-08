@@ -9,33 +9,57 @@ title: "module lang::rascal::tests::concrete::Patterns4"
 
 ## function optionalNotPresentIsFalse {#lang-rascal-tests-concrete-Patterns4-optionalNotPresentIsFalse}
 
-* ``test bool optionalNotPresentIsFalse()``
+```rascal
+test bool optionalNotPresentIsFalse()
+
+```
 
 ## function optionalPresentIsTrue {#lang-rascal-tests-concrete-Patterns4-optionalPresentIsTrue}
 
-* ``test bool optionalPresentIsTrue()``
+```rascal
+test bool optionalPresentIsTrue()
+
+```
 
 ## function optAbsent {#lang-rascal-tests-concrete-Patterns4-optAbsent}
 
-* ``test bool optAbsent()``
+```rascal
+test bool optAbsent()
+
+```
 
 ## function optPresent {#lang-rascal-tests-concrete-Patterns4-optPresent}
 
-* ``test bool optPresent()``
+```rascal
+test bool optPresent()
+
+```
 
 ## function absent {#lang-rascal-tests-concrete-Patterns4-absent}
 
-* ``bool absent((Question) `question <QValue? v>`)``
+```rascal
+bool absent((Question) `question <QValue? v>`)
+
+```
 
 ## function optAbsentInParameter {#lang-rascal-tests-concrete-Patterns4-optAbsentInParameter}
 
-* ``test bool optAbsentInParameter()``
+```rascal
+test bool optAbsentInParameter()
+
+```
 
 ## function present {#lang-rascal-tests-concrete-Patterns4-present}
 
-* ``bool present((Question) `question <QValue? v>`)``
+```rascal
+bool present((Question) `question <QValue? v>`)
+
+```
 
 ## function optPresentInParameter {#lang-rascal-tests-concrete-Patterns4-optPresentInParameter}
 
-* ``test bool optPresentInParameter()``
+```rascal
+test bool optPresentInParameter()
+
+```
 

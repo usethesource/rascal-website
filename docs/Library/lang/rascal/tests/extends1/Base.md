@@ -9,7 +9,10 @@ title: "module lang::rascal::tests::extends1::Base"
 
 ## alias INTEGER {#lang-rascal-tests-extends1-Base-INTEGER}
 
-* `int`
+```rascal
+int
+
+```
 
 ## data D {#lang-rascal-tests-extends1-Base-D}
 
@@ -21,10 +24,17 @@ data D
 
 ## function ident {#lang-rascal-tests-extends1-Base-ident}
 
-* ``int ident(int n)``
+```rascal
+int ident(int n)
+
+```
 
 ## function f {#lang-rascal-tests-extends1-Base-f}
 
-* ``str f(0)``
-* ``default str f(value v)``
+```rascal
+str f(0)
+
+default str f(value v)
+
+```
 

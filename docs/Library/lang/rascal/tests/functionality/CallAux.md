@@ -17,13 +17,22 @@ data C
 
 ## function changeX {#lang-rascal-tests-functionality-CallAux-changeX}
 
-* ``void changeX(bool() newX)``
+```rascal
+void changeX(bool() newX)
+
+```
 
 ## function getX {#lang-rascal-tests-functionality-CallAux-getX}
 
-* ``bool getX()``
+```rascal
+bool getX()
+
+```
 
 ## function c {#lang-rascal-tests-functionality-CallAux-c}
 
-* ``C c(int i)``
+```rascal
+C c(int i)
+
+```
 

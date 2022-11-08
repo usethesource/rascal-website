@@ -15,247 +15,423 @@ which satisfies these constraints.
 
 ## alias options {#lang-box-util-Box2Text-options}
 
-* `map [str, int]`
+```rascal
+map [str, int]
+
+```
 
 ## function fprint {#lang-box-util-Box2Text-fprint}
 
-* ``void fprint(Box b)``
+```rascal
+void fprint(Box b)
+
+```
 
 Print boxes
 
 ## function fprintln {#lang-box-util-Box2Text-fprintln}
 
-* ``void fprintln(Box b)``
+```rascal
+void fprintln(Box b)
+
+```
 
 Print boxes followed by newline
 
 ## function format {#lang-box-util-Box2Text-format}
 
-* ``str format(Box b)``
+```rascal
+str format(Box b)
+
+```
 
 Converts boxes into a string
 
 ## function box2latex {#lang-box-util-Box2Text-box2latex}
 
-* ``text box2latex(Box b)``
+```rascal
+text box2latex(Box b)
+
+```
 
 Converts boxes into latex
 
 ## function box2html {#lang-box-util-Box2Text-box2html}
 
-* ``text box2html(Box b)``
+```rascal
+text box2html(Box b)
+
+```
 
 Converts boxes into html
 
 ## function box2text {#lang-box-util-Box2Text-box2text}
 
-* ``text box2text(Box b)``
+```rascal
+text box2text(Box b)
+
+```
 
 Converts boxes into list of lines (ASCII)
 
 ## alias foptions {#lang-box-util-Box2Text-foptions}
 
-* `map[str, list[str]]`
+```rascal
+map[str, list[str]]
+
+```
 
 ## function vv {#lang-box-util-Box2Text-vv}
 
-* ``text vv(text a, text b)``
+```rascal
+text vv(text a, text b)
+
+```
 
 ## function blank {#lang-box-util-Box2Text-blank}
 
-* ``str blank(str a)``
+```rascal
+str blank(str a)
+
+```
 
 ## function wd {#lang-box-util-Box2Text-wd}
 
-* ``text wd(text a)``
+```rascal
+text wd(text a)
+
+```
 
 ## function width {#lang-box-util-Box2Text-width}
 
-* ``int width(str s)``
+```rascal
+int width(str s)
+
+```
 
 ## function twidth {#lang-box-util-Box2Text-twidth}
 
-* ``int twidth(text t)``
+```rascal
+int twidth(text t)
+
+```
 
 ## function hwidth {#lang-box-util-Box2Text-hwidth}
 
-* ``int hwidth(text t)``
+```rascal
+int hwidth(text t)
+
+```
 
 ## function bar {#lang-box-util-Box2Text-bar}
 
-* ``text bar(str a, text b)``
+```rascal
+text bar(str a, text b)
+
+```
 
 ## function hskip {#lang-box-util-Box2Text-hskip}
 
-* ``text hskip(int n)``
+```rascal
+text hskip(int n)
+
+```
 
 ## function vskip {#lang-box-util-Box2Text-vskip}
 
-* ``text vskip(int n)``
+```rascal
+text vskip(int n)
+
+```
 
 ## function isBlank {#lang-box-util-Box2Text-isBlank}
 
-* ``bool isBlank(str a)``
+```rascal
+bool isBlank(str a)
+
+```
 
 ## function prepend {#lang-box-util-Box2Text-prepend}
 
-* ``text prepend(str a, text b)``
+```rascal
+text prepend(str a, text b)
+
+```
 
 ## function hh {#lang-box-util-Box2Text-hh}
 
-* ``text hh(text a, text b)``
+```rascal
+text hh(text a, text b)
+
+```
 
 ## function _hh {#lang-box-util-Box2Text-_hh}
 
-* ``text _hh(text a, text b)``
+```rascal
+text _hh(text a, text b)
+
+```
 
 ## function _vv {#lang-box-util-Box2Text-_vv}
 
-* ``text _vv(text a, text b)``
+```rascal
+text _vv(text a, text b)
+
+```
 
 ## function hh_ {#lang-box-util-Box2Text-hh_}
 
-* ``text hh_(text a, text b)``
+```rascal
+text hh_(text a, text b)
+
+```
 
 ## function vv_ {#lang-box-util-Box2Text-vv_}
 
-* ``text vv_(text a, text b)``
+```rascal
+text vv_(text a, text b)
+
+```
 
 ## function LL {#lang-box-util-Box2Text-LL}
 
-* ``text LL(str s )``
+```rascal
+text LL(str s )
+
+```
 
 ## function HH {#lang-box-util-Box2Text-HH}
 
-* ``text HH(list[Box] b, Box _, options opts, int m)``
+```rascal
+text HH(list[Box] b, Box _, options opts, int m)
+
+```
 
 ## function VV {#lang-box-util-Box2Text-VV}
 
-* ``text VV(list[Box] b, Box c, options opts, int m)``
+```rascal
+text VV(list[Box] b, Box c, options opts, int m)
+
+```
 
 ## function II {#lang-box-util-Box2Text-II}
 
-* ``text II(list[Box] b, Box c, options opts, int m)``
+```rascal
+text II(list[Box] b, Box c, options opts, int m)
+
+```
 
 ## function WDWD {#lang-box-util-Box2Text-WDWD}
 
-* ``text WDWD(list[Box] b, Box c ,options opts, int m)``
+```rascal
+text WDWD(list[Box] b, Box c ,options opts, int m)
+
+```
 
 ## function ifHOV {#lang-box-util-Box2Text-ifHOV}
 
-* ``text ifHOV(text t, Box b,  Box c, options opts, int m)``
+```rascal
+text ifHOV(text t, Box b,  Box c, options opts, int m)
+
+```
 
 ## function HOVHOV {#lang-box-util-Box2Text-HOVHOV}
 
-* ``text HOVHOV(list[Box] b, Box c, options opts, int m)``
+```rascal
+text HOVHOV(list[Box] b, Box c, options opts, int m)
+
+```
 
 ## function HVHV {#lang-box-util-Box2Text-HVHV}
 
-* ``text HVHV(text T, int s, text a, Box A, list[Box] B, options opts, int m)``
-* ``text HVHV(text T, int s, list[Box] b, options opts,  int m, Box c)``
-* ``text HVHV(list[Box] b, Box _, options opts, int m)``
+```rascal
+text HVHV(text T, int s, text a, Box A, list[Box] B, options opts, int m)
+
+text HVHV(text T, int s, list[Box] b, options opts,  int m, Box c)
+
+text HVHV(list[Box] b, Box _, options opts, int m)
+
+```
 
 ## function font {#lang-box-util-Box2Text-font}
 
-* ``text font(text t, str tg)``
+```rascal
+text font(text t, str tg)
+
+```
 
 ## function QQ {#lang-box-util-Box2Text-QQ}
 
-* ``text QQ(Box b, Box c, options opts, foptions f, int m)``
+```rascal
+text QQ(Box b, Box c, options opts, foptions f, int m)
+
+```
 
 ## function O {#lang-box-util-Box2Text-O}
 
-* ``text O(Box b, Box c, options opts, int m)``
+```rascal
+text O(Box b, Box c, options opts, int m)
+
+```
 
 ## function boxSize {#lang-box-util-Box2Text-boxSize}
 
-* ``Box boxSize(Box b, Box c, options opts, int m)``
+```rascal
+Box boxSize(Box b, Box c, options opts, int m)
+
+```
 
 ## function RR {#lang-box-util-Box2Text-RR}
 
-* ``list[list[Box]] RR(list[Box] bl, Box c, options opts, int m)``
+```rascal
+list[list[Box]] RR(list[Box] bl, Box c, options opts, int m)
+
+```
 
 ## function getMaxWidth {#lang-box-util-Box2Text-getMaxWidth}
 
-* ``int getMaxWidth(list[Box] b)``
+```rascal
+int getMaxWidth(list[Box] b)
+
+```
 
 ## function Awidth {#lang-box-util-Box2Text-Awidth}
 
-* ``list[int] Awidth(list[list[Box]] a)``
+```rascal
+list[int] Awidth(list[list[Box]] a)
+
+```
 
 ## function AA {#lang-box-util-Box2Text-AA}
 
-* ``text AA(list[Box] bl, Box c ,options opts, foptions f, int m)``
+```rascal
+text AA(list[Box] bl, Box c ,options opts, foptions f, int m)
+
+```
 
 ## function changeHV2H {#lang-box-util-Box2Text-changeHV2H}
 
-* ``bool changeHV2H(list[Box] hv)``
+```rascal
+bool changeHV2H(list[Box] hv)
+
+```
 
 ## function removeHV {#lang-box-util-Box2Text-removeHV}
 
-* ``Box removeHV(Box b)``
+```rascal
+Box removeHV(Box b)
+
+```
 
 ## function removeHOV {#lang-box-util-Box2Text-removeHOV}
 
-* ``Box removeHOV(Box b)``
+```rascal
+Box removeHOV(Box b)
+
+```
 
 ## function box2data {#lang-box-util-Box2Text-box2data}
 
-* ``text box2data(Box b)``
+```rascal
+text box2data(Box b)
+
+```
 
 ## function convert2latex {#lang-box-util-Box2Text-convert2latex}
 
-* ``str convert2latex(str s)``
+```rascal
+str convert2latex(str s)
+
+```
 
 ## function text2latex {#lang-box-util-Box2Text-text2latex}
 
-* ``str text2latex(str t)``
+```rascal
+str text2latex(str t)
+
+```
 
 ## function selectBeginTag {#lang-box-util-Box2Text-selectBeginTag}
 
-* ``str selectBeginTag(str tg, str key)``
+```rascal
+str selectBeginTag(str tg, str key)
+
+```
 
 ## function selectEndTag {#lang-box-util-Box2Text-selectEndTag}
 
-* ``str selectEndTag(str tg)``
+```rascal
+str selectEndTag(str tg)
+
+```
 
 ## function convert2html {#lang-box-util-Box2Text-convert2html}
 
-* ``str convert2html(str s)``
+```rascal
+str convert2html(str s)
+
+```
 
 ## function text2html {#lang-box-util-Box2Text-text2html}
 
-* ``str text2html(str t)``
+```rascal
+str text2html(str t)
+
+```
 
 ## function text2txt {#lang-box-util-Box2Text-text2txt}
 
-* ``str text2txt(str t)``
+```rascal
+str text2txt(str t)
+
+```
 
 ## function text2latex {#lang-box-util-Box2Text-text2latex}
 
-* ``text text2latex(text t)``
+```rascal
+text text2latex(text t)
+
+```
 
 ## function text2html {#lang-box-util-Box2Text-text2html}
 
-* ``text text2html(text t)``
+```rascal
+text text2html(text t)
+
+```
 
 ## function text2txt {#lang-box-util-Box2Text-text2txt}
 
-* ``text text2txt(text t)``
+```rascal
+text text2txt(text t)
+
+```
 
 ## function tst {#lang-box-util-Box2Text-tst}
 
-* ``void tst()``
+```rascal
+void tst()
+
+```
 
 ## function baseName {#lang-box-util-Box2Text-baseName}
 
-* ``str baseName(str input)``
+```rascal
+str baseName(str input)
+
+```
 
 ## function toExport {#lang-box-util-Box2Text-toExport}
 
-* ``void toExport(loc src,loc dest, text r,str suffix)``
+```rascal
+void toExport(loc src,loc dest, text r,str suffix)
+
+```
 
 ## function main {#lang-box-util-Box2Text-main}
 
-* ``void main(Box b)``
+```rascal
+void main(Box b)
+
+```
 

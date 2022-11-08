@@ -40,9 +40,14 @@ zzz,yyy,xxx
 
 ## function readCSV {#lang-csv-IO-readCSV}
 
-* ``value readCSV(loc location, bool header = true, str separator = ",", str encoding = "UTF8")``
-* ``value readCSV(loc location, map[str,str] options)``
-* ``&T readCSV(type[&T] result, loc location, bool header = true, str separator = ",", str encoding = "UTF8")``
+```rascal
+value readCSV(loc location, bool header = true, str separator = ",", str encoding = "UTF8")
+
+value readCSV(loc location, map[str,str] options)
+
+&T readCSV(type[&T] result, loc location, bool header = true, str separator = ",", str encoding = "UTF8")
+
+```
 
 
 #### Synopsis
@@ -130,11 +135,17 @@ rel[int position,str artist,str title,int year]: {
 
 ## function getCSVType {#lang-csv-IO-getCSVType}
 
-* ``type[value] getCSVType(loc location, bool header = true, str separator = ",", str encoding = "UTF8")``
+```rascal
+type[value] getCSVType(loc location, bool header = true, str separator = ",", str encoding = "UTF8")
+
+```
 
 ## function writeCSV {#lang-csv-IO-writeCSV}
 
-* ``void writeCSV(type[&T] schema, &T relation, loc location, bool header = true, str separator = ",", str encoding = "UTF8")``
+```rascal
+void writeCSV(type[&T] schema, &T relation, loc location, bool header = true, str separator = ",", str encoding = "UTF8")
+
+```
 
 
 #### Synopsis
@@ -197,15 +208,24 @@ position,artist,title,year
 
 ## function loadCSV {#lang-csv-IO-loadCSV}
 
-* ``lang::csv::ast::CSV::Table loadCSV(loc l)``
+```rascal
+lang::csv::ast::CSV::Table loadCSV(loc l)
+
+```
 
 ## function loadNormalizedCSV {#lang-csv-IO-loadNormalizedCSV}
 
-* ``lang::csv::ast::CSV::Table loadNormalizedCSV(loc l)``
+```rascal
+lang::csv::ast::CSV::Table loadNormalizedCSV(loc l)
+
+```
 
 ## function generate {#lang-csv-IO-generate}
 
-* ``str generate(str moduleName, loc uri)``
+```rascal
+str generate(str moduleName, loc uri)
+
+```
 
 #### Synopsis
 

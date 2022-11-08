@@ -9,11 +9,17 @@ title: "module lang::rascal::tests::extends1::BaseExtended"
 
 ## alias STRING {#lang-rascal-tests-extends1-BaseExtended-STRING}
 
-* `str`
+```rascal
+str
+
+```
 
 ## alias LIST_INTEGER {#lang-rascal-tests-extends1-BaseExtended-LIST_INTEGER}
 
-* `list[INTEGER]`
+```rascal
+list[INTEGER]
+
+```
 
 ## data D {#lang-rascal-tests-extends1-BaseExtended-D}
 
@@ -33,9 +39,15 @@ data E
 
 ## function ident {#lang-rascal-tests-extends1-BaseExtended-ident}
 
-* ``str ident(str s)``
+```rascal
+str ident(str s)
+
+```
 
 ## function f {#lang-rascal-tests-extends1-BaseExtended-f}
 
-* ``str f(1)``
+```rascal
+str f(1)
+
+```
 

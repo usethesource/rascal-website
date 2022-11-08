@@ -23,13 +23,21 @@ We use this definition to separate lines from: <http://en.wikipedia.org/wiki/New
 
 ## alias Stats {#analysis-grammars-LOC-Stats}
 
-* `tuple[int total, map[loc file, int sloc] dist]`
+```rascal
+tuple[int total, map[loc file, int sloc] dist]
+
+```
 
 ## function slocStats {#analysis-grammars-LOC-slocStats}
 
-* ``Stats slocStats(file(loc l), Stats stats)``
-* ``Stats slocStats(directory(loc l, kids), Stats stats)``
-* ``default Stats slocStats(FileSystem _, Stats stats)``
+```rascal
+Stats slocStats(file(loc l), Stats stats)
+
+Stats slocStats(directory(loc l, kids), Stats stats)
+
+default Stats slocStats(FileSystem _, Stats stats)
+
+```
 
 ## data Output {#analysis-grammars-LOC-Output}
 
@@ -42,48 +50,84 @@ data Output
 
 ## function countSLOC {#analysis-grammars-LOC-countSLOC}
 
-* ``int countSLOC(Tree t)``
+```rascal
+int countSLOC(Tree t)
+
+```
 
 ## function isLayout {#analysis-grammars-LOC-isLayout}
 
-* ``bool isLayout(appl(prod(\layouts(_), _, _), _))``
-* ``bool isLayout(amb({*_, appl(prod(\layouts(_), _, _), _)}))``
-* ``default bool isLayout(Tree t)``
+```rascal
+bool isLayout(appl(prod(\layouts(_), _, _), _))
+
+bool isLayout(amb({*_, appl(prod(\layouts(_), _, _), _)}))
+
+default bool isLayout(Tree t)
+
+```
 
 ## function isComment {#analysis-grammars-LOC-isComment}
 
-* ``bool isComment(appl(p:prod(_, _, {*_, \tag("category"("Comment"))}), _))``
-* ``default bool isComment(Tree _)``
+```rascal
+bool isComment(appl(p:prod(_, _, {*_, \tag("category"("Comment"))}), _))
+
+default bool isComment(Tree _)
+
+```
 
 ## function isLF {#analysis-grammars-LOC-isLF}
 
-* ``bool isLF(int c)``
+```rascal
+bool isLF(int c)
+
+```
 
 ## function isVT {#analysis-grammars-LOC-isVT}
 
-* ``bool isVT(int c)``
+```rascal
+bool isVT(int c)
+
+```
 
 ## function isFF {#analysis-grammars-LOC-isFF}
 
-* ``bool isFF(int c)``
+```rascal
+bool isFF(int c)
+
+```
 
 ## function isCR {#analysis-grammars-LOC-isCR}
 
-* ``bool isCR(int c)``
+```rascal
+bool isCR(int c)
+
+```
 
 ## function isNEL {#analysis-grammars-LOC-isNEL}
 
-* ``bool isNEL(int c)``
+```rascal
+bool isNEL(int c)
+
+```
 
 ## function isLS {#analysis-grammars-LOC-isLS}
 
-* ``bool isLS(int c)``
+```rascal
+bool isLS(int c)
+
+```
 
 ## function isPS {#analysis-grammars-LOC-isPS}
 
-* ``bool isPS(int c)``
+```rascal
+bool isPS(int c)
+
+```
 
 ## function isNewLineChar {#analysis-grammars-LOC-isNewLineChar}
 
-* ``bool isNewLineChar(int c)``
+```rascal
+bool isNewLineChar(int c)
+
+```
 

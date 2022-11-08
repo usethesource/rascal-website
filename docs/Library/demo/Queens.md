@@ -20,21 +20,36 @@ See:
 
 ## alias Pos {#demo-Queens-Pos}
 
-* `tuple[int x,int y]`
+```rascal
+tuple[int x,int y]
+
+```
 
 ## function pairs {#demo-Queens-pairs}
 
-* ``list[tuple[&T,&T]] pairs(list[&T] p)``
+```rascal
+list[tuple[&T,&T]] pairs(list[&T] p)
+
+```
 
 ## function diagonalOverlap {#demo-Queens-diagonalOverlap}
 
-* ``bool diagonalOverlap(Pos l, Pos r)``
+```rascal
+bool diagonalOverlap(Pos l, Pos r)
+
+```
 
 ## function isSolution {#demo-Queens-isSolution}
 
-* ``bool isSolution(list[Pos] queens)``
+```rascal
+bool isSolution(list[Pos] queens)
+
+```
 
 ## function nQueens {#demo-Queens-nQueens}
 
-* ``list[list[Pos]] nQueens(int n)``
+```rascal
+list[list[Pos]] nQueens(int n)
+
+```
 

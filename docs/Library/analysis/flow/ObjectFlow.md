@@ -56,17 +56,26 @@ Figure 2.1
 
 ## alias OFG {#analysis-flow-ObjectFlow-OFG}
 
-* `rel[loc from, loc to]`
+```rascal
+rel[loc from, loc to]
+
+```
 
 ## function buildFlowGraph {#analysis-flow-ObjectFlow-buildFlowGraph}
 
-* ``OFG buildFlowGraph(FlowProgram p)``
+```rascal
+OFG buildFlowGraph(FlowProgram p)
+
+```
 
 Figure 2.2
 
 ## function propagate {#analysis-flow-ObjectFlow-propagate}
 
-* ``rel[loc,&T] propagate(OFG g, rel[loc,&T] gen, rel[loc,&T] kill, bool back)``
+```rascal
+rel[loc,&T] propagate(OFG g, rel[loc,&T] gen, rel[loc,&T] kill, bool back)
+
+```
 
 Section 2.4
 

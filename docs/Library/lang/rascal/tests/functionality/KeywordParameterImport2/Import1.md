@@ -25,9 +25,15 @@ data L (int d = -1)
 
 ## function createL1 {#lang-rascal-tests-functionality-KeywordParameterImport2-Import1-createL1}
 
-* ``L createL1()``
+```rascal
+L createL1()
+
+```
 
 ## function createM1 {#lang-rascal-tests-functionality-KeywordParameterImport2-Import1-createM1}
 
-* ``L createM1()``
+```rascal
+L createM1()
+
+```
 

@@ -17,21 +17,36 @@ data X (int y = 0)
 
 ## function Ax1_y1 {#lang-rascal-tests-functionality-CommonKeywordParameterImport3-A-Ax1_y1}
 
-* ``test bool Ax1_y1()``
+```rascal
+test bool Ax1_y1()
+
+```
 
 ## function Ax1_y2 {#lang-rascal-tests-functionality-CommonKeywordParameterImport3-A-Ax1_y2}
 
-* ``test bool Ax1_y2()``
+```rascal
+test bool Ax1_y2()
+
+```
 
 ## function Ax1_y3 {#lang-rascal-tests-functionality-CommonKeywordParameterImport3-A-Ax1_y3}
 
-* ``test bool Ax1_y3()``
+```rascal
+test bool Ax1_y3()
+
+```
 
 ## function Ax1_y4 {#lang-rascal-tests-functionality-CommonKeywordParameterImport3-A-Ax1_y4}
 
-* ``test bool Ax1_y4()``
+```rascal
+test bool Ax1_y4()
+
+```
 
 ## function Ax1_y5 {#lang-rascal-tests-functionality-CommonKeywordParameterImport3-A-Ax1_y5}
 
-* ``test bool Ax1_y5()``
+```rascal
+test bool Ax1_y5()
+
+```
 

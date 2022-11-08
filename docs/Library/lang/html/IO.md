@@ -32,7 +32,10 @@ data HTMLSyntax
 
 ## function readHTMLFile {#lang-html-IO-readHTMLFile}
 
-* ``HTMLElement readHTMLFile(loc file, loc base=file)``
+```rascal
+HTMLElement readHTMLFile(loc file, loc base=file)
+
+```
 
 #### Synopsis
 
@@ -46,7 +49,10 @@ against errors in the HTML, and complete in the sense that it supports all of HT
 
 ## function readHTMLString {#lang-html-IO-readHTMLString}
 
-* ``HTMLElement readHTMLString(str content, loc base=|http://localhost|)``
+```rascal
+HTMLElement readHTMLString(str content, loc base=|http://localhost|)
+
+```
 
 #### Synopsis
 
@@ -60,7 +66,10 @@ against errors in the HTML, and complete in the sense that it supports all of HT
 
 ## function writeHTMLString {#lang-html-IO-writeHTMLString}
 
-* ``str writeHTMLString(HTMLElement dom, str charset="UTF-8", HTMLEscapeMode escapeMode = baseMode(), bool outline=false, bool prettyPrint=true, int indentAmount=4, int maxPaddingWidth=30, HTMLSyntax \syntax=htmlSyntax())``
+```rascal
+str writeHTMLString(HTMLElement dom, str charset="UTF-8", HTMLEscapeMode escapeMode = baseMode(), bool outline=false, bool prettyPrint=true, int indentAmount=4, int maxPaddingWidth=30, HTMLSyntax \syntax=htmlSyntax())
+
+```
 
 #### Synopsis
 
@@ -74,7 +83,10 @@ yield a syntactically correct (X)HTML string.
 
 ## function writeHTMLFile {#lang-html-IO-writeHTMLFile}
 
-* ``void writeHTMLFile(loc file, HTMLElement dom, str charset="UTF-8", HTMLEscapeMode escapeMode = baseMode(), bool outline=false, bool prettyPrint=true, int indentAmount=4, int maxPaddingWidth=30, HTMLSyntax \syntax=htmlSyntax())``
+```rascal
+void writeHTMLFile(loc file, HTMLElement dom, str charset="UTF-8", HTMLEscapeMode escapeMode = baseMode(), bool outline=false, bool prettyPrint=true, int indentAmount=4, int maxPaddingWidth=30, HTMLSyntax \syntax=htmlSyntax())
+
+```
 
 #### Synopsis
 
@@ -88,7 +100,10 @@ yield a syntactically correct (X)HTML file.
 
 ## function serve {#lang-html-IO-serve}
 
-* ``Content serve(HTMLElement elem)``
+```rascal
+Content serve(HTMLElement elem)
+
+```
 
 #### Synopsis
 

@@ -36,7 +36,10 @@ The following functions are defined for nodes:
 
 ## function arity {#Node-arity}
 
-* ``int arity(node T)``
+```rascal
+int arity(node T)
+
+```
 
 
 #### Synopsis
@@ -57,7 +60,10 @@ int: 3
 
 ## function getChildren {#Node-getChildren}
 
-* ``list[value] getChildren(node T)``
+```rascal
+list[value] getChildren(node T)
+
+```
 
 
 #### Synopsis
@@ -76,7 +82,10 @@ list[value]: [10,"abc"]
 
 ## function getKeywordParameters {#Node-getKeywordParameters}
 
-* ``map[str,value] getKeywordParameters(node T)``
+```rascal
+map[str,value] getKeywordParameters(node T)
+
+```
 
 
 #### Synopsis
@@ -95,11 +104,17 @@ map[str, value]: ("height":0)
 
 ## function getAnnotations {#Node-getAnnotations}
 
-* ``map[str, value] getAnnotations(node T)``
+```rascal
+map[str, value] getAnnotations(node T)
+
+```
 
 ## function setKeywordParameters {#Node-setKeywordParameters}
 
-* ``&T <: node setKeywordParameters(&T <: node x, map[str,value] keywordParameters)``
+```rascal
+&T <: node setKeywordParameters(&T <: node x, map[str,value] keywordParameters)
+
+```
 
 
 #### Synopsis
@@ -119,11 +134,17 @@ node: "f"(10,"abc",
 
 ## function setAnnotations {#Node-setAnnotations}
 
-* ``&T <: node setAnnotations(&T <: node x, map[str,value] keywordParameters)``
+```rascal
+&T <: node setAnnotations(&T <: node x, map[str,value] keywordParameters)
+
+```
 
 ## function getName {#Node-getName}
 
-* ``str getName(node T)``
+```rascal
+str getName(node T)
+
+```
 
 
 #### Synopsis
@@ -142,7 +163,10 @@ str: "f"
 
 ## function makeNode {#Node-makeNode}
 
-* ``node makeNode(str N, value V..., map[str, value] keywordParameters = ())``
+```rascal
+node makeNode(str N, value V..., map[str, value] keywordParameters = ())
+
+```
 
 
 #### Synopsis
@@ -161,7 +185,10 @@ node: "f"(10,"abc")
 
 ## function unset {#Node-unset}
 
-* ``&T <: node unset(&T <: node x, str keywordParameter)``
+```rascal
+&T <: node unset(&T <: node x, str keywordParameter)
+
+```
 
 
 #### Synopsis
@@ -170,12 +197,19 @@ Reset a specific keyword parameter back to their default on a node.
 
 ## function delAnnotation {#Node-delAnnotation}
 
-* ``&T <: node delAnnotation(&T <:  node x, str keywordParameter)``
+```rascal
+&T <: node delAnnotation(&T <:  node x, str keywordParameter)
+
+```
 
 ## function unset {#Node-unset}
 
-* ``&T <: node unset(&T <: node x, set[str] keywordParameters)``
-* ``&T <: node unset(&T <: node x)``
+```rascal
+&T <: node unset(&T <: node x, set[str] keywordParameters)
+
+&T <: node unset(&T <: node x)
+
+```
 
 
 #### Synopsis
@@ -184,11 +218,17 @@ Reset a set of keyword parameters back to their default on a node.
 
 ## function delAnnotations {#Node-delAnnotations}
 
-* ``&T <: node delAnnotations(&T <: node x)``
+```rascal
+&T <: node delAnnotations(&T <: node x)
+
+```
 
 ## function unsetRec {#Node-unsetRec}
 
-* ``&T unsetRec(&T x)``
+```rascal
+&T unsetRec(&T x)
+
+```
 
 
 #### Synopsis
@@ -197,12 +237,19 @@ Recursively reset all keyword parameters of the node and its children back to th
 
 ## function delAnnotationsRec {#Node-delAnnotationsRec}
 
-* ``&T delAnnotationsRec(&T x)``
+```rascal
+&T delAnnotationsRec(&T x)
+
+```
 
 ## function unsetRec {#Node-unsetRec}
 
-* ``&T unsetRec(&T x, str keywordParameter)``
-* ``&T <: node unsetRec(&T <: node x, set[str] keywordParameters)``
+```rascal
+&T unsetRec(&T x, str keywordParameter)
+
+&T <: node unsetRec(&T <: node x, set[str] keywordParameters)
+
+```
 
 
 #### Synopsis
@@ -211,11 +258,17 @@ Recursively reset a specific keyword parameter of the node and its children back
 
 ## function arbNode {#Node-arbNode}
 
-* ``node arbNode()``
+```rascal
+node arbNode()
+
+```
 
 ## function toString {#Node-toString}
 
-* ``str toString(node T)``
+```rascal
+str toString(node T)
+
+```
 
 
 #### Synopsis
@@ -238,7 +291,10 @@ str: "\"f\"(10,\"abc\",size=\"large\",color=\"red\")"
 
 ## function itoString {#Node-itoString}
 
-* ``str itoString(node T)``
+```rascal
+str itoString(node T)
+
+```
 
 
 #### Synopsis

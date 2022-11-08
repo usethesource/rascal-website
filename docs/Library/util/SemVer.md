@@ -9,7 +9,10 @@ title: "module util::SemVer"
 
 ## function satisfiesVersion {#util-SemVer-satisfiesVersion}
 
-* ``bool satisfiesVersion(str version, str rangeSet)``
+```rascal
+bool satisfiesVersion(str version, str rangeSet)
+
+```
 
 
 #### Synopsis
@@ -40,33 +43,57 @@ part       ::= nr | [-0-9A-Za-z]+
 
 ## function lessVersion {#util-SemVer-lessVersion}
 
-* ``bool lessVersion(str version1, str version2)``
+```rascal
+bool lessVersion(str version1, str version2)
+
+```
 
 ## function lessEqualVersion {#util-SemVer-lessEqualVersion}
 
-* ``bool lessEqualVersion(str version1, str version2)``
+```rascal
+bool lessEqualVersion(str version1, str version2)
+
+```
 
 ## function greaterVersion {#util-SemVer-greaterVersion}
 
-* ``bool greaterVersion(str version1, str version2)``
+```rascal
+bool greaterVersion(str version1, str version2)
+
+```
 
 ## function greaterEqualVersion {#util-SemVer-greaterEqualVersion}
 
-* ``bool greaterEqualVersion(str version1, str version2)``
+```rascal
+bool greaterEqualVersion(str version1, str version2)
+
+```
 
 ## function equalVersion {#util-SemVer-equalVersion}
 
-* ``bool equalVersion(str version1, str version2)``
+```rascal
+bool equalVersion(str version1, str version2)
+
+```
 
 ## function getRascalVersion {#util-SemVer-getRascalVersion}
 
-* ``str getRascalVersion()``
+```rascal
+str getRascalVersion()
+
+```
 
 ## function getRascalRuntimeVersion {#util-SemVer-getRascalRuntimeVersion}
 
-* ``str getRascalRuntimeVersion()``
+```rascal
+str getRascalRuntimeVersion()
+
+```
 
 ## function getRascalCompilerVersion {#util-SemVer-getRascalCompilerVersion}
 
-* ``str getRascalCompilerVersion()``
+```rascal
+str getRascalCompilerVersion()
+
+```
 

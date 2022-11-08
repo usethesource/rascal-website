@@ -9,8 +9,12 @@ title: "module analysis::grammars::Dependency"
 
 ## function symbolDependencies {#analysis-grammars-Dependency-symbolDependencies}
 
-* ``Graph[Symbol] symbolDependencies(Grammar g)``
-* ``Graph[Symbol] symbolDependencies(GrammarDefinition d)``
+```rascal
+Graph[Symbol] symbolDependencies(Grammar g)
+
+Graph[Symbol] symbolDependencies(GrammarDefinition d)
+
+```
 
 
   Compute the symbol dependency graph. This graph does not report intermediate nodes
@@ -18,6 +22,10 @@ title: "module analysis::grammars::Dependency"
 
 ## function delabel {#analysis-grammars-Dependency-delabel}
 
-* ``Symbol delabel(label(_, Symbol t))``
-* ``default Symbol delabel(Symbol x)``
+```rascal
+Symbol delabel(label(_, Symbol t))
+
+default Symbol delabel(Symbol x)
+
+```
 

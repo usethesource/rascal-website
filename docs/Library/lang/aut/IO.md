@@ -9,7 +9,10 @@ title: "module lang::aut::IO"
 
 ## function readAUT {#lang-aut-IO-readAUT}
 
-* ``rel[int, str, int] readAUT(str nameAUTFile)``
+```rascal
+rel[int, str, int] readAUT(str nameAUTFile)
+
+```
 
 #### Synopsis
 
@@ -27,7 +30,10 @@ readAUT takes an AUT file and generates a value of type `rel[int, str,int]`.
 
 ## function writeAUT {#lang-aut-IO-writeAUT}
 
-* ``void writeAUT(str nameAUTFile, rel[int, str, int] r)``
+```rascal
+void writeAUT(str nameAUTFile, rel[int, str, int] r)
+
+```
 
 write an AUT file
 

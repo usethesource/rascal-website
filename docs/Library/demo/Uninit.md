@@ -9,17 +9,29 @@ title: "module demo::Uninit"
 
 ## alias expr {#demo-Uninit-expr}
 
-* `int`
+```rascal
+int
+
+```
 
 ## alias varname {#demo-Uninit-varname}
 
-* `str`
+```rascal
+str
+
+```
 
 ## function t1 {#demo-Uninit-t1}
 
-* ``test bool t1()``
+```rascal
+test bool t1()
+
+```
 
 ## function t2 {#demo-Uninit-t2}
 
-* ``test bool t2()``
+```rascal
+test bool t2()
+
+```
 

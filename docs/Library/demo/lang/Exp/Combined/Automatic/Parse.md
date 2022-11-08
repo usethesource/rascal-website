@@ -9,5 +9,8 @@ title: "module demo::lang::Exp::Combined::Automatic::Parse"
 
 ## function parseExp {#demo-lang-Exp-Combined-Automatic-Parse-parseExp}
 
-* ``Tree parseExp(str txt)``
+```rascal
+Tree parseExp(str txt)
+
+```
 

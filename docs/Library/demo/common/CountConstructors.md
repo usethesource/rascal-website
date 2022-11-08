@@ -58,17 +58,29 @@ data Hand
 
 ## function count {#demo-common-CountConstructors-count}
 
-* ``map[str,int] count(node N)``
+```rascal
+map[str,int] count(node N)
+
+```
 
 ## function countRelevant {#demo-common-CountConstructors-countRelevant}
 
-* ``map[str,int] countRelevant(node N, set[str] relevant)``
+```rascal
+map[str,int] countRelevant(node N, set[str] relevant)
+
+```
 
 ## function tstCount {#demo-common-CountConstructors-tstCount}
 
-* ``test bool tstCount()``
+```rascal
+test bool tstCount()
+
+```
 
 ## function tstCountRelevant {#demo-common-CountConstructors-tstCountRelevant}
 
-* ``test bool tstCountRelevant()``
+```rascal
+test bool tstCountRelevant()
+
+```
 

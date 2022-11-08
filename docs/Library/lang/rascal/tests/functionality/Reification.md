@@ -31,147 +31,255 @@ data D[&T]
 
 ## function reifyBool {#lang-rascal-tests-functionality-Reification-reifyBool}
 
-* ``test bool reifyBool()``
+```rascal
+test bool reifyBool()
+
+```
 
 ## function reifyStr {#lang-rascal-tests-functionality-Reification-reifyStr}
 
-* ``test bool reifyStr()``
+```rascal
+test bool reifyStr()
+
+```
 
 ## function reifyInt {#lang-rascal-tests-functionality-Reification-reifyInt}
 
-* ``test bool reifyInt()``
+```rascal
+test bool reifyInt()
+
+```
 
 ## function reifyReal {#lang-rascal-tests-functionality-Reification-reifyReal}
 
-* ``test bool reifyReal()``
+```rascal
+test bool reifyReal()
+
+```
 
 ## function reifyRat {#lang-rascal-tests-functionality-Reification-reifyRat}
 
-* ``test bool reifyRat()``
+```rascal
+test bool reifyRat()
+
+```
 
 ## function reifyNum {#lang-rascal-tests-functionality-Reification-reifyNum}
 
-* ``test bool reifyNum()``
+```rascal
+test bool reifyNum()
+
+```
 
 ## function reifyLoc {#lang-rascal-tests-functionality-Reification-reifyLoc}
 
-* ``test bool reifyLoc()``
+```rascal
+test bool reifyLoc()
+
+```
 
 ## function reifyDatetime {#lang-rascal-tests-functionality-Reification-reifyDatetime}
 
-* ``test bool reifyDatetime()``
+```rascal
+test bool reifyDatetime()
+
+```
 
 ## function reifyNode {#lang-rascal-tests-functionality-Reification-reifyNode}
 
-* ``test bool reifyNode()``
+```rascal
+test bool reifyNode()
+
+```
 
 ## function reifyVoid {#lang-rascal-tests-functionality-Reification-reifyVoid}
 
-* ``test bool reifyVoid()``
+```rascal
+test bool reifyVoid()
+
+```
 
 ## function reifyValue {#lang-rascal-tests-functionality-Reification-reifyValue}
 
-* ``test bool reifyValue()``
+```rascal
+test bool reifyValue()
+
+```
 
 ## function reifyList {#lang-rascal-tests-functionality-Reification-reifyList}
 
-* ``test bool reifyList()``
+```rascal
+test bool reifyList()
+
+```
 
 ## function reifySet {#lang-rascal-tests-functionality-Reification-reifySet}
 
-* ``test bool reifySet()``
+```rascal
+test bool reifySet()
+
+```
 
 ## function reifyBag {#lang-rascal-tests-functionality-Reification-reifyBag}
 
-* ``test bool reifyBag()``
+```rascal
+test bool reifyBag()
+
+```
 
 ## function reifyMap {#lang-rascal-tests-functionality-Reification-reifyMap}
 
-* ``test bool reifyMap()``
+```rascal
+test bool reifyMap()
+
+```
 
 ## function reifyMapWithLabels {#lang-rascal-tests-functionality-Reification-reifyMapWithLabels}
 
-* ``test bool reifyMapWithLabels()``
+```rascal
+test bool reifyMapWithLabels()
+
+```
 
 ## function reifyFunction {#lang-rascal-tests-functionality-Reification-reifyFunction}
 
-* ``test bool reifyFunction()``
+```rascal
+test bool reifyFunction()
+
+```
 
 ## function reifyFunctionWithLabel {#lang-rascal-tests-functionality-Reification-reifyFunctionWithLabel}
 
-* ``test bool reifyFunctionWithLabel()``
+```rascal
+test bool reifyFunctionWithLabel()
+
+```
 
 ## function reifyParameter {#lang-rascal-tests-functionality-Reification-reifyParameter}
 
-* ``test bool reifyParameter()``
+```rascal
+test bool reifyParameter()
+
+```
 
 ## function reifyParameterWithBound {#lang-rascal-tests-functionality-Reification-reifyParameterWithBound}
 
-* ``test bool reifyParameterWithBound()``
+```rascal
+test bool reifyParameterWithBound()
+
+```
 
 ## function reifyTuple {#lang-rascal-tests-functionality-Reification-reifyTuple}
 
-* ``test bool reifyTuple()``
+```rascal
+test bool reifyTuple()
+
+```
 
 ## function reifyTupleWithLabels {#lang-rascal-tests-functionality-Reification-reifyTupleWithLabels}
 
-* ``test bool reifyTupleWithLabels()``
+```rascal
+test bool reifyTupleWithLabels()
+
+```
 
 ## function reifyRel {#lang-rascal-tests-functionality-Reification-reifyRel}
 
-* ``test bool reifyRel()``
+```rascal
+test bool reifyRel()
+
+```
 
 ## function reifyRelWithLabels {#lang-rascal-tests-functionality-Reification-reifyRelWithLabels}
 
-* ``test bool reifyRelWithLabels()``
+```rascal
+test bool reifyRelWithLabels()
+
+```
 
 ## function reifyLrel {#lang-rascal-tests-functionality-Reification-reifyLrel}
 
-* ``test bool reifyLrel()``
+```rascal
+test bool reifyLrel()
+
+```
 
 ## function reifyLrelWithLabels {#lang-rascal-tests-functionality-Reification-reifyLrelWithLabels}
 
-* ``test bool reifyLrelWithLabels()``
+```rascal
+test bool reifyLrelWithLabels()
+
+```
 
 ## function reifyReified1 {#lang-rascal-tests-functionality-Reification-reifyReified1}
 
-* ``test bool reifyReified1()``
+```rascal
+test bool reifyReified1()
+
+```
 
 ## function reifyReified2 {#lang-rascal-tests-functionality-Reification-reifyReified2}
 
-* ``test bool reifyReified2()``
+```rascal
+test bool reifyReified2()
+
+```
 
 ## function reifyReified3 {#lang-rascal-tests-functionality-Reification-reifyReified3}
 
-* ``test bool reifyReified3()``
+```rascal
+test bool reifyReified3()
+
+```
 
 ## function everyTypeCanBeReifiedWithoutExceptions {#lang-rascal-tests-functionality-Reification-everyTypeCanBeReifiedWithoutExceptions}
 
-* ``test bool everyTypeCanBeReifiedWithoutExceptions(&T u)``
+```rascal
+test bool everyTypeCanBeReifiedWithoutExceptions(&T u)
+
+```
 
 ## function allConstructorsAreDefined {#lang-rascal-tests-functionality-Reification-allConstructorsAreDefined}
 
-* ``test bool allConstructorsAreDefined()``
+```rascal
+test bool allConstructorsAreDefined()
+
+```
 
 ## function allConstructorsForAnAlternativeDefineTheSameSort {#lang-rascal-tests-functionality-Reification-allConstructorsForAnAlternativeDefineTheSameSort}
 
-* ``test bool allConstructorsForAnAlternativeDefineTheSameSort()``
+```rascal
+test bool allConstructorsForAnAlternativeDefineTheSameSort()
+
+```
 
 ## function typeParameterReificationIsStatic1 {#lang-rascal-tests-functionality-Reification-typeParameterReificationIsStatic1}
 
-* ``test bool typeParameterReificationIsStatic1(&F _)``
+```rascal
+test bool typeParameterReificationIsStatic1(&F _)
+
+```
 
 ## function typeParameterReificationIsStatic2 {#lang-rascal-tests-functionality-Reification-typeParameterReificationIsStatic2}
 
-* ``test bool typeParameterReificationIsStatic2(list[&F] _)``
+```rascal
+test bool typeParameterReificationIsStatic2(list[&F] _)
+
+```
 
 ## function typeParameterReificationIsStatic3 {#lang-rascal-tests-functionality-Reification-typeParameterReificationIsStatic3}
 
-* ``test bool typeParameterReificationIsStatic3(&T <: list[&F] f)``
+```rascal
+test bool typeParameterReificationIsStatic3(&T <: list[&F] f)
+
+```
 
 ## function dynamicTypesAreAlwaysGeneric {#lang-rascal-tests-functionality-Reification-dynamicTypesAreAlwaysGeneric}
 
-* ``test bool dynamicTypesAreAlwaysGeneric(value v)``
+```rascal
+test bool dynamicTypesAreAlwaysGeneric(value v)
+
+```
 
 ## data P {#lang-rascal-tests-functionality-Reification-P}
 
@@ -181,13 +289,22 @@ data P (int size = 0)
 
 ## function allConstructorsHaveTheCommonKwParam {#lang-rascal-tests-functionality-Reification-allConstructorsHaveTheCommonKwParam}
 
-* ``test bool allConstructorsHaveTheCommonKwParam()``
+```rascal
+test bool allConstructorsHaveTheCommonKwParam()
+
+```
 
 ## function axiomHasItsKwParam {#lang-rascal-tests-functionality-Reification-axiomHasItsKwParam}
 
-* ``test bool axiomHasItsKwParam()``
+```rascal
+test bool axiomHasItsKwParam()
+
+```
 
 ## function axiomsKwParamIsExclusive {#lang-rascal-tests-functionality-Reification-axiomsKwParamIsExclusive}
 
-* ``test bool axiomsKwParamIsExclusive()``
+```rascal
+test bool axiomsKwParamIsExclusive()
+
+```
 

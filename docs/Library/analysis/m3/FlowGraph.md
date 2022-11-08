@@ -19,11 +19,17 @@ data M3 (
 
 ## alias BasicBlocks {#analysis-m3-FlowGraph-BasicBlocks}
 
-* `rel[loc whole, list[loc] parts]`
+```rascal
+rel[loc whole, list[loc] parts]
+
+```
 
 ## alias FlowGraph {#analysis-m3-FlowGraph-FlowGraph}
 
-* `rel[loc from, set[EdgeProperty] properties, loc to]`
+```rascal
+rel[loc from, set[EdgeProperty] properties, loc to]
+
+```
 
 ## data EdgeProperty {#analysis-m3-FlowGraph-EdgeProperty}
 

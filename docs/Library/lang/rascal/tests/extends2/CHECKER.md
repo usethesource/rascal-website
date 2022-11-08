@@ -9,5 +9,8 @@ title: "module lang::rascal::tests::extends2::CHECKER"
 
 ## function collect {#lang-rascal-tests-extends2-CHECKER-collect}
 
-* ``str collect(int _)``
+```rascal
+str collect(int _)
+
+```
 

@@ -9,9 +9,15 @@ title: "module lang::rascal::tests::concrete::FieldProjectionBug"
 
 ## function prodFieldProjectionOnAnAlternative {#lang-rascal-tests-concrete-FieldProjectionBug-prodFieldProjectionOnAnAlternative}
 
-* ``test bool prodFieldProjectionOnAnAlternative()``
+```rascal
+test bool prodFieldProjectionOnAnAlternative()
+
+```
 
 ## function labeledAlternativeProjection {#lang-rascal-tests-concrete-FieldProjectionBug-labeledAlternativeProjection}
 
-* ``test bool labeledAlternativeProjection()``
+```rascal
+test bool labeledAlternativeProjection()
+
+```
 

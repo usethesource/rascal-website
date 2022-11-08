@@ -9,5 +9,8 @@ title: "module lang::rascal::tests::library::IO"
 
 ## function testFileCopyCompletely {#lang-rascal-tests-library-IO-testFileCopyCompletely}
 
-* ``test bool testFileCopyCompletely()``
+```rascal
+test bool testFileCopyCompletely()
+
+```
 

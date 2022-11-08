@@ -20,21 +20,36 @@ data Lval
 
 ## alias Scope {#demo-lang-Lisra-Runtime-Scope}
 
-* `map[Lval,Lval]`
+```rascal
+map[Lval,Lval]
+
+```
 
 ## alias Env {#demo-lang-Lisra-Runtime-Env}
 
-* `list[Scope]`
+```rascal
+list[Scope]
+
+```
 
 ## function makeEnv {#demo-lang-Lisra-Runtime-makeEnv}
 
-* ``Env makeEnv(list[Lval] vars, list[Lval] values, Env outer)``
+```rascal
+Env makeEnv(list[Lval] vars, list[Lval] values, Env outer)
+
+```
 
 ## function find {#demo-lang-Lisra-Runtime-find}
 
-* ``int find(Lval sym, Env e)``
+```rascal
+int find(Lval sym, Env e)
+
+```
 
 ## alias Result {#demo-lang-Lisra-Runtime-Result}
 
-* `tuple[Lval val, Env env]`
+```rascal
+tuple[Lval val, Env env]
+
+```
 

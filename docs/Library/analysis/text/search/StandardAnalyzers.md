@@ -9,149 +9,260 @@ title: "module analysis::text::search::StandardAnalyzers"
 
 ## function arabic {#analysis-text-search-StandardAnalyzers-arabic}
 
-* ``Analyzer arabic()``
+```rascal
+Analyzer arabic()
+
+```
 
 ## function armenian {#analysis-text-search-StandardAnalyzers-armenian}
 
-* ``Analyzer armenian()``
+```rascal
+Analyzer armenian()
+
+```
 
 ## function basque {#analysis-text-search-StandardAnalyzers-basque}
 
-* ``Analyzer basque()``
+```rascal
+Analyzer basque()
+
+```
 
 ## function bengali {#analysis-text-search-StandardAnalyzers-bengali}
 
-* ``Analyzer bengali()``
+```rascal
+Analyzer bengali()
+
+```
 
 ## function brazilian {#analysis-text-search-StandardAnalyzers-brazilian}
 
-* ``Analyzer brazilian()``
+```rascal
+Analyzer brazilian()
+
+```
 
 ## function bulgarian {#analysis-text-search-StandardAnalyzers-bulgarian}
 
-* ``Analyzer bulgarian()``
+```rascal
+Analyzer bulgarian()
+
+```
 
 ## function catalan {#analysis-text-search-StandardAnalyzers-catalan}
 
-* ``Analyzer catalan()``
+```rascal
+Analyzer catalan()
+
+```
 
 ## function czech {#analysis-text-search-StandardAnalyzers-czech}
 
-* ``Analyzer czech()``
+```rascal
+Analyzer czech()
+
+```
 
 ## function danish {#analysis-text-search-StandardAnalyzers-danish}
 
-* ``Analyzer danish()``
+```rascal
+Analyzer danish()
+
+```
 
 ## function dutch {#analysis-text-search-StandardAnalyzers-dutch}
 
-* ``Analyzer dutch()``
+```rascal
+Analyzer dutch()
+
+```
 
 ## function english {#analysis-text-search-StandardAnalyzers-english}
 
-* ``Analyzer english()``
+```rascal
+Analyzer english()
+
+```
 
 ## function finnish {#analysis-text-search-StandardAnalyzers-finnish}
 
-* ``Analyzer finnish()``
+```rascal
+Analyzer finnish()
+
+```
 
 ## function galician {#analysis-text-search-StandardAnalyzers-galician}
 
-* ``Analyzer galician()``
+```rascal
+Analyzer galician()
+
+```
 
 ## function german {#analysis-text-search-StandardAnalyzers-german}
 
-* ``Analyzer german()``
+```rascal
+Analyzer german()
+
+```
 
 ## function greek {#analysis-text-search-StandardAnalyzers-greek}
 
-* ``Analyzer greek()``
+```rascal
+Analyzer greek()
+
+```
 
 ## function hindi {#analysis-text-search-StandardAnalyzers-hindi}
 
-* ``Analyzer hindi()``
+```rascal
+Analyzer hindi()
+
+```
 
 ## function hungarian {#analysis-text-search-StandardAnalyzers-hungarian}
 
-* ``Analyzer hungarian()``
+```rascal
+Analyzer hungarian()
+
+```
 
 ## function indonesian {#analysis-text-search-StandardAnalyzers-indonesian}
 
-* ``Analyzer indonesian()``
+```rascal
+Analyzer indonesian()
+
+```
 
 ## function irish {#analysis-text-search-StandardAnalyzers-irish}
 
-* ``Analyzer irish()``
+```rascal
+Analyzer irish()
+
+```
 
 ## function italian {#analysis-text-search-StandardAnalyzers-italian}
 
-* ``Analyzer italian()``
+```rascal
+Analyzer italian()
+
+```
 
 ## function latvian {#analysis-text-search-StandardAnalyzers-latvian}
 
-* ``Analyzer latvian()``
+```rascal
+Analyzer latvian()
+
+```
 
 ## function lithuanian {#analysis-text-search-StandardAnalyzers-lithuanian}
 
-* ``Analyzer lithuanian()``
+```rascal
+Analyzer lithuanian()
+
+```
 
 ## function norwegian {#analysis-text-search-StandardAnalyzers-norwegian}
 
-* ``Analyzer norwegian()``
+```rascal
+Analyzer norwegian()
+
+```
 
 ## function persian {#analysis-text-search-StandardAnalyzers-persian}
 
-* ``Analyzer persian()``
+```rascal
+Analyzer persian()
+
+```
 
 ## function portugese {#analysis-text-search-StandardAnalyzers-portugese}
 
-* ``Analyzer portugese()``
+```rascal
+Analyzer portugese()
+
+```
 
 ## function romanian {#analysis-text-search-StandardAnalyzers-romanian}
 
-* ``Analyzer romanian()``
+```rascal
+Analyzer romanian()
+
+```
 
 ## function russian {#analysis-text-search-StandardAnalyzers-russian}
 
-* ``Analyzer russian()``
+```rascal
+Analyzer russian()
+
+```
 
 ## function sorani {#analysis-text-search-StandardAnalyzers-sorani}
 
-* ``Analyzer sorani()``
+```rascal
+Analyzer sorani()
+
+```
 
 ## function spanish {#analysis-text-search-StandardAnalyzers-spanish}
 
-* ``Analyzer spanish()``
+```rascal
+Analyzer spanish()
+
+```
 
 ## function swedish {#analysis-text-search-StandardAnalyzers-swedish}
 
-* ``Analyzer swedish()``
+```rascal
+Analyzer swedish()
+
+```
 
 ## function thai {#analysis-text-search-StandardAnalyzers-thai}
 
-* ``Analyzer thai()``
+```rascal
+Analyzer thai()
+
+```
 
 ## function turkish {#analysis-text-search-StandardAnalyzers-turkish}
 
-* ``Analyzer turkish()``
+```rascal
+Analyzer turkish()
+
+```
 
 ## function cjkAnalyzer {#analysis-text-search-StandardAnalyzers-cjkAnalyzer}
 
-* ``Analyzer cjkAnalyzer()``
+```rascal
+Analyzer cjkAnalyzer()
+
+```
 
 ## function stopAnalyzer {#analysis-text-search-StandardAnalyzers-stopAnalyzer}
 
-* ``Analyzer stopAnalyzer()``
+```rascal
+Analyzer stopAnalyzer()
+
+```
 
 ## function keywordAnalyzer {#analysis-text-search-StandardAnalyzers-keywordAnalyzer}
 
-* ``Analyzer keywordAnalyzer()``
+```rascal
+Analyzer keywordAnalyzer()
+
+```
 
 ## function unicodeWhitespaceAnalyzer {#analysis-text-search-StandardAnalyzers-unicodeWhitespaceAnalyzer}
 
-* ``Analyzer unicodeWhitespaceAnalyzer()``
+```rascal
+Analyzer unicodeWhitespaceAnalyzer()
+
+```
 
 ## function emailAnalyzer {#analysis-text-search-StandardAnalyzers-emailAnalyzer}
 
-* ``Analyzer emailAnalyzer()``
+```rascal
+Analyzer emailAnalyzer()
+
+```
 

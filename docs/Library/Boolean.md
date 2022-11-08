@@ -25,7 +25,10 @@ The following functions are defined for Booleans:
 
 ## function arbBool {#Boolean-arbBool}
 
-* ``bool arbBool()``
+```rascal
+bool arbBool()
+
+```
 
 
 #### Synopsis
@@ -39,7 +42,7 @@ Return an arbitrary Boolean value.
 rascal>import Boolean;
 ok
 rascal>arbBool();
-bool: false
+bool: true
 rascal>arbBool();
 bool: false
 rascal>arbBool();
@@ -52,7 +55,10 @@ bool: true
 
 ## function fromString {#Boolean-fromString}
 
-* ``bool fromString(str s)``
+```rascal
+bool fromString(str s)
+
+```
 
 
 #### Synopsis
@@ -61,7 +67,10 @@ Convert the strings "true" or "false" to a bool.
 
 ## function toInt {#Boolean-toInt}
 
-* ``int toInt(bool b)``
+```rascal
+int toInt(bool b)
+
+```
 
 
 #### Synopsis
@@ -86,7 +95,10 @@ int: 0
 
 ## function toReal {#Boolean-toReal}
 
-* ``real toReal(bool b)``
+```rascal
+real toReal(bool b)
+
+```
 
 
 #### Synopsis
@@ -111,7 +123,10 @@ real: 0.0
 
 ## function toString {#Boolean-toString}
 
-* ``str toString(bool b)``
+```rascal
+str toString(bool b)
+
+```
 
 
 #### Synopsis

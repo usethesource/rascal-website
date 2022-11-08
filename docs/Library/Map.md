@@ -37,7 +37,10 @@ The following functions are defined for maps:
 
 ## function delete {#Map-delete}
 
-* ``map[&K,&V] delete(map[&K,&V] m, &K k)``
+```rascal
+map[&K,&V] delete(map[&K,&V] m, &K k)
+
+```
 
 
 #### Synopsis
@@ -60,7 +63,10 @@ map[str, int]: ("pear":2)
 
 ## function domain {#Map-domain}
 
-* ``set[&K] domain(map[&K, &V] M)``
+```rascal
+set[&K] domain(map[&K, &V] M)
+
+```
 
 
 #### Synopsis
@@ -83,7 +89,10 @@ set[str]: {"pear","apple"}
 
 ## function domainR {#Map-domainR}
 
-* ``map[&K, &V] domainR(map[&K, &V] M, set[&K] S)``
+```rascal
+map[&K, &V] domainR(map[&K, &V] M, set[&K] S)
+
+```
 
 
 #### Synopsis
@@ -106,7 +115,10 @@ map[str, int]: ("pear":2,"apple":1)
 
 ## function domainX {#Map-domainX}
 
-* ``map[&K, &V] domainX(map[&K, &V] M, set[&K] S)``
+```rascal
+map[&K, &V] domainX(map[&K, &V] M, set[&K] S)
+
+```
 
 
 #### Synopsis
@@ -129,7 +141,10 @@ map[str, int]: ("orange":3)
 
 ## function getOneFrom {#Map-getOneFrom}
 
-* ``&K getOneFrom(map[&K, &V] M)``
+```rascal
+&K getOneFrom(map[&K, &V] M)
+
+```
 
 
 #### Synopsis
@@ -147,7 +162,7 @@ Returns an arbitrary key of map `M`.
 rascal>import Map;
 ok
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "apple"
+str: "pineapple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "pear"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
@@ -156,7 +171,10 @@ str: "pineapple"
 
 ## function invert {#Map-invert}
 
-* ``map[&V, set[&K]] invert(map[&K, &V] M)``
+```rascal
+map[&V, set[&K]] invert(map[&K, &V] M)
+
+```
 
 
 #### Synopsis
@@ -183,7 +201,10 @@ map[int, set[str]]: (
 
 ## function invertUnique {#Map-invertUnique}
 
-* ``map[&V, &K] invertUnique(map[&K, &V] M)``
+```rascal
+map[&V, &K] invertUnique(map[&K, &V] M)
+
+```
 
 
 #### Synopsis
@@ -221,7 +242,10 @@ ok
 
 ## function isEmpty {#Map-isEmpty}
 
-* ``bool isEmpty(map[&K, &V] M)``
+```rascal
+bool isEmpty(map[&K, &V] M)
+
+```
 
 
 #### Synopsis
@@ -246,7 +270,10 @@ bool: false
 
 ## function mapper {#Map-mapper}
 
-* ``map[&K, &V] mapper(map[&K, &V] M, &L (&K) F, &W (&V) G)``
+```rascal
+map[&K, &V] mapper(map[&K, &V] M, &L (&K) F, &W (&V) G)
+
+```
 
 
 #### Synopsis
@@ -273,7 +300,10 @@ map[str, int]: ("Xapple":2,"Xorange":4,"Xpear":3)
 
 ## function range {#Map-range}
 
-* ``set[&V] range(map[&K, &V] M)``
+```rascal
+set[&V] range(map[&K, &V] M)
+
+```
 
 
 #### Synopsis
@@ -296,7 +326,10 @@ set[int]: {1,2}
 
 ## function rangeR {#Map-rangeR}
 
-* ``map[&K, &V] rangeR(map[&K, &V] M, set[&V] S)``
+```rascal
+map[&K, &V] rangeR(map[&K, &V] M, set[&V] S)
+
+```
 
 
 #### Synopsis
@@ -319,7 +352,10 @@ map[str, int]: ("pear":2,"orange":3)
 
 ## function rangeX {#Map-rangeX}
 
-* ``map[&K, &V] rangeX(map[&K, &V] M, set[&V] S)``
+```rascal
+map[&K, &V] rangeX(map[&K, &V] M, set[&V] S)
+
+```
 
 
 #### Synopsis
@@ -342,7 +378,10 @@ map[str, int]: ("apple":1)
 
 ## function size {#Map-size}
 
-* ``int size(map[&K, &V] M)``
+```rascal
+int size(map[&K, &V] M)
+
+```
 
 
 #### Synopsis
@@ -365,7 +404,10 @@ int: 3
 
 ## function toList {#Map-toList}
 
-* ``list[tuple[&K, &V]] toList(map[&K, &V] M)``
+```rascal
+list[tuple[&K, &V]] toList(map[&K, &V] M)
+
+```
 
 
 #### Synopsis
@@ -388,9 +430,14 @@ lrel[str,int]: [
 
 ## function toRel {#Map-toRel}
 
-* ``rel[&K,&V] toRel(map[&K, set[&V]] M)``
-* ``rel[&K,&V] toRel(map[&K, list[&V]] M)``
-* ``default java rel[&K, &V] toRel(map[&K, &V] M)``
+```rascal
+rel[&K,&V] toRel(map[&K, set[&V]] M)
+
+rel[&K,&V] toRel(map[&K, list[&V]] M)
+
+default java rel[&K, &V] toRel(map[&K, &V] M)
+
+```
 
 
 #### Synopsis
@@ -413,7 +460,10 @@ rel[str,int]: {
 
 ## function toString {#Map-toString}
 
-* ``str toString(map[&K, &V] M)``
+```rascal
+str toString(map[&K, &V] M)
+
+```
 
 
 #### Synopsis
@@ -432,7 +482,10 @@ str: "(\"pear\":2,\"orange\":3,\"apple\":1)"
 
 ## function itoString {#Map-itoString}
 
-* ``str itoString(map[&K, &V] M)``
+```rascal
+str itoString(map[&K, &V] M)
+
+```
 
 
 #### Synopsis

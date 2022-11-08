@@ -29,73 +29,127 @@ data T2
 
 ## function incomparableTypesButNonEmptyIntersectionCanMatch {#lang-rascal-tests-basic-Matching-incomparableTypesButNonEmptyIntersectionCanMatch}
 
-* ``test bool incomparableTypesButNonEmptyIntersectionCanMatch()``
+```rascal
+test bool incomparableTypesButNonEmptyIntersectionCanMatch()
+
+```
 
 ## function tstQNameInPatternInt {#lang-rascal-tests-basic-Matching-tstQNameInPatternInt}
 
-* ``test bool tstQNameInPatternInt()``
+```rascal
+test bool tstQNameInPatternInt()
+
+```
 
 ## function prefixShouldHaveEffect {#lang-rascal-tests-basic-Matching-prefixShouldHaveEffect}
 
-* ``test bool prefixShouldHaveEffect()``
+```rascal
+test bool prefixShouldHaveEffect()
+
+```
 
 ## function tstQNameInPatternVoid {#lang-rascal-tests-basic-Matching-tstQNameInPatternVoid}
 
-* ``test bool tstQNameInPatternVoid()``
+```rascal
+test bool tstQNameInPatternVoid()
+
+```
 
 ## function tstQNameInSwitchInt {#lang-rascal-tests-basic-Matching-tstQNameInSwitchInt}
 
-* ``test bool tstQNameInSwitchInt()``
+```rascal
+test bool tstQNameInSwitchInt()
+
+```
 
 ## function tstQNameInSwitchVoid {#lang-rascal-tests-basic-Matching-tstQNameInSwitchVoid}
 
-* ``test bool tstQNameInSwitchVoid()``
+```rascal
+test bool tstQNameInSwitchVoid()
+
+```
 
 ## function tstQNameInSwitchString {#lang-rascal-tests-basic-Matching-tstQNameInSwitchString}
 
-* ``test bool tstQNameInSwitchString()``
+```rascal
+test bool tstQNameInSwitchString()
+
+```
 
 ## function fT1 {#lang-rascal-tests-basic-Matching-fT1}
 
-* ``bool fT1(T1::\int())``
-* ``bool fT1(T1::\void())``
-* ``bool fT1(T1::string(str _))``
-* ``default bool fT1(value _)``
+```rascal
+bool fT1(T1::\int())
+
+bool fT1(T1::\void())
+
+bool fT1(T1::string(str _))
+
+default bool fT1(value _)
+
+```
 
 ## function fT2 {#lang-rascal-tests-basic-Matching-fT2}
 
-* ``bool fT2(T2::\int())``
-* ``bool fT2(T2::\void())``
-* ``bool fT2(T2::string(str _))``
-* ``default bool fT2(value _)``
+```rascal
+bool fT2(T2::\int())
+
+bool fT2(T2::\void())
+
+bool fT2(T2::string(str _))
+
+default bool fT2(value _)
+
+```
 
 ## function tstQNameinFun1Int {#lang-rascal-tests-basic-Matching-tstQNameinFun1Int}
 
-* ``test bool tstQNameinFun1Int()``
+```rascal
+test bool tstQNameinFun1Int()
+
+```
 
 ## function tstQNameinFun2Int {#lang-rascal-tests-basic-Matching-tstQNameinFun2Int}
 
-* ``test bool tstQNameinFun2Int()``
+```rascal
+test bool tstQNameinFun2Int()
+
+```
 
 ## function tstQNameinFun1Void {#lang-rascal-tests-basic-Matching-tstQNameinFun1Void}
 
-* ``test bool tstQNameinFun1Void()``
+```rascal
+test bool tstQNameinFun1Void()
+
+```
 
 ## function tstQNameinFun2Void {#lang-rascal-tests-basic-Matching-tstQNameinFun2Void}
 
-* ``test bool tstQNameinFun2Void()``
+```rascal
+test bool tstQNameinFun2Void()
+
+```
 
 ## function tstQNameinFun1String {#lang-rascal-tests-basic-Matching-tstQNameinFun1String}
 
-* ``test bool tstQNameinFun1String()``
+```rascal
+test bool tstQNameinFun1String()
+
+```
 
 ## function tstQNameinFun2String {#lang-rascal-tests-basic-Matching-tstQNameinFun2String}
 
-* ``test bool tstQNameinFun2String()``
+```rascal
+test bool tstQNameinFun2String()
+
+```
 
 ## function deepMatchKeywordParameter {#lang-rascal-tests-basic-Matching-deepMatchKeywordParameter}
 
-* ``test bool deepMatchKeywordParameter()``
+```rascal
+test bool deepMatchKeywordParameter()
+
+```
 
 ## data IG {#lang-rascal-tests-basic-Matching-IG}
 
@@ -107,57 +161,99 @@ data IG
 
 ## function ignoreKeywordParameter1 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter1}
 
-* ``test bool ignoreKeywordParameter1()``
+```rascal
+test bool ignoreKeywordParameter1()
+
+```
 
 ## function ignoreKeywordParameter2 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter2}
 
-* ``test bool ignoreKeywordParameter2()``
+```rascal
+test bool ignoreKeywordParameter2()
+
+```
 
 ## function ignoreKeywordParameter3 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter3}
 
-* ``test bool ignoreKeywordParameter3()``
+```rascal
+test bool ignoreKeywordParameter3()
+
+```
 
 ## function ignoreKeywordParameter4 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter4}
 
-* ``test bool ignoreKeywordParameter4()``
+```rascal
+test bool ignoreKeywordParameter4()
+
+```
 
 ## function ignoreKeywordParameter5 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter5}
 
-* ``test bool ignoreKeywordParameter5()``
+```rascal
+test bool ignoreKeywordParameter5()
+
+```
 
 ## function ignoreKeywordParameter6 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter6}
 
-* ``test bool ignoreKeywordParameter6()``
+```rascal
+test bool ignoreKeywordParameter6()
+
+```
 
 ## function ignoreKeywordParameter7 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter7}
 
-* ``test bool ignoreKeywordParameter7()``
+```rascal
+test bool ignoreKeywordParameter7()
+
+```
 
 ## function ignoreKeywordParameter8 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter8}
 
-* ``test bool ignoreKeywordParameter8()``
+```rascal
+test bool ignoreKeywordParameter8()
+
+```
 
 ## function ignoreKeywordParameter9 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter9}
 
-* ``test bool ignoreKeywordParameter9()``
+```rascal
+test bool ignoreKeywordParameter9()
+
+```
 
 ## function ignoreKeywordParameter10 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter10}
 
-* ``test bool ignoreKeywordParameter10()``
+```rascal
+test bool ignoreKeywordParameter10()
+
+```
 
 ## function ignoreKeywordParameter11 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter11}
 
-* ``test bool ignoreKeywordParameter11()``
+```rascal
+test bool ignoreKeywordParameter11()
+
+```
 
 ## function ignoreKeywordParameter12 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter12}
 
-* ``test bool ignoreKeywordParameter12()``
+```rascal
+test bool ignoreKeywordParameter12()
+
+```
 
 ## function ignoreKeywordParameter13 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter13}
 
-* ``test bool ignoreKeywordParameter13()``
+```rascal
+test bool ignoreKeywordParameter13()
+
+```
 
 ## function ignoreKeywordParameter14 {#lang-rascal-tests-basic-Matching-ignoreKeywordParameter14}
 
-* ``test bool ignoreKeywordParameter14()``
+```rascal
+test bool ignoreKeywordParameter14()
+
+```
 

@@ -105,7 +105,10 @@ data Filter
 
 ## function createIndex {#analysis-text-search-Lucene-createIndex}
 
-* ``void createIndex(loc index, set[Document] documents, Analyzer analyzer = standardAnalyzer(), str charset="UTF-8", bool inferCharset=!(charset?))``
+```rascal
+void createIndex(loc index, set[Document] documents, Analyzer analyzer = standardAnalyzer(), str charset="UTF-8", bool inferCharset=!(charset?))
+
+```
 
 #### Synopsis
 
@@ -113,7 +116,10 @@ Creates a Lucene index at a given folder location from the given set of Document
 
 ## function searchIndex {#analysis-text-search-Lucene-searchIndex}
 
-* ``set[Document] searchIndex(loc index, str query, Analyzer analyzer = standardAnalyzer(), int max = 10)``
+```rascal
+set[Document] searchIndex(loc index, str query, Analyzer analyzer = standardAnalyzer(), int max = 10)
+
+```
 
 #### Synopsis
 
@@ -121,7 +127,10 @@ Searches a Lucene index indicated by the indexFolder by analyzing a query with a
 
 ## function searchDocument {#analysis-text-search-Lucene-searchDocument}
 
-* ``list[loc] searchDocument(loc doc, str query, Analyzer analyzer = standardAnalyzer(), int max = 10, str charset="UTF-8", bool inferCharset=!(charset?))``
+```rascal
+list[loc] searchDocument(loc doc, str query, Analyzer analyzer = standardAnalyzer(), int max = 10, str charset="UTF-8", bool inferCharset=!(charset?))
+
+```
 
 #### Synopsis
 
@@ -129,8 +138,12 @@ Searches a document for a query by analyzing it with a given analyzer and listin
 
 ## function analyzeDocument {#analysis-text-search-Lucene-analyzeDocument}
 
-* ``list[Term] analyzeDocument(loc doc, Analyzer analyzer = standardAnalyzer())``
-* ``list[Term] analyzeDocument(str doc, Analyzer analyzer = standardAnalyzer())``
+```rascal
+list[Term] analyzeDocument(loc doc, Analyzer analyzer = standardAnalyzer())
+
+list[Term] analyzeDocument(str doc, Analyzer analyzer = standardAnalyzer())
+
+```
 
 #### Synopsis
 
@@ -138,7 +151,10 @@ Simulate analyzing a document source location like `createIndex` would do, for d
 
 ## function listTerms {#analysis-text-search-Lucene-listTerms}
 
-* ``rel[str chars, int frequency] listTerms(loc index, str field, int max = 10)``
+```rascal
+rel[str chars, int frequency] listTerms(loc index, str field, int max = 10)
+
+```
 
 #### Synopsis
 
@@ -146,7 +162,10 @@ Inspect the terms stored in an index for debugging purposes (what did the analyz
 
 ## function listFields {#analysis-text-search-Lucene-listFields}
 
-* ``rel[str field, int docCount, int sumTotalTermFreq] listFields(loc index)``
+```rascal
+rel[str field, int docCount, int sumTotalTermFreq] listFields(loc index)
+
+```
 
 #### Synopsis
 
@@ -154,29 +173,50 @@ Inspect the fields stored in an index for debugging purposes (which fields have 
 
 ## function classicAnalyzer {#analysis-text-search-Lucene-classicAnalyzer}
 
-* ``Analyzer classicAnalyzer()``
+```rascal
+Analyzer classicAnalyzer()
+
+```
 
 ## function simpleAnalyzer {#analysis-text-search-Lucene-simpleAnalyzer}
 
-* ``Analyzer simpleAnalyzer()``
+```rascal
+Analyzer simpleAnalyzer()
+
+```
 
 ## function standardAnalyzer {#analysis-text-search-Lucene-standardAnalyzer}
 
-* ``Analyzer standardAnalyzer()``
+```rascal
+Analyzer standardAnalyzer()
+
+```
 
 ## function whitespaceAnalyzer {#analysis-text-search-Lucene-whitespaceAnalyzer}
 
-* ``Analyzer whitespaceAnalyzer()``
+```rascal
+Analyzer whitespaceAnalyzer()
+
+```
 
 ## function classicTokenizer {#analysis-text-search-Lucene-classicTokenizer}
 
-* ``Tokenizer classicTokenizer()``
+```rascal
+Tokenizer classicTokenizer()
+
+```
 
 ## function lowerCaseTokenizer {#analysis-text-search-Lucene-lowerCaseTokenizer}
 
-* ``Tokenizer lowerCaseTokenizer()``
+```rascal
+Tokenizer lowerCaseTokenizer()
+
+```
 
 ## function lowerCaseFilter {#analysis-text-search-Lucene-lowerCaseFilter}
 
-* ``Filter lowerCaseFilter()``
+```rascal
+Filter lowerCaseFilter()
+
+```
 

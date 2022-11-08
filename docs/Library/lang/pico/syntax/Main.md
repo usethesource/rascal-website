@@ -9,6 +9,10 @@ title: "module lang::pico::\\syntax::Main"
 
 ## function program {#lang-pico-\syntax-Main-program}
 
-* ``start[Program] program(str s)``
-* ``start[Program] program(str s, loc l)``
+```rascal
+start[Program] program(str s)
+
+start[Program] program(str s, loc l)
+
+```
 

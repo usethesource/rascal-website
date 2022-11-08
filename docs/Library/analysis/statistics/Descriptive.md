@@ -69,7 +69,10 @@ num: 92.5
 
 ## function geometricMean {#analysis-statistics-Descriptive-geometricMean}
 
-* ``real geometricMean([num hd, *num tl])``
+```rascal
+real geometricMean([num hd, *num tl])
+
+```
 
 
 #### Synopsis
@@ -82,7 +85,10 @@ Computes the [geometric mean](http://en.wikipedia.org/wiki/Geometric_mean) of th
 
 ## function kurtosis {#analysis-statistics-Descriptive-kurtosis}
 
-* ``real kurtosis(list[num] values:[_, *_])``
+```rascal
+real kurtosis(list[num] values:[_, *_])
+
+```
 
 
 #### Synopsis
@@ -96,7 +102,10 @@ Kurtosis is a measure of the "peakedness" of a distribution.
 
 ## function kurtosisExcess {#analysis-statistics-Descriptive-kurtosisExcess}
 
-* ``real kurtosisExcess(list[num] values)``
+```rascal
+real kurtosisExcess(list[num] values)
+
+```
 
 
 #### Synopsis
@@ -110,7 +119,10 @@ Kurtosis excess is a measure of the "peakedness" of a distribution corrected suc
 
 ## function max {#analysis-statistics-Descriptive-max}
 
-* ``(&T <: num) max([(&T <: num) h, *(&T <: num) t])``
+```rascal
+(&T <: num) max([(&T <: num) h, *(&T <: num) t])
+
+```
 
 
 #### Synopsis
@@ -119,7 +131,10 @@ Largest data value.
 
 ## function mean {#analysis-statistics-Descriptive-mean}
 
-* ``real mean(list[num] nums:[_, *_])``
+```rascal
+real mean(list[num] nums:[_, *_])
+
+```
 
 
 #### Synopsis
@@ -132,7 +147,10 @@ Computes the [arithmetic mean](http://en.wikipedia.org/wiki/Arithmetic_mean) of 
 
 ## function median {#analysis-statistics-Descriptive-median}
 
-* ``default real median(list[num] nums:[_, *_])``
+```rascal
+default real median(list[num] nums:[_, *_])
+
+```
 
 
 #### Synopsis
@@ -158,11 +176,17 @@ real: 4.
 
 ## function middle {#analysis-statistics-Descriptive-middle}
 
-* ``list[&T] middle(list[&T] nums)``
+```rascal
+list[&T] middle(list[&T] nums)
+
+```
 
 ## function min {#analysis-statistics-Descriptive-min}
 
-* ``(&T <: num) min([(&T <: num) h, *(&T <: num) t])``
+```rascal
+(&T <: num) min([(&T <: num) h, *(&T <: num) t])
+
+```
 
 
 #### Synopsis
@@ -171,7 +195,10 @@ Smallest data value.
 
 ## function percentile {#analysis-statistics-Descriptive-percentile}
 
-* ``&T <: num percentile(list[&T <: num] nums, num p)``
+```rascal
+&T <: num percentile(list[&T <: num] nums, num p)
+
+```
 
 
 #### Synopsis
@@ -185,7 +212,10 @@ Returns the `p`th [percentile](http://en.wikipedia.org/wiki/Percentile) of the d
 
 ## function variance {#analysis-statistics-Descriptive-variance}
 
-* ``num variance([num hd, *num tl])``
+```rascal
+num variance([num hd, *num tl])
+
+```
 
 
 #### Synopsis
@@ -199,7 +229,10 @@ It measures how far a set of numbers is spread out.
 
 ## function skewness {#analysis-statistics-Descriptive-skewness}
 
-* ``real skewness(list[num] values:[_, *_])``
+```rascal
+real skewness(list[num] values:[_, *_])
+
+```
 
 
 #### Synopsis
@@ -212,7 +245,10 @@ Returns the [skewness](http://en.wikipedia.org/wiki/Skewness) of the available v
 
 ## function standardDeviation {#analysis-statistics-Descriptive-standardDeviation}
 
-* ``real standardDeviation(list[num] values)``
+```rascal
+real standardDeviation(list[num] values)
+
+```
 
 
 #### Synopsis
@@ -226,7 +262,10 @@ of the data values. It shows how much variation exists from the average (mean, o
 
 ## function sum {#analysis-statistics-Descriptive-sum}
 
-* ``(&T <:num) sum([(&T <: num) hd, *(&T <: num) tl])``
+```rascal
+(&T <:num) sum([(&T <: num) hd, *(&T <: num) tl])
+
+```
 
 
 #### Synopsis
@@ -235,7 +274,10 @@ Sum of data values.
 
 ## function sumsq {#analysis-statistics-Descriptive-sumsq}
 
-* ``(&T <:num) sumsq(list[&T <:num] values)``
+```rascal
+(&T <:num) sumsq(list[&T <:num] values)
+
+```
 
 
 #### Synopsis
@@ -244,14 +286,20 @@ Sum of the squares of data values.
 
 ## function centralMoment {#analysis-statistics-Descriptive-centralMoment}
 
-* ``real centralMoment(list[num] nums:[_, *_], int order = 1)``
+```rascal
+real centralMoment(list[num] nums:[_, *_], int order = 1)
+
+```
 
 
 	Calculate the k-th central moment
 
 ## function moment {#analysis-statistics-Descriptive-moment}
 
-* ``real moment(list[num] nums:[_, *_], int order = 1)``
+```rascal
+real moment(list[num] nums:[_, *_], int order = 1)
+
+```
 
 
 	Calculate the k-th moment

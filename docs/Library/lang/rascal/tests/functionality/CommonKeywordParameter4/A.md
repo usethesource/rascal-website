@@ -9,5 +9,8 @@ title: "module lang::rascal::tests::functionality::CommonKeywordParameter4::A"
 
 ## function testA1 {#lang-rascal-tests-functionality-CommonKeywordParameter4-A-testA1}
 
-* ``test bool testA1()``
+```rascal
+test bool testA1()
+
+```
 

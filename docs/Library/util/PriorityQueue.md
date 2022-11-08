@@ -56,15 +56,24 @@ data BinomialTree
 
 ## function addSubTree {#util-PriorityQueue-addSubTree}
 
-* ``BinomialTree addSubTree(BinomialTree p, BinomialTree q)``
+```rascal
+BinomialTree addSubTree(BinomialTree p, BinomialTree q)
+
+```
 
 ## function mergeTree {#util-PriorityQueue-mergeTree}
 
-* ``BinomialTree mergeTree(BinomialTree p, BinomialTree q)``
+```rascal
+BinomialTree mergeTree(BinomialTree p, BinomialTree q)
+
+```
 
 ## function toString {#util-PriorityQueue-toString}
 
-* ``str toString(BinomialTree T)``
+```rascal
+str toString(BinomialTree T)
+
+```
 
 ## data PriorityQueue {#util-PriorityQueue-PriorityQueue}
 
@@ -78,34 +87,59 @@ data PriorityQueue
 
 ## function mkPriorityQueue {#util-PriorityQueue-mkPriorityQueue}
 
-* ``PriorityQueue mkPriorityQueue()``
-* ``PriorityQueue mkPriorityQueue(int priority, int val)``
+```rascal
+PriorityQueue mkPriorityQueue()
+
+PriorityQueue mkPriorityQueue(int priority, int val)
+
+```
 
 ## function isEmpty {#util-PriorityQueue-isEmpty}
 
-* ``bool isEmpty(PriorityQueue Q)``
+```rascal
+bool isEmpty(PriorityQueue Q)
+
+```
 
 ## function insertElement {#util-PriorityQueue-insertElement}
 
-* ``PriorityQueue insertElement(PriorityQueue Q, int priority, int val)``
+```rascal
+PriorityQueue insertElement(PriorityQueue Q, int priority, int val)
+
+```
 
 ## function findMinimum {#util-PriorityQueue-findMinimum}
 
-* ``int findMinimum(PriorityQueue Q)``
+```rascal
+int findMinimum(PriorityQueue Q)
+
+```
 
 ## function extractMinimum {#util-PriorityQueue-extractMinimum}
 
-* ``tuple[int, int, PriorityQueue] extractMinimum(PriorityQueue Q)``
+```rascal
+tuple[int, int, PriorityQueue] extractMinimum(PriorityQueue Q)
+
+```
 
 ## function toString {#util-PriorityQueue-toString}
 
-* ``str toString(PriorityQueue Q)``
+```rascal
+str toString(PriorityQueue Q)
+
+```
 
 ## function add {#util-PriorityQueue-add}
 
-* ``list[BinomialTree] add(list[BinomialTree] heap, BinomialTree t)``
+```rascal
+list[BinomialTree] add(list[BinomialTree] heap, BinomialTree t)
+
+```
 
 ## function mergeQueue {#util-PriorityQueue-mergeQueue}
 
-* ``PriorityQueue mergeQueue(PriorityQueue p, PriorityQueue q)``
+```rascal
+PriorityQueue mergeQueue(PriorityQueue p, PriorityQueue q)
+
+```
 

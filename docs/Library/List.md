@@ -75,7 +75,10 @@ The following functions are available for lists:
 
 ## function concat {#List-concat}
 
-* ``list[&T] concat(list[list[&T]] xxs)``
+```rascal
+list[&T] concat(list[list[&T]] xxs)
+
+```
 
 
 #### Synopsis
@@ -102,7 +105,10 @@ list[int]: [1,2,3,4,5]
 
 ## function delete {#List-delete}
 
-* ``list[&T] delete(list[&T] lst, int n)``
+```rascal
+list[&T] delete(list[&T] lst, int n)
+
+```
 
 
 #### Synopsis
@@ -128,7 +134,10 @@ list[str]: ["zebra","elephant","owl"]
 
 ## function distribution {#List-distribution}
 
-* ``map[&T element, int occurs] distribution(list[&T] lst)``
+```rascal
+map[&T element, int occurs] distribution(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -148,7 +157,10 @@ map[int element, int occurs]: (1:3,3:2,2:1,4:4)
 
 ## function drop {#List-drop}
 
-* ``list[&T] drop(int n, list[&T] lst)``
+```rascal
+list[&T] drop(int n, list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -176,7 +188,10 @@ list[str]: ["snake","owl"]
 
 ## function dup {#List-dup}
 
-* ``list[&T] dup(list[&T] lst)``
+```rascal
+list[&T] dup(list[&T] lst)
+
+```
 
 #### Synopsis
 
@@ -195,11 +210,17 @@ list[int]: [3,1,5,7,2]
 
 ## function elementAt {#List-elementAt}
 
-* ``&T elementAt(list[&T] lst, int index)``
+```rascal
+&T elementAt(list[&T] lst, int index)
+
+```
 
 ## function getOneFrom {#List-getOneFrom}
 
-* ``&T getOneFrom(list[&T] lst)``
+```rascal
+&T getOneFrom(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -217,17 +238,21 @@ Get an arbitrary element from a list. See [takeOneFrom](../Library/List.md#List-
 rascal>import List;
 ok
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "snake"
+str: "zebra"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
 str: "zebra"
 rascal>getOneFrom(["zebra", "elephant", "snake", "owl"]);
-str: "snake"
+str: "elephant"
 ```
 
 ## function getFirstFrom {#List-getFirstFrom}
 
-* ``&T getFirstFrom([&T f, *&T _])``
-* ``&T getFirstFrom(list[&T] _ :[])``
+```rascal
+&T getFirstFrom([&T f, *&T _])
+
+&T getFirstFrom(list[&T] _ :[])
+
+```
 
 
 #### Synopsis
@@ -240,9 +265,14 @@ Get the first element from a list. As opposed to [getOneFrom](../Library/List.md
 
 ## function head {#List-head}
 
-* ``&T head([&T h, *&T _])``
-* ``&T head(list[&T] _:[])``
-* ``list[&T] head(list[&T] lst, int n) throws IndexOutOfBounds``
+```rascal
+&T head([&T h, *&T _])
+
+&T head(list[&T] _:[])
+
+list[&T] head(list[&T] lst, int n) throws IndexOutOfBounds
+
+```
 
 
 #### Synopsis
@@ -300,8 +330,12 @@ ok
 
 ## function headTail {#List-headTail}
 
-* ``tuple[&T, list[&T]] headTail([&T h, *&T t])``
-* ``tuple[&T, list[&T]] headTail(list[&T] _:[])``
+```rascal
+tuple[&T, list[&T]] headTail([&T h, *&T t])
+
+tuple[&T, list[&T]] headTail(list[&T] _:[])
+
+```
 
 
 #### Synopsis
@@ -328,7 +362,10 @@ tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 
 ## function index {#List-index}
 
-* ``list[int] index(list[&T] lst)``
+```rascal
+list[int] index(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -357,7 +394,10 @@ This function is useful in [for](../Rascal/Statements/For/index.md) loops over l
 
 ## function indexOf {#List-indexOf}
 
-* ``int indexOf(list[&T] lst, &T elt)``
+```rascal
+int indexOf(list[&T] lst, &T elt)
+
+```
 
 
 #### Synopsis
@@ -387,7 +427,10 @@ int: -1
 
 ## function insertAt {#List-insertAt}
 
-* ``list[&T] insertAt(list[&T] lst, int n, &T elm) throws IndexOutOfBounds``
+```rascal
+list[&T] insertAt(list[&T] lst, int n, &T elm) throws IndexOutOfBounds
+
+```
 
 
 #### Synopsis
@@ -421,7 +464,10 @@ ok
 
 ## function intercalate {#List-intercalate}
 
-* ``str intercalate(str sep, list[value] l)``
+```rascal
+str intercalate(str sep, list[value] l)
+
+```
 
 
 #### Synopsis
@@ -446,7 +492,10 @@ str: "zebra, elephant, snake, owl"
 
 ## function intersperse {#List-intersperse}
 
-* ``list[&T] intersperse(&T sep, list[&T] xs)``
+```rascal
+list[&T] intersperse(&T sep, list[&T] xs)
+
+```
 
 
 #### Synopsis
@@ -471,7 +520,10 @@ list[value]: [1]
 
 ## function isEmpty {#List-isEmpty}
 
-* ``bool isEmpty(list[&T] lst)``
+```rascal
+bool isEmpty(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -496,8 +548,12 @@ bool: false
 
 ## function last {#List-last}
 
-* ``&T last([*&T _, &T l])``
-* ``&T last(list[&T] _:[])``
+```rascal
+&T last([*&T _, &T l])
+
+&T last(list[&T] _:[])
+
+```
 
 
 #### Synopsis
@@ -526,7 +582,10 @@ list[int]: [1,4,5]
 
 ## function lastIndexOf {#List-lastIndexOf}
 
-* ``int lastIndexOf(list[&T] lst, &T elt)``
+```rascal
+int lastIndexOf(list[&T] lst, &T elt)
+
+```
 
 
 #### Synopsis
@@ -553,7 +612,10 @@ int: 4
 
 ## function mapper {#List-mapper}
 
-* ``list[&U] mapper(list[&T] lst, &U (&T) fn)``
+```rascal
+list[&U] mapper(list[&T] lst, &U (&T) fn)
+
+```
 
 
 #### Synopsis
@@ -578,8 +640,12 @@ list[int]: [2,3,4,5]
 
 ## function max {#List-max}
 
-* ``&T max([&T h, *&T t])``
-* ``&T max(list[&T] _:[])``
+```rascal
+&T max([&T h, *&T t])
+
+&T max(list[&T] _:[])
+
+```
 
 
 #### Synopsis
@@ -600,8 +666,12 @@ str: "zebra"
 
 ## function merge {#List-merge}
 
-* ``list[&T] merge(list[&T] left, list[&T] right)``
-* ``list[&T] merge(list[&T] left, list[&T] right, bool (&T a, &T b) lessOrEqual)``
+```rascal
+list[&T] merge(list[&T] left, list[&T] right)
+
+list[&T] merge(list[&T] left, list[&T] right, bool (&T a, &T b) lessOrEqual)
+
+```
 
 
 #### Synopsis
@@ -636,8 +706,12 @@ list[str]: ["ape","owl","snale","zebra","apple","berry","orange","elephant","pin
 
 ## function min {#List-min}
 
-* ``&T min([&T h, *&T t])``
-* ``&T min(list[&T] _: [])``
+```rascal
+&T min([&T h, *&T t])
+
+&T min(list[&T] _: [])
+
+```
 
 
 #### Synopsis
@@ -658,7 +732,10 @@ str: "elephant"
 
 ## function mix {#List-mix}
 
-* ``list[&T] mix(list[&T] l, list[&T] r)``
+```rascal
+list[&T] mix(list[&T] l, list[&T] r)
+
+```
 
 
 #### Synopsis
@@ -687,7 +764,10 @@ list[value]: [3,"elephant",1,"snake",7]
 
 ## function permutations {#List-permutations}
 
-* ``set[list[&T]] permutations(list[&T] lst)``
+```rascal
+set[list[&T]] permutations(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -713,11 +793,17 @@ set[list[int]]: {
 
 ## function permutationsBag {#List-permutationsBag}
 
-* ``set[list[&T]] permutationsBag(map[&T element, int occurs] b)``
+```rascal
+set[list[&T]] permutationsBag(map[&T element, int occurs] b)
+
+```
 
 ## function pop {#List-pop}
 
-* ``tuple[&T, list[&T]] pop(list[&T] lst)``
+```rascal
+tuple[&T, list[&T]] pop(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -744,7 +830,10 @@ tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
 
 ## function prefix {#List-prefix}
 
-* ``list[&T] prefix(list[&T] lst)``
+```rascal
+list[&T] prefix(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -767,7 +856,10 @@ list[str]: ["zebra","elephant","snake"]
 
 ## function push {#List-push}
 
-* ``list[&T] push(&T elem, list[&T] lst)``
+```rascal
+list[&T] push(&T elem, list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -792,7 +884,10 @@ list[str]: ["eagle","zebra","elephant","snake","owl"]
 
 ## function reducer {#List-reducer}
 
-* ``&T reducer(list[&T] lst, &T (&T, &T) fn, &T unit)``
+```rascal
+&T reducer(list[&T] lst, &T (&T, &T) fn, &T unit)
+
+```
 
 
 #### Synopsis
@@ -822,16 +917,26 @@ This function is *deprecated*, use a [reducer](../Rascal/Expressions/Reducer/ind
 
 ## function remove {#List-remove}
 
-* ``list[&T] remove(list[&T] lst, int indexToDelete)``
+```rascal
+list[&T] remove(list[&T] lst, int indexToDelete)
+
+```
 
 ## function removeFromBag {#List-removeFromBag}
 
-* ``map[&T element, int occurs] removeFromBag(map[&T element, int occurs] b, &T el)``
-* ``map[&T element, int occurs] removeFromBag(map[&T element, int occurs] b, &T el, int nr)``
+```rascal
+map[&T element, int occurs] removeFromBag(map[&T element, int occurs] b, &T el)
+
+map[&T element, int occurs] removeFromBag(map[&T element, int occurs] b, &T el, int nr)
+
+```
 
 ## function reverse {#List-reverse}
 
-* ``list[&T] reverse(list[&T] lst)``
+```rascal
+list[&T] reverse(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -856,7 +961,10 @@ list[str]: ["owl","snake","elephant","zebra"]
 
 ## function size {#List-size}
 
-* ``int size(list[&T] lst)``
+```rascal
+int size(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -877,7 +985,10 @@ int: 4
 
 ## function slice {#List-slice}
 
-* ``list[&T] slice(list[&T] lst, int begin, int len)``
+```rascal
+list[&T] slice(list[&T] lst, int begin, int len)
+
+```
 
 
 #### Synopsis
@@ -914,8 +1025,12 @@ WARNING: In the slice notation the upper bound is exclusive.
 
 ## function sort {#List-sort}
 
-* ``list[&T] sort(list[&T] lst)``
-* ``list[&T] sort(list[&T] l, bool (&T a, &T b) less)``
+```rascal
+list[&T] sort(list[&T] lst)
+
+list[&T] sort(list[&T] l, bool (&T a, &T b) less)
+
+```
 
 
 #### Synopsis
@@ -944,12 +1059,15 @@ list[str]: ["mango","strawberry","pear","pineapple","banana","grape","kiwi"]
 rascal>sort(fruits);
 list[str]: ["banana","grape","kiwi","mango","pear","pineapple","strawberry"]
 rascal>sort(fruits, bool(str a, str b){ return size(a) > size(b); });
-list[str]: ["strawberry","pineapple","banana","mango","grape","kiwi","pear"]
+list[str]: ["strawberry","pineapple","banana","grape","mango","kiwi","pear"]
 ```
 
 ## function isSorted {#List-isSorted}
 
-* ``bool isSorted(list[&T] l, bool (&T a, &T b) less = bool (&T a, &T b) { return a < b; })``
+```rascal
+bool isSorted(list[&T] l, bool (&T a, &T b) less = bool (&T a, &T b) { return a < b; })
+
+```
 
 
 #### Synopsis
@@ -965,8 +1083,12 @@ between the two parameters.
 
 ## function shuffle {#List-shuffle}
 
-* ``list[&T] shuffle(list[&T] l)``
-* ``list[&T] shuffle(list[&T] l, int seed)``
+```rascal
+list[&T] shuffle(list[&T] l)
+
+list[&T] shuffle(list[&T] l, int seed)
+
+```
 
 
 #### Synopsis
@@ -984,14 +1106,17 @@ Returns a random (unbiased) shuffled list.
 rascal>import List;
 ok
 rascal>shuffle([1,4,2,3]);
-list[int]: [1,3,2,4]
+list[int]: [3,2,1,4]
 rascal>shuffle(["zebra", "elephant", "snake", "owl"]);
-list[str]: ["snake","owl","zebra","elephant"]
+list[str]: ["snake","zebra","elephant","owl"]
 ```
 
 ## function split {#List-split}
 
-* ``tuple[list[&T],list[&T]] split(list[&T] l)``
+```rascal
+tuple[list[&T],list[&T]] split(list[&T] l)
+
+```
 
 
 #### Synopsis
@@ -1012,8 +1137,12 @@ tuple[list[str],list[str]]: <["zebra","elephant"],["snake","owl"]>
 
 ## function sum {#List-sum}
 
-* ``(&T <:num) sum([(&T <: num) hd, *(&T <: num) tl])``
-* ``(&T <:num) sum(list[&T] _: [])``
+```rascal
+(&T <:num) sum([(&T <: num) hd, *(&T <: num) tl])
+
+(&T <:num) sum(list[&T] _: [])
+
+```
 
 
 #### Synopsis
@@ -1034,9 +1163,14 @@ num: 13.5
 
 ## function tail {#List-tail}
 
-* ``list[&T] tail([&T _, *&T t])``
-* ``list[&T] tail(list[&T] _:[])``
-* ``list[&T] tail(list[&T] lst, int len) throws IndexOutOfBounds``
+```rascal
+list[&T] tail([&T _, *&T t])
+
+list[&T] tail(list[&T] _:[])
+
+list[&T] tail(list[&T] lst, int len) throws IndexOutOfBounds
+
+```
 
 
 #### Synopsis
@@ -1088,7 +1222,10 @@ ok
 
 ## function take {#List-take}
 
-* ``list[&T] take(int n, list[&T] lst)``
+```rascal
+list[&T] take(int n, list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -1116,7 +1253,10 @@ list[str]: ["zebra","elephant"]
 
 ## function takeOneFrom {#List-takeOneFrom}
 
-* ``tuple[&T, list[&T]] takeOneFrom(list[&T] lst)``
+```rascal
+tuple[&T, list[&T]] takeOneFrom(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -1140,22 +1280,25 @@ See [getOneFrom](../Library/List.md#List-getOneFrom) to only selected an element
 rascal>import List;
 ok
 rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <30,[10,20,40,50]>
-rascal>takeOneFrom([10,20,30,40,50]);
-tuple[int,list[int]]: <20,[10,30,40,50]>
-rascal>takeOneFrom([10,20,30,40,50]);
 tuple[int,list[int]]: <50,[10,20,30,40]>
-rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
-rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
-tuple[str,list[str]]: <"elephant",["zebra","snake","owl"]>
+rascal>takeOneFrom([10,20,30,40,50]);
+tuple[int,list[int]]: <10,[20,30,40,50]>
+rascal>takeOneFrom([10,20,30,40,50]);
+tuple[int,list[int]]: <30,[10,20,40,50]>
 rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
 tuple[str,list[str]]: <"snake",["zebra","elephant","owl"]>
+rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
+tuple[str,list[str]]: <"zebra",["elephant","snake","owl"]>
+rascal>takeOneFrom(["zebra", "elephant", "snake", "owl"]);
+tuple[str,list[str]]: <"owl",["zebra","elephant","snake"]>
 ```
 
 ## function takeWhile {#List-takeWhile}
 
-* ``list[&T] takeWhile(list[&T] lst, bool (&T a) take)``
+```rascal
+list[&T] takeWhile(list[&T] lst, bool (&T a) take)
+
+```
 
 
 #### Synopsis
@@ -1176,7 +1319,10 @@ list[int]: [2,4,6,8]
 
 ## function toMap {#List-toMap}
 
-* ``map[&A,list[&B]] toMap(list[tuple[&A, &B]] lst) throws MultipleKey``
+```rascal
+map[&A,list[&B]] toMap(list[tuple[&A, &B]] lst) throws MultipleKey
+
+```
 
 
 #### Synopsis
@@ -1210,7 +1356,10 @@ but imposes the constraint that those keys are unique.
 
 ## function toMapUnique {#List-toMapUnique}
 
-* ``map[&A,&B] toMapUnique(list[tuple[&A, &B]] lst) throws MultipleKey``
+```rascal
+map[&A,&B] toMapUnique(list[tuple[&A, &B]] lst) throws MultipleKey
+
+```
 
 
 #### Synopsis
@@ -1247,7 +1396,10 @@ The keys in a map are unique by definition.
 
 ## function top {#List-top}
 
-* ``&T top([&T t, *&T _])``
+```rascal
+&T top([&T t, *&T _])
+
+```
 
 
 #### Synopsis
@@ -1272,7 +1424,10 @@ str: "zebra"
 
 ## function toRel {#List-toRel}
 
-* ``rel[&T,&T] toRel(list[&T] lst)``
+```rascal
+rel[&T,&T] toRel(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -1305,7 +1460,10 @@ rel[str,str]: {
 
 ## function toSet {#List-toSet}
 
-* ``set[&T] toSet(list[&T] lst)``
+```rascal
+set[&T] toSet(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -1338,7 +1496,10 @@ set[int]: {10,40,20,30}
 
 ## function toString {#List-toString}
 
-* ``str toString(list[&T] lst)``
+```rascal
+str toString(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -1363,7 +1524,10 @@ str: "[\"zebra\",\"elephant\",\"snake\",\"owl\"]"
 
 ## function itoString {#List-itoString}
 
-* ``str itoString(list[&T] lst)``
+```rascal
+str itoString(list[&T] lst)
+
+```
 
 
 #### Synopsis
@@ -1388,7 +1552,10 @@ str: "[\"zebra\",\"elephant\",\"snake\",\"owl\"]"
 
 ## function unzip2 {#List-unzip2}
 
-* ``tuple[list[&T],list[&U]] unzip2(list[tuple[&T,&U]] lst)``
+```rascal
+tuple[list[&T],list[&U]] unzip2(list[tuple[&T,&U]] lst)
+
+```
 
 
 #### Synopsis
@@ -1413,11 +1580,17 @@ tuple[list[int],list[str],list[int]]: <[3,1,4],["thirty","ten","forty"],[300,100
 
 ## function unzip3 {#List-unzip3}
 
-* ``tuple[list[&T],list[&U],list[&V]] unzip3(list[tuple[&T,&U,&V]] lst)``
+```rascal
+tuple[list[&T],list[&U],list[&V]] unzip3(list[tuple[&T,&U,&V]] lst)
+
+```
 
 ## function upTill {#List-upTill}
 
-* ``list[int] upTill(int n)``
+```rascal
+list[int] upTill(int n)
+
+```
 
 
 #### Synopsis
@@ -1439,7 +1612,10 @@ list[int]: [0,1,2,3,4,5,6,7,8,9]
 
 ## function zip2 {#List-zip2}
 
-* ``list[tuple[&T first, &U second]] zip2(list[&T] a, list[&U] b)``
+```rascal
+list[tuple[&T first, &U second]] zip2(list[&T] a, list[&U] b)
+
+```
 
 
 #### Synopsis
@@ -1472,5 +1648,8 @@ lrel[int first,str second,int third]: [
 
 ## function zip3 {#List-zip3}
 
-* ``list[tuple[&T first, &U second, &V third]] zip3(list[&T] a, list[&U] b, list[&V] c)``
+```rascal
+list[tuple[&T first, &U second, &V third]] zip3(list[&T] a, list[&U] b, list[&V] c)
+
+```
 

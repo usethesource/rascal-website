@@ -13,5 +13,8 @@ A Quine is a program that prints itself
 
 ## function quine {#demo-basic-Quine-quine}
 
-* ``void quine()``
+```rascal
+void quine()
+
+```
 

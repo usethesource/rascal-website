@@ -9,13 +9,22 @@ title: "module lang::rascal::tests::functionality::Declaration"
 
 ## function localTypeInferenceBottomScope {#lang-rascal-tests-functionality-Declaration-localTypeInferenceBottomScope}
 
-* ``test bool localTypeInferenceBottomScope()``
+```rascal
+test bool localTypeInferenceBottomScope()
+
+```
 
 ## function localTypeInferenceNestedScope {#lang-rascal-tests-functionality-Declaration-localTypeInferenceNestedScope}
 
-* ``test bool localTypeInferenceNestedScope()``
+```rascal
+test bool localTypeInferenceNestedScope()
+
+```
 
 ## function localTypeInferenceNoEscape {#lang-rascal-tests-functionality-Declaration-localTypeInferenceNoEscape}
 
-* ``test bool localTypeInferenceNoEscape()``
+```rascal
+test bool localTypeInferenceNoEscape()
+
+```
 

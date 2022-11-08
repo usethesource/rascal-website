@@ -9,23 +9,35 @@ title: "module util::Reflective"
 
 ## function getLineSeparator {#util-Reflective-getLineSeparator}
 
-* ``str getLineSeparator()``
+```rascal
+str getLineSeparator()
+
+```
 
 Returns the system-dependent line separator string
 
 ## function evalCommands {#util-Reflective-evalCommands}
 
-* ``lrel[str result, str out, str err] evalCommands(list[str] command, loc org)``
+```rascal
+lrel[str result, str out, str err] evalCommands(list[str] command, loc org)
+
+```
 
 ## function parseModule {#util-Reflective-parseModule}
 
-* ``lang::rascal::\syntax::Rascal::Module parseModule(loc location)``
+```rascal
+lang::rascal::\syntax::Rascal::Module parseModule(loc location)
+
+```
 
 Just parse a module at a given location without any furter processing (i.e., fragment parsing) or side-effects (e.g. module loading) 
 
 ## function parseModuleWithSpaces {#util-Reflective-parseModuleWithSpaces}
 
-* ``start[Module] parseModuleWithSpaces(loc location)``
+```rascal
+start[Module] parseModuleWithSpaces(loc location)
+
+```
 
 Parse a module (including surounding spaces) at a given location without any furter processing (i.e., fragment parsing) or side-effects (e.g. module loading) 
 
@@ -89,11 +101,17 @@ data JavaBundleManifest
 
 ## function metafile {#util-Reflective-metafile}
 
-* ``loc metafile(loc l)``
+```rascal
+loc metafile(loc l)
+
+```
 
 ## function applyManifests {#util-Reflective-applyManifests}
 
-* ``PathConfig applyManifests(PathConfig cfg)``
+```rascal
+PathConfig applyManifests(PathConfig cfg)
+
+```
 
 
   Converts a PathConfig and replaces all references to roots of projects or bundles
@@ -102,27 +120,45 @@ data JavaBundleManifest
 
 ## function makeFileName {#util-Reflective-makeFileName}
 
-* ``str makeFileName(str qualifiedModuleName, str extension = "rsc")``
+```rascal
+str makeFileName(str qualifiedModuleName, str extension = "rsc")
+
+```
 
 ## function getSearchPathLoc {#util-Reflective-getSearchPathLoc}
 
-* ``loc getSearchPathLoc(str filePath, PathConfig pcfg)``
+```rascal
+loc getSearchPathLoc(str filePath, PathConfig pcfg)
+
+```
 
 ## function getModuleLocation {#util-Reflective-getModuleLocation}
 
-* ``loc getModuleLocation(str qualifiedModuleName,  PathConfig pcfg, str extension = "rsc")``
+```rascal
+loc getModuleLocation(str qualifiedModuleName,  PathConfig pcfg, str extension = "rsc")
+
+```
 
 ## function splitFileExtension {#util-Reflective-splitFileExtension}
 
-* ``tuple[str,str] splitFileExtension(str path)``
+```rascal
+tuple[str,str] splitFileExtension(str path)
+
+```
 
 ## function getModuleName {#util-Reflective-getModuleName}
 
-* ``str getModuleName(loc moduleLoc,  PathConfig pcfg, set[str] extensions = {"tc", "tpl"})``
+```rascal
+str getModuleName(loc moduleLoc,  PathConfig pcfg, set[str] extensions = {"tc", "tpl"})
+
+```
 
 ## function getDerivedReadLoc {#util-Reflective-getDerivedReadLoc}
 
-* ``tuple[bool, loc] getDerivedReadLoc(str qualifiedModuleName, str extension, PathConfig pcfg, set[str] srcExtensions = {"rsc", "mu"}, str rootDir = "")``
+```rascal
+tuple[bool, loc] getDerivedReadLoc(str qualifiedModuleName, str extension, PathConfig pcfg, set[str] srcExtensions = {"rsc", "mu"}, str rootDir = "")
+
+```
 
    
 #### Synopsis
@@ -160,7 +196,10 @@ from locations in different, configurable, directories.
 
 ## function getDerivedWriteLoc {#util-Reflective-getDerivedWriteLoc}
 
-* ``loc getDerivedWriteLoc(str qualifiedModuleName, str extension, PathConfig pcfg, set[str] srcExtensions = {"rsc", "mu"}, str rootDir = "")``
+```rascal
+loc getDerivedWriteLoc(str qualifiedModuleName, str extension, PathConfig pcfg, set[str] srcExtensions = {"rsc", "mu"}, str rootDir = "")
+
+```
 
    
 #### Synopsis
@@ -202,24 +241,37 @@ to locations in separate, configurable, directories.
 
 ## function getProjectPathConfig {#util-Reflective-getProjectPathConfig}
 
-* ``PathConfig getProjectPathConfig(loc projectRoot, RascalConfigMode mode = compiler())``
+```rascal
+PathConfig getProjectPathConfig(loc projectRoot, RascalConfigMode mode = compiler())
+
+```
 
 ## function inCompiledMode {#util-Reflective-inCompiledMode}
 
-* ``bool inCompiledMode()``
+```rascal
+bool inCompiledMode()
+
+```
 
 Is the current Rascal code executed by the compiler or the interpreter?
 
 ## function diff {#util-Reflective-diff}
 
-* ``str diff(value old, value new)``
+```rascal
+str diff(value old, value new)
+
+```
 
 Give a textual diff between two values.
 
 ## function watch {#util-Reflective-watch}
 
-* ``&T watch(type[&T] tp, &T val, str name)``
-* ``&T watch(type[&T] tp, &T val, str name, value suffix)``
+```rascal
+&T watch(type[&T] tp, &T val, str name)
+
+&T watch(type[&T] tp, &T val, str name, value suffix)
+
+```
 
 Watch value val: 
 - running in interpreted mode: write val to a file, 
@@ -227,52 +279,83 @@ Watch value val:
 
 ## function getFingerprint {#util-Reflective-getFingerprint}
 
-* ``int getFingerprint(value val, bool concretePatterns)``
-* ``int getFingerprint(value val, int arity, bool concretePatterns)``
+```rascal
+int getFingerprint(value val, bool concretePatterns)
+
+int getFingerprint(value val, int arity, bool concretePatterns)
+
+```
 
 Compute a fingerprint of a value for the benefit of the compiler and the compiler runtime
 
 ## function getFingerprintNode {#util-Reflective-getFingerprintNode}
 
-* ``int getFingerprintNode(node nd)``
+```rascal
+int getFingerprintNode(node nd)
+
+```
 
 Compute a fingerprint of a complete node for the benefit of the compiler and the compiler runtime
 
 ## function throwNullPointerException {#util-Reflective-throwNullPointerException}
 
-* ``void throwNullPointerException()``
+```rascal
+void throwNullPointerException()
+
+```
 
 Throw a raw Java NullPointerException, to help simulate an unexpected exception in test scenarios
 
 ## function getRascalReservedIdentifiers {#util-Reflective-getRascalReservedIdentifiers}
 
-* ``set[str] getRascalReservedIdentifiers()``
+```rascal
+set[str] getRascalReservedIdentifiers()
+
+```
 
 Return a list of all Rascal reserved identifiers (a.k.a. keywords)
 
 ## function getRascalVersion {#util-Reflective-getRascalVersion}
 
-* ``str getRascalVersion()``
+```rascal
+str getRascalVersion()
+
+```
 
 ## function newRascalProject {#util-Reflective-newRascalProject}
 
-* ``void newRascalProject(loc folder, str name="my-project", str group="org.rascalmpl", str version="0.1.0-SNAPSHOT")``
+```rascal
+void newRascalProject(loc folder, str name="my-project", str group="org.rascalmpl", str version="0.1.0-SNAPSHOT")
+
+```
 
 Create a folder structure for an empty Rascal project with Maven support
 
 ## function pomFile {#util-Reflective-pomFile}
 
-* ``loc pomFile(loc folder)``
+```rascal
+loc pomFile(loc folder)
+
+```
 
 ## function emptyModule {#util-Reflective-emptyModule}
 
-* ``str emptyModule()``
+```rascal
+str emptyModule()
+
+```
 
 ## function rascalMF {#util-Reflective-rascalMF}
 
-* ``str rascalMF(str name)``
+```rascal
+str rascalMF(str name)
+
+```
 
 ## function pomXml {#util-Reflective-pomXml}
 
-* ``str pomXml(str name, str group, str version)``
+```rascal
+str pomXml(str name, str group, str version)
+
+```
 

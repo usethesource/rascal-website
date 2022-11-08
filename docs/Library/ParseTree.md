@@ -283,7 +283,10 @@ Character ranges and character class
 
 ## alias CharClass {#ParseTree-CharClass}
 
-* `list[CharRange]`
+```rascal
+list[CharRange]
+
+```
 
 ## data Symbol {#ParseTree-Symbol}
 
@@ -372,7 +375,10 @@ data Symbol
 
 ## function subtype {#ParseTree-subtype}
 
-* ``bool subtype(Symbol::\sort(_), Symbol::\adt("Tree", _))``
+```rascal
+bool subtype(Symbol::\sort(_), Symbol::\adt("Tree", _))
+
+```
 
 ## data Condition {#ParseTree-Condition}
 
@@ -404,7 +410,10 @@ at a certain position in the current line of the input text.
 
 ## function priority {#ParseTree-priority}
 
-* ``Production priority(Symbol s, [*Production a, priority(Symbol _, list[Production] b), *Production c])``
+```rascal
+Production priority(Symbol s, [*Production a, priority(Symbol _, list[Production] b), *Production c])
+
+```
 
 
 #### Synopsis
@@ -413,10 +422,16 @@ Nested priority is flattened.
 
 ## function associativity {#ParseTree-associativity}
 
-* ``Production associativity(Symbol s, Associativity as, {*Production a, choice(Symbol t, set[Production] b)})``
-* ``Production associativity(Symbol rhs, Associativity a, {associativity(rhs, Associativity b, set[Production] alts), *Production rest})``
-* ``Production associativity(Symbol s, Associativity as, {*Production a, priority(Symbol t, list[Production] b)})``
-* ``Production associativity(Symbol rhs, Associativity a, set[Production] rest)``
+```rascal
+Production associativity(Symbol s, Associativity as, {*Production a, choice(Symbol t, set[Production] b)})
+
+Production associativity(Symbol rhs, Associativity a, {associativity(rhs, Associativity b, set[Production] alts), *Production rest})
+
+Production associativity(Symbol s, Associativity as, {*Production a, priority(Symbol t, list[Production] b)})
+
+Production associativity(Symbol rhs, Associativity a, set[Production] rest)
+
+```
 
 
 #### Synopsis
@@ -431,9 +446,14 @@ Normalization of associativity.
 
 ## function parse {#ParseTree-parse}
 
-* ``&T<:Tree parse(type[&T<:Tree] begin, str input, bool allowAmbiguity=false, bool hasSideEffects=false, set[Tree(Tree)] filters={})``
-* ``&T<:Tree parse(type[&T<:Tree] begin, str input, loc origin, bool allowAmbiguity=false, bool hasSideEffects=false, set[Tree(Tree)] filters={})``
-* ``&T<:Tree parse(type[&T<:Tree] begin, loc input, bool allowAmbiguity=false, bool hasSideEffects=false, set[Tree(Tree)] filters={})``
+```rascal
+&T<:Tree parse(type[&T<:Tree] begin, str input, bool allowAmbiguity=false, bool hasSideEffects=false, set[Tree(Tree)] filters={})
+
+&T<:Tree parse(type[&T<:Tree] begin, str input, loc origin, bool allowAmbiguity=false, bool hasSideEffects=false, set[Tree(Tree)] filters={})
+
+&T<:Tree parse(type[&T<:Tree] begin, loc input, bool allowAmbiguity=false, bool hasSideEffects=false, set[Tree(Tree)] filters={})
+
+```
 
 
 #### Synopsis
@@ -507,7 +527,10 @@ ok
 
 ## function parser {#ParseTree-parser}
 
-* ``&T (value input, loc origin) parser(type[&T] grammar, bool allowAmbiguity=false, bool hasSideEffects=false, bool firstAmbiguity=false, set[Tree(Tree)] filters={})``
+```rascal
+&T (value input, loc origin) parser(type[&T] grammar, bool allowAmbiguity=false, bool hasSideEffects=false, bool firstAmbiguity=false, set[Tree(Tree)] filters={})
+
+```
 
 
 #### Synopsis
@@ -540,7 +563,10 @@ The parse function behaves differently depending of the given keyword parameters
 
 ## function parsers {#ParseTree-parsers}
 
-* ``&U (type[&U] nonterminal, value input, loc origin) parsers(type[&T] grammar, bool allowAmbiguity=false, bool hasSideEffects=false, bool firstAmbiguity=false,  set[Tree(Tree)] filters={})``
+```rascal
+&U (type[&U] nonterminal, value input, loc origin) parsers(type[&T] grammar, bool allowAmbiguity=false, bool hasSideEffects=false, bool firstAmbiguity=false,  set[Tree(Tree)] filters={})
+
+```
 
 
 #### Synopsis
@@ -555,8 +581,12 @@ nonterminal parameter. This can be used to select a specific non-terminal from t
 
 ## function firstAmbiguity {#ParseTree-firstAmbiguity}
 
-* ``Tree firstAmbiguity(type[&T<:Tree] begin, str input)``
-* ``Tree firstAmbiguity(type[&T<:Tree] begin, loc input)``
+```rascal
+Tree firstAmbiguity(type[&T<:Tree] begin, str input)
+
+Tree firstAmbiguity(type[&T<:Tree] begin, loc input)
+
+```
 
 
 .Synopsis parse the input but instead of returning the entire tree, return the trees for the first ambiguous substring.
@@ -571,7 +601,10 @@ If the input sentence is not ambiguous after all, simply the entire tree is retu
 
 ## function unparse {#ParseTree-unparse}
 
-* ``str unparse(Tree tree)``
+```rascal
+str unparse(Tree tree)
+
+```
 
 
 #### Synopsis
@@ -604,11 +637,17 @@ str: "2+3"
 
 ## function printSymbol {#ParseTree-printSymbol}
 
-* ``str printSymbol(Symbol sym, bool withLayout)``
+```rascal
+str printSymbol(Symbol sym, bool withLayout)
+
+```
 
 ## function implode {#ParseTree-implode}
 
-* ``&T<:value implode(type[&T<:value] t, Tree tree)``
+```rascal
+&T<:value implode(type[&T<:value] t, Tree tree)
+
+```
 
 
 #### Synopsis
@@ -762,8 +801,12 @@ Tree search result type for [tree at](../Library/ParseTree.md#ParseTree-treeAt).
 
 ## function treeAt {#ParseTree-treeAt}
 
-* ``TreeSearchResult[&T<:Tree] treeAt(type[&T<:Tree] t, loc l, Tree a:appl(_, _))``
-* ``default TreeSearchResult[&T<:Tree] treeAt(type[&T<:Tree] t, loc l, Tree root)``
+```rascal
+TreeSearchResult[&T<:Tree] treeAt(type[&T<:Tree] t, loc l, Tree a:appl(_, _))
+
+default TreeSearchResult[&T<:Tree] treeAt(type[&T<:Tree] t, loc l, Tree root)
+
+```
 
 
 #### Synopsis
@@ -774,23 +817,41 @@ Select the innermost Tree of a given type which is enclosed by a given location.
 
 ## function sameType {#ParseTree-sameType}
 
-* ``bool sameType(label(_,Symbol s),Symbol t)``
-* ``bool sameType(Symbol s,label(_,Symbol t))``
-* ``bool sameType(Symbol s,conditional(Symbol t,_))``
-* ``bool sameType(conditional(Symbol s,_), Symbol t)``
-* ``bool sameType(Symbol s, s)``
-* ``default bool sameType(Symbol s, Symbol t)``
+```rascal
+bool sameType(label(_,Symbol s),Symbol t)
+
+bool sameType(Symbol s,label(_,Symbol t))
+
+bool sameType(Symbol s,conditional(Symbol t,_))
+
+bool sameType(conditional(Symbol s,_), Symbol t)
+
+bool sameType(Symbol s, s)
+
+default bool sameType(Symbol s, Symbol t)
+
+```
 
 ## function isNonTerminalType {#ParseTree-isNonTerminalType}
 
-* ``bool isNonTerminalType(Symbol::\sort(str _))``
-* ``bool isNonTerminalType(Symbol::\lex(str _))``
-* ``bool isNonTerminalType(Symbol::\layouts(str _))``
-* ``bool isNonTerminalType(Symbol::\keywords(str _))``
-* ``bool isNonTerminalType(Symbol::\parameterized-sort(str _, list[Symbol] _))``
-* ``bool isNonTerminalType(Symbol::\parameterized-lex(str _, list[Symbol] _))``
-* ``bool isNonTerminalType(Symbol::\start(Symbol s))``
-* ``default bool isNonTerminalType(Symbol s)``
+```rascal
+bool isNonTerminalType(Symbol::\sort(str _))
+
+bool isNonTerminalType(Symbol::\lex(str _))
+
+bool isNonTerminalType(Symbol::\layouts(str _))
+
+bool isNonTerminalType(Symbol::\keywords(str _))
+
+bool isNonTerminalType(Symbol::\parameterized-sort(str _, list[Symbol] _))
+
+bool isNonTerminalType(Symbol::\parameterized-lex(str _, list[Symbol] _))
+
+bool isNonTerminalType(Symbol::\start(Symbol s))
+
+default bool isNonTerminalType(Symbol s)
+
+```
 
 
 #### Synopsis

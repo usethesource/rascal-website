@@ -14,10 +14,17 @@ Syntax definition for S-Expressions, based on http://people.csail.mit.edu/rivest
 
 ## function raw {#lang-sexp-\syntax-SExp-raw}
 
-* ``Raw raw(Decimal d, Bytes bs)``
+```rascal
+Raw raw(Decimal d, Bytes bs)
+
+```
 
 ## function unparse {#lang-sexp-\syntax-SExp-unparse}
 
-* ``str unparse(Bytes _)``
-* ``str unparse(Decimal _)``
+```rascal
+str unparse(Bytes _)
+
+str unparse(Decimal _)
+
+```
 

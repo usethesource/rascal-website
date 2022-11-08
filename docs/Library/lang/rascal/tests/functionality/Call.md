@@ -9,147 +9,255 @@ title: "module lang::rascal::tests::functionality::Call"
 
 ## function voidFun {#lang-rascal-tests-functionality-Call-voidFun}
 
-* ``test bool voidFun()``
+```rascal
+test bool voidFun()
+
+```
 
 ## function fac {#lang-rascal-tests-functionality-Call-fac}
 
-* ``int fac(int n)``
+```rascal
+int fac(int n)
+
+```
 
 ## function testFac {#lang-rascal-tests-functionality-Call-testFac}
 
-* ``test bool testFac()``
+```rascal
+test bool testFac()
+
+```
 
 ## function facNT {#lang-rascal-tests-functionality-Call-facNT}
 
-* ``int facNT(int n)``
+```rascal
+int facNT(int n)
+
+```
 
 ## function facNotTailRec {#lang-rascal-tests-functionality-Call-facNotTailRec}
 
-* ``test bool facNotTailRec()``
+```rascal
+test bool facNotTailRec()
+
+```
 
 ## function formalsAreLocal {#lang-rascal-tests-functionality-Call-formalsAreLocal}
 
-* ``test bool formalsAreLocal()``
+```rascal
+test bool formalsAreLocal()
+
+```
 
 ## function higherOrder {#lang-rascal-tests-functionality-Call-higherOrder}
 
-* ``test bool higherOrder()``
+```rascal
+test bool higherOrder()
+
+```
 
 ## function closures1 {#lang-rascal-tests-functionality-Call-closures1}
 
-* ``test bool closures1()``
+```rascal
+test bool closures1()
+
+```
 
 ## function closures2 {#lang-rascal-tests-functionality-Call-closures2}
 
-* ``test bool closures2()``
+```rascal
+test bool closures2()
+
+```
 
 ## function changeX {#lang-rascal-tests-functionality-Call-changeX}
 
-* ``void changeX(bool() newX)``
+```rascal
+void changeX(bool() newX)
+
+```
 
 ## function getX {#lang-rascal-tests-functionality-Call-getX}
 
-* ``bool getX()``
+```rascal
+bool getX()
+
+```
 
 ## function closureVariables {#lang-rascal-tests-functionality-Call-closureVariables}
 
-* ``test bool closureVariables()``
+```rascal
+test bool closureVariables()
+
+```
 
 ## function varArgs01 {#lang-rascal-tests-functionality-Call-varArgs01}
 
-* ``test bool varArgs01()``
+```rascal
+test bool varArgs01()
+
+```
 
 ## function varArgs02 {#lang-rascal-tests-functionality-Call-varArgs02}
 
-* ``test bool varArgs02()``
+```rascal
+test bool varArgs02()
+
+```
 
 ## function varArgs03 {#lang-rascal-tests-functionality-Call-varArgs03}
 
-* ``test bool varArgs03()``
+```rascal
+test bool varArgs03()
+
+```
 
 ## function varArgs04 {#lang-rascal-tests-functionality-Call-varArgs04}
 
-* ``test bool varArgs04()``
+```rascal
+test bool varArgs04()
+
+```
 
 ## function varArgs05 {#lang-rascal-tests-functionality-Call-varArgs05}
 
-* ``test bool varArgs05()``
+```rascal
+test bool varArgs05()
+
+```
 
 ## function varArgs06 {#lang-rascal-tests-functionality-Call-varArgs06}
 
-* ``test bool varArgs06()``
+```rascal
+test bool varArgs06()
+
+```
 
 ## function varArgs11 {#lang-rascal-tests-functionality-Call-varArgs11}
 
-* ``test bool varArgs11()``
+```rascal
+test bool varArgs11()
+
+```
 
 ## function varArgs12 {#lang-rascal-tests-functionality-Call-varArgs12}
 
-* ``test bool varArgs12()``
+```rascal
+test bool varArgs12()
+
+```
 
 ## function varArgs13 {#lang-rascal-tests-functionality-Call-varArgs13}
 
-* ``test bool varArgs13()``
+```rascal
+test bool varArgs13()
+
+```
 
 ## function varArgs14 {#lang-rascal-tests-functionality-Call-varArgs14}
 
-* ``test bool varArgs14()``
+```rascal
+test bool varArgs14()
+
+```
 
 ## function varArgs21 {#lang-rascal-tests-functionality-Call-varArgs21}
 
-* ``test bool varArgs21()``
+```rascal
+test bool varArgs21()
+
+```
 
 ## function varArgs22 {#lang-rascal-tests-functionality-Call-varArgs22}
 
-* ``test bool varArgs22()``
+```rascal
+test bool varArgs22()
+
+```
 
 ## function varArgs23 {#lang-rascal-tests-functionality-Call-varArgs23}
 
-* ``test bool varArgs23()``
+```rascal
+test bool varArgs23()
+
+```
 
 ## function varArgs24 {#lang-rascal-tests-functionality-Call-varArgs24}
 
-* ``test bool varArgs24()``
+```rascal
+test bool varArgs24()
+
+```
 
 ## function varArgs31 {#lang-rascal-tests-functionality-Call-varArgs31}
 
-* ``test bool varArgs31()``
+```rascal
+test bool varArgs31()
+
+```
 
 ## function varArgs32 {#lang-rascal-tests-functionality-Call-varArgs32}
 
-* ``test bool varArgs32()``
+```rascal
+test bool varArgs32()
+
+```
 
 ## function varArgs33 {#lang-rascal-tests-functionality-Call-varArgs33}
 
-* ``test bool varArgs33()``
+```rascal
+test bool varArgs33()
+
+```
 
 ## function sideEffect1 {#lang-rascal-tests-functionality-Call-sideEffect1}
 
-* ``test bool sideEffect1()``
+```rascal
+test bool sideEffect1()
+
+```
 
 ## function max1 {#lang-rascal-tests-functionality-Call-max1}
 
-* ``test bool max1()``
+```rascal
+test bool max1()
+
+```
 
 ## function max2 {#lang-rascal-tests-functionality-Call-max2}
 
-* ``test bool max2()``
+```rascal
+test bool max2()
+
+```
 
 ## function ident1 {#lang-rascal-tests-functionality-Call-ident1}
 
-* ``test bool ident1()``
+```rascal
+test bool ident1()
+
+```
 
 ## function ident2 {#lang-rascal-tests-functionality-Call-ident2}
 
-* ``test bool ident2()``
+```rascal
+test bool ident2()
+
+```
 
 ## function ident3 {#lang-rascal-tests-functionality-Call-ident3}
 
-* ``test bool ident3()``
+```rascal
+test bool ident3()
+
+```
 
 ## function ident4 {#lang-rascal-tests-functionality-Call-ident4}
 
-* ``test bool ident4()``
+```rascal
+test bool ident4()
+
+```
 
 ## data DATA {#lang-rascal-tests-functionality-Call-DATA}
 
@@ -161,23 +269,38 @@ data DATA
 
 ## function ident5 {#lang-rascal-tests-functionality-Call-ident5}
 
-* ``test bool ident5()``
+```rascal
+test bool ident5()
+
+```
 
 ## function ident6 {#lang-rascal-tests-functionality-Call-ident6}
 
-* ``test bool ident6()``
+```rascal
+test bool ident6()
+
+```
 
 ## function ident7 {#lang-rascal-tests-functionality-Call-ident7}
 
-* ``test bool ident7()``
+```rascal
+test bool ident7()
+
+```
 
 ## function ident8 {#lang-rascal-tests-functionality-Call-ident8}
 
-* ``test bool ident8()``
+```rascal
+test bool ident8()
+
+```
 
 ## function map1 {#lang-rascal-tests-functionality-Call-map1}
 
-* ``test bool  map1()``
+```rascal
+test bool  map1()
+
+```
 
 ## data X {#lang-rascal-tests-functionality-Call-X}
 
@@ -191,51 +314,87 @@ data X
 
 ## function dispatchTest1 {#lang-rascal-tests-functionality-Call-dispatchTest1}
 
-* ``test bool  dispatchTest1()``
+```rascal
+test bool  dispatchTest1()
+
+```
 
 ## function dispatchTest2 {#lang-rascal-tests-functionality-Call-dispatchTest2}
 
-* ``test bool  dispatchTest2()``
+```rascal
+test bool  dispatchTest2()
+
+```
 
 ## function dispatchTest3 {#lang-rascal-tests-functionality-Call-dispatchTest3}
 
-* ``test bool  dispatchTest3()``
+```rascal
+test bool  dispatchTest3()
+
+```
 
 ## function dispatchTest4 {#lang-rascal-tests-functionality-Call-dispatchTest4}
 
-* ``test bool  dispatchTest4()``
+```rascal
+test bool  dispatchTest4()
+
+```
 
 ## function indirect1 {#lang-rascal-tests-functionality-Call-indirect1}
 
-* ``test bool indirect1()``
+```rascal
+test bool indirect1()
+
+```
 
 ## function keywordTest1 {#lang-rascal-tests-functionality-Call-keywordTest1}
 
-* ``test bool keywordTest1()``
+```rascal
+test bool keywordTest1()
+
+```
 
 ## function keywordTest2 {#lang-rascal-tests-functionality-Call-keywordTest2}
 
-* ``test bool  keywordTest2()``
+```rascal
+test bool  keywordTest2()
+
+```
 
 ## function keywordTest3 {#lang-rascal-tests-functionality-Call-keywordTest3}
 
-* ``test bool keywordTest3()``
+```rascal
+test bool keywordTest3()
+
+```
 
 ## function keywordTest4 {#lang-rascal-tests-functionality-Call-keywordTest4}
 
-* ``test bool keywordTest4()``
+```rascal
+test bool keywordTest4()
+
+```
 
 ## function keywordTest5 {#lang-rascal-tests-functionality-Call-keywordTest5}
 
-* ``test bool keywordTest5()``
+```rascal
+test bool keywordTest5()
+
+```
 
 ## function keywordTest6 {#lang-rascal-tests-functionality-Call-keywordTest6}
 
-* ``test bool keywordTest6()``
+```rascal
+test bool keywordTest6()
+
+```
 
 ## function keywordTest7 {#lang-rascal-tests-functionality-Call-keywordTest7}
 
-* ``test bool keywordTest7()``
+```rascal
+test bool keywordTest7()
+
+```
 
 ## data Figure {#lang-rascal-tests-functionality-Call-Figure}
 
@@ -250,59 +409,101 @@ data Figure (real shrink = 1.0, str fillColor = "white", str lineColor = "black"
 
 ## function keywordTest8 {#lang-rascal-tests-functionality-Call-keywordTest8}
 
-* ``test bool keywordTest8()``
+```rascal
+test bool keywordTest8()
+
+```
 
 ## function keywordTest9 {#lang-rascal-tests-functionality-Call-keywordTest9}
 
-* ``test bool keywordTest9()``
+```rascal
+test bool keywordTest9()
+
+```
 
 ## function keywordTest10 {#lang-rascal-tests-functionality-Call-keywordTest10}
 
-* ``test bool keywordTest10()``
+```rascal
+test bool keywordTest10()
+
+```
 
 ## function keywordTest11 {#lang-rascal-tests-functionality-Call-keywordTest11}
 
-* ``test bool keywordTest11()``
+```rascal
+test bool keywordTest11()
+
+```
 
 ## function keywordTest12 {#lang-rascal-tests-functionality-Call-keywordTest12}
 
-* ``test bool keywordTest12()``
+```rascal
+test bool keywordTest12()
+
+```
 
 ## function keywordTest13 {#lang-rascal-tests-functionality-Call-keywordTest13}
 
-* ``test bool keywordTest13()``
+```rascal
+test bool keywordTest13()
+
+```
 
 ## function keywordTest14 {#lang-rascal-tests-functionality-Call-keywordTest14}
 
-* ``test bool keywordTest14()``
+```rascal
+test bool keywordTest14()
+
+```
 
 ## function keywordTest15 {#lang-rascal-tests-functionality-Call-keywordTest15}
 
-* ``test bool keywordTest15()``
+```rascal
+test bool keywordTest15()
+
+```
 
 ## function keywordTest16 {#lang-rascal-tests-functionality-Call-keywordTest16}
 
-* ``test bool keywordTest16()``
+```rascal
+test bool keywordTest16()
+
+```
 
 ## function keywordTest17 {#lang-rascal-tests-functionality-Call-keywordTest17}
 
-* ``test bool keywordTest17()``
+```rascal
+test bool keywordTest17()
+
+```
 
 ## function keywordTest18 {#lang-rascal-tests-functionality-Call-keywordTest18}
 
-* ``test bool keywordTest18()``
+```rascal
+test bool keywordTest18()
+
+```
 
 ## function keywordTest19 {#lang-rascal-tests-functionality-Call-keywordTest19}
 
-* ``test bool keywordTest19()``
+```rascal
+test bool keywordTest19()
+
+```
 
 ## function keywordTest20 {#lang-rascal-tests-functionality-Call-keywordTest20}
 
-* ``test bool keywordTest20()``
+```rascal
+test bool keywordTest20()
+
+```
 
 ## function keywordTest21 {#lang-rascal-tests-functionality-Call-keywordTest21}
 
-* ``test bool keywordTest21()``
+```rascal
+test bool keywordTest21()
+
+```
 
 ## data D {#lang-rascal-tests-functionality-Call-D}
 
@@ -322,43 +523,73 @@ data POINT
 
 ## function keywordMatchTest1 {#lang-rascal-tests-functionality-Call-keywordMatchTest1}
 
-* ``test bool keywordMatchTest1()``
+```rascal
+test bool keywordMatchTest1()
+
+```
 
 ## function keywordMatchTest2 {#lang-rascal-tests-functionality-Call-keywordMatchTest2}
 
-* ``test bool keywordMatchTest2()``
+```rascal
+test bool keywordMatchTest2()
+
+```
 
 ## function keywordMatchTest3 {#lang-rascal-tests-functionality-Call-keywordMatchTest3}
 
-* ``test bool keywordMatchTest3()``
+```rascal
+test bool keywordMatchTest3()
+
+```
 
 ## function keywordMatchTest4 {#lang-rascal-tests-functionality-Call-keywordMatchTest4}
 
-* ``test bool keywordMatchTest4()``
+```rascal
+test bool keywordMatchTest4()
+
+```
 
 ## function keywordMatchTest5 {#lang-rascal-tests-functionality-Call-keywordMatchTest5}
 
-* ``test bool keywordMatchTest5()``
+```rascal
+test bool keywordMatchTest5()
+
+```
 
 ## function keywordMatchTest6 {#lang-rascal-tests-functionality-Call-keywordMatchTest6}
 
-* ``test bool keywordMatchTest6()``
+```rascal
+test bool keywordMatchTest6()
+
+```
 
 ## function keywordMatchTest7 {#lang-rascal-tests-functionality-Call-keywordMatchTest7}
 
-* ``test bool keywordMatchTest7()``
+```rascal
+test bool keywordMatchTest7()
+
+```
 
 ## function keywordMatchTest8 {#lang-rascal-tests-functionality-Call-keywordMatchTest8}
 
-* ``test bool keywordMatchTest8()``
+```rascal
+test bool keywordMatchTest8()
+
+```
 
 ## function keywordMatchTest9 {#lang-rascal-tests-functionality-Call-keywordMatchTest9}
 
-* ``test bool keywordMatchTest9()``
+```rascal
+test bool keywordMatchTest9()
+
+```
 
 ## function keywordMatchTest10 {#lang-rascal-tests-functionality-Call-keywordMatchTest10}
 
-* ``test bool keywordMatchTest10()``
+```rascal
+test bool keywordMatchTest10()
+
+```
 
 ## data POINT1 {#lang-rascal-tests-functionality-Call-POINT1}
 
@@ -370,15 +601,24 @@ data POINT1
 
 ## function keywordMatchTest11 {#lang-rascal-tests-functionality-Call-keywordMatchTest11}
 
-* ``test bool keywordMatchTest11()``
+```rascal
+test bool keywordMatchTest11()
+
+```
 
 ## function keywordMatchTest12 {#lang-rascal-tests-functionality-Call-keywordMatchTest12}
 
-* ``test bool keywordMatchTest12()``
+```rascal
+test bool keywordMatchTest12()
+
+```
 
 ## function keywordMatchTest13 {#lang-rascal-tests-functionality-Call-keywordMatchTest13}
 
-* ``test bool keywordMatchTest13()``
+```rascal
+test bool keywordMatchTest13()
+
+```
 
 ## data Expr {#lang-rascal-tests-functionality-Call-Expr}
 
@@ -398,15 +638,24 @@ data Expr (int width = 1)
 
 ## function genericKwParams1 {#lang-rascal-tests-functionality-Call-genericKwParams1}
 
-* ``test bool genericKwParams1()``
+```rascal
+test bool genericKwParams1()
+
+```
 
 ## function genericKwParams2 {#lang-rascal-tests-functionality-Call-genericKwParams2}
 
-* ``test bool genericKwParams2()``
+```rascal
+test bool genericKwParams2()
+
+```
 
 ## function genericKwParamsBack1 {#lang-rascal-tests-functionality-Call-genericKwParamsBack1}
 
-* ``test bool genericKwParamsBack1()``
+```rascal
+test bool genericKwParamsBack1()
+
+```
 
 ## data Expr {#lang-rascal-tests-functionality-Call-Expr}
 
@@ -418,29 +667,49 @@ data Expr (int p = 2, int q = 2 * p)
 
 ## function genericKwParams3 {#lang-rascal-tests-functionality-Call-genericKwParams3}
 
-* ``test bool genericKwParams3()``
+```rascal
+test bool genericKwParams3()
+
+```
 
 ## function genericKwParams4 {#lang-rascal-tests-functionality-Call-genericKwParams4}
 
-* ``test bool genericKwParams4()``
+```rascal
+test bool genericKwParams4()
+
+```
 
 ## function f01n {#lang-rascal-tests-functionality-Call-f01n}
 
-* ``int f01n(0)``
-* ``int f01n(1)``
-* ``default int f01n(int n)``
+```rascal
+int f01n(0)
+
+int f01n(1)
+
+default int f01n(int n)
+
+```
 
 ## function f01n1 {#lang-rascal-tests-functionality-Call-f01n1}
 
-* ``test bool f01n1()``
+```rascal
+test bool f01n1()
+
+```
 
 ## function f01n2 {#lang-rascal-tests-functionality-Call-f01n2}
 
-* ``test bool f01n2()``
+```rascal
+test bool f01n2()
+
+```
 
 ## function f01n3 {#lang-rascal-tests-functionality-Call-f01n3}
 
-* ``test bool f01n3()``
+```rascal
+test bool f01n3()
+
+```
 
 ## data E {#lang-rascal-tests-functionality-Call-E}
 
@@ -453,71 +722,125 @@ data E
 
 ## function trans {#lang-rascal-tests-functionality-Call-trans}
 
-* ``E trans("e0", [])``
-* ``default E trans(str _, list[value] vals)``
+```rascal
+E trans("e0", [])
+
+default E trans(str _, list[value] vals)
+
+```
 
 ## function trans1 {#lang-rascal-tests-functionality-Call-trans1}
 
-* ``test bool trans1()``
+```rascal
+test bool trans1()
+
+```
 
 ## function trans2 {#lang-rascal-tests-functionality-Call-trans2}
 
-* ``test bool trans2()``
+```rascal
+test bool trans2()
+
+```
 
 ## function trans3 {#lang-rascal-tests-functionality-Call-trans3}
 
-* ``test bool trans3()``
+```rascal
+test bool trans3()
+
+```
 
 ## function translateConstantCall {#lang-rascal-tests-functionality-Call-translateConstantCall}
 
-* ``int translateConstantCall(str name, list[value] args)``
+```rascal
+int translateConstantCall(str name, list[value] args)
+
+```
 
 ## function tcc {#lang-rascal-tests-functionality-Call-tcc}
 
-* ``int tcc("value", [])``
-* ``int tcc("value", list[int] L)``
-* ``int tcc("value", list[int] L)``
-* ``default int tcc(str name, list[value] args)``
+```rascal
+int tcc("value", [])
+
+int tcc("value", list[int] L)
+
+int tcc("value", list[int] L)
+
+default int tcc(str name, list[value] args)
+
+```
 
 ## function tcc1 {#lang-rascal-tests-functionality-Call-tcc1}
 
-* ``test bool tcc1()``
+```rascal
+test bool tcc1()
+
+```
 
 ## function tcc2 {#lang-rascal-tests-functionality-Call-tcc2}
 
-* ``test bool tcc2()``
+```rascal
+test bool tcc2()
+
+```
 
 ## function tcc3 {#lang-rascal-tests-functionality-Call-tcc3}
 
-* ``test bool tcc3()``
+```rascal
+test bool tcc3()
+
+```
 
 ## function tcc4 {#lang-rascal-tests-functionality-Call-tcc4}
 
-* ``test bool tcc4()``
+```rascal
+test bool tcc4()
+
+```
 
 ## function tcc5 {#lang-rascal-tests-functionality-Call-tcc5}
 
-* ``test bool tcc5()``
+```rascal
+test bool tcc5()
+
+```
 
 ## function c {#lang-rascal-tests-functionality-Call-c}
 
-* ``C c(int i)``
-* ``C c(int i)``
-* ``C c(int i)``
+```rascal
+C c(int i)
+
+C c(int i)
+
+C c(int i)
+
+```
 
 ## function bt1 {#lang-rascal-tests-functionality-Call-bt1}
 
-* ``test bool bt1()``
+```rascal
+test bool bt1()
+
+```
 
 ## function bt2 {#lang-rascal-tests-functionality-Call-bt2}
 
-* ``test bool bt2()``
+```rascal
+test bool bt2()
+
+```
 
 ## function bt3 {#lang-rascal-tests-functionality-Call-bt3}
 
-* ``test bool bt3()``
+```rascal
+test bool bt3()
+
+```
 
 ## function bt {#lang-rascal-tests-functionality-Call-bt}
 
-* ``test bool bt(int i)``
+```rascal
+test bool bt(int i)
+
+```
 

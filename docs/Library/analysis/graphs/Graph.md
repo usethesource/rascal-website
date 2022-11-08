@@ -38,11 +38,17 @@ The `Graph` library provides the following functions:
 
 ## alias Graph[&T] {#analysis-graphs-Graph-Graph[&T]}
 
-* `rel[&T from, &T to]`
+```rascal
+rel[&T from, &T to]
+
+```
 
 ## function order {#analysis-graphs-Graph-order}
 
-* ``list[&T] order(Graph[&T] g)``
+```rascal
+list[&T] order(Graph[&T] g)
+
+```
 
 
 #### Synopsis
@@ -61,7 +67,10 @@ list[int]: [1,2,3,4]
 
 ## function stronglyConnectedComponents {#analysis-graphs-Graph-stronglyConnectedComponents}
 
-* ``set[set[&T]] stronglyConnectedComponents(Graph[&T] g)``
+```rascal
+set[set[&T]] stronglyConnectedComponents(Graph[&T] g)
+
+```
 
 
 #### Synopsis
@@ -83,7 +92,10 @@ set[set[int]]: {
 
 ## function stronglyConnectedComponentsAndTopSort {#analysis-graphs-Graph-stronglyConnectedComponentsAndTopSort}
 
-* ``tuple[set[set[&T]], list[&T]]  stronglyConnectedComponentsAndTopSort(Graph[&T] ag)``
+```rascal
+tuple[set[set[&T]], list[&T]]  stronglyConnectedComponentsAndTopSort(Graph[&T] ag)
+
+```
 
 #### Synopsis
 
@@ -100,7 +112,10 @@ Returns :
 
 ## function bottom {#analysis-graphs-Graph-bottom}
 
-* ``set[&T] bottom(Graph[&T] G)``
+```rascal
+set[&T] bottom(Graph[&T] G)
+
+```
 
 
 #### Synopsis
@@ -123,7 +138,10 @@ set[int]: {4}
 
 ## function predecessors {#analysis-graphs-Graph-predecessors}
 
-* ``set[&T] predecessors(Graph[&T] G, &T From)``
+```rascal
+set[&T] predecessors(Graph[&T] G, &T From)
+
+```
 
 
 #### Synopsis
@@ -146,7 +164,10 @@ set[int]: {3,2}
 
 ## function reach {#analysis-graphs-Graph-reach}
 
-* ``set[&T] reach(Graph[&T] G, set[&T] Start)``
+```rascal
+set[&T] reach(Graph[&T] G, set[&T] Start)
+
+```
 
 
 #### Synopsis
@@ -160,7 +181,10 @@ in the set `Start`.
 
 ## function reachR {#analysis-graphs-Graph-reachR}
 
-* ``set[&T] reachR(Graph[&T] G, set[&T] Start, set[&T] Restr)``
+```rascal
+set[&T] reachR(Graph[&T] G, set[&T] Start, set[&T] Restr)
+
+```
 
 
 #### Synopsis
@@ -184,7 +208,10 @@ set[int]: {3,2}
 
 ## function reachX {#analysis-graphs-Graph-reachX}
 
-* ``set[&T] reachX(Graph[&T] G, set[&T] Start, set[&T] Excl)``
+```rascal
+set[&T] reachX(Graph[&T] G, set[&T] Start, set[&T] Excl)
+
+```
 
 
 #### Synopsis
@@ -208,7 +235,10 @@ set[int]: {3,4}
 
 ## function shortestPathPair {#analysis-graphs-Graph-shortestPathPair}
 
-* ``list[&T] shortestPathPair(Graph[&T] G, &T From, &T To)``
+```rascal
+list[&T] shortestPathPair(Graph[&T] G, &T From, &T To)
+
+```
 
 
 #### Synopsis
@@ -221,7 +251,10 @@ Returns the shortest path between nodes `From` and `To` in Graph `G`.
 
 ## function successors {#analysis-graphs-Graph-successors}
 
-* ``set[&T] successors(Graph[&T] G, &T From)``
+```rascal
+set[&T] successors(Graph[&T] G, &T From)
+
+```
 
 
 #### Synopsis
@@ -244,7 +277,10 @@ set[int]: {3,2}
 
 ## function top {#analysis-graphs-Graph-top}
 
-* ``set[&T] top(Graph[&T] G)``
+```rascal
+set[&T] top(Graph[&T] G)
+
+```
 
 
 #### Synopsis
@@ -267,7 +303,10 @@ set[int]: {1}
 
 ## function connectedComponents {#analysis-graphs-Graph-connectedComponents}
 
-* ``set[set[&T]] connectedComponents(Graph[&T] G)``
+```rascal
+set[set[&T]] connectedComponents(Graph[&T] G)
+
+```
 
 
 #### Synopsis

@@ -18,7 +18,10 @@ data TYPE (loc src=|unknown:///|)
 
 ## alias PicoId {#demo-lang-Pico-Abstract-PicoId}
 
-* `str`
+```rascal
+str
+
+```
 
 ## data PROGRAM {#demo-lang-Pico-Abstract-PROGRAM}
 
@@ -61,5 +64,8 @@ data STATEMENT (loc src=|unknown:///|)
 
 ## alias Occurrence {#demo-lang-Pico-Abstract-Occurrence}
 
-* `tuple[loc src, PicoId name, STATEMENT stat]`
+```rascal
+tuple[loc src, PicoId name, STATEMENT stat]
+
+```
 

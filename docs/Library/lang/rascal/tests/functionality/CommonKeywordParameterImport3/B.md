@@ -17,5 +17,8 @@ data X
 
 ## function B_x2_y1 {#lang-rascal-tests-functionality-CommonKeywordParameterImport3-B-B_x2_y1}
 
-* ``test bool B_x2_y1()``
+```rascal
+test bool B_x2_y1()
+
+```
 

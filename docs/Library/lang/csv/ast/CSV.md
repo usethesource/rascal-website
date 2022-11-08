@@ -34,5 +34,8 @@ data Field
 
 ## function unquote {#lang-csv-ast-CSV-unquote}
 
-* ``Table unquote(Table tbl)``
+```rascal
+Table unquote(Table tbl)
+
+```
 

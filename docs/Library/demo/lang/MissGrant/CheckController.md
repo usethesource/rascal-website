@@ -9,5 +9,8 @@ title: "module demo::lang::MissGrant::CheckController"
 
 ## function checkController {#demo-lang-MissGrant-CheckController-checkController}
 
-* ``list[Message] checkController(Controller ctl)``
+```rascal
+list[Message] checkController(Controller ctl)
+
+```
 

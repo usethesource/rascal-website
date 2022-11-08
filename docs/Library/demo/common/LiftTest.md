@@ -9,5 +9,8 @@ title: "module demo::common::LiftTest"
 
 ## function t1 {#demo-common-LiftTest-t1}
 
-* ``test bool t1()``
+```rascal
+test bool t1()
+
+```
 

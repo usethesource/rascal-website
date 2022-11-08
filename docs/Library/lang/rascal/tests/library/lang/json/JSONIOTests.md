@@ -9,11 +9,17 @@ title: "module lang::rascal::tests::library::lang::json::JSONIOTests"
 
 ## function jsonFeaturesSupported {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonFeaturesSupported}
 
-* ``bool jsonFeaturesSupported(value v)``
+```rascal
+bool jsonFeaturesSupported(value v)
+
+```
 
 ## function writeRead {#lang-rascal-tests-library-lang-json-JSONIOTests-writeRead}
 
-* ``bool writeRead(type[&T] returnType, &T dt)``
+```rascal
+bool writeRead(type[&T] returnType, &T dt)
+
+```
 
 ## data DATA1 {#lang-rascal-tests-library-lang-json-JSONIOTests-DATA1}
 
@@ -37,63 +43,108 @@ data DATA2
 
 ## function jsonWithBool1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithBool1}
 
-* ``test bool jsonWithBool1(bool dt)``
+```rascal
+test bool jsonWithBool1(bool dt)
+
+```
 
 ## function jsonWithInt1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithInt1}
 
-* ``test bool jsonWithInt1(int dt)``
+```rascal
+test bool jsonWithInt1(int dt)
+
+```
 
 ## function jsonWithReal1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithReal1}
 
-* ``test bool jsonWithReal1(real dt)``
+```rascal
+test bool jsonWithReal1(real dt)
+
+```
 
 ## function jsonWithRat1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithRat1}
 
-* ``test bool jsonWithRat1(rat dt)``
+```rascal
+test bool jsonWithRat1(rat dt)
+
+```
 
 ## function jsonWithNum1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithNum1}
 
-* ``test bool jsonWithNum1(num dt)``
+```rascal
+test bool jsonWithNum1(num dt)
+
+```
 
 ## function jsonWithLoc1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithLoc1}
 
-* ``test bool jsonWithLoc1(loc dt)``
+```rascal
+test bool jsonWithLoc1(loc dt)
+
+```
 
 ## function jsonWithStr1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithStr1}
 
-* ``test bool jsonWithStr1(str dt)``
+```rascal
+test bool jsonWithStr1(str dt)
+
+```
 
 ## function jsonWithDatetime1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithDatetime1}
 
-* ``test bool jsonWithDatetime1(datetime dt)``
+```rascal
+test bool jsonWithDatetime1(datetime dt)
+
+```
 
 ## function jsonWithList1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithList1}
 
-* ``test bool jsonWithList1(list[int] dt)``
+```rascal
+test bool jsonWithList1(list[int] dt)
+
+```
 
 ## function jsonWithSet1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithSet1}
 
-* ``test bool jsonWithSet1(set[int] dt)``
+```rascal
+test bool jsonWithSet1(set[int] dt)
+
+```
 
 ## function jsonWithMap1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithMap1}
 
-* ``test bool jsonWithMap1(map[int, int]  dt)``
+```rascal
+test bool jsonWithMap1(map[int, int]  dt)
+
+```
 
 ## function jsonWithNode1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithNode1}
 
-* ``test bool jsonWithNode1(node  dt)``
+```rascal
+test bool jsonWithNode1(node  dt)
+
+```
 
 ## function jsonWithDATA11 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithDATA11}
 
-* ``test bool jsonWithDATA11(DATA1 dt)``
+```rascal
+test bool jsonWithDATA11(DATA1 dt)
+
+```
 
 ## function jsonWithDATA21 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithDATA21}
 
-* ``test bool jsonWithDATA21(DATA2 dt)``
+```rascal
+test bool jsonWithDATA21(DATA2 dt)
+
+```
 
 ## function jsonRandom1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonRandom1}
 
-* ``test bool jsonRandom1(value dt)``
+```rascal
+test bool jsonRandom1(value dt)
+
+```
 
 ## data D {#lang-rascal-tests-library-lang-json-JSONIOTests-D}
 
@@ -114,9 +165,15 @@ data D
 
 ## function jsonStreaming1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonStreaming1}
 
-* ``test bool jsonStreaming1(D dt)``
+```rascal
+test bool jsonStreaming1(D dt)
+
+```
 
 ## function jsonStreaming2 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonStreaming2}
 
-* ``test bool jsonStreaming2(D dt)``
+```rascal
+test bool jsonStreaming2(D dt)
+
+```
 

@@ -20,17 +20,29 @@ data D
 
 ## function tstMake1 {#lang-rascal-tests-library-Type-tstMake1}
 
-* ``test bool tstMake1()``
+```rascal
+test bool tstMake1()
+
+```
 
 ## function tstMake2 {#lang-rascal-tests-library-Type-tstMake2}
 
-* ``test bool tstMake2()``
+```rascal
+test bool tstMake2()
+
+```
 
 ## function tstMake3 {#lang-rascal-tests-library-Type-tstMake3}
 
-* ``test bool tstMake3()``
+```rascal
+test bool tstMake3()
+
+```
 
 ## function tstMake4 {#lang-rascal-tests-library-Type-tstMake4}
 
-* ``test bool tstMake4()``
+```rascal
+test bool tstMake4()
+
+```
 

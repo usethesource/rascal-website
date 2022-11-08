@@ -33,7 +33,10 @@ The following functions are provided:
 
 ## function intercept {#analysis-statistics-SimpleRegression-intercept}
 
-* ``num intercept(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num intercept(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -46,7 +49,10 @@ The least squares estimate of the intercept is computed using these [normal equa
 
 ## function interceptStdErr {#analysis-statistics-SimpleRegression-interceptStdErr}
 
-* ``num interceptStdErr(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num interceptStdErr(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -58,7 +64,10 @@ Returns the http://www.xycoon.com/standarderrorb0.htm[standard error of the inte
 
 ## function meanSquareError {#analysis-statistics-SimpleRegression-meanSquareError}
 
-* ``num meanSquareError(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num meanSquareError(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -71,7 +80,10 @@ Returns the sum of squared errors divided by the degrees of freedom, usually abb
 
 ## function R {#analysis-statistics-SimpleRegression-R}
 
-* ``num R(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num R(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -85,7 +97,10 @@ More functions related to this coefficient can be found in [Correlation](../../.
 
 ## function regressionSumSquares {#analysis-statistics-SimpleRegression-regressionSumSquares}
 
-* ``num regressionSumSquares(list[tuple[num,num]] values) throws IllegalArgument``
+```rascal
+num regressionSumSquares(list[tuple[num,num]] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -99,7 +114,10 @@ This is usually abbreviated SSR or http://www.xycoon.com/SumOfSquares.htm[SSM].
 
 ## function RSquare {#analysis-statistics-SimpleRegression-RSquare}
 
-* ``num RSquare(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num RSquare(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -112,7 +130,10 @@ It provides a measure of how well future outcomes are likely to be predicted by 
 
 ## function significance {#analysis-statistics-SimpleRegression-significance}
 
-* ``num significance(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num significance(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -130,7 +151,10 @@ The validity of this statistic depends on the assumption that the observations i
 
 ## function slope {#analysis-statistics-SimpleRegression-slope}
 
-* ``num slope(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num slope(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -144,7 +168,10 @@ The slope is sometimes denoted b1.
 
 ## function slopeConfidenceInterval {#analysis-statistics-SimpleRegression-slopeConfidenceInterval}
 
-* ``num slopeConfidenceInterval(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num slopeConfidenceInterval(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -166,7 +193,10 @@ The 95% confidence interval is
 
 ## function slopeStdErr {#analysis-statistics-SimpleRegression-slopeStdErr}
 
-* ``num slopeStdErr(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num slopeStdErr(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -178,7 +208,10 @@ Returns the http://www.xycoon.com/standarderrorb0.htm[standard error of the slop
 
 ## function sumOfCrossProducts {#analysis-statistics-SimpleRegression-sumOfCrossProducts}
 
-* ``num sumOfCrossProducts(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num sumOfCrossProducts(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -190,7 +223,10 @@ Returns the sum of crossproducts, x__ᵢ*y__ᵢ.
 
 ## function sumSquaredErrors {#analysis-statistics-SimpleRegression-sumSquaredErrors}
 
-* ``num sumSquaredErrors(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num sumSquaredErrors(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -209,7 +245,10 @@ The return value is constrained to be non-negative, i.e., if due to rounding err
 
 ## function totalSumSquares {#analysis-statistics-SimpleRegression-totalSumSquares}
 
-* ``num totalSumSquares(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num totalSumSquares(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -222,7 +261,10 @@ This is defined as http://www.xycoon.com/SumOfSquares.htm[SSTO].
 
 ## function XSumSquares {#analysis-statistics-SimpleRegression-XSumSquares}
 
-* ``num XSumSquares(lrel[num,num] values) throws IllegalArgument``
+```rascal
+num XSumSquares(lrel[num,num] values) throws IllegalArgument
+
+```
 
 
 #### Synopsis
@@ -235,7 +277,10 @@ Returns the sum of squared deviations of the x values about their mean.
 
 ## function predict {#analysis-statistics-SimpleRegression-predict}
 
-* ``num predict(lrel[num,num] values, num x) throws IllegalArgument``
+```rascal
+num predict(lrel[num,num] values, num x) throws IllegalArgument
+
+```
 
 
 #### Synopsis

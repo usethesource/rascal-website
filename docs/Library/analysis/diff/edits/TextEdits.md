@@ -28,5 +28,8 @@ data TextEdit
 
 ## function delete {#analysis-diff-edits-TextEdits-delete}
 
-* ``TextEdit delete(loc range)``
+```rascal
+TextEdit delete(loc range)
+
+```
 

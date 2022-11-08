@@ -12,5 +12,8 @@ title: "module lang::smtlib2::command::response::Implode"
 
 ## function toAst {#lang-smtlib2-command-response-Implode-toAst}
 
-* ``Response toAst(str answer)``
+```rascal
+Response toAst(str answer)
+
+```
 

@@ -18,9 +18,15 @@ data B
 
 ## function visitTest {#lang-rascal-tests-functionality-SimpleVisit-visitTest}
 
-* ``test bool visitTest()``
+```rascal
+test bool visitTest()
+
+```
 
 ## function matchTest {#lang-rascal-tests-functionality-SimpleVisit-matchTest}
 
-* ``test bool matchTest()``
+```rascal
+test bool matchTest()
+
+```
 

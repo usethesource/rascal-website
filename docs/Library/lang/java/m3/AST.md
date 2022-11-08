@@ -172,15 +172,24 @@ data Modifier
 
 ## function getPaths {#lang-java-m3-AST-getPaths}
 
-* ``set[loc] getPaths(loc dir, str suffix)``
+```rascal
+set[loc] getPaths(loc dir, str suffix)
+
+```
 
 ## function findRoots {#lang-java-m3-AST-findRoots}
 
-* ``set[loc] findRoots(set[loc] folders)``
+```rascal
+set[loc] findRoots(set[loc] folders)
+
+```
 
 ## function createAstFromFile {#lang-java-m3-AST-createAstFromFile}
 
-* ``Declaration createAstFromFile(loc file, bool collectBindings, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")``
+```rascal
+Declaration createAstFromFile(loc file, bool collectBindings, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")
+
+```
 
 
 #### Synopsis
@@ -191,7 +200,10 @@ Creates AST from a file
 
 ## function createAstsFromFiles {#lang-java-m3-AST-createAstsFromFiles}
 
-* ``set[Declaration] createAstsFromFiles(set[loc] file, bool collectBindings, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")``
+```rascal
+set[Declaration] createAstsFromFiles(set[loc] file, bool collectBindings, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")
+
+```
 
 #### Synopsis
 
@@ -199,7 +211,10 @@ Creates AST from a file using Eclipse JDT compiler
 
 ## function createAstFromString {#lang-java-m3-AST-createAstFromString}
 
-* ``Declaration createAstFromString(loc fileName, str source, bool collectBinding, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")``
+```rascal
+Declaration createAstFromString(loc fileName, str source, bool collectBinding, bool errorRecovery = false, list[loc] sourcePath = [], list[loc] classPath = [], str javaVersion = "1.7")
+
+```
 
 #### Synopsis
 
@@ -207,13 +222,19 @@ Creates AST from a string using Eclipse JDT compiler
 
 ## function createAstsFromDirectory {#lang-java-m3-AST-createAstsFromDirectory}
 
-* ``set[Declaration] createAstsFromDirectory(loc project, bool collectBindings, bool errorRecovery = false, str javaVersion = "1.7" )``
+```rascal
+set[Declaration] createAstsFromDirectory(loc project, bool collectBindings, bool errorRecovery = false, str javaVersion = "1.7" )
+
+```
 
 Creates a set ASTs for all Java source files in a project using Eclipse's JDT compiler
 
 ## function createAstsFromMavenProject {#lang-java-m3-AST-createAstsFromMavenProject}
 
-* ``set[Declaration] createAstsFromMavenProject(loc project, bool collectBindings, bool errorRecovery = false, str javaVersion = "1.7" )``
+```rascal
+set[Declaration] createAstsFromMavenProject(loc project, bool collectBindings, bool errorRecovery = false, str javaVersion = "1.7" )
+
+```
 
 Creates a set ASTs for all Java source files in a Maven project using Eclipse's JDT compiler
 

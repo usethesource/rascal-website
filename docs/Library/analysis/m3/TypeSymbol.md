@@ -48,9 +48,15 @@ data TypeSymbol
 
 ## function subtype {#analysis-m3-TypeSymbol-subtype}
 
-* ``bool subtype(\any(), \any())``
+```rascal
+bool subtype(\any(), \any())
+
+```
 
 ## function lub {#analysis-m3-TypeSymbol-lub}
 
-* ``TypeSymbol lub(\any(), \any())``
+```rascal
+TypeSymbol lub(\any(), \any())
+
+```
 

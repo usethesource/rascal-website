@@ -25,9 +25,15 @@ data L (str h = "")
 
 ## function createN2 {#lang-rascal-tests-functionality-KeywordParameterImport2-Import2-createN2}
 
-* ``L createN2()``
+```rascal
+L createN2()
+
+```
 
 ## function createP2 {#lang-rascal-tests-functionality-KeywordParameterImport2-Import2-createP2}
 
-* ``L createP2()``
+```rascal
+L createP2()
+
+```
 

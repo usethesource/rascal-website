@@ -37,8 +37,12 @@ talk about _`l` 's text_ instead of _the text `l` refers to_.
 
 ## function relativize {#Location-relativize}
 
-* ``loc relativize(loc outside, loc inside)``
-* ``loc relativize(list[loc] haystack, loc needle)``
+```rascal
+loc relativize(loc outside, loc inside)
+
+loc relativize(list[loc] haystack, loc needle)
+
+```
 
 
 #### Synopsis
@@ -52,7 +56,10 @@ If the outside does not envelop the inside, then the original loc is returned.
 
 ## function isSameFile {#Location-isSameFile}
 
-* ``bool isSameFile(loc l, loc r)``
+```rascal
+bool isSameFile(loc l, loc r)
+
+```
 
 
 #### Synopsis
@@ -61,7 +68,10 @@ Check that two locations refer to the same file.
 
 ## function isLexicallyLess {#Location-isLexicallyLess}
 
-* ``bool isLexicallyLess(loc l, loc r)``
+```rascal
+bool isLexicallyLess(loc l, loc r)
+
+```
 
 
 #### Synopsis
@@ -79,7 +89,10 @@ This ordering regards the location value itself as opposed to the text it refers
 
 ## function getContent {#Location-getContent}
 
-* ``str getContent(loc l)``
+```rascal
+str getContent(loc l)
+
+```
 
 
 #### Synopsis
@@ -88,7 +101,10 @@ Get the textual content a location refers to.
 
 ## function isStrictlyContainedIn {#Location-isStrictlyContainedIn}
 
-* ``bool isStrictlyContainedIn(loc inner, loc outer)``
+```rascal
+bool isStrictlyContainedIn(loc inner, loc outer)
+
+```
 
 
 #### Synopsis
@@ -106,7 +122,10 @@ Strict containment between two locations `inner` and `outer` holds when
 
 ## function isContainedIn {#Location-isContainedIn}
 
-* ``bool isContainedIn(loc inner, loc outer)``
+```rascal
+bool isContainedIn(loc inner, loc outer)
+
+```
 
 
 #### Synopsis
@@ -123,7 +142,10 @@ Containment between two locations `inner` and `outer` holds when
 
 ## function beginsBefore {#Location-beginsBefore}
 
-* ``bool beginsBefore(loc l, loc r)``
+```rascal
+bool beginsBefore(loc l, loc r)
+
+```
 
 
 #### Synopsis
@@ -132,7 +154,10 @@ Begins a location's text before (but may overlap with) another location's text?
 
 ## function isBefore {#Location-isBefore}
 
-* ``bool isBefore(loc l, loc r)``
+```rascal
+bool isBefore(loc l, loc r)
+
+```
 
 
 #### Synopsis
@@ -145,7 +170,10 @@ Begins and ends a location's text before another location's text?
 
 ## function isImmediatelyBefore {#Location-isImmediatelyBefore}
 
-* ``bool isImmediatelyBefore(loc l, loc r)``
+```rascal
+bool isImmediatelyBefore(loc l, loc r)
+
+```
 
 
 #### Synopsis
@@ -158,7 +186,10 @@ Occurs a location's text _immediately_ before another location's text?
 
 ## function beginsAfter {#Location-beginsAfter}
 
-* ``bool beginsAfter(loc l, loc r)``
+```rascal
+bool beginsAfter(loc l, loc r)
+
+```
 
 
 #### Synopsis
@@ -171,7 +202,10 @@ In other words, `l` 's text may end before or after the end of `r` 's text.
 
 ## function isAfter {#Location-isAfter}
 
-* ``bool isAfter(loc l, loc r)``
+```rascal
+bool isAfter(loc l, loc r)
+
+```
 
 
 #### Synopsis
@@ -180,7 +214,10 @@ Is a location's text completely after another location's text?
 
 ## function isImmediatelyAfter {#Location-isImmediatelyAfter}
 
-* ``bool isImmediatelyAfter(loc l, loc r)``
+```rascal
+bool isImmediatelyAfter(loc l, loc r)
+
+```
 
 
 #### Synopsis
@@ -189,7 +226,10 @@ Is a location's text _immediately_ after another location's text?
 
 ## function isOverlapping {#Location-isOverlapping}
 
-* ``bool isOverlapping(loc l, loc r)``
+```rascal
+bool isOverlapping(loc l, loc r)
+
+```
 
 
 #### Synopsis
@@ -198,7 +238,10 @@ Refer two locations to text that overlaps?
 
 ## function cover {#Location-cover}
 
-* ``loc cover(list[loc] locs)``
+```rascal
+loc cover(list[loc] locs)
+
+```
 
 
 #### Synopsis

@@ -9,13 +9,22 @@ title: "module lang::rascal::tests::concrete::Syntax3"
 
 ## function ambFilter {#lang-rascal-tests-concrete-Syntax3-ambFilter}
 
-* ``&T <:Tree ambFilter(amb(set[&T <:Tree] alternatives))``
+```rascal
+&T <:Tree ambFilter(amb(set[&T <:Tree] alternatives))
+
+```
 
 ## function resolveableAmbIsGone {#lang-rascal-tests-concrete-Syntax3-resolveableAmbIsGone}
 
-* ``test bool resolveableAmbIsGone()``
+```rascal
+test bool resolveableAmbIsGone()
+
+```
 
 ## function twoAmbsLeft {#lang-rascal-tests-concrete-Syntax3-twoAmbsLeft}
 
-* ``test bool twoAmbsLeft()``
+```rascal
+test bool twoAmbsLeft()
+
+```
 

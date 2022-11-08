@@ -18,7 +18,12 @@ but this has not been well tested.
 
 ## function expectedAmb {#lang-java-\syntax-Java15-expectedAmb}
 
-* ``bool expectedAmb({(Expr)`(<RefType t>) <Expr e>`, appl(_,[(Expr)`(<ExprName n>)`,*_])})``
-* ``bool expectedAmb({appl(_,[*_,(Expr)`(<RefType t>) <Expr e>`]), appl(_,[appl(_,[*_,(Expr)`(<ExprName n>)`]),*_])})``
-* ``default bool expectedAmb(set[Tree] t)``
+```rascal
+bool expectedAmb({(Expr)`(<RefType t>) <Expr e>`, appl(_,[(Expr)`(<ExprName n>)`,*_])})
+
+bool expectedAmb({appl(_,[*_,(Expr)`(<RefType t>) <Expr e>`]), appl(_,[appl(_,[*_,(Expr)`(<ExprName n>)`]),*_])})
+
+default bool expectedAmb(set[Tree] t)
+
+```
 

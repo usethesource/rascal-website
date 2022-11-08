@@ -9,7 +9,10 @@ title: "module util::UUID"
 
 ## function uuid {#util-UUID-uuid}
 
-* ``loc uuid()``
+```rascal
+loc uuid()
+
+```
 
 
 #### Synopsis
@@ -34,7 +37,7 @@ The uuid() function generates a location with the authority showing the literal 
 
 ```rascal-shell ,continue
 rascal>uuid()
-loc: |uuid://eb878f47-9d3c-4ecd-862d-a54b3bd7e7e2|
+loc: |uuid://437d0596-6136-4a52-b7ce-1d3e3b762787|
 ```
 
 Use it to relate identies to data objects, as in this example which adds a field to a relation:
@@ -56,29 +59,29 @@ rel[int,int]: {
 }
 rascal>rel[int n, int square, loc id] myUniqueData = { <i,j,uuid()> | <i,j> <- myData };
 rel[int n,int square,loc id]: {
-  <3,9,|uuid://74f80956-ca94-4712-9653-8af5a441712d|>,
-  <7,49,|uuid://8c7478c4-8d91-4ce7-bb13-fd63d21c4647|>,
-  <9,81,|uuid://ebfcd561-b57d-4cf9-903e-8a9583eba471|>,
-  <10,100,|uuid://0743e9d1-858d-4f1f-883b-36bf6bce222a|>,
-  <4,16,|uuid://b940c9b6-3255-4bf3-97f8-00fdf2af55d4|>,
-  <6,36,|uuid://a5e546e9-5bbb-4c0b-9aae-1f3eb1a10093|>,
-  <1,1,|uuid://ec23718d-6e44-4981-9286-8ddf3bebcf0d|>,
-  <2,4,|uuid://602e4c88-1ca7-494c-a6c2-995eed4d5fe5|>,
-  <8,64,|uuid://34879dcf-7356-4280-880b-1ed12d2bb0ee|>,
-  <5,25,|uuid://3507d7ab-3013-429b-8065-e23935b7fd9e|>
+  <7,49,|uuid://b8c43563-68ab-457b-9e11-faa7b067cf7c|>,
+  <4,16,|uuid://1fc7699f-0841-4e35-9690-48552cc7be72|>,
+  <1,1,|uuid://63c122ec-fb6e-4602-aa8a-b9bdc3c697e2|>,
+  <8,64,|uuid://d6ee8239-7d0e-4831-b1bb-14f6ce60434f|>,
+  <3,9,|uuid://7ceb76ea-01c7-49d0-bf38-0297fa6a85eb|>,
+  <9,81,|uuid://66a90449-cb73-4758-b3f2-27d2b57a6bc4|>,
+  <5,25,|uuid://e06435a7-d660-417a-ba7e-1c140c2d1130|>,
+  <10,100,|uuid://2307e92b-7bb5-4078-bd86-dd0ed20eaf97|>,
+  <2,4,|uuid://62de2b1e-246e-4624-839b-6e0d7c80bbce|>,
+  <6,36,|uuid://4c94cef3-f4b9-490a-a984-abf9956f0d50|>
 }
 rascal>map[tuple[int i, int j] t, loc id] myUniqueMap = (<i,j>:uuid() | <i,j> <- myData );
 map[tuple[int i,int j] t, loc id]: (
-  <6,36>:|uuid://b99c77d5-9fb8-4057-8f9f-4b99cb9e2091|,
-  <2,4>:|uuid://ecbb5e98-5d9d-433f-a679-9aedd20a8e5d|,
-  <7,49>:|uuid://0b96efbc-8bab-4d78-8d39-0401d4b1626a|,
-  <9,81>:|uuid://a82ace98-c4a3-4143-8de8-0a7ca6f3fa0d|,
-  <8,64>:|uuid://f39149b8-1e72-4e19-9468-74b46870e07a|,
-  <5,25>:|uuid://883351be-19fa-47f6-a800-b9de850916d3|,
-  <4,16>:|uuid://98fa34ae-5c87-4756-a280-6db4791c9042|,
-  <1,1>:|uuid://c6201fbc-37ac-4d5c-808d-ba16c4063584|,
-  <10,100>:|uuid://9af7543a-309a-482d-b7c9-7676d03d2baa|,
-  <3,9>:|uuid://e672815d-58cf-4319-a72c-448568f8b7ec|
+  <6,36>:|uuid://0056c80e-742d-4a7b-84ff-332db28b8f3f|,
+  <2,4>:|uuid://5c7ebd2c-ea29-4ea5-b21d-6ee56ce0acdc|,
+  <7,49>:|uuid://b8095c92-6a49-40b6-9d1a-6b85dd89fa11|,
+  <9,81>:|uuid://19280971-071a-4207-98af-e8cd7a06823b|,
+  <8,64>:|uuid://a63d2928-8d21-4659-a717-473246886bdf|,
+  <5,25>:|uuid://8a973cea-513c-4f6e-80ea-b5d7c0b740d7|,
+  <4,16>:|uuid://bc0ca101-5410-44d9-b2c2-29eb5fe29b37|,
+  <1,1>:|uuid://fef61713-3141-409c-9400-f439ef5af2ab|,
+  <10,100>:|uuid://6e5f2c84-5875-4f68-a369-d2f2baa003d3|,
+  <3,9>:|uuid://84173573-36f4-4a46-94f6-d89ab22bcc0e|
 )
 ```
 Note how uuid() should always generate a fresh value:
@@ -103,7 +106,10 @@ debugging purposes.
 
 ## function uuidi {#util-UUID-uuidi}
 
-* ``int uuidi()``
+```rascal
+int uuidi()
+
+```
 
 
 #### Synopsis

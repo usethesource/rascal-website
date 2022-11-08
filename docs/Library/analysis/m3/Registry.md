@@ -18,7 +18,10 @@ The functions in this file are used to register m3 models in a global in-memory 
 
 ## function registerProject {#analysis-m3-Registry-registerProject}
 
-* ``void registerProject(loc project, M3 model)``
+```rascal
+void registerProject(loc project, M3 model)
+
+```
 
 
 #### Synopsis
@@ -44,7 +47,10 @@ programmer should take care to call [unregister project](../../../Library/analys
 
 ## function unregisterProject {#analysis-m3-Registry-unregisterProject}
 
-* ``void unregisterProject(loc project, M3 model)``
+```rascal
+void unregisterProject(loc project, M3 model)
+
+```
 
  
 #### Synopsis
@@ -67,7 +73,10 @@ removed from the registry, clearing memory.
 
 ## function unregisterProjectSchemes {#analysis-m3-Registry-unregisterProjectSchemes}
 
-* ``void unregisterProjectSchemes(loc project, set[str] schemes)``
+```rascal
+void unregisterProjectSchemes(loc project, set[str] schemes)
+
+```
 
   
 #### Synopsis

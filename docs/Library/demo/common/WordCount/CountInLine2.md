@@ -13,7 +13,10 @@ Count words in a string
 
 ## function countInLine2 {#demo-common-WordCount-CountInLine2-countInLine2}
 
-* ``int countInLine2(str S)``
+```rascal
+int countInLine2(str S)
+
+```
 
 #### Synopsis
 
@@ -21,9 +24,15 @@ use a while loop to slowly walk through the string word-by-word
 
 ## function tstCountInLine2a {#demo-common-WordCount-CountInLine2-tstCountInLine2a}
 
-* ``test bool tstCountInLine2a()``
+```rascal
+test bool tstCountInLine2a()
+
+```
 
 ## function tstCountInLine2b {#demo-common-WordCount-CountInLine2-tstCountInLine2b}
 
-* ``test bool tstCountInLine2b()``
+```rascal
+test bool tstCountInLine2b()
+
+```
 

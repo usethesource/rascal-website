@@ -12,13 +12,22 @@ title: "module lang::rascal::grammar::definition::Parameters"
 
 ## function expandParameterizedSymbols {#lang-rascal-grammar-definition-Parameters-expandParameterizedSymbols}
 
-* ``Grammar expandParameterizedSymbols(Grammar g)``
+```rascal
+Grammar expandParameterizedSymbols(Grammar g)
+
+```
 
 ## function delabel {#lang-rascal-grammar-definition-Parameters-delabel}
 
-* ``Symbol delabel(Symbol l)``
+```rascal
+Symbol delabel(Symbol l)
+
+```
 
 ## function expand {#lang-rascal-grammar-definition-Parameters-expand}
 
-* ``set[Production] expand(set[Production] prods)``
+```rascal
+set[Production] expand(set[Production] prods)
+
+```
 

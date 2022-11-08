@@ -9,5 +9,8 @@ title: "module lang::rascal::tests::imports::Mbase"
 
 ## function f {#lang-rascal-tests-imports-Mbase-f}
 
-* ``int f(int n)``
+```rascal
+int f(int n)
+
+```
 

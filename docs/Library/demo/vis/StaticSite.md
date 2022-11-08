@@ -60,7 +60,10 @@ To get this effect we used the following library modules:
 
 ## function table {#demo-vis-StaticSite-table}
 
-* ``HTMLElement table(rel[&T, &U] r)``
+```rascal
+HTMLElement table(rel[&T, &U] r)
+
+```
 
 #### Synopsis
 

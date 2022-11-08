@@ -57,7 +57,10 @@ data Language
 
 ## function stem {#analysis-text-stemming-Snowball-stem}
 
-* ``str stem(str word, Language lang=english())``
+```rascal
+str stem(str word, Language lang=english())
+
+```
 
 
 #### Synopsis
@@ -72,7 +75,10 @@ Romanian, Russian, Spanish, Swedish and Turkish.
 
 ## function kraaijPohlmannStemmer {#analysis-text-stemming-Snowball-kraaijPohlmannStemmer}
 
-* ``str kraaijPohlmannStemmer(str word)``
+```rascal
+str kraaijPohlmannStemmer(str word)
+
+```
 
 
 #### Synopsis
@@ -85,7 +91,10 @@ See http://snowball.tartarus.org/algorithms/kraaij_pohlmann/stemmer.html
 
 ## function porterStemmer {#analysis-text-stemming-Snowball-porterStemmer}
 
-* ``str porterStemmer(str word)``
+```rascal
+str porterStemmer(str word)
+
+```
 
 
 #### Synopsis
@@ -98,7 +107,10 @@ See http://snowball.tartarus.org/algorithms/porter/stemmer.html for more informa
 
 ## function lovinsStemmer {#analysis-text-stemming-Snowball-lovinsStemmer}
 
-* ``str lovinsStemmer(str word)``
+```rascal
+str lovinsStemmer(str word)
+
+```
 
 
 #### Synopsis

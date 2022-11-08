@@ -20,20 +20,45 @@ data CFNode
 
 ## alias CFGraph {#demo-lang-Pico-ControlFlow-CFGraph}
 
-* `tuple[set[CFNode] entry, Graph[CFNode] graph, set[CFNode] exit]`
+```rascal
+tuple[set[CFNode] entry, Graph[CFNode] graph, set[CFNode] exit]
+
+```
 
 ## function cflowStat {#demo-lang-Pico-ControlFlow-cflowStat}
 
-* ``CFGraph cflowStat(s:asgStat(PicoId Id, EXP Exp))``
-* ``CFGraph cflowStat(ifElseStat(EXP Exp,                   // <4>                                            list[STATEMENT] Stats1,                               list[STATEMENT] Stats2))``
-* ``CFGraph cflowStat(whileStat(EXP Exp, list[STATEMENT] Stats))``
+```rascal
+CFGraph cflowStat(s:asgStat(PicoId Id, EXP Exp))
+
+CFGraph cflowStat(ifElseStat(EXP Exp,                   // <4>             
+                              list[STATEMENT] Stats1,
+                              list[STATEMENT] Stats2))
+
+CFGraph cflowStat(ifElseStat(EXP Exp,                   // <4>             
+                              list[STATEMENT] Stats1,
+                              list[STATEMENT] Stats2))
+
+CFGraph cflowStat(ifElseStat(EXP Exp,                   // <4>             
+                              list[STATEMENT] Stats1,
+                              list[STATEMENT] Stats2))
+
+CFGraph cflowStat(whileStat(EXP Exp, list[STATEMENT] Stats))
+
+```
 
 ## function cflowStats {#demo-lang-Pico-ControlFlow-cflowStats}
 
-* ``CFGraph cflowStats(list[STATEMENT] Stats)``
+```rascal
+CFGraph cflowStats(list[STATEMENT] Stats)
+
+```
 
 ## function cflowProgram {#demo-lang-Pico-ControlFlow-cflowProgram}
 
-* ``CFGraph cflowProgram(PROGRAM P:program(list[DECL] _, list[STATEMENT] Series))``
-* ``CFGraph cflowProgram(str txt)``
+```rascal
+CFGraph cflowProgram(PROGRAM P:program(list[DECL] _, list[STATEMENT] Series))
+
+CFGraph cflowProgram(str txt)
+
+```
 

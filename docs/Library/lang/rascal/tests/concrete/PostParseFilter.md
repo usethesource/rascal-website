@@ -9,9 +9,15 @@ title: "module lang::rascal::tests::concrete::PostParseFilter"
 
 ## function amb {#lang-rascal-tests-concrete-PostParseFilter-amb}
 
-* ``X amb({f:(X)`<A _>`, *value _})``
+```rascal
+X amb({f:(X)`<A _>`, *value _})
+
+```
 
 ## function t1 {#lang-rascal-tests-concrete-PostParseFilter-t1}
 
-* ``test bool t1()``
+```rascal
+test bool t1()
+
+```
 

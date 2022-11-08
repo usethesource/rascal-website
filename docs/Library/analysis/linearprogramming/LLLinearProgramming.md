@@ -13,7 +13,10 @@ Low level linear programming interface
 
 ## alias LLCoefficients {#analysis-linearprogramming-LLLinearProgramming-LLCoefficients}
 
-* `list[num]`
+```rascal
+list[num]
+
+```
 
 ## data LLObjectiveFun {#analysis-linearprogramming-LLLinearProgramming-LLObjectiveFun}
 
@@ -44,11 +47,17 @@ data LLConstraint
 
 ## alias LLConstraints {#analysis-linearprogramming-LLLinearProgramming-LLConstraints}
 
-* `set[LLConstraint]`
+```rascal
+set[LLConstraint]
+
+```
 
 ## alias LLVariableVals {#analysis-linearprogramming-LLLinearProgramming-LLVariableVals}
 
-* `list[num]`
+```rascal
+list[num]
+
+```
 
 ## data LLSolution {#analysis-linearprogramming-LLLinearProgramming-LLSolution}
 
@@ -60,17 +69,43 @@ data LLSolution
 
 ## function llRunObjFul {#analysis-linearprogramming-LLLinearProgramming-llRunObjFul}
 
-* ``num llRunObjFul(LLObjectiveFun f, LLVariableVals vals)``
+```rascal
+num llRunObjFul(LLObjectiveFun f, LLVariableVals vals)
+
+```
 
 ## function padToSize {#analysis-linearprogramming-LLLinearProgramming-padToSize}
 
-* ``list[num] padToSize(list[num] l, int s)``
+```rascal
+list[num] padToSize(list[num] l, int s)
+
+```
 
 ## function normalize {#analysis-linearprogramming-LLLinearProgramming-normalize}
 
-* ``tuple[LLConstraints constraints, LLObjectiveFun f] normalize(LLConstraints constraints, LLObjectiveFun f)``
+```rascal
+tuple[LLConstraints constraints, LLObjectiveFun f]
+normalize(LLConstraints constraints, LLObjectiveFun f)
+
+tuple[LLConstraints constraints, LLObjectiveFun f]
+normalize(LLConstraints constraints, LLObjectiveFun f)
+
+```
 
 ## function llOptimize {#analysis-linearprogramming-LLLinearProgramming-llOptimize}
 
-* ``Maybe[LLSolution]  llOptimize(bool minimize, bool nonZero,  		   LLConstraints constraints, LLObjectiveFun f)``
+```rascal
+Maybe[LLSolution] 
+llOptimize(bool minimize, bool nonZero, 
+		   LLConstraints constraints, LLObjectiveFun f)
+
+Maybe[LLSolution] 
+llOptimize(bool minimize, bool nonZero, 
+		   LLConstraints constraints, LLObjectiveFun f)
+
+Maybe[LLSolution] 
+llOptimize(bool minimize, bool nonZero, 
+		   LLConstraints constraints, LLObjectiveFun f)
+
+```
 

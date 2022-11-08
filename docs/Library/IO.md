@@ -82,7 +82,10 @@ The following input/output functions are defined:
 
 ## function registerLocations {#IO-registerLocations}
 
-* ``void registerLocations(str scheme, str authority, map[loc logical, loc physical] m)``
+```rascal
+void registerLocations(str scheme, str authority, map[loc logical, loc physical] m)
+
+```
 
 #### Synopsis
 
@@ -115,7 +118,10 @@ may expect problems. The registry is not automatically invalidated.
 
 ## function unregisterLocations {#IO-unregisterLocations}
 
-* ``void unregisterLocations(str scheme, str authority)``
+```rascal
+void unregisterLocations(str scheme, str authority)
+
+```
 
 Undo the effect of [register locations](../Library/IO.md#IO-registerLocations)
 
@@ -126,11 +132,21 @@ For debugging or for memory management you may wish to remove a lookup table.
 
 ## function resolveLocation {#IO-resolveLocation}
 
-* ``loc resolveLocation(loc l)``
+```rascal
+loc resolveLocation(loc l)
+
+```
 
 ## function appendToFile {#IO-appendToFile}
 
-* ``void appendToFile(loc file, value V..., str charset=DEFAULT_CHARSET, bool inferCharset=!(charset?)) throws PathNotFound, IO``
+```rascal
+void appendToFile(loc file, value V..., str charset=DEFAULT_CHARSET, bool inferCharset=!(charset?))
+throws PathNotFound, IO
+
+void appendToFile(loc file, value V..., str charset=DEFAULT_CHARSET, bool inferCharset=!(charset?))
+throws PathNotFound, IO
+
+```
 
 #### Synopsis
 
@@ -156,7 +172,10 @@ Else the same method of deciding the character set is used as in [read file](../
 
 ## function appendToFileEnc {#IO-appendToFileEnc}
 
-* ``void appendToFileEnc(loc file, str charset, value V...) throws PathNotFound, IO``
+```rascal
+void appendToFileEnc(loc file, str charset, value V...) throws PathNotFound, IO
+
+```
 
 #### Synopsis
 
@@ -176,7 +195,10 @@ Files are encoded using the charset provided.
 
 ## function charsets {#IO-charsets}
 
-* ``set[str] charsets()``
+```rascal
+set[str] charsets()
+
+```
 
 #### Synopsis
 
@@ -184,7 +206,10 @@ Returns all available character sets.
 
 ## function canEncode {#IO-canEncode}
 
-* ``set[str] canEncode(str charset)``
+```rascal
+set[str] canEncode(str charset)
+
+```
 
 #### Synopsis
 
@@ -192,7 +217,10 @@ Returns whether this charset can be used for encoding (use with [write file](../
 
 ## function bprintln {#IO-bprintln}
 
-* ``bool bprintln(value arg)``
+```rascal
+bool bprintln(value arg)
+
+```
 
 #### Synopsis
 
@@ -218,7 +246,10 @@ bool: true
 
 ## function exists {#IO-exists}
 
-* ``bool exists(loc file)``
+```rascal
+bool exists(loc file)
+
+```
 
 #### Synopsis
 
@@ -247,7 +278,10 @@ bool: true
 
 ## function find {#IO-find}
 
-* ``loc find(str name, list[loc] path) throws PathNotFound``
+```rascal
+loc find(str name, list[loc] path) throws PathNotFound
+
+```
 
 #### Synopsis
 
@@ -270,7 +304,10 @@ loc: |std:///IO.rsc|
 
 ## function isDirectory {#IO-isDirectory}
 
-* ``bool isDirectory(loc file)``
+```rascal
+bool isDirectory(loc file)
+
+```
 
 #### Synopsis
 
@@ -283,7 +320,10 @@ Check whether the location `file` is a directory.
 
 ## function iprint {#IO-iprint}
 
-* ``void iprint(value arg, int lineLimit = 1000)``
+```rascal
+void iprint(value arg, int lineLimit = 1000)
+
+```
 
 #### Synopsis
 
@@ -314,7 +354,10 @@ ok
 
 ## function iprintToFile {#IO-iprintToFile}
 
-* ``void iprintToFile(loc file, value arg, str charset=DEFAULT_CHARSET)``
+```rascal
+void iprintToFile(loc file, value arg, str charset=DEFAULT_CHARSET)
+
+```
 
 #### Synopsis
 
@@ -340,11 +383,17 @@ ok
 
 ## function iprintToString {#IO-iprintToString}
 
-* ``str iprintToString(value arg)``
+```rascal
+str iprintToString(value arg)
+
+```
 
 ## function iprintExp {#IO-iprintExp}
 
-* ``&T iprintExp(&T v)``
+```rascal
+&T iprintExp(&T v)
+
+```
 
 
 #### Synopsis
@@ -376,7 +425,10 @@ list[value]: [
 
 ## function iprintlnExp {#IO-iprintlnExp}
 
-* ``&T iprintlnExp(&T v)``
+```rascal
+&T iprintlnExp(&T v)
+
+```
 
 
 #### Synopsis
@@ -408,7 +460,10 @@ list[value]: [
 
 ## function iprintln {#IO-iprintln}
 
-* ``void iprintln(value arg, int lineLimit = 1000)``
+```rascal
+void iprintln(value arg, int lineLimit = 1000)
+
+```
 
 
 #### Synopsis
@@ -453,7 +508,10 @@ ok
 
 ## function isFile {#IO-isFile}
 
-* ``bool isFile(loc file)``
+```rascal
+bool isFile(loc file)
+
+```
 
 
 #### Synopsis
@@ -466,7 +524,10 @@ Check whether location `file` is actually a file.
 
 ## function lastModified {#IO-lastModified}
 
-* ``datetime lastModified(loc file)``
+```rascal
+datetime lastModified(loc file)
+
+```
 
 
 #### Synopsis
@@ -493,7 +554,10 @@ datetime: $2022-10-27T10:50:44.000+00:00$
 
 ## function created {#IO-created}
 
-* ``datetime created(loc file)``
+```rascal
+datetime created(loc file)
+
+```
 
 
 #### Synopsis
@@ -520,7 +584,10 @@ datetime: $2022-10-27T10:50:44.000+00:00$
 
 ## function touch {#IO-touch}
 
-* ``void touch(loc file)``
+```rascal
+void touch(loc file)
+
+```
 
 
 #### Synopsis
@@ -530,7 +597,10 @@ Set the modification date of a file to `now` or create the file if it did not ex
 
 ## function setLastModified {#IO-setLastModified}
 
-* ``void setLastModified(loc file, datetime timestamp)``
+```rascal
+void setLastModified(loc file, datetime timestamp)
+
+```
 
  
 #### Synopsis
@@ -540,7 +610,10 @@ Set the modification date of a file to the timestamp
 
 ## function listEntries {#IO-listEntries}
 
-* ``list[str] listEntries(loc file)``
+```rascal
+list[str] listEntries(loc file)
+
+```
 
 
 #### Synopsis
@@ -567,7 +640,14 @@ list[str]: ["Boolean.rsc","Content.rsc","DateTime.rsc","Exception.rsc","Grammar.
 
 ## function mkDirectory {#IO-mkDirectory}
 
-* ``void mkDirectory(loc file) throws PathNotFound, IO``
+```rascal
+void mkDirectory(loc file)
+throws PathNotFound, IO
+
+void mkDirectory(loc file)
+throws PathNotFound, IO
+
+```
 
 
 #### Synopsis
@@ -580,7 +660,10 @@ Create a directory at location `file`.
 
 ## function print {#IO-print}
 
-* ``void print(value arg)``
+```rascal
+void print(value arg)
+
+```
 
 
 #### Synopsis
@@ -611,8 +694,12 @@ glued to the output of `print`.
 
 ## function printExp {#IO-printExp}
 
-* ``&T printExp(&T v)``
-* ``&T printExp(str msg, &T v)``
+```rascal
+&T printExp(&T v)
+
+&T printExp(str msg, &T v)
+
+```
 
 
 #### Synopsis
@@ -635,8 +722,12 @@ real: 3.14
 
 ## function println {#IO-println}
 
-* ``void println(value arg)``
-* ``void println()``
+```rascal
+void println(value arg)
+
+void println()
+
+```
 
 
 #### Synopsis
@@ -693,8 +784,12 @@ ok
 
 ## function printlnExp {#IO-printlnExp}
 
-* ``&T printlnExp(&T v)``
-* ``&T printlnExp(str msg, &T v)``
+```rascal
+&T printlnExp(&T v)
+
+&T printlnExp(str msg, &T v)
+
+```
 
 
 #### Synopsis
@@ -719,7 +814,10 @@ output of `printExp`.
 
 ## function rprint {#IO-rprint}
 
-* ``void rprint(value arg)``
+```rascal
+void rprint(value arg)
+
+```
 
 
 #### Synopsis
@@ -732,7 +830,10 @@ This function is only available for internal use in the Rascal development team.
 
 ## function rprintln {#IO-rprintln}
 
-* ``void rprintln(value arg)``
+```rascal
+void rprintln(value arg)
+
+```
 
 
 #### Synopsis
@@ -745,7 +846,14 @@ This function is only available for internal use in the Rascal development team.
 
 ## function readFile {#IO-readFile}
 
-* ``str readFile(loc file, str charset=DEFAULT_CHARSET, bool inferCharset=!(charset?)) throws PathNotFound, IO``
+```rascal
+str readFile(loc file, str charset=DEFAULT_CHARSET, bool inferCharset=!(charset?))
+throws PathNotFound, IO
+
+str readFile(loc file, str charset=DEFAULT_CHARSET, bool inferCharset=!(charset?))
+throws PathNotFound, IO
+
+```
 
 
 #### Synopsis
@@ -783,7 +891,10 @@ the first 32 bytes of the file are not valid UTF-8.
 
 ## function readFileEnc {#IO-readFileEnc}
 
-* ``str readFileEnc(loc file, str charset) throws PathNotFound, IO``
+```rascal
+str readFileEnc(loc file, str charset) throws PathNotFound, IO
+
+```
 
 #### Synopsis
 
@@ -797,23 +908,50 @@ Also see [read file lines enc](../Library/IO.md#IO-readFileLinesEnc).
 
 ## function readBase64 {#IO-readBase64}
 
-* ``str readBase64(loc file) throws PathNotFound, IO``
+```rascal
+str readBase64(loc file)
+throws PathNotFound, IO
+
+str readBase64(loc file)
+throws PathNotFound, IO
+
+```
 
 ## function uuencode {#IO-uuencode}
 
-* ``str uuencode(loc file)``
+```rascal
+str uuencode(loc file)
+
+```
 
 ## function writeBase64 {#IO-writeBase64}
 
-* ``void writeBase64(loc file, str content) throws PathNotFound, IO``
+```rascal
+void writeBase64(loc file, str content)
+throws PathNotFound, IO
+
+void writeBase64(loc file, str content)
+throws PathNotFound, IO
+
+```
 
 ## function uudecode {#IO-uudecode}
 
-* ``void uudecode(loc file, str content)``
+```rascal
+void uudecode(loc file, str content)
+
+```
 
 ## function readFileBytes {#IO-readFileBytes}
 
-* ``list[int] readFileBytes(loc file) throws PathNotFound, IO``
+```rascal
+list[int] readFileBytes(loc file)
+throws PathNotFound, IO
+
+list[int] readFileBytes(loc file)
+throws PathNotFound, IO
+
+```
 
 
 #### Synopsis
@@ -822,7 +960,14 @@ Read the contents of a file and return it as a list of bytes.
 
 ## function readFileLines {#IO-readFileLines}
 
-* ``list[str] readFileLines(loc file, str charset=DEFAULT_CHARSET) throws PathNotFound, IO``
+```rascal
+list[str] readFileLines(loc file, str charset=DEFAULT_CHARSET)
+throws PathNotFound, IO
+
+list[str] readFileLines(loc file, str charset=DEFAULT_CHARSET)
+throws PathNotFound, IO
+
+```
 
 
 #### Synopsis
@@ -846,7 +991,10 @@ Look at [read file](../Library/IO.md#IO-readFile) to understand how this functio
 
 ## function writeFileLines {#IO-writeFileLines}
 
-* ``void writeFileLines(loc file, list[str] lines, str charset=DEFAULT_CHARSET)``
+```rascal
+void writeFileLines(loc file, list[str] lines, str charset=DEFAULT_CHARSET)
+
+```
 
 #### Synopsis
 
@@ -864,7 +1012,14 @@ Writes a list of strings to a file, where each separate string is ended with a n
 
 ## function readFileLinesEnc {#IO-readFileLinesEnc}
 
-* ``list[str] readFileLinesEnc(loc file, str charset) throws PathNotFound, IO``
+```rascal
+list[str] readFileLinesEnc(loc file, str charset)
+throws PathNotFound, IO
+
+list[str] readFileLinesEnc(loc file, str charset)
+throws PathNotFound, IO
+
+```
 
 #### Synopsis
 
@@ -878,11 +1033,21 @@ Also see [read file lines](../Library/IO.md#IO-readFileLines).
 
 ## function remove {#IO-remove}
 
-* ``void remove(loc file, bool recursive=true) throws IO``
+```rascal
+void remove(loc file, bool recursive=true) throws IO
+
+```
 
 ## function writeFile {#IO-writeFile}
 
-* ``void writeFile(loc file, value V..., str charset=DEFAULT_CHARSET) throws PathNotFound, IO``
+```rascal
+void writeFile(loc file, value V..., str charset=DEFAULT_CHARSET)
+throws PathNotFound, IO
+
+void writeFile(loc file, value V..., str charset=DEFAULT_CHARSET)
+throws PathNotFound, IO
+
+```
 
 
 #### Synopsis
@@ -902,7 +1067,14 @@ Files are encoded in UTF-8, in case this is not desired, use [write file enc](..
 
 ## function writeFileBytes {#IO-writeFileBytes}
 
-* ``void writeFileBytes(loc file, list[int] bytes) throws PathNotFound, IO``
+```rascal
+void writeFileBytes(loc file, list[int] bytes)
+throws PathNotFound, IO
+
+void writeFileBytes(loc file, list[int] bytes)
+throws PathNotFound, IO
+
+```
 
 #### Synopsis
 
@@ -910,7 +1082,10 @@ Write a list of bytes to a file.
 
 ## function writeFileEnc {#IO-writeFileEnc}
 
-* ``void writeFileEnc(loc file, str charset, value V...) throws PathNotFound, IO``
+```rascal
+void writeFileEnc(loc file, str charset, value V...) throws PathNotFound, IO
+
+```
 
 
 #### Synopsis
@@ -930,7 +1105,14 @@ Files are encoded using the charset provided.
 
 ## function md5HashFile {#IO-md5HashFile}
 
-* ``str md5HashFile(loc file) throws PathNotFound, IO``
+```rascal
+str md5HashFile(loc file)
+throws PathNotFound, IO
+
+str md5HashFile(loc file)
+throws PathNotFound, IO
+
+```
 
 
 #### Synopsis
@@ -943,35 +1125,63 @@ MD5 hash the contents of a file location.
 
 ## function md5Hash {#IO-md5Hash}
 
-* ``str md5Hash(value v)``
+```rascal
+str md5Hash(value v)
+
+```
 
 ## function createLink {#IO-createLink}
 
-* ``str createLink(str title, str target)``
+```rascal
+str createLink(str title, str target)
+
+```
 
 ## function toBase64 {#IO-toBase64}
 
-* ``str toBase64(loc file) throws PathNotFound, IO``
+```rascal
+str toBase64(loc file)
+throws PathNotFound, IO
+
+str toBase64(loc file)
+throws PathNotFound, IO
+
+```
 
 ## function copy {#IO-copy}
 
-* ``void copy(loc source, loc target, bool recursive=false, bool overwrite=true) throws IO``
+```rascal
+void copy(loc source, loc target, bool recursive=false, bool overwrite=true) throws IO
+
+```
 
 ## function copyFile {#IO-copyFile}
 
-* ``void copyFile(loc source, loc target)``
+```rascal
+void copyFile(loc source, loc target)
+
+```
 
 ## function copyDirectory {#IO-copyDirectory}
 
-* ``void copyDirectory(loc source, loc target)``
+```rascal
+void copyDirectory(loc source, loc target)
+
+```
 
 ## function move {#IO-move}
 
-* ``void move(loc source, loc target, bool overwrite=true) throws IO``
+```rascal
+void move(loc source, loc target, bool overwrite=true) throws IO
+
+```
 
 ## function arbLoc {#IO-arbLoc}
 
-* ``loc arbLoc()``
+```rascal
+loc arbLoc()
+
+```
 
 ## data LocationChangeEvent {#IO-LocationChangeEvent}
 
@@ -1002,9 +1212,15 @@ data LocationType
 
 ## function watch {#IO-watch}
 
-* ``void watch(loc src, bool recursive, void (LocationChangeEvent event) watcher)``
+```rascal
+void watch(loc src, bool recursive, void (LocationChangeEvent event) watcher)
+
+```
 
 ## function unwatch {#IO-unwatch}
 
-* ``void unwatch(loc src, bool recursive, void (LocationChangeEvent event) watcher)``
+```rascal
+void unwatch(loc src, bool recursive, void (LocationChangeEvent event) watcher)
+
+```
 

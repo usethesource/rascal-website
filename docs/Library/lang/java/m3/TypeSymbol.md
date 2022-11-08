@@ -51,9 +51,15 @@ data TypeSymbol
 
 ## function subtype {#lang-java-m3-TypeSymbol-subtype}
 
-* ``default bool subtype(TypeSymbol s, TypeSymbol t)``
+```rascal
+default bool subtype(TypeSymbol s, TypeSymbol t)
+
+```
 
 ## function lub {#lang-java-m3-TypeSymbol-lub}
 
-* ``default TypeSymbol lub(TypeSymbol s, TypeSymbol t)``
+```rascal
+default TypeSymbol lub(TypeSymbol s, TypeSymbol t)
+
+```
 

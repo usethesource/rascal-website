@@ -13,16 +13,26 @@ title: "module lang::json::IO"
 
 ## function toJSON {#lang-json-IO-toJSON}
 
-* ``str toJSON(value v)``
-* ``str toJSON(value v, bool compact)``
+```rascal
+str toJSON(value v)
+
+str toJSON(value v, bool compact)
+
+```
 
 ## function fromJSON {#lang-json-IO-fromJSON}
 
-* ``&T fromJSON(type[&T] typ, str src)``
+```rascal
+&T fromJSON(type[&T] typ, str src)
+
+```
 
 ## function readJSON {#lang-json-IO-readJSON}
 
-* ``&T readJSON(type[&T] expected, loc src, bool implicitConstructors = true, bool implicitNodes = true, str dateTimeFormat = "yyyy-MM-dd\'T\'HH:mm:ssZZZZZ", bool lenient=false)``
+```rascal
+&T readJSON(type[&T] expected, loc src, bool implicitConstructors = true, bool implicitNodes = true, str dateTimeFormat = "yyyy-MM-dd\'T\'HH:mm:ssZZZZZ", bool lenient=false)
+
+```
 
 reads JSON values from a stream
 In general the translation behaves as follows:
@@ -53,7 +63,10 @@ A similar distinction is made for values of type `node`, configured using the `i
 
 ## function parseJSON {#lang-json-IO-parseJSON}
 
-* ``&T parseJSON(type[&T] expected, str src, bool implicitConstructors = true, bool implicitNodes = true, str dateTimeFormat = "yyyy-MM-dd\'T\'HH:mm:ssZZZZZ", bool lenient=false)``
+```rascal
+&T parseJSON(type[&T] expected, str src, bool implicitConstructors = true, bool implicitNodes = true, str dateTimeFormat = "yyyy-MM-dd\'T\'HH:mm:ssZZZZZ", bool lenient=false)
+
+```
 
 parses JSON values from a string
 In general the translation behaves as follows:
@@ -84,9 +97,15 @@ A similar distinction is made for values of type `node`, configured using the `i
 
 ## function writeJSON {#lang-json-IO-writeJSON}
 
-* ``void writeJSON(loc target, value val, bool implicitConstructors=true, bool implicitNodes=true, bool unpackedLocations=false, str dateTimeFormat="yyyy-MM-dd\'T\'HH:mm:ssZZZZZ", bool dateTimeAsInt=false, int indent=0)``
+```rascal
+void writeJSON(loc target, value val, bool implicitConstructors=true, bool implicitNodes=true, bool unpackedLocations=false, str dateTimeFormat="yyyy-MM-dd\'T\'HH:mm:ssZZZZZ", bool dateTimeAsInt=false, int indent=0)
+
+```
 
 ## function asJSON {#lang-json-IO-asJSON}
 
-* ``str asJSON(value val, bool implicitConstructors=true, bool implicitNodes=true, bool unpackedLocations=false, str dateTimeFormat="yyyy-MM-dd\'T\'HH:mm:ssZZZZZ", bool dateTimeAsInt=false, int indent = 0)``
+```rascal
+str asJSON(value val, bool implicitConstructors=true, bool implicitNodes=true, bool unpackedLocations=false, str dateTimeFormat="yyyy-MM-dd\'T\'HH:mm:ssZZZZZ", bool dateTimeAsInt=false, int indent = 0)
+
+```
 

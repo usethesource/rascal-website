@@ -12,5 +12,8 @@ title: "module lang::smtlib2::command::response::Parse"
 
 ## function parseResponse {#lang-smtlib2-command-response-Parse-parseResponse}
 
-* ``Response parseResponse(str response)``
+```rascal
+Response parseResponse(str response)
+
+```
 

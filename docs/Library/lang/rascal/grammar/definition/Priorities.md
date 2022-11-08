@@ -17,15 +17,24 @@ data Associativity
 
 ## alias Extracted {#lang-rascal-grammar-definition-Priorities-Extracted}
 
-* `rel[Production father, Associativity rule, Production child]`
+```rascal
+rel[Production father, Associativity rule, Production child]
+
+```
 
 ## alias DoNotNest {#lang-rascal-grammar-definition-Priorities-DoNotNest}
 
-* `rel[Production father, int position, Production child]`
+```rascal
+rel[Production father, int position, Production child]
+
+```
 
 ## function doNotNest {#lang-rascal-grammar-definition-Priorities-doNotNest}
 
-* ``DoNotNest doNotNest(Grammar g)``
+```rascal
+DoNotNest doNotNest(Grammar g)
+
+```
 
 
 #### Synopsis
@@ -50,21 +59,37 @@ the associativity groups and the ! restriction operator.
 
 ## function extract {#lang-rascal-grammar-definition-Priorities-extract}
 
-* ``default Extracted extract(Production _)``
-* ``Extracted extract(choice(Symbol s, set[Production] alts))``
-* ``Extracted extract(associativity(Symbol s, Associativity a, set[Production] alts))``
-* ``Extracted extract(priority(Symbol s, list[Production] levels))``
-* ``Extracted extract(high:prod(_,_,_), low:prod(_,_,_))``
-* ``Extracted extract(choice(_, set[Production] alts), Production low)``
-* ``Extracted extract(Production high, choice(_, set[Production] alts))``
-* ``Extracted extract(Production a:associativity(_, _, set[Production] alts), Production low)``
-* ``Extracted extract(Production high, Production a:associativity(_, _, set[Production] alts))``
-* ``Extracted extract(Production p:priority(Symbol _, list[Production] alts), Production low)``
-* ``Extracted extract(Production high, Production p:priority(Symbol _, list[Production] alts))``
+```rascal
+default Extracted extract(Production _)
+
+Extracted extract(choice(Symbol s, set[Production] alts))
+
+Extracted extract(associativity(Symbol s, Associativity a, set[Production] alts))
+
+Extracted extract(priority(Symbol s, list[Production] levels))
+
+Extracted extract(high:prod(_,_,_), low:prod(_,_,_))
+
+Extracted extract(choice(_, set[Production] alts), Production low)
+
+Extracted extract(Production high, choice(_, set[Production] alts))
+
+Extracted extract(Production a:associativity(_, _, set[Production] alts), Production low)
+
+Extracted extract(Production high, Production a:associativity(_, _, set[Production] alts))
+
+Extracted extract(Production p:priority(Symbol _, list[Production] alts), Production low)
+
+Extracted extract(Production high, Production p:priority(Symbol _, list[Production] alts))
+
+```
 
 ## function except {#lang-rascal-grammar-definition-Priorities-except}
 
-* ``DoNotNest except(Production p:prod(Symbol _, list[Symbol] lhs, set[Attr] _), Grammar g)``
+```rascal
+DoNotNest except(Production p:prod(Symbol _, list[Symbol] lhs, set[Attr] _), Grammar g)
+
+```
 
 
 This one-liner searches a given production for "except restrictions". 
@@ -73,17 +98,29 @@ at this position, it adds a 'do-not-nest' tuple to the result.
 
 ## function isdef {#lang-rascal-grammar-definition-Priorities-isdef}
 
-* ``bool isdef(Grammar g, Symbol s)``
+```rascal
+bool isdef(Grammar g, Symbol s)
+
+```
 
 ## function find {#lang-rascal-grammar-definition-Priorities-find}
 
-* ``Maybe[Production] find(str c, Symbol s, Symbol t, Grammar g)``
+```rascal
+Maybe[Production] find(str c, Symbol s, Symbol t, Grammar g)
+
+```
 
 ## function except {#lang-rascal-grammar-definition-Priorities-except}
 
-* ``DoNotNest except(Production p:regular(Symbol s), Grammar g)``
+```rascal
+DoNotNest except(Production p:regular(Symbol s), Grammar g)
+
+```
 
 ## function same {#lang-rascal-grammar-definition-Priorities-same}
 
-* ``bool same(Symbol x, Symbol ref)``
+```rascal
+bool same(Symbol x, Symbol ref)
+
+```
 

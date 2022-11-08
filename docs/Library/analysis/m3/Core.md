@@ -76,36 +76,54 @@ data Language (str version = "")
 
 ## function emptyM3 {#analysis-m3-Core-emptyM3}
 
-* ``M3 emptyM3(loc id)``
+```rascal
+M3 emptyM3(loc id)
+
+```
 
 
 	Create an empty m3 term with empty annotations
 
 ## function composeM3 {#analysis-m3-Core-composeM3}
 
-* ``M3 composeM3(loc id, set[M3] models)``
+```rascal
+M3 composeM3(loc id, set[M3] models)
+
+```
 
 
 	Generic function to compose the annotations of a set of M3s.
 
 ## function diffM3 {#analysis-m3-Core-diffM3}
 
-* ``M3 diffM3(loc id, list[M3] models)``
+```rascal
+M3 diffM3(loc id, list[M3] models)
+
+```
 
 
 	Generic function to apply a difference over the annotations of a list of M3s.
 
 ## function modifyM3 {#analysis-m3-Core-modifyM3}
 
-* ``M3 modifyM3(loc id, list[M3] models, value (&T,&T) fun)``
+```rascal
+M3 modifyM3(loc id, list[M3] models, value (&T,&T) fun)
+
+```
 
 ## function isEmpty {#analysis-m3-Core-isEmpty}
 
-* ``bool isEmpty(M3 model)``
+```rascal
+bool isEmpty(M3 model)
+
+```
 
 ## function relToFileSystem {#analysis-m3-Core-relToFileSystem}
 
-* ``set[FileSystem] relToFileSystem(rel[loc parent, loc child] r)``
+```rascal
+set[FileSystem] relToFileSystem(rel[loc parent, loc child] r)
+
+```
 
 
 #### Synopsis
@@ -116,11 +134,17 @@ constructs a recursive FileSystem from a binary [Location] relation.
 
 ## function files {#analysis-m3-Core-files}
 
-* ``set[loc] files(M3 model)``
+```rascal
+set[loc] files(M3 model)
+
+```
 
 ## function containmentToFileSystem {#analysis-m3-Core-containmentToFileSystem}
 
-* ``set[FileSystem] containmentToFileSystem(M3 model)``
+```rascal
+set[FileSystem] containmentToFileSystem(M3 model)
+
+```
 
 
 #### Synopsis
@@ -139,5 +163,8 @@ as effective and perhaps more efficient, as applied directly on the containment 
 
 ## function checkM3 {#analysis-m3-Core-checkM3}
 
-* ``list[Message] checkM3(M3 model)``
+```rascal
+list[Message] checkM3(M3 model)
+
+```
 

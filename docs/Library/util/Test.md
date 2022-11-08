@@ -35,7 +35,10 @@ data TestResult
 
 ## function runTests {#util-Test-runTests}
 
-* ``list[TestResult] runTests(str moduleName)``
+```rascal
+list[TestResult] runTests(str moduleName)
+
+```
 
 #### Synopsis
 
@@ -48,5 +51,8 @@ This function works under the assumption that the named module is available in t
 
 ## function testTest {#util-Test-testTest}
 
-* ``test bool testTest()``
+```rascal
+test bool testTest()
+
+```
 

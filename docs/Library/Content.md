@@ -14,7 +14,10 @@ Content provides access to the content server of the Rascal terminal for viewing
 
 ## function html {#Content-html}
 
-* ``Content html(str html)``
+```rascal
+Content html(str html)
+
+```
 
 
 #### Synopsis
@@ -23,7 +26,10 @@ Directly serve a static html page
 
 ## function file {#Content-file}
 
-* ``Content file(loc src)``
+```rascal
+Content file(loc src)
+
+```
 
 
 #### Synopsis
@@ -32,7 +38,10 @@ Directly serve the contents of a file
 
 ## function plainText {#Content-plainText}
 
-* ``Content plainText(str text)``
+```rascal
+Content plainText(str text)
+
+```
 
 
 #### Synopsis
@@ -41,7 +50,10 @@ Directly serve the contents of a string as plain text
 
 ## alias Body {#Content-Body}
 
-* `value (type[value] expected)`
+```rascal
+value (type[value] expected)
+
+```
 
 ## data Request {#Content-Request}
 
@@ -93,8 +105,12 @@ which involves a handy, automatic, encoding of Rascal values into json values.
 
 ## function response {#Content-response}
 
-* ``Response response(str content, map[str,str] header = ())``
-* ``Response response(Status status, str explanation, map[str,str] header = ())``
+```rascal
+Response response(str content, map[str,str] header = ())
+
+Response response(Status status, str explanation, map[str,str] header = ())
+
+```
 
 
 #### Synopsis
@@ -103,7 +119,10 @@ Utility to quickly render a string as HTML content
 
 ## function plain {#Content-plain}
 
-* ``Response plain(str text)``
+```rascal
+Response plain(str text)
+
+```
 
 
 #### Synopsis
@@ -112,8 +131,12 @@ Utility to quickly make a plaintext response.
 
 ## function response {#Content-response}
 
-* ``Response response(loc f, map[str,str] header = ())``
-* ``default  Response response(value val, map[str,str] header = ())``
+```rascal
+Response response(loc f, map[str,str] header = ())
+
+default  Response response(value val, map[str,str] header = ())
+
+```
 
 
 #### Synopsis

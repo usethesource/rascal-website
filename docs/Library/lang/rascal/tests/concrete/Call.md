@@ -9,9 +9,15 @@ title: "module lang::rascal::tests::concrete::Call"
 
 ## function dispatchTestLexical {#lang-rascal-tests-concrete-Call-dispatchTestLexical}
 
-* ``test bool  dispatchTestLexical()``
+```rascal
+test bool  dispatchTestLexical()
+
+```
 
 ## function dispatchTestSyntax {#lang-rascal-tests-concrete-Call-dispatchTestSyntax}
 
-* ``test bool  dispatchTestSyntax()``
+```rascal
+test bool  dispatchTestSyntax()
+
+```
 

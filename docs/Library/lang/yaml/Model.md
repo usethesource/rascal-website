@@ -25,52 +25,91 @@ data Node
 
 ## function loadYAML {#lang-yaml-Model-loadYAML}
 
-* ``Node loadYAML(str src)``
+```rascal
+Node loadYAML(str src)
+
+```
 
 ## function dumpYAML {#lang-yaml-Model-dumpYAML}
 
-* ``str dumpYAML(Node yaml)``
+```rascal
+str dumpYAML(Node yaml)
+
+```
 
 ## function testLoadDump {#lang-yaml-Model-testLoadDump}
 
-* ``test bool testLoadDump()``
+```rascal
+test bool testLoadDump()
+
+```
 
 ## function checkYAML {#lang-yaml-Model-checkYAML}
 
-* ``set[str] checkYAML(Node n)``
+```rascal
+set[str] checkYAML(Node n)
+
+```
 
 ## function badAnchors {#lang-yaml-Model-badAnchors}
 
-* ``set[Node] badAnchors(Node n)``
+```rascal
+set[Node] badAnchors(Node n)
+
+```
 
 ## function wronglyTypedScalars {#lang-yaml-Model-wronglyTypedScalars}
 
-* ``set[Node] wronglyTypedScalars(Node n)``
+```rascal
+set[Node] wronglyTypedScalars(Node n)
+
+```
 
 ## function okValue {#lang-yaml-Model-okValue}
 
-* ``bool okValue(type[&T <: value] _, value v)``
+```rascal
+bool okValue(type[&T <: value] _, value v)
+
+```
 
 ## function unsupportedTypes {#lang-yaml-Model-unsupportedTypes}
 
-* ``set[type[value]] unsupportedTypes(Node n)``
+```rascal
+set[type[value]] unsupportedTypes(Node n)
+
+```
 
 ## function untaggedScalars {#lang-yaml-Model-untaggedScalars}
 
-* ``set[Node] untaggedScalars(Node n)``
+```rascal
+set[Node] untaggedScalars(Node n)
+
+```
 
 ## function duplicateAnchors {#lang-yaml-Model-duplicateAnchors}
 
-* ``set[int] duplicateAnchors(Node n)``
+```rascal
+set[int] duplicateAnchors(Node n)
+
+```
 
 ## function undefinedRefs {#lang-yaml-Model-undefinedRefs}
 
-* ``tuple[set[int], set[int]] undefinedRefs(reference(i), set[int] seen, set[int] dupl)``
-* ``tuple[set[int], set[int]] undefinedRefs(s:sequence(ns), set[int] seen, set[int] dupl)``
-* ``tuple[set[int], set[int]] undefinedRefs(nod:mapping(m), set[int] seen, set[int] dupl)``
-* ``default tuple[set[int], set[int]] undefinedRefs(Node n, set[int] seen, set[int] dupl)``
+```rascal
+tuple[set[int], set[int]] undefinedRefs(reference(i), set[int] seen, set[int] dupl)
+
+tuple[set[int], set[int]] undefinedRefs(s:sequence(ns), set[int] seen, set[int] dupl)
+
+tuple[set[int], set[int]] undefinedRefs(nod:mapping(m), set[int] seen, set[int] dupl)
+
+default tuple[set[int], set[int]] undefinedRefs(Node n, set[int] seen, set[int] dupl)
+
+```
 
 ## function equalNodes {#lang-yaml-Model-equalNodes}
 
-* ``bool equalNodes(Node x, Node y)``
+```rascal
+bool equalNodes(Node x, Node y)
+
+```
 

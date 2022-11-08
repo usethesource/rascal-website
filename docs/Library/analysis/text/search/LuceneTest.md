@@ -21,77 +21,134 @@ data Analyzer (Analyzer comments = standardAnalyzer(), Analyzer extra = standard
 
 ## function abFilter {#analysis-text-search-LuceneTest-abFilter}
 
-* ``str abFilter(str token)``
+```rascal
+str abFilter(str token)
+
+```
 
 ## function utFilter {#analysis-text-search-LuceneTest-utFilter}
 
-* ``bool utFilter(str token)``
+```rascal
+bool utFilter(str token)
+
+```
 
 ## function lauSplitDanda {#analysis-text-search-LuceneTest-lauSplitDanda}
 
-* ``list[str] lauSplitDanda("laudanda")``
+```rascal
+list[str] lauSplitDanda("laudanda")
+
+```
 
 ## function an {#analysis-text-search-LuceneTest-an}
 
-* ``Analyzer  an()``
+```rascal
+Analyzer  an()
+
+```
 
 ## function commentAnalyzer {#analysis-text-search-LuceneTest-commentAnalyzer}
 
-* ``Analyzer  commentAnalyzer()``
+```rascal
+Analyzer  commentAnalyzer()
+
+```
 
 ## function wordSplitFilter {#analysis-text-search-LuceneTest-wordSplitFilter}
 
-* ``Filter wordSplitFilter()``
+```rascal
+Filter wordSplitFilter()
+
+```
 
 ## function extraAnalyzer {#analysis-text-search-LuceneTest-extraAnalyzer}
 
-* ``Analyzer  extraAnalyzer()``
+```rascal
+Analyzer  extraAnalyzer()
+
+```
 
 ## function indexAnalyzer {#analysis-text-search-LuceneTest-indexAnalyzer}
 
-* ``Analyzer indexAnalyzer()``
+```rascal
+Analyzer indexAnalyzer()
+
+```
 
 ## function picoIndex {#analysis-text-search-LuceneTest-picoIndex}
 
-* ``void picoIndex()``
+```rascal
+void picoIndex()
+
+```
 
 ## function picoSearch {#analysis-text-search-LuceneTest-picoSearch}
 
-* ``void picoSearch(str term)``
+```rascal
+void picoSearch(str term)
+
+```
 
 ## function extraSearch {#analysis-text-search-LuceneTest-extraSearch}
 
-* ``void extraSearch()``
+```rascal
+void extraSearch()
+
+```
 
 ## function extraTermsTest {#analysis-text-search-LuceneTest-extraTermsTest}
 
-* ``test bool extraTermsTest()``
+```rascal
+test bool extraTermsTest()
+
+```
 
 ## function identifierTest {#analysis-text-search-LuceneTest-identifierTest}
 
-* ``test bool identifierTest()``
+```rascal
+test bool identifierTest()
+
+```
 
 ## function analyzerTest1 {#analysis-text-search-LuceneTest-analyzerTest1}
 
-* ``test bool analyzerTest1()``
+```rascal
+test bool analyzerTest1()
+
+```
 
 ## function analyzerTest2 {#analysis-text-search-LuceneTest-analyzerTest2}
 
-* ``test bool analyzerTest2()``
+```rascal
+test bool analyzerTest2()
+
+```
 
 ## function searchDocTest1 {#analysis-text-search-LuceneTest-searchDocTest1}
 
-* ``test bool searchDocTest1()``
+```rascal
+test bool searchDocTest1()
+
+```
 
 ## function searchDocTest2 {#analysis-text-search-LuceneTest-searchDocTest2}
 
-* ``test bool searchDocTest2()``
+```rascal
+test bool searchDocTest2()
+
+```
 
 ## function searchDocTest3 {#analysis-text-search-LuceneTest-searchDocTest3}
 
-* ``test bool searchDocTest3()``
+```rascal
+test bool searchDocTest3()
+
+```
 
 ## function main {#analysis-text-search-LuceneTest-main}
 
-* ``void main()``
+```rascal
+void main()
+
+```
 

@@ -9,5 +9,8 @@ title: "module lang::rascal::tests::concrete::Field"
 
 ## function stripLabels {#lang-rascal-tests-concrete-Field-stripLabels}
 
-* ``test bool stripLabels()``
+```rascal
+test bool stripLabels()
+
+```
 

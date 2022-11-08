@@ -35,10 +35,16 @@ The following functions are defined for relations:
 
 ## function carrier {#Relation-carrier}
 
-* ``set[&T]  carrier (rel[&T,&T] R)``
-* ``set[&T]  carrier (rel[&T,&T,&T] R)``
-* ``set[&T]  carrier (rel[&T,&T,&T,&T] R)``
-* ``set[&T]  carrier (rel[&T,&T,&T,&T,&T] R)``
+```rascal
+set[&T]  carrier (rel[&T,&T] R)
+
+set[&T]  carrier (rel[&T,&T,&T] R)
+
+set[&T]  carrier (rel[&T,&T,&T,&T] R)
+
+set[&T]  carrier (rel[&T,&T,&T,&T,&T] R)
+
+```
 
 
 #### Synopsis
@@ -59,10 +65,16 @@ set[int]: {10,200,20,2,100,1000,1,2000}
 
 ## function carrierR {#Relation-carrierR}
 
-* ``rel[&T,&T] carrierR (rel[&T,&T] R, set[&T] S)``
-* ``rel[&T,&T,&T] carrierR (rel[&T,&T,&T] R, set[&T] S)``
-* ``rel[&T,&T,&T,&T] carrierR (rel[&T,&T,&T,&T] R, set[&T] S)``
-* ``rel[&T,&T,&T,&T,&T] carrierR (rel[&T,&T,&T,&T,&T] R, set[&T] S)``
+```rascal
+rel[&T,&T] carrierR (rel[&T,&T] R, set[&T] S)
+
+rel[&T,&T,&T] carrierR (rel[&T,&T,&T] R, set[&T] S)
+
+rel[&T,&T,&T,&T] carrierR (rel[&T,&T,&T,&T] R, set[&T] S)
+
+rel[&T,&T,&T,&T,&T] carrierR (rel[&T,&T,&T,&T,&T] R, set[&T] S)
+
+```
 
 
 #### Synopsis
@@ -85,10 +97,16 @@ rel[int,int]: {<1,10>}
 
 ## function carrierX {#Relation-carrierX}
 
-* ``rel[&T,&T] carrierX (rel[&T,&T] R, set[&T] S)``
-* ``rel[&T,&T,&T] carrierX (rel[&T,&T,&T] R, set[&T] S)``
-* ``rel[&T,&T,&T,&T] carrierX (rel[&T,&T,&T,&T] R, set[&T] S)``
-* ``rel[&T,&T,&T,&T,&T] carrierX (rel[&T,&T,&T,&T,&T] R, set[&T] S)``
+```rascal
+rel[&T,&T] carrierX (rel[&T,&T] R, set[&T] S)
+
+rel[&T,&T,&T] carrierX (rel[&T,&T,&T] R, set[&T] S)
+
+rel[&T,&T,&T,&T] carrierX (rel[&T,&T,&T,&T] R, set[&T] S)
+
+rel[&T,&T,&T,&T,&T] carrierX (rel[&T,&T,&T,&T,&T] R, set[&T] S)
+
+```
 
 
 #### Synopsis
@@ -126,10 +144,16 @@ rel[int,int]: {<3,30>}
 
 ## function complement {#Relation-complement}
 
-* ``rel[&T0, &T1] complement(rel[&T0, &T1] R)``
-* ``rel[&T0, &T1, &T2] complement(rel[&T0, &T1, &T2] R)``
-* ``rel[&T0, &T1, &T2, &T3] complement(rel[&T0, &T1, &T2, &T3] R)``
-* ``rel[&T0, &T1, &T2, &T3, &T4] complement(rel[&T0, &T1, &T2, &T3, &T4] R)``
+```rascal
+rel[&T0, &T1] complement(rel[&T0, &T1] R)
+
+rel[&T0, &T1, &T2] complement(rel[&T0, &T1, &T2] R)
+
+rel[&T0, &T1, &T2, &T3] complement(rel[&T0, &T1, &T2, &T3] R)
+
+rel[&T0, &T1, &T2, &T3, &T4] complement(rel[&T0, &T1, &T2, &T3, &T4] R)
+
+```
 
 
 #### Synopsis
@@ -196,10 +220,16 @@ rel[int,int]: {
 
 ## function domain {#Relation-domain}
 
-* ``set[&T0] domain (rel[&T0,&T1] R)``
-* ``set[&T0] domain (rel[&T0,&T1,&T2] R)``
-* ``set[&T0] domain (rel[&T0,&T1,&T2,&T3] R)``
-* ``set[&T0] domain (rel[&T0,&T1,&T2,&T3,&T4] R)``
+```rascal
+set[&T0] domain (rel[&T0,&T1] R)
+
+set[&T0] domain (rel[&T0,&T1,&T2] R)
+
+set[&T0] domain (rel[&T0,&T1,&T2,&T3] R)
+
+set[&T0] domain (rel[&T0,&T1,&T2,&T3,&T4] R)
+
+```
 
 
 #### Synopsis
@@ -220,10 +250,16 @@ set[str]: {"tue","mon"}
 
 ## function domainR {#Relation-domainR}
 
-* ``rel[&T0,&T1] domainR (rel[&T0,&T1] R, set[&T0] S)``
-* ``rel[&T0,&T1,&T2] domainR (rel[&T0,&T1,&T2] R, set[&T0] S)``
-* ``rel[&T0,&T1,&T2,&T3] domainR (rel[&T0,&T1,&T2,&T3] R, set[&T0] S)``
-* ``rel[&T0,&T1,&T2,&T3,&T4] domainR (rel[&T0,&T1,&T2,&T3,&T4] R, set[&T0] S)``
+```rascal
+rel[&T0,&T1] domainR (rel[&T0,&T1] R, set[&T0] S)
+
+rel[&T0,&T1,&T2] domainR (rel[&T0,&T1,&T2] R, set[&T0] S)
+
+rel[&T0,&T1,&T2,&T3] domainR (rel[&T0,&T1,&T2,&T3] R, set[&T0] S)
+
+rel[&T0,&T1,&T2,&T3,&T4] domainR (rel[&T0,&T1,&T2,&T3,&T4] R, set[&T0] S)
+
+```
 
 
 #### Synopsis
@@ -249,10 +285,16 @@ rel[int,int]: {
 
 ## function domainX {#Relation-domainX}
 
-* ``rel[&T0,&T1] domainX (rel[&T0,&T1] R, set[&T0] S)``
-* ``rel[&T0,&T1,&T2] domainX (rel[&T0,&T1,&T2] R, set[&T0] S)``
-* ``rel[&T0,&T1,&T2,&T3] domainX (rel[&T0,&T1,&T2,&T3] R, set[&T0] S)``
-* ``rel[&T0,&T1,&T2,&T3,&T4] domainX (rel[&T0,&T1,&T2,&T3,&T4] R, set[&T0] S)``
+```rascal
+rel[&T0,&T1] domainX (rel[&T0,&T1] R, set[&T0] S)
+
+rel[&T0,&T1,&T2] domainX (rel[&T0,&T1,&T2] R, set[&T0] S)
+
+rel[&T0,&T1,&T2,&T3] domainX (rel[&T0,&T1,&T2,&T3] R, set[&T0] S)
+
+rel[&T0,&T1,&T2,&T3,&T4] domainX (rel[&T0,&T1,&T2,&T3,&T4] R, set[&T0] S)
+
+```
 
 
 #### Synopsis
@@ -275,7 +317,10 @@ rel[int,int]: {<2,20>}
 
 ## function groupDomainByRange {#Relation-groupDomainByRange}
 
-* ``set[set[&U]] groupDomainByRange(rel[&U dom, &T ran] input)``
+```rascal
+set[set[&U]] groupDomainByRange(rel[&U dom, &T ran] input)
+
+```
 
 
 #### Synopsis
@@ -309,7 +354,10 @@ set[set[str]]: {
 
 ## function groupRangeByDomain {#Relation-groupRangeByDomain}
 
-* ``set[set[&T]] groupRangeByDomain(rel[&U dom, &T ran] input)``
+```rascal
+set[set[&T]] groupRangeByDomain(rel[&U dom, &T ran] input)
+
+```
 
 
 #### Synopsis
@@ -345,7 +393,10 @@ set[set[str]]: {
 
 ## function ident {#Relation-ident}
 
-* ``rel[&T, &T] ident (set[&T] S)``
+```rascal
+rel[&T, &T] ident (set[&T] S)
+
+```
 
 
 #### Synopsis
@@ -372,10 +423,16 @@ rel[str,str]: {
 
 ## function invert {#Relation-invert}
 
-* ``rel[&T1, &T0] invert (rel[&T0, &T1] R)``
-* ``rel[&T2, &T1, &T0] invert (rel[&T0, &T1, &T2] R)``
-* ``rel[&T3, &T2, &T1, &T0] invert (rel[&T0, &T1, &T2, &T3] R)``
-* ``rel[&T4, &T3, &T2, &T1, &T0] invert (rel[&T0, &T1, &T2, &T3, &T4] R)``
+```rascal
+rel[&T1, &T0] invert (rel[&T0, &T1] R)
+
+rel[&T2, &T1, &T0] invert (rel[&T0, &T1, &T2] R)
+
+rel[&T3, &T2, &T1, &T0] invert (rel[&T0, &T1, &T2, &T3] R)
+
+rel[&T4, &T3, &T2, &T1, &T0] invert (rel[&T0, &T1, &T2, &T3, &T4] R)
+
+```
 
 
 #### Synopsis
@@ -397,10 +454,16 @@ rel[int,int]: {
 
 ## function range {#Relation-range}
 
-* ``set[&T1] range (rel[&T0,&T1] R)``
-* ``rel[&T1,&T2] range (rel[&T0,&T1, &T2] R)``
-* ``rel[&T1,&T2,&T3] range (rel[&T0,&T1,&T2,&T3] R)``
-* ``rel[&T1,&T2,&T3,&T4] range (rel[&T0,&T1,&T2,&T3,&T4] R)``
+```rascal
+set[&T1] range (rel[&T0,&T1] R)
+
+rel[&T1,&T2] range (rel[&T0,&T1, &T2] R)
+
+rel[&T1,&T2,&T3] range (rel[&T0,&T1,&T2,&T3] R)
+
+rel[&T1,&T2,&T3,&T4] range (rel[&T0,&T1,&T2,&T3,&T4] R)
+
+```
 
 
 #### Synopsis
@@ -421,7 +484,10 @@ set[int]: {1,2}
 
 ## function rangeR {#Relation-rangeR}
 
-* ``rel[&T0,&T1] rangeR (rel[&T0,&T1] R, set[&T2] S)``
+```rascal
+rel[&T0,&T1] rangeR (rel[&T0,&T1] R, set[&T2] S)
+
+```
 
 
 #### Synopsis
@@ -447,7 +513,10 @@ rel[int,int]: {
 
 ## function rangeX {#Relation-rangeX}
 
-* ``rel[&T0,&T1] rangeX (rel[&T0,&T1] R, set[&T2] S)``
+```rascal
+rel[&T0,&T1] rangeX (rel[&T0,&T1] R, set[&T2] S)
+
+```
 
  
 #### Synopsis
@@ -470,7 +539,10 @@ rel[int,int]: {<2,20>}
 
 ## function index {#Relation-index}
 
-* ``map[&K, set[&V]] index(rel[&K, &V] R)``
+```rascal
+map[&K, set[&V]] index(rel[&K, &V] R)
+
+```
 
 
 #### Synopsis
