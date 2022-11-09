@@ -7,6 +7,7 @@ details:
   - Expressions
   - Statements
   - Tests
+  - Errors
 ---
 
 #### Synopsis
@@ -22,6 +23,7 @@ Here we describe _all_ features of the Rascal language in detail, for reference 
 * [Expressions](../Rascal/Expressions/index.md)
 * [Statements](../Rascal/Statements/index.md)
 * [Tests](../Rascal/Tests/index.md)
+* [Errors](../Rascal/Errors/index.md)
 
 You can find more (accessible) information about programming in Rascal here:
 

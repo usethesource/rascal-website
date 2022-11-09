@@ -12,3 +12,7 @@ https://rascal-mpl.org/* https://www.rascal-mpl.org/:splat 301!
 https://rascalmpl.org/* https://www.rascal-mpl.org/:splat 301!
 https://www.rascalmpl.org/* https://www.rascal-mpl.org/:splat 301!
 https://new.rascal-mpl.org/* https://www.rascal-mpl.org/:splat 301!
+
+#moved the errors
+https://www.rascal-mpl.org/docs/CompileTimeErrors/* https://www.rascalmpl.org/docs/Rascal/Errors/CompileTimeErrors/:splat 301!
+https://www.rascal-mpl.org/docs/RunTimeErrors/* https://www.rascalmpl.org/docs/Rascal/Errors/RunTimeErrors/:splat 301!

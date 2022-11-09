@@ -6,12 +6,12 @@ title: "module Type"
 
 `import Type;`
 
-
 #### Synopsis
 
 Rascal's type system, implemented in Rascal itself.
 
 #### Description
+
 
 The goal of this module is to provide:
 
@@ -20,12 +20,18 @@ The goal of this module is to provide:
 
 The following definition is built into Rascal:
 ```rascal
-data type[&T] = type(Symbol symbol, map[Symbol,Production] definitions);
+data type[&T] = type(Symbol symbol, map[Symbol, Production] definitions);
 ```
 
-The `#` operator will always produce a value of `type[&T]`, where `&T` is bound to the type that was reified.
+For values of type `type[...]` the static and dynamic type systems satisfy three additional constraints over the rules of type-parameterized [algebraic data type](../Rascal/Declarations/AlgebraicDataType/index.md)s:
+1. For any type `T`: `#T` has type `type[T]`
+2. For any type T and any value of `type[T]`, namely `type(S, D)` it holds that S is the symbolic representation of type `T` using the [algebraic data type](../Rascal/Declarations/AlgebraicDataType/index.md) [Symbol](../Library/Type.md#Type-Symbol), and
+3. ... `D` holds all the necessary [algebraic data type](../Rascal/Declarations/AlgebraicDataType/index.md) and [syntax definition](../Rascal/Declarations/SyntaxDefinition/index.md) rules required to form values of type `T`.
+
+In other words, the `#` operator will always produce a value of `type[&T]`, where `&T` is bound to the type that was reified _and_ said value will contain the full grammatical definition for what was bound to `&T`.
 
 #### Examples
+
 
 
 ```rascal-shell 
@@ -94,8 +100,6 @@ type[value]: type(
   int(),
   ())
 ```
-    
-The following functions are provided on types:
 
 
 ## data Symbol {#Type-Symbol}
@@ -116,12 +120,12 @@ data Symbol
      ;
 ```
 
-
 #### Synopsis
 
 A Symbol represents a Rascal Type.
 
 #### Description
+
 
 Symbols are values that represent Rascal's types. These are the atomic types.
 We define here:
@@ -181,12 +185,13 @@ data Production
      ;
 ```
 
-
 #### Synopsis
 
 A production in a grammar or constructor in a data type.
 
 #### Description
+
+
 
 Productions represent abstract (recursive) definitions of abstract data type constructors and functions:
 
@@ -206,10 +211,9 @@ data Attr
      ;
 ```
 
-
 #### Synopsis
 
-Attributes register additional semantics annotations of a definition. 
+Attributes register additional semantics annotations of a definition.
 
 ## function \var-func {#Type-\var-func}
 
@@ -217,7 +221,6 @@ Attributes register additional semantics annotations of a definition.
 Symbol \var-func(Symbol ret, list[Symbol] parameters, Symbol varArg)
 
 ```
-
 
 #### Synopsis
 
@@ -230,13 +233,14 @@ Production choice(Symbol s, set[Production] choices)
 
 ```
 
-
 #### Synopsis
 
 Normalize the choice between alternative productions.
 
 #### Description
 
+
+The following normalization rules canonicalize grammars to prevent arbitrary case distinctions later
 Nested choice is flattened.
 
 ## function subtype {#Type-subtype}
@@ -312,12 +316,11 @@ default bool subtype(list[Symbol] l, list[Symbol] r)
 
 ```
 
+Functions with variable argument lists are normalized to normal functions
 
 #### Synopsis
 
-Subtype on types.
-
-Functions with variable argument lists are normalized to normal functions
+the subtype relation lifted to `type` from the Symbol level
 
 ## function comparable {#Type-comparable}
 
@@ -326,10 +329,9 @@ bool comparable(Symbol s, Symbol t)
 
 ```
 
-
 #### Synopsis
 
-Check if two types are comparable, i.e., have a common supertype.
+Check if two types are comparable, i.e., one is a subtype of the other or vice versa.
 
 ## function equivalent {#Type-equivalent}
 
@@ -338,10 +340,9 @@ bool equivalent(Symbol s, Symbol t)
 
 ```
 
-
 #### Synopsis
 
-Check if two types are equivalent.
+Check if two types are equivalent, i.e. they are both subtypes of each other.
 
 ## function eq {#Type-eq}
 
@@ -350,17 +351,23 @@ bool eq(value x, value y)
 
 ```
 
-
 #### Synopsis
 
-Structural equality between values. 
+Strict structural equality between values.
 
 #### Description
 
-The difference is that no implicit coercions are done between values of incomparable types, such as == does for
-int, real and rat.
+
+
+The difference between `eq` and `==` is that no implicit coercions are done between values of incomparable types
+at the top-level. 
+
+The `==` operator, for convience, equates `1.0` with `1` but not `[1] with [1.0]`, which can be annoying
+when writing consistent specifications. The new number system that is coming up will not have these issues.
 
 #### Examples
+
+
 
 
 ```rascal-shell 
@@ -493,12 +500,12 @@ Symbol lub(Symbol l, \alias(str _, list[Symbol] _, Symbol aliased))
 
 ```
 
-
 #### Synopsis
 
-The least-upperbound (lub) between two types.
+The least-upperbound (lub) of two types is the common ancestor in the type lattice that is lowest.
 
 #### Description
+
 
 This function documents and implements the lub operation in Rascal's type system. 
 
@@ -716,12 +723,12 @@ default list[Symbol] glb(list[Symbol] l, list[Symbol] r)
 
 ```
 
-
 #### Synopsis
 
-The greatest lower bound (glb) between two types.
+The greatest lower bound (glb) between two types, i.e. a common descendant of two types in the lattice which is largest.
 
 #### Description
+
 
 This function documents and implements the glb operation in Rascal's type system. 
 
@@ -749,14 +756,16 @@ data Exception
 
 ```
 
-
 #### Synopsis
 
-Instantiate an ADT constructor of a given type with the given children and optional keyword arguments.
+Dynamically instantiate an [algebraic data type](../Rascal/Declarations/AlgebraicDataType/index.md) constructor of a given type with the given children and optional keyword arguments.
 
 #### Description
 
-This function will build a constructor if the definition exists and throw an exception otherwise.
+
+This function will build a constructor if the definition exists and the parameters fit its description, or throw an exception otherwise.
+
+This function can be used to validate external data sources against an [algebraic data type](../Rascal/Declarations/AlgebraicDataType/index.md) such as XML, JSON and YAML documents.
 
 ## function typeOf {#Type-typeOf}
 
@@ -765,18 +774,20 @@ Symbol typeOf(value v)
 
 ```
 
-
 #### Synopsis
 
-Returns the dynamic type of a value as a reified type.
+Returns the dynamic type of a value as a [Symbol](../Library/Type.md#Type-Symbol).
 
 #### Description
+
+
 
 As opposed to the # operator, which produces the type of a value statically, this
 function produces the dynamic type of a value, represented by a symbol.
 
-
 #### Examples
+
+
 
 
 ```rascal-shell 
@@ -788,7 +799,20 @@ rascal>typeOf(x)
 Symbol: int()
 ```
 
+#### Benefits
+
+
+* constructing a reified type from a dynamic type is possible:
+
+```rascal-shell ,continue
+rascal>type(typeOf(x), ())
+type[value]: type(
+  int(),
+  ())
+```
+
 #### Pitfalls
+
 
 *  Note that the `typeOf` function does not produce definitions, like the 
    [reify](../Rascal/Expressions/Values/ReifiedTypes/index.md) operator `#` does, 
@@ -809,7 +833,6 @@ default bool isIntType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
 Determine if the given type is an int.
@@ -829,10 +852,9 @@ default bool isBoolType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a bool.
+Determine if the given type is an bool.
 
 ## function isRealType {#Type-isRealType}
 
@@ -849,10 +871,9 @@ default bool isRealType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a real.
+Determine if the given type is an real.
 
 ## function isRatType {#Type-isRatType}
 
@@ -869,10 +890,9 @@ default bool isRatType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a rational.
+Determine if the given type is an rat.
 
 ## function isStrType {#Type-isStrType}
 
@@ -889,10 +909,9 @@ default bool isStrType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a string.
+Determine if the given type is an str.
 
 ## function isNumType {#Type-isNumType}
 
@@ -909,10 +928,9 @@ default bool isNumType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a num.
+Determine if the given type is an num.
 
 ## function isNodeType {#Type-isNodeType}
 
@@ -931,10 +949,9 @@ default bool isNodeType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a node.
+Determine if the given type is an node.
 
 ## function isVoidType {#Type-isVoidType}
 
@@ -951,10 +968,9 @@ default bool isVoidType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a void.
+Determine if the given type is an void.
 
 ## function isValueType {#Type-isValueType}
 
@@ -971,10 +987,9 @@ default bool isValueType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a value.
+Determine if the given type is an void.
 
 ## function isLocType {#Type-isLocType}
 
@@ -991,10 +1006,9 @@ default bool isLocType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a loc.
+Determine if the given type is an loc.
 
 ## function isDateTimeType {#Type-isDateTimeType}
 
@@ -1011,10 +1025,9 @@ default bool isDateTimeType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a `datetime`.
+Determine if the given type is an datetime.
 
 ## function isSetType {#Type-isSetType}
 
@@ -1033,10 +1046,9 @@ default bool isSetType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a set.
+Determine if the given type is an set.
 
 ## function isRelType {#Type-isRelType}
 
@@ -1055,10 +1067,9 @@ default bool isRelType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a relation.
+Determine if the given type is an rel.
 
 ## function isListRelType {#Type-isListRelType}
 
@@ -1077,10 +1088,9 @@ default bool isListRelType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a list relation.
+Determine if the given type is an lrel.
 
 ## function isTupleType {#Type-isTupleType}
 
@@ -1097,10 +1107,9 @@ default bool isTupleType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a tuple.
+Determine if the given type is an tuple.
 
 ## function isListType {#Type-isListType}
 
@@ -1118,7 +1127,6 @@ bool isListType(Symbol::\lrel(_))
 default bool isListType(Symbol _)
 
 ```
-
 
 #### Synopsis
 
@@ -1139,10 +1147,9 @@ default bool isListRelType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a list relation.
+Determine if the given type is an lrel.
 
 ## function isMapType {#Type-isMapType}
 
@@ -1159,10 +1166,9 @@ default bool isMapType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a map.
+Determine if the given type is an map.
 
 ## function isBagType {#Type-isBagType}
 
@@ -1179,10 +1185,9 @@ default bool isBagType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a bag (bags are not yet implemented).
+Determine if the given type is an bag.
 
 ## function isADTType {#Type-isADTType}
 
@@ -1201,10 +1206,9 @@ default bool isADTType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is an Abstract Data Type (ADT).
+Determine if the given type is an adt.
 
 ## function isConstructorType {#Type-isConstructorType}
 
@@ -1221,10 +1225,9 @@ default bool isConstructorType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a constructor.
+Determine if the given type is an constructor.
 
 ## function isAliasType {#Type-isAliasType}
 
@@ -1238,7 +1241,6 @@ bool isAliasType(Symbol::\label(_,Symbol lt))
 default bool isAliasType(Symbol _)
 
 ```
-
 
 #### Synopsis
 
@@ -1259,10 +1261,9 @@ default bool isFunctionType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a function.
+Determine if the given type is an function.
 
 ## function isReifiedType {#Type-isReifiedType}
 
@@ -1279,10 +1280,9 @@ default bool isReifiedType(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is a reified type.
+Determine if the given type is an reified.
 
 ## function isTypeVar {#Type-isTypeVar}
 
@@ -1297,8 +1297,7 @@ default bool isTypeVar(Symbol _)
 
 ```
 
-
 #### Synopsis
 
-Determine if the given type is an type variable (parameter).
+Determine if the given type is an type parameter.
 

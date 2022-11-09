@@ -6,12 +6,12 @@ title: "module ParseTree"
 
 `import ParseTree;`
 
-
 #### Synopsis
 
 Library functions for parse trees.
 
 #### Description
+
 
 A _concrete syntax tree_ or [parse tree](http://en.wikipedia.org/wiki/Parse_tree) is an ordered, rooted tree that 
 represents the syntactic structure of a string according to some formal grammar. 
@@ -30,9 +30,7 @@ while the leaf nodes are labeled by terminals (characters) of the grammar.
 *  Trees can be annotated in various ways, see features for [IDE construction](../RascalConcepts/IDEConstruction/index.md).
    Most importantly the `\loc` annotation always points to the source location of any (sub) parse tree.
 
-
-Parse trees are usually analyzed and constructed using 
-[concrete syntax expressions](../Rascal/Expressions/ConcreteSyntax/index.md)
+Parse trees are usually analyzed and constructed using [concrete syntax expressions](../Rascal/Expressions/ConcreteSyntax/index.md)
 and [concrete syntax patterns](../Rascal/Patterns/Concrete/index.md).
  
 _Advanced users_ may want to create tools that analyze any parse tree, regardless of the 
@@ -53,7 +51,6 @@ characters (`char`), which have an integer index in the UTF8 table.
 *  Some internal nodes encode ambiguity (`amb`) by pointing to a set of 
 alternative `Tree` nodes.
 
-
 The `Production` and `Symbol` types are an abstract notation for rules in 
 [syntax definitions](../Rascal/Declarations/SyntaxDefinition/index.md),
 while the `Tree` type is the actual notation for parse trees. 
@@ -67,13 +64,13 @@ You can analyze and manipulate parse trees in three ways:
 and [concrete syntax patterns](../Rascal/Patterns/Concrete/index.md).
 *  Using [actions](../Rascal/Declarations/SyntaxDefinition/Action/index.md).
 
-
 The type of a parse tree is the symbol that it's production produces, i.e. `appl(prod(sort("A"),[],{}),[])` has type `A`. Ambiguity nodes 
 Each such a non-terminal type has `Tree` as its immediate super-type.
 
 #### Examples
 
-// the following definition
+
+
 
 ```rascal-shell 
 rascal>import ParseTree;
@@ -83,8 +80,9 @@ ok
 ```
 will make the following succeed:
 ```rascal-shell
-rascal>parse(#A,"a") == 
->>>>>>>appl(
+rascal>t = parse(#A,"a");
+A: (A) `a`
+rascal>t := appl(
 >>>>>>>  prod(
 >>>>>>>    sort("A"),
 >>>>>>>    [lit("a")],
@@ -95,7 +93,7 @@ rascal>parse(#A,"a") ==
 >>>>>>>        [\char-class([range(97,97)])],
 >>>>>>>        {}),
 >>>>>>>      [char(97)])]);
-bool: false
+bool: true
 ```
 You see that the defined non-terminal A ends up as the production for the outermost node. 
 As the only child is the tree for recognizing the literal a, which is defined to be a single a from the character-class `[ a ]`.
@@ -113,8 +111,9 @@ ok
 ```
 Will make the following succeed:
 ```rascal-shell
-rascal>parse(#C,"cb") == 
->>>>>>>appl(
+rascal>t = parse(#C,"cb");
+C: (C) `cb`
+rascal>t := appl(
 >>>>>>>  prod(
 >>>>>>>    label(
 >>>>>>>      "myC",
@@ -144,19 +143,26 @@ rascal>parse(#C,"cb") ==
 >>>>>>>            [\char-class([range(98,98)])],
 >>>>>>>            {}),
 >>>>>>>          [char(98)])])]);
-bool: false
+bool: true
 ```
 
 Here you see that the alternative name is a label around the first argument of `prod` while argument labels become 
 labels in the list of children of a `prod`.
 
+#### Benefits
+
+
+* Parse trees have all the necessary information in them for high-fidelity source code analysis and transformation
+* Parse trees contain full definitions of the grammar rules that it applies
+* Parse trees can always be "unparsed" to source text again
+
 #### Pitfalls
 
-For historical reasons the name of the annotation is "loc" and this interferes with the Rascal keyword `loc`
-for the type of [source locations](../Rascal/Expressions/Values/Location/index.md).
-Therefore the annotation name has to be escaped as `\loc` when it is declared or used.
 
-The following functions and data types are declared for ParseTrees:
+* For historical reasons the name of the annotation is "loc" and this interferes with the Rascal keyword `loc`
+for the type of [source locations](../Rascal/Expressions/Values/Location/index.md). Therefore the annotation name has to be escaped as `\loc` when it is declared or used.
+* We are in transition from deprecating the annotation `@\loc` with the keyword field `.src=|unknown:///|`. Currently the
+run-time already uses `.src` while the source code still uses `@\loc`.
 
 
 ## data Tree {#ParseTree-Tree}
