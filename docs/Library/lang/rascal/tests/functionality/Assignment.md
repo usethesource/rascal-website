@@ -518,3 +518,17 @@ test bool testUnInitAssignment10()
 
 ```
 
+## function testSetIfUndefinedKeyIssue1713 {#lang-rascal-tests-functionality-Assignment-testSetIfUndefinedKeyIssue1713}
+
+```rascal
+test bool testSetIfUndefinedKeyIssue1713()
+
+```
+
+## function testListIfUndefinedKeyIssue1713 {#lang-rascal-tests-functionality-Assignment-testListIfUndefinedKeyIssue1713}
+
+```rascal
+test bool testListIfUndefinedKeyIssue1713()
+
+```
+

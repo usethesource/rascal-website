@@ -48,4 +48,8 @@
         </pluginRepository>
     </pluginRepositories>
 
+    <dependencies>
+
+    </dependencies>
+
 </project>

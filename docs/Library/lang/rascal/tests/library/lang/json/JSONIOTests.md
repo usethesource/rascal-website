@@ -25,9 +25,7 @@ bool writeRead(type[&T] returnType, &T dt)
 
 ```rascal
 data DATA1  
-     = f1(int n)
-     | f1(int n, str s)
-     | rec1(DATA1 d1, DATA1 d2)
+     = data1(int n)
      ;
 ```
 
@@ -35,9 +33,33 @@ data DATA1
 
 ```rascal
 data DATA2  
-     = f2(int n, str kw = "abc")
-     | f2(int n, str s)
-     | rec2(DATA2 d1, DATA2 d2, int n = 0)
+     = data2(str n)
+     ;
+```
+
+## data DATA3 {#lang-rascal-tests-library-lang-json-JSONIOTests-DATA3}
+
+```rascal
+data DATA3  
+     = data3(int n, str kw = "abc")
+     ;
+```
+
+## data Enum {#lang-rascal-tests-library-lang-json-JSONIOTests-Enum}
+
+```rascal
+data Enum  
+     = x()
+     | y()
+     | z()
+     ;
+```
+
+## data DATA4 {#lang-rascal-tests-library-lang-json-JSONIOTests-DATA4}
+
+```rascal
+data DATA4  
+     = data4(Enum e = x())
      ;
 ```
 
@@ -114,7 +136,7 @@ test bool jsonWithSet1(set[int] dt)
 ## function jsonWithMap1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonWithMap1}
 
 ```rascal
-test bool jsonWithMap1(map[int, int]  dt)
+test bool jsonWithMap1(map[int, int] dt)
 
 ```
 
@@ -146,34 +168,31 @@ test bool jsonRandom1(value dt)
 
 ```
 
-## data D {#lang-rascal-tests-library-lang-json-JSONIOTests-D}
+## function json1 {#lang-rascal-tests-library-lang-json-JSONIOTests-json1}
 
 ```rascal
-data D  
-     = date(datetime dt)
-     | uri(loc l)
-     | string(str s)
-     | integer(int n)
-     | float(real r)
-     | lists(list[D] ls)
-     | maps(map[str,str] strmaps)
-     | maps2(map[str,D] dmaps)
-     | nested(D d1, D d2)
-     | kwparams(int x = 2, D d = integer(0))
-     ;
-```
-
-## function jsonStreaming1 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonStreaming1}
-
-```rascal
-test bool jsonStreaming1(D dt)
+test bool json1()
 
 ```
 
-## function jsonStreaming2 {#lang-rascal-tests-library-lang-json-JSONIOTests-jsonStreaming2}
+## function json2 {#lang-rascal-tests-library-lang-json-JSONIOTests-json2}
 
 ```rascal
-test bool jsonStreaming2(D dt)
+test bool json2()
+
+```
+
+## function json3 {#lang-rascal-tests-library-lang-json-JSONIOTests-json3}
+
+```rascal
+test bool json3()
+
+```
+
+## function json4 {#lang-rascal-tests-library-lang-json-JSONIOTests-json4}
+
+```rascal
+test bool json4(Enum e)
 
 ```
 

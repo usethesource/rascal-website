@@ -19,6 +19,7 @@ title: util
 * [Eval](../../Library/util/Eval.md)
 * [Progress](../../Library/util/Progress.md)
 * [ShellExec](../../Library/util/ShellExec.md)
+* [Validator](../../Library/util/Validator.md)
 * [SystemAPI](../../Library/util/SystemAPI.md)
 * [Highlight](../../Library/util/Highlight.md)
 * [UUID](../../Library/util/UUID.md)

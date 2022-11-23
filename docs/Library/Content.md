@@ -88,7 +88,7 @@ and possibly uploaded content, also coded as a map[str,str]. From the constructo
 data Response  
      = response(Status status, str mimeType, map[str,str] header, str content)
      | fileResponse(loc file, str mimeType, map[str,str] header)
-     | jsonResponse(Status status, map[str,str] header, value val, bool implicitConstructors = true,  bool implicitNodes = true, str dateTimeFormat = "yyyy-MM-dd\'T\'HH:mm:ss\'Z\'")
+     | jsonResponse(Status status, map[str,str] header, value val, str dateTimeFormat = "yyyy-MM-dd\'T\'HH:mm:ss\'Z\'")
      ;
 ```
 

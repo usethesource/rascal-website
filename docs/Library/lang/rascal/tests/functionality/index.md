@@ -40,6 +40,7 @@ title: lang::rascal::tests::functionality
 * [Reducer](../../../../../Library/lang/rascal/tests/functionality/Reducer.md)
 * [Pattern](../../../../../Library/lang/rascal/tests/functionality/Pattern.md)
 * [SimpleVisit](../../../../../Library/lang/rascal/tests/functionality/SimpleVisit.md)
+* [VisitOptimized](../../../../../Library/lang/rascal/tests/functionality/VisitOptimized.md)
 * [Scoping](../../../../../Library/lang/rascal/tests/functionality/Scoping.md)
 * [KeywordParameterImport2](../../../../../Library/lang/rascal/tests/functionality/KeywordParameterImport2)
 * [Aliasing](../../../../../Library/lang/rascal/tests/functionality/Aliasing.md)
