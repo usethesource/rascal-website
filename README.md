@@ -10,6 +10,7 @@ $ yarn
 
 ### Local Development
 
+
 ``` 
 $ yarn start
 ```
@@ -18,6 +19,12 @@ This command starts a local development server and opens up a browser window. Mo
 
 ### Build
 
+This will generate the docs and download docs from projects we depend on:
+```
+mvn package -Dwebdriver.gecko.driver=/path/to/geckodriver
+```
+
+This will then compile the generated/downloaded markdown files to html:
 ```
 $ yarn build
 ```
