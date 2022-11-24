@@ -23,33 +23,26 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <configuration>
-                    <artifactItems>
-                        <artifactItem>
-                            <groupId>org.rascalmpl</groupId>
-                            <artifactId>rascal</artifactId>
-                            <version>0.27.2</version>
-                            <outputDirectory>${project.basedir}</outputDirectory>
-                            <includes>docs/**/*.*</includes>
-                        </artifactItem>
-                        <!--                        <artifactItem>
-                            <groupId>org.rascalmpl</groupId>
-                            <artifactId>rascal-tutor</artifactId>
-                            <version>0.3.2</version>
-                            <outputDirectory>./docs/Projects/Tutor</outputDirectory>
-                            <includes>docs\/**\/*.md, docs\/**\/*.png</includes>
-                        </artifactItem>
-
-                        <artifactItem>
-                            <groupId>org.rascalmpl</groupId>
-                            <artifactId>rascal-lsp</artifactId>
-                            <version>2.9.0</version>
-                            <outputDirectory>./docs/Projects/LSP</outputDirectory>
-                            <includes>docs\/**\/*.md, docs\/**\/*.png</includes>
-                        </artifactItem> -->
-
-                    </artifactItems>
-                </configuration>
+                <executions>
+                    <execution>
+                        <id>unpack</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>rascal</artifactId>
+                                    <version>0.27.2</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.rascalmpl</groupId>
