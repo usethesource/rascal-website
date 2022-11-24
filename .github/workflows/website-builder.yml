@@ -27,10 +27,12 @@ jobs:
       - uses: browser-actions/setup-firefox@latest
       - run: firefox --version
       - uses: browser-actions/setup-geckodriver@latest
-      - run: geckodriver --version      
-
-      - name: Run Maven Rascal Tutor plugin
-        run: mvn clean package
+      - run: geckodriver --version
+      - run: which geckodriver
+      
+      # Copy docs from dependent projects, run tutor on local courses folder and copy results into docs and static/assets
+      - name: Run rascal-tutor and reuse libraries
+        run: mvn clean package -Dwebdriver.gecko.driver=/opt/hostedtoolcache/geckodriver/0.32.0/x64/geckodriver
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
