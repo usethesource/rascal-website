@@ -1,4 +1,0 @@
----
-title: lang::html::examples
----
-
