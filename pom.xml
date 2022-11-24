@@ -25,7 +25,13 @@
                 <artifactId>maven-dependency-plugin</artifactId>
                 <configuration>
                     <artifactItems>
-
+                        <artifactItem>
+                            <groupId>org.rascalmpl</groupId>
+                            <artifactId>rascal</artifactId>
+                            <version>0.27.2</version>
+                            <outputDirectory>${project.basedir}</outputDirectory>
+                            <includes>docs/**/*.*</includes>
+                        </artifactItem>
                         <!--                        <artifactItem>
                             <groupId>org.rascalmpl</groupId>
                             <artifactId>rascal-tutor</artifactId>

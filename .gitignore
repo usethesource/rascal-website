@@ -12,10 +12,11 @@ _site/
 target/
 
 # Generated courses
-docs/WhyRascal
+docs/index.value
+docs/[A-Z]*
 
 # Generated assets
-static/assets/WhyRascal
+static/assets/[A-Z]*
 
 # Misc
 .DS_Store
