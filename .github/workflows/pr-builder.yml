@@ -18,13 +18,19 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
           cache: 'maven'
+
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: yarn
+
+      - uses: browser-actions/setup-firefox@latest
+      - run: firefox --version
       - uses: browser-actions/setup-geckodriver@latest
-      - run: geckodriver --version
-      - run: which geckodriver
+      - run: geckodriver --version      
+
+      - name: Run Maven Rascal Tutor plugin
+        run: mvn clean package
 
       - name: Copy from Maven dependencies
         run: echo mvn dependency:unpack
