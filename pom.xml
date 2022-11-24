@@ -48,7 +48,7 @@
             <plugin>
                 <groupId>org.rascalmpl</groupId>
                 <artifactId>rascal-maven-plugin</artifactId>
-                <version>0.10.4</version>
+                <version>0.10.5-SNAPSHOT</version>
                 <executions>
                     <execution> 
                         <id>default-cli</id> 
@@ -59,19 +59,44 @@
                         <configuration>
                             <enableStandardLibrary>true</enableStandardLibrary>
                             <errorsAsWarnings>false</errorsAsWarnings>
-                            <bin>${project.basedir}/docs</bin>
+                            <bin>${project.basedir}</bin> <!-- because tutor appends /docs to this -->
                             <srcs>
                                 <src>${project.basedir}/courses/WhyRascal</src>
                             </srcs>
                         </configuration>
                     </execution> 
                 </executions>
-            </plugin> 
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.2</version>
+                <executions>
+                    <execution>
+                        <id>copy-assets</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.basedir}/static/assets</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.basedir}/docs/assets</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
     <dependencies>
-        
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>rascal</artifactId>
+            <version>0.27.2</version>
+        </dependency>        
     </dependencies>
 
 </project>

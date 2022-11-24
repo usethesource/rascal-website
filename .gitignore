@@ -11,6 +11,12 @@
 _site/
 target/
 
+# Generated courses
+docs/WhyRascal
+
+# Generated assets
+static/assets/WhyRascal
+
 # Misc
 .DS_Store
 .env.local
