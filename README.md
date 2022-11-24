@@ -1,6 +1,6 @@
 # Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator and [Rascal Tutor](https://github.com/usethesource/rascal-tutor) a documentation generator for Rascal source files and a MarkDown pre-processor for executing inline code fragments, cross linking between courses and screenshotting interactive visualizations.
 
 ### Installation
 You need NodeJS 14+ installed, and yarn (`npm install --global yarn`)
@@ -19,7 +19,7 @@ This command starts a local development server and opens up a browser window. Mo
 
 ### Build
 
-This will generate the docs and download docs from projects we depend on:
+This will generate the docs and download docs from projects we depend on, running rascal-tutor:
 ```
 mvn package -Dwebdriver.gecko.driver=/path/to/geckodriver
 ```
