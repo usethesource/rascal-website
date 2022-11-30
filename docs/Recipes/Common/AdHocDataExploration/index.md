@@ -25,7 +25,7 @@ public int fact (int n) {
 }
 ```
 
-If you compute `fact(1000)` at the Rascal command line, you get a large number, on the order of 4.02 x 10^2567^. This is much, much bigger than, say a google, which is a mere 10<^>100^.  (If Rascal runs out stack space, try computing 100!, then 200!, then ... then 1000!; the run-time will allocate more stack space incrementally and automatically if you sneak up to where you want to go).
+If you compute `fact(1000)` at the Rascal command line, you get a large number, on the order of 4.02 x 10^2567^. This is much, much bigger than, say a google, which is a mere 10<^>100^.  (If Rascal runs out of stack space, try computing 100!, then 200!, then ... then 1000!; the run-time will allocate more stack space incrementally and automatically if you successively approximate the highest factorial you want to produce).
 
 ```rascal
 rascal> fact(1000);
@@ -34,15 +34,15 @@ int: 402387260077093773543702433923003985719374864210714632543799910429938512398
 
 Now copy the numerical result above and paste it into an edit window to have a good look at it.  Notice anything interesting?  The last 249 digits are all zeros.  How did this happen and what does it mean?
 
-To be honest, when I did this calculation for the first time, I thought I'd found a bug.  So I looked at the values of N! for N in the range 900 to 1000 and discovered that the zeros accumulate on the end of N! as N gets bigger.  Let's think about it for a bit:  N! is a cumulative product, so once a zero has appeared on the end there is no way to get rid of it by multiplying by a positive integer.
+To be honest, when I did this calculation for the first time, I thought I had found a bug.  So I looked at the values of N! for N in the range 900 to 1000 and discovered that the zeros accumulate at the end of N! as N gets bigger.  Let's think about this for a bit:  N! is a cumulative product, so once a zero has appeared at the end there is no way to get rid of it by multiplying by a positive integer.
 
-How do the zeros appear?  Well, this isn't to hard to figure out.  Obviously, each time you reach a multiple of 10, you will add (at least) one more zero to the cumulative product.  But what about multiples of 5?  Well, you would add one more zero if you can match the 5 to a 2 within the factors, and there are lots of lonely 2s in that list.  So, to summarize, each time N is a multiple of 5, you add at least one zero onto the cumulative product N!.
+How do the zeros appear?  Well, this is not too hard to figure out.  Obviously, each time you reach a multiple of 10, you will add (at least) one more zero to the cumulative product.  But what about multiples of 5?  Well, you would add one more zero if you can match the 5 to a 2 within the factors, and there are lots of lonely 2s in that list.  So, to summarize, each time N is a multiple of 5, you add at least one zero onto the cumulative product N!.
 
 So here's the question we're going to solve:  For an arbitrary N, can you predict exactly how many trailing zeros there will be in N!?  
 
 Again, this can be solved analytically (and if you go looking on the web, you will discover that this is an old chestnut of a math problem that's sometimes used in job interviews to test analytical ability), but what I want to do here is to show how we can use Rascal to play around with the problem space a bit to help us build up our intuition.  This is very much like what we do in empirical software engineering, when we have lots of data to analyze, and we're trying to look for patterns that might explain behaviours, such as why some functions are more likely to be associated with bugs than others.  In that kind of situation, we typically go through two stages:  first, we wade through the data, exploring relationships, looking for unusual lumps or recognizable patters; second, we build theories of how the world works, and test them out using the data.  In both stages, we not only look at the data, we play with it.  We build little tools to help answer our questions, see where our hunches lead us.  We use this "play" to improve our understanding of the problem space, and build intuition about how it works as testable theories.  In empirical software engineering, as in most other sciences, we usually don't get concrete proof of a theory; rather, we gather evidence towards ultimately accepting or rejecting the theories (tho often, we may choose to use this evidence to refine the theories and try again).
 
-In this case, however, there is a precise analytical solution, a proof, a "ground truth".  But that doesn't mean that we can't use the empirical approach to help build our intuition about the problem space, and ultimately devise a theory about how to calculate the number of trailing zeros in N!.  Solving analytical problems is about having enough intuition to see possible solutions.  And using this empirical approach is one way to build intuition.
+In this case, however, there is a precise analytical solution, a proof, a "ground truth".  But this does not mean that we cannot use the empirical approach to help build our intuition about the problem space, and ultimately devise a theory about how to calculate the number of trailing zeros in N!.  Solving analytical problems is about having enough intuition to see possible solutions.  And using this empirical approach is one way to build intuition.
 
 So let's define a few helper functions and see where that leads us:
 ```rascal
@@ -80,7 +80,7 @@ rascal> countTrailingZeros(i);
 int: 249
 ```
 
-OK, so we're making progress.  Let's define another function to help us explore the data space:
+OK, so we are making progress.  Let's define another function to help us explore the data space:
 
 ```rascal
 public void printLastTwenty (int n){
@@ -112,7 +112,7 @@ rascal>printLastTwenty(1000);
 1000! has 249 trailing zeros.
 ok
 ```
-So the pattern I see arising (confirmed by more playing that I won't show you) is that you add a zero every time N is divisible by 5.  But sometimes you add more than one zero: 1000! adds three zeros.  
+So the pattern I see arising (confirmed by more playing that I will not show you) is that you add a zero every time N is divisible by 5.  But sometimes you add more than one zero: 1000! adds three zeros.  
 
 We defined one function above to help us look at the data more compactly; now let's create another function to look for lumps in the data:
 ```rascal
@@ -175,7 +175,7 @@ rascal>findLumps(1000);
 ok
 ```
 
-So probably we're noticing some patterns here already, and maybe forming some intuition.  But let's first revise our lump-finding function to produce even more concise output:
+So probably we are noticing some patterns here already, and maybe forming some intuition.  But let's first revise our lump-finding function to produce even more concise output:
 
 ```rascal
 // We can parameterize the threshold to look for jumps of 2, 3, or 4 zeros
@@ -234,7 +234,7 @@ Notice anything yet?  Here are some fun math facts to consider:
 *  5^4^ = 625
 *  5^5^ = 3125
 
-So here's the solution:
+So here is the solution:
 
 Let N be a positive integer.  
 
@@ -317,7 +317,7 @@ Found a counter example at i=625
 ok
 ```
 
-Yikes, what do we do?  Well, first let's look under the hood at the engine.  The function `predictZeros` _is_ actually correct, assuming that the functions is calls are correct.  So let's look at the auxiliary functions I wrote (but haven't shown you yet):
+Yikes, what do we do?  Well, first let's look under the hood at the engine.  The function `predictZeros` _is_ actually correct, assuming that the functions is calls are correct.  So let's look at the auxiliary functions I wrote (but have not shown you yet):
 
 ```rascal
 // Log for an arbitrary base
@@ -341,16 +341,16 @@ real: 3.9999999999999998757330130880776320985295476764801684...
 
 Oh right, real numbers are prone to round off error.  What should we do?
 
-Well, here's a bad solution (that "works"):
+Well, here is a bad solution (that "works"):
 
 ```rascal
 public real floor (real a) {
     return toReal(round (a - 0.5 + 0.00001));
 }
 ```
-But how can I be sure that that's enought decimal places?  What if someone likes my `floor` function and sticks it into the Rascal library, where it is subsequently used by the Eurpoean Space Agency for its next generation of flight control software?
+But how can I be sure that that is enought decimal places?  What if someone likes my `floor` function and sticks it into the Rascal library, where it is subsequently used by the Eurpoean Space Agency for its next generation of flight control software?
 
-Sometimes, the answer is to do a lot of homework.  Lucky for us, here there is a fairly efficient exact solution using repeated integer division:
+Sometimes, the answer is to do a lot of homework.  Luckily for us, there is a fairly efficient exact solution using repeated integer division:
 ```rascal
 // Also change predictZeros to call this version
 public int floorLogBase2 (int a, int b) {
@@ -378,7 +378,7 @@ The theory works for i: 1..1000
 ok
 ```
 
-And we're done.  But what did we learn here?  Here's what I think:
+And we are done.  But what did we learn here?  Here is what I think:
 
 *  Explore the terrain, take notes, build intuition, develop theories, test them.
 **  Refine and repeat

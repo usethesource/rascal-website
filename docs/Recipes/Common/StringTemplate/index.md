@@ -97,8 +97,8 @@ str cperson =
 
 * ❷  Here is the heavy lifting done: `genClass` is defined that takes as arguments:
 
-*  the `name` of the class, and
-*  a map `fields` that associates field names with their type (both string values).
+*  The `name` of the class, and
+*  A map `fields` that associates field names with their type (both string values).
 
 
 Function `genClass` returns a string that contains several _string interpolations_ delimited by `<` and `>`.
@@ -107,7 +107,7 @@ Let's discuss some of them:
 *  In each line, only the text following `'` is contributed to the output. The text before (and including) `'` can be used to properly indent
    the string.
 *  The output of each interpolated call, like to `genMethod` is auto-indented.
-*  `public class <name>`: insert the desired class name in the result.
+*  `public class <name>`: inserts the desired class name in the result.
 *  `<for x<-fields){>` ... `<}>`: loops over the fields and contributes the text produced by its body to the result.
 *  `private <fields[x]> <x>;`: finds for the current field `x` its type and produces an appropriate private field declaration.
 *  `public void set<capitalize(x)>(<fields[x]> <x>)`: method header for the setter for field `x`.

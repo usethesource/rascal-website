@@ -16,8 +16,8 @@ the type checking, code generation, transformation, or optimization to be done o
 
 How can we bridge this gap? We discuss two approaches:
 
-*  [./Manual](../../../../Recipes/Languages/Exp/Combined/Manual/index.md): a transformation is written manually to convert parse trees to abstract syntax trees.
-*  [./Automatic](../../../../Recipes/Languages/Exp/Combined/Automatic/index.md): the library function [implode](../../../../Library/ParseTree.md#ParseTree-implode) is used to automate this transformation.
+*  [./Manual](../../../../Recipes/Languages/Exp/Combined/Manual/index.md): A transformation is written manually to convert parse trees to abstract syntax trees.
+*  [./Automatic](../../../../Recipes/Languages/Exp/Combined/Automatic/index.md): The library function [implode](../../../../Library/ParseTree.md#ParseTree-implode) is used to automate this transformation.
 
 
 

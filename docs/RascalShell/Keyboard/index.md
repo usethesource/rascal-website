@@ -18,12 +18,12 @@ Some convenient shortcuts are:
 | `Ctrl+a`  | Move cursor to begin of line. |
 | --- | --- |
 | `Ctrl+d`  | EOF marker, closes the current RascalShell (equivalent to the |
-   command (`quit`). |
+|           | command (`quit`). |
 | `Ctrl+e`  | Move cursor to end of line. |
 | `Ctrl+k`  | Kill remainder of line after cursor. |
 | `Ctrl+l`  | Clear screen. |
 
 #### Benefits
 
-* [rascal shell](../../RascalShell/index.md) is built on top of [JLine](https://github.com/jline)
+* [RascalShell](../../RascalShell/index.md) is built on top of [JLine](https://github.com/jline)
 

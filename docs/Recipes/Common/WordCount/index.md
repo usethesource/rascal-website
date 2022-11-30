@@ -9,11 +9,11 @@ Counting words in strings.
 #### Examples
 
 The purpose of WordCount is to count the number of _words_ in a list of lines (strings).
-A word is here defined as one or more letters (lowercase or uppercase), digits and the underscore character (`_`).
+A word is defined here as one or more letters (lowercase or uppercase), digits and the underscore character (`_`).
 
 We split the problem in two parts:
 
-*  Count the words in a single line. We explore three ways to do this in an imperative ([count in line1](../../../Recipes/Common/WordCount/CountInLine1/index.md)], [count in line2](../../../Recipes/Common/WordCount/CountInLine2/index.md))
+*  Count the words in a single line. We explore three ways to do this in an imperative ([count in line1](../../../Recipes/Common/WordCount/CountInLine1/index.md), [count in line2](../../../Recipes/Common/WordCount/CountInLine2/index.md))
   and a functional style ([count in line3](../../../Recipes/Common/WordCount/CountInLine3/index.md)).
 *  Next we apply the single line counter to all the lines.
 
@@ -79,7 +79,7 @@ test bool tstWordCount6(str txt) {
 ```
 
                 
-* ❶  An [enumerator](../../../Rascal/Expressions/Values/Boolean/Enumerator/index.md) is used to generated all the lines in the list of lines.
+* ❶  An [enumerator](../../../Rascal/Expressions/Values/Boolean/Enumerator/index.md) is used to generate all the lines in the list of lines.
 * ❷  The argument function `countInLine` is applied to count the number of words in each line.
 
 Let's now do some experiments using the [Jabberwocky](../../../Recipes/Common/WordCount/Jabberwocky/index.md) poem by Lewis Carrol as input.

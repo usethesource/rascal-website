@@ -29,7 +29,7 @@ The situation can be characterized by:
 
 
 The problem is now to lift the call relation using the information in the partOf relation.
-In other words: a call between two procedures will be lifted to
+In other words: A call between two procedures will be lifted to
 a call between the components to which each procedure belongs.
 
 Here is a solution:

@@ -14,7 +14,7 @@ In Rascal, the major difference between lexical syntax and non-lexical syntax is
   such as spaces, new lines, and source code comments.
 * Strings that are parsed according to the normal (non-lexical) syntax __can__ contain layout characters between
   each element. 
-* Which 'layout' (whitespace and/or source code comments) will be accepted has to be defined explicitly by the grammar writer.
+* Which 'layout' (whitespace and/or source code comments) will be accepted has to be defined explicitly by the grammar author.
 
 
 The following example extends the grammar for `Exp` in [./No Layout](../../../../../Recipes/Languages/Exp/Concrete/NoLayout/index.md) with a layout definition:

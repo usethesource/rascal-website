@@ -31,7 +31,7 @@ We use a [reducer](../../../../Rascal/Expressions/Reducer/index.md) that is a re
 * `0` is the initial value of the reducer
 *  The pattern match `/\w+/ := S` matches all words in `S`.
 *  Reduction is done by `it + 1`. In the latter `it` is a keyword that refers to the
-   value that has been reduced sofar. Effectively, the matches are reduced to a match count.
+   value that has been reduced so far. Effectively, the matches are reduced to a match count.
 
 
 Let's try it:

@@ -59,7 +59,7 @@ Some comments:
 * ❷  We also reuse the previously defined abstract syntax.
 * ❸  Import the `Parse` module defined above.
 * ❹  The top level `load` function that converts a string to an abstract syntax tree.
-* ❺  The conversion from parse tree to abstract syntax tree start here. Note that we
+* ❺  The conversion from parse tree to abstract syntax tree starts here. Note that we
     explicitly use `demo::lang::Exp::Abstract::Syntax::Exp` in these
     rules to distinguish from `demo::lang::Exp::Concrete::WithLayout::Syntax::Exp`.
 

@@ -5,11 +5,11 @@ sidebar_position: 4
 
 #### Synopsis
 
-Variout styles to write bubble sort.
+Various styles to write bubble sort.
 
 #### Description
 
-[Bubble sort](http://en.wikipedia.org/wiki/Bubble_sort) is a classical (albeit not the most efficient) technique to sort lists of values.
+[Bubble sort](http://en.wikipedia.org/wiki/Bubble_sort) is a classic (albeit not the most efficient) technique to sort lists of values.
 We present here several styles to implement bubble sort. 
 Also see [sort](../../../Library/List.md#List-sort) for a more efficient library function for sorting.
 
@@ -102,12 +102,12 @@ when a not-yet-sorted pair is encountered, the elements are exchanged, and `sort
 
 `sort2` uses list matching and consists of a switch with two cases:
 
-*  a case matching a list with two consecutive elements that are unsorted. Observe that when the pattern of a case matches,
+*  A case matching a list with two consecutive elements that are unsorted. Observe that when the pattern of a case matches,
    the case as a whole can still fail.
-*  a default case.
+*  A default case.
 
 
-`sort3` also uses list matching but in a more declarative style: as long as there are unsorted elements in the list (possibly with intervening elements), exchange them.
+`sort3` also uses list matching but in a more declarative style: As long as there are unsorted elements in the list (possibly with intervening elements), exchange them.
 
 `sort4` is identical to `sort3`, except that the shorter `*`-notation for list variables is used and that the type declaration for the
 the non-list variables has been omitted.

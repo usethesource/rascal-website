@@ -11,7 +11,7 @@ Analyzing the call structure of an application.
 Suppose a mystery box ends up on your desk. When you open it, it contains a huge software system with several questions attached to it:
 
 *  How many procedure calls occur in this system?
-*  How many procedures does it contains?
+*  How many procedures does it contain?
 *  What are the entry points for this system, i.e., procedures that call others but are not called themselves?
 *  What are the leaves of this application, i.e., procedures that are called but do not make any calls themselves?
 *  Which procedures call each other indirectly?
@@ -40,7 +40,7 @@ ok
 ```
 Rascal supports basic data types like integers and strings which are sufficient to formulate and answer the questions at hand. However, we
 can gain readability by introducing separately named types for the items we are describing. 
-First, we introduce therefore a new type `Proc` (an alias for strings) to denote procedures:
+First, we introduce a new type `Proc` (an alias for strings) to denote procedures:
 
 ```rascal-shell ,continue
 rascal>alias Proc = str;
@@ -66,6 +66,7 @@ rel[str,str]: {
 Now we are in a good position to start asking some questions.
 
 __How many calls occur in this system?__
+
 We use the function [size](../../../Library/Set.md#Set-size) to determine the number of elements in a set or relation.
 Since each tuple in the `Calls` relation represents a call between procedures, the number of tuples is equal
 to the number of calls.
@@ -74,7 +75,10 @@ to the number of calls.
 rascal>size(Calls);
 int: 8
 ```
-__How many procedures occur in this system?__ This question is more subtle, since a procedure may call (or be called) by
+
+__How many procedures occur in this system?__ 
+
+This question is more subtle, since a procedure may call (or be called) by
 several others and the number of tuples is therefore not indicative. What we need are the set of procedures that
 occur (as first or second element) in _any_ tuple. This is precisely what the function [carrier](../../../Library/Relation.md#Relation-carrier) gives us:
 
@@ -143,7 +147,7 @@ rel[str,str]: {
 __Which procedures are called directly or indirectly from each entry point?__
 
 We now know the entry points for this application ("a" and "f") and the indirect call relations. Combining this information, 
-we can determine which procedures are called from each entry point. This is done by indexing closureCalls with appropriate procedure name.
+we can determine which procedures are called from each entry point. This is done by indexing `closureCalls` with appropriate procedure name.
 The index operator yields all right-hand sides of tuples that have a given value as left-hand side. This gives the following:
 
 ```rascal-shell ,continue
@@ -168,7 +172,7 @@ rascal>(carrier(Calls) | it & (Calls+)[p] | p <- top(Calls));
 set[str]: {"e"}
 ```
 
-The reducer is initialized with  all procedures (`carrier(Calls)`) and iterates over all entry points (`p <- top(Calls)`).
+The reducer is initialized with all procedures (`carrier(Calls)`) and iterates over all entry points (`p <- top(Calls)`).
 At each iteration the current value of the reducer (`it`) is intersected (`&`) with the procedures called directly or indirectly
 from that entry point (`(Calls+)[p]`).
 
@@ -179,7 +183,7 @@ Such a visual inspection does _not_ scale very well to large graphs and this mak
 
 #### Pitfalls
 
-*  We discuss call analysis in a, intentionally, simplistic fashion that does not take into account how the call relation
+*  We discuss call analysis in an intentionally simplistic fashion that does not take into account how the call relation
   is extracted from actual source code.
   The above principles are, however, applicable to real cases as well.
 

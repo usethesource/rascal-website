@@ -43,7 +43,7 @@ The pattern `/^\W*\w+<rest:.*$>/` can be understood as follows:
 
 
 Inside the loop `count` is incremented and the new value of `S` becomes
-the remainder of the current match. To summarize: each iteration
+the remainder of the current match. To summarize: Each iteration
 removes the first word from `S` and counts it.
 
 Here is `countInLine2` in action:

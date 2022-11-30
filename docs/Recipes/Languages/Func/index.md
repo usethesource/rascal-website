@@ -4,7 +4,7 @@ title: Func
 
 #### Synopsis
 
-Func is a tiny functional language; we present several interpreters for it.
+Func is a tiny functional language; We present several interpreters for it.
 
 #### Description
 
