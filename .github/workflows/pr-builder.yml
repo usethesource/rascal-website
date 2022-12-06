@@ -24,15 +24,16 @@ jobs:
           node-version: 16.x
           cache: yarn
 
-      - uses: browser-actions/setup-firefox@latest
-      - run: firefox --version
-      - uses: browser-actions/setup-geckodriver@latest
-      - run: geckodriver --version
-      - run: which geckodriver
-      
+      - uses: browser-actions/setup-chrome@latest
+        with:
+          chrome-version: 1047731
+      - run: which chrome
+      - uses: nanasess/setup-chromedriver@v1
+      - run: which chromedriver
+
       # Copy docs from dependent projects, run tutor on local courses folder and copy results into docs and static/assets
       - name: Run rascal-tutor and reuse libraries
-        run: mvn clean package -Dwebdriver.gecko.driver=/opt/hostedtoolcache/geckodriver/0.32.0/x64/geckodriver
+        run: mvn clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome`
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
