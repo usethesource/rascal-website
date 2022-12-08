@@ -1,7 +1,7 @@
 ---
 authors: [jvinju]
 title: "Rascal 0.7.x release notes"
-sidebar_position: 6
+sidebar_position: 100
 ---
 
 In this post we report on the Rascal release 0.7.0. We expect a number of patch releases as well, which we report on by updating this post (at its end) when necessary. The Rascal release includes the following main components:

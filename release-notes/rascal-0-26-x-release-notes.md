@@ -1,7 +1,7 @@
 ---
 authors: [jvinju]
 title: "Rascal 0.26.x release notes"
-sidebar_position: 1
+sidebar_position: 95
 ---
 
 In this post we report on the Rascal release 0.26.x
