@@ -26,10 +26,11 @@ jobs:
 
       - uses: browser-actions/setup-chrome@latest
         with:
-          chrome-version: 1047731
+          chrome-version: 1047731 # v107
       - run: which chrome
       - uses: nanasess/setup-chromedriver@v1
-      - run: which chromedriver
+        with:
+          chromedriver-version: '107.0.5304.62'
 
       # Copy docs from dependent projects, run tutor on local courses folder and copy results into docs and static/assets
       - name: Run rascal-tutor and reuse libraries
