@@ -162,11 +162,11 @@ Returns an arbitrary key of map `M`.
 rascal>import Map;
 ok
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "apple"
-rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
-str: "apple"
+str: "pineapple"
 rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
 str: "pineapple"
+rascal>getOneFrom(("apple": 1, "pear": 2, "pineapple": 3));
+str: "pear"
 ```
 
 ## function invert {#Map-invert}

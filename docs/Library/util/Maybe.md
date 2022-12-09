@@ -6,10 +6,9 @@ title: "module util::Maybe"
 
 `import util::Maybe;`
 
-
 #### Synopsis
 
-Represent an optional value.
+Encapsulate any optional value using `Maybe[&T]`
 
 
 ## data Maybe {#util-Maybe-Maybe}
@@ -21,20 +20,19 @@ data Maybe[&A]
      ;
 ```
 
-
 #### Synopsis
 
-Data type to represent an optional value.
+Generic data type to encapsulate any value, optionally.
 
 #### Examples
 
+
 ```rascal
-Maybe[int] linearSearch(list[int] l, int toFind) {
-   for(i <- index(l)){
-      if(l[i] == toFind) {
-         return just(i);
-      }
+Maybe[int] indexOf(list[int] l, int toFind) {
+   for (i <- index(l), l[i] == toFind) {
+      return just(i);
    }
+   
    return nothing();
 }
 ```

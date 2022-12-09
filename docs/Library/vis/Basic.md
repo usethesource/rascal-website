@@ -77,42 +77,11 @@ default HTMLElement toHTML(value x:!set[value] _)
 ## function sampled {#vis-Basic-sampled}
 
 ```rascal
-str sampled(set[value] s, int count)
-
-```
-
-## function sample {#vis-Basic-sample}
-
-```rascal
-set[&T] sample(set[&T] corpus, int count)
-
-```
-
-## function sampled {#vis-Basic-sampled}
-
-```rascal
 str sampled(list[value] s, int count)
 
-```
+str sampled(set[value] s, int count)
 
-## function sample {#vis-Basic-sample}
-
-```rascal
-list[&T] sample(list[&T] corpus, int count)
-
-```
-
-## function sampled {#vis-Basic-sampled}
-
-```rascal
 str sampled(map[value,value] s, int count)
-
-```
-
-## function sample {#vis-Basic-sample}
-
-```rascal
-map[&T,&U] sample(map[&T,&U] corpus, int count)
 
 ```
 

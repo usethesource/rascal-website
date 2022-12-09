@@ -17,6 +17,7 @@ title: util
 * [Maybe](../../Library/util/Maybe.md)
 * [REPL](../../Library/util/REPL.md)
 * [Eval](../../Library/util/Eval.md)
+* [Sampling](../../Library/util/Sampling.md)
 * [Progress](../../Library/util/Progress.md)
 * [ShellExec](../../Library/util/ShellExec.md)
 * [Validator](../../Library/util/Validator.md)

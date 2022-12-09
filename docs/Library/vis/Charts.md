@@ -28,7 +28,9 @@ This module is quite new and may undergo some tweaks in the coming time.
 ```rascal-shell 
 rascal>import vis::Charts;
 ok
-rascal>scatterChart([<x,x> | x <- [1..100]])
+rascal>import util::Math;
+ok
+rascal>scatterChart([<x-arbInt(20),x+arbInt(20)> | x <- [1..100]])
 ```
 ![image](/assets/Library/vis/Charts_screenshot_21.png)
 ```rascal-shell
@@ -36,25 +38,25 @@ rascal>scatterChart([<x,x> | x <- [1..100]])
 
 
 ```rascal-shell -continue
-rascal>barChart([<"<x>",x> | x <- [1..100]])
+rascal>barChart([<"<x>",x-arbInt(20)> | x <- [1..100]])
 ```
-![image](/assets/Library/vis/Charts_screenshot_26.png)
+![image](/assets/Library/vis/Charts_screenshot_27.png)
 ```rascal-shell
 ```
 
 
 ```rascal-shell -continue
-rascal>lineChart([<"<x>",x> | x <- [1..100]])
+rascal>lineChart([<"<x>",x+arbInt(20)> | x <- [1..100]])
 ```
-![image](/assets/Library/vis/Charts_screenshot_30.png)
+![image](/assets/Library/vis/Charts_screenshot_31.png)
 ```rascal-shell
 ```
 
 
 ```rascal-shell -continue
-rascal>pieChart([<"<x>",x> | x <- [1..100]])
+rascal>pieChart([<"<x>",x+arbInt(25)> | x <- [1..10]])
 ```
-![image](/assets/Library/vis/Charts_screenshot_34.png)
+![image](/assets/Library/vis/Charts_screenshot_35.png)
 ```rascal-shell
 ```
 
@@ -134,9 +136,9 @@ A bar chart from labeled numbers
 ## function lineChart {#vis-Charts-lineChart}
 
 ```rascal
-Content lineChart(rel[str label, num val] values, str title="Line Chart", ChartAutoColorMode colorMode=\data())
+Content lineChart(rel[str label, num val] values, str title="Line Chart", ChartAutoColorMode colorMode=\dataset())
 
-Content lineChart(lrel[str label, num val] values, str title="Line Chart", ChartAutoColorMode colorMode=\data())
+Content lineChart(lrel[str label, num val] values, str title="Line Chart", ChartAutoColorMode colorMode=\dataset())
 
 Content lineChart(list[str] labels, rel[str label, num val] values..., str title="Line Chart", ChartAutoColorMode colorMode=\dataset())
 
@@ -392,7 +394,8 @@ data ChartAutoColorMode
 ```rascal
 data ChartLegend  
      = chartLegend(
-        LegendPosition position = top()
+        LegendPosition position = top(),
+        bool display=true
     )
      ;
 ```
@@ -432,7 +435,7 @@ data ChartColors
 ## function chartServer {#vis-Charts-chartServer}
 
 ```rascal
-Response(Request) chartServer(ChartData theData, ChartType \type=\bar(), str title="Chart", ChartAutoColorMode colorMode=\data())
+Response(Request) chartServer(ChartData theData, ChartType \type=\bar(), str title="Chart", ChartAutoColorMode colorMode=\data(), bool legend=false)
 
 Response (Request) chartServer(Chart ch)
 

@@ -18,17 +18,6 @@ This modules provides a simple API to create graph visuals for Rascal
 
 This module is quite new and may undergo some tweaks in the coming time.
 
-#### Examples
-
-
-
-```rascal-shell 
-rascal>import vis::Graphs;
-ok
-rascal>graph([<x,x+1> | x <- [1..100]] + [<100,1>])
-Serving 'Graph' at |http://localhost:9050/|
-```
-
 #### Benefits
 
 
@@ -38,19 +27,198 @@ Serving 'Graph' at |http://localhost:9050/|
 ## function graph {#vis-Graphs-graph}
 
 ```rascal
-Content graph(lrel[&T x, &T y] v, NodeLinker[&T] nodeLinker=defaultNodeLinker, NodeLabeler[&T] nodeLabeler=defaultNodeLabeler, EdgeLabeler[&T] edgeLabeler=defaultEdgeLabeler, str title="Graph", CytoLayoutName \layoutName=cose(), CytoStyle nodeStyle=defaultNodeStyle(), CytoStyle edgeStyle=defaultEdgeStyle())
+Content graph(lrel[&T x, &T y] v, NodeLinker[&T] nodeLinker=defaultNodeLinker, NodeLabeler[&T] nodeLabeler=defaultNodeLabeler, EdgeLabeler[&T] edgeLabeler=defaultEdgeLabeler, str title="Graph", CytoLayout \layout=defaultCoseLayout(), CytoStyle nodeStyle=defaultNodeStyle(), CytoStyle edgeStyle=defaultEdgeStyle())
 
-Content graph(lrel[&T x, &L edge, &T y] v, NodeLinker[&T] nodeLinker=defaultNodeLinker, NodeLabeler[&T] nodeLabeler=defaultNodeLabeler, str title="Graph", CytoLayoutName \layoutName=cose(), CytoStyle nodeStyle=defaultNodeStyle(), CytoStyle edgeStyle=defaultEdgeStyle())
+Content graph(lrel[&T x, &L edge, &T y] v, NodeLinker[&T] nodeLinker=defaultNodeLinker, NodeLabeler[&T] nodeLabeler=defaultNodeLabeler, str title="Graph", CytoLayout \layout=defaultCoseLayout(), CytoStyle nodeStyle=defaultNodeStyle(), CytoStyle edgeStyle=defaultEdgeStyle())
 
-Content graph(rel[&T x, &T y] v, NodeLinker[&T] nodeLinker=defaultNodeLinker, NodeLabeler[&T] nodeLabeler=defaultNodeLabeler, EdgeLabeler[&T] edgeLabeler=defaultEdgeLabeler, str title="Graph", CytoLayoutName \layoutName=cose(), CytoStyle nodeStyle=defaultNodeStyle(), CytoStyle edgeStyle=defaultEdgeStyle())
+Content graph(rel[&T x, &T y] v, NodeLinker[&T] nodeLinker=defaultNodeLinker, NodeLabeler[&T] nodeLabeler=defaultNodeLabeler, EdgeLabeler[&T] edgeLabeler=defaultEdgeLabeler, str title="Graph", CytoLayout \layout=defaultCoseLayout(), CytoStyle nodeStyle=defaultNodeStyle(), CytoStyle edgeStyle=defaultEdgeStyle())
 
-Content graph(rel[&T x, &L edge, &T y] v, NodeLinker[&T] nodeLinker=defaultNodeLinker, NodeLabeler[&T] nodeLabeler=defaultNodeLabeler, str title="Graph", CytoLayoutName \layoutName=cose(), CytoStyle nodeStyle=defaultNodeStyle(), CytoStyle edgeStyle=defaultEdgeStyle())
+Content graph(rel[&T x, &L edge, &T y] v, NodeLinker[&T] nodeLinker=defaultNodeLinker, NodeLabeler[&T] nodeLabeler=defaultNodeLabeler, str title="Graph", CytoLayout \layout=defaultCoseLayout(), CytoStyle nodeStyle=defaultNodeStyle(), CytoStyle edgeStyle=defaultEdgeStyle())
 
 ```
 
 #### Synopsis
 
 A graph plot from a binary list relation.
+
+#### Examples
+
+
+
+```rascal-shell 
+rascal>import vis::Graphs;
+ok
+rascal>graph([<x,x+1> | x <- [1..100]] + [<100,1>])
+```
+![image](/assets/Library/vis/Graphs_screenshot_31.png)
+```rascal-shell
+rascal>graph([<x,x+1> | x <- [1..100]] + [<100,1>], \layout=\defaultCircleLayout())
+```
+![image](/assets/Library/vis/Graphs_screenshot_31.png)
+```rascal-shell
+```
+
+Providing locations as node identities automatically transforms them to node links:
+
+```rascal-shell 
+rascal>import vis::Graphs;
+ok
+rascal>import IO;
+ok
+rascal>d = [<|std:///|, e> | e <- |std:///|.ls];
+lrel[loc,loc]: [
+  <|std:///|,|std:///Boolean.rsc|>,
+  <|std:///|,|std:///Content.rsc|>,
+  <|std:///|,|std:///DateTime.rsc|>,
+  <|std:///|,|std:///Exception.rsc|>,
+  <|std:///|,|std:///Grammar.rsc|>,
+  <|std:///|,|std:///IO.rsc|>,
+  <|std:///|,|std:///List.rsc|>,
+  <|std:///|,|std:///ListRelation.rsc|>,
+  <|std:///|,|std:///Location.rsc|>,
+  <|std:///|,|std:///Map.rsc|>,
+  <|std:///|,|std:///Message.rsc|>,
+  <|std:///|,|std:///Node.rsc|>,
+  <|std:///|,|std:///ParseTree.rsc|>,
+  <|std:///|,|std:///Prelude$1.class|>,
+  <|std:///|,|std:///Prelude$2.class|>,
+  <|std:///|,|std:///Prelude$3.class|>,
+  <|std:///|,|std:///Prelude$4.class|>,
+  <|std:///|,|std:///Prelude$Backtrack.class|>,
+  <|std:///|,|std:///Prelude$ByteBufferBackedInputStream.class|>,
+  <|std:///|,|std:///Prelude$Distance.class|>,
+  <|std:///|,|std:///Prelude$Less.class|>,
+  <|std:///|,|std:///Prelude$NodeComparator.class|>,
+  <|std:///|,|std:///Prelude$ReleasableCallback.class|>,
+  <|std:///|,|std:///Prelude$Sorting.class|>,
+  <|std:///|,|std:///Prelude.class|>,
+  <|std:///|,|std:///Prelude.rsc|>,
+  <|std:///|,|std:///Relation.rsc|>,
+  <|std:///|,|std:///Set.rsc|>,
+  <|std:///|,|std:///String.rsc|>,
+  <|std:///|,|std:///Type.class|>,
+  <|std:///|,|std:///Type.rsc|>,
+  <|std:///|,|std:///ValueIO.rsc|>,
+  <|std:///|,|std:///analysis|>,
+  <|std:///|,|std:///demo|>,
+  <|std:///|,|std:///index.md|>,
+  <|std:///|,|std:///lang|>,
+  <|std:///|,|std:///resource|>,
+  <|std:///|,|std:///util|>,
+  <|std:///|,|std:///vis|>
+]
+rascal>d += [<e,f> | <_, e> <- d, isDirectory(e), f <- e.ls];
+lrel[loc,loc]: [
+  <|std:///|,|std:///Boolean.rsc|>,
+  <|std:///|,|std:///Content.rsc|>,
+  <|std:///|,|std:///DateTime.rsc|>,
+  <|std:///|,|std:///Exception.rsc|>,
+  <|std:///|,|std:///Grammar.rsc|>,
+  <|std:///|,|std:///IO.rsc|>,
+  <|std:///|,|std:///List.rsc|>,
+  <|std:///|,|std:///ListRelation.rsc|>,
+  <|std:///|,|std:///Location.rsc|>,
+  <|std:///|,|std:///Map.rsc|>,
+  <|std:///|,|std:///Message.rsc|>,
+  <|std:///|,|std:///Node.rsc|>,
+  <|std:///|,|std:///ParseTree.rsc|>,
+  <|std:///|,|std:///Prelude$1.class|>,
+  <|std:///|,|std:///Prelude$2.class|>,
+  <|std:///|,|std:///Prelude$3.class|>,
+  <|std:///|,|std:///Prelude$4.class|>,
+  <|std:///|,|std:///Prelude$Backtrack.class|>,
+  <|std:///|,|std:///Prelude$ByteBufferBackedInputStream.class|>,
+  <|std:///|,|std:///Prelude$Distance.class|>,
+  <|std:///|,|std:///Prelude$Less.class|>,
+  <|std:///|,|std:///Prelude$NodeComparator.class|>,
+  <|std:///|,|std:///Prelude$ReleasableCallback.class|>,
+  <|std:///|,|std:///Prelude$Sorting.class|>,
+  <|std:///|,|std:///Prelude.class|>,
+  <|std:///|,|std:///Prelude.rsc|>,
+  <|std:///|,|std:///Relation.rsc|>,
+  <|std:///|,|std:///Set.rsc|>,
+  <|std:///|,|std:///String.rsc|>,
+  <|std:///|,|std:///Type.class|>,
+  <|std:///|,|std:///Type.rsc|>,
+  <|std:///|,|std:///ValueIO.rsc|>,
+  <|std:///|,|std:///analysis|>,
+  <|std:///|,|std:///demo|>,
+  <|std:///|,|std:///index.md|>,
+  <|std:///|,|std:///lang|>,
+  <|std:///|,|std:///resource|>,
+  <|std:///|,|std:///util|>,
+  <|std:///|,|std:///vis|>,
+  <|std:///analysis|,|std:///analysis/clustering|>,
+  <|std:///analysis|,|std:///analysis/diff|>,
+  <|std:///analysis|,|std:///analysis/flow|>,
+  <|std:///analysis|,|std:///analysis/formalconcepts|>,
+  <|std:///analysis|,|std:///analysis/grammars|>,
+  <|std:///analysis|,|std:///analysis/graphs|>,
+  <|std:///analysis|,|std:///analysis/linearprogramming|>,
+  <|std:///analysis|,|std:///analysis/m3|>,
+  <|std:///analysis|,|std:///analysis/statistics|>,
+  <|std:///analysis|,|std:///analysis/text|>,
+  <|std:///demo|,|std:///demo/Dominators.rsc|>,
+  <|std:///demo|,|std:///demo/McCabe.rsc|>,
+  <|std:///demo|,|std:///demo/Mod17.rsc|>,
+  <|std:///demo|,|std:///demo/Queens.rsc|>,
+  <|std:///demo|,|std:///demo/ReachingDefs.rsc|>,
+  <|std:///demo|,|std:///demo/Slicing.rsc|>,
+  <|std:///demo|,|std:///demo/Uninit.rsc|>,
+  <|std:///demo|,|std:///demo/basic|>,
+  <|std:///demo|,|std:///demo/common|>,
+  <|std:///demo|,|std:///demo/lang|>,
+  <|std:///demo|,|std:///demo/vis|>,
+  <|std:///lang|,|std:///lang/aterm|>,
+  <|std:///lang|,|std:///lang/aut|>,
+  <|std:///lang|,|std:///lang/box|>,
+  <|std:///lang|,|std:///lang/c90|>,
+  <|std:///lang|,|std:///lang/csv|>,
+  <|std:///lang|,|std:///lang/diff|>,
+  <|std:///lang|,|std:///lang/dimacs|>,
+  <|std:///lang|,|std:///lang/dot|>,
+  <|std:///lang|,|std:///lang/html|>,
+  <|std:///lang|,|std:///lang/html5|>,
+  <|std:///lang|,|std:///lang/java|>,
+  <|std:///lang|,|std:///lang/javascript|>,
+  <|std:///lang|,|std:///lang/json|>,
+  <|std:///lang|,|std:///lang/manifest|>,
+  <|std:///lang|,|std:///lang/oil|>,
+  <|std:///lang|,|std:///lang/pico|>,
+  <|std:///lang|,|std:///lang/rascal|>,
+  <|std:///lang|,|std:///lang/rsf|>,
+  <|std:///lang|,|std:///lang/sdf2|>,
+  <|std:///lang|,|std:///lang/sexp|>,
+  <|std:///lang|,|std:///lang/smtlib2|>,
+  <|std:///lang|,|std:///lang/std|>,
+  <|std:///lang|,|std:///lang/uri|>,
+  <|std:///lang|,|std:///lang/xforms|>,
+  <|std:///lang|,|std:///lang/xml|>,
+  <|std:///lang|,|std:///lang/yaml|>,
+  <|std:///resource|,|std:///resource/jdbc|>,
+  <|std:///util|,|std:///util/Benchmark.class|>,
+  <|std:///util|,|std:///util/Benchmark.rsc|>,
+  <|std:///util|,|std:///util/Eval$EvalTimer.class|>,
+  <|std:///util|,|std:///util/Eval$Timer.class|>,
+  <|std:///util|,|std:///util/Eval.class|>,
+  <|std:///util|,|std:///util/Eval.rsc|>,
+  <|std:///util|,|std:///util/FileSystem.rsc|>,
+  <|std:///util|,|std:///util/Highlight.rsc|>,
+  <|std:///util|,|std:///util/IDEServices.rsc|>,
+  <|std:///util|,|std:///util/IDEServicesLibrary.class|>,
+  <|std:///util...
+rascal>graph(d, \layout=defaultCoseLayout());
+```
+![image](/assets/Library/vis/Graphs_screenshot_38.png)
+```rascal-shell
+```
+here we adapt the node labeler to show only the last file name in the path of the location:
+```rascal-shell
+rascal>graph(d, \layout=defaultCoseLayout(), nodeLabeler=str (loc l) { return l.file; });
+```
+![image](/assets/Library/vis/Graphs_screenshot_38.png)
+```rascal-shell
+```
 
 ## alias NodeLinker[&T] {#vis-Graphs-NodeLinker[&T]}
 
@@ -99,7 +267,7 @@ str defaultEdgeLabeler(&T _source, &T _target)
 ## function cytoscape {#vis-Graphs-cytoscape}
 
 ```rascal
-Cytoscape cytoscape(list[CytoData] \data, \CytoLayoutName \layoutName=\cose(), CytoStyle nodeStyle=defaultNodeStyle(), CytoStyle edgeStyle=defaultEdgeStyle())
+Cytoscape cytoscape(list[CytoData] \data, \CytoLayout \layout=\defaultCoseLayout(), CytoStyle nodeStyle=defaultNodeStyle(), CytoStyle edgeStyle=defaultEdgeStyle())
 
 ```
 
@@ -118,7 +286,7 @@ list[CytoData] graphData(lrel[loc x, loc y] v, NodeLinker[loc] nodeLinker=defaul
 
 default list[CytoData] graphData(lrel[&T x, &T y] v, NodeLinker[&T] nodeLinker=defaultNodeLinker, NodeLabeler[&T] nodeLabeler=defaultNodeLabeler, EdgeLabeler[&T] edgeLabeler=defaultEdgeLabeler)
 
-default list[CytoData] graphData(rel[loc x, &L edge, loc y] v, NodeLinker[loc] nodeLinker=defaultNodeLinker, NodeLabeler[loc] nodeLabeler=defaultNodeLabeler, EdgeLabeler[&T] edgeLabeler=defaultEdgeLabeler)
+list[CytoData] graphData(rel[loc x, &L edge, loc y] v, NodeLinker[loc] nodeLinker=defaultNodeLinker, NodeLabeler[loc] nodeLabeler=defaultNodeLabeler, EdgeLabeler[&T] edgeLabeler=defaultEdgeLabeler)
 
 default list[CytoData] graphData(rel[&T x, &L edge, &T y] v, NodeLinker[&T] nodeLinker=defaultNodeLinker, NodeLabeler[&T] nodeLabeler=defaultNodeLabeler, EdgeLabeler[&T] edgeLabeler=defaultEdgeLabeler)
 
@@ -180,7 +348,7 @@ data CytoData
 
 ```rascal
 data CytoElement  
-     = \node(str id, str label=id, loc editor=|none:///|)
+     = \node(str id, str label=id, str editor="|none:///|")
      | \edge(str source, str target, str id="<source>-<target>", str label="")
      ;
 ```
@@ -355,12 +523,60 @@ data CytoSelector
 ## data CytoLayout {#vis-Graphs-CytoLayout}
 
 ```rascal
-data CytoLayout  
-     = cytolayout(
-        CytoLayoutName name = cose(),
-        bool animate = false
+data CytoLayout (CytoLayoutName name = cose(), bool animate=false) 
+     = cytolayout()
+     | breadthfirstLayout(
+        CytoLayoutName name = CytoLayoutName::breadthfirst(),
+        num spacingFactor= 1,
+        list[str] roots = [],
+        bool circle=false,
+        bool grid=!circle,
+        bool directed=false
+    )
+     | gridLayout(
+        CytoLayoutName name = CytoLayoutName::grid(),
+        int rows=2,
+        int cols=2,
+        bool avoidOverlap=true,
+        num spacingFactor=1
+    )
+     | circleLayout(
+        CytoLayoutName name = CytoLayoutName::circle(),
+        bool avoidOverlap=true,
+        num spacingFactor=1
+    )
+     | coseLayout(
+        CytoLayoutName name = CytoLayoutName::cose()
     )
      ;
+```
+
+## function defaultCoseLayout {#vis-Graphs-defaultCoseLayout}
+
+```rascal
+CytoLayout defaultCoseLayout(bool avoidOverlap=true)
+
+```
+
+## function defaultCircleLayout {#vis-Graphs-defaultCircleLayout}
+
+```rascal
+CytoLayout defaultCircleLayout(bool avoidOverlap=true, num spacingFactor=1)
+
+```
+
+## function defaultGridLayout {#vis-Graphs-defaultGridLayout}
+
+```rascal
+CytoLayout defaultGridLayout(int rows=2, int cols=rows, bool avoidOverlap=true, num spacingFactor=1)
+
+```
+
+## function defaultBreadthfirstLayout {#vis-Graphs-defaultBreadthfirstLayout}
+
+```rascal
+CytoLayout defaultBreadthfirstLayout(num spacingFactor=1, bool circle=false, bool grid=!circle, bool directed=false)
+
 ```
 
 ## data CytoLayoutName {#vis-Graphs-CytoLayoutName}

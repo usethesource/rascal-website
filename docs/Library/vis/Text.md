@@ -8,16 +8,16 @@ title: "module vis::Text"
 
 #### Synopsis
 
+Visualizing values using "ASCII art".
+
+#### Synopsis
+
 
 This module provides functions that map values to strings using ASCII Art pretty printing.
 
 The words [ASCII Art](https://en.wikipedia.org/wiki/ASCII_art) refers to the technique of 
 constructing images from text characters that are in the ASCII set. However, in this case
 we may use any Unicode character for visual representation purposes.
-
-#### Synopsis
-
-Visualizing values using "ASCII art".
 
 #### Examples
 
