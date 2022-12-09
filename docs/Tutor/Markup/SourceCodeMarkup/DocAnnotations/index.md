@@ -132,7 +132,7 @@ This will be expanded to
 rascal>  import DateTime;
 ok
 rascal>  now();
-datetime: $2022-12-09T11:10:47.365+00:00$
+datetime: $2022-12-09T14:27:45.221+00:00$
 ```
 ``````
 

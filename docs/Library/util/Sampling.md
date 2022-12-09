@@ -49,10 +49,10 @@ expected `target` size, but most probably a little smaller or larger.
 rascal>import util::Sampling;
 ok
 rascal>sample({"a","b","c","e","f","g","h","i","j","k"}, 4)
-set[str]: {"b","c","g","h","i","j","k"}
+set[str]: {"b","e","f","i"}
 rascal>sample({"a","b","c","e","f","g","h","i","j","k"}, 4)
-set[str]: {"a","b","c","g","i","j"}
+set[str]: {"c","g","h","i","j","k"}
 rascal>sample({"a","b","c","e","f","g","h","i","j","k"}, 4)
-set[str]: {"c","f","g","i"}
+set[str]: {"c","j","k"}
 ```
 

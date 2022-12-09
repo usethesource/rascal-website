@@ -387,7 +387,7 @@ bool: true
 * Click on any of the printed source [Location](../../../../Rascal/Expressions/Values/Location/index.md)s in the terminal and the IDE brings you to the file.
 * The method AST contains all structural/syntactic information about a method and its signature. They are defined in the [AST](../../../../Library/lang/java/m3/AST.md) module.
 * every node in the AST has been annotated with a `src` field to explain where exactly in the file it came from
-* when name and type resolution is `true` for [create ast from file](../../../../Library/lang/java/m3/AST.md#lang::java::m3::AST-createAstFromFile), the `decl` fields on given nodes point to the resolved qualified names of a reference. These qualified names coincide with the overview [M3](../../../../Library/lang/java/m3/Core.md) model contents. 
+* when name and type resolution is `true` for [create ast from file](../../../../Library/lang/java/m3/AST.md#lang-java-m3-AST-createAstFromFile), the `decl` fields on given nodes point to the resolved qualified names of a reference. These qualified names coincide with the overview [M3](../../../../Library/lang/java/m3/Core.md) model contents. 
 * [pattern matching](../../../../RascalConcepts/PatternMatching/index.md) is a very powerful way of exploring and changing ASTs
 * AST and M3 models exist for other programming languages than Java. Your skills developed here may transfer to there.
 * AST and M3 creation is fully based on reusing the Eclipse JDT compiler stack, which has a high quality and can also recover from local errors in input files.

@@ -22,20 +22,20 @@ Priority queues maintain (priority, value) pairs in sorted order. They are imple
 [Binomial heap](http://en.wikipedia.org/wiki/Binomial_heap) Priority queue are, for instance, used to implement shortest path algorithms.
 
 Provides the following functions:
-* [binomialTree](../../Library/util/PriorityQueue.md#util::PriorityQueue-binomialTree)
-* [priorityQueue](../../Library/util/PriorityQueue.md#util::PriorityQueue-priorityQueue)
-* [BinomialTree](../../Library/util/PriorityQueue.md#util::PriorityQueue-BinomialTree)
-* [PriorityQueue](../../Library/util/PriorityQueue.md#util::PriorityQueue-PriorityQueue)
-* [add](../../Library/util/PriorityQueue.md#util::PriorityQueue-add)
-* [addSubTree](../../Library/util/PriorityQueue.md#util::PriorityQueue-addSubTree)
-* [extractMinimum](../../Library/util/PriorityQueue.md#util::PriorityQueue-extractMinimum)
-* [findMinimum](../../Library/util/PriorityQueue.md#util::PriorityQueue-findMinimum)
-* [insertElement](../../Library/util/PriorityQueue.md#util::PriorityQueue-insertElement)
-* [isEmpty](../../Library/util/PriorityQueue.md#util::PriorityQueue-isEmpty)
-* [mergeQueue](../../Library/util/PriorityQueue.md#util::PriorityQueue-mergeQueue)
-* [mergeTree](../../Library/util/PriorityQueue.md#util::PriorityQueue-mergeTree)
-* [mkPriorityQueue](../../Library/util/PriorityQueue.md#util::PriorityQueue-mkPriorityQueue)
-* [toString](../../Library/util/PriorityQueue.md#util::PriorityQueue-toString)
+* [binomialTree](../../Library/util/PriorityQueue.md#util-PriorityQueue-binomialTree)
+* [priorityQueue](../../Library/util/PriorityQueue.md#util-PriorityQueue-priorityQueue)
+* [BinomialTree](../../Library/util/PriorityQueue.md#util-PriorityQueue-BinomialTree)
+* [PriorityQueue](../../Library/util/PriorityQueue.md#util-PriorityQueue-PriorityQueue)
+* [add](../../Library/util/PriorityQueue.md#util-PriorityQueue-add)
+* [addSubTree](../../Library/util/PriorityQueue.md#util-PriorityQueue-addSubTree)
+* [extractMinimum](../../Library/util/PriorityQueue.md#util-PriorityQueue-extractMinimum)
+* [findMinimum](../../Library/util/PriorityQueue.md#util-PriorityQueue-findMinimum)
+* [insertElement](../../Library/util/PriorityQueue.md#util-PriorityQueue-insertElement)
+* [isEmpty](../../Library/util/PriorityQueue.md#util-PriorityQueue-isEmpty)
+* [mergeQueue](../../Library/util/PriorityQueue.md#util-PriorityQueue-mergeQueue)
+* [mergeTree](../../Library/util/PriorityQueue.md#util-PriorityQueue-mergeTree)
+* [mkPriorityQueue](../../Library/util/PriorityQueue.md#util-PriorityQueue-mkPriorityQueue)
+* [toString](../../Library/util/PriorityQueue.md#util-PriorityQueue-toString)
 
 #### Pitfalls
 

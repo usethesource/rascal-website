@@ -32,7 +32,7 @@ rascal>import util::Math;
 ok
 rascal>scatterChart([<x-arbInt(20),x+arbInt(20)> | x <- [1..100]])
 ```
-![image](/assets/Library/vis/Charts_screenshot_21.png)
+![image](/assets/Library/vis/Charts_screenshot_23.png)
 ```rascal-shell
 ```
 
@@ -64,8 +64,8 @@ rascal>pieChart([<"<x>",x+arbInt(25)> | x <- [1..10]])
 
 
 * Easy to use for basic charting.
-* Uses [chart auto colors](../../Library/vis/Charts.md#vis::Charts-ChartAutoColors) extension for ease-of-use.
-* Support for 8 [chart type](../../Library/vis/Charts.md#vis::Charts-ChartType)s including multiple [chart data set](../../Library/vis/Charts.md#vis::Charts-ChartDataSet)s in one chart.
+* Uses [chart auto colors](../../Library/vis/Charts.md#vis-Charts-ChartAutoColors) extension for ease-of-use.
+* Support for 8 [chart type](../../Library/vis/Charts.md#vis-Charts-ChartType)s including multiple [chart data set](../../Library/vis/Charts.md#vis-Charts-ChartDataSet)s in one chart.
 * This API is open to extension via adding common keyword parameters for supporting any extension to the basic chart.js configuration.
 * You can roll your own HTML or Server based on the building blocks in this module to include and use extensions, or to combine different charts in the same view.
 
@@ -316,7 +316,7 @@ A dataset is a list of values to chart, with styling properties.
 The `data` field is a list of supported values, of which the constraints
 are not expressible by [AlgebraicDataType](../../Rascal/Declarations/AlgebraicDataType/index.md)s. These are currently supported:
 
-* [chart data point](../../Library/vis/Charts.md#vis::Charts-ChartDataPoint), with an without a `r`adius
+* [chart data point](../../Library/vis/Charts.md#vis-Charts-ChartDataPoint), with an without a `r`adius
 * `num`, but within `double` precision (!) and no `rat`
 
 ## data ChartDataPoint {#vis-Charts-ChartDataPoint}

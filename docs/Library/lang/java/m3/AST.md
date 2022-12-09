@@ -241,6 +241,6 @@ Creates a set ASTs for all Java source files in a Maven project using Eclipse's 
 #### Description
 
 
-This function uses [Reflective-getProjectPathConfig](../../../../Library/util/Reflective.md#util::Reflective-getProjectPathConfig), which inspects a `pom.xml` to 
+This function uses [Reflective-getProjectPathConfig](../../../../Library/util/Reflective.md#util-Reflective-getProjectPathConfig), which inspects a `pom.xml` to 
 compute the dependencies and concrete locations of jar files that a Maven project depends on.
 

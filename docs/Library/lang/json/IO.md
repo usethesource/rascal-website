@@ -54,7 +54,7 @@ In general the translation behaves as follows:
 ```
 
 parses JSON values from a string
-In general the translation behaves as the same as for [read j s oN](../../../Library/lang/json/IO.md#lang::json::IO-readJSON).
+In general the translation behaves as the same as for [read j s oN](../../../Library/lang/json/IO.md#lang-json-IO-readJSON).
 
 ## function writeJSON {#lang-json-IO-writeJSON}
 

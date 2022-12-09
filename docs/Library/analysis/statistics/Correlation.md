@@ -17,11 +17,11 @@ Compute the [correlation](http://en.wikipedia.org/wiki/Correlation) between pair
 Correlation measures the statistical relationship between two sets of data.
 
 The following functions are provided:
-* [PearsonsCorrelation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelation)
-* [PearsonsCorrelationPValues](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelationPValues)
-* [PearsonsCorrelationStandardErrors](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelationStandardErrors)
-* [SpearmansCorrelation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-SpearmansCorrelation)
-* [covariance](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-covariance)
+* [PearsonsCorrelation](../../../Library/analysis/statistics/Correlation.md#analysis-statistics-Correlation-PearsonsCorrelation)
+* [PearsonsCorrelationPValues](../../../Library/analysis/statistics/Correlation.md#analysis-statistics-Correlation-PearsonsCorrelationPValues)
+* [PearsonsCorrelationStandardErrors](../../../Library/analysis/statistics/Correlation.md#analysis-statistics-Correlation-PearsonsCorrelationStandardErrors)
+* [SpearmansCorrelation](../../../Library/analysis/statistics/Correlation.md#analysis-statistics-Correlation-SpearmansCorrelation)
+* [covariance](../../../Library/analysis/statistics/Correlation.md#analysis-statistics-Correlation-covariance)
 
 
 ## function PearsonsCorrelation {#analysis-statistics-Correlation-PearsonsCorrelation}
@@ -43,7 +43,7 @@ It is a measure of the strength of the linear dependence between two variables.
 
 #### Pitfalls
 
-Use [spearmans correlation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-SpearmansCorrelation) when there is a *monotonous dependence* between the two variables.
+Use [spearmans correlation](../../../Library/analysis/statistics/Correlation.md#analysis-statistics-Correlation-SpearmansCorrelation) when there is a *monotonous dependence* between the two variables.
 
 ## function PearsonsCorrelationStandardErrors {#analysis-statistics-Correlation-PearsonsCorrelationStandardErrors}
 
@@ -85,11 +85,11 @@ Spearman's rank correlation coefficient.
 
 Compute [Spearman's rank correlation coefficient](http://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient).
 The correlation between the data values is computed by first performing a rank transformation
-on the data values using a natural ranking and then computing [pearsons correlation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelation).
+on the data values using a natural ranking and then computing [pearsons correlation](../../../Library/analysis/statistics/Correlation.md#analysis-statistics-Correlation-PearsonsCorrelation).
 
 #### Pitfalls
 
-Use [pearsons correlation](../../../Library/analysis/statistics/Correlation.md#analysis::statistics::Correlation-PearsonsCorrelation) when there is a *linear dependence* between the variables.
+Use [pearsons correlation](../../../Library/analysis/statistics/Correlation.md#analysis-statistics-Correlation-PearsonsCorrelation) when there is a *linear dependence* between the variables.
 
 ## function covariance {#analysis-statistics-Correlation-covariance}
 

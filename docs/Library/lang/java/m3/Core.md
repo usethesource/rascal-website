@@ -139,7 +139,7 @@ Extract an M3 model from all the class files in a jar
 #### Description
 
 
-We use [create m3 from jar](../../../../Library/lang/java/m3/Core.md#lang::java::m3::Core-createM3FromJar) to extract an initial M3 model and 
+We use [create m3 from jar](../../../../Library/lang/java/m3/Core.md#lang-java-m3-Core-createM3FromJar) to extract an initial M3 model and 
 then a number of steps enrich the M3 towards a model that could
 have come from the original source. 
 

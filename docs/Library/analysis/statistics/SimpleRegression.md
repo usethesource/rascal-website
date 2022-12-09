@@ -14,21 +14,21 @@ Statistical methods for simple regression.
 #### Description
 
 The following functions are provided:
-* [R](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-R)
-* [RSquare](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-RSquare)
-* [XSumSquares](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-XSumSquares)
-* [intercept](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-intercept)
-* [interceptStdErr](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-interceptStdErr)
-* [meanSquareError](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-meanSquareError)
-* [predict](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-predict)
-* [regressionSumSquares](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-regressionSumSquares)
-* [significance](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-significance)
-* [slope](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-slope)
-* [slopeConfidenceInterval](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-slopeConfidenceInterval)
-* [slopeStdErr](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-slopeStdErr)
-* [sumOfCrossProducts](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-sumOfCrossProducts)
-* [sumSquaredErrors](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-sumSquaredErrors)
-* [totalSumSquares](../../../Library/analysis/statistics/SimpleRegression.md#analysis::statistics::SimpleRegression-totalSumSquares)
+* [R](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-R)
+* [RSquare](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-RSquare)
+* [XSumSquares](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-XSumSquares)
+* [intercept](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-intercept)
+* [interceptStdErr](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-interceptStdErr)
+* [meanSquareError](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-meanSquareError)
+* [predict](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-predict)
+* [regressionSumSquares](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-regressionSumSquares)
+* [significance](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-significance)
+* [slope](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-slope)
+* [slopeConfidenceInterval](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-slopeConfidenceInterval)
+* [slopeStdErr](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-slopeStdErr)
+* [sumOfCrossProducts](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-sumOfCrossProducts)
+* [sumSquaredErrors](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-sumSquaredErrors)
+* [totalSumSquares](../../../Library/analysis/statistics/SimpleRegression.md#analysis-statistics-SimpleRegression-totalSumSquares)
 
 
 ## function intercept {#analysis-statistics-SimpleRegression-intercept}

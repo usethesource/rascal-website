@@ -15,22 +15,22 @@ Descriptive Statistics.
 
 Provides the following univariate (single variable) statistics functions:
 
-* [centralMoment](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-centralMoment)
-* [geometricMean](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-geometricMean)
-* [kurtosis](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-kurtosis)
-* [kurtosisExcess](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-kurtosisExcess)
-* [max](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-max)
-* [mean](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-mean)
-* [median](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-median)
-* [middle](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-middle)
-* [min](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-min)
-* [moment](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-moment)
-* [percentile](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-percentile)
-* [skewness](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-skewness)
-* [standardDeviation](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-standardDeviation)
-* [sum](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-sum)
-* [sumsq](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-sumsq)
-* [variance](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-variance)
+* [centralMoment](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-centralMoment)
+* [geometricMean](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-geometricMean)
+* [kurtosis](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-kurtosis)
+* [kurtosisExcess](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-kurtosisExcess)
+* [max](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-max)
+* [mean](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-mean)
+* [median](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-median)
+* [middle](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-middle)
+* [min](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-min)
+* [moment](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-moment)
+* [percentile](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-percentile)
+* [skewness](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-skewness)
+* [standardDeviation](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-standardDeviation)
+* [sum](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-sum)
+* [sumsq](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-sumsq)
+* [variance](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-variance)
 
 #### Examples
 
@@ -160,7 +160,7 @@ Median of data values.
 #### Description
 
 Returns the [median](http://en.wikipedia.org/wiki/Median) of the available values.
-This is the same as the 50th [percentile](../../../Library/analysis/statistics/Descriptive.md#analysis::statistics::Descriptive-percentile).
+This is the same as the 50th [percentile](../../../Library/analysis/statistics/Descriptive.md#analysis-statistics-Descriptive-percentile).
 
 #### Examples
 
