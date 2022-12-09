@@ -54,7 +54,7 @@ alias Result = tuple[Lval val, Env env];      ❻
 
                 
 * ❶  The data type `Lval` takes care of the representation of Lisp values.
-    It covers integers, atoms, lists and closures (the representation of a functions and
+    It covers integers, atoms, lists and closures (the representation of a function and
     the context in which it will be executed).
 
 * ❷  A `Scope` describes the binding of several related variables to their value.

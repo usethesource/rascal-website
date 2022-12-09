@@ -54,7 +54,8 @@ test bool parse5() = parse("(123 abc)") == List([Integer(123), Atom("abc")]);
 * ❹  The concrete list elements in `lst` are converted one-by-one using build and are then used to
     create a new `List` value.
 
-.Concrete Patterns
+#### Concrete Patterns
+
 ****
 We use concrete patterns in these definitions. For instance, the argument pattern 
 ```rascal

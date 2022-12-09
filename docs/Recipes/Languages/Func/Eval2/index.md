@@ -148,7 +148,7 @@ Result2 eval2(seq(Exp lhs, Exp rhs), Env env, PEnv penv)  {       ❹
     All evaluator functions are changed from returning an integer (the result of evaluation) to
    `Result` (the result of evaluation _and_ the local side effects).
 * ❷  The effect of this change can be seen in all functions. For instance, when evaluating
-    multiplication, the environment produced by the left operand ahs to be passed as 
+    multiplication, the environment produced by the left operand lhs to be passed as 
     argument to the right operand of the multiplication. This is needed, to propagate any side effects
     caused by the left operand to propagate to the right one.
 * ❸  Assignment is implemented.

@@ -17,15 +17,15 @@ This is a recipe for computing basic or more advanced metrics from a Java projec
 
 Now we will follow the [EASY](../../../WhyRascal/EASY/index.md) paradigm:
 
-*  a library will be used to _parse_ the Java code generating [abstract syntax tree](../../../Rascalopedia/AbstractSyntaxTree/index.md)
-*  the same library will generate a ((Rascal:Values/Relation))al model to represent interesting facts between Java source code artifacts
-*  then we can write queries over the generated trees and relations using [Expressions](../../../Rascal/Expressions/index.md).
+*  A library will be used to _parse_ the Java code generating [abstract syntax tree](../../../Rascalopedia/AbstractSyntaxTree/index.md)
+*  The same library will generate a ((Rascal:Values/Relation))al model to represent interesting facts between Java source code artifacts
+*  Then we can write queries over the generated trees and relations using [Expressions](../../../Rascal/Expressions/index.md).
 
 
 These are a number of recipes for measuring different things about Java:
 
-*  [measuring classes](../../../Recipes/Metrics/MeasuringJava/MeasuringClasses/index.md)
-*  [measuring methods](../../../Recipes/Metrics/MeasuringJava/MeasuringMethods/index.md)
+*  [Measuring classes](../../../Recipes/Metrics/MeasuringJava/MeasuringClasses/index.md)
+*  [Measuring methods](../../../Recipes/Metrics/MeasuringJava/MeasuringMethods/index.md)
 
 #### Examples
 

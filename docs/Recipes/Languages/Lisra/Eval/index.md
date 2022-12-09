@@ -14,7 +14,7 @@ Here is the core of our Lisp interpreter. Its basic functionality is to take
 *  An `Lval` and an Environment (both defined in [Runtime](../../../../Recipes/Languages/Lisra/Runtime/index.md)).
 *  Distinguish the various forms an `Lval` can have and compute the
   effect of evaluating it.
-*  Return a `Result` that captures the value just computed and possibleside-effects
+*  Return a `Result` that captures the value just computed and possible side-effects
 on the environment.
 
 
@@ -120,28 +120,28 @@ We now explain the different cases in more detail:
 * ❶  An integer constant evaluates to itself. Note how `Integer(int x)` is used as first
     argument of this `eval` function. It is a pattern that describes that the constructor `Integer`
     with an `int` argument `x` is to be matched.
-* ❷  An atom evaluates to the value to which it is bound or to itself. `find` (see [Runtime](../../../../Recipes/Languages/Lisra/Runtime/index.md)) is used
+* ❷  An atom evaluates to the value to which it is bound to or itself. `find` (see [Runtime](../../../../Recipes/Languages/Lisra/Runtime/index.md)) is used
     to search for the atom in question. The first argument is `var:Atom(str name)`, a pattern that matches
     an `Atom`. The `var:` prefix binds the complete atom to a variable `var` to be used in the body of the function.
 * ❸  A quoted list evaluates to itself. The pattern `List([Atom("quote"), exp*])` matches a `List` constructor
-    whose first element is `Atom("quote")`. `exp*` means that the remaining list elements are assignment to `exp`.
+    whose first element is `Atom("quote")`. `exp*` means that the remaining list elements are assigned to `exp`.
     There are two cases: if the argument list has size 1, its first element is used, otherwise a list with all elements of `exp`
-    vare returned. This ensures that `List([Atom("quote"), Integer(17)])` evaluates to  `Integer(17)` and not to `List([ Integer(17)]`.
+    are returned. This ensures that `List([Atom("quote"), Integer(17)])` evaluates to  `Integer(17)` and not to `List([ Integer(17)]`.
 * ❹  Evaluates a `set!` expression that assigns the value of `exp` to variable `var`.
 
-* ❺  Evaluates the `if` expression. The test `tst` is evaluated and is not false, the value of `conseq` is returned and otherwise
-    that of `alt`.
+* ❺  Evaluates the `if` expression. The test `tst` is evaluated and if it is not false, the value of `conseq` is returned. Otherwise,
+    the value of `alt` is returned.
 
-* ❻  Evaluates a `block` expression. The list of expressions `exps` is evaluated one by one. Observe that in the for loop
+* ❻  Evaluates a `block` expression. The list of expressions `exps` is evaluated one by one. Observe that the for loop
     `<val, e> = eval(exp, e);` captures both the value and the environment that results from executing one expression. That new environment is
-    is used to evaluate the next expression(s) in the list. The value of the last expression and a possible modied environment are returned.
+    is used to evaluate the next expression(s) in the list. The value of the last expression and a possible modified environment are returned.
 
 * ❼  Evaluate a `define` expression that binds the value of `exp` to variable `var`.
-    The value of the expression is bound `var` in the local scope.
+    The value of the expression is bound to `var` in the local scope.
 
 * ❽  Evaluate a lambda expression. Essentially we return a `Closure` value that contains the expression in the lambda expression
     properly wrapped to do variable binding and environment management. 
-    A Closure contains a function that return type `Results` and has two arguments:
+    A Closure contains a function that returns `Results` type and has two arguments:
    `list[lval] args` the actual parameter values when the closure is applied, and
    `Env e` the environment at the site of the call.
     In the body of the closure we construct a new environment `makeEnv(vars, args, tail(callEnv, size(defEnv)))` that binds the variables
@@ -155,7 +155,7 @@ We now explain the different cases in more detail:
     Otherwise, all elements are evaluated and the auxiliary function ` apply` is used to apply the value of the first element to the values of   
     the remaining elements.
 
-* ❶⓿  Apply an `Lval` to a list of arguments and return a `Result`. The first case handles a `Closure`; it amounts
+* ❶⓿  Apply an `Lval` to a list of arguments and return a `Result`. The first case handles a `Closure`; It amounts
      to calling the function in the closure (environment handling and parameter binding are done in the closure as discussed above.
 
 * ❶❶  Definition of all built-in functions.

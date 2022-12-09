@@ -67,11 +67,11 @@ These parsers produce [Parse Trees](../../../Rascal/Declarations/SyntaxDefinitio
 
 There are four kinds of non-terminals that can be defined with slightly different characteristics.
 
-*  _Syntax_ non-terminals are general context-free non-terminals. This mean left-recursion, right-recursion, any of the regular expression [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol/index.md)s and all kinds of [Disambiguation](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/index.md) can be used to define it.
+*  _Syntax_ non-terminals are general context-free non-terminals. This means that left-recursion, right-recursion, any of the regular expression [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol/index.md)s and all kinds of [Disambiguation](../../../Rascal/Declarations/SyntaxDefinition/Disambiguation/index.md) can be used to define it.
    It is important to note that in between the _Symbols_ that define a syntax non-terminal the locally defined layout non-terminal will be interleaved. 
    For example, if you define `layout ML = [\ ]*;` and `syntax A = "a" "a"`, Rascal will modify the definition of A to `syntax A = "a" ML "a";` before generating a parser.
 
-*  _Lexical_ non-terminals are just like _syntax_ non-terminals, very much like _syntax_ non-terminals. 
+*  _Lexical_ non-terminals are very much like _syntax_ non-terminals. 
    However, the definition of a lexical is _not_ modified with interleaved layout non-terminals. 
    And, the structure of lexicals is not traversed by the [visit statement](../../../Rascal/Statements/Visit/index.md) and equality is checked between lexicals 
    by checking the characters (not its structure) for equality. 
@@ -85,7 +85,7 @@ There are four kinds of non-terminals that can be defined with slightly differen
 
 
 Each alternative of a syntax definition is defined by a list of [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol/index.md)s. Each of the [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol/index.md)s can be labeled or not.
-The alternative of a defined syntax type may be labeled or not as well. With the label additional operations are activated on the corresponding parse trees:
+The alternative of a defined syntax type may be labeled or not as well. With the label, additional operations are activated on the corresponding parse trees:
 
 *  The `is` operator is defined for labeled alternatives (see [Operators](../../../Rascal/Expressions/Operators/index.md)).
 *  The `has` operator is defined for labeled [./Symbol](../../../Rascal/Declarations/SyntaxDefinition/Symbol/index.md)s in the right-hand side (see [Operators](../../../Rascal/Expressions/Operators/index.md)).
@@ -154,7 +154,7 @@ syntax Expression
 *  Modular and compositional.
 *  No grammar normalization or grammar factoring necessary.
 *  Generate a parser for any context-free grammar.
-*  Generate parsers are really fast (for general parsers).
+*  Generated parsers are really fast (for general parsers).
 *  Powerful disambiguation constructs for common programming language disambiguation patterns.
 *  Data-dependent (context-sensitive) disambiguation via arbitrary functions.
 *  Embedding of concrete syntax fragments in Rascal programs

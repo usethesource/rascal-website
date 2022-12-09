@@ -30,11 +30,11 @@ the abstract syntax tree of the input program. In case the input program is synt
 see [RuntimeException](../../../../Library/Exception.md).
 
 * ❷   `parse(#start[Program], txt)`: parse `txt` according to the non-terminal `Program`.
-   * Note that `#start[Program]` is a _reified type_. The `#` operator turns a type literal into an ordinary Rascal value, whiich is then used by the `parse` function to generate a parser.
+   * Note that `#start[Program]` is a _reified type_. The `#` operator turns a type literal into an ordinary Rascal value, which is then used by the `parse` function to generate a parser.
    * We use `#start[Program]` instead of directly `#Program` because the automatic `start` rule accepts whitespace before and after the program. See [reified types](../../../../Rascal/Expressions/Values/ReifiedTypes/index.md) for more information about reifying types and grammars.
-   & The `parse` function returns a [parse tree](../../../../Rascalopedia/ParseTree/index.md) of the input program.
+   and the `parse` function returns a [parse tree](../../../../Rascalopedia/ParseTree/index.md) of the input program.
 
-* ❸   `implode(#PROGRAM, parse(#Program, txt))`: transform the parse returned by `parse` into an abstract syntax tree of type `PROGRAM`. The [implode](../../../../Library/ParseTree.md#ParseTree-implode) function performs the automatic mapping between elements in the parse tree and their counterpart in the abstract syntax.
+* ❸   `implode(#PROGRAM, parse(#Program, txt))`: Transform the parse returned by `parse` into an abstract syntax tree of type `PROGRAM`. The [implode](../../../../Library/ParseTree.md#ParseTree-implode) function performs the automatic mapping between elements in the parse tree and their counterpart in the abstract syntax.
 
 
 The function `load` can be used as follows:

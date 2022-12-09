@@ -21,7 +21,7 @@ Pico has a single purpose in life: being so simple that specifications (or imple
 
 *  The operators `+` and `-` have operands of type natural and their result is natural.
 
-*  The operator `||` has operands of type string and its results is also of type string.
+*  The operator `||` has operands of type string and its results are also of type string.
 
 *  Tests in if-then-else statement and while-statement should be of type natural.
 
