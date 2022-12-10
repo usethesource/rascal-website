@@ -13,7 +13,11 @@ a folder hierarchy again, where each folder has its own `index.md` file (generat
 compiler has generated such a consistent folder of interconnected markdown files, other downstream processors can turn them into (static) html websites, pdf files or otherwise. The standard way of processing is to use the [Docusaurus](https://docusaurus.io) static website generator.
 
 The important features of the pre-processor, "compiler", are:
+<<<<<<< HEAD:courses/Tutor/Architecture/Architecture.md
 1. The compiler is configured via ((util::Reflective::PathConfig)), where:
+=======
+1. The compiler is configured via [PathConfig](../../Library/util/Reflective.md#util-Reflective-PathConfig), where:
+>>>>>>> 72c5fa3d7cf01c465eac5d58d5aeb2054a59b49c:docs/Tutor/Architecture/index.md
    * each entry in the `srcs` list is a single _course_
    * each entry in the `libs` list, be it a jar file or not, is searched for an `index.value` file to augment the current index. 
 1. Concept hierarchy - each folder `/X` has its own index file, called either `X/X.md` or `X/index.md`. Nested folders equal nested concepts.
