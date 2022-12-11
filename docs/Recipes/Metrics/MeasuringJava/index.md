@@ -31,7 +31,7 @@ These are a number of recipes for measuring different things about Java:
 
 
 First we import the basic data types for representing Java. The model is called _M3_, and its definition is split acros a generic
-language independent module called [Core](../../../Library/analysis/m3/Core.md) and a Java specific part called [Core](../../../Library/lang/java/m3/Core.md). Have a look at the documentation 
+language independent module called [Core](../../../Library/analysis/m3/Core.md) and a Java specific part called [AST](../../../Library/lang/java/m3/AST.md). Have a look at the documentation 
 of these modules later. For now we will go through using them in a few examples.
 
 

@@ -10,11 +10,11 @@ Static type checking.
 
 ![Type Lattice](/assets/RascalConcepts/StaticTyping/type-lattice.png)
 
-Rascal has a static and a dynamic type system, which interact with eachother. The static type system is used by a type checker (not yet released) to predict errors and give warnings where possibly slipups have been made. The dynamic type system ensures well-formedness of data structures and plays an important role while pattern matching, since many algorithms dispatch on the types of values.
+Rascal has a static and a dynamic type system, which interact with each other. The static type system is used by a type checker (not yet released) to predict errors and give warnings where possible slipups have occurred. The dynamic type system ensures well-formedness of data structures and plays an important role while pattern matching, since many algorithms dispatch on the types of values.
 
 Rascal's static type system does not ensure that all functions will go right:
-   * functions may throw exceptions.
-   * functions may not be defined for the specific pattern which occur on the call site.
+   * Functions may throw exceptions.
+   * Functions may not be defined for the specific pattern which occur on the call site.
 
 However, the static type system will produce an error when a function will certainly throw an exception, or when it is certainly not defined for a certain case. Also it catches some logical tautologies and contradictions which would lead to dead code.
 
@@ -26,8 +26,8 @@ We also see that `rel` is a subtype of `set` and that each ADT is a subtype of `
 A special role is played by the datatype `Tree` that is the generic type of syntax trees. 
 Syntax trees for specific languages are all subtypes of `Tree`. As a result, syntax trees can be addressed at two levels: 
 
-*  in a generic fashion as `Tree` and,
-*  in a specific fashion as a more precisely typed syntax tree. 
+*  In a generic fashion as `Tree` and,
+*  In a specific fashion as a more precisely typed syntax tree. 
 Finally, each `alias` is structurally equivalent to one or more specific other types.
 
 Rascal does not provide an explicit casting mechanism (as in Java), but pattern matching can play that role.

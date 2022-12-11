@@ -46,7 +46,7 @@ Exp simplify(Exp e){                               ❸
 }
 ```
 
-* ❶  Definitions of the function `simp` are given with different patterns as formal argument.
+* ❶  Definitions of the function `simp` are given with different patterns as formal arguments.
     Each definition is responsible for one particular simplification 
     (here is where the similarity with rewrite rules surfaces).
 

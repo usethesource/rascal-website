@@ -20,10 +20,11 @@ There are two main approaches to this:
    mappings from parse tree to abstract syntax tree.
 
 
-Using [Syntax Definitions](../../Rascal/Declarations/SyntaxDefinition/index.md) you can define the syntax of any (programming) language. Then Rascal:
+Using [Syntax Definitions](../../Rascal/Declarations/SyntaxDefinition/index.md) you can define the syntax of any (programming) language. 
+Then Rascal will:
 
-*  will generate the parser, and
-*  will provide pattern matching and pattern construction on parse trees and abstract syntax trees,
+*  Generate the parser, and
+*  Provide pattern matching and pattern construction on parse trees and abstract syntax trees,
    see [Abstract Patterns](../../Rascal/Patterns/Node/index.md) and    
   [Concrete Patterns](../../Rascal/Patterns/Concrete/index.md).
 
@@ -80,7 +81,7 @@ start[Exp]: (start[Exp]) `2+3*4`
 First we import the syntax definition and the link:/Libraries/Prelude-ParseTree[ParseTree] module that provides the parsing functionality.
 Finally, we parse `2+3*4` using the start symbol `Exp`.
 
-Don't be worried, we are just showing the resulting parse tree here. It intended for programs and not for humans.
+Don't be worried, we are just showing the resulting parse tree here which is intended for programs and not for humans.
 The points we want to make are:
 
 *  Rascal grammars are relatively easy to read and write (unfortunately, writing grammars will never become simple).

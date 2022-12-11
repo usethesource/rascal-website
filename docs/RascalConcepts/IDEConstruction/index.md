@@ -11,7 +11,7 @@ Extend an IDE with interactive, language-specific, features (Eclipse or VSCode)
 
 Meta-programs become most useful, when they are integrated with an Interactive Development Environment (IDE). 
 
-A Rascal program running inside Eclipse can get access to many of the services provided by Eclipse such as syntax highlighting,
+A Rascal program running inside Eclipse can access many of the services provided by Eclipse such as syntax highlighting,
 outlining, documentation hovering and much more. Similarly Rascal programs running inside VScode have access to all features
 of the [language server protocol](https://microsoft.github.io/language-server-protocol/), and more.
 

@@ -10,7 +10,7 @@ A typical example of how to use M3 to analyze Java classes.
 
 
 First we import the basic data types for representing Java. The model is called _M3_, and its definition is split acros a generic
-language independent module called [Core](../../../../Library/analysis/m3/Core.md) and a Java specific part called [Core](../../../../Library/lang/java/m3/Core.md). Have a look at the documentation 
+language independent module called [Core](../../../../Library/analysis/m3/Core.md) and a Java specific part called [AST](../../../../Library/lang/java/m3/AST.md). Have a look at the documentation 
 of these modules later. For now we will go through using them in a few examples.
 
 
@@ -137,7 +137,7 @@ rel[loc from,loc to]: {
 
 You are looking at a binary relation of type `rel[loc from,loc to]`, where `from` is the container and `to` is the contained item. Each tuple, or row if you will, maps a container to a contained item.
 
-As you can read, classes contain methods, methods contain variables, etc. Classes could also contain other classes (nested classes), and methods can even contain classes (anonymous classes). Let's focus on a specific class, and project what it contains from the relation:
+As you can read, classes contain methods, methods contain variables, etc. Classes could also contain other classes (nested classes), and methods can even contain classes (anonymous classes). Let's focus on a specific class, and project and what it contains from the relation:
 
 ```rascal-shell ,continue
 rascal>import IO;
@@ -291,13 +291,13 @@ See [Core](../../../../Library/analysis/m3/Core.md) for the definition of the la
 * Using relational calculus operators like [Intersection](../../../../Rascal/Expressions/Values/Set/Intersection/index.md), [Union](../../../../Rascal/Expressions/Values/Set/Union/index.md), [Composition](../../../../Rascal/Expressions/Values/Relation/Composition/index.md), [Comprehension](../../../../Rascal/Expressions/Values/Set/Comprehension/index.md) you can query M3 models in many different ways.
 * M3 models encapsulate *everything* there is to know about the structure of a Java project. Using the knowledge of the Eclipse JDT compiler we derive types and names, semantic relations that can be queried at will.
 * M3 models are *composable*; you could extract them for different projects that depend on each-other and combine them before running an analysis on the whole
-* There are other M3 models for other languages, with similar ideas and design. You can transfer your analysis skills to those lanaguges, but also make analyses that cross the boundaries of programming languages (consider javascript and java, or java and C via JNI, etc.)
+* There are M3 models for other languages, with similar ideas and design. You can transfer your analysis skills to those lanaguges, but also make analyses that cross the boundaries of programming languages (consider javascript and java, or java and C via JNI, etc.)
 
 #### Pitfalls
 
 * Inaccurate query results are possible even though the M3 models are 100% accurate. 
    * M3 models are *initial* in the sense that they contain what can be statically derived from the source code in terms of declarations and relations. 
    * Analyses based directly on this information can still be *inaccurate*; because they represent harder questions.
-   * For example, a Java call graph produced by the relation composition `myModel.methodInvocation o myModel.methodOverrides` shows _all_ possible concrete methods that could be invoked via virtual method invocation (over-approximation), but it skips all the invokes constructed via reflection (under-aproximation). In that sense this query is both incomplete and unsound, however useful it may be.
+   * For example, a Java call graph produced by the relation composition `myModel.methodInvocation o myModel.methodOverrides` shows _all_ possible concrete methods that could be invoked via virtual method invocation (over-approximation), but it skips all the invocations constructed via reflection (under-aproximation). In that sense this query is both incomplete and unsound, however useful it may be.
 * Java still has the most complete M3 model in the Rascal ecosystem, so when you move to other languages prepare to extract more information from AST models instead.
 

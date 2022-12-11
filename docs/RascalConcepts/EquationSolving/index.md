@@ -10,7 +10,7 @@ Solving equations by fixed-point iteration.
 #### Description
 
 Many problems can be solved by forms of _constraint solving_. 
-This is a declarative way of programming: specify the constraints that a problem solution should 
+This is a declarative way of programming: Specify the constraints that a problem solution should 
 satisfy and how potential solutions can be generated. 
 The actual solution (if any) is found by enumerating solutions and testing their compliance with the constraints.
 
