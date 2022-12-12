@@ -20,7 +20,7 @@
 
     <properties>
         <rascal.version>0.28.0</rascal.version>
-        <rascal-maven-plugin.version>0.12.0</rascal-maven-plugin.version>
+        <rascal-maven-plugin.version>0.12.2-SNAPSHOT</rascal-maven-plugin.version>
     </properties>
 
     <build>
@@ -88,7 +88,18 @@
                             <bin>${project.basedir}</bin> <!-- because tutor appends /docs to this -->
                             <srcs>
                                 <src>${project.basedir}/courses/WhyRascal</src>
+                                <src>${project.basedir}/courses/Developers</src>
+                                <src>${project.basedir}/courses/Recipes</src>
+                                <src>${project.basedir}/courses/GettingHelp</src>
+                                <src>${project.basedir}/courses/GettingStarted</src>
+                                <src>${project.basedir}/courses/RascalConcepts</src>
+                                <src>${project.basedir}/courses/RascalShell</src>
+                                <src>${project.basedir}/courses/Rascalopedia</src>
+                                <src>${project.basedir}/courses/Tutor</src>
                             </srcs>
+                            <libs>
+                                <lib>|std:///|</lib>
+                            </libs>
                         </configuration>
                     </execution> 
                 </executions>
