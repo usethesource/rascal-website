@@ -59,7 +59,7 @@ demo::lang::Func::Eval2
 
 We apply `eval2` to example `F2`:
 ```rascal
-((|project://rascal/src/org/rascalmpl/library/demo/lang/Func/programs/F2.func|))
+((|project://rascal-website/courses/Recipes/demo/lang/Func/programs/F2.func|))
 ```
 
                 

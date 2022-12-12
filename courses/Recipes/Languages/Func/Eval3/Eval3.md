@@ -47,7 +47,7 @@ demo::lang::Func::Eval3
 
 We apply `eval3` to example `F3`:
 ```rascal
-((|project://rascal/src/org/rascalmpl/library/demo/lang/Func/programs/F3.func|))
+((|project://rascal-website/courses/Recipes/demo/lang/Func/programs/F3.func|))
 ```
 
                 
