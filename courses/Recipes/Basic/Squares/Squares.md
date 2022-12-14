@@ -17,8 +17,22 @@ Print a list of squares
 #### Examples
 
 How can we print a list of squares? Here is a solution:
-```rascal-include
-demo::basic::Squares
+
+```rascal-modules
+import IO; // <1>
+
+@synopsis{Print a table of squares using a for loop and single line string templates}
+void squares(int n) {
+  println("Table of squares from 1 to <n>\n"); // <2>
+  for (int I <- [1 .. n + 1])
+      println("<I> squared = <I * I>");        // <3>
+}
+
+@synopsis{a solution with one multi line string template}
+str squaresTemplate(int N) // <4>
+  = "Table of squares from 1 to <N>
+    '<for (int I <- [1 .. N + 1]) {>
+    '  <I> squared = <I * I><}>";
 ```
            
 <1> The [IO]((Library:module:IO)) module is imported since we want to print things using `println`.
@@ -32,8 +46,7 @@ demo::basic::Squares
     and returns a string value instead of printing the results itself.
 
 Here is how `square` can be used:
-```rascal-shell
-import demo::basic::Squares;
+```rascal-shell,continue
 squares(9);
 ```
 

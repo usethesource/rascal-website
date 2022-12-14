@@ -23,14 +23,29 @@ quines in many different programming languages.
 
 Learning about quines, is about learning how to quote and escape symbols in strings.
 
-
 #### Examples
 
-```rascal
-demo::basic::Quine
+```rascal-commands
+import IO;
+import String;
+
+void quine(){
+  println(program); // <3>
+  println("\"" + escape(program, ("\"" : "\\\"", "\\" : "\\\\")) + "\";"); // <4>
+}
+
+str program = // <1>
+"import IO;
+import String;
+
+void quine(){
+  println(program);
+  println(\"\\\"\" + escape(program, (\"\\\"\" : \"\\\\\\\"\", \"\\\\\" : \"\\\\\\\\\")) + \"\\\";\");
+}
+
+str program ="; // <2>
 ```
 
-                
 <1> A remarkable point in the code: the string variable `program` has as value
    the text of the module `Quine` upto here. 
 <2> The definition of `program` ends here.
@@ -43,7 +58,7 @@ demo::basic::Quine
 Now here is the catch: we have to be very carefull in handling special characters like quote (`"`) and backslash (`\`) in strings.
 
 Let's do a simple experiment:
-```rascal-shell
+```rascal-shell,continue
 import IO;
 str greeting = "\"Good Morning, Dr. Watson\", said Holmes";
 println("\"" + greeting + "\"");
@@ -68,18 +83,17 @@ We escape `program` and replace `"` by `\"`, and `\` by `\\`.
 The mesmerizing amount of `\` characters can be explained due to escaping `"` and `\`.
 
 Now let's put `quine` to the test.
-```rascal-shell
-import demo::basic::Quine;
+```rascal-shell,continue
 quine();
 ```
 If you follow this output line-by-line you will see that it
-is identical to the original source code of module `Quine`:
-
-```rascal-include
-demo::basic::Quine
-```
+is identical to the original source code of above.
 
 #### Benefits
 
+* Making a Quine is a fun coding puzzle 
+
 #### Pitfalls
+
+* Nothing useful comes from making a Quine, but some fun and relaxation.
 

@@ -27,12 +27,45 @@ Solutions to FizzBuzz in various languages are available [here](http://www.geeks
 #### Examples
 
 Here are a few possible Rascal solutions:
-```rascal-include
-demo::basic::FizzBuzz
+```rascal-commands
+import IO; 
+
+@synopsis{fizzbuzz1 revolves around ternary conditions}
+void fizzbuzz1() {
+   for (int n <- [1 .. 101]){
+      fb = ((n % 3 == 0) ? "Fizz" : "") + ((n % 5 == 0) ? "Buzz" : "");
+      println((fb == "") ?"<n>" : fb);
+   }
+}
+
+@synopsis{fizzbuzz2 embraces pattern matching and the switch statement}
+void fizzbuzz2() {
+  for (n <- [1..101]) 
+    switch(<n % 3 == 0, n % 5 == 0>) {
+      case <true,true>  : println("FizzBuzz");
+      case <true,false> : println("Fizz");
+      case <false,true> : println("Buzz");
+      default: println(n);
+    }
+}
+ 
+@synopsis{fizzbuzz3 uses classical structured if-then-else} 
+void fizzbuzz3() {
+  for (n <- [1..101]) {
+    if (n % 3 == 0) {
+      print("Fizz");
+    }
+    if (n % 5 == 0) {
+      print("Buzz");
+    } else if (n % 3 != 0) {
+      print(n);
+    }
+    println("");
+  }
+}
 ```
 
-```rascal-shell
-import demo::basic::FizzBuzz;
+```rascal-shell,continue
 fizzbuzz1();
 ```
 
