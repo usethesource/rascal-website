@@ -27,8 +27,64 @@ given a number of fields (with a name and a type)
 how can we generate a Java class with getters and setters for those fields?
 
 Here is a solution:
-```rascal-include
-demo::common::StringTemplate
+```rascal-commands
+import String;
+import List;
+
+str capitalize(str s) = "<toUpperCase(s[0])><s[1..]>";
+  
+private str genSetter(map[str,str] fields, str x) 
+    = "public void set<capitalize(x)>(<fields[x]> <x>) {
+      '  this.<x> = <x>;
+      '}";
+
+private str genGetter(map[str,str] fields, str x) 
+    = "public <fields[x]> get<capitalize(x)>() {
+      '  return <x>;
+      '}";
+
+str genClass(str name, map[str,str] fields) // <2>
+    = "public class <name> {
+      '  <for (x <- sort([f | f <- fields])) {>
+      '  private <fields[x]> <x>;
+      '  <genSetter(fields, x)>
+      '  <genGetter(fields, x)><}>
+      '}";
+
+map[str, str] fields = (
+     "name" : "String",
+     "age" : "Integer",
+     "address" : "String"
+  );
+  
+str cperson = 
+  // Do not change a single space in the string below! (for testing purposes)
+  "public class Person {
+  '  
+  '  private String address;
+  '  public void setAddress(String address) {
+  '    this.address = address;
+  '  }
+  '  public String getAddress() {
+  '    return address;
+  '  }
+  '  private Integer age;
+  '  public void setAge(Integer age) {
+  '    this.age = age;
+  '  }
+  '  public Integer getAge() {
+  '    return age;
+  '  }
+  '  private String name;
+  '  public void setName(String name) {
+  '    this.name = name;
+  '  }
+  '  public String getName() {
+  '    return name;
+  '  }
+  '}";
+
+test bool tstGenClass() = genClass("Person", fields) == cperson;
 ```
 
                 
@@ -52,8 +108,7 @@ Let's discuss some of them:
 *  `public void set<capitalize(x)>(<fields[x]> <x>)`: method header for the setter for field `x`.
 
 Let's see how this works out on actual data:
-```rascal-shell
-import demo::common::StringTemplate;
+```rascal-shell,continue
 import IO;
 fields = (
      "name" : "String",
