@@ -35,7 +35,7 @@ jobs:
 
       # Copy docs from dependent projects, run tutor on local courses folder and copy results into docs and static/assets
       - name: Run rascal-tutor and reuse libraries
-        run: mvn -B clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome`
+        run: MAVEN_OPTIONS="-Xss256m -Xmx3G" mvn -B clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome`
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile

@@ -18,11 +18,11 @@ The problem we will look at comes from mathematics, and has a precise analytical
 let's use Rascal to explore the state space, and see how it can help us to build intuition.
 
 As you know, Rascal supports arbitrarily large numbers internally (without additional libraries), unlike more traditional 
-languages like C or Java.  For example, if you want to compute 1000!, then it's a simple matter of
-calling `fact(1000)` at the command line.  Let's use this definition of factorial:
+languages like C or Java.  For example, if you want to compute 500!, then it's a simple matter of
+calling `fact(500)` at the command line.  Let's use this definition of factorial:
 
 ```rascal-commands
-public int fact (int n) {
+int fact (int n) {
     if (n <= 1) {
 	    return 1;
     } else {
@@ -31,10 +31,10 @@ public int fact (int n) {
 }
 ```
 
-If you compute `fact(1000)` at the Rascal command line, you get a large number, on the order of 4.02 x 10^2567^. This is much, much bigger than, say a google, which is a mere 10<^>100^.  (If Rascal runs out stack space, try computing 100!, then 200!, then ... then 1000!; the run-time will allocate more stack space incrementally and automatically if you sneak up to where you want to go).
+If you compute `fact(1000)` at the Rascal command line, you get a large number, on the order of 4.02 x 10^2567^. This is much, much bigger than, say a google, which is a mere 10<^>100^.  If Rascal runs out stack space, try computing 100! and 200! up to the limit, or you can fiddle with the JVM's stacksize parameter `-Xss1G`
 
 ```rascal-shell,continue
-fact(1000);
+fact(500);
 ```
 
 Now copy the numerical result above and paste it into an edit window to have a good look at it.  Notice anything interesting?  The last 249 digits are all zeros.  How did this happen and what does it mean?
@@ -50,7 +50,7 @@ Again, this can be solved analytically (and if you go looking on the web, you wi
 In this case, however, there is a precise analytical solution, a proof, a "ground truth".  But that doesn't mean that we can't use the empirical approach to help build our intuition about the problem space, and ultimately devise a theory about how to calculate the number of trailing zeros in N!.  Solving analytical problems is about having enough intuition to see possible solutions.  And using this empirical approach is one way to build intuition.
 
 So let's define a few helper functions and see where that leads us:
-```rascal-commands
+```rascal-commands,continue
 int countZeros (int n) {
     if (n < 10) {
 	    return 0;
@@ -62,17 +62,16 @@ int countZeros (int n) {
 }
 ```
 
-```rascal-shell
-i = fact(1000);
+```rascal-shell,continue
+i = fact(500);
 countZeros(i);
 ```
 
 This was my first try at the solution (really!), and there's a problem: 1000! has exactly 249 trailing zeros, not 472.  
-
 What did I do wrong?  Oh, right, _trailing_ zeros, and the above function counts _all_ of the zeros.  Let's try again:
 
 ```rascal-commands,continue
-public int countTrailingZeros (int n) {
+int countTrailingZeros (int n) {
     if (n < 10) {
 	    return 0;
     } else if (n % 10 == 0) {
@@ -89,8 +88,8 @@ countTrailingZeros(i);
 
 OK, so we're making progress.  Let's define another function to help us explore the data space:
 
-```rascal-commands
-public void printLastTwenty (int n){
+```rascal-commands,continue
+void printLastTwenty (int n){
     for(int i <- [n-19..n+1]) {
         println ("<i>! has <countTrailingZeros(fact(i))> trailing zeros.");
     }
@@ -98,10 +97,10 @@ public void printLastTwenty (int n){
 ```
 
 ```rascal-shell,continue
-rascal>printLastTwenty(1000);
+printLastTwenty(500);
 ```
 
-So the pattern I see arising (confirmed by more playing that I won't show you) is that you add a zero every time N is divisible by 5.  But sometimes you add more than one zero: 1000! adds three zeros.  
+So the pattern I see arising (confirmed by more playing that I won't show you) is that you add a zero every time N is divisible by 5.  But sometimes you add more than one zero: 500! adds three zeros.  
 
 We defined one function above to help us look at the data more compactly; now let's create another function to look for lumps in the data:
 
@@ -121,7 +120,7 @@ public void findLumps (int n) {
 ```
 
 ```rascal-shell,continue
-findLumps(1000);
+findLumps(500);
 ```
 
 So probably we're noticing some patterns here already, and maybe forming some intuition.  But let's first revise our lump-finding function to produce even more concise output:
@@ -141,10 +140,10 @@ public void findLumps2 (int n, int tao) {
 }
 ```
 
-```rascal-shell
-findLumps2(1000,2);
-findLumps2(1000,3);
-findLumps2(1000,4);
+```rascal-shell,continue
+findLumps2(500,2);
+findLumps2(500,3);
+findLumps2(500,4);
 ```
 
 Notice anything yet?  Here are some fun math facts to consider:
@@ -158,7 +157,7 @@ Notice anything yet?  Here are some fun math facts to consider:
 
 So here's the solution:
 
-Let N be a positive integer.  
+Let N be a positive integer.
 
 Let k = floor (log~5~ N)
 
@@ -173,8 +172,9 @@ We want to examine i <- [1..N+1]
 *  If  i is also divisible by 2k, add 1 more
 
 We can write this in Rascal as:
+
 ```rascal-commands,continue
-public int predictZeros (int N) {
+int predictZeros (int N) {
     int k = floorLogBase(N, 5);  // I wrote this
     int nz = 0;
     for (int i <- [1..N+1] ) {
@@ -195,7 +195,7 @@ public int predictZeros (int N) {
 Now a little hand validation might convince you that this should work, but let's write a little verifier function to be sure:
 
 ```rascal-commands,continue
-public void verifyTheory (int N) {
+void verifyTheory (int N) {
     int checkInterval = 100; // for printing
     bool failed = false;
     for (int i <- [1..N+1]) {
@@ -221,22 +221,22 @@ public void verifyTheory (int N) {
 ```rascal-shell,continue
 verifyTheory(10);
 verifyTheory(100);
-verifyTheory(1000);
+verifyTheory(500);
 ```
 
 Yikes, what do we do?  Well, first let's look under the hood at the engine.  The function `predictZeros` _is_ actually correct, assuming that the functions is calls are correct.  So let's look at the auxiliary functions I wrote (but haven't shown you yet):
 
 ```rascal-commands,continue
 // Log for an arbitrary base
-public real logB(real a, real base) {
+real logB(real a, real base) {
     return log(a) / log(base);
 }
 
-public real floor (real a) {
+real floor (real a) {
     return toReal(round (a - 0.5));
 }
 
-public int floorLogBase (int a, int b) {
+int floorLogBase (int a, int b) {
     return toInt(floor(logB(toReal(a), toReal(b))));
 }
 ```
@@ -262,7 +262,7 @@ Sometimes, the answer is to do a lot of homework.  Lucky for us, here there is a
 
 ```rascal-commands,continue
 // Also change predictZeros to call this version
-public int floorLogBase2 (int a, int b) {
+int floorLogBase2 (int a, int b) {
     int remaining = a;
     int ans = 0;
     while (remaining >= b) {
@@ -274,7 +274,7 @@ public int floorLogBase2 (int a, int b) {
 ```
 
 ```rascal-shell,continue
-verifyTheory(1000);
+verifyTheory(500);
 ```
 
 And we're done.  But what did we learn here?  Here's what I think:

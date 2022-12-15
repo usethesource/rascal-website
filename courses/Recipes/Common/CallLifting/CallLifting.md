@@ -40,18 +40,18 @@ Here is a solution:
 alias proc = loc;
 alias comp = loc;
 
-rel[comp,comp] lift(rel[proc,proc] aCalls, rel[proc,comp] aPartOf){
-	return { <C1, C2> | <proc P1, proc P2> <- aCalls, 
-	                    <comp C1, comp C2> <- aPartOf[P1] * aPartOf[P2] };
-}
+rel[comp,comp] lift(rel[proc,proc] aCalls, rel[proc,comp] aPartOf)
+    = { <C1, C2> | <proc P1, proc P2> <- aCalls, 
+	               <comp C1, comp C2> <- aPartOf[P1] * aPartOf[P2]};
 ```
 
 ```rascal-prepare,continue
-test bool tstLift() =
 calls = {<|proc:///main|, |proc:///a|>, <|proc:///main|, |proc:///b|>, <|proc:///a|, |proc:///b|>, <|proc:///a|, |proc:///c|>, <|proc:///a|, |proc:///d|>, <|proc:///b|, |proc:///d|>};        
 partOf = {<|proc:///main|, |proc:///Appl|>, <|proc:///a|, |proc:///Appl|>, <|proc:///b|, |proc:///DB|>, <|proc:///c|, |proc:///Lib|>, <|proc:///d|, |proc:///Lib|>};
-lift(calls, partOf) == { < |proc:///DB| , |proc:///Lib| > , < |proc:///Appl| , |proc:///Lib| > , 
-                      < |proc:///Appl| , |proc:///DB| > , < |proc:///Appl| , |proc:///Appl| > };
+
+test bool tstLift() = 
+    lift(calls, partOf) == { < |proc:///DB| , |proc:///Lib| > , < |proc:///Appl| , |proc:///Lib| > , 
+                             < |proc:///Appl| , |proc:///DB| > , < |proc:///Appl| , |proc:///Appl| > };
 // this is a hidden sanity check 
 assert tstLift();
 ``
