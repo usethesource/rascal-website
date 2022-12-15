@@ -1,6 +1,7 @@
-module demo::lang::Exp::Abstract::Test
-import demo::lang::Exp::Abstract::Syntax;
-import demo::lang::Exp::Abstract::Eval;
+module Languages::Exp::Abstract::Test
+
+import Languages::Exp::Abstract::Syntax;
+import Languages::Exp::Abstract::Eval;
 
 test bool t1() = eval(con(7)) == 7;
 test bool t2() = eval(mul(con(7), con(3))) == 21;

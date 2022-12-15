@@ -4,8 +4,9 @@ title: Exp
 
 #### Synopsis
 
-A demo of _hello world_ simplicity for syntax definition and language definition.
-It illustrates how to define concrete and abstract syntax and how to use concrete and abstract patterns to evaluate expressions.
+A demo, of _hello world_ simplicity, of syntax definition and language definition.
+It illustrates how to define concrete and abstract syntax and how to use concrete and 
+abstract pattern matching to evaluate expressions.
 
 #### Syntax
 
@@ -15,7 +16,7 @@ It illustrates how to define concrete and abstract syntax and how to use concret
 
 #### Description
 
-Our sample language Exp contains the following elements:
+The example language is called "Exp". It contains the following elements:
 
 *  Integer constants, e.g., `123`.
 *  A multiplication operator, e.g., `3*4`.

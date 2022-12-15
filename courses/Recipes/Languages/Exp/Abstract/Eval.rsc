@@ -1,5 +1,6 @@
-module demo::lang::Exp::Abstract::Eval
-import demo::lang::Exp::Abstract::Syntax;
+module Languages::Exp::Abstract::Eval
+
+import Languages::Exp::Abstract::Syntax;
 
 int eval(con(int n)) = n;                            // <1>
 int eval(mul(Exp e1, Exp e2)) = eval(e1) * eval(e2); // <2>

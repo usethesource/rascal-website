@@ -20,9 +20,7 @@ A frequently occurring problem is that we know the call relation of a system but
 
 Consider the following figure:
 
-
 ![]((parts.png))
-
 
 (a) Shows the calls between procedures;
 (b) shows how procedures are part of a system component.
@@ -30,35 +28,51 @@ Consider the following figure:
 
 The situation can be characterized by:
 
-*  A call relation between procedures
-*  A partOf relation between procedures and components
-
+*  A `call` relation between procedures
+*  A `partOf` relation between procedures and components
 
 The problem is now to lift the call relation using the information in the partOf relation.
 In other words: a call between two procedures will be lifted to
 a call between the components to which each procedure belongs.
 
 Here is a solution:
-```rascal-include
-demo::common::Lift
+```rascal-commands
+alias proc = loc;
+alias comp = loc;
+
+rel[comp,comp] lift(rel[proc,proc] aCalls, rel[proc,comp] aPartOf){
+	return { <C1, C2> | <proc P1, proc P2> <- aCalls, 
+	                    <comp C1, comp C2> <- aPartOf[P1] * aPartOf[P2] };
+}
 ```
 
-And we can use it as follows:
+```rascal-prepare,continue
+test bool tstLift() =
+calls = {<|proc:///main|, |proc:///a|>, <|proc:///main|, |proc:///b|>, <|proc:///a|, |proc:///b|>, <|proc:///a|, |proc:///c|>, <|proc:///a|, |proc:///d|>, <|proc:///b|, |proc:///d|>};        
+partOf = {<|proc:///main|, |proc:///Appl|>, <|proc:///a|, |proc:///Appl|>, <|proc:///b|, |proc:///DB|>, <|proc:///c|, |proc:///Lib|>, <|proc:///d|, |proc:///Lib|>};
+lift(calls, partOf) == { < |proc:///DB| , |proc:///Lib| > , < |proc:///Appl| , |proc:///Lib| > , 
+                      < |proc:///Appl| , |proc:///DB| > , < |proc:///Appl| , |proc:///Appl| > };
+// this is a hidden sanity check 
+assert tstLift();
+``
 
-```rascal-shell
-import demo::common::Lift;
-```
-Encode the call relation and partOf relation:
+And we can use it as follows. First we create some example data:
+
 ```rascal-shell,continue
-calls = {<"main", "a">, <"main", "b">, <"a", "b">, <"a", "c">, <"a", "d">, <"b", "d">};        
-partOf = {<"main", "Appl">, <"a", "Appl">, <"b", "DB">, <"c", "Lib">, <"d", "Lib">};
+calls = {<|proc:///main|, |proc:///a|>, <|proc:///main|, |proc:///b|>, <|proc:///a|, |proc:///b|>, <|proc:///a|, |proc:///c|>, <|proc:///a|, |proc:///d|>, <|proc:///b|, |proc:///d|>};        
+partOf = {<|proc:///main|, |proc:///Appl|>, <|proc:///a|, |proc:///Appl|>, <|proc:///b|, |proc:///DB|>, <|proc:///c|, |proc:///Lib|>, <|proc:///d|, |proc:///Lib|>};
 ```
-and do the lifting:
+
+and then we do the lifting:
 ```rascal-shell,continue
-lift(calls, partOf);
+lifted=lift(calls, partOf);
 ```
+
 Please verify that this corresponds exactly to (c) in the figure above.
 ```rascal-shell,continue
+import vis::Graphs;
+graph(calls);
+graph(lifted);
 ```
 
 #### Benefits

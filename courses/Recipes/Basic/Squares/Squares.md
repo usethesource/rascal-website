@@ -18,7 +18,7 @@ Print a list of squares
 
 How can we print a list of squares? Here is a solution:
 
-```rascal-modules
+```rascal-commands
 import IO; // <1>
 
 @synopsis{Print a table of squares using a for loop and single line string templates}

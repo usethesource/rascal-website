@@ -4,7 +4,7 @@ title: Abstract
 
 #### Synopsis
 
-A version of Exp based on abstract syntax.
+A version of the "Exp" language based on abstract syntax.
 
 #### Syntax
 
@@ -18,16 +18,17 @@ The [abstract syntax]((AbstractSyntaxTree)) for a language is a
 data type that is used to represent programs in the language in an _abstract_ form.
 Abstract syntax has the following properties:
 
-*  It is "abstract" in the sense that it does not contain textual details such as parentheses,
+* It is "abstract" in the sense that it does not literally contain textual details such as parentheses,
   layout, and the like.
-*  While a language has one grammar (also known as, _concrete syntax_) it may have several abstract syntaxes
-  for different purposes: type analysis, code generation, etc.
+* While a language typically has one grammar (also known as, _concrete syntax_) it may have several abstract syntaxes for different purposes: type analysis, code generation, etc.
+* Abstract syntax trees are sometimes also used as symbolic values for abstract computation and interpretation.
 
 #### Examples
 
 The abstract syntax for Exp looks like this:
+
 ```rascal-include
-demo::lang::Exp::Abstract::Syntax
+Languages::Exp::Abstract::Syntax
 ```
 
 * Line 4 defines integer constants, e.g., `con(123)`.
@@ -39,7 +40,7 @@ expressions. An interpreter, in this case, is a function that takes `Exp` as inp
 and produces `int` as output:
 
 ```rascal-include
-demo::lang::Exp::Abstract::Eval
+Languages::Exp::Abstract::Eval
 ```
 
            
@@ -67,8 +68,8 @@ In this example we use this mechanism to define separate functions for each case
 
 
 ```rascal-shell
-import demo::lang::Exp::Abstract::Syntax;
-import demo::lang::Exp::Abstract::Eval;
+import Languages::Exp::Abstract::Syntax;
+import Languages::Exp::Abstract::Eval;
 eval(mul(con(7), con(3)));
 eval(add(con(3), mul(con(4), con(5))));
 ```

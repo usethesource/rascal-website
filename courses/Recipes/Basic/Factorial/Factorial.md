@@ -60,4 +60,4 @@ fac2(47);
 
 #### Pitfalls
 
-* Typically writing recursive functions can be avoided using ((Statements-Visit)) and ((Patterns-Descandant)), so this example isn't very exemplary of typical Rascal code.
+* Typically writing recursive functions can be avoided using ((Statements-Visit)) and ((Patterns-Descendant)), so this example isn't very exemplary of typical Rascal code.

@@ -1,4 +1,4 @@
-module demo::lang::Exp::Abstract::Syntax
+module Languages::Exp::Abstract::Syntax
 
 data Exp 
     = con(int n)          // <1>
