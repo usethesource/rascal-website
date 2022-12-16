@@ -20,7 +20,7 @@
 
     <properties>
         <rascal.version>0.28.1</rascal.version>
-        <rascal-maven-plugin.version>0.13.2-SNAPSHOT</rascal-maven-plugin.version>
+        <rascal-maven-plugin.version>0.13.2</rascal-maven-plugin.version>
     </properties>
 
     <build>

@@ -27,8 +27,12 @@ Abstract syntax has the following properties:
 
 The abstract syntax for Exp looks like this:
 
-```rascal-include
-Languages::Exp::Abstract::Syntax
+```rascal-commands
+data Exp 
+    = con(int n)          // <1>
+    | mul(Exp e1, Exp e2) // <2>
+    | add(Exp e1, Exp e2) // <3>
+    ;
 ```
 
 * Line 4 defines integer constants, e.g., `con(123)`.
@@ -39,8 +43,17 @@ Given the abstract syntax for Exp, we can define an interpreter that evaluates
 expressions. An interpreter, in this case, is a function that takes `Exp` as input
 and produces `int` as output:
 
-```rascal-include
-Languages::Exp::Abstract::Eval
+```rascal-commands
+import Languages::Exp::Abstract::Syntax;
+
+int eval(con(int n)) = n;                            // <1>
+int eval(mul(Exp e1, Exp e2)) = eval(e1) * eval(e2); // <2>
+int eval(add(Exp e1, Exp e2)) = eval(e1) + eval(e2); // <3>
+
+test bool tstEval1() = eval(con(7)) == 7;
+test bool tstEval2() = eval(mul(con(7), con(3))) == 21;
+test bool tstEval3() = eval(add(con(7), con(3))) == 10;
+test bool tstEval4() = eval(add(con(3), mul(con(4), con(5)))) == 23;
 ```
 
            

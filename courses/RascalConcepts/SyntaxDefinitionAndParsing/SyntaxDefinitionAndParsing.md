@@ -47,24 +47,35 @@ Here are some examples:
 
 The EXP language can be defined as follows:
 
-```rascal-include
-demo::lang::Exp::Concrete::WithLayout::Syntax
+```rascal-commands
+lexical IntegerLiteral = [0-9]+; 
+
+start syntax Exp        
+  = IntegerLiteral      
+  | bracket "(" Exp ")" 
+  > left Exp "*" Exp    
+  > left Exp "+" Exp    
+  ;
+
+layout Whitespace
+    = [\ \t\n]*;
 ```
 
                 
 Now you may parse and manipulate programs in the EXP language. Let's demonstrate parsing an expression:
-```rascal-shell
-import demo::lang::Exp::Concrete::WithLayout::Syntax;
+```rascal-shell,continue
 import ParseTree;
 parse(#start[Exp], "2+3*4");
+t = [Exp] "1+2*3";
+import vis::Text;
+import IO;
+println(prettyTree(t))
 ```
 
 First we import the syntax definition and the link:/Libraries/Prelude-ParseTree[ParseTree] module that provides the parsing functionality.
 Finally, we parse `2+3*4` using the start symbol `Exp`.
 
-Don't be worried, we are just showing the resulting parse tree here. It intended for programs and not for humans.
 The points we want to make are:
-
 *  Rascal grammars are relatively easy to read and write (unfortunately, writing grammars will never become simple).
 *  Parser generation is completely implicit.
 *  Given a syntax definition, it can be used immediately for parsing.

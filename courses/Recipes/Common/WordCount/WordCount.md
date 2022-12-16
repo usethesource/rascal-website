@@ -21,8 +21,8 @@ A word is here defined as one or more letters (lowercase or uppercase), digits a
 
 We split the problem in two parts:
 
-*  Count the words in a single line. We explore three ways to do this in an imperative (((CountInLine1))], ((CountInLine2)))
-  and a functional style (((CountInLine3))).
+*  Count the words in a single line. We explore three ways to do this in both imperative 
+  and a functional styles.
 *  Next we apply the single line counter to all the lines.
 
 
@@ -160,7 +160,7 @@ test bool tstWordCount6(str txt) {
 <1> An [enumerator]((Rascal:Boolean-Enumerator)) is used to generated all the lines in the list of lines.
 <2> The argument function `countInLine` is applied to count the number of words in each line.
 
-Let's now do some experiments using the ((Jabberwocky)) poem by Lewis Carrol as input.
+Let's now do some experiments using the Jabberwocky poem by Lewis Carrol as input.
 
 ```rascal-shell,continue
 wordCount(Jabberwocky, countInLine1);
