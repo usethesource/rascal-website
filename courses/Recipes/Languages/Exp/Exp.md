@@ -34,7 +34,7 @@ has its benefits and pitfalls. You can compare them to learn about the trade-off
 
 #### Examples
 
-These are example sentences that are part of the ((Exp)) language:
+These are example sentences that are part of the ((Languages-Exp)) language:
 *  `123`
 *  `2+3+4`
 *  `2+3*4`
