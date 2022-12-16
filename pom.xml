@@ -19,7 +19,7 @@
     </pluginRepositories>
 
     <properties>
-        <rascal.version>0.28.1</rascal.version>
+        <rascal.version>0.28.2</rascal.version>
         <rascal-maven-plugin.version>0.13.2</rascal-maven-plugin.version>
     </properties>
 
