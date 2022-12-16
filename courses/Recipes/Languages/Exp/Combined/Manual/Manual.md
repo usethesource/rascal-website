@@ -44,7 +44,7 @@ example = parseExp("2+3");
 ```
 
 Now we need an abstract definition of the Exp language, where
-the non-terminals of the grammar lign up with the ((AlgebraicDataType)) names:
+the non-terminals of the grammar lign up with the ((Rascal:AlgebraicDataType)) names:
 ```rascal-commands,continue
 data Exp 
     = con(int n)               
