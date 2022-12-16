@@ -24,15 +24,41 @@ In Rascal, the major difference between lexical syntax and non-lexical syntax is
 
 
 The following example extends the grammar for `Exp` in ((No Layout)) with a layout definition:
-```rascal-include
-demo::lang::Exp::Concrete::WithLayout::Syntax
+```rascal-commands
+layout Whitespace = [\t-\n\r\ ]*; // <1>
+    
+lexical IntegerLiteral = [0-9]+;           
+
+start syntax Exp 
+  = IntegerLiteral          
+  | bracket "(" Exp ")"     
+  > left Exp "*" Exp        
+  > left Exp "+" Exp        
+  ;
 ```
 
 <1> Using the `layout` definition, we define that the `Whitespace` non-terminal is used _in between every symbol_ of the `syntax` productions in the current module.
 
 And now we can use spaces in our definition of the eval function as well:
-```rascal-include
-demo::lang::Exp::Concrete::WithLayout::Eval
+```rascal-commands,continue
+import String;
+import ParseTree;                                                   
+
+int eval(str txt) = eval(parse(#start[Exp], txt).top);              
+
+int eval((Exp)`<IntegerLiteral l>`) = toInt("<l>");       
+int eval((Exp)`<Exp e1> * <Exp e2>`) = eval(e1) * eval(e2);  
+int eval((Exp)`<Exp e1> + <Exp e2>`) = eval(e1) + eval(e2); 
+int eval((Exp)`( <Exp e> )`) = eval(e);                    
+
+value main() {
+  return eval(" 2+3");
+}
+
+test bool tstEval1() = eval(" 7") == 7;
+test bool tstEval2() = eval("7 * 3") == 21;
+test bool tstEval3() = eval("7 + 3") == 10;
+test bool tstEval4() = eval(" 3 + 4*5 ") == 23;
 ```
 
 Note that [Pattern Matching]((RascalConcepts:PatternMatching)) will _ignore_ all trees in layout positions, such that the parse tree of "1 + \\n1" will match against `<Exp e1> + <Exp e2>`. The same goes for equality on parse trees.
@@ -55,9 +81,7 @@ syntax start[Exp] = Whitespace Exp top Whitespace;
 ```
 
 To put this all to the test:
-```rascal-shell
-import demo::lang::Exp::Concrete::WithLayout::Syntax;
-import demo::lang::Exp::Concrete::WithLayout::Eval;
+```rascal-shell,continue
 eval("2 +  3");
 eval("2   +  3*4");
 eval("( 2+3 )* 4");

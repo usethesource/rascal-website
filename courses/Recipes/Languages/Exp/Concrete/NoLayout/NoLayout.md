@@ -20,8 +20,16 @@ We describe howto write a grammar for Exp and how to use it to implement an eval
 #### Examples
 
 Here is the grammar for Exp:
-```rascal-include
-demo::lang::Exp::Concrete::NoLayout::Syntax
+
+```rascal-commands
+lexical IntegerLiteral = [0-9]+; // <1>
+
+start syntax Exp        // <2>
+  = IntegerLiteral      // <3>
+  | bracket "(" Exp ")" // <4>
+  > left Exp "*" Exp    // <5>
+  > left Exp "+" Exp    // <6>
+  ;
 ```
 
 Notes:
@@ -38,8 +46,21 @@ Notes:
 
 
 Now that the grammar is in place we want to use it to build an evaluator. Here is how:
-```rascal-include
-demo::lang::Exp::Concrete::NoLayout::Eval
+```rascal-commands,continue
+import String;
+import ParseTree; // <1>
+
+int eval(str txt) = eval(parse(#Exp, txt)); // <2>
+
+int eval((Exp)`<IntegerLiteral l>`) = toInt("<l>");       // <3>
+int eval((Exp)`<Exp e1>*<Exp e2>`) = eval(e1) * eval(e2); // <4>
+int eval((Exp)`<Exp e1>+<Exp e2>`) = eval(e1) + eval(e2); // <5>
+int eval((Exp)`(<Exp e>)`) = eval(e);                     // <6>
+
+test bool tstEval1() = eval("7") == 7;
+test bool tstEval2() = eval("7*3") == 21;
+test bool tstEval3() = eval("7+3") == 10;
+test bool tstEval4() = eval("3+4*5") == 23;
 ```
 
 Notes:
@@ -61,18 +82,14 @@ Notes:
 
 
 What remains, is to check that `eval` works as expected.
-```rascal-shell
-import demo::lang::Exp::Concrete::NoLayout::Syntax;
-import ParseTree;
-```
 Just checking that `parse` returns a sort of parse tree:
+
 ```rascal-shell,continue
 parse(#Exp, "2+3");
 ```
 You will see such parse trees only once, unless you are a researcher in parsing ;-)
 Here is a demonstration of `eval`:
 ```rascal-shell,continue
-import demo::lang::Exp::Concrete::NoLayout::Eval;
 eval("2+3");
 eval("2+3*4");
 eval("(2+3)*4");
