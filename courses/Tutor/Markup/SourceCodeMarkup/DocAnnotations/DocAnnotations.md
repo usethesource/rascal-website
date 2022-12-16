@@ -132,18 +132,10 @@ This will be expanded to
   Get the current datetime.
 
   #### Examples
-<<<<<<< HEAD:courses/Tutor/Markup/SourceCodeMarkup/DocAnnotations/DocAnnotations.md
+
 ```rascal-shell
   import DateTime;
   now();
-=======
-
-```rascal-shell 
-rascal>  import DateTime;
-ok
-rascal>  now();
-datetime: $2022-12-09T14:27:45.221+00:00$
->>>>>>> 72c5fa3d7cf01c465eac5d58d5aeb2054a59b49c:docs/Tutor/Markup/SourceCodeMarkup/DocAnnotations/index.md
 ```
 ``````
 

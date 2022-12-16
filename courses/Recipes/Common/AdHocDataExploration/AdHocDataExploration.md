@@ -89,6 +89,7 @@ countTrailingZeros(i);
 OK, so we're making progress.  Let's define another function to help us explore the data space:
 
 ```rascal-commands,continue
+import IO;
 void printLastTwenty (int n){
     for(int i <- [n-19..n+1]) {
         println ("<i>! has <countTrailingZeros(fact(i))> trailing zeros.");
@@ -173,6 +174,21 @@ We want to examine i <- [1..N+1]
 
 We can write this in Rascal as:
 
+```rascal-prepare,continue
+// Some helper functions which will be explained later
+// Log for an arbitrary base
+import util::Math;
+
+real floor (real a) {
+    return toReal(round (a - 0.5));
+}
+
+int floorLogBase (int a, int b) {
+    return toInt(floor(log(toReal(a), toReal(b))));
+}
+```
+
+
 ```rascal-commands,continue
 int predictZeros (int N) {
     int k = floorLogBase(N, 5);  // I wrote this
@@ -227,30 +243,25 @@ verifyTheory(500);
 Yikes, what do we do?  Well, first let's look under the hood at the engine.  The function `predictZeros` _is_ actually correct, assuming that the functions is calls are correct.  So let's look at the auxiliary functions I wrote (but haven't shown you yet):
 
 ```rascal-commands,continue
-// Log for an arbitrary base
-real logB(real a, real base) {
-    return log(a) / log(base);
-}
-
 real floor (real a) {
     return toReal(round (a - 0.5));
 }
 
 int floorLogBase (int a, int b) {
-    return toInt(floor(logB(toReal(a), toReal(b))));
+    return toInt(floor(log(toReal(a), toReal(b))));
 }
 ```
 
 ```rascal-shell,continue
 floorLogBase(625,5);
-logB(625.0,5.0);
+log(625.0,5.0);
 ```
 
 Oh right, real numbers are prone to round off error.  What should we do?
 
 Well, here's a bad solution (that "works"):
 
-```rascal-commands
+```rascal-commands,continue
 public real floor (real a) {
     return toReal(round (a - 0.5 + 0.00001));
 }
