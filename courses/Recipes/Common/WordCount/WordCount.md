@@ -181,7 +181,7 @@ The inner reducer counts the number of words in a line, the outer reducer accumu
 And this is the simplest solution in Rascal, where the nesting of reducers is flattened to
 the combination of two generators, the first iterates over the lines and the second over the words in each line:
 ```rascal-shell-continue
-int wordCount3(list[str] lines = (0 | it + 1 | line <- lines, /\w+/ := line);
+int wordCount3(list[str] lines) = (0 | it + 1 | line <- lines, /\w+/ := line);
 wordCount3(Jabberwocky);
 ```
 

@@ -52,9 +52,7 @@ partOf = {<|proc:///main|, |proc:///Appl|>, <|proc:///a|, |proc:///Appl|>, <|pro
 test bool tstLift() = 
     lift(calls, partOf) == { < |proc:///DB| , |proc:///Lib| > , < |proc:///Appl| , |proc:///Lib| > , 
                              < |proc:///Appl| , |proc:///DB| > , < |proc:///Appl| , |proc:///Appl| > };
-// this is a hidden sanity check 
-assert tstLift();
-``
+```
 
 And we can use it as follows. First we create some example data:
 

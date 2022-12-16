@@ -29,9 +29,7 @@ We present here rules for determining the derivative `dE/dX` of simple expressio
 
 Here is our solution followed by a list of explanations:
 
-```rascal-include
-module demo::common::Derivative
-
+```rascal-commands
 data Exp = con(int n) // <1>
          | var(str name)
          | mul(Exp e1, Exp e2)
