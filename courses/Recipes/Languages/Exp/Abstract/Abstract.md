@@ -43,9 +43,7 @@ Given the abstract syntax for Exp, we can define an interpreter that evaluates
 expressions. An interpreter, in this case, is a function that takes `Exp` as input
 and produces `int` as output:
 
-```rascal-commands
-import Languages::Exp::Abstract::Syntax;
-
+```rascal-commands,continue
 int eval(con(int n)) = n;                            // <1>
 int eval(mul(Exp e1, Exp e2)) = eval(e1) * eval(e2); // <2>
 int eval(add(Exp e1, Exp e2)) = eval(e1) + eval(e2); // <3>
@@ -56,14 +54,13 @@ test bool tstEval3() = eval(add(con(7), con(3))) == 10;
 test bool tstEval4() = eval(add(con(3), mul(con(4), con(5)))) == 23;
 ```
 
-           
 Here we see Rascal's _pattern-directed invocation_ in action (see [Function Declaration]((Rascal:Declarations-Function))).
 The essence is this: in other languages the formal parameters in a function declaration
 are just that: formal parameters, i.e., single names that can be used inside the function and
 that are bound when the function is called.
 In Rascal, however, the formal parameters are actually a _pattern_ and functions
 can have arbitrarily complex patterns as (single) formal parameter.
-These patterns may bind variables and thus introduce variables that can be used in tthe function body.
+These patterns may bind variables and thus introduce variables that can be used in the function body.
 
 The big advantage of pattern-directed invocation is modularity and extensibility:
 
@@ -80,9 +77,7 @@ In this example we use this mechanism to define separate functions for each case
     and return the addition of their values.
 
 
-```rascal-shell
-import Languages::Exp::Abstract::Syntax;
-import Languages::Exp::Abstract::Eval;
+```rascal-shell,continue
 eval(mul(con(7), con(3)));
 eval(add(con(3), mul(con(4), con(5))));
 ```
