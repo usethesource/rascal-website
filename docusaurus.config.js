@@ -86,6 +86,13 @@ const config = {
         // ... other options
       },
     ],
+    [
+      '@docusaurus/plugin-google-analytics',
+      {
+        trackingID: 'UA-560596-6',
+        anonymizeIP: true,
+      },
+    ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
