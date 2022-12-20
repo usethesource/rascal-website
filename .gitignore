@@ -11,6 +11,13 @@
 _site/
 target/
 
+# Generated courses
+docs/index.value
+docs/[A-Z]*
+
+# Generated assets
+static/assets/[A-Z]*
+
 # Misc
 .DS_Store
 .env.local

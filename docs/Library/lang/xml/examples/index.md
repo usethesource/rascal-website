@@ -1,4 +1,0 @@
----
-title: lang::xml::examples
----
-

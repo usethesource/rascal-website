@@ -5,6 +5,14 @@
 const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
 const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 
+function isRascalCategoryIndex({ fileName, directories }) {
+  const eligibleDocIndexNames = [
+    'index',
+    'readme',
+  ];
+  return eligibleDocIndexNames.includes(fileName.toLowerCase());
+}
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'The Rascal Meta Programming Language',
@@ -25,6 +33,28 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          async sidebarItemsGenerator({
+            defaultSidebarItemsGenerator,
+            numberPrefixParser,
+            item,
+            version,
+            docs,
+            categoriesMetadata,
+            isCategoryIndex: isRascalCategoryIndex,
+          }) {
+            return defaultSidebarItemsGenerator({
+              numberPrefixParser,
+              item,
+              version,
+              docs,
+              categoriesMetadata,
+              isCategoryIndex(doc) {
+                return (
+                  isRascalCategoryIndex(doc)
+                );
+              },
+            });
+          },
           // Please change this to your repo.
           // editUrl: ({docPath}) =>
           // `https://github.com/usethesource/rascal/tree/main/src/org/rascalmpl/courses/${docPath.substring(4)}`,
@@ -38,6 +68,9 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        sitemap: {
+          priority: 0.6,
         },
       }),
     ],
@@ -58,8 +91,8 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
-        {name: 'description', content: 'The Rascal Meta Programming Language - The one-stop shop for metaprogramming'},
-        {name: 'keywords', content: 'rascal, metaprogramming, programming, dsl, compiler, code analysis'}
+        { name: 'description', content: 'The Rascal Meta Programming Language - The one-stop shop for metaprogramming' },
+        { name: 'keywords', content: 'rascal, metaprogramming, programming, dsl, compiler, code analysis' }
       ],
       navbar: {
         title: 'The Rascal Meta Programming Language',
@@ -76,11 +109,11 @@ const config = {
           },
           // {href: 'https://tutor.rascal-mpl.org/Rascal/Rascal.html', label: 'Reference docs', position: 'left'},
           // {to: '/stories', label: 'Stories', position: 'left'},
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {to: '/release-notes', label: 'Release notes', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/release-notes', label: 'Release notes', position: 'left' },
 
-          {to: '/projects', label: 'Projects', position: 'right'},
-          {to: '/team', label: 'Team', position: 'right'},
+          { to: '/projects', label: 'Projects', position: 'right' },
+          { to: '/team', label: 'Team', position: 'right' },
           {
             href: 'https://github.com/usethesource',
             label: 'GitHub',
@@ -134,7 +167,7 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} UseTheSource. Built with Docusaurus.`,
       },
-      
+
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 3,
@@ -148,26 +181,27 @@ const config = {
       algolia: {
         // The application ID provided by Algolia
         appId: '7K16S5598L',
-  
+
         // Public API key: it is safe to commit it
         apiKey: '01ef0adfc1b9c3598a0c9153042d63e5',
-  
+
         indexName: 'rascal',
-  
+
         // Optional: see doc section below
         contextualSearch: true,
-  
+
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
         // externalUrlRegex: 'external\\.com|domain\\.com',
-  
+
         // Optional: Algolia search parameters
         // searchParameters: {},
-  
+
         // Optional: path for search page that enabled by default (`false` to disable it)
         searchPagePath: 'search',
-  
+
         //... other Algolia params
-      },}),
+      },
+    }),
 };
 
 module.exports = config;

@@ -18,21 +18,24 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
           cache: 'maven'
+
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: yarn
-      - uses: browser-actions/setup-geckodriver@latest
-      - run: geckodriver --version
-      - run: which geckodriver
 
-      - name: Copy from Maven dependencies
-        run: echo mvn dependency:unpack
+      - uses: browser-actions/setup-chrome@latest
+        with:
+          chrome-version: 1047731 # v107
+      - run: which chrome
+      - uses: nanasess/setup-chromedriver@v1
+        with:
+          chromedriver-version: '107.0.5304.62'
+      - run: which chromedriver
 
-      - name: Run docs through shell
-        run: echo mvn rascal:tutor -Dwebdriver.gecko.driver=geckodriver
-      - name: Copy assets
-        run: echo mvn rascal:tutor-assets
+      # Copy docs from dependent projects, run tutor on local courses folder and copy results into docs and static/assets
+      - name: Run rascal-tutor and reuse libraries
+        run: MAVEN_OPTS="-Xss256m -Xmx3G" mvn -B clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome`
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
