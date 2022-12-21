@@ -204,7 +204,7 @@ const config = {
     }),
     scripts: [
       {
-        src: '/js/p.js', 
+        src: 'https://www.rascal-mpl.org/js/p.js', 
         'data-api': '/p/event',
         defer: true, 
         'data-domain': 'rascal-mpl.org'
