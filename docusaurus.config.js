@@ -85,14 +85,7 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
         // ... other options
       },
-    ],
-    [
-      '@docusaurus/plugin-google-analytics',
-      {
-        trackingID: 'UA-560596-6',
-        anonymizeIP: true,
-      },
-    ],
+    ]
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -209,6 +202,14 @@ const config = {
         //... other Algolia params
       },
     }),
+    scripts: [
+      {
+        src: '/js/p.js', 
+        'data-api': '/p/event',
+        defer: true, 
+        'data-domain': 'rascal-mpl.org'
+      }
+    ],
 };
 
 module.exports = config;

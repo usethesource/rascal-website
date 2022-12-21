@@ -16,3 +16,6 @@ https://new.rascal-mpl.org/* https://www.rascal-mpl.org/:splat 301!
 #moved the errors
 https://www.rascal-mpl.org/docs/CompileTimeErrors/* https://www.rascalmpl.org/docs/Rascal/Errors/CompileTimeErrors/:splat 301!
 https://www.rascal-mpl.org/docs/RunTimeErrors/* https://www.rascalmpl.org/docs/Rascal/Errors/RunTimeErrors/:splat 301!
+
+/js/p.js https://plausible.usethesource.io/js/script.js 200
+/p/event https://plausible.usethesource.io/api/event 200
