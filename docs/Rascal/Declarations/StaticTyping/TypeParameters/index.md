@@ -35,7 +35,7 @@ All other occurrences of type parameters are _using occurrences_. The following 
 
 #### Examples
 
-Let\'s consider a small example of the use of function parameters in a function declaration, see [Function](../../../../Rascal/Declarations/Function/index.md)
+Let's consider a small example of the use of function parameters in a function declaration, see [Function](../../../../Rascal/Declarations/Function/index.md)
 for more details on function declarations.
 The following function `swap` returns a tuple in which its arguments are swapped and can be applied to arbitrary values 
 in a type safe manner:

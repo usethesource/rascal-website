@@ -8,7 +8,7 @@ Analysis or transformation of one program by another program.
 
 #### Description
 
-All programs have data as input and produce other data as output.
+All programs take data as input and produce other data as output.
 A typical example is a desktop calculator program:
 after entering some numbers and operators, the program displays an answer.
 For most programs the data are numeric (calculator, spreadsheet)

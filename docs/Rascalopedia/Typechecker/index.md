@@ -35,8 +35,8 @@ These different styles of type checking have different trade offs:
 
 #### Examples
 
-*  If in Java a variable has been declared as `bool` it cannot be added to an integer.
-*  If in Java a method has three formal parameters, it cannot be called with four actual parameters.
-*  In Python, a variable can first get a string value assigned and later on an integer value.
+*  In Java: If a variable has been declared as `bool` it cannot be added to an integer.
+*  In Java: If a method has three formal parameters, it cannot be called with four actual parameters.
+*  In Python: A variable can first get a string value assigned and later on an integer value.
 
 

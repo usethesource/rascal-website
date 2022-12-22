@@ -11,15 +11,15 @@ An unordered collection of values without duplicates.
 A set is a collection of values with the following properties:
 
 *  The set maybe empty.
-*  The values in the list are _unordered_.
+*  The values in the collection are _unordered_.
 *  A value can only occur once.
 *  The set has a size that is equal to the number of values in the set.
 
 
 In Rascal, sets are surrounded by braces `{` and `}` and the elements are separated by commas.
 Each set has a type of the form `set[T]`, where _T_ is the smallest common type of all set elements.
-Read the description of [sets and their operators](../../Rascal/Expressions/Values/Set/index.md)
-and of [library functions on sets](../../Library/Set.md).
+Read more about the description of [sets and their operators](../../Rascal/Expressions/Values/Set/index.md)
+and the [library functions on sets](../../Library/Set.md).
 
 ## Sets in Daily Life
 
