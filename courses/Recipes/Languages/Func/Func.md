@@ -29,7 +29,7 @@ Func is a functional language with the following features:
   * an assignment (`:=`).
   * a `let` expression to introduce new bindings for local variables.
   * an address of a variables (denoted by `&`).
-  * derefence of a variable (denoted by `*`).
+  * dereference of a variable (denoted by `*`).
 
 
 Some features add more complexity to an interpreter, therefore
