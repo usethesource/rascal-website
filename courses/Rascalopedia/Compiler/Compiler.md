@@ -4,7 +4,7 @@ title: Compiler
 
 #### Synopsis
 
-Tranform source code to an executable form.
+Transform source code to an executable form.
 
 #### Syntax
 
@@ -16,16 +16,14 @@ Tranform source code to an executable form.
 
 #### Description
 
-A [compiler](http://en.wikipedia.org/wiki/Compiler) transforms the source code of a program (in a source langue) to an executable form
-(in a target language)
-and consists of the following phases:
+A [compiler](http://en.wikipedia.org/wiki/Compiler) transforms the source code of a program (in a source language) to an executable form (in a target language) and consists of the following phases:
 
-*  ((Parser)): read the source code and build an ((Abstract Syntax Tree)).
-*  ((Typechecker)): perform a semantic analysis of the code, resolve all names
-  and verify that the program is type correct.
-*  Optimisation: perform optimisations (e.g., constant folding, dead code elimination, call unfolding).
+*  [Parsing]((Parser)): Read the source code and build an ((Abstract Syntax Tree)).
+*  [Typechecking]((Typechecker)): Perform a semantic analysis of the code, resolving all names
+  and verifying that the program is type correct.
+*  Optimising: Perform optimisations (e.g., constant folding, dead code elimination, call unfolding).
   This can be seen as a form of ((Refactoring)).
-*  Code generation: generate the final code, this can be asembly language or directly executable code.
+*  Code generation: Generate the final code, this can be assembly language or directly executable code.
 
 #### Examples
 

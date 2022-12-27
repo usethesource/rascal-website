@@ -47,8 +47,8 @@ extensions that are helpfull when generating values:
 
 *  `int`, `real` and `num` may specify a minimal and maximal value for the values to be generated.
 *  `arb` describes an arbitrary type. The choice can be restricted by:
-   **  given an integer that defines the maximal depth of the type.
-   **  given an explicit list of types to choose from.
+   * given an integer that defines the maximal depth of the type.
+   * given an explicit list of types to choose from.
 *  `same[Name]` refers back to a type that was used earlier on in the same question.
 
 #### Examples

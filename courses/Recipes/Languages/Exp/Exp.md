@@ -4,7 +4,7 @@ title: Exp
 
 #### Synopsis
 
-A demo, of _hello world_ simplicity, of syntax definition and language definition.
+A _hello world_ demo of syntax and language definition simplicity.
 It illustrates how to define concrete and abstract syntax and how to use concrete and 
 abstract pattern matching to evaluate expressions.
 
@@ -41,7 +41,7 @@ These are example sentences that are part of the ((Languages-Exp)) language:
 *  `(2+3)*4`
 
 Because you can guess what they should mean (their semantics), you should
-be able to follow the interpreter code that implements this semantics.
+be able to follow the interpreter code that implements the semantics.
 
 #### Benefits
 

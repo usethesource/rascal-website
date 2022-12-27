@@ -31,7 +31,7 @@ void hello() {
 }
 ```
 
-When you type in a command and continue it on a new line 
+When you type in a command and continue on a new line 
 the Rascal systems prompts you with `>>>>>>>` to 
 indicate that more input is needed. 
 
@@ -41,7 +41,7 @@ when typing in the hello function. The first
 `void ()` part says the result is a function that takes 
 no arguments and 
 returns nothing, and the second part 
-`function(...)` is simplified print-out of the function-as-a-value 
+`function(...)` is a simplified print-out of the function-as-a-value 
 that elides all of the details of how functions are represented in memory.
 
 Finally, we call the `hello` function and we do this
@@ -76,11 +76,11 @@ hello();
 ```
 
 The `hello` function is by default visible outside the `Hello` module.
-We could stress this by adding writing `public void hello() { ... }`.
+We could further specify this by writing `public void hello() { ... }`.
 
 Restricting visibility to the module itself can be achieved by adding the keyword `private`
-to the definition of `hello`. When other modules `import` this one, there you 
-will not be able to invoke `hello`. 
+to the definition of `hello`. When other modules `import Hello;`, they would not be able 
+to invoke this `private` `hello()` function. 
 
 #### Benefits
 

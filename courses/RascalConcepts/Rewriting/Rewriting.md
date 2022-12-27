@@ -51,7 +51,7 @@ Exp simplify(Exp e){                          // <3>
 }
 ```
 
-<1> Definitions of the function `simp` are given with different patterns as formal argument.
+<1> Definitions of the function `simp` are given with different patterns as formal arguments.
     Each definition is responsible for one particular simplification 
     (here is where the similarity with rewrite rules surfaces).
 

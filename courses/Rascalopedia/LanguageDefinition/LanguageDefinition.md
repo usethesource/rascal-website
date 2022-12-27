@@ -25,7 +25,7 @@ A language definition defines all relevant aspects of a programming language or 
   These rules are sufficient to generate a ((Typechecker)).
 *  Rules that describe the ((Dynamic Semantics)) of a language. 
   These rules are sufficient to generate an ((Interpreter)) for it.
-*  Rules how to generate code.
+*  Rules that describe how to generate code.
 
 
 Other aspects of a language definition may include editor behaviour, highlighting, debugging, outlining, auto-completion and more.

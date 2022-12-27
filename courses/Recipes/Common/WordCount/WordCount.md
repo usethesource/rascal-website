@@ -17,7 +17,7 @@ Counting words in strings.
 #### Examples
 
 The purpose of WordCount is to count the number of _words_ in a list of lines (strings).
-A word is here defined as one or more letters (lowercase or uppercase), digits and the underscore character (`_`).
+A word is defined here as one or more letters (lowercase or uppercase), digits and the underscore character (`_`).
 
 We split the problem in two parts:
 
@@ -157,7 +157,7 @@ test bool tstWordCount6(str txt) {
 }
 ```
 
-<1> An [enumerator]((Rascal:Boolean-Enumerator)) is used to generated all the lines in the list of lines.
+<1> An [enumerator]((Rascal:Boolean-Enumerator)) is used to generate all the lines in the list of lines.
 <2> The argument function `countInLine` is applied to count the number of words in each line.
 
 Let's now do some experiments using the Jabberwocky poem by Lewis Carrol as input.

@@ -26,9 +26,9 @@ The extraction workflow is shown in the figure above and consists of the followi
 
 *  Otherwise you need the source code of the SUI. This requires:
 
-   **  Checking that all sources are available (and can be compiled by the host system on which they are usually compiled and executed). Due to missing or unreliable configuration management on the original system this may be a labour-intensive step that requires many iterations.
+   * Checking that all sources are available (and can be compiled by the host system on which they are usually compiled and executed). Due to missing or unreliable configuration management on the original system this may be a labour-intensive step that requires many iterations.
 
-   **  Determining in which languages the sources are written. In larger systems it is common that three or more different languages are being used.
+   * Determining in which languages the sources are written. In larger systems it is common that three or more different languages are being used.
 
 *  If there are reliable third-party extraction tools available for this language mix, then we only have to apply them and we are done. Here again, validation is needed that the extracted facts are as expected.
 

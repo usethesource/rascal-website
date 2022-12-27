@@ -20,19 +20,19 @@ Results are synthesized as shown in the Figure above. This consists of the follo
 
 *  Determine the results of the synthesis phase. Wide range of results is possible including:
 
-  **  Generated source code.
+  * Generated source code.
 
-  **  Generated abstract representations, like finite automata or other formals models that capture properties of the SUI.
+  * Generated abstract representations, like finite automata or other formals models that capture properties of the SUI.
 
-  **  Generated data for visualizations that will be used by visualization tools. 
+  * Generated data for visualizations that will be used by visualization tools. 
 
 *  If source code is to be generated, there are various options.
 
-  **  Print strings with embedded variables.
+  * Print strings with embedded variables.
 
-  **  Convert abstract syntax trees to strings (perhaps using forms of pretty printing).
+  * Convert abstract syntax trees to strings (perhaps using forms of pretty printing).
 
-  **  Use a grammar of the target source language, also for code generation. 
+  * Use a grammar of the target source language, also for code generation. 
       Note that this approach guarantees the generation of syntactically correct source code as opposed to code 
       generation using print statements or string templates.
 

@@ -16,7 +16,7 @@ The textual syntax of Lisp.
 
 #### Description
 
-The first step in defining Lisp's textual format, we define a grammar for it:
+The first step in defining Lisp's textual format, is to define a grammar for it:
 
 ```rascal-include
 demo::lang::Lisra::Syntax

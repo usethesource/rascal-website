@@ -20,13 +20,13 @@ The analysis workflow is shown in the figure below and consists of two steps:
 
 *  Write the Rascal code to perform the analysis. This may amount to:
 
-  **  Reordering extracted facts to make them more suitable for the synthesis phase.
+  * Reordering extracted facts to make them more suitable for the synthesis phase.
 
-  **  Enriching extracted facts. Examples are computing transitive closures of extracted facts 
+  * Enriching extracted facts. Examples are computing transitive closures of extracted facts 
       (e.g., A may call B in one or more calls), or performing data reduction by abstracting aways details
       (i.e., reducing a program to a finite automaton).
 
-  **  Combining enriched, extracted, facts to create new facts.
+  * Combining enriched, extracted, facts to create new facts.
 
 ![Analysis,Workflow]((define-analysis.png))
 

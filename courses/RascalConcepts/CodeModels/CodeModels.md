@@ -25,8 +25,8 @@ either physically (`|file:///tmp/HelloWorld.java|`) or logically (`|java+class:/
 Specifically we have standardized a set of models to represent source code which are ready 
 for computing metrics: [M3]((Library:analysis::m3)). This M3 model consists of: 
 
-*  an open (extensible) set of [Relations]((Rascal:Values-Relation)) between source code artifacts.
-*  a number of extensible [Algebraic Data Types]((Rascal:Declarations-AlgebraicDataType))
+*  An open (extensible) set of [Relations]((Rascal:Values-Relation)) between source code artifacts.
+*  A number of extensible [Algebraic Data Types]((Rascal:Declarations-AlgebraicDataType))
   for representing abstract syntax trees. 
 
 

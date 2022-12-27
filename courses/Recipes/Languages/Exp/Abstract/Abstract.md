@@ -55,8 +55,8 @@ test bool tstEval4() = eval(add(con(3), mul(con(4), con(5)))) == 23;
 ```
 
 Here we see Rascal's _pattern-directed invocation_ in action (see [Function Declaration]((Rascal:Declarations-Function))).
-The essence is this: in other languages the formal parameters in a function declaration
-are just that: formal parameters, i.e., single names that can be used inside the function and
+The essence is this: In other languages the formal parameters in a function declaration
+are just that: Formal parameters, i.e., single names that can be used inside the function and
 that are bound when the function is called.
 In Rascal, however, the formal parameters are actually a _pattern_ and functions
 can have arbitrarily complex patterns as (single) formal parameter.
@@ -70,8 +70,8 @@ The big advantage of pattern-directed invocation is modularity and extensibility
 
 In this example we use this mechanism to define separate functions for each case in the abstract syntax.
 
-<1> Defines the case for evaluating integer constants: they evaluate to themselves.
-<2> Defines the case for evaluating multiplication: first evaluate the arguments `e1` and `e2`
+<1> Defines the case for evaluating integer constants: They evaluate to themselves.
+<2> Defines the case for evaluating multiplication: First evaluate the arguments `e1` and `e2`
     and return the multiplication of their values.
 <3> Defines the case for evaluating addition: first evaluate the arguments `e1` and `e2`
     and return the addition of their values.

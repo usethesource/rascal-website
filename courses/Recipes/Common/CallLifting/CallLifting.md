@@ -23,17 +23,15 @@ Consider the following figure:
 ![]((parts.png))
 
 (a) Shows the calls between procedures;
-(b) shows how procedures are part of a system component.
-(c) shows how the call relation given in (a) can be lifted to the component level.
+(b) Shows how procedures are part of a system component.
+(c) Shows how the call relation given in (a) can be lifted to the component level.
 
 The situation can be characterized by:
 
 *  A `call` relation between procedures
 *  A `partOf` relation between procedures and components
 
-The problem is now to lift the call relation using the information in the partOf relation.
-In other words: a call between two procedures will be lifted to
-a call between the components to which each procedure belongs.
+The problem is now to lift the call relation using the information in the partOf relation. In other words: A call between two procedures will be lifted to a call between the components to which each procedure belongs.
 
 Here is a solution:
 ```rascal-commands

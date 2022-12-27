@@ -47,15 +47,15 @@ str program ="; // <2>
 ```
 
 <1> A remarkable point in the code: the string variable `program` has as value
-   the text of the module `Quine` upto here. 
+   the text of the module `Quine` up to here. 
 <2> The definition of `program` ends here.
     This string has a mesmerizing amount of escapes to which we will come back in a moment.
 
-<3> The function `quine` prints the string `program` twice, here as is and this produces the program upto icon:callout[1] above.
+<3> The function `quine` prints the string `program` twice, here as is and this produces the program up to icon:callout[1] above.
 <4> Here the value of `program` is printed as a string (surrounded with string quotes) in order to reproduce the string value 
     of `program` followed by a semi-colon (`;`).
   
-Now here is the catch: we have to be very carefull in handling special characters like quote (`"`) and backslash (`\`) in strings.
+Now here is the catch: We have to be very carefull in handling special characters like quote (`"`) and backslash (`\`) in strings.
 
 Let's do a simple experiment:
 ```rascal-shell,continue
@@ -63,12 +63,12 @@ import IO;
 str greeting = "\"Good Morning, Dr. Watson\", said Holmes";
 println("\"" + greeting + "\"");
 ```
-As you see the quotes inside the string are not escaped and the result is not a legal string.
+As you see, the quotes inside the string are not escaped and the result is not a legal string.
 So what can we do? We escape all dangerous characters in the string before printing it using the [Rascal:escape] function.
 It takes a string and a map of characters to be escaped and returns a result in which all escaping has been carried out.
-Be aware that in the map, also escaping is needed!
-We want to say: escape `"` and replace it by `\"`, but since both `"` and `\` have to be escaped themselves
-we have to say: escape `"\""` and replace it by `"\\\""`. The effect is as follows:
+Be aware that in the map, escaping is also needed!
+We want to say: Escape `"` and replace it by `\"`, but since both `"` and `\` have to be escaped themselves
+we have to say: Escape `"\""` and replace it by `"\\\""`. The effect is as follows:
 ```rascal-shell,continue
 import String;
 println("\"" + escape(greeting, ("\"": "\\\"")) + "\"");

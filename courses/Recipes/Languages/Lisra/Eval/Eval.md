@@ -21,7 +21,7 @@ Here is the core of our Lisp interpreter. Its basic functionality is to take
 *  An `Lval` and an Environment (both defined in ((Lisra-Runtime))).
 *  Distinguish the various forms an `Lval` can have and compute the
   effect of evaluating it.
-*  Return a `Result` that captures the value just computed and possibleside-effects
+*  Return a `Result` that captures the value just computed and possible side-effects
 on the environment.
 
 

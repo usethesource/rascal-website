@@ -40,7 +40,7 @@ are parse tree formats (including the one used by Rascal) that preserve all text
 #### Benefits
 
 * parse trees are nice for grammar debugging, because they are an executing trace of the parsing algorithm.
-* parse trees are good for source-to-source transformation, because they do not a priori remove important details such as whitespace indentation and source code comments. A transformation based on parse trees is sometimes called "high fidelity" because of this.
+* parse trees are good for source-to-source transformation, because they do not a-priori remove important details such as whitespace indentation and source code comments. A transformation based on parse trees is sometimes called "high fidelity" because of this.
 
 #### Pitfalls
 

@@ -19,10 +19,10 @@ There are two main approaches to this:
    mappings from parse tree to abstract syntax tree.
 
 
-Using [Syntax Definitions]((Rascal:Declarations-SyntaxDefinition)) you can define the syntax of any (programming) language. Then Rascal:
+Using [Syntax Definitions]((Rascal:Declarations-SyntaxDefinition)) you can define the syntax of any (programming) language. Then Rascal will:
 
-*  will generate the parser, and
-*  will provide pattern matching and pattern construction on parse trees and abstract syntax trees,
+*  Generate the parser, and
+*  Provide pattern matching and pattern construction on parse trees and abstract syntax trees,
    see [Abstract Patterns]((Rascal:Patterns-Node)) and    
   [Concrete Patterns]((Rascal:Patterns-Concrete)).
 

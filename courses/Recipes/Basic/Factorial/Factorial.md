@@ -18,6 +18,7 @@ Compute the factorial function.
 
 The [factorial](http://en.wikipedia.org/wiki/Factorial)
 of a number `n` is defined as `n * (n-1) * (n-2) * ... * 1`.
+
 Here is the Rascal version:
 ```rascal-commands
 @synopsis{fac1 demonstrates the ternary conditional and recursion}

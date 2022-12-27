@@ -14,7 +14,7 @@ Symbolic differentiation.
 
 #### Description
 
-Computing the [derivativa](http://en.wikipedia.org/wiki/Differentiation_(mathematics)) of an expression with respect to some variable is a classical calculus problem. Loosely speaking, a derivative can be thought of as how much one quantity is changing in response to changes in some other quantity; for example, the derivative of the position of a moving object with respect to time is the object's instantaneous velocity.
+Computing the [derivative](http://en.wikipedia.org/wiki/Differentiation_(mathematics)) of an expression with respect to some variable is a classical calculus problem. Loosely speaking, a derivative can be thought of as how much one quantity is changing in response to changes in some other quantity; for example, the derivative of the position of a moving object with respect to time is the object's instantaneous velocity.
 
 We present here rules for determining the derivative `dE/dX` of simple expressions `E` for a given variable `X`. Recall that for number `N`, variables `X` and `Y`, and expressions `E1` and `E2` the following rules apply:
 
@@ -69,9 +69,8 @@ test bool tstSimplity2() = simplify(dd(E, var("x"))) == con(5);
 <2> Introduce an example expression `E` for later use.
 <3> Define the actual differentiation function `dd`. Observe that this definition depends on the use of patterns in function declarations, see [Rascal:Function].
 <4> Define simplification rules. 
-<5> A default rule is give for the case that no simplification applies.
-<6> Define the actual simplication function `simplify` that performs a bottom up traversal of the expression, application simplification
-rules on the up.
+<5> A default rule is given for the case that no simplification applies.
+<6> Define the actual simplication function `simplify` that performs a bottom up traversal of the expression, applying simplification rules on ascend.
 
                 
 Let's differentiate the example expression `E`:

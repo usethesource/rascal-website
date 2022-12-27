@@ -42,15 +42,15 @@ demo::lang::Pico::Typecheck
                 
 Notes:
 
-<1>  We will use `TENV` (short for type environment, as an alias for a tuple that contains all relevant type information:
+<1>  We will use `TENV` (short for type environment), as an alias for a tuple that contains all relevant type information:
      *  `symbols`: a map from Pico identifiers to their declared type.
      *  `errors`: a list of error messages. An error message is represented by its location (where the error occurred) and a textual message.
 <2>  `addError` is an auxiliary function to add in a given type environment an error message to the list of errors. It returns a new type environment.
 <3>  `required`is an auxiliarty function to produce readable messages, e.g., `"Required natural, got string"`.
 <4>  The actual type checking is done by the functions `checkExp`, `checkStat`, `checkStats`, `checkDecls` and `checkProgram`. They all have three arguments:
-     *  the program fragment (an abstract syntax tree) to be checked.
-     *  the required type of that fragment.
-     *  the type environment.
+     *  The program fragment (an abstract syntax tree) to be checked.
+     *  The required type of that fragment.
+     *  The type environment.
      
      
      `checkExp` checks expressions. For instance, checking a natural constant (`natCon`) is ok when type `natural` is expected but will give an error message when a `string` is expected. Observe how all the arguments of the check functions have a labeled pattern as first argument, here `exp:natCon(int N)`. The benefit is that the whole argument is available inside the function (as value of variable `exp`) and this can be used to retrieve the location information from it (`exp@location`) when an error has to be created.

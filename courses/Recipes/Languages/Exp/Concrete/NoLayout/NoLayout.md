@@ -14,7 +14,7 @@ A version of Exp based on concrete syntax.
 
 #### Description
 
-We describe howto write a grammar for Exp and how to use it to implement an evaluator.
+We describe how to write a grammar for Exp and how to use it to implement an evaluator.
 
 
 #### Examples
@@ -34,7 +34,7 @@ start syntax Exp        // <2>
 
 Notes:
 
-<1> Defines a lexical syntax rule for IntegerLiterals; they consist of one or more digits.
+<1> Defines a lexical syntax rule for IntegerLiterals; They consist of one or more digits.
 <2> Defines the alternatives for Exp. The keyword `start` means that this is a start symbol of the grammar.
 <3> Defines alternative #1: an `IntegerLiteral`.
 <4> Defines alternative #2: parentheses. The `|` says that this alternative has the same priority as the previous one.
@@ -69,15 +69,15 @@ Notes:
 <2> The main function `eval` that evaluates an expression as string to an integer. It proceeds in two steps:
     *  `parse(#Exp, txt)` parses the given `txt` according to non-terminal `Exp` as defined by the grammar.
         The result is a parse tree.
-    *  This parse tree is given to another eval function that will reduce the tree to an integer.
+    *  This parse tree is given to another `eval` function that will reduce the tree to an integer.
 <3> Converts an IntegerLiteral to an integer. Let's dissect this further:
     *  The `Exp` preceding the concrete pattern, unambiguously defines the type of the pattern.
         This is good practice to avoid ambiguities.
     *  `<IntegerLiteral l>` matches an IntegerLiteral and binds it (a parse tree fragment) to variable `l`.
     *  In the function body, `toInt("<l>")`, the parse tree fragment is inserted in a string -- effectively unparsing it --
         and that string is converted to an integer.
-<4> Handle the multiplication case.
-<5> Handle the addition case.
+<4> Handles the multiplication case.
+<5> Handles the addition case.
 <6> Handles the case of parentheses.
 
 

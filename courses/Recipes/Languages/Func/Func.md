@@ -4,7 +4,7 @@ title: Func
 
 #### Synopsis
 
-Func is a tiny functional language; we present several interpreters for it.
+Func is a tiny functional language; We present several interpreters for it.
 
 #### Syntax
 
@@ -19,17 +19,17 @@ Func is a functional language with the following features:
 * A program consists of a number of function declarations.
 * A function declaration consists of a name, zero or more formal parameter names and an expression.
 * An expression can be one of:
-  **  an integer constant.
-  **  a variable.
-  **  arithmetic operators `+`, `-`, `*` and `/`.
-  **  comparison operators `<`, `\<=`, `>` and `>=`.
-  **  a call of a function.
-  **  an `if` expression.
-  **  a sequence of expressions (`;`).
-  **  an assignment (`:=`).
-  **  a `let` expression to introduce new bindings for local variables.
-  **  an address of a variables (denoted by `&`).
-  **  derefence of a variable (denoted by `*`).
+  * an integer constant.
+  * a variable.
+  * arithmetic operators `+`, `-`, `*` and `/`.
+  * comparison operators `<`, `\<=`, `>` and `>=`.
+  * a call of a function.
+  * an `if` expression.
+  * a sequence of expressions (`;`).
+  * an assignment (`:=`).
+  * a `let` expression to introduce new bindings for local variables.
+  * an address of a variables (denoted by `&`).
+  * derefence of a variable (denoted by `*`).
 
 
 Some features add more complexity to an interpreter, therefore

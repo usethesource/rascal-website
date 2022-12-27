@@ -19,9 +19,7 @@ Description of the properties of a program that can be determined/checked before
 The static semantics of a program describe all properties that can be determined before the program is executed.
 A ((Typechecker)) is a tool that checks the properties of a program as described by its static semantics.
 
-Static semantics describes properties that are relevant before a program is executed and 
-differs from ((Dynamic Semantics)) that
-describes the execution behaviour itself.
+Static semantics describe properties that are relevant before a program is executed and differ from ((Dynamic Semantics)) that describe the execution behaviour itself.
 
 #### Examples
 

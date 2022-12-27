@@ -32,8 +32,8 @@ We also see that `rel` is a subtype of `set` and that each ADT is a subtype of `
 A special role is played by the datatype `Tree` that is the generic type of syntax trees. 
 Syntax trees for specific languages are all subtypes of `Tree`. As a result, syntax trees can be addressed at two levels: 
 
-*  in a generic fashion as `Tree` and,
-*  in a specific fashion as a more precisely typed syntax tree. 
+*  In a generic fashion as `Tree` and,
+*  In a specific fashion as a more precisely typed syntax tree. 
 Finally, each `alias` is structurally equivalent to one or more specific other types.
 
 Rascal does not provide an explicit casting mechanism (as in Java), but pattern matching can play that role.

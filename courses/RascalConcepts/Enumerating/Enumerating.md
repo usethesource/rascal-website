@@ -29,7 +29,7 @@ int x <- [ 1 .. 10 ]
 /asgStat(Id name, _) <- P
 ```
 
-The first two produce the integer elements of a set of integers, respectively, a range of integers. 
+The first two produce the integer elements of a set of integers and a range of integers. 
 Observe that the left-hand side of an enumerator is a pattern, of which `int x` is a specific instance. 
 The use of more general patterns is illustrated by the third enumerator that does a deep traversal 
 (as denoted by the descendant operator `/`) of the complete program `P` (that is assumed to have a 
@@ -64,7 +64,7 @@ A more satisfying use is as follows:
 When used inside [Comprehensions]((Rascal:Expressions-Comprehensions)), 
 or [For]((Rascal:Statements-For)), [Do]((Rascal:Statements-Do)), or [While]((Rascal:Statements-While)) 
 statement, all values of the generator will be produced and used.
-The variables that are introduced by a enumerator are local to the construct in which the enumerator is used.
+The variables that are introduced by an enumerator are local to the construct in which the enumerator is used.
 Here is a similar example:
 ```rascal-shell
 import IO;

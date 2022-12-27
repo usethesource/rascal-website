@@ -30,7 +30,7 @@ demo::lang::Lisra::Runtime
 
                 
 <1> The data type `Lval` takes care of the representation of Lisp values.
-    It covers integers, atoms, lists and closures (the representation of a functions and
+    It covers integers, atoms, lists and closures (the representation of a function and
     the context in which it will be executed).
 
 <2> A `Scope` describes the binding of several related variables to their value.

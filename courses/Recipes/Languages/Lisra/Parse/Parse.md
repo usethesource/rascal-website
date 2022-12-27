@@ -26,8 +26,8 @@ demo::lang::Lisra::Parse
                 
 <1> First we define the actual `parse` function: it takes a string as argument and returns an `Lval`.
    It proceeds in two steps:
-   **  First the text is parsed using `parse(#LispExp, txt)`. The result is parse tree.
-   **  Next, the auxiliary function `build` is used to transform the parse tree to an `Lval`.
+   * First the text is parsed using `parse(#LispExp, txt)`. The result is parse tree.
+   * Next, the auxiliary function `build` is used to transform the parse tree to an `Lval`.
 
 <2> Function `build` is defined in cases, to handle the various parse tree forms.
     Fortunately, we do not have to spell out the details of the parse tree, but we can use concrete
@@ -41,8 +41,8 @@ demo::lang::Lisra::Parse
 <4> The concrete list elements in `lst` are converted one-by-one using build and are then used to
     create a new `List` value.
 
-.Concrete Patterns
-****
+#### Concrete Patterns
+
 We use concrete patterns in these definitions. For instance, the argument pattern 
 ```rascal
 (LispExp)`<IntegerLiteral il>`

@@ -72,7 +72,7 @@ Some comments:
 <1> We reuse the previously defined concrete syntax with layout.
 <2> We also reuse the previously defined abstract syntax.
 <3> Import the `Parse` module defined above.
-<4> The conversion from parse tree to abstract syntax tree start here. 
+<4> The conversion from parse tree to abstract syntax tree starts here. 
 
 
 Let's try it:

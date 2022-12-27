@@ -37,7 +37,7 @@ The issue is that the names in the concrete and abstract syntax are (on purpose)
 A name like `Prog` can be the one from the concrete syntax(i.e., `demo::lang::Func::Func::Prog`)
 or the one from the abstract syntax (i.e., `demo::lang::Func::AST::Prog`).
 
-For instance, the local version of `implode` defined here get a concrete `Prog` as argument and returns an abstract one.
+For instance, the local version of `implode` defined here gets a concrete `Prog` as argument and returns an abstract one.
 Both `load` function return an abstract `Prog`.
 
 Let's try this on example `F0`:

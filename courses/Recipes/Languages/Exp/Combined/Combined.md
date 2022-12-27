@@ -22,8 +22,8 @@ the type checking, code generation, transformation, or optimization to be done o
 
 How can we bridge this gap? We discuss two approaches:
 
-*  ((Manual)): a transformation is written manually to convert parse trees to abstract syntax trees.
-*  ((Automatic)): the library function ((Library:ParseTree-implode)) is used to automate this transformation.
+*  ((Manual)): A transformation is written manually to convert parse trees to abstract syntax trees.
+*  ((Automatic)): The library function ((Library:ParseTree-implode)) is used to automate this transformation.
 
 
 #### Examples

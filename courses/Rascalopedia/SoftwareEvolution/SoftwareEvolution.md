@@ -25,7 +25,7 @@ about software evolution. Here are three examples of his laws (slightly paraphra
 *  _Continuing Growth_: The functional content of programs must be continually increased to maintain user satisfaction over their lifetime.
 
 
-_Software evolution_ is a specialisation in ((Software Engineering)) that address the following:
+_Software evolution_ is a specialisation in ((Software Engineering)) that addresses the following:
 
 *  Understanding the reasons for software evolution.
 *  Understanding the impact of software evolution on the structure and quality of source code.

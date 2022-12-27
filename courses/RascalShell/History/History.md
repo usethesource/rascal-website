@@ -14,7 +14,7 @@ RascalShell provides a history of previously entered commands. This can be acces
 | ---- | ---- |
 | `↑`| Show previous command in history; Type `Return` to execute it. |
 | `↓` | Next command in history; Type `Return` to execute it. |
-| `Ctrl+r`       |(After search text) Search backward in history. |
+| `Ctrl+r`       |(After search text) Search backwards in history. |
 | `Ctrl+s`       | (After search text) Forward search in history |
 
 #### Examples
