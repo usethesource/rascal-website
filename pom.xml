@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.rascalmpl</groupId>
-    <artifactId>website</artifactId>
+    <artifactId>rascal-website</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <repositories>
@@ -20,7 +20,8 @@
 
     <properties>
         <rascal.version>0.28.2</rascal.version>
-        <rascal-maven-plugin.version>0.13.2</rascal-maven-plugin.version>
+        <clair.version>0.6.3-SNAPSHOT</clair.version>
+        <rascal-maven-plugin.version>0.13.3-SNAPSHOT</rascal-maven-plugin.version>
     </properties>
 
     <build>
@@ -66,6 +67,13 @@
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                 </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>clair</artifactId>
+                                    <version>${clair.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
@@ -83,6 +91,7 @@
                             <goal>tutor</goal>
                         </goals>
                         <configuration>
+                            <isPackageCourse>false</isPackageCourse>
                             <enableStandardLibrary>true</enableStandardLibrary>
                             <errorsAsWarnings>false</errorsAsWarnings>
                             <bin>${project.basedir}</bin> <!-- because tutor appends /docs to this -->
@@ -133,6 +142,11 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>rascal</artifactId>
             <version>${rascal.version}</version>
+        </dependency>        
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>clair</artifactId>
+            <version>${clair.version}</version>
         </dependency>        
     </dependencies>
 
