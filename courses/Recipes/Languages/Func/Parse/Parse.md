@@ -41,7 +41,7 @@ This must be defined as success: we get the original program and its parse tree 
 Next, we try the same from a file. We use the scheme `std` that refers to files that reside in the Rascal library.
 See ((Rascal:Values-Location)) for further details on other schemes.
 ```rascal-shell,continue
-parse(|std:///demo/lang/Func/programs/F0.func|);
+parse(|project://rascal-website/courses/Recipes/demo/lang/Func/programs/F0.func|);
 ```
 
 #### Benefits

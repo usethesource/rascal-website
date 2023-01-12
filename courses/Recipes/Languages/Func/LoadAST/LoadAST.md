@@ -55,7 +55,7 @@ We get the original program and its __abstract syntax tree__ of type `Prog` back
 In case of doubt, compare this with the result in ((Func-Parse)) where we did obtain a parse tree.
 Next, we try the same from a file:
 ```rascal-shell,continue
-load(|std:///demo/lang/Func/programs/F0.func|);
+load(|project://rascal-website/courses/Recipes/demo/lang/Func/programs/F0.func|);
 ```
 
 #### Benefits
