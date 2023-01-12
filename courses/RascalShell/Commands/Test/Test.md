@@ -20,11 +20,7 @@ in the terminal.
 Execute the tests in an imported module:
 
 ```rascal-shell
-import demo::basic::Factorial;
-test
+import lang::rascal::tests::library::String;
+:test
 ```
 
-Execute the tests in the `Integers` module in the Rascal test suite:
-```rascal-shell
-test lang::rascal::tests::basic::Integers
-```

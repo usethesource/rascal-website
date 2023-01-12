@@ -20,7 +20,7 @@
 
     <properties>
         <rascal.version>0.28.2</rascal.version>
-        <clair.version>0.6.3-SNAPSHOT</clair.version>
+        <clair.version>0.6.2</clair.version>
         <flybytes.version>0.1.3</flybytes.version>
         <rascal-maven-plugin.version>0.14.4</rascal-maven-plugin.version>
     </properties>
@@ -68,13 +68,13 @@
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                 </artifactItem>
-                                <artifactItem>
+                                <!--                                <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>clair</artifactId>
                                     <version>${clair.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
-                                </artifactItem>
+                                </artifactItem> -->
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>flybytes</artifactId>

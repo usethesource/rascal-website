@@ -35,16 +35,16 @@ The options are:
 
 Turn `tracing` on and execute a function:
 ```rascal-shell
-import demo::basic::Factorial;
+import List;
 :set tracing true
-fac1(5)
+index(["a","b","c"])
 ```
 
 Turn trace off and execute the same function:
 
 ```rascal-shell,continue
 :set tracing false
-fac1(5)
+index(["a","b","c"])
 ```
 
 #### Benefits
