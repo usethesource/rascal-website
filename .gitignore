@@ -14,6 +14,7 @@ target/
 # Generated courses
 docs/index.value
 docs/[A-Z]*
+!docs/Packages/_category_.yml
 
 # Generated assets
 static/assets/[A-Z]*

@@ -32,3 +32,17 @@
 .prompt {
   font-weight: bold;
 }
+
+.api-doc-style:before {
+  content: "";
+  display: block;
+  background: url("/images/package.png");
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 7px;
+  left: 7px;
+  float: left;
+  filter: invert(56%) sepia(1%) saturate(0%) hue-rotate(269deg) brightness(89%) contrast(94%);
+}
