@@ -22,6 +22,7 @@
         <rascal.version>0.28.2</rascal.version>
         <clair.version>0.6.3</clair.version>
         <flybytes.version>0.1.5</flybytes.version>
+        <typepal.version>0.8.1</typepal.version>
         <rascal-maven-plugin.version>0.14.6</rascal-maven-plugin.version>
     </properties>
 
@@ -79,6 +80,13 @@
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>flybytes</artifactId>
                                     <version>${flybytes.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>typepal</artifactId>
+                                    <version>${typepal.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                 </artifactItem>
@@ -160,6 +168,11 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>flybytes</artifactId>
             <version>${flybytes.version}</version>
+        </dependency>        
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>typepal</artifactId>
+            <version>${typepal.version}</version>
         </dependency>        
     </dependencies>
 
