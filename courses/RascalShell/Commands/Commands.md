@@ -12,7 +12,7 @@ The RascalShell provides several built-in commands:
 
 (((TOC)))  
 
-Next to these commands, the shell accepts all toplevel module ((Declarations)), ((Statements)) and ((Expressions)).
+Next to these commands, the shell accepts all toplevel module ((Rascal:Declarations)), ((Statements)) and ((Rascal:Expressions)).
 
 #### Examples
 
