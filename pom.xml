@@ -19,7 +19,7 @@
     </pluginRepositories>
 
     <properties>
-        <rascal.version>0.28.2</rascal.version>
+        <rascal.version>0.28.4</rascal.version>
         <clair.version>0.6.4</clair.version>
         <flybytes.version>0.1.6</flybytes.version>
         <typepal.version>0.8.3</typepal.version>
