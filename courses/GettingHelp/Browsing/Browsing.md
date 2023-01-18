@@ -18,7 +18,7 @@ and can be accessed via a single browser interface.
 It is organized
 in _courses_, each course consist of
 a hierarchy of _concepts_. For example, the documentation for `while` is found in the
-course named [Rascal]((Rascal))
+course named [Rascal]((Rascal:Rascal))
 and the complete name is [Rascal/Statements/While]((Rascal:Statements-While)).
 
 ##### Links
