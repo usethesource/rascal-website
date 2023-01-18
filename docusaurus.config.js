@@ -5,14 +5,6 @@
 const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
 const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 
-function isRascalCategoryIndex({ fileName, directories }) {
-  const eligibleDocIndexNames = [
-    'index',
-    'readme',
-  ];
-  return eligibleDocIndexNames.includes(fileName.toLowerCase());
-}
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'The Rascal Meta Programming Language',
@@ -33,28 +25,6 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          async sidebarItemsGenerator({
-            defaultSidebarItemsGenerator,
-            numberPrefixParser,
-            item,
-            version,
-            docs,
-            categoriesMetadata,
-            isCategoryIndex: isRascalCategoryIndex,
-          }) {
-            return defaultSidebarItemsGenerator({
-              numberPrefixParser,
-              item,
-              version,
-              docs,
-              categoriesMetadata,
-              isCategoryIndex(doc) {
-                return (
-                  isRascalCategoryIndex(doc)
-                );
-              },
-            });
-          },
           // Please change this to your repo.
           // editUrl: ({docPath}) =>
           // `https://github.com/usethesource/rascal/tree/main/src/org/rascalmpl/courses/${docPath.substring(4)}`,
