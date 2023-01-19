@@ -46,3 +46,11 @@
   float: left;
   filter: invert(56%) sepia(1%) saturate(0%) hue-rotate(269deg) brightness(89%) contrast(94%);
 }
+
+.theme-code-block [data-theme='dark'] {
+    border: 1px solid white;
+}
+
+.theme-code-block {
+    border: 1px solid black;
+}
