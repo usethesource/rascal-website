@@ -118,7 +118,6 @@
                                 <src>${project.basedir}/courses/Recipes</src>
                                 <src>${project.basedir}/courses/GettingHelp</src>
                                 <src>${project.basedir}/courses/GettingStarted</src>
-                                <src>${project.basedir}/courses/RascalConcepts</src>
                                 <src>${project.basedir}/courses/RascalShell</src>
                                 <src>${project.basedir}/courses/Rascalopedia</src>
                                 <src>${project.basedir}/courses/Tutor</src>

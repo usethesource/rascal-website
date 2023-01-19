@@ -17,6 +17,7 @@ prompt with this `>>>>>>`:
 
 ```rascal-shell
 x = 1
+
 ```
 
 The reason is that it expects a `;` after every ((Statements-Assignment)).
@@ -48,14 +49,15 @@ As you can see the entire ((Statements-For)) loop only starts when the prompt re
 
 #### Pitfalls
 
-If you type an empty line in the middle of a complex command, it is cancelled:
-
+* If you type an empty line in the middle of a complex command, it is cancelled:
 ```rascal-shell
 import IO;
 for (int i <- [0..11]) {
 
 
 ```
+* When copy/pasting code from an editor into the shell, frequently empty lines occur that trigger the cancellation behavior.
+
 
 
 
