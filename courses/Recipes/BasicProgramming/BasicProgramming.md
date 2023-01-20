@@ -1,5 +1,5 @@
 ---
-title: Basic Programming Concepts
+title: Basic Programming
 details:
   - SourceComments
   - StaticTyping

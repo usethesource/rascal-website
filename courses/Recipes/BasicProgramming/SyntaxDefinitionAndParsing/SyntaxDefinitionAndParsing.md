@@ -1,5 +1,18 @@
 ---
 title: Syntax Definition and Parsing
+keywords:
+   - parsing
+   - syntax definition
+   - glr
+   - gll
+   - sglr
+   - sgll
+   - scannerless
+   - tokenization
+   - scanner
+   - scanning
+   - regular expressions
+   - regex
 ---
 
 #### Synopsis
@@ -17,7 +30,6 @@ There are two main approaches to this:
 *  _Structured information_: Use syntax analysis to extract the complete, nested, structure of the source code 
    in the form of a syntax tree. Rascal can directly manipulate the parse trees, but it also enables user-defined
    mappings from parse tree to abstract syntax tree.
-
 
 Using [Syntax Definitions]((Rascal:Declarations-SyntaxDefinition)) you can define the syntax of any (programming) language. Then Rascal will:
 
@@ -75,16 +87,14 @@ println(prettyTree(t))
 First we import the syntax definition and the link:/Libraries/Prelude-ParseTree[ParseTree] module that provides the parsing functionality.
 Finally, we parse `2+3*4` using the start symbol `Exp`.
 
-The points we want to make are:
+See the [EXP demo]((Recipes:Languages-Exp)) for a more extensive presentation of the EXP language and [Languages]((Recipes:Recipes-Languages)) for other language examples.
+
+#### Benefits
+
 *  Rascal grammars are relatively easy to read and write (unfortunately, writing grammars will never become simple).
 *  Parser generation is completely implicit.
 *  Given a syntax definition, it can be used immediately for parsing.
 
-
-See [Recipes]((Recipes)) for a more extensive presentation of the 
-[EXP]((Recipes:Languages-Exp))
-language and [Languages]((Recipes:Recipes-Languages)) for other language examples.
-
-#### Benefits
-
 #### Pitfalls
+
+* Grammars can be ambiguous and then Rascal produces multiple parse trees instead of one.

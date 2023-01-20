@@ -102,5 +102,10 @@ One example of the actual application of subtypes can be found in
 
 #### Benefits
 
+* static types and names help with refactoring code, when parts of it have to co-evolve the compiler will point out unresolved changes.
+* static types and names help with making the code more readable. Each name is a documentation opportunity.
+* generic types are good for reusing generic functions and generic data 
+* builtin relation types allow for hard optimizations under-the-hood which are not possible in a functional language
+* immutable data allows for co-variant generic collections (sets and lists)
 #### Pitfalls
 

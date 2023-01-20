@@ -1,11 +1,16 @@
 ---
 title: Visiting
+keywords:
+   - traversal
+   - visit
+   - recursion
+   - strategies
+   - rewriting
 ---
 
 #### Synopsis
 
-Visiting tree structures and arbitrary values.
-
+Visiting tree structures and other container values.
 #### Syntax
 
 #### Types
@@ -14,11 +19,13 @@ Visiting tree structures and arbitrary values.
 
 #### Description
 
-Visiting the elements of a data structure is one of the most common operations in our domain 
-and the visitor design pattern is a solution known to every software engineer. 
-Given a tree-like data structure we want to perform an operation on some (or all) nodes of the tree. The purpose of the visitor design pattern is to decouple the logistics of visiting each node from the actual operation on each node. In Rascal the logistics of visiting is completely automated.
+Traversing the elements of a data structure is one of the most common operations in our domain. Especially
+collecting information from abstract syntax trees and parse trees is common, but also other intermediate
+data types require traversal code. Given a tree-like data structure we want to perform an operation on some (or all) nodes of the tree. The purpose of the ((Expressions-Visit)) is to decouple the logistics of visiting each node from the actual operation on each node. 
 
-Visiting is achieved by way of visit expressions that resemble the switch statement. A visit expression traverses an arbitrarily complex subject value and applies a number of cases to all its subtrees. 
+The ((Expressions-Visit)) statement and expression helps to automate the traversal without having to write boilerplate
+recursion and case distinction. It resembles the ((Statements-Switch)) statement because it uses `case` clauses as well. 
+A ((Expressions-Visit)) traverses an arbitrarily complex _subject_ value and applies the ((Patterns)) of each case to all its subtrees. 
 All the elements of the subject are visited. When one of the cases matches the statements associated 
 with that case are executed. These cases may:
 
@@ -32,10 +39,15 @@ The traversal order in a visit expressions can be explicitly defined by the prog
 
 #### Examples
 
-Examples of visiting are given in the Recipes 
-[ColoredTrees]((Recipes:Common-ColoredTrees)) and [Derivative]((Recipes:Common-Derivative)).
+* [ColoredTrees]((Recipes:Common-ColoredTrees)) shows how to visit a simple tree structure and change it without recursive function definitions.
+* [Derivative]((Recipes:Common-Derivative)) is a more involved example where ((Expressions-Visit)) is used to decouple rewrite rules application from recursive traversal.
 
 #### Benefits
 
+* Avoid writing boilerplate recursion and case distinction with ((Expressions-Visit))
+* Familiar switch-like syntax and semantics
+* No case fall-through
 #### Pitfalls
+
+* Visit always visits all nodes, so watch out for nested scopes and declarations in syntax trees that you might want to skip (e.g. nested classes in a Java method)
 
