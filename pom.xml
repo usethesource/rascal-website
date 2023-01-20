@@ -114,11 +114,9 @@
                             <bin>${project.basedir}</bin> <!-- because tutor appends /docs to this -->
                             <srcs>
                                 <src>${project.basedir}/courses/WhyRascal</src>
-                                <src>${project.basedir}/courses/Developers</src>
                                 <src>${project.basedir}/courses/Recipes</src>
                                 <src>${project.basedir}/courses/GettingHelp</src>
                                 <src>${project.basedir}/courses/GettingStarted</src>
-                                <src>${project.basedir}/courses/RascalShell</src>
                                 <src>${project.basedir}/courses/Rascalopedia</src>
                                 <src>${project.basedir}/courses/Tutor</src>
                             </srcs>

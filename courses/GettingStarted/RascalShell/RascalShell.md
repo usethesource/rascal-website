@@ -2,8 +2,8 @@
 title: Rascal Shell
 sidebar_position: 3
 details:
-  - RascalShell:REPL
-  - RascalShell:Completion
+  - REPL
+  - Completion
   - History
   - Commands
   - Keyboard

@@ -54,3 +54,5 @@
 .theme-code-block {
     border: 1px solid black;
 }
+
+.theme-code-block div pre { background-color: #DDD6C1; }

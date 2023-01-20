@@ -12,7 +12,7 @@ What is the continuation prompt `>>>>>>`?
 
 #### Description
 
-When Rascal can not recognize a complete [command]((RascalShell:Commands)) yet, it will 
+When Rascal can not recognize a complete [command]((RascalShell-Commands)) yet, it will 
 prompt with this `>>>>>>`:
 
 ```rascal-shell

@@ -46,4 +46,3 @@ Nevertheless the search box on the website will produce
 results in all courses, like [Help]((GettingHelp)) (this course)
 and [Recipes]((Recipes)) or ((Library)). 
 
-The order of appearance of search results is based on several heuristics.
