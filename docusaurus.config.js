@@ -2,8 +2,10 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 // See https://github.com/FormidableLabs/prism-react-renderer/tree/master/src/themes for available themes
-const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
-const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
+// const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
+// const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
+const lightCodeTheme = require('./src/util/solarizedLight.js');
+const darkCodeTheme = require('./src/util/solarizedDark.js');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
