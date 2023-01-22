@@ -24,12 +24,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <rascal.version>0.28.9-SNAPSHOT</rascal.version>
+        <rascal.version>0.28.9</rascal.version>
         <rascal-tutor.version>0.7.5</rascal-tutor.version>
+        <rascal-maven-plugin.version>0.15.2</rascal-maven-plugin.version>
         <clair.version>0.6.4</clair.version>
         <flybytes.version>0.1.6</flybytes.version>
         <typepal.version>0.8.3</typepal.version>
-        <rascal-maven-plugin.version>0.15.2</rascal-maven-plugin.version>
     </properties>
 
     <build>
