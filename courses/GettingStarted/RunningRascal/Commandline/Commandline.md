@@ -2,7 +2,7 @@
 title: Running Rascal on the Commandline
 ---
 
-After [downloading]((DownloadAndInstallation)) the jar you can immediately run the ((RascalShell)) like so:
+After [downloading]((DownloadAndInstallation)) the jar you can immediately run the ((GettingStarted-RascalShell)) like so:
 
 ```bash
 test-project $ java -jar ~/Downloads/rascal-0.26.5.jar 

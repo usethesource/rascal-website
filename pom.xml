@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.rascalmpl</groupId>
@@ -19,7 +21,11 @@
     </pluginRepositories>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
         <rascal.version>0.28.8</rascal.version>
+        <rascal-tutor.version>0.7.4-SNAPSHOT</rascal-tutor.version>
         <clair.version>0.6.4</clair.version>
         <flybytes.version>0.1.6</flybytes.version>
         <typepal.version>0.8.3</typepal.version>
@@ -72,11 +78,18 @@
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
+                                    <artifactId>rascal-tutor</artifactId>
+                                    <version>${rascal-tutor.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
                                     <artifactId>clair</artifactId>
                                     <version>${clair.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
-                                </artifactItem> 
+                                </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>flybytes</artifactId>
@@ -101,8 +114,8 @@
                 <artifactId>rascal-maven-plugin</artifactId>
                 <version>${rascal-maven-plugin.version}</version>
                 <executions>
-                    <execution> 
-                        <id>default-cli</id> 
+                    <execution>
+                        <id>default-cli</id>
                         <phase>compile</phase>
                         <goals>
                             <goal>tutor</goal>
@@ -118,13 +131,12 @@
                                 <src>${project.basedir}/courses/GettingHelp</src>
                                 <src>${project.basedir}/courses/GettingStarted</src>
                                 <src>${project.basedir}/courses/Rascalopedia</src>
-                                <src>${project.basedir}/courses/Tutor</src>
                             </srcs>
                             <libs>
                                 <lib>|std:///|</lib>
                             </libs>
                         </configuration>
-                    </execution> 
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
@@ -156,22 +168,27 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>rascal</artifactId>
             <version>${rascal.version}</version>
-        </dependency>        
+        </dependency>
         <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>clair</artifactId>
             <version>${clair.version}</version>
-        </dependency>        
+        </dependency>
         <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>flybytes</artifactId>
             <version>${flybytes.version}</version>
-        </dependency>        
+        </dependency>
         <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>typepal</artifactId>
             <version>${typepal.version}</version>
-        </dependency>        
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>rascal-tutor</artifactId>
+            <version>${rascal-tutor.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

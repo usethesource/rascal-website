@@ -4,5 +4,5 @@ title: Grammar
 
 #### Synopsis
 
-A synonym for ((Concept-Syntax)).
+A synonym for ((Rascal:SyntaxDefinition)).
 

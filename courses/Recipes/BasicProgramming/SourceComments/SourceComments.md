@@ -17,7 +17,7 @@ int age = 42;
  */
 int yearOfBirth = 1977;
 ```
-* ((Tutor)) documentation tags to every declaration 
+* ((rascal-tutor:Tutor)) documentation tags to every declaration 
 ```rascal
 @synopsis{Describes a concept in a single line.}
 @description{
@@ -28,5 +28,5 @@ int yearOfBirth = 1977;
 }
 ```
 
-The tutor tags contain markdown with many different features that are described in the ((Tutor)) documentation.
+The tutor tags contain markdown with many different features that are described in the ((rascal-tutor:Tutor)) documentation.
 Rascal source code comments are otherwise completely ignored.
