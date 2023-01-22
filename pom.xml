@@ -25,7 +25,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <rascal.version>0.28.9-SNAPSHOT</rascal.version>
-        <rascal-tutor.version>0.7.4-SNAPSHOT</rascal-tutor.version>
+        <rascal-tutor.version>0.7.5</rascal-tutor.version>
         <clair.version>0.6.4</clair.version>
         <flybytes.version>0.1.6</flybytes.version>
         <typepal.version>0.8.3</typepal.version>
