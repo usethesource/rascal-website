@@ -24,7 +24,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <rascal.version>0.28.8</rascal.version>
+        <rascal.version>0.28.9-SNAPSHOT</rascal.version>
         <rascal-tutor.version>0.7.4-SNAPSHOT</rascal-tutor.version>
         <clair.version>0.6.4</clair.version>
         <flybytes.version>0.1.6</flybytes.version>
@@ -82,6 +82,7 @@
                                     <version>${rascal-tutor.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
+                                    <excludes>**/examples/,**/questions/</excludes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
