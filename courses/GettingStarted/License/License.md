@@ -16,7 +16,7 @@ Furthermore, the Rascal project has the following compile-time and run-time depe
 
 ((|project://rascal-website/docs/DEPENDENCIES_rascal.txt|))
 
-:::warning
+:::info
 You should check that the licenses of the above dependencies are compatible with your goals and situation. The authors and owners of Rascal cannot be held liable for any damages caused by the use of those licenses, or changes therein.
 
 The authors contributing to Rascal prefer open-source licenses for their dependencies that are permissive to commercial exploitation and any kind of reuse, and are non-viral.
