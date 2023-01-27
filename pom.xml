@@ -30,6 +30,8 @@
         <clair.version>0.6.4</clair.version>
         <flybytes.version>0.1.7</flybytes.version>
         <typepal.version>0.8.3</typepal.version>
+        <salix-core.version>0.1.0-RC2</salix-core.version>
+        <salix-contrib.version>0.1.0-RC2</salix-contrib.version>
     </properties>
 
     <build>
@@ -102,6 +104,20 @@
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>typepal</artifactId>
                                     <version>${typepal.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>salix-core</artifactId>
+                                    <version>${salix-core.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>salix-contrib</artifactId>
+                                    <version>${salix-contrib.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                 </artifactItem>
