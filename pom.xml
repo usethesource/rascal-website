@@ -30,7 +30,7 @@
         <clair.version>0.6.4</clair.version>
         <flybytes.version>0.1.7</flybytes.version>
         <typepal.version>0.8.3</typepal.version>
-        <salix-core.version>0.1.0-RC1</salix-core.version>
+        <salix-core.version>0.1.0-RC2</salix-core.version>
         <salix-contrib.version>0.1.0-RC2</salix-contrib.version>
     </properties>
 
