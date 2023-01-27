@@ -32,6 +32,7 @@
         <typepal.version>0.8.3</typepal.version>
         <salix-core.version>0.1.0-RC2</salix-core.version>
         <salix-contrib.version>0.1.0-RC2</salix-contrib.version>
+        <rascal-lsp.version>2.13.1</rascal-lsp.version>
     </properties>
 
     <build>
@@ -121,6 +122,13 @@
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                 </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>rascal-lsp</artifactId>
+                                    <version>${rascal-lsp.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
@@ -205,6 +213,21 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>rascal-tutor</artifactId>
             <version>${rascal-tutor.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>rascal-lsp</artifactId>
+            <version>${rascal-lsp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>salix-core</artifactId>
+            <version>${salix-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>salix-contrib</artifactId>
+            <version>${salix-contrib.version}</version>
         </dependency>
     </dependencies>
 
