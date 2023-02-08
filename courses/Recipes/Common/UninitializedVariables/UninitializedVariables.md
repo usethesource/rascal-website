@@ -51,9 +51,9 @@ assert UNINIT == {<"q", 5>, <"y", 6>, <"z", 10>};
 ```
 
 The unused variables should never be uninitialized:
-``rascal-shell,continue
+```rascal-shell,continue
 UNUSED = domain(defs) - domain(uses);
 assert UNUSED == {"p"};
-assert UNUSED & UNINIT<0> == {};
+assert UNUSED & UNINIT<0> == {}; // empty intersection
 ```
 
