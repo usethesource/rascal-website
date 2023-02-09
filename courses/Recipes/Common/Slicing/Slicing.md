@@ -14,13 +14,11 @@ based on the definitions given in :
 import Relation;
 import analysis::graphs::Graph;
 alias Stat = int;
-alias Var = str;
+alias Var  = str;
 alias Def  = tuple[Stat, Var];
-alias Use = tuple[Stat, Var];
-rel[Stat, Def] definition(rel[Stat, Var] defs)
-	= {<s, <s, v>> | <Stat s, Var v> <- defs};
-rel[Stat, Def] use(rel[Stat, Var] uses)
-	= {<s, <s, v>> | <Stat s, Var v> <- uses};
+alias Use  = tuple[Stat, Var];
+rel[Stat, Def] definition(rel[Stat, Var] defs) = {<s, <s, v>> | <Stat s, Var v> <- defs};
+rel[Stat, Def] use(rel[Stat, Var] uses) = {<s, <s, v>> | <Stat s, Var v> <- uses};
 rel[Stat, Def] kill(rel[Stat, Var] defs) { 
 	return {<s1, <s2, v>> | <Stat s1, Var v> <- defs, <Stat s2, v> <- defs, s1 != s2};
 }
@@ -59,7 +57,7 @@ set[Use] BackwardSlice(
 
 	// Internal dependencies per statement
 	rel[Def, Use] defUsePerStat 
-        = {<<s, v1>, <s, v2>> | <Stat s, Var v1> <- defs, <s, var v2> <- uses}
+        = {<<s, v1>, <s, v2>> | <Stat s, Var v1> <- defs, <s, Var v2> <- uses}
         + {<<s, v>, <s, "EXEC">> | <Stat s, Var v> <- defs}
         + {<<s, "TEST">, <s,v>> | Stat s <- controlstatement, <s, Var v> <- domainR(uses, {s})};
 
@@ -104,7 +102,7 @@ CONTROLSTATEMENT = { 5 };
 Now we can try this out:
 ```rascal-shell,continue
 Example1 = BackwardSlice(CONTROLSTATEMENT, PRED, USES, DEFS, <9, "sum">);
-assert Example1 = { <1, "EXEC">, <2, "EXEC">,  <3, "EXEC">, <5, "i">, <5, "n">,  <6, "sum">, <6, "i">, <6, "EXEC">, <8, "i">, <8, "EXEC">, <9, "sum"> };
+assert Example1 == { <1, "EXEC">, <2, "EXEC">,  <3, "EXEC">, <5, "i">, <5, "n">,  <6, "sum">, <6, "i">, <6, "EXEC">, <8, "i">, <8, "EXEC">, <9, "sum"> };
 Example2 = BackwardSlice(CONTROLSTATEMENT, PRED, USES, DEFS,<10, "product">);
 assert Example2 == { <1, "EXEC">,  <2, "EXEC">, <4, "EXEC">, <5, "i">, <5, "n">, <7, "i">, <7, "product">, <7, "EXEC">, <8, "i">, <8, "EXEC">, <10,  "product">  };
 ```
