@@ -67,14 +67,14 @@ default str bottles(int n) = "<n> bottles";
 str singString() 
     = "<for (n <- [99 .. 0]) {><bottles(n)> of beer on the wall, <bottles(n)> of beer.
       'Take one down, pass it around, <bottles(n-1)> of beer on the wall.
+      '
       '<}>
       'No more bottles of beer on the wall, no more bottles of beer.
       'Go to the store and buy some more, 99 bottles of beer on the wall.";
 ```
 
 ```rascal-shell,continue
-mySong = singString()
-println(mySong)
+mySong = singString();
 ```
 
 #### Benefits
