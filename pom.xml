@@ -74,13 +74,6 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
-                                    <artifactId>rascal</artifactId>
-                                    <version>${rascal.version}</version>
-                                    <outputDirectory>${project.basedir}</outputDirectory>
-                                    <includes>docs/**/*.*</includes>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.rascalmpl</groupId>
                                     <artifactId>rascal-tutor</artifactId>
                                     <version>${rascal-tutor.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
@@ -153,13 +146,19 @@
                             <srcs>
                                 <src>${project.basedir}/courses/WhyRascal</src>
                                 <src>${project.basedir}/courses/Recipes</src>
+                                <src>${project.basedir}/courses/Rascal</src>
                                 <src>${project.basedir}/courses/GettingHelp</src>
                                 <src>${project.basedir}/courses/GettingStarted</src>
                                 <src>${project.basedir}/courses/Rascalopedia</src>
+                                <src>|lib://rascal/org/rascalmpl/library|</src>
                             </srcs>
                             <libs>
                                 <lib>|std:///|</lib>
                             </libs>
+                            <ignores>
+                                <src>|lib://rascal/org/rascalmpl/library/lang/rascal|</src>
+                                <src>|lib://rascal/org/rascalmpl/library/lang/c90|</src>
+                            </ignores>
                         </configuration>
                     </execution>
                 </executions>
