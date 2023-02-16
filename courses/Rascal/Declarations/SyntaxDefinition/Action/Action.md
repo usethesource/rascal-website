@@ -40,6 +40,7 @@ In this example ((Action)) function the a is replaced by whatever A the `f` func
 
 Actions can be used as a ((Disambiguation)) method, using the `filter` statement, as in:
 ```rascal-commands
+lexical Id = [a-z]+;
 syntax E = id: Id i;
 set[Id] types = {};
 
@@ -50,6 +51,7 @@ public E id(Id i) {
     fail; // just build the parse tree "E = id: Id i", by defaulting to the constructor
 } 
 ```
+
 
 #### Benefits
 
