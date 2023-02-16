@@ -1,5 +1,5 @@
 ---
-title: Action
+title: Parse Action
 ---
 
 #### Synopsis
@@ -36,9 +36,10 @@ In this example ((Action)) function the a is replaced by whatever A the `f` func
 *  When a ((Concrete Syntax)) expression is executed.
 *  When ((Parse Trees)) are constructed "manually".
 
+#### Examples
 
-They can be used as a ((Disambiguation)) method, using the `filter` statement, as in:
-```rascal
+Actions can be used as a ((Disambiguation)) method, using the `filter` statement, as in:
+```rascal-commands
 syntax E = id: Id i;
 set[Id] types = {};
 
@@ -49,9 +50,15 @@ public E id(Id i) {
     fail; // just build the parse tree "E = id: Id i", by defaulting to the constructor
 } 
 ```
-#### Examples
 
 #### Benefits
 
+* Actions can involve _any_ kind of context information to filter or normalize parse trees, even global variables. Closures can also be used to capture context information that can be used to filter parse forests.
+* Actions are run post-parse algorithm and are thus predictable in their semantics. It is a simple bottom-up application of functions on every node.
+* Actions are efficiënt, because their effect is memoized by default on the worst-case cubic internal representation of the parse forest. 
+ 
 #### Pitfalls
 
+* Actions can filter the very last tree from a forest, leaving an empty forest. This is represented as a ParseError.
+* In previous versions, actions were executed automatically by taking all overloaded functions from the declaring module of a ((SyntaxDefinition)). This feature has dissappeared and was replaced by an extra keyword parameter to the ((ParseTree::parse)) function.
+* Closures and global variables that capture variables which are then used to filter are side-effects, which can be hard to understand and hard to debug. It's better to write purely functional actions if that's possible. 
