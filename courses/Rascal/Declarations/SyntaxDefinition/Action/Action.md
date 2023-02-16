@@ -40,7 +40,9 @@ However, if the actions do use side-effects, such as assigning into global varia
 Actions can be used as a ((Disambiguation)) method, using the `filter` statement, as in:
 
 ```rascal-commands
-lexical Id = [a-z]+;
+import IO;
+
+lexical Id = [a-z]+ \ "type";
 
 layout Whitespace = [\ \t\n]*;
 
@@ -63,32 +65,34 @@ syntax Exp
     ;
 
 start[Program] program(str input) {
-  set[Id] symbolTable = {};
+  // we always start with an empty symbol table
+  set[str] symbolTable = {};
 
   // here we collect type declarations
   Stat declareType(s:(Stat) `type <Id id>;`) {
-    symbolTable += {id};
+    println("declared <id>");
+    symbolTable += {"<id>"};
     return s;
   }
 
   // here we remove type names used as expressions
   Exp filterExp(e:(Exp) `<Id id>`) {
-    if (id in symbolTable)
+    if ("<id>" in symbolTable) {
+        println("filtering <id> because it was declared as a type.");
         filter;
-    else 
+    }
+    else {
         return e;
+    }
   }
 
-  return parse(#start[Program], input, |demo:///|, actions={declareType, filterExp});
+  return parse(#start[Program], input, |demo:///|, filters={declareType, filterExp}, hasSideEffects=true);
 }
 ```
 
 ```rascal-shell,continue,errors
-example = "a * a;"
-// We left this example intentionally ambiguous.
-// This could be either a multiplication, or a declaration of a variable of type a*
+example = "a * a;";
 p = program(example);
-// If we declare the `a` first, then the filter kicks in and the ambiguity is resolved:
 example = "type a;
           'a * a;
           ";
