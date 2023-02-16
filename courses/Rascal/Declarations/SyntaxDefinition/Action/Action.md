@@ -14,44 +14,86 @@ Actions are functions that are called when parse trees are constructed (right af
 
 #### Description
 
-A so-called ((Action)) is a normal rascal ((Function Declarations)) that overloads a ((SyntaxDefinition)). 
-A ((Syntax Definition)), very similar to ((Algebraic Data Type)) definitions, defines a constructor for a parse tree node. 
-This constructor is the default function, and when it is overloaded by a non-default function this overloaded function will be tried first. 
-You can overload any labeled ((Syntax Definition)) using the name of an alternative.
+A so-called ((Action)) is a normal rascal ((Function Declarations)) of type `&T<:Tree (&T<:Tree)`. So an action takes a parse tree of a certain non-terminal, and returns another one of the same non-terminal (or the same). 
 
-For example:
-```rascal
-syntax A = a: B  C;
+An action is passed to the parsing algorithm via the ((ParseTree::parse)) function's `actions` parameter, and when the parser is ready, it applies the action function in a bottom-up manner throughout the parse graph while it is being converted to a ((ParseTree::Tree)). 
+* When the parameter of one of the functions matches the tree that is currently build, then the function is applied and the return value replaces the currently constructed tree. 
+* A parameter may also match an entire ambiguity cluster, and replace it by one of the alternatives, a smaller cluster or an empty cluster.
+* A parameter may also match _all_ parse trees by operating on the ((ParseTree::Tree)) level. This can be used to implement disambiguation strategies based on production ((Tag))s (such as weights or preferences).
+* When an action matches and returns, no other actions are applied to the given tree node.
+* When an action throws an exception, a parse error results with the location of the currently processed tree. This is a fast way to implement fast semantic errors at parse time. However, it is not good for usability since partially correct parse trees can still be used for syntactics and semantic IDE features. Throwing an error makes that impossible. 
+* When an action uses ((Statements-Filter)), the current tree and all its parents up to the first `Tree::amb` ambiguity cluster are removed. When the bottom-up algorithm arrives back at the cluster and only one element prevails, this element replaces the entire cluster. When zero elements prevail, a parse error is produced with source location of the location and length of the cluster. Using ((Statements-Filter)) is an effective way of implementing semantics directed disambiguation.
+* When an action uses ((Statements-Fail)), the current function backtracks to the next available matching action function.
+* When no action function matches (anymore), the parser simply returns the ((ParseTree::Tree)) in question.
 
-public A a(B b, C c) {
-  return f(b, c);
-}
-```
-In this example ((Action)) function the a is replaced by whatever A the `f` function returns. 
+:::info
+Older versions of Rascal would pass in action functions automatically from the module declaration scope of the ((Syntax Definition)) in question. This was changed in favor of portability of the `parse` functionality between the interpreted and the compiled versions of Rascal
+:::
 
-((Action))s are executed every time a parse tree is constructed:
+Actions allow for very efficient application of context information to filter ambiguity in context-free grammars. Because they are applied during the converion of a possible large but shared/memoized tree representation, they may quickly turn a cubic forest to a linear tree. 
 
-*  Right after parsing.
-*  On the way back from a visit statement.
-*  When a ((Concrete Syntax)) expression is executed.
-*  When ((Parse Trees)) are constructed "manually".
+However, if the actions do use side-effects, such as assigning into global variables or variables captured by a closure, then you must set the `hasSideEffects` boolean parameter to `true`. Otherwise the memoization algorithm will share tree output without seeing that the context may have changed. Consider an action that builds up a symbol table for type declarations, this may filter the identifier expression `MyType` in one location but not filter it at another location (after a shadowing declaration) later in the input text. If `hasSideEffects` is set to `false`, the action runner assume that equal input values, imply equal return values.
+
 
 #### Examples
 
 Actions can be used as a ((Disambiguation)) method, using the `filter` statement, as in:
+
 ```rascal-commands
 lexical Id = [a-z]+;
-syntax E = id: Id i;
-set[Id] types = {};
 
-public E id(Id i) {
-  if (i in types) 
-    filter; // remove this parse tree and all its parents up to the first amb node
-  else 
-    fail; // just build the parse tree "E = id: Id i", by defaulting to the constructor
-} 
+layout Whitespace = [\ \t\n]*;
+
+start syntax Program = Stat+;
+
+syntax Stat
+    = "type" Id ";"
+    | Type Id ";"
+    | Exp ";"
+    ;
+
+syntax Type
+    = Id
+    | Id "*"
+    ;
+
+syntax Exp
+    = Id
+    | left Exp "*" Exp
+    ;
+
+start[Program] program(str input) {
+  set[Id] symbolTable = {};
+
+  // here we collect type declarations
+  Stat declareType(s:(Stat) `type <Id id>;`) {
+    symbolTable += {id};
+    return s;
+  }
+
+  // here we remove type names used as expressions
+  Exp filterExp(e:(Exp) `<Id id>`) {
+    if (id in symbolTable)
+        filter;
+    else 
+        return e;
+  }
+
+  return parse(#start[Program], input, |demo:///|, actions={declareType, filterExp});
+}
 ```
 
+```rascal-shell,continue,errors
+example = "a * a;"
+// We left this example intentionally ambiguous.
+// This could be either a multiplication, or a declaration of a variable of type a*
+p = program(example);
+// If we declare the `a` first, then the filter kicks in and the ambiguity is resolved:
+example = "type a;
+          'a * a;
+          ";
+p = program(example);
+```
 
 #### Benefits
 
