@@ -22,4 +22,4 @@ filter;
 
 #### Description
 
-A `filter` statement has effect during execution of ((SyntaxDefinition-Action)) and visits over ((ParseTree::Tree)). It's all explained [here]((SyntaxDefinition-Action)).
+A `filter` statement has effect during execution of ((Disambiguation-Action)) and visits over ((ParseTree::Tree)). It's all explained [here]((Disambiguation-Action)).
