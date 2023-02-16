@@ -49,5 +49,4 @@ Let's give it a try:
 
 ```rascal-shell-continue
 nQueens(4)
-nQueens(8)
 ```
