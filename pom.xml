@@ -24,9 +24,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <rascal.version>0.29.1-RC1</rascal.version>
-        <rascal-tutor.version>0.8.2</rascal-tutor.version>
-        <rascal-maven-plugin.version>0.16.2</rascal-maven-plugin.version>
+        <rascal.version>0.29.1-RC4-SNAPSHOT</rascal.version>
+        <rascal-tutor.version>0.8.4</rascal-tutor.version>
+        <rascal-maven-plugin.version>0.17.0</rascal-maven-plugin.version>
         <clair.version>0.6.4</clair.version>
         <flybytes.version>0.1.7</flybytes.version>
         <typepal.version>0.8.3</typepal.version>
@@ -140,7 +140,7 @@
                         </goals>
                         <configuration>
                             <isPackageCourse>false</isPackageCourse>
-                            <enableStandardLibrary>true</enableStandardLibrary>
+                            <enableStandardLibrary>false</enableStandardLibrary>
                             <errorsAsWarnings>false</errorsAsWarnings>
                             <bin>${project.basedir}</bin> <!-- because tutor appends /docs to this -->
                             <srcs>
@@ -152,9 +152,6 @@
                                 <src>${project.basedir}/courses/Rascalopedia</src>
                                 <src>|lib://rascal/org/rascalmpl/library|</src>
                             </srcs>
-                            <libs>
-                                <lib>|std:///|</lib>
-                            </libs>
                             <ignores>
                                 <src>|lib://rascal/org/rascalmpl/library/lang/rascal|</src>
                                 <src>|lib://rascal/org/rascalmpl/library/lang/c90|</src>

@@ -5,7 +5,7 @@ keywords:
 
 ---
 
-#### Synopsis
+### Synopsis
 
 Declare a module.
 
