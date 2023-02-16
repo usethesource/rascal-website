@@ -38,7 +38,7 @@ We give various answers to these questions:
 
 #### Benefits
 
-* *one stop shop*: no more wasting time on integrating technologies to satisfy meta-programming requirements
+* *One stop shop*: no more wasting time on integrating technologies to satisfy meta-programming requirements
 * *No more databases/programming language separation*: Rascal integrates all data-types and operators that you need for meta-programming; files/strings, trees/hierarchies, tables/graphs/relations, and its easy to move between representations. Rascal has more powerful query operators than SQL and more powerfull pattern matching than Haskell.
 * *Full data and code provenance*: Rascal has source location origins of every thing you analyze and transform made explicit via URI locations.
 * *WYSIWYG*: The What You See Is What You Get paradigm means that all data in memory has a unique printed, readable, form that explains _everything_ about it.  
