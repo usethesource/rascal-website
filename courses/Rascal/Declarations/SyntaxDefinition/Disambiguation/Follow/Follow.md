@@ -7,6 +7,8 @@ keywords:
   - longest match
   - first match
   - maximal munch
+  - shift before reduce
+  - dangling else
 ---
 
 #### Synopsis
@@ -58,7 +60,7 @@ parse(#Program, "{ }");
 Another example is typical for optional whitespace:
 ```rascal-shell,continue
 lexical Id = [a-z]+;
-syntax Program = Id+
+syntax Program = Id+;
 layout Spaces = [\ ]*;
 ```
 
@@ -71,7 +73,7 @@ parse(#Program, "ab");
 We solve this by declaring longest match for `Id`:
 ```rascal-shell,continue
 lexical Id = [a-z]+ !>> [a-z];
-syntax Program = Id+
+syntax Program = Id+;
 layout Spaces = [\ ]*;
 ```
 
@@ -83,7 +85,7 @@ parse(#Program, "ab");
 
 #### Benefits
 
-* Longest and first match or not implicit heuristics but declarative filters
+* Longest and first match are not implicit heuristics but declarative disambiguation filters
 
 #### Pitfalls
 
