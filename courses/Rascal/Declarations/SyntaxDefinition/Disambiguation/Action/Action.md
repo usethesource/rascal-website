@@ -16,7 +16,7 @@ Actions are functions that are called when parse trees are constructed (right af
 
 A so-called ((Action)) is a normal rascal ((Function Declarations)) of type `&T<:Tree (&T<:Tree)`. So an action takes a parse tree of a certain non-terminal, and returns another one of the same non-terminal (or the same). 
 
-An action is passed to the parsing algorithm via the ((ParseTree::parse)) function's `actions` parameter, and when the parser is ready, it applies the action function in a bottom-up manner throughout the parse graph while it is being converted to a ((ParseTree::Tree)). 
+An action is passed to the parsing algorithm via the ((ParseTree::parse)) function's `filters` parameter, and when the parser is ready, it applies the action/filter function in a depth-first manner throughout the parse graph while it is being converted to a ((ParseTree::Tree)). 
 * When the parameter of one of the functions matches the tree that is currently build, then the function is applied and the return value replaces the currently constructed tree. 
 * A parameter may also match an entire ambiguity cluster, and replace it by one of the alternatives, a smaller cluster or an empty cluster.
 * A parameter may also match _all_ parse trees by operating on the ((ParseTree::Tree)) level. This can be used to implement disambiguation strategies based on production ((Tag))s (such as weights or preferences).
