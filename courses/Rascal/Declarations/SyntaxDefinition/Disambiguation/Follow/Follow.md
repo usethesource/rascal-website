@@ -58,7 +58,7 @@ parse(#Program, "{ }");
 ```
 
 Another example is typical for optional whitespace:
-```rascal-shell,continue
+```rascal-shell
 lexical Id = [a-z]+;
 syntax Program = Id+;
 layout Spaces = [\ ]*;
@@ -71,7 +71,7 @@ parse(#Program, "ab");
 ```
 
 We solve this by declaring longest match for `Id`:
-```rascal-shell,continue
+```rascal-shell
 lexical Id = [a-z]+ !>> [a-z];
 syntax Program = Id+;
 layout Spaces = [\ ]*;
@@ -90,5 +90,5 @@ parse(#Program, "ab");
 #### Pitfalls
 
 * Follow restrictions can filter all of the trees and leave you with a parse error
-* Follow restictions bring us outside of the realm of context-free grammars, so when constructing new parse tree values by visiting and substitution (rewriting) it is possible to construct trees that are not strictly in the language. The type system of Rascal only covers non-terminal substitutability and not the additional constraints of the disambiguation filters. 
+* Follow restictions bring us outside of the realm of context-free grammars. So when constructing new parse tree values by visiting and substitution (rewriting) it is possible to construct trees that are not strictly in the language. The type system of Rascal for substitution in parse trees only covers non-terminal substitutability and not the additional constraints of the disambiguation filters. 
 
