@@ -63,6 +63,9 @@ be efficient and scalable or generalizable.
 
 ### 2020's
 
+* Jurgen Vinju. Comparing Bottom-up with Top-down Parsing Architectures for the Syntax Definition Formalism from a Disambiguation standpoint. (2023) OASIcs, Volume 109, EVCS: Eelco Visser's Commemorative Symposium
+   > This paper motivates why Rascal moved away from scannerless GLR and to scannerless GLL, and why data-dependent context-free grammars are the next step.
+
 ### 2010's
 
 * 🎓 Ali Afroozeh and Anastasia Izmaylova, Practical General Top-down Parsers. (2019) Universiteit van Amsterdam.
