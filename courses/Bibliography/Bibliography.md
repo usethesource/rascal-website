@@ -47,10 +47,6 @@ This literature is about the meta systems themselves, their design and their eva
    > Rascal technological space. Generating notebook interfaces for DSLs, like IDEs, and deriving usable block-based language interfaces
    > from context-free grammars are two highlights.
 
-* J. Coutaz, J. The Box, A Layout Abstraction for User Interface Toolkits. (1984) Pittsburgh, PA: Carnegie Mellon University.
-   > This technical report from CMU captures the domain of two dimensional layouts, including pretty printing in an elegant, functionally complete combinator language.
-   > Later this Box abstraction would form the basic layer for all pretty printing and formatting utilities in ASF+SDF Meta-Environment,
-   > and Rascal. It also ended up in other meta programming systems such as StrategoXT, SPoofax and DMS.
 
 ### 2010's
 
@@ -64,6 +60,15 @@ This literature is about the meta systems themselves, their design and their eva
 
 ### 1980's
 
+* J. Coutaz, J. The Box, A Layout Abstraction for User Interface Toolkits. (1984) Pittsburgh, PA: Carnegie Mellon University.
+   > This technical report from CMU captures the domain of two dimensional layouts, including pretty printing in an elegant, functionally complete combinator language.
+   > Later this Box abstraction would form the basic layer for all pretty printing and formatting utilities in ASF+SDF Meta-Environment,
+   > and Rascal. It also ended up in other meta programming systems such as StrategoXT, SPoofax and DMS.
+* Paul Klint. An overview of the SUMMER programming language (1980) POPL '80: Proceedings of the 7th ACM SIGPLAN-SIGACT symposium on Principles of programming languagesJanuary 
+   > Summer was a source code analysis language with a wide array of pattern matching facilities, just as Rascal has. The meta notation used
+   > in this paper was later the inspiration for much of the SDF2 notation. The move towards algebraic specification later during the ESPRIT GIPE projects focused the pattern
+   > matching on trees instead of strings. String matching came back in Rascal later only in 2009.
+   
 ## Under the hood
 
 Here we find the algorithms and data-structures that enable the meta languages to work, to 
