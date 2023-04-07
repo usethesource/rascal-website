@@ -47,6 +47,10 @@ This literature is about the meta systems themselves, their design and their eva
    > Rascal technological space. Generating notebook interfaces for DSLs, like IDEs, and deriving usable block-based language interfaces
    > from context-free grammars are two highlights.
 
+* J. Coutaz, J. The Box, A Layout Abstraction for User Interface Toolkits. (1984) Pittsburgh, PA: Carnegie Mellon University.
+   > This technical report from CMU captures the domain of two dimensional layouts, including pretty printing in an elegant, functionally complete combinator language.
+   > Later this Box abstraction would form the basic layer for all pretty printing and formatting utilities in ASF+SDF Meta-Environment,
+   > and Rascal. It also ended up in other meta programming systems such as StrategoXT, SPoofax and DMS.
 
 ### 2010's
 
