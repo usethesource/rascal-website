@@ -15,6 +15,13 @@ inspirations from colleagues around the world..
 
 ### 2020's
 
+* 🎓 Lina María Ochoa Venegas, Break the Code? Breaking Changes and their Impact on Software Evolution, (2023) TU Eindhoven.
+   > In this thesis Rascal was applied to detect breaking changes in Java libraries and predict their impact in client projects.
+   > The Maracas tool reuses japicmp and the JDT M3 bridge for extracting detailed static information from source code and bytecode.
+* 🎓Tim Soethout, Banking on Domain Knowledge for Faster Transactions --- Leveraging Models to Avoid Coordination, (2022) TU Eindhoven.
+   > This thesis applies Rascal for Model Driven Engineering. Detailed communication protocols are generated from high-level specification.
+   > The code that is generated implements algorithms that use domain knowledge to avoid locking in distributed communication systems.
+
 ### 2010's
 
 ### 2000's
