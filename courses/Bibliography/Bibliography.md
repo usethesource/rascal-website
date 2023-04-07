@@ -59,6 +59,12 @@ be efficient and scalable or generalizable.
 
 ### 2010's
 
+* 🎓 Ali Afroozeh and Anastasia Izmaylova, Practical General Top-down Parsers. (2019) Universiteit van Amsterdam.
+   > This double thesis explores the GLL parsing algorithm as well as parsing combinators for adding context information
+   > to parsing in a principled manner with the aim of finding practical solutions to the disambiguation problem.
+   > The result is the elegant use of data-dependent context-free grammars to desugar high-level
+   > disambiguation constructor to (such as operator precedence and the offside rule).
+
 * 🎓 Michael Steindorfer, Efficient Immutable Collections. (2017) Universiteit van Amsterdam.
    > This thesis describes the core data-structures and optimizations required for Rascal's implementation
    > of relational calculus: relations, sets and maps. The trie map is the core vehicle, and the contributions
