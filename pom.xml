@@ -150,6 +150,7 @@
                                 <src>${project.basedir}/courses/GettingHelp</src>
                                 <src>${project.basedir}/courses/GettingStarted</src>
                                 <src>${project.basedir}/courses/Rascalopedia</src>
+                                <src>${project.basedir}/courses/Bibliography</src>
                                 <src>|lib://rascal/org/rascalmpl/library|</src>
                             </srcs>
                             <ignores>
