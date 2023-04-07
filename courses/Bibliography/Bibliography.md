@@ -104,3 +104,8 @@ be efficient and scalable or generalizable.
 
 ### 1980's
 
+* M. Tomita. Efficient Parsing for Natural Languages. (1985) A Fast Algorithm for Practical Systems. Kluwer Academic Publishers.
+  > Tomita's GLR parsing algorithm provides non-deterministic parsing efficiently; the effect is that it basically has limitless lookahead,
+  > and provides an implementation layer for modular/compositional grammars. More importantly, since most existing languages do not
+  > fit into the LR or LR categories, the GLR algorithm provided a way for ASF+SDF to scale from toy to real programming languages
+  > such as Pascal, COBOL and C.
