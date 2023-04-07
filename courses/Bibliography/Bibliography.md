@@ -52,6 +52,10 @@ This literature is about the meta systems themselves, their design and their eva
 
 ### 2000's
 
+* Jurgen J. Vinju and J.R. Cordy. How to make a bridge between transformation and analysis technologies? (2006) In J.R. Cordy, R. Lämmel, and A. Winter, editors, Transformation Techniques in Software Engineering, number 05161 in Dagstuhl Seminar Proceedings. Internationales Begegnungs- und Forschungszentrum (IBFI), Schloss Dagstuhl, Germany.
+   > This technical report explains the relation between the code transformation and code analysis domains from a perspective of tool builders.
+   > From here several main motivations for the design of Rascal were derived.
+
 ### 1990's
 
 ### 1980's
