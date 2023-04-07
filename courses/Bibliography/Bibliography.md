@@ -36,6 +36,12 @@ This literature is about the meta systems themselves, their design and their eva
 
 ### 2020's
 
+* 🎓Mauricio Merino Verano, Engineering Language-Parametric End-User Programming Environments for DSLs (2022) TU Eindhoven.
+   > Inspired by industrial use cases at Canon Producting Printing, this thesis adds "Notebooks" and "Block-based languages" to the
+   > Rascal technological space. Generating notebook interfaces for DSLs, like IDEs, and deriving usable block-based language interfaces
+   > from context-free grammars are two highlights.
+
+
 ### 2010's
 
 ### 2000's
