@@ -53,6 +53,11 @@ be efficient and scalable or generalizable.
 
 ### 2010's
 
+* 🎓 Michael Steindorfer, Efficient Immutable Collections. (2017) Universiteit van Amsterdam.
+   > This thesis describes the core data-structures and optimizations required for Rascal's implementation
+   > of relational calculus: relations, sets and maps. The trie map is the core vehicle, and the contributions
+   > found their way outside of the Rascal community as well.
+
 ### 2000's
 
 ### 1990's
