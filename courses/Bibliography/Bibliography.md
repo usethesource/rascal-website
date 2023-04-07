@@ -6,12 +6,12 @@ sidebar_position: 6.5
 The literature about Rascal goes back all the way to 1980's when its predecessor ASF+SDF spawned.
 This page intends to provide a comprehensive list
 of papers, PhD theses and master's theses about what is happening "under the hood", on the language
-level and with the applications of Rascal in the fields of Programming Languages, Software Engineering,
-Reverse Engineering, Re-engineering, Refactoring, Domain-specific Languages, Model Driven Engineering, and
-Security. The list includes work by the team members working on ASF+SDF and Rascal, but also key 
-inspirations from colleagues around the world..
+level and with the applications of Rascal.
 
 ## Applications
+
+Work that applies the meta-technology and theories is scattered over several sub-disciplines of Computer Science; e.g.
+Programming Languages, Software Engineering, Reverse Engineering, Re-engineering, Refactoring, Domain-specific Languages, Model Driven Engineering, and System Security.
 
 ### 2020's
 
@@ -30,7 +30,9 @@ inspirations from colleagues around the world..
 
 ### 1980's
 
-## Meta languages
+## Meta languages and systems
+
+This literature is about the meta systems themselves, their design and their evaluation.
 
 ### 2020's
 
@@ -43,6 +45,9 @@ inspirations from colleagues around the world..
 ### 1980's
 
 ## Under the hood
+
+Here we find the algorithms and data-structures that enable the meta languages to work, to 
+be efficient and scalable or generalizable.
 
 ### 2020's
 
