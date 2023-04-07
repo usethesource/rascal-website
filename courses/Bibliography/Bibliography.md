@@ -70,11 +70,18 @@ be efficient and scalable or generalizable.
    > to parsing in a principled manner with the aim of finding practical solutions to the disambiguation problem.
    > The result is the elegant use of data-dependent context-free grammars to desugar high-level
    > disambiguation constructor to (such as operator precedence and the offside rule).
-
+* 🎓 Naveneetha K. Vasudevan, A non-deterministic approach to ambiguity detection in Context Free Grammars. (2017)Department of Informatics King’s College London.
+   > This thesis from outside of the Rascal community provides very effective ambiguity detection with a practical
+   > and easy-to-implement approach. This knowledge is now the basis of Dr Ambiguity's ambiguity detection methods.
 * 🎓 Michael Steindorfer, Efficient Immutable Collections. (2017) Universiteit van Amsterdam.
    > This thesis describes the core data-structures and optimizations required for Rascal's implementation
    > of relational calculus: relations, sets and maps. The trie map is the core vehicle, and the contributions
    > found their way outside of the Rascal community as well.
+* 🎓 Bas Basten, Ambiguity Detection for Programming Language Grammars. (2011) Universiteit van Amsterdam
+   > In this thesis ambiguity of context-free grammars is a problem, which must be detected, diagnosed and cured.
+   > Static ambiguity detection in this thesis takes the approach of trying to prove unambiguity and reporting
+   > failures with causes if such a proof can not be found. There is also a chapter on the diagnostics and curing
+   > of ambiguities once found.
 
 ### 2000's
 
