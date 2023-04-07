@@ -24,6 +24,12 @@ Programming Languages, Software Engineering, Reverse Engineering, Re-engineering
 
 ### 2010's
 
+* 🎓 Davy Landman, Reverse Engineering Source Code. (2017) Universiteit van Amsterdam.
+   > We explore the limits of what can be leared purely from source code analysis.
+   > In this thesis Rascal is used for both shallow and deep code analysis (metrics and static analysis of reflective code). By mining large open-source
+   > software repositories, we discover that the cyclomatic complexity metric can _not be shown to correlate_ with source lines of code, 
+   > and also we discover the destructive impact of reflection on the accuracy of static analysis tools, and what to do about that.
+
 ### 2000's
 
 ### 1990's
