@@ -69,10 +69,11 @@ This literature is about the meta systems themselves, their design and their eva
    > in this paper was later the inspiration for much of the SDF2 notation. The move towards algebraic specification later during the ESPRIT GIPE projects focused the pattern
    > matching on trees instead of strings. String matching came back in Rascal later only in 2009.
    
-## Under the hood
+## Algorithms and Data-structures
 
 Here we find the algorithms and data-structures that enable the meta languages to work, to 
-be efficient and scalable or generalizable.
+be efficient and scalable or generalizable. Sometimes the tools are intrically linked to the meta-language's designs; we list those
+contributions here rather than above.
 
 ### 2020's
 
@@ -100,6 +101,13 @@ be efficient and scalable or generalizable.
    > of ambiguities once found.
 
 ### 2000's
+
+* Giorgios Economopoulos, Paul Klint, and Jurgen J. Vinju. Faster scannerless GLR parsing. (2009) Compiler Construction, 18th International Conference.
+   > Here we merge RNGLR with SGLR to obtain a faster and simpler implementation that works more predictably. This also rationalized the
+   > implementation of the reject filter and as a side-effect we optimized the garbage collection of parallel parse stack nodes and edges.
+* Elizabeth Scott and Adrian Johnstone. Right nulled GLR parsers (2006), ACM Transactions on Programming Languages and Systems 28(4):577-618
+   > This paper proposes a simpler and more efficient version of Tomita's GLR than the versions of Farshi and Rekers, and so
+   > later we merged this into RNSGLR (see above).
 
 ### 1990's
 
