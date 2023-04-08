@@ -83,7 +83,7 @@ This literature is about the meta systems themselves, their design and their eva
    > and Rascal. It also ended up in other meta programming systems such as StrategoXT, SPoofax and DMS.
 * Paul Klint. An overview of the SUMMER programming language (1980) POPL '80: Proceedings of the 7th ACM SIGPLAN-SIGACT symposium on Principles of programming languagesJanuary 
    > Summer was a source code analysis language with a wide array of pattern matching facilities, just as Rascal has. The meta notation used
-   > in this paper was later the inspiration for much of the SDF2 notation. The move towards algebraic specification later during the ESPRIT GIPE projects focused the pattern
+   > in this paper was later the inspiration for much of the SDF notation. The move towards algebraic specification later during the ESPRIT GIPE projects focused the pattern
    > matching on trees instead of strings. String matching came back in Rascal later only in 2009.
    
 ## Algorithms and Data-structures
