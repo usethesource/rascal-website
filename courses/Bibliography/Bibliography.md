@@ -50,7 +50,19 @@ This literature is about the meta systems themselves, their design and their eva
 
 ### 2010's
 
+* Paul Klint, Tijs van der Storm, and Jurgen Vinju. EASY Meta-programming with Rascal. Leveraging the Extract-Analyze-Synthesize Paradigm for Meta-programming. (2010) In Proceedings of the 3rd International Summer School on Generative and Transformational Techniques in Software Engineering (GTTSE'09), LNCS. Springer.
+   > This is a comprehensive overview of the first release of Rascal as it was used in education at the Master Software Engineering for the first time in 
+   > 2009, and at the summer school in Braga that year. Note that the language has evolved quite a bit since then, so as a manual it is not apropriate anymore. 
+   > The paper shows how the transformation and analysis paradigms have been merged into a single meta-language. You can find elements of ASF, SDF, Box, ATerms, 
+   > ApiGen, RScript, and other design elements in this paper. This paper is often cited as the origin paper for Rascal. The other origin paper was in IEEE SCAM 2009 (see below).
+
 ### 2000's
+
+* Paul Klint, Tijs van der Storm, and Jurgen J. Vinju. Rascal: A Domain Specific Language for Source Code Analysis and Manipulation. (2009) In Ninth IEEE International Working Conference on Source Code Analysis and Manipulation, SCAM 2009, Edmonton, Alberta, Canada, September 20-21, 2009, pages 168-177. IEEE Computer Society.
+   > This paper motivates and positions Rascal in the domain of source code analysis and manipulation by introducing it along the running example of the 
+   > "infer generic type arguments" refactoring. Since refactoring requires both analysis and transformation it is an ideal vehicle for motivation and demonstration
+   > of Rascal's language-integrated meta programming primitives. This paper is often cited as an origin paper for Rascal. It won the 2019 most influential paper award
+   > from IEEE SCAM, due to the observed impact of Rascal in education, research and industry.
 
 * Jurgen J. Vinju and J.R. Cordy. How to make a bridge between transformation and analysis technologies? (2006) In J.R. Cordy, R. Lämmel, and A. Winter, editors, Transformation Techniques in Software Engineering, number 05161 in Dagstuhl Seminar Proceedings. Internationales Begegnungs- und Forschungszentrum (IBFI), Schloss Dagstuhl, Germany.
    > This technical report explains the relation between the code transformation and code analysis domains from a perspective of tool builders.
