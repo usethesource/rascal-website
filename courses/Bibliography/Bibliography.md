@@ -68,6 +68,11 @@ This literature is about the meta systems themselves, their design and their eva
    > This technical report explains the relation between the code transformation and code analysis domains from a perspective of tool builders.
    > From here several main motivations for the design of Rascal were derived.
 
+* Philippe Charles, Robert M. Fuhrer, Stanley M. Sutton Jr., Evelyn Duesterwald, and Jurgen Vinju. Accelerating the Creation of Customized, Language-specific IDEs in Eclipse. (2009)  Proceedings of the 24th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications, OOPSLA 2009, October 25-29, 2009, Orlando, Florida, USA., pages 191-206, 2009
+   > This paper by IBM research introduces **Eclipse IMP** (IDE meta-tooling Platform) which had been designed to offer a programmeable interface to Eclipse in terms of language properties rather than 
+   > UI interactions. It resembles the ASF+SDF Meta-Environments communication protocol quite a bit. With some minor generalizations we were able to port the entire ASF+SDF Meta-Environment
+   > to Eclipse IMP within a few weeks. Later the Rascal Eclipse environment was also built directly on top of IMP. Others also had benefit from IMP, like the Eclipse-based environment for the X10 language, the Spoofax lanuage workbench and the Hege language. 
+
 ### 1990's
 
 ### 1980's
