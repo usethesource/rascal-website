@@ -28,13 +28,12 @@ UseTheSource is a collection of open-source projects related to [metaprogramming
 
 # Images
 
-- the [original Rascal logo](/images/old-rascal-logo.png) was designed by [Tobias Baanders](https://honingen.com/kunstenaar/tobias-baanders/) 
-   * ![wasp logo](/images/old-rascal-logo.png)
-- the [current Rascal logo](https://www.kittymolenaar.nl/vormgeving/42_01_grafisch_ontwerp_websites.html) was designed by [Kitty Molenaar](https://www.kittymolenaar.nl) (use for web)
-   * ![penrose triangle logo](/images/rascal_logo.png)
-- the current Rascal logo as vector graphics (use for print)
-   * ![penrose triangle logo as svg](/images/rascal_logo.svg)
-   
+| Title | Author | Image | 
+| ----  | ---- | -----  |
+| First logo | [Tobias Baanders](https://honingen.com/kunstenaar/tobias-baanders/) | <img alt="original Rascal logo" src="/images/old-rascal-logo.png" width="50%"></img> |
+| Current logo [PNG](/images/rascal_logo.png) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![current Rascal logo](/images/rascal_logo.png) |
+| Current logo [SVG](/images/rascal_logo.svg) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![current Rascal logo](/images/rascal_logo.svg) |
+
 # Contributors
 
 - [Paul Klint](https://github.com/PaulKlint) 
