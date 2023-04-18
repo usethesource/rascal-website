@@ -1,5 +1,12 @@
 ---
 title: Team
+keywords:
+    - team
+    - logo
+    - values
+    - rules
+    - CLA
+    - CoC
 ---
 
 # UseTheSource
@@ -23,8 +30,10 @@ UseTheSource is a collection of open-source projects related to [metaprogramming
 
 - the [original Rascal logo](/images/old-rascal-logo.png) was designed by [Tobias Baanders](https://honingen.com/kunstenaar/tobias-baanders/) 
    * ![wasp logo](/images/old-rascal-logo.png)
-- the [current Rascal logo](https://www.kittymolenaar.nl/vormgeving/42_01_grafisch_ontwerp_websites.html) was designed by [Kitty Molenaar](https://www.kittymolenaar.nl)
+- the [current Rascal logo](https://www.kittymolenaar.nl/vormgeving/42_01_grafisch_ontwerp_websites.html) was designed by [Kitty Molenaar](https://www.kittymolenaar.nl) (use for web)
    * ![penrose triangle logo](/images/rascal_logo.png)
+- the current Rascal logo as vector graphics (use for print)
+   * ![penrose triangle logo as svg](/images/rascal_logo.svg)
    
 # Contributors
 
