@@ -21,14 +21,38 @@ Programming Languages, Software Engineering, Reverse Engineering, Re-engineering
 * 🎓Tim Soethout, Banking on Domain Knowledge for Faster Transactions --- Leveraging Models to Avoid Coordination, (2022) TU Eindhoven.
    > This thesis applies Rascal for Model Driven Engineering. Detailed communication protocols are generated from high-level specification.
    > The code that is generated implements algorithms that use domain knowledge to avoid locking in distributed communication systems.
-
+* Mathijs T. W. Schuts, Rodin T. A. Aarssen, Paul M. Tielemans, and Jurgen J. Vinju. Large-scale semi-automated migration of legacy C/C++ test code. (2022). Software: Practise & Experience
+   > In this paper the engineers at Philips Healthcare used Rascal to automatically refactor a large body of C++ test code to a more modern test harnass by Google.
+   > This work is based on the clair front-end for C++ parsing from Rascal based on the Eclipse CDT.
+* Jouke Stoel, Tijs van der Storm and Jurgen J. Vinju. Modeling with Mocking, 14th IEEE Conference on Software Testing, Verification and Validation 
+   > The Rebel2 language is implemented in Rascal; it is a contract-based event-sourcing language based on communicating state machines, with
+   > mappings to SMT solvers for simulation and verifation purposes. We use meta-programming to filter the specifications towards 
+   > configurations with state spaces that are still practical. A collaboration with ING.
+* Tim Soethout, Tijs van der Storm, Jurgen J. Vinju. Contract-Based Return-Value Commutativity: Safely exploiting contract-based commutativity for faster serializable transactions. (2021). AGERE 2021.
+   > This is about one of the code generator backends for Rebel2 (see above). By re-defining the concept of serializability in terms of equal data-dependent post-conditions of a transaction, the communication protocol we generate can be shown to have strong isolation properties. This is a collaboration with ING.
+* Tim Soethout, Jurgen J. Vinju and Tijs van der Storm. Path-Sensitive Atomic Commit - Local Coordination Avoidance for Distributed Transactions. (2021) &lt;Programming&gt; Journal
+   > This is about an advanced communication protocol that is generated for Rebel2 (see above), the protocol uses domain knowledge specified in Rebel to 
+   > avoid unnecessary blocking synchronization with a big benefit for throughput in situations with high congestion. This is a collaboration with ING.
+   
 ### 2010's
 
+* Tim Soethout, Jurgen J. Vinju and Tijs van der Storm. Static Local Coordination Avoidance for Distributed Objects. (2019) SPLASH AGERE.
+   > This is an optimized (statically detected) version of the above PSAC protocol, where we use Rascal to generate communication protocols that
+   > do not need *any* synchronization to achieve isolation guarantees (serializability).
+* Lina Ochoa, Thomas Degueule and Jurgen J. Vinju. An Empirical Evaluation of OSGi Dependencies Best Practices in the Eclipse IDE (2018) IEEE International Conference on Mining Software Repositories (MSR)
+   > An ecosystem-level analysis of actual dependency management practises in code and meta-data.
+* Davy Landman, Alexander Serebrenik and Jurgen J. Vinju. Challenges for Static Analysis of Java Reflection – Literature Review and Empirical Study. (2017).. IEEE/ACM International Conference on Software Engineering ICSE 2017. ACM SIGSOFT Distinguished Paper Award.
+   > In this paper we used Rascal to dig deep into client code of the Java reflection API. 
+   > We analyze the corpus for typical usage patterns in annotated syntax trees and also patterns that 
+   > can be associated with the limits of static analysis tools. A typical application of the M3 
+   > intermediate fact representation model.
 * 🎓 Davy Landman, Reverse Engineering Source Code. (2017) Universiteit van Amsterdam.
    > We explore the limits of what can be learned purely from source code analysis.
    > In this thesis Rascal is used for both shallow and deep code analysis (metrics and static analysis of reflective code). By mining large open-source
    > software repositories, we discover that the cyclomatic complexity metric can _not be shown to correlate_ with source lines of code, 
    > and also we discover the destructive impact of reflection on the accuracy of static analysis tools, and what to do about that.
+* Davy Landman, Alexander Serebrenik, Eric Bouwers and Jurgen J. Vinju. Empirical analysis of the relationship between CC and SLOC in a large corpus of Java methods and C functions. (2016) Journal of Software: Evolution and Process.
+   > Trying extremely hard to corroborate the reports on Pearson correlation between Cyclomatic Complexity and Source Lines of Code in C functions and Java methods, we have to conclude that on a large and unbiased corpus there is only low correlation. Higher correlations reported in literature can be explained by data transformation techniques (log transform) and aggregation methods (addition over code modules). **SLOC DOES NOT CORRELATE LINEARLY TO CC ACCORDING TO OUR RESULTS**
 
 ### 2000's
 
@@ -40,16 +64,31 @@ Programming Languages, Software Engineering, Reverse Engineering, Re-engineering
 
 This literature is about the meta systems themselves, their design and their evaluation.
 
+
+
+
 ### 2020's
 
 * 🎓Mauricio Merino Verano, Engineering Language-Parametric End-User Programming Environments for DSLs (2022) TU Eindhoven.
    > Inspired by industrial use cases at Canon Producting Printing, this thesis adds "Notebooks" and "Block-based languages" to the
    > Rascal technological space. Generating notebook interfaces for DSLs, like IDEs, and deriving usable block-based language interfaces
    > from context-free grammars are two highlights.
-
+* Mauricio Verano Merino, Tom Beckmann, Tijs van der Storm, Robert Hirschfeld, and Jurgen J. Vinju. Getting Grammars into Shape for Block-based. (2021)  International Conference on Software Language Engineering.
+   > We can generate block-based syntax editors from context-free grammars. The paper bridges between the grammarware and blockware technological spaces. A collaboration with TU Eindhoven en Canon Production Printing.
+* Jurgen J. Vinju and Tijs van der Storm. Bacatá: Notebooks for DSLs, Almost for Free. (2020) &lt;Programming&gt; Journal and DSLDI 2020
+   > We can generate Jupyter Notebook interfaces for language descriptions in Rascal, similar to the way we can generate Eclipse plugins and VScode extensions,
+   > but with a very different user experience.
 
 ### 2010's
 
+* Jouke Stoel, Tijs van der Storm, Jurgen J. Vinju. AlleAlle: Bounded Relational Model Finding with Unbounded Data. (2019) SPLASH Onward! 
+   > AlleAlle is an (intermediate) domain specific language for expressing constraints on relations with data. It can be seen as
+   > as generalized version of Alloy. It is implemented in Rascal and uses Z3, and serves as a high-level back-end for DSL analysis tools.
+* Rodin Aarssen, Tijs van der Storm, Jurgen J. Vinju. Concrete Syntax with Black Box Parsers. (2019) &lt;Programming&gt; Journal.
+   > We add concrete syntax for parsers not generated from context-free grammars in Rascal, but rather coupled external (open) parsers for existing programming languages.
+   > This is in collaboration with TU Eindhoven and Philips Healthcare.
+* Paul Klint, Tijs van der Storm and Jurgen J. Vinju. Rascal, 10 years later. (2019) Invited paper after the IEEE SCAM Most Influential Paper award for Rascal: A Domain Specific Language for Source Code Analysis and Manipulation
+   > This paper reports on 10 years of Rascal development and application in research, education and industry. 
 * Paul Klint, Tijs van der Storm, and Jurgen Vinju. EASY Meta-programming with Rascal. Leveraging the Extract-Analyze-Synthesize Paradigm for Meta-programming. (2010) In Proceedings of the 3rd International Summer School on Generative and Transformational Techniques in Software Engineering (GTTSE'09), LNCS. Springer.
    > This is a comprehensive overview of the first release of Rascal as it was used in education at the Master Software Engineering for the first time in 
    > 2009, and at the summer school in Braga that year. Note that the language has evolved quite a bit since then, so as a manual it is not apropriate anymore. 
@@ -107,6 +146,8 @@ contributions here rather than above.
 * 🎓 Naveneetha K. Vasudevan, A non-deterministic approach to ambiguity detection in Context Free Grammars. (2017)Department of Informatics King’s College London.
    > This thesis from outside of the Rascal community provides very effective ambiguity detection with a practical
    > and easy-to-implement approach. This knowledge is now the basis of Dr Ambiguity's ambiguity detection methods.
+* Michael Steindorfer and Jurgen J. Vinju. To-many or To-one? All-in-one! Efficient Purely Functional Multi-Maps with Type-Heterogeneous Hash-Tries. (2018) ACM International Conference on Programming Languages Design and Implementation (PLDI).
+   > Here we generalize the hash-trie data-structure implementation of the JVM to efficient multi-maps for fast indexed many-to-many relations, as used in relational analysis of source code with Rascal. The data-structure optimizes for the general and statistically normal one-to-one case and degrades in memory and iteration efficiency gradually as more one-to-many tuples are added.
 * 🎓 Michael Steindorfer, Efficient Immutable Collections. (2017) Universiteit van Amsterdam.
    > This thesis describes the core data-structures and optimizations required for Rascal's implementation
    > of relational calculus: relations, sets and maps. The trie map is the core vehicle, and the contributions
