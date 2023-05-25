@@ -1,6 +1,8 @@
 ---
 title: String
 keywords:
+  - escape
+  - unicode
   - "\\\""
   - "'"
   - "<"
@@ -14,7 +16,6 @@ keywords:
   - "\\\\u"
   - "\\\\U"
   - hexademical
-  - escape
   - if
   - else
   - for
@@ -33,18 +34,16 @@ String values.
 where `_StringChar~i~_ may be one of the following:
 
 *  __Ordinary character__: Any character except `<`, `>`, `"`, `'` or `\`.
-*  __Escaped character__: Backslash `\` followed by any of  `<`, `>`, `"`, `'` or `\` represents the escaped character itself.
-  Other escape sequences that are supported are:
-**  `\n`: newline
-**  `\t`: tab
-**  `\r`: carriage return
-**  `\b`: backspace
-**  `\f`: vertical feed
-**  `\u hexDigit~1~ hexDigit~2~ hexDigit~3~ hexDigit~4~` : hexadecimal escapes with four digit indexes into UNICODE.
-**  `\U hexDigit~1~ hexDigit~2~ hexDigit~3~ hexDigit~4~ hexDigit~5~ hexDigit~6~` : hexadecimal escapes with six digit indexes into UNICODE.
-**  `\ ahexDigit~1~ hexDigit~2~`:  hexadecimal escapes with 2 digit indexes into ASCII (0x0 ... 0x7F).
-
-
+*  __Escaped character__: 
+   * Backslash `\` followed by any of  `<`, `>`, `"`, `'` or `\` represents the escaped character itself.
+   *  `\n`: newline
+   *  `\t`: tab
+   *  `\r`: carriage return
+   *  `\b`: backspace
+   *  `\f`: vertical feed
+   *  `\u hexDigit~1~ hexDigit~2~ hexDigit~3~ hexDigit~4~` : hexadecimal escapes with four digit indexes into UNICODE, such as `\uABCD`.
+   *  `\U hexDigit~1~ hexDigit~2~ hexDigit~3~ hexDigit~4~ hexDigit~5~ hexDigit~6~` : hexadecimal escapes with six digit indexes into UNICODE, such as `\UABCDEF`.
+   *  `\a hexDigit~1~ hexDigit~2~`:  hexadecimal escapes with 2 digit indexes into ASCII (0x0 ... 0x7F), such as `\a13`.
 *  __String Interpolation__: 
 
 | Form      | Description |
@@ -63,8 +62,6 @@ where `_StringChar~i~_ may be one of the following:
 | --- | --- |
 | `StringChars~1~\n StringChars~2~ `   | Strings can be multi-line without an escape or continuation marker  |
 | `StringChars~2~\n '  StringChars~2~` | A margin character `'` indicates where the next line starts  |
-
-
 
 #### Usage
 
