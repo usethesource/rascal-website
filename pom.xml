@@ -27,7 +27,7 @@
         <rascal-maven-plugin.version>0.18.0</rascal-maven-plugin.version>
         <rascal.version>0.30.1</rascal.version>
         <rascal-tutor.version>0.8.4</rascal-tutor.version>
-        <clair.version>0.6.4</clair.version>
+        <clair.version>0.7.1</clair.version>
         <flybytes.version>0.1.7</flybytes.version>
         <typepal.version>0.8.3</typepal.version>
         <salix-core.version>0.1.0-RC2</salix-core.version>
