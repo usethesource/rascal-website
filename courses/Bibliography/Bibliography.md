@@ -8,6 +8,11 @@ This page intends to provide a comprehensive list
 of papers, PhD theses and master's theses about what is happening "under the hood", on the language
 level and with the applications of Rascal.
 
+The bibliography is organized in batches of decades (1980's, 1990's, 2000's, 2010's, 2020's), and grouped by the following three categories:
+   * Applications of Meta Programming in Compiler Construction, Language Design, Reverse Engineering, Re-engineering, Static Analysis, Typechecking, Refactoring, Source-to-source transformations, Model Driven Engineering, Model Checking, Domain Specific Languages, etc.
+   * Meta Languages and Systems; their design, construction, and evaluation.
+   * Data Structures and Algorithms; which are fundamental to the above.
+
 ## Applications
 
 Work that applies the meta-technology and theories is scattered over several sub-disciplines of Computer Science; e.g.
@@ -63,9 +68,6 @@ Programming Languages, Software Engineering, Reverse Engineering, Re-engineering
 ## Meta languages and systems
 
 This literature is about the meta systems themselves, their design and their evaluation.
-
-
-
 
 ### 2020's
 
@@ -152,11 +154,16 @@ contributions here rather than above.
    > This thesis describes the core data-structures and optimizations required for Rascal's implementation
    > of relational calculus: relations, sets and maps. The trie map is the core vehicle, and the contributions
    > found their way outside of the Rascal community as well.
-* 🎓 Bas Basten, Ambiguity Detection for Programming Language Grammars. (2011) Universiteit van Amsterdam
+* 🎓 Bas Basten, Ambiguity Detection for Programming Language Grammars. (2011) Universiteit van Amsterdam.
    > In this thesis ambiguity of context-free grammars is a problem, which must be detected, diagnosed and cured.
    > Static ambiguity detection in this thesis takes the approach of trying to prove unambiguity and reporting
    > failures with causes if such a proof can not be found. There is also a chapter on the diagnostics and curing
    > of ambiguities once found.
+* Bas Basten and Jurgen Vinju. Parse forest diagnostics with Dr. Ambiguity. (2011) ACM International Conference on Software Language Engineering (SLE).
+   > This paper explains how differential analysis can isolate the cause of ambiguities; in particular we focus on the kind
+   > of ambiguities that can be solved with declarative disambiguation constructs. The algorithm uses the essence of the disambiguation
+   > constructs semantics (which characterize a difference between two comparable trees), as the vehicle for detecting the causes
+   > of ambiguity. That they can be solved then, falls out trivially.
 
 ### 2000's
 
@@ -169,6 +176,8 @@ contributions here rather than above.
 
 ### 1990's
 
+* Jurgen Vinju, Optimizations of List Matching in the ASF+SDF compiler, University of Amsterdam (1999).
+   > Making list matching faster made almost everything in ASF+SDF faster because it is a core feature.
 * 🎓Eelco Visser,  Syntax Definition for Language Prototyping, University of Amsterdam. (1997)
    > This thesis re-designs the Syntax Definition Formalism (SDF) from scratch and removes the need for a scanner. 
    > The scannerless parsing algorithm SGLR contains the disambiguation filters required to make scannerless parsing possible and feasible.
@@ -183,4 +192,4 @@ contributions here rather than above.
   > Tomita's GLR parsing algorithm provides non-deterministic parsing efficiently; the effect is that it basically has limitless lookahead,
   > and provides an implementation layer for modular/compositional grammars. More importantly, since most existing languages do not
   > fit into the LR or LR categories, the GLR algorithm provided a way for ASF+SDF to scale from toy to real programming languages
-  > such as Pascal, COBOL and C.
+  > such as Pascal, COBOL and C. We include it here because this paper informed almost all of the succeeding work in parsing of this community.
