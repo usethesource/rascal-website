@@ -6,7 +6,7 @@ sidebar_position: 9
 This bibliography is 🚧under construction🚧; we started collecting the data in May 2023 and plan to complete it around December 2023. PDF links and Bibtex snippets will be added later and many references are still missing.
 
 The literature about Rascal goes back all the way to 1980's when its predecessor ASF+SDF spawned.
-This page intends to provide a comprehensive list of papers, PhD theses and master's theses about what is happening "under the hood", on the language level and with the applications of Rascal.
+This page intends to provide a comprehensive list of papers, PhD theses and masters' theses about what is happening "under the hood", on the language level and with the applications of Rascal.
 
 The bibliography is organized in batches of decades (1980's, 1990's, 2000's, 2010's, 2020's), and grouped by the following three categories:
    * Reports on the **Applications of Meta Programming** languages and systems.
