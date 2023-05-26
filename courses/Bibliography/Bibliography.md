@@ -174,7 +174,7 @@ contributions here rather than above.
    > This paper proposes a simpler and more efficient version of Tomita's GLR than the versions of Farshi and Rekers, and so
    > later we merged this into RNSGLR (see above).
 
-* Mark van den Brand, Hayco de Jong, Paul Klint, Pieter A. Olivie. Efficient annotated terms. Softw. Pract. Exp. 30(3): 259-291 (2000)
+* Mark van den Brand, Hayco de Jong, Paul Klint, Pieter A. Olivier. Efficient annotated terms. Softw. Pract. Exp. 30(3): 259-291 (2000)
    > This paper introduces the C library on annotated maximally-shared algebraic terms that would not only become the basis of ASF+SDF Meta-Environment, but also of StrategoXT, ELAN4 and mCRL2. Later the vallang library replaced it, but most of its design principles were kept in tact.
 
 ### 1990's
