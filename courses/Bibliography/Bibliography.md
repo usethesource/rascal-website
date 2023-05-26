@@ -3,15 +3,15 @@ title: Bibliography
 sidebar_position: 6.5
 ---
 
+This bibliography is 🚧under construction🚧; we started collecting the data in May 2023 and plan to complete it around December 2023. PDF links and Bibtex snippets will be added later and many references are still missing.
+
 The literature about Rascal goes back all the way to 1980's when its predecessor ASF+SDF spawned.
-This page intends to provide a comprehensive list
-of papers, PhD theses and master's theses about what is happening "under the hood", on the language
-level and with the applications of Rascal.
+This page intends to provide a comprehensive list of papers, PhD theses and master's theses about what is happening "under the hood", on the language level and with the applications of Rascal.
 
 The bibliography is organized in batches of decades (1980's, 1990's, 2000's, 2010's, 2020's), and grouped by the following three categories:
-   * Applications of Meta Programming in Compiler Construction, Language Design, Reverse Engineering, Re-engineering, Static Analysis, Typechecking, Refactoring, Source-to-source transformations, Model Driven Engineering, Model Checking, Domain Specific Languages, etc.
-   * Meta Languages and Systems; their design, construction, and evaluation.
-   * Data Structures and Algorithms; which are fundamental to the above.
+   * **Applications of Meta Programming** in Compiler Construction, Language Design, Reverse Engineering, Re-engineering, Static Analysis, Typechecking, Refactoring, Source-to-source transformations, Model Driven Engineering, Model Checking, Domain Specific Languages, etc.
+   * All **Meta Languages and Systems**; their design, construction, and evaluation.
+   * The **Data Structures and Algorithms** which are fundamental to the above.
 
 ## Applications
 
