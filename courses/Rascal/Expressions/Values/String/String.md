@@ -33,9 +33,9 @@ String values.
 `"StringChar~1~StringChar~2~..."`
 where `_StringChar~i~_ may be one of the following:
 
-*  __Ordinary character__: Any character except `<`, `>`, `"`, `'` or `\`.
+*  __Ordinary character__: Any Unicode 24-bit character except `<`, `>`, `"`, `'` or `\`,  `a`, `b`, or `🍕`.
 *  __Escaped character__: 
-   * Backslash `\` followed by any of  `<`, `>`, `"`, `'` or `\` represents the escaped character itself.
+   * Backslash `\` followed by any of  `<`, `>`, `"`, `'` or `\` represents the escaped character itself. Such as `\<` and `\"`
    *  `\n`: newline
    *  `\t`: tab
    *  `\r`: carriage return
