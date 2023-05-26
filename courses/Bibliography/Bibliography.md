@@ -1,6 +1,6 @@
 ---
 title: Bibliography
-sidebar_position: 6.5
+sidebar_position: 9
 ---
 
 This bibliography is 🚧under construction🚧; we started collecting the data in May 2023 and plan to complete it around December 2023. PDF links and Bibtex snippets will be added later and many references are still missing.
