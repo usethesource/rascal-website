@@ -176,7 +176,7 @@ contributions here rather than above.
 
 ### 1990's
 
-* Jurgen Vinju, Optimizations of List Matching in the ASF+SDF compiler, University of Amsterdam (1999).
+* 🛠 Jurgen Vinju, Optimizations of List Matching in the ASF+SDF compiler, University of Amsterdam (1999).
    > Making list matching faster made almost everything in ASF+SDF faster because it is a core feature.
 * 🎓Eelco Visser,  Syntax Definition for Language Prototyping, University of Amsterdam. (1997)
    > This thesis re-designs the Syntax Definition Formalism (SDF) from scratch and removes the need for a scanner. 
