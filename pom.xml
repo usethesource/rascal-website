@@ -24,7 +24,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <rascal-maven-plugin.version>0.18.0</rascal-maven-plugin.version>
+        <rascal-maven-plugin.version>0.18.1</rascal-maven-plugin.version>
         <rascal.version>0.30.6</rascal.version>
         <rascal-tutor.version>0.8.4</rascal-tutor.version>
         <clair.version>0.7.1</clair.version>
