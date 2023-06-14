@@ -27,6 +27,7 @@
         <rascal-maven-plugin.version>0.18.2</rascal-maven-plugin.version>
         <rascal.version>0.31.0</rascal.version>
         <rascal-tutor.version>0.8.4</rascal-tutor.version>
+        <rascal-git.version>0.1.10</rascal-git.version>
         <clair.version>0.7.1</clair.version>
         <flybytes.version>0.1.7</flybytes.version>
         <typepal.version>0.8.3</typepal.version>
@@ -79,6 +80,13 @@
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>**/examples/,**/questions/</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>edu.appstate.cs</groupId>
+                                    <artifactId>rascal-git</artifactId>
+                                    <version>${rascal-git.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
@@ -182,6 +190,15 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <compilerArgument>-parameters</compilerArgument> <!-- make sure parameters are compiled by name into the jar -->
+                    <release>11</release>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -210,6 +227,11 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>rascal-tutor</artifactId>
             <version>${rascal-tutor.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.appstate.cs</groupId>
+            <artifactId>rascal-git</artifactId>
+            <version>${rascal-git.version}</version>
         </dependency>
         <dependency>
             <groupId>org.rascalmpl</groupId>
