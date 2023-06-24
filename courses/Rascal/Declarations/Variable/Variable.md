@@ -55,12 +55,12 @@ Rascal provides local type inference, which allows the implicit declaration of v
 #### Examples
 
 Two explicit variable declarations:
-```rascal-shell,continue,error
+```rascal-shell,continue
 int max = 100;
 min = 0;
 ```
 An implicit variable declaration
-```rascal-shell,continue,error
+```rascal-shell,continue
 day = {<"mon", 1>, <"tue", 2>, <"wed",3>, 
        <"thu", 4>, <"fri", 5>, <"sat",6>, <"sun",7>};
 ```

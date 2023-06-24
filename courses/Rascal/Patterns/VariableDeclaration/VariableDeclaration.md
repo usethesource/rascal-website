@@ -27,7 +27,7 @@ or the enclosing ((Statements-If)), ((While)), or ((Do)) if the pattern occurs i
 #### Examples
 
 Let's first perform a match that succeeds:
-```rascal-shell,error
+```rascal-shell
 str S := "abc";
 ```
 and now we attempt to inspect the value of `S`:

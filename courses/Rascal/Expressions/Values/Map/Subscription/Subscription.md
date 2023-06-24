@@ -30,10 +30,8 @@ If this key does not occur in the map, the exception `NoSuchKey` is thrown.
 
 #### Examples
 
-```rascal-shell,error
-```
 Introduce a map, assign it to `colors`, and retrieve the element with index `"trumps"`:
-```rascal-shell,continue,error
+```rascal-shell,continue
 colors = ("hearts":"red", "clover":"black", 
           "trumps":"black", "clubs":"red");
 colors["trumps"];
