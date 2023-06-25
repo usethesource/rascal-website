@@ -31,7 +31,7 @@ Remedies:
 #### Examples
 
 Import the `Map` library and introduce `M` with an empty map as value:
-```rascal-shell,error
+```rascal-shell
 import Map;
 M = ();
 ```
@@ -41,7 +41,7 @@ getOneFrom(M);
 ```
 We can also catch the `EmptyMap` error. First import the Rascal exceptions (which are also included in `Prelude`)
 and `IO`:
-```rascal-shell,continue,error
+```rascal-shell,continue
 import Exception;
 import IO;
 try 

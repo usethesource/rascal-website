@@ -22,7 +22,6 @@ Examples of violations are:
 *  a non-parametric type has parameters.
 *  a parametric type has an incorrect number of parameters.
 
-
 Remedy: correct the type.
 
 #### Examples
@@ -33,6 +32,11 @@ list[int,str] l;
 map[str, int, int]  m;
 set[int,str] s;
 ```
+
+* `bool` does not have type parameters
+* `list` only has one element type. Perhaps you needed a `lrel[int, str]`?
+* `map` has the key and the value type parameters, but not more
+* `set` has only one element type. Perhaps you needed a `rel[int, str]`?
 #### Benefits
 
 #### Pitfalls

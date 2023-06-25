@@ -32,7 +32,7 @@ Remedies:
 #### Examples
 
 Import the `List` library and introduce `L` with an empty list as value:
-```rascal-shell,error
+```rascal-shell
 import List;
 L = [];
 ```
@@ -46,7 +46,7 @@ tail(L);
 ```
 We can also catch the `EmptyList` error. First import the Rascal exceptions (which are also included in `Prelude`)
 and `IO`:
-```rascal-shell,continue,error
+```rascal-shell,continue
 import Exception;
 import IO;
 try 

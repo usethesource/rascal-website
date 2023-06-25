@@ -37,7 +37,7 @@ Here is an example where an undeclared variables occurs in list splicing:
 
 The remedy is here:
 ```rascal-shell
-x = 5;
+x = [5];
 [1, *x, 3]
 ```
 

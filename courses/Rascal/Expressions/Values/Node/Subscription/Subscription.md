@@ -31,10 +31,9 @@ If this is not the case, the exception `IndexOutOfBounds` is thrown.
 
 #### Examples
 
-```rascal-shell,error
-```
+
 Introduce a node, assign it to F and retrieve the various arguments:
-```rascal-shell,continue,error
+```rascal-shell,continue
 F = "f"(1, "abc", false);
 F[0]
 F[1]
@@ -45,4 +44,3 @@ Explore an error case:
 F[3];
 ```
 
-       

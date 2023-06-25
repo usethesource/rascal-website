@@ -36,7 +36,7 @@ Calling the undeclared function `triple` gives an error:
 triple(5)
 ```
 We can remedy this by declaring the function:
-```rascal-shell,continue,error
+```rascal-shell,continue
 int triple(int n) = 3 * n;
 triple(5)
 ```

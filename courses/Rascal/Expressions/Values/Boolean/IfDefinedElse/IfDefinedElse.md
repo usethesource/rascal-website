@@ -34,7 +34,7 @@ Also see ((Boolean-IsDefined)) and ((Assignment)).
 #### Examples
 
 This test can, for instance, be used to handle the case that a certain key value is not in a map:
-```rascal-shell,error
+```rascal-shell
 T = ("a" : 1, "b" : 2);
 ```
 Trying to access the key `"c"` will result in an error:
@@ -42,15 +42,15 @@ Trying to access the key `"c"` will result in an error:
 T["c"];
 ```
 Using the `?` operator, we can write:
-```rascal-shell,continue,error
+```rascal-shell,continue
 T["c"] ? 0;
 ```
 This is very useful, if we want to modify the associated value, but are not sure whether it exists:
-```rascal-shell,continue,error
+```rascal-shell,continue
 T["c"] ? 0 += 1;
 ```
 Another example using a list:
-```rascal-shell,continue,error
+```rascal-shell,continue
 L = [10, 20, 30];
 L[4] ? 0;
 ```

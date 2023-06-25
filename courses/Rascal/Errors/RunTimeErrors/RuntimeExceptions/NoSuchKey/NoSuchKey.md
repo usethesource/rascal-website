@@ -30,7 +30,7 @@ Remedies:
 #### Examples
 
 Import the `Map` and `IO` libraries and introduce map `M`:
-```rascal-shell,error
+```rascal-shell
 import Map;
 import IO;
 M = ("a" : 1, "b" : 2);
@@ -40,19 +40,25 @@ Indexing `M` with a non-existing key gives an error:
 M["c"]
 ```
 Use the postfix isDefined operator `?` to test whether the value is defined:
-```rascal-shell,continue,error
-if(M["c"]?) println("defined"); else println("not defined");
+```rascal-shell,continue
+if (M["c"]?) 
+  println("defined"); 
+else 
+  println("not defined");
 ```
 Or use the binary ifDefinedElse operator `?` to return an alternative value
 when the value of `M["c"]` is undefined:
-```rascal-shell,continue,error
+```rascal-shell,continue
 M["c"] ? 3
 ```
 Yet another solution is to use try/catch.
 First we import the Rascal exceptions (which are also included in `Prelude`):
-```rascal-shell,continue,error
+```rascal-shell,continue
 import Exception;
-try println(M["c"]); catch NoSuchKey(k): println("Key <k> does not exist");
+try 
+  println(M["c"]);
+catch NoSuchKey(k): 
+  println("Key <k> does not exist");
 ```
 
 #### Benefits

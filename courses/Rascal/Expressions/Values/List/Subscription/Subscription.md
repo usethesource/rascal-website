@@ -34,7 +34,7 @@ If this is not the case, the exception `IndexOutOfBounds` is thrown.
 #### Examples
 
 Introduce a list, assign it to L and retrieve the element with index 1:
-```rascal-shell,continue,error
+```rascal-shell,continue
 L = [10, 20, 30];
 L[1];
 ```

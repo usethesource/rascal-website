@@ -37,10 +37,13 @@ tan(-550000000000000000000000);
 ```
 We can also catch the `ArithmeticException` error. First import the Rascal exceptions (which are also included in `Prelude`)
 and `IO`:
-```rascal-shell,error
+```rascal-shell
 import Exception;
 import IO;
-try println(3/0); catch ArithmeticException(msg): println("The message is: <msg>");
+try 
+  println(3/0); 
+catch ArithmeticException(str msg): 
+  println("The message is: <msg>");
 ```
 
 #### Benefits

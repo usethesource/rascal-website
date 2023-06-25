@@ -29,7 +29,7 @@ $2013-07-15$ < $2014-07-15$
 ```
 
 Or with datetimes:
-```rascal-shell,continue
+```rascal-shell
 $2013-01-11T23:03:56.901+01:00$ < $2013-01-11T23:05:00.901+01:00$
 ```
 But mixing dates and times gives errors:

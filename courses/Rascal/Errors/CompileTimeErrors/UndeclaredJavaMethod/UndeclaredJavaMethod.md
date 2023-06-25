@@ -27,14 +27,7 @@ This requires these elements:
 This error is generated when a method with the same name as the Rascal function
 cannot be found in the mentioned Java class. Most likely, this is a missing or misspelled function/method name.
 
-Remedy: Contact the Rascal developers:
-
-*  Ask a question at [Rascal Ask site](http://ask.rascal-mpl.org/questions/).
-*  Read the currently open issues at the Rascal's [issue tracker](https://github.com/cwi-swat/rascal/issues?state=open). If your problem has not yet been reported by someone else, please report it here.
-
-
-If you are an expert developer and have implemented your own extension in Java, please check your own extension code first.
-
+Remedy: see ((GettingHelp)).  If you are an expert developer and have implemented your own extension in Java, please check your own extension code first.
 
 #### Examples
 

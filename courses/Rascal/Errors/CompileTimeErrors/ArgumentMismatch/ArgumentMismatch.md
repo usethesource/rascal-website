@@ -27,11 +27,11 @@ Remedies:
 #### Examples
 
 Define a function `triple` that multiplies its argument by 3:
-```rascal-shell,error
+```rascal-shell
 int triple(int x) = 3 * x;
 ```
 It works fine:
-```rascal-shell,continue,error
+```rascal-shell,continue
 triple(5)
 ```
 Unless it is called with an argument of a wrong type:
@@ -39,7 +39,7 @@ Unless it is called with an argument of a wrong type:
 triple([1,2,3])
 ```
 We can define a new version of `triple` function that accepts lists:
-```rascal-shell,continue,error
+```rascal-shell,continue
 list[int] triple(list[int] L) = [3 * x | x <- L];
 triple([1,2,3]);
 ```

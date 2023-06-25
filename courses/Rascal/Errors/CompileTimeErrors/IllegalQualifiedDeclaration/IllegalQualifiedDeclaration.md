@@ -28,7 +28,7 @@ Using a qualified name gives an error:
 data M::D = d();
 ```
 Without the qualification, this is correct:
-```rascal-shell,continue,error
+```rascal-shell,continue
 data D = d();
 ```
 

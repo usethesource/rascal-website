@@ -90,35 +90,36 @@ Some common use cases (with `begin` <= `end`):
 
 Let's put this into practice now.
 
-```rascal-shell,error
+```rascal-shell
 ND = "f"(0, "abc", 20, false, 40, [3,4,5], 60, {"a", "b"}, 80);
 ```
 Slices with begin < end
-```rascal-shell,continue,error
+```rascal-shell,continue
 ND[1..3];
 ND[1..];       // empty end => end of list of children
 ND[..3];       // empty begin => first child of list
 ND[..];        // both empty => whole list of children
 ```
 Slices with  begin >= end
-```rascal-shell,continue,error
+```rascal-shell,continue
 ND[3..1];      // slice contains children with indices 3 and 2 (in that order)
 ND[3..3];      // empty slice when begin == end
 ```
 Slices with negative begin or end:
-```rascal-shell,continue,error
+```rascal-shell,continue
 ND[2..-2];     // equivalent to ND[2..7]
 ND[2..7];
 ND[-4..-2];    // equivalent to ND[5..7]
 ND[5..7];
 ```
 Slices with an explicit second index:
-```rascal-shell,continue,error
+```rascal-shell,continue
 ND[1,3..6];
 ND[5,3..];
 ```
-Explore error cases:
-```rascal-shell,continue,error
+
+Slicing does not go "out of bounds". When we go beyond the end or the beginning, it stops there:
+```rascal-shell,continue
 ND[..10];
-ND[1..20];
+ND[..-11];
 ```

@@ -28,7 +28,7 @@ Remedies:
 #### Examples
 
 This is correct:
-```rascal-shell,error
+```rascal-shell
 data Fruit = apple(int n) | orange(int n);
 anno str Fruit @ quality;
 piece = orange(13);

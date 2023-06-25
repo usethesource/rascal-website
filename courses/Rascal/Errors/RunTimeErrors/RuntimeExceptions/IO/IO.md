@@ -43,7 +43,7 @@ import IO;
 readFile(|myScheme:///example.rsc|);
 ```
 We can catch this `IO` error. First import the Rascal exceptions (which are also included in `Prelude`):
-```rascal-shell,continue,error
+```rascal-shell,continue
 import Exception;
 try 
   readFileLines(|myScheme:///example.rsc|); 

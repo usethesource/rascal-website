@@ -31,10 +31,12 @@ void dummy() { return; }
 [1, *dummy(), 2]
 {1, *dummy(), 2}
 ```
-A solution could be:
+A solution could be to have `dummy` return a set of a list:
 
 ```rascal-shell
-int dummy() { return 17; }
+list[int] dummy() { 
+  return [17]; 
+}
 [1, *dummy(), 2]
 {1, *dummy(), 2}
 ```

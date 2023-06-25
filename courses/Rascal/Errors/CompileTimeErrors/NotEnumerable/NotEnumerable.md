@@ -30,6 +30,12 @@ int x <- 17
 b <- true
 ```
 
+Remedies:
+```rascal-shell
+int x <- [17]
+b <- {true}
+```
+
 #### Benefits
 
 #### Pitfalls

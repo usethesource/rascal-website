@@ -27,7 +27,7 @@ Remedies:
 
 #### Examples
 
-```rascal-shell,error
+```rascal-shell
 L = [1,2,3];
 ```
 Division is not supported on lists:

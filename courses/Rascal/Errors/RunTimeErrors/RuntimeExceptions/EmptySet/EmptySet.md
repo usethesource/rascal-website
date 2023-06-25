@@ -31,7 +31,7 @@ Remedies:
 #### Examples
 
 Import the `Set` library and introduce `S` with an empty set as value:
-```rascal-shell,continue,error
+```rascal-shell,continue
 import Set;
 S = {};
 ```
@@ -41,7 +41,7 @@ getOneFrom(S);
 ```
 We can also catch the `EmptySet` error. First import the Rascal exceptions (which are also included in `Prelude`)
 and `IO`:
-```rascal-shell,continue,error
+```rascal-shell,continue
 import Exception;
 import IO;
 try 

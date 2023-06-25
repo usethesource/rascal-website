@@ -22,14 +22,15 @@ being used at run time. This exception is thrown when a non-existent field is ac
 
 #### Examples
 
-Consider this highly simplified view on persons:
-```rascal-shell,error
-data Person = man(str name, bool beard) | woman(str name, bool necklace);
-jane = woman("jane", false);
+Consider this simplified model of lawful entities:
+```rascal-shell
+data Entity = person(str name, int birthYear) | company(str name, Person director);
+jane = person("Jane", 2001);
+icm =  company("ICM", jane);
 ```
-The field `beard` is evidently only applicable to a `man` but not to a woman
-(didn't we say "simplified", above):
+The field `birthYear` is evidently only applicable to a `person` but not to a `company`
 
 ```rascal-shell,continue,error
-jane.beard;
+icm.birthYear;
+jane.birthYear;
 ```

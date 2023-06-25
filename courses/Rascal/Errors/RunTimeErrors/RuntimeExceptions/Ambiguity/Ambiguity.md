@@ -27,7 +27,7 @@ Next, import the ParseTree module that provides a `parse` function that we will 
 import ParseTree;
 ```
 Entering a first expression goes well, except that the parser generator already predicts future ambiguity. So it prints a warning.
-```rascal-shell-error,continue
+```rascal-shell,continue
 parse(#E, "a+a");
 ```
 
@@ -41,7 +41,7 @@ because we did forget to define the associativity of the `+` operator.
 
 Let's fix this:
 
-```rascal-shell,errors
+```rascal-shell
 syntax A = "a";
 syntax E = A | "(" E ")" | left E "+" E;
 import ParseTree;
@@ -51,7 +51,7 @@ parse(#E, "a+a+a");
 However, one can also deal with ambiguity differently. For example we could have the parser build a tree
 for all ambiguous interpretations and inspect the resulting data-structure:
 
-```rascal-shell,errors
+```rascal-shell
 syntax A = "a";
 syntax E = A | "(" E ")" | left E "+" E | left E "*" E;
 import ParseTree;

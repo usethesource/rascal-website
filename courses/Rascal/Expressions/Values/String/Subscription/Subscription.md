@@ -32,7 +32,7 @@ If this is not the case, the exception `IndexOutOfBounds` is thrown.
 #### Examples
 
 Introduce a string, assign it to S and retrieve the element with index 1:
-```rascal-shell,continue,error
+```rascal-shell,continue
 S = "abc";
 S[1];
 ```
@@ -41,4 +41,3 @@ Explore an error case:
 S[5];
 ```
 
-       
