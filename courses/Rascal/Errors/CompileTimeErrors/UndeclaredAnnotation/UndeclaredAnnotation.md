@@ -32,11 +32,11 @@ This is correct:
 data Fruit = apple(int n) | orange(int n);
 anno str Fruit @ quality;
 piece = orange(13);
-piece @ quality = "great";
+piece@quality = "great";
 ```
 But using a wrong annotation name generates an error:
 ```rascal-shell,continue,error
-piece @ qual;
+piece@qual
 ```
 
 #### Benefits

@@ -24,7 +24,7 @@ being used at run time. This exception is thrown when a non-existent field is ac
 
 Consider this simplified model of lawful entities:
 ```rascal-shell
-data Entity = person(str name, int birthYear) | company(str name, Person director);
+data Entity = person(str name, int birthYear) | company(str name, Entity director);
 jane = person("Jane", 2001);
 icm =  company("ICM", jane);
 ```
