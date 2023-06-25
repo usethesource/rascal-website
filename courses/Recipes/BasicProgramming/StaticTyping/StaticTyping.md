@@ -47,7 +47,7 @@ set union and the like.
 #### Examples
 
 Some example can illustrate the above.
-```rascal-shell,error
+```rascal-shell
 int I = 3;
 ```
 Since I is declared as type `int`, we cannot assign a `real` value to it:
