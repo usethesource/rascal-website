@@ -38,16 +38,17 @@ The semantics are that an associativity modifier will instruct the parser to dis
 When associativity is declared for a group of productions, e.g. `left ( Alt~1~ | _Alt ~2~_ | Alt~3~)`, then each alternative will be mutually associative to each other alternative _and itself_. If an alternative of a group defines its own local associativity, as in `left ( right Alt~1~ | Alt~2~ | Alt~3~)`, then _Alt_~1~ is right associative with respect to itself and left associative with respect to all others in the group. 
 
 A finer point is that associativity has no effect on any other position than the left-most and right-most position (see also ((Disambiguation-Priority))). This is to guarantee that associativity does not introduce parse errors. The following tables explain when an associativity declaration filters, given two productions `father` and `child` that share an associativity group.
-| If `left (Parent | Child)`      | Parent None: `E = "[" E "]"` | Parent Left-most: `E = E "*"` |Parent  Right-most: `E = "*" E` | Parent Both: `E = E "*" E`   |
-| --- | --- | --- | --- | --- | --- |
+
+| If `left (Parent \| Child)`      | Parent None: `E = "[" E "]"` | Parent Left-most: `E = E "*"` |Parent  Right-most: `E = "*" E` | Parent Both: `E = E "*" E`   |
+| --- | --- | --- | --- | --- |
 | __Child None:__ `E = "{" E "}"`  | No filter        | No filter            | No filter                     | No filter               |
 | __Child Left-most:__ `E = E "+"` | No filter        | No filter            | Filter under right            | Filter under right      |
 | __Child Right-most:__ `E = "+" E`| No filter        | No filter            | No filter                     | No filter       |
 | __Child Both:__ `E = E "+" E`    | No filter        | No filter            | Filter under right            | Filter under right      |
 
 
-| If `right (Parent | Child)` | Parent None: `E = "[" E "]"` | Parent Left-most: `E = E "*"` |Parent  Right-most: `E = "*" E` | Parent Both: `E = E "*" E`   |
-| --- | --- | --- | --- | --- | --- |
+| If `right (Parent \| Child)` | Parent None: `E = "[" E "]"` | Parent Left-most: `E = E "*"` |Parent  Right-most: `E = "*" E` | Parent Both: `E = E "*" E`   |
+| --- | --- | --- | --- | --- |
 | __Child None:__ `E = "{" E "}"` | No filter        | No filter                    | No filter              | No filter               |
 | __Child Left-most:__ `E = E "+"` | No filter       | No filter                    | No filter              | No filter      |
 | __Child Right-most:__ `E = "+" E`| No filter       | Filter under left            | No filter              | Filter under left       |
