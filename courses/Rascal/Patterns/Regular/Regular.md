@@ -77,14 +77,12 @@ For convenience, we summarize the most frequently used constructs in regular exp
 
 |Operator   | Description |
 | --- | --- |
-| `x`       | The single character `x` as long as it is not a punctuation character with a  |
-                                                        special meaning in the regular expression syntax |
+| `x`       | The single character `x` as long as it is not a punctuation character with a  special meaning in the regular expression syntax |
 | `\p`      | The punctuation character `p`, this includes `!`, `"`, `#`, `$`, `%`, `&`, `'`, `(`, `)`, `*`, `+`, `,`, `-`, `.`, `/`, `:`, `;`, `<`, `=`, `>`, `?`, `@`, `[`, `\`, `]`, `^`, `_`, `{`, `\|`, `}`, and `~`. |
 | `\\`      | The backslash character |
 | `\n`      | Newline character |
 | `\t`      | Tab character |
-| `[...]`   | One of the characters between the brackets (also known as _character class_).  |
-                                                         Character ranges and set operations on character classes may be used. |
+| `[...]`   | One of the characters between the brackets (also known as _character class_).  
 | `[^...]`  | Any one character not between the brackets. |
 | `[a-z0-9]` | Character range: character between `a` and `z` or `0` and `9`. |
 | `.`       | Any character except a line terminator. If single-line mode is set (using `(?s)` or modifier `s`), then it matches any character including line terminators. |
@@ -95,7 +93,7 @@ For convenience, we summarize the most frequently used constructs in regular exp
 | `\w`      | A word: `[a-zA-Z0-9_]` |
 | `\W`      | A non-word:` [^\w]` |
 | `xy`      | Match `x` followed by `y` |
-| `x|y`     | Match `x` or `y` |
+| `x\|y`     | Match `x` or `y` |
 | `x?`      | Optional occurrence of `x` |
 | `x*`      | Zero or more occurrences of `x` |
 | `x+`      | One or more occurrences of `x` |
