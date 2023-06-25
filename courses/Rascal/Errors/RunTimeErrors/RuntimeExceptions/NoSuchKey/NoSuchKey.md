@@ -41,10 +41,11 @@ M["c"]
 ```
 Use the postfix isDefined operator `?` to test whether the value is defined:
 ```rascal-shell,continue
-if (M["c"]?) 
+if (M["c"]?) {
   println("defined"); 
-else 
+} else {
   println("not defined");
+}
 ```
 Or use the binary ifDefinedElse operator `?` to return an alternative value
 when the value of `M["c"]` is undefined:

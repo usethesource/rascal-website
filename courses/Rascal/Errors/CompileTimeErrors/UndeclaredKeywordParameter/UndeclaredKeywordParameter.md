@@ -28,10 +28,15 @@ Remedies:
 ```rascal-shell
 int incr(int n, int delta=1) = n + delta;
 ```
-Calling `incr` with a wrong keyword parameter gives an error:
-```rascal-shell,continue,error
+Calling `incr` with a wrong keyword parameter gives a **warning**:
+```rascal-shell,continue
 incr(3, diff=5);
 ```
+
+:::info
+The warning that is normally printed is not included in this document.
+:::
+
 This can be fixed by using the correct name for the keyword parameter:
 ```rascal-shell,continue
 incr(3, delta=5);

@@ -17,7 +17,7 @@ A function that is declared without keyword parameters is called with keyword pa
 #### Description
 
 Functions maybe declared with or without keyword parameters.
-This error is generated when a function has been declared without keyword parameters but is called with a keyword parameter.
+This **warning** is generated when a function has been declared without keyword parameters but is called with a keyword parameter.
 
 Remedies:
 
@@ -26,11 +26,16 @@ Remedies:
 
 #### Examples
 
-```rascal-shell,error
+```rascal-shell
 int incr(int x) = x + 1;
 incr(3, delta=5);
 ```
-Here is one solution:
+
+:::info
+The warning about the extra keyword parameters is not printed in this document.
+:::
+
+Here is a possible fix to remove the warning:
 ```rascal-shell
 int incr(int x, int delta=1) = x + delta;
 incr(3, delta=5);
