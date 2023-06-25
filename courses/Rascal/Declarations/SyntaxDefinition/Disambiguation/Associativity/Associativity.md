@@ -71,10 +71,10 @@ A finer point is that associativity has no effect on any other position than the
 
 | Original associativity | Better written as priority  |
 | --- | --- |
-|`E = left ( "+" E | E "+" E );` | `E = E "+" E > "+" E;`  |
-|`E = right ( "+" E | E "+" E );` | `E = "+" E > E "+" E;`  |
-|`E = left ( E "+" | E "+" E);` | `E = E "+" > E "+" E;`  |
-|`E = right ( E "+" | E "+" E);` | `E = E "+" E > E "+" ;` |
+| `E = left ( "+" E \| E "+" E );` | `E = E "+" E > "+" E;`  |
+| `E = right ( "+" E \| E "+" E );` | `E = "+" E > E "+" E;`  |
+| `E = left ( E "+" \| E "+" E);` | `E = E "+" > E "+" E;`  |
+| `E = right ( E "+" \| E "+" E);` | `E = E "+" E > E "+" ;` |
 
 
 //
