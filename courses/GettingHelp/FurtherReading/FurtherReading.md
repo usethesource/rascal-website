@@ -13,7 +13,7 @@ keywords:
 1. To learn how to use the ((RascalShell)), go [here]((RascalShell))
 1. To understand the terminology used in Rascal and by Rascal programmers ((Rascalopedia)) is a focused encyclopedia of meta programming.
 1. To understand error messages produced by Rascal, there is information on all ((RunTimeErrors)) and ((CompileTimeErrors)).
-1. To know everything about every detail of Rascal syntax and semantics, the [Rascal reference manual]((Rascal:Rascal)) applies.
+1. To know everything about every detail of Rascal syntax and semantics, the [Rascal reference manual]((course:Rascal)) applies.
 1. The full standard ((Library)) is documented [here]((Library)).
 
 #### Packages

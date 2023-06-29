@@ -17,7 +17,7 @@ are used to define new structured data types of arbitrary complexity. A algebrai
 * Abstract syntax trees of programming languages and domain specific languages
 
 See [Algebraic Data Types]((Rascal:Declarations-AlgebraicDataType)) and 
-[Constructors]((Rascal:Values-Constructor)) in the [Rascal Language Reference]((Rascal:Rascal)).
+[Constructors]((Rascal:Values-Constructor)) in the [Rascal Language Reference]((course:Rascal)).
 
 #### Examples
 

@@ -28,4 +28,4 @@ Here we briefly introduce the most relevant skills by example:
 
 (((TOC)))
 
-The [reference manual]((Rascal:Rascal)) spells out all syntax and semantics organized per language feature.
+The [reference manual]((course:Rascal)) spells out all syntax and semantics organized per language feature.

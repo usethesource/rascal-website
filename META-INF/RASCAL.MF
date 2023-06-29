@@ -1,2 +1,3 @@
 Project-Name: rascal-website
 Sources: courses/Recipes, courses/Rascal, |rascal://org/rascalmpl/library|
+Require-Libraries: |lib://rascal-tutor|
