@@ -17,7 +17,7 @@ int age = 42;
  */
 int yearOfBirth = 1977;
 ```
-* ((Tutor)) documentation tags to every declaration 
+* Tutor documentation tags to every declaration 
 ```rascal
 @synopsis{Describes a concept in a single line.}
 @description{
