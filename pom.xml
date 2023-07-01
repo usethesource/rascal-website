@@ -130,6 +130,7 @@
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
                                 </artifactItem>
+                                <!--
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>rascal-lsp</artifactId>
@@ -137,7 +138,8 @@
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
-                                </artifactItem>
+                                    </artifactItem>
+                                -->
                             </artifactItems>
                         </configuration>
                     </execution>
@@ -251,11 +253,13 @@
             <artifactId>salix-contrib</artifactId>
             <version>${salix-contrib.version}</version>
         </dependency>
+        <!--
         <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>rascal-lsp</artifactId>
             <version>${rascal-lsp.version}</version>
-        </dependency>
+            </dependency>
+        -->
     </dependencies>
 
 </project>
