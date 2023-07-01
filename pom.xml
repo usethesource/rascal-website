@@ -24,7 +24,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <rascal-maven-plugin.version>0.19.6</rascal-maven-plugin.version>
+        <rascal-maven-plugin.version>0.19.7</rascal-maven-plugin.version>
         <rascal.version>0.33.0</rascal.version>
         <rascal-tutor.version>0.11.5</rascal-tutor.version>
         <clair.version>0.9.2</clair.version>
@@ -79,6 +79,7 @@
                                     <version>${flybytes.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
@@ -86,15 +87,7 @@
                                     <version>${typepal.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
-                                </artifactItem>
-                                <!--
-                                <artifactItem>
-                                    <groupId>org.rascalmpl</groupId>
-                                    <artifactId>rascal-tutor</artifactId>
-                                    <version>${rascal-tutor.version}</version>
-                                    <outputDirectory>${project.basedir}</outputDirectory>
-                                    <includes>docs/**/*.*</includes>
-                                    <excludes>**/examples/,**/questions/</excludes>
+                                    <excludes>docs/index.value</excludes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>edu.appstate.cs</groupId>
@@ -102,6 +95,16 @@
                                     <version>${rascal-git.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>rascal-tutor</artifactId>
+                                    <version>${rascal-tutor.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>**/examples/,**/questions/</excludes>
+                                    <excludes>docs/index.value</excludes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
@@ -109,6 +112,7 @@
                                     <version>${clair.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
@@ -116,6 +120,7 @@
                                     <version>${salix-core.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
@@ -123,6 +128,7 @@
                                     <version>${salix-contrib.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
@@ -130,7 +136,8 @@
                                     <version>${rascal-lsp.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
-                                </artifactItem>-->
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
@@ -162,10 +169,10 @@
                                 <src>${project.basedir}/courses/Rascalopedia</src>
                                 <src>${project.basedir}/courses/Bibliography</src>
                             </srcs>
-                            <srcIgnores>
-                                <src>|lib://rascal/org/rascalmpl/library/lang/rascal|</src>
-                                <src>|lib://rascal/org/rascalmpl/library/lang/c90|</src>
-                            </srcIgnores>
+                            <ignores>
+                                <ignore>|lib://rascal/org/rascalmpl/library/lang/rascal|</ignore>
+                                <ignore>|lib://rascal/org/rascalmpl/library/lang/c90|</ignore>
+                            </ignores>
                         </configuration>
                     </execution>
                 </executions>
@@ -219,7 +226,12 @@
             <artifactId>typepal</artifactId>
             <version>${typepal.version}</version>
         </dependency>
-        <!--<dependency>
+        <dependency>
+            <groupId>edu.appstate.cs</groupId>
+            <artifactId>rascal-git</artifactId>
+            <version>${rascal-git.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>clair</artifactId>
             <version>${clair.version}</version>
@@ -230,11 +242,6 @@
             <version>${rascal-tutor.version}</version>
         </dependency>
         <dependency>
-            <groupId>edu.appstate.cs</groupId>
-            <artifactId>rascal-git</artifactId>
-            <version>${rascal-git.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>salix-core</artifactId>
             <version>${salix-core.version}</version>
@@ -243,7 +250,12 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>salix-contrib</artifactId>
             <version>${salix-contrib.version}</version>
-        </dependency>-->
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>rascal-lsp</artifactId>
+            <version>${rascal-lsp.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
