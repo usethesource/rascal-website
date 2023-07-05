@@ -68,6 +68,18 @@ void hello() {
 
 This module should be placed in `<project dir>/src/demo/basic/Hello.rsc`.
 
+```rascal-prepare
+import IO;
+writeFile(|test-modules:///demo/basic/Hello.rsc|,
+"module demo::basic::Hello
+'
+'import IO;
+'
+'void hello() {
+'   println(\"Hello world, this is my first Rascal program!\");
+'}");
+```
+
 Using this `Hello` module is now simple:
 
 ```rascal-shell
@@ -84,12 +96,12 @@ to invoke this `private` `hello()` function.
 
 #### Benefits
 
-* ((println)) is a simple function that renders a string to the output stream
-* The ((Values-String)) constants you pass to ((println)) may contain entire string templates with automatic indentation
+* ((Library:println)) is a simple function that renders a string to the output stream
+* The ((Values-String)) constants you pass to ((Library:println)) may contain entire string templates with automatic indentation
 
 #### Pitfalls
 
-* Don't forget to import the ((module:IO)) module.
+* Don't forget to import the ((Library:module:IO)) module.
 ```rascal-shell,errors
 println("I think I forgot to import the IO module...")
 ```
