@@ -43,8 +43,9 @@ syntax Exp
 * The `Id` and `Num` rules are not ambiguous. They do not require an order.
 * <1>: The `bracket` rule is required to write expressions in a different order. The `bracket` syntax ryle attribute is used in ((Rascal:Patterns)) to ignore superfluous brackets in either the pattern or the subject value.
 * <2>: At the first `>` starts the definition of order of operations. The highest precedences goes to the `^` operator (exponentiation). And here we chose for `right` associativity such that `1^2^3` parses as `1^(2^3)`.
-* <3> and <4>: We chain more `>` to expand the ordered list of operators to include multiplication `*` and division `/`. They are both `left` associative, *also* towards one another, because they are grouped in an associativity group `left ( ... )`.
-* <5> and <6>: The chain ends with addition and subtraction at the bottom of the hierarchy, again both `left` associative.
+* <3>: We chain more `>` to expand the ordered list of operators to include multiplication `*` and division `/`. * <4>: `/` is `left` associative like `*` and they are *also* towards one another, because they are grouped in an associativity group `left ( ... )`.
+* <5>: The chain ends with addition and subtraction at the bottom of the hierarchy.
+* <6>: Again both operators are `left` associative within a group.
 
 #### Examples
 
