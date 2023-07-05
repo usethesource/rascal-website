@@ -1,6 +1,7 @@
 Prism.languages['rascal'] = {
     'keyword': [
         /\bo\b/,
+        /\bassoc\b/,
         /\bsyntax\b/,
         /\bkeyword\b/,
         /\blexical\b/,
@@ -15,6 +16,7 @@ Prism.languages['rascal'] = {
         /\bfinally\b/,
         /\bprivate\b/,
         /\breal\b/,
+        /\bleft\b/,
         /\blist\b/,
         /\bfail\b/,
         /\bfilter\b/,
@@ -48,6 +50,7 @@ Prism.languages['rascal'] = {
         /\binsert\b/,
         /\bswitch\b/,
         /\breturn\b/,
+        /\bright\b/,
         /\bcase\b/,
         /\bwhile\b/,
         /\bstr\b/,
