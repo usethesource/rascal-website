@@ -40,10 +40,10 @@ When `fail` is executed:
 
 *  If the associated pattern has more alternatives, the next alternative is explored,
 *  otherwise the pattern as a whole fails. 
-   ** In the case of switch or visit this means that the next case will be tried.
-   ** For while, do and for, this implies that any bindings caused by the pattern are undone and that the next 
+   * In the case of switch or visit this means that the next case will be tried.
+   * For while, do and for, this implies that any bindings caused by the pattern are undone and that the next 
       alternative in the test is tried; otherwise the loop is terminated.
-   ** For a function call it means that the next function declaration (or the default one) is tried.
+   * For a function call it means that the next function declaration (or the default one) is tried.
 
 #### Examples
 

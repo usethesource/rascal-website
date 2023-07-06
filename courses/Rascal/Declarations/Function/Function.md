@@ -108,10 +108,10 @@ There are some restrictions however:
 
 *  Overloaded alternatives for the same function name but with different patterns must return the same type.
 *  Overloaded alternatives for the same function name must have mutually exclusive patterns, unless one alternative is labeled `default` and the other is not. The patterns of formal parameters are mutually exclusive if for at least one parameter position:
-**  They range over incomparable types, as in `int f(int a)` and `int f(real a)`, or
-**  They range over different alternatives of an ((Algebraic Data Type)), as in `int f(and(Bool a, Bool b))` and `int f(or(Bool a, Bool b))`
-**  They range over different alternatives of a ((Syntax Definition))
-**  And note that deep matches using the `/` alternative are considered to be of type `value` and therefore overlap with all other patterns.
+   *  They range over incomparable types, as in `int f(int a)` and `int f(real a)`, or
+   *  They range over different alternatives of an ((Algebraic Data Type)), as in `int f(and(Bool a, Bool b))` and `int f(or(Bool a, Bool b))`
+   *  They range over different alternatives of a ((Syntax Definition))
+   *  And note that deep matches using the `/` alternative are considered to be of type `value` and therefore overlap with all other patterns.
 *  Overlapping patterns are allowed if the one alternative has the `default` modified while the other does not.
 *  If a function is fallible, it uses the `fail` statement to back-track to a different alternative, then there must be a `default` alternative defined which can handle the general case. An ((AlgebraicDataType)) or a ((SyntaxDefinition)) with the same name and return type counts as a `default` alternative.
 *  `default` functions may not fail.
@@ -124,14 +124,10 @@ The _Modifiers_ affect _visibility_ and _special behaviour_ of functions:
 *  _Visibility_: `private` declares that a function is only visible in the current module. 
   `public` declares that it is visible outside the module as well. When visibility is not specified, `private` is assumed.
 *  _Special Behaviour_:
-   **  `java` declares that the body of the function is implemented in Java. The function should have a
-       `javaClass` annotation that determines where the Java implementation can be found.
-   **  `test` declares that this is a test function. A test function is a boolean function (currently) without arguments. 
-        It can be called as any other function. However, it can also be called automatically
-        by the unit test framework, by typing `:test` at the command line, see [Help](/docs/GettingHelp/CommandLine/).
-   **  `default` declares an alternative for an overloaded function that will only be tried after 
-        all non-default alternatives have been tried. Note that ((Algebraic Data Type))s and ((Syntax Definition))s 
-        _implicitly_ define `default` functions that may be overloaded by normal ((Function Declarations))s.
+   *  `java` declares that the body of the function is implemented in Java. The function should have a `javaClass` annotation that determines where the Java implementation can be found.
+   *  `test` declares that this is a test function. A test function is a boolean function (currently) without arguments.  It can be called as any other function. However, it can also be called automatically by the unit test framework, by typing `:test` at the command line, see [Help](/docs/GettingHelp/CommandLine/).
+   *  `default` declares an alternative for an overloaded function that will only be tried after 
+        all non-default alternatives have been tried. Note that ((Algebraic Data Type))s and ((Syntax Definition))s _implicitly_ define `default` functions that may be overloaded by normal ((Function Declarations))s.
 
 
 #### Examples

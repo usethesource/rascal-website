@@ -47,8 +47,9 @@ Let _V_ be the current value of _Assignable_.
   `begin`, `begin+step`. ... `end-step` <= `index < end` replaced by the successive elements of the value of _Exp_~4~.
   Note that the size of _V_ and _V_' may differ.  _V_' is assigned to the _Assignable_. 
   If the number of indices in the slice and the number of elements in the value of _Exp_~4~ is not equal the following is done:
-  **  If the number of elements in the slice is larger: the elements of _Exp~4~_ are used in a circular manner.
-  **  If the number of elements in the slice is smaller: the remaining elements of _Exp~4~_ is inserted after the last index in the slice.
+   * If the number of elements in the slice is larger: the elements of _Exp~4~_ are used in a circular manner.
+   * If the number of elements in the slice is smaller: the remaining elements of _Exp~4~_ is inserted after the last index in the slice.
+      
 
 #### Examples
 
