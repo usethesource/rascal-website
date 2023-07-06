@@ -4,8 +4,7 @@ title: UndeclaredVariable
 
 #### Synopsis
 
-Use of a variable that has not been declared.
-
+Rascal can not find the definition of the name (identifier) used in an ((Expressions)) or ((Patterns)).
 #### Syntax
 
 #### Types
@@ -20,13 +19,13 @@ A variable can only be used when it has been declared and initialized.
 This error is generated when this is not the case. 
 
 The error message is a bit of a *misnomer*, because it is produced when _any identifier_
-can not be found. So a name of a function, of a constructor, of a global variable
-or a local variable which can not be found in scope, produces said error message.
+can not be found. That could be a name of a ((Function)), of a [Constructors]((AlgebraicDataType)), or a [Pattern Variable]((Patterns-Variable)), or a global ((Declarations-Variable))
+or a local ((Declarations-Variable)) which can not be found in the current scope. 
 
-Remedy:
-
-*  Rename the offending variable name into the name of an existing variable.
-*  Introduce a new variable.
+You can help Rascal find the name by:
+* Adding a new declaration of a ((Function)), [Constructors]((AlgebraicDataType)), a ((Declarations-Variable)) or a [Pattern Variable]((Patterns-Variable)) that has the given name.
+* ((Import)) or ((Extend)) a module that contains a definition of the given name.
+* Using a different name, or correcting a spelling error, such that Rascal can find the name in the current scope, or an imported or extended scope.
 
 #### Examples
 
@@ -48,4 +47,4 @@ x = [5];
 
 #### Pitfalls
 
-* Not only variable produce `UndeclaredVariable`, also missing function and constructors do.
+* Not only hard-to-find variable names produce `UndeclaredVariable`, also missing ((Function))s and [Constructors]((AlgebraicDataType)) do.

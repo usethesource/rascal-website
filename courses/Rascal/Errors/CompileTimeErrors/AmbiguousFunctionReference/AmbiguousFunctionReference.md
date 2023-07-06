@@ -16,18 +16,7 @@ An ambiguous function name
 
 #### Description
 
-Warning: How to generate this error? 
-
-#### Examples
-
-```rascal-shell
-data D = d(int x);
-data D2 = d(str x);
-d(3).x
-d("a").x
-```
-
-#### Benefits
-
-#### Pitfalls
-
+:::warning
+this error message is deprecated. It should not happen anymore since
+the concepts of ((Function))s and rewrite rules have been merged.
+:::
