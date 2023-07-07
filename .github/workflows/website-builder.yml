@@ -45,6 +45,7 @@ jobs:
           NETLIFY_DEPLOY_TO_PROD: true
           install_command: yarn install --frozen-lockfile
           build_command: yarn build
+          use_nvm: false
 
       - name: Algolia crawler creation and crawl
         uses: algolia/algoliasearch-crawler-github-actions@v1.0.10
