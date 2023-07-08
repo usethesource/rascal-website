@@ -64,7 +64,7 @@ const config = {
     ({
       metadata: [
         { name: 'description', content: 'The Rascal Meta Programming Language - The one-stop shop for metaprogramming' },
-        { name: 'keywords', content: 'rascal, metaprogramming, programming, dsl, compiler, code analysis' }
+        // { name: 'keywords', content: 'rascal, metaprogramming, programming, dsl, compiler, code analysis' }
       ],
       navbar: {
         title: 'The Rascal Meta Programming Language',
