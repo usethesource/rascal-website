@@ -34,6 +34,7 @@
         <salix-core.version>0.1.0</salix-core.version>
         <salix-contrib.version>0.1.0</salix-contrib.version>
         <rascal-lsp.version>2.17.0</rascal-lsp.version>
+        <drambiguity.version>0.1.5</drambiguity.version>
     </properties>
 
     <build>
@@ -135,6 +136,14 @@
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>rascal-lsp</artifactId>
                                     <version>${rascal-lsp.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>drambiguity</artifactId>
+                                    <version>${drambiguity.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
@@ -256,6 +265,11 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>rascal-lsp</artifactId>
             <version>${rascal-lsp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>drambiguity</artifactId>
+            <version>${drambiguity.version}</version>
         </dependency>
     </dependencies>
 </project>
