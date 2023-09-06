@@ -55,3 +55,7 @@
     border: 1px solid black;
 }
 
+.theme-doc-markdown img {
+  box-shadow: 0 9px 19px rgba(0,0,0,0.30), 0 7px 6px rgba(0,0,0,0.22);
+}
+
