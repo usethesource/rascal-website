@@ -33,7 +33,7 @@
         <typepal.version>0.8.9</typepal.version>
         <salix-core.version>0.2.2</salix-core.version>
         <salix-contrib.version>0.2.2</salix-contrib.version>
-        <rascal-lsp.version>2.17.0</rascal-lsp.version>
+        <rascal-lsp.version>2.18.0</rascal-lsp.version>
         <drambiguity.version>0.1.10</drambiguity.version>
     </properties>
 
