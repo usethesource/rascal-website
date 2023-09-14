@@ -44,7 +44,11 @@ of these modules later. For now we will go through using them in a few examples.
 
 ```rascal-prepare
 import IO;
-copy(|zip+testdata:///m3/snakes-and-ladders-project-source.zip!/|, |tmp:///snakes-and-ladders|, recursive=true)
+if ({l} := findResources("Metrics/MeasuringJava/snakes-and-ladders-project-source.zip")) {
+   copy(l[scheme="zip+<l.scheme>"][path="<l.path>!/"], |tmp:///snakes-and-ladders|, recursive=true);
+} else {
+   throw "failed to copy necessary source code to analyze for this example";
+}
 ```
 
 ```rascal-shell

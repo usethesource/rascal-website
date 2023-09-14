@@ -11,7 +11,11 @@ language independent module called ((Library:module:analysis::m3::Core)) and a J
 
 ```rascal-prepare
 import IO;
-copy(|zip+testdata:///m3/snakes-and-ladders-project-source.zip!/|, |tmp:///snakes-and-ladders|, recursive=true)
+if ({l} := findResources("Metrics/MeasuringJava/snakes-and-ladders-project-source.zip")) {
+   copy(l[scheme="zip+<l.scheme>"][path="<l.path>!/"], |tmp:///snakes-and-ladders|, recursive=true);
+} else {
+   throw "failed to copy necessary source code to analyze for this example";
+}
 ```
 
 ```rascal-shell
