@@ -75,27 +75,13 @@ The elements of a location value can be accessed and modified using the standard
 * `begin.line`, `begin.column`: begin line and column of text area.
 * `end.line`, `end.column` end line and column of text area.
 
-These are the supported protocol schemes:
+All the supported schemes are reported [here]((Locations))
 
-| Scheme name and pattern | Description |
-| --- | --- |
-| `file:///<path>` | for absolute file names in the OS filesystem | 
-| `project://<projectName>/<path>` | relative to an IDEs workspace, the authority part is a project name and `/` is the root of the source project. Only in an IDE context you can find other projects with this. When running standalone on the commandline or using Maven only the current project is resolved. |
-| `target://<authprojectNameprojectNameority>/<path>` | relative to an IDEs workspace, the authority part is a project name, and the `/` is the root of the binary target path. For example Java's `.class` files end up there |
-| `tmp:///<path>` | finds the OS's folder for temporary files |
-| `home:///<path>` | finds the current user's home folder |
-| `cwd:///<path>` | finds the OS's current working directory |
-| `std:///<path>` | resolves to the (installed) location of the Rascal standard library | 
-| `zip+<scheme>://<authority>/<pathToZip>!/<pathInsideZip` | is for reading and writing into zip archives |
-| `jar+<scheme>://<authority>/<pathToZip>!/<pathInJar` | is for reading and writing into jar archives |
-| `plugin://<bundleName>/<path>` | resolves to the an Eclipse plugin (extracted) resource location, it resolves via an OSGI `bundleresource://` |
-| `bundleresource://<bundleId>/<path>` | resolves to the an OSGI bundle (extracted) resource location. This resolves to a `jar+file://<filePath>!/<pathInJar>` often but could also resolve to a filesystem location depending on the configuration options of the bundle. |
-
-Locations with specific position information should always be generated automatically but for the curious here is an example:
+Locations with specific position information are normally generated automatically (e.g. by parsers)  but for the curious here is an example:
 ```rascal-shell
 |file:///home/paulk/pico.trm|(0,1,<2,3>,<4,5>)
 ```
-Note that this is equivalent to using the `home` scheme:
+Note that example is equivalent to using the `home` scheme:
 ```rascal-shell
 |home://pico.trm|(0,1,<2,3>,<4,5>)
 ```
@@ -113,8 +99,10 @@ x = |tmp://myTempDirectory|;
 x += "myTempFile.txt";
 ```
 
-
 #### Benefits
+
+* locations are values, but they can be interpreted as references.
 
 #### Pitfalls
 
+* if a location naming scheme is not _unique_ (read inaccurate) then downstream analyses are similarly inaccurate.
