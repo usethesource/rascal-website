@@ -6,6 +6,7 @@ details:
   - Patterns
   - Expressions
   - Statements
+  - Locations
   - Tests
   - Errors
 ---
