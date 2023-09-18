@@ -57,39 +57,22 @@ URIs are explained in [Uniform Resource Identifier](http://en.wikipedia.org/wiki
 The elements of a location value can be accessed and modified using the standard mechanism of field selection and field assignment. The corresponding field names are:
 
 *  `top`: the URI of the location without precise positioning information (offset, length, begin, end).
-
 *  `uri`: the URI of the location as a string. Also subfields of the URI can be accessed:
-
-** `scheme`: the scheme (or protocol) to be used;
-
-** `authority`: the domain where the data are located, as a `str`;
-
-** `host`: the host where the URI is hosted (part of authority), as a `str`;
-
-** `port`: port on host (part of authority), as a `int`;
-
-** `path`: path name of file on host, as a `str`;
-
-** `extension`: file name extension, as a `str`;
-
-** `query`: query data, as a `str`;
-
-** `fragment`: the fragment name following the path name and query data, as a `str`;
-
-** `user`: user info (only present in schemes like mailto), as a `str`;
-  
-** `parent` : removes the last segment from the path component, if any, as a `loc`;
-
-** `file` : the last segment of the path, as a `str`;
-
-** `ls` : the contents of a directory, if the loc is a directory, as a `list[loc]`.
-
+   * `scheme`: the scheme (or protocol) to be used;
+   * `authority`: the domain where the data are located, as a `str`;
+   * `host`: the host where the URI is hosted (part of authority), as a `str`;
+   * `port`: port on host (part of authority), as a `int`;
+   * `path`: path name of file on host, as a `str`;
+   * `extension`: file name extension, as a `str`;
+   * `query`: query data, as a `str`;
+   * `fragment`: the fragment name following the path name and query data, as a `str`;
+   * `user`: user info (only present in schemes like mailto), as a `str`;
+   * `parent` : removes the last segment from the path component, if any, as a `loc`;
+   * `file` : the last segment of the path, as a `str`;
+   * `ls` : the contents of a directory, if the loc is a directory, as a `list[loc]`.
 * `offset`: start of text area.
-
 * `length`: length of text area.
-
 * `begin.line`, `begin.column`: begin line and column of text area.
-
 * `end.line`, `end.column` end line and column of text area.
 
 These are the supported protocol schemes:
