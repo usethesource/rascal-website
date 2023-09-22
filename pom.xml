@@ -35,7 +35,7 @@
         <salix-contrib.version>0.2.2</salix-contrib.version>
         <rascal-lsp.version>2.18.0</rascal-lsp.version>
         <drambiguity.version>0.1.10</drambiguity.version>
-        <php-analysis.version>0.2.1-RC1</php-analysis.version>
+        <php-analysis.version>0.2.2</php-analysis.version>
     </properties>
 
     <build>
