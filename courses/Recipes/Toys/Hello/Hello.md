@@ -2,7 +2,7 @@
 title: Hello
 ---
 
-The "Hello" example shows where to put your code such that it can do _something_. In this
+The _Hello_ example shows where to put your code such that it can do _something_. In this
 case all we do is print `Hello World...`. After you know where to put code such that it
 can be executed, you can replace the slightly silly example with more useful things.
 
