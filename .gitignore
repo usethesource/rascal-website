@@ -20,6 +20,7 @@ docs/[A-Z]*
 
 # Generated assets
 static/assets/[A-Z]*
+src/rascal/demo
 
 # Misc
 .DS_Store
