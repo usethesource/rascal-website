@@ -192,7 +192,7 @@
                             <ignores>
                                 <ignore>|lib://rascal/org/rascalmpl/library/lang/rascal|</ignore>
                                 <ignore>|lib://rascal/org/rascalmpl/library/lang/c90|</ignore>
-                                <ignore>${project.basedir}/src/rascal</ignore> 
+                                <ignore>${project.basedir}/src/rascal/demo</ignore> 
                             </ignores>
                         </configuration>
                     </execution>
