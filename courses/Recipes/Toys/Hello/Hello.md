@@ -64,7 +64,7 @@ This module should be placed in `<project dir>/src/demo/basic/Hello.rsc`.
 
 Using this `Hello` module is now simple:
 
-```rascal-shell
+```
 import demo::basic::Hello;
 hello();
 ```
