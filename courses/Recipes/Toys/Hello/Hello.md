@@ -56,8 +56,14 @@ hello()
 To have the `hello` function also for the future and to let it be used by others,
 we will place it in a file. A Rascal file is called a "module":
 
-```rascal-include
-demo::basic::Hello
+```rascal
+module demo::basic::Hello
+
+import IO;
+
+void hello() {
+   println("Hello world, this is my first Rascal program!");
+}
 ```
 
 This module should be placed in `<project dir>/src/demo/basic/Hello.rsc`.
