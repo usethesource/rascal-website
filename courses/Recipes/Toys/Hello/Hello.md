@@ -2,7 +2,7 @@
 title: Hello
 ---
 
-The "Hello" example shows where to put your code such that it can do _something_. In this
+The _Hello_ example shows where to put your code such that it can do _something_. In this
 case all we do is print `Hello World...`. After you know where to put code such that it
 can be executed, you can replace the slightly silly example with more useful things.
 
@@ -68,21 +68,9 @@ void hello() {
 
 This module should be placed in `<project dir>/src/demo/basic/Hello.rsc`.
 
-```rascal-prepare
-import IO;
-writeFile(|test-modules:///demo/basic/Hello.rsc|,
-"module demo::basic::Hello
-'
-'import IO;
-'
-'void hello() {
-'   println(\"Hello world, this is my first Rascal program!\");
-'}");
-```
-
 Using this `Hello` module is now simple:
 
-```rascal-shell
+```
 import demo::basic::Hello;
 hello();
 ```
