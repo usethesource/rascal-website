@@ -6,19 +6,14 @@ on:
       - website-v2
 
 jobs:
+  prepare-website:
+    uses: ./.github/workflows/base-jobs.yml
+
   website-pr:
     name: Sanity check the Rascal website
     runs-on: buildjet-4vcpu-ubuntu-2204
+    needs: prepare-website
     steps:
-      # Checkout only the workflow folder for this commit (else it uses main branch)
-      - name: Clone
-        uses: actions/checkout@v4
-        with:
-          sparse-checkout: '.github'
-
-      # Do the base actions
-      - uses: ./.github/base-jobs.yml
-
       # Download prepared sources from base
       - name: Download sources
         uses: actions/download-artifact@v3
