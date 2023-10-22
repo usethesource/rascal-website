@@ -1,0 +1,34 @@
+name: Base Website builder
+
+on:
+    workflow_call:
+
+jobs:
+    website:
+      name: Build the Rascal website
+      runs-on: buildjet-4vcpu-ubuntu-2204
+      steps:
+        - name: Clone
+          uses: actions/checkout@v3
+  
+        - uses: actions/setup-java@v3
+          with:
+            distribution: 'temurin'
+            java-version: '11'
+            cache: 'maven'
+  
+        - uses: actions/setup-node@v3
+          with:
+            node-version: 16
+            cache: yarn
+  
+        - uses: browser-actions/setup-chrome@latest
+          with:
+            chrome-version: 'stable'
+        - run: which chrome
+        - uses: nanasess/setup-chromedriver@v2
+        - run: which chromedriver 
+  
+        # Copy docs from dependent projects, run tutor on local courses folder and copy results into docs and static/assets
+        - name: Run rascal-tutor and reuse libraries
+          run: MAVEN_OPTIONS="-Xss256m -Xmx3G" mvn -B clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome`

@@ -10,33 +10,10 @@ jobs:
     name: Build the Rascal website
     runs-on: buildjet-4vcpu-ubuntu-2204
     steps:
-      - name: Clone
-        uses: actions/checkout@v3
+      # Do the base actions
+      - uses: .github/base-jobs.yml
 
-      - uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '11'
-          cache: 'maven'
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: yarn
-
-      - uses: browser-actions/setup-chrome@latest
-        with:
-          chrome-version: 1047731 # v107
-      - run: which chrome
-      - uses: nanasess/setup-chromedriver@v1
-        with:
-          chromedriver-version: '107.0.5304.62'
-      - run: which chromedriver 
-
-      # Copy docs from dependent projects, run tutor on local courses folder and copy results into docs and static/assets
-      - name: Run rascal-tutor and reuse libraries
-        run: MAVEN_OPTIONS="-Xss256m -Xmx3G" mvn -B clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome`
-
+      # Production deploy
       - name: Netlify Deploy
         uses: jsmrcaga/action-netlify-deploy@v2.0.0
         with:
@@ -46,6 +23,7 @@ jobs:
           install_command: yarn install --frozen-lockfile
           build_command: yarn build
 
+      # Production reindex    
       - name: Algolia crawler creation and crawl
         uses: algolia/algoliasearch-crawler-github-actions@v1.1.10
         id: algolia_crawler
