@@ -10,7 +10,10 @@ jobs:
     name: Build the Rascal website
     runs-on: buildjet-4vcpu-ubuntu-2204
     steps:
-      # Do the base actions
+      - name: Clone
+        uses: actions/checkout@v3
+
+        # Do the base actions
       - uses: ./.github/base-jobs.yml
 
       # Do a dummy build to see if there are errors
