@@ -19,6 +19,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: sources
+  
+      - name: Untar files
+        run: tar -xvf  sources.tar
 
       # Production deploy
       - name: Netlify Deploy
