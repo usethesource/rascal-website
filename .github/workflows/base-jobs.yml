@@ -25,8 +25,11 @@ jobs:
         - uses: browser-actions/setup-chrome@latest
           with:
             chrome-version: 'stable'
+          id: setup-chrome
         - run: which chrome
         - uses: nanasess/setup-chromedriver@v2
+          with:
+            chromedriver-version: ${{ steps.setup-chrome.outputs.chrome-version }}
         - run: which chromedriver 
   
         # Copy docs from dependent projects, run tutor on local courses folder and copy results into docs and static/assets
