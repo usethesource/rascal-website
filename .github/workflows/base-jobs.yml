@@ -4,10 +4,13 @@ on:
     workflow_call:
 
 jobs:
-    website:
-      name: Build the Rascal website
+    prepare-sources:
+      name: Prepare the website sources
       runs-on: buildjet-4vcpu-ubuntu-2204
-      steps:  
+      steps:
+        - name: Clone
+          uses: actions/checkout@v4
+  
         - uses: actions/setup-java@v3
           with:
             distribution: 'temurin'
@@ -29,3 +32,14 @@ jobs:
         # Copy docs from dependent projects, run tutor on local courses folder and copy results into docs and static/assets
         - name: Run rascal-tutor and reuse libraries
           run: MAVEN_OPTIONS="-Xss256m -Xmx3G" mvn -B clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome`
+
+        - uses: actions/upload-artifact@v3
+          with:
+            name: sources
+            path: |
+              .
+              !target/
+              !.git/
+              !.github/
+              !.vscode
+              !META-INF
