@@ -14,17 +14,9 @@ jobs:
     runs-on: buildjet-4vcpu-ubuntu-2204
     needs: prepare-website
     steps:
-      # Download prepared sources from base
-      - name: Download sources
-        uses: actions/download-artifact@v3
-        with:
-          name: sources
-
-      - name: Untar files
-        run: tar -xvf  sources.tar
-
       # Do a dummy build to see if there are errors
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+        
       - name: Build website
         run: yarn build
