@@ -20,6 +20,9 @@ const config = {
   organizationName: 'usethesource', // Usually your GitHub org/user name.
   projectName: 'rascal-website', // Usually your repo name.
   deploymentBranch: 'gh-pages-v2',
+  customFields: {
+    description: 'The Rascal Meta Programming Language - The one-stop shop for metaprogramming',
+  },
   presets: [
     [
       'classic',
@@ -32,6 +35,8 @@ const config = {
           // `https://github.com/usethesource/rascal/tree/main/src/org/rascalmpl/courses/${docPath.substring(4)}`,
         },
         blog: {
+          blogTitle: 'Rascal MPL Blog',
+          blogDescription: 'Stories about using Rascal MPL in real life',
           showReadingTime: true,
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
