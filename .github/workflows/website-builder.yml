@@ -14,6 +14,15 @@ jobs:
     runs-on: buildjet-4vcpu-ubuntu-2204
     needs: prepare-website
     steps:
+      # Download prepared sources from base
+      - name: Download sources
+        uses: actions/download-artifact@v3
+        with:
+          name: sources
+  
+      - name: Untar files
+        run: tar -xvf  sources.tar
+
       # Production deploy
       - name: Netlify Deploy
         uses: jsmrcaga/action-netlify-deploy@v2.0.0
