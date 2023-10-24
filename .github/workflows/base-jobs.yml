@@ -38,7 +38,7 @@ jobs:
 
         # Big speedup over uploading seperate files  
         - name: Tar files
-          run: tar --exclude='target' --exclude='.github' --exclude='.vscode' --exclude='META-INF' -cvf sources.tar .
+          run: tar --exclude='target' --exclude='.git' --exclude='.github' --exclude='.vscode' --exclude='META-INF' -cvf sources.tar .
 
         - uses: actions/upload-artifact@v3
           with:
