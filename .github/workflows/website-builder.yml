@@ -8,7 +8,7 @@ on:
 jobs:
   website:
     name: Build the Rascal website
-    runs-on: ubuntu-latest
+    runs-on: buildjet-4vcpu-ubuntu-2204
     steps:
       - name: Clone
         uses: actions/checkout@v3
@@ -21,7 +21,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 16
           cache: yarn
 
       - uses: browser-actions/setup-chrome@latest
@@ -37,14 +37,23 @@ jobs:
       - name: Run rascal-tutor and reuse libraries
         run: MAVEN_OPTIONS="-Xss256m -Xmx3G" mvn -B clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome`
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Build website
-        run: yarn build
-
       - name: Netlify Deploy
-        uses: jsmrcaga/action-netlify-deploy@v1.8.0
+        uses: jsmrcaga/action-netlify-deploy@v2.0.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_API_KEY }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_DEPLOY_TO_PROD: true
+          install_command: yarn install --frozen-lockfile
+          build_command: yarn build
+
+      - name: Algolia crawler creation and crawl
+        uses: algolia/algoliasearch-crawler-github-actions@v1.1.10
+        id: algolia_crawler
+        with:
+          crawler-api-base-url: 'https://crawler.algolia.com/api/1/'
+          crawler-user-id: ${{ secrets.CRAWLER_USER_ID }}
+          crawler-api-key: ${{ secrets.CRAWLER_API_KEY }}
+          algolia-app-id: ${{ secrets.ALGOLIA_APP_ID }}
+          algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
+          site-url: 'https://www.rascal-mpl.org'
+          crawler-name: 'rascal'

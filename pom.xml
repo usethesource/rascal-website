@@ -24,12 +24,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <rascal.version>0.28.9</rascal.version>
-        <rascal-tutor.version>0.7.4</rascal-tutor.version>
-        <rascal-maven-plugin.version>0.15.2</rascal-maven-plugin.version>
-        <clair.version>0.6.4</clair.version>
-        <flybytes.version>0.1.6</flybytes.version>
-        <typepal.version>0.8.3</typepal.version>
+        <rascal-maven-plugin.version>0.24.0</rascal-maven-plugin.version>
+        <rascal.version>0.34.0</rascal.version>
+        <rascal-tutor.version>0.15.0</rascal-tutor.version>
+        <clair.version>0.11.0</clair.version>
+        <rascal-git.version>0.1.14</rascal-git.version>
+        <flybytes.version>0.2.3</flybytes.version>
+        <typepal.version>0.8.10</typepal.version>
+        <salix-core.version>0.2.3</salix-core.version>
+        <salix-contrib.version>0.2.4</salix-contrib.version>
+        <rascal-lsp.version>2.19.0</rascal-lsp.version>
+        <drambiguity.version>0.2.0</drambiguity.version>
+        <php-analysis.version>0.2.3</php-analysis.version>
     </properties>
 
     <build>
@@ -43,6 +49,7 @@
                             <directory>docs</directory>
                             <excludes>
                                 <exclude>index.mdx</exclude>
+                                <exclude>Library/_category_.yml</exclude>
                                 <exclude>Packages/_category_.yml</exclude>
                             </excludes>
                             <followSymlinks>false</followSymlinks>
@@ -68,13 +75,30 @@
                             <goal>unpack</goal>
                         </goals>
                         <configuration>
-                            <artifactItems>
+                           <artifactItems>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
-                                    <artifactId>rascal</artifactId>
-                                    <version>${rascal.version}</version>
+                                    <artifactId>flybytes</artifactId>
+                                    <version>${flybytes.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>typepal</artifactId>
+                                    <version>${typepal.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>edu.appstate.cs</groupId>
+                                    <artifactId>rascal-git</artifactId>
+                                    <version>${rascal-git.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
@@ -83,6 +107,7 @@
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>**/examples/,**/questions/</excludes>
+                                    <excludes>docs/index.value</excludes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
@@ -90,26 +115,53 @@
                                     <version>${clair.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
-                                    <artifactId>flybytes</artifactId>
-                                    <version>${flybytes.version}</version>
+                                    <artifactId>salix-core</artifactId>
+                                    <version>${salix-core.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
-                                    <artifactId>typepal</artifactId>
-                                    <version>${typepal.version}</version>
+                                    <artifactId>salix-contrib</artifactId>
+                                    <version>${salix-contrib.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>rascal-lsp</artifactId>
+                                    <version>${rascal-lsp.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>drambiguity</artifactId>
+                                    <version>${drambiguity.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>php-analysis</artifactId>
+                                    <version>${php-analysis.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> 
             <plugin>
                 <groupId>org.rascalmpl</groupId>
                 <artifactId>rascal-maven-plugin</artifactId>
@@ -123,19 +175,23 @@
                         </goals>
                         <configuration>
                             <isPackageCourse>false</isPackageCourse>
-                            <enableStandardLibrary>true</enableStandardLibrary>
+                            <enableStandardLibrary>false</enableStandardLibrary>
                             <errorsAsWarnings>false</errorsAsWarnings>
                             <bin>${project.basedir}</bin> <!-- because tutor appends /docs to this -->
                             <srcs>
+                                <src>|lib://rascal/org/rascalmpl/library|</src>
                                 <src>${project.basedir}/courses/WhyRascal</src>
                                 <src>${project.basedir}/courses/Recipes</src>
+                                <src>${project.basedir}/courses/Rascal</src>
                                 <src>${project.basedir}/courses/GettingHelp</src>
                                 <src>${project.basedir}/courses/GettingStarted</src>
                                 <src>${project.basedir}/courses/Rascalopedia</src>
+                                <src>${project.basedir}/courses/Bibliography</src>
                             </srcs>
-                            <libs>
-                                <lib>|std:///|</lib>
-                            </libs>
+                            <ignores>
+                                <ignore>|lib://rascal/org/rascalmpl/library/lang/rascal|</ignore>
+                                <ignore>|lib://rascal/org/rascalmpl/library/lang/c90|</ignore>
+                            </ignores>
                         </configuration>
                     </execution>
                 </executions>
@@ -161,6 +217,15 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <compilerArgument>-parameters</compilerArgument> <!-- make sure parameters are compiled by name into the jar -->
+                    <release>11</release>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -169,11 +234,6 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>rascal</artifactId>
             <version>${rascal.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.rascalmpl</groupId>
-            <artifactId>clair</artifactId>
-            <version>${clair.version}</version>
         </dependency>
         <dependency>
             <groupId>org.rascalmpl</groupId>
@@ -186,10 +246,44 @@
             <version>${typepal.version}</version>
         </dependency>
         <dependency>
+            <groupId>edu.appstate.cs</groupId>
+            <artifactId>rascal-git</artifactId>
+            <version>${rascal-git.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>clair</artifactId>
+            <version>${clair.version}</version>
+            </dependency>
+        <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>rascal-tutor</artifactId>
             <version>${rascal-tutor.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>salix-core</artifactId>
+            <version>${salix-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>salix-contrib</artifactId>
+            <version>${salix-contrib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>rascal-lsp</artifactId>
+            <version>${rascal-lsp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>drambiguity</artifactId>
+            <version>${drambiguity.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>php-analysis</artifactId>
+            <version>${php-analysis.version}</version>
+        </dependency>
     </dependencies>
-
 </project>

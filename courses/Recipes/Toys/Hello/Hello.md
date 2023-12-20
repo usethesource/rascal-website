@@ -2,7 +2,7 @@
 title: Hello
 ---
 
-The "Hello" example shows where to put your code such that it can do _something_. In this
+The _Hello_ example shows where to put your code such that it can do _something_. In this
 case all we do is print `Hello World...`. After you know where to put code such that it
 can be executed, you can replace the slightly silly example with more useful things.
 
@@ -24,7 +24,7 @@ println("Hello world, this is my first Rascal program");
 As the command above, a piece of code is not _reusable_. To be able to use some code again and 
 again, the best way is to wrap it in a ((Declarations-Function)), and then call it:
 
-```rascal-commands
+```rascal-shell
 import IO;
 void hello() {
    println("Hello world, this is my first Rascal program");
@@ -36,7 +36,7 @@ the Rascal systems prompts you with `>>>>>>>` to
 indicate that more input is needed. 
 
 Don't get scared by 
-the `void (): void hello();` that you get back 
+the `void (): function(|prompt:///|(0,76,<1,0>,<3,1>))` that you get back 
 when typing in the hello function. The first 
 `void ()` part says the result is a function that takes 
 no arguments and 
@@ -70,7 +70,7 @@ This module should be placed in `<project dir>/src/demo/basic/Hello.rsc`.
 
 Using this `Hello` module is now simple:
 
-```rascal
+```
 import demo::basic::Hello;
 hello();
 ```
@@ -84,5 +84,12 @@ to invoke this `private` `hello()` function.
 
 #### Benefits
 
+* ((Library:println)) is a simple function that renders a string to the output stream
+* The ((Values-String)) constants you pass to ((Library:println)) may contain entire string templates with automatic indentation
+
 #### Pitfalls
 
+* Don't forget to import the ((Library:module:IO)) module.
+```rascal-shell,errors
+println("I think I forgot to import the IO module...")
+```

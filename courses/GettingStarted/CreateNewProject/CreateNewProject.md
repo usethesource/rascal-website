@@ -5,7 +5,7 @@ sidebar_position: 3
 
 ```rascal-prepare
 import IO;
-remove(|tmp:///myProjectName|, recursive=true);
+remove(|home:///my-project-name|, recursive=true);
 ```
 
 Rascal projects, generally, work the same in all three IDE contexts:
@@ -19,7 +19,7 @@ To create an empty project to get started, follow these instructions:
 * Then use the ((newRascalProject)) library utility function:
 ```rascal-shell
 import util::Reflective;
-newRascalProject(|tmp:///myProjectName|, name="myProjectName")
+newRascalProject(|home:///my-project-name|)
 ```
 
 The Eclipse plugin has a "New Project Wizard" you can use as well.
@@ -36,7 +36,7 @@ need to reproduce it manually for some reason.
 ```rascal-shell
 import util::FileSystem;
 // there are these files in the newly create project
-[ l | /file(l) := crawl(|tmp:///myProjectName|) ]
+[ l | /file(l) := crawl(|home:///my-project-name|) ]
 ```
 
 The `pom.xml` file is the basic setup that names the project and defines its dependencies. It defines:
@@ -48,7 +48,7 @@ The `pom.xml` file is the basic setup that names the project and defines its dep
 * minimal configurations for the required maven plugins (Java and Rascal)
 
 ```xml
-((|tmp:///myProjectName/pom.xml|))
+((|home:///my-project-name/pom.xml|))
 ```
 
 Next to that `RASCAL.MF` is required to configure the development environment for the project. Some
@@ -56,11 +56,11 @@ information from the `pom.xml` is repeated here, because this file is common bet
 and such projects could work with a `pom.xml`:
 
 ```MF
-((|tmp:///myProjectName/META-INF/RASCAL.MF|))
+((|home:///my-project-name/META-INF/RASCAL.MF|))
 ```
 
 And finally in `src/main/rascal` you'll find the Rascal source files, as configured in `RASCAL.MF`. In this case it's only `Main.rsc`:
 
 ```rascal
-((|tmp:///myProjectName/src/main/rascal/Main.rsc|))
+((|home:///my-project-name/src/main/rascal/Main.rsc|))
 ```

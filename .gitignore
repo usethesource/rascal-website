@@ -12,12 +12,15 @@ _site/
 target/
 
 # Generated courses
+!docs/index.mdx
+!docs/Library/_category_.yml
+!docs/Packages/_category_.yml
 docs/index.value
 docs/[A-Z]*
-!docs/Packages/_category_.yml
 
 # Generated assets
 static/assets/[A-Z]*
+src/rascal/demo
 
 # Misc
 .DS_Store

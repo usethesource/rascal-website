@@ -3,7 +3,8 @@ layout: post
 published: true
 author: "Jurgen J. Vinju"
 authorlink: "http://www.rascal-mpl.org"
-title: "Rascal 0.26.x release notes"
+title: "Rascal 0.28.x release notes"
+sidebar_position: 93
 ---
 
 In this post we report on the Rascal release 0.28.x

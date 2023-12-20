@@ -1,5 +1,12 @@
 ---
 title: Team
+keywords:
+    - team
+    - logo
+    - values
+    - rules
+    - CLA
+    - CoC
 ---
 
 # UseTheSource
@@ -21,12 +28,13 @@ UseTheSource is a collection of open-source projects related to [metaprogramming
 
 # Images
 
-- the [original Rascal logo](/images/logo_pre/old-rascal-logo.png) was designed by [Tobias Baanders](https://honingen.com/kunstenaar/tobias-baanders/) 
-   * ![wasp logo](/images/logo_pre/old-rascal-logo.png)
-- the [2nd Rascal logo](https://www.kittymolenaar.nl/vormgeving/42_01_grafisch_ontwerp_websites.html) was designed by [Kitty Molenaar](https://www.kittymolenaar.nl)
-   * ![penrose triangle logo](/images/logo_22/rascal_logo.png)
-- the current Rascal logo was designed by [Kitty Molenaar](https://www.kittymolenaar.nl)
-   * ![penrose triangle logo](/images/logo_23/rascal_logo.png)  
+| Title | Author | Image | 
+| ----  | ---- | -----  |
+| First logo | [Tobias Baanders](https://honingen.com/kunstenaar/tobias-baanders/) | <img alt="original Rascal logo" src="/images/old-rascal-logo.png" width="50%"></img> |
+| 2nd logo [PNG](/images/logo_22/rascal_logo.png) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![current Rascal logo](/images/rascal_logo.png) |
+| 2nd logo [SVG](/images/logo_22/rascal_logo.svg) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![current Rascal logo](/images/rascal_logo.svg) |
+| Current logo [PNG](/images/logo_23/rascal_logo.png) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![current Rascal logo](/images/rascal_logo.png) |
+| Current logo [SVG](/images/logo_23/rascal_logo.svg) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![current Rascal logo](/images/rascal_logo.svg) |
 
 # Contributors
 
