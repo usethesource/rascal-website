@@ -34,7 +34,7 @@ UseTheSource is a collection of open-source projects related to [metaprogramming
 | 2nd logo [PNG](/images/logo_22/rascal_logo.png) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![2nd Rascal logo](/images/logo_22/rascal_logo.png) |
 | 2nd logo [SVG](/images/logo_22/rascal_logo.svg) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![2nd Rascal logo](/images/logo_22/rascal_logo.svg) |
 | Current logo [PNG](/images/logo_23/rascal_logo.png) | [Kitty Molenaar](https://www.kittymolenaar.nl) | <img alt="current Rascal logo" src="/images/logo_23/rascal_logo.png" width="50%"></img> |
-| Current logo [JPG](/images/logo_23/rascal_logo.jpg) | [Kitty Molenaar](https://www.kittymolenaar.nl) | <img alt="current Rascal logo" src="/images/logo_23/rascal_logo.jpg" width="50%"></img> |
+| Current logo [SVG](/images/logo_23/rascal_logo.svg) | [Kitty Molenaar](https://www.kittymolenaar.nl) | <img alt="current Rascal logo" src="/images/logo_23/rascal_logo.svg" width="50%"></img> |
 
 # Contributors
 
