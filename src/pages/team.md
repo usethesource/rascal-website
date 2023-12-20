@@ -30,11 +30,11 @@ UseTheSource is a collection of open-source projects related to [metaprogramming
 
 | Title | Author | Image | 
 | ----  | ---- | -----  |
-| First logo | [Tobias Baanders](https://honingen.com/kunstenaar/tobias-baanders/) | <img alt="original Rascal logo" src="/images/old-rascal-logo.png" width="50%"></img> |
-| 2nd logo [PNG](/images/logo_22/rascal_logo.png) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![current Rascal logo](/images/rascal_logo.png) |
-| 2nd logo [SVG](/images/logo_22/rascal_logo.svg) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![current Rascal logo](/images/rascal_logo.svg) |
-| Current logo [PNG](/images/logo_23/rascal_logo.png) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![current Rascal logo](/images/rascal_logo.png) |
-| Current logo [SVG](/images/logo_23/rascal_logo.svg) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![current Rascal logo](/images/rascal_logo.svg) |
+| First logo | [Tobias Baanders](https://honingen.com/kunstenaar/tobias-baanders/) | <img alt="original Rascal logo" src="/images/logo_pre/old-rascal-logo.png" width="50%"></img> |
+| 2nd logo [PNG](/images/logo_22/rascal_logo.png) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![2nd Rascal logo](/images/logo_22/rascal_logo.png) |
+| 2nd logo [SVG](/images/logo_22/rascal_logo.svg) | [Kitty Molenaar](https://www.kittymolenaar.nl) | ![2nd Rascal logo](/images/logo_22/rascal_logo.svg) |
+| Current logo [PNG](/images/logo_23/rascal_logo.png) | [Kitty Molenaar](https://www.kittymolenaar.nl) | <img alt="current Rascal logo" src="/images/logo_23/rascal_logo.png" width="50%"></img> |
+| Current logo [JPG](/images/logo_23/rascal_logo.jpg) | [Kitty Molenaar](https://www.kittymolenaar.nl) | <img alt="current Rascal logo" src="/images/logo_23/rascal_logo.jpg" width="50%"></img> |
 
 # Contributors
 
