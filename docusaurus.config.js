@@ -16,7 +16,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   trailingSlash: true,
-  favicon: 'images/favicon.png',
+  favicon: 'images/logo_23/rascal_logo_64px.png',
   organizationName: 'usethesource', // Usually your GitHub org/user name.
   projectName: 'rascal-website', // Usually your repo name.
   deploymentBranch: 'gh-pages-v2',
@@ -75,7 +75,7 @@ const config = {
         title: 'The Rascal Meta Programming Language',
         logo: {
           alt: 'Rascal logo',
-          src: 'images/rascal_large_no_text.png',
+          src: 'images/logo_23/rascal_beeldmerk.png',
         },
         items: [
           {
