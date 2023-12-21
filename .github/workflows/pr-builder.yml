@@ -6,37 +6,24 @@ on:
       - website-v2
 
 jobs:
+  prepare-website:
+    uses: ./.github/workflows/base-jobs.yml
+
   website-pr:
-    name: Build the Rascal website
-    runs-on: ubuntu-latest
+    name: Sanity check the Rascal website
+    runs-on: buildjet-4vcpu-ubuntu-2204
+    needs: prepare-website
     steps:
-      - name: Clone
-        uses: actions/checkout@v3
-
-      - uses: actions/setup-java@v3
+      # Download prepared sources from base
+      - name: Download sources
+        uses: actions/download-artifact@v3
         with:
-          distribution: 'temurin'
-          java-version: '11'
-          cache: 'maven'
+          name: sources
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: yarn
+      - name: Untar files
+        run: tar -xvf  sources.tar
 
-      - uses: browser-actions/setup-chrome@latest
-        with:
-          chrome-version: 1047731 # v107
-      - run: which chrome
-      - uses: nanasess/setup-chromedriver@v1
-        with:
-          chromedriver-version: '107.0.5304.62'
-      - run: which chromedriver
-
-      # Copy docs from dependent projects, run tutor on local courses folder and copy results into docs and static/assets
-      - name: Run rascal-tutor and reuse libraries
-        run: MAVEN_OPTS="-Xss256m -Xmx3G" mvn -B clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome`
-
+      # Do a dummy build to see if there are errors
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build website
