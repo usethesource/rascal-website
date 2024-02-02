@@ -26,7 +26,7 @@
 
         <rascal-maven-plugin.version>0.24.0</rascal-maven-plugin.version>
         <rascal.version>0.34.0</rascal.version>
-        <rascal-tutor.version>0.18.3</rascal-tutor.version>
+        <rascal-tutor.version>0.18.4</rascal-tutor.version>
         <clair.version>0.12.0</clair.version>
         <rascal-git.version>0.1.14</rascal-git.version>
         <flybytes.version>0.2.3</flybytes.version>
