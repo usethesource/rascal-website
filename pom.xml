@@ -36,6 +36,7 @@
         <rascal-lsp.version>2.19.0</rascal-lsp.version>
         <drambiguity.version>0.2.0</drambiguity.version>
         <php-analysis.version>0.2.3</php-analysis.version>
+        <python-air.version>0.0.3</python-air.version>
     </properties>
 
     <build>
@@ -153,6 +154,14 @@
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>php-analysis</artifactId>
                                     <version>${php-analysis.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>python-air</artifactId>
+                                    <version>${python-air.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
@@ -284,6 +293,11 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>php-analysis</artifactId>
             <version>${php-analysis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>python-air</artifactId>
+            <version>${python-air.version}</version>
         </dependency>
     </dependencies>
 </project>
