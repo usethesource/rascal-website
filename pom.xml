@@ -36,7 +36,7 @@
         <rascal-lsp.version>2.19.0</rascal-lsp.version>
         <drambiguity.version>0.2.0</drambiguity.version>
         <php-analysis.version>0.2.3</php-analysis.version>
-        <python-air.version>0.0.5</python-air.version>
+        <python-air.version>0.0.6</python-air.version>
     </properties>
 
     <build>
