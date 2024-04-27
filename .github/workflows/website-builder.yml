@@ -32,6 +32,7 @@ jobs:
           NETLIFY_DEPLOY_TO_PROD: true
           install_command: yarn install --frozen-lockfile
           build_command: yarn build
+          debug: true
 
       # Production reindex    
       - name: Algolia crawler creation and crawl
