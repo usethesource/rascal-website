@@ -122,7 +122,7 @@ There are some restrictions however:
 The _Modifiers_ affect _visibility_ and _special behaviour_ of functions:
 
 *  _Visibility_: `private` declares that a function is only visible in the current module. 
-  `public` declares that it is visible outside the module as well. When visibility is not specified, `private` is assumed.
+  `public` declares that it is visible outside the module as well. When visibility is not specified, `public` is assumed.
 *  _Special Behaviour_:
    *  `java` declares that the body of the function is implemented in Java. The function should have a `javaClass` annotation that determines where the Java implementation can be found.
    *  `test` declares that this is a test function. A test function is a boolean function (currently) without arguments.  It can be called as any other function. However, it can also be called automatically by the unit test framework, by typing `:test` at the command line, see [Help](/docs/GettingHelp/CommandLine/).
