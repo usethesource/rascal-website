@@ -76,6 +76,6 @@ Here a number of strings for this language, with brackets to show how they will 
 
 *  Please do not assume that Rascal's priorities have the same semantics as SDF's priorities.
 *  When a priority does not have a filtering effect, such as in `E = E "+" > E "*"` it is usually better to use normal alternative composition: `E = E "+" | E "*"`. There is no difference in the semantics of parsing, but the latter expression is more intentional.
-*  You should not hide right or left recursion behind a nullable non-terminal, since the system will not filter the ambiguity then. Example: 
+*  You should not hide right or left recursion behind a nullable terminal, since the system will not filter the ambiguity then. Example: 
 `E = left "a"? E "*" E > E "+" E` will remain ambiguous. This should be written as: `E = left ("a" E "*" E | E "*" E ) > E "+" E;` (unfolding the optional such that E becomes explicitly left-most).
 
