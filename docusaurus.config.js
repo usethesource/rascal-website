@@ -88,6 +88,7 @@ const config = {
           // {to: '/stories', label: 'Stories', position: 'left'},
           { to: '/blog', label: 'Blog', position: 'left' },
           { to: '/release-notes', label: 'Release notes', position: 'left' },
+            { to: '/docs/Packages', label: 'Packages', position: 'left' },
 
           { to: '/projects', label: 'Projects', position: 'right' },
           { to: '/team', label: 'Team', position: 'right' },
