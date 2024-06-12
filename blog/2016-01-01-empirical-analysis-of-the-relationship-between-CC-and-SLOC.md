@@ -5,7 +5,7 @@ authors: [dlandman]
 
 Check out these two related articles on the empirical relation between the CC and SLOC source code metrics.
 
-```
+```bibtex
 @ARTICLE{jsep2015-landman,
   author = { Davy Landman and Alexander Serebrenik and Eric Bouwers and Jurgen J. Vinju },
   title = { {Empirical analysis of the relationship between CC and SLOC in a large corpus of Java methods and C functions} },
