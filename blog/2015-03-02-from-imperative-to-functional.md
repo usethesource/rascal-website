@@ -12,7 +12,7 @@ The reason Rascal features these two styles is that we want to make it easy for 
 Let's write a function that generates all the even numbers in a list up to a certain maximum. We will do it in a few alternative 
 ways: from very imperative to very declarative and some steps in between.
 
-```
+```rascal
 list[int] even0(int max) {
   list[int] result = [];
   for (int i <- [0..max])
@@ -24,7 +24,7 @@ list[int] even0(int max) {
 
 Now lets remove the temporary type declarations:
 
-```
+```rascal
 list[int] even1(int max) {
   result = [];
   for (i <- [0..max])
@@ -36,7 +36,7 @@ list[int] even1(int max) {
 
 To make the code shorter, we can inline the condition in the for loop:
 
-```
+```rascal
 list[int] even2(int max) {
   result = [];
   for (i <- [0..max], i % 2 == 0)
@@ -47,7 +47,7 @@ list[int] even2(int max) {
 
 In fact, for loops may produce lists as values, using the append statement:
 
-```
+```rascal
 list[int] even3(int max) {
   result = for (i <- [0..max], i % 2 == 0)
     append i;
@@ -57,7 +57,7 @@ list[int] even3(int max) {
 
 So now, the result temporary is not necessary anymore:
 
-```
+```rascal
 list[int] even4(int max) {
   return for (i <- [0..max], i % 2 == 0)
            append i;
@@ -66,7 +66,7 @@ list[int] even4(int max) {
 
 This code is actually very close to a list comprehension already:
 
-```
+```rascal
 list[int] even5(int max) {
   return [ i | i <- [0..max], i % 2 == 0];
 }
@@ -74,13 +74,13 @@ list[int] even5(int max) {
 
 And now we can just define even using an expression only:
 
-```
+```rascal
 list[int] even6(int max) = [i | i <- [0..max], i % 2 == 0];
 ```
 
 Or, perhaps we like a set instead of a list:
 
-```
+```rascal
 set[int] even7(int max) = {i | i <- [0..max], i % 2 == 0};
 ```
 
