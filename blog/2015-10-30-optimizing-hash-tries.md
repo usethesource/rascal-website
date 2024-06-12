@@ -5,7 +5,7 @@ authors: [jvinju]
 
 Hash-tries are the data-structure under Rascal's sets, maps and relations. These papers explain how they work and how we make them lean and fast on the JVM. [Others](https://blog.acolyer.org/2015/11/27/hamt/) have blogged about these results as well. The code can be found in the [Capsule project](http://www.usethesource.io/projects/capsule).
 
-```
+```bibtex
 @inproceedings{oopsla2015,
   title = {Optimizing Hash-Array Mapped Tries for Fast and Lean Immutable JVM Collections}
   author = {Michael Steindorder and Jurgen J. Vinju}.
