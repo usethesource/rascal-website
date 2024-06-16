@@ -20,6 +20,9 @@ jobs:
         with:
           name: sources
 
+      - name: Untar files
+        run: tar -xvf  sources.tar
+
       # Do a dummy build to see if there are errors
       - name: Install dependencies
         run: yarn install --frozen-lockfile
