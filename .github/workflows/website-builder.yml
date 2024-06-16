@@ -16,12 +16,9 @@ jobs:
     steps:
       # Download prepared sources from base
       - name: Download sources
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: sources
-  
-      - name: Untar files
-        run: tar -xvf  sources.tar
 
       # Production deploy
       - name: Netlify Deploy
