@@ -15,7 +15,6 @@ target/
 !docs/index.mdx
 !docs/Library/_category_.yml
 !docs/Packages/_category_.yml
-!docs/Packages/index.md
 docs/index.value
 docs/[A-Z]*
 

@@ -52,7 +52,6 @@
                                 <exclude>index.mdx</exclude>
                                 <exclude>Library/_category_.yml</exclude>
                                 <exclude>Packages/_category_.yml</exclude>
-                                <exclude>Packages/index.md</exclude>
                             </excludes>
                             <followSymlinks>false</followSymlinks>
                         </fileset>
