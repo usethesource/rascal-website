@@ -36,11 +36,13 @@ jobs:
         - name: Run rascal-tutor and reuse libraries
           run: MAVEN_OPTIONS="-Xss256m -Xmx3G" mvn -B clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome`
 
-        # Big speedup over uploading seperate files  
-        - name: Tar files
-          run: tar --exclude='target' --exclude='.git' --exclude='.github' --exclude='.vscode' --exclude='META-INF' -cvf sources.tar .
-
         - uses: actions/upload-artifact@v4
           with:
             name: sources
-            path: sources.tar
+            path: |
+              .
+              !target
+              !.git
+              !.github
+              !.vscode
+              !META-INF
