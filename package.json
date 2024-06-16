@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "mvn package && yarn start",
-    "prod": "yarn clearn && mvn clean package && yarn build",
+    "prod": "yarn clear && mvn clean package -B && yarn build",
     "mvn": "mvn package",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
