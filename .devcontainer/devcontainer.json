@@ -6,12 +6,14 @@
 	"image": "mcr.microsoft.com/devcontainers/java:1-17-bookworm",
 
 	"features": {
-		"ghcr.io/devcontainers/features/java:1": {
-			"version": "none",
+		"ghcr.io/devcontainers/features/java:1.5": {
+			"version": "17",
 			"installMaven": "true",
 			"installGradle": "false"
 		},
-		"ghcr.io/devcontainers/features/node:1": {}
+		"ghcr.io/devcontainers/features/node:1.4": {
+			"version": "20"
+		}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
