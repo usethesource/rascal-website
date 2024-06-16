@@ -88,8 +88,12 @@ const config = {
           // {to: '/stories', label: 'Stories', position: 'left'},
           { to: '/blog', label: 'Blog', position: 'left' },
           { to: '/release-notes', label: 'Release notes', position: 'left' },
-            { to: 'http://www.rascal-mpl.org/docs/Packages', label: 'Packages', position: 'left' },
-
+          {
+            type: 'doc',
+            docId: 'Packages/index',
+            position: 'left',
+            label: 'Packages',
+          },
           { to: '/projects', label: 'Projects', position: 'right' },
           { to: '/team', label: 'Team', position: 'right' },
           {
