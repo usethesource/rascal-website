@@ -18,6 +18,7 @@ The Package Directory provides an overview of libraries, tools and frameworks wr
 Each package is encapsulated in a `jar` file, is deployed in the UseTheSource Maven repository, and comes with:
 * License information.
 * Funding information.
+* Citation information.
 * Release notes.
 * Maven dependency example.
 * API documentation, generated from the sources.
