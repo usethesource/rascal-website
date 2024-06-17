@@ -11,36 +11,41 @@ jobs:
         - name: Clone
           uses: actions/checkout@v4
   
-        - uses: actions/setup-java@v3
+        - uses: buildjet/setup-java@v4
           with:
             distribution: 'temurin'
             java-version: '17'
             cache: 'maven'
   
-        - uses: actions/setup-node@v3
+        - uses: buildjet/setup-node@v4
           with:
-            node-version: 16
+            node-version: 20
             cache: yarn
   
         - uses: browser-actions/setup-chrome@latest
           with:
             chrome-version: 'stable'
           id: setup-chrome
+
         - run: which chrome
+
         - uses: nanasess/setup-chromedriver@v2
           with:
             chromedriver-version: ${{ steps.setup-chrome.outputs.chrome-version }}
+
         - run: which chromedriver 
   
         # Copy docs from dependent projects, run tutor on local courses folder and copy results into docs and static/assets
         - name: Run rascal-tutor and reuse libraries
           run: MAVEN_OPTIONS="-Xss256m -Xmx3G" mvn -B clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome`
 
-        # Big speedup over uploading seperate files  
-        - name: Tar files
-          run: tar --exclude='target' --exclude='.git' --exclude='.github' --exclude='.vscode' --exclude='META-INF' -cvf sources.tar .
-
-        - uses: actions/upload-artifact@v3
+        - uses: actions/upload-artifact@v4
           with:
             name: sources
-            path: sources.tar
+            path: |
+              .
+              !target
+              !.git
+              !.github
+              !.vscode
+              !META-INF

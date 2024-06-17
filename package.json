@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "dev": "mvn package && yarn start",
+    "prod": "yarn clear && mvn clean package -B && yarn build",
     "mvn": "mvn package",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
