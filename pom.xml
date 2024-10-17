@@ -188,7 +188,7 @@
                             <errorsAsWarnings>false</errorsAsWarnings>
                             <bin>${project.basedir}</bin> <!-- because tutor appends /docs to this -->
                             <srcs>
-                                <src>|lib://rascal/org/rascalmpl/library|</src>
+                                <!--<src>|lib://rascal/org/rascalmpl/library|</src> -->
                                 <src>${project.basedir}/courses/WhyRascal</src>
                                 <src>${project.basedir}/courses/Recipes</src>
                                 <src>${project.basedir}/courses/Rascal</src>
