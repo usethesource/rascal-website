@@ -26,7 +26,6 @@
 
         <rascal-maven-plugin.version>0.24.0</rascal-maven-plugin.version>
         <rascal.version>0.34.0</rascal.version>
-        <rascal-tutor.version>0.18.4</rascal-tutor.version>
         <clair.version>0.12.0</clair.version>
         <rascal-git.version>0.1.14</rascal-git.version>
         <flybytes.version>0.2.3</flybytes.version>
@@ -99,15 +98,6 @@
                                     <version>${rascal-git.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
-                                    <excludes>docs/index.value</excludes>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.rascalmpl</groupId>
-                                    <artifactId>rascal-tutor</artifactId>
-                                    <version>${rascal-tutor.version}</version>
-                                    <outputDirectory>${project.basedir}</outputDirectory>
-                                    <includes>docs/**/*.*</includes>
-                                    <excludes>**/examples/,**/questions/</excludes>
                                     <excludes>docs/index.value</excludes>
                                 </artifactItem>
                                 <artifactItem>
@@ -196,6 +186,7 @@
                                 <src>${project.basedir}/courses/GettingStarted</src>
                                 <src>${project.basedir}/courses/Rascalopedia</src>
                                 <src>${project.basedir}/courses/Bibliography</src>
+                                <src>${project.basedir}/courses/Tutor</src>
                                 <src>${project.basedir}/courses/Packages</src>
                             </srcs>
                             <ignores>
@@ -265,11 +256,6 @@
             <artifactId>clair</artifactId>
             <version>${clair.version}</version>
             </dependency>
-        <dependency>
-            <groupId>org.rascalmpl</groupId>
-            <artifactId>rascal-tutor</artifactId>
-            <version>${rascal-tutor.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>salix-core</artifactId>
