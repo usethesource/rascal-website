@@ -79,6 +79,14 @@
                            <artifactItems>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
+                                    <artifactId>rascal</artifactId>
+                                    <version>${rascal.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
                                     <artifactId>flybytes</artifactId>
                                     <version>${flybytes.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
