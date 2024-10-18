@@ -37,7 +37,7 @@ jobs:
   
         # Copy docs from dependent projects, run tutor on local courses folder and copy results into docs and static/assets
         - name: Run rascal-tutor and reuse libraries
-          run: MAVEN_OPTIONS="-Xss256m -Xmx3G" mvn -B clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome`
+          run: MAVEN_OPTIONS="-Xss256m -Xmx3G" mvn -B clean package -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dwebdriver.chrome.browser=`which chrome` | grep -v "\[INFO\] Downloading"
 
         - uses: actions/upload-artifact@v4
           with:
