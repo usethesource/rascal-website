@@ -84,6 +84,8 @@
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
+                                    <excludes>docs/FUNDING.md</excludes>
+                                    <excludes>docs/CITATION.md</excludes>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
