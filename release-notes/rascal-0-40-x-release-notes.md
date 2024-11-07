@@ -19,14 +19,18 @@ A new `mvn://` scheme was added to be able to address with brief but unique nota
 * `mvn:///path/inside/m2/repository/jarFile.jar` for exploring the mvn repository from its root.
 If `maven.repo.local` is set, then that is the root of the M2 repository. Otherwise if `~/m2/.repository` exists (in the users ome directory) then that is used. Otherwise `mvn` is executed with `-Dexpression=settings.localRepository` to extract the setting from the current `pom.xml` file. This is _not_ the official order as `mvn` resolves these configuration options; but it was chosen for the sake of efficiency.
 
-A great deal of tests were fixed, enhanced or extended as a side-effect of the compiler project. 
+A great deal of tests were fixed, enhanced or extended as a side-effect of the compiler project. Another visible aspect of the progress of the compiler is that now all Rascal runtime values (from vallang and beyond) now support `getFingerprint()` methods which help in optimizing patter matching and dispatch in generated code by the compiler. These  methods' return values have become a strict contract for future implementations of Rascal values, including parse trees and reified types and first-class functions.
 
 The following issues were solved: 
 * string `visit` with unicode characters had a bug
-*
+* `util::ShellExec` had some IO synchronization issues which were resolved.
+* The JUnit test runners report exceptions better now.
+* The broken and unused `stdout://` and `stdin://` resolvers were removed.
+* The `IO::watch` functionality was improved for logical source locations. However the system is still too slow on Mac to work effectively in an interactive development environment.
+* TODO
 
 Standard library maintenance:
-* Accurate and correct parsers of Windows and Unix file paths were added to the standard library.
+* Accurate and correct parsers of Windows and Unix file paths were added to the standard library. This includes a new `unc://` resolver to accurately represent the semantics of UNC paths, and `cwddrive://` which can represent the current working directory on a given drive letter on Windows.
 * `HTMLElement(loc src = |unknown:///|)` was added to position every tag from start to end via the `src` attribute.
 * The documentation strings were ported from `@doc{ }` notation to `@synopsis{..}, @description{..}, @examples{..}, @benefits{..}, @pitfalls{..}` separate tags. 
 * The `@deprecated{..}` tag is now also used during API documentation generation. It is rendered between the synsopsis and the declaration signature.
@@ -51,6 +55,13 @@ just generated with `parsers`.
 * `lang::rascal::vis::ImportGraph` was added as a port of the ASF+SDF Meta-Environment import graph visual.
 * `lang::std::ANSI` is a almost complete specification of the ANSI standard for character markup.
 * `util::Clipboard` was added to give programmatic access to the systems copy/paste feature for textual content. The feature starts up lazily so the first call to `copy` or `paste` is slower than subsequent calls. In a headless environment `copy` always returns the empty string and `paste` simply has no effect. Paste and copy are "thread friendly" in that they will produce or reproduce a string that at one time was in the system's copy/paste buffer. However, it is not necessarily the last entry and other processes may overwrite the buffer while the Rascal programming is running that has just written to it.
+* `util::Eval` was refactored and reimplemented for efficiency and robustness, following the TutorCommandExecutor design from the rascal-tutor project. Eval instances are now fully configured via `PathConfig`.
+* The concept of CodeActions was added to util::IDEServices, they also extend error `Message` constructors. CodeActions can be used to register quickfixes and other code related actions to editor positions. The positions are either directed by the error message they are attached to, or via syntax-directed pattern matching. This feature plays well with the LanguageServer features in rascal-lsp.
+* added `util::Reflective::newRascalProject` to set up an empty project template with the right RASCAL.MF file and pom.xml file.
+* `ManifestRunner.java` was removed because it was unused.
+* The `benchmark:///` resolver was removed, so was `test-temp:///`, `test-data:///` and `test-modules:///`.
+* The `memory://` resolver now supports independently garbage collectible filesystems per authority name.
+*
 
 The Java model has received big maintenance love and attention, including improvements to the generic M3 model:
 * Bumped and upgraded  to the JDT version from Eclipse 2020-03
