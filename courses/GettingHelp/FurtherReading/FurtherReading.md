@@ -18,8 +18,8 @@ keywords:
 
 #### Packages
 
-Rascal can be extended by loading different (third-party) packages. For example:
+Rascal can be extended by loading different (third-party) [packages](/docs/Packages). For example:
 
-* ((flybytes)) enables JVM bytecode analysis, transformation and generation in Rascal.
-* ((typepal)) is a generic name and type analysis framework for programming languages and textual DSLs.
+* [flybytes](/docs/Packages/Flybytes) enables JVM bytecode analysis, transformation and generation in Rascal.
+* [typepal](/docs/Packages/Typepal) is a generic name and type analysis framework for programming languages and textual DSLs.
 
