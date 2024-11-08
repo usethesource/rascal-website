@@ -64,6 +64,7 @@ just generated with `parsers`.
 
 The Java model has received big maintenance love and attention, including improvements to the generic M3 model:
 * Bumped and upgraded  to the JDT version from Eclipse 2020-03, then upgraded mapping support up to and including JLS-14.
+* Up to JLS14 all new Java constructs were added to the AST and the M3 Core model. The previous standard we supported was JLS8.
 * The AST nodes in `lang::java::m3::AST` now all satisfy the AST contract in `analysis::m3::AST`. This means that
 all source code elements are represented in the tree, annotated with `src` origins and ordered from left-to-right as
 they were in the original source file.
@@ -76,16 +77,14 @@ that invalidated the earlier mentioned AST contract.
 * String based unary and binary operator constructors for Expressions were unfolded to a constructor for each operator, i.e. `plus(Expression, Expression)` instead of `binop(Expression, "+", Expression)`
 * `lang::java::m3::AST` was documented and so was `analysis::m3::AST`
 * `lang::java::m3::Core` was documented and so was `analysis::m3::Core`
-* `composeM3` was generalized for any number of keyword fields which are either sets or lists. 
+* `composeM3` was generalized for any number of keyword fields which are either sets or lists. This makes it language-independent from now on.
 * `m3SpecificationTest` checks for the internal sanity and completeness of an M3 model. Can be used to test language front-ends.
 * `Java2ObjectFlow` was upgraded for all the changes in the AST constructors. However it may still need extension for new constrtructors like lambda expressions.
-* Lambda's were added to AST Expressions
-* Method references were added to AST Expressions
-* Up to JLS14 all new Java constructs were added to the AST and the M3 Core model. The previous standard we supported was JLS8.
+* Lambda's were added to `Expression`
+* Method references were added to `Expression`
 * Intersection types were added to the Type AST class
 * The bounds constructors of Type ASTs were renamed from `upperbound` and `lowerbound` to `super` and `extends`.
 * Java versions are now specified as constructors of the `Language` data type, for accurate description of the JLS language level the user needs to reflect.
 * M3 extraction from JVM binary class files was maintained and now also supports language features up to JLS14.  In particular the Java 9 module system was added to the mapping.
 * Tracebility with origin tracking was improved for both source code and binary classfile analysis, so if NPE's happen a clear cause can be printed.
-*
     
