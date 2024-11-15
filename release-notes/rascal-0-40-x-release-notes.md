@@ -8,7 +8,7 @@ In this post we report on the Rascal release 0.40.x
 
 <!--truncate-->
 
-## Release 0.40.14 - November 5, 2024
+## Release 0.40.17 - November 15, 2024
 
 The public release 0.40.x follows release 0.28.x; many improvements have been made in projects that depend on the rascal interpreter and the standard library (the type checker, the VScode extensions, clair, etc.) Some of these improvements depend directly on fixes in the interpreter and additions to the standard library. 
 
