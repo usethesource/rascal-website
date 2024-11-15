@@ -27,7 +27,7 @@
         <rascal-maven-plugin.version>0.28.9</rascal-maven-plugin.version>
         <rascal.version>0.40.17</rascal.version>
         <rascal-tutor.version>0.19.9</rascal-tutor.version>
-        <clair.version>0.13.0</clair.version>
+        <clair.version>0.13.1</clair.version>
         <rascal-git.version>0.1.15</rascal-git.version>
         <flybytes.version>0.2.8</flybytes.version>
         <typepal.version>0.14.8</typepal.version>
@@ -43,7 +43,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.4.0</version>
                 <configuration>
                     <filesets>
                         <fileset>
