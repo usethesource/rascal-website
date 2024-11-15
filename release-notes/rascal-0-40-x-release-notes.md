@@ -12,6 +12,8 @@ In this post we report on the Rascal release 0.40.x
 
 The public release 0.40.x follows release 0.28.x; many improvements have been made in projects that depend on the rascal interpreter and the standard library (the type checker, the VScode extensions, clair, etc.) Some of these improvements depend directly on fixes in the interpreter and additions to the standard library. 
 
+The Rascal type-checker which is available in the VScode extension is reaching maturity. The `.tpl` file format has changed, which requires everybody to throw the old ones away. The new type checker checks `.tpl` file versions and reports possible conflicts. Use `mvn clean` or remove your `bin` or `target` folders for all your projects and library projects today.
+
 The support for XML, JSON and HTML as exchange formats has been improved or completely rewritten. The main feature that was added was the optional `loc src` keyword field that provides the exact location of each node as it appears in the XML, HTML or JSON source text.
 
 A new `mvn://` scheme was added to be able to address with brief but unique notation the jar files in the local M2 repository. It supports two modes:
@@ -22,12 +24,54 @@ If `maven.repo.local` is set, then that is the root of the M2 repository. Otherw
 A great deal of tests were fixed, enhanced or extended as a side-effect of the compiler project. Another visible aspect of the progress of the compiler is that now all Rascal runtime values (from vallang and beyond) now support `getFingerprint()` methods which help in optimizing pattern matching and dispatch in generated code by the compiler. These  methods' return values have become a strict contract for future implementations of Rascal values, including parse trees and reified types and first-class functions.
 
 The following issues were solved: 
-* string `visit` with unicode characters had a bug
+* String `visit` with unicode characters had a bug
 * `util::ShellExec` had some IO synchronization issues which were resolved.
 * The JUnit test runners report exceptions better now.
 * The broken and unused `stdout://` and `stdin://` resolvers were removed.
-* The `IO::watch` functionality was improved for logical source locations. However the system is still too slow on Mac to work effectively in an interactive development environment.
-* TODO
+* The `IO::watch` functionality was improved for logical source locations. It is now fully functional on all systems with a JVM. However the system is still too slow on Mac to work effectively in an interactive development environment.
+* [Identical inner functions are flagged as code clones](https://github.com/usethesource/rascal/issues/2067)
+* [Unsupported splice pattern causes NULL pointer exception inside interpreter](https://github.com/usethesource/rascal/issues/2071)
+* [Add-assign of incompatible set types does not raise error](https://github.com/usethesource/rascal/issues/2056)
+* [Missing a "info" or "warning" message at the call-site of @deprecated functions](https://github.com/usethesource/rascal/issues/2055)
+* [deprecated module has squiqqlies over the entire file](https://github.com/usethesource/rascal/issues/2052)
+* [`rascalTModelForLocs` does not return TModel](https://github.com/usethesource/rascal/issues/2050)
+* [(common) keyword field projecten out of ADT produces dynamic instead of static type for the static type result.](https://github.com/usethesource/rascal/issues/2049)
+* [Internal crash instead of static error for relation field projection on unlabeled relation types](https://github.com/usethesource/rascal/issues/2048)
+* [Typechecker fails to report error on invalid function return type](https://github.com/usethesource/rascal/issues/2046)
+* [Type checker reports undefined module after edit](https://github.com/usethesource/rascal/issues/2044)
+* [Rascal check crashed unexpectedly with: MultipleKey at: |std:///Map.rsc|(2659,708,<109,0>,<130,54>)](https://github.com/usethesource/rascal/issues/2039)
+* [Progress monitor's utf-8 check only works in interactive terminals](https://github.com/usethesource/rascal/issues/2032)
+* [Unexpected 'Ambiguous pattern type' error](https://github.com/usethesource/rascal/issues/2030)
+* [In overlapping names, order matters for the typechecker](https://github.com/usethesource/rascal/issues/2026)
+* [`Maybe::nothing` causes wrong type if used in adt keyword parameters](https://github.com/usethesource/rascal/issues/2025)
+* [Two binds on both sides of the OR operator don't work if they are in a nested expression.](https://github.com/usethesource/rascal/issues/2024)
+* [Rascal-core is generating prints in the monitor](https://github.com/usethesource/rascal/issues/2023)
+* [Rascal type-checker crashed unexpectedly with: No module scope found for ...](https://github.com/usethesource/rascal/issues/2021)
+* [What to expect: common keyword parameter of data declaration and keyword parameter of constructor have the same name](https://github.com/usethesource/rascal/issues/2019)
+* [add function to identify possible addition of cycles on nodes](https://github.com/usethesource/rascal/issues/2018)
+* [Typechecker reports used variable as unused](https://github.com/usethesource/rascal/issues/2014)
+* [Overloads with different type parameter names cause error](https://github.com/usethesource/rascal/issues/2013)
+* [Function that only throws exception is expected to have `bool` return type](https://github.com/usethesource/rascal/issues/2012)
+* [Typechecker disallows assigning `nothing()` to field of type `Maybe`](https://github.com/usethesource/rascal/issues/2007)
+* [Typechecker fails on `analysis::typepal::TypePal`](https://github.com/usethesource/rascal/issues/2006)
+* [string editor `visit` fails with unicode matches.](https://github.com/usethesource/rascal/issues/2005)
+* [Type constructor subtype issue?](https://github.com/usethesource/rascal/issues/2003)
+* [Type checker infers `value` for known-type tuple wildcards in iterator](https://github.com/usethesource/rascal/issues/1996)
+* [Type of generator leaks](https://github.com/usethesource/rascal/issues/1995)
+* [`type` constructor doesn't accept keyword parameters starting with `\` symbol](https://github.com/usethesource/rascal/issues/1991)
+
+On the Rascal run-time engine (vallang) these issues were resolved:
+* [Add \f escape in string constants back into vallang StandardTextReader](https://github.com/usethesource/vallang/issues/270)
+* [StandardTextReader does not support `\f` escape while rascal does](https://github.com/usethesource/vallang/issues/268)
+* [Drop xz-java dependency](https://github.com/usethesource/vallang/issues/252)
+* [Entry Buckets in ShareableValuesHashSet typically nest 4 or 5 times during a transitive closure on source locations (call graph)](https://github.com/usethesource/vallang/issues/235)
+* [TypeFactory use of `checkNull` shows up on profiles](https://github.com/usethesource/vallang/issues/233)
+* [Performance regression for transitive closure on large `rel[loc,loc]`](https://github.com/usethesource/vallang/issues/230)
+* [Add identity ("kind") to types (for the benefit of generated code and runtime system)](https://github.com/usethesource/vallang/issues/209)
+* [Add informative error messages to asserts](https://github.com/usethesource/vallang/issues/158)
+* [evaluate efficiency of new hash-consing design in pr #131](https://github.com/usethesource/vallang/issues/135)
+* [add IString::asReader to stream _from_ strings](https://github.com/usethesource/vallang/issues/71)
+
 
 Standard library maintenance:
 * Accurate and correct parsers of Windows and Unix file paths were added to the standard library. This includes a new `unc://` resolver to accurately represent the semantics of UNC paths, and `cwdrive://` which can represent the current working directory on a given drive letter on Windows.
