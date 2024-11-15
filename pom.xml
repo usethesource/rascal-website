@@ -24,26 +24,26 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <rascal-maven-plugin.version>0.24.0</rascal-maven-plugin.version>
-        <rascal.version>0.34.0</rascal.version>
-        <rascal-tutor.version>0.18.4</rascal-tutor.version>
-        <clair.version>0.12.0</clair.version>
-        <rascal-git.version>0.1.14</rascal-git.version>
-        <flybytes.version>0.2.3</flybytes.version>
-        <typepal.version>0.8.10</typepal.version>
-        <salix-core.version>0.2.3</salix-core.version>
-        <salix-contrib.version>0.2.4</salix-contrib.version>
-        <rascal-lsp.version>2.20.0</rascal-lsp.version>
-        <drambiguity.version>0.2.0</drambiguity.version>
-        <php-analysis.version>0.2.3</php-analysis.version>
-        <python-air.version>0.0.6</python-air.version>
+        <rascal-maven-plugin.version>0.28.9</rascal-maven-plugin.version>
+        <rascal.version>0.40.17</rascal.version>
+        <rascal-tutor.version>0.19.9</rascal-tutor.version>
+        <clair.version>0.13.1</clair.version>
+        <rascal-git.version>0.1.15</rascal-git.version>
+        <flybytes.version>0.2.8</flybytes.version>
+        <typepal.version>0.14.8</typepal.version>
+        <salix-core.version>0.2.7</salix-core.version>
+        <salix-contrib.version>0.2.7</salix-contrib.version>
+        <rascal-lsp.version>2.21.0-2</rascal-lsp.version>
+        <drambiguity.version>0.3.5</drambiguity.version>
+        <php-analysis.version>0.2.4</php-analysis.version>
+        <python-air.version>0.0.8</python-air.version>
     </properties>
 
     <build>
         <plugins>
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.4.0</version>
                 <configuration>
                     <filesets>
                         <fileset>
@@ -77,6 +77,16 @@
                         </goals>
                         <configuration>
                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>rascal</artifactId>
+                                    <version>${rascal.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                    <excludes>docs/FUNDING.md</excludes>
+                                    <excludes>docs/CITATION.md</excludes>
+                                </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>flybytes</artifactId>
@@ -188,7 +198,7 @@
                             <errorsAsWarnings>false</errorsAsWarnings>
                             <bin>${project.basedir}</bin> <!-- because tutor appends /docs to this -->
                             <srcs>
-                                <src>|lib://rascal/org/rascalmpl/library|</src>
+                                <!--<src>|lib://rascal/org/rascalmpl/library|</src> -->
                                 <src>${project.basedir}/courses/WhyRascal</src>
                                 <src>${project.basedir}/courses/Recipes</src>
                                 <src>${project.basedir}/courses/Rascal</src>
@@ -200,6 +210,7 @@
                             </srcs>
                             <ignores>
                                 <ignore>|lib://rascal/org/rascalmpl/library/lang/rascal|</ignore>
+                                <ignore>|lib://rascal/org/rascalmpl/library/lang/c90|</ignore>
                                 <ignore>|lib://rascal/org/rascalmpl/library/lang/c90|</ignore>
                             </ignores>
                         </configuration>
