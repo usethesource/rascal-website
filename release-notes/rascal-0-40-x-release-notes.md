@@ -12,7 +12,20 @@ In this post we report on the Rascal release 0.40.x
 
 The public release 0.40.x follows release 0.28.x; many improvements have been made in projects that depend on the rascal interpreter and the standard library (the type checker, the VScode extensions, clair, etc.) Some of these improvements depend directly on fixes in the interpreter and additions to the standard library. 
 
+:::info
 The Rascal type-checker which is available in the VScode extension is reaching maturity. The `.tpl` file format has changed, which requires everybody to throw the old ones away. The new type checker checks `.tpl` file versions and reports possible conflicts. Use `mvn clean` or remove your `bin` or `target` folders for all your projects and library projects today.
+:::
+
+:::warning
+Eclipse support for Rascal will shortly be archived. After more than three years of deprecation, no more maintenance releases on the IDE plugins will be released. Also we will be archiving the git repositories of the following projects:
+* rascal-eclipse
+* impulse
+* rascal-eclipse-libraries
+
+Note that the Java support which is based on Eclipse JDT will remain to be supported. See also below for the new features.
+
+Porting the Rascal LSP servers to the Eclipse LSP client would be interesting. If you are interested in contributing, we are all ears.
+:::
 
 The support for XML, JSON and HTML as exchange formats has been improved or completely rewritten. The main feature that was added was the optional `loc src` keyword field that provides the exact location of each node as it appears in the XML, HTML or JSON source text.
 
@@ -23,7 +36,8 @@ If `maven.repo.local` is set, then that is the root of the M2 repository. Otherw
 
 A great deal of tests were fixed, enhanced or extended as a side-effect of the compiler project. Another visible aspect of the progress of the compiler is that now all Rascal runtime values (from vallang and beyond) now support `getFingerprint()` methods which help in optimizing pattern matching and dispatch in generated code by the compiler. These  methods' return values have become a strict contract for future implementations of Rascal values, including parse trees and reified types and first-class functions.
 
-The following issues were solved: 
+### The following issues were solved 
+
 * String `visit` with unicode characters had a bug
 * `util::ShellExec` had some IO synchronization issues which were resolved.
 * The JUnit test runners report exceptions better now.
@@ -61,6 +75,7 @@ The following issues were solved:
 * [`type` constructor doesn't accept keyword parameters starting with `\` symbol](https://github.com/usethesource/rascal/issues/1991)
 
 On the Rascal run-time engine (vallang) these issues were resolved:
+
 * [Add \f escape in string constants back into vallang StandardTextReader](https://github.com/usethesource/vallang/issues/270)
 * [StandardTextReader does not support `\f` escape while rascal does](https://github.com/usethesource/vallang/issues/268)
 * [Drop xz-java dependency](https://github.com/usethesource/vallang/issues/252)
@@ -73,7 +88,8 @@ On the Rascal run-time engine (vallang) these issues were resolved:
 * [add IString::asReader to stream _from_ strings](https://github.com/usethesource/vallang/issues/71)
 
 
-Standard library maintenance:
+### Standard library maintenance
+
 * Accurate and correct parsers of Windows and Unix file paths were added to the standard library. This includes a new `unc://` resolver to accurately represent the semantics of UNC paths, and `cwdrive://` which can represent the current working directory on a given drive letter on Windows.
 * `HTMLElement(loc src = |unknown:///|)` was added to position every tag from start to end via the `src` attribute.
 * The documentation strings were ported from `@doc{ }` notation to `@synopsis{..}, @description{..}, @examples{..}, @benefits{..}, @pitfalls{..}` separate tags. 
@@ -106,6 +122,8 @@ just generated with `parsers`.
 * The `benchmark:///` resolver was removed, so was `test-temp:///`, `test-data:///` and `test-modules:///`.
 * The `memory://` resolver now supports independently garbage collectible filesystems per authority name.
 
+### Java support
+
 The Java model has received big maintenance love and attention, including improvements to the generic M3 model:
 * Bumped and upgraded  to the JDT version from Eclipse 2020-03, then upgraded mapping support up to and including JLS-14.
 * Up to JLS14 all new Java constructs were added to the AST and the M3 Core model. The previous standard we supported was JLS8.
@@ -131,4 +149,4 @@ that invalidated the earlier mentioned AST contract.
 * Java versions are now specified as constructors of the `Language` data type, for accurate description of the JLS language level the user needs to reflect.
 * M3 extraction from JVM binary class files was maintained and now also supports language features up to JLS14.  In particular the Java 9 module system was added to the mapping.
 * Tracebility with origin tracking was improved for both source code and binary classfile analysis, so if NPE's happen a clear cause can be printed.
-    
+
