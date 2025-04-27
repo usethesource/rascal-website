@@ -1,10 +1,10 @@
 ---
-title: RAP 9 - "Events": a simple unified intermediate format for exceptions, errors, asserts, test results and Java stack traces
+title: RAP 9 - Events -  a simple unified intermediate format for exceptions, errors, asserts, test results and Java stack traces
 ---
 
 | RAP | 9 |
 | :---- | :---- |
-| Title | Events: a simple unified intermediate format for exceptions, errors, asserts, test results and Java stack traces |
+| Title | Events - a simple unified intermediate format for exceptions, errors, asserts, test results and Java stack traces |
 | Author | Jurgen Vinju  |
 | Status | Draft |
 | Type | Rascal Language |

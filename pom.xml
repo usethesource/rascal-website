@@ -206,6 +206,7 @@
                                 <src>${project.basedir}/courses/GettingStarted</src>
                                 <src>${project.basedir}/courses/Rascalopedia</src>
                                 <src>${project.basedir}/courses/Bibliography</src>
+                                <src>${project.basedir}/courses/RascalAmendmentProposals</src>
                                 <src>${project.basedir}/courses/Packages</src>
                             </srcs>
                             <ignores>
