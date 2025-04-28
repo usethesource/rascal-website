@@ -1,5 +1,6 @@
 ---
 title: RAP 6 - improved import/extend semantics
+sidebar_position: 6
 ---
 
 | RAP[^1] | 6 |

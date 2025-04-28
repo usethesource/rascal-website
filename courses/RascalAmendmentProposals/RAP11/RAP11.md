@@ -1,5 +1,6 @@
 ---
 title: RAP 11 - Better Datetime
+sidebar_position: 11
 ---
 
 | RAP[^1] | 11 |

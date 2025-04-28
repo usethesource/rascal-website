@@ -1,5 +1,6 @@
 ---
 title: RAP 4 - Rascal Function Semantics
+sidebar_position: 4
 ---
 
 ## Abstract

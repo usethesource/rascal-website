@@ -1,5 +1,6 @@
 ---
 title: RAP 7 - Final Pattern Variables
+sidebar_position: 7
 ---
 
 | RAP | 7 |

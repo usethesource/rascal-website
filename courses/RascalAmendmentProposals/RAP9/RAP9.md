@@ -1,5 +1,6 @@
 ---
 title: RAP 9 - Events -  a simple unified intermediate format for exceptions, errors, asserts, test results and Java stack traces
+sidebar_position: 9
 ---
 
 | RAP | 9 |

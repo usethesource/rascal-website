@@ -1,5 +1,6 @@
 ---
 title: RAP 13 - Name-parametrized syntax role modifiers
+sidebar_position: 13
 ---
 
 | RAP | 13 |

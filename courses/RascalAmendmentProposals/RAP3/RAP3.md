@@ -1,5 +1,6 @@
 ---
 title: RAP 3 - Concrete Patterns for External Parsers
+sidebar_position: 3
 ---
 
 | RAP | 3 |

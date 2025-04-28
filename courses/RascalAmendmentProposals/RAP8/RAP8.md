@@ -1,5 +1,6 @@
 ---
 title: RAP 8 -  Simple and Almost Safe Concurrency for Rascal
+sidebar_position: 8
 ---
 
 | RAP | 8 |

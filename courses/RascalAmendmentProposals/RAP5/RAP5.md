@@ -1,5 +1,6 @@
 ---
 title: RAP 5 - A single exact number type for Rascal
+sidebar_position: 5
 ---
 
 | RAP | 5 |

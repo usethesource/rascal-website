@@ -1,5 +1,6 @@
 ---
 title: RAP 2 - Types are Parsers
+sidebar_position: 2
 ---
 
 | RAP | 2 |

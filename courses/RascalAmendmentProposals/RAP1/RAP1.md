@@ -1,8 +1,9 @@
 ---
 title: RAP 1 - Deployment of Rascal Packages
+sidebar_position: 1
 ---
 
-| RAP[^1] | 1 |
+| RAP | 1 |
 | :---- | :---- |
 | Title | Deployment of Rascal Packages |
 | Author | Paul Klint, Jurgen Vinju |

@@ -1,5 +1,6 @@
 ---
 title: RAP 12 - Separate String edit from Visit functionality
+sidebar_position: 12
 ---
 
 | RAP | 12 |

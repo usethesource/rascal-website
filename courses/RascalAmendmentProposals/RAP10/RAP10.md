@@ -1,5 +1,6 @@
 ---
 title: RAP 10 - Concurrent Source Location Access
+sidebar_position: 10
 ---
 
 | RAP | 10 |
