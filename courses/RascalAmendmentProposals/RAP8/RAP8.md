@@ -45,7 +45,7 @@ As file locations, the `loc` type, in Rascal is highly prominent and these “po
   * The static type of the fork result is “list-of” the least upper bound of all static types of the append expressions in the fork block, i.e. `list[value]`.  
 * The body of the fork statement is interpreted similar to a closure:  
   * The body is the body of a closure with formal parameters all variables captured by the body.  
-    * All variables captured by the fork scope are **captured by-value**  
+    * All variables captured by the fork scope are **captured by-value**, or preferably we have applied ((RAP7)) already making all matched variables final already. 
     * This includes lexically nested closures using variables from outer scopes\!  
   * The closure returns the values provided by `append` statements  
   * The closure returns `void` on `break` and `continue` statements  
