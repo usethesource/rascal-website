@@ -12,23 +12,24 @@ sidebar_position: 13
 
 ## Abstract
 
-We want to introduce *syntax role modifiers* like `data[Statement]` , `syntax[Statement]` , `layout[Statement]` , and also “name-parameterized” modifiers like `data[&Name]`.
+We want to introduce *syntax role modifiers* like `data[Statement]` , `syntax[Statement]` , `layout[Statement]` , and also “name-parameterized” modifiers like `data[&Name]`, to Rascal's static and dynamic type systems.
 
 ## Motivation
 
 This RAP solves 3 problems in one go:
 
-* The five syntax types \-**data**, **syntax**, **lexical**, **layout**, and **keywords**\- are *indistinguishable* from each other in Rascal source code because they all use identifier names (like `Statement`, `Expression` and `Declaration`). This leads to confusion since the types internally are different, more technically: they are *type*\-*incomparable* even if the names are equal*.* So, there exist equally looking types which are semantically different. Does not compute.  
+* The five syntax types \-**data**, **syntax**, **lexical**, **layout**, and **keywords**\- are *indistinguishable* from each other in Rascal source code because they all use identifier names (like `Statement`, `Expression` and `Declaration`). This leads to confusion since the types internally are different, more technically: they are *type*\-*incomparable* even if the names are equal. So, there exist equally looking types which are semantically different. Does not compute.  
 * Transformations between syntax types can not be expressed as function types, unless the types are defined in different modules (then module prefixes can be used).  
   * E.g. `Statement implode(Statement x)` **does** **not** make sense, while `data[Statement] implode(syntax[Statement] pt)` **does** make sense.   
   * Implicitly defined syntax types, such as by `implode` or `explode` can not be used at all; while with syntax role modifiers we could implement “name preserving” function types.  
-  *  `data[&N] implode(syntax[&N] pt)` would express a transformation from syntax tree to data tree while **preserving the name** of the type and changing its role modifier.  
-* These issues are made worse by the plan to introduce “concrete syntax for external parsers”, namely for every `data` type there will be an implicit `syntax` type. Before with “implode” we could still pass the grammar of the target type as a parameter \- `&T implode(type[&T], &U <: Tree input)` \- but with “explode” there will be no such grammar typed in by the user. Hence *the concrete syntax feature for external parser is impossible* without a solution for the above. It is not expressible in Rascal momentarily.  
+  *  `data[&N] implode(syntax[&N] pt)` would simply express a transformation from syntax tree to data tree while **preserving the name** of the type and changing its role modifier.  
+* These issues are made worse by the plan to introduce “concrete syntax for external parsers” ((RAP3)), namely for every `data` type there will be an implicit `syntax` type. Before with “implode” we could still pass the grammar of the target type as a parameter \- `&T implode(type[&T], &U <: Tree input)` \- but with “explode” there will be no such grammar typed in by the user. Hence *the concrete syntax feature for external parser is impossible* without a solution for the above. It is not expressible in Rascal momentarily.  
 * This was already a hole in the type system, but we worked around it using modules and module prefixes, or judiciously not having two definitions of the same name in scope at the same time. It would be good to have this problem addressed, also independently of the concrete syntax urgency. 
+* The current `implode` works on the basis of an implicit rule that the resultiong `data` types have the same names as their corresponding `syntax` and `lexical` types. Lifting this rule to the type system makes the semantics of `implode` and `explode` more transparant to the user.
 
 ## Specification
 
-No new **syntax** is necessary for the new feature, we reuse the parametrized alias notation:
+No new **syntax** is necessary for the new feature, we reuse the parametrized alias notation. We will have to add grammar rules, of course.
 
 * Explicit notation: **`syntax`**`[Identifier]` , **`lexical`**`[Identifier]` , **`layout`**`[Identifier]` , **`keywords`**`[Identifier]` and **`data`**`[Identifier]`  
 * Parameterized notation: **`syntax`**`[&Identifier]` , **`lexical`**`[&Identifier]` , **`layout`**`[&Identifier]` , **`keywords`**`[&Identifier]` and `data[&Identifier]`  
