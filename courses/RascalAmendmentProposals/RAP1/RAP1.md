@@ -10,6 +10,10 @@ sidebar_position: 1
 | Status | Draft |
 | Type | Rascal Infrastructure |
 
+## Note
+
+The current RAP has been written before the general move to building on top of Apache Maven. However, it is clear that the below design is step-by-step being filled in with the "BOM" implemented with a pom.xml config file, etc. The document has to be revised with these developments in mind, without throwing away requirements which have yet to be fulfilled. 
+
 ## Abstract
 
 Rascal needs a mechanism to work with third-party Rascal packages (which may be standalone Rascal programs or Rascal libraries). This document describes the required structure of such packages, the required meta-data, and the standard way in which they are made available in a given Rascal installation.
@@ -26,17 +30,17 @@ A *Rascal Source Project* is a directory folder structure with the source code o
 
 The life cycle of a Rascal Package consists of the following phases:
 
-* \[**Build**\]: Convert a *Rascal Source Project* to a deployable *Rascal Package*  
-* \[**Local Installation**\]: Installing a local \[**Build**\] of a *Rascal Package* into the local *Rascal Installation*  
-* \[**Deployment**\]: The *Rascal Package* is uploaded to a (public) *Rascal Package Server*.  
-* \[**Discovery**\]: The name and the keywords defined in the *Rascal Package* make it findable.  
-* \[**Installation**\]: Once found, the *Rascal Package* can be installed in a *Rascal Installation*  
-* \[**Local Installation\]:** Installs a *Rascal Source Project* directly as a *Rascal Package* in the local *Rascal Installation,* i.e. without first deploying it. This is for simulating and testing release, and for being able to work on collections of dependent packages without having to release them officially all the time.  
-* \[**Configuration\]:** Once installed a Rascal Package optionally needs to be configured with knowledge about the system it is installed in. An example configuration for a “gitar” package (git analysis in Rascal) would be the absolute location of the git binary tool. Configuration is a way to deal with non-Rascal, non-Java dependencies, but it can also be used to set preferences or tweak run-time parameters of a Rascal package.  
-* \[**Use**\]: From then on, the *Rascal Package* can be used as if it is an integral part of Rascal.  
-* \[**Update**\]: update to a newer version (is a nice-to-have combination of steps from \[**Discovery**\], \[**Installation**\] and \[**Use**\] for a new version of an already installed package)  
-* \[**Uninstall**\]: remove Rascal Package from the current Rascal installation  
-* \[**Deprecate**\]: mark the Rascal Package as “obsolete” on the *Package Server*
+* [**Build**]: Convert a *Rascal Source Project* to a deployable *Rascal Package*  
+* [**Local Installation**]: Installing a local [**Build**] of a *Rascal Package* into the local *Rascal Installation*  
+* [**Deployment**]: The *Rascal Package* is uploaded to a (public) *Rascal Package Server*.  
+* [**Discovery**]: The name and the keywords defined in the *Rascal Package* make it findable.  
+* [**Installation**]: Once found, the *Rascal Package* can be installed in a *Rascal Installation*  
+* [**Local Installation]:** Installs a *Rascal Source Project* directly as a *Rascal Package* in the local *Rascal Installation,* i.e. without first deploying it. This is for simulating and testing release, and for being able to work on collections of dependent packages without having to release them officially all the time.  
+* [**Configuration]:** Once installed a Rascal Package optionally needs to be configured with knowledge about the system it is installed in. An example configuration for a “gitar” package (git analysis in Rascal) would be the absolute location of the git binary tool. Configuration is a way to deal with non-Rascal, non-Java dependencies, but it can also be used to set preferences or tweak run-time parameters of a Rascal package.  
+* [**Use**]: From then on, the *Rascal Package* can be used as if it is an integral part of Rascal.  
+* [**Update**]: update to a newer version (is a nice-to-have combination of steps from [**Discovery**], [**Installation**] and [**Use**] for a new version of an already installed package)  
+* [**Uninstall**]: remove Rascal Package from the current Rascal installation  
+* [**Deprecate**]: mark the Rascal Package as “obsolete” on the *Package Server*
 
 ### Rascal Source Project Layout
 
@@ -91,13 +95,13 @@ The RASCAL.MF contains the following attributes that are relevant for program de
 * Keywords: A list of keywords that can be used to discover this program.  
 * Sources: points to which nested folder contain root source folders, “src” by default  
 * Include-Source: boolean to indicate whether source code is to be included in the Package  
-* Configuration: TBD, place to declare \[**Configuration**\] values, e.g. loc pathToGit=|file:///usr/bin/git|, str heap-size \= “1G”
+* Configuration: TBD, place to declare [**Configuration**] values, e.g. loc pathToGit=|file:///usr/bin/git|, str heap-size \= “1G”
 
 ### Building and Deploying of a Package File
 
 Each library will be deployed as a single jar and adding a library to a given Rascal installation starts with this jar.
 
-* \[**Build**\] A shell command to wrap the current working project into a deployable jar file.  
+* [**Build**] A shell command to wrap the current working project into a deployable jar file.  
   1. Compiles all Rascal files in the project  
   2. Compiles all documentation in the project  
   3. **TBD**: what about Java class files?  
@@ -107,16 +111,16 @@ Each library will be deployed as a single jar and adding a library to a given Ra
   7. When the jar is finished a checksum is computed and stored next to the jar
 
 
-* \[**Deployment**\] The packaged jar will be uploaded to a Rascal Package Server, e.g. r2d2.rascal-mpl.org/\<name\>-\<version\>.jar. This is simply a http file server. It could also be our Nexus (which is indeed a file server), but we should not force people to use nexus as their file servers. Http should be the only requirement. Next to the jar should be a checksum file with the same name, i.e. \<name\>-\<version\>.sha1, and a synopsis (description) file, i.e. \<name\>-\<version\>.descr which could be the first sentence of the README.md or something like that (see \[**Discovery**\])  
-* \[**Discovery**\] The Rascal shell provides a means to query the currently available libraries on a given server, i.e. by default r2d2.usethesource.io. It should also be possible to query the list of currently installed Rascal packages. E.g. “pkg find \[string\]” will find all packages matching the optional string name on the server or list them all, and “pkg list \[string\]” does the same for the local packages. The discover and list comments also present the single line synopsis next to the name and all available version numbers for the package. Discover will also label already installed packages by a (\*) or something to make sure the user can see what already is there and what is available for download.  
-* \[**Installation**\] The Rascal shell offers an “install” command to download a library and install it in a local machine repository, i.e. \/.r2d2/myLibrary-1.0.0.jar. There is also a staging directory to make sure installation is an atomic operation, i.e. \~/.r2d2/staging.  “pkg install \<name\> \[version\]” will go through the following steps:  
+* [**Deployment**] The packaged jar will be uploaded to a Rascal Package Server, e.g. r2d2.rascal-mpl.org/\<name\>-\<version\>.jar. This is simply a http file server. It could also be our Nexus (which is indeed a file server), but we should not force people to use nexus as their file servers. Http should be the only requirement. Next to the jar should be a checksum file with the same name, i.e. \<name\>-\<version\>.sha1, and a synopsis (description) file, i.e. \<name\>-\<version\>.descr which could be the first sentence of the README.md or something like that (see [**Discovery**])  
+* [**Discovery**] The Rascal shell provides a means to query the currently available libraries on a given server, i.e. by default r2d2.usethesource.io. It should also be possible to query the list of currently installed Rascal packages. E.g. “pkg find [string]” will find all packages matching the optional string name on the server or list them all, and “pkg list [string]” does the same for the local packages. The discover and list comments also present the single line synopsis next to the name and all available version numbers for the package. Discover will also label already installed packages by a (\*) or something to make sure the user can see what already is there and what is available for download.  
+* [**Installation**] The Rascal shell offers an “install” command to download a library and install it in a local machine repository, i.e. \/.r2d2/myLibrary-1.0.0.jar. There is also a staging directory to make sure installation is an atomic operation, i.e. \~/.r2d2/staging.  “pkg install \<name\> [version]” will go through the following steps:  
   1. Clear the staging directory (for possible left-overs from a failed previous install)  
   2. Push this package name and server on the installation stack file in the staging directory file “TODO”.  
   3. Download a package from the **server**, put it in the staging directory.  
   4. Download the checksum file.  
   5. Compute the checksum independently.  
   6. Check the checksum, and bail out if it is broken.  
-  7. Check for \<name\>-\<version\>.deprecated file on the server. If deprecated show the contents on the file and warn the user. Ask if this can be ignored, if \[yes\] continue, if \[no\] bail out (default is “no”)  
+  7. Check for \<name\>-\<version\>.deprecated file on the server. If deprecated show the contents on the file and warn the user. Ask if this can be ignored, if [yes] continue, if [no] bail out (default is “no”)  
   8. Download the LICENSE file from the library and put it in the staging directory  
   9. Extract the Dependencies from the RASCAL.MF file of the project  
   10. For each of the Dependencies:  
@@ -125,33 +129,33 @@ Each library will be deployed as a single jar and adding a library to a given Ra
       * If not, go to step ‘a’ for the current package and finish the process recursively  
   11. When the current package and all of its dependencies are downloaded as above:  
       * Collect the LICENSE files and ask the user to agree with them  
-      * If \[no\] on one of the licenses, bail out.  
+      * If [no] on one of the licenses, bail out.  
       * Check for LICENSE compatibility?   
-      * If \[yes\] move all packages from staging directory to local repository directory.  
+      * If [yes] move all packages from staging directory to local repository directory.  
       * Unpack all jars in directories \<name\>-\<version\>; this will make nested jars more easily available on the java run-time classpath and loading modules is a lot faster from a file system than out of a jar.  
   12. If one of the dependencies bailed out due to checksum failure or failure to agree with the license, or failure to ignore deprecation, then report the reason for the abortion and clear all files in the staging directory.  
-* \[**Local Installation**\] a variant of the above, where a *Rascal Source Project* is packaged and deployed directly in the local *Rascal Installation*.  
+* [**Local Installation**] a variant of the above, where a *Rascal Source Project* is packaged and deployed directly in the local *Rascal Installation*.  
   1. In this way larger projects can be split into reusable packages without having to publicly release ongoing work  
   2. In this way we simulate the use of a deployed package as faithfully as possible on the developers machine  
-* \[**Configuration**\] triggered after \[**Installation**\] but also re-configuration is possible after installation.   
+* [**Configuration**] triggered after [**Installation**] but also re-configuration is possible after installation.   
   1. The shell provides a way to trigger a number of configuration questions (e.g. as defined in RASCAL.MF (TDB), e.g. “pkg config \<name\>”  
   2. The result of configuration is stored in a file \~/.r2d2/\<name\>-\<version\>.config  
   3. A Rascal standard library module provides access to the values in the config file  
-* \[**Dependency**\] by editing RASCAL.MF (or via a shell command to add it to the RASCAL.MF? “pkg add \<name\> \<version\>”?), the name of a library is added to a project at Used-Libraries. This dependency declaration contains a version number optionally. If this is not the case, then the latest version (semantic versioning) is always added to the search path.  
+* [**Dependency**] by editing RASCAL.MF (or via a shell command to add it to the RASCAL.MF? “pkg add \<name\> \<version\>”?), the name of a library is added to a project at Used-Libraries. This dependency declaration contains a version number optionally. If this is not the case, then the latest version (semantic versioning) is always added to the search path.  
   1. This effectively adds the contents of jars to the libraryPath of the project in the order of occurrence in Used-Libraries.   
-  2. The process of adding to the libraryPath should check existence of the library and bail out with an error message if it is not there anymore (see \[**Uninstall**\]), or propose to “pkg install” it again automatically?  
-* \[**Use**\] the programmer imports modules from the libraries on the library path as if they were part of the current project.   
+  2. The process of adding to the libraryPath should check existence of the library and bail out with an error message if it is not there anymore (see [**Uninstall**]), or propose to “pkg install” it again automatically?  
+* [**Use**] the programmer imports modules from the libraries on the library path as if they were part of the current project.   
   1. When the shell starts or when a dependency is added, the documentation of each library is also added to the help index.  
-  2. When the shell starts or when a dependency is added (see \[**Dependency**\]), the libraryPath of the shell is extended to make the library indeed importable. If the dependency does not exist in the local Rascal installation, then an error message should be reported  
-* \[**Uninstall**\] a “pkg uninstall \<name\> \[version\] \[“rec”\]” removes a package and its dependencies unless used by another package from the local repository.  
-  1. This can generate dangling references in source projects (see \[**Dependency**\])  
+  2. When the shell starts or when a dependency is added (see [**Dependency**]), the libraryPath of the shell is extended to make the library indeed importable. If the dependency does not exist in the local Rascal installation, then an error message should be reported  
+* [**Uninstall**] a “pkg uninstall \<name\> [version] [“rec”]” removes a package and its dependencies unless used by another package from the local repository.  
+  1. This can generate dangling references in source projects (see [**Dependency**])  
   2. This should fail if any of the installed packages in the local repository still depends on the package, unless they are on the list of currently being removed as well.  
-  3. The process should mimic the inverse of the \[**Install**\] process and be made atomic as a whole, i.e not take place at all if any of the packages can not be uninstalled.  
-  4. The process should also remove local \[**Configuration**\] files (if successful)  
-* \[**Deprecate**\] Label an already deployed (versioned) package as “obsolete” or “deprecated”, with a reason (security issue, bug, license issue, not maintained anymore, superseded by another project, etc)  
+  3. The process should mimic the inverse of the [**Install**] process and be made atomic as a whole, i.e not take place at all if any of the packages can not be uninstalled.  
+  4. The process should also remove local [**Configuration**] files (if successful)  
+* [**Deprecate**] Label an already deployed (versioned) package as “obsolete” or “deprecated”, with a reason (security issue, bug, license issue, not maintained anymore, superseded by another project, etc)  
   1. The file will not be removed from the server but...  
   2. An additional file will be uploaded \<name\>-\<version\>.deprecated, which contains the reason for the deprecation.  
-  3. The \[**Install**\] comment will check for the deprecated file and show its contents, then ask if the user wants to force the installation or bail out.
+  3. The [**Install**] comment will check for the deprecated file and show its contents, then ask if the user wants to force the installation or bail out.
 
 ## Motivation
 
