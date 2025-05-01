@@ -14,11 +14,11 @@ sidebar_position: 5
 
 This RAP proposes to unify all of Rascal’s number kinds (*int*, *real*, *rat*) into a single representation. The primary goal is to achieve simplicity while keeping interoperability with other external data sources and sinks. The secondary goal is to achieve the intended specification of Rascal arithmetic to be fully symbolic, i.e. *exact*, and so to coincide very strongly with the notions of elementary school and highschool arithmetic.
 
-All numbers will have associative and commutative semantics for \+ and \*, and classic distributivity for \* over \+. The rationals will have classic inversion laws of \*, / and \+, \-. This is unlike any programming language. There will be no implicit coercions, or rounding, or overflow for Rascal numbers.
+All numbers will have associative and commutative semantics for `+` and `*`, and classic distributivity for `*` over `+`. The rationals will have classic inversion laws of `*`, `/` and `+`, `-`. This is unlike any programming language. There will be no implicit coercions, or rounding, or overflow for Rascal numbers.
 
 The `int` type will reflect all round numbers, positive or negative. The `rat` type (supertype of `int`) will reflect all rational numbers (including the ints) and the `real` type (supertype of `rat`) will additionally reflect all other irrational numbers (including the rats). It is implied there will be only one kind of `0` value. Future versions may include an even general number types (`complex`), each again strict super-types of the previous.
 
-Fractional representation may be used inside for efficiency’s sake, but for usability’s sake we’ll use decimal notation always for reading and writing numbers. This includes the rational numbers with infinite decimal sequences. For example: `1 / 3` will return `0.(3)` which stands for  `0.33333333…(infinitely)`. `(⅓) \* 3 == 1` with this new system, and `0.(3) \* 3 == 1` as well. (the bracket notation is a standard mathematical notation for infinitely progression decimal sequences).
+Fractional representation may be used inside for efficiency’s sake, but for usability’s sake we’ll use decimal notation always for reading and writing numbers. This includes the rational numbers with infinite decimal sequences. For example: `1 / 3` will return `0.(3)` which stands for  `0.33333333…(infinitely)`. `(⅓) * 3 == 1` with this new system, and `0.(3) * 3 == 1` as well. (the bracket notation is a standard mathematical notation for infinitely progression decimal sequences).
 
 Finally, we add midpoint-radius notation for *automatically handling approximations* of irrational numbers (pi, e) and raw data with inaccuracies. Programs will not explicitly have to deal with (im)precision, but Rascal will always show exactly (by default) how imprecise a calculation might be. Example: `pi(err=0.0005)` will return `3.141 ± 0.0005` to indicate that the real number pi is any number between 3.1405 and 3.1415 (and the current best guess is 3.141). We have a new theory on making the above algebraic laws of commutativity, transitivity and distributivity work for these “midpoint radius” numbers. 
 
@@ -31,9 +31,9 @@ Finally, we add midpoint-radius notation for *automatically handling approximati
   * Interaction with external data-sources leads to a combinatorial explosion when multiple function arguments are at play, this is because `rat`, `real` and `int` are currently *incomparable* types.  
   * The least-upper-bound `num` type is not used by Rascal programmers because it does not add the abstraction required to **not** think about the differences between `int`, `rat` and `real`. I.e. the substitution principle does not blossom in the current design.   
   * Generic functions over `num` do not work because there is no shared concept of the `0` and `1` values. So even though it seems the `+` operator works on all types of numbers, the `num` type itself is not a fully implemented calculus.  
-    * Example: `\&T \<: num sum(list[\&T \<: num] l) = (0 | it \+ i | i \<- l);`  
+    * Example: `&T <: num sum(list[&T <: num] l) = (0 | it + i | i <- l);`  
     * `sum` does not type-check because `0` is not a value of all of the sub-types of `num`, just for `int` (for rat there is `0r` and for real there is `0.`). *This is not only cumbersome, it is also confusing.*  
-    * In the newly proposed system the above `sum` function is valid and returns an int for a list of ints, a rat for a list of rat and a num otherwise, because 0 \\in int ⇒ 0 \\in rat =\> \\0 in real  
+    * In the newly proposed system the above `sum` function is valid and returns an int for a list of ints, a rat for a list of rat and a num otherwise, because $0 \in int ⇒ 0 \in rat⇒ 0 \in real$ 
 * *Opportunity 1*: since Rascal’s values are all symbolic and immutable anyway, there is an overhead which we pay and we do not exploit.   
   * We could have fully *exact* numbers without loss of precision without making Rascal slower. Rascal’s numbers were already “symbolic” and relatively slow at that as compared to floating point arithmetic in Julia or C.   
   * The current RAP should not make Rascal’s numbers slower than they are now, and possibly they will be faster  
@@ -53,7 +53,7 @@ Noted that these changes have to be reflected in **vallang** as well as in **Ras
 
 1. Type system changes:  
    1. The `num` type disappears. For forward compatibility, in case a more general type then `real` is added (like `complex`) we should not have a number type which is more general than a type which will be added later.  
-   2. The number type hierarchy will be: **void** \<: **int** \<: **rat** \<: **real** \<: **value**  
+   2. The number type hierarchy will be: **void** <: **int** <: **rat** <: **real** <: **value**  
       1. `**real**` is the most general number type  
       2. `**rat**` is a proper sub-type of `**real**`   
       3. `**int**` is a proper sub-type of `**rat**`  
@@ -67,45 +67,45 @@ Noted that these changes have to be reflected in **vallang** as well as in **Ras
    2. `[0-9]+ “.” [0-9]+` : finite rational numbers in decimal notation   
    3.` [0-9]+ “.” [0-9]+ “(“ [0-9]+ “)”` : infinite decimal numbers with “repetents” to represent exactly rationals which have infinite decimal expansions. I.e. `0.(3) == ⅓`  
    4. The `x r y` notation disappears and is replaced by the `x/y` division expression  
-   5. Syntactic support for midpoint-radius notation: `number1 ± number2` means the first number is exact within a range of `number1-number2` to `number1 \+ number2`. Number2 must be exact (no range), and so must number 1 (no range nesting).  
-   6. “±” NumberLiteral: means “approximately this number”, where each digit is interpreted as if it were rounded to the nearest significant digit. So this literal `±1.00` will reduce to `1 ± 0.005` and this `±1.0` will reduce to `1 ± 0.05`. This is a convenience syntax.   
+   5. Syntactic support for midpoint-radius notation: `number1 ± number2` means the first number is exact within a range of `number1-number2` to `number1 + number2`. Number2 must be exact (no range), and so must number 1 (no range nesting).  
+   6. `"±" NumberLiteral`: means “approximately this number”, where each digit is interpreted as if it were rounded to the nearest significant digit. So this literal `±1.00` will reduce to `1 ± 0.005` and this `±1.0` will reduce to `1 ± 0.05`. This is a convenience syntax.   
    7. Scientific notation with “e” still supported on top of decimal notation; this interacts nicely with the prefix ± notation for significant digits. 
 
    8. `.3` not supported anymore, you must write `0.3` for technical (ambiguity) reasons in the grammar  
    9. The repetent notation with the brackets requires an additional disambiguation for the CallOrTree expression (no literal numbers can be functions)  
 3. Static types for arithmetic expressions  
-   1. `lub` function is defined according to int \<: rat \<: real  
-   2. For all expressions `e1`, `e2`, `type(e1) \<: **real`** and `type(e2) \<: **real`**:  
-      1. type(e1 \+ e2) = lub(type(e1), type(e2))   
+   1. `lub` function is defined according to int <: rat <: real  
+   2. For all expressions `e1`, `e2`, `type(e1) <: real` and `type(e2) <: real`:  
+      1. `type(e1 + e2) = lub(type(e1), type(e2))  ` 
          1. Implied: ints remain ints, rats remain rats and reals are reals  
-         2. Implied: Int \+ rat becomes rat, rat \+ real becomes real, etc.  
-         3. Implied: no run-time coercion is even necessary. The numbers are already of the right kind statically (\_always\_).  
-      2. type(e1 \- e2) = lub(type(e1), type(e2))   
-      3. type(e1 \* e2) = lub(type(e1), type(e2))   
-      4. type(e1 / e2) = lub(`**rat**`, lub(type(e1), type(e2))   
+         2. Implied: Int + rat becomes rat, rat + real becomes real, etc.  
+         3. Implied: no run-time coercion is even necessary. The numbers are already of the right kind statically (_always_).  
+      2. `type(e1 - e2) = lub(type(e1), type(e2))  ` 
+      3. `type(e1 * e2) = lub(type(e1), type(e2))   `
+      4. `type(e1 / e2) = lub(`**rat**`, lub(type(e1), type(e2))`   
          1. / is not closed on integers: always at least a rat (statically)  
-      5. type(e1 **div** e2) = `int`   
-      6. type(e1 **mod** e2) = lub(type(e1), type(e2))   
-      7. type([0-9]+ whole) = `**int**`  
-      8. type([0-9]+ whole . [0-9]+ fraction) = `rat` **when** `fraction != 0`
-      9. type([0-9]+ whole . [0]+ fraction) = `int`   
-         1. **Implied:** 0.0 is an **int**, this is not strictly necessary obvious if you come from another PL, but for learnability in the REPL newbies can immediately  (statically) see and understand that 0 == 0.0 == 0.000000(0).  
-      10. type([0-9]+ whole . [0-9]+ fraction “(“ [0-9]+ repetent “)”) = `**rat` when** fraction != 0\* and repetent != 0\*  
-      11. type([0-9]+ whole . [0]+ fraction “(“ [0]+ repetent “)”) = `**int`**  
-      12. type(e1 ± e2) = `**real**` if e2 != 0  
-          1. Note that both e1 and e2 as left and right-hand sides of `±` always reduce (semantically) to values of type `**rat**` dynamically due to the axioms of `±`.  
+      5. `type(e1 div e2) = int`   
+      6. `type(e1 mod e2) = lub(type(e1), type(e2))  ` 
+      7. `type([0-9]+ whole) = int`  
+      8. `type([0-9]+ whole . [0-9]+ fraction) = rat when fraction != 0`
+      9. `type([0-9]+ whole . [0]+ fraction) = int`   
+         1. **Implied:** `0.0` is an `int`, this is not strictly necessary obvious if you come from another PL, but for learnability in the REPL newbies can immediately  (statically) see and understand that `0 == 0.0 == 0.000000(0)`.  
+      10. `type([0-9]+ whole . [0-9]+ fraction “(“ [0-9]+ repetent “)”) = rat when fraction != 0* and repetent != 0`  
+      11. `type([0-9]+ whole . [0]+ fraction “(“ [0]+ repetent “)”) = int`  
+      12. `type(e1 ± e2) = real if e2 != 0  `
+          1. Note that both e1 and e2 as left and right-hand sides of `±` always reduce (semantically) to values of type `rat` dynamically due to the axioms of `±`.  
       13. Types of inherent number property fields:  
-          1. type(e1.numerator) = `int`  
-          2. type(e2.denominator) = `int`  
-          3. type(e1.radius) = `rat`  
-          4. type(e1.midpoint) = `rat`  
-          5. type(e1.whole) = `str`  
-          6. type(e1.fraction) = `str`  
-          7. type(e1.repetent) = `str`  
-          8. type(e1.scale) = `int`  
-          9. type(e1.precision) = `int`  
+          1. `type(e1.numerator) = int`  
+          2. `type(e2.denominator) = int`  
+          3. `type(e1.radius) = rat`  
+          4. `type(e1.midpoint) = rat`  
+          5. `type(e1.whole) = str`  
+          6. `type(e1.fraction) = str`  
+          7. `type(e1.repetent) = str`  
+          8. `type(e1.scale) = int`  
+          9. `type(e1.precision) = int`  
    3. Recall: even if statically an expression like `e1 / e2` has type `real`, still the dynamic type of the result might be `int`. Consider: `1.001 / 1.001 == 1`  
-      1. This is sound because int \<: rat \<: real
+      1. This is type-sound because `int <: rat <: real`
 
    
 
@@ -113,35 +113,35 @@ Noted that these changes have to be reflected in **vallang** as well as in **Ras
    1. Leading and trailing zeros are dropped  
    2. Rationals are printed in decimal notation with repetents  
       1. We always print `0.01075268817` and not `1/93`  
-   3. x/1 is printed as x, so is x \* 1  
-   4. Error ranges are printed using “±” as 0.0001 ± 0.000000001  
+   3. `x/1` is printed as `x`, so is `x * 1`  
+   4. Error ranges are printed using `±` as `0.0001 ± 0.000000001`  
    5. Might use E scientific notation to avoid printing a lot of 0’s after the `.`  
         
 5. Division. With `/` division defined on all numbers, it is also defined on integers to return rational values. This is backward incompatible and requires a few additions:  
    1. `1 / 3` will produce the rat `0.(3)` and not the int `0` anymore  
    2. New operators added `**mod**` and `**div**` operators for whole number division  
-      1. 1 div 3 will produce 0  
-      2. 1 mod 3 will produce 3  
+      1. `1 div 3` will produce `0`  
+      2. `1 mod 3` will produce `3`  
       3. Mod and div can also be defined for general rationals and midpoint-radius numbers to mean “how many times does this fit?”  
-   3. `**int**` indexes into lists, so `a[numExpression]` remains a static Rascal error when `a` has a type sub-type of `list[value]`. It has to be `a[intExpression]`. 
+   3. `int` indexes into lists, so `a[numExpression]` remains a static Rascal error when `a` has a type sub-type of `list[value]`. It has to be `a[intExpression]`. 
 
 6. The internal representation of any number is always logically a gcd-normalized fraction  
    1. No more rounding errors  
    2. A challenge to make fast  
-   3. Canonical representation due to the GCD, good for equality checks of (nested) collections with numbers in them (\!)  
+   3. Canonical representation due to the GCD, good for equality checks of (nested) collections with numbers in them (!)  
         
 7. Because there is only one number type all number operations are defined always  
-   1. ==  
-   2. \+  
-   3. /  
+   1. `==`  
+   2. `+`  
+   3. `/`  
    4. `div` (is / but whole number division)  
    5. `mod`  
    6. And there is only one `0` and one `1`  
-8. No more coercions and no more overloading  
+8. **No more coercions and no more overloading**  
    1. No more coercions like the designers of Julia also advocate  
    2. But also no more implicit overloading or upgrading of numbers to higher precisions. This is enabled by having only ONE canonical representation of numbers inside, which is rationals and pairs of rationals in the midpoint-radius case.   
-      1. Julia, for example, supports many different representations which can be traded by programmers (efficiency against exactness). Rascal does not offer these trade-offs anyway (never did support float or double), but we did overload `int \+ real`  and `real / int` etc. to generate a complex hierarchy of combinatorial size with possibly “interesting” conversions between rat, real and int.   
-   3. The linear and predictable scheme of number I/O and conversions will be:  
+      1. Julia, for example, supports many different representations which can be traded by programmers (efficiency against exactness). Rascal does not offer these trade-offs anyway (never did support float or double), but we did overload `int + real`  and `real / int` etc. to generate a complex hierarchy of combinatorial size with possibly “interesting” conversions between rat, real and int.   
+   3. The linear and predictable scheme of number IO and conversions will be:  
       1. parse a number notation, or import it.   
       2. represent as rational,   
       3. Compute the with rationals,   
@@ -153,7 +153,7 @@ Noted that these changes have to be reflected in **vallang** as well as in **Ras
    4. The specific definitions of this algebra are still under embargo  
    5. Midpoint range notation is like so: `midpoint ± radius`  
       1. The midpoint represents *the most likely* *outcome* of a computation  
-      2. The radius represents an absolute radius around the midpoint. The actual value of the number may be any real number (rational or irrational) in `[midpoint \- radius, midpoint \+ radius]` (inclusive bounds)  
+      2. The radius represents an absolute radius around the midpoint. The actual value of the number may be any real number (rational or irrational) in `[midpoint - radius, midpoint + radius]` (inclusive bounds)  
       3. All the arithmetic operators manage the radius’ automatically  
          1. Most code can be oblivious to the error ranges  
          2. The midpoint calculation is always isomorphic to a calculation on rational numbers without the error radius (i.e. error oblivious)  
@@ -161,12 +161,12 @@ Noted that these changes have to be reflected in **vallang** as well as in **Ras
          4. The radius’ are as tight as we can get them for the general arithmetic operators, but no specific theory will be included in the semantics of Rascal to tighten them more. This is up to the programmer.  
    6. Midpoint/radius numbers require more functions or operators for detecting overlap.   
       1. Midpoint radius numbers are only equal if both the midpoint and the radius are equal  
-         1. `A ± e1 == B ± e2 ⇔ A == B && e1 == e2  
+         1. `A ± e1 == B ± e2 ⇔ A == B && e1 == e2`
       2. Midpoint/radius numbers are partially ordered, not fully ordered like `rat`  
-         1. `A ± e1 \< B ± e2 ⇔ A \+ e1 \< B \- e2`  
+         1. `A ± e1 < B ± e2 ⇔ A + e1 < B - e2`  
       3. Existing `in` operator detects interval inclusion (boolean):  
-         1.  `a in b ⇔  a \>= b \- e && a \<= b \+ a`  
-         2. `a ± e1 in b ± e2 ⇔  (a \- e1) in b && (a \+ e1) in b  
+         1.  `a in b ⇔  a >= b - e && a <= b + a`  
+         2. `a ± e1 in b ± e2 ⇔  (a - e1) in b && (a + e1) in b  `
       4. Existing `&` operator detects interval overlap (boolean)  
          1. & is currently defined on sets as set intersection  
          2. We’re not defining interval intersection since the empty interval can not be represented using midpoint radius notation
@@ -183,7 +183,7 @@ Noted that these changes have to be reflected in **vallang** as well as in **Ras
     * `num fitDouble(num x)` uses the most precise double representation possible (with the least error) to represent `x`  
     * `num floatError(num x)` returns the error made by fitting `x` into a JVM float  
     * `num doubleError(num x)` returns the error made by fitting `x` into a JBM double  
-  * Library support for mapping INumber to `java.math.\*` big decimals and big integers and the like.  
+  * Library support for mapping INumber to `java.math.*` big decimals and big integers and the like.  
 * Mathematics library  
   * Some irrational numbers are represented by functions which produce rational approximations up to a given error:  
     * `num pi(rat err=1/1000)` produces pi within the bound given by `error`, and would be printed as such: `3.14129 ± 0.00001`  
@@ -192,7 +192,7 @@ Noted that these changes have to be reflected in **vallang** as well as in **Ras
     * tan(num n, rat err=1/1000), produces the `tan` of `n` within the bound given by `err`  
   * When a mathematical function is **undefined** for certain number(s), the function throws a value of ADT: `*NumberException*` with the constructor equal to the name of the function “Undefined” and its parameter(s) the input of the function.   
     * E.g. `data NumberException = tanUndefined(num x)`, (happens only when x == π/2, but that is logically impossible since Rascal would not have an exact representation of π/2, so it should never happen.   
-    * Or, `data NumberException = avgUndefined(list\[num] l)` happens for `\[]` the empty list.  
+    * Or, `data NumberException = avgUndefined(list$[$num] l)` happens for `[]` the empty list.  
     * The goal is to allow for precise error location, as well as allow for function-specific error-handling by catching/matching these run-time exceptions.  
 * Statistics library  
   * Important use case of Rascal numbers are source code statistics.  
@@ -202,17 +202,17 @@ Noted that these changes have to be reflected in **vallang** as well as in **Ras
 
 ### Semantics
 
-* Computation semantics is completely based on traditional rational number algebra. The standard field of 0, 1, \+, \* extended with /, `div` and `mod` for convenience’s sake.   
+* Computation semantics is completely based on traditional rational number algebra. The standard field of 0, 1, +, * extended with /, `div` and `mod` for convenience’s sake.   
 * Leading zeros are always dropped.   
 * 0.0 == 0, 1.0 == 1, etc. due to standard algebra exact digit counts (“precision”) of a number are **not semantically meaningful** although symbolically different:  
-  * Because *1.0 == 1 iff 10 == 10 iff 1 == 1*  
+  * Because `1.0 == 1 iff 10 == 10 iff 1 == 1`  
   * All numbers in Rascal are simply fully \_exact\_  
   * This means that a discussion on precision and resolution of rational numbers becomes relevant only at the boundaries between Rascal and other systems,   
   * Or we use the midpoint/radius notation for imprecise numbers  
   * The `str significant(num x)` function would return `”1.00”` for `significant(1 ± 0.005)`, to indicate that the original number was significantly precise up to 2 decimal digits after the dot.  
 * `{1., 1} == {1}` as a corollary to the previous,   
   * Because `{1. , 1} == {1}` iff `{1, 1} == {1}` iff `{1} == {1}`.    
-  * `\[1. , 1] == [1, 1]`, by the same reasoning  
+  * `[1. , 1] == [1, 1]`, by the same reasoning  
   * Note: this opens possibility for **further optimizing the persistent collection data-structures** under vallang (using capsule) due to the possibility of a canonical internal representation of numbers, leading to short-circuiting (in)equality tests  of possibly very large collections of numbers.   
 * Divide by zero is a runtime exception.   
   * We considered using Bergstra’s meadows, but the issue here is that the 0 division cancellation law is almost never really applicable (the axiom is pretty complex), and thus mostly computations which end up dividing by zero end up producing “NaN” or “a” or “I had a division by zero somewhere”. By that time the cause of the division by zero can be buried deeply in the past which hampers debugging and error reporting to the end-user.   
@@ -221,21 +221,21 @@ Noted that these changes have to be reflected in **vallang** as well as in **Ras
   * `0.(9) == 1`  
   * `0.(3) == ⅓`   
 * We arrive at new and simple axioms which were not possible before due to rounding issues:  
-  * ` y != 0 ⇒ x / y \* y == x`   
+  * ` y != 0 ⇒ x / y * y == x`   
   * `z != 0 /\\ y != 0 ⇒ x / (y / z) == (x / y) / z`   
-  * `y != 0 /\\ z != 0 ⇒ x / (y / z) = x \* (z / y)`  
+  * `y != 0 /\\ z != 0 ⇒ x / (y / z) = x * (z / y)`  
 * We arrive at axioms which were not possible due to number coercion and operator overloading:  
-  * `(x \+ y) \+ z == x \+ (y \+ z)`  
+  * `(x + y) + z == x + (y + z)`  
   * `x == y iff "<x>" == "<y>"`, the “WYSIWYG” axiom, but care has to be taken that a canonical printing operation exists (see above) and that it never accidentally rounds numbers.  
-* Error range semantics needs to be reflected on all built-in operations, such as \+, \-, /, \*, etc. (algebraic rules are under embargo for now)  
+* Error range semantics needs to be reflected on all built-in operations, such as +, -, /, *, etc. (algebraic rules are under embargo for now)  
   * Supports commutativity, associativity and distributive law  
   * Inversion law holds for the midpoints, but not for the radius’  
   * “Obliviousness law” requires the midpoint calculations never to be affected by the error radius  
     * This is a usability feature: the programmer can always check the outcome of a calculation manually using highschool arithmetic and forgetting about the error radius  
     * This is a error-analysis refactoring feature: algorithms can be changed under the constraint of keeping all midpoints intact and improving only the bounds of the radius’.  
   * Two important axioms for the radius operator:  
-    * Errors accumulate: E1 ± (e2 ± e3) = e1 \+= (e2 \+ e3)  
-    * Bigger errors subsume smaller errors: (E1 ± e2) ± e3 = e1 ± (max(e2, e3))  
+    * Errors accumulate  `E1 ± (e2 ± e3) = e1 += (e2 + e3)`  
+    * Bigger errors subsume smaller errors: `(E1 ± e2) ± e3 = e1 ± (max(e2, e3))`  
     * These two reductions imply canonical rational values for the left and right-hand side of `±`, since all nesting of `±` is rewritten to `+` and `max` on `rat`
 
 ### Design drawbacks and pitfalls
@@ -300,14 +300,14 @@ What this RAP does not touch at all and still is important:
   * It should not be hard to borrow the right design from somewhere?  
   * There is an overlap to be expected with our algebraic data-types, and perhaps a meaningful integration which avoids this overlap and allows for full extensibility of unit dimensions would be possible?  
 * **Easier syntax and semantics for mapping and folding number operations** over the number containers (lists, sets, maps and relations)  
-  * i.e. `list[real] \+ list[real]` could pairwise add the numbers if `+` weren’t already list concatenation.   
-  * Now we have to write `[ a[i] \+ b[i] | i \<- index(a) ] ` or something in this vain, not even taking notice of the possible difference in length of the two lists.   
+  * i.e. `list[real] + list[real]` could pairwise add the numbers if `+` weren’t already list concatenation.   
+  * Now we have to write `[ a[i] + b[i] | i <- index(a) ] ` or something in this vain, not even taking notice of the possible difference in length of the two lists.   
 * **Diagramming**: Integration with diagram, graph and table visualisation libraries  
   * A **single number type** makes integration with external diagramming and graphing tools much easier  
   * First step: adapting Shapes and Salix bridges, perhaps also the older Figure library.   
   * Idea: optimize diagramming a lot: look at screen or paper resolution constraints to filter invisible data before processing it into the diagram.   
     * So: `scatterPlot(rel[real,real] input, resolution=600 dpi)` would not “print” dots which overlap by more than 50% (or 75% or 90%??) if printed at 600dpi. Here “print” means render or communicate to the graphics engine at all.   
-    * Note that this filtering is very different from mathematical rounding. Here a “dot” is printed in a two dimensional fashion even though it is represented by mathematically precise single dimension  \<x,y\> position.   
+    * Note that this filtering is very different from mathematical rounding. Here a “dot” is printed in a two dimensional fashion even though it is represented by mathematically precise single dimension  <x,y\> position.   
       * “Overlapping” dots for more than 50% is a two-dimensional perspective.   
       * The overlapping points are removed entirely from the output set to be visualized, simply because some other point already represents their “visual value”.  
       * This filtering entails a communication and rendering optimization with possible orders of magnitude gains in efficiency. Consider an exponentially distributed and filled data-set, while paper and screens are simply linear in both directions.  
