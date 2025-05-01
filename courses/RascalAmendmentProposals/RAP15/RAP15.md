@@ -17,27 +17,33 @@ The proposal is to extend the Pattern notation like so:
 
 The semantics is that if the `pattern` matches then we check if the boolean `condition` evaluates to true in the current environment (which includes optional bindings from the current pattern). 
 
-And to introduce short-hand notation for all binary predicate operators (==, \!=, :=, \!:=, \<, \<=, \>=, \>) like so:  
-`syntax Pattern = Pattern pattern “==” Expression value`   
-               `|  Pattern pattern “!=” Expression value`  
-               `| ...`
+And to introduce short-hand notation for all binary predicate operators (`==`, `!=`, `:=`, `!:=`, `<`, `<=`, `>=`, `>`) like so:  
+
+```
+syntax Pattern = Pattern pattern “==” Expression value`   
+               |  Pattern pattern “!=” Expression value`  
+               | ...`
+```
 
 And the short-hand expansion is:   
 `p == v` expands to `tmp:p if tmp == v`
+
+The `when` notation and semantics could be completely removed in time.
 
 ## Motivation
 
 This RAP solves *a number of issues* in the design of Rascal’s syntax and semantics in one go:
 
 * **Non-linear patterns (reused pattern variables)** often accidentally capture variables of the outer scope, leading to unexpected failure. This is one of the oldest issues in the design and has been mitigated by the checker providing info/warnings when it happens.   
-* When-clauses are written out of the execution order  
-* When-clauses are not allowed for functions with statement blocks as bodies  
-* Randomized input for tests has to be filtered inside of tests, often returning `true` when the test input is invalid (and wasting opportunity for the valid input).
+* **When-clauses are written out of the execution order**
+* **When-clauses are not allowed for functions with statement blocks as bodies**  
+* Randomized input for tests has to be filtered inside of tests code block, often returning `true` when the test input is invalid (and wasting opportunity for the valid inputs).
 
-The urgency of this RAP is *low*. However, the non-linear matching issue has waited for more than 10 years now and it is still a weekly cause of time loss debugging this trivial issue in new code.
+The urgency of this RAP is *low*. However, the non-linear matching issue has **waited for more than 10 years now** and it is still a weekly cause of time loss debugging this trivial issue in new code. The type-checker warns about non-linear matches with an info message; which helps while writing new code, but it is a frequent source of false positives in the code that is left.
 
-Also there are other ways to solve the nonlinear matching problem. For example by introducing specific syntax for it in the Pattern notation. The benefit of this new notation is that it fixes the non-linear matching problem but also other problems with “when” and with random tests. 
+There are other ways to solve the nonlinear matching problem than to rename a variable. For example by introducing specific syntax for equality testing in the Pattern notation. 
 
+The benefit of the currently proposed new notation is that it fixes the non-linear matching problem but also other problems with “when” and with random tests. 
 **It would be less nice if we have to add conditional patterns anyway and have added yet another syntax for non-linear matching.** 
 
 ## Specification
@@ -54,7 +60,7 @@ Dynamic semantics:
 
 * First the pattern is matched against the current subject; with optional bindings as a side-effect. Note that if the pattern is not singular, backtracking may occur later.  
 * Then a new backtracking and binding scope is wrapped around the evaluation of the condition (such that complex back-tracking conditions can introduce variables and be cleaned up nicely)  
-* The condition finds the first way to evaluate to true (includes possible backtracking over the original pattern, but certainly also over non-singular parameters of && and ||.   
+* The condition finds the first way to evaluate to true (includes possible backtracking over the original pattern, but certainly also over non-singular parameters of `&&` and `||`. The semantics is comparable to the sematics of a `when` clause.   
 * If there is no way to evaluate the condition to true, the entire pattern fails.  
 * Otherwise the pattern succeeds and continues with the bindings introduced by the pattern side (and drops the new bindings introduced by the condition side).
 
@@ -67,25 +73,37 @@ Test semantics
 
 Short-hand notation
 
-* Expanding `p == v` to `tmp:p if tmp == v` for every binary operator is simple.  
-* Note how `_ == a` and `b := a` can be used for two different types of non-linear match. The first matches with equality (including keyword fields). The second matches with equality-modulo-keyword fields.
+* Expanding `p == v` to `tmp:p if tmp == v` for every binary operator. `tmp` must be fresh in the current scope, and unused in the succeeding scopes.  
+* Note how `_ == a` and `_ := a` can be used for two different types of non-linear match. The first matches with equality (including keyword fields). The second matches with equality-modulo-keyword fields.
 
 New static restrictions on patterns:
 
 * Implicit nonlinear patterns are “duplicate declaration” errors:   
-  * so: `and(x, x)` is and error (second x is a duplicate declaration  
+  * so: `and(x, x)` is and error (second x is a duplicate declaration). Initially this should be a warning (not an info anymore) and a quickfix should be generated to expand the non-linear match to either `_ := x` or `_ == x` 
   * Should be written as `and(x, _ := x) or and(x, _ == x)`  
 * All variable introductions in patterns are “fresh” from now on, so the static semantics of:  
   * `int x` is the same as  
   * `x`  
   * Except for the possibility of type inference in the latter.
 
+Removing `when`
+
+* Any application of when can always be rewriting to an application of `if` to the last parameter.
+* If an `if` uses only variables to the left, then it can be moved to earlier in the parameter list.
+* Only `when` clauses to functions without parameters can not be transformed, 
+however, we are pretty sure that those do not exist. In any case they could be rewrittten to an `if` inside the body of the function or a `?:` expression.
+
 ## Examples
 
 ```
-// "dependent types"
+// simulating "dependently typed patterns"
+// because pattern matching is a runtime feature, we are no actually
+// introducing a dependently typed type-system (!) but we come close 
+// to the same level of expressiveness.
 int fac(0) = 1;
 int fac(int n > 0) = fac(n - 1) * n;
+// without use of the shorthand:
+int fac(int n if n > 0) = fac(n - 1) * n;
 
 bool evenOdd(int E if E % 2 == 0, 
              int O if E % 2 == 1) = true;
@@ -106,9 +124,10 @@ This simplifies the implementation of the type-checker and the interpreter alike
    1. change the current informational message on nonlinear matches to a warning with suggestion for refactoring.  
    2. Add warnings for all “when” clauses to be refactored to conditional patterns (if possible)  
    3. Add warnings for tests that use `==>` for input filtering or `if(expression) return true;`  
+   4. Add simple quick-fixes to the warnings
 3. Then, in time, we remove the old semantics:  
    1. Make non-linear matches produce double declaration errors  
-   2. Remove syntax and semantics of `when`
+   2. **Remove syntax and semantics of `when`**
 
 ## Alternative solutions
 
