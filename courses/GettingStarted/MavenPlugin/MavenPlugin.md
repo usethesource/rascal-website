@@ -21,3 +21,12 @@ Each of the above is configured in XML in the local `pom.xml` file of a Rascal p
 * `mvn rascal:tutor` runs the tutor compiler and `-Drascal.tutor.skip` guarantees it is skipped.
 * `mvn rascal:package` runs the package rewriter and `-Drascal.package.skip` guarantees it is skipped.
 * `mvn rascal:exec` executes some Rascal code, while `-Drascal.exec.skip` makes sure this goal is skipped.
+
+
+#### Benefits
+
+* When using the ((getProjectPathConfig)) function from ((util::Reflective)), and a local `pom.xml` is available, then
+the produced configuration will be influenced by what is configured in the `pom.xml` file as well.
+* All dependencies defined in the `pom.xml` are used to automatically configure the library path of the compiler and the interpreter, as well as the classpath of the compiled or interpreted runtime engine.
+* Rascal projects can depend on any other Maven project
+
