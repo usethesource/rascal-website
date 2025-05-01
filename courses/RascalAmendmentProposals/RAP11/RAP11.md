@@ -12,15 +12,16 @@ sidebar_position: 11
 
 ### Issue
 
-1. The current date-time feature in Rascal (and vallang) is based on com.ibm.icu. It has been caught up with by the Java standard library which now features excellent support via a fork of jodatime  
+1. The current date-time feature in Rascal (and vallang) is based on `com.ibm.icu`. It has been caught up with by the Java standard library which now features excellent support via a fork of `jodatime`. We gave previously depended on `jodatime` before.  
 2. The current implementation does not support partial datetime information, for example missing a timezone offset. But a lot of data does not have this information and so it must be representable. Programmers should be able to choose how and when to complete the missing data.  
 3. Rascal does not support \`datetime\` without a date field, and it does not allow the programmer to test for this missing information either.  
 4. We currently only have offset information, this should be replaced with Zone information and only zone offsets in case of disambiguation for duplicate local date times., since offsets can change, especially for dates in the future. [More details](https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet).  
 5. We have limited libraries (or language support) to mutate zone / offset information.
+6. Sometimes datetime literals change (are normalized) and sometimes not. It is a **strong design goal** that raw data is not normalized implicitly or automatically. The library should contain _functions_ to do so on-demand. This is a strong premise for high-accuracy/low-noise research methods that employ Rascal to reason about dates and times.
 
 Example why [time zoneid](https://stackoverflow.com/tags/timezone/info)’s are preferred over zone-offsets:
 
-User reads data from a csv, it contains local date-time for which they know they should be interpreted in `Brazil/East` time zone. User has outdated time zone database installed (an 3y old java8 installation [for example](https://hi.service-now.com/kb_view.do?sysparm_article=KB0622033)). Since Brazil stopped with daylight savings time in November 2019, mapping a local date to a zone offset will be incorrect on the users computer. It will compute `2020-02-02 10:00:00` to `2020-02-02T12:00-02:00`. On this computer all will go well but running the same script on a different computer (with updated java version) will translate it to `2020-02-02T13:00:00-03:00`. Now you could argue that locally this isn’t much of a problem, but as soon as you start exporting this data (and importing it somewhere else) problems start to emerge. If you would encode dates as `2020-02-02T10:00[Brazil/East]`, no information is lost, and you can always (with the local best available knowledge) translate this to different time zones or do date math on it.
+User reads data from a csv, it contains local date-time for which they know they should be interpreted in `Brazil/East` time zone. User has outdated time zone database installed (an 3y old java8 installation [for example](https://hi.service-now.com/kb_view.do?sysparm_article=KB0622033)). Since Brazil stopped with daylight savings time in November 2019, mapping a local date to a zone offset will be incorrect on the users computer. It will compute `2020-02-02 10:00:00` to `2020-02-02T12:00-02:00`. On this computer all will go well but running the same script on a different computer (with updated java version) will translate it to `2020-02-02T13:00:00-03:00`. Now you could argue that locally this isn’t much of a problem, but as soon as you start exporting this data (and importing it somewhere else) problems start to emerge. If you would encode[^3] dates as `2020-02-02T10:00[Brazil/East]`, no information is lost, and you can always (with the local best available knowledge) translate this to different time zones or do date math on it.
 
 ### Analysis
 
@@ -78,3 +79,4 @@ Caveats:
   
 
 [^1]:  RAP is at the moment following Pyhton’s PEP ([https://www.python.org/dev/peps/](https://www.python.org/dev/peps/)). We need to look at other projects to see what is best. See for instance,  [http://yt-project.org/](http://yt-project.org/) 
+[^3]: actually we don't want to encode/decode _anything_ for a raw datetime input literal, if possible.
