@@ -75,7 +75,7 @@ As file locations, the `loc` type, in Rascal is highly prominent and these “po
       * Each loop iteration has access to the same shared but immutable data, this is cheap since only references to shared data need to be passed. (Shallow) cloning is never even necessary to share data safely.  
       * Deadlocks and races are not possible for code which does not pass closure values to the body of fork loops.  
     * Deadlocks and races are indeed pretty hard to construct, but still possible:  
-      * The fork would need to share references to previously constructed variable-reference capturing closures, or share file locks.  
+      * The fork would need to share references to previously constructed variable-reference capturing closures, or share file locks ((RAP10)).  
       * To make this sane and usable, at least all such captured variables should be declared `volatile` in the generated code. However, this may be overkill.  
       * Open question: do we need to provide locking mechanisms for reference captured variables on the language level?   
         * Hopefully not, since it is only required by corner cases due to the above design. Almost never will writable references be captured by concurrent blocks of code.  
