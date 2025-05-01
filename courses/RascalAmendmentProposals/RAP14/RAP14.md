@@ -12,7 +12,7 @@ sidebar_position: 14
 
 ## Abstract
 
-The question this RAP answers is this: given two modules; L and C, where L is a “library module” and C is a “client” module that imports or extends L, **which changes in L do not break C**? 
+The question this RAP answers is this: given two modules; L and C, where L is a “library module” and C is a “client” module that imports or extends L, **which changes in L do not break C**? If L does not break any C, then it is said to be _backward compatible_.
 
 In other words, under which circumstances is L’ (the next version of L) backwards compatible with L for *any* C’ that depends on L where C’ is equal to C only that it is configured now to depend on L’?
 
@@ -44,16 +44,16 @@ This specification is inspired by the [Java Language Specification](https://docs
 **Definitions**  
 	
 
-* **Breaking module changes:** For a module to “break” means that clients do not compile anymore without errors, or throws exceptions during linking or loading.   
+* **Breaking module changes:** For a module to “break” means that clients do not _compile_ anymore without _errors+, or _throw exceptions_ during _linking_ or _loading_.   
   * Semantics may change, for example new exceptions may be thrown at run-time, but we still accept the change as non-breaking.  
   * The “breaking” is an aspect of the *external interface of a module*. It should still work well enough to be called and interacted with, following the interfaces of the previous version.   
   * No more demands are made on non-breaking module updates.   
 * A **source module** M is represented by the Rascal source code of a module in a **.rsc file**  
 * A **binary module** M is represented by these files:  
   * A **.tpl file** in a target folder or jar file  
-  * A **.class file** in a target folder or jar file  
+  * A **.class file** in a target folder or jar file  (Open Question: can there be more .class files for a single module (happens with nested classes for example, or lambda's?)
   * A **.constants** file in a target folder or jarfile  
-  * It is assumed that Rascal guarantees these 3 files to always be in-sync.  
+  * It is assumed that the Rascal compiler guarantees these 3 files to always be in-sync.  
 * One binary module is always generated from one source module  
 * A library module L’ is either **import-compatible** or **extend-compatible** (or both) with its previous version L.   
   * Import-compatibility implies that all client modules C that *import* L do not break with L’.   
@@ -64,13 +64,13 @@ This specification is inspired by the [Java Language Specification](https://docs
   * Every client module C has (only) to be recompiled (against the binary module) L’, without any changes to the source module C,  for L’ to be source-compatible with any C.  
 * x-Incompatibility is the logical inverse of x-compatibility, with x from {import, extend, source, binary}  
 * In the cartesian product *{source,binary} x {import, extend}* are four semantically relevant compatibility situations.   
-  * It is good to remember that an library writer can not decide whether the client will extend or import their module,   
+  * It is good to remember that a library writer can not decide whether the client will extend or import their module,   
   * and vice versa, a client writer can not decide whether the next version of the library they use is binary or source compatible.  
 * **Formal compatibility** versus **actual compatibility**  
   * **Formal x-compatibility** of L/L’ reasons about all the possible (hypothetical) clients C that would upgrade to L’  
   * **Actual x-compatibility** of L/L’ reasons about the actual real uses of L in all existing real-world clients of L that would upgrade to L’  
-  * The current document is exclusively about **formal x-compatibility\!**  
-* The link between compatibility and **semantic versioning** is that incompatible projects must update their major versions, and 0.x projects their minor versions *always* when they have incompatible modules.   
+  * **The current document is exclusively about formal x-compatibility\!**  So it is about the guarantees made about a library module L, and not about whether the changed parts of L have ever been used by any clients. 
+* **The link between compatibility and semantic versioning** is that incompatible projects must update their major versions, and 0.x projects their minor versions *always* when they have incompatible modules.   
   * This will allow checkers to warn early for breaking combinations of packages and their versions.  
   * This will allow the run-time system to assume the latest minor/patch version within each major version to always be compatible with each other and load these in case of conflicts in the search path.
 
@@ -152,6 +152,6 @@ Given the syntax and semantics of Rascal, here we list concrete changes to libra
 
 ## References
 
-[^1]:  Note that RAP 6, when implemented, would remove this incompatibility. It would become extend-incompatible with alternative removal only.
+[^1]:  Note that ((RAP6)), when implemented, would remove this incompatibility. It would become extend-incompatible with alternative removal only.
 
-[^2]:  Note that RAP 6, when implemented, would remove this incompatibility. It would become extend-incompatible with alternative addition only.
+[^2]:  Note that ((RAP6)), when implemented, would remove this incompatibility. It would become extend-incompatible with alternative addition only.
