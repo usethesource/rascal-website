@@ -6,9 +6,14 @@ sidebar_position: 3
 | RAP | 3 |
 | :---- | :---- |
 | Title | Concrete Patterns for External Parsers |
-| Author | Jurgen Vinju |
+| Author | Rodin Aarsen, Jurgen Vinju, Tijs van der Storm |
 | Status | Draft |
 | Type | Rascal Language |
+
+This document derives from:
+* Rodin T.A. Aarssen, Jurgen J. Vinju, and Tijs van der Storm. Concrete Syntax With Black Box Parsers. In: <Programming'18>
+* Rodin Aarssen and Tijs van der Storm. High-Fidelity Metaprogramming with Separator Syntax Trees. In: PEPM'20 
+* And ((RAP13))
 
 ## Abstract
 
@@ -24,16 +29,20 @@ We use external compiler and IDE front-ends to lift on community efforts of cons
 
 We have alternatives for implementing this feature. Currently concrete syntax is written as follows:
 
-(NonTerminal) \`concrete-syntax-string-with-holes\`
+```
+(NonTerminal) `concrete-syntax-string-with-holes`
+```
 
 In this example we use the NonTerminal as a parser to parse the concrete-syntax string at compile-time. The holes are replaced with simple unique placeholders before parsing and after parsing the resulting parse tree is changed to put the original holes back. Then the pattern interpreter or pattern compiler goes to work to translate the tree to either a pattern matching automaton or a constructor tree if the pattern is at an expression location rather than a pattern matching location.
 
 We propose to generalize this notation to allow any string function to be applied to the concrete syntax syntax fragment, like so:
 
-data Exp \= … ; // an abstract data definition or any other type  
+```rascal
+data Exp = … ; // an abstract data definition or any other type  
 Exp javaExp(str x, loc l); // given this function which can parse a java expression string to an abstract data-type
 
-(javaExp) \`1 \+ 1\` // a concrete Java expression which will be parsed by the javaExp function (at compile time)
+(javaExp) `1 + 1` // a concrete Java expression which will be parsed by the javaExp function (at compile time)
+```
 
 The semantics would be that the normal string analysis and subsitution takes place to simplify placeholders for holes, then the string is passed to the given function, then the resulting value is visited to replace the placeholders with the holes again. The resulting value is a normal Rascal pattern which can be further processed by the interpreter or compiler.
 
