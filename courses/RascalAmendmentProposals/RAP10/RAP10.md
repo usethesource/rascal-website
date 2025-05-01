@@ -12,7 +12,7 @@ sidebar_position: 10
 
 ## Abstract
 
-Rascal can be executed in JVM threads (as in the Eclipse context for example) and also we plan to add concurrency features to Rascal itself (RAP 8). This puts a lot more pressure on our IO mechanism than before, leading to races on disk and on other external resources identified by values of type `loc`.
+Rascal can be executed in JVM threads (as in the Eclipse context for example) and also we plan to add concurrency features to Rascal itself ((RAP8)). This puts a lot more pressure on our IO mechanism than before, leading to races on disk and on other external resources identified by values of type `loc`.
 
 We propose to extend the URIResolverRegistry (which is Rascal’s generic resource access mechanism) with a cross-cutting “locking” feature that is safe (up to *unpredicted* aliasing of location URIs). 
 
@@ -117,7 +117,7 @@ A second part of the proposal is to expose this locking feature on the language 
        * `loc (str x, bool append=false)` will write a `str` to the file (replacing it, or appending to it)  
          * Example: `|home:///.bashrc|(“\#\! /bin/bash”);`  
        * Motivation: if `**sync**` is builtin, and does not require importing an IO library, it would be inconsistent to have to import a module to read/write from/to source locations.   
-       * See also **\[RAP 2\]** which avoids importing util::ValueUI and ParseTree by making types simulate parsing functions using the CallOrTree syntax.  
+       * See also ((RAP2)) which avoids importing `util::ValueUI` and `ParseTree` by making types simulate parsing functions using the CallOrTree syntax.  
        * The CallOrTree semantics would be overloaded with one more feature, letting a location “act” as a read/write function.  
          * However, locations are **not** suddenly or accidentally also sub-typed of functions\!   
          * This is \_only\_ about overloading CallOrTree, unambiguously  

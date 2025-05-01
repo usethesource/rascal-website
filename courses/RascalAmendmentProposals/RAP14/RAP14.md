@@ -84,8 +84,8 @@ Given the syntax and semantics of Rascal, here we list concrete changes to libra
   * hence extend-x-incompatibility is transitive over the inverse extend relation.  
 * L is extend-x-incompatible (at least) if L is import-x-incompatible.  
 * L is import-x-incompatible if:  
-  * At least one alternative of an overloaded function is removed.[^1] Removing alternatives breaks the dispatch function inside the client module C for the overloaded functions. After RAP 6 this would only happen in modules that *extend* the broken module.  
-  * At least one alternative of an overloaded function is added..[^2] Adding alternatives breaks the dispatch function inside the client module C for the overloaded functions. After RAP 6 this would only happen in modules that *extend* the broken module.  
+  * At least one alternative of an overloaded function is removed.[^1] Removing alternatives breaks the dispatch function inside the client module C for the overloaded functions. After ((RAP6)) this would only happen in modules that *extend* the broken module.  
+  * At least one alternative of an overloaded function is added..[^2] Adding alternatives breaks the dispatch function inside the client module C for the overloaded functions. After ((RAP6)) this would only happen in modules that *extend* the broken module.  
   * An alternative constructor of an ADT is removed (adding is fine)  
   * An alias definition is removed (adding is fine)  
   * A public global variable is removed (adding is fine)  
@@ -103,13 +103,13 @@ Given the syntax and semantics of Rascal, here we list concrete changes to libra
   * An alternative (or more) is added to an overloaded function via  
     * A normal addition typed into the current module  
     * Extending a new module that has the same (overloaded) function as in the current module, or another extended module  
-    * Importing a new module (as above).. *Note that this behavior would change if we apply the simplifications or RAP 6*  
+    * Importing a new module (as above). Note that this behavior would change if we apply the simplifications of (((RAP6)).
   * An alternative (or more) are removed from an overloaded function via:
 
     
 
     * Having been removed from an extended module, or not extending said module anymore.  
-    * Having been removed from an imported module, or not importing said module anymore (see also RAP 6\)  
+    * Having been removed from an imported module, or not importing said module anymore (see also ((RAP 6)) ) 
 * Conversely, this is a list of changes that should be import-compatible and extend-compatible:  
   * Adding non-functional tags to functions (like @synopsis)   
   * Changes to private functions are always import-compatible, but not extend-compatible  

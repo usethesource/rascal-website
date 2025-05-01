@@ -18,7 +18,7 @@ The proposal is to introduce a single structured “for-loop-like” programming
 
 The `fork` statement ends when all of its concurrent loop blocks have ended (if it returns results) and it then returns a list of values in the order of spawning each block. If no results are computed, the fork statement ends after spawning all of its computations directly.
 
-As file locations, the `loc` type, in Rascal is highly prominent and these “point” to external file locations and other resources outside of the JVM, the concurrency feature also requires us to think about resource locking. This can be implemented and designed orthogonally, see RAP 10\. 
+As file locations, the `loc` type, in Rascal is highly prominent and these “point” to external file locations and other resources outside of the JVM, the concurrency feature also requires us to think about resource locking. This can be implemented and designed orthogonally, see ((RAP10)). 
 
 ## Motivation
 

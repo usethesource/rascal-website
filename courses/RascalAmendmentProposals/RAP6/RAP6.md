@@ -3,7 +3,7 @@ title: RAP 6 - improved import/extend semantics
 sidebar_position: 6
 ---
 
-| RAP[^1] | 6 |
+| RAP | 6 |
 | :---- | :---- |
 | Title | improved import/extend semantics  |
 | Author | Jurgen Vinju |
@@ -127,4 +127,3 @@ Negative consequences:
     * And such as overloaded functions which miss cases  
   * Suggest qualified names when a function is shadowed but reachable from an import.
 
-[^1]:  RAP is at the moment following Pyhton’s PEP ([https://www.python.org/dev/peps/](https://www.python.org/dev/peps/)). We need to look at other projects to see what is best. See for instance,  [http://yt-project.org/](http://yt-project.org/) 
