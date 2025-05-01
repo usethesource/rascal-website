@@ -1,10 +1,16 @@
 ---
 title: IDE Construction
+keywords:
+    - LSP
+    - IDE
+    - Language Server Protocol
+    - Eclipse
+    - VScode
 ---
 
 #### Synopsis
 
-Extend an IDE with interactive, language-specific, features (Eclipse or VSCode)
+Extend an IDE with interactive, language-specific, features (VSCode)
 
 #### Syntax
 
