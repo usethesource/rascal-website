@@ -12,7 +12,7 @@ sidebar_position: 7
 
 ## Abstract
 
-The proposal is to disallow assignments (=) into all pattern variables, including those of function parameters and the left-hand side of generators (all pattern variables). This effectively makes all those names \`final\` in Java jargon.
+The proposal is to disallow assignments (`=`) into all pattern variables, including those of function parameters and the left-hand side of generators (all pattern variables). This effectively makes all those names `final` in Java jargon.
 
 ## Motivation
 
@@ -32,49 +32,49 @@ The basic motivation is to simplify the programming and analysis of Rascal progr
 
 ## Specification
 
-* The static checker should disallow \`x \= exp;\` for all \`x\` introduced as pattern variables; this is the core of the proposal and the rest follows.  
+* The static checker should disallow `x = exp;` for all `x` introduced as pattern variables; this is the core of the proposal and the rest follows.  
 * Closures should capture all pattern variables by-value (*or else we would not be able to satisfy the constraint that they are final*)
 
 For example:
 
 	int f(int j) {  
-    	   j \= 0; // error\! Can not assign to pattern variable j
+    	   j = 0; // error\! Can not assign to pattern variable j
 
-         for (k \<- \[0..9\]) {  
-           k \*= 2; // error Can not assign to pattern variable k  
+         for (k <- [0..9]) {  
+           k *= 2; // error Can not assign to pattern variable k  
            println(k);  
          }  
       }
 
      // prints 0123456789 (and not 999999999 anymore\!):  
      void testClosureNoState() {  
-	  x \= for (int j \<- \[0..10\]) {  
+	  x = for (int j <- [0..10]) {  
          append () { return j; };  
        }  
-       for (f \<- x) {  
+       for (f <- x) {  
          print(f());   
        }  
      }
 
      // prints 999999999:  
      void testClosureWithState() {  
-       int state \= \-1;  
-       x \= for (int j \<- \[0..10\]) {  
-         state \= j; // no error, this is a local variable  
+       int state = \-1;  
+       x = for (int j <- [0..10]) {  
+         state = j; // no error, this is a local variable  
          append () { return state; };  
        }  
-       for (f \<- x) {  
+       for (f <- x) {  
          print(f());   
        }  
      }
 
      // prints 123456789:  
      void testClosureWithScopedState() {  
-       x \= for (int j \<- \[0..10\]) {  
-         int state \= j; // no error, this is a local variable  
-         append () { return state; }; // \`state\` is new every loop  
+       x = for (int j <- [0..10]) {  
+         int state = j; // no error, this is a local variable  
+         append () { return state; }; // `state` is new every loop  
        }  
-       for (f \<- x) {  
+       for (f <- x) {  
          print(f());   
        }  
      }
@@ -103,5 +103,4 @@ For example:
 * [https://stackoverflow.com/questions/54278043/box-callback-functions-returning-the-same-string-in-rascal/54278923?r=SearchResults\&s=6|21.5850\#54278923](https://stackoverflow.com/questions/54278043/box-callback-functions-returning-the-same-string-in-rascal/54278923?r=SearchResults&s=6|21.5850#54278923)  
 * [https://github.com/heathermiller/spores](https://github.com/heathermiller/spores)  
 * [http://blog.sethladd.com/2012/01/for-loops-in-dart-or-fresh-bindings-for.html](http://blog.sethladd.com/2012/01/for-loops-in-dart-or-fresh-bindings-for.html)  
-*   
-  
+
