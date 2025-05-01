@@ -5,7 +5,7 @@ sidebar_position: 4
 
 ## Abstract
 
-Rascal functions are special, different from functions, procedures or methods in other kinds of functional and procedural languages. Rascal functions are much like term rewriting rules instead. Yet we see Rascal as a functional/imperative programming language with a static type system. This small document clarifies what Rascal functions are, summarizing a (hopefully) coherent design story. 
+Rascal functions are special, different from functions, procedures or methods in other kinds of functional and procedural languages. Rascal functions are much like term rewriting rules instead. Yet we see Rascal as a functional/imperative programming language with a static type system and a dynamic type system. This small document clarifies what Rascal functions are, summarizing a (hopefully) coherent design story. 
 
 We explore how their syntax, static and dynamic semantics works, with examples and counter-examples. The issue this document tries to clear up is the static and dynamic semantics of function calling, including types of functions, and their sub-typing relation, which influences pattern matching, which influences function dispatch. 
 
@@ -163,24 +163,30 @@ The overloaded alternatives of the `suc` function which are labeled with `defaul
 
 Also when functions fail explicitly using the `fail` statement or when their `when` clauses fail, the other functions will be tried next i.e these two definitions together define a complete function over the integers:
 
+```rascal
 int f(int i) = 2 * i + 1 when i % 2 == 0;
 int f(int i) = 3 * i when i % 2 != 0;
+```
 
 Or one could define a function by dispatching over the alternative definitions of an adt:
 
+```rascal
 int cc(ifThenElse(_, _, _)) = 1;
 int cc(while(_, _)) = 1;
 default int cc(statement _) = 0;
+```
 
 In other words, the fallibile pattern matching feature for function parameters is the foremost (and preferred) mechanism for dynamic dispatch in Rascal. Overloaded definitions can be distributed over multiple modules and will be fused into one if one module extends another. 
 Finally, sometimes its handy to define an overloaded function from two existing ones with different names. The + operator on functions does exactly this, i.e:
 
+```rascal
 boolean mod2(int i) = true when i %% 2 == 0;
 boolean mod3(int i) = true when i %% 3 == 0;
 default  other(int i) = false; 
 
 (f + g + other)(9) // will return true because mod3 matches
- 
+```
+
 #### Higher order functions
 
 Now this is interesting. Since all formal parameters to functions are in fact patterns, the consequence is that passing around functions is also done via pattern matching itself. 
@@ -193,7 +199,7 @@ A first class function is a Rascal run-time value with an actual concrete functi
 
 Some other example types of functions are:
 
-```
+```rascal
 int f(0) = 1; // type is int(int)
 str f([]) = "hello" // type is str(list[void])
 data X = x(); // type is X()`
@@ -202,7 +208,7 @@ list[value] f(x(), 1) = 1; // type is list[value] (X, int)
 
 Pattern matching against function types allows programmers to pass these functions around:
 
-```
+```rascal
 int apply(int (int) func, int arg) = func(arg);
 int f(0) = 1;
 
@@ -215,7 +221,7 @@ For example, there is in principle no guarantee that the function passed to `app
 
 A Rascal type checker, therefore should not reject the following code, since it is entirely valid:
 
-```
+```rascal
 value x = someExpressionProducingValues;
 int f(int i) = 0;
 f(x); 
@@ -229,7 +235,7 @@ That kind of power is paid for by the loss of a kind of completeness here for th
 
 To express the semantics of pattern matching on first class functions with typed patterns, driving the point home, is to have the following definition of sub-type for function types with one argument:
 
-```
+```rascal
 bool subtype(T1 (T2), T3 (T4)) = subtype(T1, T3) && comparable(T2, T4);
 ```
 
@@ -262,7 +268,7 @@ A question is what the dynamic type of an overloaded function would be. Especial
 
 Examples:
 
-```
+```rascal
 int f(int _) = 0;
 int f(real _) = 1;
 
@@ -283,7 +289,7 @@ This design decision inherits the same weakness as typing call sites, it may be 
 
 Next to overloading by name, Rascal also features the construction of first class dynamically dispatched function alternatives via the addition operator: `+`.
 
-```
+```rascal
 int f(int i) = 0;
 int g(real r) = 1;
 int example = (f + g)(0);
@@ -297,7 +303,7 @@ Another operator is function composition (f o g).
 
 Functions in Rascal may also have additional parameters in the form of keyword parameters. These are quite different from formal pattern parameters:
 
-```
+```rascal
 int f(int i = 0) = i * 2;
 ```
 
