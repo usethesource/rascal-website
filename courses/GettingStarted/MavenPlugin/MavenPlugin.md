@@ -11,10 +11,11 @@ details:
 ---
 
 The [rascal-maven-plugin](http://github.com/usethesource/rascal-maven-plugin) offers these Maven plugins for dealing with Rascal projects:
-* ((CompileMojo)) for static checking and compiling Rascal projects to JVM class files, TypePal `.tpl` modules and `.constants` files.
+* ((CompileMojo)) for static checking and compiling Rascal projects to Rascal binary modules,which are comprised of: one JVM class file, or more (interface and test classes), a TypePal `.tpl` TModule and a `.constants` file with an index of constant values.
 * ((TutorMojo)) for (modularly) generating API docs, and compiling tutor courses to docusaurus markdown
 * ((PackageMojo)) for packing compiled Rascal code, source code and documentation into a jar file, making the internal location references relocatable. 
 * ((ExecMojo)) for executing arbitrary Rascal code during an arbitrary Maven goal.
+* ((ConsoleMojo for starting a ((REPL))
 
 Each of the above is configured in XML in the local `pom.xml` file of a Rascal project. All of them are executed during a `mvn package` or `mvn install` command line. If the local pom has the right configuration, then each mojo can also be invoked separately:
 * `mvn rascal:compile` runs the compiler and `-Drascal.compile.skip` guarantees it is skipped.
