@@ -7,9 +7,12 @@ keywords:
     - "rascal:compile"
 ---
 
+All Rascal projects are assumed to be configured via a Maven `pom.xml` file. The primary goal
+is to make the Rascal compiler available to the project via `<plugin>` tag. Running the compiler will make the binary output available for us by other projects later. Also static errors are detected and reported.
+
 The `rascal:compile` mojo is executed by default with the `compile` goal of Maven. For every Rascal module in the `srcs` list of configured source modules, it will generate a binary `.tpl` TModule file. It typechecks all the modules which have an older timestamp on their corresponding binary output `.tpl` file, and the downstream damage triggered by these recompile. 
 
-The main output for the user is a list of INFO, WARNING and ERROR messages, including their origin location. The compiler produces errors when the source code is not executable at that point. It generates errors, when it is likely the generated code will throw exceptions at run-time or otherwise fail to behave as expected. Information messages are reserved for hinting at deprecated uses of the language or libraries.
+The main output for the user is a list of INFO, WARNING and ERROR messages, including their origin location. The compiler produces **errors** when the source code is not executable at that point. It generates **warnings**, when it is likely the generated code will throw exceptions at run-time or otherwise fail to behave as expected. **Info** messages are reserved for hinting at deprecated uses of the language or libraries, or other (possibly noisy) ignorable information about the code as written.
 
 The compiler is configured in `pom.xml` in three locations:
 * `<dependencies>...</dependencies>` - each dependency leads to a compile-time library path entry, and a run-time JVM classpath entry.
@@ -66,7 +69,9 @@ Each configuration has the exact same parameters as the keyword fields of a ((ut
 
 Maven is typically executed on the Un*x or Windows commandline like so:
 ```bash
-# typically runs the compiler and the tests before packaging everything 
+#! /bin/bash
+
+# Typically runs the compiler and the tests before packaging everything 
 # in a jar file,  and copying it to your local Maven repository:
 mvn install
 
