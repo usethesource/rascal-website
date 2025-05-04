@@ -12,8 +12,8 @@ The `rascal:compile` mojo is executed by default with the `compile` goal of Mave
 The main output for the user is a list of INFO, WARNING and ERROR messages, including their origin location. The compiler produces errors when the source code is not executable at that point. It generates errors, when it is likely the generated code will throw exceptions at run-time or otherwise fail to behave as expected. Information messages are reserved for hinting at deprecated uses of the language or libraries.
 
 The compiler is configured in `pom.xml` in three locations:
-* `<dependencies>...</dependencies> - each dependency leads to a compile-time library path entry, and a run-time JVM classpath entry.
-* the general `<configuration>...</configuration> tags for Rascal mojos:
+* `<dependencies>...</dependencies>` - each dependency leads to a compile-time library path entry, and a run-time JVM classpath entry.
+* the general `<configuration>...</configuration>` tags for Rascal mojos:
 ```xml
 <plugins>
     <plugin>
@@ -51,9 +51,9 @@ The compiler is configured in `pom.xml` in three locations:
 * The latter overwrites the first, tag-by-tag
 
 Each configuration has the exact same parameters as the keyword fields of a ((util::Reflective::PathConfig)) constructor, and some additional ones:
-* `<srcs><src>${project.basedir}/src/main/rascal</src></srcs>`
-* `<libs>...</libs>` - however, if we leave these alone they are filled automatically via `<dependencies>`
-* `<bin>${project.basedir}/target/classes` however, the default is always good.
+* `<srcs><src>${project.basedir}/src/main/rascal</src></srcs>`, configure a list of folder in the current project that are the roots for Rascal module names.
+* `<libs>...</libs>` - configure library dependencies manually. However, if we leave these alone they are filled automatically via `<dependencies>` which is much easier to get right.
+* `<bin>${project.basedir}/target/classes</bin>` defines the target folder for binary files. However, the default is always good.
 * `<generatedSources>${project.basedir}/src/generated-sources/java</generatedSources>` - will be  used to store intermediate generated Java files. The default is fine too.
 * `<ignores><ignore>${project.basedir}/src/main/rascal/Experiments</ignore></ignores>` - allows us to select files and folders reachable from the `srcs` and skip their compilation unless they are required by other non-ignored modules.
 * A number of boolean flags can be used for debugging purposes:  `<logPathConfig>`, `<logImports>`, `<logWrittenFiles>`, `<warnUnused>`, `<warnUnusedFormals>`, `<warnUnusedVariables>`, `<warnUnusedPatternFormals>`, `<errorsAsWarnings>` and `<warningsAsErrors>`. The latter two control if a `mvn` run will fail (exit code 1) or succeed (exit code 0) in the presence of warnings or errors.
