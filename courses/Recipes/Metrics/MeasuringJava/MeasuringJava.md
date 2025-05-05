@@ -4,7 +4,7 @@ title: Measuring Java
 
 #### Synopsis
 
-A few steps using the M3 model to compute basic metrics for a Java project in Eclipse.
+A few steps using the M3 model to compute basic metrics for a Java project in VScode.
 
 #### Syntax
 
@@ -17,10 +17,10 @@ A few steps using the M3 model to compute basic metrics for a Java project in Ec
 #### Description
 
 
-This is a recipe for computing basic or more advanced metrics from a Java project in Eclipse. We assume:
+This is a recipe for computing basic or more advanced metrics from a Java project. We assume:
 
-* You have Rascal installed in an Eclipse instance.
-* You have a Java project in your Eclipse workspace that compiles without errors. Let's call it `HelloWorld`.
+* You have the Rascal extension installed in an VScode instance.
+* You have a Java project in your VScode workspace that compiles without errors. Let's call it `HelloWorld`.
 
 
 Now we will follow the [EASY]((EASY)) paradigm:

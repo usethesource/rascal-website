@@ -12,7 +12,6 @@ const FeatureList = [
                 <li>Context Free Grammars</li>
                 <li>Concrete Syntax Fragments</li>
                 <li>Static Analysis</li>
-                <li>Eclipse Plugins</li>
                 <li>VScode extensions</li>
                 <li>Language Server Protocol</li>
             </ul>
