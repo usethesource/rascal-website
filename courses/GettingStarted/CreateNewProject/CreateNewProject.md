@@ -67,4 +67,4 @@ And finally in `src/main/rascal` you'll find the Rascal source files, as configu
 
 #### Pitfalls
 
-* In `RASCAL.MF` the `Sources` configuration option will be replaced by pom.xml's `<srcs>` tag.
+* In `RASCAL.MF` the `Sources` configuration option is deprecated and will soon be replaced by pom.xml's `<srcs>` tag in `pom.xml`.
