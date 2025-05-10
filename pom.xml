@@ -24,9 +24,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <rascal-maven-plugin.version>0.30.0-RC18-SNAPSHOT</rascal-maven-plugin.version>
+        <rascal-maven-plugin.version>0.30.0-RC18</rascal-maven-plugin.version>
         <rascal.version>0.41.0-RC32</rascal.version>
-        <rascal-tutor.version>0.19.9</rascal-tutor.version>
         <clair.version>0.13.1</clair.version>
         <java-air.version>0.1.0-SNAPSHOT</clair.version>
         <rascal-git.version>0.1.15</rascal-git.version>
@@ -111,15 +110,6 @@
                                     <version>${rascal-git.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
-                                    <excludes>docs/index.value</excludes>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.rascalmpl</groupId>
-                                    <artifactId>rascal-tutor</artifactId>
-                                    <version>${rascal-tutor.version}</version>
-                                    <outputDirectory>${project.basedir}</outputDirectory>
-                                    <includes>docs/**/*.*</includes>
-                                    <excludes>**/examples/,**/questions/</excludes>
                                     <excludes>docs/index.value</excludes>
                                 </artifactItem>
                                 <artifactItem>
@@ -299,11 +289,6 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>java-air</artifactId>
             <version>${java-air.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.rascalmpl</groupId>
-            <artifactId>rascal-tutor</artifactId>
-            <version>${rascal-tutor.version}</version>
         </dependency>
         <dependency>
             <groupId>org.rascalmpl</groupId>
