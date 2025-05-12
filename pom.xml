@@ -38,7 +38,7 @@
         <drambiguity.version>0.3.6-RC1</drambiguity.version>
         <rascal-lucene.version>0.1.0-RC1</rascal-lucene.version>
         <php-analysis.version>0.2.5-RC1</php-analysis.version>
-        <python-air.version>0.0.9-RC1</python-air.version>
+        <python-air.version>0.0.9-RC2</python-air.version>
     </properties>
 
     <build>
