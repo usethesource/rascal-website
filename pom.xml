@@ -24,14 +24,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <rascal-maven-plugin.version>0.30.0-RC18</rascal-maven-plugin.version>
-        <rascal.version>0.41.0-RC32</rascal.version>
-        <clair.version>0.13.1</clair.version>
-        <java-air.version>0.1.0-SNAPSHOT</clair.version>
-        <rascal-git.version>0.1.15</rascal-git.version>
-        <flybytes.version>0.2.8</flybytes.version>
-        <typepal.version>0.14.8</typepal.version>
-        <salix-core.version>0.2.7</salix-core.version>
+        <rascal-maven-plugin.version>0.30.0-RC24</rascal-maven-plugin.version>
+        <rascal.version>0.41.0-RC42</rascal.version>
+        <clair.version>0.13.2-RC1</clair.version>
+        <java-air.version>1.0.0-RC1</clair.version>
+        <rascal-git.version>0.1.16-RC1</rascal-git.version>
+        <flybytes.version>0.2.9-RC2</flybytes.version>
+        <typepal.version>0.15.2-RC1</typepal.version>
+        <salix-core.version>0.2.8-RC1</salix-core.version>
         <salix-contrib.version>0.2.7</salix-contrib.version>
         <rascal-lsp.version>2.21.0-2</rascal-lsp.version>
         <drambiguity.version>0.3.5</drambiguity.version>
