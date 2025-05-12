@@ -28,7 +28,7 @@
         <rascal.version>0.41.0-RC42</rascal.version>
         
         <clair.version>0.13.2-RC1</clair.version>
-        <java-air.version>1.0.0-RC1</clair.version>
+        <java-air.version>1.0.0-RC1</java-air.version>
         <rascal-git.version>0.1.16-RC2</rascal-git.version>
         <flybytes.version>0.2.9-RC2</flybytes.version>
         <typepal.version>0.15.2-RC1</typepal.version>
