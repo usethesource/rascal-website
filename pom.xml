@@ -24,10 +24,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <rascal-maven-plugin.version>0.30.0-RC24</rascal-maven-plugin.version>
+        <rascal-maven-plugin.version>0.30.0-RC25</rascal-maven-plugin.version>
         <rascal.version>0.41.0-RC42</rascal.version>
         
-        <clair.version>0.13.2-RC1</clair.version>
+        <clair.version>0.13.2-RC2</clair.version>
         <java-air.version>1.0.0-RC1</java-air.version>
         <rascal-git.version>0.1.16-RC2</rascal-git.version>
         <flybytes.version>0.2.9-RC2</flybytes.version>
@@ -203,8 +203,6 @@
                         </goals>
                         <configuration>
                             <isPackageCourse>false</isPackageCourse>
-                            <enableStandardLibrary>false</enableStandardLibrary>
-                            <errorsAsWarnings>false</errorsAsWarnings>
                             <bin>${project.basedir}</bin> <!-- because tutor appends /docs to this -->
                             <srcs>
                                 <!--<src>|lib://rascal/org/rascalmpl/library|</src> -->
