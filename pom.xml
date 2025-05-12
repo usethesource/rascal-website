@@ -34,7 +34,7 @@
         <typepal.version>0.15.2-RC1</typepal.version>
         <salix-core.version>0.2.8-RC2</salix-core.version>
         <salix-contrib.version>0.2.8-RC1</salix-contrib.version>
-        <rascal-lsp.version>2.22.0-RC1</rascal-lsp.version>
+        <rascal-lsp.version>2.22.0-RC2</rascal-lsp.version>
         <drambiguity.version>0.3.6-RC1</drambiguity.version>
         <rascal-lucene.version>0.1.0-RC1</rascal-lucene.version>
         <php-analysis.version>0.2.5-RC1</php-analysis.version>
