@@ -35,8 +35,8 @@
         <salix-core.version>0.2.8-RC2</salix-core.version>
         <salix-contrib.version>0.2.8-RC1</salix-contrib.version>
         <rascal-lsp.version>2.22.0-RC2</rascal-lsp.version>
-        <drambiguity.version>0.3.6-RC1</drambiguity.version>
-        <rascal-lucene.version>0.1.0-RC1</rascal-lucene.version>
+        <drambiguity.version>0.3.6-RC2</drambiguity.version>
+        <rascal-lucene.version>0.1.0-RC2</rascal-lucene.version>
         <php-analysis.version>0.2.5-RC1</php-analysis.version>
         <python-air.version>0.0.9-RC2</python-air.version>
     </properties>
