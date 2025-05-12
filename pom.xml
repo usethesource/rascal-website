@@ -26,18 +26,19 @@
 
         <rascal-maven-plugin.version>0.30.0-RC24</rascal-maven-plugin.version>
         <rascal.version>0.41.0-RC42</rascal.version>
+        
         <clair.version>0.13.2-RC1</clair.version>
         <java-air.version>1.0.0-RC1</clair.version>
         <rascal-git.version>0.1.16-RC1</rascal-git.version>
         <flybytes.version>0.2.9-RC2</flybytes.version>
         <typepal.version>0.15.2-RC1</typepal.version>
-        <salix-core.version>0.2.8-RC1</salix-core.version>
-        <salix-contrib.version>0.2.7</salix-contrib.version>
-        <rascal-lsp.version>2.21.0-2</rascal-lsp.version>
-        <drambiguity.version>0.3.5</drambiguity.version>
-        <rascal-lucene.version>0.1.0-SNAPSHOT</rascal-lucene.version>
-        <php-analysis.version>0.2.4</php-analysis.version>
-        <python-air.version>0.0.8</python-air.version>
+        <salix-core.version>0.2.8-RC2</salix-core.version>
+        <salix-contrib.version>0.2.8-RC1</salix-contrib.version>
+        <rascal-lsp.version>2.22.0-RC1</rascal-lsp.version>
+        <drambiguity.version>0.3.6-RC1</drambiguity.version>
+        <rascal-lucene.version>0.1.0-RC1</rascal-lucene.version>
+        <php-analysis.version>0.2.5-RC1</php-analysis.version>
+        <python-air.version>0.0.9-RC1</python-air.version>
     </properties>
 
     <build>
