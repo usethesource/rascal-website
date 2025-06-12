@@ -57,7 +57,7 @@ Now assign to variables `S` and `T` the string `"abracadabra"` and let's see wha
 ```rascal-shell,continue
 S = "abracadabra";
 T = S;
-S = replaceAll("abracadabra", "a", "A");
+S = replaceAll(S, "a", "A");
 S;
 T;
 ```

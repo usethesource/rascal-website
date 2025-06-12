@@ -98,5 +98,12 @@ $2101-09-05$;
 
 #### Benefits
 
+* Typically for abstract syntax tree ((Datatypes)) we try to use a very **small** set of syntactic types (`EXP` and `STAT`) that  more-or-less accurately reflect the abstract syntax of a language, while certainly **over-approximating** the type-correct programs of a language. 
+* Type-checking is then left for the next language processor, that takes these trees as input. Generally nicer error messages can be produced that way for the user, and  the language processors become simpler because there are fewer ((Datatypes)) to remember.
+* ((Datatypes)) can be used to represent the abstract syntax tree information from open compilers such as CLANG, JDT and CDT. This way we can reuse parsers and type-checkers from existing compilers.
+* Rascal ((Datatypes)) feature an orthogonal "annotation" feature called ["keyword parameters"]((Values-Constructor)). This is where origin locations and types can be stored without changing the structure of the AST.
+
 #### Pitfalls
 
+* Some languages have **huge** abstract syntax tree formats with dozens of types and hundreds of constructors. Sometimes
+it is easier to stick with ((ParseTree))s and ((ConcreteSyntax)).

@@ -34,6 +34,6 @@ Typing `Return` will reexecute `c = 3`.
 Typing the letter `a` (the search text in this example) followed by `Ctrl+r` will show the text:
 
 ```rascal
-(reverse-i-search)`a': a = 3;
+(reverse-i-search)`a': a = 1;
 ```
-And again, typing `Return` will re-execute `a = 3`.
+And again, typing `Return` will re-execute `a = 1;`.

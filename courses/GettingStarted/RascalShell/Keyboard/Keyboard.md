@@ -13,15 +13,14 @@ When handling console input, RascalShell supports a subset of the shortcuts prov
 
 Some convenient shortcuts are:
 
-
+| Key combo | Description |
+| --------  | ----------  | 
 | `Ctrl+a`  | Move cursor to begin of line. |
-| --- | --- |
-| `Ctrl+d`  | EOF marker, closes the current RascalShell (equivalent to the |
-|           | command (`quit`). |
+| `Ctrl+d`  | EOF marker, closes the current RascalShell (equivalent to the command (`quit`). |
 | `Ctrl+e`  | Move cursor to end of line. |
 | `Ctrl+k`  | Kill remainder of line after cursor. |
 | `Ctrl+l`  | Clear screen. |
 
 #### Benefits
 
-* ((RascalShell)) is built on top of [JLine](https://github.com/jline)
+* ((RascalShell)) is built on top of [JLine 3](https://github.com/jline/jline3)

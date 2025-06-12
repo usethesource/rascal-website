@@ -33,13 +33,15 @@ for(int i <- [1..5])
   append i*i;
 L = for(int i <- [1..5]) 
   append i*i;
+```
 
+```rascal-shell
 OUTER:for (int i <-[1..5])
-  for (int j <- [1..5])
-    append OUTER: <i,j>;
+        for (int j <- [1..5])
+          append OUTER: <i,j>;
 ```
 
 #### Benefits
-
+ 
 #### Pitfalls
 

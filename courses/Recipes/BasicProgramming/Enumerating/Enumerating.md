@@ -23,6 +23,9 @@ See [Enumerator]((Rascal:Boolean-Enumerator)) for details.
 
 #### Examples
 
+Without a conditional context, like ((Statements-If)) or ((Statements-For)) or ((Expressions-Comprehensions)), an enumerator simply finds the first element that matches against the left-hand side pattern and returns `true` if it can find it. In other words `<-` acts
+like the logical quantifier `exists`:
+
 ```rascal
 int x <- { 1, 3, 5, 7, 11 }
 int x <- [ 1 .. 10 ]
@@ -72,9 +75,21 @@ for(int x <- {1, 3, 5, 7, 11 })
     println("x = <x>");
 ```
 
+Here you see how ((Statements-If)) is also a conditional context:
+```rascal-shell
+import IO;
+if (int x <- [1,2,3,4], i % 2 == 0)
+    println("an even <i>");
+```
+
 #### Benefits
+
+* Any of the ((Patterns)) can be used on the left-hand side of `<-`
+* Variables bound in conditional contexts can be used in the lexical scopes of those contexts and not outside. There exist no "null" references.  
+* ((Statements-If)) finds the first element that satisfies all conditions, including the ((Patterns)), which is "exists" logic. 
+* ((Statements-For)) and ((Expressions-Comprehensions)) iterate through all, which is "forall" logic.
 
 #### Pitfalls
 
-The variables that are bound by an enumerator are local to the statement in which the enumerator is used.
+* The variables that are bound by an enumerator are local to the statement in which the enumerator is used.
 

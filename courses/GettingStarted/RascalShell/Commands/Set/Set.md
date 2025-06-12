@@ -40,6 +40,8 @@ import List;
 index(["a","b","c"])
 ```
 
+By the way, see the docs on the ((function:List::index)) function  [here]((function:List::index)).
+
 Turn trace off and execute the same function:
 
 ```rascal-shell,continue

@@ -20,7 +20,7 @@ A few steps using the M3 model to compute basic metrics for a Java project in Ec
 This is a recipe for computing basic or more advanced metrics from a Java project in Eclipse. We assume:
 
 * You have Rascal installed in an Eclipse instance.
-* You have a Rascal project that depends on ((JavaAir)) in its `pom.xml`
+* You have a Rascal project that depends on ((org.rascalmpl.java-air)) in its `pom.xml`
 * You have a Java project in your Eclipse workspace that compiles without errors. Let's call it `HelloWorld`.
 
 
