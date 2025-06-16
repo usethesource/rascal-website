@@ -78,8 +78,8 @@ for(int x <- {1, 3, 5, 7, 11 })
 Here you see how ((Statements-If)) is also a conditional context:
 ```rascal-shell
 import IO;
-if (int x <- [1,2,3,4], i % 2 == 0)
-    println("an even <i>");
+if (int x <- [1,2,3,4], x % 2 == 0)
+    println("an even <x>");
 ```
 
 #### Benefits

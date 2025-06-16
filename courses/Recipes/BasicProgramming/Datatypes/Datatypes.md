@@ -106,4 +106,4 @@ $2101-09-05$;
 #### Pitfalls
 
 * Some languages have **huge** abstract syntax tree formats with dozens of types and hundreds of constructors. Sometimes
-it is easier to stick with ((ParseTree))s and ((ConcreteSyntax)).
+it is easier to stick with ((module:ParseTree))s and ((ConcreteSyntax)).
