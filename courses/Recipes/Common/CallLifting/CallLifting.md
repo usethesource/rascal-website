@@ -45,7 +45,7 @@ rel[comp,comp] lift(rel[proc,proc] aCalls, rel[proc,comp] aPartOf)
 
 ```rascal-prepare,continue
 calls = {<|proc:///main|, |proc:///a|>, <|proc:///main|, |proc:///b|>, <|proc:///a|, |proc:///b|>, <|proc:///a|, |proc:///c|>, <|proc:///a|, |proc:///d|>, <|proc:///b|, |proc:///d|>};        
-partOf = {<|proc:///main|, |proc:///Appl|>, <|proc:///a|, |proc:///Appl|>, <|proc:///b|, |proc:///DB|>, <|proc:///c|, |proc:///Lib|>, <|proc:///d|, |proc:///Lib|>}
+partOf = {<|proc:///main|, |proc:///Appl|>, <|proc:///a|, |proc:///Appl|>, <|proc:///b|, |proc:///DB|>, <|proc:///c|, |proc:///Lib|>, <|proc:///d|, |proc:///Lib|>};
 test bool tstLift() = 
     lift(calls, partOf) == { < |proc:///DB| , |proc:///Lib| > , < |proc:///Appl| , |proc:///Lib| > , 
                              < |proc:///Appl| , |proc:///DB| > , < |proc:///Appl| , |proc:///Appl| > };

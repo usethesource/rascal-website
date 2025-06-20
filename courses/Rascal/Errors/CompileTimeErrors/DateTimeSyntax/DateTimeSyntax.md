@@ -22,7 +22,7 @@ Some errors in the format are treated as syntax errors, others generate the `Dat
 Remedy: Fix the datetime value notation.
 
 #### Examples
-
+   
 A correct datetime value:
 ```rascal-shell
 $2013-07-15T09:15:23.123+03:00$;
