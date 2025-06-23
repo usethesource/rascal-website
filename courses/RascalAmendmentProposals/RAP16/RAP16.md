@@ -102,9 +102,10 @@ What should we do when erroneous access to subtrees is detected in the body of a
 
 On the one hand the automatic skipping is probably what the user intends to do. On the other hand, this would be the first case in which backtracking kicks in without a failing match or an explicit fail statement. Also, side effects in the body of the construct that is already executed before the erroneous access occurs will be visible. This could get confusing for the user.
 
-**Conclusion:**
 We opted for the first option because transparently catching exceptions can cause too much confusion.
 
+**Conclusion:**
+When erroneous access to subtrees is detected in the body of a backtracking construct, the exception will be propagated normally.
 It is up to the programmer to handle these exceptions at the appropriate level.
 A framework like TypePal can assist by providing suitable default handling where appropriate.
 
