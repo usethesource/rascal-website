@@ -30,6 +30,7 @@ The options are:
   the results after each RascalShell command.
 * `tracing`: while executing Rascal code, print a trace of all function calls.
 * `errors`: print more diagnostic stack traces if available (of internal functionality)
+* `debugging` : activate break points and step-wise execution with the debugging UI of the IDE (e.g. VScode).
 
 #### Examples
 
@@ -53,6 +54,7 @@ index(["a","b","c"])
 
 * `profiling` provides an accurate and non-invasive profile using a stack sampling method. With high probability the operations that appear to be taking the most time are indeed a bottleneck.
 * `tracing` is helpful to see which of the overloaded functions have been called and what their result was.
+* `debugging` enables a full featured debugging experience within VScode
 
 #### Pitfalls
 
@@ -61,3 +63,4 @@ index(["a","b","c"])
 * `profiling` gives insight into the Rascal program's behavior but not necessarily in the underlying cost of interpreting a 
 Rascal program.
 * `errors` is a window into the implementation of Rascal rather than the notion of Rascal programs as they run. It is used for developers of the compiler and interpreter.
+* `debugging` only works in VScode

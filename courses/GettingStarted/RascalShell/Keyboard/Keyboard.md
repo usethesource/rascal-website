@@ -2,10 +2,6 @@
 title: Keyboard Shortcuts
 ---
 
-#### Synopsis
-
-Keybord shortcuts.
-
 #### Description
 
 When handling console input, RascalShell supports a subset of the shortcuts provided by
@@ -20,7 +16,9 @@ Some convenient shortcuts are:
 | `Ctrl+e`  | Move cursor to end of line. |
 | `Ctrl+k`  | Kill remainder of line after cursor. |
 | `Ctrl+l`  | Clear screen. |
+| `Ctrl+c   | Abort current (running) command. |
 
 #### Benefits
 
 * ((RascalShell)) is built on top of [JLine 3](https://github.com/jline/jline3)
+* The command shell allows for multiline editing.

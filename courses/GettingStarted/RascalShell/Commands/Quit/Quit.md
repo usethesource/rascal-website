@@ -9,7 +9,7 @@ Quit the RascalShell.
 #### Syntax
 
 * `:quit`
-* `Ctrl+d` or `Eof`
+* `Ctrl+d` or `EOF`
 
 #### Description
 
