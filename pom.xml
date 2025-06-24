@@ -30,10 +30,10 @@
         <clair.version>0.13.1</clair.version>
         <rascal-git.version>0.1.15</rascal-git.version>
         <flybytes.version>0.2.8</flybytes.version>
-        <typepal.version>0.14.8</typepal.version>
+        <typepal.version>0.15.1</typepal.version>
         <salix-core.version>0.2.7</salix-core.version>
         <salix-contrib.version>0.2.7</salix-contrib.version>
-        <rascal-lsp.version>2.21.0-2</rascal-lsp.version>
+        <rascal-lsp.version>2.21.2</rascal-lsp.version>
         <drambiguity.version>0.3.5</drambiguity.version>
         <php-analysis.version>0.2.4</php-analysis.version>
         <python-air.version>0.0.8</python-air.version>
