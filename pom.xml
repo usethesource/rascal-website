@@ -32,10 +32,13 @@
         <rascal-git.version>0.1.16-RC3-SNAPSHOT</rascal-git.version>
         <flybytes.version>0.2.9-RC3-SNAPSHOT</flybytes.version>
         <typepal.version>0.15.2-RC2-SNAPSHOT</typepal.version>
+
         <salix-core.version>0.2.8-RC3-SNAPSHOT</salix-core.version>
         <salix-contrib.version>0.2.8-RC2-SNAPSHOT</salix-contrib.version>
-        <rascal-lsp.version>2.22.0-RC3-SNAPSHOT</rascal-lsp.version>
         <drambiguity.version>0.3.6-RC3-SNAPSHOT</drambiguity.version>
+
+        <rascal-lsp.version>2.22.0-RC3-SNAPSHOT</rascal-lsp.version>
+
         <rascal-lucene.version>0.1.0-RC5-SNAPSHOT</rascal-lucene.version>
         <php-analysis.version>0.2.5-RC2-SNAPSHOT</php-analysis.version>
         <python-air.version>0.0.9-RC3-SNAPSHOT</python-air.version>
