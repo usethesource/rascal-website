@@ -75,7 +75,7 @@ to the `mvn://` scheme also enables debug-stepping through library code with the
 * the REPL was ported from jline2 to **jline3**; with important usability enhancements among which _multiline editing_
 * the textual progress bar and printing to stderr was improved radically (sometimes prints were lost), also due to the upgrade to jline3
 * the REPL starts _much_ faster, due to a re-implementation of the Maven features for acquiring the exact locations of dependencies.
-* module reloading is faster and more accurate on MacOS due to the new File Watchers (see below)
+* module reloading is faster and more accurate on macOS due to the new File Watches (see below)
 * the `:set` options grammar was extended with optional `;`'s and also further implemented
 * all other `:` commands are now implemented. See `:help` for instructions. You can now `:undeclare` functions and variables
 without having to restart the REPL, for example. All `:` commands accept accidentally types `;` semicolons at the end now.
