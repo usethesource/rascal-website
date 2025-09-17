@@ -163,6 +163,7 @@ change, and what kind of action is required from a client depending on the kind 
 
 ### Tutor improvements
 
+* For disambiguation purpuses the package URLs have changed on the generated websites: For example: `https://www.rascal-mpl.org/docs/Packages/Clair/` is now `https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.clair`.
 * tutor indexing and compilation was made (more) incremental per Markdown file, documentation folder and Rascal module. If modules
 are removed from a project or renamed, the incrementally constructed index in `target/classes/docs/index.value` is _not_
 automatically invalidated. Only removing that file (`mvn clean`) will uncover all possible linking errors introduced
@@ -178,11 +179,12 @@ declared in the currently running REPL as a side-effect for later use.
 * modules called `demo*` (case insensitive) or modules nested under packages called `demo` are presented differently than normal modules. Their tests are always shown fully and the bodies of all functions are expanded fully in the documentation.
 * if a code block expects errors but no errors are reported, this is now flagged as an error.
 * added citations and funding to the main page of a package (not optional)
+* added github links to sources where possible.
 * ambiguous link errors now propose a minimal amount of _exact_ and _shortest_ solutions for chosing one of the current alternatives.
 
 ### Standard Library Maintenance
 
-* `lang::java::{m3,flow,syntax,tests}::*` were all moved to the [java-air](https://github.com/usethesource/java-air/) project. This also removes the `pom.xml` dependencies on the Eclipse JDT and OW2 ASM libraries. All functionality was ported as-is to the other project. Module and package
+* `lang::java::{m3,flow,syntax,tests}::*` were all moved to the [java-air](https://www.rascal-mpl.org/Packages/org.rascalmpl.java-air) project. This also removes the `pom.xml` dependencies on the Eclipse JDT and OW2 ASM libraries. All functionality was ported as-is to the other project. Module and package
 names have remained the same and so have internal Java-based mapping code classes and packages.
    * Now you have to add a dependency in your `pom.xml` file on `java-air` (see above).
    * `java-air` is expected to release more often in one year, namely adding support for JLS >14 versions.
