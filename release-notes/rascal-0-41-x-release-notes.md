@@ -166,7 +166,7 @@ declared in the currently running REPL as a side-effect for later use.
 
 ### Standard Library Maintenance
 
-* `lang::java::{m3,flow,syntax,tests}::*` were all moved to the `java-air` project. This also removes the pom.xml dependencies on the Eclipse JDT and OW2 ASM libraries. All functionality was ported as-is to the other project. Module and package
+* `lang::java::{m3,flow,syntax,tests}::*` were all moved to the `java-air` project. This also removes the `pom.xml` dependencies on the Eclipse JDT and OW2 ASM libraries. All functionality was ported as-is to the other project. Module and package
 names have remained the same and so have internal Java-based mapping code classes and packages.
    * Now you have to add a dependency in your pom file on `java-air` (see above).
    * Java-air is expected to release more often in one year, namely adding support for JLS >14 versions.
