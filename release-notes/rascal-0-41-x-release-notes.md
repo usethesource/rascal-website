@@ -35,7 +35,7 @@ Nothing else has changed w.r.t. Java analysis. The same module names, functions 
 
 If you are interested in bringing `java-air` up to JLS-17, 19, 21, 23, ...; This is an example of something where we welcome help from the community. Please have a look at https://github.com/usethesource/java-air/. 
 
-### Parser improvements (the Error Recovery)
+### Parser improvements (the Error Recovery Mode)
 
 The generated parsers now support an "error recovery" mode. In this mode the parser is **robust** against errors in the _input_. This is extremely useful for interactive editing situations, where sometimes a file is under development and we still want syntax-directed and semantics-directed features. Examples of downstream features that can work well with a recovered parse:
 * highlighting,
@@ -47,9 +47,9 @@ The recovering parser, when it gets stuck, will detect what it is currently tryi
 `Statement` and then continue parsing with the rest of the file. The resulting parse tree may contain several of those sub-trees which are "half recognized" (in case of multiple errors, or if the recovery failed immediately again). 
 
 The recovered parse trees have two new types of `Production`: `skipped` and `error`, where the last contains the original `Production` that was aborted, and the position "dot" were that happened.
-The `skipped` production is there to create a type-correct representation of all the characters in the file, including the skipped characters and in the right order. Note that all characters of the input are _always_ represented in the parse tree, with or without errors.
+The `skipped` production is there to create a type-correct representation of all the characters in the file, including the skipped characters and in the right order. Note that all characters of the input are _always_ represented in the parse tree, with or without errors. Also it is expected that recovered tree will contain many _ambiguity clusters_. These clusters correspond to every way that the parser was trying to recognize the input at the time it got stuck. To handle these ambiguities and other aspects of error trees, the module `util::ParseErrorRecovery` contains handy generic utilities to make downstream consumers of error trees more robust. This module includes the `disambiguateParseErrors` _heuristics_, which is most effective. Different downstream analyses are sensitive to different way of resolving ambiguity in error trees, but most of the time the `disambiguateParseErrors` heuristic is quite fine.
 
-Downstream analyses like syntax highlighting and type checking can simply _ignore_ the error trees, and then they will be reasonably robust against parse errors too.
+Namely, downstream analyses like syntax highlighting and type checking can simply _ignore_ the error trees, and then they will be reasonably robust against parse errors too.
 To make this work Rascal features such as "pattern matching" and "field selection" were extended, making it easy for Rascal programmers to ignore the error trees and focus on the correct trees only. Examples of such features:
 * a pattern match on a partially recognized syntactic construct always _fails_, such that the error case is always an orthogonal extra case, or the `default` is executed.
 * if accidentally an error tree does lead to a new run-time exception, then this exception is always wrapped by `ParseErrorRecovery` to indicate that this was the reason. This happens for example if you ask for a field that was part of the skipped characters: NoSuchField is then wrapped by `ParseErrorRecovery` automatically. Programmers can use `try-catch` as high-up in their algorithms as necessary to recover from such problems. 
