@@ -36,7 +36,7 @@ If you are interested in bringing `java-air` up to JSL-17, 19, 21, 23, ...; This
 
 The generated parsers now support an "error recovery" mode. In this mode the parser is **robust** against errors in the _input_. This is extremely useful for interactive editing situations, where sometimes a file is under development and we still want syntax-directed and semantics-directed features. Examples of downstream features that can work well with a recovered parse:
 * highlighting,
-* type-checking,
+* type checking,
 * reference resolving, etc.
 
 The recovering parser, when it gets stuck, will detect what it is currently trying to recognize (say a `Statement`), skip a few characters and accept a "half-skipped, half-recognized" version of the 
