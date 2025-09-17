@@ -191,7 +191,7 @@ but also to add position information where it previously wasn't for more accurat
 * renamed `DocumentEdit` to `FileChange`, and also factored the concept into its own module. documented it and renamed some functions for the sake of consistency. top-level function names have been kept with @deprecated tags. Also `DocumentEdit` was aliased to the new name `FileChange` for backward compatibility in Rascal code (this does not help for Java code).
 * `Message` now has a default way of printing messages, `writeMessages`, and a default way of reporting messages in `main` functions, featuring the correct return value (0 for no errors, not 0 for errors), and the interpretation of `errorsAsWarnings` and `warningsAsErrors`.
 * `Message` has `causes` now, where additional information about how an error or warning came to be can be linked. These are unfoldable in the diagnostics view of your IDE, and they are printed with each error on the console.
-* In `IDEServices`, `Message` has `fixes` now where you can register `CodeAction` (quickfixes) for the error that was introduced.
+* In `IDEServices`, `Message` has `fixes` now where you can register `CodeAction` (quick fixes) for the error that was introduced.
 These fixes are picked up by the LSP server and integrated into VScode's diagnostics view. They are ignored when printing
 a Message to the console.
 * `IO::watch` now uses the constructors from `analysis::diff::edits::FileSystemChange` to report updates to files.
