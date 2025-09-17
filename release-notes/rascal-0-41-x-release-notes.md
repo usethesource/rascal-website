@@ -9,14 +9,17 @@ In this post we report on the Rascal release 0.41.x
 ## Release 0.41.0 - September, 2025
 
 Welcome to Rascal 0.41.0! This release comes with great improvements in usability (parse error recovery, loading speed)
-and enormous progress with type checking and compilation. Numerous additions to the standard library and a _big change_ in the Java language support setup... The release notes are organized by major topics and there is a list of smaller improvements at the end, including a list of linked closed issues and the merged pull requests.
+and enormous progress with type-checking and compilation. Numerous additions to the standard library and a _big change_ in the Java language support setup... These release notes are organized by major topics and there is a list of smaller improvements at the end, including a list of linked closed issues and the merged pull requests.
 
 Many, if not most, of the improvements to the Rascal project were both funded and executed by Swat.engineering BV. Thanks!
 
 ### Analyzing Java code
 
-For many users the extraction of `java-air` as a separate project from `rascal` will be the biggest change. This allows
-us to do faster maintenance cycles on both projects and it more than halfed the size of the binary distribution of the core Rascal features.
+For many users the extraction of [java-air](https://github.com/usethesource/java-air/) as a separate project from `rascal` will be the biggest change. This allows
+us to do faster maintenance cycles on both projects and it more than halved the size of the binary distribution of the core Rascal features. 
+
+**Students following courses on Software Evolution**, or Software Maintenance/Software quality at different schools and universities: your course notes may not
+include this new information, but this is relevant for you if you want to use the newest Rascal VScode extension for your lab exercises!
 
 To regain access to all the beloved features for the Java language related to parsing, abstract syntax trees, and semantic models like `M3`, please add this to your `pom.xml` dependencies:
 
@@ -36,7 +39,8 @@ If you are interested in bringing `java-air` up to JSL-17, 19, 21, 23, ...; This
 
 The generated parsers now support an "error recovery" mode. In this mode the parser is **robust** against errors in the _input_. This is extremely useful for interactive editing situations, where sometimes a file is under development and we still want syntax-directed and semantics-directed features. Examples of downstream features that can work well with a recovered parse:
 * highlighting,
-* type checking,
+* autocompletion,
+* type-checking,
 * reference resolving, etc.
 
 The recovering parser, when it gets stuck, will detect what it is currently trying to recognize (say a `Statement`), skip a few characters and accept a "half-skipped, half-recognized" version of the 
@@ -72,7 +76,7 @@ to the `mvn://` scheme also enables debug-stepping through library code with the
 ### REPL/Console improvements
 
 * the REPL consistently prints what its configuration is (versions, source path, classpath, runtime environment, standard library)
-* the REPL was ported from jline2 to **jline3**; with important usability enhancements among which _multiline editing_
+* the REPL was re-implemented from jline2 to **jline3**; with important usability enhancements among which _multiline editing_
 * the textual progress bar and printing to stderr was improved radically (sometimes prints were lost), also due to the upgrade to jline3
 * the REPL starts _much_ faster, due to a re-implementation of the Maven features for acquiring the exact locations of dependencies.
 * module reloading is faster and more accurate on macOS due to the new File Watches (see below)
@@ -116,8 +120,10 @@ removed, since now we don't need a release of `rascal-maven-plugin` to use a new
 ### Merging debugger and other LSP core features into the main Rascal project
 
 To increase cohesion and lower coupling between the `rascal` project and the `rascal-lsp` project
-core features of rascal-lsp are being moved into the rascal project. This is ongoing. Eventually
-this will make it very easy for the new LSP client (other editors than VScode) to connect to Rascal's LSP,
+core features of rascal-lsp are being moved into the rascal project. This is ongoing. One of the goals
+is to be able to run any rascal version with the VS Code extension, depending on a project's dependency
+on Rascal rather than the extension's dependency on rascal. 
+This will also facilitate new LSP client (other editors than VScode) to connect to Rascal's LSP,
 including the advanced terminal support and loading LSP extensions for DSLs. 
 Also it lowers our maintenance costs and increases the speed of our release cycles.
 
@@ -166,7 +172,7 @@ declared in the currently running REPL as a side-effect for later use.
 
 ### Standard Library Maintenance
 
-* `lang::java::{m3,flow,syntax,tests}::*` were all moved to the `java-air` project. This also removes the `pom.xml` dependencies on the Eclipse JDT and OW2 ASM libraries. All functionality was ported as-is to the other project. Module and package
+* `lang::java::{m3,flow,syntax,tests}::*` were all moved to the [java-air](https://github.com/usethesource/java-air/) project. This also removes the `pom.xml` dependencies on the Eclipse JDT and OW2 ASM libraries. All functionality was ported as-is to the other project. Module and package
 names have remained the same and so have internal Java-based mapping code classes and packages.
    * Now you have to add a dependency in your pom file on `java-air` (see above).
    * Java-air is expected to release more often in one year, namely adding support for JLS >14 versions.
@@ -174,7 +180,6 @@ names have remained the same and so have internal Java-based mapping code classe
    * All existing issues have been moved to the new repository on github
 * `analysis::text::search::*` was extracted into a separate library: [rascal-lucene](https://github.com/usethesource/rascal-lucene). This lucene-based two-way integration with Rascal offers _very fast_ (approximate or exact) text indexing and search facilities. It integrates with Rascal's grammars and parsing features and functions, to create syntax-directed and semantics-directed indexing features for programming languages, domain specific languages as well as their comments and documentation. It was separated to allow for independent evolution as well as to reduce the binary deployment footprint and (transitive) dependency list of the core rascal project. Example application areas: IDEs with documentation search features, feature location applications, requirements engineering, software maintenance and evolution. All applications were quick access to _relevant_ documents or code is essential.
 * `lang::xml::IO` was extended with a _streaming_ API for XML nodes in very large but repetitive documents. See the `streamXML` function. 
-* duplicate overloads, present due to the exact same functions being extended from different directions in the extend graph, were eliminated. This greatly affects the efficiency of functions with only a few overloads, when the high count was caused by "diamond-shaped" extend graphs. Otherwise it doesn't do much for efficiency.
 * `Type` was cleaned up radically. The cloned implementations of subtype, lub, glb, intersects now directly call their native Java implementations via "unreification". The resulting Types of lub and glb are then "reified" as values again and returned to the caller. Extensive specification-based tests were added to document the formal properties of the type system (it's a _finite lattice_.)
 And `lrel` and `rel` were completely removed from the `Symbol` representation, as these are always normalized to `list[tuple[...]]` and `set[tuple[...]]`. `bag` was also removed because we never implemented it.
 * the `PathConfig` type was cleaned up and factored into its own module `util::PathConfig`. It will serve as the common intermediate representation between configuration code (Maven, VScode, Eclipse) and file-based language processors. `PathConfig` now also has a `messages` field where errors and warnings detected during configuration steps can be communicated to the user.
@@ -225,6 +230,7 @@ large files can now already be received and consumed by the client, in parallel,
 
 * Throwing and catching StackOverflow and OutOfMemory is possible again, due to not triggered OutOfMemory or StackOverflow during the handling of these exceptions.
 * The `visit` statement now _always_ memoizes amb clusters; this brings down the worst-case complexity of a visit with nested ambiguity to polynomial numbers (instead of the previous exponential amounts of nested combinations).
+* Duplicate overloads, present due to the exact same functions being extended from different directions in the extend graph, were eliminated. This greatly affects the efficiency of functions with only a few overloads, when the high count was caused by "diamond-shaped" extend graphs. Otherwise it doesn't do much for efficiency.
 
 ### Merged Pull Requests since version 0.40.0
 
@@ -417,6 +423,7 @@ contributing to Rascal than we'd use the "pull request" model together like this
 * [#2406](https://github.com/usethesource/rascal/pull/2406) - Removing extend cycle
 * [#2393](https://github.com/usethesource/rascal/pull/2393) - Switching to release of rascal that includes the new typechecker changes
 * [#2411](https://github.com/usethesource/rascal/pull/2411) - Fixed type error
+
 
 ### Fixed issues since version 0.40.0
 
