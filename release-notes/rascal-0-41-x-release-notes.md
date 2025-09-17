@@ -62,7 +62,7 @@ Other improvements to the parsers:
 > *warning* the way Rascal is configured is gradually migrating from using `RASCAL.MF` to using `pom.xml`. Dependencies (Java, Rascal or otherwise) already come from a `pom.xml` file's `<dependencies>` list. Every project should have one, with at least a dependency on the rascal project itself.
 
 * `Require-Libraries` in `RASCAL.MF` is no longer in use. You will be warned by the IDE about this.
-* the interpreter is now also configured by pom.xml, just as the compiler. `Sources` still come from `RASCAL.MF` for the interpreter, but not for the checker and the compiler. For now you have to keep `RASCAL.MF` and `pom.xml` in line w.r.t. the configuration of the local source folders.
+* the interpreter is now also configured by `pom.xml`, just like the compiler. `Sources` still come from `RASCAL.MF` for the interpreter, but not for the checker and the compiler. For now you have to keep `RASCAL.MF` and `pom.xml` in line w.r.t. the configuration of the local source folders.
 * `pom.xml` parsing is done locally and quickly, and so is configuring variables and resolving and downloading dependencies.
 * the version of the bootstrap jar is now an explicit parameter in pom.xml, and it is downloaded automatically when required. Only relevant for developers working on the Rascal project itself.
 * locations of library dependencies are always normalized to `mvn://` or `jar+file://` such that file access inside a library is always done in the same way and very few clients have to distinguish different cases of `loc` schemes. Normalization
