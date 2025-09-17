@@ -31,9 +31,9 @@ To regain access to all the beloved features for the Java language related to pa
 </dependency>
 ```
 
-Nothing else has changed w.r.t. Java analysis. The same module names, functions as always are present in `lang::java::*` as ever. Java-air currently supports language features up to **JLS-14** and is still based on Eclipse's Java Development Toolkit.
+Nothing else has changed w.r.t. Java analysis. The same module names, functions as always are present in `lang::java::*` as ever. `java-air` currently supports language features up to **JLS-14** and is still based on Eclipse's Java Development Toolkit.
 
-If you are interested in bringing `java-air` up to JSL-17, 19, 21, 23, ...; This is an example of something we welcome help with in the community. Please have a look at https://github.com/usethesource/java-air/. 
+If you are interested in bringing `java-air` up to JLS-17, 19, 21, 23, ...; This is an example of something where we welcome help from the community. Please have a look at https://github.com/usethesource/java-air/. 
 
 ### Parser improvements (the Error Recovery)
 
@@ -63,15 +63,15 @@ Other improvements to the parsers:
 
 ### Fast Configuration via Maven's `pom.xml`
 
-> *warning* the way Rascal is configured is gradually migrating from using `RASCAL.MF` to using `pom.xml`. Dependencies (Java, Rascal or otherwise) already come from a `pom.xml` file's `<dependencies>` list. Every project should have one, with at least a dependency on the rascal project itself.
+> *warning* the way Rascal is configured is gradually migrating from using `RASCAL.MF` to using `pom.xml`. Dependencies (Java, Rascal or otherwise) already come from a `pom.xml` file's `<dependencies>` list. Every project should have one, with at least a dependency on the Rascal project itself.
 
 * `Require-Libraries` in `RASCAL.MF` is no longer in use. You will be warned by the IDE about this.
 * the interpreter is now also configured by `pom.xml`, just like the compiler. `Sources` still come from `RASCAL.MF` for the interpreter, but not for the checker and the compiler. For now you have to keep `RASCAL.MF` and `pom.xml` in line w.r.t. the configuration of the local source folders.
 * `pom.xml` parsing is done locally and quickly, and so is configuring variables and resolving and downloading dependencies.
-* the version of the bootstrap jar is now an explicit parameter in pom.xml, and it is downloaded automatically when required. Only relevant for developers working on the Rascal project itself.
+* the version of the bootstrap jar is now an explicit parameter in `pom.xml`, and it is downloaded automatically when required. This is only relevant for developers working on the Rascal project itself.
 * locations of library dependencies are always normalized to `mvn://` or `jar+file://` such that file access inside a library is always done in the same way and very few clients have to distinguish different cases of `loc` schemes. Normalization
 to the `mvn://` scheme also enables debug-stepping through library code with the Rascal debugger.
-* the old `lib://` scheme has completely dissappeared, in favor of `mvn://` which is more precise due to the additional version number and group id. 
+* the old `lib://` scheme has completely disappeared, in favor of `mvn://` which is more precise due to the additional version number and group id. 
 
 ### REPL/Console improvements
 
@@ -81,8 +81,9 @@ to the `mvn://` scheme also enables debug-stepping through library code with the
 * the REPL starts _much_ faster, due to a re-implementation of the Maven features for acquiring the exact locations of dependencies.
 * module reloading is faster and more accurate on macOS due to the new File Watches (see below)
 * the `:set` options grammar was extended with optional `;`'s and also further implemented
-* all other `:` commands are now implemented. See `:help` for instructions. You can now `:undeclare` functions and variables
-without having to restart the REPL, for example. All `:` commands accept accidentally types `;` semicolons at the end now.
+* all other `:` commands are now implemented. See `:help` for instructions. 
+* You can now `:undeclare` functions and variables without having to restart the REPL, for example. 
+* All `:` commands accept accidentally typed `;` semicolons at the end.
 * An empty line no longer "cancels" a command, so multiline pasted code work better. Instead CTRL+C or simply `;` + ENTER will get you restarted.
 * Commandline parsing via keyword parameters of `main` was extended and stabilized. Use `--help` of `-help` on a main
 with example keyword parameters to get an idea: `void main(int age=0, str name="")`. Execute by `java -cp rascal.jar org.rascalmpl.shell.RascalShell my::mod::Name --help`. You can also create your own Java class and extend `AbstractCommandlineTool` to call their `main`, given the top module name and a source path. There are some bells and whistles for `PathConfig pcfg` parameters; namely all the individual fields of `PathConfig` will be added to the commandline parameters, and `--project <loc>` is used to call `util::Reflective::getProjectPathConfig` automagically when a `PathConfig` parameter is present.
@@ -90,7 +91,7 @@ with example keyword parameters to get an idea: `void main(int age=0, str name="
 ### File watching
 
 The file watching feature, both the Java and the Rascal API, were re-implemented from scratch based on
-SWAT.engineering's [Java Watch](https://github.com/SWAT-engineering/java-watch). This comes with several enhancements but also 
+Swat.engineering's [Java Watch](https://github.com/SWAT-engineering/java-watch). This comes with several enhancements but also 
 serious bug fixes. The stability and efficiency was improved with respect to recursive file watching and deletion and creation
 of (recursive) folders under watch. Most importantly file watching now also works effectively on **Mac OSX**, which it didn't before.
 
@@ -101,19 +102,19 @@ processors (for DLSs) which can do incremental and/or modular analysis or code g
 ### Merging the Maven Plugin, Tutor, Checker and the Compiler into the Main Rascal Project
 
 Previously the checker and the compiler resided in the `rascal-core` project because they were experimental. Also
-the rascal-tutor project was separate for faster release cycles in its secpond experimental fase.
+the `rascal-tutor` project was separate for faster release cycles in its second experimental phase.
 We moved on and merged them all back into the `main` development branch of the [rascal](https://github.com/usethesource/rascal)
 project. This improves cohesion and lowers coupling, but most importantly it cuts the bootstrapping release cycles
-between four projects: rascal, rascal-tutor, rascal-maven-plugin and rascal-core. Rascal-tutor and rascal-core have 
-been _archived_ on github and usethesource.io.
+between four projects: `rascal`, `rascal-tutor`, `rascal-maven-plugin` and `rascal-core`. `rascal-tutor` and `rascal-core` have 
+been _archived_ on GitHub and usethesource.io.
 
 All progress in the checker and the compiler is now directly available in the Rascal project. We made sure to 
 clone the entire commit history of `rascal-core` into the `rascal` project, for search and attribution purposes.
 
-Also all complex behaviors in `rascal-maven-plugin` have been moved to commandline tools in the `rascal` project,
-including parallel type-checking. The maven plugin project is now only a shell which calls the commandline tools from the
-released jar. Instead of the rascal version which is configured by the `rascal-maven-plugin` it will use
-the version of rascal described in the pom of the _client_ project. The plugin also prints warnings and 
+Also all complex behaviors in `rascal-maven-plugin` have been moved to command-line tools in the `rascal` project,
+including parallel type checking. The maven plugin project is now only a shell which calls the command-line tools from the
+released jar. Instead of the Rascal version which is configured by the `rascal-maven-plugin` it will use
+the version of Rascal described in the `pom.xml` of the _client_ project. The plugin also prints warnings and 
 errors if the versions are out-of-date or inconsistent. This is yet another cyclic bootstrap dependency
 removed, since now we don't need a release of `rascal-maven-plugin` to use a new version of `rascal`.
 
@@ -127,7 +128,7 @@ This will also facilitate new LSP client (other editors than VScode) to connect 
 including the advanced terminal support and loading LSP extensions for DSLs. 
 Also it lowers our maintenance costs and increases the speed of our release cycles.
 
-* The Debug Adapter Protocol (DAP) implementation (an extension to the Language Service Protocol) was moved to the rascal project.
+* The Debug Adapter Protocol (DAP) implementation (an extension to the Language Service Protocol) was moved to the Rascal project.
 * Several core features of the Language Service Protocol server for Rascal (and DSLs written in Rascal) moved along with it. 
 For example: mapping UTF16 characters (LSP editors) to UTF32 (Rascal parsers) and back.
 
@@ -144,21 +145,21 @@ an _abstract interface_ consisting only of logical fully qualified names of decl
 enables "binary backward compatibility" where an existing binary (.tpl and/or .class file) from a library 
 can still be linked and loaded with newer client code, and even newer binary libraries can be linked and loaded with older
 client binaries as long as the aforementioned interface hasn't changed too much. We are documenting when and how interfaces
-change, and what kind of action is required from a client under which changes to a library.
+change, and what kind of action is required from a client depending on the kind of changes to a library.
 * The checker analyzes whether a binary library is (still) compatible and produces diagnostic information if not.
-* The whole checker is now tested incrementally on a selected set of external Rascal libraries and programs, and the rascal project itself, for regressions.
-* Character classes fully supported, in line with the semantics of the interpreter where `char(10)` has the dynamic type `[\n]`. The checker now assumes any `char(_)` term has type `![] + [\0]`. Sub-typing for character classes is sub-classing, `lub` is class union and `glb` is class intersection.
-* Any type like `tuple[int,void]` is considered equivalent to `void` in _all circumstances_ (also as return types). Since tuple instances with void fields do not exist, any such type is "void" of values. The canonical type that represents the empry set of values is `void`. Same for function type parameters: `int (void, int)` is equivalent to `void` for the same reason as above. Functions with `void` parameters do not exist in Rascal, hence such type terms are canonically reduced to `void`. This reduction to one simple case is essential for downstream analyses. For example,  the static checking of assignments and return values (where `void` is treated exceptionally). Another example is the semantics of dynamic dispatch where a `void` return type produced by the dynamic instantiation of type variables will lead to overload application failure (`CallFailed`) and/or backtracking. 
+* The whole checker is now tested incrementally on a selected set of external Rascal libraries and programs, and the Rascal project itself, for regressions.
+* Character classes are now fully supported, in line with the semantics of the interpreter where `char(10)` has the dynamic type `[\n]`. The checker now assumes any `char(_)` term has type `![] + [\0]`. Subtyping for character classes is subclassing, `lub` is class union and `glb` is class intersection.
+* Any type like `tuple[int, void]` is considered equivalent to `void` in _all circumstances_ (also as return types). Since tuple instances with void fields do not exist, any such type is "void" of values. The canonical type that represents the empty set of values is `void`. The same holds for function type parameters: `int (void, int)` is equivalent to `void` for the same reason. Functions with `void` parameters do not exist in Rascal, hence such type terms are canonically reduced to `void`. This reduction to one simple case is essential for downstream analyses --- for example, the static checking of assignments and return values (where `void` is treated exceptionally). Another example is the semantics of dynamic dispatch where a `void` return type produced by the dynamic instantiation of type variables will lead to overload application failure (`CallFailed`) and/or backtracking. 
 * the implementation of the extend feature as well as the related overloading resolution were overhauled completely. 
 
 ### Tutor improvements
 
-* tutor indexing and compilation was made incremental per markdown file, documentation folder and Rascal module. If modules
+* tutor indexing and compilation was made (more) incremental per Markdown file, documentation folder and Rascal module. If modules
 are removed from a project or renamed, the incrementally constructed index in `target/classes/docs/index.value` is _not_
 automatically invalidated. Only removing that file (`mvn clean`) will uncover all possible linking errors introduced
 by the removal/renaming. Otherwise only modules which have been edited will be re-documented. Old errors in unchanged
 modules are always reported again with each incremental run.
-* added progress bar for loading indices and compiling markdown code.
+* added progress bar for loading indices and compiling Markdown code.
 * added optional author lists to a package's presentation.
 * better error handling around the screenshot feature.
 * added a call-out feature
@@ -174,21 +175,21 @@ declared in the currently running REPL as a side-effect for later use.
 
 * `lang::java::{m3,flow,syntax,tests}::*` were all moved to the [java-air](https://github.com/usethesource/java-air/) project. This also removes the `pom.xml` dependencies on the Eclipse JDT and OW2 ASM libraries. All functionality was ported as-is to the other project. Module and package
 names have remained the same and so have internal Java-based mapping code classes and packages.
-   * Now you have to add a dependency in your pom file on `java-air` (see above).
-   * Java-air is expected to release more often in one year, namely adding support for JLS >14 versions.
+   * Now you have to add a dependency in your `pom.xml` file on `java-air` (see above).
+   * `java-air` is expected to release more often in one year, namely adding support for JLS >14 versions.
    * Please report Java analysis issues with the `java-air` project from now on, where appropriate.
-   * All existing issues have been moved to the new repository on github
-* `analysis::text::search::*` was extracted into a separate library: [rascal-lucene](https://github.com/usethesource/rascal-lucene). This lucene-based two-way integration with Rascal offers _very fast_ (approximate or exact) text indexing and search facilities. It integrates with Rascal's grammars and parsing features and functions, to create syntax-directed and semantics-directed indexing features for programming languages, domain specific languages as well as their comments and documentation. It was separated to allow for independent evolution as well as to reduce the binary deployment footprint and (transitive) dependency list of the core rascal project. Example application areas: IDEs with documentation search features, feature location applications, requirements engineering, software maintenance and evolution. All applications were quick access to _relevant_ documents or code is essential.
+   * All existing issues have been moved to the new repository on GitHub
+* `analysis::text::search::*` was extracted into a separate library: [rascal-lucene](https://github.com/usethesource/rascal-lucene). This lucene-based two-way integration with Rascal offers _very fast_ (approximate or exact) text indexing and search facilities. It integrates with Rascal's grammars and parsing features and functions, to create syntax-directed and semantics-directed indexing features for programming languages, domain-specific languages as well as their comments and documentation. It was separated to allow for independent evolution as well as to reduce the binary deployment footprint and (transitive) dependency list of the core Rascal project. Example application areas include IDEs with documentation search features, feature location applications, requirements engineering, software maintenance and evolution --- all applications where quick access to _relevant_ documents or code is essential.
 * `lang::xml::IO` was extended with a _streaming_ API for XML nodes in very large but repetitive documents. See the `streamXML` function. 
 * `Type` was cleaned up radically. The cloned implementations of subtype, lub, glb, intersects now directly call their native Java implementations via "unreification". The resulting Types of lub and glb are then "reified" as values again and returned to the caller. Extensive specification-based tests were added to document the formal properties of the type system (it's a _finite lattice_.)
-And `lrel` and `rel` were completely removed from the `Symbol` representation, as these are always normalized to `list[tuple[...]]` and `set[tuple[...]]`. `bag` was also removed because we never implemented it.
-* the `PathConfig` type was cleaned up and factored into its own module `util::PathConfig`. It will serve as the common intermediate representation between configuration code (Maven, VScode, Eclipse) and file-based language processors. `PathConfig` now also has a `messages` field where errors and warnings detected during configuration steps can be communicated to the user.
+`lrel` and `rel` were completely removed from the `Symbol` representation, as these are always normalized to `list[tuple[...]]` and `set[tuple[...]]`. `bag` was also removed because we never implemented it.
+* the `PathConfig` type was cleaned up and factored into its own module `util::PathConfig`. It will serve as the common intermediate representation between configuration code (Maven, VS Code, Eclipse) and file-based language processors. `PathConfig` now also has a `messages` field where errors and warnings detected during configuration steps can be communicated to the user.
 * `Box2Text` was optimized, including more fixes to making arrays (tables) more robust. Empty H, V, HV and HOV boxes are now always removed before outlining, to avoid spurious spacing.
-* `analysis::diff::edits::HifiTreeDiff` and  `analysis::diff::edits::HifiLayoutDiff` were added. The first computes `TextEdit` by looking at the differences between an original tree and a rewritten tree. The algorithm tries
-to maintain as much accidental whitespace, indentation and comments from the original as possible. The second does the same where the rewritten tree is a _formatted_ version of the original. A minimum sets of whitespace
+* `analysis::diff::edits::HifiTreeDiff` and `analysis::diff::edits::HifiLayoutDiff` were added. The first computes `TextEdit` by looking at the differences between an original tree and a rewritten tree. The algorithm tries
+to maintain as much accidental whitespace, indentation and comments from the original as possible. The second does the same where the rewritten tree is a _formatted_ version of the original. A minimum set of whitespace
 edits are computed such that the formatting is executed as defined, while it also tries to recover comments as much as possible from the original. Both algorithms are keystones of source-to-source transformation pipelines
 for syntax- and semantics-directed features in IDEs.
-* `HiFiLayoutDiff` can map all case insensitive literals to all lowercase, all UPPERCASE, Capitalized or as originally printed, or as formatted by `toBox` (five modes).
+* `HiFiLayoutDiff` can map all case-insensitive literals to all lowercase, all UPPERCASE, Capitalized or as originally printed, or as formatted by `toBox` (five modes).
 * `toBox` no longer implements comment preservation (badly) because this is now covered by `HiFiLayoutDiff` (excellently).
 * Added `ParseTree::reposition` function which has all the bells and whistles to add and remove `src` annotations on `Tree` nodes. Can be used to decrease the memory footprint of full parse trees without removing syntactic information,
 but also to add position information where it previously wasn't for more accurate analyses.
@@ -431,8 +432,6 @@ contributing to Rascal then we'd use the "pull request" model together like this
 * [vallang #303](https://github.com/usethesource/vallang/pull/303) - randomValue now also takes a RandomTypesConfig such that we can prevent, for example, the generation of random ADTs in a TypeStore
 * [vallang #304](https://github.com/usethesource/vallang/pull/304) - workaround or fix for the npe during Rascal testing
 * [vallang #310](https://github.com/usethesource/vallang/pull/310) - add inferred return type to IWithKeywordParameters::getParameter to avoid a lot of casting in client code. This should be source-backward compatible, not binary though
-
-
 
 ### Fixed issues since version 0.40.0
 
