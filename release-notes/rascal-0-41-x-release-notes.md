@@ -18,7 +18,7 @@ Many, if not most, of the improvements to the Rascal project were both funded an
 For many users the extraction of `java-air` as a separate project from `rascal` will be the biggest change. This allows
 us to do faster maintenance cycles on both projects and it more than halfed the size of the binary distribution of the core Rascal features.
 
-To regain access to all the beloved features related to parsing, abstract syntax trees, semantic models like `M3`, for the Java language, please add this to your pom.xml dependencies:
+To regain access to all the beloved features for the Java language related to parsing, abstract syntax trees, and semantic models like `M3`, please add this to your `pom.xml` dependencies:
 
 ```xml
 <dependency>  
