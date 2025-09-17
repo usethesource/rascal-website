@@ -9,7 +9,7 @@ In this post we report on the Rascal release 0.41.x
 ## Release 0.41.0 - September, 2025
 
 Welcome to Rascal 0.41.0! This release comes with great improvements in usability (parse error recovery, loading speed)
-and enormous progress with type-checking and compilation. Numerous additions to the standard library and a _big change_ in the Java language support setup... The release notes are organized by major topics and there is a list of smaller improvements at the end, including a list of linked closed issues and the merged pull requests.
+and enormous progress with type checking and compilation. Numerous additions to the standard library and a _big change_ in the Java language support setup... The release notes are organized by major topics and there is a list of smaller improvements at the end, including a list of linked closed issues and the merged pull requests.
 
 Many, if not most, of the improvements to the Rascal project were both funded and executed by Swat.engineering BV. Thanks!
 
