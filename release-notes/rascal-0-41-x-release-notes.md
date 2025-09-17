@@ -192,50 +192,50 @@ for syntax- and semantics-directed features in IDEs.
 * `toBox` no longer implements comment preservation (badly) because this is now covered by `HiFiLayoutDiff` (excellently).
 * Added `ParseTree::reposition` function which has all the bells and whistles to add and remove `src` annotations on `Tree` nodes. Can be used to decrease the memory footprint of full parse trees without removing syntactic information,
 but also to add position information where it previously wasn't for more accurate analyses.
-* `IO` now has full `stat` capabilities, also on the Java API side in URIResolverRegistry.
-* renamed `DocumentEdit` to `FileChange`, and also factored the concept into its own module. documented it and renamed some functions for the sake of consistency. top-level function names have been kept with @deprecated tags. Also `DocumentEdit` was aliased to the new name `FileChange` for backward compatibility in Rascal code (this does not help for Java code).
-* `Message` now has a default way of printing messages, `writeMessages`, and a default way of reporting messages in `main` functions, featuring the correct return value (0 for no errors, not 0 for errors), and the interpretation of `errorsAsWarnings` and `warningsAsErrors`.
+* `IO` now has full `stat` capabilities, also on the Java API side in `URIResolverRegistry`.
+* renamed `DocumentEdit` to `FileSystemChange`, and also factored the concept into its own module. documented it and renamed some functions for the sake of consistency; top-level function names have been kept with `@deprecated` tags. Also `DocumentEdit` was aliased to the new name `FileSystemChange` for backward compatibility in Rascal code (this does not help for Java code).
+* `Message` now has a default way of printing messages, `writeMessages`, and a default way of reporting messages in `main` functions, featuring the correct return value (`0` for no errors, non-`0` for errors), and the interpretation of `errorsAsWarnings` and `warningsAsErrors`.
 * `Message` has `causes` now, where additional information about how an error or warning came to be can be linked. These are unfoldable in the diagnostics view of your IDE, and they are printed with each error on the console.
 * In `IDEServices`, `Message` has `fixes` now where you can register `CodeAction` (quick fixes) for the error that was introduced.
-These fixes are picked up by the LSP server and integrated into VScode's diagnostics view. They are ignored when printing
-a Message to the console.
+These fixes are picked up by the LSP server and integrated into VS Code's Diagnostics view. They are ignored when printing
+a `Message` to the console.
 * `IO::watch` now uses the constructors from `analysis::diff::edits::FileSystemChange` to report updates to files.
 * `String::indent` was added; which exposes the internal lazy and linear implementation of string indentation. Very fast.
-* `lang::rascal::viz::ImportGraph` contains an experimental visualization of the import and extend graph. Reads the information from the files directly.
+* `lang::rascal::vis::ImportGraph` contains an experimental visualization of the import and extend graph. It reads the information from the files directly.
 * `IO` adds base32 support
-* The documentation of the library was improved in dozens of modules; typos, old explanations, forgotten features.
-* `IO` adds "capabilities" support (which are not permissions), telling you based on the locations scheme and file 
-if you can read, write, load classes, etc. from this location or not.
+* The documentation of the standard library was improved in dozens of modules; typos, old explanations, forgotten features.
+* `IO` adds "capabilities" support (which are not permissions), telling you based on a location's scheme and file 
+whether you can read, write, load classes, etc. from this location or not.
 * The use of production `@category` tags for syntax highlighting (see `ParseTree`) were made consistent with the token categories
-for the Language Service Protocol and VScode, all over the standard library.
-* The new module `lang::java::Compiler` contains access to the open-jdk Java compiler from Rascal, fully supporting any `loc`
-based file-system for sources, targets and libraries. Configured using `util::PathConfig`. This is useful for DSL compilers
-that generate Java code as an intermediate language. Use an in memory filesystem (`memory://my-file-system/`), for example,
-for very fast compilation times and easy clean up, under-the-hood.
+for the Language Service Protocol and VS Code, all over the standard library.
+* The new module `lang::java::Compiler` contains access to the OpenJDK Java compiler from Rascal, fully supporting any `loc`-based
+file system for sources, targets and libraries, configurable using `util::PathConfig`. This is useful for DSL compilers
+that generate Java code as an intermediate language. Use an in-memory file system (`memory://my-file-system/`), for example,
+for very fast compilation times and easy clean-up, under-the-hood.
 * The new module `lang::java::Runner` makes it possible to execute any `main` method in any compiled JVM class, as well as 
-running the test methods of any `JUnit` class. The classpath is configured as a `list[loc]`. In particular working with `mvn://` locs is effective (fast) this way.
+running the test methods of any `JUnit` class. The classpath is configured as a `list[loc]`. In particular working with `mvn://` locations is effective (fast) this way.
 * `util::Monitor::job` now throws a useful exception rather than `CallFailed` if the function or closure that is passed accidentally returns `void` (which is _not_ allowed).
-* A number of features were added to `lang::json::IO` which also impact `Content` servers and `util::WebServer` positively and `util::LanguageServer`. We can now print certain `data` types to string, just-in-time before serializing to JSON, and also parse that data back when it comes back from a web client (for example). Also it's possible to make all constructors explicit or just their data types as the first field of an object: `{ _type="Expression" }`. This comes in handy sometimes on the Typescript or Javascript side of things. On the way back, these fields are used for validation purposes.
+* A number of features were added to `lang::json::IO` which also impact `Content` servers and `util::WebServer` positively and `util::LanguageServer`. We can now print certain `data` types to string, just-in-time before serializing to JSON, and also parse that data back when it comes back from a web client (for example). Also it's possible to make all constructors explicit or just their data types as the first field of an object: `{ _type="Expression" }`. This comes in handy sometimes on the TypeScript or JavaScript side of things. On the way back, these fields are used for validation purposes.
 * Parse error reporting in `lang::json::IO` was radically improved, and origin locations along with them (they use the same internal administration of parsing positions).
 * `lang::json::IO` now supports mapping `null` to Rascal and back in different ways: it writes nothing at all (not even the key) for absent keyword parameters, and for `Maybe[void]::nothing()` it writes `null`. On the way back `null` becomes `Maybe[void]::nothing()` if a `Maybe[&T]` was expected, and keyword parameters are not bound if the value with a key was `null`. Also `null` elements in arrays are skipped. So if `null`s are expected in the input, use `Maybe[&T]` or keyword fields with defaults to model those on the Rascal side. 
 * `lang::json::IO` squeezes arbitrary precision `real`'s into JSON's floats. Integers are kept as-is, because JSON supports
 any integer and does not have overflow. Of course on the client side you will still have to deal with overflow when the number
 is bound to a field or variable.
 * `lang::json::IO`'s eight year old deprecated functions have finally been removed completely.
-* `Content` server now serves long (html or json) strings using a the internal concat/indent stream. This halfs the memory 
+* `Content` server now serves long (HTML or JSON) strings using the internal concat/indent stream. This halves the memory 
 consumption for large files, and still uses the fast internal streaming `Reader` on the implementations of `IString`. Also
 large files can now already be received and consumed by the client, in parallel, while the Rascal server is still sending. This has a positive effect on response times on the client side for web applications on the REPL with `Content`, using `util::Webserver` and the Language Service Protocol with `util::LanguageServer`.
 
 ### Other Rascal Interpreter changes
 
-* Throwing and catching StackOverflow and OutOfMemory is possible again, due to not triggered OutOfMemory or StackOverflow during the handling of these exceptions.
-* The `visit` statement now _always_ memoizes amb clusters; this brings down the worst-case complexity of a visit with nested ambiguity to polynomial numbers (instead of the previous exponential amounts of nested combinations).
+* Throwing and catching `StackOverflow` and `OutOfMemory` is possible again, due to not triggering `OutOfMemory` or `StackOverflow` during the handling of these exceptions.
+* The `visit` statement now _always_ memoizes `amb` clusters; this brings down the worst-case complexity of a visit with nested ambiguity to polynomial numbers (instead of the previous exponential amounts of nested combinations).
 * Duplicate overloads, present due to the exact same functions being extended from different directions in the extend graph, were eliminated. This greatly affects the efficiency of functions with only a few overloads, when the high count was caused by "diamond-shaped" extend graphs. Otherwise it doesn't do much for efficiency.
 
 ### Merged Pull Requests since version 0.40.0
 
 The following list gives access to detailed progress and discussions regarding this progress. If you are interested in
-contributing to Rascal than we'd use the "pull request" model together like this:
+contributing to Rascal then we'd use the "pull request" model together like this:
 
 * [#2080](https://github.com/usethesource/rascal/pull/2080) - Fix excessive whitespace issue in `newRascalProject`
 * [#2082](https://github.com/usethesource/rascal/pull/2082) - Add method `getTagValue` that generalizes `getCategory`
@@ -423,14 +423,24 @@ contributing to Rascal than we'd use the "pull request" model together like this
 * [#2406](https://github.com/usethesource/rascal/pull/2406) - Removing extend cycle
 * [#2393](https://github.com/usethesource/rascal/pull/2393) - Switching to release of rascal that includes the new typechecker changes
 * [#2411](https://github.com/usethesource/rascal/pull/2411) - Fixed type error
+* [vallang #287](https://github.com/usethesource/vallang/pull/287) - fix issue #286 with tests
+* [vallang #288](https://github.com/usethesource/vallang/pull/288) - Increase performance of IString Readers for the `read(CharBuffer)` overload
+* [vallang #289](https://github.com/usethesource/vallang/pull/289) - Added support for writing formfeed and backspace escaped characters
+* [vallang #301](https://github.com/usethesource/vallang/pull/301) - Support map field names in binary reader
+* [vallang #302](https://github.com/usethesource/vallang/pull/302) - removed implicit changes to RandomTypeConfig during the recursive random type generator. 
+* [vallang #303](https://github.com/usethesource/vallang/pull/303) - randomValue now also takes a RandomTypesConfig such that we can prevent, for example, the generation of random ADTs in a TypeStore
+* [vallang #304](https://github.com/usethesource/vallang/pull/304) - workaround or fix for the npe during Rascal testing
+* [vallang #310](https://github.com/usethesource/vallang/pull/310) - add inferred return type to IWithKeywordParameters::getParameter to avoid a lot of casting in client code. This should be source-backward compatible, not binary though
+
 
 
 ### Fixed issues since version 0.40.0
 
-The following list of bugs, enhancements and other issues were registered with the rascal project and solved in the time
+The following list of bugs, enhancements and other issues were registered with the rascal and vallang projects and solved in the time
 frame since version 0.40.0. Some older issues were also fixed as you can see. Most issues however, were detected while alpha and
 beta testing new features. 
 
+* [vallang #286](https://github.com/usethesource/vallang/issues/286) - Type.compareTo is broken
 * [#2079](https://github.com/usethesource/rascal/issues/2079) - `RASCAL.MF` generated by `newRascalProject` triggers an error in VS Code
 * [#2072](https://github.com/usethesource/rascal/issues/2072) - Generalize `getCategory` in `ProductionAdapter` to get any tag value
 * [#2009](https://github.com/usethesource/rascal/issues/2009) - char-class type reificiation does something wrong for high surrogate/low surrogate pairs
