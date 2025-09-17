@@ -57,7 +57,7 @@ Other improvements to the parsers:
 * Two bugs related to nullables inside regular expressions were solved
 * The `@<column>` constraint in grammar rules was fixed. 
 
-### Fast Configuration via Maven's pom.xml
+### Fast Configuration via Maven's `pom.xml`
 
 > *warning* the way Rascal is configured is gradually migrating from using `RASCAL.MF` to using `pom.xml`. Dependencies (Java, Rascal or otherwise) already come from a `pom.xml` file's `<dependencies>` list. Every project should have one, with at least a dependency on the rascal project itself.
 
