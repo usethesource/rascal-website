@@ -9,16 +9,24 @@ In this post we report on the Rascal release 0.41.x
 ## Release 0.41.0 - September, 2025
 
 Welcome to Rascal 0.41.0! This release comes with great improvements in usability (parse error recovery, loading speed)
-and enormous progress with type-checking and compilation. Numerous additions to the standard library and a _big change_ in the Java language support setup... These release notes are organized by major topics and there is a list of smaller improvements at the end, including a list of linked closed issues and the merged pull requests.
+and enormous progress with type-checking and compilation. Numerous additions to the standard library and a _big change_ in the Java language support setup... 
+These release notes are organized by major topics and there is a list of smaller improvements at the end, including a list of linked closed issues and the merged pull requests.
 
 Many, if not most, of the improvements to the Rascal project were both funded and executed by Swat.engineering BV. Thanks!
+
+:::info
+All Eclipse functionality, including the `rascal-eclipse` plugin and the Eclipse IDE Metatooling Platform (IMP a.k.a. `impulse`), was _archived_ this year, after having been deprecated for a long time.
+Everybody is expected to use Rascal now using the VScode extension, or using the commandline REPL, or from their own LSP clients. With this move to VScode the `Figure` library (embedded in `rascal-eclipse`)
+is no longer available, until we create a replacement. The pre-existing releases of `rascal-eclipse` and `impulse` will _not_ remain available forever on `usethesource.io`, 
+for the sake of security and simplicity.
+:::
 
 ### Analyzing Java code
 
 For many users the extraction of [java-air](https://github.com/usethesource/java-air/) as a separate project from `rascal` will be the biggest change. This allows
 us to do faster maintenance cycles on both projects and it more than halved the size of the binary distribution of the core Rascal features. 
 
-**Students following courses on Software Evolution**, or Software Maintenance/Software quality at different schools and universities: your course notes may not
+**Students following courses on Software Evolution**, or Software Maintenance/Software quality at different schools and universities: your course and lab notes may not
 include this new information, but this is relevant for you if you want to use the newest Rascal VScode extension for your lab exercises!
 
 To regain access to all the beloved features for the Java language related to parsing, abstract syntax trees, and semantic models like `M3`, please add this to your `pom.xml` dependencies:
@@ -55,13 +63,13 @@ To make this work Rascal features such as "pattern matching" and "field selectio
 * if accidentally an error tree does lead to a new run-time exception, then this exception is always wrapped by `ParseErrorRecovery` to indicate that this was the reason. This happens for example if you ask for a field that was part of the skipped characters: NoSuchField is then wrapped by `ParseErrorRecovery` automatically. Programmers can use `try-catch` as high-up in their algorithms as necessary to recover from such problems. 
 
 Parse error recovery required significant new extensions to the parsing algorithm, as well as introducing new downstream analyses
-of ambiguous parse forests caused by recovering from different parallel stacks. These feature were very well tested on Rascal, Java and C grammars. Nevertheless it can be considered "beta" since not that many users (a few dozen) have tested it out. We hope you will enjoy it! In particular the robustness of syntax highlighting and the possibility of providing semantic feedback on a partially parsed file for your users are interesting.
+of ambiguous parse forests caused by recovering from different parallel stacks. These features were very well tested on Rascal, Java and C grammars. Nevertheless it can be considered "beta" since not that many users (a few dozen) have tested it out. We hope you will enjoy it! In particular the robustness of syntax highlighting and the possibility of providing semantic feedback on a partially parsed file for your users are interesting.
 
 Other improvements to the parsers:
 * Two bugs related to nullables inside regular expressions were solved
 * The `@<column>` constraint in grammar rules was fixed. 
 
-### Fast Configuration via Maven's `pom.xml`
+### Fast and Consistent Configuration via Maven's `pom.xml`
 
 > *warning* the way Rascal is configured is gradually migrating from using `RASCAL.MF` to using `pom.xml`. Dependencies (Java, Rascal or otherwise) already come from a `pom.xml` file's `<dependencies>` list. Every project should have one, with at least a dependency on the Rascal project itself.
 
@@ -72,6 +80,7 @@ Other improvements to the parsers:
 * locations of library dependencies are always normalized to `mvn://` or `jar+file://` such that file access inside a library is always done in the same way and very few clients have to distinguish different cases of `loc` schemes. Normalization
 to the `mvn://` scheme also enables debug-stepping through library code with the Rascal debugger.
 * the old `lib://` scheme has completely disappeared, in favor of `mvn://` which is more precise due to the additional version number and group id. 
+* the computations that configure the interpreter and the compiler, by constructing a PathConfig, were re-implemented and rationalized.
 
 ### REPL/Console improvements
 
