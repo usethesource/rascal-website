@@ -31,7 +31,7 @@
         <flybytes.version>0.2.9</flybytes.version>
         <typepal.version>0.15.2</typepal.version>
         <salix-core.version>0.2.8</salix-core.version>
-        <!--<salix-contrib.version>0.2.7</salix-contrib.version> -->
+        <salix-contrib.version>0.2.7</salix-contrib.version> 
         <!--<rascal-lsp.version>2.21.0-2</rascal-lsp.version> -->
         <drambiguity.version>0.3.7</drambiguity.version>
         <!--php-analysis.version>0.2.4</php-analysis.version> -->
@@ -136,14 +136,14 @@
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
                                 </artifactItem>
-                                <!--<artifactItem>
+                                <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>salix-contrib</artifactId>
                                     <version>${salix-contrib.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
-                                </artifactItem> -->
+                                </artifactItem>
                                 <!--<artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>rascal-lsp</artifactId>
