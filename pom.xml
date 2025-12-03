@@ -24,19 +24,19 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <rascal-maven-plugin.version>0.28.9</rascal-maven-plugin.version>
-        <rascal.version>0.40.17</rascal.version>
-        <rascal-tutor.version>0.19.9</rascal-tutor.version>
-        <clair.version>0.13.1</clair.version>
-        <rascal-git.version>0.1.15</rascal-git.version>
-        <flybytes.version>0.2.8</flybytes.version>
-        <typepal.version>0.14.8</typepal.version>
-        <salix-core.version>0.2.7</salix-core.version>
-        <salix-contrib.version>0.2.7</salix-contrib.version>
-        <rascal-lsp.version>2.21.0-2</rascal-lsp.version>
-        <drambiguity.version>0.3.5</drambiguity.version>
-        <php-analysis.version>0.2.4</php-analysis.version>
+        <rascal-maven-plugin.version>0.30.0</rascal-maven-plugin.version>
+        <rascal.version>0.41.0</rascal.version>
+        <clair.version>0.13.2</clair.version>
+        <rascal-git.version>0.1.16</rascal-git.version>
+        <flybytes.version>0.2.9</flybytes.version>
+        <typepal.version>0.15.2</typepal.version>
+        <salix-core.version>0.2.8</salix-core.version>
+        <!--<salix-contrib.version>0.2.7</salix-contrib.version> -->
+        <!--<rascal-lsp.version>2.21.0-2</rascal-lsp.version> -->
+        <drambiguity.version>0.3.7</drambiguity.version>
+        <!--php-analysis.version>0.2.4</php-analysis.version> -->
         <python-air.version>0.0.8</python-air.version>
+        <java-air.version>1.0.0</java-air.version>
     </properties>
 
     <build>
@@ -136,22 +136,22 @@
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
                                 </artifactItem>
-                                <artifactItem>
+                                <!--<artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>salix-contrib</artifactId>
                                     <version>${salix-contrib.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
-                                </artifactItem>
-                                <artifactItem>
+                                </artifactItem> -->
+                                <!--<artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>rascal-lsp</artifactId>
                                     <version>${rascal-lsp.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
-                                </artifactItem>
+                                </artifactItem> -->
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>drambiguity</artifactId>
@@ -160,18 +160,26 @@
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
                                 </artifactItem>
-                                <artifactItem>
+                                <!--<artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>php-analysis</artifactId>
                                     <version>${php-analysis.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
-                                </artifactItem>
+                                </artifactItem> -->
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>python-air</artifactId>
                                     <version>${python-air.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>java-air</artifactId>
+                                    <version>${java.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
