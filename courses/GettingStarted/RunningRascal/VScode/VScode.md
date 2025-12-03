@@ -27,10 +27,6 @@ This assumes there is a functional [Rascal project]((CreateNewProject)) in your 
 ## Programmatic access to VScode features
 
 * Use ((util::IDEServices)) to communicate with VScode, to register problems, to open files and browsers, etc.
-* Use `util::LanguageServer` to register languages designed and implemented in Rascal with the Language Server Protocol in VScode immediately.
+* Use ((util::LanguageServer)) to register languages designed and implemented in Rascal with the Language Server Protocol in VScode immediately.
 * The `project://<projectName>` location scheme provides access to the root of each registered folder in the VScode workspace.
 * Use ((util::Reflective::getProjectPathConfig)) for Java and Rascal project configuration extracted from Maven configuration (classpaths, sourcepaths, library dependencies).
-
-:::info
-The `util::LanguageServer` module is waiting to be documented.
-:::

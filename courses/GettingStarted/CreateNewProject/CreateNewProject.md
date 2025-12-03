@@ -8,8 +8,7 @@ import IO;
 remove(|home:///my-project-name|, recursive=true);
 ```
 
-Rascal projects, generally, work the same in all three IDE contexts:
-* Eclipse
+Rascal projects, generally, work the same in all contexts:
 * VScode
 * Commandline
 
