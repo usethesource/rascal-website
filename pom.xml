@@ -35,7 +35,7 @@
         <!--<rascal-lsp.version>2.21.0-2</rascal-lsp.version> -->
         <drambiguity.version>0.3.7</drambiguity.version>
         <!--php-analysis.version>0.2.4</php-analysis.version> -->
-        <python-air.version>0.0.8</python-air.version>
+        <python-air.version>0.0.9</python-air.version>
         <java-air.version>1.0.0</java-air.version>
     </properties>
 
