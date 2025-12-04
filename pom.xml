@@ -113,15 +113,6 @@
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
-                                    <artifactId>rascal-tutor</artifactId>
-                                    <version>${rascal-tutor.version}</version>
-                                    <outputDirectory>${project.basedir}</outputDirectory>
-                                    <includes>docs/**/*.*</includes>
-                                    <excludes>**/examples/,**/questions/</excludes>
-                                    <excludes>docs/index.value</excludes>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.rascalmpl</groupId>
                                     <artifactId>clair</artifactId>
                                     <version>${clair.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
@@ -284,12 +275,12 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>clair</artifactId>
             <version>${clair.version}</version>
-            </dependency>
+        </dependency>
         <dependency>
             <groupId>org.rascalmpl</groupId>
-            <artifactId>rascal-tutor</artifactId>
-            <version>${rascal-tutor.version}</version>
-        </dependency>
+            <artifactId>java-air</artifactId>
+            <version>${java-air.version}</version>
+            </dependency>
         <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>salix-core</artifactId>
@@ -300,21 +291,21 @@
             <artifactId>salix-contrib</artifactId>
             <version>${salix-contrib.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>rascal-lsp</artifactId>
             <version>${rascal-lsp.version}</version>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>drambiguity</artifactId>
             <version>${drambiguity.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>php-analysis</artifactId>
             <version>${php-analysis.version}</version>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>python-air</artifactId>
