@@ -35,7 +35,7 @@
         <!--<rascal-lsp.version>2.21.0-2</rascal-lsp.version> -->
         <drambiguity.version>0.3.7</drambiguity.version>
         <!--php-analysis.version>0.2.4</php-analysis.version> -->
-        <python-air.version>0.0.9</python-air.version>
+    <!--<python-air.version>0.0.11</python-air.version> -->
         <java-air.version>1.0.0</java-air.version>
     </properties>
 
@@ -159,14 +159,14 @@
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
                                 </artifactItem> -->
-                                <artifactItem>
+                                <!--<artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>python-air</artifactId>
                                     <version>${python-air.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
-                                </artifactItem>
+                                </artifactItem> -->
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>java-air</artifactId>
@@ -306,10 +306,10 @@
             <artifactId>php-analysis</artifactId>
             <version>${php-analysis.version}</version>
         </dependency> -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>python-air</artifactId>
             <version>${python-air.version}</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 </project>
