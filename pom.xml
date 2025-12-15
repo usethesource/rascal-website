@@ -31,7 +31,7 @@
         <flybytes.version>0.2.9</flybytes.version>
         <typepal.version>0.15.3</typepal.version>
         <salix-core.version>0.2.8</salix-core.version>
-        <salix-contrib.version>0.2.7</salix-contrib.version> 
+        <salix-contrib.version>0.2.8</salix-contrib.version> 
         <drambiguity.version>0.3.7</drambiguity.version>
         <java-air.version>1.0.0</java-air.version>
         <rascal-lsp.version>2.22.0-RC3</rascal-lsp.version>
