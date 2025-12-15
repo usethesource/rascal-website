@@ -29,7 +29,7 @@
         <clair.version>0.13.2</clair.version>
         <rascal-git.version>0.1.16</rascal-git.version>
         <flybytes.version>0.2.9</flybytes.version>
-        <typepal.version>0.15.3</typepal.version>
+        <typepal.version>0.15.4</typepal.version>
         <salix-core.version>0.2.8</salix-core.version>
         <salix-contrib.version>0.2.8</salix-contrib.version> 
         <drambiguity.version>0.3.7</drambiguity.version>

@@ -49,7 +49,7 @@ The currently available packages are grouped in two categories: language support
 
 | Library Name | Package | Note |
 | ------------ | ------- | ----- |
-| Dr Ambiguity | [drambiguity](/docs/Packages/DrAmbiguity) | Interactive UI based on Salix for detection, diagnostics and fixing of ambiguity context-free grammars. |
+| Dr Ambiguity | drambiguity | Interactive UI based on Salix for detection, diagnostics and fixing of ambiguity context-free grammars. Currently documentation is not building, will be released as soon as possible |
 | Salix        | [salix-core](/docs/Packages/org.rascalmpl.salix-core) | User interface framework for Rascal |
 | Salix Contrib | [salix-contrib](/docs/Packages/org.rascalmpl.salix-contrib) | Useful extensions for Salix |
 | Rascal GIT   | [rascal-git](/docs/Packages/edu.appstate.cs.rascal-git/) | Accessing GIT from Rascal |
