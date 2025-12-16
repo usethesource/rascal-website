@@ -6,9 +6,9 @@ sidebar_position: 87
 
 In this post we report on the Rascal release 0.41.x
 
-## Release 0.41.0 & 0.41.1 - December, 2025
+## Release 0.41.0, 0.41.1 & 0.41.2 - December, 2025
 
-Welcome to Rascal 0.41.0! This release comes with great improvements in usability (parse error recovery, loading speed)
+Welcome to Rascal 0.41.2! This release comes with great improvements in usability (parse error recovery, loading speed)
 and enormous progress with type-checking and compilation. Numerous additions to the standard library and a _big change_ in the Java language support setup...
 These release notes are organized by major topics and there is a list of smaller improvements at the end, including a list of linked closed issues and the merged pull requests.
 
@@ -477,6 +477,20 @@ contributing to Rascal then we'd use the "pull request" model together like this
 * [#2405](https://github.com/usethesource/rascal/pull/2405) - Gradually improving the reporting of incompatible binary libraries
 * [#2550](https://github.com/usethesource/rascal/pull/2550) - Fix missing port registering for debugger
 * [#2392](https://github.com/usethesource/rascal/pull/2392) - improving handling of extend cycles and reloading (extended) modules with (temporary) errors
+* [#2542](https://github.com/usethesource/rascal/pull/2542) - Always test that the current typechecker can type check the standard library of Rascal
+* [#2555](https://github.com/usethesource/rascal/pull/2555) - Use daemon threads to prevent blocking shutdown
+* [#2552](https://github.com/usethesource/rascal/pull/2552) - Add the callerEnvironment as Scope in default parameter computation
+* [#2560](https://github.com/usethesource/rascal/pull/2560) - Fix broken links caused by removing features only used in rascal-website
+* [#2561](https://github.com/usethesource/rascal/pull/2561) - Fix dozens of doc compilation errors due to persistent module load errors
+* [#2564](https://github.com/usethesource/rascal/pull/2564) - Better change detection for extend
+* [#2566](https://github.com/usethesource/rascal/pull/2566) - Missing `ModuleStatus` propagation
+* [#2565](https://github.com/usethesource/rascal/pull/2565) - Fix various errors in integration tests
+* [#2557](https://github.com/usethesource/rascal/pull/2557) - Added missing verbose flag to prevent Maven plugin from crashing if it is set
+* [#2540](https://github.com/usethesource/rascal/pull/2540) - Add symbol constructor args name on tree view
+* [#2559](https://github.com/usethesource/rascal/pull/2559) - Classloader concurrency
+* [#2567](https://github.com/usethesource/rascal/pull/2567) - Removed cycle reported in [#2563](https://github.com/usethesource/rascal/issues/2563)
+* [#2568](https://github.com/usethesource/rascal/pull/2568) - Fixed various type errors
+* [#2571](https://github.com/usethesource/rascal/pull/2571) - Make breakpoint suspension global
 * [vallang #287](https://github.com/usethesource/vallang/pull/287) - fix issue #286 with tests
 * [vallang #288](https://github.com/usethesource/vallang/pull/288) - Increase performance of IString Readers for the `read(CharBuffer)` overload
 * [vallang #289](https://github.com/usethesource/vallang/pull/289) - Added support for writing formfeed and backspace escaped characters
@@ -693,3 +707,6 @@ beta testing new features.
 * [#2415](https://github.com/usethesource/rascal/issues/2415) - Interpreter crashes when calling a varargs functions with too few arguments
 * [#2379](https://github.com/usethesource/rascal/issues/2379) - `ArrayIndexOutOfBoundException` from `vallang` at constructor pattern match
 * [#2397](https://github.com/usethesource/rascal/issues/2397) - Importing a typepal module makes the type checker bail out silently
+* [#2562](https://github.com/usethesource/rascal/issues/2562) - Unexpected "Remove code clone" error
+* [#2563](https://github.com/usethesource/rascal/issues/2563) - ATypeTest creates a cycle that breaks all following tests
+* [#2519](https://github.com/usethesource/rascal/issues/2519) - [documentation error] declarations != relations
