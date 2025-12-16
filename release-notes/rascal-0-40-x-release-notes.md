@@ -47,9 +47,9 @@ A great deal of tests were fixed, enhanced or extended as a side-effect of the c
 * [Unsupported splice pattern causes NULL pointer exception inside interpreter](https://github.com/usethesource/rascal/issues/2071)
 * [Add-assign of incompatible set types does not raise error](https://github.com/usethesource/rascal/issues/2056)
 * [Missing a "info" or "warning" message at the call-site of @deprecated functions](https://github.com/usethesource/rascal/issues/2055)
-* [deprecated module has squiqqlies over the entire file](https://github.com/usethesource/rascal/issues/2052)
+* [deprecated module has squigglies over the entire file](https://github.com/usethesource/rascal/issues/2052)
 * [`rascalTModelForLocs` does not return TModel](https://github.com/usethesource/rascal/issues/2050)
-* [(common) keyword field projecten out of ADT produces dynamic instead of static type for the static type result.](https://github.com/usethesource/rascal/issues/2049)
+* [(common) keyword field projected out of ADT produces dynamic instead of static type for the static type result.](https://github.com/usethesource/rascal/issues/2049)
 * [Internal crash instead of static error for relation field projection on unlabeled relation types](https://github.com/usethesource/rascal/issues/2048)
 * [Typechecker fails to report error on invalid function return type](https://github.com/usethesource/rascal/issues/2046)
 * [Type checker reports undefined module after edit](https://github.com/usethesource/rascal/issues/2044)
@@ -93,13 +93,13 @@ On the Rascal run-time engine (vallang) these issues were resolved:
 * Accurate and correct parsers of Windows and Unix file paths were added to the standard library. This includes a new `unc://` resolver to accurately represent the semantics of UNC paths, and `cwdrive://` which can represent the current working directory on a given drive letter on Windows.
 * `HTMLElement(loc src = |unknown:///|)` was added to position every tag from start to end via the `src` attribute.
 * The documentation strings were ported from `@doc{ }` notation to `@synopsis{..}, @description{..}, @examples{..}, @benefits{..}, @pitfalls{..}` separate tags. 
-* The `@deprecated{..}` tag is now also used during API documentation generation. It is rendered between the synsopsis and the declaration signature.
+* The `@deprecated{..}` tag is now also used during API documentation generation. It is rendered between the synopsis and the declaration signature.
 * The Box language for automatic string formatting was revived and its box2text algorithm was optimized. See `lang::box`
    * Box2text was re-implemented using list comprehensions and list splicing for efficiency and brevity.
    * Box arrays (tables) were fixed and finalized, and utility support for mapping lists to tables was added.
    * Box "groups" were added (ported from ASF+SDF) as a means to easily generate boxes from (separated) lists.
    * The concepts of fonts and highlighting were completely removed from Box, as this is an orthogonal feature
-implemented elsewhere by highlighter algoriths and mappings to HTML. The new trick is to use Box to format a file,
+implemented elsewhere by highlighter algorithms and mappings to HTML. The new trick is to use Box to format a file,
 then reparse that file and map it to ANSI or HTML or other markup formalisms.
    * the NULL box was added as a convenience for plugging holes and not loose parity or other counts.
    * Tests for Box2text were added.
@@ -136,17 +136,17 @@ that invalidated the earlier mentioned AST contract.
 * An AST and M3 model of the Java 9 module system was added.
 * The `isSuper` boolean was removed from the AST definition of `methodInvocation`n and `new` calls, also to satisfy the AST contract.
 * Java Annotations AST constructors were moved from `Expression` to `Modifier`.
-* String based unary and binary operator constructors for Expressions were unfolded to a constructor for each operator, i.e. `plus(Expression, Expression)` instead of `binop(Expression, "+", Expression)`
-* `lang::java::m3::AST` was documented and so was `analysis::m3::AST`
-* `lang::java::m3::Core` was documented and so was `analysis::m3::Core`
+* String based unary and binary operator constructors for Expressions were unfolded to a constructor for each operator, i.e. `plus(Expression, Expression)` instead of `binop(Expression, "+", Expression)`.
+* `lang::java::m3::AST` was documented and so was `analysis::m3::AST`.
+* `lang::java::m3::Core` was documented and so was `analysis::m3::Core`.
 * `composeM3` was generalized for any number of keyword fields which are either sets or lists. This makes it language-independent from now on.
 * `m3SpecificationTest` checks for the internal sanity and completeness of an M3 model. Can be used to test language front-ends.
-* `Java2ObjectFlow` was upgraded for all the changes in the AST constructors. However it may still need extension for new constrtructors like lambda expressions.
-* Lambda's were added to `Expression`
-* Method references were added to `Expression`
-* Intersection types were added to the Type AST class
+* `Java2ObjectFlow` was upgraded for all the changes in the AST constructors. However it may still need extension for new constructors like lambda expressions.
+* Lambda's were added to `Expression`.
+* Method references were added to `Expression`.
+* Intersection types were added to the Type AST class.
 * The bounds constructors of Type ASTs were renamed from `upperbound` and `lowerbound` to `super` and `extends`.
 * Java versions are now specified as constructors of the `Language` data type, for accurate description of the JLS language level the user needs to reflect.
 * M3 extraction from JVM binary class files was maintained and now also supports language features up to JLS14.  In particular the Java 9 module system was added to the mapping.
-* Tracebility with origin tracking was improved for both source code and binary classfile analysis, so if NPE's happen a clear cause can be printed.
+* Traceability with origin tracking was improved for both source code and binary class file analysis, so if NPE's happen a clear cause can be printed.
 

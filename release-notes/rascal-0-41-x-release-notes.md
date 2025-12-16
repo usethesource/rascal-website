@@ -69,8 +69,8 @@ The `skipped` production is there to create a type-correct representation of all
 
 Namely, downstream analyses like syntax highlighting and type checking can simply _ignore_ the error trees, and then they will be reasonably robust against parse errors too.
 To make this work Rascal features such as "pattern matching" and "field selection" were extended, making it easy for Rascal programmers to ignore the error trees and focus on the correct trees only. Examples of such features:
-* a pattern match on a partially recognized syntactic construct always _fails_, such that the error case is always an orthogonal extra case, or the `default` is executed.
-* if accidentally an error tree does lead to a new run-time exception, then this exception is always wrapped by `ParseErrorRecovery` to indicate that this was the reason. This happens for example if you ask for a field that was part of the skipped characters: NoSuchField is then wrapped by `ParseErrorRecovery` automatically. Programmers can use `try-catch` as high-up in their algorithms as necessary to recover from such problems. 
+* A pattern match on a partially recognized syntactic construct always _fails_, such that the error case is always an orthogonal extra case, or the `default` is executed.
+* If accidentally an error tree does lead to a new run-time exception, then this exception is always wrapped by `ParseErrorRecovery` to indicate that this was the reason. This happens for example if you ask for a field that was part of the skipped characters: NoSuchField is then wrapped by `ParseErrorRecovery` automatically. Programmers can use `try-catch` as high-up in their algorithms as necessary to recover from such problems.
 
 Parse error recovery required significant new extensions to the parsing algorithm, as well as introducing new downstream analyses
 of ambiguous parse forests caused by recovering from different parallel stacks. These features were very well tested on Rascal, Java and C grammars. Nevertheless it can be considered "beta" since not that many users (a few dozen) have tested it out. We hope you will enjoy it! In particular the robustness of syntax highlighting and the possibility of providing semantic feedback on a partially parsed file for your users are interesting.
@@ -84,23 +84,23 @@ Other improvements to the parsers:
 > *warning* the way Rascal is configured is gradually migrating from using `RASCAL.MF` to using `pom.xml`. Dependencies (Java, Rascal or otherwise) already come from a `pom.xml` file's `<dependencies>` list. Every project should have one, with at least a dependency on the Rascal project itself.
 
 * `Require-Libraries` in `RASCAL.MF` is no longer in use. You will be warned by the IDE about this.
-* the interpreter is now also configured by `pom.xml`, just like the compiler. `Sources` still come from `RASCAL.MF` for the interpreter, but not for the checker and the compiler. For now you have to keep `RASCAL.MF` and `pom.xml` in line w.r.t. the configuration of the local source folders.
+* The interpreter is now also configured by `pom.xml`, just like the compiler. `Sources` still come from `RASCAL.MF` for the interpreter, but not for the checker and the compiler. For now you have to keep `RASCAL.MF` and `pom.xml` in line w.r.t. the configuration of the local source folders.
 * `pom.xml` parsing is done locally and quickly, and so is configuring variables and resolving and downloading dependencies.
-* the version of the bootstrap jar is now an explicit parameter in `pom.xml`, and it is downloaded automatically when required. This is only relevant for developers working on the Rascal project itself.
-* locations of library dependencies are always normalized to `mvn://` or `jar+file://` such that file access inside a library is always done in the same way and very few clients have to distinguish different cases of `loc` schemes. Normalization
+* The version of the bootstrap jar is now an explicit parameter in `pom.xml`, and it is downloaded automatically when required. This is only relevant for developers working on the Rascal project itself.
+* Locations of library dependencies are always normalized to `mvn://` or `jar+file://` such that file access inside a library is always done in the same way and very few clients have to distinguish different cases of `loc` schemes. Normalization
 to the `mvn://` scheme also enables debug-stepping through library code with the Rascal debugger.
-* the old `lib://` scheme has completely disappeared, in favor of `mvn://` which is more precise due to the additional version number and group id. 
-* the computations that configure the interpreter and the compiler, by constructing a PathConfig, were re-implemented and rationalized.
+* The old `lib://` scheme has completely disappeared, in favor of `mvn://` which is more precise due to the additional version number and group id.
+* The computations that configure the interpreter and the compiler, by constructing a PathConfig, were re-implemented and rationalized.
 
 ### REPL/Console improvements
 
-* the REPL consistently prints what its configuration is (versions, source path, classpath, runtime environment, standard library)
-* the REPL was re-implemented from jline2 to **jline3**; with important usability enhancements among which _multiline editing_
-* the textual progress bar and printing to stderr was improved radically (sometimes prints were lost), also due to the upgrade to jline3
-* the REPL starts _much_ faster, due to a re-implementation of the Maven features for acquiring the exact locations of dependencies.
-* module reloading is faster and more accurate on macOS due to the new File Watches (see below)
-* the `:set` options grammar was extended with optional `;`'s and also further implemented
-* all other `:` commands are now implemented. See `:help` for instructions. 
+* The REPL consistently prints what its configuration is (versions, source path, classpath, runtime environment, standard library)
+* The REPL was re-implemented from jline2 to **jline3**; with important usability enhancements among which _multiline editing_
+* The textual progress bar and printing to stderr was improved radically (sometimes prints were lost), also due to the upgrade to jline3
+* The REPL starts _much_ faster, due to a re-implementation of the Maven features for acquiring the exact locations of dependencies.
+* Module reloading is faster and more accurate on macOS due to the new File Watches (see below)
+* The `:set` options grammar was extended with optional `;`'s and also further implemented
+* All other `:` commands are now implemented. See `:help` for instructions.
 * You can now `:undeclare` functions and variables without having to restart the REPL, for example.
 * All `:` commands accept accidentally typed `;` semicolons at the end.
 * An empty line no longer "cancels" a command, so multiline pasted code work better. Instead CTRL+C or simply `;` + ENTER will get you restarted.
@@ -159,7 +159,7 @@ are merged due to the `extend` feature: constructors, globals, type parameters o
 * Subtype and lub were improved for corner cases with higher-order functions.
 * Several checker issues caused by colliding extended modules were resolved.
 * The checker now has an **incremental** mode which is much faster in an IDE context.
-* Type inference was strengtened by inheriting more information from the context.
+* Type inference was strengthened by inheriting more information from the context.
 * The checker already worked module-by-module, but now each module is represented by
 an _abstract interface_ consisting only of logical fully qualified names of declared items (also represented by `loc`). This
 enables "binary backward compatibility" where an existing binary (.tpl and/or .class file) from a library
@@ -170,28 +170,28 @@ change, and what kind of action is required from a client depending on the kind 
 * The whole checker is now tested incrementally on a selected set of external Rascal libraries and programs, and the Rascal project itself, for regressions.
 * Character classes are now fully supported, in line with the semantics of the interpreter where `char(10)` has the dynamic type `[\n]`. The checker now assumes any `char(_)` term has type `![] + [\0]`. Subtyping for character classes is subclassing, `lub` is class union and `glb` is class intersection.
 * Any type like `tuple[int, void]` is considered equivalent to `void` in _all circumstances_ (also as return types). Since tuple instances with void fields do not exist, any such type is "void" of values. The canonical type that represents the empty set of values is `void`. The same holds for function type parameters: `int (void, int)` is equivalent to `void` for the same reason. Functions with `void` parameters do not exist in Rascal, hence such type terms are canonically reduced to `void`. This reduction to one simple case is essential for downstream analyses --- for example, the static checking of assignments and return values (where `void` is treated exceptionally). Another example is the semantics of dynamic dispatch where a `void` return type produced by the dynamic instantiation of type variables will lead to overload application failure (`CallFailed`) and/or backtracking.
-* the implementation of the extend feature as well as the related overloading resolution were overhauled completely. 
+* The implementation of the extend feature as well as the related overloading resolution were overhauled completely.
 
 ### Tutor improvements
 
-* For disambiguation purpuses the package URLs have changed on the generated websites: For example: `https://www.rascal-mpl.org/docs/Packages/Clair/` is now `https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.clair`.
-* tutor indexing and compilation was made (more) incremental per Markdown file, documentation folder and Rascal module. If modules
+* For disambiguation purposes the package URLs have changed on the generated websites: For example: `https://www.rascal-mpl.org/docs/Packages/Clair/` is now `https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.clair`.
+* Tutor indexing and compilation was made (more) incremental per Markdown file, documentation folder and Rascal module. If modules
 are removed from a project or renamed, the incrementally constructed index in `target/classes/docs/index.value` is _not_
 automatically invalidated. Only removing that file (`mvn clean`) will uncover all possible linking errors introduced
 by the removal/renaming. Otherwise only modules which have been edited will be re-documented. Old errors in unchanged
 modules are always reported again with each incremental run.
-* added progress bar for loading indices and compiling Markdown code.
-* added optional author lists to a package's presentation.
-* better error handling around the screenshot feature.
-* added a call-out feature
-* added `rascal-declaration` blocks, which show as simple highlighted top-level declarations in the documentation, but are
+* Added progress bar for loading indices and compiling Markdown code.
+* Added optional author lists to a package's presentation.
+* Better error handling around the screenshot feature.
+* Added a call-out feature.
+* Added `rascal-declaration` blocks, which show as simple highlighted top-level declarations in the documentation, but are
 declared in the currently running REPL as a side-effect for later use.
-* show issue tracker location on the main page
-* modules called `demo*` (case insensitive) or modules nested under packages called `demo` are presented differently than normal modules. Their tests are always shown fully and the bodies of all functions are expanded fully in the documentation.
-* if a code block expects errors but no errors are reported, this is now flagged as an error.
-* added citations and funding to the main page of a package (not optional)
-* added github links to sources where possible.
-* ambiguous link errors now propose a minimal amount of _exact_ and _shortest_ solutions for chosing one of the current alternatives.
+* Show issue tracker location on the main page.
+* Modules called `demo*` (case insensitive) or modules nested under packages called `demo` are presented differently than normal modules. Their tests are always shown fully and the bodies of all functions are expanded fully in the documentation.
+* If a code block expects errors but no errors are reported, this is now flagged as an error.
+* Added citations and funding to the main page of a package (not optional).
+* Added github links to sources where possible.
+* Ambiguous link errors now propose a minimal amount of _exact_ and _shortest_ solutions for choosing one of the current alternatives.
 
 ### Standard Library Maintenance
 
@@ -200,12 +200,12 @@ names have remained the same and so have internal Java-based mapping code classe
    * Now you have to add a dependency in your `pom.xml` file on `java-air` (see above).
    * `java-air` is expected to release more often in one year, namely adding support for JLS >14 versions.
    * Please report Java analysis issues with the `java-air` project from now on, where appropriate.
-   * All existing issues have been moved to the new repository on GitHub
+   * All existing issues have been moved to the new repository on GitHub.
 * `analysis::text::search::*` was extracted into a separate library: [rascal-lucene](https://github.com/usethesource/rascal-lucene). This lucene-based two-way integration with Rascal offers _very fast_ (approximate or exact) text indexing and search facilities. It integrates with Rascal's grammars and parsing features and functions, to create syntax-directed and semantics-directed indexing features for programming languages, domain-specific languages as well as their comments and documentation. It was separated to allow for independent evolution as well as to reduce the binary deployment footprint and (transitive) dependency list of the core Rascal project. Example application areas include IDEs with documentation search features, feature location applications, requirements engineering, software maintenance and evolution --- all applications where quick access to _relevant_ documents or code is essential.
 * `lang::xml::IO` was extended with a _streaming_ API for XML nodes in very large but repetitive documents. See the `streamXML` function.
 * `Type` was cleaned up radically. The cloned implementations of subtype, lub, glb, intersects now directly call their native Java implementations via "unreification". The resulting Types of lub and glb are then "reified" as values again and returned to the caller. Extensive specification-based tests were added to document the formal properties of the type system (it's a _finite lattice_.)
 `lrel` and `rel` were completely removed from the `Symbol` representation, as these are always normalized to `list[tuple[...]]` and `set[tuple[...]]`. `bag` was also removed because we never implemented it.
-* the `PathConfig` type was cleaned up and factored into its own module `util::PathConfig`. It will serve as the common intermediate representation between configuration code (Maven, VS Code, Eclipse) and file-based language processors. `PathConfig` now also has a `messages` field where errors and warnings detected during configuration steps can be communicated to the user.
+* The `PathConfig` type was cleaned up and factored into its own module `util::PathConfig`. It will serve as the common intermediate representation between configuration code (Maven, VS Code, Eclipse) and file-based language processors. `PathConfig` now also has a `messages` field where errors and warnings detected during configuration steps can be communicated to the user.
 * `Box2Text` was optimized, including more fixes to making arrays (tables) more robust. Empty H, V, HV and HOV boxes are now always removed before outlining, to avoid spurious spacing.
 * `analysis::diff::edits::HifiTreeDiff` and `analysis::diff::edits::HifiLayoutDiff` were added. The first computes `TextEdit` by looking at the differences between an original tree and a rewritten tree. The algorithm tries
 to maintain as much accidental whitespace, indentation and comments from the original as possible. The second does the same where the rewritten tree is a _formatted_ version of the original. A minimum set of whitespace
@@ -216,7 +216,7 @@ for syntax- and semantics-directed features in IDEs.
 * Added `ParseTree::reposition` function which has all the bells and whistles to add and remove `src` annotations on `Tree` nodes. Can be used to decrease the memory footprint of full parse trees without removing syntactic information,
 but also to add position information where it previously wasn't for more accurate analyses.
 * `IO` now has full `stat` capabilities, also on the Java API side in `URIResolverRegistry`.
-* renamed `DocumentEdit` to `FileSystemChange`, and also factored the concept into its own module. documented it and renamed some functions for the sake of consistency; top-level function names have been kept with `@deprecated` tags. Also `DocumentEdit` was aliased to the new name `FileSystemChange` for backward compatibility in Rascal code (this does not help for Java code).
+* Renamed `DocumentEdit` to `FileSystemChange`, and also factored the concept into its own module. documented it and renamed some functions for the sake of consistency; top-level function names have been kept with `@deprecated` tags. Also `DocumentEdit` was aliased to the new name `FileSystemChange` for backward compatibility in Rascal code (this does not help for Java code).
 * `Message` now has a default way of printing messages, `writeMessages`, and a default way of reporting messages in `main` functions, featuring the correct return value (`0` for no errors, non-`0` for errors), and the interpretation of `errorsAsWarnings` and `warningsAsErrors`.
 * `Message` has `causes` now, where additional information about how an error or warning came to be can be linked. These are unfoldable in the diagnostics view of your IDE, and they are printed with each error on the console.
 * In `IDEServices`, `Message` has `fixes` now where you can register `CodeAction` (quick fixes) for the error that was introduced.
