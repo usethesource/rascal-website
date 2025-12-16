@@ -446,6 +446,37 @@ contributing to Rascal then we'd use the "pull request" model together like this
 * [#2406](https://github.com/usethesource/rascal/pull/2406) - Removing extend cycle
 * [#2393](https://github.com/usethesource/rascal/pull/2393) - Switching to release of rascal that includes the new typechecker changes
 * [#2411](https://github.com/usethesource/rascal/pull/2411) - Fixed type error
+* [#2518](https://github.com/usethesource/rascal/pull/2518) - fixes #2513 by splitting name tags between vars and funcs
+* [#2517](https://github.com/usethesource/rascal/pull/2517) - Remove warnings and infos from packaged TPLs
+* [#2520](https://github.com/usethesource/rascal/pull/2520) - Implemented streaming base64 translation functions
+* [#2524](https://github.com/usethesource/rascal/pull/2524) - Use latest vallang (RC20)
+* [#2507](https://github.com/usethesource/rascal/pull/2507) - Remote IDE services
+* [#2511](https://github.com/usethesource/rascal/pull/2511) - fixes another cause of #2497
+* [#2526](https://github.com/usethesource/rascal/pull/2526) - Always print a message if we automatically reload a module
+* [#2527](https://github.com/usethesource/rascal/pull/2527) - Remote IDEServices - small updates
+* [#2530](https://github.com/usethesource/rascal/pull/2530) - added missing conversion of list[loc] to OS paths separated by File.pathSeparator
+* [#2531](https://github.com/usethesource/rascal/pull/2531) - Using latest version of typepal
+* [#2532](https://github.com/usethesource/rascal/pull/2532) - refactored the implementation of the right debug step scopes to the interpreter design pattern and added some more special cases
+* [#2539](https://github.com/usethesource/rascal/pull/2539) - Fixed minor type isues
+* [#2521](https://github.com/usethesource/rascal/pull/2521) - Remove unused reflect tag on JDBC
+* [#2529](https://github.com/usethesource/rascal/pull/2529) - Change the behaviour of Step Over for For/While/Switch/Visit
+* [#2528](https://github.com/usethesource/rascal/pull/2528) - Fix/Allow all tree-like variable to be displayed as tree in debugger
+* [#2516](https://github.com/usethesource/rascal/pull/2516) - Show more details in case of an IO exception
+* [#2505](https://github.com/usethesource/rascal/pull/2505) - Make sure we never share lists and properly clear a root environment cache on reset
+* [#2502](https://github.com/usethesource/rascal/pull/2502) - fixed problem in extending common keyword parameter defaults; they would overwrite each other if for the same type but from a different module
+* [#2486](https://github.com/usethesource/rascal/pull/2486) - Replaced problematic location
+* [#2483](https://github.com/usethesource/rascal/pull/2483) - Fix/avoid-module-loc-conflicts
+* [#2473](https://github.com/usethesource/rascal/pull/2473) - fix/save-tpl-on-error
+* [#2460](https://github.com/usethesource/rascal/pull/2460) - Fixed check for "normal" (non-error) ambiguities after error recovery
+* [#2444](https://github.com/usethesource/rascal/pull/2444) - Improve ux of parse trees in Variables view during debugging
+* [#2446](https://github.com/usethesource/rascal/pull/2446) - Ignore breakpoints in removed modules
+* [#2438](https://github.com/usethesource/rascal/pull/2438) - Streaming issue in webserver and repl content server
+* [#2427](https://github.com/usethesource/rascal/pull/2427) - Lowered validation level as we only construct the classpath and are not building
+* [#2422](https://github.com/usethesource/rascal/pull/2422) - Handle IO and parse errors in module with breakpoint
+* [#2416](https://github.com/usethesource/rascal/pull/2416) - Fix issue where a varargs match throws an ArrayIndexOutOfBounds exception
+* [#2405](https://github.com/usethesource/rascal/pull/2405) - Gradually improving the reporting of incompatible binary libraries
+* [#2550](https://github.com/usethesource/rascal/pull/2550) - Fix missing port registering for debugger
+* [#2392](https://github.com/usethesource/rascal/pull/2392) - improving handling of extend cycles and reloading (extended) modules with (temporary) errors
 * [vallang #287](https://github.com/usethesource/vallang/pull/287) - fix issue #286 with tests
 * [vallang #288](https://github.com/usethesource/vallang/pull/288) - Increase performance of IString Readers for the `read(CharBuffer)` overload
 * [vallang #289](https://github.com/usethesource/vallang/pull/289) - Added support for writing formfeed and backspace escaped characters
@@ -642,3 +673,23 @@ beta testing new features.
 * [#2390](https://github.com/usethesource/rascal/issues/2390) - When module loading fails due to a cyclic extend, the current module is not cleaned up and left as a "zombie"
 * [#2388](https://github.com/usethesource/rascal/issues/2388) - Extend cycle detection can be spoofed by confusing imports halfway
 * [#2407](https://github.com/usethesource/rascal/issues/2407) - Fix import/extend cycle in checker that triggers undefined interpreter behavior
+* [#2394](https://github.com/usethesource/rascal/issues/2394) - Remove messages during tpl packaging
+* [#2513](https://github.com/usethesource/rascal/issues/2513) - 'Undeclared variable' error on use of declared constructor
+* [#2515](https://github.com/usethesource/rascal/issues/2515) - Translate java IO exceptions to better rascal IO exceptions
+* [#2497](https://github.com/usethesource/rascal/issues/2497) - Name in default expression not found although it is defined
+* [#2481](https://github.com/usethesource/rascal/issues/2481) - `MalFormedURI` exception when backslashes occur in qualified module names (RC70)
+* [#2482](https://github.com/usethesource/rascal/issues/2482) - Spurious "Conflicting module locations found" error (RC72)
+* [#2462](https://github.com/usethesource/rascal/issues/2462) - Self import error from std lib
+* [#2464](https://github.com/usethesource/rascal/issues/2464) - TPL not written when module has static errors
+* [#2466](https://github.com/usethesource/rascal/issues/2466) - Imprecise error message "module name is ambiguous"
+* [#2465](https://github.com/usethesource/rascal/issues/2465) - mvn, jar and zip schemes do not fully load module texts anymore if called from rascal-lsp
+* [#2461](https://github.com/usethesource/rascal/issues/2461) - REPL: Strange characters when pressing backspace
+* [#2459](https://github.com/usethesource/rascal/issues/2459) - NPE in error recovery disambiguation
+* [#2443](https://github.com/usethesource/rascal/issues/2443) - Debug variable hover how shows appl/prod tree instead of more readable yield `(Statement) if (bla) ...`
+* [#2445](https://github.com/usethesource/rascal/issues/2445) - Warnings after turning on debug mode
+* [#2438](https://github.com/usethesource/rascal/issues/2437) - String streamer in webserver and REPLcontentServer fail on large output
+* [#2420](https://github.com/usethesource/rascal/issues/2420) - Unexpected errors/warning when starting a Rascal console
+* [#2421](https://github.com/usethesource/rascal/issues/2421) - Turning on debug mode causes stack dump, but debugger stays working
+* [#2415](https://github.com/usethesource/rascal/issues/2415) - Interpreter crashes when calling a varargs functions with too few arguments
+* [#2379](https://github.com/usethesource/rascal/issues/2379) - `ArrayIndexOutOfBoundException` from `vallang` at constructor pattern match
+* [#2397](https://github.com/usethesource/rascal/issues/2397) - Importing a typepal module makes the type checker bail out silently
