@@ -6,7 +6,7 @@ sidebar_position: 87
 
 In this post we report on the Rascal release 0.41.x
 
-## Release 0.41.0 - September, 2025
+## Release 0.41.0 & 0.41.1 - December, 2025
 
 Welcome to Rascal 0.41.0! This release comes with great improvements in usability (parse error recovery, loading speed)
 and enormous progress with type-checking and compilation. Numerous additions to the standard library and a _big change_ in the Java language support setup... 
@@ -43,9 +43,19 @@ Nothing else has changed w.r.t. Java analysis. The same module names, functions 
 
 If you are interested in bringing `java-air` up to JLS-17, 19, 21, 23, ...; This is an example of something where we welcome help from the community. Please have a look at https://github.com/usethesource/java-air/. 
 
+:::info
+For students close to a deadline: VS Code allows you to downgrade your extension, so you can always go back to a version of the VS Code extension with an older release of rascal packaged.
+
+- find the extension in the extensions bar
+- click on the cogwheel in the corner
+- clock "Install Specific Version..."
+
+:::
+
 ### Parser improvements (the Error Recovery Mode)
 
 The generated parsers now support an "error recovery" mode. In this mode the parser is **robust** against errors in the _input_. This is extremely useful for interactive editing situations, where sometimes a file is under development and we still want syntax-directed and semantics-directed features. Examples of downstream features that can work well with a recovered parse:
+
 * highlighting,
 * autocompletion,
 * type-checking,
@@ -138,8 +148,9 @@ including the advanced terminal support and loading LSP extensions for DSLs.
 Also it lowers our maintenance costs and increases the speed of our release cycles.
 
 * The Debug Adapter Protocol (DAP) implementation (an extension to the Language Service Protocol) was moved to the Rascal project.
-* Several core features of the Language Service Protocol server for Rascal (and DSLs written in Rascal) moved along with it. 
+* Several core infrastructure features of the Language Service Protocol server for Rascal (and DSLs written in Rascal) moved along with it. 
 For example: mapping UTF16 characters (LSP editors) to UTF32 (Rascal parsers) and back.
+* the REPL extensions in VS Code (such as automatic reloading of modules) got moved to the generic rascal REPL.
 
 ### Type checker improvements
 

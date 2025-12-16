@@ -39,20 +39,20 @@ The currently available packages are grouped in two categories: language support
 
 | Language name | Package | Note |
 | ------------- | ------- | ----- |
-| C and C++     | [clair](/docs/Packages/Clair) | |
-| Java          | [rascal](/docs/Rascal) | To be factored out of the standard library soon |
-| PHP           | [php-analysis](/docs/Packages/PhpAnalysis) | |
-| Python        | [python-air](/docs/Packages/PythonAir) | |
-| JVM bytecode  | [flybytes](/docs/Packages/Flybytes) | Forward and Reverse | 
+| C and C++     | [clair](/docs/Packages/org.rascalmpl.clair) | |
+| Java          | [java-air](/docs/Packages/org.rascalmpl.java-air) | used to be part of standard library |
+| PHP           | php-analysis | currently not building will be released as soon as possible |
+| Python        | python-air | currently not building will be released as soon as possible |
+| JVM bytecode  | [flybytes](/docs/Packages/org.rascalmpl.flybytes) | Forward and Reverse |
 
 ### Generic Libraries
 
 | Library Name | Package | Note |
 | ------------ | ------- | ----- |
-| Dr Ambiguity | [drambiguity](/docs/Packages/DrAmbiguity) | Interactive UI based on Salix for detection, diagnostics and fixing of ambiguity context-free grammars. |
-| Salix        | [salix-core](/docs/Packages/SalixCore) | User interface framework for Rascal |
-| Salix Contrib | [salix-contrib](/docs/Packages/SalixContrib) | Useful extensions for Salix |
-| Rascal GIT   | [rascal-git](/docs/Packages/RascalGit) | Accessing GIT from Rascal |
-| Rascal LSP   | [rascal-lsp](/docs/Packages/RascalLsp) | LSP for Rascal and LSP generator for DSLs in Rascal |
-| Typepal      | [typepal](/docs/Packages/Typepal) | Generic name and type analysis framework; to be factored in to the standard library soon |
-| Rascal Tutor | [rascal-tutor](/docs/Packages/RascalTutor) | Rascal source code documenter and manual authoring tool; to be factored into the standard library soon | 
+| Dr Ambiguity | drambiguity | Interactive UI based on Salix for detection, diagnostics and fixing of ambiguity context-free grammars. Currently documentation is not building, will be released as soon as possible |
+| Salix        | [salix-core](/docs/Packages/org.rascalmpl.salix-core) | User interface framework for Rascal |
+| Salix Contrib | [salix-contrib](/docs/Packages/org.rascalmpl.salix-contrib) | Useful extensions for Salix |
+| Rascal GIT   | [rascal-git](/docs/Packages/edu.appstate.cs.rascal-git/) | Accessing GIT from Rascal |
+| Rascal LSP   | [rascal-lsp](/docs/Packages/org.rascalmpl.rascal-lsp/) | LSP for Rascal and LSP generator for DSLs in Rascal |
+| Typepal      | [typepal](/docs/Packages/org.rascalmpl.typepal/) | Generic name and type analysis framework |
+| Rascal Tutor | rascal-tutor | Rascal source code documenter and manual authoring tool, documentation not released yet due to changes in tutor infrastructure | 

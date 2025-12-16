@@ -39,7 +39,7 @@ Unless it is called with an argument of a wrong type:
 triple([1,2,3])
 ```
 We can define a new version of `triple` function that accepts lists:
-```rascal-shell,continue
+```rascal-shell
 list[int] triple(list[int] L) = [3 * x | x <- L];
 triple([1,2,3]);
 ```
