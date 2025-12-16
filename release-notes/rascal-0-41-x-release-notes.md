@@ -495,7 +495,7 @@ contributing to Rascal then we'd use the "pull request" model together like this
 * [#2557](https://github.com/usethesource/rascal/pull/2557) - Added missing verbose flag to prevent Maven plugin from crashing if it is set
 * [#2540](https://github.com/usethesource/rascal/pull/2540) - Add symbol constructor args name on tree view
 * [#2559](https://github.com/usethesource/rascal/pull/2559) - Classloader concurrency
-* [#2567](https://github.com/usethesource/rascal/pull/2567) - Removed cycle reported in [#2563](https://github.com/usethesource/rascal/issues/2563)
+* [#2567](https://github.com/usethesource/rascal/pull/2567) - Removed cycle reported in #2563
 * [#2568](https://github.com/usethesource/rascal/pull/2568) - Fixed various type errors
 * [#2571](https://github.com/usethesource/rascal/pull/2571) - Make breakpoint suspension global
 * [vallang #287](https://github.com/usethesource/vallang/pull/287) - fix issue #286 with tests
