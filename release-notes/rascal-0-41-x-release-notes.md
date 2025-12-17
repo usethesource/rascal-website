@@ -21,6 +21,10 @@ is no longer available, until we create a replacement. The pre-existing releases
 for the sake of security and simplicity.
 :::
 
+### For people using 0.41.0 & 0.41.1
+
+We previously released 0.41.0 and 0.41.1. Since they still contained some issues, we did not release them as part of any Rascal tools (e.g. the VS Code extension). If your project depends on one of those Rascal versions, we urge you to update to 0.41.2.
+
 ### Analyzing Java code
 
 For many users the extraction of [java-air](https://github.com/usethesource/java-air/) as a separate project from `rascal` will be the biggest change. This allows
