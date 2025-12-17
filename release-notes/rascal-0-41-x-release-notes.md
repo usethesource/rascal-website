@@ -103,6 +103,9 @@ to the `mvn://` scheme also enables debug-stepping through library code with the
 * The textual progress bar and printing to stderr was improved radically (sometimes prints were lost), also due to the upgrade to jline3
 * The REPL starts _much_ faster, due to a re-implementation of the Maven features for acquiring the exact locations of dependencies.
 * Module reloading is faster and more accurate on macOS due to the new File Watches (see below)
+* Automatically reloading a module is always announced via an info message.
+* Automatic reloading now works for (extended) modules with errors.
+* Loading of modules in cycles has been improved so no definitions or messages from imported are lost anymore.
 * The `:set` options grammar was extended with optional `;`'s and also further implemented
 * All other `:` commands are now implemented. See `:help` for instructions.
 * You can now `:undeclare` functions and variables without having to restart the REPL, for example.
@@ -158,8 +161,12 @@ For example: mapping UTF16 characters (LSP editors) to UTF32 (Rascal parsers) an
 
 ### Debugger improvements
 
+* Show all variables with subtype of `Tree` as trees in variables view.
 * Show symbol constructor argument names in variables view.
 * Fix issues with keyword parameter value computation.
+* Refactored and fixed the computation of debug step scopes.
+* Changed the behavior of step-over for block statements to step over the condition, into the body.
+* Breakpoint suspension is now global, which means that step-over will not skip breakpoints deeper in statements anymore.
 
 ### Type checker improvements
 
@@ -263,6 +270,7 @@ large files can now already be received and consumed by the client, in parallel,
 ### Other Rascal Interpreter changes
 
 * Throwing and catching `StackOverflow` and `OutOfMemory` is possible again, due to not triggering `OutOfMemory` or `StackOverflow` during the handling of these exceptions.
+* Rascal IO exceptions have been improved to include much more information, to clarify what caused them to be thrown.
 * The `visit` statement now _always_ memoizes `amb` clusters; this brings down the worst-case complexity of a visit with nested ambiguity to polynomial numbers (instead of the previous exponential amounts of nested combinations).
 * Duplicate overloads, present due to the exact same functions being extended from different directions in the extend graph, were eliminated. This greatly affects the efficiency of functions with only a few overloads, when the high count was caused by "diamond-shaped" extend graphs. Otherwise it doesn't do much for efficiency.
 
