@@ -14,12 +14,12 @@ The 0.23.0 release marks the end of the migration of all Rascal supporting libra
 
 We report on intermediate releases 0.18.x, 0.19.x, 0.20.x, 0.21.x and 0.22.x as well, as these had not lead to a release of the Rascal Eclipse plugins or a stable release of the commandline version. 
 
-**Generating Eclipse and VScode Plugins**
+**Generating Eclipse and VS Code Plugins**
 
 This port to Java 11 implies that the current [stable release of the Rascal Eclipse plugin](https://update.rascal-mpl.org/stable/) works again with the latest releases of Eclipse from 2021 and 2022. In the meantime
-releases of the [rascal-language-server extension](https://marketplace.visualstudio.com/items?itemName=usethesource.rascalmpl) for VScode have been developed. 
+releases of the [rascal-language-server extension](https://marketplace.visualstudio.com/items?itemName=usethesource.rascalmpl) for VS Code have been developed. 
 
-Porting Rascal's IDE generator features to VScode has had minor impact on the modules in the standard library concerning interaction with DSLs and interactions with the IDE (`util::IDEServices`, `util::Monitor` and `util::IDE`). The old API still works and it is backward compatible in Eclipse. However, if you want to port your DSL to VScode, there are minor changes in how to wrap your extension and new interaction possibilities with the IDE which are not present in Eclipse. Not all new IDE API is available in Eclipse yet either. Both directions of consolidation (VScode <-> Eclipse) are interesting directions of future work.
+Porting Rascal's IDE generator features to VS Code has had minor impact on the modules in the standard library concerning interaction with DSLs and interactions with the IDE (`util::IDEServices`, `util::Monitor` and `util::IDE`). The old API still works and it is backward compatible in Eclipse. However, if you want to port your DSL to VS Code, there are minor changes in how to wrap your extension and new interaction possibilities with the IDE which are not present in Eclipse. Not all new IDE API is available in Eclipse yet either. Both directions of consolidation (VS Code <-> Eclipse) are interesting directions of future work.
 
 This release works best with Java 11, but not with higher versions. There are still illegal uses of reflective access which need to be resolved before Rascal runs correctly on Java 13 and higher.
 

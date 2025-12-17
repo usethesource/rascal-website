@@ -16,7 +16,7 @@ Many, if not most, of the improvements to the Rascal project were both funded an
 
 :::info
 All Eclipse functionality, including the `rascal-eclipse` plugin and the Eclipse IDE Metatooling Platform (IMP a.k.a. `impulse`), was _archived_ this year, after having been deprecated for a long time.
-Everybody is expected to use Rascal now using the VScode extension, or using the commandline REPL, or from their own LSP clients. With this move to VScode the `Figure` library (embedded in `rascal-eclipse`)
+Everybody is expected to use Rascal now using the VS Code extension, or using the commandline REPL, or from their own LSP clients. With this move to VS Code the `Figure` library (embedded in `rascal-eclipse`)
 is no longer available, until we create a replacement. The pre-existing releases of `rascal-eclipse` and `impulse` will _not_ remain available forever on `usethesource.io`,
 for the sake of security and simplicity.
 :::
@@ -31,7 +31,7 @@ For many users the extraction of [java-air](https://github.com/usethesource/java
 us to do faster maintenance cycles on both projects and it more than halved the size of the binary distribution of the core Rascal features.
 
 **Students following courses on Software Evolution**, or Software Maintenance/Software quality at different schools and universities: your course and lab notes may not
-include this new information, but this is relevant for you if you want to use the newest Rascal VScode extension for your lab exercises!
+include this new information, but this is relevant for you if you want to use the newest Rascal VS Code extension for your lab exercises!
 
 To regain access to all the beloved features for the Java language related to parsing, abstract syntax trees, and semantic models like `M3`, please add this to your `pom.xml` dependencies:
 
@@ -150,7 +150,7 @@ To increase cohesion and lower coupling between the `rascal` project and the `ra
 core features of rascal-lsp are being moved into the rascal project. This is ongoing. One of the goals
 is to be able to run any rascal version with the VS Code extension, depending on a project's dependency
 on Rascal rather than the extension's dependency on rascal.
-This will also facilitate new LSP client (other editors than VScode) to connect to Rascal's LSP,
+This will also facilitate new LSP client (other editors than VS Code) to connect to Rascal's LSP,
 including the advanced terminal support and loading LSP extensions for DSLs.
 Also it lowers our maintenance costs and increases the speed of our release cycles.
 

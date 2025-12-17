@@ -9,7 +9,7 @@ In this usecase description we give a flavor of how you can use Rascal to:
 1. define the syntax of a DSL;
 2. create a simple semantic check;
 3. how to compile the DSL to Java;
-4. instantiate a VScode extension or Eclipse Plugin for the DSL.
+4. instantiate a VS Code extension or Eclipse Plugin for the DSL.
 
 The following example shows how to define a simple DSL for "state machines". It includes a parser, a check for unreachable states and a compiler to Java code. 
 
@@ -184,4 +184,4 @@ And that's it! A complete DSL in 36 lines of code. Of course, the parser and the
 #### Constructing an IDE 
 
 * For Eclipse Rascal offers plugin generation via the `util::IDE` module. You can register the language and the respective analysis, compilation and visualization functions with a single function call. The standard library module `util::IDEServices` allows for calling into features of the IDE (such as starting an editor or applying a refactoring).
-* For VScode an interface with similar features and abstraction level is offered in `util::LanguageServer`, but geared towards the _Language Service Protocol_.
+* For VS Code an interface with similar features and abstraction level is offered in `util::LanguageServer`, but geared towards the _Language Service Protocol_.

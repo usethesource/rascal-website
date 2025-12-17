@@ -85,7 +85,7 @@ The two unused methods are:
 * `|java+method:///snakes/Square/nextSquare()|`
 * `|java+method:///snakes/Player/square()|`
 
-In an interactive environment like Eclipse or VScode we would click on these links to jump to their source code. Here we will print the bodies:
+In an interactive environment like Eclipse or VS Code we would click on these links to jump to their source code. Here we will print the bodies:
 
 ```rascal-shell,continue
 println(readFile(|java+method:///snakes/Player/square()|))
