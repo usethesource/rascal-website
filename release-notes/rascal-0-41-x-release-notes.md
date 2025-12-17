@@ -21,10 +21,6 @@ is no longer available, until we create a replacement. The pre-existing releases
 for the sake of security and simplicity.
 :::
 
-### For people using 0.41.0 & 0.41.1
-
-We previously released 0.41.0 and 0.41.1. Since they still contained some issues, we did not release them as part of any Rascal tools (e.g. the VS Code extension). If your project depends on one of those Rascal versions, we urge you to update to 0.41.2.
-
 ### Analyzing Java code
 
 For many users the extraction of [java-air](https://github.com/usethesource/java-air/) as a separate project from `rascal` will be the biggest change. This allows
@@ -273,6 +269,10 @@ large files can now already be received and consumed by the client, in parallel,
 * Rascal IO exceptions have been improved to include much more information, to clarify what caused them to be thrown.
 * The `visit` statement now _always_ memoizes `amb` clusters; this brings down the worst-case complexity of a visit with nested ambiguity to polynomial numbers (instead of the previous exponential amounts of nested combinations).
 * Duplicate overloads, present due to the exact same functions being extended from different directions in the extend graph, were eliminated. This greatly affects the efficiency of functions with only a few overloads, when the high count was caused by "diamond-shaped" extend graphs. Otherwise it doesn't do much for efficiency.
+
+### What happened to 0.41.0 and 0.41.1?
+
+We previously released 0.41.0 and 0.41.1. Since they still contained some issues, we did not release them as part of any Rascal tools (e.g. the VS Code extension). If your project depends on one of those Rascal versions, we urge you to update to 0.41.2.
 
 ### Merged Pull Requests since version 0.40.0
 
