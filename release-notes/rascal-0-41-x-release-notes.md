@@ -80,7 +80,7 @@ Parse error recovery required significant new extensions to the parsing algorith
 of ambiguous parse forests caused by recovering from different parallel stacks. These features were very well tested on Rascal, Java and C grammars. Nevertheless it can be considered "beta" since not that many users (a few dozen) have tested it out. We hope you will enjoy it! In particular the robustness of syntax highlighting and the possibility of providing semantic feedback on a partially parsed file for your users are interesting.
 
 Other improvements to the parsers:
-* Two bugs related to nullables inside regular expressions were solved
+* Two bugs related to nullables inside regular expressions were solved.
 * The `@<column>` constraint in grammar rules was fixed.
 
 ### Fast and Consistent Configuration via Maven's `pom.xml`
