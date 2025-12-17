@@ -10,10 +10,10 @@ In this post we report on the Rascal release 0.40.x
 
 ## Release 0.40.17 - November 15, 2024
 
-The public release 0.40.x follows release 0.28.x; many improvements have been made in projects that depend on the rascal interpreter and the standard library (the type checker, the VScode extensions, clair, etc.) Some of these improvements depend directly on fixes in the interpreter and additions to the standard library.
+The public release 0.40.x follows release 0.28.x; many improvements have been made in projects that depend on the rascal interpreter and the standard library (the type checker, the VS Code extensions, clair, etc.) Some of these improvements depend directly on fixes in the interpreter and additions to the standard library.
 
 :::info
-The Rascal type-checker which is available in the VScode extension is reaching maturity. The `.tpl` file format has changed, which requires everybody to throw the old ones away. The new type checker checks `.tpl` file versions and reports possible conflicts. Use `mvn clean` or remove your `bin` or `target` folders for all your projects and library projects today.
+The Rascal type-checker which is available in the VS Code extension is reaching maturity. The `.tpl` file format has changed, which requires everybody to throw the old ones away. The new type checker checks `.tpl` file versions and reports possible conflicts. Use `mvn clean` or remove your `bin` or `target` folders for all your projects and library projects today.
 :::
 
 :::warning

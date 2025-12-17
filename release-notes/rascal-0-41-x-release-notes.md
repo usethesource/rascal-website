@@ -6,9 +6,9 @@ sidebar_position: 87
 
 In this post we report on the Rascal release 0.41.x
 
-## Release 0.41.0 & 0.41.1 - December, 2025
+## Release 0.41.0, 0.41.1 & 0.41.2 - December, 2025
 
-Welcome to Rascal 0.41.0! This release comes with great improvements in usability (parse error recovery, loading speed)
+Welcome to Rascal 0.41.2! This release comes with great improvements in usability (parse error recovery, loading speed)
 and enormous progress with type-checking and compilation. Numerous additions to the standard library and a _big change_ in the Java language support setup...
 These release notes are organized by major topics and there is a list of smaller improvements at the end, including a list of linked closed issues and the merged pull requests.
 
@@ -16,7 +16,7 @@ Many, if not most, of the improvements to the Rascal project were both funded an
 
 :::info
 All Eclipse functionality, including the `rascal-eclipse` plugin and the Eclipse IDE Metatooling Platform (IMP a.k.a. `impulse`), was _archived_ this year, after having been deprecated for a long time.
-Everybody is expected to use Rascal now using the VScode extension, or using the commandline REPL, or from their own LSP clients. With this move to VScode the `Figure` library (embedded in `rascal-eclipse`)
+Everybody is expected to use Rascal now using the VS Code extension, or using the commandline REPL, or from their own LSP clients. With this move to VS Code the `Figure` library (embedded in `rascal-eclipse`)
 is no longer available, until we create a replacement. The pre-existing releases of `rascal-eclipse` and `impulse` will _not_ remain available forever on `usethesource.io`,
 for the sake of security and simplicity.
 :::
@@ -27,7 +27,7 @@ For many users the extraction of [java-air](https://github.com/usethesource/java
 us to do faster maintenance cycles on both projects and it more than halved the size of the binary distribution of the core Rascal features.
 
 **Students following courses on Software Evolution**, or Software Maintenance/Software quality at different schools and universities: your course and lab notes may not
-include this new information, but this is relevant for you if you want to use the newest Rascal VScode extension for your lab exercises!
+include this new information, but this is relevant for you if you want to use the newest Rascal VS Code extension for your lab exercises!
 
 To regain access to all the beloved features for the Java language related to parsing, abstract syntax trees, and semantic models like `M3`, please add this to your `pom.xml` dependencies:
 
@@ -76,12 +76,12 @@ Parse error recovery required significant new extensions to the parsing algorith
 of ambiguous parse forests caused by recovering from different parallel stacks. These features were very well tested on Rascal, Java and C grammars. Nevertheless it can be considered "beta" since not that many users (a few dozen) have tested it out. We hope you will enjoy it! In particular the robustness of syntax highlighting and the possibility of providing semantic feedback on a partially parsed file for your users are interesting.
 
 Other improvements to the parsers:
-* Two bugs related to nullables inside regular expressions were solved
+* Two bugs related to nullables inside regular expressions were solved.
 * The `@<column>` constraint in grammar rules was fixed.
 
 ### Fast and Consistent Configuration via Maven's `pom.xml`
 
-> *warning* the way Rascal is configured is gradually migrating from using `RASCAL.MF` to using `pom.xml`. Dependencies (Java, Rascal or otherwise) already come from a `pom.xml` file's `<dependencies>` list. Every project should have one, with at least a dependency on the Rascal project itself.
+> *warning* The way Rascal is configured is gradually migrating from using `RASCAL.MF` to using `pom.xml`. Dependencies (Java, Rascal or otherwise) already come from a `pom.xml` file's `<dependencies>` list. Every project should have one, with at least a dependency on the Rascal project itself.
 
 * `Require-Libraries` in `RASCAL.MF` is no longer in use. You will be warned by the IDE about this.
 * The interpreter is now also configured by `pom.xml`, just like the compiler. `Sources` still come from `RASCAL.MF` for the interpreter, but not for the checker and the compiler. For now you have to keep `RASCAL.MF` and `pom.xml` in line w.r.t. the configuration of the local source folders.
@@ -94,12 +94,15 @@ to the `mvn://` scheme also enables debug-stepping through library code with the
 
 ### REPL/Console improvements
 
-* The REPL consistently prints what its configuration is (versions, source path, classpath, runtime environment, standard library)
-* The REPL was re-implemented from jline2 to **jline3**; with important usability enhancements among which _multiline editing_
-* The textual progress bar and printing to stderr was improved radically (sometimes prints were lost), also due to the upgrade to jline3
+* The REPL consistently prints what its configuration is (versions, source path, classpath, runtime environment, standard library).
+* The REPL was re-implemented from jline2 to **jline3**; with important usability enhancements among which _multiline editing_.
+* The textual progress bar and printing to stderr was improved radically (sometimes prints were lost), also due to the upgrade to jline3.
 * The REPL starts _much_ faster, due to a re-implementation of the Maven features for acquiring the exact locations of dependencies.
-* Module reloading is faster and more accurate on macOS due to the new File Watches (see below)
-* The `:set` options grammar was extended with optional `;`'s and also further implemented
+* Module reloading is faster and more accurate on macOS due to the new File Watches (see below).
+* Automatically reloading a module is always announced via an info message.
+* Automatic reloading now works for (extended) modules with errors.
+* Loading of modules in cycles has been improved so no definitions or messages from imported are lost anymore.
+* The `:set` options grammar was extended with optional `;`'s and also further implemented.
 * All other `:` commands are now implemented. See `:help` for instructions.
 * You can now `:undeclare` functions and variables without having to restart the REPL, for example.
 * All `:` commands accept accidentally typed `;` semicolons at the end.
@@ -143,7 +146,7 @@ To increase cohesion and lower coupling between the `rascal` project and the `ra
 core features of rascal-lsp are being moved into the rascal project. This is ongoing. One of the goals
 is to be able to run any rascal version with the VS Code extension, depending on a project's dependency
 on Rascal rather than the extension's dependency on rascal.
-This will also facilitate new LSP client (other editors than VScode) to connect to Rascal's LSP,
+This will also facilitate new LSP client (other editors than VS Code) to connect to Rascal's LSP,
 including the advanced terminal support and loading LSP extensions for DSLs.
 Also it lowers our maintenance costs and increases the speed of our release cycles.
 
@@ -151,6 +154,15 @@ Also it lowers our maintenance costs and increases the speed of our release cycl
 * Several core infrastructure features of the Language Service Protocol server for Rascal (and DSLs written in Rascal) moved along with it.
 For example: mapping UTF16 characters (LSP editors) to UTF32 (Rascal parsers) and back.
 * the REPL extensions in VS Code (such as automatic reloading of modules) got moved to the generic rascal REPL.
+
+### Debugger improvements
+
+* Show all variables with subtype of `Tree` as trees in variables view.
+* Show symbol constructor argument names in variables view.
+* Fix issues with keyword parameter value computation.
+* Refactored and fixed the computation of debug step scopes.
+* Changed the behavior of step-over for block statements to step over the condition, into the body.
+* Breakpoint suspension is now global, which means that step-over will not skip breakpoints deeper in statements anymore.
 
 ### Type checker improvements
 
@@ -171,6 +183,7 @@ change, and what kind of action is required from a client depending on the kind 
 * Character classes are now fully supported, in line with the semantics of the interpreter where `char(10)` has the dynamic type `[\n]`. The checker now assumes any `char(_)` term has type `![] + [\0]`. Subtyping for character classes is subclassing, `lub` is class union and `glb` is class intersection.
 * Any type like `tuple[int, void]` is considered equivalent to `void` in _all circumstances_ (also as return types). Since tuple instances with void fields do not exist, any such type is "void" of values. The canonical type that represents the empty set of values is `void`. The same holds for function type parameters: `int (void, int)` is equivalent to `void` for the same reason. Functions with `void` parameters do not exist in Rascal, hence such type terms are canonically reduced to `void`. This reduction to one simple case is essential for downstream analyses --- for example, the static checking of assignments and return values (where `void` is treated exceptionally). Another example is the semantics of dynamic dispatch where a `void` return type produced by the dynamic instantiation of type variables will lead to overload application failure (`CallFailed`) and/or backtracking.
 * The implementation of the extend feature as well as the related overloading resolution were overhauled completely.
+* Fixed propagation of outdated information for downstream extended modules.
 
 ### Tutor improvements
 
@@ -252,8 +265,13 @@ large files can now already be received and consumed by the client, in parallel,
 ### Other Rascal Interpreter changes
 
 * Throwing and catching `StackOverflow` and `OutOfMemory` is possible again, due to not triggering `OutOfMemory` or `StackOverflow` during the handling of these exceptions.
+* Rascal IO exceptions have been improved to include much more information, to clarify what caused them to be thrown.
 * The `visit` statement now _always_ memoizes `amb` clusters; this brings down the worst-case complexity of a visit with nested ambiguity to polynomial numbers (instead of the previous exponential amounts of nested combinations).
 * Duplicate overloads, present due to the exact same functions being extended from different directions in the extend graph, were eliminated. This greatly affects the efficiency of functions with only a few overloads, when the high count was caused by "diamond-shaped" extend graphs. Otherwise it doesn't do much for efficiency.
+
+### What happened to 0.41.0 and 0.41.1?
+
+We previously released 0.41.0 and 0.41.1. Since they still contained some issues, we did not release them as part of any Rascal tools (e.g. the VS Code extension). If your project depends on one of those Rascal versions, we urge you to update to 0.41.2.
 
 ### Merged Pull Requests since version 0.40.0
 
@@ -446,6 +464,51 @@ contributing to Rascal then we'd use the "pull request" model together like this
 * [#2406](https://github.com/usethesource/rascal/pull/2406) - Removing extend cycle
 * [#2393](https://github.com/usethesource/rascal/pull/2393) - Switching to release of rascal that includes the new typechecker changes
 * [#2411](https://github.com/usethesource/rascal/pull/2411) - Fixed type error
+* [#2518](https://github.com/usethesource/rascal/pull/2518) - fixes #2513 by splitting name tags between vars and funcs
+* [#2517](https://github.com/usethesource/rascal/pull/2517) - Remove warnings and infos from packaged TPLs
+* [#2520](https://github.com/usethesource/rascal/pull/2520) - Implemented streaming base64 translation functions
+* [#2524](https://github.com/usethesource/rascal/pull/2524) - Use latest vallang (RC20)
+* [#2507](https://github.com/usethesource/rascal/pull/2507) - Remote IDE services
+* [#2511](https://github.com/usethesource/rascal/pull/2511) - fixes another cause of #2497
+* [#2526](https://github.com/usethesource/rascal/pull/2526) - Always print a message if we automatically reload a module
+* [#2527](https://github.com/usethesource/rascal/pull/2527) - Remote IDEServices - small updates
+* [#2530](https://github.com/usethesource/rascal/pull/2530) - added missing conversion of list[loc] to OS paths separated by File.pathSeparator
+* [#2531](https://github.com/usethesource/rascal/pull/2531) - Using latest version of typepal
+* [#2532](https://github.com/usethesource/rascal/pull/2532) - refactored the implementation of the right debug step scopes to the interpreter design pattern and added some more special cases
+* [#2539](https://github.com/usethesource/rascal/pull/2539) - Fixed minor type isues
+* [#2521](https://github.com/usethesource/rascal/pull/2521) - Remove unused reflect tag on JDBC
+* [#2529](https://github.com/usethesource/rascal/pull/2529) - Change the behaviour of Step Over for For/While/Switch/Visit
+* [#2528](https://github.com/usethesource/rascal/pull/2528) - Fix/Allow all tree-like variable to be displayed as tree in debugger
+* [#2516](https://github.com/usethesource/rascal/pull/2516) - Show more details in case of an IO exception
+* [#2505](https://github.com/usethesource/rascal/pull/2505) - Make sure we never share lists and properly clear a root environment cache on reset
+* [#2502](https://github.com/usethesource/rascal/pull/2502) - fixed problem in extending common keyword parameter defaults; they would overwrite each other if for the same type but from a different module
+* [#2486](https://github.com/usethesource/rascal/pull/2486) - Replaced problematic location
+* [#2483](https://github.com/usethesource/rascal/pull/2483) - Fix/avoid-module-loc-conflicts
+* [#2473](https://github.com/usethesource/rascal/pull/2473) - fix/save-tpl-on-error
+* [#2460](https://github.com/usethesource/rascal/pull/2460) - Fixed check for "normal" (non-error) ambiguities after error recovery
+* [#2444](https://github.com/usethesource/rascal/pull/2444) - Improve ux of parse trees in Variables view during debugging
+* [#2446](https://github.com/usethesource/rascal/pull/2446) - Ignore breakpoints in removed modules
+* [#2438](https://github.com/usethesource/rascal/pull/2438) - Streaming issue in webserver and repl content server
+* [#2427](https://github.com/usethesource/rascal/pull/2427) - Lowered validation level as we only construct the classpath and are not building
+* [#2422](https://github.com/usethesource/rascal/pull/2422) - Handle IO and parse errors in module with breakpoint
+* [#2416](https://github.com/usethesource/rascal/pull/2416) - Fix issue where a varargs match throws an ArrayIndexOutOfBounds exception
+* [#2405](https://github.com/usethesource/rascal/pull/2405) - Gradually improving the reporting of incompatible binary libraries
+* [#2550](https://github.com/usethesource/rascal/pull/2550) - Fix missing port registering for debugger
+* [#2392](https://github.com/usethesource/rascal/pull/2392) - improving handling of extend cycles and reloading (extended) modules with (temporary) errors
+* [#2542](https://github.com/usethesource/rascal/pull/2542) - Always test that the current typechecker can type check the standard library of Rascal
+* [#2555](https://github.com/usethesource/rascal/pull/2555) - Use daemon threads to prevent blocking shutdown
+* [#2552](https://github.com/usethesource/rascal/pull/2552) - Add the callerEnvironment as Scope in default parameter computation
+* [#2560](https://github.com/usethesource/rascal/pull/2560) - Fix broken links caused by removing features only used in rascal-website
+* [#2561](https://github.com/usethesource/rascal/pull/2561) - Fix dozens of doc compilation errors due to persistent module load errors
+* [#2564](https://github.com/usethesource/rascal/pull/2564) - Better change detection for extend
+* [#2566](https://github.com/usethesource/rascal/pull/2566) - Missing `ModuleStatus` propagation
+* [#2565](https://github.com/usethesource/rascal/pull/2565) - Fix various errors in integration tests
+* [#2557](https://github.com/usethesource/rascal/pull/2557) - Added missing verbose flag to prevent Maven plugin from crashing if it is set
+* [#2540](https://github.com/usethesource/rascal/pull/2540) - Add symbol constructor args name on tree view
+* [#2559](https://github.com/usethesource/rascal/pull/2559) - Classloader concurrency
+* [#2567](https://github.com/usethesource/rascal/pull/2567) - Removed cycle reported in #2563
+* [#2568](https://github.com/usethesource/rascal/pull/2568) - Fixed various type errors
+* [#2571](https://github.com/usethesource/rascal/pull/2571) - Make breakpoint suspension global
 * [vallang #287](https://github.com/usethesource/vallang/pull/287) - fix issue #286 with tests
 * [vallang #288](https://github.com/usethesource/vallang/pull/288) - Increase performance of IString Readers for the `read(CharBuffer)` overload
 * [vallang #289](https://github.com/usethesource/vallang/pull/289) - Added support for writing formfeed and backspace escaped characters
@@ -642,3 +705,26 @@ beta testing new features.
 * [#2390](https://github.com/usethesource/rascal/issues/2390) - When module loading fails due to a cyclic extend, the current module is not cleaned up and left as a "zombie"
 * [#2388](https://github.com/usethesource/rascal/issues/2388) - Extend cycle detection can be spoofed by confusing imports halfway
 * [#2407](https://github.com/usethesource/rascal/issues/2407) - Fix import/extend cycle in checker that triggers undefined interpreter behavior
+* [#2394](https://github.com/usethesource/rascal/issues/2394) - Remove messages during tpl packaging
+* [#2513](https://github.com/usethesource/rascal/issues/2513) - 'Undeclared variable' error on use of declared constructor
+* [#2515](https://github.com/usethesource/rascal/issues/2515) - Translate java IO exceptions to better rascal IO exceptions
+* [#2497](https://github.com/usethesource/rascal/issues/2497) - Name in default expression not found although it is defined
+* [#2481](https://github.com/usethesource/rascal/issues/2481) - `MalFormedURI` exception when backslashes occur in qualified module names (RC70)
+* [#2482](https://github.com/usethesource/rascal/issues/2482) - Spurious "Conflicting module locations found" error (RC72)
+* [#2462](https://github.com/usethesource/rascal/issues/2462) - Self import error from std lib
+* [#2464](https://github.com/usethesource/rascal/issues/2464) - TPL not written when module has static errors
+* [#2466](https://github.com/usethesource/rascal/issues/2466) - Imprecise error message "module name is ambiguous"
+* [#2465](https://github.com/usethesource/rascal/issues/2465) - mvn, jar and zip schemes do not fully load module texts anymore if called from rascal-lsp
+* [#2461](https://github.com/usethesource/rascal/issues/2461) - REPL: Strange characters when pressing backspace
+* [#2459](https://github.com/usethesource/rascal/issues/2459) - NPE in error recovery disambiguation
+* [#2443](https://github.com/usethesource/rascal/issues/2443) - Debug variable hover how shows appl/prod tree instead of more readable yield `(Statement) if (bla) ...`
+* [#2445](https://github.com/usethesource/rascal/issues/2445) - Warnings after turning on debug mode
+* [#2438](https://github.com/usethesource/rascal/issues/2437) - String streamer in webserver and REPLcontentServer fail on large output
+* [#2420](https://github.com/usethesource/rascal/issues/2420) - Unexpected errors/warning when starting a Rascal console
+* [#2421](https://github.com/usethesource/rascal/issues/2421) - Turning on debug mode causes stack dump, but debugger stays working
+* [#2415](https://github.com/usethesource/rascal/issues/2415) - Interpreter crashes when calling a varargs functions with too few arguments
+* [#2379](https://github.com/usethesource/rascal/issues/2379) - `ArrayIndexOutOfBoundException` from `vallang` at constructor pattern match
+* [#2397](https://github.com/usethesource/rascal/issues/2397) - Importing a typepal module makes the type checker bail out silently
+* [#2562](https://github.com/usethesource/rascal/issues/2562) - Unexpected "Remove code clone" error
+* [#2563](https://github.com/usethesource/rascal/issues/2563) - ATypeTest creates a cycle that breaks all following tests
+* [#2519](https://github.com/usethesource/rascal/issues/2519) - [documentation error] declarations != relations
