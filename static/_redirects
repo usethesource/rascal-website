@@ -19,3 +19,12 @@ https://www.rascal-mpl.org/docs/RunTimeErrors/* https://www.rascalmpl.org/docs/R
 
 /js/p.js https://plausible.usethesource.io/js/script.js 200
 /p/event https://plausible.usethesource.io/api/event 200
+
+https://www.rascal-mpl.org/docs/Packages/Clair/* https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.clair/:splat 301!
+https://www.rascal-mpl.org/docs/Packages/FlyBytes/* https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.flybytes/:splat 301!
+https://www.rascal-mpl.org/docs/Packages/Typepal/* https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.typepal/:splat 301!
+https://www.rascal-mpl.org/docs/Packages/RascalLsp/* https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.rascal-lsp/:splat 301!
+https://www.rascal-mpl.org/docs/Packages/SalixCore/* https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.salix-core/:splat 301!
+https://www.rascal-mpl.org/docs/Packages/SalixContrib/* https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.salix-contrib/:splat 301!
+https://www.rascal-mpl.org/docs/Packages/SalixContrib/* https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.salix-contrib/:splat 301!
+https://www.rascal-mpl.org/docs/Packages/PhpAnalysis/* https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.php-analysis/:splat 301!
