@@ -35,6 +35,7 @@
         <drambiguity.version>0.3.8</drambiguity.version>
         <java-air.version>1.0.1</java-air.version>
         <rascal-lsp.version>2.22.0</rascal-lsp.version>
+        <rascal-lucene.version>0.1.0</rascal-lucene.version>
         <!--php-analysis.version>0.2.4</php-analysis.version> -->
         <!--<python-air.version>0.0.11</python-air.version> -->
     </properties>
@@ -166,11 +167,19 @@
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
-                                </artifactItem> -->
+                                </artifactItem>  -->
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>rascal-lucene</artifactId>
+                                    <version>${rascal-lucene.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem>
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>java-air</artifactId>
-                                    <version>${java-version}</version>
+                                    <version>${java-air.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
@@ -300,6 +309,11 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>drambiguity</artifactId>
             <version>${drambiguity.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>rascal-lucene</artifactId>
+            <version>${rascal-lucene.version}</version>
         </dependency>
         <!--<dependency>
             <groupId>org.rascalmpl</groupId>

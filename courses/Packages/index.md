@@ -56,3 +56,4 @@ The currently available packages are grouped in two categories: language support
 | Rascal LSP   | [rascal-lsp](/docs/Packages/org.rascalmpl.rascal-lsp/) | LSP for Rascal and LSP generator for DSLs in Rascal |
 | Typepal      | [typepal](/docs/Packages/org.rascalmpl.typepal/) | Generic name and type analysis framework |
 | Rascal Tutor | rascal-tutor | Rascal source code documenter and manual authoring tool, documentation not released yet due to changes in tutor infrastructure | 
+| Rascal Lucene | [rascal-lucene](/docs/Packages/org.rascalmpl.rascal-lucene/) | Two-way mapping between Rascal and the Apache Lucene search and indexing library |
