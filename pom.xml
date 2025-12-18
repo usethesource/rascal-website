@@ -179,7 +179,7 @@
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>java-air</artifactId>
-                                    <version>${java-version}</version>
+                                    <version>${java-air.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
