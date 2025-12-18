@@ -167,7 +167,7 @@
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
-                                </artifactItem> -->
+                                </artifactItem>  -->
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>rascal-lucene</artifactId>
