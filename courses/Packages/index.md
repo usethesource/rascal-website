@@ -8,7 +8,31 @@ If you would like to share your Rascal library or tool with the community, pleas
 with authentication/authorization for publication on the Maven repository and jumping through minor hoops like running the automated tests and documentation generation. The community's values and guidelines can be found [here](https://www.usethesource.io/about).
 :::
 
-### What is the Rascal Package Directory?
+The currently available Rascal packages are grouped in two categories: language support and generic libraries.
+
+### Language Support
+
+| Language name | Package | Note |
+| ------------- | ------- | ----- |
+| C and C++     | [clair](/docs/Packages/org.rascalmpl.clair) | Based on Eclipse CDT |
+| Java          | [java-air](/docs/Packages/org.rascalmpl.java-air) | Based on Eclipse JDT (used to be part of standard library) |
+| JVM bytecode  | [flybytes](/docs/Packages/org.rascalmpl.flybytes) | Forward and Reverse |
+| PHP           | php-analysis | Currently not building will be released as soon as possible |
+| Python        | python-air | Currently not building will be released as soon as possible |
+
+### Generic Libraries
+
+| Library Name | Package | Note |
+| ------------ | ------- | ----- |
+| Dr Ambiguity | drambiguity | Interactive UI based on Salix for detection, diagnostics and fixing of ambiguity context-free grammars. Currently documentation is not building, will be released as soon as possible |
+| Rascal Lucene | [rascal-lucene](/docs/Packages/org.rascalmpl.rascal-lucene/) | Two-way mapping between Rascal and the Apache Lucene search and indexing library |
+| Salix        | [salix-core](/docs/Packages/org.rascalmpl.salix-core) | User interface framework for Rascal |
+| Salix Contrib | [salix-contrib](/docs/Packages/org.rascalmpl.salix-contrib) | Useful extensions for Salix |
+| Rascal GIT   | [rascal-git](/docs/Packages/edu.appstate.cs.rascal-git/) | Accessing GIT from Rascal |
+| Rascal LSP   | [rascal-lsp](/docs/Packages/org.rascalmpl.rascal-lsp/) | LSP for Rascal and LSP generator for DSLs in Rascal |
+| Typepal      | [typepal](/docs/Packages/org.rascalmpl.typepal/) | Generic name and type analysis framework |
+
+### More info: what is the Rascal Package Directory?
 
 The Package Directory provides an overview of libraries, tools and frameworks written in Rascal (and other languages) which are:
 * contributed by the community
@@ -32,27 +56,3 @@ The release and deployment mechanisms that are in place guarantee that:
 :::info
 If a package was not released (yet) after a major or minor release of `rascal`, then it may still work with the newest release, but this is not guaranteed. Packages owners are reminded to upgrade and release by the UseTheSource community.
 :::
-
-The currently available packages are grouped in two categories: language support, and generic libraries.
-
-### Language Support
-
-| Language name | Package | Note |
-| ------------- | ------- | ----- |
-| C and C++     | [clair](/docs/Packages/org.rascalmpl.clair) | Based on Eclipse CDT |
-| Java          | [java-air](/docs/Packages/org.rascalmpl.java-air) | Based on Eclipse JDT (used to be part of standard library) |
-| JVM bytecode  | [flybytes](/docs/Packages/org.rascalmpl.flybytes) | Forward and Reverse |
-| PHP           | php-analysis | Currently not building will be released as soon as possible |
-| Python        | python-air | Currently not building will be released as soon as possible |
-
-### Generic Libraries
-
-| Library Name | Package | Note |
-| ------------ | ------- | ----- |
-| Dr Ambiguity | drambiguity | Interactive UI based on Salix for detection, diagnostics and fixing of ambiguity context-free grammars. Currently documentation is not building, will be released as soon as possible |
-| Rascal Lucene | [rascal-lucene](/docs/Packages/org.rascalmpl.rascal-lucene/) | Two-way mapping between Rascal and the Apache Lucene search and indexing library |
-| Salix        | [salix-core](/docs/Packages/org.rascalmpl.salix-core) | User interface framework for Rascal |
-| Salix Contrib | [salix-contrib](/docs/Packages/org.rascalmpl.salix-contrib) | Useful extensions for Salix |
-| Rascal GIT   | [rascal-git](/docs/Packages/edu.appstate.cs.rascal-git/) | Accessing GIT from Rascal |
-| Rascal LSP   | [rascal-lsp](/docs/Packages/org.rascalmpl.rascal-lsp/) | LSP for Rascal and LSP generator for DSLs in Rascal |
-| Typepal      | [typepal](/docs/Packages/org.rascalmpl.typepal/) | Generic name and type analysis framework |
