@@ -47,16 +47,16 @@ The slice parameters `begin`, `end`, and `step` are determined as follows:
 
 *  _Exp~2~_:
 **  If _Exp~2~_ is absent, then `begin = 0`.
-**  Otherwise, if _N~2~_ >= 0 then `begin = min(N~2~, Len)` else `begin = max(N~2~ + Len, 0)`. 
+**  Otherwise, if _N~2~_ >= 0 then `begin = min(N~2~, Len-1)` else `begin = max(N~2~ + Len, 0)`. 
 *  _Exp~4~_:
 **  If _Exp~4~_ is absent, then `end = Len`.
-**  Otherwise, if _N~4~_ >= 0, then `end = min(N~4~, Len-1)` else `end = max(N~4~ + Len, 0)`.
+**  Otherwise, if _N~4~_ >= 0, then `end = min(N~4~, Len)` else `end = max(N~4~ + Len, 0)`.
 *  _Exp~3~_:
 **  If _Exp~3~_ is absent, then if `begin < end` then `step = 1` else `step = -1`.
 **  Otherwise, if `begin < end`, then `step = N~3~ - begin` else `step = begin - N~3~`.
 
 
-Now, the constraints `0 <= begin < Len` and `0 < end <= Len` should hold,
+Now, the constraints `0 <= begin < Len` and `0 <= end <= Len` should hold,
 otherwise the exception `IndexOutOfBounds` is thrown.
 
 The slice consists of the elements `L[begin]`, `L[begin+step]`, `L[end - step]`.
