@@ -4,9 +4,34 @@ sidebar_position: 10
 ---
 
 :::tip
-If you would like to share your Rascal library or tool with the community, please [open a pull request](https://github.com/usethesource/rascal/pulls) to add your project to the pom.xml. Currently we require to make a "fork" to help
-with authentication/authorization for publication on the Maven repository and jumping through minor hoops like running the automated tests and documentation generation. The community's values and guidelines can be found [here](https://www.usethesource.io/about).
-:::
+You can ((AddYourProjectToThePackageDirectory)).
+::
+
+### The packages
+
+### Language Support
+
+| Language name | Package | Note |
+| ------------- | ------- | ----- |
+| C and C++     | [clair](/docs/Packages/org.rascalmpl.clair) | |
+| Java          | [java-air](/docs/Packages/org.rascalmpl.java-air) | factored out of the standard library recently |
+| PHP           | [php-analysis](/docs/Packages/PhpAnalysis) | |
+| Python        | [python-air](/docs/Packages/PythonAir) | |
+| JVM bytecode  | [flybytes](/docs/Packages/Flybytes) | Forward and Reverse | 
+
+### Libraries
+
+| Salix        | [salix-core](/docs/Packages/SalixCore) | User interface framework for Rascal |
+| Salix Contrib | [salix-contrib](/docs/Packages/SalixContrib) | Useful extensions for Salix |
+| Rascal GIT   | [rascal-git](/docs/Packages/RascalGit) | Accessing GIT from Rascal |
+| Rascal LSP   | [rascal-lsp](/docs/Packages/RascalLsp) | LSP for Rascal and LSP generator for DSLs in Rascal |
+| Typepal      | [typepal](/docs/Packages/Typepal) | Generic name and type analysis framework; to be factored in to the standard library soon |
+
+### Tools
+
+| Library Name | Package | Note |
+| ------------ | ------- | ----- |
+| Dr Ambiguity | [drambiguity](/docs/Packages/DrAmbiguity) | Interactive UI for detection, diagnostics and fixing of ambiguity context-free grammars. |
 
 The currently available Rascal packages are grouped in two categories: language support and generic libraries.
 

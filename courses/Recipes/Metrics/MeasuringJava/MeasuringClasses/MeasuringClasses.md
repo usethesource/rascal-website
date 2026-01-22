@@ -9,8 +9,7 @@ A typical example of how to use M3 to analyze Java classes.
 #### Examples
 
 
-First we import the basic data types for representing Java. The model is called _M3_, and its definition is split acros a generic
-language independent module called ((analysis::m3::Core)) and a Java specific part called ((lang::java::m3::AST)). Have a look at the documentation 
+First we import the basic data types for representing Java. The model is called _M3_, and its definition is split acros a generic language independent module called ((analysis::m3::Core)) and a Java specific part called ((lang::java::m3::AST)). Have a look at the documentation 
 of these modules later. For now we will go through using them in a few examples.
 
 ```rascal-prepare
