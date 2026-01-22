@@ -22,6 +22,8 @@ sidebar_position: 10
 
 ### Libraries
 
+| Library name | Package | Note |
+| -----------  | ------- | ---- |
 | Salix        | [salix-core](/docs/Packages/org.rascalmpl.salix-core) | User interface framework for Rascal |
 | Salix Contrib | [salix-contrib](/docs/Packages/org.rascalmpl.salix-contrib) | Useful extensions for Salix |
 | Rascal GIT   | [rascal-git](/docs/Packages/edu.appstate.cs.rascal-git) | Accessing GIT from Rascal |
