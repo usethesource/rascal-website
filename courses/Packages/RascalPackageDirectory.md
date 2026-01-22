@@ -24,7 +24,7 @@ Each package is encapsulated in a `jar` file, is deployed in the [UseTheSource M
 </repositories>
 ```
 
-All packages always come with the following information, directly available under <http://www.rascalmpl.org/Packages/>:
+All packages always come with the following information, directly available under <http://www.rascalmpl.org/docs/Packages/>:
 * License information.
 * Funding information.
 * Citation information.
