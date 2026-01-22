@@ -1,5 +1,5 @@
 ---
-title: Package Directory
+title: Adding your own package
 sidebar_position: 10
 ---
 
