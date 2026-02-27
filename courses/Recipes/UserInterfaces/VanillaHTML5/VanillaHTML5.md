@@ -24,9 +24,9 @@ write a server function:
 
 ```rascal-shell
 import Content;
-// A server in Rascal terms is a function  that takes an HTTP ((Content-Request)) and produces an HTTP ((Content-Response)):
-Response myWebServer(Request q) = plain("Hello \<b\>World\<b\>");
-// Let's test the server locally to see what the `plain` utility function produces as ((Content-Response)):
+// A server in Rascal terms is a function  that takes an HTTP Request and produces an HTTP Response:
+Response myWebServer(Request q) = response("Hello \<b\>World\<b\>");
+// Let's test the server locally to see what the `plain` utility function produces as Response:
 myWebServer(get("index.html"))
 // and the REPL will spin-up an actual server by itself like this:
 content("myServer", myWebServer)
@@ -60,7 +60,7 @@ plainText(generateList(words))
 html(generateList(words))
 ```
  
-**Generating abstract HTML is done using ((lang::html::AST)) algebraic data-type for HTML. For example:
+**Generating abstract HTML** is done using ((lang::html::AST)) algebraic data-type for HTML. For example:
 ```rascal-shell,continue
 import lang::html::AST;
 import lang::html::IO;
