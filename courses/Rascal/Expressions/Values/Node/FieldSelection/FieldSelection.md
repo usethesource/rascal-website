@@ -50,8 +50,8 @@ n.height
 #### Benefits
 
 * untyped `node` values can be used to easily import external structured (e.g with fields) data sources without first having to validate them.
-* ((FieldSelection)) also works for [Constructors]((Constructor-FieldSelection)), [Relations]((Relation-FieldSelection)) and [Tuples]((Tuple-FieldSelection)), and the builtin fields of ((Location)) and ((DateTime)). All with similar syntax and semantics. 
+* Field selection also works for [Constructors]((Constructor-FieldSelection)), [Relations]((Relation-FieldSelection)) and [Tuples]((Tuple-FieldSelection)), and the builtin fields of ((Location)) and ((DateTime)). All with similar syntax and semantics. 
  
 #### Pitfalls
 
-* the static return type of any keyword field on `node` is always `value`. If you need more accurate types, consider defining an ((AlgebraicDatatype)) and add keyword parameters to ((Constructor))s.
+* the static return type of any keyword field on `node` is always `value`. If you need more accurate types, consider defining an ((AlgebraicDataType)) and add keyword parameters to ((Values-Constructor))s.
