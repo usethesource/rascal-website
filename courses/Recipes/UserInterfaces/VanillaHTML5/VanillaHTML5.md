@@ -66,7 +66,7 @@ import lang::html::AST;
 import lang::html::IO;
 ```
 
-```rascal-commands,continue
+```rascal-shell,continue
 HTMLElement generateUL(list[str] words) = ul([li([text(w)]) | w <- words]);
 // and we can see the generated HTML
 plainText(writeHTMLString(generateUL(words)))
