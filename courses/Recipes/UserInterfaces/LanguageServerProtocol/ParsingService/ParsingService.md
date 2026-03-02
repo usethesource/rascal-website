@@ -9,7 +9,7 @@ A parser is the first and foremost thing you need for constructing an LSP server
 
 #### Examples
 
-Type in a ((((Rascal:SyntaxDefinition)))), also known as a context-free grammar, for your language.
+Type in a ((Rascal:SyntaxDefinition)), also known as a context-free grammar, for your language.
 
 Here is an example that defines a very small programming language called "Pico". We will use
 this language throughout all recipes for the ((LanguageServerProtocol)).
