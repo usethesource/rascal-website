@@ -46,23 +46,31 @@ start[Program] parsePicoWithRecovery(str contents, loc origin)
 Now syntax highlighting will indicate which part of the file has been recognized and
 which part of the file has not. The parse errors will still appear in the Diagnostics view.
 
+
+```rascal-prepare
+import ParseTree;
+import demo::lang::Pico::Syntax;
+start[Program] parsePico(str contents, loc origin) 
+    = parse(#start[Program], contents, origin);
+```
+
 It is always a good idea to test your parser in the terminal:
 ```rascal-shell,continue
-parsePico("begin a: natural; a := 42 end", |demo:///|)
+parsePico("begin declare a: natural; a := 42 end", |demo:///|)
 ```
 And to find out what a parse error looks like:
 ```rascal-shell,continue,errors
-parsePico("begin a: natural; a = 42 end", |demo:///|)
+parsePico("begin declare a: natural; a = 42 end", |demo:///|)
 ```
 
 Or you could write a test function for it, for future reference:
 ```rascal-commands,continue
 test bool testPicoParser() {
-    return start[Program] _ := parsePico("begin a: natural; a := 42 end", |demo:///|);
+    return start[Program] _ := parsePico("begin declare a: natural; a := 42 end", |demo:///|);
 }
 test bool testErrorPicoParser() {
     try {
-         parsePico("begin a: natural; a = 4$2 end", |demo:///|);
+         parsePico("begin declare a: natural; a = 4$2 end", |demo:///|);
          return false;
     }
     catch ParseError(_): {
