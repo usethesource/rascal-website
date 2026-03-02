@@ -24,7 +24,7 @@ import ParseTree;
 ```
 
 and then you can write your own parser function that wraps the `#start[Program]` non-terminal:
-```rascal-commands
+```rascal-commands,continue
 import demo::lang::Pico::Syntax;
 start[Program] parsePico(str contents, loc origin) 
     = parse(#start[Program], contents, origin);
@@ -38,6 +38,7 @@ syntax highlighting only works if there is no parse error. To help your users a 
 activate parse error recovery:
 
 ```rascal-commands
+import ParseTree;
 import demo::lang::Pico::Syntax;
 start[Program] parsePico(str contents, loc origin) 
     = parse(#start[Program], contents, origin, allowRecovery=true);
@@ -46,25 +47,25 @@ Now syntax highlighting will indicate which part of the file has been recognized
 which part of the file has not. The parse errors will still appear in the Diagnostics view.
 
 It is always a good idea to test your parser in the terminal:
-```rascal-shell
+```rascal-shell,continue
 parsePico("begin a: natural; a := 42 end", |demo:///|)
 ```
 And to find out what a parse error looks like:
-```rascal-shell,errors
-parsePico("begin a: natural; a := 4$2 end", |demo:///|)
+```rascal-shell,continue,errors
+parsePico("begin a: natural; a = 42 end", |demo:///|)
 ```
 
 Or you could write a test function for it, for future reference:
-```rascal-commands
+```rascal-commands,continue
 test bool testPicoParser() {
     return start[Program] _ := parsePico("begin a: natural; a := 42 end", |demo:///|);
 }
 test bool testErrorPicoParser() {
     try {
-         parsePico("begin a: natural; a := 4$2 end", |demo:///|);
+         parsePico("begin a: natural; a = 4$2 end", |demo:///|);
          return false;
     }
-    catch ParseError(_):
+    catch ParseError(_): {
         return true;
     }
 }
@@ -77,3 +78,9 @@ run your own language server.
 
 
 
+#### Benefits
+
+* you can always test any service function in the terminal. This is highly recommended because simple errors
+and output can sometimes be hard to find in the IDE.
+* you can always write Rascal test functions to add to the stability of your LSP services.
+* the ((ParseTree-Tree))s produced by your ((ParsingService)) will be the input of all other services later.
