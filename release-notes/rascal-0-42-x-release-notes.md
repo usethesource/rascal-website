@@ -26,7 +26,7 @@ for the sake of security and simplicity.
 
 > *warning* The way Rascal is configured is gradually migrating from using `RASCAL.MF` to using `pom.xml`. Dependencies (Java, Rascal or otherwise) already come from a `pom.xml` file's `<dependencies>` list. Every project should have one, with at least a dependency on the Rascal project itself.
 
-* The `mvn package` phase now uses a dedicated directory to rewrite locations in the JAR, preventing issues when packaging a project in active development in a local directory (i.e. not on a build server).
+* `mvn package` conflicted with compilation from the IDE (i.e. by saving a changed module), leading to confusing errors when alternating between the two. The package phase now uses a dedicated directory to rewrite locations in the JAR, preventing these issues.
 * Maven now properly resolves sibling project dependencies in multi-module projects.
 
 ### REPL/Console improvements
