@@ -40,7 +40,7 @@ activate parse error recovery:
 ```rascal-commands
 import ParseTree;
 import demo::lang::Pico::Syntax;
-start[Program] parsePico(str contents, loc origin) 
+start[Program] parsePicoWithRecovery(str contents, loc origin) 
     = parse(#start[Program], contents, origin, allowRecovery=true);
 ```
 Now syntax highlighting will indicate which part of the file has been recognized and
