@@ -30,7 +30,7 @@ been checked before publication.
 
 Every Rascal library project also represents one _course_. Each module produces
 one _concept_ and encapsulates what is defined and documented within. In particular
-the [standard library]((Library)) is interesting to browse. The package hierarchy
+the [standard library]((Library:Index)) is interesting to browse. The package hierarchy
 of the library is mapped one-to-one to the concept hierarchy of the corresponding course.
 
 #### Code examples
@@ -44,5 +44,5 @@ Most pages are indexed carefully, for example using the appropriate keywords and
 
 Nevertheless the search box on the website will produce
 results in all courses, like [Help]((GettingHelp)) (this course)
-and [Recipes]((Recipes)) or ((Library)). 
+and [Recipes]((Recipes)) or ((Library:Index)). 
 

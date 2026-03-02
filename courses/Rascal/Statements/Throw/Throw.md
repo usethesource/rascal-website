@@ -53,7 +53,7 @@ if (size(aList) == 3) {
 }
 ```
 
-Here we throw a constructor of ((Exception-RuntimeException)):
+Here we throw a constructor of ((data:Exception-RuntimeException)):
 ```rascal-shell,error
 import Exception;
 // highlight-next-line

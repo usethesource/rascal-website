@@ -53,7 +53,7 @@ public class RunRascalTestModules { }
 
 * <1> selects the test runner (parallel or not)
 * <2> selects the root package to search for modules and tests
-* Then use JUnit configuration in Eclipse, VScode or Maven to activate the tests at the right time.
+* Then use JUnit configuration in Eclipse, VS Code or Maven to activate the tests at the right time.
 * Reporting goes through standard JUnit reporting, so this integrates well with IDEs and continuous integration systems like Jenkins and GitHub Actions. 
 
 

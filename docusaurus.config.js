@@ -14,7 +14,7 @@ const config = {
   url: 'https://www.rascal-mpl.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
   trailingSlash: true,
   favicon: 'images/logo_23/rascal_logo_64px.png',
   organizationName: 'usethesource', // Usually your GitHub org/user name.

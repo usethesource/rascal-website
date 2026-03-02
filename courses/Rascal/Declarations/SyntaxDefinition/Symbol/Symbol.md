@@ -90,7 +90,7 @@ Inline conditions (((Disambiguation))s) can be added to symbols to constrain the
 
 | Disambiguation                             | Description                                                 |
 | --- | --- |
-| `Symbol _`                 | _Symbol_ ends at end of line or end of file                     |
+| `Symbol $`                 | _Symbol_ ends at end of line or end of file                     |
 | `^Symbol`                  | _Symbol_ starts at begin of line                                |
 | `Symbol @ ColumnIndex`   | _Symbol_ starts at certain column index.                        |
 | `Symbol~1~ >> Symbol~2~`   | _Symbol~1~_ must be (directly) followed by _Symbol~2~_            |

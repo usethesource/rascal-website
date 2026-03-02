@@ -8,9 +8,8 @@ import IO;
 remove(|home:///my-project-name|, recursive=true);
 ```
 
-Rascal projects, generally, work the same in all three IDE contexts:
-* Eclipse
-* VScode
+Rascal projects, generally, work the same in all contexts:
+* VS Code
 * Commandline
 
 To create an empty project to get started, follow these instructions:
@@ -24,7 +23,7 @@ newRascalProject(|home:///my-project-name|)
 
 The Eclipse plugin has a "New Project Wizard" you can use as well.
 
-The next step is to import the new project into VScode or Eclipse, or
+The next step is to import the new project into VS Code or Eclipse, or
 to `cd` to the project's root directory. From there on ((RunningRascal))
 with the new project's source and library settings is trivial.
 
@@ -52,7 +51,7 @@ The `pom.xml` file is the basic setup that names the project and defines its dep
 ```
 
 Next to that `RASCAL.MF` is required to configure the development environment for the project. Some
-information from the `pom.xml` is repeated here, because this file is common between Eclipse, VScode and empty commandline projects,
+information from the `pom.xml` is repeated here, because this file is common between Eclipse, VS Code and empty commandline projects,
 and such projects could work with a `pom.xml`:
 
 ```MF

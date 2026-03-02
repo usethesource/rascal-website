@@ -27,4 +27,4 @@ In this post we report on the Rascal release 0.26.x
 
 ## Release 0.25.x 
 
-Release 0.25.x were intermediate releases required to eliminate the old tutor from the rascal package. They never made it into an IDE like VScode or Eclipse and no stable commandline release was distributed either.
+Release 0.25.x were intermediate releases required to eliminate the old tutor from the rascal package. They never made it into an IDE like VS Code or Eclipse and no stable commandline release was distributed either.

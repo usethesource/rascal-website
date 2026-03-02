@@ -20,6 +20,7 @@ These are all schemes that map to locations of files in physical or logical file
 | `home:///<path>` | file-system path relative to where the current user's home directory is |
 | `std:///<path>` | opaque virtual file system that points to the root of the (deployed) Rascal standard library |
 | `memory://<filesystem-name>/<path>` | fast in-memory file system that is transient between runs of the JVM. Guarantees `lastModified` is incremented after every write |
+| `mvn:///<groupId>--<artifactId>--<version>/<in-jar-path>` | Identifies a jar file installed in the `~/.m2` maven repository. The file-system is opaque and not writable. Maven dependencies have to have been downloaded earlier for this scheme to resolve. It does not download dependencies |
 | `jar+<scheme>://<authority>/<jar-path>!/<in-jar-path>` | file-system for what is inside a jar file |
 | `zip+<scheme>://<authority>/<zip-path>!/<in-zip-path>` | file-system for what is insied a zip file |
 | `project://<project-name>/<path>` | opaque file-system that is relative to the root a an IDE project in the current workspace of an IDE. The project must be "open" and active for this to work. |
@@ -28,9 +29,6 @@ These are all schemes that map to locations of files in physical or logical file
 | `https://<host>/<path>?<query>#fragment` | Simply a page on a website. | 
 | `http://<host>/<path>?<query>#fragment` | Simply a page on a website. | 
 | `system:///<path>` | this is the root of the JVM class and resource path for the current JVM |
-| `bundle://<bundle-name>/<path>` | this is an opaque file system into an OSGI bundle (which must be loaded and initialized). Works only in Eclipse. It defers to `bundleresource://` after the bundle instance id has been resolved. |
-| `plugin//<plugin-name>/<path>` | this is an opaque file system into an Eclipse plugin (which must be loaded and initialized). Works only in Eclipse. It defers to `bundle://` after the bundle name is associated with the plugin name. |
-| `bundleresource://<bundle-id>/<path>` | this is an opaque file system into an (unzipped) resource partition of an OSGI bundle (whichmust be loaded and initialized). Works only in Eclipse |
 
 For all of these schemes it is natural to use offset/length and start/end line/column information as described [here]((Values-Location)).
 

@@ -186,7 +186,7 @@ we can define canonicalization functions. The same holds for ((Syntax Definition
 
 This definition implies a default function for t(), f() and neg(B):
 
-```rascal-shell,continue
+```rascal-shell
 data B = t() | f() | neg(B);
 ```
 
