@@ -34,7 +34,7 @@
         <salix-contrib.version>0.2.11</salix-contrib.version>
         <drambiguity.version>0.3.9</drambiguity.version>
         <java-air.version>1.0.2</java-air.version>
-        <rascal-lsp.version>2.23.0</rascal-lsp.version>
+        <rascal-lsp.version>2.22.1</rascal-lsp.version>
         <rascal-lucene.version>0.1.1</rascal-lucene.version>
         <php-analysis.version>0.3.3</php-analysis.version>
         <python-air.version>0.0.12</python-air.version> 
