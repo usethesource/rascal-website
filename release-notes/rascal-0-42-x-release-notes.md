@@ -57,7 +57,7 @@ The 0.42.x series is the **last** release in which the `@deprecated` API of [uti
 * The debugging console now has autocomplete.
 * The debugging console now supports importing modules.
 * Conditional breakpoint support.
-* Some bug fixes where confusing, non-existent locations were shown.
+* Added more accurate location tracking (some non-existent locations were shown before).
 * There is now a fixed "Rascal exceptions" breakpoint. When enabled, the debugger is paused on exceptions.
 * Frame restart support.
 
