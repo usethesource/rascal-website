@@ -15,7 +15,7 @@ Here is an example that defines a very small programming language called "Pico".
 this language throughout all recipes for the ((LanguageServerProtocol)).
 
 ```rascal-include
-lang::pico::syntax::Main
+lang::pico::\syntax::Main
 ```
 
 It's important that you import the `ParseTree` module to be able to call the ((ParseTree-parse)) function:
@@ -25,7 +25,7 @@ import ParseTree;
 
 and then you can write your own parser function that wraps the `#start[Program]` non-terminal:
 ```rascal-commands,continue
-import lang::pico::syntax::Main;
+import lang::pico::\syntax::Main;
 start[Program] parsePico(str contents, loc origin) 
     = parse(#start[Program], contents, origin);
 ```
@@ -39,7 +39,7 @@ activate parse error recovery:
 
 ```rascal-commands
 import ParseTree;
-import lang::pico::syntax::Main;
+import lang::pico::\syntax::Main;
 start[Program] parsePicoWithRecovery(str contents, loc origin) 
     = parse(#start[Program], contents, origin, allowRecovery=true);
 ```
@@ -49,7 +49,7 @@ which part of the file has not. The parse errors will still appear in the Diagno
 
 ```rascal-prepare
 import ParseTree;
-import lang::pico::syntax::Main;
+import lang::pico::\syntax::Main;
 start[Program] parsePico(str contents, loc origin) 
     = parse(#start[Program], contents, origin);
 ```
