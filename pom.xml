@@ -30,8 +30,8 @@
         <rascal-git.version>0.1.18</rascal-git.version>
         <flybytes.version>0.2.11</flybytes.version>
         <typepal.version>0.15.6</typepal.version>
-        <salix-core.version>0.2.10</salix-core.version>
-        <salix-contrib.version>0.2.10</salix-contrib.version>
+        <salix-core.version>0.2.11</salix-core.version>
+        <salix-contrib.version>0.2.11</salix-contrib.version>
         <drambiguity.version>0.3.9</drambiguity.version>
         <java-air.version>1.0.2</java-air.version>
         <rascal-lsp.version>2.23.0</rascal-lsp.version>
