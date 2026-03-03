@@ -1,5 +1,5 @@
 ---
-authors: [thartman]
+authors: [thartman,jurgenvinju]
 title: "Rascal 0.42.x release notes"
 sidebar_position: 86
 ---
@@ -8,23 +8,36 @@ In this post we report on the Rascal release 0.42.x
 
 ## Release 0.42.0 - March, 2026
 
-Welcome to Rascal 0.42.0! <!-- This release comes with great improvements in usability (parse error recovery, loading speed)
-and enormous progress with type-checking and compilation. Numerous additions to the standard library and a _big change_ in the Java language support setup... -->
+Welcome to Rascal 0.42.0! This release fixes many important issues. It is characterized best by an enormous improvement in start-up speed and
+a lot of usability improvements for the debugger.
+
 These release notes are organized by major topics and there is a list of smaller improvements at the end, including a list of linked closed issues and the merged pull requests.
 
-Many, if not most, of the improvements to the Rascal project were both funded and executed by Swat.engineering BV. Thanks!
+Many, if not most, of the improvements to the Rascal project were both funded and executed by Swat.engineering BV. Thanks! Also 
+thanks to Jean-Baptiste Boderlein for the many improvements to the Rascal debugger.
 
-<!-- Let's repeat this warning from the previous release once again. -->
+:::warning
+The new checker will re-calculate and replace all intermediate `.tpl` files in your target folder which have been produced earlier with an older version. So, the first
+check after upgrading to 0.42.x will not be incremental.
+Also, for library dependencies and inter-project dependencies it is important you upgrade to rascal **0.42.x** all _at the same time_. A clean error message
+will be produced if you forget, or definitions will simply not be found because their fully qualified names in the TPL file interfaces have changed in different ways. 
+:::
+
 :::info
-All Eclipse functionality, including the `rascal-eclipse` plugin and the Eclipse IDE Metatooling Platform (IMP a.k.a. `impulse`), was _archived_ last year, after having been deprecated for a long time.
-Everybody is expected to use Rascal now using the VS Code extension, or using the commandline REPL, or from their own LSP clients. With this move to VS Code the `Figure` library (embedded in `rascal-eclipse`)
-is no longer available, until we create a replacement. The pre-existing releases of `rascal-eclipse` and `impulse` will _not_ remain available forever on `usethesource.io`,
-for the sake of security and simplicity.
+All Eclipse functionality, including the `rascal-eclipse` plugin and the Eclipse IDE Metatooling Platform (IMP a.k.a. `impulse`), was _archived_ last year, after having been deprecated for a long time. Everybody is expected to use Rascal now using the VS Code extension, or using the commandline REPL, or from their own LSP clients. With this move to VS Code the `Figure` library (embedded in `rascal-eclipse`) is no longer available, until we create a replacement. The pre-existing releases of `rascal-eclipse` and `impulse` will _not_ remain available forever on `usethesource.io`, for the sake of security and simplicity.
+:::
+
+:::info
+The Java-air project was extracted from the Rascal standard library in version 0.41.x already. Please add a dependency to [java-air](https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.java-air/) if you want to keep using this functionality. 
+:::
+
+:::info
+The 0.42.x series is the **last** release in which the `@deprecated` API of [util::LanguageServer](https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.rascal-lsp/Library/util/LanguageServer/) will be available (corresponds to [rascal-lsp](https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.rascal-lsp) 2.11.x).  Please migrate to the new language service function signatures a.s.a.p. It's quite easy.
 :::
 
 ### Fast and Consistent Configuration via Maven's `pom.xml`
 
-> *warning* The way Rascal is configured is gradually migrating from using `RASCAL.MF` to using `pom.xml`. Dependencies (Java, Rascal or otherwise) already come from a `pom.xml` file's `<dependencies>` list. Every project should have one, with at least a dependency on the Rascal project itself.
+> *warning* The way Rascal is configured is gradually migrating from using `RASCAL.MF` to using `pom.xml`. Dependencies (Java, Rascal or otherwise) already come from a `pom.xml` file's `<dependencies>` list. Every project should have one, with at least a dependency on the Rascal project itself. Only the project name and the source folders for the interpreter still come from `RASCAL.MF`.
 
 * `mvn package` conflicted with compilation from the IDE (i.e. by saving a changed module), leading to confusing errors when alternating between the two. The package phase now uses a dedicated directory to rewrite locations in the JAR, preventing these issues.
 * Maven now properly resolves sibling project dependencies in multi-module projects.
@@ -32,8 +45,10 @@ for the sake of security and simplicity.
 ### REPL/Console improvements
 
 * Reloading modules that were removed since importing (for example when switching branches) crashed the REPL, but is now handled gracefully.
-* Reloading of modules that were `extend`ed on the REPL did not work, but is now fixed.
+* Reloading of modules that were `extend`ed on the REPL did not work. Typing `extend MyModule;` on the REPL now leads to a warning and the semantics of `import MyModule;`.
 * Imports of missing modules are now cleared.
+* NullPointerExceptions due to reloading modules which have been renamed or deleted in the mean time now leads to proper unloading of the old module.
+* Errors detected while importing (missing module file for example) are now linked to the import statement's location, rather than the missing module location.
 
 ### Debugger improvements
 
@@ -49,7 +64,7 @@ for the sake of security and simplicity.
 ### Type checker improvements
 
 * Warnings for unused imports/extends have been improved.
-* Instead of using physical locations (`|file:///C:/Users/John/A.rsc|(0, 121, <1, 0>, <8, 54>)`), which are very sensitive to subtle (layout) changes in files, the type-checker (and the TPL files it produces) now use **logical locations**, which consist of the role, name and hash of the entity, i.e. `|rascal+module://A$1234abcd|`. This fixes and prevents a host of subtle bugs around type-checking and incremental changes in particular.
+* TypePal and the Rascal type-checker switched (_internally_) from exact file locations for definition/declaration identifiers to abstract logical locations (a.k.a. fully qualified names). Since fully qualified names are more stable under minor changes of the file, intermediate results (TPL files) are more often compatible to their previous versions which helps in modular and incremental type-checking and compilation. It also improves library encapsulation and co-evolution of library dependencies. This is all internal and does not change the way the checker works for you. It did help to fix a number of pressing issues with incremental re-checking and library dependency upgrade scenarios.
 * The computation of the hashes of logical locations has been changed to normalize and sanitize inputs before hashing. This fixes issues when mixing TPLs from different OSes, but as a consequence, many hashes of libraries changed. Projects should therefore update to the most recently released version of libraries.
 * Project path configurations would sometimes contain "Unresolved dependency" errors for local projects that could (and would) be resolved in the workspace. If these project are indeed resolved, these errors are now not shown anymore.
 * Improved the representation of module names in the progress bar while typechecking.
@@ -59,13 +74,13 @@ for the sake of security and simplicity.
 
 ### Tutor improvements
 
-* Added `includeLibraries` option, which simply copies the contents of the docs folder from all library dependencies.
+* Added `includeLibraries` option, which copies the contents of the docs folder from all library dependencies. This is to simplify the website configuration.
 
 ### Standard Library Maintenance
 
 * When creating a new Rascal project using `util::Reflective::newRascalProject`, some useful VS Code settings are now added to the project by default.
 * When serializing as JSON, complex values are not wrapped with auxiliary JSON objects anymore.
-* Parsing JSON to an ADT using `parseJSON` would crash with "length should be positive" error in case the input length exceeded 1024 characters. This has been fixed, along with come related complex issues when parsins with origin tracking.
+* Parsing JSON to an ADT using `parseJSON` would crash with "length should be positive" error in case the input length exceeded 1024 characters. Also JSON origin tracking could not be turned off even with `originTracking=false`. Both issues have been fixed, and origin tracking as well as accurate error messages have been improved to cover more corner cases. In the next release unicode support will be added to the accurate origin tracking code.
 * Fixed many type errors, that would sometimes propagate to modules importing the standard library as well.
 * Improve the performance of `copy` when the source and destination location have the same scheme, for `memory` and `file` schemes.
 * Deprecated some definitions in `util::ShellExec` that were intended to be deprecated already: `createProcess`, `exec` and `execWithCode` variants that accept a `str` as the first argument - use a `loc` instead.
@@ -74,11 +89,11 @@ for the sake of security and simplicity.
 ### Other Rascal Interpreter changes
 
 * Nested list assignment also works with negative indices.
-* Array slicing now works a bit differently; it supports negative and out-of-bound indices. In some cases, where negative slice indices are used, the result might change.
+* List slicing now works a bit differently; it supports negative and out-of-bound indices. In some cases, where negative slice indices are used, the result might change.
 * Fixes for shadowing local function definitions with function arguments.
 * Sub-list equality checking did always not work correctly for sub-lists of the same list, which has now been fixed.
 * Fixes for rare missing definitions from cyclic imports.
-* Colliding hashes of tuple values caused subtle equality/difference bugs, which have been fixed.
+* Colliding hashes of tuple values caused subtle equality/difference/lookup issues, which have been fixed downstream in the [vallang](https://github.com/usethesource/vallang) and [capsule](https://github.com/usethesource/vallang) dependencies.
 
 ### Merged Pull Requests since version 0.41.2
 
