@@ -152,22 +152,22 @@
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
                                 </artifactItem>
-                                <!--<artifactItem>
+                                <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>php-analysis</artifactId>
                                     <version>${php-analysis.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
-                                </artifactItem> -->
-                                <!--<artifactItem>
+                                </artifactItem> 
+                                <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>python-air</artifactId>
                                     <version>${python-air.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
-                                </artifactItem>  -->
+                                </artifactItem> 
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>rascal-lucene</artifactId>
@@ -213,6 +213,7 @@
                                 <src>${project.basedir}/courses/Rascal</src>
                                 <src>${project.basedir}/courses/GettingHelp</src>
                                 <src>${project.basedir}/courses/GettingStarted</src>
+                                <src>${project.basedir}/courses/Tutor</src>
                                 <src>${project.basedir}/courses/Rascalopedia</src>
                                 <src>${project.basedir}/courses/Bibliography</src>
                                 <src>${project.basedir}/courses/RascalAmendmentProposals</src>
@@ -315,15 +316,15 @@
             <artifactId>rascal-lucene</artifactId>
             <version>${rascal-lucene.version}</version>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>php-analysis</artifactId>
             <version>${php-analysis.version}</version>
-        </dependency> -->
-        <!--<dependency>
+        </dependency>
+        <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>python-air</artifactId>
             <version>${python-air.version}</version>
-        </dependency>-->
+        </dependency>
     </dependencies>
 </project>
