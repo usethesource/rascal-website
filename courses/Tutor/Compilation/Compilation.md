@@ -1,5 +1,6 @@
 ---
 title: Tutor Compilation
+sidebar_position: 4
 keywords:
     - compilation
     - compiler

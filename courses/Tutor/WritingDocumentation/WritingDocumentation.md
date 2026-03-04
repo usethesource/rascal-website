@@ -1,10 +1,11 @@
 ---
-title: Maintenance
+title: Writing documentation
+sidebar_position: 1
 ---
 
 #### Synopsis
 
-How to maintain a course.
+How to create a course, write concept files and how to maintain them.
 
 #### Syntax
 

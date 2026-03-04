@@ -1,5 +1,6 @@
 ---
 title: Concept
+sidebar_position: 3
 details:
   - Title
   - Keywords
