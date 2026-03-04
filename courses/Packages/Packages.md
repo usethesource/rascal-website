@@ -16,8 +16,8 @@ sidebar_position: 10
 | ------------- | ------- | ----- |
 | C and C++     | [clair](/docs/Packages/org.rascalmpl.clair) | |
 | Java          | [java-air](/docs/Packages/org.rascalmpl.java-air) | factored out of the standard library recently |
-| PHP           | Temporarily offline | |
-| Python        | Temporarily offline | |
+| PHP           | [php-analysis](/docs/Packages/org.rascalmpl.php-analysis) | |
+| Python        | [php-analysis](/docs/Packages/org.rascalmpl.python-air) | |
 | JVM bytecode  | [flybytes](/docs/Packages/org.rascalmpl.flybytes) | Forward and Reverse | 
 
 ### Libraries
@@ -35,5 +35,5 @@ sidebar_position: 10
 
 | Library Name | Package | Note |
 | ------------ | ------- | ----- |
-| Dr Ambiguity | Temporarily offline | Interactive UI for detection, diagnostics and fixing of ambiguity context-free grammars. |
+| Dr Ambiguity | [drambiguity](/docs/Packages/org.rascalmpl.drambiguity) | Interactive UI for detection, diagnostics and fixing of (ambiguity in) context-free grammars. |
 
