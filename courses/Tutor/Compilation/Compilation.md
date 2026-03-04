@@ -11,7 +11,7 @@ keywords:
     - dependencies
 ---
 
-After ((Authoring)) tutor files, they have to compiled down to plain docusaurus. The compiler implements features such as linking, screenshots, and executing code fragments.
+After ((WritingDocumentation)) and/or ((DocumentingCode)), the concept files have to compiled down to plain docusaurus. The compiler implements features such as linking, screenshots, and executing code fragments.
 Most importantly, when there are linking errors (missing or ambiguous) or code execution errors, the compiler reports them such that they can be fixed before releasing the documentation.
 
 ## Configuration
@@ -35,7 +35,6 @@ Do configure the tutor, add the plugin to the pom.xml like so:
                     <goal>tutor</goal>
                 </goals>
                 <configuration>
-                    <enableStandardLibrary>false</enableStandardLibrary> 
                     <errorsAsWarnings>false</errorsAsWarnings>
                     <isPackageCourse>true</isPackageCourse>
                     <bin>${project.build.outputDirectory}</bin>

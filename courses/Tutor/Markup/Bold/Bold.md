@@ -1,26 +1,27 @@
 ---
-title: Maintenance
+title: Bold
+sidebar_position: 1
 ---
 
 #### Synopsis
 
-How to maintain a course.
+Create *bold* text.
 
 #### Syntax
+
+``````
+*Text*
+``````
 
 #### Types
 
 #### Function
-       
-#### Usage
 
 #### Description
 
-The following topics are discussed:
-
-(((TOC)))
-
 #### Examples
+
+`*bold*` gives *bold*.
 
 #### Benefits
 

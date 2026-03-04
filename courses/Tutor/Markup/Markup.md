@@ -4,7 +4,7 @@ title: Markup
 
 #### Synopsis
 
-Markup directives for creating concept pages.
+Markup syntax in ((Concept)) pages and [code]((DocumentingCode)).
 
 #### Syntax
 
@@ -14,16 +14,16 @@ Markup directives for creating concept pages.
 
 #### Description
 
-The _MarkedText_ in each section of a concept is plain text.
-Some characters or text strings are used to influence the markup of the text
-and follow the conventions of <http://docusaurus.io>
-We distinguish:
+((Concept)) notation is simply Markdown notation, with some extensions specifically meant
+for [linking concepts((Links)) and providing executed ((CodeExamples)).
 
-*  ((StructureMarkup)) influences the structure of the text.
-*  ((InlineMarkup)) influences the markup for characters or words.
-*  ((SourceCodeMarkup)) to define concepts in Rascal source code.
-*  ((QuestionMarkup)) defines interactive tutorial questions.
+The Markdown dialect we use is Docusaurus Markdown: <http://docusaurus.io>. See:
+* https://docusaurus.io/docs/markdown-features for the "commonmark" compliant features of Docusaurus
+* https://docusaurus.io/docs/markdown-features/react for the MDX/React extensibility features of Docusaurus
 
+However, we strongly recommend staying with vanilla common mark and use only the ((Tutor)) ((Markup)) extensions.
+
+(((TOC)))
 
 #### Examples
 

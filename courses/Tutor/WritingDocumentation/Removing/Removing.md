@@ -1,5 +1,5 @@
 ---
-title: Removing concepts
+title: Removing a concept
 sidebar_position: 4
 ---
 

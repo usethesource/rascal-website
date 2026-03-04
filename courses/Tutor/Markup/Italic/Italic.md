@@ -1,26 +1,27 @@
 ---
-title: Maintenance
+title: Italic
+sidebar_position: 2
 ---
 
 #### Synopsis
 
-How to maintain a course.
+Create _italic_ text.
 
 #### Syntax
+
+```
+_Text_
+```
 
 #### Types
 
 #### Function
-       
-#### Usage
 
 #### Description
 
-The following topics are discussed:
-
-(((TOC)))
-
 #### Examples
+
+* `_italic_` gives _italic_.
 
 #### Benefits
 
