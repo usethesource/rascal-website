@@ -24,20 +24,20 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <rascal-maven-plugin.version>0.30.2</rascal-maven-plugin.version>
-        <rascal.version>0.41.2</rascal.version>
-        <clair.version>0.13.3</clair.version>
-        <rascal-git.version>0.1.17</rascal-git.version>
-        <flybytes.version>0.2.10</flybytes.version>
-        <typepal.version>0.15.5</typepal.version>
-        <salix-core.version>0.2.9</salix-core.version>
-        <salix-contrib.version>0.2.9</salix-contrib.version>
-        <drambiguity.version>0.3.8</drambiguity.version>
-        <java-air.version>1.0.1</java-air.version>
-        <rascal-lsp.version>2.22.0</rascal-lsp.version>
-        <rascal-lucene.version>0.1.0</rascal-lucene.version>
-        <!--php-analysis.version>0.2.4</php-analysis.version> -->
-        <!--<python-air.version>0.0.11</python-air.version> -->
+        <rascal-maven-plugin.version>0.31.0</rascal-maven-plugin.version>
+        <rascal.version>0.42.0</rascal.version>
+        <clair.version>0.13.4</clair.version>
+        <rascal-git.version>0.1.18</rascal-git.version>
+        <flybytes.version>0.2.11</flybytes.version>
+        <typepal.version>0.15.6</typepal.version>
+        <salix-core.version>0.2.11</salix-core.version>
+        <salix-contrib.version>0.2.11</salix-contrib.version>
+        <drambiguity.version>0.3.10</drambiguity.version>
+        <java-air.version>1.0.2</java-air.version>
+        <rascal-lsp.version>2.22.1</rascal-lsp.version>
+        <rascal-lucene.version>0.1.1</rascal-lucene.version>
+        <php-analysis.version>0.3.3</php-analysis.version>
+        <python-air.version>0.0.12</python-air.version> 
     </properties>
 
     <build>
@@ -152,22 +152,22 @@
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
                                 </artifactItem>
-                                <!--<artifactItem>
+                                <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>php-analysis</artifactId>
                                     <version>${php-analysis.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
-                                </artifactItem> -->
-                                <!--<artifactItem>
+                                </artifactItem> 
+                                <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>python-air</artifactId>
                                     <version>${python-air.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
-                                </artifactItem>  -->
+                                </artifactItem> 
                                 <artifactItem>
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>rascal-lucene</artifactId>
@@ -202,7 +202,6 @@
                         </goals>
                         <configuration>
                             <isPackageCourse>false</isPackageCourse>
-                            <enableStandardLibrary>false</enableStandardLibrary>
                             <errorsAsWarnings>false</errorsAsWarnings>
                             <verbose>true</verbose>
                             <bin>${project.basedir}</bin> <!-- because tutor appends /docs to this -->
@@ -213,6 +212,7 @@
                                 <src>${project.basedir}/courses/Rascal</src>
                                 <src>${project.basedir}/courses/GettingHelp</src>
                                 <src>${project.basedir}/courses/GettingStarted</src>
+                                <src>${project.basedir}/courses/Tutor</src>
                                 <src>${project.basedir}/courses/Rascalopedia</src>
                                 <src>${project.basedir}/courses/Bibliography</src>
                                 <src>${project.basedir}/courses/RascalAmendmentProposals</src>
@@ -315,15 +315,15 @@
             <artifactId>rascal-lucene</artifactId>
             <version>${rascal-lucene.version}</version>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>php-analysis</artifactId>
             <version>${php-analysis.version}</version>
-        </dependency> -->
-        <!--<dependency>
+        </dependency>
+        <dependency>
             <groupId>org.rascalmpl</groupId>
             <artifactId>python-air</artifactId>
             <version>${python-air.version}</version>
-        </dependency>-->
+        </dependency>
     </dependencies>
 </project>
