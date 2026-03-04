@@ -41,6 +41,7 @@ An _author_ of a course can:
 * Create a new concept in a course.
 * Edit a concept directly using a standard text editor.
 * Add code examples that are actually executed at "compile time" of the course. The code examples either simulate the interaction with the Rascal REPL, or they are just highlighted code.
+* Automatically produce inlined ((Screenshots)) of running interactive Web-based visualizations (using a headless browser).
 * Recompile the course.
 * Inspect the warnings that are generated for the whole course in order to 
   control the quality of the concept descriptions.
@@ -48,11 +49,7 @@ An _author_ of a course can:
 * Inline images in the same folder/directory as the concept
 * Use Rascal code to create (static) visuals
 
-The actual markup used is an extension of Docusaurus, see https://docusaurus.io/ and
-in most cases we directly refer to 
 
-* https://docusaurus.io/docs/markdown-features for the "commonmark" compliant features of Docusaurus
-* https://docusaurus.io/docs/markdown-features/react for the MDX/React extensibility features of Docusaurus
 
 The following topics will be described here:
 
