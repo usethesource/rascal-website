@@ -15,18 +15,18 @@ The Rascal Tutor compiler can be used to create, maintain and follow (interactiv
 
 #### Description
 
-The RascalTutor is an interactive ((Authoring)) and learning environment intended to create and follow interactive courses related to the Rascal language.
+The RascalTutor is an [authoring]((WritingDocumentation)) environment with an emphasis on education and documentation.
 It is based on the following principles and ideas:
 
-* [Write]((Authoring)) standard Markdown in normal files and folders that can be edited using any Markdown editor.
+* [Write]((WritingDocumentation)) standard Markdown in normal files and folders that can be edited using any Markdown editor.
 * Generates Docusaurus Markdown files in a file hierarchy that can be included easily in a static markdown website.
 * The basic notion is a ((Concept)). Each concept has a _name_ and contains a fixed set of subsections that describe it.
 * A course is a _concept tree_:
-  The central subject of the course is the root of the concept tree, and all subtrees further explain their parent concept.
-* A Rascal code module is a ((Concept)) to the Tutor compiler as well, in order to provide ((API)) documentation for every Rascal module. The declarations it contains are not sub-concepts but rather sub-sections of that concept.
+  The central subject of the course is the root of the concept tree, and all subtrees further explain their parent concept. See ((WritingDocumentation)) on how to create and maintain a concept tree.
+* A Rascal code module is a ((Concept)) to the Tutor compiler as well, for ((DocumentingCode)) and API written in Rascal. The declarations it contains are not sub-concepts but rather sub-sections of that concept.
 * A folder with Rascal modules is also a ((Concept)). 
 If it has an `index.md` file this is used to document it, otherwise an `index.md` file is generated.
-* Concepts, as described above, can easily be [linked by short names]((LinkingConcepts)), and disambiguated with longer names when necessary.
+* Concepts, as described above, can easily be [linked by short names]((Markup-Links)), and disambiguated with longer names when necessary.
 
 A _student_ using a course can:
 
@@ -44,7 +44,7 @@ An _author_ of a course can:
 * Recompile the course.
 * Inspect the warnings that are generated for the whole course in order to 
   control the quality of the concept descriptions.
-* Create [links]((LinkingConcepts)) between concepts (in different courses)
+* Create [links]((Markup-Links)) between concepts (in different courses)
 * Inline images in the same folder/directory as the concept
 * Use Rascal code to create (static) visuals
 
@@ -72,4 +72,4 @@ The following topics will be described here:
 * We have to run the tutor compiler manually to find out about possible errors. There is no IDE support yet.
 * The Tutor compiler is not incremental yet. It will re-compile everything from scratch even if nothing has changed.
 * Downstream tools, such as Docusaurus, may detect issues that the tutor compiler does not detect. For example broken links that are not ((Concept)) links will not be detected early. This means you may have to go back and fix the documentation, release it in a `jar` and then try the downstream tool again.
-* The interactive ((QuestionMarkup)) part of the compiler is currently under maintenance and therefore unavailable.
+* The interactive question markup part of the compiler is currently under maintenance and therefore unavailable.

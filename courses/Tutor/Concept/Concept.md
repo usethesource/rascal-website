@@ -48,6 +48,7 @@ A _concept_ is the basic building block of a course.
    ``````
 
 All sections are optional, but not the title header. It is always recommended to have at least a Synopsis and some Examples. Empty sections are removed by the preprocessor.
+It is not checked, but these section headers are recommended for all concepts and no new section headers are to be introduced.
 
 #### Description
 
