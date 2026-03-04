@@ -35,6 +35,11 @@ Refer to a concept in this course or another course.
 ((function::functionName))
 ``````
 
+And also for all of the above the labeled variants:
+``````
+[a text label]((ConceptLink))
+``````
+
 #### Types
 
 #### Function
@@ -53,11 +58,12 @@ Above are all the ways a concept can be linked:
 
 The concept name of this concept is `ReferenceToConcept` while its title is `Reference to Concept` (note the spaces).
 
-We can create a reference to the `InlineMarkup` concept in the current course in the following ways:
+We can create a reference to the `CodeExamples` concept in the current course in the following ways:
 
-* `((Inline Markup))` (using the display name) gives ((Inline Markup)).
-* `((Markup-InlineMarkup))` (using its parent concept name and concept name) gives ((Markup-InlineMarkup)).
-* `[see inline markup]((Tutor:Markup-InlineMarkup))` gives [see inline markup]((Tutor:Markup-InlineMarkup))
+* `((Code Examples))` (using the display name) gives: "((Code Examples))".
+* `((Markup-CodeExamples))` (using its parent concept name and concept name) gives "((Markup-CodeExamples))".
+* `[see code examples]((Tutor:Markup-CodeExamples))` gives "[see inline markup]((Tutor:Markup-CodeExamples))"
+* for more link notations see the _syntax_ types above.
 
 
 #### Benefits

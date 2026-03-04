@@ -202,7 +202,6 @@
                         </goals>
                         <configuration>
                             <isPackageCourse>false</isPackageCourse>
-                            <enableStandardLibrary>false</enableStandardLibrary>
                             <errorsAsWarnings>false</errorsAsWarnings>
                             <verbose>true</verbose>
                             <bin>${project.basedir}</bin> <!-- because tutor appends /docs to this -->
