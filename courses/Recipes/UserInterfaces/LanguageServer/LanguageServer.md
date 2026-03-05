@@ -30,7 +30,7 @@ You can work in small steps:
    * the ((SelectionRangeService)) provides an easy and quick way to select the right pieces of DSL code for the user.
    * the ((DocumentSymbolService))  provides a linked outline view and symbol based search in the editor.
    * the ((HoverService)) provides quick (on-demand) documentation in the editor with a tooltip. See also later ((AnalysisService)) and ((BuildService)) for pre-computing documentation information.
-   * the ((ReferencesSevice)) and 
+   * the ((ReferencesService)) and 
    * ((DefinitionService)) and 
    * ((ImplementationService)) provide quick (on-demand) links to either all references, all definitions of a symbol, or all implementations of a symbol in the editor (with a hyperlink). See also later ((AnalysisService)) and ((BuildService)) for pre-computing reference, definition and implementation information.
    * the ((AnalysisService)) services provides errors and warnings for the user as diagnostics in the IDE (e.g. type checking), while the user is typing in the editor. 
