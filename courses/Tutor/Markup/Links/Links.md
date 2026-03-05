@@ -65,6 +65,28 @@ We can create a reference to the `CodeExamples` concept in the current course in
 * `[see code examples]((Tutor:Markup-CodeExamples))` gives "[see inline markup]((Tutor:Markup-CodeExamples))"
 * for more link notations see the _syntax_ types above.
 
+When a link name is _ambiguous_ this means that multiple concepts could be the target of the link. This
+can happen, for example, when:
+* The same name is used nested under different compound ((Concept))s
+* The same name is used by different dependent libraries 
+* A name occurs as different categories: concept, module, dunction, datatype, etc.
+* Or any combination of the above.
+
+Here is an example error message caused by an ambiguous reference:
+```
+[ERROR] /courses/Recipes/UserInterfaces/LanguageServerProtocol/RegisterYourLanguage/RegisterYourLanguage.md:51:0: Ambiguous concept link `Syntax Definition` can be resolved by:
+   * using ((Rascal:SyntaxDefinition)) to link to /Rascal/Declarations/SyntaxDefinition/index.md;
+   * using ((Rascal-SyntaxDefinition)) to link to /Library/lang/rascal/\syntax/Rascal.md#lang-rascal-\syntax-Rascal-SyntaxDefinition;
+   * using ((MultiErrorBug-SyntaxDefinition)) to link to /Library/lang/rascal/tests/concrete/recovery/bugs/MultiErrorBug.md#lang-rascal-tests-concrete-recovery-bugs-MultiErrorBug-SyntaxDefinition;
+```
+
+We see that the name resolves to a concept in the `Rascal` course, to a non-terminal name in the Rascal syntax definition itself, called "SyntaxDefinition", and to a local type definition in one
+of the test modules of the standard library. This is all accidental.
+
+In short: the link "Syntax Definition" was just not precise enough. The error message helps by:
+* providing three options to choose from (or as many as their are alternative resolutions);
+* ensuring that each option resolves _precisely_ and _unambiguously_ to one of the original alternatives;
+* ensuring thet each option is the _shortest_ way to describe the exact and unambiguous link. Their may be many more ways to write it.
 
 #### Benefits
 
