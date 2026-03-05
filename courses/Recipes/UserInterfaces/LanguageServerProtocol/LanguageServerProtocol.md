@@ -9,7 +9,7 @@ keywords:
 
 #### Synopsis
 
-Recipe for creating an IDE for your language based on the Language Server Protocol
+Recipes for creating an IDE for your language based on the Language Server Protocol using ((util::LanguageServer)) and ((util::IDEServices))
 
 #### Syntax
 
@@ -41,27 +41,25 @@ You can work in small steps:
    * ((CallHierarchyService)) provides an on-demand, lazy browser for the "call graph" of a PL or DSL.
    * ((RenameService)) offers language-specific renaming to your users.
 
-So start with the ((ParsingService)) and ((RegisterYourLanguage)), then pick which IDE feature you'd like to provide 
-to your users first, and just go with that.
+So start with the ((ParsingService)) and ((RegisterYourLanguage)), then pick which IDE feature you'd like to provide to your users first, and just go with that.
 
 #### Examples
 
 #### Benefits
 
-* There is no need for a "second level" (starting up another VS code instance) to test your new extension. All you 
-need is to ((RegisterYourLanguage)) and your language will be added to your IDE here and now.
+* There are only two small API modules relevant for constructing full featured IDEs:
+   * ((util::LanguageServer)) for building an LSP server that connects to the VScode client.
+   * ((util::IDEServices)) for programmatically calling IDE effects (like opening editors and starting web views).
+* There is no need for a "second level" (starting up another VS code instance) to test your new extension. All you need is to ((RegisterYourLanguage)) and your language will be added to your IDE here and now.
 * Your services code "sees" always the code that the user sees in their editor. Even if the file is unsaved, or the file comes from `aVeryWeirdURIScheme:///what?`, all of Rascal's IO features are rerouted implicitly to see the editor contents.
 * Your LSP services are based on the metaprogramming facilities of Rascal, and IDE construction is just a form of meta-programming (code in -> UI information out).
 * The Rascal LSP API functions are pure, and work with only immutable data-types. This makes it easy to test and/or debug independently of any editor client. Managing editor state and implementing the asynchronous LSP protocol is hidden under-the-hood.
 * Your LSP services once made for VScode, will work for any IDE client we port the [LSP bridge]((org.rascalmpl.rascal-lsp)) to.
 * You do not have to write a full type-checker or a full compiler, to start giving your users valuable features like error checking, overviews and hyperlinks. Start small. Dream big.
-* All changes to DSL files are applied via collecting ((((TextEdits-FileSystemChange))))s, which is a kind of `diff` format. If you stick 
-with this protocol rather then writing to disk yourself, then the IDE will integrate all changes into the undo/redo stack, and can also provide confirmation dialogs and/or previews.
-* Later you can decide to deploy your own VScode extension with no changes to your ((util::LanguageServer)) contributions.
+* All changes to DSL files are applied via collecting ((((TextEdits-FileSystemChange))))s, which is a kind of `diff` format. If you stick with this protocol rather then writing to disk yourself, then the IDE will integrate all changes into the undo/redo stack, and can also provide confirmation dialogs and/or previews.
+* Later you can decide to deploy your own VScode extension with no changes to your ((util::LanguageServer)) services code.
 
 #### Pitfalls
 
-* It is easy to add many useful commands and features for yours users, but all of them have to have a clear and predictable semantics and
-all of them must be maintained in the future. It makes sense to create services "on demand", as your users ask for them. Too many options is confusing. Also not every DSL needs every programming language feature, even though it is easy to construct it
-with Rascal and the ((util::LanguageServer)) API.
+* It is easy to add many useful commands and features for yours users, but all of them have to have a clear and predictable semantics and all of them must be maintained in the future. It makes sense to create services "on demand", as your users ask for them. Too many options is confusing. Also not every DSL needs every programming language feature, even though it is easy to construct it with Rascal and the ((util::LanguageServer)) API.
 * In VScode, if your ((ExecutionService)) changes any DSL files on a project, which are not in an open editor, then editors are opened for each file and it is up to the user to "save" them and commit to the changes. It's the same for ((RenameService)) and any other side-effect applied to code files you build into your Rascal code.

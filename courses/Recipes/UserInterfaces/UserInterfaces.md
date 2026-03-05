@@ -13,7 +13,7 @@ keywords:
 
 #### Synopsis
 
-Recipes for writing Rascal programs that create interactive _visual_ user interfaces
+Recipes for writing Rascal programs that create interactive _visual_ user interfaces.
 
 #### Syntax
 
@@ -37,10 +37,11 @@ These recipes fall into three major technological categories:
 * ((SalixRecipes)) explain how to use the [Salix]((org.rascalmpl.salix-core)) framework to build user interfaces for the browser (or the IDE web view) in Rascal.
 * ((LanguageServerProtocol)) recipes explain how to construct a full featured IDE with Visual Studio Code and the Language Server Protocol.
 
-
 #### Examples
 
 #### Benefits
+
+
 
 #### Pitfalls
 

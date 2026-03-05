@@ -84,11 +84,8 @@ In general a ((ParsingService)) is simply a function that satisfies the ((util::
 Now let's move on to [registering your language with the IDE]((RegisterYourLanguage)) and
 run your own language server.
 
-
-
 #### Benefits
 
-* you can always test any service function in the terminal. This is highly recommended because simple errors
-and output can sometimes be hard to find in the IDE.
+* you can always test any service function in the terminal. This is highly recommended because simple errors and output can sometimes be hard to find in the IDE.
 * you can always write Rascal test functions to add to the stability of your LSP services.
 * the ((ParseTree-Tree))s produced by your ((ParsingService)) will be the input of all other services later.
