@@ -43,7 +43,7 @@ The error trees themselves consist of an `error` node representing a production 
 not recognized is included as the last child of the error node in the form of a `skipped` node containing the list of characters that
 where skipped before parsing could continue.
 
-Note that the definition of `error` and `skipped` productions can be found in the ((ParseTree)) module.
+Note that the definition of `error` and `skipped` productions can be found in the ((module:ParseTree)) module.
 
 For some situations, simple disambiguation of the error ambiguities can be enough. For this the module ((util::ParseErrorRecovery)) offers
 the `disambiguateParseErrors` function that takes an error tree and removes all ambiguities based on some simple heuristics:
