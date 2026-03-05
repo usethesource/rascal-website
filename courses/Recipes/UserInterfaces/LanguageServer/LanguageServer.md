@@ -1,7 +1,8 @@
 ---
-title: "VScode and the Language Server Protocol"
+title: "Creating Language Servers for VScode"
 keywords:
     - LSP
+    - IDE
     - VScode
     - "Visual Studio Code"
     - "Language Server Protocol"
@@ -9,7 +10,7 @@ keywords:
 
 #### Synopsis
 
-Recipes for creating an IDE for your language based on the Language Server Protocol using ((util::LanguageServer)) and ((util::IDEServices))
+Recipes for creating an IDE for your language based on the Language Server Protocol using ((module:util::LanguageServer)) and ((module:util::IDEServices)).
 
 #### Syntax
 

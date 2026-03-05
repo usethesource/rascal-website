@@ -65,7 +65,7 @@ The first time the parser will be generated and cached, and when it is finished 
 That's it!
 
 Now you can continue, for example, with ((SyntaxHighlighting)) or ((HoverService)) as two of 
-the ((LanguageServerProtocol)) features to try out.
+the ((LanguageServer)) features to try out.
 
 #### Benefits
 

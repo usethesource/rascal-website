@@ -35,7 +35,7 @@ These recipes are useful if have one of the following intentions for your progra
 These recipes fall into three major technological categories:
 * ((VanillaHTML5)) recipes explain how to generate and serve HTML5 content directly from Rascal into your IDE web view or into your Desktop browser.
 * ((SalixRecipes)) explain how to use the [Salix]((org.rascalmpl.salix-core)) framework to build user interfaces for the browser (or the IDE web view) in Rascal.
-* ((LanguageServerProtocol)) recipes explain how to construct a full featured IDE with Visual Studio Code and the Language Server Protocol.
+* ((LanguageServer)) recipes explain how to construct a full featured IDE with Visual Studio Code and the Language Server Protocol.
 
 #### Examples
 
