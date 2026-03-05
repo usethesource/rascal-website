@@ -41,6 +41,11 @@ Here is the effect of a misspelled module name (assuming that you do not have a 
 import Lis;
 ```
 
+```rascal-prepare,continue
+// have to clean this up  otherwise the REPL keeps warning about the missing module
+:unimport Lis;
+```
+
 #### Benefits
 
 #### Pitfalls

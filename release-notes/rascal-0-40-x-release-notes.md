@@ -10,10 +10,10 @@ In this post we report on the Rascal release 0.40.x
 
 ## Release 0.40.17 - November 15, 2024
 
-The public release 0.40.x follows release 0.28.x; many improvements have been made in projects that depend on the rascal interpreter and the standard library (the type checker, the VScode extensions, clair, etc.) Some of these improvements depend directly on fixes in the interpreter and additions to the standard library. 
+The public release 0.40.x follows release 0.28.x; many improvements have been made in projects that depend on the rascal interpreter and the standard library (the type checker, the VS Code extensions, clair, etc.) Some of these improvements depend directly on fixes in the interpreter and additions to the standard library.
 
 :::info
-The Rascal type-checker which is available in the VScode extension is reaching maturity. The `.tpl` file format has changed, which requires everybody to throw the old ones away. The new type checker checks `.tpl` file versions and reports possible conflicts. Use `mvn clean` or remove your `bin` or `target` folders for all your projects and library projects today.
+The Rascal type-checker which is available in the VS Code extension is reaching maturity. The `.tpl` file format has changed, which requires everybody to throw the old ones away. The new type checker checks `.tpl` file versions and reports possible conflicts. Use `mvn clean` or remove your `bin` or `target` folders for all your projects and library projects today.
 :::
 
 :::warning
@@ -36,7 +36,7 @@ If `maven.repo.local` is set, then that is the root of the M2 repository. Otherw
 
 A great deal of tests were fixed, enhanced or extended as a side-effect of the compiler project. Another visible aspect of the progress of the compiler is that now all Rascal runtime values (from vallang and beyond) now support `getFingerprint()` methods which help in optimizing pattern matching and dispatch in generated code by the compiler. These  methods' return values have become a strict contract for future implementations of Rascal values, including parse trees and reified types and first-class functions.
 
-### The following issues were solved 
+### The following issues were solved
 
 * String `visit` with unicode characters had a bug
 * `util::ShellExec` had some IO synchronization issues which were resolved.
@@ -47,9 +47,9 @@ A great deal of tests were fixed, enhanced or extended as a side-effect of the c
 * [Unsupported splice pattern causes NULL pointer exception inside interpreter](https://github.com/usethesource/rascal/issues/2071)
 * [Add-assign of incompatible set types does not raise error](https://github.com/usethesource/rascal/issues/2056)
 * [Missing a "info" or "warning" message at the call-site of @deprecated functions](https://github.com/usethesource/rascal/issues/2055)
-* [deprecated module has squiqqlies over the entire file](https://github.com/usethesource/rascal/issues/2052)
+* [deprecated module has squigglies over the entire file](https://github.com/usethesource/rascal/issues/2052)
 * [`rascalTModelForLocs` does not return TModel](https://github.com/usethesource/rascal/issues/2050)
-* [(common) keyword field projecten out of ADT produces dynamic instead of static type for the static type result.](https://github.com/usethesource/rascal/issues/2049)
+* [(common) keyword field projected out of ADT produces dynamic instead of static type for the static type result.](https://github.com/usethesource/rascal/issues/2049)
 * [Internal crash instead of static error for relation field projection on unlabeled relation types](https://github.com/usethesource/rascal/issues/2048)
 * [Typechecker fails to report error on invalid function return type](https://github.com/usethesource/rascal/issues/2046)
 * [Type checker reports undefined module after edit](https://github.com/usethesource/rascal/issues/2044)
@@ -93,24 +93,24 @@ On the Rascal run-time engine (vallang) these issues were resolved:
 * Accurate and correct parsers of Windows and Unix file paths were added to the standard library. This includes a new `unc://` resolver to accurately represent the semantics of UNC paths, and `cwdrive://` which can represent the current working directory on a given drive letter on Windows.
 * `HTMLElement(loc src = |unknown:///|)` was added to position every tag from start to end via the `src` attribute.
 * The documentation strings were ported from `@doc{ }` notation to `@synopsis{..}, @description{..}, @examples{..}, @benefits{..}, @pitfalls{..}` separate tags. 
-* The `@deprecated{..}` tag is now also used during API documentation generation. It is rendered between the synsopsis and the declaration signature.
+* The `@deprecated{..}` tag is now also used during API documentation generation. It is rendered between the synopsis and the declaration signature.
 * The Box language for automatic string formatting was revived and its box2text algorithm was optimized. See `lang::box`
    * Box2text was re-implemented using list comprehensions and list splicing for efficiency and brevity.
    * Box arrays (tables) were fixed and finalized, and utility support for mapping lists to tables was added.
    * Box "groups" were added (ported from ASF+SDF) as a means to easily generate boxes from (separated) lists.
    * The concepts of fonts and highlighting were completely removed from Box, as this is an orthogonal feature
-implemented elsewhere by highlighter algoriths and mappings to HTML. The new trick is to use Box to format a file,
+implemented elsewhere by highlighter algorithms and mappings to HTML. The new trick is to use Box to format a file,
 then reparse that file and map it to ANSI or HTML or other markup formalisms.
    * the NULL box was added as a convenience for plugging holes and not loose parity or other counts.
    * Tests for Box2text were added.
    * Tree2Box is a new language-parametric  formatter that maps any parse tree to Box using default heuristics. They trigger on the shape of production rules as they are typically found in programming languages. Tree2Box is a re-implementation of the
 `pandora` tool of the ASF+SDF Meta-Environment, but written in Rascal instead of C+ApiGen. You can override default behavior by adding rules for your exceptional language constructs.
-* The CSV model now has origin fields for Tables, Records and Fields: `loc src=|unknown:///`, such that CSV files can be 
+* The CSV model now has origin fields for Tables, Records and Fields: `loc src=|unknown:///`, such that CSV files can be
 parsed and treated as (DSL) source code.
 * `lang::json::IO` now has full origin tracking support.
 * `util::Monitor` progress monitoring is now also supported on textual interfaces using UTF8 and ANSI support for pretty bars. If UTF8 is not supported by the terminal, it used ASCII art. If ANSI is not available, it defaults to normal event logging prins on the console. The progress bar will always default to the latter if in a CI environment of if `-Drascal.monitor.batch` is set.
 * The progress monitors for module importation in the interpreter and parser generator were rationalized.
-* In `lang::rascal::grammar::storage::ModuleParserStorage` a new feature for saving generated parsers to disk and loading them again was added. It follows the interface design of `ParseTree::parsers`. You can load a saved parser and used it as if 
+* In `lang::rascal::grammar::storage::ModuleParserStorage` a new feature for saving generated parsers to disk and loading them again was added. It follows the interface design of `ParseTree::parsers`. You can load a saved parser and used it as if
 just generated with `parsers`.
 * `lang::rascal::vis::ImportGraph` was added as a port of the ASF+SDF Meta-Environment import graph visual.
 * `lang::std::ANSI` is an almost complete specification of the ANSI standard for character markup.
@@ -131,22 +131,22 @@ The Java model has received big maintenance love and attention, including improv
 all source code elements are represented in the tree, annotated with `src` origins and ordered from left-to-right as
 they were in the original source file.
 * The constructors: `enum`, `enumConstant`, `compilationUnit`, `class`, `interface`, `method`, `field`, etc., all received
-extra positional parameters for the concept of modifiers. Before these were modelled as keyword parameters, but 
+extra positional parameters for the concept of modifiers. Before these were modelled as keyword parameters, but
 that invalidated the earlier mentioned AST contract.
 * An AST and M3 model of the Java 9 module system was added.
 * The `isSuper` boolean was removed from the AST definition of `methodInvocation`n and `new` calls, also to satisfy the AST contract.
 * Java Annotations AST constructors were moved from `Expression` to `Modifier`.
-* String based unary and binary operator constructors for Expressions were unfolded to a constructor for each operator, i.e. `plus(Expression, Expression)` instead of `binop(Expression, "+", Expression)`
-* `lang::java::m3::AST` was documented and so was `analysis::m3::AST`
-* `lang::java::m3::Core` was documented and so was `analysis::m3::Core`
+* String based unary and binary operator constructors for Expressions were unfolded to a constructor for each operator, i.e. `plus(Expression, Expression)` instead of `binop(Expression, "+", Expression)`.
+* `lang::java::m3::AST` was documented and so was `analysis::m3::AST`.
+* `lang::java::m3::Core` was documented and so was `analysis::m3::Core`.
 * `composeM3` was generalized for any number of keyword fields which are either sets or lists. This makes it language-independent from now on.
 * `m3SpecificationTest` checks for the internal sanity and completeness of an M3 model. Can be used to test language front-ends.
-* `Java2ObjectFlow` was upgraded for all the changes in the AST constructors. However it may still need extension for new constrtructors like lambda expressions.
-* Lambda's were added to `Expression`
-* Method references were added to `Expression`
-* Intersection types were added to the Type AST class
+* `Java2ObjectFlow` was upgraded for all the changes in the AST constructors. However it may still need extension for new constructors like lambda expressions.
+* Lambda's were added to `Expression`.
+* Method references were added to `Expression`.
+* Intersection types were added to the Type AST class.
 * The bounds constructors of Type ASTs were renamed from `upperbound` and `lowerbound` to `super` and `extends`.
 * Java versions are now specified as constructors of the `Language` data type, for accurate description of the JLS language level the user needs to reflect.
 * M3 extraction from JVM binary class files was maintained and now also supports language features up to JLS14.  In particular the Java 9 module system was added to the mapping.
-* Tracebility with origin tracking was improved for both source code and binary classfile analysis, so if NPE's happen a clear cause can be printed.
+* Traceability with origin tracking was improved for both source code and binary class file analysis, so if NPE's happen a clear cause can be printed.
 

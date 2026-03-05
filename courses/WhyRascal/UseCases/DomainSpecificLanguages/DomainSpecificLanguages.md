@@ -184,4 +184,4 @@ And that's it! A complete DSL in 36 lines of code. Of course, the parser and the
 #### Constructing an IDE 
 
 * For Eclipse Rascal offers plugin generation via the `util::IDE` module. You can register the language and the respective analysis, compilation and visualization functions with a single function call. The standard library module `util::IDEServices` allows for calling into features of the IDE (such as starting an editor or applying a refactoring).
-* For VScode an interface with similar features and abstraction level is offered in `util::LanguageServer`, but geared towards the _Language Service Protocol_.
+* For VS Code an interface with similar features and abstraction level is offered in `util::LanguageServer`, but geared towards the _Language Service Protocol_.

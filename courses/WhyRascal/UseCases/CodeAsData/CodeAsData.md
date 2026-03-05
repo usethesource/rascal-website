@@ -6,8 +6,8 @@ Code analysis has many motivations. In this example we will see how we can resol
 
 #### Parsing=Turning Code into Data
 
-In this example we use Rascal's JDT library, which wraps Eclipse's Java Development Toolkit compiler for Java and makes its information available as Rascal data types. This intermediate model is called _M3_, and its definition is split acros a generic
-language independent module called ((Library:module:analysis::m3::Core)) and a Java specific part called ((Library:module:lang::java::m3::Core)). 
+In this example we use the ((org.rascalmpl.java-air)) package, which wraps Eclipse's Java Development Toolkit compiler for Java and makes its information available as Rascal data types. This intermediate model is called _M3_, and its definition is split acros a generic
+language independent module called ((analysis::m3::Core)) and a Java specific part called ((lang::\java::m3::Core)). 
 
 ```rascal-prepare
 import IO;
@@ -85,7 +85,7 @@ The two unused methods are:
 * `|java+method:///snakes/Square/nextSquare()|`
 * `|java+method:///snakes/Player/square()|`
 
-In an interactive environment like Eclipse or VScode we would click on these links to jump to their source code. Here we will print the bodies:
+In an interactive environment like Eclipse or VS Code we would click on these links to jump to their source code. Here we will print the bodies:
 
 ```rascal-shell,continue
 println(readFile(|java+method:///snakes/Player/square()|))

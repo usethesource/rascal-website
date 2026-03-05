@@ -8,8 +8,8 @@ import IO;
 remove(|home:///my-project-name|, recursive=true);
 ```
 
-Rascal projects, generally, work the same in all IDE contexts:
-* VScode
+Rascal projects, generally, work the same in all contexts:
+* VS Code
 * Commandline
 
 To create an empty project to get started, follow these instructions:

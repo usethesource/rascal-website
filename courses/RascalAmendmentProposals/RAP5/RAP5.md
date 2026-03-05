@@ -153,8 +153,8 @@ Noted that these changes have to be reflected in **vallang** as well as in **Ras
    4. The specific definitions of this algebra are still under embargo  
    5. Midpoint range notation is like so: `midpoint ± radius`  
       1. The midpoint represents *the most likely* *outcome* of a computation  
-      2. The radius represents an absolute radius around the midpoint. The actual value of the number may be any real number (rational or irrational) in `[midpoint - radius, midpoint + radius]` (inclusive bounds)  
-      3. All the arithmetic operators manage the radius’ automatically  
+      2. The radius represents an absolute radius around the midpoint. The actual value of the number may be any real number (rational or irrational) in `(midpoint - radius, midpoint + radius)` (exclusive bounds are important to avoid that < less-than becomes false due to an infinitesially small overlap between two real numbers that touch exactly at their upper and lowerbounds resp.)  
+      5. All the arithmetic operators manage the radius’ automatically  
          1. Most code can be oblivious to the error ranges  
          2. The midpoint calculation is always isomorphic to a calculation on rational numbers without the error radius (i.e. error oblivious)  
          3. The radius’ are always a conservative over-approximation of the error  

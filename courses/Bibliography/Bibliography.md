@@ -78,7 +78,7 @@ This literature is about the meta systems themselves, their design and their eva
 * Mauricio Verano Merino, Tom Beckmann, Tijs van der Storm, Robert Hirschfeld, and Jurgen J. Vinju. Getting Grammars into Shape for Block-based. (2021)  International Conference on Software Language Engineering.
    > We can generate block-based syntax editors from context-free grammars. The paper bridges between the grammarware and blockware technological spaces. A collaboration with TU Eindhoven en Canon Production Printing.
 * Jurgen J. Vinju and Tijs van der Storm. Bacatá: Notebooks for DSLs, Almost for Free. (2020) &lt;Programming&gt; Journal and DSLDI 2020
-   > We can generate Jupyter Notebook interfaces for language descriptions in Rascal, similar to the way we can generate Eclipse plugins and VScode extensions,
+   > We can generate Jupyter Notebook interfaces for language descriptions in Rascal, similar to the way we can generate Eclipse plugins and VS Code extensions,
    > but with a very different user experience.
 
 ### 2010's
