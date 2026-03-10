@@ -54,9 +54,9 @@ str generateList(list[str] words)
 ```
 
 ```rascal-shell,continue
-// this is the generated content as plain/text mimetype
+// This is the generated content as plain/text mimetype:
 plainText(generateList(words))
-// this is the generated content as plain/html mimetype
+// This is the generated content as plain/html mimetype:
 html(generateList(words))
 ```
  

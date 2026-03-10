@@ -52,7 +52,7 @@ or we can use some definitions and reify the defined type to see a different beh
 data Nat = zero() | succ(Nat prev) | add(Nat l, Nat r) | mul(Nat l, Nat r);
 #Nat
 ```
-and we can get an abstract definition of the constructors of the [AlgebraicDataType]:
+and we can get an abstract definition of the constructors of the ((AlgebraicDataType)):
 ```rascal-shell,continue
 import Type;
 #Nat.definitions[adt("Nat",[])]
