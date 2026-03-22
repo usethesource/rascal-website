@@ -14,7 +14,8 @@ a lot of usability improvements for the debugger.
 These release notes are organized by major topics and there is a list of smaller improvements at the end, including a list of linked closed issues and the merged pull requests.
 
 Many, if not most, of the improvements to the Rascal project were both funded and executed by Swat.engineering BV. Thanks! Also 
-thanks to Jean-Baptiste Boderlein for the many improvements to the Rascal debugger.
+thanks to Jean-Baptiste B
+Doderlein for the many improvements to the Rascal debugger.
 
 :::warning
 The new checker will re-calculate and replace all intermediate `.tpl` files in your target folder which have been produced earlier with an older version. So, the first
