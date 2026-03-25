@@ -11,7 +11,7 @@ jobs:
 
   website:
     name: Deploy the Rascal website
-    runs-on: buildjet-4vcpu-ubuntu-2204
+    runs-on: ubicloud-standard-2
     needs: prepare-website
     steps:
       # Download prepared sources from base
