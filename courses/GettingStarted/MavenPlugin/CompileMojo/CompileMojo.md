@@ -73,7 +73,7 @@ The compiler is configured in `pom.xml` in three locations:
 ```
 * The latter overwrites the first, tag-by-tag
 
-The configuration tags are an extended subset of the standard fields of ((util::Reflective::PathConfig)).
+The configuration tags are an extended subset of the standard fields of ((data:PathConfig)).
 The defaults are chosen such that you hardly have to use these tags.
 
 | *Configuration tag* | *Default* | *Description* |
