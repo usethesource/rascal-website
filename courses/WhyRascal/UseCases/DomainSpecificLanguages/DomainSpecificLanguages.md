@@ -9,7 +9,7 @@ In this usecase description we give a flavor of how you can use Rascal to:
 1. define the syntax of a DSL;
 2. create a simple semantic check;
 3. how to compile the DSL to Java;
-4. instantiate a VS Code extension or Eclipse Plugin for the DSL.
+4. instantiate a VScode extension (an LSP server) for the DSL.
 
 The following example shows how to define a simple DSL for "state machines". It includes a parser, a check for unreachable states and a compiler to Java code. 
 

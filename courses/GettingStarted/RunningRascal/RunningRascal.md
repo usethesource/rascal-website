@@ -6,7 +6,7 @@ sidebar_position: 2
 #### Running Rascal: starting a terminal with a read-eval-print-loop
 
 1. On the Unix or Windows [Commandline]((RunningRascal-Commandline)), start a ((RascalShell)) by: `java -jar rascal-<version>.jar`
-2. In [VS Code]((RunningRascal-VScode)), in the command palette type `Rascal` and select `Create Rascal Terminal`
+2. In [VScode]((RunningRascal-VScode)), in the command palette type `Rascal` and select `Create Rascal Terminal`
 4. With Maven, ((CreateNewProject)) first and then type: `mvn rascal:console`
 
 You will be prompted for input right after the version is printed and a lot of information about the current searchpath configuration. 

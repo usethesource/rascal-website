@@ -57,7 +57,7 @@ What are the differences between ASF+SDF and Rascal? What are the commonalities?
 
 *  Rascal is based on a Java interpreter, or a Java run-time when compiled. So the code is more portable.
 
-*  Rascal is supported by a modern, Eclipse-based, IDE, unlike the simple IDE of the ASF+SDF Meta-Environment.
+*  Rascal is supported by a modern, VScode-based IDE, unlike the simple IDE of the ASF+SDF Meta-Environment.
   IDE services like keyword highlighting, outlining, and more are available for the Rascal programmer.
 
 #### Examples

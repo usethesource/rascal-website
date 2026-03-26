@@ -12,7 +12,7 @@ sidebar_position: 10
 
 ## Abstract
 
-Rascal can be executed in JVM threads (as in the Eclipse context for example) and also we plan to add concurrency features to Rascal itself ((RAP8)). This puts a lot more pressure on our IO mechanism than before, leading to races on disk and on other external resources identified by values of type `loc`.
+Rascal can be executed in JVM threads and also we plan to add concurrency features to Rascal itself ((RAP8)). This puts a lot more pressure on our IO mechanism than before, leading to races on disk and on other external resources identified by values of type `loc`.
 
 We propose to extend the URIResolverRegistry (which is Rascal’s generic resource access mechanism) with a cross-cutting “locking” feature that is safe (up to *unpredicted* aliasing of location URIs). 
 
@@ -21,7 +21,7 @@ A second part of the proposal is to expose this locking feature on the language 
 ## Motivation
 
 * Many use cases of Rascal involve file IO  
-  * Often in a dynamic context where multiple file processors read and write concurrently, such as the Eclipse IDE or an LSP server.  
+  * Often in a dynamic context where multiple file processors read and write concurrently, such as the an LSP server.  
   * More and more in a concurrent and even parallel context, where multi-core architectures are used to speed up larger computations  
 * File IO is hazardous in a concurrent context, due to race conditions  
 * So, we need some form of locking mechanism on file IO.  

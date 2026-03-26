@@ -21,9 +21,7 @@ import util::Reflective;
 newRascalProject(|home:///my-project-name|)
 ```
 
-The Eclipse plugin has a "New Project Wizard" you can use as well.
-
-The next step is to import the new project into VS Code or Eclipse, or
+The next step is to import the new project into VScode, or
 to `cd` to the project's root directory. From there on ((RunningRascal))
 with the new project's source and library settings is trivial.
 
@@ -51,8 +49,7 @@ The `pom.xml` file is the basic setup that names the project and defines its dep
 ```
 
 Next to that `RASCAL.MF` is required to configure the development environment for the project. Some
-information from the `pom.xml` is repeated here, because this file is common between Eclipse, VS Code and empty commandline projects,
-and such projects could work with a `pom.xml`:
+information from the `pom.xml` is repeated here, because this file is common between VScode and empty commandline projects, and such projects should work with a `pom.xml`:
 
 ```MF
 ((|home:///my-project-name/META-INF/RASCAL.MF|))
@@ -63,3 +60,11 @@ And finally in `src/main/rascal` you'll find the Rascal source files, as configu
 ```rascal
 ((|home:///my-project-name/src/main/rascal/Main.rsc|))
 ```
+
+#### Benefits
+
+* The ((newRascalProject)) sets up a project for use with the Rascal ((MavenPlugin)).
+
+#### Pitfalls
+
+* In `RASCAL.MF` the `Sources` configuration option is deprecated and will soon be replaced by pom.xml's `<srcs>` tag in `pom.xml`.
