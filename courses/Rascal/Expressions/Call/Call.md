@@ -2,10 +2,13 @@
 title: Call
 keywords:
   - call
-  - call function
+  - "call function"
+  - prefix
+  - term
   - constructor
   - invoke
-  - invoke function
+  - invocation
+  - "invoke function"
   - "("
   - ")"
 ---
@@ -31,6 +34,11 @@ Call with both positional and keyword parameters:
 Name (Exp~1~, Exp~2~, ..., Name~1~ = Exp~1~, Name~2~ = Exp~2~, ...)
 ```
 
+Calling a functions that is produced by an expression
+```rascal
+Exp (Exp~1~, Exp~2~, ..., Name~1~ = Exp~1~, Name~2~ = Exp~2~, ...)
+```
+
 #### Types
 
 
@@ -38,6 +46,11 @@ Name (Exp~1~, Exp~2~, ..., Name~1~ = Exp~1~, Name~2~ = Exp~2~, ...)
 | --- | --- | --- | --- |
 | `T~1~`    | `T~2~`   | ... | Determined by _Name_, _T~i~_ and function declarations  |
 
+* The parameter types of functions are _variant_, so both co- and contra-variant. In other words they are correct as long as one is a subtype of the other, or vice versa.
+* If the called object is a more complex expression than a function name,
+the type of the expression must be a function type, and the type of the return type
+must be aligned and the number of parameters must be equal. Each parameter type must be
+comparable.
 
 #### Function
 
@@ -70,7 +83,7 @@ and if their signature [matches]((Patterns)), and their body does not ((Fail)), 
 If the match of the signature is non-unitary, it involves backtracking, then a single function
 may be tried many times.
 
-If the name of the function in the call is
+A function declared `default` is tried only after all non-default functions have been tried.
 
 #### Examples
 
