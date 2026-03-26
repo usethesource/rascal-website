@@ -7,6 +7,14 @@ keywords:
     - "rascal:compile"
 ---
 
+#### Synopsis
+
+Basic project configuration for Rascal projects, checking, compilation and running.
+
+#### Decription
+
+The `compile` mojo calls the Rascal static checker and compiler on the source code in a Rascal project. Also it uses information from the libraries the current project depends on (including the standard library). The configuration here is also the core of the configuration for the other maven plugins.
+
 All Rascal projects are assumed to be configured via a Maven `pom.xml` file. To use the Rascal compiler via the `mvn rascal:compile` goal:
 1. The Rascal compiler is made available to the project via adding a proper `<plugin>` tag for the `rascal-maven-plugin`. 
 1. Dependencies on other Rascal or JVM-based projects are declared in with `<dependency>` tags.
@@ -32,7 +40,32 @@ Next to these files the compiler outputs messages and their origin location:
 * `[WARNING]` messages report on likely issues in `Module.rsc`; for example likely to be incomplete and throw an exception, or likely to never match and be dead, etc.
 * `[INFO]` messages provide information useful for understanding advanced features of Rascal or hint at to be deprecated behavior that a programmer might prepare themselves for.
 
-#### Configuring the compiler with Maven
+The configuration tags for the compile mojo are an extended subset of the standard fields of ((data:PathConfig)).
+The defaults are chosen such that you hardly have to use these tags.
+
+| *Configuration tag* | *Default* | *Description* |
+| ------------------- | ----------| ------------- |
+| `<srcs>`            | `<src>./src/main/rascal</src>` | list of directories where `.rsc` files can be found |
+| `<libs>`            | filled with `<dependencies>` | list of jar files or directories for the library dependencies |
+| `<ignores>`         | empty     | list of folders and files to skip while compiling |
+| `<generatedSources>` | `./target/generated-sources` | where the compiler stores intermediate Java code |
+| `<bin>`             | `./target/classes` | where the binary output of the compiler is staged before it goes into the jar file |
+| `<logPathConfig>` | false | write the pathConfig to the log before compiling |
+| `<logImports>` | false | write imports and extends of each module to the log during compilation |
+| `<logWrittenFiles>` | false | log every file written including timestamp during compilation |
+| `<warnUnused>` | true | warn about unused declarations |
+| `<warnedUnusedFormals>` | true | warn about unused formal parameters (pattern variables of function signatures) |
+| `<warnUnusedPatternFormals>` | true | warn about unused  variables in patterns |
+| `<errorsAsWarnings>` | false | with this the compiler never reports failure in the presence of errors |
+| `<warningsAsErrors>` | false | with this the compiler reports failure even if there are only warnings and no errors. Can not be true at the same time with `errorsAsWarnings` |
+| `<parallel>` | false | enables parallel compilation of a large group of `.rsc` source files |
+| `<parallelMax>` | `5` | restricts the number of parallel compiler processes. The mojo otherwises
+computes an estimate based on the number of processors and the available memory |
+| `<parallelPrechecks>` | empty | a list of files reachable from `<srcs>` that will be compiled before the
+other processes start. |
+| `<verbose>` | enables internal debugging prints of the compiler |
+
+#### Examples
 
 The compiler is configured in `pom.xml` in three locations:
 * `<dependencies>...</dependencies>` - each dependency leads to a compile-time library path entry, and a run-time JVM classpath entry.
@@ -73,37 +106,8 @@ The compiler is configured in `pom.xml` in three locations:
 ```
 * The latter overwrites the first, tag-by-tag
 
-The configuration tags are an extended subset of the standard fields of ((data:PathConfig)).
-The defaults are chosen such that you hardly have to use these tags.
-
-| *Configuration tag* | *Default* | *Description* |
-| ------------------- | ----------| ------------- |
-| `<srcs>`            | `<src>./src/main/rascal</src>` | list of directories where `.rsc` files can be found |
-| `<libs>`            | filled with `<dependencies>` | list of jar files or directories for the library dependencies |
-| `<ignores>`         | empty     | list of folders and files to skip while compiling |
-| `<generatedSources>` | `./target/generated-sources` | where the compiler stores intermediate Java code |
-| `<bin>`             | `./target/classes` | where the binary output of the compiler is staged before it goes into the jar file |
-| `<logPathConfig>` | false | write the pathConfig to the log before compiling |
-| `<logImports>` | false | write imports and extends of each module to the log during compilation |
-| `<logWrittenFiles>` | false | log every file written including timestamp during compilation |
-| `<warnUnused>` | true | warn about unused declarations |
-| `<warnedUnusedFormals>` | true | warn about unused formal parameters (pattern variables of function signatures) |
-| `<warnUnusedPatternFormals>` | true | warn about unused  variables in patterns |
-| `<errorsAsWarnings>` | false | with this the compiler never reports failure in the presence of errors |
-| `<warningsAsErrors>` | false | with this the compiler reports failure even if there are only warnings and no errors. Can not be true at the same time with `errorsAsWarnings` |
-| `<parallel>` | false | enables parallel compilation of a large group of `.rsc` source files |
-| `<parallelMax>` | `5` | restricts the number of parallel compiler processes. The mojo otherwises
-computes an estimate based on the number of processors and the available memory |
-| `<parallelPrechecks>` | empty | a list of files reachable from `<srcs>` that will be compiled before the
-other processes start. |
-| `<verbose>` | enables internal debugging prints of the compiler |
-
-#### Examples
-
 Maven is typically executed on the Un*x or Windows commandline like so:
 ```bash
-#! /bin/bash
-
 # Typically runs the compiler and the tests before packaging everything 
 # in a jar file,  and copying it to your local Maven repository:
 mvn install
