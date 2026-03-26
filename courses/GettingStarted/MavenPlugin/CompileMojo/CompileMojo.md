@@ -7,7 +7,7 @@ keywords:
     - "rascal:compile"
 ---
 
-All Rascal projects are assumed to be configured via a Maven `pom.xml` file. To use the Rascal compler via the `mvn rascal:compile` goal:
+All Rascal projects are assumed to be configured via a Maven `pom.xml` file. To use the Rascal compiler via the `mvn rascal:compile` goal:
 1. The Rascal compiler is made available to the project via adding a proper `<plugin>` tag for the `rascal-maven-plugin`. 
 1. Dependencies on other Rascal or JVM-based projects are declared in with `<dependency>` tags.
 1. Running `mvn compile` or `mvn package` or `mvn install` will trigger the compiler, reporting errors, warnings and other information on the go.
