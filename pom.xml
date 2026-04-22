@@ -25,16 +25,16 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <rascal-maven-plugin.version>0.31.0</rascal-maven-plugin.version>
-        <rascal.version>0.42.1</rascal.version>
+        <rascal.version>0.42.2</rascal.version>
         <clair.version>0.13.4</clair.version>
         <rascal-git.version>0.1.18</rascal-git.version>
         <flybytes.version>0.2.11</flybytes.version>
-        <typepal.version>0.15.6</typepal.version>
+        <typepal.version>0.16.7</typepal.version>
         <salix-core.version>0.2.11</salix-core.version>
         <salix-contrib.version>0.2.11</salix-contrib.version>
         <drambiguity.version>0.3.10</drambiguity.version>
         <java-air.version>1.0.2</java-air.version>
-        <rascal-lsp.version>2.22.1</rascal-lsp.version>
+        <rascal-lsp.version>2.22.5</rascal-lsp.version>
         <rascal-lucene.version>0.1.1</rascal-lucene.version>
         <php-analysis.version>0.3.3</php-analysis.version>
         <python-air.version>0.0.12</python-air.version> 
