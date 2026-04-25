@@ -31,4 +31,5 @@ not be turned into actual maintenance projects on the language. Completed RAPs a
 * [ ]  ((RAP14)) - Backward compatibility for Rascal modules
 * [ ]  ((RAP15)) - Conditional patterns and removal of accidental non-linear matching
 * [ ]  ((RAP16)) - Support for error trees
+* [ ]  ((RAP16)) - Better support for ambiguous trees
 
