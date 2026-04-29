@@ -104,6 +104,11 @@ We do not have a way to explicitly match ambiguous trees.
 
 Analogous to what whas discussed in RAP16, exception caused by ambiguous tree access should be propagated normally during backtracking and in generators.
 
+## Compatibility
+
+This proposal is backwards compatible in the sense that if code used to work without throwing static errors, it will continue to function but now throws a dynamic error.
+Try/catch blocks that happen to catch all exceptions (or already catch `ParseErrorRecovery` exceptions will now also catch exceptions when caused by access to an ambiguous tree.
+
 ## Implementation
 
 We can follow exactly the same implementation path we did for the error recovery case. Start by writing tests and then add support to both the interpreter and compiler. Note that the implementation should be simpler for ambiguous trees than for error trees: for ambiguous trees all field access should result in a `ParseErrorRecovery` exception while for error trees only access to fields "after the dot" should fail.
