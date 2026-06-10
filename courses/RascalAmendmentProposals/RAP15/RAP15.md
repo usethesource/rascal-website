@@ -153,5 +153,15 @@ This simplifies the implementation of the type-checker and the interpreter alike
 * Think of another syntax for non-linear matching and forget about all the other possible conditions.  
 * Introduce a type system with dependent types (the current solution comes really close to a *dynamic* dependently typed system; a static dependently types system is much more involved and also hard to work with for programmers since nothing runs until it type-checks).
 
+## Design by contract (ideas for a next RAP)
+
+* An observation: `if` clauses to patterns offer a way to express strongly enforced _preconditions_ on the input parameters (contracts). 
+* And, there is [RAP](https://www.rascal-mpl.org/docs/RascalAmendmentProposals/RAP7/) for enforcing immutability of all pattern variables. Assume we accept this.
+   * with immutability of the input there is no need for a notation to looking back in time when formulating post-conditions.
+* And, we also assume global variables will not be mutable in the future anymore (only local variables). Otherwise we need a notation for preconditions on globals next to the `if` on patterns.
+* Then the question remains: What would be a syntax for imposing post-conditions on the return value, which would mirror the conditions on input variables nicely?
+   * For example `"return" Expresion expression "if" Expression condition ";";` would go a long way, where the function throws `CallFailed()` for example if it can not satisfy the post condition(s).
+  
+
 ## References
 
