@@ -109,9 +109,10 @@ however, we are pretty sure that those do not exist. In any case they could be r
 
 ```
 // simulating "dependently typed patterns"
-// because pattern matching is a runtime feature, we are no actually
-// introducing a dependently typed type-system (!) but we come close 
-// to the same level of expressiveness.
+// because pattern matching is a runtime feature, we are _not_
+// introducing a dependently typed type-system (!). However we come close 
+// to the same level of expressiveness; since the conditions are guaranteed to be satisfied before we start running
+// the body, the conditions offer a strong contract (preconditions) within that block of code.
 int fac(0) = 1;
 int fac(int n > 0) = fac(n - 1) * n;
 // without use of the shorthand:
