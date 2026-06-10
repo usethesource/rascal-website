@@ -54,14 +54,16 @@ Static semantics:
 
 * The pattern may bind variables that are used in the condition  
 * The condition may bind variables *inside* of it, but does not leak new variables beyond the current pattern.  
-* The condition must be of type `bool`
+* The condition must be of type `bool` or the function type `bool(value)`
 
 Dynamic semantics:
 
 * First the pattern is matched against the current subject; with optional bindings as a side-effect. Note that if the pattern is not singular, backtracking may occur later.  
 * Then a new backtracking and binding scope is wrapped around the evaluation of the condition (such that complex back-tracking conditions can introduce variables and be cleaned up nicely)  
-* The condition finds the first way to evaluate to true (includes possible backtracking over the original pattern, but certainly also over non-singular parameters of `&&` and `||`. The semantics is comparable to the sematics of a `when` clause.   
-* If there is no way to evaluate the condition to true, the entire pattern fails.  
+* The condition finds the first way to evaluate to true (includes possible backtracking over the original pattern, but certainly also over non-singular parameters of `&&` and `||`. The semantics is comparable to the sematics of a `when` clause.
+   * if the condition is of type `bool` we simply evaluate it
+   * if the condition is of type `bool(value)` we evaluate the expression as `condition(p)`
+* If there is no way to evaluate the condition to true, the entire pattern fails. if `condition(p)` fails (CallFailed) then we also fail the condition.
 * Otherwise the pattern succeeds and continues with the bindings introduced by the pattern side (and drops the new bindings introduced by the condition side).
 
 Test semantics
@@ -109,6 +111,12 @@ bool evenOdd(int E if E % 2 == 0,
              int O if E % 2 == 1) = true;
 
 default bool evenOdd(int _, int _) = false;
+
+// shorter and sweeter:
+bool isOdd(int i) = i %% 2 == 1;
+bool isEven(int i) = i %% 2 == 0;
+
+bool evenOdd(int E if isEven, int O if isOdd) = true;
 
 // remove duplicates with list matching
 Bool and([*Bool x, Bool a, *Bool y, _ == a, *Bool z])
