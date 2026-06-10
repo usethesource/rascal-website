@@ -28,6 +28,16 @@ syntax Pattern = Pattern pattern “==” Expression value`
 And the short-hand expansion is:   
 `p == v` expands to `tmp:p if tmp == v`
 
+We also allow for short-hand application of boolean predicate functions:
+```
+int E if isOdd
+```
+
+This translates to:
+```
+int E if isOdd(E)
+```
+
 The `when` notation and semantics could be completely removed in time.
 
 ## Motivation
