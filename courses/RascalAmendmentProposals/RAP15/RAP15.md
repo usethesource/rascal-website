@@ -49,12 +49,12 @@ This RAP solves *a number of issues* in the design of Rascal’s syntax and sema
 * **When-clauses are not allowed for functions with statement blocks as bodies**  
 * Randomized input for tests has to be filtered inside of tests code block, often returning `true` when the test input is invalid (and wasting opportunity for the valid inputs).
 
-The urgency of this RAP is *low*. However, the non-linear matching issue has **waited for more than 10 years now** and it is still a weekly cause of time loss debugging this trivial issue in new code. The type-checker warns about non-linear matches with an info message; which helps while writing new code, but it is a frequent source of false positives in the code that is left.
+The urgency of this RAP is *low*. However, it is still a cause of time loss through  debugging. The type-checker warns about non-linear matches with an info message; which helps while writing new code, but it is a frequent source of false positives in the code that is left.
 
 There are other ways to solve the nonlinear matching problem than to rename a variable. For example by introducing specific syntax for equality testing in the Pattern notation. 
 
 The benefit of the currently proposed new notation is that it fixes the non-linear matching problem but also other problems with “when” and with random tests. 
-**It would be less nice if we have to add conditional patterns anyway and have added yet another syntax for non-linear matching.** 
+It would be less nice if we have to add conditional patterns anyway and have added yet another syntax for non-linear matching.
 
 ## Specification
 
