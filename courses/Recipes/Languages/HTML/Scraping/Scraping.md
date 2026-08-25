@@ -21,11 +21,13 @@ In this demo we extract information from the website of the [Centraal Bureau voo
 
 We found an interesting [page](https://longreads.cbs.nl/nederland-in-cijfers-2022/hoeveel-fietsen-we-gemiddeld-per-week/) that lists how much biking the Dutchies do on average weekly:
 
-```rascal-shell
+```rascal-shell,errors
 import lang::html::IO;
 import IO;
 
-page = readHTMLFile(|https://longreads.cbs.nl/nederland-in-cijfers-2022/hoeveel-fietsen-we-gemiddeld-per-week/|);
+// we use a local copy instead of the live content for stability reasons
+htmlExample = getResource("Languages/HTML/Scraping/fietsen.html");
+page = readHTMLFile(htmlExample);
 ```
 
 As you can see the output is truncated with `...`, to see more we can use ((IO-iprintln)):
@@ -65,7 +67,7 @@ Now we refined the pattern to filter out the non-header rows:
 
 ```rascal-shell,continue
 if (/tab:div(rows,class=/datatable-container/) := page) { 
-    for (/r:tr([th(_,scope="row"), td(_)]) := rows) { // <3>
+    for (/r:tr([text(_),th(_,scope="row"), text(_), td(_), text(_)]) := rows) { // <3>
         println(r);
     }
 }
@@ -78,7 +80,7 @@ We could make the query deeper and more complex, but we choose to add another ne
 
 ```rascal-shell,continue
 if (/tab:div(rows,class=/datatable-container/) := page) { 
-    for (/r:tr([category:th(_,scope="row"), number:td(_)]) := rows) { 
+    for (/r:tr([text(_),category:th(_,scope="row"), text(_), number:td(_), text(_)]) := rows) { 
         if (/text(str c) := category, /text(str n) := number) {
             println("<c> --- <n>");
         }
@@ -91,6 +93,7 @@ raw data. But the Dutch use comma's as decimal separators:
 
 ```rascal-shell,continue,error
 import String;
+import util::Math;
 toReal("18,79");
 toReal("18.79");
 replaceAll("18,79", ",", ".")
@@ -99,7 +102,7 @@ replaceAll("18,79", ",", ".")
 ```rascal-shell,continue
 rel[str persoonskenmerken, real fietskilometers] myData = {};
 if (/tab:div(rows,class=/datatable-container/) := page) { 
-    for (/r:tr([category:th(_,scope="row"), number:td(_)]) := rows) { 
+    for (/r:tr([text(_),category:th(_,scope="row"), text(_), number:td(_), text(_)]) := rows) { 
         if (/text(str c) := category, /text(str n) := number) {
             println("<c> --- <n>");
             myData += <c, toReal(replaceAll(n, ",", "."))>;
@@ -110,11 +113,12 @@ myData;
 ```
 
 Now we have the data in a format that we can compute with:
-```rascal-shell
+```rascal-shell,continue
 myData<persoonskenmerken>
 import Set;
 theSum = sum(myData<fietskilometers>);
 relativeData = { <pk, round(avg / theSum * 100.0, 0.1) > | <pk, avg> <- myData};
+```
 
 To keep this analysis for the future, for example when new data is published on the site, we
 can store the query in a function. It is also ready to be rewritten from structured programming
@@ -123,7 +127,7 @@ style into a functional comprehension. Let's do that first:
 ```rascal-shell,continue
 { <c, toReal(replaceAll(n, ",", "."))>                      
 | /tab:div(rows,class=/datatable-container/) := page        
-, /r:tr([category:th(_,scope="row"), number:td(_)]) := rows 
+, /r:tr([text(_),category:th(_,scope="row"), text(_), number:td(_), text(_)]) := rows 
 , /text(str c) := category, /text(str n) := number          
 }
 ```
@@ -137,10 +141,10 @@ of a ((Set-Comprehension)):
 
 Now we wrap it all up in a reusable function:
 ```rascal-shell,continue
-rel[str persoonskenmerken, real fietskilometers] scrapeFietskilometers(loc address=|https://longreads.cbs.nl/nederland-in-cijfers-2022/hoeveel-fietsen-we-gemiddeld-per-week/|) 
+rel[str persoonskenmerken, real fietskilometers] scrapeFietsKilometers(loc address=|https://longreads.cbs.nl/nederland-in-cijfers-2022/hoeveel-fietsen-we-gemiddeld-per-week/|) 
     = { <c, toReal(replaceAll(n, ",", "."))>                      
         | /tab:div(rows,class=/datatable-container/)        := readHTMLFile(address)        
-        , /r:tr([category:th(_,scope="row"), number:td(_)]) := rows 
+        , /r:tr([text(_),category:th(_,scope="row"), text(_), number:td(_), text(_)]) := rows 
         , /text(str c) := category, /text(str n)            := number          
     };
 scrapeFietsKilometers()
