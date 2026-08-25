@@ -28,6 +28,16 @@ syntax Pattern = Pattern pattern “==” Expression value`
 And the short-hand expansion is:   
 `p == v` expands to `tmp:p if tmp == v`
 
+We also allow for short-hand application of boolean predicate functions:
+```
+int E if isOdd
+```
+
+This translates to:
+```
+int E if isOdd(E)
+```
+
 The `when` notation and semantics could be completely removed in time.
 
 ## Motivation
@@ -39,12 +49,12 @@ This RAP solves *a number of issues* in the design of Rascal’s syntax and sema
 * **When-clauses are not allowed for functions with statement blocks as bodies**  
 * Randomized input for tests has to be filtered inside of tests code block, often returning `true` when the test input is invalid (and wasting opportunity for the valid inputs).
 
-The urgency of this RAP is *low*. However, the non-linear matching issue has **waited for more than 10 years now** and it is still a weekly cause of time loss debugging this trivial issue in new code. The type-checker warns about non-linear matches with an info message; which helps while writing new code, but it is a frequent source of false positives in the code that is left.
+The urgency of this RAP is *low*. However, it is still a cause of time loss through  debugging. The type-checker warns about non-linear matches with an info message; which helps while writing new code, but it is a frequent source of false positives in the code that is left.
 
 There are other ways to solve the nonlinear matching problem than to rename a variable. For example by introducing specific syntax for equality testing in the Pattern notation. 
 
 The benefit of the currently proposed new notation is that it fixes the non-linear matching problem but also other problems with “when” and with random tests. 
-**It would be less nice if we have to add conditional patterns anyway and have added yet another syntax for non-linear matching.** 
+It would be less nice if we have to add conditional patterns anyway and have added yet another syntax for non-linear matching.
 
 ## Specification
 
@@ -54,14 +64,16 @@ Static semantics:
 
 * The pattern may bind variables that are used in the condition  
 * The condition may bind variables *inside* of it, but does not leak new variables beyond the current pattern.  
-* The condition must be of type `bool`
+* The condition must be of type `bool` or the function type `bool(value)`
 
 Dynamic semantics:
 
 * First the pattern is matched against the current subject; with optional bindings as a side-effect. Note that if the pattern is not singular, backtracking may occur later.  
 * Then a new backtracking and binding scope is wrapped around the evaluation of the condition (such that complex back-tracking conditions can introduce variables and be cleaned up nicely)  
-* The condition finds the first way to evaluate to true (includes possible backtracking over the original pattern, but certainly also over non-singular parameters of `&&` and `||`. The semantics is comparable to the sematics of a `when` clause.   
-* If there is no way to evaluate the condition to true, the entire pattern fails.  
+* The condition finds the first way to evaluate to true (includes possible backtracking over the original pattern, but certainly also over non-singular parameters of `&&` and `||`. The semantics is comparable to the sematics of a `when` clause.
+   * if the condition is of type `bool` we simply evaluate it
+   * if the condition is of type `bool(value)` we evaluate the expression as `condition(p)`
+* If there is no way to evaluate the condition to true, the entire pattern fails. if `condition(p)` fails (CallFailed) then we also fail the condition.
 * Otherwise the pattern succeeds and continues with the bindings introduced by the pattern side (and drops the new bindings introduced by the condition side).
 
 Test semantics
@@ -97,9 +109,10 @@ however, we are pretty sure that those do not exist. In any case they could be r
 
 ```
 // simulating "dependently typed patterns"
-// because pattern matching is a runtime feature, we are no actually
-// introducing a dependently typed type-system (!) but we come close 
-// to the same level of expressiveness.
+// because pattern matching is a runtime feature, we are _not_
+// introducing a dependently typed type-system (!). However we come close 
+// to the same level of expressiveness; since the conditions are guaranteed to be satisfied before we start running
+// the body, the conditions offer a strong contract (preconditions) within that block of code.
 int fac(0) = 1;
 int fac(int n > 0) = fac(n - 1) * n;
 // without use of the shorthand:
@@ -109,6 +122,12 @@ bool evenOdd(int E if E % 2 == 0,
              int O if E % 2 == 1) = true;
 
 default bool evenOdd(int _, int _) = false;
+
+// shorter and sweeter:
+bool isOdd(int i) = i %% 2 == 1;
+bool isEven(int i) = i %% 2 == 0;
+
+bool evenOdd(int E if isEven, int O if isOdd) = true;
 
 // remove duplicates with list matching
 Bool and([*Bool x, Bool a, *Bool y, _ == a, *Bool z])
@@ -133,6 +152,16 @@ This simplifies the implementation of the type-checker and the interpreter alike
 
 * Think of another syntax for non-linear matching and forget about all the other possible conditions.  
 * Introduce a type system with dependent types (the current solution comes really close to a *dynamic* dependently typed system; a static dependently types system is much more involved and also hard to work with for programmers since nothing runs until it type-checks).
+
+## Design by contract (ideas for a next RAP)
+
+* An observation: `if` clauses to patterns offer a way to express strongly enforced _preconditions_ on the input parameters (contracts). 
+* And, there is [RAP](https://www.rascal-mpl.org/docs/RascalAmendmentProposals/RAP7/) for enforcing immutability of all pattern variables. Assume we accept this.
+   * with immutability of the input there is no need for a notation to looking back in time when formulating post-conditions.
+* And, we also assume global variables will not be mutable in the future anymore (only local variables). Otherwise we need a notation for preconditions on globals next to the `if` on patterns.
+* Then the question remains: What would be a syntax for imposing post-conditions on the return value, which would mirror the conditions on input variables nicely?
+   * For example `"return" Expresion expression "if" Expression condition ";";` would go a long way, where the function throws `CallFailed()` for example if it can not satisfy the post condition(s).
+  
 
 ## References
 
