@@ -5,16 +5,18 @@ sidebar_position: 17
 
 | RAP | 16 |
 | :---- | :---- |
-| Title | Drop sequence symbols | 
+| Title | Drop sequence and alternative symbols | 
 | Author | Jurgen Vinju |
 | Status | Draft |
 | Type | Language Design  |
 
 ## Abstract
 
-The sequence symbol in syntax definitions, `(A B)` defines a nameless non-terminal which parses and `A` followed by a `B`. In context-free syntax contexts a lalayout node is added. An arbitrary amount of elements is allowed. Sequence is one of "regular" symbols next to lists, separated lists, alternatives and optionals.
+The sequence symbol in syntax definitions, `(A B)` defines a nameless non-terminal which parses and `A` followed by a `B`. In context-free syntax contexts a layout node is added. An arbitrary amount of elements is allowed. Sequence is one of "regular" symbols next to lists, separated lists, alternatives and optionals.
 
-The proposal is to remove this feature entirely from Rascal.
+The alternative symbol in syntax definitions `(A | B)` defines a nameless non-terminal which accepts either `A` or `B` (or both). An arbitrary amount of elements is allowed. Alternative is also one of the "regular" symbols next to lists, etc.
+
+The proposal is to remove these features entirely from Rascal. Also from lexical syntax definitions where they are sometimes quite handy.
 
 ## Motivation
 
@@ -23,9 +25,15 @@ It can be made to work but at the cost of weird special cases in several places.
 * Nested sequences in a grammar do not contribute to the readability of a grammar.
 * Nested sequences in a grammar make downstream processing in Rascal harder.
 * A simple production rule for the sequence: `syntax MySequence = A B;` solves the problem.
+* Alternative is the dual of sequence. Where Sequence implements (again) the concatenation feature of productions rules, alternative implements again the `|` of production rules. To remove one without the other would be inconsistent.
+* Nested alternatives in a grammar do not contribute to the readability of grammar.
+* Nested alternatives in a grammar make downstream processing harder.
+* Both nested alternatives and nested sequences make it hard to create a clear mapping between concrete and abstract syntax (implode).
 
 ## Compatibility
 
-* Sequence is not used by the bootstrap sequence because it does not occur in the Rascal grammar for Rascal
-* None of our examples use sequence
+* Neither Sequence nor Alternative is used by the bootstrap sequence because it does not occur in the Rascal grammar for Rascal
+* None of our examples use sequence or alternative
 * Removing sequence will produce a parse error in the grammars that use it.
+* Some people use sequence and alternative in complex lexical syntax definitions. They will have to introduce a non-terminal for every instance.
+* It is possible to leave the syntax of Sequence and Alternative in the grammar for a while and provide quickfixes for the user.
