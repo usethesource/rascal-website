@@ -52,14 +52,14 @@ Function types contribute to the "bounded type lattice" of Rascal. We have to de
 types with keyword fields now, such that the lattice properties are preserved:
 * partial reflexive order
    - reflexive: $a <= a$
-   - antisymmatric: $a <= b && b <= a ==> a == b$
-   - transitive: $a <= b && b <= c ==> a <= c$
+   - antisymmatric: $a <= b \wedge b <= a  \rightarrow  a == b$
+   - transitive: $a <= b \wedge b <= c \rightarrow  a <= c$
 * top `value` is identity for glb
 * bottom `void` is identity for lub
 
 ### More parameters is fine, less is not, and contra variance (not co-variance) for parameter types
 
-For two function types a <: b, `a` must 
+For two function types `a <= b`, `a` must 
 * have at least the same parameter names as `b`
 * these parameter types per name are to be supertypes (contra-variant), so 
    * wrong: `int(int f = ...) <= int(num f = ...)`, because the sub-type can now not handle parameters of type `rat`
@@ -70,7 +70,7 @@ For two function types a <: b, `a` must
 
 Note that the `more parameters is fine, fewer parameters is not fine` is essential for the lattice property. Dynamically
 we could have allowed fewer parameters too (since all that would happen is passing superfluous parameters). However, such
-a rule would make it **easy to break antisymmetry** (i.e. create `a <= b && b <= a && b != a`) and break termination and unique solution properties of type inference. Also we believe "more parameters is fine" to coincide with what people 
+a rule would make it **easy to break antisymmetry** (i.e. create $a <= b \wedge b <= a \wedge b != a$) and break termination and unique solution properties of type inference. Also we believe "more parameters is fine" to coincide with what people 
 expect from sub-typing/sub-classing in programming languages. Java classes may have more methods, and not fewer, too.
 
 If a generic parameter is used in keyword parameter type:
