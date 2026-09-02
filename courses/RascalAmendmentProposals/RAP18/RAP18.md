@@ -79,8 +79,9 @@ If a generic parameter is used in keyword parameter type:
 
 ## Dynamic Semantics
 
-* for a type correct program the dynamic semantics of Rascal remains unchanged. In Rascal we only have concrete function instances, which all carry their own defaults.
+* for a type correct program the dynamic semantics of Rascal remains (almost) unchanged. In Rascal we only have concrete function instances, which all carry their own defaults.
 * for type-parametrized programs, type instantation must be extended to keyword parameters
+* the dynamic version of `subtype` must reflect the static semantics and will change the way typed variable patterns match or don't match.
 
 ## Implementation
 
