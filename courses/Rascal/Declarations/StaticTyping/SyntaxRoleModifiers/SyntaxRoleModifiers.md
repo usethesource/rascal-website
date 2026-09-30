@@ -44,8 +44,8 @@ Or their open variants:
    * `layout` for layout ((SyntaxDefinition))
    * `keyword` for keyword ((SyntaxDefinition))
 * Parametrized (open) syntax role modifiers bind and instantiate the _name_ of syntax types
-   * In a ((Pattern)) `data[&T]` matches only with (((AlgebraicDataType))s and binds their name
-   * In a return type of a ((FunctionDeclaration)) `syntax[&T]` instantiates a syntax type with the bound name
+   * In a ((Rascal-Pattern)) `data[&T]` matches only with (((AlgebraicDataType))s and binds their name
+   * In a return type of a ((Declarations-Function)) `syntax[&T]` instantiates a syntax type with the bound name
 
 
 #### Examples
@@ -57,8 +57,8 @@ data E = e();
 syntax E = "e";
 // now we use the ambiguous name `E` with a modifier to make sure we pick the right one:
 data[E] example1 = e();
-// the ((AsType)) operator accepts only `syntax` non-terminals, so it does not need the modifier:
-syntax[E] example2 = [E] "e";
+// even reified types can be specialized towards the indicated type name:
+syntax[E] example2 = parse(#syntax[E], "e");
 ```
 
 This illustrates __name preserving__ functions:
