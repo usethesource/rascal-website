@@ -8,26 +8,11 @@ In this post we report on the Rascal release 0.43.x
 
 ## Release 0.43.0 - October, 2026
 
-Welcome to Rascal 0.43.0! This release introduces a major step forward in the way DSL projects can manage their Rascal version dependencies. Moving to a *POM-leading* approach, from this release onward, any evaluator that runs in the context of a DSL project (regardless of its origin, such as a command of the `rascal-maven-plugin` or a REPL opened by the VS Code extension) will use exactly the Rascal version that is specified in that project's pom.xml. This approach rules out many subtle version-related issues and improves overall stability. A side-effect of the POM-leading approach is that the `std` schema can no longer be used to refer to locations inside the standard library. This is another major change introduced in this release. Additionally, this release includes bugfixes and improvements to usability, performance, and stability.
-
-Both the POM-leading approach and the removal of the `std` schema are explained in more detail in two separate blog posts:
-  - ???
-  - ???
+Welcome to Rascal 0.43.0! The major changes of this release are the removal of annotations and the removal of the `std` scheme. Additionally, this release includes several bugfixes and improvements to usability, performance, and stability.
 
 These release notes are organized by major topics, and there is a list of merged pull requests and closed issues at the end.
 
 Many, if not most, of the improvements to the Rascal project were both funded and executed by Swat.engineering BV. Thanks!
-
-:::warning
-The checker introduced in version 0.42.x will re-calculate and replace all intermediate `.tpl` files in your target folder which have been produced earlier with an older version. So, the first
-check after upgrading to 0.42.x or above will not be incremental.
-Also, for library dependencies and inter-project dependencies it is important you upgrade to rascal **0.43.x** all _at the same time_. A clean error message
-will be produced if you forget, or definitions will simply not be found because their fully qualified names in the TPL file interfaces have changed in different ways. 
-:::
-
-:::warning
-**Breaking changes:** As announced in the release notes of version 0.42.x, the `@deprecated` API of [util::LanguageServer](https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.rascal-lsp/Library/util/LanguageServer/) has been removed in version 0.43.x. Furthermore, annotations are no longer supported (see below).
-:::
 
 :::info
 The Java-air project was extracted from the Rascal standard library in version 0.41.x already. Please add a dependency to [java-air](https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.java-air/) if you want to keep using this functionality. 
@@ -39,12 +24,16 @@ The Java-air project was extracted from the Rascal standard library in version 0
 * The scheme and authority of locations are now case-insensitive (normalized to lowercase), as required by the [URI RFC](https://datatracker.ietf.org/doc/html/rfc3986). This fixes a few subtle issues when locations were used in combination with some form of RPC (HTTP/JSON/LSP) or case-sensitive file system. (#2845, #2857, #2851, #2860, #2862)
 * Parsers (including concrete syntax pattern matchers) can now be run directly for symbols with regular operators, including `*`, `+`, and `?`, without the need to introduce dummy symbols in the grammar. (#2809)
 * Annotations have been removed. A Quick Fix is available in VS Code to automatically migrate all Rascal code with annotations to equivalent code without them. (#1974, #2793)
-* The Rascal language now depends on version 0.1.x of Vallang.
+* The Rascal language now depends on version 1.1.x of Vallang.
+
+:::info
+The removal of the `std` scheme, the removal of annotation support, and the case-insensitivity of scheme/authority are low-impact breaking changes. Migration tools and Quick Fixes in the VS Code extension are provided to streamline the few code changes that might be needed.
+:::
 
 ### Maven and evaluator improvements
 
-* The version of Rascal used by an evaluator is now fully determined by the pom.xml of the project in which the evaluator is started (e.g., by executing `rascal:compile/tutor/console` using Maven or by opening a REPL in the VS Code extension). See the separate [blog post](???) for details. (#2641, #2794, #2792, #2976, #2804, #2901)
 * Rascal tests can now be executed using Maven, without the need to write separate Java classes with the `JUnitTestRunner` annotation. Test output is reported in language-independent CTRF JSON format. (#2755, #2840)
+* The internals have been updated toward improvements in the VS Code extension to better respect pom.xml. See the separate [blog post](???) for details. (#2641, #2794, #2792, #2976, #2804, #2901)
 * Several other small issues have been fixed/improved. (#2843, #2877, #2854, #2913)
 
 ### Typechecker improvements
