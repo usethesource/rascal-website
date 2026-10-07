@@ -130,14 +130,14 @@ contributing to Rascal then we'd use the "pull request" model together like this
 * [#2901](https://github.com/usethesource/rascal/pull/2901) - Distinguish between cases "resolver doesn't exist" and "resolver does exist, but fails" when resolving logical locations
 * [#2914](https://github.com/usethesource/rascal/pull/2914) - Disabling a test that doesn't work
 * [#2913](https://github.com/usethesource/rascal/pull/2913) - Use unaliased static type in assignable statement
-* [vallang #350] - Implement proper scheme and authority normalisation
-* [vallang #354] - Fix alias type intersection checks
-* [vallang #293] - removed unused imports and added more specific overrides of the IListWriter.unique() and ISetWriter.unique() methods to avoid weird casts in client code
-* [vallang #355] - Remove wrong circular definition exception when using alias twice in constructor
-* [vallang #356] - KeyForBottom Manual Annotation (certainly chercker-framework issue)
-* [vallang #359] - Fix nested parameterized ADT parsing in StandardTextReader
-* [vallang #360] - Add test and fix for Validation and Arity in ValueIO parsing.
-* [vallang #361] - Fix Merge Regression
+* [vallang #350](https://github.com/usethesource/vallang/pull/350) - Implement proper scheme and authority normalisation
+* [vallang #354](https://github.com/usethesource/vallang/pull/354) - Fix alias type intersection checks
+* [vallang #293](https://github.com/usethesource/vallang/pull/293) - removed unused imports and added more specific overrides of the IListWriter.unique() and ISetWriter.unique() methods to avoid weird casts in client code
+* [vallang #355](https://github.com/usethesource/vallang/pull/355) - Remove wrong circular definition exception when using alias twice in constructor
+* [vallang #356](https://github.com/usethesource/vallang/pull/356) - KeyForBottom Manual Annotation (certainly chercker-framework issue)
+* [vallang #359](https://github.com/usethesource/vallang/pull/359) - Fix nested parameterized ADT parsing in StandardTextReader
+* [vallang #360](https://github.com/usethesource/vallang/pull/360) - Add test and fix for Validation and Arity in ValueIO parsing.
+* [vallang #361](https://github.com/usethesource/vallang/pull/361) - Fix Merge Regression
 
 ### Fixed issues since version 0.42.2
 
@@ -185,4 +185,4 @@ beta testing new features.
 * [#2027](https://github.com/usethesource/rascal/issues/2027) - ANSI codes printed after exit and prompt is off.
 * [#2904](https://github.com/usethesource/rascal/issues/2904) - Local nested pattern variable does not shadow global function definition
 * [#1100](https://github.com/usethesource/rascal/issues/1100) - Imploding with overloaded AST constructor functions does not work
-* [vallang #349] - Source Locations do not normalize scheme & authority, this causes subtle issues
+* [vallang #349](https://github.com/usethesource/vallang/issues/349) - Source Locations do not normalize scheme & authority, this causes subtle issues
