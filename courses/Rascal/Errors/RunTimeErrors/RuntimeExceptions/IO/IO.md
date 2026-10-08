@@ -22,7 +22,7 @@ This error can be generated for many reasons.
 
 First there may be a problem in the [location]((Rascal:Values-Location)) that is used.
 It maybe that the _schemes_ is not supported.
-Examples of supported schemes include `http`, `file`, `home`, `rascal` and `project`.
+Examples of supported schemes include `http`, `file`, `home`, `mvn` and `project`.
 It can also be the case that the _host_ that occurs in the location cannot be found.
 
 Second, while trying to open the file things can go wrong like insufficient access rights
