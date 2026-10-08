@@ -30,7 +30,7 @@ import IO;
 readFileLines(|cdw:///courses/Recipes/demo/lang/Func/Parse.rsc|);
 ```
 This is fixed by using the proper scheme name:
-```rascal-shell,continue,error
+```rascal-shell,continue
 readFileLines(|cwd:///courses/Recipes/demo/lang/Func/Parse.rsc|);
 ```
 
