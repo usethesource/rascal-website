@@ -2,34 +2,39 @@ jvinju:
   name: Jurgen Vinju
   title: Senior Researcher @ CWI-SWAT, professor @ TU/E, Rascal Core Team
   url: http://homepages.cwi.nl/~jurgenv
-  image_url: https://www.cwi.nl/intranet/faces/1367.jpg
+  image_url: /images/authors/jurgen.jpg
 
 tvdstorm:
   name: Tijs van der Storm
   title: Group Leader @ CWI-SWAT, professor @ RUG, Rascal Core Team
   url: https://homepages.cwi.nl/~storm/
-  image_url: https://www.cwi.nl/intranet/faces/1812.jpg
+  image_url: /images/authors/tijs.jpg
 
 dlandman:
   name: Davy Landman
-  title: Language Engineer & CEO of swat.engineering, Rascal Core Team
-  url: https://homepages.cwi.nl/~landman/
-  image_url: https://homepages.cwi.nl/~landman/images/davylandman.png
+  title: Language Engineer & CEO of Swat.engineering, Rascal Core Team
+  url: https://www.davylandman.nl/
+  image_url: /images/authors/davy.webp
 
 msteindorfer:
   name: Micheal Steindorfer
   title: Researcher @ TU Delft, Rascal Contributor
   url: https://github.com/msteindorfer
-  image_url: https://avatars.githubusercontent.com/u/1998004?v=4
+  image_url: /images/authors/michael.jpg
 
 mhills:
   name: Mark Hills
   title: Associate Professor @ East Caroline University, Rascal Contributor
   url: http://www.cs.ecu.edu/hillsma/
-  image_url: https://s.gravatar.com/avatar/cf27b8d5ab19b451087c19f5493d32a9?s=270%27
+  image_url: /images/authors/mark.jpg
 
 pklint:
   name: Paul Klint
   title: Research Fellow @ CWI, Rascal Godfather
   url: https://www.cwi.nl/people/paul-klint
-  image_url: https://www.adviescollegeicttoetsing.nl/binaries/medium/content/gallery/adviescollegeicttoetsing/content-afbeeldingen/leden-adviescollege-ict-toetsing/paul-klint-213-x-300-px.jpg
+  image_url: /images/authors/paul.webp
+
+thartman:
+  name: Toine Hartman
+  title: Language Engineer @ Swat.engineering, Rascal Contributor
+  image_url: /images/authors/toine.webp

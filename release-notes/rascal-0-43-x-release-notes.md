@@ -15,12 +15,12 @@ These release notes are organized by major topics, and there is a list of merged
 Many, if not most, of the improvements to the Rascal project were both funded and executed by Swat.engineering BV. Thanks!
 
 :::info
-The Java-air project was extracted from the Rascal standard library in version 0.41.x already. Please add a dependency to [java-air](https://www.rascal-mpl.org/docs/Packages/org.rascalmpl.java-air/) if you want to keep using this functionality. 
+The Java-air project was extracted from the Rascal standard library in version 0.41.x already. Please add a dependency to [java-air](/docs/Packages/org.rascalmpl.java-air/) if you want to keep using this functionality. 
 :::
 
 ### Language improvements
 
-* The `std` scheme to refer to locations in the standard library has been sunsetted. See the separate [blog post](???) for details. ([#2828], [#2847])
+* The `std` scheme to refer to locations in the standard library has been sunsetted. See the separate [blog post](/blog/2026/10/08/removed-library-schemes) for details. ([#2828], [#2847])
 * The scheme and authority of locations are now case-insensitive (normalized to lowercase), as required by the [URI RFC](https://datatracker.ietf.org/doc/html/rfc3986). This fixes a few subtle issues when locations were used in combination with some form of RPC (HTTP/JSON/LSP) or case-sensitive file system. ([#2845], [#2857], [#2851], [#2860], [#2862])
 * Parsers (including concrete syntax pattern matchers) can now be run directly for symbols with regular operators, including `*`, `+`, and `?`, without the need to introduce dummy symbols in the grammar. ([#2809])
 * Annotations have been removed. A Quick Fix is available in VS Code to automatically migrate all Rascal code with annotations to equivalent code without them. ([#1974], [#2793])
@@ -33,7 +33,7 @@ The removal of the `std` scheme, the removal of annotation support, and the case
 ### Maven and evaluator improvements
 
 * Rascal tests can now be executed using Maven, without the need to write separate Java classes with the `JUnitTestRunner` annotation. Test output is reported in language-independent CTRF JSON format. ([#2755], [#2840])
-* The internals have been updated toward improvements in the VS Code extension to better respect pom.xml. See the separate [blog post](???) for details. ([#2641], [#2794], [#2792], [#2976], [#2804], [#2901])
+* The internals have been updated toward improvements in the VS Code extension to better respect pom.xml. See the separate [blog post](/blog/2026/10/07/pom-leading-for-dsls) for details. ([#2641], [#2794], [#2792], [#2976], [#2804], [#2901])
 * Several other small issues have been fixed/improved. ([#2843], [#2877], [#2854], [#2913])
 
 ### Typechecker improvements
