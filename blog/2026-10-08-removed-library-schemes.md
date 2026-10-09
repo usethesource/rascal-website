@@ -17,6 +17,7 @@ These schemes have been removed. Any use of source locations with these schemes 
     ; // do something with lib
   }
   ```
+  Note for `rascal` and `rascal-lsp`: if they are not yet present in the POM, follow the instructions [here](/blog/2026/10/07/pom-leading-for-dsls).
 
   For experiments, a direct [`mvn://`](/docs/Rascal/Locations/#description) URI can also be used. Note that this divert from the POM when the version in the POM is changed.
 * In other cases, [`findResources`](/docs/Library/IO/#IO-findResources) can help.
