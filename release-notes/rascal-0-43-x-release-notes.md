@@ -1,7 +1,7 @@
 ---
 authors: [sungshik]
 title: "Rascal 0.43.x release notes"
-sidebar_position: 86
+sidebar_position: 87
 ---
 
 In this post we report on the Rascal release 0.43.x
