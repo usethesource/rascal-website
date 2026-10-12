@@ -9,7 +9,7 @@ This feature removal went through the following stages to make for a smooth tran
 
 1. `2009-2013` only annotations implemented (syntax and semantics).
 2. `2013-2019` both annotations and keyword fields implemented (syntax and semantics), but never at the same time on the same node.
-3. `2019-2026 annotations simulated by keyword fields (both the syntactical features use semantics of keyword fields); `Tree@\loc` is simulated by `Tree.src`.
+3. `2019-2026` annotations simulated by keyword fields (both the syntactical features use semantics of keyword fields); `Tree@\loc` is simulated by `Tree.src`.
 4. `2026-....` annotations not implemented anymore (only syntax), everything is a keyword field. `anno loc Tree@\loc` is replaced by `data Tree(loc src=|unknown:///|)` in the `ParseTree` module.
 
 We are now past step 4. Every use of a syntactic construct related to annotations will produce:
