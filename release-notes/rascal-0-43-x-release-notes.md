@@ -31,7 +31,7 @@ The removal of the `std` scheme, the removal of annotation support, and the case
 :::
 
 :::info
-If you have string constants in your own Java code for location schemes, changing these to all lowercase will help prevent any issues. For example,
+If you have string constants in your own Java code for location schemes or authorities, changing these to all lowercase will help prevent any issues. For example,
 change `String myScheme = "arrayLength";` to `String myScheme = "arraylength";`, to make sure that `myLoc.getScheme().equals(myScheme)` still works.
 :::
 
