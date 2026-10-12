@@ -12,7 +12,7 @@ Welcome to Rascal 0.43.0! The major changes of this release are the removal of a
 
 These release notes are organized by major topics, and there is a list of merged pull requests and closed issues at the end.
 
-Many, if not most, of the improvements to the Rascal project were both funded and executed by [Swat.engineering BV](https://www.swat.engineering). Thanks!
+Many, if not most, of the improvements to the Rascal project were both funded and executed by [Swat.engineering](https://www.swat.engineering). Thanks!
 
 :::info
 The Java-air project was extracted from the Rascal standard library in version 0.41.x already. Please add a dependency to [java-air](/docs/Packages/org.rascalmpl.java-air/) if you want to keep using this functionality.
