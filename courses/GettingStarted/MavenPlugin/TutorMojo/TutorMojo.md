@@ -45,13 +45,14 @@ See ((course:Tutor)) for more information on how annotated Rascal modules and
 concept files in markdown format are used to compile documentation.
 
 This is the complete list of tutor parameters and their defaults:
-| parameter | default | note |
+
+| parameter | example/default | note |
 | --- | --- | --- |
-| bin | `./target/classes/` | target folder where `docs` will reside
+| bin | `./target/classes/` | target folder where `docs` will reside |
 | srcs | `<src>./src/main/rascal</src>` | list of local source folders for Rascal modules and concept files |
 | ignores | `<ignore>./src/main/rascal/prelude</ignore>` | will not generate any documentation reachable from this folder |
-| sources | `|http://github.com/usethesource/${project.name}/blob/main|` | website of the project's home. |
-| issues | `|http://github.com/usethesource/${project.name}/issues|` | website of the project's issue tracker. |
+| sources | `http://github.com/usethesource/${project.name}/blob/main` | website of the project's home. |
+| issues | `http://github.com/usethesource/${project.name}/issues` | website of the project's issue tracker. |
 | license | ./LICENSE.md | local file that contains the (open-source) license. |
 | citation | ./CITATION.MD | local file that explains how to cite this project. |
 | funding | ./FUNDING.MD | local file that documents the money sources. |
@@ -71,9 +72,12 @@ Note that issues, license, citation, funding, authors and releaseNotes files mus
 * Writing  ((CodeExamples)) is a way to write documented tests. At compile-time all examples are tested for unexpected failures.
 * The tutor compiler is incremental. Repeated `mvn rascal:tutor` will only re-index and re-compile changed files.
 * The tutor compiler generates errors with accurate file names and line numbers, for easy fixing.
+* Every library package is always documented online with the relevant documentation on licenses, authors, funding, citation, API and
+specific user documentation.
 
 ### Pitfalls
 
 * By default the tutor generates markdown in `/Packages/<groupId>.<artefactId>` and all links are relative to these subfolder.
 * The incremental compiler never removes information from the index. So after `mvn clean` new broken links can be found.
 * There is no IDE integration for tutor compilation yet.
+* Pitfalls: the first time it can take some effort to collect all the relevant information on license, authors, funding, citation, etc.
