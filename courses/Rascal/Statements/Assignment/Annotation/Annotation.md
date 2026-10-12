@@ -9,7 +9,7 @@ keywords:
 #### Synopsis
 
 Assign to an annotation. This feature has been removed.
-See (/blog/2026/10/12/no-more-annotations)[this blog].
+See [this blog](/blog/2026/10/12/no-more-annotations).
 
 #### Syntax
 
