@@ -141,7 +141,7 @@ of a ((Set-Comprehension)):
 
 Now we wrap it all up in a reusable function:
 ```rascal-shell,continue
-rel[str persoonskenmerken, real fietskilometers] scrapeFietsKilometers(loc address=|https://longreads.cbs.nl/nederland-in-cijfers-2022/hoeveel-fietsen-we-gemiddeld-per-week/|) 
+rel[str persoonskenmerken, real fietskilometers] scrapeFietsKilometers(loc address=htmlExample) 
     = { <c, toReal(replaceAll(n, ",", "."))>                      
         | /tab:div(rows,class=/datatable-container/)        := readHTMLFile(address)        
         , /r:tr([text(_),category:th(_,scope="row"), text(_), number:td(_), text(_)]) := rows 
