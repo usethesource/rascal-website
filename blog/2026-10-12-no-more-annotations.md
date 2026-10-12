@@ -3,8 +3,8 @@ title: Final step in replacing the annotations feature with the keyword field fe
 authors: [jvinju]
 ---
 
-Over the years we have been gradually replacing the (/docs/Rascal/Declarations/Annotation)[Annotation] feature with the (/docs/Rascal/Declarations/AlgebraicDataType)[Keyword field] feature.
-In (/release-notes/rascal-0-43-x-release-notes)[release 0.43.0] the final step has been made by replacing the semantics of annotations with a "not implemented" error message with a **quick-fix** suggestion.
+Over the years we have been gradually replacing the [Annotation](/docs/Rascal/Declarations/Annotation) feature with the [Keyword field](/docs/Rascal/Declarations/AlgebraicDataType) feature.
+In [release 0.43.0](/release-notes/rascal-0-43-x-release-notes) the final step has been made by replacing the semantics of annotations with a "not implemented" error message with a **quick-fix** suggestion.
 This feature removal went through the following stages to make for a smooth transition:
 
 1. `2009-2013` only annotations implemented (syntax and semantics).
