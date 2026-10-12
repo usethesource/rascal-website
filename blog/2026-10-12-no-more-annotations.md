@@ -3,14 +3,14 @@ title: Final step in replacing the annotations feature with the keyword field fe
 authors: [jvinju]
 ---
 
-Over the years we have been gradually replacing the (docs/Rascal/Declarations/Annotation/) feature with the (docs/Rascal/Declarations/AlgebraicDataType/)[Keyword field] feature.
+Over the years we have been gradually replacing the (/docs/Rascal/Declarations/Annotation/)[Annotation] feature with the (/docs/Rascal/Declarations/AlgebraicDataType/)[Keyword field] feature.
 In release 0.43.0 the final step has been made by replacing the semantics of annotations with a "not implemented" error message with a **quick-fix** suggestion.
 This feature removal went through the following stages to make for a smooth transition:
 
-1. $2009-2013$ only annotations implemented (syntax and semantics).
-2. $2013-2019$ both annotations and keyword fields implemented (syntax and semantics), but never at the same time on the same node.
-3. $2019-2026$ annotations simulated by keyword fields (both the syntactical features use semantics of keyword fields); `Tree@\loc` is simulated by `Tree.src`.
-4. $2026-\ldots$ annotations not implemented anymore (only syntax), everything is a keyword field. `anno loc Tree@\loc` is replaced by `data Tree(loc src=|unknown:///|)` in the `ParseTree` module.
+1. `2009-2013` only annotations implemented (syntax and semantics).
+2. `2013-2019` both annotations and keyword fields implemented (syntax and semantics), but never at the same time on the same node.
+3. `2019-2026 annotations simulated by keyword fields (both the syntactical features use semantics of keyword fields); `Tree@\loc` is simulated by `Tree.src`.
+4. `2026-....` annotations not implemented anymore (only syntax), everything is a keyword field. `anno loc Tree@\loc` is replaced by `data Tree(loc src=|unknown:///|)` in the `ParseTree` module.
 
 We are now past step 4. Every use of a syntactic construct related to annotations will produce:
 1. an error message by the checker
@@ -27,6 +27,7 @@ For your convenience we list the differences in syntax and semantics here:
 | declaration | `anno OfType OnType@name` | `data OnType(OfType name = Default)` | annotations do not have default expressions |
 | projection  | `OnExpr@name`             | `OnExpr.name`                        | annotations throw `NoSuchAnnotation` if `name` does not exist, while keyword fields return their default. Keyword fields on `node` throw `NoSuchField` exceptions and return a value of type `value` always. |
 | assignment | `OnExpr@name = Expr` | `OnExpr.name = Expr` | Assigment operators like `+=` also inherit the semantics of projection |
+| update  | `OnExpr[@name=Expr]` | `OnExpr[name=Expr]` | field update works the same for both features, both set the field whether or not it was there before |
 | equality | `Cons[@f=1] == Cons[@f=2]` is `true` | `Cons(f=1) == Cons(f=2)` is `false` | constructor equality ignores annotations while it does not ignore keyword fields, this also holds for set elements, and map/relation keys |
 | matching | `Cons[@f=1] := Cons[@f=2]` is `true` |  `Cons(f=1) := Cons(f=2)` is `true` | constructor matching always ignores keyword fields and annotations |
 
