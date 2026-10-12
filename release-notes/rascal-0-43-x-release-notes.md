@@ -1,7 +1,7 @@
 ---
 authors: [sungshik]
 title: "Rascal 0.43.x release notes"
-sidebar_position: 87
+sidebar_position: 85
 ---
 
 In this post we report on the Rascal release 0.43.x
@@ -23,11 +23,16 @@ The Java-air project was extracted from the Rascal standard library in version 0
 * The `std` scheme to refer to locations in the standard library has been sunsetted. See the separate [blog post](/blog/2026/10/08/removed-library-schemes) for details. ([#2828](https://github.com/usethesource/rascal/pull/2828), [#2847](https://github.com/usethesource/rascal/pull/2847))
 * The scheme and authority of locations are now case-insensitive (normalized to lowercase), as required by the [URI RFC](https://datatracker.ietf.org/doc/html/rfc3986). This fixes a few subtle issues when locations were used in combination with some form of RPC (HTTP/JSON/LSP) or case-sensitive file system. ([#2845](https://github.com/usethesource/rascal/pull/2845), [#2857](https://github.com/usethesource/rascal/pull/2857), [#2851](https://github.com/usethesource/rascal/pull/2851), [#2860](https://github.com/usethesource/rascal/pull/2860), [#2862](https://github.com/usethesource/rascal/pull/2862))
 * Parsers (including concrete syntax pattern matchers) can now be run directly for symbols with regular operators, including `*`, `+`, and `?`, without the need to introduce dummy symbols in the grammar. ([#2809](https://github.com/usethesource/rascal/pull/2809))
-* Annotations have been removed. A Quick Fix is available in VS Code to automatically migrate all Rascal code with annotations to equivalent code without them. ([#1974](https://github.com/usethesource/rascal/pull/1974), [#2793](https://github.com/usethesource/rascal/pull/2793))
+* Annotation syntax and semantics have been removed. See [blog post](/blog/2026/10/12/no-more-annotations). A Quick Fix is available in VS Code to automatically migrate all Rascal code with annotations to equivalent code (keyword fields). ([#1974](https://github.com/usethesource/rascal/pull/1974), [#2793](https://github.com/usethesource/rascal/pull/2793))
 * The Rascal language now depends on version 1.1.x of Vallang.
 
 :::info
-The removal of the `std` scheme, the removal of annotation support, and the case-insensitivity of scheme/authority are low-impact breaking changes. Migration tools and Quick Fixes in the VS Code extension are provided to streamline the few code changes that might be needed.
+The removal of the `std` scheme, the removal of annotation support, and the case-insensitivity of scheme/authority are low-impact breaking changes. Migration tools and Quick Fixes in the VS Code extension are provided to streamline the few code changes that might be needed. 
+:::
+
+:::info
+If you have string constants in your own Java code for location schemes, changing these to all lowercase will help prevent any issues. For example,
+change `String myScheme = "arrayLength";` to `String myScheme = "arraylength";`, to make sure that `myLoc.getScheme().equals(myScheme)` still works.
 :::
 
 ### Maven and evaluator improvements
