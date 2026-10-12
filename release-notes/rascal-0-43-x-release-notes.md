@@ -37,7 +37,7 @@ change `String myScheme = "arrayLength";` to `String myScheme = "arraylength";`,
 
 ### Maven and evaluator improvements
 
-* Rascal tests can now be executed using Maven, without the need to write separate Java classes with the `JUnitTestRunner` annotation. Test output is reported in language-independent CTRF JSON format. ([#2755](https://github.com/usethesource/rascal/pull/2755), [#2840](https://github.com/usethesource/rascal/pull/2840))
+* Rascal tests can now be executed using Maven, without the need to write separate Java classes with the `JUnitTestRunner` annotation. Test output is reported in language-independent CTRF JSON format. See ((TestMojo)). ([#2755](https://github.com/usethesource/rascal/pull/2755), [#2840](https://github.com/usethesource/rascal/pull/2840))
 * The internals have been updated toward improvements in the VS Code extension to better respect pom.xml. See the separate [blog post](/blog/2026/10/07/pom-leading-for-dsls) for details. ([#2641](https://github.com/usethesource/rascal/pull/2641), [#2794](https://github.com/usethesource/rascal/pull/2794), [#2792](https://github.com/usethesource/rascal/pull/2792), \[#2976], [#2804](https://github.com/usethesource/rascal/pull/2804), [#2901](https://github.com/usethesource/rascal/pull/2901))
 * Several other small issues have been fixed/improved. ([#2843](https://github.com/usethesource/rascal/pull/2843), [#2877](https://github.com/usethesource/rascal/pull/2877), [#2854](https://github.com/usethesource/rascal/pull/2854), [#2913](https://github.com/usethesource/rascal/pull/2913))
 
