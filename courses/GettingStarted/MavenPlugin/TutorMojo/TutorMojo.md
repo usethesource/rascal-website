@@ -1,5 +1,12 @@
 ---
 title: Tutor Mojo
+keywords:
+    - "rascal:tutor"
+    - documentation
+    - rascaldoc
+    - tutor
+    - docusaurus
+    - markdown
 ---
 
 #### Synopsis

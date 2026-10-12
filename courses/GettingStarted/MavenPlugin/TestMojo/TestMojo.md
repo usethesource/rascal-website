@@ -3,6 +3,7 @@ title: Test Mojo
 keywords:
     - unit test
     - mvn test
+    - "rascal:test"
 ---
 
 #### Synopsis
