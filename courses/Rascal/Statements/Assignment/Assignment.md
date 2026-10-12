@@ -12,6 +12,7 @@ keywords:
   - "]"
   - "."
   - "?"
+  - deconstructing bind
 
 ---
 
