@@ -39,4 +39,4 @@ i.e. `int age = 0`, while for more complex type an exception is thrown by the de
 
 Finally, the quickfix may open and rewrite a large group of files for the current project. You have to save and close each of them manually to write the result to disk. This would also be a good time to review the generated defaults.
 
-If you get stuck, please contact (Jurgen Vinju)[mailto:Jurgen.Vinju@cwi.nl] or (Davy Landman)[mailto:Davy.Landman@swat.engineering] for help.
+If you get stuck, please contact [Jurgen Vinju](mailto:Jurgen.Vinju@cwi.nl) or [Davy Landman](mailto:Davy.Landman@swat.engineering) for help.
