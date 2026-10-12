@@ -13,11 +13,12 @@ This feature removal went through the following stages to make for a smooth tran
 4. `2026-....` annotations not implemented anymore (only syntax), everything is a keyword field. `anno loc Tree@\loc` is replaced by `data Tree(loc src=|unknown:///|)` in the `ParseTree` module.
 
 We are now past step 4. Every use of a syntactic construct related to annotations will produce:
-1. an error message by the checker
+1. an error message by the checker.
 2. a quick-fix suggestion to remove any and all uses of annotation syntax _in the current project_ and replace them by the respective keyword field feature.
+3. a static error by the interpreter.
 
 Note that:
-* If you don't fix the code, it will not run anymore and you will get runtime "static" exceptions by the interpreter.
+* If you don't fix the code, it will not run anymore and you will get static exceptions by the interpreter.
 * After you have fixed the code, it may not run properly on older versions of Rascal anymore, because older versions always come with their own version of the `ParseTree` module.
 
 For your convenience we list the differences in syntax and semantics here:
