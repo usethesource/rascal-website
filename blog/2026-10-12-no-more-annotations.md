@@ -3,8 +3,8 @@ title: Final step in replacing the annotations feature with the keyword field fe
 authors: [jvinju]
 ---
 
-Over the years we have been gradually replacing the (/docs/Rascal/Declarations/Annotation/)[Annotation] feature with the (/docs/Rascal/Declarations/AlgebraicDataType/)[Keyword field] feature.
-In release 0.43.0 the final step has been made by replacing the semantics of annotations with a "not implemented" error message with a **quick-fix** suggestion.
+Over the years we have been gradually replacing the (/docs/Rascal/Declarations/Annotation)[Annotation] feature with the (/docs/Rascal/Declarations/AlgebraicDataType)[Keyword field] feature.
+In (/release-notes/rascal-0-43-x-release-notes)[release 0.43.0] the final step has been made by replacing the semantics of annotations with a "not implemented" error message with a **quick-fix** suggestion.
 This feature removal went through the following stages to make for a smooth transition:
 
 1. `2009-2013` only annotations implemented (syntax and semantics).
@@ -39,4 +39,4 @@ i.e. `int age = 0`, while for more complex type an exception is thrown by the de
 
 Finally, the quickfix may open and rewrite a large group of files for the current project. You have to save and close each of them manually to write the result to disk. This would also be a good time to review the generated defaults.
 
-If you get stuck, please contact mailto:Jurgen.Vinju@cwi.nl or mailto:Davy.Landman@swat.engineering for help.
+If you get stuck, please contact (Jurgen Vinju)[mailto:Jurgen.Vinju@cwi.nl] or (Davy Landman)[mailto:Davy.Landman@swat.engineering] for help.
