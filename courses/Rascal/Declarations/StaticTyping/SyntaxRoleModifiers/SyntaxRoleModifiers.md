@@ -44,8 +44,8 @@ Or their open variants:
    * `layout` for layout ((SyntaxDefinition))
    * `keyword` for keyword ((SyntaxDefinition))
 * Parametrized (open) syntax role modifiers bind and instantiate the _name_ of syntax types
-   * In a ((Rascal-Pattern)) `data[&T]` matches only with (((AlgebraicDataType))s and binds their name
-   * In a return type of a ((Declarations-Function)) `syntax[&T]` instantiates a syntax type with the bound name
+   * In ((Rascal:Patterns)), `data[&T]` matches only with (((AlgebraicDataType))s and binds their name
+   * In return types of ((Declarations-Function))s, `syntax[&T]` instantiates a syntax type with the bound name
 
 
 #### Examples
