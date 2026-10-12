@@ -7,12 +7,12 @@ keywords:
 
 #### Synopsis
 
-`mvn test` runs all rascal test functions in all Rascal modules that reachable from the configured source folders.
+`mvn test` runs all rascal test functions in all Rascal modules that are reachable from the configured source folders.
 
 #### Description
 
 If you add a test execution to the pom configuration:
-* then `mvn test` will run all available tests.
+* then `mvn test` and `mvn rascal:test` will run all available tests of the current project
 * in interactive mode a progress bars are shown per module and for all modules.
 * in `target/rascal-test-reports`, each JSON file reports on one module.
 
