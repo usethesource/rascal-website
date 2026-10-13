@@ -53,6 +53,7 @@ index(["a","b","c"])
 
 * `profiling` provides an accurate and non-invasive profile using a stack sampling method. With high probability the operations that appear to be taking the most time are indeed a bottleneck.
 * `tracing` is helpful to see which of the overloaded functions have been called and what their result was.
+* `debugging` using the interactive debugging interface can be a more effective experience than println-debugging.
 
 #### Pitfalls
 
