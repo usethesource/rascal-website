@@ -4,6 +4,7 @@ keywords:
   - set
   - tracing
   - profiling
+  - debugging
 ---
 
 #### Synopsis
@@ -30,6 +31,7 @@ The options are:
   the results after each RascalShell command.
 * `tracing`: while executing Rascal code, print a trace of all function calls.
 * `errors`: print more diagnostic stack traces if available (of internal functionality)
+* `debugging` : _if available_, this connects the runtime to a debugging interface with breakpoints and stepwise execution.
 
 #### Examples
 
