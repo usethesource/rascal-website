@@ -17,7 +17,7 @@ sidebar_position: 10
 | C and C++     | [clair](/docs/Packages/org.rascalmpl.clair) | |
 | Java          | [java-air](/docs/Packages/org.rascalmpl.java-air) | factored out of the standard library recently |
 | PHP           | [php-analysis](/docs/Packages/org.rascalmpl.php-analysis) | |
-| Python        | [php-analysis](/docs/Packages/org.rascalmpl.python-air) | |
+| Python        | [python-air](/docs/Packages/org.rascalmpl.python-air) | |
 | JVM bytecode  | [flybytes](/docs/Packages/org.rascalmpl.flybytes) | Forward and Reverse | 
 
 ### Libraries
