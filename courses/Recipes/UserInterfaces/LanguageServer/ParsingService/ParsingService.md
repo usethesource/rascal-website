@@ -79,7 +79,7 @@ test bool testErrorPicoParser() {
 }
 ```
 
-In general a ((ParsingService)) is simply a function that satisfies the ((util::LanguageServer-Parser)) signature.
+In general a ((ParsingService)) is simply a function that satisfies the ((util::LanguageServer-parsing)) signature.
 
 Now let's move on to [registering your language with the IDE]((RegisterYourLanguage)) and
 run your own language server.
