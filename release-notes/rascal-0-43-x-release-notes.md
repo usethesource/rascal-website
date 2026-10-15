@@ -27,6 +27,10 @@ The Java-air project was extracted from the Rascal standard library in version 0
 * The Rascal language now depends on version 1.1.x of Vallang.
 
 :::info
+Due to the removal of the `std` resolver, users will most likely also have to update their library dependencies to the latest release.
+:::
+
+:::info
 The removal of the `std` scheme, the removal of annotation support, and the case-insensitivity of scheme/authority are low-impact breaking changes. Migration tools and Quick Fixes in the VS Code extension are provided to streamline the few code changes that might be needed. 
 :::
 
@@ -55,6 +59,7 @@ change `String myScheme = "arrayLength";` to `String myScheme = "arraylength";`,
 * XML parsing: Support for case-sensitive parsing of tags and attributes has been added. ([#2888](https://github.com/usethesource/rascal/pull/2888))
 * Graph visualization: Support for tooltips/hover styles and edge weights has been improved. ([#2769](https://github.com/usethesource/rascal/pull/2769))
 * Reflective: Support to generate a new Rascal project folder and pom.xml has been improved. ([#2891](https://github.com/usethesource/rascal/pull/2891), [#2893](https://github.com/usethesource/rascal/pull/2893))
+* IO: `resolveLocation` now always returns the argument location if it cannot be resolved (instead of sometimes throwing a `SchemeNotSupported` exception).
 * Several other small issues have been fixed/improved. ([#2815](https://github.com/usethesource/rascal/pull/2815), [#2831](https://github.com/usethesource/rascal/pull/2831), [#2876](https://github.com/usethesource/rascal/pull/2876), [#2892](https://github.com/usethesource/rascal/pull/2892))
 
 ### Merged Pull Requests since version 0.42.2
