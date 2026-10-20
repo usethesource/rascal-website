@@ -201,12 +201,12 @@
                             <goal>tutor</goal>
                         </goals>
                         <configuration>
+                            <version>${rascal.version}</version>
                             <isPackageCourse>false</isPackageCourse>
                             <errorsAsWarnings>false</errorsAsWarnings>
                             <verbose>true</verbose>
                             <bin>${project.basedir}</bin> <!-- because tutor appends /docs to this -->
                             <srcs>
-                                <!--<src>|lib://rascal/org/rascalmpl/library|</src> -->
                                 <src>${project.basedir}/courses/WhyRascal</src>
                                 <src>${project.basedir}/courses/Recipes</src>
                                 <src>${project.basedir}/courses/Rascal</src>
