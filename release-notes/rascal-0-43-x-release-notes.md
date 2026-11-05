@@ -6,6 +6,17 @@ sidebar_position: 85
 
 In this post we report on the Rascal release 0.43.x
 
+## Release 0.43.1 - November 2026
+
+This is a small bugfix release for some issues that were found after releasing 0.43.0
+
+* Renamed recently introduced `interpreter_external` to `interpreterExternal` [#2968](https://github.com/usethesource/rascal/pull/2968)
+* Fixed memo configuration and make sure users are warned about those wrong configuration [#2948](https://github.com/usethesource/rascal/pull/2948)
+* synopsis tags now support Markdown [#2957](https://github.com/usethesource/rascal/pull/2957)
+* Fixed parser generator generating overlapping names [#2942](https://github.com/usethesource/rascal/pull/2942)
+* Improve memory pressure of the typechecker [#2947](https://github.com/usethesource/rascal/pull/2947)
+* Fixes in the typechecker & compiler [#2886](https://github.com/usethesource/rascal/pull/2886) [#2962](https://github.com/usethesource/rascal/pull/2962)
+
 ## Release 0.43.0 - October, 2026
 
 Welcome to Rascal 0.43.0! The major changes of this release are the removal of annotations and the removal of the `std` scheme. Additionally, this release includes several bugfixes and improvements to usability, performance, and stability.
