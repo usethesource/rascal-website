@@ -17,6 +17,8 @@ This is a small bugfix release for some issues that were found after releasing 0
 * Improve memory pressure of the typechecker [#2947](https://github.com/usethesource/rascal/pull/2947)
 * Fixes in the typechecker & compiler [#2886](https://github.com/usethesource/rascal/pull/2886) [#2962](https://github.com/usethesource/rascal/pull/2962)
 
+Note that the next major release (0.44.0) will increase the Java runtime requirement to 21.
+
 ## Release 0.43.0 - October, 2026
 
 Welcome to Rascal 0.43.0! The major changes of this release are the removal of annotations and the removal of the `std` scheme. Additionally, this release includes several bugfixes and improvements to usability, performance, and stability.
@@ -72,6 +74,11 @@ change `String myScheme = "arrayLength";` to `String myScheme = "arraylength";`,
 * Reflective: Support to generate a new Rascal project folder and pom.xml has been improved. ([#2891](https://github.com/usethesource/rascal/pull/2891), [#2893](https://github.com/usethesource/rascal/pull/2893))
 * IO: `resolveLocation` now always returns the argument location if it cannot be resolved (instead of sometimes throwing a `SchemeNotSupported` exception).
 * Several other small issues have been fixed/improved. ([#2815](https://github.com/usethesource/rascal/pull/2815), [#2831](https://github.com/usethesource/rascal/pull/2831), [#2876](https://github.com/usethesource/rascal/pull/2876), [#2892](https://github.com/usethesource/rascal/pull/2892))
+
+
+### Upcoming changes
+
+Note that the next major release (0.44.0) will increase the Java runtime requirement to 21.
 
 ### Merged Pull Requests since version 0.42.2
 
