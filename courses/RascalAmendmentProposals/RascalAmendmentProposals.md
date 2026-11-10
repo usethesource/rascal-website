@@ -30,6 +30,7 @@ not be turned into actual maintenance projects on the language. Completed RAPs a
 * [ ]  ((RAP13)) - Name-parametrized syntax modifiers
 * [ ]  ((RAP14)) - Backward compatibility for Rascal modules
 * [ ]  ((RAP15)) - Conditional patterns and removal of accidental non-linear matching
-* [ ]  ((RAP16)) - Support for error trees
+* [X]  ((RAP16)) - Support for error trees (implemented in 0.42.0)
 * [ ]  ((RAP17)) - Removing support for regular sequence and alternative symbols in grammars
+* [ ]  ((RAP18)) - Better support for ambiguous trees
 
