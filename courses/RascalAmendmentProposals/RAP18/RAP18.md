@@ -88,8 +88,8 @@ We propose to use the same approach here: throw a `Ambiguity` exception (analogo
 
 ### Named field assignment
 
-This should also generate a `ParseErrorRecovery` exception. Currently it generates a `NoSuchField` exception in the interpreter, which is a dynamic exception so it can be caught.
-For consistency this should be turned into a `ParseErrorRecovery` exception.
+This should also generate a `Ambiguity` exception. Currently it generates a `NoSuchField` exception in the interpreter, which is a dynamic exception so it can be caught.
+For consistency this should be turned into a `Ambiguity` exception.
 
 ### Named field access with alternative
 
@@ -97,13 +97,13 @@ When applied on an ambigous tree the alternative should be returned. This alread
 
 ### Indexed field access
 
-Indexed field access on an ambiguous tree should also generate a `ParseErrorRecovery` exception.
+Indexed field access on an ambiguous tree should generate a `Ambiguity` exception.
 
 This currently causes an internal error in the interpreter (caused by a Java `UnsupportedOperationException`).
 
 ### Indexed field assignment
 
-Indexed field assignment on an ambiguous tree should also generate a `ParseErrorRecovery` exception.
+Indexed field assignment on an ambiguous tree should generate an `Ambiguity` exception.
 
 Indexed field assignment does not currently work in the interpreter at all.
 
@@ -114,26 +114,25 @@ Matching should fail on ambiguous trees but typed holes can match ambiguous tree
 ### Conclusions
 
 For the interpreter the following changes are needed:
-- `tree.field` should throw a `ParseErrorRecovery` exception instead of a static `UndeclaredField` error.
-- `tree.field=subtree` should throw a `ParseErrorRecovery` exception instead of a `NoSuchField` exception.
-- Named field access on ambiguous trees should throw a `ParseErrorRecovery` exception.
-- Named field assignment on ambiguous trees should throw a `ParseErrorRecovery` exception.
-- Indexed field access on ambiguous trees should throw a `ParseErrorRecovery` exception.
-- Indexed field assignment on ambiguous trees should throw a `ParseErrorRecovery` exception. This should probably wait until proper support for indexed field assignment in the interpreter is implemented.
+- `tree.field` should throw a `Ambiguity` exception instead of a static `UndeclaredField` error.
+- `tree.field=subtree` should throw a `Ambiguity` exception instead of a `NoSuchField` exception.
+- Named field access on ambiguous trees should throw a `Ambiguity` exception.
+- Named field assignment on ambiguous trees should throw a `Ambiguity` exception.
+- Indexed field access on ambiguous trees should throw a `Ambiguity` exception.
+- Indexed field assignment on ambiguous trees should throw a `Ambiguity` exception. This should probably wait until proper support for indexed field assignment in the interpreter is implemented.
 
 ## Handle faulty access to ambiguous trees in backtracking contexts and generators
 
-Analogous to what whas discussed in RAP16, exception caused by ambiguous tree access should be propagated normally during backtracking and in generators.
-This is already  implemented thanks to the work on implementing RAP16.
+Analogous to what whas discussed in RAP16, `Ambiguity` exceptions caused by ambiguous tree access should be propagated normally during backtracking and in generators.
 
 ## Compatibility
 
 This proposal is backwards compatible in the sense that if code used to work without throwing static errors, it will continue to function but now throws a dynamic error.
-Try/catch blocks that happen to catch all exceptions (or already catches `ParseErrorRecovery` exceptions) will now also catch exceptions when caused by access to an ambiguous tree.
+Try/catch blocks that happen to catch all exceptions will now also catch `Ambiguity` exceptions caused by access to an ambiguous tree.
 
 ## Implementation
 
-We can follow exactly the same implementation path we did for the error recovery case. Start by writing tests and then add support to both the interpreter and compiler. Note that the implementation should be simpler for ambiguous trees than for error trees: for ambiguous trees all field access should result in a `ParseErrorRecovery` exception while for error trees only access to fields "after the dot" should fail.
+We can follow exactly the same implementation path we did for the error recovery case. Start by writing tests and then add support to both the interpreter and compiler. Note that the implementation should be simpler for ambiguous trees than for error trees: for ambiguous trees all field access should result in an `Ambiguity` exception while for error trees only access to fields "after the dot" should fail with an `ParseErrorRecovery` exception.
 
 ## Alternatives considered
 
@@ -141,7 +140,7 @@ We can follow exactly the same implementation path we did for the error recovery
 What if all alternatives do have a particular field? We could let field checks succeed in that case as that seems sound. But in practice we foresee this would cause confusion, because although all alternatives have a particular field, it is unclear which one to return on access so field access would still throw an exception.
 The same goes for ambiguities where all alternatives are generated by the same (labeled) production. Letting `tree is label` succeed will cause trouble later.
 
-### Use of the same exception for failres caused by ambiguous trees and error trees
+### Use of the same exception for failures caused by ambiguous trees and error trees
 Error recovery often causes ambiguities even when the syntax does not normally allow ambigous trees. It might even be argued that ambiguous trees are a also produced by a specialized form of error recovery.
 
 In practice we expect language designers to be interested in either error recovery trees or in the presence of 'true' ambiguities, so we opted to use different exceptions for these cases.
