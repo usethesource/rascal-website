@@ -59,10 +59,8 @@ The defaults are chosen such that you hardly have to use these tags.
 | `<errorsAsWarnings>` | false | with this the compiler never reports failure in the presence of errors |
 | `<warningsAsErrors>` | false | with this the compiler reports failure even if there are only warnings and no errors. Can not be true at the same time with `errorsAsWarnings` |
 | `<parallel>` | false | enables parallel compilation of a large group of `.rsc` source files |
-| `<parallelMax>` | `5` | restricts the number of parallel compiler processes. The mojo otherwises
-computes an estimate based on the number of processors and the available memory |
-| `<parallelPrechecks>` | empty | a list of files reachable from `<srcs>` that will be compiled before the
-other processes start. |
+| `<parallelMax>` | `5` | restricts the number of parallel compiler processes. The mojo otherwises computes an estimate based on the number of processors and the available memory |
+| `<parallelPrechecks>` | empty | a list of files reachable from `<srcs>` that will be compiled before the other processes start. |
 | `<verbose>` | enables internal debugging prints of the compiler |
 
 #### Examples

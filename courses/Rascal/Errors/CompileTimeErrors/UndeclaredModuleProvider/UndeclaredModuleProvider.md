@@ -24,14 +24,14 @@ Remedy: Use an existing scheme.
 
 #### Examples
 
-Misspelling the scheme for Rascal's standard library (which is `std`) gives an error when the location is used:
+Misspelling the scheme for the current working directory (which is `cwd`) gives an error when the location is used:
 ```rascal-shell,error
 import IO;
-readFileLines(|standard:///demo/basic/Hello.rsc|);
+readFileLines(|cdw:///courses/Recipes/demo/lang/Func/Parse.rsc|);
 ```
 This is fixed by using the proper scheme name:
-```rascal-shell,continue,error
-readFileLines(|std:///demo/basic/Hello.rsc|);
+```rascal-shell,continue
+readFileLines(|cwd:///courses/Recipes/demo/lang/Func/Parse.rsc|);
 ```
 
 #### Benefits

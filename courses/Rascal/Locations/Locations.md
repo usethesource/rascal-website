@@ -18,14 +18,12 @@ These are all schemes that map to locations of files in physical or logical file
 | `cwd:///<path>` | file-system path relative to the current working directory of the JVM running Rascal |
 | `tmp:///<path>` | file-system path relative to where this OS/JVM thinks the temp folder is |
 | `home:///<path>` | file-system path relative to where the current user's home directory is |
-| `std:///<path>` | opaque virtual file system that points to the root of the (deployed) Rascal standard library |
 | `memory://<filesystem-name>/<path>` | fast in-memory file system that is transient between runs of the JVM. Guarantees `lastModified` is incremented after every write |
 | `mvn:///<groupId>--<artifactId>--<version>/<in-jar-path>` | Identifies a jar file installed in the `~/.m2` maven repository. The file-system is opaque and not writable. Maven dependencies have to have been downloaded earlier for this scheme to resolve. It does not download dependencies |
 | `jar+<scheme>://<authority>/<jar-path>!/<in-jar-path>` | file-system for what is inside a jar file |
 | `zip+<scheme>://<authority>/<zip-path>!/<in-zip-path>` | file-system for what is insied a zip file |
 | `project://<project-name>/<path>` | opaque file-system that is relative to the root a an IDE project in the current workspace of an IDE. The project must be "open" and active for this to work. |
 | `target://<project-name>/<path>` | opaque file-system that is relative to the (binary) target compilation folder of a project that is active and open in the workspace of the current IDE |
-| `lib://<lib-project-name>/<path>` | opaque file-system that points to the deployed code of a Rascal library. The library must have a RASCAL.MF file with the right `Project-Name` in it. The scheme may wrap/hide a target folder or a deployed jar file, depending on the situation in the IDE. Opened and active projects are resolved to their target folders while projects we depend on in `pom.xml` that are not opened typically resolve to their installed jar files in the users `.m2` folder |
 | `https://<host>/<path>?<query>#fragment` | Simply a page on a website. | 
 | `http://<host>/<path>?<query>#fragment` | Simply a page on a website. | 
 | `system:///<path>` | this is the root of the JVM class and resource path for the current JVM |

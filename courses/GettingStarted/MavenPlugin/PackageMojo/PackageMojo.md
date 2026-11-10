@@ -8,7 +8,7 @@ Prepare compiler output files for distribution in a jar file, and downstream usa
 
 #### Description
 
-The `prepare` plugin takes care of:
+The `package` plugin takes care of:
     * copying source files to the target folder, for later reference by debuggers (source distribution)
     * renaming file references in generated code and interface files (`.tpl` and `.constant`) such that they point to the distributed location and not the source project location.
 

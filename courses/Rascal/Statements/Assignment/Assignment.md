@@ -12,7 +12,7 @@ keywords:
   - "]"
   - "."
   - "?"
-  - "@"
+  - deconstructing bind
 
 ---
 
@@ -35,7 +35,6 @@ An _Assignable_ is one of the following:
 *   `Assignable . Name` 
 *   `< Assignable, Assignable, ..., Assignable >`
 *   `Assignable ? Exp` 
-*   `Assignable @ Name`
 *   `Name ( Assignable, Assignable, ... )`
 
 #### Types

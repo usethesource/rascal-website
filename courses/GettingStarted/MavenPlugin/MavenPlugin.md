@@ -16,12 +16,15 @@ The [rascal-maven-plugin](http://github.com/usethesource/rascal-maven-plugin) of
 * ((PackageMojo)) for packing compiled Rascal code, source code and documentation into a jar file. 
 * ((ExecMojo)) for executing arbitrary Rascal code during an arbitrary Maven goal.
 * ((ConsoleMojo)) for starting a Rascal ((REPL))
+* ((TestMojo)) for running Rascal tests.
 
-Each of the above is configured in XML in the local `pom.xml` file of a Rascal project. All of them are executed during a `mvn package` or `mvn install` commandline. If the local pom has the right configuration, then each mojo can also be invoked separately:
-* `mvn rascal:compile` runs the compiler and `-Drascal.compile.skip` guarantees it is skipped.
-* `mvn rascal:tutor` runs the tutor compiler and `-Drascal.tutor.skip` guarantees it is skipped.
-* `mvn rascal:package` runs the package rewriter and `-Drascal.package.skip` guarantees it is skipped.
+Each of the above is configured in XML in the local `pom.xml` file of a Rascal project. All of them are executed during a `mvn package` or `mvn install` commandline. If the local pom has the right configuration, then each mojo can also be invoked by the respective stage, or separately:
+* `mvn compile` or `mvn rascal:compile` runs the compiler and `-Drascal.compile.skip` guarantees it is skipped.
+* `mvn compile` or `mvn rascal:tutor` runs the tutor compiler and `-Drascal.tutor.skip` guarantees it is skipped.
+* `mvn package` or `mvn rascal:package` runs the package rewriter and `-Drascal.package.skip` guarantees it is skipped.
 * `mvn rascal:exec` executes some Rascal code, while `-Drascal.exec.skip` makes sure this goal is skipped.
+* `mvn test` or `mvn rascal:test` runs all test in all modules and reports the result in `target/rascal-test-results`, while `-Drascal.test.skip` makes sure this goal is skipped.
+* `mvn rascal:console` starts up a Rascal terminal with the same configuration as `mvn rascal:test` would use.
 
 #### Examples
 
@@ -46,3 +49,7 @@ newRascalPomFile(|tmp:///my-project|);
 * All dependencies defined in the `pom.xml` are used to automatically configure the library path of the compiler and the interpreter, as well as the classpath of the compiled or interpreted runtime engine.
 * Rascal projects can depend on any other Maven project
 
+#### Pitfalls
+
+* Watch out that `<configuration>` tags can be different for each `<execution>` goal. Specifically `<srcs>` can be (should be) different between compile and tutor.
+* Maven will always executer earlies stages first. So `mvn package` will execute `compile`, `test` and `package` (at least). Use `-Drascal.<stage>.skip` to avoid double work.
