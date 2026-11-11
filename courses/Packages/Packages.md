@@ -19,6 +19,7 @@ sidebar_position: 10
 | PHP           | [php-analysis](/docs/Packages/org.rascalmpl.php-analysis) | |
 | Python        | [python-air](/docs/Packages/org.rascalmpl.python-air) | |
 | JVM bytecode  | [flybytes](/docs/Packages/org.rascalmpl.flybytes) | Forward and Reverse | 
+| COBOL 85      | [cobol-air](/docs/Packages/org.rascalmpl.cobol-air) | | 
 
 ### Libraries
 
