@@ -6,6 +6,10 @@ sidebar_position: 85
 
 In this post we report on the Rascal release 0.43.x
 
+## Release 0.43.2 - November 2026
+
+This is a small bugfix release for a regression introduced in 0.43.1. The typechecker would in case of name-binding errors sometimes spend a lot of time calculating fixes. This release fixes that bug.
+
 ## Release 0.43.1 - November 2026
 
 This is a small bugfix release for some issues that were found after releasing 0.43.0
