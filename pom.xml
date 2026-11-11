@@ -38,6 +38,7 @@
         <rascal-lucene.version>0.1.2</rascal-lucene.version>
         <php-analysis.version>0.3.6</php-analysis.version>
         <python-air.version>0.0.13</python-air.version> 
+        <cobol-air.version>0.1.1</cobol-air.version> 
     </properties>
 
     <build>
@@ -164,6 +165,14 @@
                                     <groupId>org.rascalmpl</groupId>
                                     <artifactId>python-air</artifactId>
                                     <version>${python-air.version}</version>
+                                    <outputDirectory>${project.basedir}</outputDirectory>
+                                    <includes>docs/**/*.*</includes>
+                                    <excludes>docs/index.value</excludes>
+                                </artifactItem> 
+                                <artifactItem>
+                                    <groupId>org.rascalmpl</groupId>
+                                    <artifactId>cobol-air</artifactId>
+                                    <version>${cobol-air.version}</version>
                                     <outputDirectory>${project.basedir}</outputDirectory>
                                     <includes>docs/**/*.*</includes>
                                     <excludes>docs/index.value</excludes>
@@ -324,6 +333,11 @@
             <groupId>org.rascalmpl</groupId>
             <artifactId>python-air</artifactId>
             <version>${python-air.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rascalmpl</groupId>
+            <artifactId>cobol-air</artifactId>
+            <version>${cobol-air.version}</version>
         </dependency>
     </dependencies>
 </project>
