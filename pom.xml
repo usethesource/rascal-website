@@ -26,7 +26,7 @@
 
         <rascal-maven-plugin.version>0.32.2</rascal-maven-plugin.version>
         <rascal.version>0.43.3</rascal.version>
-        <clair.version>0.13.5</clair.version>
+        <clair.version>0.13.6</clair.version>
         <rascal-git.version>0.1.19</rascal-git.version>
         <flybytes.version>0.2.12</flybytes.version>
         <typepal.version>0.17.3</typepal.version>
@@ -38,7 +38,7 @@
         <rascal-lucene.version>0.1.2</rascal-lucene.version>
         <php-analysis.version>0.3.6</php-analysis.version>
         <python-air.version>0.0.13</python-air.version> 
-        <cobol-air.version>0.1.1</cobol-air.version> 
+        <cobol-air.version>0.1.2</cobol-air.version> 
     </properties>
 
     <build>
